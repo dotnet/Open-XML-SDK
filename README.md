@@ -51,7 +51,7 @@ and the PowerShell script BldSdk.ps1
     `C:> PowerShell`
 4.  Run the PowerShell script to build the libraries:
     
-    `PS C:\users\Eric\Documents\Open-Xml-Sdk> ./BldSdk.ps1`
+    `PS C:\users\<username>\Documents\Open-Xml-Sdk> ./BldSdk.ps1`
 
     The build will commence - it can take a few seconds, up to a minute,
     depending on the speed of your computer.
