@@ -32,14 +32,13 @@ search results above the start menu.
 - Click the Yes button in the User Account Control dialog box.
 - Run the command to set the execution policy:
 The the PowerShell prompt, type:
-PS C:\Windows\system32> Set-ExecutionPolicy Unrestricted<Enter>
+Set-ExecutionPolicy Unrestricted<Enter>
 - The Set-ExecutionPolicy cmdlet asks:
 Do you want to change the execution policy?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
 Press Y Enter
 - You can exit the PowerShell session that is running as administrator.
-Type:
-PS C:\Windows\system32> Exit
+At the PowerShell prompt, type: Exit
 
 Build the Open XML SDK Libraries
 ================================
@@ -48,13 +47,11 @@ administrator.
 - Change directories into the directory that contains this README.md,
 and the PowerShell script BldSdk.ps1
 For instance, type:
-C:> CD C:\users\<username>\Documents\Open-Xml-Sdk<Enter>
+CD C:\users\username\Documents\Open-Xml-Sdk<Enter>
 - Start PowerShell.
-Type:
-C:> PowerShell<Enter>
+At the DOS command prompt, type: PowerShell Enter
 - Run the PowerShell script to build the libraries:
-Type:
-PS C:\users\Eric\Documents\Open-Xml-Sdk> ./BldSdk.ps1<Enter>
+Type: ./BldSdk.ps1 Enter
 - The build will commence - it can take a few seconds, up to a minute,
 depending on the speed of your computer.
 - Find the debug libraries in the folder: ./build/OpenXmlSdkLib/Debug.
