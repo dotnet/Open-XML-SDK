@@ -31,15 +31,15 @@ button, then type PowerShell.  The PowerShell shortcut will be in the
 search results above the start menu.
 - Click the Yes button in the User Account Control dialog box.
 - Run the command to set the execution policy:
-Type:
+The the PowerShell prompt, type:
 PS C:\Windows\system32> Set-ExecutionPolicy Unrestricted<Enter>
 - The Set-ExecutionPolicy cmdlet asks:
 Do you want to change the execution policy?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
-Press <Enter>
+Press Y Enter
 - You can exit the PowerShell session that is running as administrator.
 Type:
-PS C:\Windows\system32> Exit<Enter>
+PS C:\Windows\system32> Exit
 
 Build the Open XML SDK Libraries
 ================================
