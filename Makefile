@@ -74,6 +74,7 @@ FILES_SRC=\
 	$(OXFRAMEWORKDIR)/MediaDataPart.cs \
 	$(OXFRAMEWORKDIR)/NamespaceIdMap.cs \
 	$(OXFRAMEWORKDIR)/OpenXmlAttribute.cs \
+    $(OXFRAMEWORKDIR)/OpenXmlObsolete.cs \
 	$(OXFRAMEWORKDIR)/OpenXmlBasePart.cs \
 	$(OXFRAMEWORKDIR)/OpenXmlCompositeElement.cs \
 	$(OXFRAMEWORKDIR)/OpenXmlElement.cs \
