@@ -56,3 +56,9 @@ Type: ./BldSdk.ps1 Enter
 depending on the speed of your computer.
 - Find the debug libraries in the folder: ./build/OpenXmlSdkLib/Debug.
 Find the release libraries in the folder: ./build/OpenXmlSdkLib/Release
+
+Building with Mono
+=================
+- First, ensure you have mono installed in a manner appropriate to your linux/unix distribution.
+- `make build`
+- Find libraries in the folder: ./build/OpenXmlSdkLib
