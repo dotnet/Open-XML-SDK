@@ -13,8 +13,23 @@ Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.
 Licensed under the Apache License, Version 2.0.
 See License.txt in the project root for license information.
 
+Documentation
+=============
+
+This release of the SDK is the exact source code for version 2.5, therefore
+the documentation available on MSDN is still accurate.
+
+[Open XML SDK 2.5 for Office](http://msdn.microsoft.com/en-us/library/office/bb448854.aspx)
+
+In addition to open sourcing of the SDK, Microsoft has opened up the
+conceptual documentation for public review / contributions.  A copy of
+the documentation is [now in GitHub](https://github.com/OfficeDev/office-content) for you to edit and review.
+
 Build Instructions
 ==================
+
+For a video that shows how to get and build the SDK, see [this blog post](http://openxmldeveloper.org/blog/b/openxmldeveloper/archive/2014/06/25/the-open-xml-sdk-is-now-open-source.aspx)
+at [OpenXmlDeveloper.org](http://OpenXmlDeveloper.org).
 
 Note: for this first release, you must have some version of Visual Studio
 installed.  Visual Studio 2012 Express Edition will work just fine:
