@@ -75,5 +75,5 @@ Find the release libraries in the folder: ./build/OpenXmlSdkLib/Release
 Building with Mono
 =================
 - First, ensure you have mono installed in a manner appropriate to your linux/unix distribution.
-- `make build`
+- `make -f Makefile-Linux-Mono build`
 - Find libraries in the folder: ./build/OpenXmlSdkLib
