@@ -77,3 +77,4 @@ Building with Mono
 - First, ensure you have mono installed in a manner appropriate to your linux/unix distribution.
 - `make -f Makefile-Linux-Mono build`
 - Find libraries in the folder: ./build/OpenXmlSdkLib
+- [Screen-Cast: Using the Open XML SDK on Linux using Mono](http://openxmldeveloper.org/blog/b/openxmldeveloper/archive/2014/07/03/screen-cast-using-open-xml-sdk-on-linux-using-mono.aspx)
