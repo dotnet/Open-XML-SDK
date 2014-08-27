@@ -1539,21 +1539,6 @@ namespace DocumentFormat.OpenXml.Packaging
             Package.Flush();
         }
 
-        /// <summary>
-        /// Saves the OpenXml package to a file.
-        /// </summary>
-        /// <param name="path"></param>
-        /// <returns></returns>
-        public OpenXmlPackage SaveAs(string path)
-        {
-            ThrowIfObjectDisposed();
-
-            if (path == null)
-                throw new ArgumentNullException("path");
-
-            throw new NotImplementedException();
-        }
-
         #region Default clone method
 
         /// <summary>
@@ -1598,10 +1583,23 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
         /// <param name="openSettings">The advanced settings for opening a document.</param>
         /// <returns>The cloned OpenXml package.</returns>
-        private OpenXmlPackage Clone(Stream stream, bool isEditable, OpenSettings openSettings)
+        public OpenXmlPackage Clone(Stream stream, bool isEditable, OpenSettings openSettings)
         {
+            if (stream == null)
+                throw new ArgumentNullException("stream");
+
+            // Use this OpenXml package's OpenSettings if none are provided.
+            // This is more in line with cloning than providing the default
+            // OpenSettings, i.e., unless the caller explicitly specifies
+            // something, we'll later open the clone with this OpenXml 
+            // package's OpenSettings.
+            if (openSettings == null)
+                openSettings = OpenSettings;
+            
             // Save the contents of all parts and relationships that are contained 
             // in the OpenXml package to make sure we clone a consistent state.
+            // This will also invoke ThrowIfObjectDisposed(), so we don't need
+            // to call it here.
             Save();
 
             // Create new OpenXmlPackage backed by stream. Next, copy all document
@@ -1673,10 +1671,23 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
         /// <param name="openSettings">The advanced settings for opening a document.</param>
         /// <returns>The cloned document.</returns>
-        private OpenXmlPackage Clone(string path, bool isEditable, OpenSettings openSettings)
+        public OpenXmlPackage Clone(string path, bool isEditable, OpenSettings openSettings)
         {
+            if (path == null)
+                throw new ArgumentNullException("path");
+
+            // Use this OpenXml package's OpenSettings if none are provided.
+            // This is more in line with cloning than providing the default
+            // OpenSettings, i.e., unless the caller explicitly specifies
+            // something, we'll later open the clone with this OpenXml 
+            // package's OpenSettings.
+            if (openSettings == null)
+                openSettings = OpenSettings;
+
             // Save the contents of all parts and relationships that are contained 
             // in the OpenXml package to make sure we clone a consistent state.
+            // This will also invoke ThrowIfObjectDisposed(), so we don't need
+            // to call it here.
             Save();
 
             // Use the same approach as for the streams-based cloning, i.e., close 
@@ -1727,13 +1738,31 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="package">The specified instance of Package.</param>
         /// <param name="openSettings">The advanced settings for opening a document.</param>
         /// <returns>The cloned OpenXml package.</returns>
-        private OpenXmlPackage Clone(Package package, OpenSettings openSettings)
+        public OpenXmlPackage Clone(Package package, OpenSettings openSettings)
         {
+            if (package == null)
+                throw new ArgumentNullException("package");
+
+            // Use this OpenXml package's OpenSettings if none are provided.
+            // This is more in line with cloning than providing the default
+            // OpenSettings, i.e., unless the caller explicitly specifies
+            // something, we'll later open the clone with this OpenXml 
+            // package's OpenSettings.
+            if (openSettings == null)
+                openSettings = OpenSettings;
+
             // Save the contents of all parts and relationships that are contained 
             // in the OpenXml package to make sure we clone a consistent state.
+            // This will also invoke ThrowIfObjectDisposed(), so we don't need
+            // to call it here.
             Save();
 
             // Create a new OpenXml package, copy this package's parts, and flush.
+            // This is different from the stream and file-based cloning, because
+            // we don't close the package here (whereas it will be closed in
+            // stream and file-based cloning to make sure the underlying stream
+            // or file can be read without any corruption issues directly after
+            // having cloned the OpenXml package).
             OpenXmlPackage clone = CreateClone(package);
             foreach (var part in this.Parts)
             {
