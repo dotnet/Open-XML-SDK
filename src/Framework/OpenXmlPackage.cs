@@ -625,369 +625,6 @@ namespace DocumentFormat.OpenXml.Packaging
             Dispose();
         }
 
-        #region extended methods
-
-        /// <summary>
-        /// Saves the contents of all parts and relationships that are contained 
-        /// in the OpenXml package.
-        /// </summary>
-        public void Save()
-        {
-            ThrowIfObjectDisposed();
-            
-            SavePartContents();
-            Package.Flush();
-        }
-
-        /// <summary>
-        /// Saves the OpenXml package to a file.
-        /// </summary>
-        /// <param name="path"></param>
-        /// <returns></returns>
-        public OpenXmlPackage SaveAs(string path)
-        {
-            ThrowIfObjectDisposed();
-
-            if (path == null)
-                throw new ArgumentNullException("path");
-
-            throw new NotImplementedException();
-        }
-
-        #region Default clone method
-
-        /// <summary>
-        /// Creates a clone of this OpenXml package, opened on a <see cref="MemoryStream"/>
-        /// with expandable capacity.
-        /// </summary>
-        /// <returns>The cloned OpenXml package.</returns>
-        public OpenXmlPackage Clone()
-        {
-            // TODO: Check whether using a MemoryStream like this is best practice.
-            // We should probably reference it from a private property and 
-            // dispose it properly during Dispose().
-            return Clone(new MemoryStream(), FileOpenAccess == FileAccess.ReadWrite, OpenSettings);
-        }
-
-        #endregion Default clone method
-
-        #region Stream-based cloning
-
-        /// <summary>
-        /// Creates a clone of this OpenXml package, opened on the given stream.
-        /// </summary>
-        /// <param name="stream">The IO stream on which to open the OpenXml package.</param>
-        /// <returns>The cloned OpenXml package.</returns>
-        public OpenXmlPackage Clone(Stream stream)
-        {
-            return Clone(stream, FileOpenAccess == FileAccess.ReadWrite, OpenSettings);
-        }
-
-        /// <summary>
-        /// Creates a clone of this OpenXml package, opened on the given stream.
-        /// </summary>
-        /// <param name="stream">The IO stream on which to open the OpenXml package.</param>
-        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
-        /// <returns>The cloned OpenXml package.</returns>
-        public OpenXmlPackage Clone(Stream stream, bool isEditable)
-        {
-            return Clone(stream, isEditable, OpenSettings);
-        }
-
-        /// <summary>
-        /// Creates a clone of this OpenXml package, opened on the given stream.
-        /// </summary>
-        /// <param name="stream">The IO stream on which to open the OpenXml package.</param>
-        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
-        /// <param name="openSettings">The advanced settings for opening a document.</param>
-        /// <returns>The cloned OpenXml package.</returns>
-        private OpenXmlPackage Clone(Stream stream, bool isEditable, OpenSettings openSettings)
-        {
-            // Save the contents of all parts and relationships that are contained 
-            // in the OpenXml package.
-            Save();
-
-            // Create new OpenXmlPackage backed by stream. Next, copy all document
-            // parts (AddPart will copy the parts and their children in a recursive 
-            // fashion) and close/dispose the document (by leaving the scope of the 
-            // using statement). Finally, reopen the clone from the MemoryStream. 
-            // This way, writing the stream to a file, for example, directly after 
-            // returning from this method will not lead to issues with corrupt files
-            // and a FileFormatException ("Compressed part has inconsistent data length") 
-            // thrown within OpenXmlPackage.OpenCore(string, bool) by the
-            //     this._metroPackage = Package.Open(path, ...);
-            // assignment.
-            using (OpenXmlPackage clone = CreateClone(stream))
-            {
-                foreach (var part in this.Parts)
-                    clone.AddPart(part.OpenXmlPart, part.RelationshipId);
-            }
-            return OpenClone(stream, isEditable, openSettings);
-        }
-
-        /// <summary>
-        /// Creates a new, concrete OpenXml package, i.e., a <see cref="WordprocessingDocument"/>, 
-        /// <see cref="SpreadsheetDocument"/>, or <see cref="PresentationDocument"/> with the same 
-        /// DocumentType and AutoSave settings as this OpenXml package.
-        /// </summary>
-        /// <param name="stream">The stream on which the concrete OpenXml package will be created.</param>
-        /// <returns>The newly created, concrete OpenXml package.</returns>
-        protected virtual OpenXmlPackage CreateClone(Stream stream)
-        {
-            if (stream == null)
-                throw new ArgumentNullException("stream");
-
-            // This is not really object-oriented but limits the number of source
-            // files to be changed.
-            if (this is WordprocessingDocument)
-            {
-                return WordprocessingDocument.Create(stream,
-                    ((WordprocessingDocument)this).DocumentType, OpenSettings.AutoSave);
-            }
-            else if (this is SpreadsheetDocument)
-            {
-                return SpreadsheetDocument.Create(stream,
-                    ((SpreadsheetDocument)this).DocumentType, OpenSettings.AutoSave);
-            }
-            else if (this is PresentationDocument)
-            {
-                return PresentationDocument.Create(stream,
-                    ((PresentationDocument)this).DocumentType, OpenSettings.AutoSave);
-            }
-            else
-            {
-                throw new ArgumentException("Unknown OpenXmlPackage: " + this.GetType());
-            }
-        }
-
-        /// <summary>
-        /// Opens the cloned OpenXml package on the stream.
-        /// </summary>
-        /// <param name="stream">The stream on which the cloned OpenXml package will be opened.</param>
-        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
-        /// <param name="openSettings">The advanced settings for opening a document.</param>
-        /// <returns>The cloned OpenXml package.</returns>
-        protected virtual OpenXmlPackage OpenClone(Stream stream, bool isEditable, OpenSettings openSettings)
-        {
-            if (stream == null)
-                throw new ArgumentNullException("stream");
-
-            // Initialize open settings as necessary. The static methods in the derived
-            // don't handle this.
-            if (openSettings == null)
-                openSettings = new OpenSettings();
-
-            // This is not really object-oriented but limits the number of source 
-            // files to be changed.
-            if (this is WordprocessingDocument)
-                return WordprocessingDocument.Open(stream, isEditable, openSettings);
-            else if (this is SpreadsheetDocument)
-                return SpreadsheetDocument.Open(stream, isEditable, openSettings);
-            else if (this is PresentationDocument)
-                return PresentationDocument.Open(stream, isEditable, openSettings);
-            else
-                throw new ArgumentException("Unknown OpenXmlPackage: " + this.GetType());
-        }
-
-        #endregion Stream-based cloning
-
-        #region File-based cloning
-
-        /// <summary>
-        /// Creates an editable clone of this OpenXml package opened from the given 
-        /// file (which will be created by cloning this OpenXml package).
-        /// </summary>
-        /// <param name="path">The path and file name of the target document.</param>
-        /// <returns>The cloned document.</returns>
-        public OpenXmlPackage Clone(string path)
-        {
-            return Clone(path, FileOpenAccess == FileAccess.ReadWrite, OpenSettings);
-        }
-
-        /// <summary>
-        /// Creates a clone of this OpenXml package opened from the given file (which
-        /// will be created by cloning this OpenXml package).
-        /// </summary>
-        /// <param name="path">The path and file name of the target document.</param>
-        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
-        /// <returns>The cloned document.</returns>
-        public OpenXmlPackage Clone(string path, bool isEditable)
-        {
-            return Clone(path, isEditable, OpenSettings);
-        }
-
-        /// <summary>
-        /// Creates a clone of this OpenXml package opened from the given file (which
-        /// will be created by cloning this OpenXml package).
-        /// </summary>
-        /// <param name="path">The path and file name of the target document.</param>
-        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
-        /// <param name="openSettings">The advanced settings for opening a document.</param>
-        /// <returns>The cloned document.</returns>
-        private OpenXmlPackage Clone(string path, bool isEditable, OpenSettings openSettings)
-        {
-            // Save the contents of all parts and relationships that are contained 
-            // in the OpenXml package.
-            Save();
-
-            // Use the same approach as for the streams-based cloning, i.e., close 
-            // and reopen the document.
-            using (OpenXmlPackage clone = CreateClone(path))
-            {
-                foreach (var part in this.Parts)
-                    clone.AddPart(part.OpenXmlPart, part.RelationshipId);
-            }
-            return OpenClone(path, isEditable, openSettings);
-        }
-
-        /// <summary>
-        /// Creates a new, concrete OpenXml package, i.e., a <see cref="WordprocessingDocument"/>, 
-        /// <see cref="SpreadsheetDocument"/>, or <see cref="PresentationDocument"/> with the same 
-        /// DocumentType and AutoSave settings as this OpenXml package.
-        /// </summary>
-        /// <param name="path">The file on which the concrete OpenXml package will be created.</param>
-        /// <returns>The newly created, concrete OpenXml package.</returns>
-        protected virtual OpenXmlPackage CreateClone(string path)
-        {
-            if (path == null)
-                throw new ArgumentNullException("path");
-
-            // This is not really object-oriented but limits the number of source
-            // files to be changed.
-            if (this is WordprocessingDocument)
-            {
-                return WordprocessingDocument.Create(path,
-                    ((WordprocessingDocument)this).DocumentType, OpenSettings.AutoSave);
-            }
-            else if (this is SpreadsheetDocument)
-            {
-                return SpreadsheetDocument.Create(path,
-                    ((SpreadsheetDocument)this).DocumentType, OpenSettings.AutoSave);
-            }
-            else if (this is PresentationDocument)
-            {
-                return PresentationDocument.Create(path,
-                    ((PresentationDocument)this).DocumentType, OpenSettings.AutoSave);
-            }
-            else
-            {
-                throw new ArgumentException("Unknown OpenXmlPackage: " + this.GetType());
-            }
-        }
-
-        /// <summary>
-        /// Opens the cloned, editable OpenXml package on the file.
-        /// </summary>
-        /// <param name="path">The path and file name of the target document.</param>
-        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
-        /// <param name="openSettings">The advanced settings for opening a document.</param>
-        /// <returns>The fully cloned, concrete OpenXml package.</returns>
-        protected virtual OpenXmlPackage OpenClone(string path, bool isEditable, OpenSettings openSettings)
-        {
-            if (path == null)
-                throw new ArgumentNullException("path");
-
-            // Initialize open settings as necessary. The static methods in the derived
-            // don't handle this.
-            if (openSettings == null)
-                openSettings = new OpenSettings();
-
-            // This is not really object-oriented but limits the number of source 
-            // files to be changed.
-            if (this is WordprocessingDocument)
-                return WordprocessingDocument.Open(path, isEditable, openSettings);
-            else if (this is SpreadsheetDocument)
-                return SpreadsheetDocument.Open(path, isEditable, openSettings);
-            else if (this is PresentationDocument)
-                return PresentationDocument.Open(path, isEditable, openSettings);
-            else
-                // Should this be integrated into the resources?
-                throw new ArgumentException("Unknown OpenXmlPackage: " + this.GetType());
-        }
-
-        #endregion File-based cloning
-
-        #region Package-based cloning
-
-        /// <summary>
-        /// Creates a clone of this OpenXml package, opened on the given package.
-        /// </summary>
-        /// <param name="package">The specified OpenXml package.</param>
-        /// <returns>The cloned OpenXml package.</returns>
-        public OpenXmlPackage Clone(Package package)
-        {
-            return Clone(package, OpenSettings);
-        }
-
-        /// <summary>
-        /// Creates a clone of this OpenXml package, opened on the given package.
-        /// </summary>
-        /// <param name="package">The specified OpenXml package.</param>
-        /// <param name="openSettings">The advanced settings for opening a document.</param>
-        /// <returns>The cloned OpenXml package.</returns>
-        private OpenXmlPackage Clone(Package package, OpenSettings openSettings)
-        {
-            // Save the contents of all parts and relationships that are contained 
-            // in the OpenXml package.
-            Save();
-
-            // Create a new OpenXml package, copy this package's parts, and flush.
-            OpenXmlPackage clone = CreateClone(package);
-            foreach (var part in this.Parts)
-            {
-                clone.AddPart(part.OpenXmlPart, part.RelationshipId);
-            }
-            package.Flush();
-
-            // Configure OpenSettings.
-            clone.OpenSettings.AutoSave = openSettings.AutoSave;
-            clone.OpenSettings.MarkupCompatibilityProcessSettings.ProcessMode = openSettings.MarkupCompatibilityProcessSettings.ProcessMode;
-            clone.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions = openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
-            clone.MaxCharactersInPart = openSettings.MaxCharactersInPart;
-
-            return clone;
-        }
-
-        /// <summary>
-        /// Creates a new, concrete OpenXml package, i.e., a <see cref="WordprocessingDocument"/>, 
-        /// <see cref="SpreadsheetDocument"/>, or <see cref="PresentationDocument"/> with the same 
-        /// DocumentType and AutoSave settings as this OpenXml package.
-        /// </summary>
-        /// <param name="package">The specified OpenXml package.</param>
-        /// <returns>The newly created, concrete OpenXml package.</returns>
-        protected virtual OpenXmlPackage CreateClone(Package package)
-        {
-            if (package == null)
-                throw new ArgumentNullException("package");
-
-            // This is not really object-oriented but limits the number of source
-            // files to be changed.
-            if (this is WordprocessingDocument)
-            {
-                return WordprocessingDocument.Create(package,
-                    ((WordprocessingDocument)this).DocumentType, OpenSettings.AutoSave);
-            }
-            else if (this is SpreadsheetDocument)
-            {
-                return SpreadsheetDocument.Create(package,
-                    ((SpreadsheetDocument)this).DocumentType, OpenSettings.AutoSave);
-            }
-            else if (this is PresentationDocument)
-            {
-                return PresentationDocument.Create(package,
-                    ((PresentationDocument)this).DocumentType, OpenSettings.AutoSave);
-            }
-            else
-            {
-                // Should this be integrated into the resources?
-                throw new ArgumentException("Unknown OpenXmlPackage: " + this.GetType());
-            }
-        }
-        
-        #endregion Package-based cloning
-
-        #endregion extended methods
-
         #region methods to operate DataPart
 
         /// <summary>
@@ -1887,6 +1524,243 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
             }
         }
+
+        #region saving and cloning
+
+        /// <summary>
+        /// Saves the contents of all parts and relationships that are contained 
+        /// in the OpenXml package.
+        /// </summary>
+        public void Save()
+        {
+            ThrowIfObjectDisposed();
+
+            SavePartContents();
+            Package.Flush();
+        }
+
+        /// <summary>
+        /// Saves the OpenXml package to a file.
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public OpenXmlPackage SaveAs(string path)
+        {
+            ThrowIfObjectDisposed();
+
+            if (path == null)
+                throw new ArgumentNullException("path");
+
+            throw new NotImplementedException();
+        }
+
+        #region Default clone method
+
+        /// <summary>
+        /// Creates a clone of this OpenXml package, opened on a <see cref="MemoryStream"/>
+        /// with expandable capacity.
+        /// </summary>
+        /// <returns>The cloned OpenXml package.</returns>
+        public OpenXmlPackage Clone()
+        {
+            return Clone(new MemoryStream(), FileOpenAccess == FileAccess.ReadWrite, OpenSettings);
+        }
+
+        #endregion Default clone method
+
+        #region Stream-based cloning
+
+        /// <summary>
+        /// Creates a clone of this OpenXml package, opened on the given stream.
+        /// </summary>
+        /// <param name="stream">The IO stream on which to open the OpenXml package.</param>
+        /// <returns>The cloned OpenXml package.</returns>
+        public OpenXmlPackage Clone(Stream stream)
+        {
+            return Clone(stream, FileOpenAccess == FileAccess.ReadWrite, OpenSettings);
+        }
+
+        /// <summary>
+        /// Creates a clone of this OpenXml package, opened on the given stream.
+        /// </summary>
+        /// <param name="stream">The IO stream on which to open the OpenXml package.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
+        /// <returns>The cloned OpenXml package.</returns>
+        public OpenXmlPackage Clone(Stream stream, bool isEditable)
+        {
+            return Clone(stream, isEditable, OpenSettings);
+        }
+
+        /// <summary>
+        /// Creates a clone of this OpenXml package, opened on the given stream.
+        /// </summary>
+        /// <param name="stream">The IO stream on which to open the OpenXml package.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
+        /// <param name="openSettings">The advanced settings for opening a document.</param>
+        /// <returns>The cloned OpenXml package.</returns>
+        private OpenXmlPackage Clone(Stream stream, bool isEditable, OpenSettings openSettings)
+        {
+            // Save the contents of all parts and relationships that are contained 
+            // in the OpenXml package to make sure we clone a consistent state.
+            Save();
+
+            // Create new OpenXmlPackage backed by stream. Next, copy all document
+            // parts (AddPart will copy the parts and their children in a recursive 
+            // fashion) and close/dispose the document (by leaving the scope of the 
+            // using statement). Finally, reopen the clone from the MemoryStream. 
+            // This way, writing the stream to a file, for example, directly after 
+            // returning from this method will not lead to issues with corrupt files
+            // and a FileFormatException ("Compressed part has inconsistent data length") 
+            // thrown within OpenXmlPackage.OpenCore(string, bool) by the
+            //     this._metroPackage = Package.Open(path, ...);
+            // assignment.
+            using (OpenXmlPackage clone = CreateClone(stream))
+            {
+                foreach (var part in this.Parts)
+                    clone.AddPart(part.OpenXmlPart, part.RelationshipId);
+            }
+            return OpenClone(stream, isEditable, openSettings);
+        }
+
+        /// <summary>
+        /// Creates a new OpenXmlPackage on the given stream.
+        /// </summary>
+        /// <param name="stream">The stream on which the concrete OpenXml package will be created.</param>
+        /// <returns>A new instance of OpenXmlPackage.</returns>
+        protected abstract OpenXmlPackage CreateClone(Stream stream);
+
+        /// <summary>
+        /// Opens the cloned OpenXml package on the given stream.
+        /// </summary>
+        /// <param name="stream">The stream on which the cloned OpenXml package will be opened.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
+        /// <param name="openSettings">The advanced settings for opening a document.</param>
+        /// <returns>A new instance of OpenXmlPackage.</returns>
+        protected abstract OpenXmlPackage OpenClone(Stream stream, bool isEditable, OpenSettings openSettings);
+
+        #endregion Stream-based cloning
+
+        #region File-based cloning
+
+        /// <summary>
+        /// Creates an editable clone of this OpenXml package opened from the given 
+        /// file (which will be created by cloning this OpenXml package).
+        /// </summary>
+        /// <param name="path">The path and file name of the target document.</param>
+        /// <returns>The cloned document.</returns>
+        public OpenXmlPackage Clone(string path)
+        {
+            return Clone(path, FileOpenAccess == FileAccess.ReadWrite, OpenSettings);
+        }
+
+        /// <summary>
+        /// Creates a clone of this OpenXml package opened from the given file (which
+        /// will be created by cloning this OpenXml package).
+        /// </summary>
+        /// <param name="path">The path and file name of the target document.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
+        /// <returns>The cloned document.</returns>
+        public OpenXmlPackage Clone(string path, bool isEditable)
+        {
+            return Clone(path, isEditable, OpenSettings);
+        }
+
+        /// <summary>
+        /// Creates a clone of this OpenXml package opened from the given file (which
+        /// will be created by cloning this OpenXml package).
+        /// </summary>
+        /// <param name="path">The path and file name of the target document.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
+        /// <param name="openSettings">The advanced settings for opening a document.</param>
+        /// <returns>The cloned document.</returns>
+        private OpenXmlPackage Clone(string path, bool isEditable, OpenSettings openSettings)
+        {
+            // Save the contents of all parts and relationships that are contained 
+            // in the OpenXml package to make sure we clone a consistent state.
+            Save();
+
+            // Use the same approach as for the streams-based cloning, i.e., close 
+            // and reopen the document.
+            using (OpenXmlPackage clone = CreateClone(path))
+            {
+                foreach (var part in this.Parts)
+                    clone.AddPart(part.OpenXmlPart, part.RelationshipId);
+            }
+            return OpenClone(path, isEditable, openSettings);
+        }
+
+        /// <summary>
+        /// Creates a new OpenXml package on the given file.
+        /// </summary>
+        /// <param name="path">The path and file name of the target OpenXml package.</param>
+        /// <returns>A new instance of OpenXmlPackage.</returns>
+        protected abstract OpenXmlPackage CreateClone(string path);
+
+        /// <summary>
+        /// Opens the cloned OpenXml package on the given file.
+        /// </summary>
+        /// <param name="path">The path and file name of the target OpenXml package.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
+        /// <param name="openSettings">The advanced settings for opening a document.</param>
+        /// <returns>A new instance of OpenXmlPackage.</returns>
+        protected abstract OpenXmlPackage OpenClone(string path, bool isEditable, OpenSettings openSettings);
+
+        #endregion File-based cloning
+
+        #region Package-based cloning
+
+        /// <summary>
+        /// Creates a clone of this OpenXml package, opened on the specified instance
+        /// of Package.
+        /// </summary>
+        /// <param name="package">The specified instance of Package.</param>
+        /// <returns>The cloned OpenXml package.</returns>
+        public OpenXmlPackage Clone(Package package)
+        {
+            return Clone(package, OpenSettings);
+        }
+
+        /// <summary>
+        /// Creates a clone of this OpenXml package, opened on the specified instance
+        /// of Package.
+        /// </summary>
+        /// <param name="package">The specified instance of Package.</param>
+        /// <param name="openSettings">The advanced settings for opening a document.</param>
+        /// <returns>The cloned OpenXml package.</returns>
+        private OpenXmlPackage Clone(Package package, OpenSettings openSettings)
+        {
+            // Save the contents of all parts and relationships that are contained 
+            // in the OpenXml package to make sure we clone a consistent state.
+            Save();
+
+            // Create a new OpenXml package, copy this package's parts, and flush.
+            OpenXmlPackage clone = CreateClone(package);
+            foreach (var part in this.Parts)
+            {
+                clone.AddPart(part.OpenXmlPart, part.RelationshipId);
+            }
+            package.Flush();
+
+            // Configure OpenSettings.
+            clone.OpenSettings.AutoSave = openSettings.AutoSave;
+            clone.OpenSettings.MarkupCompatibilityProcessSettings.ProcessMode = openSettings.MarkupCompatibilityProcessSettings.ProcessMode;
+            clone.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions = openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
+            clone.MaxCharactersInPart = openSettings.MaxCharactersInPart;
+
+            return clone;
+        }
+
+        /// <summary>
+        /// Creates a new instance of OpenXmlPackage on the specified instance
+        /// of Package.
+        /// </summary>
+        /// <param name="package">The specified instance of Package.</param>
+        /// <returns>A new instance of OpenXmlPackage.</returns>
+        protected abstract OpenXmlPackage CreateClone(Package package);
+
+        #endregion Package-based cloning
+
+        #endregion saving and cloning
     }
 
     /// <summary>
