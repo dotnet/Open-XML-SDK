@@ -1582,6 +1582,8 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <summary>
         /// Creates a clone of this OpenXml package, opened on the given stream.
+        /// The cloned OpenXml package is opened with the same settings, i.e.,
+        /// FileOpenAccess and OpenSettings, as this OpenXml package.
         /// </summary>
         /// <param name="stream">The IO stream on which to open the OpenXml package.</param>
         /// <returns>The cloned OpenXml package.</returns>
@@ -1592,6 +1594,8 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <summary>
         /// Creates a clone of this OpenXml package, opened on the given stream.
+        /// The cloned OpenXml package is opened with the same OpenSettings as
+        /// this OpenXml package.
         /// </summary>
         /// <param name="stream">The IO stream on which to open the OpenXml package.</param>
         /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
@@ -1666,8 +1670,10 @@ namespace DocumentFormat.OpenXml.Packaging
         #region File-based cloning
 
         /// <summary>
-        /// Creates an editable clone of this OpenXml package opened from the given 
-        /// file (which will be created by cloning this OpenXml package).
+        /// Creates a clone of this OpenXml package opened from the given file
+        /// (which will be created by cloning this OpenXml package).
+        /// The cloned OpenXml package is opened with the same settings, i.e.,
+        /// FileOpenAccess and OpenSettings, as this OpenXml package.
         /// </summary>
         /// <param name="path">The path and file name of the target document.</param>
         /// <returns>The cloned document.</returns>
@@ -1677,8 +1683,10 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Creates a clone of this OpenXml package opened from the given file (which
-        /// will be created by cloning this OpenXml package).
+        /// Creates a clone of this OpenXml package opened from the given file 
+        /// (which will be created by cloning this OpenXml package).
+        /// The cloned OpenXml package is opened with the same OpenSettings as 
+        /// this OpenXml package.
         /// </summary>
         /// <param name="path">The path and file name of the target document.</param>
         /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
@@ -1747,7 +1755,8 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <summary>
         /// Creates a clone of this OpenXml package, opened on the specified instance
-        /// of Package.
+        /// of Package. The clone will be opened with the same OpenSettings as this
+        /// OpenXml package.
         /// </summary>
         /// <param name="package">The specified instance of Package.</param>
         /// <returns>The cloned OpenXml package.</returns>

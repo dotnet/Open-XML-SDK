@@ -1704,20 +1704,32 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
+        /// Creates a new editable instance of SpreadsheetDocument from an <see cref="XDocument"/>
+        /// in Flat OPC format, opened on a <see cref="MemoryStream"/>.
+        /// </summary>
+        /// <param name="document">The document in Flat OPC format.</param>
+        /// <returns>A new instance of SpreadsheetDocument.</returns>
+        public static SpreadsheetDocument FromFlatOpcDocument(XDocument document)
+        {
+            return FromFlatOpcDocument(document, new MemoryStream(), true);
+        }
+        
+        /// <summary>
         /// Creates a new instance of SpreadsheetDocument from a workbook
         /// in Flat OPC format.
         /// </summary>
         /// <param name="document">The workbook in Flat OPC format.</param>
         /// <param name="stream">The stream on which the SpreadsheetDocument will be created.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
         /// <returns>A new instance of SpreadsheetDocument.</returns>
-        public static SpreadsheetDocument FromFlatOpcDocument(XDocument document, Stream stream)
+        public static SpreadsheetDocument FromFlatOpcDocument(XDocument document, Stream stream, bool isEditable)
         {
             if (document == null)
                 throw new ArgumentNullException("document");
             if (stream == null)
                 throw new ArgumentNullException("stream");
 
-            return SpreadsheetDocument.Open(FromFlatOpcDocumentCore(document, Package.Open(stream)));
+            return SpreadsheetDocument.Open(FromFlatOpcDocumentCore(document, stream), true);
         }
 
         /// <summary>
@@ -1726,15 +1738,16 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="document">The workbook in Flat OPC format.</param>
         /// <param name="path">The path and file name of the target SpreadsheetDocument.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
         /// <returns>A new instance of SpreadsheetDocument.</returns>
-        public static SpreadsheetDocument FromFlatOpcDocument(XDocument document, string path)
+        public static SpreadsheetDocument FromFlatOpcDocument(XDocument document, string path, bool isEditable)
         {
             if (document == null)
                 throw new ArgumentNullException("document");
             if (path == null)
                 throw new ArgumentNullException("path");
 
-            return SpreadsheetDocument.Open(FromFlatOpcDocumentCore(document, Package.Open(path)));
+            return SpreadsheetDocument.Open(FromFlatOpcDocumentCore(document, path), isEditable);
         }
 
         /// <summary>
@@ -1752,6 +1765,74 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException("package");
 
             return SpreadsheetDocument.Open(FromFlatOpcDocumentCore(document, package));
+        }
+
+        /// <summary>
+        /// Creates a new instance of SpreadsheetDocument from a string
+        /// in Flat OPC format on a <see cref="MemoryStream"/> with expandable
+        /// capacity.
+        /// </summary>
+        /// <param name="text">The string in Flat OPC format.</param>
+        /// <returns>A new instance of SpreadsheetDocument.</returns>
+        public static SpreadsheetDocument FromFlatOpcString(string text)
+        {
+            if (text == null)
+                throw new ArgumentNullException("text");
+
+            return FromFlatOpcDocument(XDocument.Parse(text), new MemoryStream(), true);
+        }
+
+        /// <summary>
+        /// Creates a new instance of SpreadsheetDocument from a string
+        /// in Flat OPC format on a 
+        /// </summary>
+        /// <param name="text">The string in Flat OPC format.</param>
+        /// <param name="stream">The <see cref="Stream"/> on which the SpreadsheetDocument will be created.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
+        /// <returns>A new instance of SpreadsheetDocument.</returns>
+        public static SpreadsheetDocument FromFlatOpcString(string text, Stream stream, bool isEditable)
+        {
+            if (text == null)
+                throw new ArgumentNullException("text");
+            if (stream == null)
+                throw new ArgumentNullException("stream");
+
+            return FromFlatOpcDocument(XDocument.Parse(text), stream, isEditable);
+        }
+
+        /// <summary>
+        /// Creates a new instance of SpreadsheetDocument from a string
+        /// in Flat OPC format.
+        /// </summary>
+        /// <param name="text">The string in Flat OPC format.</param>
+        /// <param name="path">The path and file name of the target SpreadsheetDocument.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
+        /// <returns>A new instance of SpreadsheetDocument.</returns>
+        public static SpreadsheetDocument FromFlatOpcString(string text, string path, bool isEditable)
+        {
+            if (text == null)
+                throw new ArgumentNullException("text");
+            if (path == null)
+                throw new ArgumentNullException("path");
+
+            return FromFlatOpcDocument(XDocument.Parse(text), path, isEditable);
+        }
+
+        /// <summary>
+        /// Creates a new instance of SpreadsheetDocument from a string
+        /// in Flat OPC format.
+        /// </summary>
+        /// <param name="text">The string in Flat OPC format.</param>
+        /// <param name="package">The <see cref="Package"/> of the target SpreadsheetDocument.</param>
+        /// <returns>A new instance of SpreadsheetDocument.</returns>
+        public static SpreadsheetDocument FromFlatOpcString(string text, Package package)
+        {
+            if (text == null)
+                throw new ArgumentNullException("text");
+            if (package == null)
+                throw new ArgumentNullException("package");
+
+            return FromFlatOpcDocument(XDocument.Parse(text), package);
         }
 
         #endregion Flat OPC
@@ -2543,20 +2624,32 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
+        /// Creates a new editable instance of PresentationDocument from an <see cref="XDocument"/>
+        /// in Flat OPC format, opened on a <see cref="MemoryStream"/>.
+        /// </summary>
+        /// <param name="document">The document in Flat OPC format.</param>
+        /// <returns>A new instance of PresentationDocument.</returns>
+        public static PresentationDocument FromFlatOpcDocument(XDocument document)
+        {
+            return FromFlatOpcDocument(document, new MemoryStream(), true);
+        }
+
+        /// <summary>
         /// Creates a new instance of PresentationDocument from a presentation
         /// in Flat OPC format.
         /// </summary>
         /// <param name="document">The presentation in Flat OPC format.</param>
         /// <param name="stream">The stream on which the PresentationDocument will be created.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
         /// <returns>A new instance of PresentationDocument.</returns>
-        public static PresentationDocument FromFlatOpcDocument(XDocument document, Stream stream)
+        public static PresentationDocument FromFlatOpcDocument(XDocument document, Stream stream, bool isEditable)
         {
             if (document == null)
                 throw new ArgumentNullException("document");
             if (stream == null)
                 throw new ArgumentNullException("stream");
 
-            return PresentationDocument.Open(FromFlatOpcDocumentCore(document, Package.Open(stream)));
+            return PresentationDocument.Open(FromFlatOpcDocumentCore(document, stream), isEditable);
         }
 
         /// <summary>
@@ -2565,15 +2658,16 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="document">The presentation in Flat OPC format.</param>
         /// <param name="path">The path and file name of the target PresentationDocument.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
         /// <returns>A new instance of PresentationDocument.</returns>
-        public static PresentationDocument FromFlatOpcDocument(XDocument document, string path)
+        public static PresentationDocument FromFlatOpcDocument(XDocument document, string path, bool isEditable)
         {
             if (document == null)
                 throw new ArgumentNullException("document");
             if (path == null)
                 throw new ArgumentNullException("path");
 
-            return PresentationDocument.Open(FromFlatOpcDocumentCore(document, Package.Open(path)));
+            return PresentationDocument.Open(FromFlatOpcDocumentCore(document, path), isEditable);
         }
 
         /// <summary>
@@ -2591,6 +2685,74 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException("package");
 
             return PresentationDocument.Open(FromFlatOpcDocumentCore(document, package));
+        }
+
+        /// <summary>
+        /// Creates a new instance of PresentationDocument from a string
+        /// in Flat OPC format on a <see cref="MemoryStream"/> with expandable
+        /// capacity.
+        /// </summary>
+        /// <param name="text">The string in Flat OPC format.</param>
+        /// <returns>A new instance of PresentationDocument.</returns>
+        public static PresentationDocument FromFlatOpcString(string text)
+        {
+            if (text == null)
+                throw new ArgumentNullException("text");
+
+            return FromFlatOpcDocument(XDocument.Parse(text), new MemoryStream(), true);
+        }
+
+        /// <summary>
+        /// Creates a new instance of PresentationDocument from a string
+        /// in Flat OPC format on a 
+        /// </summary>
+        /// <param name="text">The string in Flat OPC format.</param>
+        /// <param name="stream">The <see cref="Stream"/> on which the PresentationDocument will be created.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
+        /// <returns>A new instance of PresentationDocument.</returns>
+        public static PresentationDocument FromFlatOpcString(string text, Stream stream, bool isEditable)
+        {
+            if (text == null)
+                throw new ArgumentNullException("text");
+            if (stream == null)
+                throw new ArgumentNullException("stream");
+
+            return FromFlatOpcDocument(XDocument.Parse(text), stream, isEditable);
+        }
+
+        /// <summary>
+        /// Creates a new instance of PresentationDocument from a string
+        /// in Flat OPC format.
+        /// </summary>
+        /// <param name="text">The string in Flat OPC format.</param>
+        /// <param name="path">The path and file name of the target PresentationDocument.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
+        /// <returns>A new instance of PresentationDocument.</returns>
+        public static PresentationDocument FromFlatOpcString(string text, string path, bool isEditable)
+        {
+            if (text == null)
+                throw new ArgumentNullException("text");
+            if (path == null)
+                throw new ArgumentNullException("path");
+
+            return FromFlatOpcDocument(XDocument.Parse(text), path, isEditable);
+        }
+
+        /// <summary>
+        /// Creates a new instance of PresentationDocument from a string
+        /// in Flat OPC format.
+        /// </summary>
+        /// <param name="text">The string in Flat OPC format.</param>
+        /// <param name="package">The <see cref="Package"/> of the target PresentationDocument.</param>
+        /// <returns>A new instance of PresentationDocument.</returns>
+        public static PresentationDocument FromFlatOpcString(string text, Package package)
+        {
+            if (text == null)
+                throw new ArgumentNullException("text");
+            if (package == null)
+                throw new ArgumentNullException("package");
+
+            return FromFlatOpcDocument(XDocument.Parse(text), package);
         }
 
         #endregion Flat OPC
