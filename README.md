@@ -78,3 +78,12 @@ Building with Mono
 - `make -f Makefile-Linux-Mono build`
 - Find libraries in the folder: ./build/OpenXmlSdkLib
 - [Screen-Cast: Using the Open XML SDK on Linux using Mono](http://openxmldeveloper.org/blog/b/openxmldeveloper/archive/2014/07/03/screen-cast-using-open-xml-sdk-on-linux-using-mono.aspx)
+
+Building with Visual Studio
+===========================
+The Visual Studio project contains a pre-build command line that launches a
+PowerShell script which sets the version string of the AssemblyInfo.cs (in
+roughly the same way as the normal command line build script). To be able
+to execute that pre-build command line, you must also set the execution policy
+as described above. Should you have multiple PowerShell shortcuts, you must
+use the right one for your Visual Studio installation.
