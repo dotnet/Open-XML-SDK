@@ -87,3 +87,14 @@ roughly the same way as the normal command line build script). To be able
 to execute that pre-build command line, you must also set the execution policy
 as described above. Should you have multiple PowerShell shortcuts, you must
 use the right one for your Visual Studio installation.
+
+
+If you get the error "The command "cd C:\Users\Eric\Documents\Open-Xml-Sdk\
+powershell ./SetAssemblyVersionString.ps1" exited with code 1, then you need
+to set your execution policy.  There is a different execution policy for PowerShell
+scripts that are run from Visual Studio.  To set this execution policy:
+
+- Start a COMMAND prompt (not PowerShell console) as Administrator
+- Enter the following command:
+
+C:\windows\system32>c:\windows\syswow64\WindowsPowerShell\v1.0\powershell.exe -command set-executionpolicy unrestricted
