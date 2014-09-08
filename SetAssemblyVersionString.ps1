@@ -40,7 +40,7 @@ function SetAssemblyVersionString
     # Compute new version string.
     $computedVersion = GetVersionString
 
-    if (test-path .\build\version.txt)
+    if ((Test-Path .\src\ofapi\Properties\AssemblyInfo.cs) -and (Test-Path .\build\version.txt))
     {
         # version.txt file exists, so read last-used version string
         $lastVersion = gc .\build\version.txt
@@ -55,9 +55,7 @@ function SetAssemblyVersionString
     {
         # version.txt file does not exist, so write AssemblyInfo.cs
         WriteAssemblyVersionString $computedVersion
-
     }    
-
 }
 
 . SetAssemblyVersionString
