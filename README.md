@@ -1,3 +1,5 @@
+Open XML SDK by Microsoft Open Technologies, Inc. http://msopentech.com
+
 Open-XML-SDK
 ============
 The Open XML SDK provides open-source libraries for working with Open XML
