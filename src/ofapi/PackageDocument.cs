@@ -246,6 +246,84 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
+        /// Creates an editable WordprocessingDocument from a template, opened on
+        /// a MemoryStream with expandable capacity. The template will be attached
+        /// to the WordprocessingDocument.
+        /// </summary>
+        /// <remarks>
+        /// Attaching the template has been chosen as the default behavior because
+        /// this is also what happens when a document is created from a template
+        /// (other than Normal.dotm) using Microsoft Word.
+        /// </remarks>
+        /// <param name="path">The path and file name of the template.</param>
+        /// <returns>The new WordprocessingDocument based on and linked to the template.</returns>
+        public static WordprocessingDocument CreateFromTemplate(string path)
+        {
+            return CreateFromTemplate(path, true);
+        }
+
+        /// <summary>
+        /// Creates an editable WordprocessingDocument from a template, opened on
+        /// a MemoryStream with expandable capacity.
+        /// </summary>
+        /// <remarks>
+        /// This method is provided to offer the choice to not attach the template.
+        /// When templates are attached in Microsoft Word, for example, the absolute
+        /// path will be used in the relationship. These absolute paths are most 
+        /// often user-specific, however, so once documents are shared with other
+        /// users, the relationship gets "broken" anyhow. 
+        /// </remarks>
+        /// <param name="path">The path and file name of the template.</param>
+        /// <param name="isTemplateAttached">True, if the template should be attached to the document.</param>
+        /// <returns>The new WordprocessingDocument based on and linked to the template.</returns>
+        public static WordprocessingDocument CreateFromTemplate(string path, bool isTemplateAttached)
+        {
+            if (path == null)
+                throw new ArgumentNullException("path");
+
+            // Check extensions as the template must have a valid Word Open XML extension.
+            string extension = Path.GetExtension(path);
+            if (extension != ".docx" && extension != ".docm" && extension != ".dotx" && extension != ".dotm")
+                throw new ArgumentException("Illegal template file: " + path, "path");
+
+            using (WordprocessingDocument template = WordprocessingDocument.Open(path, false))
+            {
+                // We've opened the template in read-only mode to let multiple processes
+                // open it without running into problems. Therefore, we now have to
+                // explicitly open the clone on a MemoryStream and in read-write mode.
+                WordprocessingDocument document =
+                    (WordprocessingDocument)template.Clone(new MemoryStream(), true);
+
+                // If the template is a document rather than a template, we are done.
+                if (extension == ".docx" || extension == ".docm")
+                    return document;
+
+                // Otherwise, we'll have to do some more work.
+                // Firstly, we'll change the document type from Template to Document.
+                document.ChangeDocumentType(WordprocessingDocumentType.Document);
+
+                // Secondly, we'll attach the template to our new document if so desired.
+                if (isTemplateAttached)
+                {
+                    // Create a relative or absolute external relationship to the template.
+                    // TODO: Check whether relative URIs are universally supported. They work in Office 2010.
+                    MainDocumentPart mainDocumentPart = document.MainDocumentPart;
+                    DocumentSettingsPart documentSettingsPart = mainDocumentPart.DocumentSettingsPart;
+                    ExternalRelationship relationship = documentSettingsPart.AddExternalRelationship(
+                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/attachedTemplate",
+                        new Uri(path, UriKind.RelativeOrAbsolute));
+                    documentSettingsPart.Settings.Append(
+                        new DocumentFormat.OpenXml.Wordprocessing.AttachedTemplate() { Id = relationship.Id });
+                }
+
+                // We are done, so save and return.
+                // TODO: Check whether it would be safe to return without saving.
+                document.Save();
+                return document;
+            }
+        }
+
+        /// <summary>
         /// Creates a new instance of the WordprocessingDocument class from the specified file.
         /// </summary>
         /// <param name="path">The path and file name of the target WordprocessingDocument.</param>
@@ -1164,6 +1242,45 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
+        /// Creates an editable SpreadsheetDocument from a template, opened on
+        /// a MemoryStream with expandable capacity.
+        /// </summary>
+        /// <param name="path">The path and file name of the template.</param>
+        /// <returns>The new SpreadsheetDocument based on and linked to the template.</returns>
+        public static SpreadsheetDocument CreateFromTemplate(string path)
+        {
+            if (path == null)
+                throw new ArgumentNullException("path");
+
+            // Check extensions as the template must have a valid Word Open XML extension.
+            string extension = Path.GetExtension(path);
+            if (extension != ".xlsx" && extension != ".xlsm" && extension != ".xltx" && extension != ".xltm")
+                throw new ArgumentException("Illegal template file: " + path, "path");
+
+            using (SpreadsheetDocument template = SpreadsheetDocument.Open(path, false))
+            {
+                // We've opened the template in read-only mode to let multiple processes or
+                // threads open it without running into problems. Therefore, we now have to
+                // explicitly open the clone on a MemoryStream and in read-write mode.
+                SpreadsheetDocument document =
+                    (SpreadsheetDocument)template.Clone(new MemoryStream(), true);
+
+                // If the template is a document rather than a template, we are done.
+                if (extension == ".xlsx" || extension == ".xlsm")
+                    return document;
+
+                // Otherwise, we'll have to do some more work.
+                // Firstly, we'll change the document type from Template to Document.
+                document.ChangeDocumentType(SpreadsheetDocumentType.Workbook);
+
+                // We are done, so save and return.
+                // TODO: Check whether it would be safe to return without saving.
+                document.Save();
+                return document;
+            }
+        }
+
+        /// <summary>
         /// Creates a new instance of the SpreadsheetDocument class from the specified file.
         /// </summary>
         /// <param name="path">The path and file name of the target SpreadsheetDocument.</param>
@@ -2072,6 +2189,43 @@ namespace DocumentFormat.OpenXml.Packaging
             return doc;
         }
 
+        /// <summary>
+        /// Creates an editable PresentationDocument from a template, opened on
+        /// a MemoryStream with expandable capacity.
+        /// </summary>
+        /// <param name="path">The path and file name of the template.</param>
+        /// <returns>The new PresentationDocument based on the template.</returns>
+        public static PresentationDocument CreateFromTemplate(string path)
+        {
+            if (path == null)
+                throw new ArgumentNullException("path");
+
+            // Check extensions as the template must have a valid Word Open XML extension.
+            string extension = Path.GetExtension(path);
+            if (extension != ".pptx" && extension != ".pptm" && extension != ".potx" && extension != ".potm")
+                throw new ArgumentException("Illegal template file: " + path, "path");
+
+            using (PresentationDocument template = PresentationDocument.Open(path, false))
+            {
+                // We've opened the template in read-only mode to let multiple processes or
+                // threads open it without running into problems. Therefore, we now have to
+                // explicitly open the clone on a MemoryStream and in read-write mode.
+                PresentationDocument document =
+                    (PresentationDocument)template.Clone(new MemoryStream(), true);
+
+                // If the template is a document rather than a template, we are done.
+                if (extension == ".xlsx" || extension == ".xlsm")
+                    return document;
+
+                // Otherwise, we'll have to do some more work.
+                document.ChangeDocumentType(PresentationDocumentType.Presentation);
+
+                // We are done, so save and return.
+                // TODO: Check whether it would be safe to return without saving.
+                document.Save();
+                return document;
+            }
+        }
 
         /// <summary>
         /// Creates a new instance of the PresentationDocument class from the specified file.
