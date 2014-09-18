@@ -289,10 +289,8 @@ namespace DocumentFormat.OpenXml.Packaging
             using (WordprocessingDocument template = WordprocessingDocument.Open(path, false))
             {
                 // We've opened the template in read-only mode to let multiple processes
-                // open it without running into problems. Therefore, we now have to
-                // explicitly open the clone on a MemoryStream and in read-write mode.
-                WordprocessingDocument document =
-                    (WordprocessingDocument)template.Clone(new MemoryStream(), true);
+                // open it without running into problems.
+                WordprocessingDocument document = (WordprocessingDocument)template.Clone();
 
                 // If the template is a document rather than a template, we are done.
                 if (extension == ".docx" || extension == ".docm")
@@ -1260,10 +1258,8 @@ namespace DocumentFormat.OpenXml.Packaging
             using (SpreadsheetDocument template = SpreadsheetDocument.Open(path, false))
             {
                 // We've opened the template in read-only mode to let multiple processes or
-                // threads open it without running into problems. Therefore, we now have to
-                // explicitly open the clone on a MemoryStream and in read-write mode.
-                SpreadsheetDocument document =
-                    (SpreadsheetDocument)template.Clone(new MemoryStream(), true);
+                // threads open it without running into problems.
+                SpreadsheetDocument document = (SpreadsheetDocument)template.Clone();
 
                 // If the template is a document rather than a template, we are done.
                 if (extension == ".xlsx" || extension == ".xlsm")
@@ -2208,10 +2204,8 @@ namespace DocumentFormat.OpenXml.Packaging
             using (PresentationDocument template = PresentationDocument.Open(path, false))
             {
                 // We've opened the template in read-only mode to let multiple processes or
-                // threads open it without running into problems. Therefore, we now have to
-                // explicitly open the clone on a MemoryStream and in read-write mode.
-                PresentationDocument document =
-                    (PresentationDocument)template.Clone(new MemoryStream(), true);
+                // threads open it without running into problems.
+                PresentationDocument document = (PresentationDocument)template.Clone();
 
                 // If the template is a document rather than a template, we are done.
                 if (extension == ".xlsx" || extension == ".xlsm")
