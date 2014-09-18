@@ -29,7 +29,7 @@ function GetVersionString
 function WriteAssemblyVersionString($versionString)
 {
     # Produce new AssemblyInfo.cs using version string
-    gc .\src\ofapi\Properties\AssemblyInfo.cs.source | % { $_ -replace "2.0.3302.0", "$versionString" } > .\src\ofapi\Properties\AssemblyInfo.cs
+    gc .\src\ofapi\Properties\AssemblyInfo.cs.source | % { $_ -replace "2.0.3302.0", "$versionString" } | sc -Encoding UTF8 .\src\ofapi\Properties\AssemblyInfo.cs
 
     # Remember last used version string
     sc .\build\version.txt $versionString
