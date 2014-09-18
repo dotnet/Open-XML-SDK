@@ -1564,13 +1564,14 @@ namespace DocumentFormat.OpenXml.Packaging
         #region Default clone method
 
         /// <summary>
-        /// Creates a clone of this OpenXml package, opened on a <see cref="MemoryStream"/>
-        /// with expandable capacity.
+        /// Creates an editable clone of this OpenXml package, opened on a 
+        /// <see cref="MemoryStream"/> with expandable capacity and using
+        /// default OpenSettings.
         /// </summary>
         /// <returns>The cloned OpenXml package.</returns>
         public OpenXmlPackage Clone()
         {
-            return Clone(new MemoryStream(), FileOpenAccess == FileAccess.ReadWrite, OpenSettings);
+            return Clone(new MemoryStream(), true, new OpenSettings());
         }
 
         #endregion Default clone method
