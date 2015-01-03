@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using System.Xml;
+using System.Xml.Linq;
 using System.Globalization;
 using System.Diagnostics;
 using DocumentFormat.OpenXml;
@@ -485,6 +486,17 @@ namespace DocumentFormat.OpenXml
             get
             {
                 return new XmlQualifiedName(this.LocalName, this.NamespaceUri);
+            }
+        }
+
+        /// <summary>
+        /// Gets the qualified name of the current element.
+        /// </summary>
+        public virtual XName XName
+        {
+            get
+            {
+                return XName.Get(this.LocalName, this.NamespaceUri);
             }
         }
         

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Xml;
+using System.Xml.Linq;
 
 namespace DocumentFormat.OpenXml
 {
@@ -113,6 +114,17 @@ namespace DocumentFormat.OpenXml
             get
             {
                 return new XmlQualifiedName(this._tagName, this._namespaceUri);
+            }
+        }
+
+        /// <summary>
+        /// Gets the qualified name of the current attribute.
+        /// </summary>
+        public XName XName
+        {
+            get
+            {
+                return XName.Get(this._tagName, this._namespaceUri);
             }
         }
 
