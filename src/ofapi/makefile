@@ -49,7 +49,6 @@ FILES_SRC=\
 	$(OXFRAMEWORKDIR)\OpenXmlLeafElement.cs \
 	$(OXFRAMEWORKDIR)\OpenXmlLeafTextElement.cs \
 	$(OXFRAMEWORKDIR)\OpenXmlNonElementNode.cs \
-	$(OXFRAMEWORKDIR)\OpenXmlObsolete.cs \
 	$(OXFRAMEWORKDIR)\OpenXmlPackage.cs \
 	$(OXFRAMEWORKDIR)\OpenXmlPartRootElement.cs \
 	$(OXFRAMEWORKDIR)\OpenXmlReader.cs \
