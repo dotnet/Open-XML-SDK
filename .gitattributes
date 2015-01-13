@@ -21,12 +21,16 @@ makefile*  text
 *.txt_AddInFactory text
 *.txt_AddOutofFactory text
 *.source  text
+# .def is for makefile.def
+*.def     text
+*.gitattributes  text
+*.gitignore  text
 
 # Images should be treated as binary
 # (binary is a macro for -text -diff)
 *.png     binary
-*.jepg    binary
-
+*.jpeg    binary
+*.bin     binary
 *.sdf     binary
 
 ###############################################################################
