@@ -53,7 +53,7 @@ function Build
 
     # (Build tools need the DEBUG condition defined for both Debug/Release. Don't remove the nmake option "/E VDEBUG=1".)
 
-    gc .\src\ofapi\Properties\AssemblyInfo.cs.source | % { $_ -replace "2.0.3302.0", "$paramVersion" } > .\src\ofapi\Properties\AssemblyInfo.cs
+    gc .\src\ofapi\Properties\AssemblyInfo.cs.source | % { $_ -replace "2.0.3302.0", "$paramVersion" } | Set-Content .\src\ofapi\Properties\AssemblyInfo.cs -Encoding UTF8
 
     # ==================================== Build Open XML SDK ====================================
     "Building Open XML SDK"
