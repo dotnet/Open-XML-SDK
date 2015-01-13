@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information. -->
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddedPartIsNotAllowed" xml:space="preserve">
+    <value>The part cannot be added here.</value>
+  </data>
+  <data name="CannotChangeDocumentType" xml:space="preserve">
+    <value>Cannot change the document type.</value>
+  </data>
+  <data name="CannotChangeDocumentTypeSerious" xml:space="preserve">
+    <value>Cannot change the document type. The document may be corrupt.</value>
+  </data>
+  <data name="CannotFindAttribute" xml:space="preserve">
+    <value>The element does not allow the specified attribute.</value>
+  </data>
+  <data name="CannotLoadRootElement" xml:space="preserve">
+    <value>Cannot load the root element from the part. The part contains invalid data.</value>
+  </data>
+  <data name="CannotReloadDomTreeWithoutAssociatedPart" xml:space="preserve">
+    <value>Cannot reload the DOM tree since this element is not associated with an OpenXmlPart.</value>
+  </data>
+  <data name="CannotSaveDomTreeWithoutAssociatedPart" xml:space="preserve">
+    <value>Cannot save DOM tree since this element is not associated with an OpenXmlPart.</value>
+  </data>
+  <data name="CannotValidateAcbElement" xml:space="preserve">
+    <value>The OpenXmlValidator cannot validate against AlternateContent, AlternateContentChoice and AlternateContentFallback.</value>
+  </data>
+  <data name="CannotValidateMiscNode" xml:space="preserve">
+    <value>The OpenXmlValidator cannot validate against OpenXmlMiscNode.</value>
+  </data>
+  <data name="CannotValidateUnknownElement" xml:space="preserve">
+    <value>The OpenXmlValidator cannot validate against OpenXmlUnknownElement.</value>
+  </data>
+  <data name="CycleReference" xml:space="preserve">
+    <value>A circular reference has been detected.</value>
+  </data>
+  <data name="DocumentTooBig" xml:space="preserve">
+    <value>The document has exceeded the size limit. Its type cannot be changed.</value>
+  </data>
+  <data name="ElementIsNotChild" xml:space="preserve">
+    <value>The specified oldChild is not a child of this element.</value>
+  </data>
+  <data name="ElementIsNotInOffice2007" xml:space="preserve">
+    <value>The validator is set to validate content based on Microsoft Office 2007 rules. The passed in element is not defined in Microsoft Office 2007.</value>
+  </data>
+  <data name="ElementIsNotInOffice2010" xml:space="preserve">
+    <value>The validator is set to validate content based on Microsoft Office 2010 rules. The passed in element is not defined in Microsoft Office 2010.</value>
+  </data>
+  <data name="ElementIsNotInOffice2013" xml:space="preserve">
+    <value>The validator is set to validate content based on Microsoft Office 2013 rules. The passed in element is not defined in Microsoft Office 2013.</value>
+  </data>
+  <data name="ElementIsPartOfTree" xml:space="preserve">
+    <value>Cannot insert the OpenXmlElement "newChild" because it is part of a tree. </value>
+  </data>
+  <data name="EmptyCollection" xml:space="preserve">
+    <value>Empty collection.</value>
+  </data>
+  <data name="ErrorContentType" xml:space="preserve">
+    <value>The contentType parameter has incorrect value.</value>
+  </data>
+  <data name="ExtendedPartIsOpenXmlPart" xml:space="preserve">
+    <value>An ExtendedPart was encountered with a relationship type that starts with "http://schemas.openxmlformats.org". Expected a defined part instead based on the relationship type.</value>
+  </data>
+  <data name="ExtendedPartNotAllowed" xml:space="preserve">
+    <value>ExtendedPart must be added by AddExtendedPart( ).</value>
+  </data>
+  <data name="ExternalRelationshipIsNotReferenced" xml:space="preserve">
+    <value>The specified ExternalRelationship is not referenced by this part.</value>
+  </data>
+  <data name="FileFormatNotSupported" xml:space="preserve">
+    <value>The specified FileFormatVersions parameter has an invalid value: {0}</value>
+  </data>
+  <data name="Fmt_PartRootIsInvalid" xml:space="preserve">
+    <value>The root XML element "{0}" in the part is incorrect. The expected root XML element is: "{1}".</value>
+  </data>
+  <data name="HyperlinkRelationshipIsNotReferenced" xml:space="preserve">
+    <value>The specified ExternalRelationship is not referenced by this part.</value>
+  </data>
+  <data name="ImplicitConversionExceptionOnNull" xml:space="preserve">
+    <value>Error in implicit conversion. Cannot convert null object.</value>
+  </data>
+  <data name="InnerXmlCannotBeSet" xml:space="preserve">
+    <value>This OpenXmlElement's InnerXml cannot be set.</value>
+  </data>
+  <data name="InvalidContentTypePart" xml:space="preserve">
+    <value>The content type of the part is invalid. The expected content type is: {0}.</value>
+  </data>
+  <data name="InvalidEnumValue" xml:space="preserve">
+    <value>The specified value is not valid according to the specified enum type.</value>
+  </data>
+  <data name="InvalidMainPartContentType" xml:space="preserve">
+    <value>Cannot set the MainPartContentType property to this value because it is not valid for this type of document.</value>
+  </data>
+  <data name="InvalidMCMode" xml:space="preserve">
+    <value>The specified MarkupCompatibilityProcessSettings.TargetFileFormatVersions is invalid to process the extensibility markup.</value>
+  </data>
+  <data name="InvalidOuterXml" xml:space="preserve">
+    <value>The XML has invalid content and cannot be constructed as an element.</value>
+  </data>
+  <data name="InvalidOuterXmlForMiscNode" xml:space="preserve">
+    <value>The XML has invalid content and cannot be constructed as an element.</value>
+  </data>
+  <data name="InvalidPackageType" xml:space="preserve">
+    <value>The specified package is not valid.</value>
+  </data>
+  <data name="StrictReadOnly" xml:space="preserve">
+    <value>ISO 29500 Strict formatted document can't be opened while edit operation is enabled.</value>
+  </data>
+  <data name="InvalidPartContentType" xml:space="preserve">
+    <value>The document cannot be opened because there is an invalid part with an unexpected content type. 
+[Part Uri={0}], 
+[Content Type={1}], 
+[Expected Content Type={2}].</value>
+  </data>
+  <data name="InvalidWriteStringCall" xml:space="preserve">
+    <value>Text string can only be written out in OpenXmlLeafTextElement.</value>
+  </data>
+  <data name="InvalidXmlIDStringException" xml:space="preserve">
+    <value>An invalid XML ID string</value>
+  </data>
+  <data name="LeafElementInnerXmlCannotBeSet" xml:space="preserve">
+    <value>This OpenXmlLeafElement's InnerXml can only be set to null or to an empty string.</value>
+  </data>
+  <data name="LocalNameIsNull" xml:space="preserve">
+    <value>LocalName is null or empty.</value>
+  </data>
+  <data name="MainPartIsDifferent" xml:space="preserve">
+    <value>The part cannot be added to this package because its content type is not allowed in this type of document.</value>
+  </data>
+  <data name="MultipleRelationshipsToSamePart" xml:space="preserve">
+    <value>There are more than one relationship references that target the specified part.</value>
+  </data>
+  <data name="NoMainPart" xml:space="preserve">
+    <value>The specified package is invalid. The main part is missing.</value>
+  </data>
+  <data name="NonCompositeNoChild" xml:space="preserve">
+    <value>Non-composite elements do not have child elements.</value>
+  </data>
+  <data name="NonImplemented" xml:space="preserve">
+    <value>The method or operation has not been implemented.</value>
+  </data>
+  <data name="NoSpecifiedExternalRelationship" xml:space="preserve">
+    <value>No external relationship with the specified ID was found.</value>
+  </data>
+  <data name="NoSpecifiedHyperlinkRelationship" xml:space="preserve">
+    <value>No hyperlink relationship with the specified ID was found.</value>
+  </data>
+  <data name="NsNotUnderStand" xml:space="preserve">
+    <value>Current Markup Compatibility mode does not understand namespace prefix "{0}".</value>
+  </data>
+  <data name="OnlyOnePartAllowed" xml:space="preserve">
+    <value>Only one instance of the type is allowed for this parent.</value>
+  </data>
+  <data name="PackageAccessModeIsReadonly" xml:space="preserve">
+    <value>This operation requires that the document be opened with ReadWrite (or Write) access.</value>
+  </data>
+  <data name="PackageMustCanBeRead" xml:space="preserve">
+    <value>This operation requires that the package be opened with Read access.</value>
+  </data>
+  <data name="PackageRelatedArgumentNullException" xml:space="preserve">
+    <value>Arguments openXmlPackage and its parent cannot be null at same time.</value>
+  </data>
+  <data name="ParentIsNull" xml:space="preserve">
+    <value>The parent of this element is null.</value>
+  </data>
+  <data name="PartExistsWithDifferentRelationshipId" xml:space="preserve">
+    <value>The specified part is already referenced as a target part by a relationship with a different ID.</value>
+  </data>
+  <data name="PartIsDestroyed" xml:space="preserve">
+    <value>The part has been destroyed.</value>
+  </data>
+  <data name="PartIsEmpty" xml:space="preserve">
+    <value>The XML content is empty.</value>
+  </data>
+  <data name="PartIsNotAllowed" xml:space="preserve">
+    <value>The specified part is not allowed with this parent.</value>
+  </data>
+  <data name="PartIsNotInOffice2007" xml:space="preserve">
+    <value>The validator is set to validate content based on Microsoft Office 2007 rules. The passed in part is not defined in Microsoft Office 2007.</value>
+  </data>
+  <data name="PartIsNotInOffice2010" xml:space="preserve">
+    <value>The validator is set to validate content based on Microsoft Office 2010 rules. The passed in part is not defined in Microsoft Office 2010.</value>
+  </data>
+  <data name="PartIsNotInOffice2013" xml:space="preserve">
+    <value>The validator is set to validate content based on Microsoft Office 2013 rules. The passed in part is not defined in Microsoft Office 2013.</value>
+  </data>
+  <data name="PartNotInSamePackage" xml:space="preserve">
+    <value>A relationship can only be created between two parts in a package.</value>
+  </data>
+  <data name="PartRootAlreadyHasAssociation" xml:space="preserve">
+    <value>Cannot set the given root element to this part. The given part root element has already been associated with another OpenXmlPart.</value>
+  </data>
+  <data name="PartUnknown" xml:space="preserve">
+    <value>The XML content is unknown. Cannot create an OpenXmlReader on that content.</value>
+  </data>
+  <data name="PropertyMutualExclusive" xml:space="preserve">
+    <value>The {0} property cannot be set when the {1} property is not null.</value>
+  </data>
+  <data name="ReaderInEndState" xml:space="preserve">
+    <value>The reader is now positioned at the end element tag.</value>
+  </data>
+  <data name="ReaderInEofState" xml:space="preserve">
+    <value>The reader is now positioned at EOF.</value>
+  </data>
+  <data name="ReaderInNullState" xml:space="preserve">
+    <value>The reader is now positioned before the first element. Call OpenXmlReader.Read() before this operation.</value>
+  </data>
+  <data name="RelationshipIdConflict" xml:space="preserve">
+    <value>Id conflicts with the Id of an existing relationship.</value>
+  </data>
+  <data name="RequiredPartDoNotExist" xml:space="preserve">
+    <value>A required part is missing. The class name is stored in the PartClassName property.</value>
+  </data>
+  <data name="SamePartWithDifferentRelationshipType" xml:space="preserve">
+    <value>A shared part is referenced by multiple source parts with a different relationship type.</value>
+  </data>
+  <data name="StreamAccessModeShouldBeWrite" xml:space="preserve">
+    <value>The stream was not opened for writing.</value>
+  </data>
+  <data name="StringArgumentEmptyException" xml:space="preserve">
+    <value>The string argument cannot be empty.</value>
+  </data>
+  <data name="StringIsEmpty" xml:space="preserve">
+    <value>The specified string is empty.</value>
+  </data>
+  <data name="TextIsInvalidEnumValue" xml:space="preserve">
+    <value>The text value is not a valid enumeration value.</value>
+  </data>
+  <data name="TextIsInvalidOnOffValue" xml:space="preserve">
+    <value>The text value is invalid. It can be only 'true', 'false', 'on', 'off', '0', '1'.</value>
+  </data>
+  <data name="TextIsInvalidTrueFalseBlankValue" xml:space="preserve">
+    <value>The text value is invalid. It can be only 'true', 'false', 't', 'f', ''.</value>
+  </data>
+  <data name="TextIsInvalidTrueFalseValue" xml:space="preserve">
+    <value>The text value is invalid. It can be only 'true', 'false', 't', 'f'.</value>
+  </data>
+  <data name="UnknowMCContent" xml:space="preserve">
+    <value>There is invalid extensibility markup in "{0}".</value>
+  </data>
+  <data name="UnknownPackage" xml:space="preserve">
+    <value>The specified package is unknown.</value>
+  </data>
+  <data name="UseAddHyperlinkRelationship" xml:space="preserve">
+    <value>Do not add hyperlink relationships through the AddExternalRelationship() method. Use AddHyperlinkRelationship() instead.</value>
+  </data>
+  <data name="ValidationException" xml:space="preserve">
+    <value>The OpenXmlPackage.Validate method found an error in the document.</value>
+  </data>
+  <data name="NoSpecifiedReferenceRelationship" xml:space="preserve">
+    <value>No ReferenceRelationship with the specified ID was found.</value>
+  </data>
+  <data name="ReferenceRelationshipIsNotReferenced" xml:space="preserve">
+    <value>The specified ReferenceRelationship is not referenced by this part.</value>
+  </data>
+  <data name="DataPartIsInUse" xml:space="preserve">
+    <value>The specified DataPart is referenced by other parts.</value>
+  </data>
+  <data name="ForeignDataPart" xml:space="preserve">
+    <value>The specified DataPart is not in this document.</value>
+  </data>
+  <data name="ForeignOpenXmlPart" xml:space="preserve">
+    <value>The specified OpenXmlPart is not referenced by this part.</value>
+  </data>
+  <data name="MediaDataPartShouldNotReferenceOtherParts" xml:space="preserve">
+    <value>An Audio / Video part shall not have implicit or explicit relationships to other parts defined by Open XML Standard.</value>
+  </data>
+  <data name="DataPartReferenceIsNotAllowed" xml:space="preserve">
+    <value>The specified DataPartReferenceRelationship is not allowed with this parent.</value>
+  </data>
+  <data name="ForeignMediaDataPart" xml:space="preserve">
+    <value>The specified MediaDataPart is not in this document.</value>
+  </data>
+  <data name="CannotSetAttribute" xml:space="preserve">
+    <value>Cannot set XML namespace declaration here. Use AddNamespaceDeclaration method instead.</value>
+  </data>
+  <data name="DuplicatedPrefix" xml:space="preserve">
+    <value>The prefix "{0}" is already defined in current node.</value>
+  </data>
+  <data name="PartNotInVersion" xml:space="preserve">
+    <value>The OpenXmlPart is not a valid part in the specified FileFormat version.</value>
+  </data>
+  <data name="DocumentFileFormatVersionMismatch" xml:space="preserve">
+    <value>You should not validate document preprocessed based on FileFormatVersions.{0} against FileFormatVersions.{1} constraints. The preprocessing file format version is set in OpenSettings. Also check the file format version setting in the OpenXmlValidator.</value>
+  </data>
+  <data name="InvalidUriFormat" xml:space="preserve">
+    <value>Invalid Hyperlink: Malformed URI is embedded as a hyperlink in the document.</value>
+  </data>
+</root>
