@@ -12757,6 +12757,7 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
 tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags", new PartConstraintRule("UserDefinedTagsPart", UserDefinedTagsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
 tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide", new PartConstraintRule("SlidePart", SlidePart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
 tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", new PartConstraintRule("EmbeddedControlPersistencePart", null, false, true,(FileFormatVersions)7 ));
+tempData.Add("http://schemas.microsoft.com/office/2011/relationships/webextension", new PartConstraintRule("WebExtensionPart", WebExtensionPart.ContentTypeConstant, false, true,(FileFormatVersions)4 ));
 
             _partConstraint = tempData;
         }
@@ -12864,6 +12865,9 @@ tempData.Add("http://schemas.microsoft.com/office/2007/relationships/media", new
             
         case EmbeddedControlPersistencePart.RelationshipTypeConstant:
                     return new EmbeddedControlPersistencePart();
+            
+        case WebExtensionPart.RelationshipTypeConstant:
+                    return new WebExtensionPart();        
             
 
         }
@@ -13408,6 +13412,17 @@ tempData.Add("http://schemas.microsoft.com/office/2007/relationships/media", new
         {
             get{
                     return this.GetPartsOfType<EmbeddedControlPersistencePart>();
+                }
+        }
+                
+        /// <summary>
+        /// Gets the WebExtensionParts of the SlidePart., only available in Office2013
+        /// </summary>
+[OfficeAvailability(FileFormatVersions.Office2013)]
+        public System.Collections.Generic.IEnumerable<WebExtensionPart> WebExtensionParts
+        {
+            get{
+                    return this.GetPartsOfType<WebExtensionPart>();
                 }
         }
                 
@@ -22512,14 +22527,14 @@ case EmbeddedControlPersistencePart.RelationshipTypeConstant:
 case SlideSyncDataPart.RelationshipTypeConstant:
 	openXmlPart = new SlideSyncDataPart();
 	return;
+case WebExtensionPart.RelationshipTypeConstant:
+	openXmlPart = new WebExtensionPart();
+	return;
 case WorksheetPart.RelationshipTypeConstant:
 	openXmlPart = new WorksheetPart();
 	return;
 case DrawingsPart.RelationshipTypeConstant:
 	openXmlPart = new DrawingsPart();
-	return;
-case WebExtensionPart.RelationshipTypeConstant:
-	openXmlPart = new WebExtensionPart();
 	return;
 case PivotTablePart.RelationshipTypeConstant:
 	openXmlPart = new PivotTablePart();
@@ -22774,6 +22789,9 @@ case EmbeddedControlPersistencePart.RelationshipTypeConstant:
 case SlideSyncDataPart.RelationshipTypeConstant:
 	openXmlPart = new SlideSyncDataPart();
 	return;
+case WebExtensionPart.RelationshipTypeConstant:
+	openXmlPart = new WebExtensionPart();
+	return;
 case WorksheetPart.RelationshipTypeConstant:
 	openXmlPart = new WorksheetPart();
 	return;
@@ -22812,9 +22830,6 @@ case SlicersPart.RelationshipTypeConstant:
 	return;
 case TimeLinePart.RelationshipTypeConstant:
 	openXmlPart = new TimeLinePart();
-	return;
-case WebExtensionPart.RelationshipTypeConstant:
-	openXmlPart = new WebExtensionPart();
 	return;
 case DialogsheetPart.RelationshipTypeConstant:
 	openXmlPart = new DialogsheetPart();
