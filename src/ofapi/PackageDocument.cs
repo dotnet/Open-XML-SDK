@@ -1,4 +1,5 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+// Copyright 2014 Thomas Barnekow (cloning)
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -705,6 +706,77 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get { return GetSubPartOfType<WebExTaskpanesPart>(); }
         }
+
+        #region cloning
+
+        #region Stream-based cloning
+
+        /// <summary>
+        /// Creates a new OpenXmlPackage on the given stream.
+        /// </summary>
+        /// <param name="stream">The stream on which the concrete OpenXml package will be created.</param>
+        /// <returns>A new instance of OpenXmlPackage.</returns>
+        protected override OpenXmlPackage CreateClone(Stream stream)
+        {
+            return WordprocessingDocument.Create(stream, DocumentType, OpenSettings.AutoSave);
+        }
+
+        /// <summary>
+        /// Opens the cloned OpenXml package on the given stream.
+        /// </summary>
+        /// <param name="stream">The stream on which the cloned OpenXml package will be opened.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
+        /// <param name="openSettings">The advanced settings for opening a document.</param>
+        /// <returns>A new instance of OpenXmlPackage.</returns>
+        protected override OpenXmlPackage OpenClone(Stream stream, bool isEditable, OpenSettings openSettings)
+        {
+            return WordprocessingDocument.Open(stream, isEditable, openSettings);
+        }
+
+        #endregion Stream-based cloning
+
+        #region File-based cloning
+
+        /// <summary>
+        /// Creates a new OpenXml package on the given file.
+        /// </summary>
+        /// <param name="path">The path and file name of the target OpenXml package.</param>
+        /// <returns>A new instance of OpenXmlPackage.</returns>
+        protected override OpenXmlPackage CreateClone(string path)
+        {
+            return WordprocessingDocument.Create(path, DocumentType, OpenSettings.AutoSave);
+        }
+
+        /// <summary>
+        /// Opens the cloned OpenXml package on the given file.
+        /// </summary>
+        /// <param name="path">The path and file name of the target OpenXml package.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
+        /// <param name="openSettings">The advanced settings for opening a document.</param>
+        /// <returns>A new instance of OpenXmlPackage.</returns>
+        protected override OpenXmlPackage OpenClone(string path, bool isEditable, OpenSettings openSettings)
+        {
+            return WordprocessingDocument.Open(path, isEditable, openSettings);
+        }
+
+        #endregion File-based cloning
+
+        #region Package-based cloning
+
+        /// <summary>
+        /// Creates a new instance of OpenXmlPackage on the specified instance
+        /// of Package.
+        /// </summary>
+        /// <param name="package">The specified instance of Package.</param>
+        /// <returns>A new instance of OpenXmlPackage.</returns>
+        protected override OpenXmlPackage CreateClone(Package package)
+        {
+            return WordprocessingDocument.Create(package, DocumentType, OpenSettings.AutoSave);
+        }
+
+        #endregion Package-based cloning
+
+        #endregion cloning
     }
     
     /// <summary>
@@ -1400,6 +1472,77 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get { return GetSubPartOfType<WebExTaskpanesPart>(); }
         }
+
+        #region cloning
+
+        #region Stream-based cloning
+
+        /// <summary>
+        /// Creates a new OpenXmlPackage on the given stream.
+        /// </summary>
+        /// <param name="stream">The stream on which the concrete OpenXml package will be created.</param>
+        /// <returns>A new instance of OpenXmlPackage.</returns>
+        protected override OpenXmlPackage CreateClone(Stream stream)
+        {
+            return SpreadsheetDocument.Create(stream, DocumentType, OpenSettings.AutoSave);
+        }
+
+        /// <summary>
+        /// Opens the cloned OpenXml package on the given stream.
+        /// </summary>
+        /// <param name="stream">The stream on which the cloned OpenXml package will be opened.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
+        /// <param name="openSettings">The advanced settings for opening a document.</param>
+        /// <returns>A new instance of OpenXmlPackage.</returns>
+        protected override OpenXmlPackage OpenClone(Stream stream, bool isEditable, OpenSettings openSettings)
+        {
+            return SpreadsheetDocument.Open(stream, isEditable, openSettings);
+        }
+
+        #endregion Stream-based cloning
+
+        #region File-based cloning
+
+        /// <summary>
+        /// Creates a new OpenXml package on the given file.
+        /// </summary>
+        /// <param name="path">The path and file name of the target OpenXml package.</param>
+        /// <returns>A new instance of OpenXmlPackage.</returns>
+        protected override OpenXmlPackage CreateClone(string path)
+        {
+            return SpreadsheetDocument.Create(path, DocumentType, OpenSettings.AutoSave);
+        }
+
+        /// <summary>
+        /// Opens the cloned OpenXml package on the given file.
+        /// </summary>
+        /// <param name="path">The path and file name of the target OpenXml package.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
+        /// <param name="openSettings">The advanced settings for opening a document.</param>
+        /// <returns>A new instance of OpenXmlPackage.</returns>
+        protected override OpenXmlPackage OpenClone(string path, bool isEditable, OpenSettings openSettings)
+        {
+            return SpreadsheetDocument.Open(path, isEditable, openSettings);
+        }
+
+        #endregion File-based cloning
+
+        #region Package-based cloning
+
+        /// <summary>
+        /// Creates a new instance of OpenXmlPackage on the specified instance
+        /// of Package.
+        /// </summary>
+        /// <param name="package">The specified instance of Package.</param>
+        /// <returns>A new instance of OpenXmlPackage.</returns>
+        protected override OpenXmlPackage CreateClone(Package package)
+        {
+            return SpreadsheetDocument.Create(package, DocumentType, OpenSettings.AutoSave);
+        }
+
+        #endregion Package-based cloning
+
+        #endregion cloning
     }
     
     /// <summary>
@@ -2103,5 +2246,76 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get { return GetSubPartOfType<WebExTaskpanesPart>(); }
         }
+
+        #region cloning
+
+        #region Stream-based cloning
+
+        /// <summary>
+        /// Creates a new OpenXmlPackage on the given stream.
+        /// </summary>
+        /// <param name="stream">The stream on which the concrete OpenXml package will be created.</param>
+        /// <returns>A new instance of OpenXmlPackage.</returns>
+        protected override OpenXmlPackage CreateClone(Stream stream)
+        {
+            return PresentationDocument.Create(stream, DocumentType, OpenSettings.AutoSave);
+        }
+
+        /// <summary>
+        /// Opens the cloned OpenXml package on the given stream.
+        /// </summary>
+        /// <param name="stream">The stream on which the cloned OpenXml package will be opened.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
+        /// <param name="openSettings">The advanced settings for opening a document.</param>
+        /// <returns>A new instance of OpenXmlPackage.</returns>
+        protected override OpenXmlPackage OpenClone(Stream stream, bool isEditable, OpenSettings openSettings)
+        {
+            return PresentationDocument.Open(stream, isEditable, openSettings);
+        }
+
+        #endregion Stream-based cloning
+
+        #region File-based cloning
+
+        /// <summary>
+        /// Creates a new OpenXml package on the given file.
+        /// </summary>
+        /// <param name="path">The path and file name of the target OpenXml package.</param>
+        /// <returns>A new instance of OpenXmlPackage.</returns>
+        protected override OpenXmlPackage CreateClone(string path)
+        {
+            return PresentationDocument.Create(path, DocumentType, OpenSettings.AutoSave);
+        }
+
+        /// <summary>
+        /// Opens the cloned OpenXml package on the given file.
+        /// </summary>
+        /// <param name="path">The path and file name of the target OpenXml package.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
+        /// <param name="openSettings">The advanced settings for opening a document.</param>
+        /// <returns>A new instance of OpenXmlPackage.</returns>
+        protected override OpenXmlPackage OpenClone(string path, bool isEditable, OpenSettings openSettings)
+        {
+            return PresentationDocument.Open(path, isEditable, openSettings);
+        }
+
+        #endregion File-based cloning
+
+        #region Package-based cloning
+
+        /// <summary>
+        /// Creates a new instance of OpenXmlPackage on the specified instance
+        /// of Package.
+        /// </summary>
+        /// <param name="package">The specified instance of Package.</param>
+        /// <returns>A new instance of OpenXmlPackage.</returns>
+        protected override OpenXmlPackage CreateClone(Package package)
+        {
+            return PresentationDocument.Create(package, DocumentType, OpenSettings.AutoSave);
+        }
+
+        #endregion Package-based cloning
+
+        #endregion cloning
     }
 }
