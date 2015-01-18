@@ -46,11 +46,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.XML" />
-<<<<<<< HEAD
-=======
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="WindowsBase" />
->>>>>>> 618bce0... Implemented Flat OPC conversion
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\Framework\AlternateContent.cs" />
