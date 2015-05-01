@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -10,8 +10,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DocumentFormat.OpenXml</RootNamespace>
     <AssemblyName>DocumentFormat.OpenXml</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -25,6 +26,7 @@
     <DocumentationFile>build\OpenXmlSdkLib\Debug\DocumentFormat.OpenXml.XML</DocumentationFile>
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
     <FileAlignment>512</FileAlignment>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -35,13 +37,14 @@
     <WarningLevel>4</WarningLevel>
     <NoWarn>3003</NoWarn>
     <DocumentationFile>build\OpenXmlSdkLib\Release\DocumentFormat.OpenXml.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.XML" />
-    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\Framework\AlternateContent.cs" />
@@ -217,6 +220,33 @@
     <Compile Include="src\ofapi\Validation\WordprocessingDocumentValidator.cs" />
     <Compile Include="src\ofapi\Validation\XmlPath.cs" />
     <Compile Include="src\ofapi\Wordprocessing.cs" />
+    <Compile Include="SystemIOPackaging\CompressionOption.cs" />
+    <Compile Include="SystemIOPackaging\ContentType.cs" />
+    <Compile Include="SystemIOPackaging\EncryptionOption.cs" />
+    <Compile Include="SystemIOPackaging\FileFormatException.cs" />
+    <Compile Include="SystemIOPackaging\IgnoreFlushAndCloseStream.cs" />
+    <Compile Include="SystemIOPackaging\InternalRelationshipCollection.cs" />
+    <Compile Include="SystemIOPackaging\Invariant.cs" />
+    <Compile Include="SystemIOPackaging\Package.cs" />
+    <Compile Include="SystemIOPackaging\PackagePart.cs" />
+    <Compile Include="SystemIOPackaging\PackagePartCollection.cs" />
+    <Compile Include="SystemIOPackaging\PackageProperties.cs" />
+    <Compile Include="SystemIOPackaging\PackageRelationship.cs" />
+    <Compile Include="SystemIOPackaging\PackageRelationshipCollection.cs" />
+    <Compile Include="SystemIOPackaging\PackageRelationshipSelector.cs" />
+    <Compile Include="SystemIOPackaging\PackageRelationshipSelectorType.cs" />
+    <Compile Include="SystemIOPackaging\PackageXmlEnum.cs" />
+    <Compile Include="SystemIOPackaging\PackageXmlStringTable.cs" />
+    <Compile Include="SystemIOPackaging\PackagingUtilities.cs" />
+    <Compile Include="SystemIOPackaging\PackUriHelper.cs" />
+    <Compile Include="SystemIOPackaging\PartBasedPackageProperties.cs" />
+    <Compile Include="SystemIOPackaging\SR.cs" />
+    <Compile Include="SystemIOPackaging\SRID.cs" />
+    <Compile Include="SystemIOPackaging\TargetMode.cs" />
+    <Compile Include="SystemIOPackaging\XmlCompatibilityReader.cs" />
+    <Compile Include="SystemIOPackaging\XmlWrappingReader.cs" />
+    <Compile Include="SystemIOPackaging\ZipPackage.cs" />
+    <Compile Include="SystemIOPackaging\ZipPackagePart.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="src\Framework\ExceptionMessages.resx">
