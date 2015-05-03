@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace System.IO.Packaging
 {
+
+
+
     internal class SRID
     {
         public static string AttemptedToCreateDuplicateFileName = "AttemptedToCreateDuplicateFileName";
@@ -61,6 +64,7 @@ namespace System.IO.Packaging
         public static string CorruptStream = "CorruptStream";
         public static string CreateModeMustBeCreateOrOpen = "CreateModeMustBeCreateOrOpen";
         public static string CreateNewOnNonEmptyStream = "CreateNewOnNonEmptyStream";
+        public static string CreateNewNotSupported = "CreateNewNotSupported";
         public static string CryptoProviderCanNotDecrypt = "CryptoProviderCanNotDecrypt";
         public static string CryptoProviderCanNotMergeBlocks = "CryptoProviderCanNotMergeBlocks";
         public static string CryptoProviderIsNotReady = "CryptoProviderIsNotReady";
@@ -233,6 +237,7 @@ namespace System.IO.Packaging
         public static string TransformStackValid = "TransformStackValid";
         public static string TransformTypeUnsupported = "TransformTypeUnsupported";
         public static string TruncateAppendModesNotSupported = "TruncateAppendModesNotSupported";
+        public static string TruncateNotSupported = "TruncateNotSupported";
         public static string TypesElementExpected = "TypesElementExpected";
         public static string TypesTagHasExtraAttributes = "TypesTagHasExtraAttributes";
         public static string TypesXmlDoesNotMatchSchema = "TypesXmlDoesNotMatchSchema";

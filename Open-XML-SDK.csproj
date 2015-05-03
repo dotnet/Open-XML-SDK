@@ -227,6 +227,7 @@
     <Compile Include="SystemIOPackaging\IgnoreFlushAndCloseStream.cs" />
     <Compile Include="SystemIOPackaging\InternalRelationshipCollection.cs" />
     <Compile Include="SystemIOPackaging\Invariant.cs" />
+    <Compile Include="SystemIOPackaging\LimitedWrappingStream.cs" />
     <Compile Include="SystemIOPackaging\Package.cs" />
     <Compile Include="SystemIOPackaging\PackagePart.cs" />
     <Compile Include="SystemIOPackaging\PackagePartCollection.cs" />

@@ -206,29 +206,6 @@ namespace System.IO.Packaging
                     // b. items that have either a leading or trailing slash.
                     if (IsZipItemValidOpcPartOrPiece(zipArchiveEntry.Name))
                     {
-#if false
-                        // ew todo think that this can be deleted.
-
-                        // In the case of a piece name, postpone processing until
-                        // all piece candidates have been collected.
-                        PieceInfo pieceInfo;
-                        if (PieceNameHelper.TryCreatePieceInfo(zipInfo, out pieceInfo))
-                        {
-                            if (pieceDictionary.ContainsKey(pieceInfo))
-                                throw new FormatException(SR.Get(SRID.DuplicatePiecesFound));
-
-                            if (pieceInfo.PartUri != null)
-                            {
-                                //If a part does not have valid partname, then we should just ignore it
-                                //It is not meaningful to even add it to the ignored items list as we will 
-                                //never generate a name that corresponds to this zip item and as such will
-                                //never have to delete it.
-                                pieceDictionary.Add(pieceInfo, null);
-                            }
-                            continue;
-                        }
-#endif
-
                         Uri partUri = new Uri(GetOpcNameFromZipItemName(zipArchiveEntry.FullName), UriKind.Relative);
                         PackUriHelper.ValidatedPartUri validatedPartUri;
                         if (PackUriHelper.TryValidatePartUri(partUri, out validatedPartUri))
@@ -265,13 +242,6 @@ namespace System.IO.Packaging
                         _ignoredItemHelper.AddItemForAtomicPart(validatedPartUri, zipArchiveEntry.Name);
                 }
             }
-
-#if false
-            // todo ew this isn't necessary, I think
-            // Well-formed piece sequences get recorded in parts.
-            // Debris from invalid sequences gets swept into _ignoredItems.
-            ProcessPieces(pieceDictionary, parts);
-#endif
 
             return parts.ToArray();
         }
@@ -314,6 +284,9 @@ namespace System.IO.Packaging
                     if (_shouldCloseContainerStream)
                     {
                         _containerStream.Close();
+                    }
+                    else
+                    {
                     }
                     _containerStream = null;
                 }
@@ -369,7 +342,7 @@ namespace System.IO.Packaging
                 else if (access == FileAccess.ReadWrite)
                     zipArchiveMode = ZipArchiveMode.Update;
 
-                zipArchive = new ZipArchive(_containerStream, zipArchiveMode, false);
+                zipArchive = new ZipArchive(_containerStream, zipArchiveMode, true, Text.Encoding.UTF8);
                 ignoredItemHelper = new IgnoredItemHelper(zipArchive);
                 contentTypeHelper = new ContentTypeHelper(zipArchive, ignoredItemHelper);
             }
@@ -411,7 +384,7 @@ namespace System.IO.Packaging
                 else if (access == FileAccess.ReadWrite)
                     zipArchiveMode = ZipArchiveMode.Update;
 
-                zipArchive = new ZipArchive(s, zipArchiveMode);
+                zipArchive = new ZipArchive(s, zipArchiveMode, true, Text.Encoding.UTF8);
                 ignoredItemHelper = new IgnoredItemHelper(zipArchive);
                 contentTypeHelper = new ContentTypeHelper(zipArchive, ignoredItemHelper);
             }
@@ -556,7 +529,6 @@ namespace System.IO.Packaging
             }
         }
 
-        // todo fix following comment.
         // convert from Zip CompressionMethodEnum and DeflateOptionEnum to Metro CompressionOption 
         static private CompressionOption GetCompressionOptionFromZipFileInfo(ZipArchiveEntry zipFileInfo)
         {

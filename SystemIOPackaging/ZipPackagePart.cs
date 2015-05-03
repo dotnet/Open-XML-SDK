@@ -55,7 +55,35 @@ namespace System.IO.Packaging
         {
             if (_zipArchiveEntry != null)
             {
-                return _zipArchiveEntry.Open();
+                if (mode == FileMode.Create)
+                {
+                    using (var tempStream = _zipArchiveEntry.Open())
+                    {
+                        tempStream.SetLength(0);
+                    }
+                }
+
+                var stream = _zipArchiveEntry.Open();
+                bool canRead = true;
+                bool canWrite = true;
+                switch (access)
+                {
+                    case FileAccess.Read:
+                        canRead = true;
+                        canWrite = false;
+                        break;
+                    case FileAccess.Write:
+                        canRead = false;
+                        canWrite = true;
+                        break;
+                    case FileAccess.ReadWrite:
+                        canRead = true;
+                        canWrite = true;
+                        break;
+                }
+
+                var limitedStream = new LimitedWrappingStream(stream, canRead, canWrite);
+                return limitedStream;
             }
             // v-ericwh todo have questions about this
             return null;

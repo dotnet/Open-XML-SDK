@@ -881,6 +881,20 @@ namespace System.IO.Packaging
                 ThrowIfFileModeInvalid(packageMode);
                 ThrowIfFileAccessInvalid(packageAccess);
 
+                // todo ew move into function
+                if (packageMode == FileMode.OpenOrCreate && packageAccess != FileAccess.ReadWrite)
+                    throw new ArgumentException(SR.Get(SRID.UnsupportedCombinationOfModeAccess));
+                if (packageMode == FileMode.Create && packageAccess != FileAccess.ReadWrite)
+                    throw new ArgumentException(SR.Get(SRID.UnsupportedCombinationOfModeAccess));
+                if (packageMode == FileMode.CreateNew && packageAccess != FileAccess.ReadWrite)
+                    throw new ArgumentException(SR.Get(SRID.UnsupportedCombinationOfModeAccess));
+                if (packageMode == FileMode.Open && packageAccess == FileAccess.Write)
+                    throw new ArgumentException(SR.Get(SRID.UnsupportedCombinationOfModeAccess));
+                if (packageMode == FileMode.Truncate && packageAccess == FileAccess.Read)
+                    throw new ArgumentException(SR.Get(SRID.UnsupportedCombinationOfModeAccess));
+                if (packageMode == FileMode.Truncate)
+                    throw new NotSupportedException(SR.Get(SRID.UnsupportedCombinationOfModeAccess));
+
                 //Note: FileShare enum is not being verfied at this stage, as we do not interpret the flag in this
                 //code at all and just pass it on to the next layer, where the necessary validation can be
                 //performed. Also, there is no meaningful way to check this parameter at this layer, as the
@@ -894,15 +908,16 @@ namespace System.IO.Packaging
                 try
                 {
                     package = new ZipPackage(packageFileInfo.FullName, packageMode, packageAccess, packageShare);
+                    package._openFileMode = packageMode;
 
-                        //We need to get all the parts if any exists from the underlying file
-                        //so that we have the names in the Normalized form in our in-memory
-                        //data structures.
-                        //Note: If ever this call is removed, each individual call to GetPartCore,
-                        //may result in undefined behavior as the underlying ZipArchive, maintains the
-                        //files list as being case-sensitive.
-                        if (package.FileOpenAccess == FileAccess.ReadWrite || package.FileOpenAccess == FileAccess.Read)
-                            package.GetParts();
+                    //We need to get all the parts if any exists from the underlying file
+                    //so that we have the names in the Normalized form in our in-memory
+                    //data structures.
+                    //Note: If ever this call is removed, each individual call to GetPartCore,
+                    //may result in undefined behavior as the underlying ZipArchive, maintains the
+                    //files list as being case-sensitive.
+                    if (package.FileOpenAccess == FileAccess.ReadWrite || package.FileOpenAccess == FileAccess.Read)
+                        package.GetParts();
                 }
                 catch
                 {
@@ -1269,6 +1284,7 @@ namespace System.IO.Packaging
         private static readonly FileMode s_defaultStreamMode = FileMode.Open;
 
         private FileAccess _openFileAccess;
+        private FileMode _openFileMode;
         private bool _disposed;
         private SortedList<PackUriHelper.ValidatedPartUri, PackagePart> _partList;
         private PackagePartCollection _partCollection;

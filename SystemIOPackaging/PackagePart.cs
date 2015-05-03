@@ -351,6 +351,11 @@ namespace System.IO.Packaging
             CheckInvalidState();
             ThrowIfOpenAccessModesAreIncompatible(mode, access);
 
+            if (mode == FileMode.CreateNew)
+                throw new ArgumentException(SR.Get(SRID.CreateNewNotSupported));
+            if (mode == FileMode.Truncate)
+                throw new ArgumentException(SR.Get(SRID.TruncateNotSupported));
+
             Stream s = GetStreamCore(mode, access);
 
             if (s == null)
