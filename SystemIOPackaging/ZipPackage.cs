@@ -350,7 +350,7 @@ namespace System.IO.Packaging
                     zipArchiveMode = ZipArchiveMode.Update;
 
                 zipArchive = new ZipArchive(_containerStream, zipArchiveMode, true, Text.Encoding.UTF8);
-                _zipStreamManager = new ZipStreamManager(zipArchive);
+                _zipStreamManager = new ZipStreamManager(zipArchive, _packageFileMode, _packageFileAccess);
                 ignoredItemHelper = new IgnoredItemHelper(zipArchive);
                 contentTypeHelper = new ContentTypeHelper(zipArchive, ignoredItemHelper, _packageFileMode, _packageFileAccess, _zipStreamManager);
             }
@@ -396,7 +396,7 @@ namespace System.IO.Packaging
 
                 zipArchive = new ZipArchive(s, zipArchiveMode, true, Text.Encoding.UTF8);
                 
-                _zipStreamManager = new ZipStreamManager(zipArchive);
+                _zipStreamManager = new ZipStreamManager(zipArchive, packageFileMode, packageFileAccess);
                 ignoredItemHelper = new IgnoredItemHelper(zipArchive);
                 contentTypeHelper = new ContentTypeHelper(zipArchive, ignoredItemHelper, packageFileMode, packageFileAccess, _zipStreamManager);
             }
@@ -484,7 +484,15 @@ namespace System.IO.Packaging
         //  Internal Properties
         //
         //------------------------------------------------------
-        // None
+        
+        internal FileMode PackageFileMode
+        {
+            get
+            {
+                return _packageFileMode;
+            }
+        }
+
         //------------------------------------------------------
         //
         //  Internal Events
@@ -972,7 +980,7 @@ namespace System.IO.Packaging
                     _contentTypeZipArchiveEntry = thisArchive.CreateEntry(contentTypefullName);
 
 
-                    using (Stream s = _zipStreamManager.Open(_contentTypeZipArchiveEntry, _packageFileMode, _packageFileAccess, FileAccess.ReadWrite))
+                    using (Stream s = _zipStreamManager.Open(_contentTypeZipArchiveEntry, _packageFileMode, FileAccess.ReadWrite))
                     {
                         // use UTF-8 encoding by default
                         using (XmlTextWriter writer = new XmlTextWriter(s, System.Text.Encoding.UTF8))
@@ -1225,7 +1233,7 @@ namespace System.IO.Packaging
                 if (_contentTypeZipArchiveEntry != null)
                 {
                     _contentTypeStreamExists = true;
-                    return _zipStreamManager.Open(_contentTypeZipArchiveEntry, _packageFileMode, _packageFileAccess, FileAccess.ReadWrite);
+                    return _zipStreamManager.Open(_contentTypeZipArchiveEntry, _packageFileMode, FileAccess.ReadWrite);
                 }
 
 #if false

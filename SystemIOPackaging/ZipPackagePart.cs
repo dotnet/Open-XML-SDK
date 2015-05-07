@@ -57,35 +57,15 @@ namespace System.IO.Packaging
             {
                 if (streamFileMode == FileMode.Create)
                 {
-                    using (var tempStream = _zipStreamManager.Open(_zipArchiveEntry, streamFileMode, _zipPackage.FileOpenAccess, streamFileAccess))
+                    using (var tempStream = _zipStreamManager.Open(_zipArchiveEntry, streamFileMode, streamFileAccess))
                     {
                         tempStream.SetLength(0);
                     }
                 }
 
-                var stream = _zipStreamManager.Open(_zipArchiveEntry, streamFileMode, _zipPackage.FileOpenAccess, streamFileAccess);
-                bool canRead = true;
-                bool canWrite = true;
-                switch (streamFileAccess)
-                {
-                    case FileAccess.Read:
-                        canRead = true;
-                        canWrite = false;
-                        break;
-                    case FileAccess.Write:
-                        canRead = false;
-                        canWrite = true;
-                        break;
-                    case FileAccess.ReadWrite:
-                        canRead = true;
-                        canWrite = true;
-                        break;
-                }
-
-                var limitedStream = new LimitedWrappingStream(stream, canRead, canWrite);
-                return limitedStream;
+                var stream = _zipStreamManager.Open(_zipArchiveEntry, streamFileMode, streamFileAccess);
+                return stream;
             }
-            // v-ericwh todo have questions about this
             return null;
         }
 

@@ -10,21 +10,22 @@ namespace System.IO.Packaging
     internal class ZipStreamManager : IDisposable
     {
         private ZipArchive _zipArchive;
-        private Dictionary<string, Stream> _streamCache;
+        private FileAccess _packageFileAccess;
+        private FileMode _packageFileMode;
         private bool _disposed = false;
 
-        public ZipStreamManager(ZipArchive zipArchive)
+        public ZipStreamManager(ZipArchive zipArchive, FileMode packageFileMode, FileAccess packageFileAccess)
         {
             _zipArchive = zipArchive;
-            _streamCache = new Dictionary<string,Stream>();
+            _packageFileMode = packageFileMode;
+            _packageFileAccess = packageFileAccess;
         }
 
-        public Stream Open(ZipArchiveEntry zipArchiveEntry, FileMode fileMode, FileAccess packageFileAccess, FileAccess streamFileAccess)
+        public Stream Open(ZipArchiveEntry zipArchiveEntry, FileMode streamFileMode, FileAccess streamFileAccess)
         {
-            // todo need to figure out canRead, canWrite from fileMode, fileAccess
             bool canRead = true;
             bool canWrite = true;
-            switch (packageFileAccess)
+            switch (_packageFileAccess)
             {
                 case FileAccess.Read:
                     switch (streamFileAccess)
@@ -79,33 +80,12 @@ namespace System.IO.Packaging
                     break;
             }
 
-            if (_streamCache.ContainsKey(zipArchiveEntry.FullName))
-            {
-                Stream s = _streamCache[zipArchiveEntry.FullName];
-                if (fileMode == FileMode.Create)
-                {
-                    s.SetLength(0);
-                }
-                s.Seek(0, SeekOrigin.Begin);
-                return new ZipWrappingStream(s, canRead, canWrite);
-            }
-            else
-            { 
-                Stream ns = zipArchiveEntry.Open();
-                _streamCache.Add(zipArchiveEntry.FullName, ns);
-                return new ZipWrappingStream(ns, canRead, canWrite);
-            }
+            Stream ns = zipArchiveEntry.Open();
+            return new ZipWrappingStream(zipArchiveEntry, ns, _packageFileMode, _packageFileAccess, canRead, canWrite);
         }
 
         public void Close(ZipArchiveEntry zipArchiveEntry)
         {
-            if (_streamCache.ContainsKey(zipArchiveEntry.FullName))
-            {
-                Stream s = _streamCache[zipArchiveEntry.FullName];
-                s.Close();
-                s.Dispose();
-                _streamCache.Remove(zipArchiveEntry.FullName);
-            }
         }
 
         //
@@ -125,18 +105,6 @@ namespace System.IO.Packaging
 
             if (disposing)
             {
-                foreach (var s in _streamCache)
-                {
-                    try
-                    {
-                        s.Value.Close();
-                        s.Value.Dispose();
-                    }
-                    catch (ObjectDisposedException)
-                    {
-                        continue;
-                    }
-                }
             }
 
             _disposed = true;

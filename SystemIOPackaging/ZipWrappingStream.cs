@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,12 +11,18 @@ namespace System.IO.Packaging
     internal class ZipWrappingStream : Stream
     {
         private Stream _baseStream;
+        private ZipArchiveEntry _zipArchiveEntry;
+        private FileMode _packageFileMode;
+        private FileAccess _packageFileAccess;
         private bool _canRead;
         private bool _canWrite;
 
-        public ZipWrappingStream(Stream stream, bool canRead, bool canWrite)
+        public ZipWrappingStream(ZipArchiveEntry zipArchiveEntry, Stream stream, FileMode packageFileMode, FileAccess packageFileAccess, bool canRead, bool canWrite)
         {
+            _zipArchiveEntry = zipArchiveEntry;
             _baseStream = stream;
+            _packageFileMode = packageFileMode;
+            _packageFileAccess = packageFileAccess;
             _canRead = canRead;
             _canWrite = canWrite;
         }
@@ -89,9 +97,34 @@ namespace System.IO.Packaging
             }
         }
 
+        // For some strange reason, if the package FileAccess == Read,
+        // then can't get length from the stream.  Not supported.
+        // The workaround - write the stream to a memory stream, then return the length of the
+        // memory stream.
         public override long Length
         {
-            get { return _baseStream.Length; }
+            get {
+                if (_packageFileAccess == FileAccess.Read)
+                {
+                    using (MemoryStream ms = new MemoryStream())
+                    using (Stream zs = _zipArchiveEntry.Open())
+                    {
+                        CopyStream(zs, ms);
+                        return ms.Length;
+                    }
+                }
+                else
+                    return _baseStream.Length;
+            }
+        }
+
+        private static void CopyStream(Stream source, Stream target)
+        {
+            const int bufSize = 0x4096;
+            byte[] buf = new byte[bufSize];
+            int bytesRead = 0;
+            while ((bytesRead = source.Read(buf, 0, bufSize)) > 0)
+                target.Write(buf, 0, bytesRead);
         }
 
         public override bool CanSeek
@@ -99,12 +132,11 @@ namespace System.IO.Packaging
             get { return _baseStream.CanSeek; }
         }
 
-        // this wrapping stream will not close the underlying stream
         public override void Close()
         {
+            _baseStream.Close();
         }
 
-        // this wrapping stream will not dispose of the underlying stream
         protected override void Dispose(bool disposing)
         {
         }
