@@ -96,7 +96,7 @@ namespace System.IO.Packaging
             //Store the content type of this part in the content types stream.
             _contentTypeHelper.AddContentType((PackUriHelper.ValidatedPartUri)partUri, new ContentType(contentType), level);
 
-            return new ZipPackagePart(this, zipArchiveEntry.Archive, zipArchiveEntry, (PackUriHelper.ValidatedPartUri)partUri, contentType, compressionOption);
+            return new ZipPackagePart(this, zipArchiveEntry.Archive, zipArchiveEntry, _zipStreamManager, (PackUriHelper.ValidatedPartUri)partUri, contentType, compressionOption);
         }
 
         /// <summary>
@@ -217,7 +217,7 @@ namespace System.IO.Packaging
                                 // part, it will be detected at this point because the part's Uri (which
                                 // is independent of interleaving) will already be in the dictionary.
                                 parts.Add(new ZipPackagePart(this, zipArchiveEntry.Archive, zipArchiveEntry,
-                                    validatedPartUri, contentType.ToString(), GetCompressionOptionFromZipFileInfo(zipArchiveEntry)));
+                                    _zipStreamManager, validatedPartUri, contentType.ToString(), GetCompressionOptionFromZipFileInfo(zipArchiveEntry)));
                             }
                             else
                                 //Since this part does not have a valid content type we add it to the ignored list,
@@ -274,6 +274,11 @@ namespace System.IO.Packaging
                         _contentTypeHelper.SaveToFile();
                     }
 
+                    if (_zipStreamManager != null)
+                    {
+                        _zipStreamManager.Dispose();
+                    }
+
                     if (_zipArchive != null)
                     {
                         _zipArchive.Dispose();
@@ -319,32 +324,35 @@ namespace System.IO.Packaging
         /// Internal constructor that is called by the OpenOnFile static method.
         /// </summary>
         /// <param name="path">File path to the container.</param>
-        /// <param name="mode">Container is opened in the specified mode if possible</param>
-        /// <param name="access">Container is opened with the speficied access if possible</param>
+        /// <param name="packageFileMode">Container is opened in the specified mode if possible</param>
+        /// <param name="packageFileAccess">Container is opened with the speficied access if possible</param>
         /// <param name="share">Container is opened with the specified share if possible</param>
 
-        internal ZipPackage(string path, FileMode mode, FileAccess access, FileShare share)
-            : base(access)
+        internal ZipPackage(string path, FileMode packageFileMode, FileAccess packageFileAccess, FileShare share)
+            : base(packageFileAccess)
         {
             ZipArchive zipArchive = null;
             IgnoredItemHelper ignoredItemHelper = null;
             ContentTypeHelper contentTypeHelper = null;
+            _packageFileMode = packageFileMode;
+            _packageFileAccess = packageFileAccess;
 
             try
             {
-                _containerStream = new FileStream(path, mode, access, share);
+                _containerStream = new FileStream(path, _packageFileMode, _packageFileAccess, share);
                 _shouldCloseContainerStream = true;
                 ZipArchiveMode zipArchiveMode = ZipArchiveMode.Update;
-                if (access == FileAccess.Read)
+                if (packageFileAccess == FileAccess.Read)
                     zipArchiveMode = ZipArchiveMode.Read;
-                else if (access == FileAccess.Write)
+                else if (packageFileAccess == FileAccess.Write)
                     zipArchiveMode = ZipArchiveMode.Create;
-                else if (access == FileAccess.ReadWrite)
+                else if (packageFileAccess == FileAccess.ReadWrite)
                     zipArchiveMode = ZipArchiveMode.Update;
 
                 zipArchive = new ZipArchive(_containerStream, zipArchiveMode, true, Text.Encoding.UTF8);
+                _zipStreamManager = new ZipStreamManager(zipArchive);
                 ignoredItemHelper = new IgnoredItemHelper(zipArchive);
-                contentTypeHelper = new ContentTypeHelper(zipArchive, ignoredItemHelper);
+                contentTypeHelper = new ContentTypeHelper(zipArchive, ignoredItemHelper, _packageFileMode, _packageFileAccess, _zipStreamManager);
             }
             catch
             {
@@ -365,28 +373,32 @@ namespace System.IO.Packaging
         /// Internal constructor that is called by the Open(Stream) static methods.
         /// </summary>
         /// <param name="s"></param>
-        /// <param name="mode"></param>
-        /// <param name="access"></param>
-        internal ZipPackage(Stream s, FileMode mode, FileAccess access)
-            : base(access)
+        /// <param name="packageFileMode"></param>
+        /// <param name="packageFileAccess"></param>
+        internal ZipPackage(Stream s, FileMode packageFileMode, FileAccess packageFileAccess)
+            : base(packageFileAccess)
         {
             ZipArchive zipArchive = null;
             IgnoredItemHelper ignoredItemHelper = null;
             ContentTypeHelper contentTypeHelper = null;
+            _packageFileMode = packageFileMode;
+            _packageFileAccess = packageFileAccess;
 
             try
             {
                 ZipArchiveMode zipArchiveMode = ZipArchiveMode.Update;
-                if (access == FileAccess.Read)
+                if (packageFileAccess == FileAccess.Read)
                     zipArchiveMode = ZipArchiveMode.Read;
-                else if (access == FileAccess.Write)
+                else if (packageFileAccess == FileAccess.Write)
                     zipArchiveMode = ZipArchiveMode.Create;
-                else if (access == FileAccess.ReadWrite)
+                else if (packageFileAccess == FileAccess.ReadWrite)
                     zipArchiveMode = ZipArchiveMode.Update;
 
                 zipArchive = new ZipArchive(s, zipArchiveMode, true, Text.Encoding.UTF8);
+                
+                _zipStreamManager = new ZipStreamManager(zipArchive);
                 ignoredItemHelper = new IgnoredItemHelper(zipArchive);
-                contentTypeHelper = new ContentTypeHelper(zipArchive, ignoredItemHelper);
+                contentTypeHelper = new ContentTypeHelper(zipArchive, ignoredItemHelper, packageFileMode, packageFileAccess, _zipStreamManager);
             }
             catch
             {
@@ -749,6 +761,9 @@ namespace System.IO.Packaging
         private bool _shouldCloseContainerStream;
         private ContentTypeHelper _contentTypeHelper;    // manages the content types for all the parts in the container
         private IgnoredItemHelper _ignoredItemHelper;    // manages the ignored items in a zip package
+        private ZipStreamManager _zipStreamManager;      // manages streams for all parts, avoiding opening streams multiple times
+        private FileAccess _packageFileAccess;
+        private FileMode _packageFileMode;
 
         private static readonly string s_forwardSlash = "/"; //Required for creating a part name from a zip item name
 
@@ -816,9 +831,12 @@ namespace System.IO.Packaging
             /// Complete initialization in read mode also involves calling ParseContentTypesFile
             /// to deserialize content type information.
             /// </summary>
-            internal ContentTypeHelper(ZipArchive zipArchive, IgnoredItemHelper ignoredItemHelper)
+            internal ContentTypeHelper(ZipArchive zipArchive, IgnoredItemHelper ignoredItemHelper, FileMode packageFileMode, FileAccess packageFileAccess, ZipStreamManager zipStreamManager)
             {
                 _zipArchive = zipArchive;               //initialized in the ZipPackage constructor
+                _packageFileMode = packageFileMode;
+                _packageFileAccess = packageFileAccess;
+                _zipStreamManager = zipStreamManager;   //initialized in the ZipPackage constructor
                 // The extensions are stored in the default Dictionary in their original form , but they are compared
                 // in a normalized manner using the ExtensionComparer.
                 _defaultDictionary = new Dictionary<string, ContentType>(s_defaultDictionaryInitialSize, s_extensionEqualityComparer);
@@ -949,10 +967,12 @@ namespace System.IO.Packaging
                     // if the XML is shorter than the existing content part.
                     var contentTypefullName = _contentTypeZipArchiveEntry.FullName;
                     var thisArchive = _contentTypeZipArchiveEntry.Archive;
+                    _zipStreamManager.Close(_contentTypeZipArchiveEntry);
                     _contentTypeZipArchiveEntry.Delete();
                     _contentTypeZipArchiveEntry = thisArchive.CreateEntry(contentTypefullName);
 
-                    using (Stream s = _contentTypeZipArchiveEntry.Open())
+
+                    using (Stream s = _zipStreamManager.Open(_contentTypeZipArchiveEntry, _packageFileMode, _packageFileAccess, FileAccess.ReadWrite))
                     {
                         // use UTF-8 encoding by default
                         using (XmlTextWriter writer = new XmlTextWriter(s, System.Text.Encoding.UTF8))
@@ -1205,7 +1225,7 @@ namespace System.IO.Packaging
                 if (_contentTypeZipArchiveEntry != null)
                 {
                     _contentTypeStreamExists = true;
-                    return _contentTypeZipArchiveEntry.Open();
+                    return _zipStreamManager.Open(_contentTypeZipArchiveEntry, _packageFileMode, _packageFileAccess, FileAccess.ReadWrite);
                 }
 
 #if false
@@ -1376,6 +1396,9 @@ namespace System.IO.Packaging
             private Dictionary<PackUriHelper.ValidatedPartUri, ContentType> _overrideDictionary;
             private Dictionary<string, ContentType> _defaultDictionary;
             private ZipArchive _zipArchive;
+            private FileMode _packageFileMode;
+            private FileAccess _packageFileAccess;
+            private ZipStreamManager _zipStreamManager;
             private IgnoredItemHelper _ignoredItemHelper;
             private ZipArchiveEntry _contentTypeZipArchiveEntry;
             private bool _contentTypeStreamExists;

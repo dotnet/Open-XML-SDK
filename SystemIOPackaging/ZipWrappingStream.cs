@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace System.IO.Packaging
 {
-    internal class LimitedWrappingStream : Stream
+    internal class ZipWrappingStream : Stream
     {
         private Stream _baseStream;
         private bool _canRead;
         private bool _canWrite;
 
-        public LimitedWrappingStream(Stream stream, bool canRead, bool canWrite)
+        public ZipWrappingStream(Stream stream, bool canRead, bool canWrite)
         {
             _baseStream = stream;
             _canRead = canRead;
@@ -99,15 +99,14 @@ namespace System.IO.Packaging
             get { return _baseStream.CanSeek; }
         }
 
+        // this wrapping stream will not close the underlying stream
         public override void Close()
         {
-            _baseStream.Close();
         }
 
+        // this wrapping stream will not dispose of the underlying stream
         protected override void Dispose(bool disposing)
         {
-            if (disposing)
-                _baseStream.Dispose();
         }
     }
 }

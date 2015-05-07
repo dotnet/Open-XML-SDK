@@ -48,25 +48,25 @@ namespace System.IO.Packaging
         /// <summary>
         /// Custom Implementation for the GetStream Method
         /// </summary>
-        /// <param name="mode">Mode in which the stream should be opened</param>
-        /// <param name="access">Access with which the stream should be opened</param>
+        /// <param name="streamFileMode">Mode in which the stream should be opened</param>
+        /// <param name="streamFileAccess">Access with which the stream should be opened</param>
         /// <returns>Stream Corresponding to this part</returns>
-        protected override Stream GetStreamCore(FileMode mode, FileAccess access)
+        protected override Stream GetStreamCore(FileMode streamFileMode, FileAccess streamFileAccess)
         {
             if (_zipArchiveEntry != null)
             {
-                if (mode == FileMode.Create)
+                if (streamFileMode == FileMode.Create)
                 {
-                    using (var tempStream = _zipArchiveEntry.Open())
+                    using (var tempStream = _zipStreamManager.Open(_zipArchiveEntry, streamFileMode, _zipPackage.FileOpenAccess, streamFileAccess))
                     {
                         tempStream.SetLength(0);
                     }
                 }
 
-                var stream = _zipArchiveEntry.Open();
+                var stream = _zipStreamManager.Open(_zipArchiveEntry, streamFileMode, _zipPackage.FileOpenAccess, streamFileAccess);
                 bool canRead = true;
                 bool canWrite = true;
-                switch (access)
+                switch (streamFileAccess)
                 {
                     case FileAccess.Read:
                         canRead = true;
@@ -110,21 +110,24 @@ namespace System.IO.Packaging
         /// This is called from the ZipPackage class as a result of GetPartCore,
         /// GetPartsCore or CreatePartCore methods     
         /// </summary>
-        /// <param name="container"></param>
+        /// <param name="zipPackage"></param>
         /// <param name="zipArchive"></param>
         /// <param name="zipArchiveEntry"></param>
         /// <param name="partUri"></param>
         /// <param name="compressionOption"></param>
         /// <param name="contentType"></param>
-        internal ZipPackagePart(ZipPackage container,
+        internal ZipPackagePart(ZipPackage zipPackage,
             ZipArchive zipArchive,
             ZipArchiveEntry zipArchiveEntry,
+            ZipStreamManager zipStreamManager,
             PackUriHelper.ValidatedPartUri partUri,
             string contentType,
             CompressionOption compressionOption)
-            : base(container, partUri, contentType, compressionOption)
+            : base(zipPackage, partUri, contentType, compressionOption)
         {
+            _zipPackage = zipPackage;
             _zipArchive = zipArchive;
+            _zipStreamManager = zipStreamManager;
             _zipArchiveEntry = zipArchiveEntry;
         }
 
@@ -177,10 +180,10 @@ namespace System.IO.Packaging
 
         #region Private Variables
 
-        // Zip item info for an atomic part.
-        private ZipArchiveEntry _zipArchiveEntry = null;
-
+        private ZipPackage _zipPackage;
+        private ZipArchiveEntry _zipArchiveEntry;
         private ZipArchive _zipArchive;
+        private ZipStreamManager _zipStreamManager;
 
         #endregion Private Variables
 
