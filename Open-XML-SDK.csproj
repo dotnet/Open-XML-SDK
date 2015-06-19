@@ -220,8 +220,8 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="src\Framework\ExceptionMessages.resx">
-      <!-- 
-        Thomas Barnekow: Added LogicalName tag with content taken from makefile. 
+      <!--
+        Thomas Barnekow: Added LogicalName tag with content taken from makefile.
         This is required to assign the proper namespace to the .resources file.
         When left out, these resources will not be found, leading to runtime
         exceptions.
@@ -229,8 +229,8 @@
       <LogicalName>DocumentFormat.OpenXml.ExceptionMessages.resources</LogicalName>
     </EmbeddedResource>
     <EmbeddedResource Include="src\ofapi\Validation\ValidationResources.resx">
-      <!-- 
-        Thomas Barnekow: Added LogicalName tag with content taken from makefile. 
+      <!--
+        Thomas Barnekow: Added LogicalName tag with content taken from makefile.
         This is required to assign the proper namespace to the .resources file.
         When left out, these resources will not be found, leading to runtime
         exceptions.
@@ -241,22 +241,22 @@
   <ItemGroup>
     <None Include="README.md" />
   </ItemGroup>
-  <!-- 
-    Thomas Barnekow: Removed following item group because it creates a Properties folder 
-    that is currently not required. That Properties folder normally contains the 
-    AssemblyInfo.cs, which is contained in src\ofapi\Properties in our case. 
+  <!--
+    Thomas Barnekow: Removed following item group because it creates a Properties folder
+    that is currently not required. That Properties folder normally contains the
+    AssemblyInfo.cs, which is contained in src\ofapi\Properties in our case.
   -->
-  <!-- 
+  <!--
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
   -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>cd $(ProjectDir)
-PowerShell .\SetAssemblyVersionString.ps1</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
