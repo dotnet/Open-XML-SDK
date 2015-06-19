@@ -61,7 +61,6 @@
     <Compile Include="src\Framework\OpenXmlLeafElement.cs" />
     <Compile Include="src\Framework\OpenXmlLeafTextElement.cs" />
     <Compile Include="src\Framework\OpenXmlNonElementNode.cs" />
-    <Compile Include="src\Framework\OpenXmlObsolete.cs" />
     <Compile Include="src\Framework\OpenXmlPackage.cs" />
     <Compile Include="src\Framework\OpenXmlPartRootElement.cs" />
     <Compile Include="src\Framework\OpenXmlReader.cs" />
