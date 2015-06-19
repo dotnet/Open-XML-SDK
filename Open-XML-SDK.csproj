@@ -17,24 +17,24 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>build\OpenXmlSdkLib\Debug\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>3003</NoWarn>
-    <DocumentationFile>build\OpenXmlSdkLib\Debug\DocumentFormat.OpenXml.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\DocumentFormat.OpenXml.xml</DocumentationFile>
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>build\OpenXmlSdkLib\Release\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>3003</NoWarn>
-    <DocumentationFile>build\OpenXmlSdkLib\Release\DocumentFormat.OpenXml.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\DocumentFormat.OpenXml.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -61,7 +61,6 @@
     <Compile Include="src\Framework\OpenXmlLeafElement.cs" />
     <Compile Include="src\Framework\OpenXmlLeafTextElement.cs" />
     <Compile Include="src\Framework\OpenXmlNonElementNode.cs" />
-    <Compile Include="src\Framework\OpenXmlObsolete.cs" />
     <Compile Include="src\Framework\OpenXmlPackage.cs" />
     <Compile Include="src\Framework\OpenXmlPartRootElement.cs" />
     <Compile Include="src\Framework\OpenXmlReader.cs" />
@@ -220,8 +219,8 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="src\Framework\ExceptionMessages.resx">
-      <!-- 
-        Thomas Barnekow: Added LogicalName tag with content taken from makefile. 
+      <!--
+        Thomas Barnekow: Added LogicalName tag with content taken from makefile.
         This is required to assign the proper namespace to the .resources file.
         When left out, these resources will not be found, leading to runtime
         exceptions.
@@ -229,8 +228,8 @@
       <LogicalName>DocumentFormat.OpenXml.ExceptionMessages.resources</LogicalName>
     </EmbeddedResource>
     <EmbeddedResource Include="src\ofapi\Validation\ValidationResources.resx">
-      <!-- 
-        Thomas Barnekow: Added LogicalName tag with content taken from makefile. 
+      <!--
+        Thomas Barnekow: Added LogicalName tag with content taken from makefile.
         This is required to assign the proper namespace to the .resources file.
         When left out, these resources will not be found, leading to runtime
         exceptions.
@@ -241,22 +240,22 @@
   <ItemGroup>
     <None Include="README.md" />
   </ItemGroup>
-  <!-- 
-    Thomas Barnekow: Removed following item group because it creates a Properties folder 
-    that is currently not required. That Properties folder normally contains the 
-    AssemblyInfo.cs, which is contained in src\ofapi\Properties in our case. 
+  <!--
+    Thomas Barnekow: Removed following item group because it creates a Properties folder
+    that is currently not required. That Properties folder normally contains the
+    AssemblyInfo.cs, which is contained in src\ofapi\Properties in our case.
   -->
-  <!-- 
+  <!--
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
   -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>cd $(ProjectDir)
-PowerShell .\SetAssemblyVersionString.ps1</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

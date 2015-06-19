@@ -442,7 +442,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="schemas">The set of XML schemas to be used.</param>
         /// <param name="validationEventHandler">ValidationEventHandler for validation events.</param>
-        [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
+        [Obsolete("This functionality is obsolete and will be removed from future version release. Please see OpenXmlValidator class for supported validation functionality.", false)]
         public void ValidateXml(XmlSchemaSet schemas, ValidationEventHandler validationEventHandler)
         {
             ThrowIfObjectDisposed();
@@ -483,7 +483,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="schemaFile">The XML schema to be used.</param>
         /// <param name="validationEventHandler">ValidationEventHandler for validation events.</param>
-        [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
+        [Obsolete("This functionality is obsolete and will be removed from future version release. Please see OpenXmlValidator class for supported validation functionality.", false)]
         public void ValidateXml(string schemaFile, ValidationEventHandler validationEventHandler)
         {
             

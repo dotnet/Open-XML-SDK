@@ -743,7 +743,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="validationSettings">The OpenXmlPackageValidationSettings for validation events.</param>
         /// <remarks>If validationSettings is null or no EventHandler is set, the default behavior is to throw an OpenXmlPackageException on the validation error. </remarks>
-        [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
+        [Obsolete("This functionality is obsolete and will be removed from future version release. Please see OpenXmlValidator class for supported validation functionality.", false)]
         public void Validate(OpenXmlPackageValidationSettings validationSettings)
         {
             this.ThrowIfObjectDisposed();
@@ -1529,7 +1529,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Specifies event handlers that will handle OpenXmlPackage validation events and the OpenXmlPackageValidationEventArgs. 
     /// </summary>
-    [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
+    [Obsolete("This functionality is obsolete and will be removed from future version release. Please see OpenXmlValidator class for supported validation functionality.", false)]
     public class OpenXmlPackageValidationSettings
     {
         private EventHandler<OpenXmlPackageValidationEventArgs> valEventHandler;
@@ -1572,7 +1572,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Represents the Open XML package validation events.
     /// </summary>
     [SerializableAttribute]
-    [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
+    [Obsolete("This functionality is obsolete and will be removed from future version release. Please see OpenXmlValidator class for supported validation functionality.", false)]
     public sealed class OpenXmlPackageValidationEventArgs : EventArgs
     {
         private string _message;
