@@ -7,19 +7,12 @@
 //  This is a sub class of the abstract class for Package. 
 //  This implementation is specific to Zip file format.
 //
-// History:
-//  12/28/2004: SarjanaS: Initial creation. [BruceMac provided some of the
-//                                           initial code]
-//  03/15/2005: BruceMac: Replace DisposeCore with Dispose(bool) to follow
-//              new Design Guidelines for Dispose pattern.
-//
 //-----------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;
 using System.Xml;                   //Required for Content Type File manipulation
 using System.Diagnostics;
-using System.Windows;               // For Exception strings - SRID
 using System.IO.Compression;
 
 namespace System.IO.Packaging
@@ -288,7 +281,7 @@ namespace System.IO.Packaging
                     // _containerStream may be passed into the constructor, in which case, it should not be closed here.
                     if (_shouldCloseContainerStream)
                     {
-                        _containerStream.Close();
+                        _containerStream.Dispose();
                     }
                     else
                     {
@@ -983,11 +976,8 @@ namespace System.IO.Packaging
                     using (Stream s = _zipStreamManager.Open(_contentTypeZipArchiveEntry, _packageFileMode, FileAccess.ReadWrite))
                     {
                         // use UTF-8 encoding by default
-                        using (XmlTextWriter writer = new XmlTextWriter(s, System.Text.Encoding.UTF8))
+                        using (XmlWriter writer = XmlWriter.Create(s, new XmlWriterSettings { Encoding = System.Text.Encoding.UTF8 }))
                         {
-#if DEBUG
-                            writer.Formatting = Formatting.Indented;
-#endif
                             writer.WriteStartDocument();
 
                             // write root element tag - Types
@@ -1042,14 +1032,15 @@ namespace System.IO.Packaging
                 if (s == null)
                     return;
 
-                using (s)
-                using (XmlTextReader reader = new XmlTextReader(s))
-                {
-                    reader.WhitespaceHandling = WhitespaceHandling.None;
+                XmlReaderSettings xrs = new XmlReaderSettings();
+                xrs.IgnoreWhitespace = true;
 
+                using (s)
+                using (XmlReader reader = XmlReader.Create(s, xrs))
+                {
                     //Prohibit DTD from the markup as per the OPC spec
 #pragma warning disable 618
-                    reader.ProhibitDtd = true;
+                    // reader.ProhibitDtd = true; todo ew
 #pragma warning restore 618
 
                     //This method expects the reader to be in ReadState.Initial.
@@ -1071,7 +1062,9 @@ namespace System.IO.Packaging
                         //There should be a namespace Attribute present at this level.
                         //Also any other attribute on the <Types> tag is an error including xml: and xsi: attributes
                         if (PackagingUtilities.GetNonXmlnsAttributeCount(reader) > 0)
-                            throw new XmlException(SR.Get(SRID.TypesTagHasExtraAttributes), null, reader.LineNumber, reader.LinePosition);
+                        {
+                            throw new XmlException(SR.TypesTagHasExtraAttributes, null, ((IXmlLineInfo)reader).LineNumber, ((IXmlLineInfo)reader).LinePosition);
+                        }
 
                         // start tag encountered
                         // now parse individual Default and Override tags
@@ -1099,18 +1092,22 @@ namespace System.IO.Packaging
                                     && reader.Depth == 1
                                     && (String.CompareOrdinal(reader.NamespaceURI, s_typesNamespaceUri) == 0)
                                     && (String.CompareOrdinal(reader.Name, s_overrideTagName) == 0))
-                            {
-                                ProcessOverrideTagAttributes(reader);
-                            }
-                            else
+                                {
+                                    ProcessOverrideTagAttributes(reader);
+                                }
+                                else
                                     if (reader.NodeType == XmlNodeType.EndElement && reader.Depth == 0 && String.CompareOrdinal(reader.Name, s_typesTagName) == 0)
-                                continue;
-                            else
-                                throw new XmlException(SR.Get(SRID.TypesXmlDoesNotMatchSchema), null, reader.LineNumber, reader.LinePosition);
+                                        continue;
+                                    else
+                                    {
+                                        throw new XmlException(SR.TypesXmlDoesNotMatchSchema, null, ((IXmlLineInfo)reader).LineNumber, ((IXmlLineInfo)reader).LinePosition);
+                                    }
                         }
                     }
                     else
-                        throw new XmlException(SR.Get(SRID.TypesElementExpected), null, reader.LineNumber, reader.LinePosition);
+                    {
+                        throw new XmlException(SR.TypesElementExpected, null, ((IXmlLineInfo)reader).LineNumber, ((IXmlLineInfo)reader).LinePosition);
+                    }
                 }
             }
 
@@ -1256,14 +1253,14 @@ namespace System.IO.Packaging
             }
 
             // Process the attributes for the Default tag
-            private void ProcessDefaultTagAttributes(XmlTextReader reader)
+            private void ProcessDefaultTagAttributes(XmlReader reader)
             {
                 #region Default Tag
 
                 //There could be a namespace Attribute present at this level. 
                 //Also any other attribute on the <Default> tag is an error including xml: and xsi: attributes
                 if (PackagingUtilities.GetNonXmlnsAttributeCount(reader) != 2)
-                    throw new XmlException(SR.Get(SRID.DefaultTagDoesNotMatchSchema), null, reader.LineNumber, reader.LinePosition);
+                    throw new XmlException(SR.DefaultTagDoesNotMatchSchema, null, ((IXmlLineInfo)reader).LineNumber, ((IXmlLineInfo)reader).LinePosition);
 
                 // get the required Extension and ContentType attributes
 
@@ -1287,14 +1284,14 @@ namespace System.IO.Packaging
             }
 
             // Process the attributes for the Default tag
-            private void ProcessOverrideTagAttributes(XmlTextReader reader)
+            private void ProcessOverrideTagAttributes(XmlReader reader)
             {
                 #region Override Tag
 
                 //There could be a namespace Attribute present at this level. 
                 //Also any other attribute on the <Override> tag is an error including xml: and xsi: attributes
                 if (PackagingUtilities.GetNonXmlnsAttributeCount(reader) != 2)
-                    throw new XmlException(SR.Get(SRID.OverrideTagDoesNotMatchSchema), null, reader.LineNumber, reader.LinePosition);
+                    throw new XmlException(SR.OverrideTagDoesNotMatchSchema, null, ((IXmlLineInfo)reader).LineNumber, ((IXmlLineInfo)reader).LinePosition);
 
                 // get the required Extension and ContentType attributes
 
@@ -1321,7 +1318,7 @@ namespace System.IO.Packaging
             }
 
             //If End element is present for Relationship then we process it
-            private void ProcessEndElement(XmlTextReader reader, string elementName)
+            private void ProcessEndElement(XmlReader reader, string elementName)
             {
                 Debug.Assert(!reader.IsEmptyElement, "This method should only be called it the Relationship Element is not empty");
 
@@ -1333,7 +1330,7 @@ namespace System.IO.Packaging
                 if (reader.NodeType == XmlNodeType.EndElement && String.CompareOrdinal(elementName, reader.LocalName) == 0)
                     return;
                 else
-                    throw new XmlException(SR.Get(SRID.ElementIsNotEmptyElement, elementName), null, reader.LineNumber, reader.LinePosition);
+                    throw new XmlException(SR.Format(SR.ElementIsNotEmptyElement, elementName), null, ((IXmlLineInfo)reader).LineNumber, ((IXmlLineInfo)reader).LinePosition);
             }
 
             private void AddOverrideElement(PackUriHelper.ValidatedPartUri partUri, ContentType contentType)
@@ -1379,22 +1376,22 @@ namespace System.IO.Packaging
             }
 
             //Validate if the required XML attribute is present and not an empty string
-            private void ValidateXmlAttribute(string attributeName, string attributeValue, string tagName, XmlTextReader reader)
+            private void ValidateXmlAttribute(string attributeName, string attributeValue, string tagName, XmlReader reader)
             {
                 ThrowIfXmlAttributeMissing(attributeName, attributeValue, tagName, reader);
 
                 //Checking for empty attribute
                 if (attributeValue == String.Empty)
-                    throw new XmlException(SR.Get(SRID.RequiredAttributeEmpty, tagName, attributeName), null, reader.LineNumber, reader.LinePosition);
+                    throw new XmlException(SR.Format(SR.RequiredAttributeEmpty, tagName, attributeName), null, ((IXmlLineInfo)reader).LineNumber, ((IXmlLineInfo)reader).LinePosition);
             }
 
 
             //Validate if the required Content type XML attribute is present
             //Content type of a part can be empty
-            private void ThrowIfXmlAttributeMissing(string attributeName, string attributeValue, string tagName, XmlTextReader reader)
+            private void ThrowIfXmlAttributeMissing(string attributeName, string attributeValue, string tagName, XmlReader reader)
             {
                 if (attributeValue == null)
-                    throw new XmlException(SR.Get(SRID.RequiredAttributeMissing, tagName, attributeName), null, reader.LineNumber, reader.LinePosition);
+                    throw new XmlException(SR.Format(SR.RequiredAttributeMissing, tagName, attributeName), null, ((IXmlLineInfo)reader).LineNumber, ((IXmlLineInfo)reader).LinePosition);
             }
 
             #endregion Private Methods

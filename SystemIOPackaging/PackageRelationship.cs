@@ -7,16 +7,11 @@
 //  This is a class for representing a PackageRelationship. This is a part of the 
 //  MMCF Packaging Layer. 
 //
-// History:
-//  01/03/2004: SarjanaS: Initial creation.
-//  03/17/2004: BruceMac: Initial implementation or PackageRelationship methods
-//
 //-----------------------------------------------------------------------------
 
 using System;
 using System.Collections;
 using System.Xml;
-using System.Windows;           // For Exception strings - SRID
 using System.Text;              // for StringBuilder
 using System.Diagnostics;       // for Debug.Assert
 
@@ -176,7 +171,7 @@ namespace System.IO.Packaging
             }
             catch (XmlException exception)
             {
-                throw new XmlException(SR.Get(SRID.NotAValidXmlIdString, id), exception);
+                throw new XmlException(SR.Format(SR.NotAValidXmlIdString, id), exception);
             }
 #endif
 

@@ -7,10 +7,6 @@
 //  This is a subclass for the abstract PackagePart class.
 //  This implementation is specific to Zip file format.
 //
-// History:
-//  12/28/2004: SarjanaS: Initial creation. [BruceMac provided some of the
-//                                           initial code]
-//
 //-----------------------------------------------------------------------------
 
 using System;

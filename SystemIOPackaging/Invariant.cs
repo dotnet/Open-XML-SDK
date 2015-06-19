@@ -1,3 +1,4 @@
+// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 //---------------------------------------------------------------------------
@@ -12,10 +13,7 @@ namespace System.IO.Packaging
 {
     using System;
     using System.Security;
-    using System.Security.Permissions;
-    using Microsoft.Win32;
     using System.Diagnostics;
-    using System.Windows;
 
     /// <summary>
     /// Provides methods that assert an application is in a valid state. 
@@ -44,32 +42,6 @@ namespace System.IO.Packaging
         static Invariant()
         {
             s_strict = _strictDefaultValue;
-
-#if PRERELEASE
-            //
-            // Let the user override the inital value of the Strict property from the registry.
-            //
-
-            new RegistryPermission(RegistryPermissionAccess.Read, "HKEY_LOCAL_MACHINE\\" + RegistryKeys.WPF).Assert(); 
-            try
-            {
-                RegistryKey key = Registry.LocalMachine.OpenSubKey(RegistryKeys.WPF);
-
-                if (key != null)
-                {
-                    object obj = key.GetValue("InvariantStrict");
-
-                    if (obj is int)
-                    {
-                        _strict = (int)obj != 0;
-                    }
-                }
-            }
-            finally
-            {
-                CodeAccessPermission.RevertAll(); 
-            }
-#endif // PRERELEASE
         }
 
         #endregion Constructors
@@ -235,87 +207,12 @@ namespace System.IO.Packaging
         private // DO NOT MAKE PUBLIC OR INTERNAL -- See security note
             static void FailFast(string message, string detailMessage)
         {
-            if (Invariant.IsDialogOverrideEnabled)
-            {
-                // This is the override for stress and other automation.
-                // Automated systems can't handle a popup-dialog, so let
-                // them jump straight into the debugger.
-                Debugger.Break();
-            }
+            Debug.Assert(false, string.Format("Invariant failure: {0}\n{1}", message, detailMessage));
 
-            Debug.Assert(false, "Invariant failure: " + message, detailMessage);
-
-            Environment.FailFast(SR.Get(SRID.InvariantFailure));
+            Environment.FailFast(SR.InvariantFailure);
         }
 
         #endregion Private Methods
-
-        //------------------------------------------------------
-        //
-        //  Private Properties
-        //
-        //------------------------------------------------------
-
-        #region Private Properties
-
-        // Returns true if the default assert failure dialog has been disabled
-        // on this machine.
-        //
-        // The dialog may be disabled by
-        //   Installing a JIT debugger to the [HKEY_LOCAL_MACHINE\Software\Microsoft\.NETFramework]
-        //     DbgJITDebugLaunchSetting and DbgManagedDebugger registry keys.
-        ///<SecurityNote>
-        /// Critical - this function elevates to read from the registry. 
-        /// TreatAsSafe - Not controllable from external input. 
-        ///               The information stored indicates whether dialog override is available or not. Safe to expose
-        ///</SecurityNote>
-        private static bool IsDialogOverrideEnabled
-        {
-            // [SecurityCritical, SecurityTreatAsSafe] todo ew
-            // [SecurityCritical]
-            get
-            {
-                RegistryKey key;
-                bool enabled;
-
-                enabled = false;
-
-                //extracting all the data under an elevation.
-                object dbgJITDebugLaunchSettingValue;
-                string dbgManagedDebuggerValue;
-                PermissionSet ps = new PermissionSet(PermissionState.None);
-                RegistryPermission regPerm = new RegistryPermission(RegistryPermissionAccess.Read, "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NetFramework");
-                ps.AddPermission(regPerm);
-                ps.Assert();//BlessedAssert
-                try
-                {
-                    key = Registry.LocalMachine.OpenSubKey("Software\\Microsoft\\.NETFramework");
-                    dbgJITDebugLaunchSettingValue = key.GetValue("DbgJITDebugLaunchSetting");
-                    dbgManagedDebuggerValue = key.GetValue("DbgManagedDebugger") as string;
-                }
-                finally
-                {
-                    PermissionSet.RevertAssert();
-                }
-                //
-                // Check for the enable.
-                //
-                if (key != null)
-                {
-                    //
-                    // Only count the enable if there's a JIT debugger to launch.
-                    //
-                    enabled = (dbgJITDebugLaunchSettingValue is int && ((int)dbgJITDebugLaunchSettingValue & 2) != 0);
-                    if (enabled)
-                    {
-                        enabled = dbgManagedDebuggerValue != null && dbgManagedDebuggerValue.Length > 0;
-                    }
-                }
-                return enabled;
-            }
-        }
-
-        #endregion Private Properties
 
         //------------------------------------------------------
         //

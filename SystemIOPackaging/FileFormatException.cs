@@ -6,16 +6,10 @@
 // Description: The FileFormatException class is thrown when an input file or a data stream that is supposed to conform
 // to a certain file format specification is malformed.
 //
-// History:  
-//  10/21/2004 : mleonov - Created
-//
 //---------------------------------------------------------------------------
 
 using System;
-using System.Runtime.Serialization;
 using System.Security;
-using System.Security.Permissions;
-using System.Windows;
 using System.IO.Packaging;
 
 namespace System.IO
@@ -24,8 +18,7 @@ namespace System.IO
     /// The FileFormatException class is thrown when an input file or a data stream that is supposed to conform
     /// to a certain file format specification is malformed.
     /// </summary>
-    [Serializable()]
-    public class FileFormatException : FormatException, ISerializable
+    public class FileFormatException : FormatException
     {
         /// <summary>
         /// Creates a new instance of FileFormatException class.
@@ -34,7 +27,7 @@ namespace System.IO
         /// This message takes into account the current system culture.
         /// </summary>
         public FileFormatException()
-            : base(SR.Get(SRID.FileFormatException))
+            : base(SR.FileFormatException)
         { }
 
         /// <summary>
@@ -68,8 +61,8 @@ namespace System.IO
         public FileFormatException(Uri sourceUri)
             : base(
                 sourceUri == null
-                ? SR.Get(SRID.FileFormatException)
-                : SR.Get(SRID.FileFormatExceptionWithFileName, sourceUri))
+                ? SR.FileFormatException
+                : SR.Format(SR.FileFormatExceptionWithFileName, sourceUri))
         {
             _sourceUri = sourceUri;
         }
@@ -102,8 +95,8 @@ namespace System.IO
         public FileFormatException(Uri sourceUri, Exception innerException)
             : base(
                 sourceUri == null
-                ? SR.Get(SRID.FileFormatException)
-                : SR.Get(SRID.FileFormatExceptionWithFileName, sourceUri),
+                ? SR.FileFormatException
+                : SR.Format(SR.FileFormatExceptionWithFileName, sourceUri),
                 innerException)
         {
             _sourceUri = sourceUri;
@@ -137,7 +130,6 @@ namespace System.IO
         /// </SecurityNote>
         public Uri SourceUri
         {
-            [SecuritySafeCritical]
             get
             {
                 return _sourceUri;

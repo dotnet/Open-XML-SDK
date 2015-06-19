@@ -1,8 +1,10 @@
-﻿using System;
+// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -101,6 +103,7 @@ namespace System.IO.Packaging
         // then can't get length from the stream.  Not supported.
         // The workaround - write the stream to a memory stream, then return the length of the
         // memory stream.
+        // todo ew this will cause inefficiencies in PowerTools - should fix PowerTools
         public override long Length
         {
             get {
@@ -132,13 +135,10 @@ namespace System.IO.Packaging
             get { return _baseStream.CanSeek; }
         }
 
-        public override void Close()
-        {
-            _baseStream.Close();
-        }
-
         protected override void Dispose(bool disposing)
         {
+            if (disposing)
+                _baseStream.Dispose();
         }
     }
 }

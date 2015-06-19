@@ -7,14 +7,10 @@
 //  Description:    The class is used to wrap a given stream in a way that the Flush
 //                  and Close calls to the stream are Ignored. This stream class has been
 //                  created specifically for perf improvements for the ZipPackage.
-//                  
-//
-//  History:        09/05/05 - SarjanaS - initial implementation
 //------------------------------------------------------------------------------
 
 using System;
 using System.IO;
-using System.Windows;                       // for ExceptionStringTable
 
 namespace System.IO.Packaging
 {
@@ -214,7 +210,7 @@ namespace System.IO.Packaging
         private void ThrowIfStreamDisposed()
         {
             if (_disposed)
-                throw new ObjectDisposedException(null, SR.Get(SRID.StreamObjectDisposed));
+                throw new ObjectDisposedException(null, SR.StreamObjectDisposed);
         }
 
         #endregion Private Methods

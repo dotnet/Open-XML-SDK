@@ -220,6 +220,7 @@
     <Compile Include="src\ofapi\Validation\WordprocessingDocumentValidator.cs" />
     <Compile Include="src\ofapi\Validation\XmlPath.cs" />
     <Compile Include="src\ofapi\Wordprocessing.cs" />
+    <Compile Include="SystemIOPackaging\Common\SR.cs" />
     <Compile Include="SystemIOPackaging\CompressionOption.cs" />
     <Compile Include="SystemIOPackaging\ContentType.cs" />
     <Compile Include="SystemIOPackaging\EncryptionOption.cs" />
@@ -227,7 +228,6 @@
     <Compile Include="SystemIOPackaging\IgnoreFlushAndCloseStream.cs" />
     <Compile Include="SystemIOPackaging\InternalRelationshipCollection.cs" />
     <Compile Include="SystemIOPackaging\Invariant.cs" />
-    <Compile Include="SystemIOPackaging\LimitedWrappingStream.cs" />
     <Compile Include="SystemIOPackaging\Package.cs" />
     <Compile Include="SystemIOPackaging\PackagePart.cs" />
     <Compile Include="SystemIOPackaging\PackagePartCollection.cs" />
@@ -242,7 +242,6 @@
     <Compile Include="SystemIOPackaging\PackUriHelper.cs" />
     <Compile Include="SystemIOPackaging\PartBasedPackageProperties.cs" />
     <Compile Include="SystemIOPackaging\SR.cs" />
-    <Compile Include="SystemIOPackaging\SRID.cs" />
     <Compile Include="SystemIOPackaging\TargetMode.cs" />
     <Compile Include="SystemIOPackaging\XmlCompatibilityReader.cs" />
     <Compile Include="SystemIOPackaging\XmlWrappingReader.cs" />
