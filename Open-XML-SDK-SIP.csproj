@@ -245,8 +245,8 @@
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\System-IO-Packaging\System.IO.Packaging\System.IO.Packaging.csproj">
-      <Project>{a226cf92-ad34-4e4c-8c32-5cfdfacbbda8}</Project>
+    <ProjectReference Include="System.IO.Packaging\System.IO.Packaging.csproj">
+      <Project>{4c88a3ad-1241-4a04-854b-8372df29828d}</Project>
       <Name>System.IO.Packaging</Name>
     </ProjectReference>
   </ItemGroup>
