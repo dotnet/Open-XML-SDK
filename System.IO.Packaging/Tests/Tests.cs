@@ -79,8 +79,7 @@ namespace System.IO.Packaging.Tests
             Uri partUriDocument = PackUriHelper.CreatePartUri(new Uri(documentPath, UriKind.Relative));
             using (Package package = Package.Open(fiGuidName.FullName, FileMode.Create, FileAccess.ReadWrite))
             {
-                // todo this is wrong, should throw XmlException
-                Assert.Throws<ArgumentNullException>(() =>
+                Assert.Throws<XmlException>(() =>
                 {
                     package.DeleteRelationship("ab:23");
                 });
