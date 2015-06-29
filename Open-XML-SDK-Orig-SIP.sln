@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Open-XML-SDK", "Open-XML-SDK.csproj", "{55FB0A8A-B816-4DC9-9BB4-4DB5B5950F5A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Open-XML-SDK-Orig-SIP", "Open-XML-SDK-Orig-SIP.csproj", "{55FB0A8A-B816-4DC9-9BB4-4DB5B5950F5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
