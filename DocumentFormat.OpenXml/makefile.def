@@ -1,0 +1,70 @@
+﻿# Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+
+# Common configuration for makefile
+
+# Misc
+
+O=obj
+
+# Compiler
+
+MSBUILD=msbuild.exe
+
+# CSharp Compiler
+
+CSC=csc.exe
+CSCFLAGS=/nologo /warn:4
+
+!IFDEF VDEBUG
+
+# if define DEBUG here, causes validation to throw the following unexpected exception
+# An ExtendedPart '{/ppt/printerSettings/printerSettings1.bin}' was encountered with a relationship type that starts with "http://schemas.openxmlformats.org". Expected a defined part instead based on the relationship type.
+# CSCFLAGS=$(CSCFLAGS) /debug /checked /define:DEBUG;TRACE
+CSCFLAGS=$(CSCFLAGS) /debug /checked
+
+!ELSE
+
+CSCFLAGS=$(CSCFLAGS) /debug:pdbonly /o
+
+!ENDIF #VDEBUG
+
+# IDL Compiler
+
+# Resource compiler flags
+
+RESGEN=resgen.exe
+RC=rc
+RCFLAGS=/usesourcepath
+
+# Source dirs
+
+OXAPIDIR=.
+SRCDIR=$(OXAPIDIR)\src
+TOOLSRCDIR=$(OXAPIDIR)\toolsrc
+APIGENDIR=$(SRCDIR)\ApiGen
+DOMGENDIR=$(SRCDIR)\DomGenV3
+OXFRAMEWORKDIR=$(SRCDIR)\Framework
+OFAPIDIR=$(SRCDIR)\ofapi
+GENERATEDCODEDIR=$(SRCDIR)\GeneratedCode
+OFAPI4SDBBUILDERDIR=$(TOOLSRCDIR)\Ofapi4SdbBuilder
+SCHEMAPROCESSORDIR=$(TOOLSRCDIR)\SchemaProcessor
+SDBBUILDERDIR=$(TOOLSRCDIR)\SdbBuilder
+SEMANTICCONSTRAINTREGGENDIR=$(TOOLSRCDIR)\SemanticConstraintRegGen
+SCHEMATRONGENDIR=$(TOOLSRCDIR)\SchematronGen
+COREDIR=$(TOOLSRCDIR)\oxapitool\Core
+
+# Build dirs
+
+BUILDDIR=$(OXAPIDIR)\build
+MAINBLDDIR=$(OXAPIDIR)\build\oxapitool\Main
+APIGENBLDDIR=$(BUILDDIR)\ApiGen
+DOMGENBLDDIR=$(BUILDDIR)\DomGenV3
+FRAMEWORKBLDDIR=$(BUILDDIR)\Framework
+OFAPIBLDDIR=$(BUILDDIR)\OpenXmlSdkLib
+GENERATEDCODEBLDDIR=$(BUILDDIR)\GeneratedCode
+OFAPI4SDBBUILDERBLDDIR=$(BUILDDIR)\Ofapi4SdbBuilder
+SCHEMAPROCESSORBLDDIR=$(BUILDDIR)\SchemaProcessor
+SDBBUILDERBLDDIR=$(BUILDDIR)\SdbBuilder
+SEMANTICCONSTRAINTREGGENBLDDIR=$(BUILDDIR)\SemanticConstraintRegGen
+SCHEMATRONGENBLDDIR=$(BUILDDIR)\SchematronGen
+

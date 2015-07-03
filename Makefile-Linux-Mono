@@ -13,7 +13,7 @@ RCFLAGS=/usesourcepath
 
 # Source dirs
 
-OXAPIDIR=.
+OXAPIDIR=./DocumentFormat.OpenXml
 SRCDIR=$(OXAPIDIR)/src
 TOOLSRCDIR=$(OXAPIDIR)/toolsrc
 APIGENDIR=$(SRCDIR)/ApiGen
