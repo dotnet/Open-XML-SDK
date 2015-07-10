@@ -13,10 +13,20 @@ Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.
 Licensed under the Apache License, Version 2.0.
 See License.txt in the project root for license information.
 
+News
+====
+We are happy to announce the release of the Open XML SDK Version 2.6.  The
+big feature in 2.6 is the inclusion of a replacement for System.IO.Packaging, which
+has a serious bug that causes it (albeit rarely and in specific circumstances)
+to throw exceptions (ObjectDisposedException and NullReferenceException).  You can
+find out more about this bug and whether it affects you in [the blog post that announces the release of the new System.IO.Packaging](http://openxmldeveloper.org/blog/b/openxmldeveloper/archive/2015/06/29/announcing-the-release-of-a-new-system-io-packaging-implementation.aspx).
+
+Going forward, the Open XML SDK will be based on this new implementation of System.IO.Packaging.
+
 Documentation
 =============
 
-This release of the SDK is the exact source code for version 2.5, therefore
+This functionality of the Open XML SDK is the same as for version 2.5, therefore
 the documentation available on MSDN is still accurate.
 
 [Open XML SDK 2.5 for Office](http://msdn.microsoft.com/en-us/library/office/bb448854.aspx)
@@ -28,49 +38,20 @@ the documentation is [now in GitHub](https://github.com/OfficeDev/office-content
 Build Instructions
 ==================
 
-For a video that shows how to get and build the SDK, see [this blog post](http://openxmldeveloper.org/blog/b/openxmldeveloper/archive/2014/06/25/the-open-xml-sdk-is-now-open-source.aspx)
-at [OpenXmlDeveloper.org](http://OpenXmlDeveloper.org).
-
 Note: for this first release, you must have some version of Visual Studio
 installed.  Visual Studio 2012 Express Edition will work just fine:
 http://www.microsoft.com/en-us/download/details.aspx?id=34673
 
-Set Execution Policy for PowerShell
-===================================
-In order to run the script that builds the Open XML SDK, you need to set
-the execution policy.  To set the execution policy, you must run
-PowerShell as administrator.
-- Right click on the PowerShell shortcut, and click "Run as administrator".
-An easy way to find the PowerShell shortcut is to click the Start
-button, then type PowerShell.  The PowerShell shortcut will be in the
-search results above the start menu.
-- Click the Yes button in the User Account Control dialog box.
-- Run the command to set the execution policy:
-The the PowerShell prompt, type:
-Set-ExecutionPolicy Unrestricted<Enter>
-- The Set-ExecutionPolicy cmdlet asks:
-Do you want to change the execution policy?
-[Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
-Press Y Enter
-- You can exit the PowerShell session that is running as administrator.
-At the PowerShell prompt, type: Exit
+To build the Open XML SDK:
+- clone the repo at https://github.com/OfficeDev/Open-XML-SDK
+- Start a Visual Studio command prompt, and check into the directory that contains the repo
+- Use MSBUILD to build the SDK  (C:> MSBUILD Open-Xml-Sdk.sln)
+- If you want to continue to use the System.IO.Packaging that comes with the .NET Framework, use MSBUILD as follows  (C:> MSBUILD Open-XML-SDK-Orig-SIP.sln)
+- In your program that uses the Open XML SDK, add references to the newly built libraries in build/OpenXmlSdkLib/Debug
 
-Build the Open XML SDK Libraries
-================================
-- Start a Visual Studio command prompt.  It does not need to run as
-administrator.
-- Change directories into the directory that contains this README.md,
-and the PowerShell script BldSdk.ps1
-For instance, type:
-CD C:\users\username\Documents\Open-Xml-Sdk<Enter>
-- Start PowerShell.
-At the DOS command prompt, type: PowerShell Enter
-- Run the PowerShell script to build the libraries:
-Type: ./BldSdk.ps1 Enter
-- The build will commence - it can take a few seconds, up to a minute,
-depending on the speed of your computer.
-- Find the debug libraries in the folder: ./build/OpenXmlSdkLib/Debug.
-Find the release libraries in the folder: ./build/OpenXmlSdkLib/Release
+Previously, we were using PowerShell to generate a new version number for each build.  This is no longer required, and it is more convenient to build the SDK using MSBUILD, therefore I have removed the instructions for building using the PowerShell script.
+
+Instead of using MSBUILD, you can also open the solution using Visual Studio and build it.
 
 Building with Mono
 =================
@@ -78,23 +59,3 @@ Building with Mono
 - `make -f Makefile-Linux-Mono build`
 - Find libraries in the folder: ./build/OpenXmlSdkLib
 - [Screen-Cast: Using the Open XML SDK on Linux using Mono](http://openxmldeveloper.org/blog/b/openxmldeveloper/archive/2014/07/03/screen-cast-using-open-xml-sdk-on-linux-using-mono.aspx)
-
-Building with Visual Studio
-===========================
-The Visual Studio project contains a pre-build command line that launches a
-PowerShell script which sets the version string of the AssemblyInfo.cs (in
-roughly the same way as the normal command line build script). To be able
-to execute that pre-build command line, you must also set the execution policy
-as described above. Should you have multiple PowerShell shortcuts, you must
-use the right one for your Visual Studio installation.
-
-
-If you get the error "The command "cd C:\Users\Eric\Documents\Open-Xml-Sdk\
-powershell ./SetAssemblyVersionString.ps1" exited with code 1, then you need
-to set your execution policy.  There is a different execution policy for PowerShell
-scripts that are run from Visual Studio.  To set this execution policy:
-
-- Start a COMMAND prompt (not PowerShell console) as Administrator
-- Enter the following command:
-
-C:\windows\system32>c:\windows\syswow64\WindowsPowerShell\v1.0\powershell.exe -command set-executionpolicy unrestricted

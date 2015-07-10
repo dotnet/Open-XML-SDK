@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{E5D39C6A-9067-477E-B0D3-A9419B86E6E5}</ProjectGuid>
+    <ProjectGuid>{55FB0A8A-B816-4DC9-9BB4-4DB5B5950F5A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DocumentFormat.OpenXml</RootNamespace>
@@ -45,6 +45,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.XML" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\Framework\AlternateContent.cs" />
@@ -243,12 +244,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="System.IO.Packaging\System.IO.Packaging.csproj">
-      <Project>{4c88a3ad-1241-4a04-854b-8372df29828d}</Project>
-      <Name>System.IO.Packaging</Name>
-    </ProjectReference>
   </ItemGroup>
   <!-- 
     Thomas Barnekow: Removed following item group because it creates a Properties folder 

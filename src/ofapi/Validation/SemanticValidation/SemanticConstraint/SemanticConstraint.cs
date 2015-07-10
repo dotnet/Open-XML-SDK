@@ -226,7 +226,9 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
             for (int i = 0; i < path.Length; i++)
             {
                 IEnumerable<OpenXmlPart> s = parts.Where(p => p.OpenXmlPart.GetType().Name == path[i]).Select(t => t.OpenXmlPart);
-                Debug.Assert(s.Count() <= 1);
+                // Debug.Assert(s.Count() <= 1);  // TODO changing to an exception
+                if (s.Count() > 1)
+                    throw new Exception("Invalid document error: more than one part retrieved for one URI.");
                 if (s.Count() == 0)
                 {
                     return null;

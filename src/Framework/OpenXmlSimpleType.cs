@@ -965,11 +965,18 @@ namespace DocumentFormat.OpenXml
                 }
                 else
                 {
-                    Debug.Assert(this.TextValue == null && !this.InnerValue.HasValue ||
+                    //Debug.Assert(this.TextValue == null && !this.InnerValue.HasValue ||
+                    //             this.TextValue != null && !this.InnerValue.HasValue ||
+                    //             this.TextValue != null && this.TextValue == this.InnerValue.ToString() ||
+                    //    // special case: signed number like text is "+5", value is 5
+                    //             this.TextValue != null && this.TextValue == "+" + this.InnerValue.ToString());
+                    bool assertVal = (this.TextValue == null && !this.InnerValue.HasValue ||
                                  this.TextValue != null && !this.InnerValue.HasValue ||
                                  this.TextValue != null && this.TextValue == this.InnerValue.ToString() ||
-                                // special case: signed number like text is "+5", value is 5
+                        // special case: signed number like text is "+5", value is 5
                                  this.TextValue != null && this.TextValue == "+" + this.InnerValue.ToString());
+                    if (!assertVal)
+                        throw new Exception("Inner text formatting error =========================================================");
 
                 }
                 return this.TextValue;

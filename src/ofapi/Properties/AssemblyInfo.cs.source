@@ -40,5 +40,4 @@ using System.Security;
 [assembly: AssemblyFileVersion("2.0.3302.0")]
 
 [assembly: NeutralResourcesLanguageAttribute("en-US")]
-[assembly: AllowPartiallyTrustedCallers]
-[assembly: SecurityTransparent]
+[assembly: SecurityRules(SecurityRuleSet.Level1)]
