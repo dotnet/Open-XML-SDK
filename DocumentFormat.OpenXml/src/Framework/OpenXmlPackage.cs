@@ -1532,6 +1532,8 @@ namespace DocumentFormat.OpenXml.Packaging
 
         #region saving
 
+        private readonly object _saveAndCloneLock = new object();
+
         /// <summary>
         /// Saves the contents of all parts and relationships that are contained
         /// in the OpenXml package, if FileOpenAccess is ReadWrite.
@@ -1541,8 +1543,12 @@ namespace DocumentFormat.OpenXml.Packaging
             ThrowIfObjectDisposed();
             if (FileOpenAccess == FileAccess.ReadWrite)
             {
-                SavePartContents();
-                Package.Flush();
+                lock (_saveAndCloneLock)
+                {
+                    SavePartContents();
+                    // TODO: Revisit.
+                    // Package.Flush();
+                }
             }
         }
 
@@ -1626,28 +1632,31 @@ namespace DocumentFormat.OpenXml.Packaging
             if (openSettings == null)
                 openSettings = OpenSettings;
 
-            // Save the contents of all parts and relationships that are contained
-            // in the OpenXml package to make sure we clone a consistent state.
-            // This will also invoke ThrowIfObjectDisposed(), so we don't need
-            // to call it here.
-            Save();
-
-            // Create new OpenXmlPackage backed by stream. Next, copy all document
-            // parts (AddPart will copy the parts and their children in a recursive
-            // fashion) and close/dispose the document (by leaving the scope of the
-            // using statement). Finally, reopen the clone from the MemoryStream.
-            // This way, writing the stream to a file, for example, directly after
-            // returning from this method will not lead to issues with corrupt files
-            // and a FileFormatException ("Compressed part has inconsistent data length")
-            // thrown within OpenXmlPackage.OpenCore(string, bool) by the
-            //     this._metroPackage = Package.Open(path, ...);
-            // assignment.
-            using (OpenXmlPackage clone = CreateClone(stream))
+            lock (_saveAndCloneLock)
             {
-                foreach (var part in this.Parts)
-                    clone.AddPart(part.OpenXmlPart, part.RelationshipId);
+                // Save the contents of all parts and relationships that are contained
+                // in the OpenXml package to make sure we clone a consistent state.
+                // This will also invoke ThrowIfObjectDisposed(), so we don't need
+                // to call it here.
+                Save();
+
+                // Create new OpenXmlPackage backed by stream. Next, copy all document
+                // parts (AddPart will copy the parts and their children in a recursive
+                // fashion) and close/dispose the document (by leaving the scope of the
+                // using statement). Finally, reopen the clone from the MemoryStream.
+                // This way, writing the stream to a file, for example, directly after
+                // returning from this method will not lead to issues with corrupt files
+                // and a FileFormatException ("Compressed part has inconsistent data length")
+                // thrown within OpenXmlPackage.OpenCore(string, bool) by the
+                //     this._metroPackage = Package.Open(path, ...);
+                // assignment.
+                using (OpenXmlPackage clone = CreateClone(stream))
+                {
+                    foreach (var part in this.Parts)
+                        clone.AddPart(part.OpenXmlPart, part.RelationshipId);
+                }
+                return OpenClone(stream, isEditable, openSettings);
             }
-            return OpenClone(stream, isEditable, openSettings);
         }
 
         /// <summary>
@@ -1718,20 +1727,23 @@ namespace DocumentFormat.OpenXml.Packaging
             if (openSettings == null)
                 openSettings = OpenSettings;
 
-            // Save the contents of all parts and relationships that are contained
-            // in the OpenXml package to make sure we clone a consistent state.
-            // This will also invoke ThrowIfObjectDisposed(), so we don't need
-            // to call it here.
-            Save();
-
-            // Use the same approach as for the streams-based cloning, i.e., close
-            // and reopen the document.
-            using (OpenXmlPackage clone = CreateClone(path))
+            lock (_saveAndCloneLock)
             {
-                foreach (var part in this.Parts)
-                    clone.AddPart(part.OpenXmlPart, part.RelationshipId);
+                // Save the contents of all parts and relationships that are contained
+                // in the OpenXml package to make sure we clone a consistent state.
+                // This will also invoke ThrowIfObjectDisposed(), so we don't need
+                // to call it here.
+                Save();
+
+                // Use the same approach as for the streams-based cloning, i.e., close
+                // and reopen the document.
+                using (OpenXmlPackage clone = CreateClone(path))
+                {
+                    foreach (var part in this.Parts)
+                        clone.AddPart(part.OpenXmlPart, part.RelationshipId);
+                }
+                return OpenClone(path, isEditable, openSettings);
             }
-            return OpenClone(path, isEditable, openSettings);
         }
 
         /// <summary>
@@ -1786,32 +1798,36 @@ namespace DocumentFormat.OpenXml.Packaging
             if (openSettings == null)
                 openSettings = OpenSettings;
 
-            // Save the contents of all parts and relationships that are contained
-            // in the OpenXml package to make sure we clone a consistent state.
-            // This will also invoke ThrowIfObjectDisposed(), so we don't need
-            // to call it here.
-            Save();
-
-            // Create a new OpenXml package, copy this package's parts, and flush.
-            // This is different from the stream and file-based cloning, because
-            // we don't close the package here (whereas it will be closed in
-            // stream and file-based cloning to make sure the underlying stream
-            // or file can be read without any corruption issues directly after
-            // having cloned the OpenXml package).
-            OpenXmlPackage clone = CreateClone(package);
-            foreach (var part in this.Parts)
+            lock (_saveAndCloneLock)
             {
-                clone.AddPart(part.OpenXmlPart, part.RelationshipId);
+                // Save the contents of all parts and relationships that are contained
+                // in the OpenXml package to make sure we clone a consistent state.
+                // This will also invoke ThrowIfObjectDisposed(), so we don't need
+                // to call it here.
+                Save();
+
+                // Create a new OpenXml package, copy this package's parts, and flush.
+                // This is different from the stream and file-based cloning, because
+                // we don't close the package here (whereas it will be closed in
+                // stream and file-based cloning to make sure the underlying stream
+                // or file can be read without any corruption issues directly after
+                // having cloned the OpenXml package).
+                OpenXmlPackage clone = CreateClone(package);
+                foreach (var part in this.Parts)
+                {
+                    clone.AddPart(part.OpenXmlPart, part.RelationshipId);
+                }
+                // TODO: Revisit.
+                // package.Flush();
+
+                // Configure OpenSettings.
+                clone.OpenSettings.AutoSave = openSettings.AutoSave;
+                clone.OpenSettings.MarkupCompatibilityProcessSettings.ProcessMode = openSettings.MarkupCompatibilityProcessSettings.ProcessMode;
+                clone.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions = openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
+                clone.MaxCharactersInPart = openSettings.MaxCharactersInPart;
+
+                return clone;
             }
-            package.Flush();
-
-            // Configure OpenSettings.
-            clone.OpenSettings.AutoSave = openSettings.AutoSave;
-            clone.OpenSettings.MarkupCompatibilityProcessSettings.ProcessMode = openSettings.MarkupCompatibilityProcessSettings.ProcessMode;
-            clone.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions = openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
-            clone.MaxCharactersInPart = openSettings.MaxCharactersInPart;
-
-            return clone;
         }
 
         /// <summary>
