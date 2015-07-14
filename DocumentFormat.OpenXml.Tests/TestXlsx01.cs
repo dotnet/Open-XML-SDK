@@ -1,25 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.IO.Packaging;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
-using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation;
-using DocumentFormat.OpenXml.Wordprocessing;
+using Xunit;
 using P = DocumentFormat.OpenXml.Presentation;
 using S = DocumentFormat.OpenXml.Spreadsheet;
 using W = DocumentFormat.OpenXml.Wordprocessing;
 using A = DocumentFormat.OpenXml.Drawing;
 using DW = DocumentFormat.OpenXml.Drawing.Wordprocessing;
 using PIC = DocumentFormat.OpenXml.Drawing.Pictures;
-using OpenXmlPowerTools;
-using Xunit;
 
-namespace DocumentFormat.OpenXml.Test
+namespace DocumentFormat.OpenXml.Tests
 {
     public class XlsxTests01
     {

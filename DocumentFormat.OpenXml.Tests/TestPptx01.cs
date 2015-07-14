@@ -1,24 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.IO.Packaging;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
-using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation;
-using DocumentFormat.OpenXml.Presentation;
+using Xunit;
 using P = DocumentFormat.OpenXml.Presentation;
 using D = DocumentFormat.OpenXml.Drawing;
 using A = DocumentFormat.OpenXml.Drawing;
 using PIC = DocumentFormat.OpenXml.Drawing.Pictures;
-using OpenXmlPowerTools;
-using Xunit;
-using DocumentFormat.OpenXml.Drawing;
 
-namespace DocumentFormat.OpenXml.Test
+namespace DocumentFormat.OpenXml.Tests
 {
     public class PptxTests01
     {
@@ -28,7 +20,7 @@ namespace DocumentFormat.OpenXml.Test
         [Fact]
         public void P007_PptxCreation_Package_Settings()
         {
-            var fiSource = new FileInfo(System.IO.Path.Combine(s_TestFileLocation, "Presentation.pptx"));
+            var fiSource = new FileInfo(Path.Combine(s_TestFileLocation, "Presentation.pptx"));
             var fiCopy = new FileInfo(Guid.NewGuid().ToString() + ".pptx");
             File.Copy(fiSource.FullName, fiCopy.FullName);
             using (Package package = Package.Open(fiCopy.FullName, FileMode.Open, FileAccess.ReadWrite))
@@ -48,7 +40,7 @@ namespace DocumentFormat.OpenXml.Test
         [Fact]
         public void P006_PresentationDocument_Open()
         {
-            var fiSource = new FileInfo(System.IO.Path.Combine(s_TestFileLocation, "Presentation.pptx"));
+            var fiSource = new FileInfo(Path.Combine(s_TestFileLocation, "Presentation.pptx"));
             var fiCopy = new FileInfo(Guid.NewGuid().ToString() + ".pptx");
             File.Copy(fiSource.FullName, fiCopy.FullName);
             OpenSettings openSettings = new OpenSettings();
@@ -65,7 +57,7 @@ namespace DocumentFormat.OpenXml.Test
         [Fact]
         public void P005_PptxCreation_Package_Settings()
         {
-            var fiSource = new FileInfo(System.IO.Path.Combine(s_TestFileLocation, "Presentation.pptx"));
+            var fiSource = new FileInfo(Path.Combine(s_TestFileLocation, "Presentation.pptx"));
             var fiCopy = new FileInfo(Guid.NewGuid().ToString() + ".pptx");
             File.Copy(fiSource.FullName, fiCopy.FullName);
             using (Package package = Package.Open(fiCopy.FullName, FileMode.Open, FileAccess.ReadWrite))
@@ -85,7 +77,7 @@ namespace DocumentFormat.OpenXml.Test
         [Fact]
         public void P004_SpreadsheetDocument_Open()
         {
-            var fiSource = new FileInfo(System.IO.Path.Combine(s_TestFileLocation, "Presentation.pptx"));
+            var fiSource = new FileInfo(Path.Combine(s_TestFileLocation, "Presentation.pptx"));
             var fiCopy = new FileInfo(Guid.NewGuid().ToString() + ".pptx");
             File.Copy(fiSource.FullName, fiCopy.FullName);
             OpenSettings openSettings = new OpenSettings();
@@ -124,7 +116,7 @@ namespace DocumentFormat.OpenXml.Test
             // Create a presentation at a specified file path. The presentation document type is pptx, by default.
             PresentationDocument presentationDoc = PresentationDocument.Create(filepath, PresentationDocumentType.Presentation);
             PresentationPart presentationPart = presentationDoc.AddPresentationPart();
-            presentationPart.Presentation = new DocumentFormat.OpenXml.Presentation.Presentation();
+            presentationPart.Presentation = new P.Presentation();
 
             CreatePresentationParts(presentationPart);
 
@@ -134,11 +126,11 @@ namespace DocumentFormat.OpenXml.Test
 
         private static void CreatePresentationParts(PresentationPart presentationPart)
         {
-            SlideMasterIdList slideMasterIdList1 = new SlideMasterIdList(new SlideMasterId() { Id = (UInt32Value)2147483648U, RelationshipId = "rId1" });
-            SlideIdList slideIdList1 = new SlideIdList(new SlideId() { Id = (UInt32Value)256U, RelationshipId = "rId2" });
-            SlideSize slideSize1 = new SlideSize() { Cx = 9144000, Cy = 6858000, Type = SlideSizeValues.Screen4x3 };
-            NotesSize notesSize1 = new NotesSize() { Cx = 6858000, Cy = 9144000 };
-            DefaultTextStyle defaultTextStyle1 = new DefaultTextStyle();
+            P.SlideMasterIdList slideMasterIdList1 = new P.SlideMasterIdList(new P.SlideMasterId() { Id = (UInt32Value)2147483648U, RelationshipId = "rId1" });
+            P.SlideIdList slideIdList1 = new P.SlideIdList(new P.SlideId() { Id = (UInt32Value)256U, RelationshipId = "rId2" });
+            P.SlideSize slideSize1 = new P.SlideSize() { Cx = 9144000, Cy = 6858000, Type = P.SlideSizeValues.Screen4x3 };
+            P.NotesSize notesSize1 = new P.NotesSize() { Cx = 6858000, Cy = 9144000 };
+            P.DefaultTextStyle defaultTextStyle1 = new P.DefaultTextStyle();
 
             presentationPart.Presentation.Append(slideMasterIdList1, slideIdList1, slideSize1, notesSize1, defaultTextStyle1);
 
@@ -161,49 +153,49 @@ namespace DocumentFormat.OpenXml.Test
         private static SlidePart CreateSlidePart(PresentationPart presentationPart)
         {
             SlidePart slidePart1 = presentationPart.AddNewPart<SlidePart>("rId2");
-            slidePart1.Slide = new Slide(
-                    new CommonSlideData(
-                        new ShapeTree(
+            slidePart1.Slide = new P.Slide(
+                    new P.CommonSlideData(
+                        new P.ShapeTree(
                             new P.NonVisualGroupShapeProperties(
                                 new P.NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" },
                                 new P.NonVisualGroupShapeDrawingProperties(),
-                                new ApplicationNonVisualDrawingProperties()),
-                            new GroupShapeProperties(new TransformGroup()),
+                                new P.ApplicationNonVisualDrawingProperties()),
+                            new P.GroupShapeProperties(new D.TransformGroup()),
                             new P.Shape(
                                 new P.NonVisualShapeProperties(
                                     new P.NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" },
-                                    new P.NonVisualShapeDrawingProperties(new ShapeLocks() { NoGrouping = true }),
-                                    new ApplicationNonVisualDrawingProperties(new PlaceholderShape())),
+                                    new P.NonVisualShapeDrawingProperties(new D.ShapeLocks() { NoGrouping = true }),
+                                    new P.ApplicationNonVisualDrawingProperties(new P.PlaceholderShape())),
                                 new P.ShapeProperties(),
                                 new P.TextBody(
-                                    new BodyProperties(),
-                                    new ListStyle(),
-                                    new Paragraph(new EndParagraphRunProperties() { Language = "en-US" }))))),
-                    new ColorMapOverride(new MasterColorMapping()));
+                                    new D.BodyProperties(),
+                                    new D.ListStyle(),
+                                    new D.Paragraph(new D.EndParagraphRunProperties() { Language = "en-US" }))))),
+                    new P.ColorMapOverride(new D.MasterColorMapping()));
             return slidePart1;
         }
 
         private static SlideLayoutPart CreateSlideLayoutPart(SlidePart slidePart1)
         {
             SlideLayoutPart slideLayoutPart1 = slidePart1.AddNewPart<SlideLayoutPart>("rId1");
-            SlideLayout slideLayout = new SlideLayout(
-            new CommonSlideData(new ShapeTree(
+            P.SlideLayout slideLayout = new P.SlideLayout(
+            new P.CommonSlideData(new P.ShapeTree(
               new P.NonVisualGroupShapeProperties(
               new P.NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" },
               new P.NonVisualGroupShapeDrawingProperties(),
-              new ApplicationNonVisualDrawingProperties()),
-              new GroupShapeProperties(new TransformGroup()),
+              new P.ApplicationNonVisualDrawingProperties()),
+              new P.GroupShapeProperties(new D.TransformGroup()),
               new P.Shape(
               new P.NonVisualShapeProperties(
                 new P.NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "" },
-                new P.NonVisualShapeDrawingProperties(new ShapeLocks() { NoGrouping = true }),
-                new ApplicationNonVisualDrawingProperties(new PlaceholderShape())),
+                new P.NonVisualShapeDrawingProperties(new D.ShapeLocks() { NoGrouping = true }),
+                new P.ApplicationNonVisualDrawingProperties(new P.PlaceholderShape())),
               new P.ShapeProperties(),
               new P.TextBody(
-                new BodyProperties(),
-                new ListStyle(),
-                new Paragraph(new EndParagraphRunProperties()))))),
-            new ColorMapOverride(new MasterColorMapping()));
+                new D.BodyProperties(),
+                new D.ListStyle(),
+                new D.Paragraph(new D.EndParagraphRunProperties()))))),
+            new P.ColorMapOverride(new D.MasterColorMapping()));
             slideLayoutPart1.SlideLayout = slideLayout;
             return slideLayoutPart1;
         }
@@ -211,26 +203,26 @@ namespace DocumentFormat.OpenXml.Test
         private static SlideMasterPart CreateSlideMasterPart(SlideLayoutPart slideLayoutPart1)
         {
             SlideMasterPart slideMasterPart1 = slideLayoutPart1.AddNewPart<SlideMasterPart>("rId1");
-            SlideMaster slideMaster = new SlideMaster(
-            new CommonSlideData(new ShapeTree(
+            P.SlideMaster slideMaster = new P.SlideMaster(
+            new P.CommonSlideData(new P.ShapeTree(
               new P.NonVisualGroupShapeProperties(
               new P.NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" },
               new P.NonVisualGroupShapeDrawingProperties(),
-              new ApplicationNonVisualDrawingProperties()),
-              new GroupShapeProperties(new TransformGroup()),
+              new P.ApplicationNonVisualDrawingProperties()),
+              new P.GroupShapeProperties(new D.TransformGroup()),
               new P.Shape(
               new P.NonVisualShapeProperties(
                 new P.NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title Placeholder 1" },
-                new P.NonVisualShapeDrawingProperties(new ShapeLocks() { NoGrouping = true }),
-                new ApplicationNonVisualDrawingProperties(new PlaceholderShape() { Type = PlaceholderValues.Title })),
+                new P.NonVisualShapeDrawingProperties(new D.ShapeLocks() { NoGrouping = true }),
+                new P.ApplicationNonVisualDrawingProperties(new P.PlaceholderShape() { Type = P.PlaceholderValues.Title })),
               new P.ShapeProperties(),
               new P.TextBody(
-                new BodyProperties(),
-                new ListStyle(),
-                new Paragraph())))),
+                new D.BodyProperties(),
+                new D.ListStyle(),
+                new D.Paragraph())))),
             new P.ColorMap() { Background1 = D.ColorSchemeIndexValues.Light1, Text1 = D.ColorSchemeIndexValues.Dark1, Background2 = D.ColorSchemeIndexValues.Light2, Text2 = D.ColorSchemeIndexValues.Dark2, Accent1 = D.ColorSchemeIndexValues.Accent1, Accent2 = D.ColorSchemeIndexValues.Accent2, Accent3 = D.ColorSchemeIndexValues.Accent3, Accent4 = D.ColorSchemeIndexValues.Accent4, Accent5 = D.ColorSchemeIndexValues.Accent5, Accent6 = D.ColorSchemeIndexValues.Accent6, Hyperlink = D.ColorSchemeIndexValues.Hyperlink, FollowedHyperlink = D.ColorSchemeIndexValues.FollowedHyperlink },
-            new SlideLayoutIdList(new SlideLayoutId() { Id = (UInt32Value)2147483649U, RelationshipId = "rId1" }),
-            new TextStyles(new TitleStyle(), new BodyStyle(), new OtherStyle()));
+            new P.SlideLayoutIdList(new P.SlideLayoutId() { Id = (UInt32Value)2147483649U, RelationshipId = "rId1" }),
+            new P.TextStyles(new P.TitleStyle(), new P.BodyStyle(), new P.OtherStyle()));
             slideMasterPart1.SlideMaster = slideMaster;
 
             return slideMasterPart1;

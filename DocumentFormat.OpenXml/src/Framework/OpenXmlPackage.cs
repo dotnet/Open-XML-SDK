@@ -1,4 +1,5 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+// Copyright 2014 Thomas Barnekow (cloning, Flat OPC (with Eric White))
 using System;
 using System.Diagnostics;
 using System.Collections;
@@ -12,6 +13,8 @@ using System.Runtime.Serialization;
 using System.Globalization;
 using DocumentFormat.OpenXml;
 using System.Linq;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
@@ -1524,6 +1527,553 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
             }
         }
+
+        #region saving and cloning
+
+        #region saving
+
+        private readonly object _saveAndCloneLock = new object();
+
+        /// <summary>
+        /// Saves the contents of all parts and relationships that are contained
+        /// in the OpenXml package, if FileOpenAccess is ReadWrite.
+        /// </summary>
+        public void Save()
+        {
+            ThrowIfObjectDisposed();
+            if (FileOpenAccess == FileAccess.ReadWrite)
+            {
+                lock (_saveAndCloneLock)
+                {
+                    SavePartContents();
+                    // TODO: Revisit.
+                    // Package.Flush();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Saves the contents of all parts and relationships that are contained
+        /// in the OpenXml package to the specified file. Opens the saved document
+        /// using the same settings that were used to open this OpenXml package.
+        /// </summary>
+        /// <remarks>
+        /// Calling SaveAs(string) is exactly equivalent to calling Clone(string).
+        /// This method is essentially provided for convenience.
+        /// </remarks>
+        /// <param name="path">The path and file name of the target document.</param>
+        /// <returns>The cloned OpenXml package</returns>
+        public OpenXmlPackage SaveAs(string path)
+        {
+            return Clone(path);
+        }
+
+        #endregion saving
+
+        #region Default clone method
+
+        /// <summary>
+        /// Creates an editable clone of this OpenXml package, opened on a
+        /// <see cref="MemoryStream"/> with expandable capacity and using
+        /// default OpenSettings.
+        /// </summary>
+        /// <returns>The cloned OpenXml package.</returns>
+        public OpenXmlPackage Clone()
+        {
+            return Clone(new MemoryStream(), true, new OpenSettings());
+        }
+
+        #endregion Default clone method
+
+        #region Stream-based cloning
+
+        /// <summary>
+        /// Creates a clone of this OpenXml package, opened on the given stream.
+        /// The cloned OpenXml package is opened with the same settings, i.e.,
+        /// FileOpenAccess and OpenSettings, as this OpenXml package.
+        /// </summary>
+        /// <param name="stream">The IO stream on which to open the OpenXml package.</param>
+        /// <returns>The cloned OpenXml package.</returns>
+        public OpenXmlPackage Clone(Stream stream)
+        {
+            return Clone(stream, FileOpenAccess == FileAccess.ReadWrite, OpenSettings);
+        }
+
+        /// <summary>
+        /// Creates a clone of this OpenXml package, opened on the given stream.
+        /// The cloned OpenXml package is opened with the same OpenSettings as
+        /// this OpenXml package.
+        /// </summary>
+        /// <param name="stream">The IO stream on which to open the OpenXml package.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
+        /// <returns>The cloned OpenXml package.</returns>
+        public OpenXmlPackage Clone(Stream stream, bool isEditable)
+        {
+            return Clone(stream, isEditable, OpenSettings);
+        }
+
+        /// <summary>
+        /// Creates a clone of this OpenXml package, opened on the given stream.
+        /// </summary>
+        /// <param name="stream">The IO stream on which to open the OpenXml package.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
+        /// <param name="openSettings">The advanced settings for opening a document.</param>
+        /// <returns>The cloned OpenXml package.</returns>
+        public OpenXmlPackage Clone(Stream stream, bool isEditable, OpenSettings openSettings)
+        {
+            if (stream == null)
+                throw new ArgumentNullException("stream");
+
+            // Use this OpenXml package's OpenSettings if none are provided.
+            // This is more in line with cloning than providing the default
+            // OpenSettings, i.e., unless the caller explicitly specifies
+            // something, we'll later open the clone with this OpenXml
+            // package's OpenSettings.
+            if (openSettings == null)
+                openSettings = OpenSettings;
+
+            lock (_saveAndCloneLock)
+            {
+                // Save the contents of all parts and relationships that are contained
+                // in the OpenXml package to make sure we clone a consistent state.
+                // This will also invoke ThrowIfObjectDisposed(), so we don't need
+                // to call it here.
+                Save();
+
+                // Create new OpenXmlPackage backed by stream. Next, copy all document
+                // parts (AddPart will copy the parts and their children in a recursive
+                // fashion) and close/dispose the document (by leaving the scope of the
+                // using statement). Finally, reopen the clone from the MemoryStream.
+                // This way, writing the stream to a file, for example, directly after
+                // returning from this method will not lead to issues with corrupt files
+                // and a FileFormatException ("Compressed part has inconsistent data length")
+                // thrown within OpenXmlPackage.OpenCore(string, bool) by the
+                //     this._metroPackage = Package.Open(path, ...);
+                // assignment.
+                using (OpenXmlPackage clone = CreateClone(stream))
+                {
+                    foreach (var part in this.Parts)
+                        clone.AddPart(part.OpenXmlPart, part.RelationshipId);
+                }
+                return OpenClone(stream, isEditable, openSettings);
+            }
+        }
+
+        /// <summary>
+        /// Creates a new OpenXmlPackage on the given stream.
+        /// </summary>
+        /// <param name="stream">The stream on which the concrete OpenXml package will be created.</param>
+        /// <returns>A new instance of OpenXmlPackage.</returns>
+        protected abstract OpenXmlPackage CreateClone(Stream stream);
+
+        /// <summary>
+        /// Opens the cloned OpenXml package on the given stream.
+        /// </summary>
+        /// <param name="stream">The stream on which the cloned OpenXml package will be opened.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
+        /// <param name="openSettings">The advanced settings for opening a document.</param>
+        /// <returns>A new instance of OpenXmlPackage.</returns>
+        protected abstract OpenXmlPackage OpenClone(Stream stream, bool isEditable, OpenSettings openSettings);
+
+        #endregion Stream-based cloning
+
+        #region File-based cloning
+
+        /// <summary>
+        /// Creates a clone of this OpenXml package opened from the given file
+        /// (which will be created by cloning this OpenXml package).
+        /// The cloned OpenXml package is opened with the same settings, i.e.,
+        /// FileOpenAccess and OpenSettings, as this OpenXml package.
+        /// </summary>
+        /// <param name="path">The path and file name of the target document.</param>
+        /// <returns>The cloned document.</returns>
+        public OpenXmlPackage Clone(string path)
+        {
+            return Clone(path, FileOpenAccess == FileAccess.ReadWrite, OpenSettings);
+        }
+
+        /// <summary>
+        /// Creates a clone of this OpenXml package opened from the given file
+        /// (which will be created by cloning this OpenXml package).
+        /// The cloned OpenXml package is opened with the same OpenSettings as
+        /// this OpenXml package.
+        /// </summary>
+        /// <param name="path">The path and file name of the target document.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
+        /// <returns>The cloned document.</returns>
+        public OpenXmlPackage Clone(string path, bool isEditable)
+        {
+            return Clone(path, isEditable, OpenSettings);
+        }
+
+        /// <summary>
+        /// Creates a clone of this OpenXml package opened from the given file (which
+        /// will be created by cloning this OpenXml package).
+        /// </summary>
+        /// <param name="path">The path and file name of the target document.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
+        /// <param name="openSettings">The advanced settings for opening a document.</param>
+        /// <returns>The cloned document.</returns>
+        public OpenXmlPackage Clone(string path, bool isEditable, OpenSettings openSettings)
+        {
+            if (path == null)
+                throw new ArgumentNullException("path");
+
+            // Use this OpenXml package's OpenSettings if none are provided.
+            // This is more in line with cloning than providing the default
+            // OpenSettings, i.e., unless the caller explicitly specifies
+            // something, we'll later open the clone with this OpenXml
+            // package's OpenSettings.
+            if (openSettings == null)
+                openSettings = OpenSettings;
+
+            lock (_saveAndCloneLock)
+            {
+                // Save the contents of all parts and relationships that are contained
+                // in the OpenXml package to make sure we clone a consistent state.
+                // This will also invoke ThrowIfObjectDisposed(), so we don't need
+                // to call it here.
+                Save();
+
+                // Use the same approach as for the streams-based cloning, i.e., close
+                // and reopen the document.
+                using (OpenXmlPackage clone = CreateClone(path))
+                {
+                    foreach (var part in this.Parts)
+                        clone.AddPart(part.OpenXmlPart, part.RelationshipId);
+                }
+                return OpenClone(path, isEditable, openSettings);
+            }
+        }
+
+        /// <summary>
+        /// Creates a new OpenXml package on the given file.
+        /// </summary>
+        /// <param name="path">The path and file name of the target OpenXml package.</param>
+        /// <returns>A new instance of OpenXmlPackage.</returns>
+        protected abstract OpenXmlPackage CreateClone(string path);
+
+        /// <summary>
+        /// Opens the cloned OpenXml package on the given file.
+        /// </summary>
+        /// <param name="path">The path and file name of the target OpenXml package.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
+        /// <param name="openSettings">The advanced settings for opening a document.</param>
+        /// <returns>A new instance of OpenXmlPackage.</returns>
+        protected abstract OpenXmlPackage OpenClone(string path, bool isEditable, OpenSettings openSettings);
+
+        #endregion File-based cloning
+
+        #region Package-based cloning
+
+        /// <summary>
+        /// Creates a clone of this OpenXml package, opened on the specified instance
+        /// of Package. The clone will be opened with the same OpenSettings as this
+        /// OpenXml package.
+        /// </summary>
+        /// <param name="package">The specified instance of Package.</param>
+        /// <returns>The cloned OpenXml package.</returns>
+        public OpenXmlPackage Clone(Package package)
+        {
+            return Clone(package, OpenSettings);
+        }
+
+        /// <summary>
+        /// Creates a clone of this OpenXml package, opened on the specified instance
+        /// of Package.
+        /// </summary>
+        /// <param name="package">The specified instance of Package.</param>
+        /// <param name="openSettings">The advanced settings for opening a document.</param>
+        /// <returns>The cloned OpenXml package.</returns>
+        public OpenXmlPackage Clone(Package package, OpenSettings openSettings)
+        {
+            if (package == null)
+                throw new ArgumentNullException("package");
+
+            // Use this OpenXml package's OpenSettings if none are provided.
+            // This is more in line with cloning than providing the default
+            // OpenSettings, i.e., unless the caller explicitly specifies
+            // something, we'll later open the clone with this OpenXml
+            // package's OpenSettings.
+            if (openSettings == null)
+                openSettings = OpenSettings;
+
+            lock (_saveAndCloneLock)
+            {
+                // Save the contents of all parts and relationships that are contained
+                // in the OpenXml package to make sure we clone a consistent state.
+                // This will also invoke ThrowIfObjectDisposed(), so we don't need
+                // to call it here.
+                Save();
+
+                // Create a new OpenXml package, copy this package's parts, and flush.
+                // This is different from the stream and file-based cloning, because
+                // we don't close the package here (whereas it will be closed in
+                // stream and file-based cloning to make sure the underlying stream
+                // or file can be read without any corruption issues directly after
+                // having cloned the OpenXml package).
+                OpenXmlPackage clone = CreateClone(package);
+                foreach (var part in this.Parts)
+                {
+                    clone.AddPart(part.OpenXmlPart, part.RelationshipId);
+                }
+                // TODO: Revisit.
+                // package.Flush();
+
+                // Configure OpenSettings.
+                clone.OpenSettings.AutoSave = openSettings.AutoSave;
+                clone.OpenSettings.MarkupCompatibilityProcessSettings.ProcessMode = openSettings.MarkupCompatibilityProcessSettings.ProcessMode;
+                clone.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions = openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
+                clone.MaxCharactersInPart = openSettings.MaxCharactersInPart;
+
+                return clone;
+            }
+        }
+
+        /// <summary>
+        /// Creates a new instance of OpenXmlPackage on the specified instance
+        /// of Package.
+        /// </summary>
+        /// <param name="package">The specified instance of Package.</param>
+        /// <returns>A new instance of OpenXmlPackage.</returns>
+        protected abstract OpenXmlPackage CreateClone(Package package);
+
+        #endregion Package-based cloning
+
+        #endregion saving and cloning
+
+        #region Flat OPC
+
+        private static readonly XNamespace pkg = "http://schemas.microsoft.com/office/2006/xmlPackage";
+        private static readonly XNamespace rel = "http://schemas.openxmlformats.org/package/2006/relationships";
+
+        /// <summary>
+        /// Converts an OpenXml package in OPC format to string in Flat OPC format.
+        /// </summary>
+        /// <returns>The OpenXml package in Flat OPC format.</returns>
+        public string ToFlatOpcString()
+        {
+            return ToFlatOpcDocument().ToString();
+        }
+
+        /// <summary>
+        /// Converts an OpenXml package in OPC format to an <see cref="XDocument"/>
+        /// in Flat OPC format.
+        /// </summary>
+        /// <returns>The OpenXml package in Flat OPC format.</returns>
+        public abstract XDocument ToFlatOpcDocument();
+
+        /// <summary>
+        /// Converts an OpenXml package in OPC format to an <see cref="XDocument"/>
+        /// in Flat OPC format.
+        /// </summary>
+        /// <param name="instruction">The processing instruction.</param>
+        /// <returns>The OpenXml package in Flat OPC format.</returns>
+        protected XDocument ToFlatOpcDocument(XProcessingInstruction instruction)
+        {
+            // Save the contents of all parts and relationships that are contained
+            // in the OpenXml package to make sure we convert a consistent state.
+            // This will also invoke ThrowIfObjectDisposed(), so we don't need
+            // to call it here.
+            Save();
+
+            // Create an XML document with a standalone declaration, processing
+            // instruction (if not null), and a package root element with a
+            // namespace declaration and one child element for each part.
+            return new XDocument(
+                new XDeclaration("1.0", "UTF-8", "yes"),
+                instruction,
+                new XElement(
+                    pkg + "package",
+                    new XAttribute(XNamespace.Xmlns + "pkg", pkg.ToString()),
+                    Package.GetParts().Select(part => GetContentsAsXml(part))));
+        }
+
+        /// <summary>
+        /// Gets the <see cref="PackagePart"/>'s contents as an <see cref="XElement"/>.
+        /// </summary>
+        /// <param name="part">The package part.</param>
+        /// <returns>The corresponding <see cref="XElement"/>.</returns>
+        private static XElement GetContentsAsXml(PackagePart part)
+        {
+            if (part.ContentType.EndsWith("xml"))
+            {
+                using (Stream stream = part.GetStream())
+                using (StreamReader streamReader = new StreamReader(stream))
+                using (XmlReader xmlReader = XmlReader.Create(streamReader))
+                    return new XElement(pkg + "part",
+                        new XAttribute(pkg + "name", part.Uri),
+                        new XAttribute(pkg + "contentType", part.ContentType),
+                        new XElement(pkg + "xmlData", XElement.Load(xmlReader)));
+            }
+            else
+            {
+                using (Stream stream = part.GetStream())
+                using (BinaryReader binaryReader = new BinaryReader(stream))
+                {
+                    int len = (int)binaryReader.BaseStream.Length;
+                    byte[] byteArray = binaryReader.ReadBytes(len);
+
+                    // The following expression creates the base64String, then chunks
+                    // it to lines of 76 characters long.
+                    string base64String = System.Convert.ToBase64String(byteArray)
+                        .Select((c, i) => new { Character = c, Chunk = i / 76 })
+                        .GroupBy(c => c.Chunk)
+                        .Aggregate(
+                            new StringBuilder(),
+                            (s, i) =>
+                                s.Append(
+                                    i.Aggregate(
+                                        new StringBuilder(),
+                                        (seed, it) => seed.Append(it.Character),
+                                        sb => sb.ToString())).Append(Environment.NewLine),
+                            s => s.ToString());
+
+                    return new XElement(pkg + "part",
+                        new XAttribute(pkg + "name", part.Uri),
+                        new XAttribute(pkg + "contentType", part.ContentType),
+                        new XAttribute(pkg + "compression", "store"),
+                        new XElement(pkg + "binaryData", base64String));
+                }
+            }
+        }
+
+        /// <summary>
+        /// Converts an <see cref="XDocument"/> in Flat OPC format to an OpenXml package
+        /// stored on a <see cref="Stream"/>.
+        /// </summary>
+        /// <param name="document">The document in Flat OPC format.</param>
+        /// <param name="stream">The <see cref="Stream"/> on which to store the OpenXml package.</param>
+        /// <returns>The <see cref="Stream"/> containing the OpenXml package.</returns>
+        protected static Stream FromFlatOpcDocumentCore(XDocument document, Stream stream)
+        {
+            using (Package package = Package.Open(stream, FileMode.Create, FileAccess.ReadWrite))
+            {
+                FromFlatOpcDocumentCore(document, package);
+            }
+            return stream;
+        }
+
+        /// <summary>
+        /// Converts an <see cref="XDocument"/> in Flat OPC format to an OpenXml package
+        /// stored in a file.
+        /// </summary>
+        /// <param name="document">The document in Flat OPC format.</param>
+        /// <param name="path">The path and file name of the file in which to store the OpenXml package.</param>
+        /// <returns>The path and file name of the file containing the OpenXml package.</returns>
+        protected static string FromFlatOpcDocumentCore(XDocument document, string path)
+        {
+            using (Package package = Package.Open(path, FileMode.Create, FileAccess.ReadWrite, FileShare.None))
+            {
+                FromFlatOpcDocumentCore(document, package);
+            }
+            return path;
+        }
+
+        /// <summary>
+        /// Converts an <see cref="XDocument"/> in Flat OPC format to an OpenXml package
+        /// stored in a <see cref="Package"/>.
+        /// </summary>
+        /// <param name="document">The document in Flat OPC format.</param>
+        /// <param name="package">The <see cref="Package"/> in which to store the OpenXml package.</param>
+        /// <returns>The <see cref="Package"/> containing the OpenXml package.</returns>
+        protected static Package FromFlatOpcDocumentCore(XDocument document, Package package)
+        {
+            // Add all parts (but not relationships).
+            foreach (var xmlPart in document.Root
+                .Elements()
+                .Where(p =>
+                    (string)p.Attribute(pkg + "contentType") !=
+                        "application/vnd.openxmlformats-package.relationships+xml"))
+            {
+                string name = (string)xmlPart.Attribute(pkg + "name");
+                string contentType = (string)xmlPart.Attribute(pkg + "contentType");
+                if (contentType.EndsWith("xml"))
+                {
+                    Uri uri = new Uri(name, UriKind.Relative);
+                    PackagePart part = package.CreatePart(uri, contentType, CompressionOption.SuperFast);
+                    using (Stream stream = part.GetStream(FileMode.Create))
+                    using (XmlWriter xmlWriter = XmlWriter.Create(stream))
+                        xmlPart.Element(pkg + "xmlData")
+                            .Elements()
+                            .First()
+                            .WriteTo(xmlWriter);
+                }
+                else
+                {
+                    Uri uri = new Uri(name, UriKind.Relative);
+                    PackagePart part = package.CreatePart(uri, contentType, CompressionOption.SuperFast);
+                    using (Stream stream = part.GetStream(FileMode.Create))
+                    using (BinaryWriter binaryWriter = new BinaryWriter(stream))
+                    {
+                        string base64StringInChunks = (string)xmlPart.Element(pkg + "binaryData");
+                        char[] base64CharArray = base64StringInChunks
+                            .Where(c => c != '\r' && c != '\n').ToArray();
+                        byte[] byteArray =
+                            System.Convert.FromBase64CharArray(
+                                base64CharArray, 0, base64CharArray.Length);
+                        binaryWriter.Write(byteArray);
+                    }
+                }
+            }
+
+            foreach (var xmlPart in document.Root.Elements())
+            {
+                string name = (string)xmlPart.Attribute(pkg + "name");
+                string contentType = (string)xmlPart.Attribute(pkg + "contentType");
+                if (contentType == "application/vnd.openxmlformats-package.relationships+xml")
+                {
+                    if (name == "/_rels/.rels")
+                    {
+                        // Add the package level relationships.
+                        foreach (XElement xmlRel in xmlPart.Descendants(rel + "Relationship"))
+                        {
+                            string id = (string)xmlRel.Attribute("Id");
+                            string type = (string)xmlRel.Attribute("Type");
+                            string target = (string)xmlRel.Attribute("Target");
+                            string targetMode = (string)xmlRel.Attribute("TargetMode");
+                            if (targetMode == "External")
+                                package.CreateRelationship(
+                                    new Uri(target, UriKind.Absolute),
+                                    TargetMode.External, type, id);
+                            else
+                                package.CreateRelationship(
+                                    new Uri(target, UriKind.Relative),
+                                    TargetMode.Internal, type, id);
+                        }
+                    }
+                    else
+                    {
+                        // Add part level relationships.
+                        string directory = name.Substring(0, name.IndexOf("/_rels"));
+                        string relsFilename = name.Substring(name.LastIndexOf('/'));
+                        string filename = relsFilename.Substring(0, relsFilename.IndexOf(".rels"));
+                        PackagePart fromPart = package.GetPart(new Uri(directory + filename, UriKind.Relative));
+                        foreach (XElement xmlRel in xmlPart.Descendants(rel + "Relationship"))
+                        {
+                            string id = (string)xmlRel.Attribute("Id");
+                            string type = (string)xmlRel.Attribute("Type");
+                            string target = (string)xmlRel.Attribute("Target");
+                            string targetMode = (string)xmlRel.Attribute("TargetMode");
+                            if (targetMode == "External")
+                                fromPart.CreateRelationship(
+                                    new Uri(target, UriKind.Absolute),
+                                    TargetMode.External, type, id);
+                            else
+                                fromPart.CreateRelationship(
+                                    new Uri(target, UriKind.Relative),
+                                    TargetMode.Internal, type, id);
+                        }
+                    }
+                }
+            }
+
+            // Save contents of all parts and relationships contained in package.
+            package.Flush();
+            return package;
+        }
+
+        #endregion Flat OPC
     }
 
     /// <summary>

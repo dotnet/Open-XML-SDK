@@ -9,8 +9,8 @@
     <ProjectGuid>{78E2D77F-FCA9-4809-BB75-0AC76DF9B95D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Tests</RootNamespace>
-    <AssemblyName>Tests</AssemblyName>
+    <RootNamespace>System.IO.Packaging.Tests</RootNamespace>
+    <AssemblyName>System.IO.Packaging.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>25479d7c</NuGetPackageImportStamp>
