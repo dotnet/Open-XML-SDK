@@ -3,23 +3,17 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Packaging;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
-using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation;
-using DocumentFormat.OpenXml.Wordprocessing;
+using Xunit;
 using P = DocumentFormat.OpenXml.Presentation;
 using S = DocumentFormat.OpenXml.Spreadsheet;
 using W = DocumentFormat.OpenXml.Wordprocessing;
 using A = DocumentFormat.OpenXml.Drawing;
 using DW = DocumentFormat.OpenXml.Drawing.Wordprocessing;
 using PIC = DocumentFormat.OpenXml.Drawing.Pictures;
-using OpenXmlPowerTools;
-using Xunit;
 
-namespace DocumentFormat.OpenXml.Test
+namespace DocumentFormat.OpenXml.Tests
 {
     public class DocxTests01
     {
@@ -404,11 +398,11 @@ namespace DocumentFormat.OpenXml.Test
                     {
                         doc.AddMainDocumentPart();
                         doc.MainDocumentPart.Document =
-                            new Document(
-                            new Body(
-                                new Paragraph(
-                                new Run(
-                                    new Text("Hello World!")))));
+                            new W.Document(
+                            new W.Body(
+                                new W.Paragraph(
+                                new W.Run(
+                                    new W.Text("Hello World!")))));
                         doc.MainDocumentPart.Document.Save();
                     });
             }
@@ -425,11 +419,11 @@ namespace DocumentFormat.OpenXml.Test
             {
                 doc.AddMainDocumentPart();
                 doc.MainDocumentPart.Document =
-                    new Document(
-                    new Body(
-                        new Paragraph(
-                        new Run(
-                            new Text("Hello World!")))));
+                    new W.Document(
+                    new W.Body(
+                        new W.Paragraph(
+                        new W.Run(
+                            new W.Text("Hello World!")))));
                 doc.MainDocumentPart.Document.Save();
                 OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                 var errs = v.Validate(doc);
@@ -446,11 +440,11 @@ namespace DocumentFormat.OpenXml.Test
             {
                 doc.AddMainDocumentPart();
                 doc.MainDocumentPart.Document =
-                    new Document(
-                    new Body(
-                        new Paragraph(
-                        new Run(
-                            new Text("Hello World!")))));
+                    new W.Document(
+                    new W.Body(
+                        new W.Paragraph(
+                        new W.Run(
+                            new W.Text("Hello World!")))));
                 doc.MainDocumentPart.Document.Save();
                 OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                 var errs = v.Validate(doc);
@@ -467,11 +461,11 @@ namespace DocumentFormat.OpenXml.Test
             {
                 doc.AddMainDocumentPart();
                 doc.MainDocumentPart.Document =
-                    new Document(
-                    new Body(
-                        new Paragraph(
-                        new Run(
-                            new Text("Hello World!")))));
+                    new W.Document(
+                    new W.Body(
+                        new W.Paragraph(
+                        new W.Run(
+                            new W.Text("Hello World!")))));
                 doc.MainDocumentPart.Document.Save();
                 OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                 var errs = v.Validate(doc);
@@ -583,9 +577,9 @@ namespace DocumentFormat.OpenXml.Test
                 using (WordprocessingDocument doc = WordprocessingDocument.Open(ms, true))
                 {
                     MainDocumentPart mdp = doc.MainDocumentPart;
-                    var f = mdp.Document.Body.GetFirstChild<Paragraph>();
+                    var f = mdp.Document.Body.GetFirstChild<W.Paragraph>();
                     var a = f.Ancestors();
-                    a = f.Ancestors<Paragraph>();
+                    a = f.Ancestors<W.Paragraph>();
                 }
             }
         }
@@ -603,10 +597,10 @@ namespace DocumentFormat.OpenXml.Test
                     MainDocumentPart mdp = doc.MainDocumentPart;
                     var l = mdp.Document.Body.LastChild;
                     var p = l.PreviousSibling();
-                    p = l.PreviousSibling<Paragraph>();
-                    var f = mdp.Document.Body.GetFirstChild<Paragraph>();
+                    p = l.PreviousSibling<W.Paragraph>();
+                    var f = mdp.Document.Body.GetFirstChild<W.Paragraph>();
                     var n = f.NextSibling();
-                    n = f.NextSibling<Paragraph>();
+                    n = f.NextSibling<W.Paragraph>();
                 }
             }
         }
@@ -809,10 +803,10 @@ namespace DocumentFormat.OpenXml.Test
                 using (WordprocessingDocument doc = WordprocessingDocument.Open(ms, true))
                 {
                     MainDocumentPart mdp = doc.MainDocumentPart;
-                    var newPara = new Paragraph(
-                        new Run(
-                            new Text("Hello")));
-                    var firstPara = mdp.Document.Body.Elements<Paragraph>().FirstOrDefault();
+                    var newPara = new W.Paragraph(
+                        new W.Run(
+                            new W.Text("Hello")));
+                    var firstPara = mdp.Document.Body.Elements<W.Paragraph>().FirstOrDefault();
                     mdp.Document.Body.InsertBefore(newPara, firstPara);
                     var newPara2 = (OpenXmlElement)newPara.Clone();
                     mdp.Document.Body.InsertAfter(newPara2, firstPara);
@@ -834,10 +828,10 @@ namespace DocumentFormat.OpenXml.Test
                 using (WordprocessingDocument doc = WordprocessingDocument.Open(ms, true))
                 {
                     MainDocumentPart mdp = doc.MainDocumentPart;
-                    var newPara = new Paragraph(
-                        new Run(
-                            new Text("Hello")));
-                    var firstPara = mdp.Document.Body.Elements<Paragraph>().FirstOrDefault();
+                    var newPara = new W.Paragraph(
+                        new W.Run(
+                            new W.Text("Hello")));
+                    var firstPara = mdp.Document.Body.Elements<W.Paragraph>().FirstOrDefault();
                     firstPara.InsertAfterSelf(newPara);
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
@@ -857,10 +851,10 @@ namespace DocumentFormat.OpenXml.Test
                 using (WordprocessingDocument doc = WordprocessingDocument.Open(ms, true))
                 {
                     MainDocumentPart mdp = doc.MainDocumentPart;
-                    var newPara = new Paragraph(
-                        new Run(
-                            new Text("Hello")));
-                    var firstPara = mdp.Document.Body.Elements<Paragraph>().FirstOrDefault();
+                    var newPara = new W.Paragraph(
+                        new W.Run(
+                            new W.Text("Hello")));
+                    var firstPara = mdp.Document.Body.Elements<W.Paragraph>().FirstOrDefault();
                     firstPara.InsertBeforeSelf(newPara);
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
@@ -1140,9 +1134,9 @@ namespace DocumentFormat.OpenXml.Test
             using (WordprocessingDocument doc = 
                 WordprocessingDocument.Open(fileInfo.FullName, true))
             {
-                Paragraph firstParagraph = 
-                    doc.MainDocumentPart.Document.Descendants<Paragraph>().First();
-                Comments comments = null;
+                W.Paragraph firstParagraph = 
+                    doc.MainDocumentPart.Document.Descendants<W.Paragraph>().First();
+                W.Comments comments = null;
                 string id = "0";
 
                 if (doc.MainDocumentPart.GetPartsCountOfType<WordprocessingCommentsPart>() > 0)
@@ -1150,32 +1144,32 @@ namespace DocumentFormat.OpenXml.Test
                     comments = doc.MainDocumentPart.WordprocessingCommentsPart.Comments;
                     if (comments.HasChildren)
                     {
-                        id = comments.Descendants<Comment>().Select(e => e.Id.Value).Max();
+                        id = comments.Descendants<W.Comment>().Select(e => e.Id.Value).Max();
                     }
                 }
                 else
                 {
                     WordprocessingCommentsPart commentPart = 
                         doc.MainDocumentPart.AddNewPart<WordprocessingCommentsPart>();
-                    commentPart.Comments = new Comments();
+                    commentPart.Comments = new W.Comments();
                     comments = commentPart.Comments;
                 }
 
-                Paragraph p = new Paragraph(new Run(new Text(comment)));
-                Comment cmt = 
-                    new Comment() { Id = id, 
+                W.Paragraph p = new W.Paragraph(new W.Run(new W.Text(comment)));
+                W.Comment cmt = 
+                    new W.Comment() { Id = id, 
                         Author = author, Initials = initials, Date = DateTime.Now };
                 cmt.AppendChild(p);
                 comments.AppendChild(cmt);
                 comments.Save();
 
-                firstParagraph.InsertBefore(new CommentRangeStart() 
-                    { Id = id }, firstParagraph.GetFirstChild<Run>());
+                firstParagraph.InsertBefore(new W.CommentRangeStart() 
+                    { Id = id }, firstParagraph.GetFirstChild<W.Run>());
 
-                var cmtEnd = firstParagraph.InsertAfter(new CommentRangeEnd() 
-                    { Id = id }, firstParagraph.Elements<Run>().Last());
+                var cmtEnd = firstParagraph.InsertAfter(new W.CommentRangeEnd() 
+                    { Id = id }, firstParagraph.Elements<W.Run>().Last());
 
-                firstParagraph.InsertAfter(new Run(new CommentReference() { Id = id }), cmtEnd);
+                firstParagraph.InsertAfter(new W.Run(new W.CommentReference() { Id = id }), cmtEnd);
                 OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                 var errs = v.Validate(doc);
                 Assert.Equal(0, errs.Count());
@@ -1196,11 +1190,11 @@ namespace DocumentFormat.OpenXml.Test
 
                     // Create the Document DOM. 
                     doc.MainDocumentPart.Document =
-                        new Document(
-                        new Body(
-                            new Paragraph(
-                            new Run(
-                                new Text("Hello World!")))));
+                        new W.Document(
+                        new W.Body(
+                            new W.Paragraph(
+                            new W.Run(
+                                new W.Text("Hello World!")))));
 
                     // Save changes to the main document part. 
                     doc.MainDocumentPart.Document.Save();
