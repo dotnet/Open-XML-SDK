@@ -81,6 +81,11 @@ namespace DocumentFormat.OpenXml.Packaging
             this._uri = uriTarget;
 
             // TODO: should we delay load?
+            if (!this.OpenXmlPackage.Package.PartExists(uriTarget))
+            {
+                throw new OpenXmlPackageException(string.Format("The part with URI target {0} does not exist in the package.", uriTarget));
+            }
+
             PackagePart metroPart = this.OpenXmlPackage.Package.GetPart(uriTarget);
 
             if (this.IsContentTypeFixed &&
