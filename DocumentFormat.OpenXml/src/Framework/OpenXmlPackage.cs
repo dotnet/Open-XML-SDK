@@ -2079,7 +2079,9 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Specifies event handlers that will handle OpenXmlPackage validation events and the OpenXmlPackageValidationEventArgs. 
     /// </summary>
-    [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
+    // Building on Travis CI failed, saying that ObsoleteAttributeMessages does not contain a definition
+    // for 'ObsoleteV1ValidationFunctionality'. Thus, we've replaced the member with its value.
+    [Obsolete("This functionality is obsolete and will be removed from future version release. Please see OpenXmlValidator class for supported validation functionality.", false)]
     public class OpenXmlPackageValidationSettings
     {
         private EventHandler<OpenXmlPackageValidationEventArgs> valEventHandler;

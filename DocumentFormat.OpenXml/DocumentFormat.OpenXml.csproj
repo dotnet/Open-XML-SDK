@@ -249,6 +249,11 @@
       <Name>System.IO.Packaging</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="src\GeneratedCode\O12SchemaConstraintDatas.bin" />
+    <None Include="src\GeneratedCode\O14SchemaConstraintDatas.bin" />
+    <None Include="src\GeneratedCode\O15SchemaConstraintDatas.bin" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
