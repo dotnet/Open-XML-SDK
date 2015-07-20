@@ -1,0 +1,15 @@
+version: 2.6.{build}
+skip_tags: true
+clone_folder: c:\projects\Open-XML-SDK
+install:
+- ps: nuget restore Open-XML-SDK.sln
+build:
+  project: Open-XML-SDK.sln
+  verbosity: minimal
+test:
+  assemblies: '**\*.Tests.dll'
+notifications:
+- provider: Email
+  to:
+  - thomas@barnekow.info
+  on_build_status_changed: true

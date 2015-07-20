@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information. -->
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -113,21 +112,11 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="O12SchemaConstraintDatas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\generatedcode\o12schemaconstraintdatas.bin;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="O14SchemaConstraintDatas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\generatedcode\o14schemaconstraintdatas.bin;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="O15SchemaConstraintDatas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\generatedcode\o15schemaconstraintdatas.bin;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="ExceptionError" xml:space="preserve">
     <value>Inner exception: {0}.</value>
   </data>
@@ -346,5 +335,15 @@
   </data>
   <data name="Pkg_DataPartReferenceIsNotAllowed" xml:space="preserve">
     <value>The package/part '{0}' cannot have a relationship that targets '{1}'.</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="O12SchemaConstraintDatas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\GeneratedCode\O12SchemaConstraintDatas.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="O14SchemaConstraintDatas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\GeneratedCode\O14SchemaConstraintDatas.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="O15SchemaConstraintDatas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\GeneratedCode\O15SchemaConstraintDatas.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
