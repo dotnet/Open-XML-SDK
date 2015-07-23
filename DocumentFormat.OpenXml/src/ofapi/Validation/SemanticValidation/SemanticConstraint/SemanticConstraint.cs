@@ -204,18 +204,14 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
             HexBinaryValue hexBinaryValue = attributeValue as HexBinaryValue;
             if (hexBinaryValue != null)
             {
-                long val = -1;
-                bool result;
-
-                result = long.TryParse(hexBinaryValue.Value, NumberStyles.HexNumber, CultureInfo.InvariantCulture, out val);
-                value = (double)val;
-
+                long val;
+                bool result = long.TryParse(hexBinaryValue.Value, NumberStyles.HexNumber, CultureInfo.InvariantCulture, out val);
+                value = val;
                 return result;
             }
-            else
-            {
-                return double.TryParse(attributeValue.InnerText, out value);
-            }
+
+            return double.TryParse(attributeValue.InnerText, NumberStyles.AllowDecimalPoint,
+                CultureInfo.InvariantCulture, out value);
         }
 
         private static OpenXmlPart GetPartThroughPartPath(IEnumerable<IdPartPair> pairs, string[] path)
