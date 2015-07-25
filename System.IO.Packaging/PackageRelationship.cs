@@ -9,14 +9,13 @@
 //
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections;
+using System.Diagnostics;
 using System.Xml;
-using System.Text;              // for StringBuilder
-using System.Diagnostics;       // for Debug.Assert
 
 namespace System.IO.Packaging
 {
+    using Properties;
+
     /// <summary>
     /// This class is used to express a relationship between a source and a target part. 
     /// The only way to create a PackageRelationship, is to call the PackagePart.CreateRelationship()
@@ -171,7 +170,7 @@ namespace System.IO.Packaging
             }
             catch (XmlException exception)
             {
-                throw new XmlException(SR.Format(SR.NotAValidXmlIdString, id), exception);
+                throw new XmlException(Formatter.Format(Resources.NotAValidXmlIdString, id), exception);
             }
 #endif
 
