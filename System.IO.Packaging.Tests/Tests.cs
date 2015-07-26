@@ -15,7 +15,24 @@ namespace System.IO.Packaging.Tests
         private string Mime_MediaTypeNames_Text_Xml = "text/xml";
         private string Mime_MediaTypeNames_Image_Jpeg = "image/jpeg"; // System.Net.Mime.MediaTypeNames.Image.Jpeg
 
-        // 
+        [Fact]
+        public void T173_GettingNonExistentPartThrowsMeaningfulException()
+        {
+            using (var stream = new MemoryStream(TestFileLib.GetByteArray("plain.docx")))
+            using (var package = Package.Open(stream, FileMode.Open))
+            {
+                var partUri = new Uri("/idontexist.xml", UriKind.Relative);
+                try
+                {
+                    var part = package.GetPart(partUri);
+                    Assert.True(false);
+                }
+                catch (InvalidOperationException ex)
+                {
+                    Assert.True(ex.Message.Contains(partUri.ToString()));
+                }
+            }
+        }
 
         [Fact]
         public void T172_EmptyRelationshipPart()

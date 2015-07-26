@@ -8,12 +8,10 @@
 //
 //---------------------------------------------------------------------------
 
-using System;
-using System.Security;
-using System.IO.Packaging;
-
 namespace System.IO
 {
+    using Packaging.Properties;
+
     /// <summary>
     /// The FileFormatException class is thrown when an input file or a data stream that is supposed to conform
     /// to a certain file format specification is malformed.
@@ -27,7 +25,7 @@ namespace System.IO
         /// This message takes into account the current system culture.
         /// </summary>
         public FileFormatException()
-            : base(SR.FileFormatException)
+            : base(Resources.FileFormatException)
         { }
 
         /// <summary>
@@ -61,8 +59,8 @@ namespace System.IO
         public FileFormatException(Uri sourceUri)
             : base(
                 sourceUri == null
-                ? SR.FileFormatException
-                : SR.Format(SR.FileFormatExceptionWithFileName, sourceUri))
+                ? Resources.FileFormatException
+                : Formatter.Format(Resources.FileFormatExceptionWithFileName, sourceUri))
         {
             _sourceUri = sourceUri;
         }
@@ -95,8 +93,8 @@ namespace System.IO
         public FileFormatException(Uri sourceUri, Exception innerException)
             : base(
                 sourceUri == null
-                ? SR.FileFormatException
-                : SR.Format(SR.FileFormatExceptionWithFileName, sourceUri),
+                ? Resources.FileFormatException
+                : Formatter.Format(Resources.FileFormatExceptionWithFileName, sourceUri),
                 innerException)
         {
             _sourceUri = sourceUri;

@@ -9,13 +9,12 @@
 //
 //-----------------------------------------------------------------------------
 
-using System;
-using System.IO;                        // for Path class
 using System.Diagnostics;
-using System.Collections.Generic;       // For IEqualityComparer<>
 
 namespace System.IO.Packaging
 {
+    using Properties;
+
     /// <summary>
     /// This class has the utility methods for composing and parsing an Uri of pack:// scheme
     /// </summary>
@@ -100,7 +99,7 @@ namespace System.IO.Packaging
             if (fragment != null)
             {
                 if (fragment == String.Empty || fragment[0] != '#')
-                    throw new ArgumentException(SR.FragmentMustStartWithHash);
+                    throw new ArgumentException(Resources.FragmentMustStartWithHash);
             }
 
             // Step 2 - Remove fragment identifier from the package URI, if it is present
@@ -122,7 +121,7 @@ namespace System.IO.Packaging
             absolutePackageUri = absolutePackageUri.Replace('/', ',');
 
             // Step 5 - Append pack:// at the begining and a '/' at the end of the pack uri obtained so far            
-            absolutePackageUri = String.Concat(PackUriHelper.UriSchemePack, "://", absolutePackageUri);
+            absolutePackageUri = String.Concat(UriSchemePack, "://", absolutePackageUri);
 
             Uri packUri = new Uri(absolutePackageUri);
 
@@ -224,7 +223,7 @@ namespace System.IO.Packaging
             string partName = GetStringForPartUriFromAnyUri(resolvedUri);
 
             if (partName == String.Empty)
-                throw new ArgumentException(SR.PartUriIsEmpty);
+                throw new ArgumentException(Resources.PartUriIsEmpty);
 
             ThrowIfPartNameEndsWithSlash(partName);
 
@@ -341,7 +340,7 @@ namespace System.IO.Packaging
                 ValidateAndGetPackUriComponents(secondPackUri, out secondPackageUri, out secondPartUri);
 
 
-                if (firstPackageUri.Scheme == PackUriHelper.UriSchemePack && secondPackageUri.Scheme == PackUriHelper.UriSchemePack)
+                if (firstPackageUri.Scheme == UriSchemePack && secondPackageUri.Scheme == UriSchemePack)
                 {
                     compareResult = ComparePackUri(firstPackageUri, secondPackageUri);
                 }
@@ -435,7 +434,7 @@ namespace System.IO.Packaging
 
             // 2. Checks that this part Uri is not a relationshipPart Uri
             if (IsRelationshipPartUri(partUri))
-                throw new ArgumentException(SR.RelationshipPartUriNotExpected);
+                throw new ArgumentException(Resources.RelationshipPartUriNotExpected);
 
             //We should have a ValidatedPartUri by this time
             string partName = ((ValidatedPartUri)partUri).PartUriString;
@@ -486,10 +485,10 @@ namespace System.IO.Packaging
 
             // 2. Checks that this part Uri is not a relationshipPart Uri
             if (!IsRelationshipPartUri(relationshipPartUri))
-                throw new ArgumentException(SR.RelationshipPartUriExpected);
+                throw new ArgumentException(Resources.RelationshipPartUriExpected);
 
             // _rels/.rels has no parent part
-            if (PackUriHelper.ComparePartUri(PackageRelationship.ContainerRelationshipPartName, relationshipPartUri) == 0)
+            if (ComparePartUri(PackageRelationship.ContainerRelationshipPartName, relationshipPartUri) == 0)
             {
                 return PackageRootUri;
             }
@@ -672,7 +671,7 @@ namespace System.IO.Packaging
                 throw new ArgumentNullException("packageUri");
 
             if (!packageUri.IsAbsoluteUri)
-                throw new ArgumentException(SR.UriShouldBeAbsolute);
+                throw new ArgumentException(Resources.UriShouldBeAbsolute);
 
             return packageUri;
         }
@@ -684,10 +683,10 @@ namespace System.IO.Packaging
                 throw new ArgumentNullException("packUri");
 
             if (!packUri.IsAbsoluteUri)
-                throw new ArgumentException(SR.UriShouldBeAbsolute);
+                throw new ArgumentException(Resources.UriShouldBeAbsolute);
 
-            if (packUri.Scheme != PackUriHelper.UriSchemePack)
-                throw new ArgumentException(SR.UriShouldBePackScheme);
+            if (packUri.Scheme != UriSchemePack)
+                throw new ArgumentException(Resources.UriShouldBePackScheme);
 
             return packUri;
         }
@@ -754,10 +753,10 @@ namespace System.IO.Packaging
             //We need to make sure that the URI passed to us is not just "/"
             //"/" is a valid relative uri, but is not a valid partname
             if (partName == String.Empty)
-                return new ArgumentException(SR.PartUriIsEmpty);
+                return new ArgumentException(Resources.PartUriIsEmpty);
 
             if (partName[0] != '/')
-                return new ArgumentException(SR.PartUriShouldStartWithForwardSlash);
+                return new ArgumentException(Resources.PartUriShouldStartWithForwardSlash);
 
             argumentException = GetExceptionIfPartNameStartsWithTwoSlashes(partName);
             if (argumentException != null)
@@ -789,7 +788,7 @@ namespace System.IO.Packaging
             //We perform the comparison in a case-insensitive manner, as at this point,
             //only escaped hex digits (A-F) might vary in casing.
             if (String.CompareOrdinal(partUri.OriginalString.ToUpperInvariant(), wellFormedPartName.ToUpperInvariant()) != 0)
-                return new ArgumentException(SR.InvalidPartUri);
+                return new ArgumentException(Resources.InvalidPartUri);
 
             //if we get here, the partUri is valid and so we return null, as there is no exception.
             partUriString = partName;
@@ -806,7 +805,7 @@ namespace System.IO.Packaging
         private static ArgumentException GetExceptionIfAbsoluteUri(Uri uri)
         {
             if (uri.IsAbsoluteUri)
-                return new ArgumentException(SR.URIShouldNotBeAbsolute);
+                return new ArgumentException(Resources.URIShouldNotBeAbsolute);
             else
                 return null;
         }
@@ -821,7 +820,7 @@ namespace System.IO.Packaging
         private static ArgumentException GetExceptionIfFragmentPresent(string partName)
         {
             if (partName.Contains("#"))
-                return new ArgumentException(SR.PartUriCannotHaveAFragment);
+                return new ArgumentException(Resources.PartUriCannotHaveAFragment);
             else
                 return null;
         }
@@ -838,7 +837,7 @@ namespace System.IO.Packaging
             if (partName.Length > 0)
             {
                 if (partName[partName.Length - 1] == '/')
-                    return new ArgumentException(SR.PartUriShouldNotEndWithForwardSlash);
+                    return new ArgumentException(Resources.PartUriShouldNotEndWithForwardSlash);
             }
             return null;
         }
@@ -861,7 +860,7 @@ namespace System.IO.Packaging
             if (partName.Length > 1)
             {
                 if (partName[0] == '/' && partName[1] == '/')
-                    return new ArgumentException(SR.PartUriShouldNotStartWithTwoForwardSlashes);
+                    return new ArgumentException(Resources.PartUriShouldNotStartWithTwoForwardSlashes);
             }
             return null;
         }
@@ -944,13 +943,13 @@ namespace System.IO.Packaging
             Uri packageUri = new Uri(Uri.UnescapeDataString(hostAndPort));
 
             if (packageUri.Fragment != String.Empty)
-                throw new ArgumentException(SR.InnerPackageUriHasFragment);
+                throw new ArgumentException(Resources.InnerPackageUriHasFragment);
 
             return packageUri;
         }
 
         //This method validates and returns the PartUri component.
-        private static PackUriHelper.ValidatedPartUri GetPartUriComponent(Uri packUri)
+        private static ValidatedPartUri GetPartUriComponent(Uri packUri)
         {
             Debug.Assert(packUri != null, "packUri parameter cannot be null");
 
@@ -1187,7 +1186,7 @@ namespace System.IO.Packaging
                     return false;
 
                 // if uri is /_rels/.rels then we return true
-                if (PackUriHelper.ComparePartUri(s_containerRelationshipNormalizedPartUri, this) == 0)
+                if (ComparePartUri(s_containerRelationshipNormalizedPartUri, this) == 0)
                     return true;
 
                 // Look for pattern that matches: "XXX/_rels/YYY.rels" where XXX is zero or more part name characters and
@@ -1226,7 +1225,7 @@ namespace System.IO.Packaging
                     {
                         // look for "_rels" segment in the third last segment
                         if (String.CompareOrdinal(segments[segments.Length - 3], s_relationshipPartUpperCaseSegmentName) == 0)
-                            throw new ArgumentException(SR.NotAValidRelationshipPartUri);
+                            throw new ArgumentException(Resources.NotAValidRelationshipPartUri);
                     }
                 }
 
@@ -1265,7 +1264,7 @@ namespace System.IO.Packaging
                     return 1;
 
                 //Compare the normalized uri strings for the two part uris.
-                return String.CompareOrdinal(this.NormalizedPartUriString, otherPartUri.NormalizedPartUriString);
+                return String.CompareOrdinal(NormalizedPartUriString, otherPartUri.NormalizedPartUriString);
             }
 
             //------------------------------------------------------

@@ -43,13 +43,14 @@
 // 
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;   // For Dictionary<string, string>
-using System.Text;                  // For StringBuilder
-using System.Diagnostics;           // For Debug.Assert
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Text;
 
 namespace System.IO.Packaging
 {
+    using Properties;
+
     /// <summary>
     /// Content Type class
     /// </summary>
@@ -87,7 +88,7 @@ namespace System.IO.Packaging
             else
             {
                 if (IsLinearWhiteSpaceChar(contentType[0]) || IsLinearWhiteSpaceChar(contentType[contentType.Length - 1]))
-                    throw new ArgumentException(SR.ContentTypeCannotHaveLeadingTrailingLWS);
+                    throw new ArgumentException(Resources.ContentTypeCannotHaveLeadingTrailingLWS);
 
                 //Carriage return can be expressed as '\r\n' or '\n\r'
                 //We need to make sure that a \r is accompanied by \n
@@ -382,7 +383,7 @@ namespace System.IO.Packaging
                     index = contentType.IndexOf(s_linearWhiteSpaceChars[2], ++index);
                 }
                 else
-                    throw new ArgumentException(SR.InvalidLinearWhiteSpaceCharacter);
+                    throw new ArgumentException(Resources.InvalidLinearWhiteSpaceCharacter);
             }
         }
 
@@ -400,7 +401,7 @@ namespace System.IO.Packaging
             string[] splitBasedOnForwardSlash = typeAndSubType.Split(s_forwardSlashSeparator);
 
             if (splitBasedOnForwardSlash.Length != 2)
-                throw new ArgumentException(SR.InvalidTypeSubType);
+                throw new ArgumentException(Resources.InvalidTypeSubType);
 
             _type = ValidateToken(splitBasedOnForwardSlash[0]);
             _subType = ValidateToken(splitBasedOnForwardSlash[1]);
@@ -419,13 +420,13 @@ namespace System.IO.Packaging
                 //At this point the first character MUST be a semi-colon
                 //First time through this test is serving more as an assert.
                 if (parameterAndValue[0] != SemicolonSeparator)
-                    throw new ArgumentException(SR.ExpectingSemicolon);
+                    throw new ArgumentException(Resources.ExpectingSemicolon);
 
                 //At this point if we have just one semicolon, then its an error.
                 //Also, there can be no trailing LWS characters, as we already checked for that
                 //in the constructor.
                 if (parameterAndValue.Length == 1)
-                    throw new ArgumentException(SR.ExpectingParameterValuePairs);
+                    throw new ArgumentException(Resources.ExpectingParameterValuePairs);
 
                 //Removing the leading ; from the string
                 parameterAndValue = parameterAndValue.Substring(1);
@@ -437,7 +438,7 @@ namespace System.IO.Packaging
                 int equalSignIndex = parameterAndValue.IndexOf(EqualSeparator);
 
                 if (equalSignIndex <= 0 || equalSignIndex == (parameterAndValue.Length - 1))
-                    throw new ArgumentException(SR.InvalidParameterValuePair);
+                    throw new ArgumentException(Resources.InvalidParameterValuePair);
 
                 int parameterStartIndex = equalSignIndex + 1;
 
@@ -501,7 +502,7 @@ namespace System.IO.Packaging
                     length = s.IndexOf('"', ++length);
 
                     if (length == -1)
-                        throw new ArgumentException(SR.InvalidParameterValue);
+                        throw new ArgumentException(Resources.InvalidParameterValue);
 
                     if (s[length - 1] != '\\')
                     {
@@ -525,7 +526,7 @@ namespace System.IO.Packaging
         private static string ValidateToken(string token)
         {
             if (String.CompareOrdinal(token, String.Empty) == 0)
-                throw new ArgumentException(SR.InvalidToken);
+                throw new ArgumentException(Resources.InvalidToken);
 
             for (int i = 0; i < token.Length; i++)
             {
@@ -541,7 +542,7 @@ namespace System.IO.Packaging
                     }
                     else
                     {
-                        throw new ArgumentException(SR.InvalidToken);
+                        throw new ArgumentException(Resources.InvalidToken);
                     }
                 }
             }
@@ -559,7 +560,7 @@ namespace System.IO.Packaging
         private static string ValidateQuotedStringOrToken(string parameterValue)
         {
             if (String.CompareOrdinal(parameterValue, String.Empty) == 0)
-                throw new ArgumentException(SR.InvalidParameterValue);
+                throw new ArgumentException(Resources.InvalidParameterValue);
 
             if (parameterValue.Length >= 2 &&
                 parameterValue.StartsWith(Quote, StringComparison.Ordinal) &&
@@ -585,11 +586,11 @@ namespace System.IO.Packaging
                     continue;
 
                 if (quotedText[i] <= ' ' || quotedText[i] >= 0xFF)
-                    throw new ArgumentException(SR.InvalidParameterValue);
+                    throw new ArgumentException(Resources.InvalidParameterValue);
                 else
                     if (quotedText[i] == '"' &&
                         (i == 0 || quotedText[i - 1] != '\\'))
-                    throw new ArgumentException(SR.InvalidParameterValue);
+                    throw new ArgumentException(Resources.InvalidParameterValue);
             }
         }
 

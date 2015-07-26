@@ -9,14 +9,13 @@
 //
 //-----------------------------------------------------------------------------
 
-using System;
-using System.IO;
-using System.Collections;
-using System.Collections.Generic;   // For List <>
-using System.Diagnostics;           // For Debug.Assert
+using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace System.IO.Packaging
 {
+    using Properties;
+
     /// <summary>
     /// This class represents the a PackagePart within a container.
     /// This is a part of the Packaging Layer APIs
@@ -201,7 +200,7 @@ namespace System.IO.Packaging
                         // a mistake and that is also not desirable.
                         //
                         // PackagePart is a public API.
-                        throw new InvalidOperationException(SR.NullContentTypeProvided);
+                        throw new InvalidOperationException(Resources.NullContentTypeProvided);
                     }
                     _contentType = new ContentType(contentType);
                 }
@@ -270,7 +269,7 @@ namespace System.IO.Packaging
         /// initialize the content type for a PackagePart in a lazy manner they must override this method.</exception>
         protected virtual string GetContentTypeCore()
         {
-            throw new NotSupportedException(SR.GetContentTypeCoreNotImplemented);
+            throw new NotSupportedException(Resources.GetContentTypeCoreNotImplemented);
         }
 
 
@@ -341,14 +340,14 @@ namespace System.IO.Packaging
             ThrowIfOpenAccessModesAreIncompatible(mode, access);
 
             if (mode == FileMode.CreateNew)
-                throw new ArgumentException(SR.CreateNewNotSupported);
+                throw new ArgumentException(Resources.CreateNewNotSupported);
             if (mode == FileMode.Truncate)
-                throw new ArgumentException(SR.TruncateNotSupported);
+                throw new ArgumentException(Resources.TruncateNotSupported);
 
             Stream s = GetStreamCore(mode, access);
 
             if (s == null)
-                throw new IOException(SR.NullStreamReturned);
+                throw new IOException(Resources.NullStreamReturned);
 
             //Detect if any stream implementations are returning all three
             //properties - CanSeek, CanWrite and CanRead as false. Such a 
@@ -522,7 +521,7 @@ namespace System.IO.Packaging
 
             PackageRelationship returnedRelationship = GetRelationshipHelper(id);
             if (returnedRelationship == null)
-                throw new InvalidOperationException(SR.PackagePartRelationshipDoesNotExist);
+                throw new InvalidOperationException(Resources.PackagePartRelationshipDoesNotExist);
             else
                 return returnedRelationship;
         }
@@ -756,12 +755,12 @@ namespace System.IO.Packaging
             //Creating a part using a readonly stream.
             if (access == FileAccess.Read &&
                 (mode == FileMode.Create || mode == FileMode.CreateNew || mode == FileMode.Truncate || mode == FileMode.Append))
-                throw new IOException(SR.UnsupportedCombinationOfModeAccess);
+                throw new IOException(Resources.UnsupportedCombinationOfModeAccess);
 
             //Incompatible access modes between container and part stream.
             if ((_container.FileOpenAccess == FileAccess.Read && access != FileAccess.Read) ||
                 (_container.FileOpenAccess == FileAccess.Write && access != FileAccess.Write))
-                throw new IOException(SR.ContainerAndPartModeIncompatible);
+                throw new IOException(Resources.ContainerAndPartModeIncompatible);
         }
 
         //Check if the part is in an invalid state
@@ -775,21 +774,21 @@ namespace System.IO.Packaging
         private void ThrowIfParentContainerClosed()
         {
             if (_container == null)
-                throw new InvalidOperationException(SR.ParentContainerClosed);
+                throw new InvalidOperationException(Resources.ParentContainerClosed);
         }
 
         //If the part has been deleted then we throw
         private void ThrowIfPackagePartDeleted()
         {
             if (_deleted == true)
-                throw new InvalidOperationException(SR.PackagePartDeleted);
+                throw new InvalidOperationException(Resources.PackagePartDeleted);
         }
 
         // some operations are invalid if we are a relationship part
         private void ThrowIfRelationship()
         {
             if (IsRelationshipPart)
-                throw new InvalidOperationException(SR.RelationshipPartsCannotHaveRelationships);
+                throw new InvalidOperationException(Resources.RelationshipPartsCannotHaveRelationships);
         }
 
         /// <summary>
