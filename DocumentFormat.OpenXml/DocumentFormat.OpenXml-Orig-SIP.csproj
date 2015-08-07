@@ -18,12 +18,12 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>build\OpenXmlSdkLib\Debug\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>3003</NoWarn>
-    <DocumentationFile>build\OpenXmlSdkLib\Debug\DocumentFormat.OpenXml.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\DocumentFormat.OpenXml.XML</DocumentationFile>
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
     <FileAlignment>512</FileAlignment>
     <Prefer32Bit>false</Prefer32Bit>
@@ -31,12 +31,12 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>build\OpenXmlSdkLib\Release\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>3003</NoWarn>
-    <DocumentationFile>build\OpenXmlSdkLib\Release\DocumentFormat.OpenXml.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\DocumentFormat.OpenXml.XML</DocumentationFile>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
