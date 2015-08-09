@@ -18,13 +18,11 @@ namespace DocumentFormat.OpenXml.Tests
 {
     public class DocxTests01
     {
-        public static string s_TestFileLocation = "../../../TestFiles/";
-
         [Fact]
         public void W052_CreateElementFromOuterXml()
         {
             var docName = "UnknownElement.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+            var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -43,7 +41,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W051_AddNewPart_ToOpenXmlPackage()
         {
             var docName = "Hyperlink.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+            var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -62,7 +60,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W050_DeleteAdd_CoreExtendedProperties()
         {
             var docName = "Hyperlink.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+            var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -91,7 +89,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W049_AddNewPart_ToPackage()
         {
             var docName = "Hyperlink.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+            var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -109,7 +107,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W048_AddNewPart_ToPackage()
         {
             var docName = "Hyperlink.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+            var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -127,7 +125,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W047_AddNewPart_ToPackage()
         {
             var docName = "Hyperlink.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -145,7 +143,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W046_AddNewPart_ToPackage()
         {
             var docName = "Hyperlink.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+            var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -165,7 +163,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W045_AddNewPart_ToPart()
         {
             var docName = "Hyperlink.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+            var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -183,7 +181,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W044_AddNewPart_ToPart()
         {
             var docName = "Hyperlink.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -201,7 +199,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W043_AddNewPart()
         {
             var docName = "Hyperlink.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -219,7 +217,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W042_AddNewPart()
         {
             var docName = "Hyperlink.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+            var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -237,7 +235,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W041_AddAlternativeFormatImportPart()
         {
             var docName = "Hyperlink.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -256,7 +254,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var docName = "Hyperlink.docx";
             var ResourceRelationshipType = "http://resourceRelType";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+            var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -329,8 +327,9 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W039_ChangeDocumentType()
         {
-            var fiSource = new FileInfo(Path.Combine(s_TestFileLocation, "Document.docx"));
-            var fiCopy = new FileInfo(Guid.NewGuid().ToString() + ".docx");
+            var docName = "Document.docx";
+            var fiSource = new FileInfo(Path.Combine(TestUtil.SourceDir.FullName, docName));
+            var fiCopy = new FileInfo(Path.Combine(TestUtil.TempDir.FullName, Guid.NewGuid().ToString() + ".docx"));
             File.Copy(fiSource.FullName, fiCopy.FullName);
             using (Package package = Package.Open(fiCopy.FullName, FileMode.Open, FileAccess.ReadWrite))
             {
@@ -342,14 +341,16 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.Equal(416, errs.Count());
                 }
             }
-            fiCopy.Delete();
+            if (TestUtil.DeleteTempFiles)
+                fiCopy.Delete();
         }
 
         [Fact]
         public void W038_DocxCreation_Package()
         {
-            var fiSource = new FileInfo(Path.Combine(s_TestFileLocation, "Document.docx"));
-            var fiCopy = new FileInfo(Guid.NewGuid().ToString() + ".docx");
+            var docName = "Document.docx";
+            var fiSource = new FileInfo(Path.Combine(TestUtil.SourceDir.FullName, docName));
+            var fiCopy = new FileInfo(Path.Combine(TestUtil.TempDir.FullName, Guid.NewGuid().ToString() + ".docx"));
             File.Copy(fiSource.FullName, fiCopy.FullName);
             using (Package package = Package.Open(fiCopy.FullName, FileMode.Open, FileAccess.ReadWrite))
             {
@@ -361,14 +362,16 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.Equal(416, errs.Count());
                 }
             }
-            fiCopy.Delete();
+            if (TestUtil.DeleteTempFiles)
+                fiCopy.Delete();
         }
 
         [Fact]
         public void W037_DocxCreation_Package_Settings()
         {
-            var fiSource = new FileInfo(Path.Combine(s_TestFileLocation, "Document.docx"));
-            var fiCopy = new FileInfo(Guid.NewGuid().ToString() + ".docx");
+            var docName = "Document.docx";
+            var fiSource = new FileInfo(Path.Combine(TestUtil.SourceDir.FullName, docName));
+            var fiCopy = new FileInfo(Path.Combine(TestUtil.TempDir.FullName, Guid.NewGuid().ToString() + ".docx"));
             File.Copy(fiSource.FullName, fiCopy.FullName);
             using (Package package = Package.Open(fiCopy.FullName, FileMode.Open, FileAccess.ReadWrite))
             {
@@ -384,14 +387,16 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.Equal(450, errs.Count());
                 }
             }
-            fiCopy.Delete();
+            if (TestUtil.DeleteTempFiles)
+                fiCopy.Delete();
         }
 
         [Fact]
         public void W036_DocxCreation_File()
         {
-            var fiSource = new FileInfo(Path.Combine(s_TestFileLocation, "Document.docx"));
-            var fiCopy = new FileInfo(Guid.NewGuid().ToString() + ".docx");
+            var docName = "Document.docx";
+            var fiSource = new FileInfo(Path.Combine(TestUtil.SourceDir.FullName, docName));
+            var fiCopy = new FileInfo(Path.Combine(TestUtil.TempDir.FullName, Guid.NewGuid().ToString() + ".docx"));
             File.Copy(fiSource.FullName, fiCopy.FullName);
             using (WordprocessingDocument doc = WordprocessingDocument.Open(fiCopy.FullName, true))
             {
@@ -407,13 +412,14 @@ namespace DocumentFormat.OpenXml.Tests
                         doc.MainDocumentPart.Document.Save();
                     });
             }
-            fiCopy.Delete();
+            if (TestUtil.DeleteTempFiles)
+                fiCopy.Delete();
         }
 
         [Fact]
         public void W035_DocxCreation_Package()
         {
-            FileInfo fi = new FileInfo(Path.Combine(s_TestFileLocation, Guid.NewGuid().ToString() + ".docx"));
+            FileInfo fi = new FileInfo(Path.Combine(TestUtil.TempDir.FullName, Guid.NewGuid().ToString() + ".docx"));
             using (MemoryStream ms = new MemoryStream())
             using (Package package = Package.Open(ms, FileMode.Create, FileAccess.ReadWrite))
             using (WordprocessingDocument doc = WordprocessingDocument.Create(package, WordprocessingDocumentType.Document))
@@ -430,13 +436,14 @@ namespace DocumentFormat.OpenXml.Tests
                 var errs = v.Validate(doc);
                 Assert.Equal(0, errs.Count());
             }
-            fi.Delete();
+            if (TestUtil.DeleteTempFiles)
+                fi.Delete();
         }
 
         [Fact]
         public void W034_DocxCreation()
         {
-            FileInfo fi = new FileInfo(Path.Combine(s_TestFileLocation, Guid.NewGuid().ToString() + ".docx"));
+            FileInfo fi = new FileInfo(Path.Combine(TestUtil.TempDir.FullName, Guid.NewGuid().ToString() + ".docx"));
             using (WordprocessingDocument doc = WordprocessingDocument.Create(fi.FullName, WordprocessingDocumentType.Document))
             {
                 doc.AddMainDocumentPart();
@@ -451,13 +458,14 @@ namespace DocumentFormat.OpenXml.Tests
                 var errs = v.Validate(doc);
                 Assert.Equal(0, errs.Count());
             }
-            fi.Delete();
+            if (TestUtil.DeleteTempFiles)
+                fi.Delete();
         }
 
         [Fact]
         public void W033_DocxCreation()
         {
-            FileInfo fi = new FileInfo(Path.Combine(s_TestFileLocation, Guid.NewGuid().ToString() + ".docx"));
+            FileInfo fi = new FileInfo(Path.Combine(TestUtil.TempDir.FullName, Guid.NewGuid().ToString() + ".docx"));
             using (WordprocessingDocument doc = WordprocessingDocument.Create(fi.FullName, WordprocessingDocumentType.Document))
             {
                 doc.AddMainDocumentPart();
@@ -472,14 +480,15 @@ namespace DocumentFormat.OpenXml.Tests
                 var errs = v.Validate(doc);
                 Assert.Equal(0, errs.Count());
             }
-            fi.Delete();
+            if (TestUtil.DeleteTempFiles)
+                fi.Delete();
         }
 
         [Fact]
         public void W032_AnnotationsOnElements()
         {
             var docName = "Document.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -506,7 +515,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W031_AnnotationsOnParts()
         {
             var docName = "Document.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -532,7 +541,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W030_DeleteReferenceRelationship2()
         {
             var docName = "Document.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -552,7 +561,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W029_NonExistant_ReferenceRelationship()
         {
             var docName = "Document.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -571,7 +580,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W028_Ancestors()
         {
             var docName = "Document.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -589,7 +598,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W027_PreviousSibling_NextSibling()
         {
             var docName = "Document.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -610,7 +619,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W026_AddRemoveNamespaceDeclaration()
         {
             var docName = "Document.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -631,7 +640,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W025_ClearAllAttributes()
         {
             var docName = "Document.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -651,7 +660,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W024_LastChild_LookupPrefix()
         {
             var docName = "Document.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -671,7 +680,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W023_NamespaceDeclarations()
         {
             var docName = "Document.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -691,7 +700,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W022_InnerXml_InnerText()
         {
             var docName = "Document.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -712,7 +721,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W021_OuterXml()
         {
             var docName = "Document.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -732,7 +741,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W020_GetAttribute()
         {
             var docName = "Document.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -754,7 +763,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W019_SetAttributes()
         {
             var docName = "Document.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -777,7 +786,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W018_RemoveAttributes()
         {
             var docName = "Document.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -797,7 +806,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W017_InsertBefore_InsertAfter()
         {
             var docName = "Document.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -822,7 +831,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W016_InsertAfterSelf()
         {
             var docName = "Document.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -845,7 +854,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W015_InsertBeforeSelf()
         {
             var docName = "Document.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -868,7 +877,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W014_MaxCharactersInPart()
         {
             var docName = "Hyperlink.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -889,7 +898,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W013_MarkupCompat_ProcessLoadedPartsOnly()
         {
             var docName = "Hyperlink.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -909,7 +918,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W012_MarkupCompat_ProcessAllParts()
         {
             var docName = "Hyperlink.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -929,7 +938,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W011_MarkupCompat_InvalidValidation()
         {
             var docName = "Hyperlink.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -955,7 +964,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W010_HyperlinkRelationships()
         {
             var docName = "Hyperlink.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -975,7 +984,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W009_DeleteAllParts()
         {
             var docName = "Comments.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -994,8 +1003,8 @@ namespace DocumentFormat.OpenXml.Tests
         public void W008_AddImageToDocx()
         {
             var docName = "Comments.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
-            var fiImage = new FileInfo(s_TestFileLocation + "Image.png");
+            var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
+            var fiImage = new FileInfo(Path.Combine(TestUtil.SourceDir.FullName, "Image.png"));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -1088,7 +1097,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W007_GetPartById_DeleteParts()
         {
             var docName = "Comments.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -1107,7 +1116,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W006_RemoveCommentsPart()
         {
             var docName = "Comments.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -1125,8 +1134,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W005_AddCommentsPart()
         {
-            var fileInfo = new FileInfo(Guid.NewGuid().ToString() + ".docx");
-            var orig = new FileInfo(Path.Combine(s_TestFileLocation, "Plain.docx"));
+            var fileInfo = new FileInfo(Path.Combine(TestUtil.TempDir.FullName, Guid.NewGuid().ToString() + ".docx"));
+            var orig = new FileInfo(Path.Combine(TestUtil.SourceDir.FullName, "Plain.docx"));
             File.Copy(orig.FullName, fileInfo.FullName);
             string author = "Eric White";
             string comment = "A comment.";
@@ -1175,7 +1184,8 @@ namespace DocumentFormat.OpenXml.Tests
                 var errs = v.Validate(doc);
                 Assert.Equal(0, errs.Count());
             }
-            fileInfo.Delete();
+            if (TestUtil.DeleteTempFiles)
+                fileInfo.Delete();
         }
 
         [Fact]
@@ -1222,7 +1232,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         private static void DocxValidationHelper(string docName, int expectedErrorCount)
         {
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -1243,7 +1253,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void W001_OpenMemoryStream()
         {
             var docName = "Plain.docx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);

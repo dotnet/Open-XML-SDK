@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void X008_XlsxCreation_Package_Settings()
         {
             var fiSource = new FileInfo(Path.Combine(s_TestFileLocation, "Spreadsheet.xlsx"));
-            var fiCopy = new FileInfo(Guid.NewGuid().ToString() + ".xlsx");
+            var fiCopy = new FileInfo(Path.Combine(TestUtil.TempDir.FullName, Guid.NewGuid().ToString() + ".xlsx"));
             File.Copy(fiSource.FullName, fiCopy.FullName);
             using (Package package = Package.Open(fiCopy.FullName, FileMode.Open, FileAccess.ReadWrite))
             {
@@ -35,14 +35,15 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.Equal(1, errs.Count());
                 }
             }
-            fiCopy.Delete();
+            if (TestUtil.DeleteTempFiles)
+                fiCopy.Delete();
         }
 
         [Fact]
         public void X007_SpreadsheetDocument_Open()
         {
             var fiSource = new FileInfo(Path.Combine(s_TestFileLocation, "Spreadsheet.xlsx"));
-            var fiCopy = new FileInfo(Guid.NewGuid().ToString() + ".xlsx");
+            var fiCopy = new FileInfo(Path.Combine(TestUtil.TempDir.FullName, Guid.NewGuid().ToString() + ".xlsx"));
             File.Copy(fiSource.FullName, fiCopy.FullName);
             OpenSettings openSettings = new OpenSettings();
             openSettings.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013);
@@ -52,7 +53,8 @@ namespace DocumentFormat.OpenXml.Tests
                 var errs = v.Validate(doc);
                 Assert.Equal(1, errs.Count());
             }
-            fiCopy.Delete();
+            if (TestUtil.DeleteTempFiles)
+                fiCopy.Delete();
         }
 
         [Fact]
@@ -88,7 +90,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void X005_XlsxCreation_Package_Settings()
         {
             var fiSource = new FileInfo(Path.Combine(s_TestFileLocation, "Spreadsheet.xlsx"));
-            var fiCopy = new FileInfo(Guid.NewGuid().ToString() + ".xlsx");
+            var fiCopy = new FileInfo(Path.Combine(TestUtil.TempDir.FullName, Guid.NewGuid().ToString() + ".xlsx"));
             File.Copy(fiSource.FullName, fiCopy.FullName);
             using (Package package = Package.Open(fiCopy.FullName, FileMode.Open, FileAccess.ReadWrite))
             {
@@ -101,14 +103,15 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.Equal(1, errs.Count());
                 }
             }
-            fiCopy.Delete();
+            if (TestUtil.DeleteTempFiles)
+                fiCopy.Delete();
         }
 
         [Fact]
         public void X004_SpreadsheetDocument_Open()
         {
             var fiSource = new FileInfo(Path.Combine(s_TestFileLocation, "Spreadsheet.xlsx"));
-            var fiCopy = new FileInfo(Guid.NewGuid().ToString() + ".xlsx");
+            var fiCopy = new FileInfo(Path.Combine(TestUtil.TempDir.FullName, Guid.NewGuid().ToString() + ".xlsx"));
             File.Copy(fiSource.FullName, fiCopy.FullName);
             OpenSettings openSettings = new OpenSettings();
             openSettings.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013);
@@ -118,7 +121,8 @@ namespace DocumentFormat.OpenXml.Tests
                 var errs = v.Validate(doc);
                 Assert.Equal(1, errs.Count());
             }
-            fiCopy.Delete();
+            if (TestUtil.DeleteTempFiles)
+                fiCopy.Delete();
         }
 
         [Fact]
@@ -176,7 +180,8 @@ namespace DocumentFormat.OpenXml.Tests
 
             doc.Close();
 
-            fi.Delete();
+            if (TestUtil.DeleteTempFiles)
+                fi.Delete();
         }
 
         [Fact]

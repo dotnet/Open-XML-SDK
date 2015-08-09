@@ -94,6 +94,7 @@
     <Compile Include="TestPptx01.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestXlsx01.cs" />
+    <Compile Include="TestUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
