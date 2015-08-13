@@ -23,6 +23,11 @@ find out more about this bug and whether it affects you in [the blog post that a
 
 Going forward, the Open XML SDK will be based on this new implementation of System.IO.Packaging.
 
+We are also happy to announce the release of Open-Xml-PowerTools on GitHub.  Open-Xml-PowerTools provides
+example code and guidance for implementing a wide range of Open XML scenarios.  This new release is version 4.0 of
+PowerTools for Open XML, which previously lived at http://powertools.codeplex.com.  The repo name on
+GitHub is https://github.com/OfficeDev/Open-Xml-PowerTools.
+
 Documentation
 =============
 
