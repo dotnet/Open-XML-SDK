@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.1
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentFormat.OpenXml", "DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj", "{E5D39C6A-9067-477E-B0D3-A9419B86E6E5}"
 EndProject

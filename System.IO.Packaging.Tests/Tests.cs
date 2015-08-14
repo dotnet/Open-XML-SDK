@@ -8,7 +8,15 @@ using System.Xml;
 using System.Xml.Linq;
 using Xunit;
 
+// to run the X64 tests:
+// packages\xunit.runner.console.2.0.0\tools\xunit.console System.IO.Packaging.Tests.64\bin\Debug\System.IO.Packaging.Tests.dll
+
+#if X64
+namespace System.IO.Packaging.Tests.X64
+#else
 namespace System.IO.Packaging.Tests
+#endif
+
 {
     public class Tests
     {
