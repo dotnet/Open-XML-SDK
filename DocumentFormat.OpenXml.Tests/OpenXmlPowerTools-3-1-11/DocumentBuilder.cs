@@ -617,10 +617,15 @@ namespace OpenXmlPowerTools
             foreach (XElement style in fromStyles.Root.Elements(W.style))
             {
                 string name = style.Attribute(W.styleId).Value;
+                string defaultattr = (style.Attribute(W._default) != null) ? style.Attribute(W._default).Value : "";
+                string typeattr = (style.Attribute(W.type) != null) ? style.Attribute(W.type).Value : ""; 
+
                 if (toStyles
                     .Root
                     .Elements(W.style)
-                    .Where(o => o.Attribute(W.styleId).Value == name)
+                    .Where(o => (o.Attribute(W.styleId).Value == name) || ((defaultattr == "1") &&
+                                                                            (style.Attribute(W._default) != null) && (style.Attribute(W._default).Value == "1") &&
+                                                                            (o.Attribute(W.type) != null) && (o.Attribute(W.type).Value == typeattr)))
                     .Count() == 0)
                 {
                     int number = 1;
