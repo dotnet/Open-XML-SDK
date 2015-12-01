@@ -9,14 +9,17 @@
 //
 //-----------------------------------------------------------------------------
 
-using System;
 using System.Collections.Generic;
-using System.Xml;                   //Required for Content Type File manipulation
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO.Compression;
+using System.Text;
+using System.Xml;
 
 namespace System.IO.Packaging
 {
+    using Properties;
+
     /// <summary>
     /// ZipPackage is a specific implementation for the abstract Package
     /// class, corresponding to the Zip file format. 
@@ -68,7 +71,7 @@ namespace System.IO.Packaging
             if (contentType == null)
                 throw new ArgumentNullException("contentType");
 
-            Package.ThrowIfCompressionOptionInvalid(compressionOption);
+            ThrowIfCompressionOptionInvalid(compressionOption);
 
             // Convert Metro CompressionOption to Zip CompressionMethodEnum.
             CompressionLevel level;
@@ -174,7 +177,7 @@ namespace System.IO.Packaging
 
             // The list of files has to be searched linearly (1) to identify the content type
             // stream, and (2) to identify parts.
-            System.Collections.ObjectModel.ReadOnlyCollection<ZipArchiveEntry> zipArchiveEntries = _zipArchive.Entries;
+            ReadOnlyCollection<ZipArchiveEntry> zipArchiveEntries = _zipArchive.Entries;
 
             // We have already identified the [ContentTypes].xml pieces if any are present during
             // the initialization of ZipPackage object
@@ -314,7 +317,7 @@ namespace System.IO.Packaging
                 else if (packageFileAccess == FileAccess.ReadWrite)
                     zipArchiveMode = ZipArchiveMode.Update;
 
-                zipArchive = new ZipArchive(_containerStream, zipArchiveMode, true, Text.Encoding.UTF8);
+                zipArchive = new ZipArchive(_containerStream, zipArchiveMode, true, Encoding.UTF8);
                 _zipStreamManager = new ZipStreamManager(zipArchive, _packageFileMode, _packageFileAccess);
                 contentTypeHelper = new ContentTypeHelper(zipArchive, _packageFileMode, _packageFileAccess, _zipStreamManager);
             }
@@ -356,7 +359,7 @@ namespace System.IO.Packaging
                 else if (packageFileAccess == FileAccess.ReadWrite)
                     zipArchiveMode = ZipArchiveMode.Update;
 
-                zipArchive = new ZipArchive(s, zipArchiveMode, true, Text.Encoding.UTF8);
+                zipArchive = new ZipArchive(s, zipArchiveMode, true, Encoding.UTF8);
                 
                 _zipStreamManager = new ZipStreamManager(zipArchive, packageFileMode, packageFileAccess);
                 contentTypeHelper = new ContentTypeHelper(zipArchive, packageFileMode, packageFileAccess, _zipStreamManager);
@@ -742,7 +745,7 @@ namespace System.IO.Packaging
                     using (Stream s = _zipStreamManager.Open(_contentTypeZipArchiveEntry, _packageFileMode, FileAccess.ReadWrite))
                     {
                         // use UTF-8 encoding by default
-                        using (XmlWriter writer = XmlWriter.Create(s, new XmlWriterSettings { Encoding = System.Text.Encoding.UTF8 }))
+                        using (XmlWriter writer = XmlWriter.Create(s, new XmlWriterSettings { Encoding = Encoding.UTF8 }))
                         {
                             writer.WriteStartDocument();
 
@@ -788,7 +791,7 @@ namespace System.IO.Packaging
                     _overrideDictionary = new Dictionary<PackUriHelper.ValidatedPartUri, ContentType>(s_overrideDictionaryInitialSize);
             }
 
-            private void ParseContentTypesFile(System.Collections.ObjectModel.ReadOnlyCollection<ZipArchiveEntry> zipFiles)
+            private void ParseContentTypesFile(ReadOnlyCollection<ZipArchiveEntry> zipFiles)
             {
                 // Find the content type stream, allowing for interleaving. Naming collisions
                 // (as between an atomic and an interleaved part) will result in an exception being thrown.
@@ -824,7 +827,7 @@ namespace System.IO.Packaging
                         //Also any other attribute on the <Types> tag is an error including xml: and xsi: attributes
                         if (PackagingUtilities.GetNonXmlnsAttributeCount(reader) > 0)
                         {
-                            throw new XmlException(SR.TypesTagHasExtraAttributes, null, ((IXmlLineInfo)reader).LineNumber, ((IXmlLineInfo)reader).LinePosition);
+                            throw new XmlException(Resources.TypesTagHasExtraAttributes, null, ((IXmlLineInfo)reader).LineNumber, ((IXmlLineInfo)reader).LinePosition);
                         }
 
                         // start tag encountered
@@ -861,13 +864,13 @@ namespace System.IO.Packaging
                                         continue;
                                     else
                                     {
-                                        throw new XmlException(SR.TypesXmlDoesNotMatchSchema, null, ((IXmlLineInfo)reader).LineNumber, ((IXmlLineInfo)reader).LinePosition);
+                                        throw new XmlException(Resources.TypesXmlDoesNotMatchSchema, null, ((IXmlLineInfo)reader).LineNumber, ((IXmlLineInfo)reader).LinePosition);
                                     }
                         }
                     }
                     else
                     {
-                        throw new XmlException(SR.TypesElementExpected, null, ((IXmlLineInfo)reader).LineNumber, ((IXmlLineInfo)reader).LinePosition);
+                        throw new XmlException(Resources.TypesElementExpected, null, ((IXmlLineInfo)reader).LineNumber, ((IXmlLineInfo)reader).LinePosition);
                     }
                 }
             }
@@ -880,7 +883,7 @@ namespace System.IO.Packaging
             /// <remarks>
             /// The input array is lexicographically sorted
             /// </remarks>
-            private Stream OpenContentTypeStream(System.Collections.ObjectModel.ReadOnlyCollection<ZipArchiveEntry> zipFiles)
+            private Stream OpenContentTypeStream(ReadOnlyCollection<ZipArchiveEntry> zipFiles)
             {
                 foreach (ZipArchiveEntry zipFileInfo in zipFiles)
                 {
@@ -915,7 +918,7 @@ namespace System.IO.Packaging
                 //There could be a namespace Attribute present at this level. 
                 //Also any other attribute on the <Default> tag is an error including xml: and xsi: attributes
                 if (PackagingUtilities.GetNonXmlnsAttributeCount(reader) != 2)
-                    throw new XmlException(SR.DefaultTagDoesNotMatchSchema, null, ((IXmlLineInfo)reader).LineNumber, ((IXmlLineInfo)reader).LinePosition);
+                    throw new XmlException(Resources.DefaultTagDoesNotMatchSchema, null, ((IXmlLineInfo)reader).LineNumber, ((IXmlLineInfo)reader).LinePosition);
 
                 // get the required Extension and ContentType attributes
 
@@ -946,7 +949,7 @@ namespace System.IO.Packaging
                 //There could be a namespace Attribute present at this level. 
                 //Also any other attribute on the <Override> tag is an error including xml: and xsi: attributes
                 if (PackagingUtilities.GetNonXmlnsAttributeCount(reader) != 2)
-                    throw new XmlException(SR.OverrideTagDoesNotMatchSchema, null, ((IXmlLineInfo)reader).LineNumber, ((IXmlLineInfo)reader).LinePosition);
+                    throw new XmlException(Resources.OverrideTagDoesNotMatchSchema, null, ((IXmlLineInfo)reader).LineNumber, ((IXmlLineInfo)reader).LinePosition);
 
                 // get the required Extension and ContentType attributes
 
@@ -985,7 +988,7 @@ namespace System.IO.Packaging
                 if (reader.NodeType == XmlNodeType.EndElement && String.CompareOrdinal(elementName, reader.LocalName) == 0)
                     return;
                 else
-                    throw new XmlException(SR.Format(SR.ElementIsNotEmptyElement, elementName), null, ((IXmlLineInfo)reader).LineNumber, ((IXmlLineInfo)reader).LinePosition);
+                    throw new XmlException(Formatter.Format(Resources.ElementIsNotEmptyElement, elementName), null, ((IXmlLineInfo)reader).LineNumber, ((IXmlLineInfo)reader).LinePosition);
             }
 
             private void AddOverrideElement(PackUriHelper.ValidatedPartUri partUri, ContentType contentType)
@@ -1037,7 +1040,7 @@ namespace System.IO.Packaging
 
                 //Checking for empty attribute
                 if (attributeValue == String.Empty)
-                    throw new XmlException(SR.Format(SR.RequiredAttributeEmpty, tagName, attributeName), null, ((IXmlLineInfo)reader).LineNumber, ((IXmlLineInfo)reader).LinePosition);
+                    throw new XmlException(Formatter.Format(Resources.RequiredAttributeEmpty, tagName, attributeName), null, ((IXmlLineInfo)reader).LineNumber, ((IXmlLineInfo)reader).LinePosition);
             }
 
 
@@ -1046,7 +1049,7 @@ namespace System.IO.Packaging
             private void ThrowIfXmlAttributeMissing(string attributeName, string attributeValue, string tagName, XmlReader reader)
             {
                 if (attributeValue == null)
-                    throw new XmlException(SR.Format(SR.RequiredAttributeMissing, tagName, attributeName), null, ((IXmlLineInfo)reader).LineNumber, ((IXmlLineInfo)reader).LinePosition);
+                    throw new XmlException(Formatter.Format(Resources.RequiredAttributeMissing, tagName, attributeName), null, ((IXmlLineInfo)reader).LineNumber, ((IXmlLineInfo)reader).LinePosition);
             }
 
             #endregion Private Methods

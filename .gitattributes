@@ -17,7 +17,7 @@
 *.msbuild text
 *.md      text
 *.txt     text
-[Mm]akefile* text
+[Mm]akefile*  text
 *.txt_AddInFactory text
 *.txt_AddOutofFactory text
 *.source  text

@@ -3,9 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Open-XML-SDK", "Open-XML-SDK.csproj", "{E5D39C6A-9067-477E-B0D3-A9419B86E6E5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentFormat.OpenXml", "DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj", "{E5D39C6A-9067-477E-B0D3-A9419B86E6E5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.IO.Packaging", "System.IO.Packaging\System.IO.Packaging.csproj", "{4C88A3AD-1241-4A04-854B-8372DF29828D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.IO.Packaging.Tests", "System.IO.Packaging.Tests\System.IO.Packaging.Tests.csproj", "{78E2D77F-FCA9-4809-BB75-0AC76DF9B95D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentFormat.OpenXml.Tests", "DocumentFormat.OpenXml.Tests\DocumentFormat.OpenXml.Tests.csproj", "{CFC3F992-E450-4D7F-9ADB-22212AAC650A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E43CE613-45B8-4FFC-AE29-3876ABD68244}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentFormat.OpenXml.WB", "DocumentFormat.OpenXml.WB\DocumentFormat.OpenXml.WB.csproj", "{55FB0A8A-B816-4DC9-9BB4-4DB5B5950F5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentFormat.OpenXml.WB.Tests", "DocumentFormat.OpenXml.WB.Tests\DocumentFormat.OpenXml.WB.Tests.csproj", "{CD991B25-9DDE-4480-BC90-0B9F3428BDFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +34,22 @@ Global
 		{4C88A3AD-1241-4A04-854B-8372DF29828D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C88A3AD-1241-4A04-854B-8372DF29828D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C88A3AD-1241-4A04-854B-8372DF29828D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78E2D77F-FCA9-4809-BB75-0AC76DF9B95D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78E2D77F-FCA9-4809-BB75-0AC76DF9B95D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78E2D77F-FCA9-4809-BB75-0AC76DF9B95D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78E2D77F-FCA9-4809-BB75-0AC76DF9B95D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFC3F992-E450-4D7F-9ADB-22212AAC650A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFC3F992-E450-4D7F-9ADB-22212AAC650A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFC3F992-E450-4D7F-9ADB-22212AAC650A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFC3F992-E450-4D7F-9ADB-22212AAC650A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55FB0A8A-B816-4DC9-9BB4-4DB5B5950F5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55FB0A8A-B816-4DC9-9BB4-4DB5B5950F5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55FB0A8A-B816-4DC9-9BB4-4DB5B5950F5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55FB0A8A-B816-4DC9-9BB4-4DB5B5950F5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD991B25-9DDE-4480-BC90-0B9F3428BDFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD991B25-9DDE-4480-BC90-0B9F3428BDFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD991B25-9DDE-4480-BC90-0B9F3428BDFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD991B25-9DDE-4480-BC90-0B9F3428BDFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

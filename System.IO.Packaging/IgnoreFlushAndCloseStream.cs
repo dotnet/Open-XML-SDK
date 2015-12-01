@@ -9,11 +9,10 @@
 //                  created specifically for perf improvements for the ZipPackage.
 //------------------------------------------------------------------------------
 
-using System;
-using System.IO;
-
 namespace System.IO.Packaging
 {
+    using Properties;
+
     /// <summary>
     /// This class ignores all calls to Flush() and Close() methods
     /// depending on whether the IgnoreFlushAndClose property is set to true
@@ -210,7 +209,7 @@ namespace System.IO.Packaging
         private void ThrowIfStreamDisposed()
         {
             if (_disposed)
-                throw new ObjectDisposedException(null, SR.StreamObjectDisposed);
+                throw new ObjectDisposedException(null, Resources.StreamObjectDisposed);
         }
 
         #endregion Private Methods

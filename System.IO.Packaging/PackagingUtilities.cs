@@ -7,14 +7,14 @@
 //
 //---------------------------------------------------------------------------
 
-using System;
-using System.IO;
-using System.Xml;               // For XmlReader
-using System.Diagnostics;       // For Debug.Assert
-using System.Text;              // For Encoding
+using System.Diagnostics;
+using System.Text;
+using System.Xml;
 
 namespace System.IO.Packaging
 {
+    using Properties;
+
     internal static class PackagingUtilities
     {
         //------------------------------------------------------
@@ -74,7 +74,7 @@ namespace System.IO.Packaging
                         return;
                     else
                         //if the encoding attribute has any other value we throw an exception
-                        throw new FileFormatException(SR.EncodingNotSupported);
+                        throw new FileFormatException(Resources.EncodingNotSupported);
                 }
             }
 
@@ -105,7 +105,7 @@ namespace System.IO.Packaging
         static internal void VerifyStreamReadArgs(Stream s, byte[] buffer, int offset, int count)
         {
             if (!s.CanRead)
-                throw new NotSupportedException(SR.ReadNotSupported);
+                throw new NotSupportedException(Resources.ReadNotSupported);
 
             if (buffer == null)
             {
@@ -114,19 +114,19 @@ namespace System.IO.Packaging
 
             if (offset < 0)
             {
-                throw new ArgumentOutOfRangeException("offset", SR.OffsetNegative);
+                throw new ArgumentOutOfRangeException("offset", Resources.OffsetNegative);
             }
 
             if (count < 0)
             {
-                throw new ArgumentOutOfRangeException("count", SR.ReadCountNegative);
+                throw new ArgumentOutOfRangeException("count", Resources.ReadCountNegative);
             }
 
             checked     // catch any integer overflows
             {
                 if (offset + count > buffer.Length)
                 {
-                    throw new ArgumentException(SR.ReadBufferTooSmall, "buffer");
+                    throw new ArgumentException(Resources.ReadBufferTooSmall, "buffer");
                 }
             }
         }
@@ -142,7 +142,7 @@ namespace System.IO.Packaging
         static internal void VerifyStreamWriteArgs(Stream s, byte[] buffer, int offset, int count)
         {
             if (!s.CanWrite)
-                throw new NotSupportedException(SR.WriteNotSupported);
+                throw new NotSupportedException(Resources.WriteNotSupported);
 
             if (buffer == null)
             {
@@ -151,18 +151,18 @@ namespace System.IO.Packaging
 
             if (offset < 0)
             {
-                throw new ArgumentOutOfRangeException("offset", SR.OffsetNegative);
+                throw new ArgumentOutOfRangeException("offset", Resources.OffsetNegative);
             }
 
             if (count < 0)
             {
-                throw new ArgumentOutOfRangeException("count", SR.WriteCountNegative);
+                throw new ArgumentOutOfRangeException("count", Resources.WriteCountNegative);
             }
 
             checked
             {
                 if (offset + count > buffer.Length)
-                    throw new ArgumentException(SR.WriteBufferTooSmall, "buffer");
+                    throw new ArgumentException(Resources.WriteBufferTooSmall, "buffer");
             }
         }
 

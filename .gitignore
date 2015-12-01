@@ -5,6 +5,7 @@
 *.suo
 *.user
 *.sln.docstates
+*.DotSettings
 
 # Build results
 [Dd]ebug/
@@ -123,14 +124,14 @@ publish/
 *.[Pp]ublish.xml
 *.azurePubxml
 
-# NuGet Packages Directory
-packages/
-## TODO: If the tool you use requires repositories.config uncomment the next line
-#!packages/repositories.config
-
-# Enable "build/" folder in the NuGet Packages folder since NuGet packages use it for MSBuild targets
-# This line needs to be after the ignore of the build folder (and the packages folder if the line above has been uncommented)
-!packages/build/
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+# except build/, which is used as an MSBuild target.
+!**/packages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/packages/repositories.config
 
 # Windows Azure Build Output
 csx/

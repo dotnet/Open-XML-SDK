@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information. -->
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ExceptionError" xml:space="preserve">
+    <value>Inner exception: {0}.</value>
+  </data>
+  <data name="Fmt_AnyElementInNamespace" xml:space="preserve">
+    <value>any element in namespace '{0}'</value>
+  </data>
+  <data name="Fmt_ElementName" xml:space="preserve">
+    <value>&lt;{0}:{1}&gt;</value>
+  </data>
+  <data name="Fmt_ElementNameSeparator" xml:space="preserve">
+    <value>,</value>
+  </data>
+  <data name="Fmt_ListOfPossibleElements" xml:space="preserve">
+    <value> List of possible elements expected: {0}.</value>
+  </data>
+  <data name="MC_ErrorOnUnprefixedAttributeName" xml:space="preserve">
+    <value>The attribute '{0}' needs to specify a proper prefix when defined on an AlternateContent element.</value>
+  </data>
+  <data name="MC_InvalidIgnorableAttribute" xml:space="preserve">
+    <value>The Ignorable attribute is invalid - The value '{0}' contains an invalid prefix that is not defined.</value>
+  </data>
+  <data name="MC_InvalidMustUnderstandAttribute" xml:space="preserve">
+    <value>The MustUnderstand attribute is invalid - The value '{0}' contains an invalid prefix that is not defined.</value>
+  </data>
+  <data name="MC_InvalidPreserveAttributesAttribute" xml:space="preserve">
+    <value>The PreserveAttributes attribute is invalid - The value '{0}' contains invalid qualified names. The ProcessAttributes attribute value cannot reference any attribute name that does not belong to a namespace that is identified by the Ignorable attribute of the same element.</value>
+  </data>
+  <data name="MC_InvalidPreserveElementsAttribute" xml:space="preserve">
+    <value>The PreserveElements attribute is invalid - The value '{0}' contains invalid qualified names. The PreserveElements attribute value cannot reference any element name that does not belong to a namespace that is identified by the Ignorable attribute of the same element.</value>
+  </data>
+  <data name="MC_InvalidProcessContentAttribute" xml:space="preserve">
+    <value>The ProcessContent attribute is invalid - The value '{0}' contains invalid qualified names. The ProcessContent attribute value cannot reference any element name that does not belong to a namespace that is identified by the Ignorable attribute of the same element.</value>
+  </data>
+  <data name="MC_InvalidRequiresAttribute" xml:space="preserve">
+    <value>The Requires attribute is invalid - The value '{0}' contains an invalid prefix that is not defined.</value>
+  </data>
+  <data name="MC_InvalidXmlAttribute" xml:space="preserve">
+    <value>The {0} element should not have an xml:lang or xml:space attribute.</value>
+  </data>
+  <data name="MC_InvalidXmlAttributeWithProcessContent" xml:space="preserve">
+    <value>An element should not have an xml:lang or xml:space attribute and also be identified by a ProcessContent attribute.</value>
+  </data>
+  <data name="MC_MissedRequiresAttribute" xml:space="preserve">
+    <value>All Choice elements must have a Requires attribute whose value contains a whitespace delimited list of namespace prefixes.</value>
+  </data>
+  <data name="MC_ShallContainChoice" xml:space="preserve">
+    <value>An AlternateContent element must contain one or more Choice child elements, optionally followed by a Fallback child element.</value>
+  </data>
+  <data name="MC_ShallNotContainAlternateContent" xml:space="preserve">
+    <value>An AlternateContent element cannot be the child of an AlternateContent element.</value>
+  </data>
+  <data name="Pkg_ExtendedPartIsOpenXmlPart" xml:space="preserve">
+    <value>An ExtendedPart '{0}' was encountered with a relationship type that starts with "http://schemas.openxmlformats.org". Expected a defined part instead based on the relationship type.</value>
+  </data>
+  <data name="Pkg_OnlyOnePartAllowed" xml:space="preserve">
+    <value>The package/part '{0}' can only have one instance of relationship that targets part '{1}'.</value>
+  </data>
+  <data name="Pkg_PartIsNotAllowed" xml:space="preserve">
+    <value>The package/part '{0}' cannot have a relationship that targets part '{1}'.</value>
+  </data>
+  <data name="Pkg_RequiredPartDoNotExist" xml:space="preserve">
+    <value>A required part '{0}' is missing.</value>
+  </data>
+  <data name="Sch_AllElement" xml:space="preserve">
+    <value>Element '{0}' cannot appear more than once if content model type is "all".</value>
+  </data>
+  <data name="Sch_AttributeUnionFailedEx" xml:space="preserve">
+    <value>The '{0}' attribute is invalid - The value '{1}' is not valid according to any of the memberTypes of the union.</value>
+  </data>
+  <data name="Sch_AttributeValueDataTypeDetailed" xml:space="preserve">
+    <value>The attribute '{0}' has invalid value '{1}'.{2}</value>
+  </data>
+  <data name="Sch_ElementUnionFailedEx" xml:space="preserve">
+    <value>The '{0}' element is invalid - The value '{1}' is not valid according to any of the memberTypes of the union.</value>
+  </data>
+  <data name="Sch_ElementValueDataTypeDetailed" xml:space="preserve">
+    <value>The element '{0}' has invalid value '{1}'.{2}</value>
+  </data>
+  <data name="Sch_EmptyAttributeValue" xml:space="preserve">
+    <value> The attribute value cannot be empty.</value>
+  </data>
+  <data name="Sch_EmptyElementValue" xml:space="preserve">
+    <value> The text value cannot be empty.</value>
+  </data>
+  <data name="Sch_EnumerationConstraintFailed" xml:space="preserve">
+    <value> The Enumeration constraint failed.</value>
+  </data>
+  <data name="Sch_IncompleteContentExpectingComplex" xml:space="preserve">
+    <value>The element has incomplete content.{0}</value>
+  </data>
+  <data name="Sch_InvalidChildinLeafElement" xml:space="preserve">
+    <value>The element '{0}' is a leaf element and cannot contain children.</value>
+  </data>
+  <data name="Sch_InvalidElementContentExpectingComplex" xml:space="preserve">
+    <value>The element has invalid child element '{0}'.{1}</value>
+  </data>
+  <data name="Sch_InvalidElementContentWrongType" xml:space="preserve">
+    <value>The element has child element '{0}' of invalid type '{1}'.</value>
+  </data>
+  <data name="Sch_LengthConstraintFailed" xml:space="preserve">
+    <value> The actual length according to datatype '{0}' is not equal to the specified length. The expected length is {1}.</value>
+  </data>
+  <data name="Sch_MaxExclusiveConstraintFailed" xml:space="preserve">
+    <value> The MaxExclusive constraint failed. The value must be less than {0}.</value>
+  </data>
+  <data name="Sch_MaxInclusiveConstraintFailed" xml:space="preserve">
+    <value> The MaxInclusive constraint failed. The value must be less than or equal to {0}.</value>
+  </data>
+  <data name="Sch_MaxLengthConstraintFailed" xml:space="preserve">
+    <value> The actual length according to datatype '{0}' is greater than the MaxLength value. The length must be smaller than or equal to {1}.</value>
+  </data>
+  <data name="Sch_MinExclusiveConstraintFailed" xml:space="preserve">
+    <value> The MinExclusive constraint failed. The value must be greater than {0}.</value>
+  </data>
+  <data name="Sch_MinInclusiveConstraintFailed" xml:space="preserve">
+    <value> The MinInclusive constraint failed. The value must be greater than or equal to {0}.</value>
+  </data>
+  <data name="Sch_MinLengthConstraintFailed" xml:space="preserve">
+    <value> The actual length according to datatype '{0}' is less than the MinLength value. The length must be bigger than or equal to {1}.</value>
+  </data>
+  <data name="Sch_MissRequiredAttribute" xml:space="preserve">
+    <value>The required attribute '{0}' is missing.</value>
+  </data>
+  <data name="Sch_PatternConstraintFailed" xml:space="preserve">
+    <value> The Pattern constraint failed. The expected pattern is {0}.</value>
+  </data>
+  <data name="Sch_StringIsNotValidValue" xml:space="preserve">
+    <value> The string '{0}' is not a valid '{1}' value.</value>
+  </data>
+  <data name="Sch_TotalDigitsConstraintFailed" xml:space="preserve">
+    <value> The TotalDigits constraint failed. The expected number of digits is {0}.</value>
+  </data>
+  <data name="Sch_UndeclaredAttribute" xml:space="preserve">
+    <value>The '{0}' attribute is not declared.</value>
+  </data>
+  <data name="Sch_UnexpectedElementContentExpectingComplex" xml:space="preserve">
+    <value>The element has unexpected child element '{0}'.{1}</value>
+  </data>
+  <data name="Sem_AttributeAbsentConditionToNonValue" xml:space="preserve">
+    <value>Attribute '{0}' should be absent when the value of attribute '{1}' is not {2}.</value>
+  </data>
+  <data name="Sem_AttributeAbsentConditionToValue" xml:space="preserve">
+    <value>Attribute '{0}' should be absent when the value of attribute '{1}' is {2}.</value>
+  </data>
+  <data name="Sem_AttributeMutualExclusive" xml:space="preserve">
+    <value>Attribute '{0}' and '{1}' cannot be present at the same time. Only one of these attributes '{2}' can be present at a given time.</value>
+  </data>
+  <data name="Sem_AttributeRequiredConditionToValue" xml:space="preserve">
+    <value>Attribute '{0}' should be present when the value of attribute '{1}' is {2}.</value>
+  </data>
+  <data name="Sem_AttributeValueConditionToAnother" xml:space="preserve">
+    <value>Attribute '{0}' should have value(s) {1} when attribute '{2}' has value(s) {3}. Current value of attribute '{4}' is '{5}'.</value>
+  </data>
+  <data name="Sem_AttributeValueDataTypeDetailed" xml:space="preserve">
+    <value>The attribute '{0}' has invalid value '{1}'.{2}</value>
+  </data>
+  <data name="Sem_AttributeValueLessEqualToAnother" xml:space="preserve">
+    <value>Attribute '{0}' has value '{1}'. It should be less than or equal to the value of attribute '{2}' which is '{3}'.</value>
+  </data>
+  <data name="Sem_AttributeValueLessEqualToAnotherEx" xml:space="preserve">
+    <value>Attribute '{0}' has value '{1}'. It should be less than the value of attribute '{2}' which is '{3}'.</value>
+  </data>
+  <data name="Sem_IncorrectRelationshipType" xml:space="preserve">
+    <value>Relationship '{0}' referenced by attribute '{1}' has incorrect type. Its type should be '{2}'.</value>
+  </data>
+  <data name="Sem_MaxLengthConstraintFailed" xml:space="preserve">
+    <value> The actual length is greater than the MaxLength value. The length must be smaller than or equal to {0}.</value>
+  </data>
+  <data name="Sem_MinLengthConstraintFailed" xml:space="preserve">
+    <value> The actual length is less than the MinLength value. The length must be bigger than or equal to {0}.</value>
+  </data>
+  <data name="Sem_MissingIndexedElement" xml:space="preserve">
+    <value>Element '{0}' referenced by '{1}@{2}' does not exist in part '{3}'. The index is '{4}'.</value>
+  </data>
+  <data name="Sem_MissingReferenceElement" xml:space="preserve">
+    <value>Element '{0}' referenced by '{1}@{2}' does not exist in part '{3}'. The reference value is '{4}'.</value>
+  </data>
+  <data name="Sem_UniqueAttributeValue" xml:space="preserve">
+    <value>Attribute '{0}' should have unique value. Its current value '{1}' duplicates with others.</value>
+  </data>
+  <data name="TypeName_base64Binary" xml:space="preserve">
+    <value>http://www.w3.org/2001/XMLSchema:base64Binary</value>
+  </data>
+  <data name="TypeName_hexBinary" xml:space="preserve">
+    <value>http://www.w3.org/2001/XMLSchema:hexBinary</value>
+  </data>
+  <data name="TypeName_ID" xml:space="preserve">
+    <value>http://www.w3.org/2001/XMLSchema:ID</value>
+  </data>
+  <data name="TypeName_Integer" xml:space="preserve">
+    <value>http://www.w3.org/2001/XMLSchema:integer</value>
+  </data>
+  <data name="TypeName_language" xml:space="preserve">
+    <value>http://www.w3.org/2001/XMLSchema:language</value>
+  </data>
+  <data name="TypeName_NCName" xml:space="preserve">
+    <value>http://www.w3.org/2001/XMLSchema:NCName</value>
+  </data>
+  <data name="TypeName_nonNegativeInteger" xml:space="preserve">
+    <value>http://www.w3.org/2001/XMLSchema:nonNegativeInteger</value>
+  </data>
+  <data name="TypeName_positiveInteger" xml:space="preserve">
+    <value>http://www.w3.org/2001/XMLSchema:positiveInteger</value>
+  </data>
+  <data name="TypeName_QName" xml:space="preserve">
+    <value>http://www.w3.org/2001/XMLSchema:QName</value>
+  </data>
+  <data name="TypeName_token" xml:space="preserve">
+    <value>http://www.w3.org/2001/XMLSchema:token</value>
+  </data>
+  <data name="Sem_InvalidRelationshipId" xml:space="preserve">
+    <value>The relationship '{0}' referenced by attribute '{1}' does not exist.</value>
+  </data>
+  <data name="Sem_AttributeValueUniqueInDocument" xml:space="preserve">
+    <value>Attribute '{0}' should have unique value in the whole document. Its current value '{1}' duplicates with others.</value>
+  </data>
+  <data name="Pkg_DataPartReferenceIsNotAllowed" xml:space="preserve">
+    <value>The package/part '{0}' cannot have a relationship that targets '{1}'.</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="O12SchemaConstraintDatas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\GeneratedCode\O12SchemaConstraintDatas.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="O14SchemaConstraintDatas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\GeneratedCode\O14SchemaConstraintDatas.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="O15SchemaConstraintDatas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\GeneratedCode\O15SchemaConstraintDatas.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

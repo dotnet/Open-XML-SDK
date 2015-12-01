@@ -9,15 +9,13 @@
 //
 //-----------------------------------------------------------------------------
 
-using System;
-using System.IO;
-using System.Collections;
-using System.Collections.Generic;   // For SortedList<>
+using System.Collections.Generic;
 using System.Diagnostics;
-using System.Security;           // For Debug.Assert
 
 namespace System.IO.Packaging
 {
+    using Properties;
+
     /// <summary>
     /// Abstract Base class for the Package.
     /// This is a part of the Packaging Layer APIs
@@ -252,7 +250,7 @@ namespace System.IO.Packaging
             PackUriHelper.ValidatedPartUri validatedPartUri = PackUriHelper.ValidatePartUri(partUri);
 
             if (_partList.ContainsKey(validatedPartUri))
-                throw new InvalidOperationException(SR.PartAlreadyExists);
+                throw new InvalidOperationException(Resources.PartAlreadyExists);
 
             // Add the part to the _partList if there is no prefix collision
             // Note: This is the only place where we pass a null to this method for the part and if the
@@ -273,7 +271,7 @@ namespace System.IO.Packaging
 
         /// <summary>
         /// Returns a part that already exists in the package. If the part
-        /// Corresponding to the URI does not exist in the package then an exception is
+        /// corresponding to the URI does not exist in the package then an exception is
         /// thrown. The method calls the GetPartCore method which actually fetches the part.
         /// </summary>
         /// <param name="partUri"></param>
@@ -287,9 +285,9 @@ namespace System.IO.Packaging
         {
             PackagePart returnedPart = GetPartHelper(partUri);
             if (returnedPart == null)
-                throw new InvalidOperationException(SR.PartDoesNotExist);
-            else
-                return returnedPart;
+                throw new InvalidOperationException(Formatter.Format(Resources.PartDoesNotExist, partUri));
+
+            return returnedPart;
         }
 
 
@@ -375,14 +373,14 @@ namespace System.IO.Packaging
                 if (Uri.Compare(owningPartUri, PackUriHelper.PackageRootUri, UriComponents.SerializationInfoString, UriFormat.UriEscaped, StringComparison.Ordinal) == 0)
                 {
                     //Clear any data in memory
-                    this.ClearRelationships();
+                    ClearRelationships();
                 }
                 else
                 {
                     //Clear any data in memory
-                    if (this.PartExists(owningPartUri))
+                    if (PartExists(owningPartUri))
                     {
-                        PackagePart owningPart = this.GetPart(owningPartUri);
+                        PackagePart owningPart = GetPart(owningPartUri);
                         owningPart.ClearRelationships();
                     }
                 }
@@ -434,7 +432,7 @@ namespace System.IO.Packaging
                     partUri = (PackUriHelper.ValidatedPartUri)parts[i].Uri;
 
                     if (seenPartUris.ContainsKey(partUri))
-                        throw new FileFormatException(SR.BadPackageFormat);
+                        throw new FileFormatException(Resources.BadPackageFormat);
                     else
                     {
                         // Add the part to the list of URIs that we have already seen
@@ -678,7 +676,7 @@ namespace System.IO.Packaging
 
             PackageRelationship returnedRelationship = GetRelationshipHelper(id);
             if (returnedRelationship == null)
-                throw new InvalidOperationException(SR.PackageRelationshipDoesNotExist);
+                throw new InvalidOperationException(Resources.PackageRelationshipDoesNotExist);
             else
                 return returnedRelationship;
         }
@@ -816,14 +814,14 @@ namespace System.IO.Packaging
         internal void ThrowIfReadOnly()
         {
             if (_openFileAccess == FileAccess.Read)
-                throw new IOException(SR.CannotModifyReadOnlyContainer);
+                throw new IOException(Resources.CannotModifyReadOnlyContainer);
         }
 
         // If the container is writeonly, parts cannot be retrieved from it
         internal void ThrowIfWriteOnly()
         {
             if (_openFileAccess == FileAccess.Write)
-                throw new IOException(SR.CannotRetrievePartsOfWriteOnlyContainer);
+                throw new IOException(Resources.CannotRetrievePartsOfWriteOnlyContainer);
         }
 
         // return true to continue
@@ -876,17 +874,17 @@ namespace System.IO.Packaging
                 ThrowIfFileAccessInvalid(packageAccess);
 
                 if (packageMode == FileMode.OpenOrCreate && packageAccess != FileAccess.ReadWrite)
-                    throw new ArgumentException(SR.UnsupportedCombinationOfModeAccess);
+                    throw new ArgumentException(Resources.UnsupportedCombinationOfModeAccess);
                 if (packageMode == FileMode.Create && packageAccess != FileAccess.ReadWrite)
-                    throw new ArgumentException(SR.UnsupportedCombinationOfModeAccess);
+                    throw new ArgumentException(Resources.UnsupportedCombinationOfModeAccess);
                 if (packageMode == FileMode.CreateNew && packageAccess != FileAccess.ReadWrite)
-                    throw new ArgumentException(SR.UnsupportedCombinationOfModeAccess);
+                    throw new ArgumentException(Resources.UnsupportedCombinationOfModeAccess);
                 if (packageMode == FileMode.Open && packageAccess == FileAccess.Write)
-                    throw new ArgumentException(SR.UnsupportedCombinationOfModeAccess);
+                    throw new ArgumentException(Resources.UnsupportedCombinationOfModeAccess);
                 if (packageMode == FileMode.Truncate && packageAccess == FileAccess.Read)
-                    throw new ArgumentException(SR.UnsupportedCombinationOfModeAccess);
+                    throw new ArgumentException(Resources.UnsupportedCombinationOfModeAccess);
                 if (packageMode == FileMode.Truncate)
-                    throw new NotSupportedException(SR.UnsupportedCombinationOfModeAccess);
+                    throw new NotSupportedException(Resources.UnsupportedCombinationOfModeAccess);
 
                 //Note: FileShare enum is not being verfied at this stage, as we do not interpret the flag in this
                 //code at all and just pass it on to the next layer, where the necessary validation can be
@@ -1042,7 +1040,7 @@ namespace System.IO.Packaging
                 //Removing the invalid entry from the _partList.
                 _partList.Remove(partUri);
 
-                throw new InvalidOperationException(SR.PartNamePrefixExists);
+                throw new InvalidOperationException(Resources.PartNamePrefixExists);
             }
         }
 
@@ -1050,7 +1048,7 @@ namespace System.IO.Packaging
         private void ThrowIfObjectDisposed()
         {
             if (_disposed == true)
-                throw new ObjectDisposedException(null, SR.ObjectDisposed);
+                throw new ObjectDisposedException(null, Resources.ObjectDisposed);
         }
 
         private void EnsureRelationships()

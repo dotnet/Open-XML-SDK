@@ -2,12 +2,19 @@ Open-XML-SDK
 ============
 The Open XML SDK provides open-source libraries for working with Open XML
 Documents (DOCX, XLSX, and PPTX).  It supports scenarios such as:
-- High-performance generation of word-processing documents, spreadsheets,
-  and presentations
+- High-performance generation of word-processing documents, spreadsheets, and presentations.
+- Populating content in DOCX files from an XML data source.
+- Splitting up (shredding) a DOCX or PPTX file into multiple files, and combining
+  multiple DOCX / PPTX files into a single file.
+- High fidelity conversion of DOCX => HTML/CSS and HTML/CSS => DOCX.
+- Extraction of data from XLSX.
+- Searching and replacing content in DOCX / PPTX using regular expressions.
+- Updating cached data and embedded spreadsheets for charts in DOCX / PPTX.
 - Document modification, such as removing tracked revisions or removing
-  unacceptable content from documents
-- Data and content querying and extraction, such as transformation from
-  DOCX to HTML, or extraction of data from spreadsheets
+  unacceptable content from documents.
+
+[Open-Xml-PowerTools](https://github.com/OfficeDev/Open-Xml-PowerTools) provides example code and guidance for implementing many of the above important Open XML scenarios.  Be sure to check it out
+before re-inventing your own solutions.
 
 Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.
 Licensed under the Apache License, Version 2.0.
@@ -22,6 +29,10 @@ to throw exceptions (ObjectDisposedException and NullReferenceException).  You c
 find out more about this bug and whether it affects you in [the blog post that announces the release of the new System.IO.Packaging](http://openxmldeveloper.org/blog/b/openxmldeveloper/archive/2015/06/29/announcing-the-release-of-a-new-system-io-packaging-implementation.aspx).
 
 Going forward, the Open XML SDK will be based on this new implementation of System.IO.Packaging.
+
+We are also happy to announce the release of Open-Xml-PowerTools on GitHub.  Open-Xml-PowerTools provides
+example code and guidance for implementing a wide range of Open XML scenarios.  You can find PowerTools for Open XML, which previously lived at http://powertools.codeplex.com,
+at https://github.com/OfficeDev/Open-Xml-PowerTools.
 
 Documentation
 =============
