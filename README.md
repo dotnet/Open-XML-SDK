@@ -1,5 +1,8 @@
 Open-XML-SDK
 ============
+
+Release Version 2.6.0
+
 The Open XML SDK provides open-source libraries for working with Open XML
 Documents (DOCX, XLSX, and PPTX).  It supports scenarios such as:
 - High-performance generation of word-processing documents, spreadsheets, and presentations.
@@ -37,7 +40,7 @@ at https://github.com/OfficeDev/Open-Xml-PowerTools.
 Documentation
 =============
 
-This functionality of the Open XML SDK is the same as for version 2.5, therefore
+The functionality of the specific classes in Open XML SDK Version 2.6.0 is the same as for version 2.5, therefore
 the documentation available on MSDN is still accurate.
 
 [Open XML SDK 2.5 for Office](http://msdn.microsoft.com/en-us/library/office/bb448854.aspx)
@@ -50,19 +53,24 @@ Build Instructions
 ==================
 
 Note: for this first release, you must have some version of Visual Studio
-installed.  Visual Studio 2012 Express Edition will work just fine:
-http://www.microsoft.com/en-us/download/details.aspx?id=34673
+installed.  Visual Studio 2015 Community Edition will work just fine:
+https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs
 
 To build the Open XML SDK:
-- clone the repo at https://github.com/OfficeDev/Open-XML-SDK
-- Start a Visual Studio command prompt, and check into the directory that contains the repo
+- Clone the repo at https://github.com/OfficeDev/Open-XML-SDK
+- Open the solution using Visual Studio 2013 or 2015.  Community Edition of VS2015 works just fine.
+- Build the solution (using either Debug or Release configuration)
+- Run the Xunit tests to verify the installation
+
+If you want to use a command line approach:
+- Start a Visual Studio command prompt, and change into the directory that contains the repo
 - Use MSBUILD to build the SDK  (C:> MSBUILD Open-Xml-Sdk.sln)
-- If you want to continue to use the System.IO.Packaging that comes with the .NET Framework, use MSBUILD as follows  (C:> MSBUILD Open-XML-SDK-Orig-SIP.sln)
-- In your program that uses the Open XML SDK, add references to the newly built libraries in build/OpenXmlSdkLib/Debug
+- You can also use MSBUILD to build the individual projects.
+
+To use the SDK:
+- In your program that uses the Open XML SDK, add references to the newly built libraries in DocumentFormat.OpenXml/bin/Debug (or in DocumentFormat.OpenXml/bin/Release)
 
 Previously, we were using PowerShell to generate a new version number for each build.  This is no longer required, and it is more convenient to build the SDK using MSBUILD, therefore I have removed the instructions for building using the PowerShell script.
-
-Instead of using MSBUILD, you can also open the solution using Visual Studio and build it.
 
 Building with Mono
 =================
