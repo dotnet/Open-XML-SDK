@@ -487,8 +487,14 @@
     <Compile Include="..\DocumentFormat.OpenXml\src\ofapi\Validation\SemanticValidation\SemanticConstraint\AttributeCannotOmitConstraint.cs">
       <Link>src\ofapi\Validation\SemanticValidation\SemanticConstraint\AttributeCannotOmitConstraint.cs</Link>
     </Compile>
+    <Compile Include="..\DocumentFormat.OpenXml\src\ofapi\Validation\SemanticValidation\SemanticConstraint\AttributeMinMaxConstraint.cs">
+      <Link>src\ofapi\Validation\SemanticValidation\SemanticConstraint\AttributeMinMaxConstraint.cs</Link>
+    </Compile>
     <Compile Include="..\DocumentFormat.OpenXml\src\ofapi\Validation\SemanticValidation\SemanticConstraint\AttributeMutualExclusive.cs">
       <Link>src\ofapi\Validation\SemanticValidation\SemanticConstraint\AttributeMutualExclusive.cs</Link>
+    </Compile>
+    <Compile Include="..\DocumentFormat.OpenXml\src\ofapi\Validation\SemanticValidation\SemanticConstraint\AttributePairConstraint.cs">
+      <Link>src\ofapi\Validation\SemanticValidation\SemanticConstraint\AttributePairConstraint.cs</Link>
     </Compile>
     <Compile Include="..\DocumentFormat.OpenXml\src\ofapi\Validation\SemanticValidation\SemanticConstraint\AttributeRequiredConditionToValue.cs">
       <Link>src\ofapi\Validation\SemanticValidation\SemanticConstraint\AttributeRequiredConditionToValue.cs</Link>
@@ -513,6 +519,9 @@
     </Compile>
     <Compile Include="..\DocumentFormat.OpenXml\src\ofapi\Validation\SemanticValidation\SemanticConstraint\IndexReferenceConstraint.cs">
       <Link>src\ofapi\Validation\SemanticValidation\SemanticConstraint\IndexReferenceConstraint.cs</Link>
+    </Compile>
+    <Compile Include="..\DocumentFormat.OpenXml\src\ofapi\Validation\SemanticValidation\SemanticConstraint\ParentTypeConstraint.cs">
+      <Link>src\ofapi\Validation\SemanticValidation\SemanticConstraint\ParentTypeConstraint.cs</Link>
     </Compile>
     <Compile Include="..\DocumentFormat.OpenXml\src\ofapi\Validation\SemanticValidation\SemanticConstraint\ReferenceExistConstraint.cs">
       <Link>src\ofapi\Validation\SemanticValidation\SemanticConstraint\ReferenceExistConstraint.cs</Link>

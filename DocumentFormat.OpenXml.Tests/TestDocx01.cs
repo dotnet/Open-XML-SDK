@@ -14,17 +14,79 @@ using DW = DocumentFormat.OpenXml.Drawing.Wordprocessing;
 using PIC = DocumentFormat.OpenXml.Drawing.Pictures;
 using OpenXmlPowerTools;
 
-// to run the X64 tests:
-// packages\xunit.runner.console.2.0.0\tools\xunit.console DocumentFormat.OpenXml.Tests.64\bin\Debug\DocumentFormat.OpenXml.Tests.dll
-
-#if X64
-namespace DocumentFormat.OpenXml.Tests.X64
-#else
 namespace DocumentFormat.OpenXml.Tests
-#endif
 {
     public class DocxTests01
     {
+        [Fact]
+        public void W055_Load_Save_Data_Bound_Content_Controls()
+        {
+            var fileInfo = new FileInfo(Path.Combine(TestUtil.TempDir.FullName, Guid.NewGuid().ToString() + ".docx"));
+            var orig = new FileInfo(Path.Combine(TestUtil.SourceDir.FullName, "Data-Bound-Content-Controls.docx"));
+            File.Copy(orig.FullName, fileInfo.FullName);
+
+            using (WordprocessingDocument doc =
+                WordprocessingDocument.Open(fileInfo.FullName, true))
+            {
+                W.Body body = doc.MainDocumentPart.Document.Body;
+                W.Paragraph para = body.Elements<W.Paragraph>().First();
+                var newPara = new W.Paragraph(
+                    new W.Run(
+                        new W.Text("Test")));
+                para.InsertBeforeSelf(newPara);
+                OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
+                var errs = v.Validate(doc);
+            }
+            if (TestUtil.DeleteTempFiles)
+                fileInfo.Delete();
+        }
+
+        [Fact]
+        public void W054_Load_Save_Strict()
+        {
+            var fileInfo = new FileInfo(Path.Combine(TestUtil.TempDir.FullName, Guid.NewGuid().ToString() + ".docx"));
+            var orig = new FileInfo(Path.Combine(TestUtil.SourceDir.FullName, "Strict01.docx"));
+            File.Copy(orig.FullName, fileInfo.FullName);
+
+            using (WordprocessingDocument doc =
+                WordprocessingDocument.Open(fileInfo.FullName, true))
+            {
+                W.Body body = doc.MainDocumentPart.Document.Body;
+                W.Paragraph para = body.Elements<W.Paragraph>().First();
+                var newPara = new W.Paragraph(
+                    new W.Run(
+                        new W.Text("Test")));
+                para.InsertBeforeSelf(newPara);
+                OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
+                var errs = v.Validate(doc);
+            }
+            if (TestUtil.DeleteTempFiles)
+                fileInfo.Delete();
+        }
+
+        [Fact]
+        public void W053_AddPart_ToOpenXmlPackage()
+        {
+            var docName = "Hyperlink.docx";
+            var ba = File.ReadAllBytes(Path.Combine(TestUtil.SourceDir.FullName, docName));
+            using (MemoryStream ms = new MemoryStream())
+            using (MemoryStream ms2 = new MemoryStream())
+            {
+                ms.Write(ba, 0, ba.Length);
+                ms2.Write(ba, 0, ba.Length);
+                using (WordprocessingDocument doc = WordprocessingDocument.Open(ms, true))
+                using (WordprocessingDocument doc2 = WordprocessingDocument.Open(ms2, true))
+                {
+                    OpenXmlPackage pkg = (OpenXmlPackage)doc;
+                    OpenXmlPackage pkg2 = (OpenXmlPackage)doc2;
+                    CoreFilePropertiesPart cp = pkg.GetPartsOfType<CoreFilePropertiesPart>().First();
+                    CoreFilePropertiesPart cp2 = pkg2.GetPartsOfType<CoreFilePropertiesPart>().First();
+                    pkg2.DeletePart(cp2);
+                    pkg2.AddPart(cp);
+                }
+            }
+        }
+
         [Fact]
         public void W052_CreateElementFromOuterXml()
         {
@@ -1156,21 +1218,10 @@ namespace DocumentFormat.OpenXml.Tests
                 W.Comments comments = null;
                 string id = "0";
 
-                if (doc.MainDocumentPart.GetPartsCountOfType<WordprocessingCommentsPart>() > 0)
-                {
-                    comments = doc.MainDocumentPart.WordprocessingCommentsPart.Comments;
-                    if (comments.HasChildren)
-                    {
-                        id = comments.Descendants<W.Comment>().Select(e => e.Id.Value).Max();
-                    }
-                }
-                else
-                {
-                    WordprocessingCommentsPart commentPart = 
-                        doc.MainDocumentPart.AddNewPart<WordprocessingCommentsPart>();
-                    commentPart.Comments = new W.Comments();
-                    comments = commentPart.Comments;
-                }
+                WordprocessingCommentsPart commentPart = 
+                    doc.MainDocumentPart.AddNewPart<WordprocessingCommentsPart>();
+                commentPart.Comments = new W.Comments();
+                comments = commentPart.Comments;
 
                 W.Paragraph p = new W.Paragraph(new W.Run(new W.Text(comment)));
                 W.Comment cmt = 

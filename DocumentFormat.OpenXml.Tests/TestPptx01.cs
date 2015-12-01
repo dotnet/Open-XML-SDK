@@ -10,14 +10,7 @@ using D = DocumentFormat.OpenXml.Drawing;
 using A = DocumentFormat.OpenXml.Drawing;
 using PIC = DocumentFormat.OpenXml.Drawing.Pictures;
 
-// to run the X64 tests:
-// packages\xunit.runner.console.2.0.0\tools\xunit.console DocumentFormat.OpenXml.Tests.64\bin\Debug\DocumentFormat.OpenXml.Tests.dll
-
-#if X64
-namespace DocumentFormat.OpenXml.Tests.X64
-#else
 namespace DocumentFormat.OpenXml.Tests
-#endif
 {
     public class PptxTests01
     {
@@ -120,19 +113,6 @@ namespace DocumentFormat.OpenXml.Tests
             PresentationPart presentationPart = presentationDoc.AddPresentationPart();
             presentationPart.Presentation = new P.Presentation();
             CreatePresentationParts(presentationPart);
-        }
-
-        public static void CreatePresentation(string filepath)
-        {
-            // Create a presentation at a specified file path. The presentation document type is pptx, by default.
-            PresentationDocument presentationDoc = PresentationDocument.Create(filepath, PresentationDocumentType.Presentation);
-            PresentationPart presentationPart = presentationDoc.AddPresentationPart();
-            presentationPart.Presentation = new P.Presentation();
-
-            CreatePresentationParts(presentationPart);
-
-            //Close the presentation handle
-            presentationDoc.Close();
         }
 
         private static void CreatePresentationParts(PresentationPart presentationPart)
@@ -385,8 +365,6 @@ namespace DocumentFormat.OpenXml.Tests
                     var thumbNailPart = doc.ThumbnailPart;
                     doc.DeletePart(corePart);
                     doc.DeletePart(appPart);
-                    if (custFilePropsPart != null)
-                        doc.DeletePart(custFilePropsPart);
                     if (thumbNailPart != null)
                         doc.DeletePart(thumbNailPart);
                     doc.AddCoreFilePropertiesPart();

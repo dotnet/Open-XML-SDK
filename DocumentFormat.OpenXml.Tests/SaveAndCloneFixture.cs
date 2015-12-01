@@ -32,14 +32,7 @@ using DocumentFormat.OpenXml.Wordprocessing;
 using Xunit;
 using Text = DocumentFormat.OpenXml.Wordprocessing.Text;
 
-// to run the X64 tests:
-// packages\xunit.runner.console.2.0.0\tools\xunit.console DocumentFormat.OpenXml.Tests.64\bin\Debug\DocumentFormat.OpenXml.Tests.dll
-
-#if X64
-namespace DocumentFormat.OpenXml.Tests.X64
-#else
 namespace DocumentFormat.OpenXml.Tests
-#endif
 {
     [SuppressMessage("ReSharper", "UnusedMember.Global")]
     public class SaveAndCloneFixture : BaseFixture
@@ -344,19 +337,19 @@ namespace DocumentFormat.OpenXml.Tests
         /// <param name="body"></param>
         /// <param name="styleId">The style ID or null</param>
         /// <param name="text"></param>
-        internal void InsertParagraph(Body body, string styleId, string text)
-        {
-            var p = new Paragraph(new Run(new Text(text)));
-            if (styleId != null)
-                p.InsertAt(new ParagraphProperties(new ParagraphStyleId { Val = styleId }), 0);
+        //internal void InsertParagraph(Body body, string styleId, string text)
+        //{
+        //    var p = new Paragraph(new Run(new Text(text)));
+        //    if (styleId != null)
+        //        p.InsertAt(new ParagraphProperties(new ParagraphStyleId { Val = styleId }), 0);
 
-            if (body.LastChild is SectionProperties)
-            {
-                body.LastChild.InsertBeforeSelf(p);
-                return;
-            }
-            body.AppendChild(p);
-        }
+        //    if (body.LastChild is SectionProperties)
+        //    {
+        //        body.LastChild.InsertBeforeSelf(p);
+        //        return;
+        //    }
+        //    body.AppendChild(p);
+        //}
 
         private static void CheckPresentationDocument(string path, string clonePath)
         {

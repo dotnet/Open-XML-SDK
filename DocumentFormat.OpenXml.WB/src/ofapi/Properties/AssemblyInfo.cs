@@ -39,5 +39,8 @@ using System.Security;
 [assembly: AssemblyVersion("2.6.0.0")]
 [assembly: AssemblyFileVersion("2.6.0.0")]
 
+[assembly: InternalsVisibleTo("DocumentFormat.OpenXml.Tests")]
+[assembly: InternalsVisibleTo("DocumentFormat.OpenXml.WB.Tests")]
+
 [assembly: NeutralResourcesLanguageAttribute("en-US")]
 [assembly: SecurityRules(SecurityRuleSet.Level1)]

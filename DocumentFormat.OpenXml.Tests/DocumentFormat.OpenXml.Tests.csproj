@@ -22,7 +22,8 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>
+    </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -60,8 +61,95 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseFixture.cs" />
+    <Compile Include="Common\TestContext.cs" />
+    <Compile Include="ConformanceTest\ChartTrackingRefBased\ChartTrackingRefBasedTest.cs" />
+    <Compile Include="ConformanceTest\ChartTrackingRefBased\GeneratedDocument.cs" />
+    <Compile Include="ConformanceTest\ChartTrackingRefBased\TestEntities.cs" />
+    <Compile Include="ConformanceTest\CommentExPeople\CommentExPeopleTest.cs" />
+    <Compile Include="ConformanceTest\CommentExPeople\GeneratedDocument.cs" />
+    <Compile Include="ConformanceTest\CommentExPeople\TestEntities.cs" />
+    <Compile Include="ConformanceTest\CommentEx\CommentExTest.cs" />
+    <Compile Include="ConformanceTest\CommentEx\Commons.cs" />
+    <Compile Include="ConformanceTest\CommentEx\ConstantStrings.cs" />
+    <Compile Include="ConformanceTest\CommentEx\GeneratedDocument.cs" />
+    <Compile Include="ConformanceTest\CommentEx\TestEntities.cs" />
+    <Compile Include="ConformanceTest\ContentControl\ConstantStrings.cs" />
+    <Compile Include="ConformanceTest\ContentControl\ContentControlTest.cs" />
+    <Compile Include="ConformanceTest\ContentControl\DeleteElement.cs" />
+    <Compile Include="ConformanceTest\ContentControl\EditElement.cs" />
+    <Compile Include="ConformanceTest\ContentControl\GeneratedDocument.cs" />
+    <Compile Include="ConformanceTest\ContentControl\VerifyDeletedElement.cs" />
+    <Compile Include="ConformanceTest\ContentControl\VerifyElement.cs" />
+    <Compile Include="ConformanceTest\FootnoteColumns\FootnoteColumnTest.cs" />
+    <Compile Include="ConformanceTest\FootnoteColumns\GeneratedDocument.cs" />
+    <Compile Include="ConformanceTest\General\ConformanceTestBase.cs" />
+    <Compile Include="ConformanceTest\Guide\GeneratedDocument.cs" />
+    <Compile Include="ConformanceTest\Guide\GuideTest.cs" />
+    <Compile Include="ConformanceTest\Guide\TestEntities.cs" />
+    <Compile Include="ConformanceTest\Pivot\ConnectionGeneratedDocument.cs" />
+    <Compile Include="ConformanceTest\Pivot\ConnectionTestEntities.cs" />
+    <Compile Include="ConformanceTest\Pivot\PivotTest.cs" />
+    <Compile Include="ConformanceTest\PresetTransition\GeneratedDocument.cs" />
+    <Compile Include="ConformanceTest\PresetTransition\PresetTransitionTest.cs" />
+    <Compile Include="ConformanceTest\Slicer\GeneratedDocument.cs" />
+    <Compile Include="ConformanceTest\Slicer\SlicerTest.cs" />
+    <Compile Include="ConformanceTest\Slicer\TestEntities.cs" />
+    <Compile Include="ConformanceTest\Theme\GeneratedDocument.cs" />
+    <Compile Include="ConformanceTest\Theme\TestEntities.cs" />
+    <Compile Include="ConformanceTest\Theme\ThemeTest.cs" />
+    <Compile Include="ConformanceTest\ThreadingInfo\GeneratedDocument.cs" />
+    <Compile Include="ConformanceTest\ThreadingInfo\TestEntities.cs" />
+    <Compile Include="ConformanceTest\ThreadingInfo\ThreadingInfoTest.cs" />
+    <Compile Include="ConformanceTest\Timeline\GeneratedDocument.cs" />
+    <Compile Include="ConformanceTest\Timeline\TestEntities.cs" />
+    <Compile Include="ConformanceTest\Timeline\TimeLineTest.cs" />
+    <Compile Include="ConformanceTest\WebExtension\WebExtensionData.cs" />
+    <Compile Include="ConformanceTest\WebExtension\WebExtensionTest.cs" />
+    <Compile Include="ConformanceTest\WorkbookPr\GeneratedDocument.cs" />
+    <Compile Include="ConformanceTest\WorkbookPr\TestEntities.cs" />
+    <Compile Include="ConformanceTest\WorkbookPr\WorkBookPrTest.cs" />
     <Compile Include="CreateFromTemplateFixture.cs" />
     <Compile Include="FlatOpcFixture.cs" />
+    <Compile Include="GeneratedCode001-Complex-DOCX.cs" />
+    <Compile Include="GeneratedCode002-Complex-XLSX.cs" />
+    <Compile Include="GeneratedCode003-Data-Bound-Content-Controls.cs" />
+    <Compile Include="ofapiTest\AllParticleValidatorTest.cs" />
+    <Compile Include="ofapiTest\AnyParticleValidatorTest.cs" />
+    <Compile Include="ofapiTest\BugRegressionTest.cs" />
+    <Compile Include="ofapiTest\ChoiceParticleValidatorTest.cs" />
+    <Compile Include="ofapiTest\CompositeParticleValidatorTest.cs" />
+    <Compile Include="ofapiTest\CustomXmlElementTest.cs" />
+    <Compile Include="ofapiTest\GroupParticleValidatorTest.cs" />
+    <Compile Include="ofapiTest\ListValueTest.cs" />
+    <Compile Include="ofapiTest\M4Conformance.cs" />
+    <Compile Include="ofapiTest\MCSupport.cs" />
+    <Compile Include="ofapiTest\McValidationTest.cs" />
+    <Compile Include="ofapiTest\OpenXmlCompositeElementTest.cs" />
+    <Compile Include="ofapiTest\OpenXmlElementTest.cs" />
+    <Compile Include="ofapiTest\OpenXmlElementTest2.cs" />
+    <Compile Include="ofapiTest\OpenXmlPackageTest.cs" />
+    <Compile Include="ofapiTest\OpenXmlPartTest.cs" />
+    <Compile Include="ofapiTest\OpenXmlReaderTest.cs" />
+    <Compile Include="ofapiTest\OpenXmlSimpleValueTest.cs" />
+    <Compile Include="ofapiTest\OpenXmlValidatorTest.cs" />
+    <Compile Include="ofapiTest\OpenXmlWriterTest.cs" />
+    <Compile Include="ofapiTest\SchemaValidatorTest.cs" />
+    <Compile Include="ofapiTest\SdbSchemaDatasTest.cs" />
+    <Compile Include="ofapiTest\SemanticConstraintTest.cs" />
+    <Compile Include="ofapiTest\SemanticValidationTest.cs" />
+    <Compile Include="ofapiTest\SequenceParticleValidatorTest.cs" />
+    <Compile Include="ofapiTest\ValidationErrorStrings.cs" />
+    <Compile Include="ofapiTest\ValidatorExtension.cs" />
+    <Compile Include="ofapiTest\XmlPathTest.cs" />
+    <Compile Include="OpenXmlDomTaskLibrary\DataStorage\FileDataGroup.cs" />
+    <Compile Include="OpenXmlDomTaskLibrary\DataStorage\FileType.cs" />
+    <Compile Include="OpenXmlDomTaskLibrary\DataStorage\ITestData.cs" />
+    <Compile Include="OpenXmlDomTaskLibrary\DataStorage\ITestDataGroup.cs" />
+    <Compile Include="OpenXmlDomTaskLibrary\DataStorage\TestDataStorage.cs" />
+    <Compile Include="OpenXmlDomTaskLibrary\OpenXmlDomTaskLibrary.cs" />
+    <Compile Include="OpenXmlDomTaskLibrary\OpenXmlDomTestExtension.cs" />
+    <Compile Include="OpenXmlDomTaskLibrary\TestScripts\OpenXmlTestBase.cs" />
+    <Compile Include="OpenXmlDomTaskLibrary\VerifiableLog.cs" />
     <Compile Include="OpenXmlPowerTools-3-1-11\ChartUpdater.cs" />
     <Compile Include="OpenXmlPowerTools-3-1-11\DocumentBuilder.cs" />
     <Compile Include="OpenXmlPowerTools-3-1-11\FieldRetriever.cs" />
@@ -91,6 +179,12 @@
     <Compile Include="OpenXmlPowerTools-3-1-11\XlsxTables.cs" />
     <Compile Include="SaveAndCloneFixture.cs" />
     <Compile Include="TestDocx01.cs" />
+    <Compile Include="TestFileStreams.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestFileStreams.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TestGeneratedCode.cs" />
     <Compile Include="TestPptx01.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestXlsx01.cs" />
@@ -112,6 +206,14 @@
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TestFileStreams.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TestFileStreams.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

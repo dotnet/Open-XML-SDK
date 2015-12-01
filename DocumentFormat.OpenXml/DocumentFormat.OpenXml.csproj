@@ -195,7 +195,9 @@
     <Compile Include="src\ofapi\Validation\SemanticValidation\SemanticConstraint\AttributeAbsentConditionToNonValue.cs" />
     <Compile Include="src\ofapi\Validation\SemanticValidation\SemanticConstraint\AttributeAbsentConditionToValue.cs" />
     <Compile Include="src\ofapi\Validation\SemanticValidation\SemanticConstraint\AttributeCannotOmitConstraint.cs" />
+    <Compile Include="src\ofapi\Validation\SemanticValidation\SemanticConstraint\AttributeMinMaxConstraint.cs" />
     <Compile Include="src\ofapi\Validation\SemanticValidation\SemanticConstraint\AttributeMutualExclusive.cs" />
+    <Compile Include="src\ofapi\Validation\SemanticValidation\SemanticConstraint\AttributePairConstraint.cs" />
     <Compile Include="src\ofapi\Validation\SemanticValidation\SemanticConstraint\AttributeRequiredConditionToValue.cs" />
     <Compile Include="src\ofapi\Validation\SemanticValidation\SemanticConstraint\AttributeValueConditionToAnother.cs" />
     <Compile Include="src\ofapi\Validation\SemanticValidation\SemanticConstraint\AttributeValueLengthConstraint.cs" />
@@ -204,6 +206,7 @@
     <Compile Include="src\ofapi\Validation\SemanticValidation\SemanticConstraint\AttributeValueRangeConstraint.cs" />
     <Compile Include="src\ofapi\Validation\SemanticValidation\SemanticConstraint\AttributeValueSetConstraint.cs" />
     <Compile Include="src\ofapi\Validation\SemanticValidation\SemanticConstraint\IndexReferenceConstraint.cs" />
+    <Compile Include="src\ofapi\Validation\SemanticValidation\SemanticConstraint\ParentTypeConstraint.cs" />
     <Compile Include="src\ofapi\Validation\SemanticValidation\SemanticConstraint\ReferenceExistConstraint.cs" />
     <Compile Include="src\ofapi\Validation\SemanticValidation\SemanticConstraint\RelationshipExistConstraint.cs" />
     <Compile Include="src\ofapi\Validation\SemanticValidation\SemanticConstraint\RelationshipTypeConstraint.cs" />
