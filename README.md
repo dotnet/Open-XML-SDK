@@ -19,6 +19,11 @@ Documents (DOCX, XLSX, and PPTX).  It supports scenarios such as:
 [Open-Xml-PowerTools](https://github.com/OfficeDev/Open-Xml-PowerTools) provides example code and guidance for implementing many of the above important Open XML scenarios.  Be sure to check it out
 before re-inventing your own solutions.
 
+The Open-Xml-Sdk relies on the System.IO.Packaging namespace.  There is an implementation of System.IO.Packaging in the WindowsBase assembly,
+and there is a new, open source implementation of System.IO.Packaging that is included with version 2.6 of the Open-Xml-Sdk.  Because of this, there
+are six projects in the Visual Studio solution.  [This screen-cast](https://www.youtube.com/watch?v=B13IYHKhcc8) describes the six projects, and explains
+the purpose behind each.
+
 Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.
 Licensed under the Apache License, Version 2.0.
 See License.txt in the project root for license information.
