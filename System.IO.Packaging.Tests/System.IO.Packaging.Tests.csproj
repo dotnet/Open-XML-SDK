@@ -67,6 +67,10 @@
       <Project>{4c88a3ad-1241-4a04-854b-8372df29828d}</Project>
       <Name>System.IO.Packaging</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TestUtil\TestUtil.csproj">
+      <Project>{b63e969b-f7ec-4b6c-8540-67fc0c0c3e56}</Project>
+      <Name>TestUtil</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />

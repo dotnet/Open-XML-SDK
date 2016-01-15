@@ -19,42 +19,49 @@
  * Email: thomas<at/>barnekow<dot/>info
  */
 
+using System;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using DocumentFormat.OpenXml.Packaging;
+using OxTest;
 using Xunit;
 
-// to run the X64 tests:
-// packages\xunit.runner.console.2.0.0\tools\xunit.console DocumentFormat.OpenXml.Tests.64\bin\Debug\DocumentFormat.OpenXml.Tests.dll
-
-#if X64
-namespace DocumentFormat.OpenXml.Tests.X64
-#else
 namespace DocumentFormat.OpenXml.Tests
-#endif
 {
     [SuppressMessage("ReSharper", "UnusedMember.Global")]
     [SuppressMessage("ReSharper", "UnusedVariable")]
     public class CreateFromTemplateFixture : BaseFixture
     {
-        private const string DirectoryPath = "CreateFromTemplate";
+        private static string s_SubDirectory = "CreateFromTemplate";
 
-        private const string DocumentPath = DirectoryPath + "\\Document.docx";
-        private const string PresentationPath = DirectoryPath + "\\Presentation.pptx";
-        private const string SpreadsheetPath = DirectoryPath + "\\Spreadsheet.xlsx";
+        private static string TestResultsDirectory
+        {
+            get
+            {
+                return Path.Combine(TestUtil.TestResultsDirectory, s_SubDirectory);
+            }
+        }
 
-        private const string DocumentTemplatePath = DirectoryPath + "\\Document.dotx";
-        private const string PresentationTemplatePath = DirectoryPath + "\\Presentation.potx";
-        private const string SpreadsheetTemplatePath = DirectoryPath + "\\Spreadsheet.xltx";
+        private string DocumentPath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
+        private string PresentationPath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
+        private string SpreadsheetPath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
+
+        //private string DocumentTemplatePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".dotx");
+        //private string PresentationTemplatePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".potx");
+        //private string SpreadsheetTemplatePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xltx");
+
+        private string DocumentTemplatePath = "Document.dotx";
+        private string PresentationTemplatePath = "Presentation.potx";
+        private string SpreadsheetTemplatePath = "Spreadsheet.xltx";
 
         /// <summary>
         /// Creates a new instance of this test fixture, registering our test folder
         /// with the base fixture for cleanup after testing.
         /// </summary>
         public CreateFromTemplateFixture()
-            : base(DirectoryPath)
+            : base(TestResultsDirectory)
         {
-            Directory.CreateDirectory(DirectoryPath);
+            Directory.CreateDirectory(TestResultsDirectory);
 
             File.Copy(GetTestFilePath(DocumentTemplatePath), DocumentTemplatePath, true);
             File.Copy(GetTestFilePath(PresentationTemplatePath), PresentationTemplatePath, true);
@@ -64,7 +71,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreatePresentationFromTemplate()
         {
-            using (var packageDocument = PresentationDocument.CreateFromTemplate(PresentationTemplatePath))
+            using (var packageDocument = PresentationDocument.CreateFromTemplate(GetTestFilePath(PresentationTemplatePath)))
             {
                 var part = packageDocument.PresentationPart;
                 var root = part.Presentation;
@@ -79,7 +86,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateSpreadsheetFromTemplate()
         {
-            using (var packageDocument = SpreadsheetDocument.CreateFromTemplate(SpreadsheetTemplatePath))
+            using (var packageDocument = SpreadsheetDocument.CreateFromTemplate(GetTestFilePath(SpreadsheetTemplatePath)))
             {
                 var part = packageDocument.WorkbookPart;
                 var root = part.Workbook;
@@ -94,7 +101,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateWordprocessingDocumentFromTemplate()
         {
-            using (var packageDocument = WordprocessingDocument.CreateFromTemplate(DocumentTemplatePath))
+            using (var packageDocument = WordprocessingDocument.CreateFromTemplate(GetTestFilePath(DocumentTemplatePath)))
             {
                 var part = packageDocument.MainDocumentPart;
                 var root = part.Document;

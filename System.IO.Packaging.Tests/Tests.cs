@@ -8,21 +8,20 @@ using System.Xml;
 using System.Xml.Linq;
 using Xunit;
 
-// to run the X64 tests:
-// packages\xunit.runner.console.2.0.0\tools\xunit.console System.IO.Packaging.Tests.64\bin\Debug\System.IO.Packaging.Tests.dll
+// packages\xunit.runner.console.2.0.0\tools\xunit.console System.IO.Packaging.Tests\bin\Debug\System.IO.Packaging.Tests.dll
 
-#if X64
-namespace System.IO.Packaging.Tests.X64
-#else
 namespace System.IO.Packaging.Tests
-#endif
-
 {
     public class Tests
     {
         private string Mime_MediaTypeNames_Text_Xml = "text/xml";
         private string Mime_MediaTypeNames_Image_Jpeg = "image/jpeg"; // System.Net.Mime.MediaTypeNames.Image.Jpeg
 
+        // Check off: N
+        // Use correct temp dir: Y
+        // Create GUID temp files: Y
+        // Dispose of all disposable: Y
+        // Log the test: 
         [Fact]
         public void T173_GettingNonExistentPartThrowsMeaningfulException()
         {
@@ -1670,8 +1669,12 @@ namespace System.IO.Packaging.Tests
                             PackagePart documentPart = package.GetPart(documentUri);
 
                             //  Load the document XML in the part into an XDocument instance.
-                            var xDoc = XDocument.Load(XmlReader.Create(documentPart.GetStream()));
-                            Assert.NotNull(xDoc);
+                            using (Stream stream = documentPart.GetStream())
+                            using (XmlReader reader = XmlReader.Create(stream))
+                            {
+                                var xDoc = XDocument.Load(XmlReader.Create(documentPart.GetStream()));
+                                Assert.NotNull(xDoc);
+                            }
                         }
                     }
                     catch (InvalidOperationException)
@@ -1709,8 +1712,12 @@ namespace System.IO.Packaging.Tests
                             PackagePart documentPart = package.GetPart(documentUri);
 
                             //  Load the document XML in the part into an XDocument instance.
-                            var xDoc = XDocument.Load(XmlReader.Create(documentPart.GetStream()));
-                            Assert.NotNull(xDoc);
+                            using (Stream stream = documentPart.GetStream())
+                            using (var reader = XmlReader.Create(stream))
+                            {
+                                var xDoc = XDocument.Load(reader);
+                                Assert.NotNull(xDoc);
+                            }
                         }
                     }
                     catch (InvalidOperationException)
@@ -1754,7 +1761,10 @@ namespace System.IO.Packaging.Tests
                                 package.GetPart(documentUri);
 
                             //  Load the document XML in the part into an XDocument instance.
-                            var xDoc = XDocument.Load(XmlReader.Create(documentPart.GetStream()));
+                            XDocument xDoc = null;
+                            using (Stream stream = documentPart.GetStream())
+                            using (XmlReader reader = XmlReader.Create(stream))
+                                xDoc = XDocument.Load(reader);
 
                             //  Find the styles part. There will only be one.
                             PackageRelationship styleRelation =
@@ -1766,7 +1776,11 @@ namespace System.IO.Packaging.Tests
                                 PackagePart stylePart = package.GetPart(styleUri);
 
                                 //  Load the style XML in the part into an XDocument instance.
-                                var styleDoc = XDocument.Load(XmlReader.Create(stylePart.GetStream()));
+                                using (Stream stream = stylePart.GetStream())
+                                using (XmlReader reader = XmlReader.Create(stream))
+                                {
+                                    var styleDoc = XDocument.Load(reader);
+                                }
                             }
                         }
                     }
@@ -1896,24 +1910,14 @@ namespace System.IO.Packaging.Tests
             var docName = "plain.docx";
             var ba = TestFileLib.GetByteArray(docName);
 
-            try
+            using (MemoryStream ms = new MemoryStream())
             {
-                using (MemoryStream ms = new MemoryStream())
+                ms.Write(ba, 0, ba.Length);
+                using (Package package = Package.Open(ms, FileMode.Open, FileAccess.ReadWrite))
                 {
-                    ms.Write(ba, 0, ba.Length);
-                    using (Package package = Package.Open(ms, FileMode.Open, FileAccess.ReadWrite))
-                    {
-                        var partCount = package.GetParts().Count();
-                        Assert.Equal(10, partCount);
-                    }
+                    var partCount = package.GetParts().Count();
+                    Assert.Equal(10, partCount);
                 }
-            }
-            catch (IOException)
-            {
-            }
-            catch (Exception e)
-            {
-                Assert.True(false, "Caught exception: " + e.ToString());
             }
         }
 

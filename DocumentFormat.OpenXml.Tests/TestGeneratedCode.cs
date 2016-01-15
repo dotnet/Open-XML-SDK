@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Packaging;
@@ -13,6 +14,7 @@ using A = DocumentFormat.OpenXml.Drawing;
 using DW = DocumentFormat.OpenXml.Drawing.Wordprocessing;
 using PIC = DocumentFormat.OpenXml.Drawing.Pictures;
 using OpenXmlPowerTools;
+using OxTest;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -21,7 +23,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void G001()
         {
-            var fileInfo = new FileInfo(Path.Combine(TestUtil.TempDir.FullName, Guid.NewGuid().ToString() + ".docx"));
+            var fileInfo = new FileInfo(Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx"));
             GeneratedClass001 gc = new GeneratedClass001();
             gc.CreatePackage(fileInfo.FullName);
             if (TestUtil.DeleteTempFiles)
@@ -31,7 +33,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void G002()
         {
-            var fileInfo = new FileInfo(Path.Combine(TestUtil.TempDir.FullName, Guid.NewGuid().ToString() + ".xlsx"));
+            var fileInfo = new FileInfo(Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx"));
             GeneratedClass002 gc = new GeneratedClass002();
             gc.CreatePackage(fileInfo.FullName);
             if (TestUtil.DeleteTempFiles)
@@ -41,7 +43,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void G003()
         {
-            var fileInfo = new FileInfo(Path.Combine(TestUtil.TempDir.FullName, Guid.NewGuid().ToString() + ".docx"));
+            var fileInfo = new FileInfo(Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx"));
             GeneratedClass003 gc = new GeneratedClass003();
             gc.CreatePackage(fileInfo.FullName);
             if (TestUtil.DeleteTempFiles)

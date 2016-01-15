@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,15 +9,21 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
     using Xunit;
     using DocumentFormat.OpenXml.Tests.TaskLibraries;
     using DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass;
+    using System.IO;
+    using OxTest;
 
-    
+
     public class ThreadingInfoTest : OpenXmlTestBase
     {
-        private readonly string generateDocumentFile = "TestThreadingInfoBase.pptx";
-        private readonly string editDocumentFile = "EditedThreadingInfo.pptx";
-        private readonly string deleteDocumentFile = "DeletedThreadingInfo.pptx";
-        private readonly string addDocumentFile = "AddedThreadingInfo.pptx";
-
+        //private readonly string generateDocumentFile = "TestThreadingInfoBase.pptx";
+        //private readonly string editDocumentFile = "EditedThreadingInfo.pptx";
+        //private readonly string deleteDocumentFile = "DeletedThreadingInfo.pptx";
+        //private readonly string addDocumentFile = "AddedThreadingInfo.pptx";
+        private readonly string generateDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
+        private readonly string editDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
+        private readonly string deleteDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
+        private readonly string addDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
+        
         TestEntities testEntities = null;
 
         #region Constructor
@@ -25,8 +32,6 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         /// </summary>
         public ThreadingInfoTest()
         {
-            // Set the flag to notify MSTest of Ots Log failure
-            this.OtsLogFailureToFailTest = true;
         }
         #endregion
 
@@ -37,19 +42,12 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         /// <param name="createFilePath">Create Power Point file path</param>
         private void Initialize(string createFilePath)
         {
-            try
-            {
-                GeneratedDocument generatedDocument = new GeneratedDocument();
-                generatedDocument.CreatePackage(createFilePath);
+            GeneratedDocument generatedDocument = new GeneratedDocument();
+            generatedDocument.CreatePackage(createFilePath);
 
-                this.Log.Pass("Create Power Point file. File path=[{0}]", createFilePath);
+            this.Log.Pass("Create Power Point file. File path=[{0}]", createFilePath);
 
-                this.testEntities = new TestEntities(createFilePath);
-            }
-            catch (Exception e)
-            {
-                this.Log.Fail(string.Format(e.Message + ". :File path={0}", createFilePath));
-            }
+            this.testEntities = new TestEntities(createFilePath);
         }
         #endregion
 
@@ -71,20 +69,14 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         public void ThreadingInfo01EditElement()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            try
-            {
-                string originalFilepath = this.GetTestFilePath(this.generateDocumentFile);
-                string editFilePath = this.GetTestFilePath(this.editDocumentFile);
 
-                System.IO.File.Copy(originalFilepath, editFilePath, true);
+            string originalFilepath = this.GetTestFilePath(this.generateDocumentFile);
+            string editFilePath = this.GetTestFilePath(this.editDocumentFile);
 
-                this.testEntities.EditElements(editFilePath, this.Log);
-                this.testEntities.VerifyElements(editFilePath, this.Log);
-            }
-            catch (Exception e)
-            {
-                this.Log.Fail(e.Message);
-            }
+            System.IO.File.Copy(originalFilepath, editFilePath, true);
+
+            this.testEntities.EditElements(editFilePath, this.Log);
+            this.testEntities.VerifyElements(editFilePath, this.Log);
         }
 
         /// <summary>
@@ -94,26 +86,20 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         public void ThreadingInfo03DeleteAddElement()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            try
-            {
-                string originalFilepath = this.GetTestFilePath(this.generateDocumentFile);
-                string deleteFilePath = this.GetTestFilePath(this.deleteDocumentFile);
-                string addFilePath = this.GetTestFilePath(this.addDocumentFile);
 
-                System.IO.File.Copy(originalFilepath, deleteFilePath, true);
+            string originalFilepath = this.GetTestFilePath(this.generateDocumentFile);
+            string deleteFilePath = this.GetTestFilePath(this.deleteDocumentFile);
+            string addFilePath = this.GetTestFilePath(this.addDocumentFile);
 
-                this.testEntities.DeleteElements(deleteFilePath, this.Log);
-                this.testEntities.VerifyDeleteElements(deleteFilePath, this.Log);
+            System.IO.File.Copy(originalFilepath, deleteFilePath, true);
 
-                System.IO.File.Copy(deleteFilePath, addFilePath, true);
+            this.testEntities.DeleteElements(deleteFilePath, this.Log);
+            this.testEntities.VerifyDeleteElements(deleteFilePath, this.Log);
 
-                this.testEntities.AddElements(addFilePath, this.Log);
-                this.testEntities.VerifyAddElements(addFilePath, this.Log);
-            }
-            catch (Exception e)
-            {
-                this.Log.Fail(e.Message);
-            }
+            System.IO.File.Copy(deleteFilePath, addFilePath, true);
+
+            this.testEntities.AddElements(addFilePath, this.Log);
+            this.testEntities.VerifyAddElements(addFilePath, this.Log);
         }
 
         #endregion

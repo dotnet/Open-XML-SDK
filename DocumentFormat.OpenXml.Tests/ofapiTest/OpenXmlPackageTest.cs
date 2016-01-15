@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using System;
 using System.Text;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ using wp = DocumentFormat.OpenXml.Drawing.Wordprocessing;
 using a = DocumentFormat.OpenXml.Drawing;
 using pic = DocumentFormat.OpenXml.Drawing.Pictures;
 using x = DocumentFormat.OpenXml.Spreadsheet;
+using OxTest;
 #if WB
 using DocumentFormat.OpenXml.WB.Tests;
 #endif
@@ -29,9 +31,6 @@ namespace DocumentFormat.OpenXml.Tests
         ///</summary>
         public OpenXmlPackageTest()
         {
-            //
-            // TODO: Add constructor logic here
-            //
         }
 
         private TestContext testContextInstance;
@@ -52,28 +51,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        #region Additional test attributes
-        //
-        // You can use the following additional attributes as you write your tests:
-        //
-        // Use ClassInitialize to run code before running the first test in the class
-        // [ClassInitialize()]
-        // public static void MyClassInitialize(TestContext testContext) { }
-        //
-        // Use ClassCleanup to run code after all tests in a class have run
-        // [ClassCleanup()]
-        // public static void MyClassCleanup() { }
-        //
-        // Use TestInitialize to run code before running each test 
-        // [TestInitialize()]
-        // public void MyTestInitialize() { }
-        //
-        // Use TestCleanup to run code after each test has run
-        // [TestCleanup()]
-        // public void MyTestCleanup() { }
-        //
-        #endregion
-
         ///<summary>
         ///AutoSaveTestDocx.
         ///</summary>
@@ -82,7 +59,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             #region Prepare
             // The content of parts changes should be saved when the package is disposed
-            string testFile = "autosavetest.docx";
+            string testFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
             // copy test file
             PrepareTestFile(testFile, TestFileStreams.complex0docx);
             #endregion
@@ -100,7 +77,7 @@ namespace DocumentFormat.OpenXml.Tests
             #endregion
 
             #region Change main doucment & style parts
-            string originalFile = "autosavetest0.docx";
+            string originalFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
             File.Copy(testFile, originalFile); // backup file
             // HACK : Open and close the file with SDK to normalize the file
             // since the SDK will change contents when closing the package.
@@ -177,7 +154,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
 
             // Create with file stream
-            string file = "created.docx";
+            string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
             using (var document = WordprocessingDocument.Create(file, DocumentFormat.OpenXml.WordprocessingDocumentType.Document))
             {
                 document.AddMainDocumentPart();
@@ -256,7 +233,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void AutoSaveTestPptx()
         {
-            string testFile = "autosave.pptx";
+            string testFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
             PrepareTestFile(testFile, TestFileStreams.autosave);
             // Change something in the master part.
             int textCount = 0;
@@ -293,7 +270,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void AutoSaveOpenTest()
         {
             #region WordprocesingDocument.Open test
-            string testDocxFile = "autosave.docx";
+            string testDocxFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
             PrepareTestFile(testDocxFile, TestFileStreams.complex0docx);
             OpenSettings s = new OpenSettings();
             s.AutoSave = false;
@@ -339,7 +316,7 @@ namespace DocumentFormat.OpenXml.Tests
             #endregion
 
             #region PresentationDocument.Open test
-            string testPptxFile = "autosave.pptx";
+            string testPptxFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
             PrepareTestFile(testPptxFile, TestFileStreams.autosave);
             s.AutoSave = false;
             using (var doc = PresentationDocument.Open(testPptxFile, true, s))
@@ -403,7 +380,7 @@ namespace DocumentFormat.OpenXml.Tests
             #endregion
 
             #region SpreadsheetDocument.Open test
-            string testXlsxFile = "autosave.xlsx";
+            string testXlsxFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
             PrepareTestFile(testXlsxFile, TestFileStreams.basicspreadsheet);
             s.AutoSave = false;
             using (var doc = SpreadsheetDocument.Open(testXlsxFile, true, s))
@@ -501,7 +478,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CreateRelationshipToPartTest()
         {
-            string testFile = "AddRelationshipToPart.pptx";
+            //string testFile = "AddRelationshipToPart.pptx";
+            string testFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
             PrepareTestFile(testFile, TestFileStreams.autosave);
             using (var doc = PresentationDocument.Open(testFile, true))
             {
@@ -651,32 +629,33 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void AutoSaveCreateTest()
         {
-            using (var doc = WordprocessingDocument.Create("a.docx", WordprocessingDocumentType.Document))
+            string testFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
+            using (var doc = WordprocessingDocument.Create(testFile, WordprocessingDocumentType.Document))
             {
                 doc.AddMainDocumentPart();
                 doc.MainDocumentPart.Document = new Document();
             }
 
             //should be autosaved
-            using (var doc = WordprocessingDocument.Open("a.docx", false))
+            using (var doc = WordprocessingDocument.Open(testFile, false))
             {
                 Assert.NotNull(doc.MainDocumentPart.Document);
             }
 
-            File.Delete("a.docx");
+            File.Delete(testFile);
 
-            using (var doc = WordprocessingDocument.Create("a.docx", WordprocessingDocumentType.Document, false))
+            using (var doc = WordprocessingDocument.Create(testFile, WordprocessingDocumentType.Document, false))
             {
                 doc.AddMainDocumentPart();
                 doc.MainDocumentPart.Document = new Document();
             }
 
             //should not be autosaved
-            using (var doc = WordprocessingDocument.Open("a.docx", false))
+            using (var doc = WordprocessingDocument.Open(testFile, false))
             {
                 Assert.Null(doc.MainDocumentPart.Document);
             }
-            File.Delete("a.docx");
+            File.Delete(testFile);
             
         }
 
@@ -786,15 +765,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MediaDataPartReferenceTest()
         {
-            //using (Stream stream = new MemoryStream(TestFileStreams.mediareference, true))
-            //{
-            //    using (PresentationDocument testDocument = PresentationDocument.Open(stream, true))
-            //    {
-            //        Assert.Equal(1, testDocument.DataParts.Count());
-
-            //    }
-            //}
-
             using (var stream = new MemoryStream())
             {
                 using (var doc = PresentationDocument.Create(stream, PresentationDocumentType.Presentation))
@@ -828,9 +798,9 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void StrictFileOpenTest()
         {
-            string testDocxFile = "AnnotationRef.docx";
-            string testPptxFile = "Algn_tab_TabAlignment.pptx";
-            string testXlsxFile = "Comments.xlsx";
+            string testDocxFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
+            string testPptxFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
+            string testXlsxFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
 
             #region WordprocesingDocument.StrictFileOpen test
             PrepareTestFile(testDocxFile, TestFileStreams.AnnotationRef);
@@ -954,7 +924,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void O15FileOpenTest()
         {
-            string testXlsxFile = "Youtube.xlsx";
+            //todo string testXlsxFile = "Youtube.xlsx";
+            string testXlsxFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
 
             OpenSettings settings2012 = new OpenSettings()
             {

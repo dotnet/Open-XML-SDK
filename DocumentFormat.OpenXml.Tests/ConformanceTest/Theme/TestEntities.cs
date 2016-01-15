@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,16 +24,9 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, true))
             {
-                try
-                {
-                    package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value = this.ThemeId2;
+                package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value = this.ThemeId2;
 
-                    log.Pass("Edit theme id attribute. Set value is \"{0}\"", this.ThemeId2);
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                log.Pass("Edit theme id attribute. Set value is \"{0}\"", this.ThemeId2);
             }
         }
 
@@ -45,15 +39,8 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, false))
             {
-                try
-                {
-                    log.Verify(package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value == this.ThemeId2,
-                        "UnChanged in the id attribute value on theme element. ID value=[{0}]", package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value);
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                log.Verify(package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value == this.ThemeId2,
+                    "UnChanged in the id attribute value on theme element. ID value=[{0}]", package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value);
             }
         }
 
@@ -66,16 +53,9 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, true))
             {
-                try
-                {
-                    package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId = null;
+                package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId = null;
 
-                    log.Pass("Delete theme id attribute.");
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                log.Pass("Delete theme id attribute.");
             }
         }
 
@@ -88,15 +68,8 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, false))
             {
-                try
-                {
-                    log.Verify(package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId == null,
-                        "Theme id attribute is not deleted. ID value=[{0}]", package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId);
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                log.Verify(package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId == null,
+                    "Theme id attribute is not deleted. ID value=[{0}]", package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId);
             }
         }
 
@@ -109,16 +82,9 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, true))
             {
-                try
-                {
-                    package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId = this.ThemeId1;
+                package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId = this.ThemeId1;
 
-                    log.Pass("Add theme id attribute.");
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                log.Pass("Add theme id attribute.");
             }
         }
 
@@ -131,15 +97,8 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, false))
             {
-                try
-                {
-                    log.Verify(package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value == this.ThemeId1,
-                        "UnChanged in the id attribute value on theme element. ID value=[{0}]", package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value);
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                log.Verify(package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value == this.ThemeId1,
+                    "UnChanged in the id attribute value on theme element. ID value=[{0}]", package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value);
             }
         }
     }

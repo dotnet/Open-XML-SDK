@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using System;
 using System.Text;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,16 +9,13 @@ using DocumentFormat.OpenXml.Wordprocessing;
 using DocumentFormat.OpenXml.Packaging;
 using excel = DocumentFormat.OpenXml.Spreadsheet;
 using System.Reflection;
+using OxTest;
 #if WB
 using DocumentFormat.OpenXml.WB.Tests;
 #endif
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    /// <summary>
-    /// UnitTest1 的摘要说明
-    /// </summary>
-    
     public class M4Conformance
     {
         ///<summary>
@@ -25,17 +23,10 @@ namespace DocumentFormat.OpenXml.Tests
         ///</summary>
         public M4Conformance()
         {
-            //
-            //TODO: 在此处添加构造函数逻辑
-            //
         }
 
         private TestContext testContextInstance;
 
-        /// <summary>
-        ///获取或设置测试上下文，该上下文提供
-        ///有关当前测试运行及其功能的信息。
-        ///</summary>
         public TestContext TestContext
         {
             get
@@ -47,28 +38,6 @@ namespace DocumentFormat.OpenXml.Tests
                 testContextInstance = value;
             }
         }
-
-        #region 附加测试属性
-        //
-        // 编写测试时，还可使用以下附加属性:
-        //
-        // 在运行类中的第一个测试之前使用 ClassInitialize 运行代码
-        // [ClassInitialize()]
-        // public static void MyClassInitialize(TestContext testContext) { }
-        //
-        // 在类中的所有测试都已运行之后使用 ClassCleanup 运行代码
-        // [ClassCleanup()]
-        // public static void MyClassCleanup() { }
-        //
-        // 在运行每个测试之前，使用 TestInitialize 来运行代码
-        // [TestInitialize()]
-        // public void MyTestInitialize() { }
-        //
-        // 在每个测试运行完之后，使用 TestCleanup 来运行代码
-        // [TestCleanup()]
-        // public void MyTestCleanup() { }
-        //
-        #endregion
 
         ///<summary>
         ///O14OnlyElesInO12.
@@ -138,7 +107,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void LoadExt()
         {
-            string file = "14.docx";
+            string file = System.IO.Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
             CopyFileStream(TestFileStreams.excel14, file);
 
             using (SpreadsheetDocument doc = SpreadsheetDocument.Open(file, false))
@@ -156,7 +125,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
 
         }
-
 
         private void CopyFileStream(byte[] srcBuffer, string fileName)
         {

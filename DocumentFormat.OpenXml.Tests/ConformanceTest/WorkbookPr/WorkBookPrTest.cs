@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,25 +9,29 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
     using Xunit;
     using DocumentFormat.OpenXml.Tests.TaskLibraries;
     using DocumentFormat.OpenXml.Tests.WorkBookPrClass;
+    using System.IO;
+    using OxTest;
 
-    
+
     public class WorkBookPrTest : OpenXmlTestBase
     {
         TestEntities testEntities = null;
 
-        private readonly string generatedDocumentFile = "TestWorkBookPrBase.xlsx";
-        private readonly string editedDocumentFile = "EditWorkBookPr.xlsx";
-        private readonly string deletedDocumentFile = "DeleteWorkBookPr.xlsx";
-        private readonly string addedDocumentFile = "AddedWorkBookPr.xlsx";
-
+        //private readonly string generatedDocumentFile = "TestWorkBookPrBase.xlsx";
+        //private readonly string editedDocumentFile = "EditWorkBookPr.xlsx";
+        //private readonly string deletedDocumentFile = "DeleteWorkBookPr.xlsx";
+        //private readonly string addedDocumentFile = "AddedWorkBookPr.xlsx";
+        private readonly string generatedDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
+        private readonly string editedDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
+        private readonly string deletedDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
+        private readonly string addedDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
+        
         #region Constructor
         /// <summary>
         /// Constructor
         /// </summary>
         public WorkBookPrTest()
         {
-            // Set the flag to notify MSTest of Ots Log failure
-            this.OtsLogFailureToFailTest = true;
         }
         #endregion
 
@@ -37,19 +42,12 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
         /// <param name="createFilePath">Create Word file path</param>
         private void Initialize(string createFilePath)
         {
-            try
-            {
-                GeneratedDocument generatedDocument = new GeneratedDocument();
-                generatedDocument.CreatePackage(createFilePath);
+            GeneratedDocument generatedDocument = new GeneratedDocument();
+            generatedDocument.CreatePackage(createFilePath);
 
-                this.Log.Pass("Create Word file. File path=[{0}]", createFilePath);
+            this.Log.Pass("Create Word file. File path=[{0}]", createFilePath);
 
-                this.testEntities = new TestEntities(createFilePath);
-            }
-            catch (Exception e)
-            {
-                this.Log.Fail(string.Format(e.Message + ". :File path={0}", createFilePath));
-            }
+            this.testEntities = new TestEntities(createFilePath);
         }
         #endregion
 
@@ -71,20 +69,14 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
         public void WorkBookPr01EditElement()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            try
-            {
-                string originalFilepath = this.GetTestFilePath(this.generatedDocumentFile);
-                string editFilePath = this.GetTestFilePath(this.editedDocumentFile);
 
-                System.IO.File.Copy(originalFilepath, editFilePath, true);
+            string originalFilepath = this.GetTestFilePath(this.generatedDocumentFile);
+            string editFilePath = this.GetTestFilePath(this.editedDocumentFile);
 
-                this.testEntities.EditElements(editFilePath, this.Log);
-                this.testEntities.VerifyElements(editFilePath, this.Log);
-            }
-            catch (Exception e)
-            {
-                this.Log.Fail(e.Message);
-            }
+            System.IO.File.Copy(originalFilepath, editFilePath, true);
+
+            this.testEntities.EditElements(editFilePath, this.Log);
+            this.testEntities.VerifyElements(editFilePath, this.Log);
         }
 
         /// <summary>
@@ -94,27 +86,21 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
         public void WorkBookPr03DeleteElement()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            try
-            {
-                string originalFilepath = this.GetTestFilePath(this.generatedDocumentFile);
-                string deleteFilePath = this.GetTestFilePath(this.deletedDocumentFile);
-                string addFilePath = this.GetTestFilePath(this.addedDocumentFile);
+            
+            string originalFilepath = this.GetTestFilePath(this.generatedDocumentFile);
+            string deleteFilePath = this.GetTestFilePath(this.deletedDocumentFile);
+            string addFilePath = this.GetTestFilePath(this.addedDocumentFile);
 
-                System.IO.File.Copy(originalFilepath, deleteFilePath, true);
+            System.IO.File.Copy(originalFilepath, deleteFilePath, true);
 
-                this.testEntities.DeleteElements(deleteFilePath, this.Log);
-                this.testEntities.VerifyDeleteElements(deleteFilePath, this.Log);
+            this.testEntities.DeleteElements(deleteFilePath, this.Log);
+            this.testEntities.VerifyDeleteElements(deleteFilePath, this.Log);
 
 
-                System.IO.File.Copy(deleteFilePath, addFilePath, true);
+            System.IO.File.Copy(deleteFilePath, addFilePath, true);
 
-                this.testEntities.AddElement(addFilePath, this.Log);
-                this.testEntities.VerifyAddElements(addFilePath, this.Log);
-            }
-            catch (Exception e)
-            {
-                this.Log.Fail(e.Message);
-            }
+            this.testEntities.AddElement(addFilePath, this.Log);
+            this.testEntities.VerifyAddElements(addFilePath, this.Log);
         }
 
         #endregion

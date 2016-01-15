@@ -19,24 +19,29 @@
  * Email: thomas<at/>barnekow<dot/>info
  */
 
+using System;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Packaging;
+using OxTest;
 using Xunit;
 
-// to run the X64 tests:
-// packages\xunit.runner.console.2.0.0\tools\xunit.console DocumentFormat.OpenXml.Tests.64\bin\Debug\DocumentFormat.OpenXml.Tests.dll
-
-#if X64
-namespace DocumentFormat.OpenXml.Tests.X64
-#else
 namespace DocumentFormat.OpenXml.Tests
-#endif
 {
     [SuppressMessage("ReSharper", "UnusedMember.Global")]
     public class FlatOpcFixture : BaseFixture
     {
+        private static string s_SubDirectory = "FlatOpc";
+
+        private static string TestResultsDirectory
+        {
+            get
+            {
+                return Path.Combine(TestUtil.TestResultsDirectory, s_SubDirectory);
+            }
+        }
+
         private const string DirectoryPath = "FlatOpc";
 
         private const string DocumentPath = DirectoryPath + "\\Document.docx";
@@ -52,23 +57,23 @@ namespace DocumentFormat.OpenXml.Tests
         /// with the base fixture for cleanup after testing.
         /// </summary>
         public FlatOpcFixture()
-            : base(DirectoryPath)
+            : base(TestResultsDirectory)
         {
-            Directory.CreateDirectory(DirectoryPath);
+            Directory.CreateDirectory(TestResultsDirectory);
 
-            File.Copy(GetTestFilePath(DocumentPath), DocumentPath, true);
-            File.Copy(GetTestFilePath(PresentationPath), PresentationPath, true);
-            File.Copy(GetTestFilePath(SpreadsheetPath), SpreadsheetPath, true);
+            File.Copy(GetTestFilePath(DocumentPath), Path.Combine(TestUtil.TestResultsDirectory, DocumentPath), true);
+            File.Copy(GetTestFilePath(PresentationPath), Path.Combine(TestUtil.TestResultsDirectory, PresentationPath), true);
+            File.Copy(GetTestFilePath(SpreadsheetPath), Path.Combine(TestUtil.TestResultsDirectory, SpreadsheetPath), true);
 
-            PrepareWordprocessingDocument(DocumentPath);
-            PreparePresentationDocument(PresentationPath);
-            PrepareSpreadsheetDocument(SpreadsheetPath);
+            PrepareWordprocessingDocument(Path.Combine(TestUtil.TestResultsDirectory, DocumentPath));
+            PreparePresentationDocument(Path.Combine(TestUtil.TestResultsDirectory, PresentationPath));
+            PrepareSpreadsheetDocument(Path.Combine(TestUtil.TestResultsDirectory, SpreadsheetPath));
         }
 
         [Fact]
         public void CanCreateFlatOpcPresentationDocuments()
         {
-            using (var source = PresentationDocument.Open(PresentationPath, true))
+            using (var source = PresentationDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, PresentationPath), true))
             {
                 // Test FlatOpcDocument methods. 
                 // Check ToFlatOpcDocument() and FromFlatOpcDocument(XDocument).
@@ -83,8 +88,8 @@ namespace DocumentFormat.OpenXml.Tests
                     AssertThatPackagesAreEqual(source, dest);
 
                 // Check FromFlatOpcDocument(XDocument, string, bool).
-                using (PresentationDocument.FromFlatOpcDocument(flatOpcDoc, PresentationClonePath, false))
-                using (var dest = PresentationDocument.Open(PresentationClonePath, false))
+                using (PresentationDocument.FromFlatOpcDocument(flatOpcDoc, Path.Combine(TestUtil.TestResultsDirectory, PresentationClonePath), false))
+                using (var dest = PresentationDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, PresentationClonePath), false))
                     AssertThatPackagesAreEqual(source, dest);
 
                 // Check FromFlatOpcDocument(XDocument, Package).
@@ -106,8 +111,8 @@ namespace DocumentFormat.OpenXml.Tests
                     AssertThatPackagesAreEqual(source, dest);
 
                 // Check FromFlatOpcString(string, string, bool).
-                using (PresentationDocument.FromFlatOpcString(flatOpcString, PresentationClonePath, false))
-                using (var dest = PresentationDocument.Open(PresentationClonePath, false))
+                using (PresentationDocument.FromFlatOpcString(flatOpcString, Path.Combine(TestUtil.TestResultsDirectory, PresentationClonePath), false))
+                using (var dest = PresentationDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, PresentationClonePath), false))
                     AssertThatPackagesAreEqual(source, dest);
 
                 // Check FromFlatOpcString(string, Package).
@@ -121,7 +126,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateFlatOpcSpreadsheetDocuments()
         {
-            using (var source = SpreadsheetDocument.Open(SpreadsheetPath, true))
+            using (var source = SpreadsheetDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, SpreadsheetPath), true))
             {
                 // Test FlatOpcDocument methods. 
                 // Check ToFlatOpcDocument() and FromFlatOpcDocument(XDocument).
@@ -136,8 +141,8 @@ namespace DocumentFormat.OpenXml.Tests
                     AssertThatPackagesAreEqual(source, dest);
 
                 // Check FromFlatOpcDocument(XDocument, string, bool).
-                using (SpreadsheetDocument.FromFlatOpcDocument(flatOpcDoc, SpreadsheetClonePath, false))
-                using (var dest = SpreadsheetDocument.Open(SpreadsheetClonePath, false))
+                using (SpreadsheetDocument.FromFlatOpcDocument(flatOpcDoc, Path.Combine(TestUtil.TestResultsDirectory, SpreadsheetClonePath), false))
+                using (var dest = SpreadsheetDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, SpreadsheetClonePath), false))
                     AssertThatPackagesAreEqual(source, dest);
 
                 // Check FromFlatOpcDocument(XDocument, Package).
@@ -159,8 +164,8 @@ namespace DocumentFormat.OpenXml.Tests
                     AssertThatPackagesAreEqual(source, dest);
 
                 // Check FromFlatOpcString(string, string, bool).
-                using (SpreadsheetDocument.FromFlatOpcString(flatOpcString, SpreadsheetClonePath, false))
-                using (var dest = SpreadsheetDocument.Open(SpreadsheetClonePath, false))
+                using (SpreadsheetDocument.FromFlatOpcString(flatOpcString, Path.Combine(TestUtil.TestResultsDirectory, SpreadsheetClonePath), false))
+                using (var dest = SpreadsheetDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, SpreadsheetClonePath), false))
                     AssertThatPackagesAreEqual(source, dest);
 
                 // Check FromFlatOpcString(string, Package).
@@ -174,7 +179,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateFlatOpcWordprocessingDocuments()
         {
-            using (var source = WordprocessingDocument.Open(DocumentPath, true))
+            using (var source = WordprocessingDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, DocumentPath), true))
             {
                 // Test FlatOpcDocument methods. 
                 // Check ToFlatOpcDocument() and FromFlatOpcDocument(XDocument).
@@ -189,8 +194,8 @@ namespace DocumentFormat.OpenXml.Tests
                     AssertThatPackagesAreEqual(source, dest);
 
                 // Check FromFlatOpcDocument(XDocument, string, bool).
-                using (WordprocessingDocument.FromFlatOpcDocument(flatOpcDoc, DocumentClonePath, false))
-                using (var dest = WordprocessingDocument.Open(DocumentClonePath, false))
+                using (WordprocessingDocument.FromFlatOpcDocument(flatOpcDoc, Path.Combine(TestUtil.TestResultsDirectory, DocumentClonePath), false))
+                using (var dest = WordprocessingDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, DocumentClonePath), false))
                     AssertThatPackagesAreEqual(source, dest);
 
                 // Check FromFlatOpcDocument(XDocument, Package).
@@ -212,8 +217,8 @@ namespace DocumentFormat.OpenXml.Tests
                     AssertThatPackagesAreEqual(source, dest);
 
                 // Check FromFlatOpcString(string, string, bool).
-                using (WordprocessingDocument.FromFlatOpcString(flatOpcString, DocumentClonePath, false))
-                using (var dest = WordprocessingDocument.Open(DocumentClonePath, false))
+                using (WordprocessingDocument.FromFlatOpcString(flatOpcString, Path.Combine(TestUtil.TestResultsDirectory, DocumentClonePath), false))
+                using (var dest = WordprocessingDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, DocumentClonePath), false))
                     AssertThatPackagesAreEqual(source, dest);
 
                 // Check FromFlatOpcString(string, Package).

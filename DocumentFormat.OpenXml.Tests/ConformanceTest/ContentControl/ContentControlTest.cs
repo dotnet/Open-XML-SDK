@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,15 +10,17 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
     using DocumentFormat.OpenXml.Tests.TaskLibraries;
     using DocumentFormat.OpenXml.Tests.TaskLibraries.DataStorage;
     using DocumentFormat.OpenXml.Tests.ContentControlClass;
+    using System.IO;
+    using OxTest;
 
     /// <summary>
     /// Tests for Content Controls
     /// </summary>
     public class ContentControlTest : OpenXmlTestBase
     {
-        private readonly string generatedDocumentFilePath = "TestContentControlBaseFile.docx";
-        private readonly string editedDocumentFilePath = "EditContentControlFile.docx";
-        private readonly string deletedDocumentFilePath = "DeleteContentControlFile.docx";
+        private readonly string generatedDocumentFilePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
+        private readonly string editedDocumentFilePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
+        private readonly string deletedDocumentFilePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
 
         #region Constructor
         /// <summary>
@@ -25,8 +28,6 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
         /// </summary>
         public ContentControlTest()
         {
-            // Set the flag to notify MSTest of Ots Log failure
-            this.OtsLogFailureToFailTest = true;
         }
         #endregion
 
@@ -37,17 +38,10 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
         /// <param name="createFilePath">Create Word file path</param>
         private void Initialize(string createFilePath)
         {
-            try
-            {
-                GeneratedDocument generatedDocument = new GeneratedDocument();
-                generatedDocument.CreatePackage(createFilePath);
+            GeneratedDocument generatedDocument = new GeneratedDocument();
+            generatedDocument.CreatePackage(createFilePath);
 
-                this.Log.Pass("Create Word file. File path=[{0}]", createFilePath);
-            }
-            catch (Exception e)
-            {
-                this.Log.Fail(string.Format(e.Message + ". :File path={0}", createFilePath));
-            }
+            this.Log.Pass("Create Word file. File path=[{0}]", createFilePath);
         }
         #endregion
 
@@ -69,20 +63,14 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
         public void ContentControl01EditElement()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            try
-            {
-                string originalFilepath = this.GetTestFilePath(this.generatedDocumentFilePath);
-                string editFilePath = this.GetTestFilePath(this.editedDocumentFilePath);
 
-                System.IO.File.Copy(originalFilepath, editFilePath, true);
+            string originalFilepath = this.GetTestFilePath(this.generatedDocumentFilePath);
+            string editFilePath = this.GetTestFilePath(this.editedDocumentFilePath);
 
-                EditElement.EditContentControlElements(editFilePath, this.Log);
-                VerifyElement.VerifyContentControlElement(editFilePath, this.Log);
-            }
-            catch (Exception e)
-            {
-                this.Log.Fail(e.Message);
-            }
+            System.IO.File.Copy(originalFilepath, editFilePath, true);
+
+            EditElement.EditContentControlElements(editFilePath, this.Log);
+            VerifyElement.VerifyContentControlElement(editFilePath, this.Log);
         }
 
         /// <summary>
@@ -92,21 +80,15 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
         public void ContentControl03DeleteElement()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            try
-            {
-                string originalFilepath = this.GetTestFilePath(this.generatedDocumentFilePath);
-                string deleteFilePath = this.GetTestFilePath(this.deletedDocumentFilePath);
 
-                System.IO.File.Copy(originalFilepath, deleteFilePath, true);
+            string originalFilepath = this.GetTestFilePath(this.generatedDocumentFilePath);
+            string deleteFilePath = this.GetTestFilePath(this.deletedDocumentFilePath);
 
-                //Deleting all "sdt" elements
-                DeleteElement.DeleteContentControlElements(deleteFilePath, this.Log);
-                int sdtElementNum = VerifyDeletedElement.DeletedElementVerify(deleteFilePath, this.Log);
-            }
-            catch (Exception e)
-            {
-                this.Log.Fail(e.Message);
-            }
+            System.IO.File.Copy(originalFilepath, deleteFilePath, true);
+
+            //Deleting all "sdt" elements
+            DeleteElement.DeleteContentControlElements(deleteFilePath, this.Log);
+            int sdtElementNum = VerifyDeletedElement.DeletedElementVerify(deleteFilePath, this.Log);
         }
         #endregion
     }

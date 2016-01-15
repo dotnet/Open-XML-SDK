@@ -1,7 +1,7 @@
 Open-XML-SDK
 ============
 
-Release Version 2.6.0
+Release Version 2.6.1
 
 The Open XML SDK provides open-source libraries for working with Open XML
 Documents (DOCX, XLSX, and PPTX).  It supports scenarios such as:
@@ -28,19 +28,31 @@ Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.
 Licensed under the Apache License, Version 2.0.
 See License.txt in the project root for license information.
 
+Portions of this project are licensed under the MIT license.
+See MIT-License.txt in the project root for license information.
+
 News
 ====
-We are happy to announce the release of the Open XML SDK Version 2.6.  The
-big feature in 2.6 is the inclusion of a replacement for System.IO.Packaging, which
+The most recent release of the Open XML SDK is Version 2.6.1, which includes a total of 1333 XUnit tests.
+
+We are also happy to announce the release of Open-Xml-PowerTools on GitHub.  Open-Xml-PowerTools provides
+example code and guidance for implementing a wide range of Open XML scenarios.  You can find PowerTools
+for Open XML, which previously lived at [PowerTools.CodePlex.com](http://powertools.codeplex.com) at
+[github.com/OfficeDev/Open-Xml-PowerTools](https://github.com/OfficeDev/Open-Xml-PowerTools).
+
+Change Log
+==========
+
+Version 2.6.1 : January 15, 2016
+- Added hundreds of XUnit tests.  There are now a total of 1333 tests.  They take about 20 minutes to run, so be patient.
+
+Version 2.6.0 : June 29, 2015
+- The big feature in 2.6 is the inclusion of a replacement for System.IO.Packaging, which
 has a serious bug that causes it (albeit rarely and in specific circumstances)
 to throw exceptions (ObjectDisposedException and NullReferenceException).  You can
 find out more about this bug and whether it affects you in [the blog post that announces the release of the new System.IO.Packaging](http://openxmldeveloper.org/blog/b/openxmldeveloper/archive/2015/06/29/announcing-the-release-of-a-new-system-io-packaging-implementation.aspx).
 
 Going forward, the Open XML SDK will be based on this new implementation of System.IO.Packaging.
-
-We are also happy to announce the release of Open-Xml-PowerTools on GitHub.  Open-Xml-PowerTools provides
-example code and guidance for implementing a wide range of Open XML scenarios.  You can find PowerTools for Open XML, which previously lived at http://powertools.codeplex.com,
-at https://github.com/OfficeDev/Open-Xml-PowerTools.
 
 Documentation
 =============

@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,14 +9,16 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
     using Xunit;
     using DocumentFormat.OpenXml.Tests.TaskLibraries;
     using DocumentFormat.OpenXml.Tests.CommentExPeopleClass;
+    using System.IO;
+    using OxTest;
 
     /// <summary>
     /// Test for Comment People part.
     /// </summary>
     public class CommentExPeopleTest : OpenXmlTestBase
     {
-        private readonly string generateDocumentFilePath = "TestCommentPeopleBase.docx";
-        private readonly string editeDocumentFilePath = "EditedCommentPeople.docx";
+        private readonly string generateDocumentFilePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
+        private readonly string editedDocumentFilePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
 
         #region Constructor
         /// <summary>
@@ -23,8 +26,6 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
         /// </summary>
         public CommentExPeopleTest()
         {
-            // Set the flag to notify MSTest of Ots Log failure.
-            this.OtsLogFailureToFailTest = true;
         }
         #endregion
 
@@ -35,17 +36,10 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
         /// <param name="createFilePath">Create Word file path</param>
         private void Initialize(string createFilePath)
         {
-            try
-            {
-                GeneratedDocument generatedDocument = new GeneratedDocument();
-                generatedDocument.CreatePackage(createFilePath);
+            GeneratedDocument generatedDocument = new GeneratedDocument();
+            generatedDocument.CreatePackage(createFilePath);
 
-                this.Log.Pass("Create Word file. File path=[{0}].", createFilePath);
-            }
-            catch (Exception e)
-            {
-                this.Log.Fail(string.Format(e.Message + ". :File path={0}.", createFilePath));
-            }
+            this.Log.Pass("Create Word file. File path=[{0}].", createFilePath);
         }
 
         /// <summary>
@@ -67,17 +61,11 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
         public void CommentExPeople01ReadElement()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            try
-            {
-                string originalFilepath = this.GetTestFilePath(this.generateDocumentFilePath);
 
-                TestEntities testEntities = new TestEntities();
-                testEntities.ReadElements(originalFilepath, this.Log);
-            }
-            catch (Exception e)
-            {
-                this.Log.Fail(e.Message);
-            }
+            string originalFilepath = this.GetTestFilePath(this.generateDocumentFilePath);
+
+            TestEntities testEntities = new TestEntities();
+            testEntities.ReadElements(originalFilepath, this.Log);
         }
 
         /// <summary>
@@ -87,21 +75,15 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
         public void CommentExPeople02EditElement()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            try
-            {
-                string originalFilepath = this.GetTestFilePath(this.generateDocumentFilePath);
-                string editFilePath = this.GetTestFilePath(this.editeDocumentFilePath);
 
-                System.IO.File.Copy(originalFilepath, editFilePath, true);
+            string originalFilepath = this.GetTestFilePath(this.generateDocumentFilePath);
+            string editFilePath = this.GetTestFilePath(this.editedDocumentFilePath);
 
-                TestEntities testEntities = new TestEntities();
-                testEntities.EditElements(editFilePath, this.Log);
-                testEntities.VerifyElements(editFilePath, this.Log);
-            }
-            catch (Exception e)
-            {
-                this.Log.Fail(e.Message);
-            }
+            System.IO.File.Copy(originalFilepath, editFilePath, true);
+
+            TestEntities testEntities = new TestEntities();
+            testEntities.EditElements(editFilePath, this.Log);
+            testEntities.VerifyElements(editFilePath, this.Log);
         }
         #endregion
     }

@@ -1,3 +1,4 @@
+// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 using System;
 using System.Collections.Generic;
 using System.Collections;
@@ -13,18 +14,26 @@ namespace DocumentFormat.OpenXml.Tests.TimeLine
     using Xunit;
     using DocumentFormat.OpenXml.Tests.TaskLibraries;
     using DocumentFormat.OpenXml.Tests.TimelineClass;
+    using OxTest;
 
 
     /// <summary>
     /// Tests for TimeLine elements
     /// </summary>
-    
+
     public class TimeLineTest : OpenXmlTestBase
     {
-        private readonly string generateDocumentFile = "TestTimeLineBase.xlsx";
-        private readonly string editeDocumentFile = "EditedTimeLine.xlsx";
-        private readonly string deleteTimelineStyleDocumentFile = "DeletedTimelineStyleTimeLine.xlsx";
-        private readonly string addTimelineStyleDocumentFile = "AddedTimelineStyleTimeLine.xlsx";
+        //private readonly string generateDocumentFile = "TestTimeLineBase.xlsx";
+        //private readonly string editeDocumentFile = "EditedTimeLine.xlsx";
+        //private readonly string deleteTimelineStyleDocumentFile = "DeletedTimelineStyleTimeLine.xlsx";
+        //private readonly string addTimelineStyleDocumentFile = "AddedTimelineStyleTimeLine.xlsx";
+        private readonly string generateDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
+        private readonly string editeDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
+        private readonly string deleteTimelineStyleDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
+        private readonly string addTimelineStyleDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
+
+        
+
         TestEntities testEntities = null;
 
         #region Constructor
@@ -33,8 +42,6 @@ namespace DocumentFormat.OpenXml.Tests.TimeLine
         /// </summary>
         public TimeLineTest()
         {
-            // Set the flag to notify MSTest of Ots Log failure
-            this.OtsLogFailureToFailTest = true;
         }
         #endregion
 
@@ -46,19 +53,12 @@ namespace DocumentFormat.OpenXml.Tests.TimeLine
         /// <returns>Excel file path</returns>
         private void Initialize(string createFilePath)
         {
-            try
-            {
-                GeneratedDocument generatedDocument = new GeneratedDocument();
-                generatedDocument.CreatePackage(createFilePath);
+            GeneratedDocument generatedDocument = new GeneratedDocument();
+            generatedDocument.CreatePackage(createFilePath);
 
-                this.Log.Pass("Create Excel file. File path=[{0}]", createFilePath);
+            this.Log.Pass("Create Excel file. File path=[{0}]", createFilePath);
 
-                this.testEntities = new TestEntities(createFilePath);
-            }
-            catch (Exception e)
-            {
-                this.Log.Fail(string.Format(e.Message + ". :File path={0}", createFilePath));
-            }
+            this.testEntities = new TestEntities(createFilePath);
         }
         #endregion
 
@@ -80,32 +80,26 @@ namespace DocumentFormat.OpenXml.Tests.TimeLine
         public void TimeLine01EditDeleteAddAttribute()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            try
-            {
-                string originalFilepath = this.GetTestFilePath(this.generateDocumentFile);
-                string editFilePath = this.GetTestFilePath(this.editeDocumentFile);
-                string deleteTimelineStyleFilePath = this.GetTestFilePath(this.deleteTimelineStyleDocumentFile);
-                string addTimelineStyleFilePath = this.GetTestFilePath(addTimelineStyleDocumentFile);
 
-                System.IO.File.Copy(originalFilepath, editFilePath, true);
+            string originalFilepath = this.GetTestFilePath(this.generateDocumentFile);
+            string editFilePath = this.GetTestFilePath(this.editeDocumentFile);
+            string deleteTimelineStyleFilePath = this.GetTestFilePath(this.deleteTimelineStyleDocumentFile);
+            string addTimelineStyleFilePath = this.GetTestFilePath(addTimelineStyleDocumentFile);
 
-                this.testEntities.EditAttributes(editFilePath, this.Log);
-                this.testEntities.VerifyEditedAttribute(editFilePath, this.Log);
+            System.IO.File.Copy(originalFilepath, editFilePath, true);
 
-                System.IO.File.Copy(editFilePath, deleteTimelineStyleFilePath, true);
+            this.testEntities.EditAttributes(editFilePath, this.Log);
+            this.testEntities.VerifyEditedAttribute(editFilePath, this.Log);
 
-                this.testEntities.DeleteTimelineStyle(deleteTimelineStyleFilePath, this.Log);
-                this.testEntities.VerifyDeletedTimelineStyle(deleteTimelineStyleFilePath, this.Log);
+            System.IO.File.Copy(editFilePath, deleteTimelineStyleFilePath, true);
 
-                System.IO.File.Copy(deleteTimelineStyleFilePath, addTimelineStyleFilePath, true);
+            this.testEntities.DeleteTimelineStyle(deleteTimelineStyleFilePath, this.Log);
+            this.testEntities.VerifyDeletedTimelineStyle(deleteTimelineStyleFilePath, this.Log);
 
-                this.testEntities.AddTimelineStyle(addTimelineStyleFilePath, this.Log);
-                this.testEntities.VerifyAddedTimelineStyle(addTimelineStyleFilePath, this.Log);
-            }
-            catch (Exception e)
-            {
-                this.Log.Fail(e.Message);
-            }
+            System.IO.File.Copy(deleteTimelineStyleFilePath, addTimelineStyleFilePath, true);
+
+            this.testEntities.AddTimelineStyle(addTimelineStyleFilePath, this.Log);
+            this.testEntities.VerifyAddedTimelineStyle(addTimelineStyleFilePath, this.Log);
         }
 
         #endregion

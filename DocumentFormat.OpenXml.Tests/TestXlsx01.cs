@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using System;
 using System.IO;
 using System.IO.Packaging;
 using System.Linq;
@@ -11,18 +12,41 @@ using W = DocumentFormat.OpenXml.Wordprocessing;
 using A = DocumentFormat.OpenXml.Drawing;
 using DW = DocumentFormat.OpenXml.Drawing.Wordprocessing;
 using PIC = DocumentFormat.OpenXml.Drawing.Pictures;
+using OxTest;
 
 namespace DocumentFormat.OpenXml.Tests
 {
     public class XlsxTests01
     {
-        public static string s_TestFileLocation = "../../../TestFiles/";
+        public static string s_TestFileLocation = null;
+
+        public static string TestFileLocation
+        {
+            get
+            {
+                if (s_TestFileLocation != null)
+                    return s_TestFileLocation;
+                // find the directory, wherever it may be, to get to the TestFiles directory
+                var dir = new DirectoryInfo(Environment.CurrentDirectory);
+                while (true)
+                {
+                    if (dir.Name == "DocumentFormat.OpenXml.Tests" || dir.Name == "DocumentFormat.OpenXml.WB.Tests")
+                        break;
+                    dir = dir.Parent;
+                }
+                dir = dir.Parent; // go up one more, to the parent of the above dirs
+                var testDataStorageDirInfo = new DirectoryInfo(Path.Combine(dir.FullName, "TestFiles/"));
+                s_TestFileLocation = testDataStorageDirInfo.FullName;
+                return s_TestFileLocation;
+            }
+        }
+
 
         [Fact]
         public void X008_XlsxCreation_Package_Settings()
         {
-            var fiSource = new FileInfo(Path.Combine(s_TestFileLocation, "Spreadsheet.xlsx"));
-            var fiCopy = new FileInfo(Path.Combine(TestUtil.TempDir.FullName, Guid.NewGuid().ToString() + ".xlsx"));
+            var fiSource = new FileInfo(Path.Combine(TestFileLocation, "Spreadsheet.xlsx"));
+            var fiCopy = new FileInfo(Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx"));
             File.Copy(fiSource.FullName, fiCopy.FullName);
             using (Package package = Package.Open(fiCopy.FullName, FileMode.Open, FileAccess.ReadWrite))
             {
@@ -42,8 +66,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void X007_SpreadsheetDocument_Open()
         {
-            var fiSource = new FileInfo(Path.Combine(s_TestFileLocation, "Spreadsheet.xlsx"));
-            var fiCopy = new FileInfo(Path.Combine(TestUtil.TempDir.FullName, Guid.NewGuid().ToString() + ".xlsx"));
+            var fiSource = new FileInfo(Path.Combine(TestFileLocation, "Spreadsheet.xlsx"));
+            var fiCopy = new FileInfo(Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx"));
             File.Copy(fiSource.FullName, fiCopy.FullName);
             OpenSettings openSettings = new OpenSettings();
             openSettings.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013);
@@ -61,7 +85,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void X006_Xlsx_DeleteAdd_CoreExtendedProperties()
         {
             var docName = "Spreadsheet.xlsx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+            var ba = File.ReadAllBytes(TestFileLocation + docName);
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -89,8 +113,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void X005_XlsxCreation_Package_Settings()
         {
-            var fiSource = new FileInfo(Path.Combine(s_TestFileLocation, "Spreadsheet.xlsx"));
-            var fiCopy = new FileInfo(Path.Combine(TestUtil.TempDir.FullName, Guid.NewGuid().ToString() + ".xlsx"));
+            var fiSource = new FileInfo(Path.Combine(TestFileLocation, "Spreadsheet.xlsx"));
+            var fiCopy = new FileInfo(Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx"));
             File.Copy(fiSource.FullName, fiCopy.FullName);
             using (Package package = Package.Open(fiCopy.FullName, FileMode.Open, FileAccess.ReadWrite))
             {
@@ -110,8 +134,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void X004_SpreadsheetDocument_Open()
         {
-            var fiSource = new FileInfo(Path.Combine(s_TestFileLocation, "Spreadsheet.xlsx"));
-            var fiCopy = new FileInfo(Path.Combine(TestUtil.TempDir.FullName, Guid.NewGuid().ToString() + ".xlsx"));
+            var fiSource = new FileInfo(Path.Combine(TestFileLocation, "Spreadsheet.xlsx"));
+            var fiCopy = new FileInfo(Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx"));
             File.Copy(fiSource.FullName, fiCopy.FullName);
             OpenSettings openSettings = new OpenSettings();
             openSettings.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013);
@@ -156,7 +180,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void X002_XlsxCreation()
         {
-            FileInfo fi = new FileInfo(Path.Combine(s_TestFileLocation, Guid.NewGuid().ToString() + ".docx"));
+            FileInfo fi = new FileInfo(Path.Combine(TestFileLocation, Guid.NewGuid().ToString() + ".xlsx"));
             // By default, AutoSave = true, Editable = true, and Type = xlsx.
             SpreadsheetDocument doc = SpreadsheetDocument.Create(fi.FullName, SpreadsheetDocumentType.Workbook);
             WorkbookPart workbookpart = doc.AddWorkbookPart();
@@ -193,7 +217,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         private static void XlsxValidationHelper(string docName, int expectedErrorCount)
         {
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+            var ba = File.ReadAllBytes(TestFileLocation + docName);
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);

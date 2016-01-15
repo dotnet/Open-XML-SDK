@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,20 +29,13 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
         {
             using (WordprocessingDocument package = WordprocessingDocument.Open(filePath, true))
             {
-                try
-                {
-                    WordprocessingPeoplePart peoplePart = package.MainDocumentPart.WordprocessingPeoplePart;
-                    W15.Person person = peoplePart.People.Descendants<W15.Person>().First();
-                    W15.PresenceInfo presenceInfo = person.Descendants<W15.PresenceInfo>().First();
+                WordprocessingPeoplePart peoplePart = package.MainDocumentPart.WordprocessingPeoplePart;
+                W15.Person person = peoplePart.People.Descendants<W15.Person>().First();
+                W15.PresenceInfo presenceInfo = person.Descendants<W15.PresenceInfo>().First();
 
-                    log.VerifyValue(person.Author.Value, this.verifyAuthor, "Person Author attribute is matched. Author={0}", person.Author);
-                    log.VerifyValue(presenceInfo.ProviderId.Value, this.verifyProviderId, "PresenceInfo ProviderId attribute is matched. ProviderId={0}", presenceInfo.ProviderId);
-                    log.VerifyValue(presenceInfo.UserId.Value, this.verifyUserId, "PresenceInfo UserId attribute is matched. UserId={0}", presenceInfo.UserId);
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                log.VerifyValue(person.Author.Value, this.verifyAuthor, "Person Author attribute is matched. Author={0}", person.Author);
+                log.VerifyValue(presenceInfo.ProviderId.Value, this.verifyProviderId, "PresenceInfo ProviderId attribute is matched. ProviderId={0}", presenceInfo.ProviderId);
+                log.VerifyValue(presenceInfo.UserId.Value, this.verifyUserId, "PresenceInfo UserId attribute is matched. UserId={0}", presenceInfo.UserId);
             }
         }
 
@@ -54,22 +48,15 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
         {
             using (WordprocessingDocument package = WordprocessingDocument.Open(filePath, true))
             {
-                try
-                {
-                    WordprocessingPeoplePart peoplePart = package.MainDocumentPart.WordprocessingPeoplePart;
-                    W15.Person person = peoplePart.People.Descendants<W15.Person>().First();
-                    W15.PresenceInfo presenceInfo = person.Descendants<W15.PresenceInfo>().First();
+                WordprocessingPeoplePart peoplePart = package.MainDocumentPart.WordprocessingPeoplePart;
+                W15.Person person = peoplePart.People.Descendants<W15.Person>().First();
+                W15.PresenceInfo presenceInfo = person.Descendants<W15.PresenceInfo>().First();
 
-                    person.Author.Value = this.editAuthor;
-                    presenceInfo.ProviderId.Value = this.editProviderId;
-                    presenceInfo.UserId.Value = this.editUserId;
+                person.Author.Value = this.editAuthor;
+                presenceInfo.ProviderId.Value = this.editProviderId;
+                presenceInfo.UserId.Value = this.editUserId;
 
-                    log.Pass("PresenceInfo in PeoplePart is updated");
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                log.Pass("PresenceInfo in PeoplePart is updated");
             }
         }
 

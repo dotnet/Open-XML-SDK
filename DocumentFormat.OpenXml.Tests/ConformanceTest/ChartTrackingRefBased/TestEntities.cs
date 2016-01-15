@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,20 +29,13 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, false))
             {
-                try
-                {
-                    //Get Extension Uri value
-                    P15.ChartTrackingReferenceBased chartTrackingReferenceBased = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<P15.ChartTrackingReferenceBased>().Single();
-                    PresentationPropertiesExtension presentationPropertiesExtension = (PresentationPropertiesExtension)chartTrackingReferenceBased.Parent;
-                    this.ChartTrackingReferenceBasedExtUri = presentationPropertiesExtension.Uri;
+                //Get Extension Uri value
+                P15.ChartTrackingReferenceBased chartTrackingReferenceBased = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<P15.ChartTrackingReferenceBased>().Single();
+                PresentationPropertiesExtension presentationPropertiesExtension = (PresentationPropertiesExtension)chartTrackingReferenceBased.Parent;
+                this.ChartTrackingReferenceBasedExtUri = presentationPropertiesExtension.Uri;
 
-                    if (string.IsNullOrEmpty(this.ChartTrackingReferenceBasedExtUri))
-                        throw new Exception("Uri attribute value in Extension element is not set.");
-                }
-                catch (Exception e)
-                {
-                    throw e;
-                }
+                if (string.IsNullOrEmpty(this.ChartTrackingReferenceBasedExtUri))
+                    throw new Exception("Uri attribute value in Extension element is not set.");
             }
         }
 
@@ -54,17 +48,10 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, true))
             {
-                try
-                {
-                    P15.ChartTrackingReferenceBased chartTrackingReferenceBased = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<P15.ChartTrackingReferenceBased>().Single();
-                    chartTrackingReferenceBased.Val.Value = true;
+                P15.ChartTrackingReferenceBased chartTrackingReferenceBased = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<P15.ChartTrackingReferenceBased>().Single();
+                chartTrackingReferenceBased.Val.Value = true;
 
-                    log.Pass("Edited ChartTrackingReferenceBase value.");
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                log.Pass("Edited ChartTrackingReferenceBase value.");
             }
         }
 
@@ -77,16 +64,9 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, false))
             {
-                try
-                {
-                    P15.ChartTrackingReferenceBased chartTrackingReferenceBased = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<P15.ChartTrackingReferenceBased>().Single();
+                P15.ChartTrackingReferenceBased chartTrackingReferenceBased = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<P15.ChartTrackingReferenceBased>().Single();
 
-                    log.Verify(chartTrackingReferenceBased.Val.Value == true, "UnChanged in the ChartTrackingReferenceBase element.");
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                log.Verify(chartTrackingReferenceBased.Val.Value == true, "UnChanged in the ChartTrackingReferenceBase element.");
             }
         }
 
@@ -99,20 +79,13 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, true))
             {
-                try
-                {
-                    PresentationPropertiesExtension presentationPropertiesExtension = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<PresentationPropertiesExtension>().Where(e => e.Uri == this.ChartTrackingReferenceBasedExtUri).Single();
-                    P15.ChartTrackingReferenceBased chartTrackingReferenceBased = presentationPropertiesExtension.Descendants<P15.ChartTrackingReferenceBased>().Single();
+                PresentationPropertiesExtension presentationPropertiesExtension = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<PresentationPropertiesExtension>().Where(e => e.Uri == this.ChartTrackingReferenceBasedExtUri).Single();
+                P15.ChartTrackingReferenceBased chartTrackingReferenceBased = presentationPropertiesExtension.Descendants<P15.ChartTrackingReferenceBased>().Single();
 
-                    chartTrackingReferenceBased.Remove();
-                    presentationPropertiesExtension.Remove();
+                chartTrackingReferenceBased.Remove();
+                presentationPropertiesExtension.Remove();
 
-                    log.Pass("Deleted chartTrackingReferenceBased element.");
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                log.Pass("Deleted chartTrackingReferenceBased element.");
             }
         }
 
@@ -125,18 +98,11 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, false))
             {
-                try
-                {
-                    int chartTrackingReferenceBasedExtCount = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<PresentationPropertiesExtension>().Where(e => e.Uri == this.ChartTrackingReferenceBasedExtUri).Count();
-                    log.Verify(chartTrackingReferenceBasedExtCount == 0, "ChartTrackingReferenceBased extension element is not deleted.");
+                int chartTrackingReferenceBasedExtCount = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<PresentationPropertiesExtension>().Where(e => e.Uri == this.ChartTrackingReferenceBasedExtUri).Count();
+                log.Verify(chartTrackingReferenceBasedExtCount == 0, "ChartTrackingReferenceBased extension element is not deleted.");
 
-                    int chartTrackingReferenceBasedCount = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<P15.ChartTrackingReferenceBased>().Count();
-                    log.Verify(chartTrackingReferenceBasedCount == 0, "ChartTrackingReferenceBased element is not deleted.");
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                int chartTrackingReferenceBasedCount = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<P15.ChartTrackingReferenceBased>().Count();
+                log.Verify(chartTrackingReferenceBasedCount == 0, "ChartTrackingReferenceBased element is not deleted.");
             }
         }
 
@@ -149,21 +115,14 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, true))
             {
-                try
-                {
-                    PresentationPropertiesExtension presentationPropertiesExtension = new PresentationPropertiesExtension() { Uri = this.ChartTrackingReferenceBasedExtUri };
-                    P15.ChartTrackingReferenceBased chartTrackingReferenceBased = new P15.ChartTrackingReferenceBased();
-                    chartTrackingReferenceBased.Val = true;
+                PresentationPropertiesExtension presentationPropertiesExtension = new PresentationPropertiesExtension() { Uri = this.ChartTrackingReferenceBasedExtUri };
+                P15.ChartTrackingReferenceBased chartTrackingReferenceBased = new P15.ChartTrackingReferenceBased();
+                chartTrackingReferenceBased.Val = true;
 
-                    presentationPropertiesExtension.AppendChild<P15.ChartTrackingReferenceBased>(chartTrackingReferenceBased);
-                    package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.AppendChild<PresentationPropertiesExtension>(presentationPropertiesExtension);
+                presentationPropertiesExtension.AppendChild<P15.ChartTrackingReferenceBased>(chartTrackingReferenceBased);
+                package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.AppendChild<PresentationPropertiesExtension>(presentationPropertiesExtension);
 
-                    log.Pass("Added ChartTrackingReferenceBased element.");
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                log.Pass("Added ChartTrackingReferenceBased element.");
             }
         }
 
@@ -176,19 +135,12 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, false))
             {
-                try
-                {
-                    int chartTrackingReferenceBasedExtCount = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<PresentationPropertiesExtension>().Where(e => e.Uri == this.ChartTrackingReferenceBasedExtUri).Count();
+                int chartTrackingReferenceBasedExtCount = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<PresentationPropertiesExtension>().Where(e => e.Uri == this.ChartTrackingReferenceBasedExtUri).Count();
 
-                    log.Verify(chartTrackingReferenceBasedExtCount == 1, "chartTrackingReferenceBased extension element is not added.");
+                log.Verify(chartTrackingReferenceBasedExtCount == 1, "chartTrackingReferenceBased extension element is not added.");
 
-                    int chartTrackingReferenceBasedCount = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<P15.ChartTrackingReferenceBased>().Count();
-                    log.Verify(chartTrackingReferenceBasedCount == 1, "ChartTrackingReferenceBased element is not added.");
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                int chartTrackingReferenceBasedCount = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<P15.ChartTrackingReferenceBased>().Count();
+                log.Verify(chartTrackingReferenceBasedCount == 1, "ChartTrackingReferenceBased element is not added.");
             }
         }
     }

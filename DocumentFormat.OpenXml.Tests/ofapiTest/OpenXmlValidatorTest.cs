@@ -1,4 +1,5 @@
-﻿using DocumentFormat.OpenXml;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using DocumentFormat.OpenXml;
 using Xunit;
 using System.IO;
 using System;
@@ -16,13 +17,6 @@ using DocumentFormat.OpenXml.WB.Tests;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    
-    
-    /// <summary>
-    ///This is a test class for OpenXmlValidatorTest and is intended
-    ///to contain all OpenXmlValidatorTest Unit Tests
-    ///</summary>
-
     public class OpenXmlValidatorTestFixture : IDisposable
     {
         public OpenXmlValidatorTestFixture()
@@ -70,10 +64,6 @@ namespace DocumentFormat.OpenXml.Tests
             set;
         }
 
-        #region Additional test attributes
-        // 
-        
-
         ///<summary>
         ///You can use the following additional attributes as you write your tests:
         ///Use ClassInitialize to run code before running the first test in the class
@@ -92,20 +82,6 @@ namespace DocumentFormat.OpenXml.Tests
             O12Validator = null;
             O14Validator = null;
         }        
-
-        //Use TestInitialize to run code before running each test
-        //[TestInitialize()]
-        //public void MyTestInitialize()
-        //{
-        //}
-        //
-        //Use TestCleanup to run code after each test has run
-        //[TestCleanup()]
-        //public void MyTestCleanup()
-        //{
-        //}
-        //
-        #endregion
 
         #region property validation
 
@@ -659,10 +635,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'startAt' has invalid value 'abc'. The string 'abc' is not a valid 'Int32' value.", actual.First().Description);
-#if DEBUG
-            Assert.Equal("startAt", actual.First().AttributeQualifiedName);
-            Assert.Equal("Sch_StringIsNotValidValue", actual.First().ValidationErrorCategory);
-#endif
+
             autoNum.StartAt = -1;
             actual = O12Validator.Validate(autoNum);
             Assert.Equal(1, actual.Count());
@@ -761,10 +734,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_ElementValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The element 'http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing:col' has invalid value '2147483648'. The string '2147483648' is not a valid 'Int32' value.", actual.First().Description);
-#if DEBUG
-            Assert.Null(actual.First().AttributeQualifiedName);
-            Assert.Equal("Sch_StringIsNotValidValue", actual.First().ValidationErrorCategory);
-#endif
 
             element.Text = "-1";
             actual = O12Validator.Validate(element);
@@ -772,10 +741,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_ElementValueDataTypeDetailed", actual.First().Id);
             Assert.True(actual.First().Description.EndsWith(" The MinInclusive constraint failed. The value must be greater than or equal to 0."));
-#if DEBUG
-            Assert.Null(actual.First().AttributeQualifiedName);
-            Assert.Equal("Sch_MinInclusiveConstraintFailed", actual.First().ValidationErrorCategory);
-#endif
         }
 
         /// <summary>
@@ -1307,20 +1272,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ******************** double.Epsilon is too small so ((double)2.0) - double.Epsilon == 2.0
 
-            //logBase.Val = ((double)2.0) - double.Epsilon;
-            //actual = O12Validator.Validate(logBase);
-            //Assert.Equal(1, actual.Count());
-            //Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
-            //Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
-            //Assert.True(actual.First().Description.EndsWith(" The MinInclusive constraint failed."));
-            
-            //logBase.Val = (double)1000.0 + double.Epsilon;
-            //actual = O12Validator.Validate(logBase);
-            //Assert.Equal(1, actual.Count());
-            //Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
-            //Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
-            //Assert.True(actual.First().Description.EndsWith(" The MinInclusive constraint failed."));
-
             logBase.Val = (double)2.0 - 0.1;
             actual = O12Validator.Validate(logBase);
             Assert.Equal(1, actual.Count());
@@ -1454,30 +1405,20 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'http://schemas.openxmlformats.org/officeDocument/2006/math:val' has invalid value 'abc'. The string 'abc' is not a valid 'http://www.w3.org/2001/XMLSchema:integer' value.", actual.First().Description);
-#if DEBUG
-            Assert.Equal("http://schemas.openxmlformats.org/officeDocument/2006/math:val", actual.First().AttributeQualifiedName);
-            Assert.Equal("Sch_StringIsNotValidValue", actual.First().ValidationErrorCategory);
-#endif 
+
             element.Val = -3;
             actual = O12Validator.Validate(element);
             Assert.Equal(1, actual.Count());
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.True(actual.First().Description.EndsWith(" The MinInclusive constraint failed. The value must be greater than or equal to -2."));
-#if DEBUG
-            Assert.Equal("http://schemas.openxmlformats.org/officeDocument/2006/math:val", actual.First().AttributeQualifiedName);
-            Assert.Equal("Sch_MinInclusiveConstraintFailed", actual.First().ValidationErrorCategory);
-#endif 
+
             element.Val = 3;
             actual = O12Validator.Validate(element);
             Assert.Equal(1, actual.Count());
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.True(actual.First().Description.EndsWith(" The MaxInclusive constraint failed. The value must be less than or equal to 2."));
-#if DEBUG
-            Assert.Equal("http://schemas.openxmlformats.org/officeDocument/2006/math:val", actual.First().AttributeQualifiedName);
-            Assert.Equal("Sch_MaxInclusiveConstraintFailed", actual.First().ValidationErrorCategory);
-#endif        
         }
 
         /// <summary>
@@ -2462,7 +2403,6 @@ namespace DocumentFormat.OpenXml.Tests
             // ***** good case ******
 
             var element = new DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbarControlClone();
-            //element.SetAttribute( new OpenXmlAttribute("xmlns", "A", "http://www.w3.org/2000/xmlns/", "http://test"));
             element.AddNamespaceDeclaration("A", "http://test");
 
             element.IdQ = "A";
@@ -3024,11 +2964,11 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     IEnumerable<ValidationErrorInfo> actual;
                     actual = O12Validator.Validate(wordTestDocument);
-                    Assert.Equal(1, actual.Count()); // The value 'actual' should contain one validtion error for 'doNotEmbedSmartTags' in the test document.
+                    Assert.Equal(1, actual.Count()); // The value 'actual' should contain one validation error for 'doNotEmbedSmartTags' in the test document.
 
                     // Office2010
                     actual = O14Validator.Validate(wordTestDocument);
-                    Assert.Equal(1, actual.Count()); // The value 'actual' should contain one validtion error for 'doNotEmbedSmartTags' in the test document.
+                    Assert.Equal(1, actual.Count()); // The value 'actual' should contain one validation error for 'doNotEmbedSmartTags' in the test document.
                 }
             }
         }
@@ -3302,10 +3242,6 @@ namespace DocumentFormat.OpenXml.Tests
 
                     mainPart.CreateRelationship(mainPart.Uri, System.IO.Packaging.TargetMode.Internal, mainPart.RelationshipType);
 
-                    //var wrongHeaderPart = mainPart.AddExtendedPart(HeaderPart.RelationshipTypeConstant, FooterPart.ContentTypeConstant, "xml");
-                    //Header header = new Header();
-                    //header.SaveToPart(wrongHeaderPart);
-
                     wordDoc.Close();
                 }
                 stream.Flush();
@@ -3320,9 +3256,6 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.Equal("/word/document.xml", errors.First().Path.PartUri.ToString());
                     Assert.Equal("The package/part 'MainDocumentPart{/word/document.xml}' cannot have a relationship that targets part 'MainDocumentPart{/word/document.xml}'.", errors.First().Description);
                     Assert.Same(loadedDoc.MainDocumentPart, errors.ElementAt(1).Part);
-#if DEBUG
-                    Assert.Same(loadedDoc.MainDocumentPart.GetPartsOfType<WordprocessingCommentsPart>().First(), errors.ElementAt(1).RelatedPart);
-#endif
                     Assert.Equal("Pkg_OnlyOnePartAllowed", errors.ElementAt(1).Id);
                     Assert.Equal("/word/document.xml", errors.ElementAt(1).Path.PartUri.ToString());
                     Assert.Equal("The package/part 'MainDocumentPart{/word/document.xml}' can only have one instance of relationship that targets part 'WordprocessingCommentsPart'.", errors.ElementAt(1).Description);
@@ -4059,11 +3992,6 @@ namespace DocumentFormat.OpenXml.Tests
                 }
             }
         }
-
-        #region other tests
-
-        #endregion
-
     }
 }
 

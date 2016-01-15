@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentFormat.OpenXml.WB",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentFormat.OpenXml.WB.Tests", "DocumentFormat.OpenXml.WB.Tests\DocumentFormat.OpenXml.WB.Tests.csproj", "{CD991B25-9DDE-4480-BC90-0B9F3428BDFC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUtil", "TestUtil\TestUtil.csproj", "{B63E969B-F7EC-4B6C-8540-67FC0C0C3E56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{CD991B25-9DDE-4480-BC90-0B9F3428BDFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD991B25-9DDE-4480-BC90-0B9F3428BDFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD991B25-9DDE-4480-BC90-0B9F3428BDFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B63E969B-F7EC-4B6C-8540-67FC0C0C3E56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B63E969B-F7EC-4B6C-8540-67FC0C0C3E56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B63E969B-F7EC-4B6C-8540-67FC0C0C3E56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B63E969B-F7EC-4B6C-8540-67FC0C0C3E56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,10 +1,4 @@
-﻿/****************************************************
- * OpenXmlDomTestExtension.cs
- * 
- * Created By: Lio Li(lioli)
- * Last Modified Date: March 17, 2009
- * 
- * *************************************************/
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -19,6 +13,7 @@ using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Bibliography;
 using DocumentFormat.OpenXml.AdditionalCharacteristics;
 using DocumentFormat.OpenXml.Validation;
+using OxTest;
 
 namespace DocumentFormat.OpenXml.Tests.TaskLibraries
 {
@@ -72,7 +67,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             if (!file.Exists)
                 throw new FileNotFoundException(string.Format("Specified file {0} does not exist.", file.Name));
 
-            string copy = System.IO.Path.ChangeExtension(file.Name, ".copy" + file.Extension);
+            string copy = System.IO.Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", "") + file.Extension);
             file.CopyTo(copy, true);
             return new FileInfo(copy);
         }
@@ -88,27 +83,20 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             if (!file.Exists)
                 throw new FileNotFoundException(string.Format("Specified file {0} does not exist.", file.Name));
 
-            //if (writable)
-            //{
-            //    string clone = System.IO.Path.ChangeExtension(file.FullName, ".out" + file.Extension);
-            //    file.CopyTo(clone, true);         // make copy for testfile
-            //    file = new FileInfo(clone);
-            //}
-
             string ext = file.Extension.ToLower();
-            OpenXmlPackage srcPacakge = null;
+            OpenXmlPackage srcPackage = null;
 
             if (_wordprocessingExtension.Contains(ext))
             {
-                return srcPacakge = WordprocessingDocument.Open(file.FullName, writable);
+                return srcPackage = WordprocessingDocument.Open(file.FullName, writable);
             }
             else if (_spreadsheetExtension.Contains(ext))
             {
-                return srcPacakge = SpreadsheetDocument.Open(file.FullName, writable);
+                return srcPackage = SpreadsheetDocument.Open(file.FullName, writable);
             }
             else if (_presentationExtension.Contains(ext))
             {
-                return srcPacakge = PresentationDocument.Open(file.FullName, writable);
+                return srcPackage = PresentationDocument.Open(file.FullName, writable);
             }
             else
                 throw new Exception("Not Supported Document Type!");
@@ -126,121 +114,22 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             if (!file.Exists)
                 throw new FileNotFoundException(string.Format("Specified file {0} does not exist.", file.Name));
 
-            //if (writable)
-            //{
-            //    string clone = System.IO.Path.ChangeExtension(file.FullName, ".out" + file.Extension);
-            //    file.CopyTo(clone, true);         // make copy for testfile
-            //    file = new FileInfo(clone);
-            //}
-
             string ext = file.Extension.ToLower();
-            OpenXmlPackage srcPacakge = null;
+            OpenXmlPackage srcPackage = null;
             if (_wordprocessingExtension.Contains(ext))
             {
-                return srcPacakge = WordprocessingDocument.Open(file.FullName, writable, new OpenSettings() { AutoSave = autosave });
+                return srcPackage = WordprocessingDocument.Open(file.FullName, writable, new OpenSettings() { AutoSave = autosave });
             }
             else if (_spreadsheetExtension.Contains(ext))
             {
-                return srcPacakge = SpreadsheetDocument.Open(file.FullName, writable, new OpenSettings() { AutoSave = autosave });
+                return srcPackage = SpreadsheetDocument.Open(file.FullName, writable, new OpenSettings() { AutoSave = autosave });
             }
             else if (_presentationExtension.Contains(ext))
             {
-                return srcPacakge = PresentationDocument.Open(file.FullName, writable, new OpenSettings() { AutoSave = autosave });
+                return srcPackage = PresentationDocument.Open(file.FullName, writable, new OpenSettings() { AutoSave = autosave });
             }
             else
                 throw new Exception("Not Supported Document Type!");
-        }
-
-        /// <summary>
-        /// Open specified existing package.
-        /// </summary>
-        /// <param name="file">File to be opened.</param>
-        /// <param name="writable">Open package in read/write mode if true, false for readonly.</param>
-        /// <returns>OpenXmlPackage instance for opened package.</returns>
-        public static OpenXmlPackage OpenPackage(this FileInfo file, bool writable, FileFormatVersions format, MarkupCompatibilityProcessMode mcProcessMode)
-        {
-            OpenSettings settings = new OpenSettings();
-            settings.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(mcProcessMode, format);
-            return OpenPackage(file, writable, settings);
-        }
-
-        //public static OpenXmlPackage OpenPackage(this FileInfo file, bool writable, FileFormatVersions format, bool processWholePackage)
-        //{
-        //    OpenSettings settings = new OpenSettings();
-        //    if (processWholePackage)
-        //    {
-        //        settings.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, format);
-        //    }
-        //    else
-        //    {
-        //        settings.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, format);
-        //    }
-        //    return OpenPackage(file, writable, settings);
-        //}
-
-        /// <summary>
-        /// Open specified existing package.
-        /// </summary>
-        /// <param name="file">File to be opened.</param>
-        /// <param name="writable">Open package in read/write mode if true, false for readonly.</param>
-        /// <param name="settings">Settings on AutoSave, MaxCharactersInPart, MarkupCompatibilityProcessSettings and ProcessMCInWholePackage.</param>
-        /// <returns>OpenXmlPackage instance for opened package.</returns>
-        public static OpenXmlPackage OpenPackage(this FileInfo file, bool writable, OpenSettings settings)
-        {
-            if (!file.Exists)
-                throw new FileNotFoundException(string.Format("Specified file {0} does not exist.", file.Name));
-
-            //if (writable)
-            //{
-            //    string clone = System.IO.Path.ChangeExtension(file.FullName, ".out" + file.Extension);
-            //    file.CopyTo(clone, true);         // make copy for testfile
-            //    file = new FileInfo(clone);
-            //}
-
-            string ext = file.Extension.ToLower();
-            OpenXmlPackage srcPacakge = null;
-            if (_wordprocessingExtension.Contains(ext))
-            {
-                return srcPacakge = WordprocessingDocument.Open(file.FullName, writable, settings);
-            }
-            else if (_spreadsheetExtension.Contains(ext))
-            {
-                return srcPacakge = SpreadsheetDocument.Open(file.FullName, writable, settings);
-            }
-            else if (_presentationExtension.Contains(ext))
-            {
-                return srcPacakge = PresentationDocument.Open(file.FullName, writable, settings);
-            }
-            else
-                throw new Exception("Not Supported Document Type!");
-        }
-
-        public static OpenXmlPackage CreatePackage(this FileInfo file, Boolean overwiteIfExist)
-        {
-            if (file.Exists)
-            {
-                throw new InvalidOperationException(String.Format("The file {0} exists!!", file.FullName));
-            }
-
-            string ext = file.Extension.ToLower();
-            OpenXmlPackage srcPacakge = null;
-            if (_wordprocessingExtension.Contains(ext))
-            {
-                return srcPacakge = WordprocessingDocument.Create(file.FullName, WordprocessingDocumentType.Document);
-            }
-            else if (_spreadsheetExtension.Contains(ext))
-            {
-                return srcPacakge = SpreadsheetDocument.Create(file.FullName, SpreadsheetDocumentType.Workbook);
-            }
-            else if (_presentationExtension.Contains(ext))
-            {
-                return srcPacakge = PresentationDocument.Create(file.FullName, PresentationDocumentType.Presentation);
-            }
-            else
-                throw new Exception("Not Supported Document Type!");
-
-
-
         }
 
         public static void CreateIfNotExist(this DirectoryInfo dir)
@@ -543,12 +432,6 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
                 xmlDoc.Load(part.GetStream());
                 if (part.IsBibliographyPart())
                     return new Sources(xmlDoc.DocumentElement.OuterXml);
-
-                //else if (part.IsAdditionalCharacteristicsPart())
-                //{
-                //    // TODO: AdditionalCharacteristics currently is not a PartRootElement. And it will be changed later. Will it?
-                //    return new AdditionalCharacteristicsInfo(xmlDoc.DocumentElement.OuterXml);
-                //}
                 else if (part.IsInkPart())
                 {
                     return new DocumentFormat.OpenXml.InkML.Ink(xmlDoc.DocumentElement.OuterXml);
@@ -1046,97 +929,6 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
                 .FirstOrDefault() as OfficeAvailabilityAttribute;
         }
 
-
-        //private static HashSet<string> O12NamespaceSet = new HashSet<string>{
-        //                                           @"http://www.w3.org/XML/1998/namespace",
-        //                                           @"http://schemas.openxmlformats.org/package/2006/metadata/core-properties",
-        //                                           @"http://schemas.openxmlformats.org/officeDocument/2006/extended-properties",
-        //                                           @"http://schemas.openxmlformats.org/officeDocument/2006/custom-properties",
-        //                                           @"http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes",
-        //                                           @"http://purl.org/dc/elements/1.1/",
-        //                                           @"http://purl.org/dc/terms/",
-        //                                           @"http://schemas.openxmlformats.org/officeDocument/2006/characteristics",
-        //                                           @"http://schemas.openxmlformats.org/officeDocument/2006/bibliography",
-        //                                           @"http://schemas.openxmlformats.org/drawingml/2006/main",
-        //                                           @"http://schemas.openxmlformats.org/drawingml/2006/chart",
-        //                                           @"http://schemas.openxmlformats.org/drawingml/2006/chartDrawing",
-        //                                           @"http://schemas.openxmlformats.org/drawingml/2006/compatibility",
-        //                                           @"http://schemas.openxmlformats.org/drawingml/2006/diagram",
-        //                                           @"http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas",
-        //                                           @"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing",
-        //                                           @"http://schemas.openxmlformats.org/drawingml/2006/picture",
-        //                                           @"http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing",
-        //                                           @"http://schemas.openxmlformats.org/officeDocument/2006/relationships",
-        //                                           @"http://schemas.openxmlformats.org/officeDocument/2006/customXml",
-        //                                           @"http://schemas.openxmlformats.org/officeDocument/2006/math",
-        //                                           @"http://schemas.openxmlformats.org/spreadsheetml/2006/main",
-        //                                           @"http://schemas.openxmlformats.org/wordprocessingml/2006/main",
-        //                                           @"http://schemas.openxmlformats.org/presentationml/2006/main",
-        //                                           @"http://schemas.openxmlformats.org/schemaLibrary/2006/main",
-        //                                           @"urn:schemas-microsoft-com:vml",
-        //                                           @"urn:schemas-microsoft-com:office:office",
-        //                                           @"urn:schemas-microsoft-com:office:word",
-        //                                           @"urn:schemas-microsoft-com:office:excel",
-        //                                           @"urn:schemas-microsoft-com:office:powerpoint",
-        //                                           @"http://schemas.openxmlformats.org/markup-compatibility/2006",
-        //                                           @"http://schemas.microsoft.com/office/excel/2006/main",
-        //                                           @"http://schemas.microsoft.com/office/word/2006/wordml",
-        //                                           @"http://schemas.microsoft.com/office/2006/01/customui",
-        //                                           @"http://schemas.microsoft.com/office/2006/activeX",
-        //                                          @"http://schemas.microsoft.com/office/2006/coverPageProps",
-        //                                          @"http://schemas.microsoft.com/office/2006/customDocumentInformationPanel",
-        //                                          @"http://schemas.microsoft.com/office/2006/metadata/contentType",
-        //                                          @"http://schemas.microsoft.com/office/2006/metadata/customXsn",
-        //                                          @"http://schemas.microsoft.com/office/2006/metadata/longProperties",
-        //                                          @"http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes",
-        //                                          @"http://www.w3.org/2001/XMLSchema",
-        //                                          @"http://schemas.microsoft.com/office/drawing/2008/diagram",
-        //                                         };
-
-        //private static HashSet<string> O14NamespaceSet = new HashSet<string>{ 
-        //                                           @"http://schemas.microsoft.com/office/drawing/2007/8/2/chart",
-        //                                          @"http://schemas.microsoft.com/office/drawing/2010/chartDrawing",
-        //                                          @"http://schemas.microsoft.com/office/drawing/2010/main",
-        //                                          @"http://schemas.microsoft.com/office/powerpoint/2010/main",
-        //                                          @"http://schemas.microsoft.com/office/drawing/2010/picture",
-        //                                          @"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing",
-        //                                          @"http://schemas.microsoft.com/office/word/2010/wordml",
-        //                                          @"http://schemas.microsoft.com/office/spreadsheetml/2009/9/main",
-        //                                          @"http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing",
-        //                                          @"http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac",
-        //                                          @"http://www.w3.org/2003/InkML",
-        //                                          @"http://www.w3.org/2003/04/emma",
-        //                                          @"http://schemas.microsoft.com/ink/2010/main",
-        //                                          @"http://schemas.microsoft.com/office/2009/07/customui",
-        //                                          @"http://schemas.microsoft.com/office/drawing/2010/diagram",
-        //                                          @"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas",
-        //                                          @"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup",
-        //                                          @"http://schemas.microsoft.com/office/word/2010/wordprocessingShape",
-        //                                          @"http://schemas.microsoft.com/office/drawing/2010/slicer",
-        //                                          @"http://schemas.microsoft.com/office/2007/6/19/audiovideo",
-
-        //                                         };
-
-
-        //public static bool IsInVersion(this Type hostType, FileFormatVersions version)
-        //{
-        //    if (hostType.IsAbstract || !hostType.IsSubclassOf(typeof(OpenXmlElement)))
-        //        return false;
-
-        //    var ns = hostType.GetElementTagName().Namespace;
-        //    if (O12NamespaceSet.Contains(ns))
-        //    {
-        //        var oa = hostType.GetOfficeAvailability();
-        //        if (oa == null || oa.OfficeVersion == version)
-        //            return true;
-        //        else
-        //            return false;
-        //    }
-        //    if (O14NamespaceSet.Contains(ns) && version == FileFormatVersions.Office2010)
-        //        return true;
-        //    return false;
-        //}
-
         public static bool IsInVersion(this Type hostType, FileFormatVersions version)
         {
             if (hostType.IsAbstract || !hostType.IsSubclassOf(typeof(OpenXmlElement)))
@@ -1194,25 +986,34 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         #endregion Attribute Extensions
 
         #region IEnumerable Extensions
-        /// <summary> Pick an element from source collection randomly. </summary>
+        /// <summary>Pick the second element from source collection.  If there is only one element, picks the first.</summary>
         /// <typeparam name="TSource">Type of collection content</typeparam>
         /// <param name="source">source collection</param>
         /// <returns>chosen element of source collection</returns>
-        public static TSource PickRandom<TSource>(this IEnumerable<TSource> source)
+        public static TSource PickSecond<TSource>(this IEnumerable<TSource> source)
         {
-            int index = new Random().Next(source.Count());
-            return source.ElementAtOrDefault(index);
+            var chosenElement = source.Skip(1).FirstOrDefault();
+            if (chosenElement != null)
+                return chosenElement;
+            chosenElement = source.FirstOrDefault();
+            return chosenElement;
+            // this used to return a random element.  Bad idea for a test suite.
         }
 
-        /// <summary> Pick an element from source collection randomly. </summary>
+        /// <summary>Pick the second element from source collection.  If there is only one element, picks the first.</summary>
         /// <typeparam name="TSource">Type of collection content</typeparam>
         /// <param name="source">source collection</param>
         /// <param name="predicate">predicate on collection element</param>
         /// <returns>chosen element of source collection</returns>
-        public static TSource PickRandom<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
+        public static TSource PickSecond<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
         {
-            int index = new Random().Next(source.Count(predicate));
-            return source.Where(predicate).ElementAtOrDefault(index);
+            var filteredCollection = source.Where(predicate);
+            var chosenElement = filteredCollection.Skip(1).FirstOrDefault();
+            if (chosenElement != null)
+                return chosenElement;
+            chosenElement = filteredCollection.FirstOrDefault();
+            return chosenElement;
+            //this used to return a random element.  Bad idea for a test suite.
         }
 
         /// <summary> Conduct specified action on each member of current collection. </summary>
@@ -1376,12 +1177,6 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         #endregion
 
         #region Extensions for Custom Attributes
-        //// Get concrete derived classes of OpenXmlElement class
-        //public static IEnumerable<Type> GetConcreteDerivesOfOpenXmlElement()
-        //{
-        //    return Assembly.GetAssembly(typeof(OpenXmlElement)).GetTypes()
-        //        .Where(t => !t.IsAbstract && t.IsSubclassOf(typeof(OpenXmlElement)));
-        //}
 
         // Get declared public instance properties of specified hosting type
         public static IEnumerable<PropertyInfo> DeclaredProperties(this Type hostType)

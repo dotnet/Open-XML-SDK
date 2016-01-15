@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -59,8 +60,6 @@ namespace DocumentFormat.OpenXml.Tests
         /// </summary>
         public ConformanceTestBase()
         {
-            // Sets the flag to notify MSTest of Ots Log failure.
-            this.OtsLogFailureToFailTest = true;
         }
 
         /// <summary>
@@ -78,35 +77,29 @@ namespace DocumentFormat.OpenXml.Tests
 
         protected void SimpleReadWriteTest(ElementHandler preTest, ElementHandler update, ElementHandler postTest)
         {
-            try
+            string originalFilePath = this.GetTestFilePath(this.BaseFileName);
+            string modifiedFilePath = this.GetTestFilePath(this.ModifiedFileName);
+
+            System.IO.File.Copy(originalFilePath, modifiedFilePath, true);
+            this.Log.Comment("File copy [{0}] to [{1}]", originalFilePath, modifiedFilePath);
+
+            using (var package = this.OpenDocument(modifiedFilePath, true))
             {
-                string originalFilePath = this.GetTestFilePath(this.BaseFileName);
-                string modifiedFilePath = this.GetTestFilePath(this.ModifiedFileName);
+                var elements = this.GetElements(package);
 
-                System.IO.File.Copy(originalFilePath, modifiedFilePath, true);
-                this.Log.Comment("File copy [{0}] to [{1}]", originalFilePath, modifiedFilePath);
-
-                using (var package = this.OpenDocument(modifiedFilePath, true))
-                {
-                    var elements = this.GetElements(package);
-
-                    preTest(elements.First<TElement>());
-                    update(elements.First<TElement>());
-                }
-
-                this.Log.Pass("Updated the element on [{0}].", modifiedFilePath);
-
-                using (var package = this.OpenDocument(modifiedFilePath, false))
-                {
-                    var elements = this.GetElements(package);
-
-                    postTest(elements.First<TElement>());
-                }
+                preTest(elements.First<TElement>());
+                update(elements.First<TElement>());
             }
-            catch (Exception e)
+
+            this.Log.Pass("Updated the element on [{0}].", modifiedFilePath);
+
+            using (var package = this.OpenDocument(modifiedFilePath, false))
             {
-                this.Log.Fail(e.Message);
+                var elements = this.GetElements(package);
+
+                postTest(elements.First<TElement>());
             }
+
         }
         #endregion
 
@@ -117,20 +110,12 @@ namespace DocumentFormat.OpenXml.Tests
         /// <param name="createFilePath">file path to create</param>
         protected void CreatePackage(string path)
         {
-            try
-            {
-                Type reflectedCode = typeof(TReflectedCode);
-                object documentGenerator = Activator.CreateInstance(reflectedCode);
-                var createPackageMethod = reflectedCode.GetMethod("CreatePackage");
-                createPackageMethod.Invoke(documentGenerator, new object[] { path });
+            Type reflectedCode = typeof(TReflectedCode);
+            object documentGenerator = Activator.CreateInstance(reflectedCode);
+            var createPackageMethod = reflectedCode.GetMethod("CreatePackage");
+            createPackageMethod.Invoke(documentGenerator, new object[] { path });
 
-                this.Log.Pass("Document generated. path=[{0}]", path);
-            }
-            catch (Exception e)
-            {
-                this.Log.Fail(string.Format(
-                    "Message=[{0}], path=[{1}]", e.Message, path));
-            }
+            this.Log.Pass("Document generated. path=[{0}]", path);
         }
 
         /// <summary>
@@ -150,27 +135,19 @@ namespace DocumentFormat.OpenXml.Tests
                         DocumentFormat.OpenXml.FileFormatVersions.Office2013)
                 };
 
-            try
-            {
-                Type type = typeof(TPackage);
+            Type type = typeof(TPackage);
 
-                if (type == typeof(WordprocessingDocument))
-                {
-                    package = WordprocessingDocument.Open(path, enableEdit, settings);
-                }
-                else if (type == typeof(PresentationDocument))
-                {
-                    package = PresentationDocument.Open(path, enableEdit, settings);
-                }
-                else if (type == typeof(SpreadsheetDocument))
-                {
-                    package = SpreadsheetDocument.Open(path, enableEdit, settings);
-                }
-            }
-            catch(Exception e)
+            if (type == typeof(WordprocessingDocument))
             {
-                this.Log.Fail(string.Format(
-                    "Message=[{0}], path=[{1}]", e.Message, path));
+                package = WordprocessingDocument.Open(path, enableEdit, settings);
+            }
+            else if (type == typeof(PresentationDocument))
+            {
+                package = PresentationDocument.Open(path, enableEdit, settings);
+            }
+            else if (type == typeof(SpreadsheetDocument))
+            {
+                package = SpreadsheetDocument.Open(path, enableEdit, settings);
             }
 
             this.Log.Pass("Opened test document {0}", path);
