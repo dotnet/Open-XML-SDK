@@ -359,7 +359,8 @@ namespace DocumentFormat.OpenXml.Tests
                     doc.ChangeDocumentType(WordprocessingDocumentType.Template);
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(416, errs.Count());
+                    var cnt = errs.Count();
+                    Assert.True(cnt == 416 || cnt == 2); // v3.0 correctly reports fewer errors than v2.5.1
                 }
             }
             if (TestUtil.DeleteTempFiles)
@@ -380,7 +381,8 @@ namespace DocumentFormat.OpenXml.Tests
                     var cnt = doc.MainDocumentPart.Document.Descendants().Count();
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(416, errs.Count());
+                    var errcnt = errs.Count();
+                    Assert.True(errcnt == 416 || errcnt == 2); // v3.0 correctly reports fewer errors than v2.5.1
                 }
             }
             if (TestUtil.DeleteTempFiles)
@@ -405,7 +407,8 @@ namespace DocumentFormat.OpenXml.Tests
 
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(450, errs.Count());
+                    var cnt2 = errs.Count();
+                    Assert.True(cnt2 == 450 || cnt2 == 36); // v3.0 correctly reports fewer errors than v2.5.1
                 }
             }
             if (TestUtil.DeleteTempFiles)
@@ -527,7 +530,8 @@ namespace DocumentFormat.OpenXml.Tests
                     fp.RemoveAnnotations(typeof(string));
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(416, errs.Count());
+                    var cnt = errs.Count();
+                    Assert.True(cnt == 416 || cnt == 2); // v3.0 correctly reports fewer errors than v2.5.1
                 }
             }
         }
@@ -553,7 +557,8 @@ namespace DocumentFormat.OpenXml.Tests
                     mdp.RemoveAnnotations(typeof(string));
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(416, errs.Count());
+                    var cnt = errs.Count();
+                    Assert.True(cnt == 416 || cnt == 2); // v3.0 correctly reports fewer errors than v2.5.1
                 }
             }
         }
@@ -573,7 +578,8 @@ namespace DocumentFormat.OpenXml.Tests
                     mdp.DeleteReferenceRelationship("rId26");
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(417, errs.Count());
+                    var cnt = errs.Count();
+                    Assert.True(cnt == 417 || cnt == 3); // v3.0 correctly reports fewer errors than v2.5.1
                 }
             }
         }
@@ -652,7 +658,8 @@ namespace DocumentFormat.OpenXml.Tests
                     firstPara.RemoveNamespaceDeclaration("f");
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(416, errs.Count());
+                    var cnt = errs.Count();
+                    Assert.True(cnt == 416 || cnt == 2); // v3.0 correctly reports fewer errors than v2.5.1
                 }
             }
         }
@@ -672,7 +679,8 @@ namespace DocumentFormat.OpenXml.Tests
                     firstPara.ClearAllAttributes();
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(416, errs.Count());
+                    var cnt = errs.Count();
+                    Assert.True(cnt == 416 || cnt == 2); // v3.0 correctly reports fewer errors than v2.5.1
                 }
             }
         }
@@ -692,7 +700,8 @@ namespace DocumentFormat.OpenXml.Tests
                     var p = firstPara.LookupPrefix("http://schemas.openxmlformats.org/wordprocessingml/2006/main");
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(416, errs.Count());
+                    var cnt = errs.Count();
+                    Assert.True(cnt == 416 || cnt == 2); // v3.0 correctly reports fewer errors than v2.5.1
                 }
             }
         }
@@ -712,7 +721,8 @@ namespace DocumentFormat.OpenXml.Tests
                     var ns = firstPara.NamespaceDeclarations;
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(416, errs.Count());
+                    var cnt = errs.Count();
+                    Assert.True(cnt == 416 || cnt == 2); // v3.0 correctly reports fewer errors than v2.5.1
                 }
             }
         }
@@ -733,7 +743,8 @@ namespace DocumentFormat.OpenXml.Tests
                     var s2 = firstPara.InnerText;
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(416, errs.Count());
+                    var cnt = errs.Count();
+                    Assert.True(cnt == 416 || cnt == 2); // v3.0 correctly reports fewer errors than v2.5.1
                 }
             }
         }
@@ -753,7 +764,8 @@ namespace DocumentFormat.OpenXml.Tests
                     var s = firstPara.OuterXml;
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(416, errs.Count());
+                    var cnt = errs.Count();
+                    Assert.True(cnt == 416 || cnt == 2); // v3.0 correctly reports fewer errors than v2.5.1
                 }
             }
         }
@@ -775,7 +787,8 @@ namespace DocumentFormat.OpenXml.Tests
                     firstPara.GetAttribute(att.LocalName, att.NamespaceUri);
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(416, errs.Count());
+                    var cnt = errs.Count();
+                    Assert.True(cnt == 416 || cnt == 2); // v3.0 correctly reports fewer errors than v2.5.1
                 }
             }
         }
@@ -798,7 +811,8 @@ namespace DocumentFormat.OpenXml.Tests
                     firstPara.SetAttributes(atts);
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(416, errs.Count());
+                    var cnt = errs.Count();
+                    Assert.True(cnt == 416 || cnt == 2); // v3.0 correctly reports fewer errors than v2.5.1
                 }
             }
         }
@@ -818,7 +832,8 @@ namespace DocumentFormat.OpenXml.Tests
                     firstPara.RemoveAttribute("displacedByCustomXml", "http://schemas.openxmlformats.org/wordprocessingml/2006/main");
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(416, errs.Count());
+                    var cnt = errs.Count();
+                    Assert.True(cnt == 416 || cnt == 2); // v3.0 correctly reports fewer errors than v2.5.1
                 }
             }
         }
@@ -843,7 +858,8 @@ namespace DocumentFormat.OpenXml.Tests
                     mdp.Document.Body.InsertAfter(newPara2, firstPara);
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(416, errs.Count());
+                    var cnt = errs.Count();
+                    Assert.True(cnt == 416 || cnt == 2); // v3.0 correctly reports fewer errors than v2.5.1
                 }
             }
         }
@@ -866,7 +882,8 @@ namespace DocumentFormat.OpenXml.Tests
                     firstPara.InsertAfterSelf(newPara);
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(416, errs.Count());
+                    var cnt = errs.Count();
+                    Assert.True(cnt == 416 || cnt == 2); // v3.0 correctly reports fewer errors than v2.5.1
                 }
             }
         }
@@ -889,7 +906,8 @@ namespace DocumentFormat.OpenXml.Tests
                     firstPara.InsertBeforeSelf(newPara);
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(416, errs.Count());
+                    var cnt = errs.Count();
+                    Assert.True(cnt == 416 || cnt == 2); // v3.0 correctly reports fewer errors than v2.5.1
                 }
             }
         }
@@ -1229,19 +1247,19 @@ namespace DocumentFormat.OpenXml.Tests
         public void W003_DocxValidation()
         {
             var docName = "Document.docx";
-            DocxValidationHelper(docName, 832);
+            DocxValidationHelper(docName, 832, 418); // v2.5.1 reports more errors than 3.0
         }
 
         [Fact]
         public void W002_PlainDocxValidation()
         {
             var docName = "Plain.docx";
-            DocxValidationHelper(docName, 0);
+            DocxValidationHelper(docName, 0, 0); // v2.5.1 reports more errors than 3.0
         }
 
-        private static void DocxValidationHelper(string docName, int expectedErrorCount)
+        private static void DocxValidationHelper(string docName, int expectedErrorCount, int expectedErrorCount2)
         {
-                        var ba = File.ReadAllBytes(Path.Combine(TestUtil.TestFilesDir, docName));
+            var ba = File.ReadAllBytes(Path.Combine(TestUtil.TestFilesDir, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -1253,7 +1271,7 @@ namespace DocumentFormat.OpenXml.Tests
                     cnt += validator.Validate(doc).Count();
                     validator = new OpenXmlValidator(FileFormatVersions.Office2013);
                     cnt += validator.Validate(doc).Count();
-                    Assert.Equal(expectedErrorCount, cnt);
+                    Assert.True(cnt == expectedErrorCount || cnt == expectedErrorCount2);
                 }
             }
         }

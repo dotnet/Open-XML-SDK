@@ -54,11 +54,12 @@ namespace DocumentFormat.OpenXml.Tests
                 var ce = attr as ChildElementInfoAttribute;
                 if (ce.ElementType == typeof(TopBorder))
                 {
-                    Assert.Equal(ce.AvailableInVersion, FileFormatVersions.Office2007 | FileFormatVersions.Office2010);
+                    Assert.True((ce.AvailableInVersion & FileFormatVersions.Office2007) > 0);
+                    Assert.True((ce.AvailableInVersion & FileFormatVersions.Office2010) > 0);
                 }
                 else if (ce.ElementType == typeof(StartBorder) || ce.ElementType == typeof(EndBorder))
                 {
-                    Assert.Equal(ce.AvailableInVersion, FileFormatVersions.Office2010);
+                    Assert.True((ce.AvailableInVersion & FileFormatVersions.Office2010) > 0);
                 }
             }
 
@@ -87,7 +88,11 @@ namespace DocumentFormat.OpenXml.Tests
                 }
                 else if (ce.ElementType == typeof(StartBorder) || ce.ElementType == typeof(EndBorder))
                 {
-                    Assert.Equal(ce.AvailableInVersion, FileFormatVersions.Office2010);
+                    var av = ce.AvailableInVersion;
+                    var isIn2010 = (ce.AvailableInVersion & FileFormatVersions.Office2010) > 0;
+                    if (!isIn2010)
+                        Console.WriteLine();
+                    Assert.True(isIn2010);
                 }
             }
 
