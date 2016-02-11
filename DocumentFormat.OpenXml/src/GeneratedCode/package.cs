@@ -454,7 +454,7 @@ public partial class DigitalSignatureOriginPart : OpenXmlPart , IFixedContentTyp
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/signature", new PartConstraintRule("XmlSignaturePart", XmlSignaturePart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/signature", new PartConstraintRule("XmlSignaturePart", XmlSignaturePart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -719,37 +719,38 @@ public partial class MainDocumentPart : OpenXmlPart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", new PartConstraintRule("CustomXmlPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/glossaryDocument", new PartConstraintRule("GlossaryDocumentPart", GlossaryDocumentPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme", new PartConstraintRule("ThemePart", ThemePart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail", new PartConstraintRule("ThumbnailPart", null, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments", new PartConstraintRule("WordprocessingCommentsPart", WordprocessingCommentsPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings", new PartConstraintRule("DocumentSettingsPart", DocumentSettingsPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/endnotes", new PartConstraintRule("EndnotesPart", EndnotesPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable", new PartConstraintRule("FontTablePart", FontTablePart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/footnotes", new PartConstraintRule("FootnotesPart", FootnotesPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering", new PartConstraintRule("NumberingDefinitionsPart", NumberingDefinitionsPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles", new PartConstraintRule("StyleDefinitionsPart", StyleDefinitionsPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2007/relationships/stylesWithEffects", new PartConstraintRule("StylesWithEffectsPart", StylesWithEffectsPart.ContentTypeConstant, false, false,(FileFormatVersions)2 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/webSettings", new PartConstraintRule("WebSettingsPart", WebSettingsPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer", new PartConstraintRule("FooterPart", FooterPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/header", new PartConstraintRule("HeaderPart", HeaderPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings", new PartConstraintRule("WordprocessingPrinterSettingsPart", WordprocessingPrinterSettingsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2006/relationships/keyMapCustomizations", new PartConstraintRule("CustomizationPart", CustomizationPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2006/relationships/vbaProject", new PartConstraintRule("VbaProjectPart", VbaProjectPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2011/relationships/commentsExtended", new PartConstraintRule("WordprocessingCommentsExPart", WordprocessingCommentsExPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2011/relationships/people", new PartConstraintRule("WordprocessingPeoplePart", WordprocessingPeoplePart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk", new PartConstraintRule("AlternativeFormatImportPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", new PartConstraintRule("EmbeddedControlPersistencePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", new PartConstraintRule("CustomXmlPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/glossaryDocument", new PartConstraintRule("GlossaryDocumentPart", GlossaryDocumentPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme", new PartConstraintRule("ThemePart", ThemePart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail", new PartConstraintRule("ThumbnailPart", null, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments", new PartConstraintRule("WordprocessingCommentsPart", WordprocessingCommentsPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings", new PartConstraintRule("DocumentSettingsPart", DocumentSettingsPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/endnotes", new PartConstraintRule("EndnotesPart", EndnotesPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable", new PartConstraintRule("FontTablePart", FontTablePart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/footnotes", new PartConstraintRule("FootnotesPart", FootnotesPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering", new PartConstraintRule("NumberingDefinitionsPart", NumberingDefinitionsPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles", new PartConstraintRule("StyleDefinitionsPart", StyleDefinitionsPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2007/relationships/stylesWithEffects", new PartConstraintRule("StylesWithEffectsPart", StylesWithEffectsPart.ContentTypeConstant, false, false,(FileFormatVersions)14 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/webSettings", new PartConstraintRule("WebSettingsPart", WebSettingsPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer", new PartConstraintRule("FooterPart", FooterPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/header", new PartConstraintRule("HeaderPart", HeaderPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings", new PartConstraintRule("WordprocessingPrinterSettingsPart", WordprocessingPrinterSettingsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2006/relationships/keyMapCustomizations", new PartConstraintRule("CustomizationPart", CustomizationPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2006/relationships/vbaProject", new PartConstraintRule("VbaProjectPart", VbaProjectPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2011/relationships/commentsExtended", new PartConstraintRule("WordprocessingCommentsExPart", WordprocessingCommentsExPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2011/relationships/people", new PartConstraintRule("WordprocessingPeoplePart", WordprocessingPeoplePart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk", new PartConstraintRule("AlternativeFormatImportPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2014/relationships/chartEx", new PartConstraintRule("ExtendedChartPart", ExtendedChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", new PartConstraintRule("EmbeddedControlPersistencePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -765,7 +766,7 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
         if (_dataPartReferenceConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)15 ));
 
             _dataPartReferenceConstraint = tempData;
         }
@@ -861,6 +862,9 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
             
         case ChartPart.RelationshipTypeConstant:
                     return new ChartPart();        
+            
+        case ExtendedChartPart.RelationshipTypeConstant:
+                    return new ExtendedChartPart();        
             
         case DiagramColorsPart.RelationshipTypeConstant:
                     return new DiagramColorsPart();        
@@ -1323,7 +1327,7 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
             get {return GetSubPartOfType<StyleDefinitionsPart>(); }
         }
         /// <summary>
-        /// Gets the StylesWithEffectsPart of the MainDocumentPart., only available in Office2010
+        /// Gets the StylesWithEffectsPart of the MainDocumentPart., only available in Office2010, Office2013, Office2016
         /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2010)]
         public StylesWithEffectsPart StylesWithEffectsPart
@@ -1412,6 +1416,16 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
         {
             get{
                     return this.GetPartsOfType<ChartPart>();
+                }
+        }
+                
+        /// <summary>
+        /// Gets the ExtendedChartParts of the MainDocumentPart.
+        /// </summary>
+        public System.Collections.Generic.IEnumerable<ExtendedChartPart> ExtendedChartParts
+        {
+            get{
+                    return this.GetPartsOfType<ExtendedChartPart>();
                 }
         }
                 
@@ -1532,7 +1546,7 @@ public partial class CustomizationPart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.microsoft.com/office/2006/relationships/attachedToolbars", new PartConstraintRule("WordAttachedToolbarsPart", WordAttachedToolbarsPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.microsoft.com/office/2006/relationships/attachedToolbars", new PartConstraintRule("WordAttachedToolbarsPart", WordAttachedToolbarsPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -1902,17 +1916,18 @@ public partial class WordprocessingCommentsPart : OpenXmlPart , IFixedContentTyp
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk", new PartConstraintRule("AlternativeFormatImportPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", new PartConstraintRule("EmbeddedControlPersistencePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk", new PartConstraintRule("AlternativeFormatImportPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2014/relationships/chartEx", new PartConstraintRule("ExtendedChartPart", ExtendedChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", new PartConstraintRule("EmbeddedControlPersistencePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -1928,7 +1943,7 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
         if (_dataPartReferenceConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)15 ));
 
             _dataPartReferenceConstraint = tempData;
         }
@@ -1964,6 +1979,9 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
             
         case ChartPart.RelationshipTypeConstant:
                     return new ChartPart();        
+            
+        case ExtendedChartPart.RelationshipTypeConstant:
+                    return new ExtendedChartPart();        
             
         case DiagramColorsPart.RelationshipTypeConstant:
                     return new DiagramColorsPart();        
@@ -2274,6 +2292,16 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
         }
                 
         /// <summary>
+        /// Gets the ExtendedChartParts of the WordprocessingCommentsPart.
+        /// </summary>
+        public System.Collections.Generic.IEnumerable<ExtendedChartPart> ExtendedChartParts
+        {
+            get{
+                    return this.GetPartsOfType<ExtendedChartPart>();
+                }
+        }
+                
+        /// <summary>
         /// Gets the DiagramColorsParts of the WordprocessingCommentsPart.
         /// </summary>
         public System.Collections.Generic.IEnumerable<DiagramColorsPart> DiagramColorsParts
@@ -2390,8 +2418,8 @@ public partial class DocumentSettingsPart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/recipientData", new PartConstraintRule("MailMergeRecipientDataPart", null, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/recipientData", new PartConstraintRule("MailMergeRecipientDataPart", null, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -2650,17 +2678,18 @@ public partial class EndnotesPart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk", new PartConstraintRule("AlternativeFormatImportPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", new PartConstraintRule("EmbeddedControlPersistencePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk", new PartConstraintRule("AlternativeFormatImportPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2014/relationships/chartEx", new PartConstraintRule("ExtendedChartPart", ExtendedChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", new PartConstraintRule("EmbeddedControlPersistencePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -2676,7 +2705,7 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
         if (_dataPartReferenceConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)15 ));
 
             _dataPartReferenceConstraint = tempData;
         }
@@ -2712,6 +2741,9 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
             
         case ChartPart.RelationshipTypeConstant:
                     return new ChartPart();        
+            
+        case ExtendedChartPart.RelationshipTypeConstant:
+                    return new ExtendedChartPart();        
             
         case DiagramColorsPart.RelationshipTypeConstant:
                     return new DiagramColorsPart();        
@@ -3022,6 +3054,16 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
         }
                 
         /// <summary>
+        /// Gets the ExtendedChartParts of the EndnotesPart.
+        /// </summary>
+        public System.Collections.Generic.IEnumerable<ExtendedChartPart> ExtendedChartParts
+        {
+            get{
+                    return this.GetPartsOfType<ExtendedChartPart>();
+                }
+        }
+                
+        /// <summary>
         /// Gets the DiagramColorsParts of the EndnotesPart.
         /// </summary>
         public System.Collections.Generic.IEnumerable<DiagramColorsPart> DiagramColorsParts
@@ -3138,7 +3180,7 @@ public partial class FontTablePart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/font", new PartConstraintRule("FontPart", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/font", new PartConstraintRule("FontPart", null, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -3335,17 +3377,18 @@ public partial class FooterPart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk", new PartConstraintRule("AlternativeFormatImportPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", new PartConstraintRule("EmbeddedControlPersistencePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk", new PartConstraintRule("AlternativeFormatImportPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2014/relationships/chartEx", new PartConstraintRule("ExtendedChartPart", ExtendedChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", new PartConstraintRule("EmbeddedControlPersistencePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -3361,7 +3404,7 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
         if (_dataPartReferenceConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)15 ));
 
             _dataPartReferenceConstraint = tempData;
         }
@@ -3397,6 +3440,9 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
             
         case ChartPart.RelationshipTypeConstant:
                     return new ChartPart();        
+            
+        case ExtendedChartPart.RelationshipTypeConstant:
+                    return new ExtendedChartPart();        
             
         case DiagramColorsPart.RelationshipTypeConstant:
                     return new DiagramColorsPart();        
@@ -3707,6 +3753,16 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
         }
                 
         /// <summary>
+        /// Gets the ExtendedChartParts of the FooterPart.
+        /// </summary>
+        public System.Collections.Generic.IEnumerable<ExtendedChartPart> ExtendedChartParts
+        {
+            get{
+                    return this.GetPartsOfType<ExtendedChartPart>();
+                }
+        }
+                
+        /// <summary>
         /// Gets the DiagramColorsParts of the FooterPart.
         /// </summary>
         public System.Collections.Generic.IEnumerable<DiagramColorsPart> DiagramColorsParts
@@ -3823,17 +3879,18 @@ public partial class FootnotesPart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk", new PartConstraintRule("AlternativeFormatImportPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", new PartConstraintRule("EmbeddedControlPersistencePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk", new PartConstraintRule("AlternativeFormatImportPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2014/relationships/chartEx", new PartConstraintRule("ExtendedChartPart", ExtendedChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", new PartConstraintRule("EmbeddedControlPersistencePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -3849,7 +3906,7 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
         if (_dataPartReferenceConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)15 ));
 
             _dataPartReferenceConstraint = tempData;
         }
@@ -3885,6 +3942,9 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
             
         case ChartPart.RelationshipTypeConstant:
                     return new ChartPart();        
+            
+        case ExtendedChartPart.RelationshipTypeConstant:
+                    return new ExtendedChartPart();        
             
         case DiagramColorsPart.RelationshipTypeConstant:
                     return new DiagramColorsPart();        
@@ -4195,6 +4255,16 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
         }
                 
         /// <summary>
+        /// Gets the ExtendedChartParts of the FootnotesPart.
+        /// </summary>
+        public System.Collections.Generic.IEnumerable<ExtendedChartPart> ExtendedChartParts
+        {
+            get{
+                    return this.GetPartsOfType<ExtendedChartPart>();
+                }
+        }
+                
+        /// <summary>
         /// Gets the DiagramColorsParts of the FootnotesPart.
         /// </summary>
         public System.Collections.Generic.IEnumerable<DiagramColorsPart> DiagramColorsParts
@@ -4311,33 +4381,34 @@ public partial class GlossaryDocumentPart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments", new PartConstraintRule("WordprocessingCommentsPart", WordprocessingCommentsPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings", new PartConstraintRule("DocumentSettingsPart", DocumentSettingsPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/endnotes", new PartConstraintRule("EndnotesPart", EndnotesPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable", new PartConstraintRule("FontTablePart", FontTablePart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/footnotes", new PartConstraintRule("FootnotesPart", FootnotesPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering", new PartConstraintRule("NumberingDefinitionsPart", NumberingDefinitionsPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles", new PartConstraintRule("StyleDefinitionsPart", StyleDefinitionsPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2007/relationships/stylesWithEffects", new PartConstraintRule("StylesWithEffectsPart", StylesWithEffectsPart.ContentTypeConstant, false, false,(FileFormatVersions)2 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/webSettings", new PartConstraintRule("WebSettingsPart", WebSettingsPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer", new PartConstraintRule("FooterPart", FooterPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/header", new PartConstraintRule("HeaderPart", HeaderPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings", new PartConstraintRule("WordprocessingPrinterSettingsPart", WordprocessingPrinterSettingsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2006/relationships/keyMapCustomizations", new PartConstraintRule("CustomizationPart", CustomizationPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2006/relationships/vbaProject", new PartConstraintRule("VbaProjectPart", VbaProjectPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2011/relationships/commentsExtended", new PartConstraintRule("WordprocessingCommentsExPart", WordprocessingCommentsExPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2011/relationships/people", new PartConstraintRule("WordprocessingPeoplePart", WordprocessingPeoplePart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk", new PartConstraintRule("AlternativeFormatImportPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", new PartConstraintRule("EmbeddedControlPersistencePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments", new PartConstraintRule("WordprocessingCommentsPart", WordprocessingCommentsPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings", new PartConstraintRule("DocumentSettingsPart", DocumentSettingsPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/endnotes", new PartConstraintRule("EndnotesPart", EndnotesPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable", new PartConstraintRule("FontTablePart", FontTablePart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/footnotes", new PartConstraintRule("FootnotesPart", FootnotesPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering", new PartConstraintRule("NumberingDefinitionsPart", NumberingDefinitionsPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles", new PartConstraintRule("StyleDefinitionsPart", StyleDefinitionsPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2007/relationships/stylesWithEffects", new PartConstraintRule("StylesWithEffectsPart", StylesWithEffectsPart.ContentTypeConstant, false, false,(FileFormatVersions)14 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/webSettings", new PartConstraintRule("WebSettingsPart", WebSettingsPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer", new PartConstraintRule("FooterPart", FooterPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/header", new PartConstraintRule("HeaderPart", HeaderPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings", new PartConstraintRule("WordprocessingPrinterSettingsPart", WordprocessingPrinterSettingsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2006/relationships/keyMapCustomizations", new PartConstraintRule("CustomizationPart", CustomizationPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2006/relationships/vbaProject", new PartConstraintRule("VbaProjectPart", VbaProjectPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2011/relationships/commentsExtended", new PartConstraintRule("WordprocessingCommentsExPart", WordprocessingCommentsExPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2011/relationships/people", new PartConstraintRule("WordprocessingPeoplePart", WordprocessingPeoplePart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk", new PartConstraintRule("AlternativeFormatImportPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2014/relationships/chartEx", new PartConstraintRule("ExtendedChartPart", ExtendedChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", new PartConstraintRule("EmbeddedControlPersistencePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -4353,7 +4424,7 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
         if (_dataPartReferenceConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)15 ));
 
             _dataPartReferenceConstraint = tempData;
         }
@@ -4437,6 +4508,9 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
             
         case ChartPart.RelationshipTypeConstant:
                     return new ChartPart();        
+            
+        case ExtendedChartPart.RelationshipTypeConstant:
+                    return new ExtendedChartPart();        
             
         case DiagramColorsPart.RelationshipTypeConstant:
                     return new DiagramColorsPart();        
@@ -4776,7 +4850,7 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
             get {return GetSubPartOfType<StyleDefinitionsPart>(); }
         }
         /// <summary>
-        /// Gets the StylesWithEffectsPart of the GlossaryDocumentPart., only available in Office2010
+        /// Gets the StylesWithEffectsPart of the GlossaryDocumentPart., only available in Office2010, Office2013, Office2016
         /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2010)]
         public StylesWithEffectsPart StylesWithEffectsPart
@@ -4865,6 +4939,16 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
         {
             get{
                     return this.GetPartsOfType<ChartPart>();
+                }
+        }
+                
+        /// <summary>
+        /// Gets the ExtendedChartParts of the GlossaryDocumentPart.
+        /// </summary>
+        public System.Collections.Generic.IEnumerable<ExtendedChartPart> ExtendedChartParts
+        {
+            get{
+                    return this.GetPartsOfType<ExtendedChartPart>();
                 }
         }
                 
@@ -4985,17 +5069,18 @@ public partial class HeaderPart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk", new PartConstraintRule("AlternativeFormatImportPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", new PartConstraintRule("EmbeddedControlPersistencePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk", new PartConstraintRule("AlternativeFormatImportPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2014/relationships/chartEx", new PartConstraintRule("ExtendedChartPart", ExtendedChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", new PartConstraintRule("EmbeddedControlPersistencePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -5011,7 +5096,7 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
         if (_dataPartReferenceConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)15 ));
 
             _dataPartReferenceConstraint = tempData;
         }
@@ -5047,6 +5132,9 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
             
         case ChartPart.RelationshipTypeConstant:
                     return new ChartPart();        
+            
+        case ExtendedChartPart.RelationshipTypeConstant:
+                    return new ExtendedChartPart();        
             
         case DiagramColorsPart.RelationshipTypeConstant:
                     return new DiagramColorsPart();        
@@ -5357,6 +5445,16 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
         }
                 
         /// <summary>
+        /// Gets the ExtendedChartParts of the HeaderPart.
+        /// </summary>
+        public System.Collections.Generic.IEnumerable<ExtendedChartPart> ExtendedChartParts
+        {
+            get{
+                    return this.GetPartsOfType<ExtendedChartPart>();
+                }
+        }
+                
+        /// <summary>
         /// Gets the DiagramColorsParts of the HeaderPart.
         /// </summary>
         public System.Collections.Generic.IEnumerable<DiagramColorsPart> DiagramColorsParts
@@ -5473,7 +5571,7 @@ public partial class NumberingDefinitionsPart : OpenXmlPart , IFixedContentTypeP
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -5982,30 +6080,30 @@ public partial class WorkbookPart : OpenXmlPart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", new PartConstraintRule("CustomXmlPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/calcChain", new PartConstraintRule("CalculationChainPart", CalculationChainPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/sheetMetadata", new PartConstraintRule("CellMetadataPart", CellMetadataPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/connections", new PartConstraintRule("ConnectionsPart", ConnectionsPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/xmlMaps", new PartConstraintRule("CustomXmlMappingsPart", CustomXmlMappingsPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/sharedStrings", new PartConstraintRule("SharedStringTablePart", SharedStringTablePart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/revisionHeaders", new PartConstraintRule("WorkbookRevisionHeaderPart", WorkbookRevisionHeaderPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/usernames", new PartConstraintRule("WorkbookUserDataPart", WorkbookUserDataPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles", new PartConstraintRule("WorkbookStylesPart", WorkbookStylesPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme", new PartConstraintRule("ThemePart", ThemePart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail", new PartConstraintRule("ThumbnailPart", null, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/volatileDependencies", new PartConstraintRule("VolatileDependenciesPart", VolatileDependenciesPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartsheet", new PartConstraintRule("ChartsheetPart", ChartsheetPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/dialogsheet", new PartConstraintRule("DialogsheetPart", DialogsheetPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/externalLink", new PartConstraintRule("ExternalWorkbookPart", ExternalWorkbookPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheDefinition", new PartConstraintRule("PivotTableCacheDefinitionPart", PivotTableCacheDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet", new PartConstraintRule("WorksheetPart", WorksheetPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2006/relationships/attachedToolbars", new PartConstraintRule("ExcelAttachedToolbarsPart", ExcelAttachedToolbarsPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2006/relationships/vbaProject", new PartConstraintRule("VbaProjectPart", VbaProjectPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2006/relationships/xlMacrosheet", new PartConstraintRule("MacroSheetPart", MacroSheetPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2006/relationships/xlIntlMacrosheet", new PartConstraintRule("InternationalMacroSheetPart", InternationalMacroSheetPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2007/relationships/customDataProps", new PartConstraintRule("CustomDataPropertiesPart", CustomDataPropertiesPart.ContentTypeConstant, false, true,(FileFormatVersions)2 ));
-tempData.Add("http://schemas.microsoft.com/office/2007/relationships/slicerCache", new PartConstraintRule("SlicerCachePart", SlicerCachePart.ContentTypeConstant, false, true,(FileFormatVersions)2 ));
-tempData.Add("http://schemas.microsoft.com/office/2011/relationships/timelineCache", new PartConstraintRule("TimeLineCachePart", TimeLineCachePart.ContentTypeConstant, false, true,(FileFormatVersions)4 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", new PartConstraintRule("CustomXmlPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/calcChain", new PartConstraintRule("CalculationChainPart", CalculationChainPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/sheetMetadata", new PartConstraintRule("CellMetadataPart", CellMetadataPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/connections", new PartConstraintRule("ConnectionsPart", ConnectionsPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/xmlMaps", new PartConstraintRule("CustomXmlMappingsPart", CustomXmlMappingsPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/sharedStrings", new PartConstraintRule("SharedStringTablePart", SharedStringTablePart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/revisionHeaders", new PartConstraintRule("WorkbookRevisionHeaderPart", WorkbookRevisionHeaderPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/usernames", new PartConstraintRule("WorkbookUserDataPart", WorkbookUserDataPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles", new PartConstraintRule("WorkbookStylesPart", WorkbookStylesPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme", new PartConstraintRule("ThemePart", ThemePart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail", new PartConstraintRule("ThumbnailPart", null, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/volatileDependencies", new PartConstraintRule("VolatileDependenciesPart", VolatileDependenciesPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartsheet", new PartConstraintRule("ChartsheetPart", ChartsheetPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/dialogsheet", new PartConstraintRule("DialogsheetPart", DialogsheetPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/externalLink", new PartConstraintRule("ExternalWorkbookPart", ExternalWorkbookPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheDefinition", new PartConstraintRule("PivotTableCacheDefinitionPart", PivotTableCacheDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet", new PartConstraintRule("WorksheetPart", WorksheetPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2006/relationships/attachedToolbars", new PartConstraintRule("ExcelAttachedToolbarsPart", ExcelAttachedToolbarsPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2006/relationships/vbaProject", new PartConstraintRule("VbaProjectPart", VbaProjectPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2006/relationships/xlMacrosheet", new PartConstraintRule("MacroSheetPart", MacroSheetPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2006/relationships/xlIntlMacrosheet", new PartConstraintRule("InternationalMacroSheetPart", InternationalMacroSheetPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2007/relationships/customDataProps", new PartConstraintRule("CustomDataPropertiesPart", CustomDataPropertiesPart.ContentTypeConstant, false, true,(FileFormatVersions)14 ));
+tempData.Add("http://schemas.microsoft.com/office/2007/relationships/slicerCache", new PartConstraintRule("SlicerCachePart", SlicerCachePart.ContentTypeConstant, false, true,(FileFormatVersions)14 ));
+tempData.Add("http://schemas.microsoft.com/office/2011/relationships/timelineCache", new PartConstraintRule("TimeLineCachePart", TimeLineCachePart.ContentTypeConstant, false, true,(FileFormatVersions)12 ));
 
             _partConstraint = tempData;
         }
@@ -6446,7 +6544,7 @@ tempData.Add("http://schemas.microsoft.com/office/2011/relationships/timelineCac
         }
                 
         /// <summary>
-        /// Gets the CustomDataPropertiesParts of the WorkbookPart., only available in Office2010
+        /// Gets the CustomDataPropertiesParts of the WorkbookPart., only available in Office2010, Office2013, Office2016
         /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2010)]
         public System.Collections.Generic.IEnumerable<CustomDataPropertiesPart> CustomDataPropertiesParts
@@ -6457,7 +6555,7 @@ tempData.Add("http://schemas.microsoft.com/office/2011/relationships/timelineCac
         }
                 
         /// <summary>
-        /// Gets the SlicerCacheParts of the WorkbookPart., only available in Office2010
+        /// Gets the SlicerCacheParts of the WorkbookPart., only available in Office2010, Office2013, Office2016
         /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2010)]
         public System.Collections.Generic.IEnumerable<SlicerCachePart> SlicerCacheParts
@@ -6468,7 +6566,7 @@ tempData.Add("http://schemas.microsoft.com/office/2011/relationships/timelineCac
         }
                 
         /// <summary>
-        /// Gets the TimeLineCacheParts of the WorkbookPart., only available in Office2013
+        /// Gets the TimeLineCacheParts of the WorkbookPart., only available in Office2013, Office2016
         /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2013)]
         public System.Collections.Generic.IEnumerable<TimeLineCachePart> TimeLineCacheParts
@@ -6613,10 +6711,10 @@ public partial class ChartsheetPart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings", new PartConstraintRule("SpreadsheetPrinterSettingsPart", SpreadsheetPrinterSettingsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing", new PartConstraintRule("DrawingsPart", DrawingsPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", new PartConstraintRule("VmlDrawingPart", VmlDrawingPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings", new PartConstraintRule("SpreadsheetPrinterSettingsPart", SpreadsheetPrinterSettingsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing", new PartConstraintRule("DrawingsPart", DrawingsPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", new PartConstraintRule("VmlDrawingPart", VmlDrawingPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -7281,10 +7379,10 @@ public partial class DialogsheetPart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings", new PartConstraintRule("SpreadsheetPrinterSettingsPart", SpreadsheetPrinterSettingsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing", new PartConstraintRule("DrawingsPart", DrawingsPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", new PartConstraintRule("VmlDrawingPart", VmlDrawingPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings", new PartConstraintRule("SpreadsheetPrinterSettingsPart", SpreadsheetPrinterSettingsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing", new PartConstraintRule("DrawingsPart", DrawingsPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", new PartConstraintRule("VmlDrawingPart", VmlDrawingPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -7476,15 +7574,16 @@ public partial class DrawingsPart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", new PartConstraintRule("CustomXmlPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2011/relationships/webextension", new PartConstraintRule("WebExtensionPart", WebExtensionPart.ContentTypeConstant, false, true,(FileFormatVersions)4 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2014/relationships/chartEx", new PartConstraintRule("ExtendedChartPart", ExtendedChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", new PartConstraintRule("CustomXmlPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2011/relationships/webextension", new PartConstraintRule("WebExtensionPart", WebExtensionPart.ContentTypeConstant, false, true,(FileFormatVersions)12 ));
 
             _partConstraint = tempData;
         }
@@ -7532,6 +7631,9 @@ tempData.Add("http://schemas.microsoft.com/office/2011/relationships/webextensio
         {
         case ChartPart.RelationshipTypeConstant:
                     return new ChartPart();        
+            
+        case ExtendedChartPart.RelationshipTypeConstant:
+                    return new ExtendedChartPart();        
             
         case DiagramColorsPart.RelationshipTypeConstant:
                     return new DiagramColorsPart();        
@@ -7731,6 +7833,16 @@ tempData.Add("http://schemas.microsoft.com/office/2011/relationships/webextensio
         }
                 
         /// <summary>
+        /// Gets the ExtendedChartParts of the DrawingsPart.
+        /// </summary>
+        public System.Collections.Generic.IEnumerable<ExtendedChartPart> ExtendedChartParts
+        {
+            get{
+                    return this.GetPartsOfType<ExtendedChartPart>();
+                }
+        }
+                
+        /// <summary>
         /// Gets the DiagramColorsParts of the DrawingsPart.
         /// </summary>
         public System.Collections.Generic.IEnumerable<DiagramColorsPart> DiagramColorsParts
@@ -7801,7 +7913,7 @@ tempData.Add("http://schemas.microsoft.com/office/2011/relationships/webextensio
         }
                 
         /// <summary>
-        /// Gets the WebExtensionParts of the DrawingsPart., only available in Office2013
+        /// Gets the WebExtensionParts of the DrawingsPart., only available in Office2013, Office2016
         /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2013)]
         public System.Collections.Generic.IEnumerable<WebExtensionPart> WebExtensionParts
@@ -8054,7 +8166,7 @@ public partial class PivotTablePart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheDefinition", new PartConstraintRule("PivotTableCacheDefinitionPart", PivotTableCacheDefinitionPart.ContentTypeConstant, true, false,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheDefinition", new PartConstraintRule("PivotTableCacheDefinitionPart", PivotTableCacheDefinitionPart.ContentTypeConstant, true, false,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -8196,7 +8308,7 @@ public partial class PivotTableCacheDefinitionPart : OpenXmlPart , IFixedContent
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheRecords", new PartConstraintRule("PivotTableCacheRecordsPart", PivotTableCacheRecordsPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheRecords", new PartConstraintRule("PivotTableCacheRecordsPart", PivotTableCacheRecordsPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -8662,7 +8774,7 @@ public partial class WorkbookRevisionHeaderPart : OpenXmlPart , IFixedContentTyp
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/revisionLog", new PartConstraintRule("WorkbookRevisionLogPart", WorkbookRevisionLogPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/revisionLog", new PartConstraintRule("WorkbookRevisionLogPart", WorkbookRevisionLogPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -9239,7 +9351,7 @@ public partial class TableDefinitionPart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/queryTable", new PartConstraintRule("QueryTablePart", QueryTablePart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/queryTable", new PartConstraintRule("QueryTablePart", QueryTablePart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -9492,24 +9604,24 @@ public partial class WorksheetPart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings", new PartConstraintRule("SpreadsheetPrinterSettingsPart", SpreadsheetPrinterSettingsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing", new PartConstraintRule("DrawingsPart", DrawingsPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", new PartConstraintRule("VmlDrawingPart", VmlDrawingPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments", new PartConstraintRule("WorksheetCommentsPart", WorksheetCommentsPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotTable", new PartConstraintRule("PivotTablePart", PivotTablePart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableSingleCells", new PartConstraintRule("SingleCellTablePart", SingleCellTablePart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/table", new PartConstraintRule("TableDefinitionPart", TableDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", new PartConstraintRule("EmbeddedControlPersistencePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/ctrlProp", new PartConstraintRule("ControlPropertiesPart", ControlPropertiesPart.ContentTypeConstant, false, true,(FileFormatVersions)2 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customProperty", new PartConstraintRule("CustomPropertyPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2006/relationships/wsSortMap", new PartConstraintRule("WorksheetSortMapPart", WorksheetSortMapPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/queryTable", new PartConstraintRule("QueryTablePart", QueryTablePart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary", new PartConstraintRule("EmbeddedControlPersistenceBinaryDataPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2007/relationships/slicer", new PartConstraintRule("SlicersPart", SlicersPart.ContentTypeConstant, false, true,(FileFormatVersions)2 ));
-tempData.Add("http://schemas.microsoft.com/office/2011/relationships/timeline", new PartConstraintRule("TimeLinePart", TimeLinePart.ContentTypeConstant, false, true,(FileFormatVersions)4 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings", new PartConstraintRule("SpreadsheetPrinterSettingsPart", SpreadsheetPrinterSettingsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing", new PartConstraintRule("DrawingsPart", DrawingsPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", new PartConstraintRule("VmlDrawingPart", VmlDrawingPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments", new PartConstraintRule("WorksheetCommentsPart", WorksheetCommentsPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotTable", new PartConstraintRule("PivotTablePart", PivotTablePart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableSingleCells", new PartConstraintRule("SingleCellTablePart", SingleCellTablePart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/table", new PartConstraintRule("TableDefinitionPart", TableDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", new PartConstraintRule("EmbeddedControlPersistencePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/ctrlProp", new PartConstraintRule("ControlPropertiesPart", ControlPropertiesPart.ContentTypeConstant, false, true,(FileFormatVersions)14 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customProperty", new PartConstraintRule("CustomPropertyPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2006/relationships/wsSortMap", new PartConstraintRule("WorksheetSortMapPart", WorksheetSortMapPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/queryTable", new PartConstraintRule("QueryTablePart", QueryTablePart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary", new PartConstraintRule("EmbeddedControlPersistenceBinaryDataPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2007/relationships/slicer", new PartConstraintRule("SlicersPart", SlicersPart.ContentTypeConstant, false, true,(FileFormatVersions)14 ));
+tempData.Add("http://schemas.microsoft.com/office/2011/relationships/timeline", new PartConstraintRule("TimeLinePart", TimeLinePart.ContentTypeConstant, false, true,(FileFormatVersions)12 ));
 
             _partConstraint = tempData;
         }
@@ -9970,7 +10082,7 @@ tempData.Add("http://schemas.microsoft.com/office/2011/relationships/timeline", 
         }
                 
         /// <summary>
-        /// Gets the ControlPropertiesParts of the WorksheetPart., only available in Office2010
+        /// Gets the ControlPropertiesParts of the WorksheetPart., only available in Office2010, Office2013, Office2016
         /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2010)]
         public System.Collections.Generic.IEnumerable<ControlPropertiesPart> ControlPropertiesParts
@@ -10048,7 +10160,7 @@ tempData.Add("http://schemas.microsoft.com/office/2011/relationships/timeline", 
         }
                 
         /// <summary>
-        /// Gets the SlicersParts of the WorksheetPart., only available in Office2010
+        /// Gets the SlicersParts of the WorksheetPart., only available in Office2010, Office2013, Office2016
         /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2010)]
         public System.Collections.Generic.IEnumerable<SlicersPart> SlicersParts
@@ -10059,7 +10171,7 @@ tempData.Add("http://schemas.microsoft.com/office/2011/relationships/timeline", 
         }
                 
         /// <summary>
-        /// Gets the TimeLineParts of the WorksheetPart., only available in Office2013
+        /// Gets the TimeLineParts of the WorksheetPart., only available in Office2013, Office2016
         /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2013)]
         public System.Collections.Generic.IEnumerable<TimeLinePart> TimeLineParts
@@ -10324,20 +10436,20 @@ public partial class PresentationPart : OpenXmlPart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", new PartConstraintRule("CustomXmlPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/font", new PartConstraintRule("FontPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/presProps", new PartConstraintRule("PresentationPropertiesPart", PresentationPropertiesPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableStyles", new PartConstraintRule("TableStylesPart", TableStylesPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme", new PartConstraintRule("ThemePart", ThemePart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/viewProps", new PartConstraintRule("ViewPropertiesPart", ViewPropertiesPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster", new PartConstraintRule("NotesMasterPart", NotesMasterPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide", new PartConstraintRule("SlidePart", SlidePart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster", new PartConstraintRule("SlideMasterPart", SlideMasterPart.ContentTypeConstant, true, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags", new PartConstraintRule("UserDefinedTagsPart", UserDefinedTagsPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/commentAuthors", new PartConstraintRule("CommentAuthorsPart", CommentAuthorsPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/handoutMaster", new PartConstraintRule("HandoutMasterPart", HandoutMasterPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2006/relationships/legacyDocTextInfo", new PartConstraintRule("LegacyDiagramTextInfoPart", LegacyDiagramTextInfoPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2006/relationships/vbaProject", new PartConstraintRule("VbaProjectPart", VbaProjectPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", new PartConstraintRule("CustomXmlPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/font", new PartConstraintRule("FontPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/presProps", new PartConstraintRule("PresentationPropertiesPart", PresentationPropertiesPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableStyles", new PartConstraintRule("TableStylesPart", TableStylesPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme", new PartConstraintRule("ThemePart", ThemePart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/viewProps", new PartConstraintRule("ViewPropertiesPart", ViewPropertiesPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster", new PartConstraintRule("NotesMasterPart", NotesMasterPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide", new PartConstraintRule("SlidePart", SlidePart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster", new PartConstraintRule("SlideMasterPart", SlideMasterPart.ContentTypeConstant, true, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags", new PartConstraintRule("UserDefinedTagsPart", UserDefinedTagsPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/commentAuthors", new PartConstraintRule("CommentAuthorsPart", CommentAuthorsPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/handoutMaster", new PartConstraintRule("HandoutMasterPart", HandoutMasterPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2006/relationships/legacyDocTextInfo", new PartConstraintRule("LegacyDiagramTextInfoPart", LegacyDiagramTextInfoPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2006/relationships/vbaProject", new PartConstraintRule("VbaProjectPart", VbaProjectPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -10929,21 +11041,22 @@ public partial class HandoutMasterPart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", new PartConstraintRule("CustomXmlPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", new PartConstraintRule("VmlDrawingPart", VmlDrawingPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary", new PartConstraintRule("EmbeddedControlPersistenceBinaryDataPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme", new PartConstraintRule("ThemePart", ThemePart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags", new PartConstraintRule("UserDefinedTagsPart", UserDefinedTagsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide", new PartConstraintRule("SlidePart", SlidePart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", new PartConstraintRule("CustomXmlPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2014/relationships/chartEx", new PartConstraintRule("ExtendedChartPart", ExtendedChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", new PartConstraintRule("VmlDrawingPart", VmlDrawingPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary", new PartConstraintRule("EmbeddedControlPersistenceBinaryDataPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme", new PartConstraintRule("ThemePart", ThemePart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags", new PartConstraintRule("UserDefinedTagsPart", UserDefinedTagsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide", new PartConstraintRule("SlidePart", SlidePart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -10959,8 +11072,8 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
         if (_dataPartReferenceConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/audio", new PartConstraintRule("AudioReferenceRelationship", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/audio", new PartConstraintRule("AudioReferenceRelationship", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)15 ));
 
             _dataPartReferenceConstraint = tempData;
         }
@@ -10996,6 +11109,9 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
             
         case ChartPart.RelationshipTypeConstant:
                     return new ChartPart();        
+            
+        case ExtendedChartPart.RelationshipTypeConstant:
+                    return new ExtendedChartPart();        
             
         case DiagramColorsPart.RelationshipTypeConstant:
                     return new DiagramColorsPart();        
@@ -11342,6 +11458,16 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
         }
                 
         /// <summary>
+        /// Gets the ExtendedChartParts of the HandoutMasterPart.
+        /// </summary>
+        public System.Collections.Generic.IEnumerable<ExtendedChartPart> ExtendedChartParts
+        {
+            get{
+                    return this.GetPartsOfType<ExtendedChartPart>();
+                }
+        }
+                
+        /// <summary>
         /// Gets the DiagramColorsParts of the HandoutMasterPart.
         /// </summary>
         public System.Collections.Generic.IEnumerable<DiagramColorsPart> DiagramColorsParts
@@ -11492,21 +11618,22 @@ public partial class NotesMasterPart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", new PartConstraintRule("CustomXmlPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", new PartConstraintRule("VmlDrawingPart", VmlDrawingPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary", new PartConstraintRule("EmbeddedControlPersistenceBinaryDataPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme", new PartConstraintRule("ThemePart", ThemePart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags", new PartConstraintRule("UserDefinedTagsPart", UserDefinedTagsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide", new PartConstraintRule("SlidePart", SlidePart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", new PartConstraintRule("CustomXmlPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2014/relationships/chartEx", new PartConstraintRule("ExtendedChartPart", ExtendedChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", new PartConstraintRule("VmlDrawingPart", VmlDrawingPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary", new PartConstraintRule("EmbeddedControlPersistenceBinaryDataPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme", new PartConstraintRule("ThemePart", ThemePart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags", new PartConstraintRule("UserDefinedTagsPart", UserDefinedTagsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide", new PartConstraintRule("SlidePart", SlidePart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -11522,8 +11649,8 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
         if (_dataPartReferenceConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/audio", new PartConstraintRule("AudioReferenceRelationship", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/audio", new PartConstraintRule("AudioReferenceRelationship", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)15 ));
 
             _dataPartReferenceConstraint = tempData;
         }
@@ -11559,6 +11686,9 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
             
         case ChartPart.RelationshipTypeConstant:
                     return new ChartPart();        
+            
+        case ExtendedChartPart.RelationshipTypeConstant:
+                    return new ExtendedChartPart();        
             
         case DiagramColorsPart.RelationshipTypeConstant:
                     return new DiagramColorsPart();        
@@ -11905,6 +12035,16 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
         }
                 
         /// <summary>
+        /// Gets the ExtendedChartParts of the NotesMasterPart.
+        /// </summary>
+        public System.Collections.Generic.IEnumerable<ExtendedChartPart> ExtendedChartParts
+        {
+            get{
+                    return this.GetPartsOfType<ExtendedChartPart>();
+                }
+        }
+                
+        /// <summary>
         /// Gets the DiagramColorsParts of the NotesMasterPart.
         /// </summary>
         public System.Collections.Generic.IEnumerable<DiagramColorsPart> DiagramColorsParts
@@ -12055,22 +12195,23 @@ public partial class NotesSlidePart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", new PartConstraintRule("CustomXmlPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", new PartConstraintRule("VmlDrawingPart", VmlDrawingPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary", new PartConstraintRule("EmbeddedControlPersistenceBinaryDataPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster", new PartConstraintRule("NotesMasterPart", NotesMasterPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride", new PartConstraintRule("ThemeOverridePart", ThemeOverridePart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide", new PartConstraintRule("SlidePart", SlidePart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags", new PartConstraintRule("UserDefinedTagsPart", UserDefinedTagsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", new PartConstraintRule("CustomXmlPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2014/relationships/chartEx", new PartConstraintRule("ExtendedChartPart", ExtendedChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", new PartConstraintRule("VmlDrawingPart", VmlDrawingPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary", new PartConstraintRule("EmbeddedControlPersistenceBinaryDataPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster", new PartConstraintRule("NotesMasterPart", NotesMasterPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride", new PartConstraintRule("ThemeOverridePart", ThemeOverridePart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide", new PartConstraintRule("SlidePart", SlidePart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags", new PartConstraintRule("UserDefinedTagsPart", UserDefinedTagsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -12086,8 +12227,8 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
         if (_dataPartReferenceConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/audio", new PartConstraintRule("AudioReferenceRelationship", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/audio", new PartConstraintRule("AudioReferenceRelationship", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)15 ));
 
             _dataPartReferenceConstraint = tempData;
         }
@@ -12123,6 +12264,9 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
             
         case ChartPart.RelationshipTypeConstant:
                     return new ChartPart();        
+            
+        case ExtendedChartPart.RelationshipTypeConstant:
+                    return new ExtendedChartPart();        
             
         case DiagramColorsPart.RelationshipTypeConstant:
                     return new DiagramColorsPart();        
@@ -12472,6 +12616,16 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
         }
                 
         /// <summary>
+        /// Gets the ExtendedChartParts of the NotesSlidePart.
+        /// </summary>
+        public System.Collections.Generic.IEnumerable<ExtendedChartPart> ExtendedChartParts
+        {
+            get{
+                    return this.GetPartsOfType<ExtendedChartPart>();
+                }
+        }
+                
+        /// <summary>
         /// Gets the DiagramColorsParts of the NotesSlidePart.
         /// </summary>
         public System.Collections.Generic.IEnumerable<DiagramColorsPart> DiagramColorsParts
@@ -12737,27 +12891,28 @@ public partial class SlidePart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", new PartConstraintRule("CustomXmlPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", new PartConstraintRule("VmlDrawingPart", VmlDrawingPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary", new PartConstraintRule("EmbeddedControlPersistenceBinaryDataPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments", new PartConstraintRule("SlideCommentsPart", SlideCommentsPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesSlide", new PartConstraintRule("NotesSlidePart", NotesSlidePart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride", new PartConstraintRule("ThemeOverridePart", ThemeOverridePart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout", new PartConstraintRule("SlideLayoutPart", SlideLayoutPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideUpdateInfo", new PartConstraintRule("SlideSyncDataPart", SlideSyncDataPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags", new PartConstraintRule("UserDefinedTagsPart", UserDefinedTagsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide", new PartConstraintRule("SlidePart", SlidePart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", new PartConstraintRule("EmbeddedControlPersistencePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2011/relationships/webextension", new PartConstraintRule("WebExtensionPart", WebExtensionPart.ContentTypeConstant, false, true,(FileFormatVersions)4 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", new PartConstraintRule("CustomXmlPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2014/relationships/chartEx", new PartConstraintRule("ExtendedChartPart", ExtendedChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", new PartConstraintRule("VmlDrawingPart", VmlDrawingPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary", new PartConstraintRule("EmbeddedControlPersistenceBinaryDataPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments", new PartConstraintRule("SlideCommentsPart", SlideCommentsPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesSlide", new PartConstraintRule("NotesSlidePart", NotesSlidePart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride", new PartConstraintRule("ThemeOverridePart", ThemeOverridePart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout", new PartConstraintRule("SlideLayoutPart", SlideLayoutPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideUpdateInfo", new PartConstraintRule("SlideSyncDataPart", SlideSyncDataPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags", new PartConstraintRule("UserDefinedTagsPart", UserDefinedTagsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide", new PartConstraintRule("SlidePart", SlidePart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", new PartConstraintRule("EmbeddedControlPersistencePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2011/relationships/webextension", new PartConstraintRule("WebExtensionPart", WebExtensionPart.ContentTypeConstant, false, true,(FileFormatVersions)12 ));
 
             _partConstraint = tempData;
         }
@@ -12773,9 +12928,9 @@ tempData.Add("http://schemas.microsoft.com/office/2011/relationships/webextensio
         if (_dataPartReferenceConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/audio", new PartConstraintRule("AudioReferenceRelationship", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2007/relationships/media", new PartConstraintRule("MediaReferenceRelationship", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/audio", new PartConstraintRule("AudioReferenceRelationship", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2007/relationships/media", new PartConstraintRule("MediaReferenceRelationship", null, false, true,(FileFormatVersions)15 ));
 
             _dataPartReferenceConstraint = tempData;
         }
@@ -12811,6 +12966,9 @@ tempData.Add("http://schemas.microsoft.com/office/2007/relationships/media", new
             
         case ChartPart.RelationshipTypeConstant:
                     return new ChartPart();        
+            
+        case ExtendedChartPart.RelationshipTypeConstant:
+                    return new ExtendedChartPart();        
             
         case DiagramColorsPart.RelationshipTypeConstant:
                     return new DiagramColorsPart();        
@@ -13251,6 +13409,16 @@ tempData.Add("http://schemas.microsoft.com/office/2007/relationships/media", new
         }
                 
         /// <summary>
+        /// Gets the ExtendedChartParts of the SlidePart.
+        /// </summary>
+        public System.Collections.Generic.IEnumerable<ExtendedChartPart> ExtendedChartParts
+        {
+            get{
+                    return this.GetPartsOfType<ExtendedChartPart>();
+                }
+        }
+                
+        /// <summary>
         /// Gets the DiagramColorsParts of the SlidePart.
         /// </summary>
         public System.Collections.Generic.IEnumerable<DiagramColorsPart> DiagramColorsParts
@@ -13416,7 +13584,7 @@ tempData.Add("http://schemas.microsoft.com/office/2007/relationships/media", new
         }
                 
         /// <summary>
-        /// Gets the WebExtensionParts of the SlidePart., only available in Office2013
+        /// Gets the WebExtensionParts of the SlidePart., only available in Office2013, Office2016
         /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2013)]
         public System.Collections.Generic.IEnumerable<WebExtensionPart> WebExtensionParts
@@ -13453,23 +13621,24 @@ public partial class SlideLayoutPart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", new PartConstraintRule("CustomXmlPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", new PartConstraintRule("VmlDrawingPart", VmlDrawingPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary", new PartConstraintRule("EmbeddedControlPersistenceBinaryDataPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide", new PartConstraintRule("SlidePart", SlidePart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster", new PartConstraintRule("SlideMasterPart", SlideMasterPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride", new PartConstraintRule("ThemeOverridePart", ThemeOverridePart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags", new PartConstraintRule("UserDefinedTagsPart", UserDefinedTagsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", new PartConstraintRule("EmbeddedControlPersistencePart", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", new PartConstraintRule("CustomXmlPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2014/relationships/chartEx", new PartConstraintRule("ExtendedChartPart", ExtendedChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", new PartConstraintRule("VmlDrawingPart", VmlDrawingPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary", new PartConstraintRule("EmbeddedControlPersistenceBinaryDataPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide", new PartConstraintRule("SlidePart", SlidePart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster", new PartConstraintRule("SlideMasterPart", SlideMasterPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride", new PartConstraintRule("ThemeOverridePart", ThemeOverridePart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags", new PartConstraintRule("UserDefinedTagsPart", UserDefinedTagsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", new PartConstraintRule("EmbeddedControlPersistencePart", null, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -13485,9 +13654,9 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
         if (_dataPartReferenceConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/audio", new PartConstraintRule("AudioReferenceRelationship", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2007/relationships/media", new PartConstraintRule("MediaReferenceRelationship", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/audio", new PartConstraintRule("AudioReferenceRelationship", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2007/relationships/media", new PartConstraintRule("MediaReferenceRelationship", null, false, true,(FileFormatVersions)15 ));
 
             _dataPartReferenceConstraint = tempData;
         }
@@ -13523,6 +13692,9 @@ tempData.Add("http://schemas.microsoft.com/office/2007/relationships/media", new
             
         case ChartPart.RelationshipTypeConstant:
                     return new ChartPart();        
+            
+        case ExtendedChartPart.RelationshipTypeConstant:
+                    return new ExtendedChartPart();        
             
         case DiagramColorsPart.RelationshipTypeConstant:
                     return new DiagramColorsPart();        
@@ -13951,6 +14123,16 @@ tempData.Add("http://schemas.microsoft.com/office/2007/relationships/media", new
         }
                 
         /// <summary>
+        /// Gets the ExtendedChartParts of the SlideLayoutPart.
+        /// </summary>
+        public System.Collections.Generic.IEnumerable<ExtendedChartPart> ExtendedChartParts
+        {
+            get{
+                    return this.GetPartsOfType<ExtendedChartPart>();
+                }
+        }
+                
+        /// <summary>
         /// Gets the DiagramColorsParts of the SlideLayoutPart.
         /// </summary>
         public System.Collections.Generic.IEnumerable<DiagramColorsPart> DiagramColorsParts
@@ -14121,23 +14303,24 @@ public partial class SlideMasterPart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", new PartConstraintRule("CustomXmlPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", new PartConstraintRule("VmlDrawingPart", VmlDrawingPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary", new PartConstraintRule("EmbeddedControlPersistenceBinaryDataPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme", new PartConstraintRule("ThemePart", ThemePart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide", new PartConstraintRule("SlidePart", SlidePart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout", new PartConstraintRule("SlideLayoutPart", SlideLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", new PartConstraintRule("EmbeddedControlPersistencePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags", new PartConstraintRule("UserDefinedTagsPart", UserDefinedTagsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", new PartConstraintRule("CustomXmlPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2014/relationships/chartEx", new PartConstraintRule("ExtendedChartPart", ExtendedChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", new PartConstraintRule("VmlDrawingPart", VmlDrawingPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary", new PartConstraintRule("EmbeddedControlPersistenceBinaryDataPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme", new PartConstraintRule("ThemePart", ThemePart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide", new PartConstraintRule("SlidePart", SlidePart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout", new PartConstraintRule("SlideLayoutPart", SlideLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", new PartConstraintRule("EmbeddedControlPersistencePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags", new PartConstraintRule("UserDefinedTagsPart", UserDefinedTagsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -14153,9 +14336,9 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
         if (_dataPartReferenceConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/audio", new PartConstraintRule("AudioReferenceRelationship", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2007/relationships/media", new PartConstraintRule("MediaReferenceRelationship", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/audio", new PartConstraintRule("AudioReferenceRelationship", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2007/relationships/media", new PartConstraintRule("MediaReferenceRelationship", null, false, true,(FileFormatVersions)15 ));
 
             _dataPartReferenceConstraint = tempData;
         }
@@ -14191,6 +14374,9 @@ tempData.Add("http://schemas.microsoft.com/office/2007/relationships/media", new
             
         case ChartPart.RelationshipTypeConstant:
                     return new ChartPart();        
+            
+        case ExtendedChartPart.RelationshipTypeConstant:
+                    return new ExtendedChartPart();        
             
         case DiagramColorsPart.RelationshipTypeConstant:
                     return new DiagramColorsPart();        
@@ -14619,6 +14805,16 @@ tempData.Add("http://schemas.microsoft.com/office/2007/relationships/media", new
         }
                 
         /// <summary>
+        /// Gets the ExtendedChartParts of the SlideMasterPart.
+        /// </summary>
+        public System.Collections.Generic.IEnumerable<ExtendedChartPart> ExtendedChartParts
+        {
+            get{
+                    return this.GetPartsOfType<ExtendedChartPart>();
+                }
+        }
+                
+        /// <summary>
         /// Gets the DiagramColorsParts of the SlideMasterPart.
         /// </summary>
         public System.Collections.Generic.IEnumerable<DiagramColorsPart> DiagramColorsParts
@@ -15008,7 +15204,7 @@ public partial class ViewPropertiesPart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide", new PartConstraintRule("SlidePart", SlidePart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide", new PartConstraintRule("SlidePart", SlidePart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -15393,12 +15589,12 @@ public partial class ChartPart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartUserShapes", new PartConstraintRule("ChartDrawingPart", ChartDrawingPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride", new PartConstraintRule("ThemeOverridePart", ThemeOverridePart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2011/relationships/chartStyle", new PartConstraintRule("ChartStylePart", ChartStylePart.ContentTypeConstant, false, true,(FileFormatVersions)4 ));
-tempData.Add("http://schemas.microsoft.com/office/2011/relationships/chartColorStyle", new PartConstraintRule("ChartColorStylePart", ChartColorStylePart.ContentTypeConstant, false, true,(FileFormatVersions)4 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartUserShapes", new PartConstraintRule("ChartDrawingPart", ChartDrawingPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride", new PartConstraintRule("ThemeOverridePart", ThemeOverridePart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2011/relationships/chartStyle", new PartConstraintRule("ChartStylePart", ChartStylePart.ContentTypeConstant, false, true,(FileFormatVersions)12 ));
+tempData.Add("http://schemas.microsoft.com/office/2011/relationships/chartColorStyle", new PartConstraintRule("ChartColorStylePart", ChartColorStylePart.ContentTypeConstant, false, true,(FileFormatVersions)12 ));
 
             _partConstraint = tempData;
         }
@@ -15616,7 +15812,7 @@ tempData.Add("http://schemas.microsoft.com/office/2011/relationships/chartColorS
             get {return GetSubPartOfType<ThemeOverridePart>(); }
         }
         /// <summary>
-        /// Gets the ChartStyleParts of the ChartPart., only available in Office2013
+        /// Gets the ChartStyleParts of the ChartPart., only available in Office2013, Office2016
         /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2013)]
         public System.Collections.Generic.IEnumerable<ChartStylePart> ChartStyleParts
@@ -15627,7 +15823,278 @@ tempData.Add("http://schemas.microsoft.com/office/2011/relationships/chartColorS
         }
                 
         /// <summary>
-        /// Gets the ChartColorStyleParts of the ChartPart., only available in Office2013
+        /// Gets the ChartColorStyleParts of the ChartPart., only available in Office2013, Office2016
+        /// </summary>
+[OfficeAvailability(FileFormatVersions.Office2013)]
+        public System.Collections.Generic.IEnumerable<ChartColorStylePart> ChartColorStyleParts
+        {
+            get{
+                    return this.GetPartsOfType<ChartColorStylePart>();
+                }
+        }
+                
+
+
+    /// <summary>
+    /// Is the ContentType for this part fixed? 
+    /// </summary>
+    internal sealed override bool IsContentTypeFixed
+    {
+        get { return true; }
+    }
+}
+/// <summary>
+/// Defines the ExtendedChartPart.
+/// </summary>
+public partial class ExtendedChartPart : OpenXmlPart , IFixedContentTypePart
+{
+    private static System.Collections.Generic.Dictionary<string, PartConstraintRule> _partConstraint;
+    private static System.Collections.Generic.Dictionary<string, PartConstraintRule> _dataPartReferenceConstraint;
+    
+    /// <summary>
+    /// Get Part constraint data
+    /// </summary>
+    /// <returns>Part constraint data</returns>
+    internal sealed override System.Collections.Generic.IDictionary<string, PartConstraintRule> GetPartConstraint()
+    {
+        if (_partConstraint == null)
+        {
+            System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartUserShapes", new PartConstraintRule("ChartDrawingPart", ChartDrawingPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride", new PartConstraintRule("ThemeOverridePart", ThemeOverridePart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2011/relationships/chartStyle", new PartConstraintRule("ChartStylePart", ChartStylePart.ContentTypeConstant, false, true,(FileFormatVersions)12 ));
+tempData.Add("http://schemas.microsoft.com/office/2011/relationships/chartColorStyle", new PartConstraintRule("ChartColorStylePart", ChartColorStylePart.ContentTypeConstant, false, true,(FileFormatVersions)12 ));
+
+            _partConstraint = tempData;
+        }
+        return _partConstraint;
+    }
+    
+    /// <summary>
+    /// Get the constraint rule of DataPartReferenceRelationship.
+    /// </summary>
+    /// <returns>Part constraint data</returns>
+    internal sealed override System.Collections.Generic.IDictionary<string, PartConstraintRule> GetDataPartReferenceConstraint()
+    {
+        if (_dataPartReferenceConstraint == null)
+        {
+            System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
+            
+            _dataPartReferenceConstraint = tempData;
+        }
+        return _dataPartReferenceConstraint;
+    }
+    
+    /// <summary>
+    /// Construtor of ExtendedChartPart
+    /// </summary>
+    internal protected ExtendedChartPart()
+            : base()
+    {
+    }
+    
+    
+    /// <summary>
+    /// Create an instance of OpenXmlPart according to the given relationship type
+    /// </summary>
+    /// <param name="relationshipType">Relationship type</param>
+    /// <returns>An instance of OpenXmlPart</returns>
+    internal sealed override OpenXmlPart CreatePartCore(string relationshipType)
+    {
+        this.ThrowIfObjectDisposed();
+
+        if ( relationshipType == null )
+        {
+            throw new ArgumentNullException("relationshipType");
+        }
+        switch (relationshipType)
+        {
+        case ChartDrawingPart.RelationshipTypeConstant:
+                    return new ChartDrawingPart();        
+            
+        case EmbeddedPackagePart.RelationshipTypeConstant:
+                    return new EmbeddedPackagePart();
+            
+        case ImagePart.RelationshipTypeConstant:
+                    return new ImagePart();
+            
+        case ThemeOverridePart.RelationshipTypeConstant:
+                    return new ThemeOverridePart();        
+            
+        case ChartStylePart.RelationshipTypeConstant:
+                    return new ChartStylePart();        
+            
+        case ChartColorStylePart.RelationshipTypeConstant:
+                    return new ChartColorStylePart();        
+            
+
+        }
+        throw new ArgumentOutOfRangeException("relationshipType");
+    }
+    
+
+    	/// <summary>
+    /// Adds a EmbeddedPackagePart to the ExtendedChartPart.
+    /// </summary>
+    /// <param name="contentType">The content type of the EmbeddedPackagePart.</param>
+    /// <returns>The newly added part.</returns>
+    public EmbeddedPackagePart AddEmbeddedPackagePart(string contentType)
+    {
+        EmbeddedPackagePart childPart = new EmbeddedPackagePart();
+        this.InitPart(childPart, contentType);
+        return childPart;
+    }
+    /// <summary>
+    /// Adds a ImagePart to the ExtendedChartPart.
+    /// </summary>
+    /// <param name="contentType">the content type of the ImagePart.</param>
+    /// <returns>The newly added part.</returns>
+    public ImagePart AddImagePart(string contentType)
+    {
+        ImagePart childPart = new ImagePart();
+        this.InitPart(childPart, contentType);
+        return childPart;
+    }
+    /// <summary>
+    /// Adds a ImagePart to the ExtendedChartPart.
+    /// </summary>
+    /// <param name="partType">The part type of the ImagePart.</param>
+    /// <returns>The newly added part.</returns>
+     public ImagePart AddImagePart(ImagePartType partType)
+    {
+        string contentType = ImagePartTypeInfo.GetContentType(partType);
+        string partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
+        OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+    
+        return AddImagePart(contentType);
+    }
+    
+    /// <summary>
+    /// Adds a ImagePart to the ExtendedChartPart.
+    /// </summary>
+    /// <param name="contentType">the content type of the ImagePart.</param>
+    /// <param name="id">The relationship id.</param>
+    /// <returns>The newly added part.</returns>
+    public ImagePart AddImagePart(string contentType, string id)
+    {
+        ImagePart childPart = new ImagePart();
+        this.InitPart(childPart, contentType, id);
+        return childPart;
+    }
+    
+    /// <summary>
+    /// Adds a ImagePart to the ExtendedChartPart.
+    /// </summary>
+    /// <param name="partType">The part type of the ImagePart.</param>
+    /// <param name="id">The relationship id.</param>
+    /// <returns>The newly added part.</returns>
+     public ImagePart AddImagePart(ImagePartType partType, string id)
+    {
+        string contentType = ImagePartTypeInfo.GetContentType(partType);
+        string partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
+        OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+    
+        return AddImagePart(contentType, id);
+    }
+ 
+    
+    
+   
+    /// <summary>
+    /// The fixed value of the RelationshipType
+    /// </summary>
+    internal const System.String RelationshipTypeConstant =@"http://schemas.microsoft.com/office/2014/relationships/chartEx";
+    /// <summary>
+    /// Gets the RelationshipType.
+    /// </summary>
+    public sealed override string RelationshipType
+    {
+       get { return RelationshipTypeConstant; }
+    } 
+    
+    /// <summary>
+    /// The fixed value of the ContentType
+    /// </summary>
+    internal const System.String ContentTypeConstant =@"application/vnd.ms-office.chartex+xml";
+    /// <summary>
+    /// Gets the ContentType.
+    /// </summary>
+    public sealed override string ContentType
+    {
+       get { return ContentTypeConstant; }
+    } 
+    
+    /// <summary>
+    /// The fixed value of the TargetPath
+    /// </summary>
+    internal const System.String TargetPathConstant =@"extendedCharts";
+    /// <summary>
+    /// Gets the TargetPath.
+    /// </summary>
+    internal sealed override string TargetPath
+    {
+       get { return TargetPathConstant; }
+    } 
+    
+    /// <summary>
+    /// The fixed value of the TargetName
+    /// </summary>
+    internal const System.String TargetNameConstant =@"chart";
+    /// <summary>
+    /// Gets the TargetName.
+    /// </summary>
+    internal sealed override string TargetName
+    {
+       get { return TargetNameConstant; }
+    } 
+    
+
+        /// <summary>
+        /// Gets the ChartDrawingPart of the ExtendedChartPart.
+        /// </summary>
+        public ChartDrawingPart ChartDrawingPart
+        {
+            get {return GetSubPartOfType<ChartDrawingPart>(); }
+        }
+        /// <summary>
+        /// Gets the EmbeddedPackagePart of the ExtendedChartPart.
+        /// </summary>
+        public EmbeddedPackagePart EmbeddedPackagePart
+        {
+            get {return GetSubPartOfType<EmbeddedPackagePart>(); }
+        }
+        /// <summary>
+        /// Gets the ImageParts of the ExtendedChartPart.
+        /// </summary>
+        public System.Collections.Generic.IEnumerable<ImagePart> ImageParts
+        {
+            get{
+                    return this.GetPartsOfType<ImagePart>();
+                }
+        }
+                
+        /// <summary>
+        /// Gets the ThemeOverridePart of the ExtendedChartPart.
+        /// </summary>
+        public ThemeOverridePart ThemeOverridePart
+        {
+            get {return GetSubPartOfType<ThemeOverridePart>(); }
+        }
+        /// <summary>
+        /// Gets the ChartStyleParts of the ExtendedChartPart., only available in Office2013, Office2016
+        /// </summary>
+[OfficeAvailability(FileFormatVersions.Office2013)]
+        public System.Collections.Generic.IEnumerable<ChartStylePart> ChartStyleParts
+        {
+            get{
+                    return this.GetPartsOfType<ChartStylePart>();
+                }
+        }
+                
+        /// <summary>
+        /// Gets the ChartColorStyleParts of the ExtendedChartPart., only available in Office2013, Office2016
         /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2013)]
         public System.Collections.Generic.IEnumerable<ChartColorStylePart> ChartColorStyleParts
@@ -15664,8 +16131,9 @@ public partial class ChartDrawingPart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2014/relationships/chartEx", new PartConstraintRule("ExtendedChartPart", ExtendedChartPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -15713,6 +16181,9 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
         {
         case ChartPart.RelationshipTypeConstant:
                     return new ChartPart();        
+            
+        case ExtendedChartPart.RelationshipTypeConstant:
+                    return new ExtendedChartPart();        
             
         case ImagePart.RelationshipTypeConstant:
                     return new ImagePart();
@@ -15834,6 +16305,13 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
         public ChartPart ChartPart
         {
             get {return GetSubPartOfType<ChartPart>(); }
+        }
+        /// <summary>
+        /// Gets the ExtendedChartPart of the ChartDrawingPart.
+        /// </summary>
+        public ExtendedChartPart ExtendedChartPart
+        {
+            get {return GetSubPartOfType<ExtendedChartPart>(); }
         }
         /// <summary>
         /// Gets the ImageParts of the ChartDrawingPart.
@@ -15980,9 +16458,9 @@ public partial class DiagramDataPart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide", new PartConstraintRule("SlidePart", SlidePart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet", new PartConstraintRule("WorksheetPart", WorksheetPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide", new PartConstraintRule("SlidePart", SlidePart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet", new PartConstraintRule("WorksheetPart", WorksheetPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -16205,7 +16683,7 @@ public partial class DiagramLayoutDefinitionPart : OpenXmlPart , IFixedContentTy
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -16510,7 +16988,7 @@ public partial class ThemePart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -16707,7 +17185,7 @@ public partial class ThemeOverridePart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -17012,7 +17490,7 @@ public partial class CustomXmlPart : OpenXmlPart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXmlProps", new PartConstraintRule("CustomXmlPropertiesPart", CustomXmlPropertiesPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXmlProps", new PartConstraintRule("CustomXmlPropertiesPart", CustomXmlPropertiesPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -17250,7 +17728,7 @@ public partial class EmbeddedControlPersistencePart : OpenXmlPart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary", new PartConstraintRule("EmbeddedControlPersistenceBinaryDataPart", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary", new PartConstraintRule("EmbeddedControlPersistenceBinaryDataPart", null, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -18119,8 +18597,8 @@ public partial class VmlDrawingPart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2006/relationships/legacyDiagramText", new PartConstraintRule("LegacyDiagramTextPart", LegacyDiagramTextPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2006/relationships/legacyDiagramText", new PartConstraintRule("LegacyDiagramTextPart", LegacyDiagramTextPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -18558,7 +19036,7 @@ public partial class RibbonExtensibilityPart : CustomUIPart , IFixedContentTypeP
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -18755,7 +19233,7 @@ public partial class VbaProjectPart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.microsoft.com/office/2006/relationships/wordVbaData", new PartConstraintRule("VbaDataPart", VbaDataPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.microsoft.com/office/2006/relationships/wordVbaData", new PartConstraintRule("VbaDataPart", VbaDataPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -19005,14 +19483,14 @@ public partial class MacroSheetPart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings", new PartConstraintRule("SpreadsheetPrinterSettingsPart", SpreadsheetPrinterSettingsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing", new PartConstraintRule("DrawingsPart", DrawingsPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", new PartConstraintRule("VmlDrawingPart", VmlDrawingPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments", new PartConstraintRule("WorksheetCommentsPart", WorksheetCommentsPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customProperty", new PartConstraintRule("CustomPropertyPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings", new PartConstraintRule("SpreadsheetPrinterSettingsPart", SpreadsheetPrinterSettingsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing", new PartConstraintRule("DrawingsPart", DrawingsPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", new PartConstraintRule("VmlDrawingPart", VmlDrawingPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments", new PartConstraintRule("WorksheetCommentsPart", WorksheetCommentsPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customProperty", new PartConstraintRule("CustomPropertyPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -19368,14 +19846,14 @@ public partial class InternationalMacroSheetPart : OpenXmlPart , IFixedContentTy
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings", new PartConstraintRule("SpreadsheetPrinterSettingsPart", SpreadsheetPrinterSettingsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing", new PartConstraintRule("DrawingsPart", DrawingsPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", new PartConstraintRule("VmlDrawingPart", VmlDrawingPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments", new PartConstraintRule("WorksheetCommentsPart", WorksheetCommentsPart.ContentTypeConstant, false, false,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customProperty", new PartConstraintRule("CustomPropertyPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings", new PartConstraintRule("SpreadsheetPrinterSettingsPart", SpreadsheetPrinterSettingsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing", new PartConstraintRule("DrawingsPart", DrawingsPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", new PartConstraintRule("VmlDrawingPart", VmlDrawingPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments", new PartConstraintRule("WorksheetCommentsPart", WorksheetCommentsPart.ContentTypeConstant, false, false,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/customProperty", new PartConstraintRule("CustomPropertyPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -19731,7 +20209,7 @@ public partial class DiagramPersistLayoutPart : OpenXmlPart , IFixedContentTypeP
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -19912,7 +20390,7 @@ public partial class DiagramPersistLayoutPart : OpenXmlPart , IFixedContentTypeP
     }
 }
 /// <summary>
-/// Defines the StylesWithEffectsPart, this part is only available in Office2010.
+/// Defines the StylesWithEffectsPart, this part is only available in Office2010 or above.
 /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class StylesWithEffectsPart : StylesPart , IFixedContentTypePart
@@ -20018,10 +20496,10 @@ public partial class StylesWithEffectsPart : StylesPart , IFixedContentTypePart
     /// <returns>Returns true if the part is defined in the specified version.</returns>
     internal override bool IsInVersion(DocumentFormat.OpenXml.FileFormatVersions version)
     {
-		if(version == FileFormatVersions.Office2010)
-		{
+		if (((version & FileFormatVersions.Office2010) > 0) ||
+		    ((version & FileFormatVersions.Office2013) > 0) ||
+		    ((version & FileFormatVersions.Office2016) > 0))
 			return true;
-		}
 		return false;
     }
 
@@ -20034,7 +20512,7 @@ public partial class StylesWithEffectsPart : StylesPart , IFixedContentTypePart
     }
 }
 /// <summary>
-/// Defines the RibbonAndBackstageCustomizationsPart, this part is only available in Office2010.
+/// Defines the RibbonAndBackstageCustomizationsPart, this part is only available in Office2010 or above.
 /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class RibbonAndBackstageCustomizationsPart : OpenXmlPart , IFixedContentTypePart
@@ -20051,7 +20529,7 @@ public partial class RibbonAndBackstageCustomizationsPart : OpenXmlPart , IFixed
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -20229,10 +20707,10 @@ public partial class RibbonAndBackstageCustomizationsPart : OpenXmlPart , IFixed
     /// <returns>Returns true if the part is defined in the specified version.</returns>
     internal override bool IsInVersion(DocumentFormat.OpenXml.FileFormatVersions version)
     {
-		if(version == FileFormatVersions.Office2010)
-		{
+		if (((version & FileFormatVersions.Office2010) > 0) ||
+		    ((version & FileFormatVersions.Office2013) > 0) ||
+		    ((version & FileFormatVersions.Office2016) > 0))
 			return true;
-		}
 		return false;
     }
 
@@ -20245,7 +20723,7 @@ public partial class RibbonAndBackstageCustomizationsPart : OpenXmlPart , IFixed
     }
 }
 /// <summary>
-/// Defines the ControlPropertiesPart, this part is only available in Office2010.
+/// Defines the ControlPropertiesPart, this part is only available in Office2010 or above.
 /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ControlPropertiesPart : OpenXmlPart , IFixedContentTypePart
@@ -20351,10 +20829,10 @@ public partial class ControlPropertiesPart : OpenXmlPart , IFixedContentTypePart
     /// <returns>Returns true if the part is defined in the specified version.</returns>
     internal override bool IsInVersion(DocumentFormat.OpenXml.FileFormatVersions version)
     {
-		if(version == FileFormatVersions.Office2010)
-		{
+		if (((version & FileFormatVersions.Office2010) > 0) ||
+		    ((version & FileFormatVersions.Office2013) > 0) ||
+		    ((version & FileFormatVersions.Office2016) > 0))
 			return true;
-		}
 		return false;
     }
 
@@ -20367,7 +20845,7 @@ public partial class ControlPropertiesPart : OpenXmlPart , IFixedContentTypePart
     }
 }
 /// <summary>
-/// Defines the CustomDataPropertiesPart, this part is only available in Office2010.
+/// Defines the CustomDataPropertiesPart, this part is only available in Office2010 or above.
 /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class CustomDataPropertiesPart : OpenXmlPart , IFixedContentTypePart
@@ -20384,7 +20862,7 @@ public partial class CustomDataPropertiesPart : OpenXmlPart , IFixedContentTypeP
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.microsoft.com/office/2007/relationships/customData", new PartConstraintRule("CustomDataPart", CustomDataPart.ContentTypeConstant, false, false,(FileFormatVersions)2 ));
+            tempData.Add("http://schemas.microsoft.com/office/2007/relationships/customData", new PartConstraintRule("CustomDataPart", CustomDataPart.ContentTypeConstant, false, false,(FileFormatVersions)14 ));
 
             _partConstraint = tempData;
         }
@@ -20493,7 +20971,7 @@ public partial class CustomDataPropertiesPart : OpenXmlPart , IFixedContentTypeP
     
 
         /// <summary>
-        /// Gets the CustomDataPart of the CustomDataPropertiesPart., only available in Office2010
+        /// Gets the CustomDataPart of the CustomDataPropertiesPart., only available in Office2010, Office2013, Office2016
         /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2010)]
         public CustomDataPart CustomDataPart
@@ -20508,10 +20986,10 @@ public partial class CustomDataPropertiesPart : OpenXmlPart , IFixedContentTypeP
     /// <returns>Returns true if the part is defined in the specified version.</returns>
     internal override bool IsInVersion(DocumentFormat.OpenXml.FileFormatVersions version)
     {
-		if(version == FileFormatVersions.Office2010)
-		{
+		if (((version & FileFormatVersions.Office2010) > 0) ||
+		    ((version & FileFormatVersions.Office2013) > 0) ||
+		    ((version & FileFormatVersions.Office2016) > 0))
 			return true;
-		}
 		return false;
     }
 
@@ -20524,7 +21002,7 @@ public partial class CustomDataPropertiesPart : OpenXmlPart , IFixedContentTypeP
     }
 }
 /// <summary>
-/// Defines the CustomDataPart, this part is only available in Office2010.
+/// Defines the CustomDataPart, this part is only available in Office2010 or above.
 /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class CustomDataPart : OpenXmlPart , IFixedContentTypePart
@@ -20630,10 +21108,10 @@ public partial class CustomDataPart : OpenXmlPart , IFixedContentTypePart
     /// <returns>Returns true if the part is defined in the specified version.</returns>
     internal override bool IsInVersion(DocumentFormat.OpenXml.FileFormatVersions version)
     {
-		if(version == FileFormatVersions.Office2010)
-		{
+		if (((version & FileFormatVersions.Office2010) > 0) ||
+		    ((version & FileFormatVersions.Office2013) > 0) ||
+		    ((version & FileFormatVersions.Office2016) > 0))
 			return true;
-		}
 		return false;
     }
 
@@ -20646,7 +21124,7 @@ public partial class CustomDataPart : OpenXmlPart , IFixedContentTypePart
     }
 }
 /// <summary>
-/// Defines the SlicerCachePart, this part is only available in Office2010.
+/// Defines the SlicerCachePart, this part is only available in Office2010 or above.
 /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class SlicerCachePart : OpenXmlPart , IFixedContentTypePart
@@ -20752,10 +21230,10 @@ public partial class SlicerCachePart : OpenXmlPart , IFixedContentTypePart
     /// <returns>Returns true if the part is defined in the specified version.</returns>
     internal override bool IsInVersion(DocumentFormat.OpenXml.FileFormatVersions version)
     {
-		if(version == FileFormatVersions.Office2010)
-		{
+		if (((version & FileFormatVersions.Office2010) > 0) ||
+		    ((version & FileFormatVersions.Office2013) > 0) ||
+		    ((version & FileFormatVersions.Office2016) > 0))
 			return true;
-		}
 		return false;
     }
 
@@ -20768,7 +21246,7 @@ public partial class SlicerCachePart : OpenXmlPart , IFixedContentTypePart
     }
 }
 /// <summary>
-/// Defines the SlicersPart, this part is only available in Office2010.
+/// Defines the SlicersPart, this part is only available in Office2010 or above.
 /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class SlicersPart : OpenXmlPart , IFixedContentTypePart
@@ -20874,10 +21352,10 @@ public partial class SlicersPart : OpenXmlPart , IFixedContentTypePart
     /// <returns>Returns true if the part is defined in the specified version.</returns>
     internal override bool IsInVersion(DocumentFormat.OpenXml.FileFormatVersions version)
     {
-		if(version == FileFormatVersions.Office2010)
-		{
+		if (((version & FileFormatVersions.Office2010) > 0) ||
+		    ((version & FileFormatVersions.Office2013) > 0) ||
+		    ((version & FileFormatVersions.Office2016) > 0))
 			return true;
-		}
 		return false;
     }
 
@@ -20890,7 +21368,7 @@ public partial class SlicersPart : OpenXmlPart , IFixedContentTypePart
     }
 }
 /// <summary>
-/// Defines the WebExtensionPart, this part is only available in Office2013.
+/// Defines the WebExtensionPart, this part is only available in Office2013, Office2016.
 /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class WebExtensionPart : OpenXmlPart , IFixedContentTypePart
@@ -20907,7 +21385,7 @@ public partial class WebExtensionPart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -21085,10 +21563,9 @@ public partial class WebExtensionPart : OpenXmlPart , IFixedContentTypePart
     /// <returns>Returns true if the part is defined in the specified version.</returns>
     internal override bool IsInVersion(DocumentFormat.OpenXml.FileFormatVersions version)
     {
-		if(version == FileFormatVersions.Office2013)
-		{
+		if (((version & FileFormatVersions.Office2013) > 0) ||
+		    ((version & FileFormatVersions.Office2016) > 0))
 			return true;
-		}
 		return false;
     }
 
@@ -21101,7 +21578,7 @@ public partial class WebExtensionPart : OpenXmlPart , IFixedContentTypePart
     }
 }
 /// <summary>
-/// Defines the WebExTaskpanesPart, this part is only available in Office2013.
+/// Defines the WebExTaskpanesPart, this part is only available in Office2013, Office2016.
 /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class WebExTaskpanesPart : OpenXmlPart , IFixedContentTypePart
@@ -21118,7 +21595,7 @@ public partial class WebExTaskpanesPart : OpenXmlPart , IFixedContentTypePart
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.microsoft.com/office/2011/relationships/webextension", new PartConstraintRule("WebExtensionPart", WebExtensionPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.microsoft.com/office/2011/relationships/webextension", new PartConstraintRule("WebExtensionPart", WebExtensionPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -21280,10 +21757,9 @@ public partial class WebExTaskpanesPart : OpenXmlPart , IFixedContentTypePart
     /// <returns>Returns true if the part is defined in the specified version.</returns>
     internal override bool IsInVersion(DocumentFormat.OpenXml.FileFormatVersions version)
     {
-		if(version == FileFormatVersions.Office2013)
-		{
+		if (((version & FileFormatVersions.Office2013) > 0) ||
+		    ((version & FileFormatVersions.Office2016) > 0))
 			return true;
-		}
 		return false;
     }
 
@@ -21296,7 +21772,7 @@ public partial class WebExTaskpanesPart : OpenXmlPart , IFixedContentTypePart
     }
 }
 /// <summary>
-/// Defines the WordprocessingCommentsExPart, this part is only available in Office2013.
+/// Defines the WordprocessingCommentsExPart, this part is only available in Office2013, Office2016.
 /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class WordprocessingCommentsExPart : OpenXmlPart , IFixedContentTypePart
@@ -21313,17 +21789,18 @@ public partial class WordprocessingCommentsExPart : OpenXmlPart , IFixedContentT
         if (_partConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk", new PartConstraintRule("AlternativeFormatImportPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", new PartConstraintRule("EmbeddedControlPersistencePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)7 ));
-tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk", new PartConstraintRule("AlternativeFormatImportPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", new PartConstraintRule("ChartPart", ChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2014/relationships/chartEx", new PartConstraintRule("ExtendedChartPart", ExtendedChartPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", new PartConstraintRule("DiagramColorsPart", DiagramColorsPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", new PartConstraintRule("DiagramDataPart", DiagramDataPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", new PartConstraintRule("DiagramPersistLayoutPart", DiagramPersistLayoutPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", new PartConstraintRule("DiagramLayoutDefinitionPart", DiagramLayoutDefinitionPart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", new PartConstraintRule("DiagramStylePart", DiagramStylePart.ContentTypeConstant, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", new PartConstraintRule("EmbeddedControlPersistencePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", new PartConstraintRule("EmbeddedObjectPart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", new PartConstraintRule("EmbeddedPackagePart", null, false, true,(FileFormatVersions)15 ));
+tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", new PartConstraintRule("ImagePart", null, false, true,(FileFormatVersions)15 ));
 
             _partConstraint = tempData;
         }
@@ -21339,7 +21816,7 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
         if (_dataPartReferenceConstraint == null)
         {
             System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string,PartConstraintRule> ();
-            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)7 ));
+            tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/video", new PartConstraintRule("VideoReferenceRelationship", null, false, true,(FileFormatVersions)15 ));
 
             _dataPartReferenceConstraint = tempData;
         }
@@ -21375,6 +21852,9 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
             
         case ChartPart.RelationshipTypeConstant:
                     return new ChartPart();        
+            
+        case ExtendedChartPart.RelationshipTypeConstant:
+                    return new ExtendedChartPart();        
             
         case DiagramColorsPart.RelationshipTypeConstant:
                     return new DiagramColorsPart();        
@@ -21685,6 +22165,16 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
         }
                 
         /// <summary>
+        /// Gets the ExtendedChartParts of the WordprocessingCommentsExPart.
+        /// </summary>
+        public System.Collections.Generic.IEnumerable<ExtendedChartPart> ExtendedChartParts
+        {
+            get{
+                    return this.GetPartsOfType<ExtendedChartPart>();
+                }
+        }
+                
+        /// <summary>
         /// Gets the DiagramColorsParts of the WordprocessingCommentsExPart.
         /// </summary>
         public System.Collections.Generic.IEnumerable<DiagramColorsPart> DiagramColorsParts
@@ -21782,10 +22272,9 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
     /// <returns>Returns true if the part is defined in the specified version.</returns>
     internal override bool IsInVersion(DocumentFormat.OpenXml.FileFormatVersions version)
     {
-		if(version == FileFormatVersions.Office2013)
-		{
+		if (((version & FileFormatVersions.Office2013) > 0) ||
+		    ((version & FileFormatVersions.Office2016) > 0))
 			return true;
-		}
 		return false;
     }
 
@@ -21798,7 +22287,7 @@ tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationship
     }
 }
 /// <summary>
-/// Defines the ChartStylePart, this part is only available in Office2013.
+/// Defines the ChartStylePart, this part is only available in Office2013, Office2016.
 /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ChartStylePart : OpenXmlPart , IFixedContentTypePart
@@ -21904,10 +22393,9 @@ public partial class ChartStylePart : OpenXmlPart , IFixedContentTypePart
     /// <returns>Returns true if the part is defined in the specified version.</returns>
     internal override bool IsInVersion(DocumentFormat.OpenXml.FileFormatVersions version)
     {
-		if(version == FileFormatVersions.Office2013)
-		{
+		if (((version & FileFormatVersions.Office2013) > 0) ||
+		    ((version & FileFormatVersions.Office2016) > 0))
 			return true;
-		}
 		return false;
     }
 
@@ -21920,7 +22408,7 @@ public partial class ChartStylePart : OpenXmlPart , IFixedContentTypePart
     }
 }
 /// <summary>
-/// Defines the ChartColorStylePart, this part is only available in Office2013.
+/// Defines the ChartColorStylePart, this part is only available in Office2013, Office2016.
 /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ChartColorStylePart : OpenXmlPart , IFixedContentTypePart
@@ -22026,10 +22514,9 @@ public partial class ChartColorStylePart : OpenXmlPart , IFixedContentTypePart
     /// <returns>Returns true if the part is defined in the specified version.</returns>
     internal override bool IsInVersion(DocumentFormat.OpenXml.FileFormatVersions version)
     {
-		if(version == FileFormatVersions.Office2013)
-		{
+		if (((version & FileFormatVersions.Office2013) > 0) ||
+		    ((version & FileFormatVersions.Office2016) > 0))
 			return true;
-		}
 		return false;
     }
 
@@ -22042,7 +22529,7 @@ public partial class ChartColorStylePart : OpenXmlPart , IFixedContentTypePart
     }
 }
 /// <summary>
-/// Defines the TimeLinePart, this part is only available in Office2013.
+/// Defines the TimeLinePart, this part is only available in Office2013, Office2016.
 /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class TimeLinePart : OpenXmlPart , IFixedContentTypePart
@@ -22148,10 +22635,9 @@ public partial class TimeLinePart : OpenXmlPart , IFixedContentTypePart
     /// <returns>Returns true if the part is defined in the specified version.</returns>
     internal override bool IsInVersion(DocumentFormat.OpenXml.FileFormatVersions version)
     {
-		if(version == FileFormatVersions.Office2013)
-		{
+		if (((version & FileFormatVersions.Office2013) > 0) ||
+		    ((version & FileFormatVersions.Office2016) > 0))
 			return true;
-		}
 		return false;
     }
 
@@ -22164,7 +22650,7 @@ public partial class TimeLinePart : OpenXmlPart , IFixedContentTypePart
     }
 }
 /// <summary>
-/// Defines the TimeLineCachePart, this part is only available in Office2013.
+/// Defines the TimeLineCachePart, this part is only available in Office2013, Office2016.
 /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class TimeLineCachePart : OpenXmlPart , IFixedContentTypePart
@@ -22270,10 +22756,9 @@ public partial class TimeLineCachePart : OpenXmlPart , IFixedContentTypePart
     /// <returns>Returns true if the part is defined in the specified version.</returns>
     internal override bool IsInVersion(DocumentFormat.OpenXml.FileFormatVersions version)
     {
-		if(version == FileFormatVersions.Office2013)
-		{
+		if (((version & FileFormatVersions.Office2013) > 0) ||
+		    ((version & FileFormatVersions.Office2016) > 0))
 			return true;
-		}
 		return false;
     }
 
@@ -22286,7 +22771,7 @@ public partial class TimeLineCachePart : OpenXmlPart , IFixedContentTypePart
     }
 }
 /// <summary>
-/// Defines the WordprocessingPeoplePart, this part is only available in Office2013.
+/// Defines the WordprocessingPeoplePart, this part is only available in Office2013, Office2016.
 /// </summary>
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class WordprocessingPeoplePart : OpenXmlPart , IFixedContentTypePart
@@ -22392,10 +22877,9 @@ public partial class WordprocessingPeoplePart : OpenXmlPart , IFixedContentTypeP
     /// <returns>Returns true if the part is defined in the specified version.</returns>
     internal override bool IsInVersion(DocumentFormat.OpenXml.FileFormatVersions version)
     {
-		if(version == FileFormatVersions.Office2013)
-		{
+		if (((version & FileFormatVersions.Office2013) > 0) ||
+		    ((version & FileFormatVersions.Office2016) > 0))
 			return true;
-		}
 		return false;
     }
 
@@ -22458,11 +22942,14 @@ case ChartPart.RelationshipTypeConstant:
 case ChartDrawingPart.RelationshipTypeConstant:
 	openXmlPart = new ChartDrawingPart();
 	return;
-case ImagePart.RelationshipTypeConstant:
-	openXmlPart = new ImagePart();
+case ExtendedChartPart.RelationshipTypeConstant:
+	openXmlPart = new ExtendedChartPart();
 	return;
 case EmbeddedPackagePart.RelationshipTypeConstant:
 	openXmlPart = new EmbeddedPackagePart();
+	return;
+case ImagePart.RelationshipTypeConstant:
+	openXmlPart = new ImagePart();
 	return;
 case ThemeOverridePart.RelationshipTypeConstant:
 	openXmlPart = new ThemeOverridePart();
@@ -22726,6 +23213,9 @@ case ChartPart.RelationshipTypeConstant:
 case ChartDrawingPart.RelationshipTypeConstant:
 	openXmlPart = new ChartDrawingPart();
 	return;
+case ExtendedChartPart.RelationshipTypeConstant:
+	openXmlPart = new ExtendedChartPart();
+	return;
 case EmbeddedPackagePart.RelationshipTypeConstant:
 	openXmlPart = new EmbeddedPackagePart();
 	return;
@@ -22933,6 +23423,9 @@ case ChartPart.RelationshipTypeConstant:
 	return;
 case ChartDrawingPart.RelationshipTypeConstant:
 	openXmlPart = new ChartDrawingPart();
+	return;
+case ExtendedChartPart.RelationshipTypeConstant:
+	openXmlPart = new ExtendedChartPart();
 	return;
 case EmbeddedPackagePart.RelationshipTypeConstant:
 	openXmlPart = new EmbeddedPackagePart();

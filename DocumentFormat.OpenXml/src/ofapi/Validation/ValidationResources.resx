@@ -339,12 +339,15 @@
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="O12SchemaConstraintDatas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\GeneratedCode\O12SchemaConstraintDatas.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\..\generatedcode\o12schemaconstraintdatas.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="O14SchemaConstraintDatas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\GeneratedCode\O14SchemaConstraintDatas.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\..\generatedcode\o14schemaconstraintdatas.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="O15SchemaConstraintDatas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\GeneratedCode\O15SchemaConstraintDatas.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\..\generatedcode\o15schemaconstraintdatas.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="O16SchemaConstraintDatas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\generatedcode\o16schemaconstraintdatas.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

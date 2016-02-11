@@ -310,47 +310,47 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             switch (redirectedRestriction.AttributeId)
             {
                 // property name: Width
-                case 2591:
+                case 2593:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: Percent
-                case 2849:
+                case 2851:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: FontSize
-                case 2926:
+                case 2928:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: ShapeId
-                case 3073:
+                case 3075:
                     simpleValue = new UInt32Value();
                     break;
 
                 // property name: ShapeId
-                case 3082:
+                case 3084:
                     simpleValue = new UInt32Value();
                     break;
 
                 // property name: ShapeId
-                case 3086:
+                case 3088:
                     simpleValue = new UInt32Value();
                     break;
 
                 // property name: ShapeId
-                case 3091:
+                case 3093:
                     simpleValue = new UInt32Value();
                     break;
 
                 // property name: AdvanceAfterTime
-                case 3152:
+                case 3154:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: ShapeId
-                case 3155:
+                case 3157:
                     simpleValue = new UInt32Value();
                     break;
 

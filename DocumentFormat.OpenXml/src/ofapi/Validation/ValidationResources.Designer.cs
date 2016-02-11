@@ -235,6 +235,13 @@ namespace DocumentFormat.OpenXml.Validation {
             }
         }
         
+        internal static byte[] O16SchemaConstraintDatas {
+            get {
+                object obj = ResourceManager.GetObject("O16SchemaConstraintDatas", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
         /// <summary>
         ///   Looks up a localized string similar to The package/part &apos;{0}&apos; cannot have a relationship that targets &apos;{1}&apos;..
         /// </summary>

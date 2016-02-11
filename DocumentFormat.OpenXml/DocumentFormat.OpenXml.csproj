@@ -85,6 +85,7 @@
     <Compile Include="src\GeneratedCode\O12UnionHelper.cs" />
     <Compile Include="src\GeneratedCode\O14UnionHelper.cs" />
     <Compile Include="src\GeneratedCode\O15UnionHelper.cs" />
+    <Compile Include="src\GeneratedCode\O16UnionHelper.cs" />
     <Compile Include="src\GeneratedCode\package.cs" />
     <Compile Include="src\GeneratedCode\PartialSemanticConstraintRegistry.cs" />
     <Compile Include="src\GeneratedCode\PartParitalDef.cs" />
@@ -116,15 +117,23 @@
     <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_drawing_2012_chartStyle.cs" />
     <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_drawing_2012_main.cs" />
     <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_drawing_2012_timeslicer.cs" />
+    <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_drawing_2014_chart.cs" />
+    <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_drawing_2014_chartex.cs" />
+    <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_drawing_2014_chart_ac.cs" />
+    <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_drawing_2014_main.cs" />
     <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_excel_2006_main.cs" />
     <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_excel_2010_spreadsheetDrawing.cs" />
     <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_powerpoint_2010_main.cs" />
     <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_powerpoint_2012_main.cs" />
     <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_powerpoint_2012_roamingSettings.cs" />
+    <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_powerpoint_2015_main.cs" />
     <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_spreadsheetml_2009_9_main.cs" />
     <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_spreadsheetml_2010_11_ac.cs" />
     <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_spreadsheetml_2010_11_main.cs" />
     <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_spreadsheetml_2011_1_ac.cs" />
+    <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_spreadsheetml_2014_11_main.cs" />
+    <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_spreadsheetml_2014_revision.cs" />
+    <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_spreadsheetml_2015_02_main.cs" />
     <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_thememl_2012_main.cs" />
     <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_webextensions_taskpanes_2010_11.cs" />
     <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_webextensions_webextension_2010_11.cs" />
@@ -136,6 +145,7 @@
     <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_word_2010_wordprocessingShape.cs" />
     <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_word_2012_wordml.cs" />
     <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_word_2012_wordprocessingDrawing.cs" />
+    <Compile Include="src\GeneratedCode\schemas_microsoft_com_office_word_2015_wordml_symex.cs" />
     <Compile Include="src\GeneratedCode\schemas_openxmlformats_org_drawingml_2006_chart.cs" />
     <Compile Include="src\GeneratedCode\schemas_openxmlformats_org_drawingml_2006_chartDrawing.cs" />
     <Compile Include="src\GeneratedCode\schemas_openxmlformats_org_drawingml_2006_compatibility.cs" />
@@ -256,6 +266,7 @@
     <None Include="src\GeneratedCode\O12SchemaConstraintDatas.bin" />
     <None Include="src\GeneratedCode\O14SchemaConstraintDatas.bin" />
     <None Include="src\GeneratedCode\O15SchemaConstraintDatas.bin" />
+    <None Include="src\GeneratedCode\O16SchemaConstraintDatas.bin" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

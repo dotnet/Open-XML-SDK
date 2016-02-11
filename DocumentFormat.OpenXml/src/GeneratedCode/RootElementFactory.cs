@@ -257,6 +257,9 @@ if( 71 == namespaceId && "timelines" == name)
 if( 71 == namespaceId && "timelineCacheDefinition" == name)
     return new DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheDefinition();
     
+if( 80 == namespaceId && "chartSpace" == name)
+    return new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartSpace();
+    
 return null;
 }
 }

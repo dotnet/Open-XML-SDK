@@ -202,6 +202,7 @@
       <DependentUpon>TestFileStreams.resx</DependentUpon>
     </Compile>
     <Compile Include="TestGeneratedCode.cs" />
+    <Compile Include="TestOffice2016.cs" />
     <Compile Include="TestPptx01.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestXlsx01.cs" />

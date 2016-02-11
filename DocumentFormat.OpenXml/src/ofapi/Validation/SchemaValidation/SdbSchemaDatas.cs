@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
         private SdbSchemaDatas(FileFormatVersions fileFormat)
         {
-            Debug.Assert(fileFormat == FileFormatVersions.Office2007 || fileFormat == FileFormatVersions.Office2010 || fileFormat == FileFormatVersions.Office2013);
+            Debug.Assert(fileFormat == FileFormatVersions.Office2007 || fileFormat == FileFormatVersions.Office2010 || fileFormat == FileFormatVersions.Office2013 || fileFormat == FileFormatVersions.Office2016);
 
             this.SdbDataHead = new SdbDataHead();
             this._fileFormat = fileFormat;
@@ -104,7 +104,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         }
 
         /// <summary>
-        /// Return an instance of SchemaConstraintDatabase which will load Office2010 schemas.
+        /// Return an instance of SchemaConstraintDatabase which will load Office2013 schemas.
         /// </summary>
         public static SdbSchemaDatas GetOffice2013SchemaDatas()
         {
@@ -112,6 +112,17 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             SdbSchemaDatas o15Datas = new SdbSchemaDatas(FileFormatVersions.Office2013);
             o15Datas.InitOnDemand();
             return (SdbSchemaDatas)o15Datas;
+        }
+
+        /// <summary>
+        /// Return an instance of SchemaConstraintDatabase which will load Office2016 schemas.
+        /// </summary>
+        public static SdbSchemaDatas GetOffice2016SchemaDatas()
+        {
+            // Remark: should we use WeakReference singleton? If yes, then be careful for multi-thread issue.
+            SdbSchemaDatas o16Datas = new SdbSchemaDatas(FileFormatVersions.Office2016);
+            o16Datas.InitOnDemand();
+            return (SdbSchemaDatas)o16Datas;
         }
 
         /// <summary>
@@ -189,8 +200,12 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                     constraintBinaryData = ValidationResources.O15SchemaConstraintDatas;
                     break;
 
+                case FileFormatVersions.Office2016:
+                    constraintBinaryData = ValidationResources.O16SchemaConstraintDatas;
+                    break;
+
                 default:
-                    Debug.Assert(this._fileFormat == FileFormatVersions.Office2007 || this._fileFormat == FileFormatVersions.Office2010 || this._fileFormat == FileFormatVersions.Office2013);
+                    Debug.Assert(this._fileFormat == FileFormatVersions.Office2007 || this._fileFormat == FileFormatVersions.Office2010 || this._fileFormat == FileFormatVersions.Office2013 || this._fileFormat == FileFormatVersions.Office2016);
                     constraintBinaryData = ValidationResources.O12SchemaConstraintDatas;
                     break;
             }

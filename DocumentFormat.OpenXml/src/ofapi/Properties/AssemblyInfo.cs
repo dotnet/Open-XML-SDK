@@ -10,10 +10,10 @@ using System.Security;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("DocumentFormat.OpenXml")]
-[assembly: AssemblyDescription("Open XML Format SDK 2.6")]
+[assembly: AssemblyDescription("Open XML Format SDK 3.0")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft Open Technologies, Inc.")]
-[assembly: AssemblyProduct("Open XML Format SDK 2.6")]
+[assembly: AssemblyProduct("Open XML Format SDK 3.0")]
 [assembly: AssemblyCopyright("© 2014 Microsoft Open Technologies, Inc.  Licensed under the Apache License, Version 2.0.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -36,8 +36,8 @@ using System.Security;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("2.6.0.0")]
-[assembly: AssemblyFileVersion("2.6.0.0")]
+[assembly: AssemblyVersion("3.0.0001.0001")]
+[assembly: AssemblyFileVersion("3.0.0001.0001")]
 
 [assembly: InternalsVisibleTo("DocumentFormat.OpenXml.Tests")]
 [assembly: InternalsVisibleTo("DocumentFormat.OpenXml.WB.Tests")]

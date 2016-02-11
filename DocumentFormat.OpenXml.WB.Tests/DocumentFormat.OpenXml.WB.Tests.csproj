@@ -467,6 +467,9 @@
     <Compile Include="..\DocumentFormat.OpenXml.Tests\TestGeneratedCode.cs">
       <Link>TestGeneratedCode.cs</Link>
     </Compile>
+    <Compile Include="..\DocumentFormat.OpenXml.Tests\TestOffice2016.cs">
+      <Link>TestOffice2016.cs</Link>
+    </Compile>
     <Compile Include="..\DocumentFormat.OpenXml.Tests\TestPptx01.cs">
       <Link>TestPptx01.cs</Link>
     </Compile>

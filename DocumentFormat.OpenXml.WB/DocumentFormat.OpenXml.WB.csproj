@@ -157,6 +157,9 @@
     <Compile Include="..\DocumentFormat.OpenXml\src\GeneratedCode\O15UnionHelper.cs">
       <Link>src\GeneratedCode\O15UnionHelper.cs</Link>
     </Compile>
+    <Compile Include="..\DocumentFormat.OpenXml\src\GeneratedCode\O16UnionHelper.cs">
+      <Link>src\GeneratedCode\O16UnionHelper.cs</Link>
+    </Compile>
     <Compile Include="..\DocumentFormat.OpenXml\src\GeneratedCode\package.cs">
       <Link>src\GeneratedCode\package.cs</Link>
     </Compile>
@@ -250,6 +253,18 @@
     <Compile Include="..\DocumentFormat.OpenXml\src\GeneratedCode\schemas_microsoft_com_office_drawing_2012_timeslicer.cs">
       <Link>src\GeneratedCode\schemas_microsoft_com_office_drawing_2012_timeslicer.cs</Link>
     </Compile>
+    <Compile Include="..\DocumentFormat.OpenXml\src\GeneratedCode\schemas_microsoft_com_office_drawing_2014_chart.cs">
+      <Link>src\GeneratedCode\schemas_microsoft_com_office_drawing_2014_chart.cs</Link>
+    </Compile>
+    <Compile Include="..\DocumentFormat.OpenXml\src\GeneratedCode\schemas_microsoft_com_office_drawing_2014_chartex.cs">
+      <Link>src\GeneratedCode\schemas_microsoft_com_office_drawing_2014_chartex.cs</Link>
+    </Compile>
+    <Compile Include="..\DocumentFormat.OpenXml\src\GeneratedCode\schemas_microsoft_com_office_drawing_2014_chart_ac.cs">
+      <Link>src\GeneratedCode\schemas_microsoft_com_office_drawing_2014_chart_ac.cs</Link>
+    </Compile>
+    <Compile Include="..\DocumentFormat.OpenXml\src\GeneratedCode\schemas_microsoft_com_office_drawing_2014_main.cs">
+      <Link>src\GeneratedCode\schemas_microsoft_com_office_drawing_2014_main.cs</Link>
+    </Compile>
     <Compile Include="..\DocumentFormat.OpenXml\src\GeneratedCode\schemas_microsoft_com_office_excel_2006_main.cs">
       <Link>src\GeneratedCode\schemas_microsoft_com_office_excel_2006_main.cs</Link>
     </Compile>
@@ -265,6 +280,9 @@
     <Compile Include="..\DocumentFormat.OpenXml\src\GeneratedCode\schemas_microsoft_com_office_powerpoint_2012_roamingSettings.cs">
       <Link>src\GeneratedCode\schemas_microsoft_com_office_powerpoint_2012_roamingSettings.cs</Link>
     </Compile>
+    <Compile Include="..\DocumentFormat.OpenXml\src\GeneratedCode\schemas_microsoft_com_office_powerpoint_2015_main.cs">
+      <Link>src\GeneratedCode\schemas_microsoft_com_office_powerpoint_2015_main.cs</Link>
+    </Compile>
     <Compile Include="..\DocumentFormat.OpenXml\src\GeneratedCode\schemas_microsoft_com_office_spreadsheetml_2009_9_main.cs">
       <Link>src\GeneratedCode\schemas_microsoft_com_office_spreadsheetml_2009_9_main.cs</Link>
     </Compile>
@@ -276,6 +294,15 @@
     </Compile>
     <Compile Include="..\DocumentFormat.OpenXml\src\GeneratedCode\schemas_microsoft_com_office_spreadsheetml_2011_1_ac.cs">
       <Link>src\GeneratedCode\schemas_microsoft_com_office_spreadsheetml_2011_1_ac.cs</Link>
+    </Compile>
+    <Compile Include="..\DocumentFormat.OpenXml\src\GeneratedCode\schemas_microsoft_com_office_spreadsheetml_2014_11_main.cs">
+      <Link>src\GeneratedCode\schemas_microsoft_com_office_spreadsheetml_2014_11_main.cs</Link>
+    </Compile>
+    <Compile Include="..\DocumentFormat.OpenXml\src\GeneratedCode\schemas_microsoft_com_office_spreadsheetml_2014_revision.cs">
+      <Link>src\GeneratedCode\schemas_microsoft_com_office_spreadsheetml_2014_revision.cs</Link>
+    </Compile>
+    <Compile Include="..\DocumentFormat.OpenXml\src\GeneratedCode\schemas_microsoft_com_office_spreadsheetml_2015_02_main.cs">
+      <Link>src\GeneratedCode\schemas_microsoft_com_office_spreadsheetml_2015_02_main.cs</Link>
     </Compile>
     <Compile Include="..\DocumentFormat.OpenXml\src\GeneratedCode\schemas_microsoft_com_office_thememl_2012_main.cs">
       <Link>src\GeneratedCode\schemas_microsoft_com_office_thememl_2012_main.cs</Link>
@@ -306,6 +333,9 @@
     </Compile>
     <Compile Include="..\DocumentFormat.OpenXml\src\GeneratedCode\schemas_microsoft_com_office_word_2012_wordml.cs">
       <Link>src\GeneratedCode\schemas_microsoft_com_office_word_2012_wordml.cs</Link>
+    </Compile>
+    <Compile Include="..\DocumentFormat.OpenXml\src\GeneratedCode\schemas_microsoft_com_office_word_2015_wordml_symex.cs">
+      <Link>src\GeneratedCode\schemas_microsoft_com_office_word_2015_wordml_symex.cs</Link>
     </Compile>
     <Compile Include="..\DocumentFormat.OpenXml\src\GeneratedCode\schemas_microsoft_com_office_word_2012_wordprocessingDrawing.cs">
       <Link>src\GeneratedCode\schemas_microsoft_com_office_word_2012_wordprocessingDrawing.cs</Link>
@@ -585,6 +615,9 @@
     </None>
     <None Include="..\DocumentFormat.OpenXml\src\GeneratedCode\O15SchemaConstraintDatas.bin">
       <Link>src\GeneratedCode\O15SchemaConstraintDatas.bin</Link>
+    </None>
+    <None Include="..\DocumentFormat.OpenXml\src\GeneratedCode\O16SchemaConstraintDatas.bin">
+      <Link>src\GeneratedCode\O16SchemaConstraintDatas.bin</Link>
     </None>
   </ItemGroup>
   <ItemGroup>
