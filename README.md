@@ -1,7 +1,17 @@
 Open-XML-SDK
 ============
 
-Release Version 2.6.1
+Release Version 3.0.0
+
+    This is the Office2016 branch, which contains a preview of the Open-Xml-Sdk v3.0 that
+	supports the Office 2016 extensions in the file format.  The biggest change to the markup was
+	the introduction of the ExtendedChartPart, which support the new chart types, such as Waterfall,
+	Box and Whisker, and Sunburst.  You can specify FileFormatVersions.Office2016 to validate this
+	markup.  This version of the SDK also supports using the strongly-typed OM to access the markup
+	in the new parts.
+	
+	We will merge the Office2016 branch into vNext at some point in the future, after receiving
+	feedback.
 
 The Open XML SDK provides open-source libraries for working with Open XML
 Documents (DOCX, XLSX, and PPTX).  It supports scenarios such as:
