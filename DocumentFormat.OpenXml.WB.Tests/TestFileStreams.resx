@@ -171,7 +171,7 @@
   </data>
   <data name="o09_Performance_typical_pptx"
         type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\TestFiles\o09_performance_typical.pptx;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\TestFiles\o09_Performance_typical.pptx;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="mcppt"
         type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -187,7 +187,7 @@
   </data>
   <data name="May_12_04"
         type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\TestFiles\may 12 04.docx;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\TestFiles\May 12 04.docx;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="mailmerge"
         type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -199,7 +199,7 @@
   </data>
   <data name="_5Errors"
         type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\TestFiles\5errors.docx;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\TestFiles\5Errors.docx;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="complex2010docx"
         type="System.Resources.ResXFileRef, System.Windows.Forms">
