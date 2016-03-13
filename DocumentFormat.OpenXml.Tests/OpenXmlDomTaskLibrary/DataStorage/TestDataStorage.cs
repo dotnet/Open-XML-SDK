@@ -139,7 +139,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries.DataStorage
                 new FileDataGroup(
                     DataGroups.RobustnessBugRegression.ToString(),
                     "Various Test Files created by non-Office products",
-                    robustnessFolder + @"BugRegression/"));
+                    robustnessFolder + @"bugregression/"));
 
             this.RegisterDataGroup(
                 new FileDataGroup(

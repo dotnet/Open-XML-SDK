@@ -1,6 +1,6 @@
 ﻿/*
  * FlatOpcFixture.cs - Testing Flat OPC functionality in Open XML SDK
- * 
+ *
  * Copyright 2014-2015 Thomas Barnekow
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +14,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
+ *
  * Developer: Thomas Barnekow
  * Email: thomas<at/>barnekow<dot/>info
  */
@@ -44,13 +44,13 @@ namespace DocumentFormat.OpenXml.Tests
 
         private const string DirectoryPath = "FlatOpc";
 
-        private const string DocumentPath = DirectoryPath + "\\Document.docx";
-        private const string PresentationPath = DirectoryPath + "\\Presentation.pptx";
-        private const string SpreadsheetPath = DirectoryPath + "\\Spreadsheet.xlsx";
+        private const string DocumentPath = DirectoryPath + "/Document.docx";
+        private const string PresentationPath = DirectoryPath + "/Presentation.pptx";
+        private const string SpreadsheetPath = DirectoryPath + "/Spreadsheet.xlsx";
 
-        private const string DocumentClonePath = DirectoryPath + "\\Document Clone.docx";
-        private const string PresentationClonePath = DirectoryPath + "\\Presentation Clone.pptx";
-        private const string SpreadsheetClonePath = DirectoryPath + "\\Spreadsheet Clone.xlsx";
+        private const string DocumentClonePath = DirectoryPath + "/Document Clone.docx";
+        private const string PresentationClonePath = DirectoryPath + "/Presentation Clone.pptx";
+        private const string SpreadsheetClonePath = DirectoryPath + "/Spreadsheet Clone.xlsx";
 
         /// <summary>
         /// Creates a new instance of this test fixture, registering our test folder
@@ -75,7 +75,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             using (var source = PresentationDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, PresentationPath), true))
             {
-                // Test FlatOpcDocument methods. 
+                // Test FlatOpcDocument methods.
                 // Check ToFlatOpcDocument() and FromFlatOpcDocument(XDocument).
                 var flatOpcDoc = source.ToFlatOpcDocument();
                 using (var dest = PresentationDocument.FromFlatOpcDocument(flatOpcDoc))
@@ -128,7 +128,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             using (var source = SpreadsheetDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, SpreadsheetPath), true))
             {
-                // Test FlatOpcDocument methods. 
+                // Test FlatOpcDocument methods.
                 // Check ToFlatOpcDocument() and FromFlatOpcDocument(XDocument).
                 var flatOpcDoc = source.ToFlatOpcDocument();
                 using (var dest = SpreadsheetDocument.FromFlatOpcDocument(flatOpcDoc))
@@ -181,7 +181,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             using (var source = WordprocessingDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, DocumentPath), true))
             {
-                // Test FlatOpcDocument methods. 
+                // Test FlatOpcDocument methods.
                 // Check ToFlatOpcDocument() and FromFlatOpcDocument(XDocument).
                 var flatOpcDoc = source.ToFlatOpcDocument();
                 using (var dest = WordprocessingDocument.FromFlatOpcDocument(flatOpcDoc))
