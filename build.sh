@@ -11,4 +11,3 @@ $FSHARPI --lib:$libdir $@
 EOF
 chmod +x fsharpi
 mono packages/FAKE/tools/FAKE.exe Build.fsx $@
-rm fsharpi
