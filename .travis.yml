@@ -6,7 +6,7 @@ os:
 
 mono:
   - latest
-  - 4.0.2
+  - 4.0.5
 
 sudo: false  # use the new container-based Travis infrastructure
 
