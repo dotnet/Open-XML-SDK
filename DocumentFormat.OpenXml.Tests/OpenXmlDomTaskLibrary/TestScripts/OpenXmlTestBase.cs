@@ -329,7 +329,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// <returns></returns>
         public IEnumerable<FileInfo> GetTestFiles(string sourceFolder)
         {
-            string inputPath = Path.Combine(sourcePath, sourceFolder);
+            string inputPath = Path.Combine(sourcePath, sourceFolder.Replace("\\","/"));
             return new DirectoryInfo(inputPath).GetFiles("*", SearchOption.AllDirectories);
         }
 
@@ -341,7 +341,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// <returns></returns>
         public FileInfo GetTestFileOne(string sourceFile)
         {
-            string inputPath = Path.Combine(sourcePath, sourceFile);
+            string inputPath = Path.Combine(sourcePath, sourceFile.Replace("\\", "/"));
             return new FileInfo(inputPath);
         }
 
@@ -407,7 +407,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// <returns></returns>
         public IEnumerable<FileInfo> CopyTestFiles(string sourceFolder, bool recursive, string searchPattern, Func<FileInfo, bool> pred, int? maxFiles = null)
         {
-            string inputPath = Path.Combine(sourcePath, sourceFolder);
+            string inputPath = Path.Combine(sourcePath, sourceFolder.Replace("\\","/"));
             string outputPath = this.CurrentResultFolder;
 
             // Cd to the outputPath folder

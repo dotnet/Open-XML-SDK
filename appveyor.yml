@@ -1,13 +1,14 @@
+init:
+  - git config --global core.autocrlf input
+build_script:
+  - cmd: build.cmd
+test: off
 version: 2.6.{build}
 skip_tags: true
 clone_folder: c:\projects\Open-XML-SDK
-install:
-- ps: nuget restore Open-XML-SDK.sln
-build:
-  project: Open-XML-SDK.sln
-  verbosity: minimal
-test:
-  assemblies: '**\*.Tests.dll'
+artifacts:
+  - path: bin
+    name: bin
 notifications:
 - provider: Email
   to:

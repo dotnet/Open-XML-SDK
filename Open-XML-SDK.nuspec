@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+    <metadata>
+        <id>Open-XML-SDK</id>
+        <version>@build.number@</version>
+        <releaseNotes>@releaseNotes@</releaseNotes>
+        <title>Open XML SDK</title>
+        <authors>Microsoft Open Technologies,Inc.</authors>
+        <owners>Microsoft Open Technologies,Inc.</owners>
+        <licenseUrl>https://github.com/OfficeDev/Open-XML-SDK/blob/vNext/LICENSE.txt</licenseUrl>
+        <projectUrl>https://github.com/OfficeDev/Open-XML-SDK</projectUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <description>The Open XML SDK provides open-source libraries for working with Open XML Documents (DOCX, XLSX, and PPTX). It supports scenarios such as:
+•High-performance generation of word-processing documents, spreadsheets, and presentations.
+•Populating content in DOCX files from an XML data source.
+•Splitting up (shredding) a DOCX or PPTX file into multiple files, and combining multiple DOCX / PPTX files into a single file.
+•High fidelity conversion of DOCX =&gt; HTML/CSS and HTML/CSS =&gt; DOCX.
+•Extraction of data from XLSX.
+•Searching and replacing content in DOCX / PPTX using regular expressions.
+•Updating cached data and embedded spreadsheets for charts in DOCX / PPTX.
+•Document modification, such as removing tracked revisions or removing unacceptable content from documents.
+
+Open-Xml-PowerTools provides example code and guidance for implementing many of the above important Open XML scenarios. Be sure to check it out before re-inventing your own solutions.
+
+Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.</description>
+        <summary>The Open XML SDK provides open-source libraries for working with Open XML Documents (DOCX, XLSX, and PPTX).</summary>
+        <tags>OpenXML</tags>
+        <dependencies>
+            <group targetFramework=".NETFramework4.5" />
+        </dependencies>
+    </metadata>
+</package>

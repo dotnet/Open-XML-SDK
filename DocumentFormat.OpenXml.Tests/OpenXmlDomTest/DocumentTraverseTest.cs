@@ -315,7 +315,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void TraverseSpreadSheetDocument()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            foreach (var testfile in CopyTestFiles(@"SpreadSheet\smallset", false, 3))
+            foreach (var testfile in CopyTestFiles(@"spreadsheet\smallset", false, 3))
             {
                 Log.BeginGroup(testfile.Name);
                 Log.Comment("open test file {0} for traversing", testfile);

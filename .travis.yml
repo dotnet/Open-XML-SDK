@@ -1,9 +1,26 @@
 language: csharp
-solution: Open-XML-SDK.sln
-install:
-  - nuget restore Open-XML-SDK.sln
+
+os:
+  - linux
+  - osx
+
+mono:
+  - latest
+  - alpha
+  - beta
+  - nightly
+
+sudo: false  # use the new container-based Travis infrastructure
+
+before_install:
+  - chmod +x build.sh
+
 script:
-  - xbuild /p:Configuration=Release Open-XML-SDK.sln
-  # The following tests are currently not run due to a bug in Mono
-  # - mono ./packages/xunit.runner.console.2.0.0/tools/xunit.console.exe ./System.IO.Packaging.Tests/bin/Release/System.IO.Packaging.Tests.dll
-  # - mono ./packages/xunit.runner.console.2.0.0/tools/xunit.console.exe ./DocumentFormat.OpenXml.Tests/bin/Release/DocumentFormat.OpenXml.Tests.dll
+  - ./build.sh All
+
+matrix:
+  allow_failures:
+    - mono: alpha 
+    - mono: beta 
+    - mono: nightly 
+  
