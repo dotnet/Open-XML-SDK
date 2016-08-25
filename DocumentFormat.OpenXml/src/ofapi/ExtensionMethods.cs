@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml
         {
             if (element == null)
             {
-                throw new ArgumentNullException("element");
+                throw new ArgumentNullException(nameof(element));
             }
 
             if (element.Parent == null)
@@ -83,7 +83,7 @@ namespace DocumentFormat.OpenXml
         {
             if (element == null)
             {
-                throw new ArgumentNullException("element");
+                throw new ArgumentNullException(nameof(element));
             }
 
             OpenXmlPartRootElement partRootElement = element.GetPartRootElement();

@@ -229,12 +229,12 @@ namespace DocumentFormat.OpenXml
         {
             if (openXmlPart == null)
             {
-                throw new ArgumentNullException("openXmlPart");
+                throw new ArgumentNullException(nameof(openXmlPart));
             }
 
             if (encoding == null)
             {
-                throw new ArgumentNullException("encoding");
+                throw new ArgumentNullException(nameof(encoding));
             }
 
             Stream partStream = openXmlPart.GetStream(FileMode.Create);
@@ -259,12 +259,12 @@ namespace DocumentFormat.OpenXml
         {
             if (partStream == null)
             {
-                throw new ArgumentNullException("partStream");
+                throw new ArgumentNullException(nameof(partStream));
             }
 
             if (encoding == null)
             {
-                throw new ArgumentNullException("encoding");
+                throw new ArgumentNullException(nameof(encoding));
             }
 
             this.Init(partStream, /*closeOutput*/false, encoding);
@@ -323,18 +323,18 @@ namespace DocumentFormat.OpenXml
         {
             if (elementReader == null)
             {
-                throw new ArgumentNullException("elementReader");
+                throw new ArgumentNullException(nameof(elementReader));
             }
 
             if (elementReader.IsEndElement)
             {
-                throw new ArgumentOutOfRangeException("elementReader");
+                throw new ArgumentOutOfRangeException(nameof(elementReader));
             }
 
             if (elementReader.IsMiscNode)
             {
                 // OpenXmlMiscNode should be written by WriteElement( );
-                throw new ArgumentOutOfRangeException("elementReader");
+                throw new ArgumentOutOfRangeException(nameof(elementReader));
             }
 
             this.ThrowIfObjectDisposed();
@@ -376,12 +376,12 @@ namespace DocumentFormat.OpenXml
         {
             if (elementObject == null)
             {
-                throw new ArgumentNullException("elementObject");
+                throw new ArgumentNullException(nameof(elementObject));
             }
 
             if (elementObject is OpenXmlMiscNode)
             {
-                throw new ArgumentOutOfRangeException("elementObject");
+                throw new ArgumentOutOfRangeException(nameof(elementObject));
             }
 
             this.ThrowIfObjectDisposed();
@@ -427,12 +427,12 @@ namespace DocumentFormat.OpenXml
         {
             if (elementObject == null)
             {
-                throw new ArgumentNullException("elementObject");
+                throw new ArgumentNullException(nameof(elementObject));
             }
 
             if (elementObject is OpenXmlMiscNode)
             {
-                throw new ArgumentOutOfRangeException("elementObject");
+                throw new ArgumentOutOfRangeException(nameof(elementObject));
             }
 
             this.ThrowIfObjectDisposed();
@@ -506,7 +506,7 @@ namespace DocumentFormat.OpenXml
         {
             if (elementObject == null)
             {
-                throw new ArgumentNullException("elementObject");
+                throw new ArgumentNullException(nameof(elementObject));
             }
 
             this.ThrowIfObjectDisposed();

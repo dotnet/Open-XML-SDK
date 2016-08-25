@@ -90,7 +90,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (referenceRelationship == null)
             {
-                throw new ArgumentNullException("referenceRelationship");
+                throw new ArgumentNullException(nameof(referenceRelationship));
             }
 
             if (referenceRelationship.Id == null || referenceRelationship.Container != this)
@@ -122,7 +122,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (id == null)
             {
-                throw new ArgumentNullException("id");
+                throw new ArgumentNullException(nameof(id));
             }
 
             foreach (var referenceRelationship in this.ReferenceRelationshipList)
@@ -152,7 +152,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (id == null)
             {
-                throw new ArgumentNullException("id");
+                throw new ArgumentNullException(nameof(id));
             }
 
             foreach (var referenceRelatinship in this.ReferenceRelationshipList)
@@ -197,12 +197,12 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (relationshipType == null)
             {
-                throw new ArgumentNullException("relationshipType");
+                throw new ArgumentNullException(nameof(relationshipType));
             }
 
             if (externalUri == null)
             {
-                throw new ArgumentNullException("externalUri");
+                throw new ArgumentNullException(nameof(externalUri));
             }
 
             if (relationshipType == HyperlinkRelationship.RelationshipTypeConst)
@@ -234,17 +234,17 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (relationshipType == null)
             {
-                throw new ArgumentNullException("relationshipType");
+                throw new ArgumentNullException(nameof(relationshipType));
             }
 
             if (externalUri == null)
             {
-                throw new ArgumentNullException("externalUri");
+                throw new ArgumentNullException(nameof(externalUri));
             }
 
             if (id == null)
             {
-                throw new ArgumentNullException("id");
+                throw new ArgumentNullException(nameof(id));
             }
 
             if (relationshipType == HyperlinkRelationship.RelationshipTypeConst)
@@ -272,7 +272,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (externalRelationship == null)
             {
-                throw new ArgumentNullException("externalRelationship");
+                throw new ArgumentNullException(nameof(externalRelationship));
             }
 
             if (externalRelationship.Id == null || externalRelationship.Container != this)
@@ -302,7 +302,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (id == null)
             {
-                throw new ArgumentNullException("id");
+                throw new ArgumentNullException(nameof(id));
             }
 
             foreach (var externalRelationship in this.ReferenceRelationshipList.OfType<ExternalRelationship>())
@@ -330,7 +330,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (id == null)
             {
-                throw new ArgumentNullException("id");
+                throw new ArgumentNullException(nameof(id));
             }
 
             foreach (var externalRelationship in this.ReferenceRelationshipList.OfType<ExternalRelationship>())
@@ -373,7 +373,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (hyperlinkUri == null)
             {
-                throw new ArgumentNullException("hyperlinkUri");
+                throw new ArgumentNullException(nameof(hyperlinkUri));
             }
 
             TargetMode targetMode = isExternal ? TargetMode.External : TargetMode.Internal;
@@ -399,12 +399,12 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (hyperlinkUri == null)
             {
-                throw new ArgumentNullException("hyperlinkUri");
+                throw new ArgumentNullException(nameof(hyperlinkUri));
             }
 
             if (id == null)
             {
-                throw new ArgumentNullException("id");
+                throw new ArgumentNullException(nameof(id));
             }
 
             PackageRelationship relationship = this.CreateRelationship(hyperlinkUri, TargetMode.External, HyperlinkRelationship.RelationshipTypeConst, id);
@@ -445,7 +445,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (mediaDataPart == null)
             {
-                throw new ArgumentNullException("mediaDataPart");
+                throw new ArgumentNullException(nameof(mediaDataPart));
             }
 
             if (mediaDataPart.OpenXmlPackage != this.InternalOpenXmlPackage)
@@ -477,12 +477,12 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (mediaDataPart == null)
             {
-                throw new ArgumentNullException("mediaDataPart");
+                throw new ArgumentNullException(nameof(mediaDataPart));
             }
 
             if (id == null)
             {
-                throw new ArgumentNullException("id");
+                throw new ArgumentNullException(nameof(id));
             }
 
             if (mediaDataPart.OpenXmlPackage != this.InternalOpenXmlPackage)
@@ -509,7 +509,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (dataPartReferenceRelationship == null)
             {
-                throw new ArgumentNullException("dataPartReferenceRelationship");
+                throw new ArgumentNullException(nameof(dataPartReferenceRelationship));
             }
 
             var mediaDataPart = dataPartReferenceRelationship.DataPart;
@@ -551,7 +551,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (id == null)
             {
-                throw new ArgumentNullException("id");
+                throw new ArgumentNullException(nameof(id));
             }
 
             OpenXmlPart part = null;
@@ -563,7 +563,7 @@ namespace DocumentFormat.OpenXml.Packaging
             else
             {
                 // return null;
-                throw new ArgumentOutOfRangeException("id");
+                throw new ArgumentOutOfRangeException(nameof(id));
             }
         }
 
@@ -580,7 +580,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (part == null)
             {
-                throw new ArgumentNullException("part");
+                throw new ArgumentNullException(nameof(part));
             }
 
             if (this.PartDictionary.ContainsValue(part))
@@ -594,7 +594,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
             }
 
-            throw new ArgumentOutOfRangeException("part");
+            throw new ArgumentOutOfRangeException(nameof(part));
         }
 
         /// <summary>
@@ -612,12 +612,12 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (part == null)
             {
-                throw new ArgumentNullException("part");
+                throw new ArgumentNullException(nameof(part));
             }
 
             if (newRelationshipId == null)
             {
-                throw new ArgumentNullException("newRelationshipId");
+                throw new ArgumentNullException(nameof(newRelationshipId));
             }
 
             string oldId = null;
@@ -646,7 +646,7 @@ namespace DocumentFormat.OpenXml.Packaging
             if (oldId == null)
             {
                 // the part is not a sub part.
-                throw new ArgumentOutOfRangeException("part");
+                throw new ArgumentOutOfRangeException(nameof(part));
             }
 
             // Add a new relationship, and then remove the old relationship
@@ -691,7 +691,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (id == null)
             {
-                throw new ArgumentNullException("id");
+                throw new ArgumentNullException(nameof(id));
             }
             return (T)AddPartFrom(part, id);
         }
@@ -709,7 +709,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (targetPart == null)
             {
-                throw new ArgumentNullException("targetPart");
+                throw new ArgumentNullException(nameof(targetPart));
             }
             if (!IsInSamePackage(targetPart))
             {
@@ -737,11 +737,11 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (targetPart == null)
             {
-                throw new ArgumentNullException("targetPart");
+                throw new ArgumentNullException(nameof(targetPart));
             }
             if (id == null)
             {
-                throw new ArgumentNullException("id");
+                throw new ArgumentNullException(nameof(id));
             }
             if (!IsInSamePackage(targetPart))
             {
@@ -794,7 +794,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (contentType == null)
             {
-                throw new ArgumentNullException("contentType");
+                throw new ArgumentNullException(nameof(contentType));
             }
 
             return this.AddNewPartInternal<T>(contentType, id);
@@ -826,17 +826,17 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (relationshipType == null)
             {
-                throw new ArgumentNullException("relationshipType");
+                throw new ArgumentNullException(nameof(relationshipType));
             }
 
             if (contentType == null)
             {
-                throw new ArgumentNullException("contentType");
+                throw new ArgumentNullException(nameof(contentType));
             }
 
             if (targetExt == null)
             {
-                throw new ArgumentNullException("targetExt");
+                throw new ArgumentNullException(nameof(targetExt));
             }
 
             ExtendedPart child = new ExtendedPart(relationshipType);
@@ -863,7 +863,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (id == null)
             {
-                throw new ArgumentNullException("id");
+                throw new ArgumentNullException(nameof(id));
             }
 
             return DeletePartCore(id);
@@ -881,7 +881,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             //if (part == null)
             //{
-            //    throw new ArgumentNullException("part");
+            //    throw new ArgumentNullException(nameof(part));
             //}
             if (part == null)
             {
@@ -910,7 +910,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (partsToBeDeleted == null)
             {
-                throw new ArgumentNullException("partsToBeDeleted");
+                throw new ArgumentNullException(nameof(partsToBeDeleted));
             }
 
             StringCollection relationshipIds = new StringCollection();
@@ -962,7 +962,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (annotation == null)
             {
-                throw new ArgumentNullException("annotation");
+                throw new ArgumentNullException(nameof(annotation));
             }
             if (this._annotations == null)
             {
@@ -1037,7 +1037,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (type == null)
             {
-                throw new ArgumentNullException("type");
+                throw new ArgumentNullException(nameof(type));
             }
 
             if (this._annotations != null)
@@ -1114,7 +1114,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (type == null)
             {
-                throw new ArgumentNullException("type");
+                throw new ArgumentNullException(nameof(type));
             }
 
             if (this._annotations != null)
@@ -1204,7 +1204,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (type == null)
             {
-                throw new ArgumentNullException("type");
+                throw new ArgumentNullException(nameof(type));
             }
             if (this._annotations != null)
             {
@@ -1285,7 +1285,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (partCollection == null)
             {
-                throw new ArgumentNullException("partCollection");
+                throw new ArgumentNullException(nameof(partCollection));
             }
 
             partCollection.Clear();
@@ -1428,7 +1428,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (contentType == null)
             {
-                throw new ArgumentNullException("contentType");
+                throw new ArgumentNullException(nameof(contentType));
             }
 
             if (contentType == string.Empty)
@@ -1452,7 +1452,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 // Invalid part (same relationship type, but wrong (is different to be expected )content type 
                 if (partConstraintRule.PartContentType != null && contentType != partConstraintRule.PartContentType)
                 {
-                    throw new ArgumentOutOfRangeException("newPart");
+                    throw new ArgumentOutOfRangeException(nameof(newPart));
                 }
 
                 newPart.CreateInternal(this.InternalOpenXmlPackage, this.ThisOpenXmlPart, contentType, null);
@@ -1476,7 +1476,7 @@ namespace DocumentFormat.OpenXml.Packaging
             //}
             else
             {
-                throw new ArgumentOutOfRangeException("newPart");
+                throw new ArgumentOutOfRangeException(nameof(newPart));
             }
         }
 
@@ -1495,7 +1495,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (subPart == null)
             {
-                throw new ArgumentNullException("subPart");
+                throw new ArgumentNullException(nameof(subPart));
             }
 
             if (subPart.OpenXmlPackage == this.InternalOpenXmlPackage)
@@ -1526,7 +1526,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
                 else
                 {
-                    //throw new ArgumentOutOfRangeException("subPart");                    
+                    //throw new ArgumentOutOfRangeException(nameof(subPart));                    
                     throw new InvalidOperationException(ExceptionMessages.AddedPartIsNotAllowed);
                 }
             }
@@ -1534,7 +1534,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (partConstraintRule.PartContentType != null && subPart.ContentType != partConstraintRule.PartContentType)
                 {
-                    //throw new ArgumentOutOfRangeException("subPart");                    
+                    //throw new ArgumentOutOfRangeException(nameof(subPart));                    
                     throw new InvalidOperationException(ExceptionMessages.AddedPartIsNotAllowed);
                 }
 
@@ -1569,7 +1569,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (part == null)
             {
-                throw new ArgumentNullException("part");
+                throw new ArgumentNullException(nameof(part));
             }
 
             // only one part has the same relationshipType allowed
@@ -1597,7 +1597,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (part == null)
             {
-                throw new ArgumentNullException("part");
+                throw new ArgumentNullException(nameof(part));
             }
 
             // check if part is shared
@@ -1637,7 +1637,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (rId == null)
                 {
-                    throw new ArgumentNullException("rId");
+                    throw new ArgumentNullException(nameof(rId));
                 }
             }
 
@@ -1947,7 +1947,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (relationshipType == null)
             {
-                throw new ArgumentNullException("relationshipType");
+                throw new ArgumentNullException(nameof(relationshipType));
             }
 
             // there should be only one part of this type
@@ -1979,12 +1979,12 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (part == null)
             {
-                throw new ArgumentNullException("part");
+                throw new ArgumentNullException(nameof(part));
             }
 
             if (part.OpenXmlPackage != this.InternalOpenXmlPackage)
             {
-                throw new ArgumentOutOfRangeException("part");
+                throw new ArgumentOutOfRangeException(nameof(part));
             }
 
             return this.PartDictionary.ContainsValue(part);
@@ -2001,7 +2001,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (relationshipType == null)
             {
-                throw new ArgumentNullException("relationshipType");
+                throw new ArgumentNullException(nameof(relationshipType));
             }
 
             OpenXmlPart part = null;
@@ -2400,7 +2400,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (relationshipType == null)
             {
-                throw new ArgumentNullException("relationshipType");
+                throw new ArgumentNullException(nameof(relationshipType));
             }
 
             OpenXmlPart openXmlPart = null;
@@ -2441,7 +2441,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (relationshipType == null)
             {
-                throw new ArgumentNullException("relationshipType");
+                throw new ArgumentNullException(nameof(relationshipType));
             }
             switch (relationshipType)
             {

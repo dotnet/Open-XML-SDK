@@ -64,7 +64,7 @@ namespace DocumentFormat.OpenXml
             if (element == null)
             {
                 return null;
-                // throw new ArgumentNullException("element");
+                // throw new ArgumentNullException(nameof(element));
             }
 
             XmlPath xmlPath = new XmlPath();

@@ -158,7 +158,7 @@ namespace DocumentFormat.OpenXml.Packaging
             this.BasePackage = package;
             if (this.BasePackage == null)
             {
-                throw new ArgumentNullException("BasePackage");
+                throw new ArgumentNullException(nameof(BasePackage));
             }
 
             this.BasePackageRelationshipCollection = this.BasePackage.GetRelationships();
@@ -189,7 +189,7 @@ namespace DocumentFormat.OpenXml.Packaging
             this.BasePackagePart = packagePart;
             if (this.BasePackagePart == null)
             {
-                throw new ArgumentNullException("BasePackagePart");
+                throw new ArgumentNullException(nameof(BasePackagePart));
             }
 
             this.BasePackageRelationshipCollection = this.BasePackagePart.GetRelationships();
@@ -274,7 +274,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (package == null)
             {
-                throw new ArgumentNullException("package");
+                throw new ArgumentNullException(nameof(package));
             }
 
             if (package.FileOpenAccess == FileAccess.Write)
@@ -300,7 +300,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (package == null)
             {
-                throw new ArgumentNullException("package");
+                throw new ArgumentNullException(nameof(package));
             }
 
             //if (package.FileOpenAccess != FileAccess.Write)
@@ -323,7 +323,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (stream == null)
             {
-                throw new ArgumentNullException("stream");
+                throw new ArgumentNullException(nameof(stream));
             }
 
             if (readWriteMode)
@@ -349,7 +349,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (stream == null)
             {
-                throw new ArgumentNullException("stream");
+                throw new ArgumentNullException(nameof(stream));
             }
 
             if (!stream.CanWrite)
@@ -373,7 +373,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (path == null)
             {
-                throw new ArgumentNullException("path");
+                throw new ArgumentNullException(nameof(path));
             }
 
             if (readWriteMode)
@@ -398,7 +398,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (path == null)
             {
-                throw new ArgumentNullException("path");
+                throw new ArgumentNullException(nameof(path));
             }
 
             this._accessMode = FileAccess.ReadWrite;
@@ -586,7 +586,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (part == null)
             {
-                throw new ArgumentNullException("part");
+                throw new ArgumentNullException(nameof(part));
             }
 
             if (part.RelationshipType == this.MainPartRelationshipType &&
@@ -642,7 +642,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (contentType == null)
             {
-                throw new ArgumentNullException("contentType");
+                throw new ArgumentNullException(nameof(contentType));
             }
 
             MediaDataPart mediaDataPart = new MediaDataPart();
@@ -668,12 +668,12 @@ namespace DocumentFormat.OpenXml.Packaging
             
             if (contentType == null)
             {
-                throw new ArgumentNullException("contentType");
+                throw new ArgumentNullException(nameof(contentType));
             }
 
             if (extension == null)
             {
-                throw new ArgumentNullException("extension");
+                throw new ArgumentNullException(nameof(extension));
             }
 
             MediaDataPart mediaDataPart = new MediaDataPart();
@@ -715,7 +715,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (dataPart == null)
             {
-                throw new ArgumentNullException("dataPart");
+                throw new ArgumentNullException(nameof(dataPart));
             }
 
             if (dataPart.OpenXmlPackage != this)
@@ -1257,7 +1257,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (contentType == null)
             {
-                throw new ArgumentNullException("contentType");
+                throw new ArgumentNullException(nameof(contentType));
             }
 
             PartConstraintRule partConstraintRule;
@@ -1284,7 +1284,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 return child;
             }
-            throw new ArgumentOutOfRangeException("relationshipType");
+            throw new ArgumentOutOfRangeException(nameof(relationshipType));
         }
 
         internal sealed override OpenXmlPackage InternalOpenXmlPackage
@@ -1304,7 +1304,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (reachableParts == null)
             {
-                throw new ArgumentNullException("reachableParts");
+                throw new ArgumentNullException(nameof(reachableParts));
             }
 
             foreach (OpenXmlPart part in this.ChildrenParts.Values)
@@ -1622,7 +1622,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public OpenXmlPackage Clone(Stream stream, bool isEditable, OpenSettings openSettings)
         {
             if (stream == null)
-                throw new ArgumentNullException("stream");
+                throw new ArgumentNullException(nameof(stream));
 
             // Use this OpenXml package's OpenSettings if none are provided.
             // This is more in line with cloning than providing the default
@@ -1717,7 +1717,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public OpenXmlPackage Clone(string path, bool isEditable, OpenSettings openSettings)
         {
             if (path == null)
-                throw new ArgumentNullException("path");
+                throw new ArgumentNullException(nameof(path));
 
             // Use this OpenXml package's OpenSettings if none are provided.
             // This is more in line with cloning than providing the default
@@ -1788,7 +1788,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public OpenXmlPackage Clone(Package package, OpenSettings openSettings)
         {
             if (package == null)
-                throw new ArgumentNullException("package");
+                throw new ArgumentNullException(nameof(package));
 
             // Use this OpenXml package's OpenSettings if none are provided.
             // This is more in line with cloning than providing the default

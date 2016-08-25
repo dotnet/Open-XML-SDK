@@ -638,7 +638,7 @@ namespace DocumentFormat.OpenXml
         {
             if (localName == null)
             {
-                throw new ArgumentNullException("localName");
+                throw new ArgumentNullException(nameof(localName));
             }
 
             if (namespaceUri == null)
@@ -721,7 +721,7 @@ namespace DocumentFormat.OpenXml
         {
             if (attributes == null)
             {
-                throw new ArgumentNullException("attributes");
+                throw new ArgumentNullException(nameof(attributes));
             }
 
             if (this.HasAttributes)
@@ -832,7 +832,7 @@ namespace DocumentFormat.OpenXml
         {
             if (localName == null)
             {
-                throw new ArgumentNullException("localName");
+                throw new ArgumentNullException(nameof(localName));
             }
 
             if (namespaceUri == null)
@@ -897,7 +897,7 @@ namespace DocumentFormat.OpenXml
         {
             if (openXmlAttributes == null)
             {
-                throw new ArgumentNullException("openXmlAttributes");
+                throw new ArgumentNullException(nameof(openXmlAttributes));
             }
 
             foreach (OpenXmlAttribute attribute in openXmlAttributes)
@@ -937,11 +937,11 @@ namespace DocumentFormat.OpenXml
         {
             if (string.IsNullOrEmpty(prefix))
             {
-                throw new ArgumentNullException("prefix");
+                throw new ArgumentNullException(nameof(prefix));
             }
             if (string.IsNullOrEmpty(uri))
             {
-                throw new ArgumentNullException("uri");
+                throw new ArgumentNullException(nameof(uri));
             }
             MakeSureParsed();
             if (NamespaceDeclField == null)
@@ -967,7 +967,7 @@ namespace DocumentFormat.OpenXml
         {
             if (string.IsNullOrEmpty(prefix))
             {
-                throw new ArgumentNullException("prefix");
+                throw new ArgumentNullException(nameof(prefix));
             }
             MakeSureParsed();
             if (NamespaceDeclField != null)
@@ -1256,7 +1256,7 @@ namespace DocumentFormat.OpenXml
         {
             if (xmlWriter == null)
             {
-                throw new ArgumentNullException("xmlWriter");
+                throw new ArgumentNullException(nameof(xmlWriter));
             }
 
             if (this.XmlParsed)
@@ -1293,7 +1293,7 @@ namespace DocumentFormat.OpenXml
         {
             if (newChildren == null)
             {
-                throw new ArgumentNullException("newChildren");
+                throw new ArgumentNullException(nameof(newChildren));
             }
 
             foreach (OpenXmlElement child in newChildren)
@@ -1362,7 +1362,7 @@ namespace DocumentFormat.OpenXml
         {
             if (newElement == null)
             {
-                throw new ArgumentNullException("newElement");
+                throw new ArgumentNullException(nameof(newElement));
                 // TODO: should we just return null? InsertBefore / InsertAfter do not throw on null newChild.
                 // return null;
             }
@@ -1385,7 +1385,7 @@ namespace DocumentFormat.OpenXml
         {
             if (newElement == null)
             {
-                throw new ArgumentNullException("newElement");
+                throw new ArgumentNullException(nameof(newElement));
                 // TODO: should we just return null? InsertBefore / InsertAfter do not throw on null newChild.
                 // return null;
             }
@@ -1492,7 +1492,7 @@ namespace DocumentFormat.OpenXml
         {
             if (element == null)
             {
-                throw new ArgumentNullException("element");
+                throw new ArgumentNullException(nameof(element));
             }
 
             return (GetOrder(this, element) == ElementOrder.After);
@@ -1507,7 +1507,7 @@ namespace DocumentFormat.OpenXml
         {
             if (element == null)
             {
-                throw new ArgumentNullException("element");
+                throw new ArgumentNullException(nameof(element));
             }
 
             return (GetOrder(this, element) == ElementOrder.Before);
@@ -2326,7 +2326,7 @@ namespace DocumentFormat.OpenXml
         {
             if (annotation == null)
             {
-                throw new ArgumentNullException("annotation");
+                throw new ArgumentNullException(nameof(annotation));
             }
             if (this._annotations == null)
             {
@@ -2401,7 +2401,7 @@ namespace DocumentFormat.OpenXml
         {
             if (type == null)
             {
-                throw new ArgumentNullException("type");
+                throw new ArgumentNullException(nameof(type));
             }
 
             if (this._annotations != null)
@@ -2478,7 +2478,7 @@ namespace DocumentFormat.OpenXml
         {
             if (type == null)
             {
-                throw new ArgumentNullException("type");
+                throw new ArgumentNullException(nameof(type));
             }
 
             if (this._annotations != null)
@@ -2568,7 +2568,7 @@ namespace DocumentFormat.OpenXml
         {
             if (type == null)
             {
-                throw new ArgumentNullException("type");
+                throw new ArgumentNullException(nameof(type));
             }
             if (this._annotations != null)
             {
@@ -3117,7 +3117,7 @@ namespace DocumentFormat.OpenXml
         {
             if (prefix == null)
             {
-                throw new ArgumentNullException("prefix");
+                throw new ArgumentNullException(nameof(prefix));
             }
 
             // first, lookup whether the prefix is defined on itself and any ancestor elements.
@@ -3145,7 +3145,7 @@ namespace DocumentFormat.OpenXml
         {
             if (string.IsNullOrEmpty(namespaceUri))
             {
-                throw new ArgumentNullException("namespaceUri");
+                throw new ArgumentNullException(nameof(namespaceUri));
             }
 
             var node = this;

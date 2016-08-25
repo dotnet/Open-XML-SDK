@@ -227,10 +227,10 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                 //return "OnOffValue":
 
                 default:
-                    throw new ArgumentOutOfRangeException("xsdType");
+                    throw new ArgumentOutOfRangeException(nameof(xsdType));
             }
 
-            throw new ArgumentOutOfRangeException("xsdType");;
+            throw new ArgumentOutOfRangeException(nameof(xsdType));;
         }
     }
 

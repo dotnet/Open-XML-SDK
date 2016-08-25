@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml
         {
             if (String.IsNullOrEmpty(localName))
             {
-                throw new ArgumentNullException("localName");
+                throw new ArgumentNullException(nameof(localName));
             }
 
             if (prefix == null)
@@ -50,7 +50,7 @@ namespace DocumentFormat.OpenXml
         {
             if (String.IsNullOrEmpty(localName))
             {
-                throw new ArgumentNullException("localName");
+                throw new ArgumentNullException(nameof(localName));
             }
 
             if (prefix == null)

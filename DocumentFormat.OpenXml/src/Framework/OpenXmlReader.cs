@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml
         {
             if (baseReader == null)
             {
-                throw new ArgumentNullException("baseReader");
+                throw new ArgumentNullException(nameof(baseReader));
             }
 
             this._strictTranslation = strictTranslation;
@@ -915,7 +915,7 @@ namespace DocumentFormat.OpenXml
         {
             if (openXmlPart == null)
             {
-                throw new ArgumentNullException("openXmlPart");
+                throw new ArgumentNullException(nameof(openXmlPart));
             }
             Stream partStream = openXmlPart.GetStream(FileMode.Open);
             // set MaxCharactersInDocument to limit the part size on loading DOM.
@@ -933,7 +933,7 @@ namespace DocumentFormat.OpenXml
         {
             if (openXmlPart == null)
             {
-                throw new ArgumentNullException("openXmlPart");
+                throw new ArgumentNullException(nameof(openXmlPart));
             }
             // set MaxCharactersInDocument to limit the part size on loading DOM.
             this._elementContext.XmlReaderSettings.MaxCharactersInDocument = openXmlPart.MaxCharactersInPart;
@@ -949,7 +949,7 @@ namespace DocumentFormat.OpenXml
         {
             if (partStream == null)
             {
-                throw new ArgumentNullException("partStream");
+                throw new ArgumentNullException(nameof(partStream));
             }
 
             // we don't know the MaxCharactersInPart if only a stream is passed in.
@@ -966,7 +966,7 @@ namespace DocumentFormat.OpenXml
         {
             if (partStream == null)
             {
-                throw new ArgumentNullException("partStream");
+                throw new ArgumentNullException(nameof(partStream));
             }
             // we don't know the MaxCharactersInPart if only a stream is passed in.
             this.Init(partStream, /*closeInput*/false);
@@ -1906,7 +1906,7 @@ namespace DocumentFormat.OpenXml
         {
             if (openXmlElement == null)
             {
-                throw new ArgumentNullException("openXmlElement");
+                throw new ArgumentNullException(nameof(openXmlElement));
             }
 
             this.Init(openXmlElement);
@@ -1922,7 +1922,7 @@ namespace DocumentFormat.OpenXml
         {
             if (openXmlElement == null)
             {
-                throw new ArgumentNullException("openXmlElement");
+                throw new ArgumentNullException(nameof(openXmlElement));
             }
 
             this.Init(openXmlElement);
