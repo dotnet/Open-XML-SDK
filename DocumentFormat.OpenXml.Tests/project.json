@@ -6,6 +6,9 @@
     "dotnet-test-xunit": "2.2.0-preview2-build1029",
     "DocumentFormat.OpenXml": "3.0.0-*"
   },
+  "buildOptions": {
+    "embed": "../TestFiles/**/*.*"
+  },
   "frameworks": {
     "net451": {
       "frameworkAssemblies": {

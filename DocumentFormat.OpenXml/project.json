@@ -4,7 +4,12 @@
     "nowarn": [
       "3003"
     ],
-    "xmlDoc": true
+    "xmlDoc": true,
+    "embed": [
+      "src/GeneratedCode/O12SchemaConstraintDatas.bin",
+      "src/GeneratedCode/O14SchemaConstraintDatas.bin",
+      "src/GeneratedCode/O15SchemaConstraintDatas.bin"
+    ]
   },
   "frameworks": {
     "net45": {
