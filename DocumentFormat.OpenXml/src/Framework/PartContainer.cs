@@ -913,7 +913,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException("partsToBeDeleted");
             }
 
-            StringCollection relationshipIds = new StringCollection();
+            List<string> relationshipIds = new List<string>();
 
             foreach (OpenXmlPart part in partsToBeDeleted)
             {
@@ -1858,7 +1858,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            StringCollection relationshipIds = new StringCollection();
+            List<string> relationshipIds = new List<string>();
 
             foreach (KeyValuePair<string, OpenXmlPart> idPartPair in this.ChildrenParts)
             {
