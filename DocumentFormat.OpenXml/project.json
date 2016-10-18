@@ -4,12 +4,7 @@
     "nowarn": [
       "3003"
     ],
-    "xmlDoc": true,
-    "embed": [
-      "src/GeneratedCode/O12SchemaConstraintDatas.bin",
-      "src/GeneratedCode/O14SchemaConstraintDatas.bin",
-      "src/GeneratedCode/O15SchemaConstraintDatas.bin"
-    ]
+    "xmlDoc": true
   },
   "frameworks": {
     "net45": {
@@ -17,6 +12,15 @@
         "System.Xml": "",
         "System.Xml.Linq": "",
         "WindowsBase": ""
+      },
+      "buildOptions": {
+        "define": [
+        ],
+        "embed": [
+          "src/GeneratedCode/O12SchemaConstraintDatas.bin",
+          "src/GeneratedCode/O14SchemaConstraintDatas.bin",
+          "src/GeneratedCode/O15SchemaConstraintDatas.bin"
+        ]
       }
     }
   }

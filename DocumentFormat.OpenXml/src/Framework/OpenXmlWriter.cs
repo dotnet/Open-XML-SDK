@@ -550,7 +550,7 @@ namespace DocumentFormat.OpenXml
 
         private static bool IsOpenXmlLeafTextElement(Type elementType)
         {
-            return elementType.GetTypeInfo().IsSubclassOf(OpenXmlLeafTextElementClass.GetTypeInfo());
+            return elementType.IsSubclassOf(OpenXmlLeafTextElementClass);
         }
 
         private static bool IsOpenXmlLeafTextElement(OpenXmlElement element)

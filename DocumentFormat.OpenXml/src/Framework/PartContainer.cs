@@ -10,6 +10,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Xml;
 using System.Linq;
+using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
@@ -1045,7 +1046,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 object[] annotations = this._annotations as object[];
                 if (annotations == null)
                 {
-                    if (type.IsInstanceOfType(this._annotations))
+                    if (type.GetTypeInfo().IsAssignableFrom(this._annotations.GetType().GetTypeInfo()))
                     {
                         return this._annotations;
                     }
@@ -1059,7 +1060,7 @@ namespace DocumentFormat.OpenXml.Packaging
                         {
                             break;
                         }
-                        if (type.IsInstanceOfType(obj))
+                        if (type.GetTypeInfo().IsAssignableFrom(obj.GetType().GetTypeInfo()))
                         {
                             return obj;
                         }
@@ -1122,7 +1123,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 object[] annotations = this._annotations as object[];
                 if (annotations == null)
                 {
-                    if (type.IsInstanceOfType(this._annotations))
+                    if (type.GetTypeInfo().IsAssignableFrom(this._annotations.GetType().GetTypeInfo()))
                     {
                         yield return this._annotations;
                     }
@@ -1136,7 +1137,7 @@ namespace DocumentFormat.OpenXml.Packaging
                         {
                             break;
                         }
-                        if (type.IsInstanceOfType(obj))
+                        if (type.GetTypeInfo().IsAssignableFrom(obj.GetType().GetTypeInfo()))
                         {
                             yield return obj;
                         }
@@ -1211,7 +1212,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 object[] annotations = this._annotations as object[];
                 if (annotations == null)
                 {
-                    if (type.IsInstanceOfType(this._annotations))
+                    if (type.GetTypeInfo().IsAssignableFrom(this._annotations.GetType().GetTypeInfo()))
                     {
                         this._annotations = null;
                     }
@@ -1227,7 +1228,7 @@ namespace DocumentFormat.OpenXml.Packaging
                         {
                             break;
                         }
-                        if (!type.IsInstanceOfType(o))
+                        if (!type.GetTypeInfo().IsAssignableFrom(o.GetType().GetTypeInfo()))
                         {
                             annotations[num++] = o;
                         }
