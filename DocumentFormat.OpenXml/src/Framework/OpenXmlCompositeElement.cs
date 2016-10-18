@@ -203,7 +203,7 @@ namespace DocumentFormat.OpenXml
                     // because XmlReader can not be created on InnerXml ( InnerXml may have several root elements ).
 
                     StringWriter w = new StringWriter(CultureInfo.InvariantCulture);
-                    XmlTextWriter writer2 = new XmlDOMTextWriter(w);
+                    XmlWriter writer2 = new XmlDOMTextWriter(w);
                     try
                     {
                         writer2.WriteStartElement(this.Prefix, this.LocalName, this.NamespaceUri);

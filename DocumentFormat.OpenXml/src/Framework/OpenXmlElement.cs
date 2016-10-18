@@ -563,7 +563,7 @@ namespace DocumentFormat.OpenXml
                 {
                     // namespace, this element and attributes
                     StringWriter w = new StringWriter(CultureInfo.InvariantCulture);
-                    XmlTextWriter writer2 = new XmlDOMTextWriter(w);
+                    XmlWriter writer2 = new XmlDOMTextWriter(w);
                     try
                     {
                         this.WriteTo(writer2);
