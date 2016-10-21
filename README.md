@@ -41,6 +41,11 @@ See License.txt in the project root for license information.
 Portions of this project are licensed under the MIT license.
 See MIT-License.txt in the project root for license information.
 
+Download
+========
+
+Downloads are available on [this site](https://www.microsoft.com/en-us/download/details.aspx?id=30425).
+
 News
 ====
 The most recent release of the Open XML SDK is Version 2.6.1, which includes a total of 1333 XUnit tests.
