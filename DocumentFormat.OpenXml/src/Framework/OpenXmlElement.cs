@@ -524,17 +524,14 @@ namespace DocumentFormat.OpenXml
             {
                 if (this.XmlParsed)
                 {
-                    StringWriter w = new StringWriter(CultureInfo.InvariantCulture);
-                    XmlDOMTextWriter writer2 = new XmlDOMTextWriter(w);
-                    try
+                    using (StringWriter w = new StringWriter(CultureInfo.InvariantCulture))
                     {
-                        this.WriteContentTo(writer2);
+                        using (XmlDOMTextWriter writer2 = new XmlDOMTextWriter(w))
+                        {
+                            this.WriteContentTo(writer2);
+                        }
+                        return w.ToString();
                     }
-                    finally
-                    {
-                        writer2.Close();
-                    }
-                    return w.ToString();
                 }
                 else
                 {
@@ -562,17 +559,14 @@ namespace DocumentFormat.OpenXml
                 if (this.XmlParsed)
                 {
                     // namespace, this element and attributes
-                    StringWriter w = new StringWriter(CultureInfo.InvariantCulture);
-                    XmlWriter writer2 = new XmlDOMTextWriter(w);
-                    try
+                    using (StringWriter w = new StringWriter(CultureInfo.InvariantCulture))
                     {
-                        this.WriteTo(writer2);
+                        using (XmlDOMTextWriter writer2 = new XmlDOMTextWriter(w))
+                        {
+                            this.WriteTo(writer2);
+                        }
+                        return w.ToString();
                     }
-                    finally
-                    {
-                        writer2.Close();
-                    }
-                    return w.ToString();
                 }
                 else
                 {
