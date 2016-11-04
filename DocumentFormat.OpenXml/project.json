@@ -1,0 +1,18 @@
+﻿{
+  "version": "3.0.0-*",
+  "buildOptions": {
+    "nowarn": [
+      "3003"
+    ],
+    "xmlDoc": true
+  },
+  "frameworks": {
+    "net45": {
+      "frameworkAssemblies": {
+        "System.Xml": "",
+        "System.Xml.Linq": "",
+        "WindowsBase": ""
+      }
+    }
+  }
+}
