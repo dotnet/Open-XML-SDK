@@ -29,77 +29,11 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the base class for PackageRelationshipPropertyCollection and PackagePartRelationshipPropertyCollection objects.
     /// </summary>
-    abstract internal class RelationshipCollection : CollectionBase
+    abstract internal class RelationshipCollection : List<RelationshipProperty>
     {
         protected PackageRelationshipCollection BasePackageRelationshipCollection { get; set; }
 
-        private bool _strictTranslation = false;
-        internal bool StrictTranslation
-        {
-            get
-            {
-               return this._strictTranslation;
-            }
-            set
-            {
-               this._strictTranslation = value;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the relationship properties of the element at the specified index in the collection.
-        /// </summary>
-        public RelationshipProperty this[int index]
-        {
-            get
-            {
-                return (RelationshipProperty)this.List[index];
-            }
-            set
-            {
-                this.List[index] = value;
-            }
-        }
-
-        /// <summary>
-        /// Adds the specified relationship properties to the collection.
-        /// </summary>
-        public int Add(RelationshipProperty value)
-        {
-            return this.List.Add(value);
-        }
-
-        /// <summary>
-        /// Gets the index of the specified relationship properties in the collection.
-        /// </summary>
-        public int IndexOf(RelationshipProperty value)
-        {
-            return this.List.IndexOf(value);
-        }
-
-        /// <summary>
-        /// Inserts the specified relationship properties at the specified index in the collection.
-        /// </summary>
-        public void Insert(int index, RelationshipProperty value)
-        {
-            this.List.Insert(index, value);
-        }
-
-        /// <summary>
-        /// Removes the specified relationship properties from the collection.
-        /// </summary>
-        public void Remove(RelationshipProperty value)
-        {
-            this.List.Remove(value);
-        }
-
-        /// <summary>
-        /// Gets a value that indicates whether the collection contains the specified relationship properties.
-        /// </summary>
-        public bool Contains(RelationshipProperty value)
-        {
-            return this.List.Contains(value);
-        }
+        internal bool StrictTranslation { get; set; }
 
         /// <summary>
         /// This method fills the collection with PackageRels from the PackageRelationshipCollection that is given in the sub class.
