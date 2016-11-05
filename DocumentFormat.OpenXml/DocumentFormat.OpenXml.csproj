@@ -47,6 +47,7 @@
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.XML" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\Framework\AlternateContent.cs" />
@@ -245,12 +246,6 @@
       -->
       <LogicalName>DocumentFormat.OpenXml.Validation.ValidationResources.resources</LogicalName>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\System.IO.Packaging\System.IO.Packaging.csproj">
-      <Project>{4c88a3ad-1241-4a04-854b-8372df29828d}</Project>
-      <Name>System.IO.Packaging</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="src\GeneratedCode\O12SchemaConstraintDatas.bin" />
