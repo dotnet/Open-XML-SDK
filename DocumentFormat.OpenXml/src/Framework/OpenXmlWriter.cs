@@ -6,6 +6,7 @@ using System.Text;
 using System.Diagnostics;
 using System.Xml;
 using DocumentFormat.OpenXml.Packaging;
+using System.Reflection;
 
 namespace DocumentFormat.OpenXml
 {
@@ -549,7 +550,7 @@ namespace DocumentFormat.OpenXml
 
         private static bool IsOpenXmlLeafTextElement(Type elementType)
         {
-            return elementType.IsSubclassOf(OpenXmlLeafTextElementClass);
+            return elementType.GetTypeInfo().IsSubclassOf(OpenXmlLeafTextElementClass.GetTypeInfo());
         }
 
         private static bool IsOpenXmlLeafTextElement(OpenXmlElement element)
