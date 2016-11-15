@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     using SdbIndex = UInt16;
     using OpenXmlTypeId = UInt16;
     using DocumentFormat.OpenXml.Validation;
-    
+
     /// <summary>
     /// Defines SdbSchemaDatas class.
     /// </summary>
@@ -24,10 +24,10 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
         /*******************************************************************
          * Data format.
-         * 
+         *
          * Data head.
          * Table1 a list of SdbClassIdToSchemaTypeIndex (classId => ctIndex)
-         * Table2 a list of all SdbSchemaType (schema types).  
+         * Table2 a list of all SdbSchemaType (schema types).
          * Table3 a list of all SdbParticleConstraint.
          * Table4 a list of all SdbParticleChildrenIndex
          * Table5 a list of all attribute constraint
@@ -36,16 +36,16 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private SdbDataArray<SdbClassIdToSchemaTypeIndex> SdbClassIdMap { get; set; }
-        
+
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private SdbDataArray<SdbSchemaType> SdbSchemaTypes { get; set; }
-        
+
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private SdbDataArray<SdbParticleConstraint> SdbParticles { get; set; }
-        
+
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private SdbDataArray<SdbParticleChildrenIndex> SdbParticleIndexs { get; set; }
-        
+
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private SdbDataArray<SdbAttributeConstraint> SdbAttributes { get; set; }
 
@@ -56,14 +56,14 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         private ParticleConstraint[] EmptyChildrenParticles = new ParticleConstraint[0];
 
         /// <summary>
-        /// Cache the created 
+        /// Cache the created
         /// </summary>
         private Dictionary<OpenXmlTypeId, SchemaTypeData> _schemaTypeDatas;
         private bool _loaded;
         private FileFormatVersions _fileFormat;
 
         /// <summary>
-        /// The data head. 
+        /// The data head.
         /// </summary>
         public SdbDataHead SdbDataHead { get; private set; }
 
@@ -80,7 +80,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         //static SdbSchemaDatas()
         //{
         //}
-               
+
         /// <summary>
         /// Return an instance of SchemaConstraintDatabase which will load Office2007 schemas.
         /// </summary>
@@ -139,7 +139,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
             Debug.Assert(openxmlTypeId >= this.SdbDataHead.StartClassId);
             Debug.Assert(openxmlTypeId < this.SdbDataHead.StartClassId + this.SdbDataHead.ClassIdsCount);
-            
+
             OpenXmlTypeId typeId = (OpenXmlTypeId)openxmlTypeId;
 
             SchemaTypeData schemaTypeData;
@@ -173,33 +173,11 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         {
             this._schemaTypeDatas = new Dictionary<ushort, SchemaTypeData>();
 
-            byte[] constraintBinaryData;
-
-            switch (this._fileFormat)
+            // Load the database from disk.
+            using (var data = ValidationResources.GetSchemaStream(_fileFormat))
             {
-                case FileFormatVersions.Office2007:
-                    constraintBinaryData = ValidationResources.O12SchemaConstraintDatas;
-                    break;
-
-                case FileFormatVersions.Office2010:
-                    constraintBinaryData = ValidationResources.O14SchemaConstraintDatas;
-                    break;
-
-                case FileFormatVersions.Office2013:
-                    constraintBinaryData = ValidationResources.O15SchemaConstraintDatas;
-                    break;
-
-                default:
-                    Debug.Assert(this._fileFormat == FileFormatVersions.Office2007 || this._fileFormat == FileFormatVersions.Office2010 || this._fileFormat == FileFormatVersions.Office2013);
-                    constraintBinaryData = ValidationResources.O12SchemaConstraintDatas;
-                    break;
+                this.Load(data);
             }
-            // Load the database from disk.    
-            using (var byteStream = new MemoryStream(constraintBinaryData, false))
-            {
-                this.Load(byteStream);
-            }
-            return;
         }
 
         /// <summary>
@@ -358,7 +336,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             dataBytes = new byte[count];
             dataStream.Read(dataBytes, 0, count);
             this.SdbClassIdMap = new SdbDataArray<SdbClassIdToSchemaTypeIndex>(dataBytes);
-            
+
 
             // schema types
             count = this.SdbDataHead.SchemaTypeCount * SdbSchemaType.TypeSize;
@@ -372,7 +350,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             dataStream.Read(dataBytes, 0, count);
             this.SdbParticles = new SdbDataArray<SdbParticleConstraint>(dataBytes);
 
-            // particle children index 
+            // particle children index
             count = this.SdbDataHead.ParticleChildrenIndexCount * SdbParticleChildrenIndex.TypeSize;
             dataBytes = new byte[count];
             dataStream.Read(dataBytes, 0, count);
@@ -387,7 +365,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             // simple type constraints
             dataStream.Seek(this.SdbDataHead.SimpleTypeDataOffset, SeekOrigin.Begin);
             this.SimpleTypeRestrictions = SimpleTypeRestrictions.Deserialize(dataStream, this._fileFormat);
-            
+
             Assert(this.SdbDataHead.SimpleTypeCount == this.SimpleTypeRestrictions.SimpleTypeCount);
 
             CheckData();
@@ -451,7 +429,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// </summary>
         private void CheckData()
         {
-            
+
 #if DEBUG
             SdbClassIdToSchemaTypeIndex classIdData;
 
@@ -488,13 +466,13 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             }
             else if (schemaType.IsSimpleContent)
             {
-                // 
+                //
             }
             else
             {
                 // only attributes
             }
-            
+
             // check attributes
             for (int i = 0; i < schemaType.AttributesCount; i++)
             {
@@ -727,7 +705,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                 //    Debug.Assert(simpleType is OtherSimpleTypeRestriction);
                 //    break;
 
-                // enum, list 
+                // enum, list
 
                 case XsdType.Enum:
                     Debug.Assert(simpleType is EnumValueRestriction);
@@ -769,7 +747,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     }
 
 
-    internal class SdbDataArray<T> 
+    internal class SdbDataArray<T>
         // : IEnumerable<T>
         where T : SdbData, new()
     {

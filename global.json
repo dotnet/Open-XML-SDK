@@ -1,0 +1,6 @@
+{
+    "projects":[
+        "DocumentFormat.OpenXml",
+        "DocumentFormat.OpenXml.Tests"
+    ]
+}

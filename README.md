@@ -29,11 +29,6 @@ Documents (DOCX, XLSX, and PPTX).  It supports scenarios such as:
 [Open-Xml-PowerTools](https://github.com/OfficeDev/Open-Xml-PowerTools) provides example code and guidance for implementing many of the above important Open XML scenarios.  Be sure to check it out
 before re-inventing your own solutions.
 
-The Open-Xml-Sdk relies on the System.IO.Packaging namespace.  There is an implementation of System.IO.Packaging in the WindowsBase assembly,
-and there is a new, open source implementation of System.IO.Packaging that is included with version 2.6 of the Open-Xml-Sdk.  Because of this, there
-are six projects in the Visual Studio solution.  [This screen-cast](https://www.youtube.com/watch?v=B13IYHKhcc8) describes the six projects, and explains
-the purpose behind each.
-
 Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.
 Licensed under the Apache License, Version 2.0.
 See License.txt in the project root for license information.
@@ -79,29 +74,16 @@ the documentation is [now in GitHub](https://github.com/OfficeDev/office-content
 Build Instructions
 ==================
 
-Note: for this first release, you must have some version of Visual Studio
-installed.  Visual Studio 2015 Community Edition will work just fine:
-https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs
+This project uses the `project.json` for the project system. Please see the [.NET Core SDK](https://www.microsoft.com/net/core#windows) for more information on how to use this project type.
 
 To build the Open XML SDK:
 - Clone the repo at https://github.com/OfficeDev/Open-XML-SDK
-- Open the solution using Visual Studio 2013 or 2015.  Community Edition of VS2015 works just fine.
+- Open the solution using Visual Studio 2015.  Community Edition of VS2015 works just fine.
 - Build the solution (using either Debug or Release configuration)
 - Run the Xunit tests to verify the installation
 
 If you want to use a command line approach:
-- Start a Visual Studio command prompt, and change into the directory that contains the repo
-- Use MSBUILD to build the SDK  (C:> MSBUILD Open-Xml-Sdk.sln)
-- You can also use MSBUILD to build the individual projects.
-
-To use the SDK:
-- In your program that uses the Open XML SDK, add references to the newly built libraries in DocumentFormat.OpenXml/bin/Debug (or in DocumentFormat.OpenXml/bin/Release)
-
-Previously, we were using PowerShell to generate a new version number for each build.  This is no longer required, and it is more convenient to build the SDK using MSBUILD, therefore I have removed the instructions for building using the PowerShell script.
-
-Building with Mono
-=================
-- First, ensure you have mono installed in a manner appropriate to your linux/unix distribution.
-- `make -f Makefile-Linux-Mono build`
-- Find libraries in the folder: ./build/OpenXmlSdkLib
-- [Screen-Cast: Using the Open XML SDK on Linux using Mono](http://openxmldeveloper.org/blog/b/openxmldeveloper/archive/2014/07/03/screen-cast-using-open-xml-sdk-on-linux-using-mono.aspx)
+- Go to the directory the solution is in
+- Run `dotnet restore` in the directory
+- Run `dotnet test DocumentFormat.OpenXml.Tests` to run the tests
+- RUn `dotnet pack DocumentFormat.OpenXml` to generate a nupkg
