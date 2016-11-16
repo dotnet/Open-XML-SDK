@@ -112,7 +112,7 @@ namespace DocumentFormat.OpenXml
                 this.Close();
             }
 
-            ((IDisposable)this.BaseReader).Dispose();
+            this.BaseReader.Dispose();
         }
 
         /// <summary>
@@ -1630,7 +1630,6 @@ namespace DocumentFormat.OpenXml
             this._elementStack.Clear();
             this._xmlReader.Close();
         }
-
 
         #region private methods
 

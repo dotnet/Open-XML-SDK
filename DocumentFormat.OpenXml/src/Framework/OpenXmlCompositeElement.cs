@@ -202,36 +202,33 @@ namespace DocumentFormat.OpenXml
                     // create an outer XML by wrapping the InnerXml with this element.
                     // because XmlReader can not be created on InnerXml ( InnerXml may have several root elements ).
 
-                    StringWriter w = new StringWriter(CultureInfo.InvariantCulture);
-                    XmlTextWriter writer2 = new XmlDOMTextWriter(w);
-                    try
+                    using (StringWriter w = new StringWriter(CultureInfo.InvariantCulture))
                     {
-                        writer2.WriteStartElement(this.Prefix, this.LocalName, this.NamespaceUri);
-                        writer2.WriteRaw(value);
-                        writer2.WriteEndElement();
-                    }
-                    finally
-                    {
-                        writer2.Close();
-                    }
+                        using (XmlWriter writer2 = new XmlDOMTextWriter(w))
+                        {
+                            writer2.WriteStartElement(this.Prefix, this.LocalName, this.NamespaceUri);
+                            writer2.WriteRaw(value);
+                            writer2.WriteEndElement();
+                        }
 
-                    // create a temp element to parse the xml.
-                    OpenXmlElement newElement = this.CloneNode(false);
-                    newElement.OuterXml = w.ToString();
+                        // create a temp element to parse the xml.
+                        OpenXmlElement newElement = this.CloneNode(false);
+                        newElement.OuterXml = w.ToString();
 
-                    OpenXmlElement child = newElement.FirstChild;
-                    OpenXmlElement next = null;
+                        OpenXmlElement child = newElement.FirstChild;
+                        OpenXmlElement next = null;
 
-                    // then move all children to this element.
-                    while (child != null)
-                    {
-                        next = child.NextSibling();
+                        // then move all children to this element.
+                        while (child != null)
+                        {
+                            next = child.NextSibling();
 
-                        child = newElement.RemoveChild(child);
+                            child = newElement.RemoveChild(child);
 
-                        this.AppendChild(child);
+                            this.AppendChild(child);
 
-                        child = next;
+                            child = next;
+                        }
                     }
                 }
             }

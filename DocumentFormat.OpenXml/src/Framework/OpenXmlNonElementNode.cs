@@ -76,13 +76,11 @@ namespace DocumentFormat.OpenXml
                 using (XmlReader xmlReader = XmlConvertingReaderFactory.Create(stringReader, settings))
                 {
                     xmlReader.Read();
-                
+
                     if (xmlReader.NodeType != nodeType)
                     {
                         throw new ArgumentException(ExceptionMessages.InvalidOuterXmlForMiscNode);
                     }
-
-                    xmlReader.Close();
                 }
             }
 
@@ -151,7 +149,6 @@ namespace DocumentFormat.OpenXml
                             {
                                 xmlReader.Read();
                                 localName = xmlReader.LocalName;
-                                xmlReader.Close();
                             }
                         }
                         break;
