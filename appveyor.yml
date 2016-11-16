@@ -1,12 +1,5 @@
 os: Visual Studio 2015
 
-environment:
-  SignClientSecret:
-    secure: VTO9eDpMF+nIWNKN8ERYk52veXovg3lBm9HA1K9NXq1WukzRTWQtDBdAf3hUS5oL
-
-install:
-  - ps: nuget install -ExcludeVersion SignClient -Version 0.5.0-beta4 -pre -OutputDirectory .\build\
-
 build_script:
   - ps: gitversion /output buildserver
   - ps: .\build\Update-Version.ps1 $env:GitVersion_NuGetVersion
@@ -16,20 +9,6 @@ build_script:
 
 after_build:
   - ps: dotnet --verbose pack .\DocumentFormat.OpenXml -o .
-  - ps: .\build\SignPackage.ps1
 
 test_script:
   - cmd: dotnet test .\DocumentFormat.OpenXml.Tests
-
-artifacts:
-  - path: '*.nupkg'
-    name: NuGetArtifacts
-
-deploy:
-  provider: NuGet
-  server: https://www.myget.org/F/openxml/api/v2/package
-  api_key:
-    secure: il1wdXL6HbnB8b6+T4PbKzkSVVg0GhCodYb1/jLqbQLH3qeqnvBlUfQv0J1x8GAA
-  skip_symbols: false
-  symbol_server: https://www.myget.org/F/openxml/symbols/api/v2/package
-  artifact: /.*\.nupkg/
