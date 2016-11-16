@@ -12,8 +12,6 @@
   "frameworks": {
     "net451": {
       "frameworkAssemblies": {
-        "System.Drawing": "",
-        "System.Windows.Forms": "",
         "Microsoft.VisualBasic": ""
       }
     }
