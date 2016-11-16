@@ -1,11 +1,11 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 // Copyright 2014 Thomas Barnekow (cloning, Flat OPC)
+
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.IO;
 using System.IO.Packaging;
-using System.Collections.Specialized;
+using System.Reflection;
 using System.Xml.Linq;
 
 namespace DocumentFormat.OpenXml.Packaging
@@ -568,7 +568,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException("contentType");
             }
 
-            if (typeof(MainDocumentPart).IsAssignableFrom(typeof(T)) && contentType != WordprocessingDocument.MainPartContentTypes[this._documentType])
+            if (typeof(MainDocumentPart).GetTypeInfo().IsAssignableFrom(typeof(T).GetTypeInfo()) && contentType != WordprocessingDocument.MainPartContentTypes[this._documentType])
             {
                 throw new OpenXmlPackageException(ExceptionMessages.ErrorContentType);
             }
@@ -1518,7 +1518,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException("contentType");
             }
 
-            if (typeof(WorkbookPart).IsAssignableFrom(typeof(T)) && contentType != SpreadsheetDocument.MainPartContentTypes[this._documentType])
+            if (typeof(WorkbookPart).GetTypeInfo().IsAssignableFrom(typeof(T).GetTypeInfo()) && contentType != SpreadsheetDocument.MainPartContentTypes[this._documentType])
             {
                 throw new OpenXmlPackageException(ExceptionMessages.ErrorContentType);
             }
@@ -2546,7 +2546,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException("contentType");
             }
 
-            if (typeof(PresentationPart).IsAssignableFrom(typeof(T)) && contentType != PresentationDocument.MainPartContentTypes[this._documentType])
+            if (typeof(PresentationPart).GetTypeInfo().IsAssignableFrom(typeof(T).GetTypeInfo()) && contentType != PresentationDocument.MainPartContentTypes[this._documentType])
             {
                 throw new OpenXmlPackageException(ExceptionMessages.ErrorContentType);
             }

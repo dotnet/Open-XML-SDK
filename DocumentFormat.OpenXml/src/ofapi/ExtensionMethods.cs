@@ -164,13 +164,13 @@ namespace DocumentFormat.OpenXml
         {
             Debug.Assert(parent is OpenXmlCompositeElement);
             Debug.Assert(elementIds != null);
-            
+
             List<OpenXmlElement> childElements = new List<OpenXmlElement>();
 
             if (elementIds.Count() > 0)
             {
                 // use reflection
-                var childElementTypeAttributes = Attribute.GetCustomAttributes(parent.GetType(), typeof(ChildElementInfoAttribute));
+                var childElementTypeAttributes = parent.GetType().GetTypeInfo().GetCustomAttributes<ChildElementInfoAttribute>();
 
                 foreach (ChildElementInfoAttribute childElementTypeAttribute in childElementTypeAttributes)
                 {
@@ -196,7 +196,7 @@ namespace DocumentFormat.OpenXml
             if (parent is OpenXmlCompositeElement)
             {
                 // use reflection
-                var childElementTypeAttributes = Attribute.GetCustomAttributes(parent.GetType(), typeof(ChildElementInfoAttribute));
+                var childElementTypeAttributes = parent.GetType().GetTypeInfo().GetCustomAttributes<ChildElementInfoAttribute>();
 
                 foreach (ChildElementInfoAttribute childElementTypeAttribute in childElementTypeAttributes)
                 {

@@ -3289,8 +3289,9 @@ namespace DocumentFormat.OpenXml
 
         internal static string ToString(T enumVal)
         {
-            FieldInfo fi = enumVal.GetType().GetField(enumVal.ToString());
-            EnumStringAttribute stringAttr = Attribute.GetCustomAttribute(fi, typeof(EnumStringAttribute)) as EnumStringAttribute;
+            FieldInfo fi = enumVal.GetType().GetTypeInfo().GetField(enumVal.ToString());
+            EnumStringAttribute stringAttr = fi.GetCustomAttribute<EnumStringAttribute>();
+
             if (stringAttr != null)
             {
                 return stringAttr.Value;
@@ -3313,8 +3314,9 @@ namespace DocumentFormat.OpenXml
                     Array values = Enum.GetValues(typeof(T));
                     foreach (T enumVal in values)
                     {
-                        FieldInfo fi = enumVal.GetType().GetField(enumVal.ToString());
-                        EnumStringAttribute stringAttr = Attribute.GetCustomAttribute(fi, typeof(EnumStringAttribute)) as EnumStringAttribute;
+                        FieldInfo fi = enumVal.GetType().GetTypeInfo().GetField(enumVal.ToString());
+                        EnumStringAttribute stringAttr = fi.GetCustomAttribute<EnumStringAttribute>();
+
                         lookupTable.Add(stringAttr.Value, enumVal);
                     }
 
@@ -3328,13 +3330,13 @@ namespace DocumentFormat.OpenXml
             {
                 parseCount++;
 
-
                 Array values = Enum.GetValues(typeof(T));
 
                 foreach (T enumVal in values)
                 {
-                    FieldInfo fi = enumVal.GetType().GetField(enumVal.ToString());
-                    EnumStringAttribute stringAttr = Attribute.GetCustomAttribute(fi, typeof(EnumStringAttribute)) as EnumStringAttribute;
+                    FieldInfo fi = enumVal.GetType().GetTypeInfo().GetField(enumVal.ToString());
+                    EnumStringAttribute stringAttr = fi.GetCustomAttribute<EnumStringAttribute>();
+
                     if (stringAttr != null && stringAttr.Value == stringVal)
                     {
                         result = enumVal;
@@ -3380,8 +3382,9 @@ namespace DocumentFormat.OpenXml
 
                 foreach (T enumVal in values)
                 {
-                    FieldInfo fi = this.Value.GetType().GetField(enumVal.ToString());
-                    OfficeAvailabilityAttribute versionAttr = Attribute.GetCustomAttribute(fi, typeof(OfficeAvailabilityAttribute)) as OfficeAvailabilityAttribute;
+                    FieldInfo fi = this.Value.GetType().GetTypeInfo().GetField(enumVal.ToString());
+                    OfficeAvailabilityAttribute versionAttr = fi.GetCustomAttribute<OfficeAvailabilityAttribute>();
+
                     if (versionAttr != null)
                     {
                         if (lookupTable == null)
