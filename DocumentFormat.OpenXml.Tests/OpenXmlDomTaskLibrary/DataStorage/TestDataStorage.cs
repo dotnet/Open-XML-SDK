@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries.DataStorage
                 if (m_RootFolder != null)
                     return m_RootFolder;
                 // find the directory, wherever it may be, to get to the TestDataStorage directory
-                var dir = new DirectoryInfo(Environment.CurrentDirectory);
+                var dir = new DirectoryInfo(Directory.GetCurrentDirectory());
                 while (true)
                 {
                     if (dir.Name == "DocumentFormat.OpenXml.Tests" || dir.Name == "DocumentFormat.OpenXml.WB.Tests")
@@ -59,7 +59,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries.DataStorage
 
             if (!Directory.Exists(rootFolder))
             {
-                throw new ApplicationException("Can't access the root folder of the TestDataStorage at: '" + rootFolder + "'");
+                throw new Exception("Can't access the root folder of the TestDataStorage at: '" + rootFolder + "'");
             }
 
             string o14IsoStrictFolder = Path.Combine(rootFolder, @"O14ISOStrict\");
