@@ -178,3 +178,5 @@ FakesAssemblies/
 *.nuget.targets
 project.lock.json
 .vs/
+Tests/
+TestFiles/
