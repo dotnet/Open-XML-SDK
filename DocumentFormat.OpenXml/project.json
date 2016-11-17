@@ -15,6 +15,7 @@
       },
       "buildOptions": {
         "define": [
+          "FEATURE_BINARYFORMATTER"
         ],
         "embed": [
           "src/GeneratedCode/O12SchemaConstraintDatas.bin",

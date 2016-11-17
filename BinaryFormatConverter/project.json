@@ -1,0 +1,15 @@
+﻿{
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "debugType": "portable",
+    "emitEntryPoint": true
+  },
+  "dependencies": {
+    "DocumentFormat.OpenXml": "3.0.0-*",
+    "SourceCodeSerializer": "0.1.0"
+  },
+  "frameworks": {
+    "net46": {
+    }
+  }
+}

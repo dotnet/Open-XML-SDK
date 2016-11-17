@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             this._fileFormat = fileFormat;
         }
 
-        public void InitOnDemand()
+        public void Initialize()
         {
             if (this._loaded)
             {

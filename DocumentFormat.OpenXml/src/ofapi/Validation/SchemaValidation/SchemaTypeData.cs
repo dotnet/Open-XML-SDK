@@ -5,6 +5,12 @@ using System.Linq;
 using System.Diagnostics;
 using System.Collections.ObjectModel;
 
+namespace DocumentFormat.OpenXml
+{
+    internal class IgnoreAttribute : Attribute { }
+    internal class IncludeAttribute : Attribute { }
+}
+
 namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 {
     /// <summary>
