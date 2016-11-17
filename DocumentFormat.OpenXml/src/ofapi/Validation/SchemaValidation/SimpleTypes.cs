@@ -2272,7 +2272,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         {
             try
             {
-                XmlConvert.VerifyTOKEN(attributeValue.InnerText);
+                VerifyTOKEN(attributeValue.InnerText);
             }
             catch (XmlException)
             {
@@ -2281,6 +2281,30 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
             return true;
         }
+
+#if FEATURE_XML_VERIFYTOKEN
+        protected static string VerifyTOKEN(string token)
+        {
+            return XmlConvert.VerifyTOKEN(token);
+        }
+#else
+        private static char[] crt = new char[] { '\n', '\r', '\t' };
+
+        protected static string VerifyTOKEN(string token)
+        {
+            if (token == null || token.Length == 0)
+            {
+                return token;
+            }
+
+            if (token[0] == ' ' || token[token.Length - 1] == ' ' || token.IndexOfAny(crt) != -1 || token.IndexOf("  ", StringComparison.Ordinal) != -1)
+            {
+                throw new System.Xml.XmlException($"Not a valid token: '{token}'");
+            }
+
+            return token;
+        }
+#endif
     }
 
     /// <summary>
@@ -2925,7 +2949,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         {
             try
             {
-                XmlConvert.VerifyTOKEN(attributeValue.InnerText);
+                VerifyTOKEN(attributeValue.InnerText);
             }
             catch (XmlException)
             {
