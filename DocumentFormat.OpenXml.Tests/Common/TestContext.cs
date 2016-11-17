@@ -29,13 +29,6 @@ namespace DocumentFormat.OpenXml.Tests
             set;
         }
 
-        [MethodImpl(MethodImplOptions.NoInlining)]
-        public static string GetCurrentMethod()
-        {
-            StackTrace st = new StackTrace();
-            StackFrame sf = st.GetFrame(1);
-
-            return sf.GetMethod().Name;
-        }
+        public static string GetCurrentMethod([CallerMemberName]string name = null) => name;
     }
 }
