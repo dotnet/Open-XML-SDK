@@ -11,6 +11,7 @@ using LogUtil;
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
+using System.Collections;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -205,7 +206,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns></returns>
         internal bool IsReflectablePart(Type partType, OpenXmlPartContainer parent)
         {
-            if ((null != partType.GetInterface("IFixedContentTypePart"))
+            if ((null != partType.GetInterfaces().FirstOrDefault(i => i == typeof(IFixedContentTypePart)))
                 && PartRootElementMap.ContainsKey(partType))
                 return true;
 
@@ -235,7 +236,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             Log.Comment("Building Part {0} for PartContainer {1}", srcIdPartPair.OpenXmlPart.GetType(), parent.GetType());
             Type partType = srcIdPartPair.OpenXmlPart.GetType();
-            if (partType.GetInterface("IFixedContentTypePart") != null)
+            if (partType.GetInterfaces().Any(i => i == typeof(IFixedContentTypePart)))
             {
                 // public virtual T AddNewPart<T>(string contentType, string id) where T: OpenXmlPart
                 var addNewPartMethod = GetAddNewPartMethod(parent.GetType(), partType);
@@ -362,7 +363,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Initialize Part-PartRootElement Map...");
             _partRootElementMap = new Dictionary<Type, Type>();
             var flag = BindingFlags.Public | BindingFlags.Instance | BindingFlags.FlattenHierarchy;
-            var rootElements = typeof(OpenXmlPart).Assembly.GetTypes()
+            var rootElements = typeof(OpenXmlPart).GetTypeInfo().Assembly.GetTypes()
                 .Where(type => type.IsSubclassOf(typeof(OpenXmlPartRootElement)));
             foreach (var rootType in rootElements)
             {
@@ -574,9 +575,9 @@ namespace DocumentFormat.OpenXml.Tests
             Predicate<MethodInfo> matchMethod =
                 m => m.IsGenericMethod;
             Predicate<ParameterInfo[]> matchParams =
-                ps => ps.Count() == 1 && ps[0].ParameterType.IsClass;
+                ps => ps.Count() == 1 && ps[0].ParameterType.GetTypeInfo().IsClass;
             Predicate<ParameterInfo> matchReturn =
-                r => r.ParameterType.IsClass;
+                r => r.ParameterType.GetTypeInfo().IsClass;
             return GetMethodInfo(hostType, prefix, matchMethod, matchParams, matchReturn);
         }
 
@@ -631,7 +632,7 @@ namespace DocumentFormat.OpenXml.Tests
             Predicate<MethodInfo> matchMethod =
                 m => m.IsGenericMethod;
             Predicate<ParameterInfo[]> matchParams =
-                ps => ps.Count() == 1 && ps[0].ParameterType.IsClass;
+                ps => ps.Count() == 1 && ps[0].ParameterType.GetTypeInfo().IsClass;
             Predicate<ParameterInfo> matchReturn = null;
             return GetMethodInfo(hostType, prefix, matchMethod, matchParams, matchReturn);
         }
@@ -712,7 +713,7 @@ namespace DocumentFormat.OpenXml.Tests
             Predicate<MethodInfo> matchMethod =
                 m => !m.IsGenericMethod;
             Predicate<ParameterInfo[]> matchParams =
-                ps => ps.Count() == 1 && null != ps[0].ParameterType.GetInterface("IEnumerable`1");
+                ps => ps.Count() == 1 && null != ps[0].ParameterType.GetInterfaces().FirstOrDefault(t => t == typeof(IEnumerator<>));
             Predicate<ParameterInfo> matchReturn = null;
             return GetMethodInfo(hostType, prefix, matchMethod, matchParams, matchReturn);
         }
@@ -791,7 +792,7 @@ namespace DocumentFormat.OpenXml.Tests
             Predicate<ParameterInfo[]> matchParams =
                 ps => ps.Count() == 0;
             Predicate<ParameterInfo> matchReturn =
-                r => null != r.ParameterType.GetInterface("IEnumerable`1");
+                r => null != r.ParameterType.GetInterfaces().FirstOrDefault(t => t == typeof(IEnumerator<>));
             return GetMethodInfo(hostType, prefix, matchMethod, matchParams, matchReturn);
         }
         #endregion Elements
@@ -829,7 +830,7 @@ namespace DocumentFormat.OpenXml.Tests
             Predicate<ParameterInfo[]> matchParams =
                 ps => ps.Count() == 0;
             Predicate<ParameterInfo> matchReturn =
-                r => null != r.ParameterType.GetInterface("IEnumerable`1");
+                r => null != r.ParameterType.GetInterfaces().FirstOrDefault(t => t == typeof(IEnumerator<>));
             return GetMethodInfo(hostType, prefix, matchMethod, matchParams, matchReturn);
         }
 
@@ -867,7 +868,7 @@ namespace DocumentFormat.OpenXml.Tests
             Predicate<ParameterInfo[]> matchParams =
                 ps => ps.Count() == 0;
             Predicate<ParameterInfo> matchReturn =
-                r => null != r.ParameterType.GetInterface("IEnumerable`1");
+                r => null != r.ParameterType.GetInterfaces().FirstOrDefault(t => t == typeof(IEnumerator<>));
             return GetMethodInfo(hostType, prefix, matchMethod, matchParams, matchReturn);
         }
 
@@ -879,7 +880,7 @@ namespace DocumentFormat.OpenXml.Tests
             Predicate<ParameterInfo[]> matchParams =
                 ps => ps.Count() == 0;
             Predicate<ParameterInfo> matchReturn =
-                r => null != r.ParameterType.GetInterface("IEnumerable`1");
+                r => null != r.ParameterType.GetInterfaces().FirstOrDefault(t => t == typeof(IEnumerator<>));
             return GetMethodInfo(hostType, prefix, matchMethod, matchParams, matchReturn);
         }
 
@@ -894,7 +895,7 @@ namespace DocumentFormat.OpenXml.Tests
             Predicate<ParameterInfo[]> matchParams =
                 ps => ps.Count() == 0;
             Predicate<ParameterInfo> matchReturn =
-                r => null != r.ParameterType.GetInterface("IEnumerator`1");
+                r => null != r.ParameterType.GetInterfaces().FirstOrDefault(t => t == typeof(IEnumerator<>));
             return GetMethodInfo(hostType, prefix, matchMethod, matchParams, matchReturn);
         }
 
@@ -906,7 +907,7 @@ namespace DocumentFormat.OpenXml.Tests
             Predicate<ParameterInfo[]> matchParams =
                 ps => ps.Count() == 0;
             Predicate<ParameterInfo> matchReturn =
-                r => null != r.ParameterType.GetInterface("IEnumerator");
+                r => null != r.ParameterType.GetInterfaces().FirstOrDefault(t => t == typeof(IEnumerator));
             return GetMethodInfo(hostType, prefix, matchMethod, matchParams, matchReturn);
         }
         #endregion Enumerator
@@ -1098,7 +1099,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var flag = BindingFlags.FlattenHierarchy | BindingFlags.Instance | BindingFlags.Public;
             var properties = hostType.GetProperties(flag)
-                .Where(p => p.GetCustomAttributes(typeof(SchemaAttrAttribute), false).Length > 0);
+                .Where(p => p.GetCustomAttributes(typeof(SchemaAttrAttribute), false).Any());
             return properties;
         }
 
@@ -1111,7 +1112,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var flag = BindingFlags.FlattenHierarchy | BindingFlags.Instance | BindingFlags.Public;
             var properties = hostType.GetProperties(flag)
-                .Where(p => p.GetCustomAttributes(typeof(SchemaAttrAttribute), false).Length > 0);
+                .Where(p => p.GetCustomAttributes(typeof(SchemaAttrAttribute), false).Any());
             return properties
                 .Select(p => p.GetCustomAttributes(typeof(SchemaAttrAttribute), false).First() as SchemaAttrAttribute)
                 .Select(sa => new OpenXmlAttribute(sa.Tag, sa.NamespaceUri, null));
@@ -1126,16 +1127,16 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var flag = BindingFlags.FlattenHierarchy | BindingFlags.Instance | BindingFlags.Public;
             Func<FieldInfo, bool> hasEnumString =
-                fi => fi.GetCustomAttributes(typeof(EnumStringAttribute), false).Length > 0;
+                fi => fi.GetCustomAttributes(typeof(EnumStringAttribute), false).Any();
 
             return hostType.GetProperties(flag)
-                .Where(p => p.PropertyType.IsEnum && p.PropertyType.GetFields(flag).Any(hasEnumString));
+                .Where(p => p.PropertyType.GetTypeInfo().IsEnum && p.PropertyType.GetFields(flag).Any(hasEnumString));
         }
 
         public static IEnumerable<Type> ListEnums()
         {
-            return typeof(OpenXmlElement).Assembly.GetTypes()
-                .Where(t => t.IsEnum && t.GetFields().Any(f => f.GetCustomAttributes(typeof(EnumStringAttribute), false).Length > 0));
+            return typeof(OpenXmlElement).GetTypeInfo().Assembly.GetTypes()
+                .Where(t => t.GetTypeInfo().IsEnum && t.GetFields().Any(f => f.GetCustomAttributes<EnumStringAttribute>(false).Any()));
         }
 
         /// <summary>
@@ -1145,8 +1146,8 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>IEnumerable<Type> represent valid child element type for specified type of OpenXmlElement</returns>
         public static IEnumerable<Type> GetChildElementTypes(Type hostType)
         {
-            return hostType.GetCustomAttributes(typeof(ChildElementInfoAttribute), false)
-                .Select(ca => (ca as ChildElementInfoAttribute).ElementType);
+            return hostType.GetTypeInfo().GetCustomAttributes<ChildElementInfoAttribute>(false)
+                .Select(ca => ca.ElementType);
         }
 
         /// <summary>

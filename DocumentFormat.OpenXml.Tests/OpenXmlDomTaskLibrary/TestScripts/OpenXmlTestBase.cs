@@ -194,7 +194,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
                     return _SourceRootPath;
 
                 // find the directory, wherever it may be, to get to the TestDataStorage directory
-                var dir = new DirectoryInfo(Environment.CurrentDirectory);
+                var dir = new DirectoryInfo(Directory.GetCurrentDirectory());
                 while (true)
                 {
                     if (dir.Name == "DocumentFormat.OpenXml.Tests" || dir.Name == "DocumentFormat.OpenXml.WB.Tests")
@@ -223,7 +223,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
                 if (this._SourcePath == null)
                 {
                     // find the directory, wherever it may be, to get to the TestDataStorage directory
-                    var dir = new DirectoryInfo(Environment.CurrentDirectory);
+                    var dir = new DirectoryInfo(Directory.GetCurrentDirectory());
                     while (true)
                     {
                         if (dir.Name == "DocumentFormat.OpenXml.Tests" || dir.Name == "DocumentFormat.OpenXml.WB.Tests")
@@ -301,22 +301,6 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
                 File.Delete("source-" + testFile.Name);
 
             return testFile.CopyTo("source-" + testFile.Name);
-        }
-
-        public static DriveInfo GetLargestFreeDrive()
-        {
-            DriveInfo largetstDrive = null;
-            long largestSize = 0;
-
-            foreach (DriveInfo driveInfo in DriveInfo.GetDrives())
-            {
-                if (driveInfo.IsReady && driveInfo.AvailableFreeSpace > largestSize)
-                {
-                    largetstDrive = driveInfo;
-                    largestSize = driveInfo.AvailableFreeSpace;
-                }
-            }
-            return largetstDrive;
         }
 
         /// <summary>
@@ -411,7 +395,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             string outputPath = this.CurrentResultFolder;
 
             // Cd to the outputPath folder
-            Environment.CurrentDirectory = outputPath;
+            Directory.SetCurrentDirectory(outputPath);
 
             // Ensure pred is not null
             if (pred == null) { pred = (file => { return true; }); }
@@ -457,7 +441,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             var sourceFolder = Path.GetDirectoryName(sourceFile);
             var sourceFileName = Path.GetFileName(sourceFile);
             Func<FileInfo, bool> pred =
-                file => file.Name.Equals(sourceFileName, StringComparison.InvariantCultureIgnoreCase);
+                file => file.Name.Equals(sourceFileName, StringComparison.OrdinalIgnoreCase);
             return CopyTestFiles(sourceFolder, false, sourceFileName, pred).First();
         }
 

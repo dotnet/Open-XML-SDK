@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Tests
                 if (s_TestFileLocation != null)
                     return s_TestFileLocation;
                 // find the directory, wherever it may be, to get to the TestFiles directory
-                var dir = new DirectoryInfo(Environment.CurrentDirectory);
+                var dir = new DirectoryInfo(Directory.GetCurrentDirectory());
                 while (true)
                 {
                     if (dir.Name == "DocumentFormat.OpenXml.Tests" || dir.Name == "DocumentFormat.OpenXml.WB.Tests")

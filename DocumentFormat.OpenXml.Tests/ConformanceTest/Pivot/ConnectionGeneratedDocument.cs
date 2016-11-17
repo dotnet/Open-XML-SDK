@@ -746,9 +746,10 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
         // Generates content of extendedPart1.
         private void GenerateExtendedPart1Content(ExtendedPart extendedPart1)
         {
-            System.IO.Stream data = GetBinaryDataStream(extendedPart1Data);
-            extendedPart1.FeedData(data);
-            data.Close();
+            using (System.IO.Stream data = GetBinaryDataStream(extendedPart1Data))
+            {
+                extendedPart1.FeedData(data);
+            }
         }
 
         // Generates content of pivotTableCacheDefinitionPart1.
@@ -1777,9 +1778,10 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
         // Generates content of spreadsheetPrinterSettingsPart1.
         private void GenerateSpreadsheetPrinterSettingsPart1Content(SpreadsheetPrinterSettingsPart spreadsheetPrinterSettingsPart1)
         {
-            System.IO.Stream data = GetBinaryDataStream(spreadsheetPrinterSettingsPart1Data);
-            spreadsheetPrinterSettingsPart1.FeedData(data);
-            data.Close();
+            using (System.IO.Stream data = GetBinaryDataStream(spreadsheetPrinterSettingsPart1Data))
+            {
+                spreadsheetPrinterSettingsPart1.FeedData(data);
+            }
         }
 
         // Generates content of pivotTablePart1.

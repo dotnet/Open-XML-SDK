@@ -1058,17 +1058,19 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
         // Generates content of imagePart1.
         private void GenerateImagePart1Content(ImagePart imagePart1)
         {
-            System.IO.Stream data = GetBinaryDataStream(imagePart1Data);
-            imagePart1.FeedData(data);
-            data.Close();
+            using (System.IO.Stream data = GetBinaryDataStream(imagePart1Data))
+            {
+                imagePart1.FeedData(data);
+            }
         }
 
         // Generates content of imagePart2.
         private void GenerateImagePart2Content(ImagePart imagePart2)
         {
-            System.IO.Stream data = GetBinaryDataStream(imagePart2Data);
-            imagePart2.FeedData(data);
-            data.Close();
+            using (System.IO.Stream data = GetBinaryDataStream(imagePart2Data))
+            {
+                imagePart2.FeedData(data);
+            }
         }
 
         // Generates content of webExtensionPart4.
@@ -1264,9 +1266,10 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
         // Generates content of imagePart3.
         private void GenerateImagePart3Content(ImagePart imagePart3)
         {
-            System.IO.Stream data = GetBinaryDataStream(imagePart3Data);
-            imagePart3.FeedData(data);
-            data.Close();
+            using (System.IO.Stream data = GetBinaryDataStream(imagePart3Data))
+            {
+                imagePart3.FeedData(data);
+            }
         }
 
         // Generates content of webExtensionPart5.
