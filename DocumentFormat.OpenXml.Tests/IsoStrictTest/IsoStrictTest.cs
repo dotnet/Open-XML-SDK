@@ -162,60 +162,6 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        /// Verifying Mapping Table
-        /// </summary>
-        /// <param name="dictionary">Dictionary object for code</param>
-        /// <param name="fileName">File Name for csv file to compare</param>
-        private void VerifyMappingTable(Dictionary<string, string> dictionary, string fileName)
-        {
-            // Creat a sorted dictionary instance from the dictionary object for the mapping table b/w Transtional and ISO Strict
-            SortedDictionary<string, string> sortedDictionary = new SortedDictionary<string, string>(dictionary);
-
-            Microsoft.VisualBasic.FileIO.TextFieldParser textFieldParser =
-                new Microsoft.VisualBasic.FileIO.TextFieldParser(fileName, System.Text.Encoding.GetEncoding(1252))
-                {
-                    TextFieldType = Microsoft.VisualBasic.FileIO.FieldType.Delimited,
-                    Delimiters = new string[] { "," },
-                    HasFieldsEnclosedInQuotes = true,
-                    TrimWhiteSpace = true,
-                };
-
-            // Skip Title raw
-            textFieldParser.ReadLine();
-
-            // variable for the number of items in csv file
-            int items = 0;
-
-            while (!textFieldParser.EndOfData)
-            {
-                // fields[0]: Transtional Namespace/Relationship, fields[1]: ISO Strict Namespace/Relationship
-                string[] fields = textFieldParser.ReadFields();
-
-                // variable for value
-                string value = null;
-
-                // Get a value based on the key specified 
-                if (sortedDictionary.TryGetValue(fields[1], out value))
-                {
-                    this.Log.VerifyValue(value, fields[0], "Verifying namespace/relationship values... Mapping Table (Code) = {0}, Mapping Table (CSV) = {1}", value, fields[0]);
-                }
-                else
-                {
-                    this.Log.Fail("Missmatched! URI for Transitional doesn't exist in the dictionary. Transitional = {0}, ISO Strict = {1}", fields[0], fields[1]);
-                }
-
-                items++;
-            }
-
-            if (sortedDictionary.Count != items)
-            {
-                Console.WriteLine("There might be missing items in the dictionary. Item Count (Code) = {0}, Item Count (CSV) = {1}", sortedDictionary.Count, items);
-            }
-
-            textFieldParser.Close();
-        }
-
-        /// <summary>
         /// Opens given Open XML File and returns instance of the package
         /// </summary>
         /// <param name="entry">Test data entry</param>
