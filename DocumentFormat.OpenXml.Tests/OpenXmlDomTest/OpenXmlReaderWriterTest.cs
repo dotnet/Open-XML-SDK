@@ -902,7 +902,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Activator.CreateInstance(reader.ElementType) is OpenXmlLeafTextElement)
             {
                 string Text = reader.GetText();
-                Log.VerifyTrue(Xreader.ReadString() == Text, "exptected: '{0}' <> actual: '{1}'", Xreader.Value, Text);
+                Log.VerifyTrue(Xreader.ReadContentAsString() == Text, "exptected: '{0}' <> actual: '{1}'", Xreader.Value, Text);
 
                 Read(reader);
             }
