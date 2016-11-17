@@ -32,34 +32,34 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region ReaderConstruction ...
 
-        ConstrReader PartConstrWithNoMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlTextReader z) =>
+        ConstrReader PartConstrWithNoMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
         {
             y = OpenXmlReader.Create(x.MainDocumentPart);
-            z = new XmlTextReader(x.MainDocumentPart.GetStream());
+            z = XmlReader.Create(x.MainDocumentPart.GetStream());
         };
 
-        ConstrReader PartConstrWithMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlTextReader z) =>
+        ConstrReader PartConstrWithMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
         {
             y = OpenXmlReader.Create(x.MainDocumentPart.GetStream(), true);
-            z = new XmlTextReader(x.MainDocumentPart.GetStream());
+            z = XmlReader.Create(x.MainDocumentPart.GetStream());
         };
 
-        ConstrReader DomConstrWithNoMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlTextReader z) =>
+        ConstrReader DomConstrWithNoMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
         {
             OpenXmlElement firstChild = x.MainDocumentPart.Document.FirstChild;
             y = OpenXmlDomReader.Create(firstChild);
 
             XElement XfirstChild = ConvertToXElement(x.MainDocumentPart, firstChild);
-            z = new XmlTextReader(new StringReader(firstChild.OuterXml));
+            z = XmlReader.Create(new StringReader(firstChild.OuterXml));
         };
 
-        ConstrReader DomConstrWithMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlTextReader z) =>
+        ConstrReader DomConstrWithMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
         {
             OpenXmlElement firstChild = x.MainDocumentPart.Document.FirstChild;
             y = new OpenXmlDomReader(firstChild, true);
 
             XElement XfirstChild = ConvertToXElement(x.MainDocumentPart, firstChild);
-            z = new XmlTextReader(new StringReader(firstChild.OuterXml));
+            z = XmlReader.Create(new StringReader(firstChild.OuterXml));
         };
 
 
@@ -237,7 +237,7 @@ namespace DocumentFormat.OpenXml.Tests
                     writer.WriteEndElement();
                 }
 
-                XmlReader reader = new XmlTextReader(part.GetStream());
+                XmlReader reader = XmlReader.Create(part.GetStream());
                 reader.Read();
                 reader.Read();
                 reader.Read();
@@ -323,7 +323,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 XElement XEle = null;
                 using (Stream stream = part.GetStream())
-                using (XmlReader reader = new XmlTextReader(stream))
+                using (XmlReader reader = XmlReader.Create(stream))
                     XEle = XElement.Load(reader);
                 VerifyEqual(XEle, p, part);
             }
@@ -372,7 +372,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void VerifyDocumentStart(OpenXmlPart part, bool? standalone)
         {
-            XmlReader reader = new XmlTextReader(part.GetStream());
+            XmlReader reader = XmlReader.Create(part.GetStream());
             reader.Read();
 
             Log.Comment("verify the part contains XmlDeclaration");
@@ -461,7 +461,7 @@ namespace DocumentFormat.OpenXml.Tests
         private void VerifyStartElement(OpenXmlPart part, object writeSource, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations)
         {
             using (Stream stream = part.GetStream())
-            using (XmlReader xmlReader = new XmlTextReader(stream))
+            using (XmlReader xmlReader = XmlReader.Create(stream))
             {
                 xmlReader.Read();
                 xmlReader.Read();
@@ -570,7 +570,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         private delegate void PreRead(OpenXmlReader Oreader, XmlReader Xreader, out String standalone);
 
-        private delegate void ConstrReader(WordprocessingDocument doc, out OpenXmlReader Oreader, out XmlTextReader Treader);
+        private delegate void ConstrReader(WordprocessingDocument doc, out OpenXmlReader Oreader, out XmlReader Treader);
 
         private delegate OpenXmlWriter ConstrWriter(OpenXmlPart part);
 
@@ -659,11 +659,9 @@ namespace DocumentFormat.OpenXml.Tests
         /// Test each Property of OpenXmlReader Class
         /// </summary>
         /// <param name="reader">the OpenXmlReader to be tested</param>
-        /// <param name="XTreader">the corresponding XmlTextReader used to verify results</param>
-        private void ReaderPropertiesTest(OpenXmlReader reader, XmlTextReader XTreader, string standalone)
+        /// <param name="XTreader">the corresponding XmlReader used to verify results</param>
+        private void ReaderPropertiesTest(OpenXmlReader reader, XmlReader XTreader, string standalone)
         {
-
-            TestEncoding(reader, XTreader);
             TestStandaloneXml(reader, XTreader, standalone);
             TestHasAttributes(reader, XTreader);
             TestElementType(reader, XTreader);
@@ -680,25 +678,10 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        /// Test Encoding of the OpenXmlReader
-        /// </summary>
-        /// <param name="reader">the OpenXmlReader to be tested</param>
-        /// <param name="XTreader">the corresponding XmlTextReader</param>
-        private void TestEncoding(OpenXmlReader reader, XmlTextReader XTreader)
-        {
-            Log.Comment("Test Encoding");
-            if (reader.Encoding != null && XTreader.Encoding != null)
-                Log.VerifyTrue(reader.Encoding.Equals(XTreader.Encoding.BodyName, StringComparison.OrdinalIgnoreCase),
-                    "expect: {0} actual: {1}", XTreader.Encoding.ToString(), reader.Encoding.ToString());
-            else
-                Log.Pass("Both Encodings are NULL");
-        }
-
-        /// <summary>
         /// Test StandaloneXml of the OpenXmlReader
         /// </summary>
         /// <param name="reader">the OpenXmlReader to be tested</param>
-        /// <param name="XTreader">the corresponding XmlTextReader</param>
+        /// <param name="XTreader">the corresponding XmlReader</param>
         private void TestStandaloneXml(OpenXmlReader reader, XmlReader XTreader, string standalone)
         {
             Log.Comment("Test Standalone");
@@ -716,8 +699,8 @@ namespace DocumentFormat.OpenXml.Tests
         /// test HasAttributes of the OpenXmlReader
         /// </summary>
         /// <param name="reader">the OpenXmlReader to be tested</param>
-        /// <param name="XTreader">the corresponding XmlTextReader</param>
-        private void TestHasAttributes(OpenXmlReader reader, XmlTextReader XTreader)
+        /// <param name="XTreader">the corresponding XmlReader</param>
+        private void TestHasAttributes(OpenXmlReader reader, XmlReader XTreader)
         {
             if (reader.Depth > 0)
             {
@@ -733,8 +716,8 @@ namespace DocumentFormat.OpenXml.Tests
         /// test ElementType of the OpenXmlReader
         /// </summary>
         /// <param name="reader">the OpenXmlReader to be tested</param>
-        /// <param name="XTreader">the corresponding XmlTextReader</param>
-        private void TestElementType(OpenXmlReader reader, XmlTextReader XTreader)
+        /// <param name="XTreader">the corresponding XmlReader</param>
+        private void TestElementType(OpenXmlReader reader, XmlReader XTreader)
         {
             Log.Comment("Test ElementType");
             Type type = reader.ElementType;
@@ -757,8 +740,8 @@ namespace DocumentFormat.OpenXml.Tests
         /// test IsMiscNode of the OpenXmlReader
         /// </summary>
         /// <param name="reader">the OpenXmlReader to be tested</param>
-        /// <param name="XTreader">the corresponding XmlTextReader</param>
-        private void TestIsMiscNode(OpenXmlReader reader, XmlTextReader XTreader)
+        /// <param name="XTreader">the corresponding XmlReader</param>
+        private void TestIsMiscNode(OpenXmlReader reader, XmlReader XTreader)
         {
             //TODO: What is MiscNode? What is the definition?
             Log.Comment("Test IsMiscNode");
@@ -772,8 +755,8 @@ namespace DocumentFormat.OpenXml.Tests
         /// test IsStartElement of the OpenXmlReader
         /// </summary>
         /// <param name="reader">the OpenXmlReader to be tested</param>
-        /// <param name="XTreader">the corresponding XmlTextReader</param>
-        private void TestIsStartElement(OpenXmlReader reader, XmlTextReader XTreader)
+        /// <param name="XTreader">the corresponding XmlReader</param>
+        private void TestIsStartElement(OpenXmlReader reader, XmlReader XTreader)
         {
             Log.Comment("Test IsStartElement");
             if (IsMisc(XTreader))
@@ -792,8 +775,8 @@ namespace DocumentFormat.OpenXml.Tests
         /// test IsEndElement of the OpenXmlReader
         /// </summary>
         /// <param name="reader">the OpenXmlReader to be tested</param>
-        /// <param name="XTreader">the corresponding XmlTextReader</param>
-        private void TestIsEndElement(OpenXmlReader reader, XmlTextReader XTreader)
+        /// <param name="XTreader">the corresponding XmlReader</param>
+        private void TestIsEndElement(OpenXmlReader reader, XmlReader XTreader)
         {
             Log.Comment("Test IsEndElement");
             if (IsMisc(XTreader))
@@ -816,8 +799,8 @@ namespace DocumentFormat.OpenXml.Tests
         /// test EOF of the OpenXmlReader
         /// </summary>
         /// <param name="reader">the OpenXmlReader to be tested</param>
-        /// <param name="XTreader">the corresponding XmlTextReader</param>
-        private void TestEOF(OpenXmlReader reader, XmlTextReader XTreader)
+        /// <param name="XTreader">the corresponding XmlReader</param>
+        private void TestEOF(OpenXmlReader reader, XmlReader XTreader)
         {
             Log.Comment("Test EOF");
             Log.VerifyTrue(reader.EOF == XTreader.EOF, "Expect: {0} <> actual: {1}", XTreader.EOF, reader.EOF);
@@ -827,8 +810,8 @@ namespace DocumentFormat.OpenXml.Tests
         /// test LocalName of the OpenXmlReader
         /// </summary>
         /// <param name="reader">the OpenXmlReader to be tested</param>
-        /// <param name="XTreader">the corresponding XmlTextReader</param>
-        private void TestLocalName(OpenXmlReader reader, XmlTextReader XTreader)
+        /// <param name="XTreader">the corresponding XmlReader</param>
+        private void TestLocalName(OpenXmlReader reader, XmlReader XTreader)
         {
             String localName = XTreader.LocalName;
             if (IsMisc(XTreader))
@@ -873,8 +856,8 @@ namespace DocumentFormat.OpenXml.Tests
         /// test NameSpaceURI of the OpenXmlReader
         /// </summary>
         /// <param name="reader">the OpenXmlReader to be tested</param>
-        /// <param name="XTreader">the corresponding XmlTextReader</param>
-        private void TestNameSpaceURI(OpenXmlReader reader, XmlTextReader XTreader)
+        /// <param name="XTreader">the corresponding XmlReader</param>
+        private void TestNameSpaceURI(OpenXmlReader reader, XmlReader XTreader)
         {
             Log.Comment("Test NameSpaceURI");
             Log.VerifyTrue(XTreader.NamespaceURI.Equals(reader.NamespaceUri, StringComparison.OrdinalIgnoreCase),
@@ -885,8 +868,8 @@ namespace DocumentFormat.OpenXml.Tests
         /// test Prefix of the OpenXmlReader
         /// </summary>
         /// <param name="reader">the OpenXmlReader to be tested</param>
-        /// <param name="XTreader">the corresponding XmlTextReader</param>
-        private void TestPrefix(OpenXmlReader reader, XmlTextReader XTreader)
+        /// <param name="XTreader">the corresponding XmlReader</param>
+        private void TestPrefix(OpenXmlReader reader, XmlReader XTreader)
         {
             Log.Comment("Test Prefix");
             Log.VerifyTrue(reader.Prefix.Equals(XTreader.Prefix, StringComparison.OrdinalIgnoreCase),
@@ -897,18 +880,18 @@ namespace DocumentFormat.OpenXml.Tests
         /// test Depth of the OpenXmlReader
         /// </summary>
         /// <param name="reader">the OpenXmlReader to be tested</param>
-        /// <param name="XTreader">the corresponding XmlTextReader</param>
-        private void TestDepth(OpenXmlReader reader, XmlTextReader XTreader)
+        /// <param name="XTreader">the corresponding XmlReader</param>
+        private void TestDepth(OpenXmlReader reader, XmlReader XTreader)
         {
             Log.Comment("Test Depth");
             Log.VerifyTrue(reader.Depth == XTreader.Depth, "Expect: {0} <> actual: {1}", XTreader.Depth, reader.Depth);
         }
 
         /// <summary>
-        /// Test OpenXmlReader GetText() method, and verify the result with XmlTextReader
+        /// Test OpenXmlReader GetText() method, and verify the result with XmlReader
         /// </summary>
         /// <param name="reader">the OpenXmlReader that will be tested</param>
-        /// <param name="XTreader">the corresponding XmlTextReader used to verify the result</param>
+        /// <param name="XTreader">the corresponding XmlReader used to verify the result</param>
         private void TestGetText(OpenXmlReader reader, XmlReader Xreader)
         {
             Log.Comment("Test GetText()");
@@ -933,7 +916,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <summary>
         /// Check if the pass-in XmlReader is pointing to a Misc Node
         /// </summary>
-        /// <param name="XTreader">the XmlTextReader to be tested</param>
+        /// <param name="XTreader">the XmlReader to be tested</param>
         /// <returns>TRUE, if the current node is a misc node. FALSE, if not</returns>
         private static bool IsMisc(XmlReader XTreader)
         {
@@ -1250,7 +1233,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
             return result;
         }
-        #endregion
+#endregion
 
         [Fact]
         public void bug247883()
