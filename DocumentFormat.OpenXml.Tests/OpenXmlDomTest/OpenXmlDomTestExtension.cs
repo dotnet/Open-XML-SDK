@@ -802,9 +802,10 @@ namespace DocumentFormat.OpenXml.Tests
             }
             else
             {
-                XmlWriter partWriter = XmlWriter.Create(part.GetStream());
-                element.WriteTo(partWriter);
-                partWriter.Close();
+                using (XmlWriter partWriter = XmlWriter.Create(part.GetStream()))
+                {
+                    element.WriteTo(partWriter);
+                }
             }
         }
 

@@ -517,10 +517,10 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
                 }
                 catch (XmlException)
                 {
-                    sourceStm.Close();
+                    sourceStm.Dispose();
                     sourceStm = sourcePart.GetStream();
 
-                    targetStm.Close();
+                    targetStm.Dispose();
                     targetStm = targetPart.GetStream();
 
                     if (sourceStm.Length != targetStm.Length)
@@ -712,9 +712,10 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             }
             else
             {
-                XmlWriter partWriter = XmlWriter.Create(part.GetStream());
-                element.WriteTo(partWriter);
-                partWriter.Close();
+                using (XmlWriter partWriter = XmlWriter.Create(part.GetStream()))
+                {
+                    element.WriteTo(partWriter);
+                }
             }
         }
 
