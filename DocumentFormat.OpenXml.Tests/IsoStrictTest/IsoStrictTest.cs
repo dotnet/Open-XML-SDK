@@ -269,7 +269,7 @@ namespace DocumentFormat.OpenXml.Tests
         private Dictionary<string, string> GetIsoStrictNamespaceMappingTable()
         {
             // Get DocumentFormat.OpenXml assembly instance
-            Assembly assembly = AppDomain.CurrentDomain.GetAssemblies().Where(x => x.FullName.Contains("DocumentFormat.OpenXml")).FirstOrDefault();
+            Assembly assembly = typeof(AlternateContent).GetTypeInfo().Assembly;
 
             // _nanespaceTranslationDic is a dictionary that stores Transtional/ISO Strict Namespace/Relationship information
             FieldInfo fieldInfo = assembly.GetTypes().Where(x => x.Name == "NamespaceIdMap").FirstOrDefault().GetField("_namespaceTranslationDic", BindingFlags.NonPublic | BindingFlags.Static);
