@@ -55,9 +55,7 @@ namespace OxTest
                     return s_TempDir.FullName;
                 else
                 {
-                    var now = DateTime.Now;
-                    var tempDirName = String.Format("TestResults-{0:00}-{1:00}-{2:00}-{3:00}{4:00}{5:00}", now.Year - 2000, now.Month, now.Day, now.Hour, now.Minute, now.Second);
-                    s_TempDir = new DirectoryInfo(Path.Combine(".", tempDirName));
+                    s_TempDir = new DirectoryInfo(Path.Combine(".", "test", Guid.NewGuid().ToString()));
                     s_TempDir.Create();
                     return s_TempDir.FullName;
                 }

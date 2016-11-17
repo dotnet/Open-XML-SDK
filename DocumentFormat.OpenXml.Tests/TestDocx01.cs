@@ -13,7 +13,6 @@ using W = DocumentFormat.OpenXml.Wordprocessing;
 using A = DocumentFormat.OpenXml.Drawing;
 using DW = DocumentFormat.OpenXml.Drawing.Wordprocessing;
 using PIC = DocumentFormat.OpenXml.Drawing.Pictures;
-using OpenXmlPowerTools;
 using OxTest;
 
 namespace DocumentFormat.OpenXml.Tests
