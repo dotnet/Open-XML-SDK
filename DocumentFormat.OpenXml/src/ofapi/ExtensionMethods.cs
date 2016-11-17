@@ -200,7 +200,7 @@ namespace DocumentFormat.OpenXml
 
                 foreach (ChildElementInfoAttribute childElementTypeAttribute in childElementTypeAttributes)
                 {
-                    if (childElementTypeAttribute.ElementType.IsInstanceOfType(child))
+                    if (childElementTypeAttribute.ElementType.GetTypeInfo().IsAssignableFrom(child.GetType().GetTypeInfo()))
                     {
                         return true;
                     }
