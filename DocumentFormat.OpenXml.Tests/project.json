@@ -7,13 +7,14 @@
     "DocumentFormat.OpenXml": "3.0.0-*"
   },
   "buildOptions": {
-    "embed": "../TestFiles/**/*.*"
+    "embed": "../TestFiles/**/*.*",
+    "copyToOutput": [
+      "../TestFiles/**/*.*",
+      "../TestDataStorage/**/*.*"
+    ]
   },
   "frameworks": {
-    "net451": {
-      "frameworkAssemblies": {
-      }
-    },
+    "net451": {},
     "netcoreapp1.0": {
       "dependencies": {
         "Microsoft.NETCore.App": {

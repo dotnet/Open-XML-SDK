@@ -18,6 +18,8 @@ using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Wordprocessing;
 
+using OxTest;
+
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
@@ -316,7 +318,7 @@ namespace DocumentFormat.OpenXml.Tests
                 }
                 catch (Exception e)
                 {
-                    if (TaskLibraries.OpenXmlDomTaskLibrary.IsKnownIssue(TaskLibraries.DataStorage.TestDataStorage.RootFolder, testfile.FullName, e.Message) == true)
+                    if (TaskLibraries.OpenXmlDomTaskLibrary.IsKnownIssue(TestUtil.TestDataStorage, testfile.FullName, e.Message) == true)
                     {
                         Log.Warning(e.ToString());
                     }

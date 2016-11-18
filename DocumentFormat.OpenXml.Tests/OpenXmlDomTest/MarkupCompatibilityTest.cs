@@ -10,6 +10,7 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation;
 using Xunit;
+using OxTest;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -3692,7 +3693,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
             catch (Exception ex)
             {
-                if (OpenXmlDomTaskLibrary.IsKnownIssue(TestDataStorage.RootFolder, testfile.FullName, ex.Message) == false)
+                if (OpenXmlDomTaskLibrary.IsKnownIssue(TestUtil.TestDataStorage, testfile.FullName, ex.Message) == false)
                 {
                     Log.Warning("Exception {0} thrown out when validating...", ex.GetType().FullName);
                     Log.Fail(ex.ToString());
@@ -3708,7 +3709,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 foreach (var error in errors)
                 {
-                    if (OpenXmlDomTaskLibrary.IsKnownIssue(TestDataStorage.RootFolder, testfile.FullName, error.Description) == false)
+                    if (OpenXmlDomTaskLibrary.IsKnownIssue(TestUtil.TestDataStorage, testfile.FullName, error.Description) == false)
                     {
                         // Disabled OuterXML output since there are too many errors cause Out of Memory exception
                         Log.Error("Error Message: {0}", error.GetErrorString(false));
@@ -3755,7 +3756,7 @@ namespace DocumentFormat.OpenXml.Tests
                 foreach (var error in errors)
                 {
                     Log.Warning("Error Message: {0}", error.GetErrorString(true)); /*include OuterXml*/
-                    if (OpenXmlDomTaskLibrary.IsKnownIssue(TestDataStorage.RootFolder, testfile.FullName, error.Description) == false)
+                    if (OpenXmlDomTaskLibrary.IsKnownIssue(TestUtil.TestDataStorage, testfile.FullName, error.Description) == false)
                     {
                         unknownErrorDetected = true;
                     }
