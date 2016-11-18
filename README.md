@@ -38,8 +38,6 @@ See MIT-License.txt in the project root for license information.
 
 News
 ====
-The most recent release of the Open XML SDK is Version 2.6.1, which includes a total of 1333 XUnit tests.
-
 We are also happy to announce the release of Open-Xml-PowerTools on GitHub.  Open-Xml-PowerTools provides
 example code and guidance for implementing a wide range of Open XML scenarios.  You can find PowerTools
 for Open XML, which previously lived at [PowerTools.CodePlex.com](http://powertools.codeplex.com) at
@@ -47,6 +45,11 @@ for Open XML, which previously lived at [PowerTools.CodePlex.com](http://powerto
 
 Change Log
 ==========
+
+Version 3.0.0 : [In Progress]
+- Added support for .NET Standard 1.3
+- Moved to using System.IO.Packaging from dotnet/corefx for .NET Standard 1.3 and WindowsBase for .NET 4.5
+- Cleaned up project system to use .NET CLI
 
 Version 2.6.1 : January 15, 2016
 - Added hundreds of XUnit tests.  There are now a total of 1333 tests.  They take about 20 minutes to run, so be patient.
@@ -86,4 +89,18 @@ If you want to use a command line approach:
 - Go to the directory the solution is in
 - Run `dotnet restore` in the directory
 - Run `dotnet test DocumentFormat.OpenXml.Tests` to run the tests
-- RUn `dotnet pack DocumentFormat.OpenXml` to generate a nupkg
+- Run `dotnet pack DocumentFormat.OpenXml` to generate a nupkg
+
+Schema Files
+============
+
+The data for schema validation is contained in static binary files that are not compatible in .NET Standard. At this moment, a converter tool is used to transform the binary
+file into a set of POCO objects that will not require deserialization at runtime. This tool is located in the `BinaryFormatConverter` folder. In order to run it:
+
+- Run `dotnet restore` in the solution directory
+- `cd BinaryFormatConverter`
+- `dotnet run`
+
+This will go through and update schema files in the form of `DocumentFormat.OpenXml/src/GeneratedCode/Office*Schema.cs`. This update only needs to be run when there is a change 
+to the binary files; otherwise, they will return the same result. These updated files are only used in the .NET Sandard implementation, while the binary files will continue to 
+be used in the .NET 4.5 builds.
