@@ -26,6 +26,14 @@
           "FEATURE_XML_SCHEMA",
           "FEATURE_XML_VERIFYTOKEN"
         ],
+        "compile": {
+          "excludeFiles": [
+            "src/GeneratedCode/Office2007Schema.cs",
+            "src/GeneratedCode/Office2010Schema.cs",
+            "src/GeneratedCode/Office2013Schema.cs",
+            "src/ofapi/Validation/SchemaValidation/OfficeStaticSchemaDatas.cs"
+          ]
+        },
         "embed": [
           "src/GeneratedCode/O12SchemaConstraintDatas.bin",
           "src/GeneratedCode/O14SchemaConstraintDatas.bin",
