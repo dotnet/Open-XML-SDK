@@ -43,4 +43,7 @@ using System.Security;
 [assembly: InternalsVisibleTo("DocumentFormat.OpenXml.WB.Tests")]
 
 [assembly: NeutralResourcesLanguageAttribute("en-US")]
+
+#if FEATURE_SECURITY
 [assembly: SecurityRules(SecurityRuleSet.Level1)]
+#endif

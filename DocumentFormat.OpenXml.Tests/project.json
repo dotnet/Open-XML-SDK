@@ -7,12 +7,24 @@
     "DocumentFormat.OpenXml": "3.0.0-*"
   },
   "buildOptions": {
-    "embed": "../TestFiles/**/*.*"
+    "embed": "../TestFiles/**/*.*",
+    "copyToOutput": [
+      "../TestFiles/**/*.*",
+      "../TestDataStorage/**/*.*"
+    ]
   },
   "frameworks": {
-    "net451": {
-      "frameworkAssemblies": {
-        "Microsoft.VisualBasic": ""
+    "net451": {},
+    "netcoreapp1.0": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "type": "platform",
+          "version": "1.0.0"
+        },
+        "System.Xml.ReaderWriter": "4.3.0",
+        "System.Xml.XmlDocument": "4.3.0",
+        "System.Reflection.Extensions": "4.3.0",
+        "System.Runtime.Extensions": "4.3.0"
       }
     }
   }

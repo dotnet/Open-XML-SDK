@@ -2,12 +2,15 @@
 using System;
 using System.Diagnostics;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.Linq;
 using System.Xml;
 using System.Text.RegularExpressions;
 using System.Globalization;
 using DocumentFormat.OpenXml.Validation;
+
+#if FEATURE_BINARYFORMATTER
+using System.Runtime.Serialization.Formatters.Binary;
+#endif
 
 namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 {
@@ -284,6 +287,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         public int SimpleTypeCount { get; set; }
         public SimpleTypeRestriction[] SimpleTypes { get; set; }
 
+#if FEATURE_BINARYFORMATTER
         internal void Serialize(Stream stream)
         {
             // simpletypes
@@ -310,6 +314,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             }
             return simpleTypeRestrictions;
         }
+#endif
 
         /// <summary>
         /// Indexer to retriver a specified data in the SimpleTypes.
@@ -391,6 +396,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the maxLength facets.
         /// </summary>
+        [Ignore]
         public virtual int MaxLength
         {
             get { throw new InvalidOperationException(); }
@@ -400,6 +406,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the minLength facets.
         /// </summary>
+        [Ignore]
         public virtual int MinLength
         {
             get { throw new InvalidOperationException(); }
@@ -409,6 +416,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the length facets.
         /// </summary>
+        [Ignore]
         public virtual int Length
         {
             get { throw new InvalidOperationException(); }
@@ -670,7 +678,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// An ID for this type. 
         /// </summary>
-        internal int AttributeId
+        public int AttributeId
         {
             get;
             set;
@@ -687,6 +695,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.Redirected; }
@@ -766,7 +775,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// An ID for union. 
         /// </summary>
-        internal int UnionId
+        public int UnionId
         {
             get;
             set;
@@ -783,6 +792,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.Union; }
@@ -792,6 +802,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Returns the corresponding CLR type name. The name will be used to report error.
         /// </summary>
+        [Ignore]
         public override string ClrTypeName
         {
             get
@@ -862,6 +873,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.Enum; }
@@ -910,7 +922,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         {
             return;
         }
-#endif 
+#endif
     }
 
     /// <summary>
@@ -929,6 +941,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.List; }
@@ -1133,7 +1146,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
             return;
         }
-#endif 
+#endif
     }
 
     /// <summary>
@@ -1428,6 +1441,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.UnsignedByte; }
@@ -1460,6 +1474,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.Byte; }
@@ -1492,6 +1507,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.Short; }
@@ -1524,6 +1540,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.Int; }
@@ -1556,6 +1573,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.Long; }
@@ -1587,6 +1605,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.UnsignedShort; }
@@ -1618,6 +1637,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.UnsignedInt; }
@@ -1649,6 +1669,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.UnsignedLong; }
@@ -1680,6 +1701,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.Float; }
@@ -1729,6 +1751,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.Double; }
@@ -1785,6 +1808,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.Decimal; }
@@ -1827,6 +1851,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.Integer; }
@@ -1878,6 +1903,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.NonNegativeInteger; }
@@ -1931,6 +1957,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.PositiveInteger; }
@@ -1973,6 +2000,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.DateTime; }
@@ -2004,6 +2032,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.Date; }
@@ -2059,6 +2088,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.String; }
@@ -2215,6 +2245,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.Token; }
@@ -2241,7 +2272,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         {
             try
             {
-                XmlConvert.VerifyTOKEN(attributeValue.InnerText);
+                VerifyTOKEN(attributeValue.InnerText);
             }
             catch (XmlException)
             {
@@ -2250,6 +2281,30 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
             return true;
         }
+
+#if FEATURE_XML_VERIFYTOKEN
+        protected static string VerifyTOKEN(string token)
+        {
+            return XmlConvert.VerifyTOKEN(token);
+        }
+#else
+        private static char[] crt = new char[] { '\n', '\r', '\t' };
+
+        protected static string VerifyTOKEN(string token)
+        {
+            if (token == null || token.Length == 0)
+            {
+                return token;
+            }
+
+            if (token[0] == ' ' || token[token.Length - 1] == ' ' || token.IndexOfAny(crt) != -1 || token.IndexOf("  ", StringComparison.Ordinal) != -1)
+            {
+                throw new System.Xml.XmlException($"Not a valid token: '{token}'");
+            }
+
+            return token;
+        }
+#endif
     }
 
     /// <summary>
@@ -2275,6 +2330,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.QName; }
@@ -2377,6 +2433,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.NormalizedString; }
@@ -2426,6 +2483,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.Name; }
@@ -2487,6 +2545,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.NCName; }
@@ -2552,6 +2611,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.ID; }
@@ -2621,6 +2681,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.AnyURI; }
@@ -2691,6 +2752,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.HexBinary; }
@@ -2769,6 +2831,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.Base64Binary; }
@@ -2859,6 +2922,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.Language; }
@@ -2885,7 +2949,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         {
             try
             {
-                XmlConvert.VerifyTOKEN(attributeValue.InnerText);
+                VerifyTOKEN(attributeValue.InnerText);
             }
             catch (XmlException)
             {
@@ -2897,7 +2961,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         }
     }
 
-    #region TrueFalse / OnOff 
+#region TrueFalse / OnOff 
 #if false
     /// <summary>
     /// TrueFalseValue (ST_TrueFalse) based simple type constraint.
@@ -2913,6 +2977,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.TrueFalseValue; }
@@ -2946,6 +3011,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.TrueFalseBlankValue; }
@@ -2979,6 +3045,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
+        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.OnOffValue; }
@@ -2999,7 +3066,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     }
 
 #endif
-    #endregion
+#endregion
 
 #if false
     /// <summary>

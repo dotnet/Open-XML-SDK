@@ -15,12 +15,43 @@
       },
       "buildOptions": {
         "define": [
+          "FEATURE_BINARYFORMATTER",
+          "FEATURE_CLONEABLE",
+          "FEATURE_CLOSE",
+          "FEATURE_REFLECTION",
+          "FEATURE_SECURITY",
+          "FEATURE_SERIALIZATION",
+          "FEATURE_SYSTEMEXCEPTION",
+          "FEATURE_XML_QUOTECHAR",
+          "FEATURE_XML_SCHEMA",
+          "FEATURE_XML_VERIFYTOKEN"
         ],
+        "compile": {
+          "excludeFiles": [
+            "src/GeneratedCode/Office2007Schema.cs",
+            "src/GeneratedCode/Office2010Schema.cs",
+            "src/GeneratedCode/Office2013Schema.cs",
+            "src/ofapi/Validation/SchemaValidation/OfficeStaticSchemaDatas.cs"
+          ]
+        },
         "embed": [
           "src/GeneratedCode/O12SchemaConstraintDatas.bin",
           "src/GeneratedCode/O14SchemaConstraintDatas.bin",
           "src/GeneratedCode/O15SchemaConstraintDatas.bin"
         ]
+      }
+    },
+    "netstandard1.3": {
+      "dependencies": {
+        "NETStandard.Library": "1.6.0",
+        "System.IO.Packaging": "4.0.0"
+      },
+      "buildOptions": {
+        "compile": {
+          "excludeFiles": [
+            "src/ofapi/Validation/SchemaValidation/BinarySdbSchemaDatas.cs"
+          ]
+        }
       }
     }
   }

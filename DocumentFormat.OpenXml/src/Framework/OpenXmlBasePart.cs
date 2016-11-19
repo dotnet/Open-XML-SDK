@@ -437,6 +437,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public abstract string RelationshipType { get; }
 
+#if FEATURE_XML_SCHEMA
         /// <summary>
         /// Validates the XML content of the part by using the specified schema.
         /// </summary>
@@ -499,6 +500,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             this.ValidateXml(schemas, validationEventHandler);
         }
+#endif
 
         /// <summary>
         /// Gets the root element of the current part.
