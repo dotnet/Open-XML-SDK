@@ -36,6 +36,11 @@ See License.txt in the project root for license information.
 Portions of this project are licensed under the MIT license.
 See MIT-License.txt in the project root for license information.
 
+Download
+========
+
+Downloads are available on [this site](https://www.microsoft.com/en-us/download/details.aspx?id=30425).
+
 News
 ====
 We are also happy to announce the release of Open-Xml-PowerTools on GitHub.  Open-Xml-PowerTools provides
