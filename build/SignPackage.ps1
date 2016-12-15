@@ -8,8 +8,8 @@ if([string]::IsNullOrEmpty($env:SignClientSecret)){
 
 # Setup Variables we need to pass into the sign client tool
 
-$appSettings = "$currentDirectory\appsettings.json"
-$appPath = "$currentDirectory\..\SignClient\tools\SignClient.dll"
+$appSettings = "$currentDirectory\SignClientSettings.json"
+$appPath = "$currentDirectory\SignClient\tools\SignClient.dll"
 
 $nupgks = ls $currentDirectory\..\*.nupkg | Select -ExpandProperty FullName
 
