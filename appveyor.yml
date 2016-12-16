@@ -24,3 +24,14 @@ test_script:
 artifacts:
   - path: '*.nupkg'
     name: NuGetArtifacts
+
+deploy:
+  provider: NuGet
+  server: https://dotnet.myget.org/F/open-xml-sdk/api/v2/package
+  api_key:
+    secure: rxiGDTFaiouAgVTK2ESDt/RjxVH0sBiomuohk4j4byhZUwxNIXq6RN8oK3/nXDJb
+  skip_symbols: false
+  symbol_server: https://dotnet.myget.org/F/open-xml-sdk/symbols/api/v2/packages
+  artifact: /.*\.nupkg/
+  on:
+    branch: [master, vNext, Office2016]
