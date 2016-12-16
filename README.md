@@ -36,6 +36,16 @@ See License.txt in the project root for license information.
 Portions of this project are licensed under the MIT license.
 See MIT-License.txt in the project root for license information.
 
+CI Builds
+=================
+
+CI builds are available via a MyGet feed:
+
+| Client | Feed URL |
+| ------ | -------- |
+| NuGet V3 (Visual Studio 2015+) | https://dotnet.myget.org/F/open-xml-sdk/api/v3/index.json |
+| NuGet V2 (Visual Studio 2012+) | https://dotnet.myget.org/F/open-xml-sdk/api/v2 |
+
 News
 ====
 We are also happy to announce the release of Open-Xml-PowerTools on GitHub.  Open-Xml-PowerTools provides
