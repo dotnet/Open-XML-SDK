@@ -56,7 +56,7 @@ for Open XML, which previously lived at [PowerTools.CodePlex.com](http://powerto
 Change Log
 ==========
 
-Version 3.0.0 : [In Progress]
+Version 2.7.0 : [In Progress]
 - Added support for .NET Standard 1.3
 - Moved to using System.IO.Packaging from dotnet/corefx for .NET Standard 1.3 and WindowsBase for .NET 4.5
 - Cleaned up project system to use .NET CLI

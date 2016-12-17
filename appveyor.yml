@@ -29,9 +29,6 @@ deploy:
   provider: NuGet
   server: https://dotnet.myget.org/F/open-xml-sdk/api/v2/package
   api_key:
-    secure: rxiGDTFaiouAgVTK2ESDt/RjxVH0sBiomuohk4j4byhZUwxNIXq6RN8oK3/nXDJb
-  skip_symbols: false
-  symbol_server: https://dotnet.myget.org/F/open-xml-sdk/symbols/api/v2/packages
-  artifact: /.*\.nupkg/
+    secure: Z9SzikoGtCN8Y3uK/w8gxBFwdL5BZ+QG2clbvx0W0SL048eKdykAsaLd8q3jKLbk
   on:
     branch: [master, vNext, Office2016]
