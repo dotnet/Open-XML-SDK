@@ -415,6 +415,10 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Ogg Vorbis (.ogg)
         /// </summary>
         OggAudio,
+        /// <summary>
+        /// Mpeg 4 Audio (.mp4)
+        /// </summary>
+        Mp4Audio,
 
         #endregion
 
@@ -471,7 +475,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// VC-1 Stream (.wmv)
         /// </summary>
-        VC1
+        VC1,
+        /// <summary>
+        /// Mpeg 4 Video (.mp4)
+        /// </summary>
+        Mp4Video
 
         #endregion
     }
@@ -511,6 +519,10 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 case MediaDataPartType.OggAudio:
                     return "audio/ogg";
+
+                case MediaDataPartType.Mp4Audio:
+                    return "audio/mp4";
+
 
                 // *** Video types.
 
@@ -553,6 +565,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 case MediaDataPartType.VC1:
                     return "video/vc1";
 
+                case MediaDataPartType.Mp4Video:
+                    return "video/mp4";
+
                 default:
                     throw new ArgumentOutOfRangeException("mediaDataPartType");
             }
@@ -591,6 +606,9 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 case MediaDataPartType.OggAudio:
                     return ".ogg";
+
+                case MediaDataPartType.Mp4Audio:
+                    return ".mp4";
 
                 // Video types.
 
@@ -632,7 +650,10 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 case MediaDataPartType.VC1:
                     return ".wmv";
-                
+
+                case MediaDataPartType.Mp4Video:
+                    return ".mp4";
+
                 default:
                     return ".media";
             }
