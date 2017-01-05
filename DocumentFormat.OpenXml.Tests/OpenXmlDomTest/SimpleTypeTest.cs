@@ -6,6 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.IO;
 using System.Reflection;
+using System.Globalization;
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
@@ -1821,7 +1822,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("Constructing with another instance with valid value...");
             objA = new DecimalValue(validValue);
-            simpleValueValidTest(new DecimalValue(objA), validValue, validValue.ToString());
+            simpleValueValidTest(new DecimalValue(objA), validValue, validValue.ToString(CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with special value {0} and testing...", specialValue1);
             simpleValueValidTest(new DecimalValue(specialValue1), specialValue1, specialValue1.ToString());
@@ -1887,24 +1888,24 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyNull(defaultObj, "default(SingleValue) returns reference other than NULL");
 
             Log.Comment("Constructing with Max value and testing...");
-            simpleValueValidTest(new SingleValue(maxValue), maxValue, maxValue.ToString("R"));
+            simpleValueValidTest(new SingleValue(maxValue), maxValue, maxValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with Max value and testing with Clone()...");
-            simpleValueValidTest(new SingleValue(maxValue).Clone() as SingleValue, maxValue, maxValue.ToString("R"));
+            simpleValueValidTest(new SingleValue(maxValue).Clone() as SingleValue, maxValue, maxValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Set Value with Min value and testing...");
             SingleValue objA = new SingleValue();
             objA.Value = minValue;
-            simpleValueValidTest(objA, minValue, minValue.ToString("R"));
+            simpleValueValidTest(objA, minValue, minValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Set InnerText with Min value and testing...");
             SingleValue objB = new SingleValue();
-            objB.InnerText = minValue.ToString("R");
-            simpleValueValidTest(objB, minValue, minValue.ToString("R"));
+            objB.InnerText = minValue.ToString("R", CultureInfo.InvariantCulture);
+            simpleValueValidTest(objB, minValue, minValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Implicit Int Operator with Min value and testing...");
             objB = minValue;
-            simpleValueValidTest(objB, minValue, minValue.ToString("R"));
+            simpleValueValidTest(objB, minValue, minValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Explicit SingleValue conversion with value {0} and testing", validValue);
             objB = SingleValue.FromSingle(validValue);
@@ -1912,10 +1913,10 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("Constructing with another instance with valid value...");
             objA = new SingleValue(validValue);
-            simpleValueValidTest(new SingleValue(objA), validValue, validValue.ToString("R"));
+            simpleValueValidTest(new SingleValue(objA), validValue, validValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with special value {0} and testing...", specialEpsilon);
-            simpleValueValidTest(new SingleValue(specialEpsilon), specialEpsilon, specialEpsilon.ToString("R"));
+            simpleValueValidTest(new SingleValue(specialEpsilon), specialEpsilon, specialEpsilon.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with special value {0} and testing...", specialPositiveInfinity);
             simpleValueValidTest(new SingleValue(specialPositiveInfinity), specialPositiveInfinity, PositiveInfinity);
@@ -2021,24 +2022,24 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyNull(defaultObj, "default(DoubleValue) returns reference other than NULL");
 
             Log.Comment("Constructing with Max value and testing...");
-            simpleValueValidTest(new DoubleValue(maxValue), maxValue, maxValue.ToString("R"));
+            simpleValueValidTest(new DoubleValue(maxValue), maxValue, maxValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with Max value and testing with Clone()...");
-            simpleValueValidTest(new DoubleValue(maxValue).Clone() as DoubleValue, maxValue, maxValue.ToString("R"));
+            simpleValueValidTest(new DoubleValue(maxValue).Clone() as DoubleValue, maxValue, maxValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Set Value with Min value and testing...");
             DoubleValue objA = new DoubleValue();
             objA.Value = minValue;
-            simpleValueValidTest(objA, minValue, minValue.ToString("R"));
+            simpleValueValidTest(objA, minValue, minValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Set InnerText with Min value and testing...");
             DoubleValue objB = new DoubleValue();
-            objB.InnerText = minValue.ToString("R");
-            simpleValueValidTest(objB, minValue, minValue.ToString("R"));
+            objB.InnerText = minValue.ToString("R", CultureInfo.InvariantCulture);
+            simpleValueValidTest(objB, minValue, minValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Implicit Int Operator with Min value and testing...");
             objB = minValue;
-            simpleValueValidTest(objB, minValue, minValue.ToString("R"));
+            simpleValueValidTest(objB, minValue, minValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Explicit Double conversion with value {0} and testing", validValue);
             objB = DoubleValue.FromDouble(validValue);
@@ -2046,10 +2047,10 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("Constructing with another instance with valid value...");
             objA = new DoubleValue(validValue);
-            simpleValueValidTest(new DoubleValue(objA), validValue, validValue.ToString("R"));
+            simpleValueValidTest(new DoubleValue(objA), validValue, validValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with special value {0} and testing...", specialEpsilon);
-            simpleValueValidTest(new DoubleValue(specialEpsilon), specialEpsilon, specialEpsilon.ToString("R"));
+            simpleValueValidTest(new DoubleValue(specialEpsilon), specialEpsilon, specialEpsilon.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with special value {0} and testing...", specialPositiveInfinity);
             simpleValueValidTest(new DoubleValue(specialPositiveInfinity), specialPositiveInfinity, PositiveInfinity);
