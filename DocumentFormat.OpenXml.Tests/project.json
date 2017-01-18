@@ -11,7 +11,8 @@
     "copyToOutput": [
       "../TestFiles/**/*.*",
       "../TestDataStorage/**/*.*"
-    ]
+    ],
+    "keyFile": "../DocumentFormat.OpenXml/DocumentFormat.OpenXml.snk"
   },
   "frameworks": {
     "net451": {},

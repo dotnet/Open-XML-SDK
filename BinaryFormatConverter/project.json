@@ -2,7 +2,8 @@
   "version": "1.0.0-*",
   "buildOptions": {
     "debugType": "portable",
-    "emitEntryPoint": true
+    "emitEntryPoint": true,
+    "keyFile": "../DocumentFormat.OpenXml/DocumentFormat.OpenXml.snk"
   },
   "dependencies": {
     "DocumentFormat.OpenXml": "3.0.0-*",
