@@ -6,7 +6,7 @@
     "keyFile": "../DocumentFormat.OpenXml/DocumentFormat.OpenXml.snk"
   },
   "dependencies": {
-    "DocumentFormat.OpenXml": "3.0.0-*",
+    "DocumentFormat.OpenXml": "2.7.0-*",
     "SourceCodeSerializer": "0.1.0"
   },
   "frameworks": {
