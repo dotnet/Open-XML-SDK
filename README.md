@@ -36,15 +36,40 @@ See License.txt in the project root for license information.
 Portions of this project are licensed under the MIT license.
 See MIT-License.txt in the project root for license information.
 
-CI Builds
+
+The Latest Builds
 =================
 
-CI builds are available via a MyGet feed:
+##Where to get the Nuget package
+The NuGet package for Open XML SDK is currently available as a custom feed on MyGet. You can trust this package source, since the custom feed is locked and only this project feeds into the source.
+
+##How to install the Nuget package
+The package you want to install is DocumentFormat.OpenXml. See https://dotnet.myget.org/gallery/open-xml-sdk 
+
+The package feed or the package source is specified by the feed URL. Depending on your version of Visual Studio, choose the appropriate feed URL from the table below. 
+
+Table 1: The latest builds are available via a MyGet feed
 
 | Client | Feed URL |
 | ------ | -------- |
 | NuGet V3 (Visual Studio 2015+) | https://dotnet.myget.org/F/open-xml-sdk/api/v3/index.json |
 | NuGet V2 (Visual Studio 2012+) | https://dotnet.myget.org/F/open-xml-sdk/api/v2 |
+
+1.	Specify the package source via a configuration option. For more info, see https://docs.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior. 
+Note that usually a NuGet.config file is placed in the directory and the configuration options are added there to ensure the sources are persisted in the version control.
+
+2.	Install the package. The **Install-Package** command considers the package source either via configuration or argument. (If you have trouble installing the package, try restarting Visual Studio. Package sources could be cached and changes you've made to any NuGet.config files may not be detected.)
+
+	```
+	PM> Install-Package DocumentFormat.OpenXml 
+	```
+
+	```
+	PM> Install-Package DocumentFormat.OpenXml -Source https://dotnet.myget.org/F/open-xml-sdk/api/v3/index.json 
+	```
+
+	**Note**: This example is for Visual Studio 2015 and later.
+
 
 News
 ====
