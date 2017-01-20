@@ -15,7 +15,6 @@
     "keyFile": "../DocumentFormat.OpenXml/DocumentFormat.OpenXml.snk"
   },
   "frameworks": {
-    "net451": {},
     "netcoreapp1.0": {
       "dependencies": {
         "Microsoft.NETCore.App": {
@@ -27,6 +26,7 @@
         "System.Reflection.Extensions": "4.3.0",
         "System.Runtime.Extensions": "4.3.0"
       }
-    }
+    },
+    "net451": {}
   }
 }
