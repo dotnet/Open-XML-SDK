@@ -1,9 +1,9 @@
 Open-XML-SDK
 ============
 
-Release Version 2.6.1
+Release Version 2.7
 
-    News: The Office2016 branch on this repo contains a preview of the Open-Xml-Sdk v3.0, which
+    News: The Office2016 branch on this repo contains a preview of the Open-Xml-Sdk v2.7, which
 	supports the Office 2016 extensions in the file format.  The biggest change to the markup was
 	the introduction of the ExtendedChartPart, which support the new chart types, such as Waterfall,
 	Box and Whisker, and Sunburst.  You can specify FileFormatVersions.Office2016 to validate this
@@ -56,7 +56,7 @@ for Open XML, which previously lived at [PowerTools.CodePlex.com](http://powerto
 Change Log
 ==========
 
-Version 2.7.0 : [In Progress]
+Version 2.7.0 : January 20, 2017
 - Added support for .NET Standard 1.3
 - Moved to using System.IO.Packaging from dotnet/corefx for .NET Standard 1.3 and WindowsBase for .NET 4.5
 - Cleaned up project system to use .NET CLI
