@@ -18,27 +18,35 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     {
         private readonly Dictionary<OpenXmlTypeId, SchemaTypeData> _schemaTypeDatas = new Dictionary<ushort, SchemaTypeData>();
 
+        [Include]
         protected SdbDataHead SdbDataHead { get; set; }
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        [Include]
         protected IReadOnlyList<SdbClassIdToSchemaTypeIndex> SdbClassIdMap { get; set; }
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        [Include]
         protected IReadOnlyList<SdbSchemaType> SdbSchemaTypes { get; set; }
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        [Include]
         protected IReadOnlyList<SdbParticleConstraint> SdbParticles { get; set; }
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        [Include]
         protected IReadOnlyList<SdbParticleChildrenIndex> SdbParticleIndexs { get; set; }
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        [Include]
         protected IReadOnlyList<SdbAttributeConstraint> SdbAttributes { get; set; }
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        [Include]
         protected SimpleTypeRestrictions SimpleTypeRestrictions { get; set; }
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        [Include]
         protected ParticleConstraint[] EmptyChildrenParticles = new ParticleConstraint[0];
 
         /// <summary>
@@ -46,9 +54,13 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// </summary>
         public static SdbSchemaDatas GetOffice2007SchemaDatas()
         {
-            var o12Datas = new BinarySdbSchemaDatas(FileFormatVersions.Office2007);
-            o12Datas.InitOnDemand();
-            return o12Datas;
+#if FEATURE_BINARYFORMATTER
+            var data = new BinarySdbSchemaDatas(FileFormatVersions.Office2007);
+#else
+            var data = new Office2007Schema();
+#endif
+            data.Initialize();
+            return data;
         }
 
         /// <summary>
@@ -56,9 +68,13 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// </summary>
         public static SdbSchemaDatas GetOffice2010SchemaDatas()
         {
-            var o14Datas = new BinarySdbSchemaDatas(FileFormatVersions.Office2010);
-            o14Datas.InitOnDemand();
-            return o14Datas;
+#if FEATURE_BINARYFORMATTER
+            var data = new BinarySdbSchemaDatas(FileFormatVersions.Office2010);
+#else
+            var data = new Office2010Schema();
+#endif
+            data.Initialize();
+            return data;
         }
 
         /// <summary>
@@ -66,9 +82,13 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// </summary>
         public static SdbSchemaDatas GetOffice2013SchemaDatas()
         {
-            var o15Datas = new BinarySdbSchemaDatas(FileFormatVersions.Office2013);
-            o15Datas.InitOnDemand();
-            return o15Datas;
+#if FEATURE_BINARYFORMATTER
+            var data = new BinarySdbSchemaDatas(FileFormatVersions.Office2013);
+#else
+            var data = new Office2013Schema();
+#endif
+            data.Initialize();
+            return data;
         }
 
         /// <summary>

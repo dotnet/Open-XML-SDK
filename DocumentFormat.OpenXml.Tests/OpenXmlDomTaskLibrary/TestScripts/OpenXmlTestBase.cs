@@ -190,20 +190,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         {
             get
             {
-                if (_SourceRootPath != null)
-                    return _SourceRootPath;
-
-                // find the directory, wherever it may be, to get to the TestDataStorage directory
-                var dir = new DirectoryInfo(Directory.GetCurrentDirectory());
-                while (true)
-                {
-                    if (dir.Name == "DocumentFormat.OpenXml.Tests" || dir.Name == "DocumentFormat.OpenXml.WB.Tests")
-                        break;
-                    dir = dir.Parent;
-                }
-                dir = dir.Parent; // go up one more, to the parent of the above dirs
-                var testDataStorageDirInfo = new DirectoryInfo(Path.Combine(dir.FullName, "TestDataStorage"));
-                _SourceRootPath = testDataStorageDirInfo.FullName;
+                _SourceRootPath = TestUtil.TestDataStorage;
                 return _SourceRootPath;
             }
         }
@@ -220,22 +207,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         {
             get
             {
-                if (this._SourcePath == null)
-                {
-                    // find the directory, wherever it may be, to get to the TestDataStorage directory
-                    var dir = new DirectoryInfo(Directory.GetCurrentDirectory());
-                    while (true)
-                    {
-                        if (dir.Name == "DocumentFormat.OpenXml.Tests" || dir.Name == "DocumentFormat.OpenXml.WB.Tests")
-                            break;
-                        dir = dir.Parent;
-                    }
-                    dir = dir.Parent; // go up one more, to the parent of the above dirs
-                    var testDataStorageDirInfo = new DirectoryInfo(Path.Combine(dir.FullName, "TestDataStorage"));
-                    this._SourcePath = testDataStorageDirInfo.FullName;
-                    return this._SourcePath;
-                }
-                return this._SourcePath;
+                return _SourcePath ?? TestUtil.TestDataStorage;
             }
             set
             {
@@ -514,7 +486,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
                         foreach (var result in validateResults)
                         {
                             if (OpenXmlDomTaskLibrary.IsKnownIssue(
-                                TestDataStorage.RootFolder, file.FilePath, result.Description) == false)
+                                TestUtil.TestDataStorage, file.FilePath, result.Description) == false)
                             {
                                 errorDetected = true;
                                 Log.Fail("Validation Error: {0}", result.Description);
@@ -531,7 +503,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
                 catch (Exception e)
                 {
                     if (OpenXmlDomTaskLibrary.IsKnownIssue(
-                        TestDataStorage.RootFolder, file.FilePath, e.Message) == false)
+                        TestUtil.TestDataStorage, file.FilePath, e.Message) == false)
                     {
                         errorDetected = true;
                         Log.Fail("Exception: {0}", e.Message);

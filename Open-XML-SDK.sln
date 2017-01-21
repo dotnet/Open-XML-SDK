@@ -7,6 +7,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DocumentFormat.OpenXml", "D
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DocumentFormat.OpenXml.Tests", "DocumentFormat.OpenXml.Tests\DocumentFormat.OpenXml.Tests.xproj", "{B92240AF-6E87-4428-9C5A-371178A04E5B}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "BinaryFormatConverter", "BinaryFormatConverter\BinaryFormatConverter.xproj", "{E97A956D-8113-45B6-9002-2ED651A6CD6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B92240AF-6E87-4428-9C5A-371178A04E5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B92240AF-6E87-4428-9C5A-371178A04E5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B92240AF-6E87-4428-9C5A-371178A04E5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E97A956D-8113-45B6-9002-2ED651A6CD6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E97A956D-8113-45B6-9002-2ED651A6CD6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E97A956D-8113-45B6-9002-2ED651A6CD6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E97A956D-8113-45B6-9002-2ED651A6CD6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

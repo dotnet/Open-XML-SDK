@@ -9,9 +9,6 @@ using DocumentFormat.OpenXml.Packaging;
 using w = DocumentFormat.OpenXml.Wordprocessing;
 using System;
 using System.Xml;
-#if WB
-using DocumentFormat.OpenXml.WB.Tests;
-#endif
 
 namespace DocumentFormat.OpenXml.Tests
 {

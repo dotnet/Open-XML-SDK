@@ -94,6 +94,7 @@ namespace DocumentFormat.OpenXml
             get { return this._strictTranslation; }
         }
 
+#if FEATURE_CLOSE
         /// <summary>
         /// Override the method defined in XmlReader
         /// </summary>
@@ -101,16 +102,19 @@ namespace DocumentFormat.OpenXml
         {
             this.BaseReader.Close();
         }
+#endif
 
         /// <summary>
         /// Override the method defined in XmlReader
         /// </summary>
         protected override void Dispose(bool disposing)
         {
+#if FEATURE_CLOSE
             if (this.ReadState != ReadState.Closed)
             {
                 this.Close();
             }
+#endif
 
             this.BaseReader.Dispose();
         }
@@ -454,6 +458,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
+#if FEATURE_XML_QUOTECHAR
         /// <summary>
         /// Override the property defined in XmlReader
         /// </summary>
@@ -464,6 +469,7 @@ namespace DocumentFormat.OpenXml
                 return this.BaseReader.QuoteChar;
             }
         }
+#endif
 
         /// <summary>
         /// Override the property defined in XmlReader
@@ -808,7 +814,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public abstract void Close( );
 
-        #region dispose related methods
+#region dispose related methods
 
         /// <summary>
         /// Thrown if the object is disposed.
@@ -837,10 +843,10 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        #endregion
+#endregion
 
 
-        #region IDisposable Members
+#region IDisposable Members
 
         /// <summary>
         /// Closes the reader, and releases all resources. 
@@ -851,7 +857,7 @@ namespace DocumentFormat.OpenXml
             GC.SuppressFinalize(this);
         }
 
-        #endregion
+#endregion
     }
 
     internal enum ElementState
@@ -1312,7 +1318,7 @@ namespace DocumentFormat.OpenXml
 
         }
 
-        #region private methods
+#region private methods
 
         /// <summary>
         /// Moves to next element
@@ -1507,7 +1513,7 @@ namespace DocumentFormat.OpenXml
             return;
         }
 
-        #endregion
+#endregion
 
         /// <summary>
         /// Loads the element at the current cursor.
@@ -1628,10 +1634,14 @@ namespace DocumentFormat.OpenXml
             ThrowIfObjectDisposed();
             this._elementState = ElementState.EOF;
             this._elementStack.Clear();
+#if FEATURE_CLOSE
             this._xmlReader.Close();
+#else
+            this._xmlReader.Dispose();
+#endif
         }
 
-        #region private methods
+#region private methods
 
         private void Init(Stream partStream, bool closeInput)
         {
@@ -1867,7 +1877,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        #endregion
+#endregion
 
     }
 
@@ -2234,7 +2244,7 @@ namespace DocumentFormat.OpenXml
 
         }
 
-        #region private methods
+#region private methods
 
         /// <summary>
         /// Move to next element 
@@ -2448,7 +2458,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        #endregion
+#endregion
 
         /// <summary>
         /// Loads the element at the current cursor.
@@ -2542,7 +2552,7 @@ namespace DocumentFormat.OpenXml
             this._rootElement = null;
         }
 
-        #region private methods
+#region private methods
 
         private void Init(OpenXmlElement openXmlElement)
         {
@@ -2581,6 +2591,6 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        #endregion
+#endregion
     }
 }

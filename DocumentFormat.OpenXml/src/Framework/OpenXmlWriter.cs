@@ -524,10 +524,14 @@ namespace DocumentFormat.OpenXml
         {
             if (this._xmlWriter != null)
             {
+#if FEATURE_CLOSE
                 // the end tag of the root element
                 // this._xmlWriter.WriteEndElement();
 
                 this._xmlWriter.Close();
+#else
+                this._xmlWriter.Dispose();
+#endif
             }
 
             this._isLeafTextElementStart = false;

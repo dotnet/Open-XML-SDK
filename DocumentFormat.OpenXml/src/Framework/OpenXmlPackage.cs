@@ -9,12 +9,15 @@ using System.Collections.Specialized;
 using System.Text;
 using System.IO;
 using System.IO.Packaging;
-using System.Runtime.Serialization;
 using System.Globalization;
 using DocumentFormat.OpenXml;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
+
+#if FEATURE_SERIALIZATION
+using System.Runtime.Serialization;
+#endif
 
 using static System.ReflectionExtensions;
 
@@ -1106,10 +1109,12 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new OpenXmlPackageException(ExceptionMessages.CannotChangeDocumentType, e);
             }
+#if FEATURE_SYSTEMEXCEPTION
             catch (SystemException e)
             {
                 throw new OpenXmlPackageException(ExceptionMessages.CannotChangeDocumentType, e);
             }
+#endif
 
             try
             {
@@ -1171,10 +1176,12 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new OpenXmlPackageException(ExceptionMessages.CannotChangeDocumentType, e);
             }
+#if FEATURE_SYSTEMEXCEPTION
             catch (SystemException e)
             {
                 throw new OpenXmlPackageException(ExceptionMessages.CannotChangeDocumentTypeSerious, e);
             }
+#endif
         }
 
         #endregion 
@@ -2164,6 +2171,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
         }
 
+#if FEATURE_SERIALIZATION
         /// <summary>
         /// Initializes a new instance of the OpenXmlPackageException class using the supplied serialized data. 
         /// </summary>
@@ -2173,6 +2181,7 @@ namespace DocumentFormat.OpenXml.Packaging
             : base(info, context)
         {
         }
+#endif
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPackageException class using the supplied error message and a reference to the inner exception that caused the current exception. 
