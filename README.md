@@ -40,10 +40,10 @@ See MIT-License.txt in the project root for license information.
 The Latest Builds
 =================
 
-##Where to get the Nuget package
+##Where to get the NuGet package
 The NuGet package for Open XML SDK is currently available as a custom feed on MyGet. You can trust this package source, since the custom feed is locked and only this project feeds into the source.
 
-##How to install the Nuget package
+##How to install the NuGet package
 The package you want to install is DocumentFormat.OpenXml. See https://dotnet.myget.org/gallery/open-xml-sdk 
 
 The package feed or the package source is specified by the feed URL. Depending on your version of Visual Studio, choose the appropriate feed URL from the table below. 
@@ -84,7 +84,7 @@ Change Log
 Version 2.7.0 : January 20, 2017
 - Added support for .NET Standard 1.3
 - Moved to using System.IO.Packaging from dotnet/corefx for .NET Standard 1.3 and WindowsBase for .NET 4.5
-- Cleaned up project system to use .NET CLI
+- Cleaned up project build system to use .NET CLI
 
 Version 2.6.1 : January 15, 2016
 - Added hundreds of XUnit tests.  There are now a total of 1333 tests.  They take about 20 minutes to run, so be patient.
@@ -95,7 +95,6 @@ has a serious bug that causes it (albeit rarely and in specific circumstances)
 to throw exceptions (ObjectDisposedException and NullReferenceException).  You can
 find out more about this bug and whether it affects you in [the blog post that announces the release of the new System.IO.Packaging](http://openxmldeveloper.org/blog/b/openxmldeveloper/archive/2015/06/29/announcing-the-release-of-a-new-system-io-packaging-implementation.aspx).
 
-Going forward, the Open XML SDK will be based on this new implementation of System.IO.Packaging.
 
 Documentation
 =============
