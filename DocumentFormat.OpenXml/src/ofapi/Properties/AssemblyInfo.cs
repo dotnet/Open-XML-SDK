@@ -10,11 +10,11 @@ using System.Security;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("DocumentFormat.OpenXml")]
-[assembly: AssemblyDescription("Open XML Format SDK 2.6")]
+[assembly: AssemblyDescription("Open XML Format SDK 2.7")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft Open Technologies, Inc.")]
-[assembly: AssemblyProduct("Open XML Format SDK 2.6")]
-[assembly: AssemblyCopyright("© 2014 Microsoft Open Technologies, Inc.  Licensed under the Apache License, Version 2.0.")]
+[assembly: AssemblyProduct("Open XML Format SDK 2.7")]
+[assembly: AssemblyCopyright("© 2017 Microsoft Open Technologies, Inc.  Licensed under the Apache License, Version 2.0.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -36,11 +36,11 @@ using System.Security;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("2.6.0.0")]
-[assembly: AssemblyFileVersion("2.6.0.0")]
+[assembly: AssemblyVersion("0.0.1.0")]
+[assembly: AssemblyFileVersion("0.0.1.0")]
 
-[assembly: InternalsVisibleTo("DocumentFormat.OpenXml.Tests")]
-[assembly: InternalsVisibleTo("DocumentFormat.OpenXml.WB.Tests")]
+[assembly: InternalsVisibleTo("DocumentFormat.OpenXml.Tests, Publickey=002400000480000094000000060200000024000052534131000400000100010061d8931836c82bf25ca6b773dfd6e7b3ab4e43fba60cf4a86347170373415a165ccc40da3da4a52163822db9fa91f15828236d32d6a9fe754859f10d1f8262646c1f3fb6b4348123f14d733db0ff11c3198b7cf56caaebbf14563990446a6c32aff36d5a7097194294c127fe3cdf9f2609daae5f4daf26f8b6227f203d2a8bbf")]
+[assembly: InternalsVisibleTo("DocumentFormat.OpenXml.WB.Tests, Publickey=002400000480000094000000060200000024000052534131000400000100010061d8931836c82bf25ca6b773dfd6e7b3ab4e43fba60cf4a86347170373415a165ccc40da3da4a52163822db9fa91f15828236d32d6a9fe754859f10d1f8262646c1f3fb6b4348123f14d733db0ff11c3198b7cf56caaebbf14563990446a6c32aff36d5a7097194294c127fe3cdf9f2609daae5f4daf26f8b6227f203d2a8bbf")]
 
 [assembly: NeutralResourcesLanguageAttribute("en-US")]
 

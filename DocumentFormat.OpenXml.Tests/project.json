@@ -4,14 +4,15 @@
   "dependencies": {
     "xunit": "2.2.0-beta2-build3300",
     "dotnet-test-xunit": "2.2.0-preview2-build1029",
-    "DocumentFormat.OpenXml": "3.0.0-*"
+    "DocumentFormat.OpenXml": "0.0.1-*"
   },
   "buildOptions": {
     "embed": "../TestFiles/**/*.*",
     "copyToOutput": [
       "../TestFiles/**/*.*",
       "../TestDataStorage/**/*.*"
-    ]
+    ],
+    "keyFile": "../DocumentFormat.OpenXml/DocumentFormat.OpenXml.snk"
   },
   "frameworks": {
     "netcoreapp1.0": {

@@ -5,7 +5,6 @@ using Vml = DocumentFormat.OpenXml.Vml;
 using xvml = DocumentFormat.OpenXml.Vml.Spreadsheet;
 using M = DocumentFormat.OpenXml.Math;
 using System;
-using System.Globalization;
 
 using Xunit;
 namespace DocumentFormat.OpenXml.Tests
@@ -359,7 +358,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             target.Value = (float)765.43211234E11;
             Assert.True(target.HasValue);
-            Assert.Equal(((float)765.43211234E11).ToString(CultureInfo.InvariantCulture), target.InnerText);
+            Assert.Equal(((float)765.43211234E11).ToString(), target.InnerText);
 
             target.Value = float.NaN;
             Assert.True(target.HasValue);
