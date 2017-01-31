@@ -12,10 +12,10 @@ build_script:
   - ps: .\build\Update-Version.ps1 $env:GitVersion_NuGetVersion
   - ps: dotnet --info
   - ps: dotnet restore
-  - ps: dotnet --verbose build .\DocumentFormat.OpenXml.Tests
+  - ps: dotnet --verbose build -c Release .\DocumentFormat.OpenXml.Tests
 
 after_build:
-  - ps: dotnet --verbose pack .\DocumentFormat.OpenXml -o .
+  - ps: dotnet --verbose pack -c Release .\DocumentFormat.OpenXml -o .
   - ps: .\build\SignPackage.ps1
 
 test_script:
