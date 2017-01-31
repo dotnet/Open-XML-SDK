@@ -21,10 +21,6 @@ after_build:
 test_script:
   - cmd: dotnet test -c Release .\DocumentFormat.OpenXml.Tests
 
-artifacts:
-  - path: '*.nupkg'
-    name: NuGetArtifacts
-
 deploy:
   provider: NuGet
   server: https://dotnet.myget.org/F/open-xml-sdk/api/v2/package
