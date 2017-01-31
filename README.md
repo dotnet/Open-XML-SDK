@@ -77,6 +77,9 @@ We are also happy to announce the release of Open-Xml-PowerTools on GitHub.  Ope
 Change Log
 ==========
 
+Version 2.7.1 : January 31, 2017
+- Fixed crash when validation is invoked on .NET Framework with strong-naming enforced
+
 Version 2.7.0 : January 24, 2017
 - Added support for .NET Standard 1.3
 - Moved to using System.IO.Packaging from dotnet/corefx for .NET Standard 1.3 and WindowsBase for .NET 4.5
