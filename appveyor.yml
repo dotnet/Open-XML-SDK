@@ -12,14 +12,14 @@ build_script:
   - ps: .\build\Update-Version.ps1 $env:GitVersion_NuGetVersion
   - ps: dotnet --info
   - ps: dotnet restore
-  - ps: dotnet --verbose build .\DocumentFormat.OpenXml.Tests
+  - ps: dotnet --verbose build -c Release .\DocumentFormat.OpenXml.Tests
 
 after_build:
-  - ps: dotnet --verbose pack .\DocumentFormat.OpenXml -o .
+  - ps: dotnet --verbose pack -c Release .\DocumentFormat.OpenXml -o .
   - ps: .\build\SignPackage.ps1
 
 test_script:
-  - cmd: dotnet test .\DocumentFormat.OpenXml.Tests
+  - cmd: dotnet test -c Release .\DocumentFormat.OpenXml.Tests
 
 artifacts:
   - path: '*.nupkg'
@@ -29,6 +29,6 @@ deploy:
   provider: NuGet
   server: https://dotnet.myget.org/F/open-xml-sdk/api/v2/package
   api_key:
-    secure: Z9SzikoGtCN8Y3uK/w8gxBFwdL5BZ+QG2clbvx0W0SL048eKdykAsaLd8q3jKLbk
+    secure: +uagaLcg+y8G8ZBxlXm0E5VmTHeT030NeoyHZGU8V7MtIPc1+VUXru0mAPVh0KhK
   on:
     branch: [master, vNext, Office2016]
