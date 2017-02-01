@@ -1384,6 +1384,56 @@ namespace DocumentFormat.OpenXml.Packaging
             private Dictionary<string, int> _sequenceNumbers = new Dictionary<string, int>(20);
             private Dictionary<string, int> _reservedUri = new Dictionary<string, int>();
 
+            //Added for issue #123, some contentTypes need to have a 1 appended to the name
+            //for the first item in the package
+            private List<string> _numberedContentTypes = new List<string>
+            {
+                //11.3 WordprocessingML Parts
+                "application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml",
+                "application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml",
+                //12.3 SpreadsheetML Parts
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.chartsheet+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.comments+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.dialogsheet+xml",
+                "application/vnd.openxmlformats-officedocument.drawing+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.externalLink+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.dialogsheet+xml",
+                "application/vnd.openxmlformats-officedocument.drawing+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.externalLink+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheetMetadata+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.pivotCacheDefinition+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.pivotCacheRecords+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.queryTable+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.revisionLog+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.tableSingleCells+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.table+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml",
+                //13.3 PresentationML Parts
+                "application/vnd.openxmlformats-officedocument.presentationml.comments+xml",
+                "application/vnd.openxmlformats-officedocument.presentationml.handoutMaster+xml",
+                "application/vnd.openxmlformats-officedocument.presentationml.notesMaster+xml",
+                "application/vnd.openxmlformats-officedocument.presentationml.notesSlide+xml",
+                "application/vnd.openxmlformats-officedocument.presentationml.slide+xml",
+                "application/vnd.openxmlformats-officedocument.presentationml.slideLayout+xml",
+                "application/vnd.openxmlformats-officedocument.presentationml.slideMaster+xml",
+                "application/vnd.openxmlformats-officedocument.presentationml.slideUpdateInfo+xml",
+                "application/vnd.openxmlformats-officedocument.presentationml.tags+xml",
+                //14.2 DrawingML Parts
+                "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+                "application/vnd.openxmlformats-officedocument.drawingml.chartshapes+xml",
+                "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
+                "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
+                "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
+                "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
+                "application/vnd.openxmlformats-officedocument.theme+xml",
+                "application/vnd.openxmlformats-officedocument.themeOverride+xml",
+                //15.2 Shared Parts
+                "application/vnd.openxmlformats-officedocument.customXmlProperties+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.printerSettings",
+                "application/vnd.openxmlformats-officedocument.wordprocessingml.printerSettings",
+                "application/vnd.openxmlformats-officedocument.presentationml.printerSettings"
+            };
+
             public PartUriHelper()
             {
             }
@@ -1466,7 +1516,17 @@ namespace DocumentFormat.OpenXml.Packaging
                 else
                 {
                     this._sequenceNumbers.Add(contentType, 1);
-                    return "";
+                    //return "";
+
+                    //Certain types need to contain an initial 1 value. Issue #123
+                    if (_numberedContentTypes.Contains(contentType))
+                    {
+                        return "1";
+                    }
+                    else
+                    {
+                        return "";
+                    }
                 }
             }
         }
