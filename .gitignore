@@ -180,3 +180,6 @@ project.lock.json
 .vs/
 Tests/
 TestFiles/
+DocumentFormat.OpenXml.Tests/Spreadsheet.xltx
+DocumentFormat.OpenXml.Tests/Presentation.potx
+DocumentFormat.OpenXml.Tests/Document.dotx
