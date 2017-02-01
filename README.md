@@ -39,10 +39,10 @@ See MIT-License.txt in the project root for license information.
 The Latest Builds
 =================
 
-##Where to get the NuGet package
+##Where to get the NuGet package?
 The NuGet package for Open XML SDK is currently available as a custom feed on MyGet. You can trust this package source, since the custom feed is locked and only this project feeds into the source.
 
-##How to install the NuGet package
+##How to install the NuGet package?
 The package you want to install is DocumentFormat.OpenXml. See https://dotnet.myget.org/gallery/open-xml-sdk 
 
 The package feed or the package source is specified by the feed URL. Depending on your version of Visual Studio, choose the appropriate feed URL from the table below. 
@@ -54,28 +54,32 @@ Table 1: The latest builds are available via a MyGet feed
 | NuGet V3 (Visual Studio 2015+) | https://dotnet.myget.org/F/open-xml-sdk/api/v3/index.json |
 | NuGet V2 (Visual Studio 2012+) | https://dotnet.myget.org/F/open-xml-sdk/api/v2 |
 
-1.	Specify the package source via a configuration option. For more info, see https://docs.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior. 
-Note that usually a NuGet.config file is placed in the directory and the configuration options are added there to ensure the sources are persisted in the version control.
+The **Install-Package** command considers the package source either via configuration or argument. Also the package version can vary. For the latest version info, see https://dotnet.myget.org/feed/open-xml-sdk/package/nuget/DocumentFormat.OpenXml 
 
-2.	Install the package. The **Install-Package** command considers the package source either via configuration or argument. (If you have trouble installing the package, try restarting Visual Studio. Package sources could be cached and changes you've made to any NuGet.config files may not be detected.)
-
-	```
-	PM> Install-Package DocumentFormat.OpenXml 
-	```
+- To specify the package source via a configuration option, see https://docs.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior. Note that usually a NuGet.config file is placed in the directory and the configuration options are added there to ensure the sources are persisted in the version control.
 
 	```
-	PM> Install-Package DocumentFormat.OpenXml -Source https://dotnet.myget.org/F/open-xml-sdk/api/v3/index.json 
+	PM> Install-Package DocumentFormat.OpenXml -Verison <version retrieved from the web>
 	```
 
-	**Note**: This example is for Visual Studio 2015 and later.
+- To pass the feed URL as an argument, here is an example for Visual Studio 2015 and later. 
 
+	```
+	PM> Install-Package DocumentFormat.OpenXml -Version <version retrieved from the web> -Source https://dotnet.myget.org/F/open-xml-sdk/api/v3/index.json 
+	```
 
+**Note**:  If you have trouble installing the package, try restarting Visual Studio. Package sources could be cached, and changes you've made to any NuGet.config files may not be detected.
+	
+	
 News
 ====
 We are also happy to announce the release of Open-Xml-PowerTools on GitHub.  Open-Xml-PowerTools provides example code and guidance for implementing a wide range of Open XML scenarios.  You can find PowerTools for Open XML, which previously lived at [PowerTools.CodePlex.com](http://powertools.codeplex.com) at [github.com/OfficeDev/Open-Xml-PowerTools] https://github.com/OfficeDev/Open-Xml-PowerTools).
 
 Change Log
 ==========
+
+Version 2.7.1 : January 31, 2017
+- Fixed crash when validation is invoked on .NET Framework with strong-naming enforced
 
 Version 2.7.0 : January 24, 2017
 - Added support for .NET Standard 1.3
@@ -101,7 +105,7 @@ In addition to open sourcing of the SDK, Microsoft has opened up the conceptual 
 Build Instructions
 ==================
 
-This project uses the `project.json` for the project system. Please see the [.NET Core SDK](https://www.microsoft.com/net/core#windows) for more information on how to use this project type.
+This project uses the `project.json` for the project build system. Please see the [.NET Core SDK](https://www.microsoft.com/net/core#windows) for more information on how to use this project type.
 
 To build the Open XML SDK:
 - Clone the repo at https://github.com/OfficeDev/Open-XML-SDK
