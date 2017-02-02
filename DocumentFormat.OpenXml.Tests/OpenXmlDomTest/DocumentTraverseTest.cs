@@ -3,6 +3,7 @@ using System;
 using System.Linq;
 using System.Reflection;
 using System.Xml.Linq;
+using System.IO;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Presentation;
@@ -269,7 +270,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
             //description = " Case ID: 75567, 75568, 75505, 75506, 76083, 76084";
-            foreach (var testfile in CopyTestFiles(@"wordprocessing\paragraph", false, 3))
+            foreach (var testfile in CopyTestFiles(Path.Combine(@"wordprocessing", "paragraph"), false, 3))
             {
                 Log.BeginGroup(testfile.Name);
 
@@ -315,7 +316,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void TraverseSpreadSheetDocument()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            foreach (var testfile in CopyTestFiles(@"SpreadSheet\smallset", false, 3))
+            foreach (var testfile in CopyTestFiles(Path.Combine(@"spreadsheet", "smallset"), false, 3))
             {
                 Log.BeginGroup(testfile.Name);
                 Log.Comment("open test file {0} for traversing", testfile);
@@ -362,7 +363,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void TraversePPTDocument()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            foreach (var testfile in CopyTestFiles(@"presentation\smallset", false, 3))
+            foreach (var testfile in CopyTestFiles(Path.Combine(@"presentation", "smallset"), false, 3))
             {
                 Log.BeginGroup(testfile.Name);
                 Log.Comment("open test file {0} for traversing", testfile);
