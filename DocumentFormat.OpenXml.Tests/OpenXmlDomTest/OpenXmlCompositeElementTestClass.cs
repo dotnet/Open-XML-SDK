@@ -2543,7 +2543,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void Bug680607_SaveOutWord14Beta2File()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfile = CopyTestFiles("BugRegression", true, "680607.HelloO14.docx", f => f.IsWordprocessingFile())
+            var testfile = CopyTestFiles("bugregression", true, "680607.HelloO14.docx", f => f.IsWordprocessingFile())
                 .FirstOrDefault();
 
             using (var Package = testfile.OpenPackage(true))
