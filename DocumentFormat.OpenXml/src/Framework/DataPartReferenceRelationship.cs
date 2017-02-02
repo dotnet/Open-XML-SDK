@@ -107,7 +107,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     break;
 
                 default:
-                    throw new ArgumentOutOfRangeException("relationshipType");
+                    throw new ArgumentOutOfRangeException(nameof(relationshipType));
             }
             dataPartReferenceRelationship.Container = containter;
             return dataPartReferenceRelationship;

@@ -51,12 +51,12 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (uriTarget == null)
             {
-                throw new ArgumentNullException("uriTarget");
+                throw new ArgumentNullException(nameof(uriTarget));
             }
 
             if (id == null)
             {
-                throw new ArgumentNullException("id");
+                throw new ArgumentNullException(nameof(id));
             }
 
             if (openXmlPackage == null && parent == null)
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Packaging
             else if (parent != null && openXmlPackage != null &&
                  parent.OpenXmlPackage != openXmlPackage)
             {
-                throw new ArgumentOutOfRangeException("parent");
+                throw new ArgumentOutOfRangeException(nameof(parent));
             }
             else if (parent != null && openXmlPackage == null)
             {
@@ -121,7 +121,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (contentType == null)
             {
-                throw new ArgumentNullException("contentType");
+                throw new ArgumentNullException(nameof(contentType));
             }
 
             PartConstraintRule partConstraintRule;
@@ -148,7 +148,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 return child;
             }
-            throw new ArgumentOutOfRangeException("relationshipType");
+            throw new ArgumentOutOfRangeException(nameof(relationshipType));
         }
 
         // get app specific TargetPath if exists
@@ -193,7 +193,7 @@ namespace DocumentFormat.OpenXml.Packaging
             else if (parent != null && openXmlPackage != null &&
                  parent.OpenXmlPackage != openXmlPackage)
             {
-                throw new ArgumentOutOfRangeException("parent");
+                throw new ArgumentOutOfRangeException(nameof(parent));
             }
             else if (parent != null && openXmlPackage == null)
             {
@@ -262,7 +262,7 @@ namespace DocumentFormat.OpenXml.Packaging
             else if (parent != null && openXmlPackage != null &&
                  parent.OpenXmlPackage != openXmlPackage)
             {
-                throw new ArgumentOutOfRangeException("parent");
+                throw new ArgumentOutOfRangeException(nameof(parent));
             }
             else if (parent != null && openXmlPackage == null)
             {
@@ -407,7 +407,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (sourceStream == null)
             {
-                throw new ArgumentNullException("sourceStream");
+                throw new ArgumentNullException(nameof(sourceStream));
             }
 
             using (Stream targetStream = this.GetStream(FileMode.Create))
@@ -450,7 +450,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (schemas == null)
             {
-                throw new ArgumentNullException("schemas");
+                throw new ArgumentNullException(nameof(schemas));
             }
 
             XmlReaderSettings xmlReaderSettings = new XmlReaderSettings();
@@ -492,7 +492,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (schemaFile == null)
             {
-                throw new ArgumentNullException("schemaFile");
+                throw new ArgumentNullException(nameof(schemaFile));
             }
 
             XmlSchemaSet schemas = new XmlSchemaSet();
@@ -582,7 +582,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (reachableParts == null)
             {
-                throw new ArgumentNullException("reachableParts");
+                throw new ArgumentNullException(nameof(reachableParts));
             }
 
             reachableParts.Add(this, false);
@@ -862,7 +862,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (sourceStream == null)
             {
-                throw new ArgumentNullException("sourceStream");
+                throw new ArgumentNullException(nameof(sourceStream));
             }
             
             using (BinaryReader sourceReader = new BinaryReader(sourceStream))

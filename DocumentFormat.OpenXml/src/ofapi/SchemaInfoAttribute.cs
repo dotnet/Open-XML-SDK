@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml
         {
             if (string.IsNullOrEmpty(tag))
             {
-                throw new ArgumentNullException("tag");
+                throw new ArgumentNullException(nameof(tag));
             }
 
             _nsId = nsId;

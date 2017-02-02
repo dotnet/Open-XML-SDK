@@ -79,12 +79,12 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (contentType == null)
             {
-                throw new ArgumentNullException("contentType");
+                throw new ArgumentNullException(nameof(contentType));
             }
 
             if (partExtension == null)
             {
-                throw new ArgumentNullException("partExtension");
+                throw new ArgumentNullException(nameof(partExtension));
             }
 
             string existedPartExtension = null;

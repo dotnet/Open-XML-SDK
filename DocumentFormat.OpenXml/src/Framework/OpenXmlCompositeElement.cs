@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml
         {
             if (childrenElements == null)
             {
-                throw new ArgumentNullException("childrenElements");
+                throw new ArgumentNullException(nameof(childrenElements));
             }
 
             foreach (OpenXmlElement child in childrenElements)
@@ -88,7 +88,7 @@ namespace DocumentFormat.OpenXml
         {
             if (childrenElements == null)
             {
-                throw new ArgumentNullException("childrenElements");
+                throw new ArgumentNullException(nameof(childrenElements));
             }
 
             foreach (OpenXmlElement child in childrenElements)
@@ -106,7 +106,7 @@ namespace DocumentFormat.OpenXml
         {
             if (childrenElements == null)
             {
-                throw new ArgumentNullException("childrenElements");
+                throw new ArgumentNullException(nameof(childrenElements));
             }
 
             foreach (OpenXmlElement child in childrenElements)
@@ -248,7 +248,7 @@ namespace DocumentFormat.OpenXml
         {
             if (newChild == null)
             {
-                // throw new ArgumentNullException("newChild");
+                // throw new ArgumentNullException(nameof(newChild));
                 return null;
             }
 
@@ -294,7 +294,7 @@ namespace DocumentFormat.OpenXml
         {
             if (newChild == null)
             {
-                // throw new ArgumentNullException("newChild");
+                // throw new ArgumentNullException(nameof(newChild));
                 return null;
             }
 
@@ -353,7 +353,7 @@ namespace DocumentFormat.OpenXml
         {
             if (newChild == null)
             {
-                // throw new ArgumentNullException("newChild");
+                // throw new ArgumentNullException(nameof(newChild));
                 return null;
             }
 
@@ -412,7 +412,7 @@ namespace DocumentFormat.OpenXml
         {
             if (newChild == null)
             {
-                // throw new ArgumentNullException("newChild");
+                // throw new ArgumentNullException(nameof(newChild));
                 return null;
             }
 
@@ -423,7 +423,7 @@ namespace DocumentFormat.OpenXml
 
             if (index < 0 || index > this.ChildElements.Count)
             {
-                throw new ArgumentOutOfRangeException("index");
+                throw new ArgumentOutOfRangeException(nameof(index));
             }
             else if ( index == 0 )
             {
@@ -450,7 +450,7 @@ namespace DocumentFormat.OpenXml
         {
             if (newChild == null)
             {
-                //throw new ArgumentNullException("newChild");
+                //throw new ArgumentNullException(nameof(newChild));
                 return null;
             }
 
@@ -472,7 +472,7 @@ namespace DocumentFormat.OpenXml
         {
             if (oldChild == null)
             {
-                // throw new ArgumentNullException("oldChild");
+                // throw new ArgumentNullException(nameof(oldChild));
                 return null;
             }
 
@@ -556,13 +556,13 @@ namespace DocumentFormat.OpenXml
         {
             if (oldChild == null)
             {
-                //throw new ArgumentNullException("oldChild");
+                //throw new ArgumentNullException(nameof(oldChild));
                 return null;
             }
 
             if (newChild == null)
             {
-                throw new ArgumentNullException("newChild");
+                throw new ArgumentNullException(nameof(newChild));
             }
 
             if (oldChild.Parent != this)
