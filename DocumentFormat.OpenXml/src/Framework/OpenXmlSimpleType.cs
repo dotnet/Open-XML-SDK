@@ -36,7 +36,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
 
             this.TextValue = source.TextValue;
@@ -216,7 +216,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
 
             this.InnerText = source.InnerText;
@@ -338,7 +338,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -484,7 +484,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
          
@@ -642,7 +642,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -795,7 +795,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -947,7 +947,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -1118,7 +1118,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -1278,7 +1278,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -1434,7 +1434,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -1586,7 +1586,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -1736,7 +1736,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -1889,7 +1889,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -2048,7 +2048,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -2223,7 +2223,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -2404,7 +2404,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -2564,7 +2564,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -2671,7 +2671,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -2781,7 +2781,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -2882,7 +2882,7 @@ namespace DocumentFormat.OpenXml
         {
             if (list == null)
             {
-                throw new ArgumentNullException("list");
+                throw new ArgumentNullException(nameof(list));
             }
 
             this._list =  new ObservableCollection<T>();
@@ -2903,7 +2903,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -3139,7 +3139,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
             this._enumValue = source._enumValue;
         }
@@ -3625,7 +3625,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
 
             Initialize();
@@ -3816,7 +3816,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
             Initialize();
             _impl.InnerText = source.InnerText;
@@ -4012,7 +4012,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
             Initialize();
             _impl.InnerText = source.InnerText;
@@ -4133,7 +4133,7 @@ namespace DocumentFormat.OpenXml
         {
             if (xmlAttribute == null)
             {
-                throw new ArgumentNullException("xmlAttribute");
+                throw new ArgumentNullException(nameof(xmlAttribute));
             }
 
             return ToBoolean(xmlAttribute);

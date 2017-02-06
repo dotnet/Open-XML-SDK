@@ -1239,7 +1239,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void bug247883()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph").Where(fi => fi.IsWordprocessingFile());
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph").Where(fi => fi.IsWordprocessingFile());
             var testfile0 = testfiles.ElementAtOrDefault(0);
             var testfile1 = testfiles.ElementAtOrDefault(1);
             using (WordprocessingDocument word0 = WordprocessingDocument.Open(testfile0.FullName, true))
@@ -1270,7 +1270,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void bug251835_ReaderDispose()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph").Where(fi => fi.IsWordprocessingFile());
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph").Where(fi => fi.IsWordprocessingFile());
             var testfile = testfiles.FirstOrDefault();
             try
             {

@@ -119,7 +119,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (subPart == null)
             {
-                throw new ArgumentNullException("subPart");
+                throw new ArgumentNullException(nameof(subPart));
             }
 
             if (subPart.OpenXmlPackage == this.InternalOpenXmlPackage)
@@ -156,7 +156,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (contentType == null)
             {
-                throw new ArgumentNullException("contentType");
+                throw new ArgumentNullException(nameof(contentType));
             }
 
             if (contentType == string.Empty)

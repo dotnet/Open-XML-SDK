@@ -538,7 +538,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         {
             if (index >= SdbData.MaxSdbIndex)
             {
-                throw new ArgumentOutOfRangeException("index");
+                throw new ArgumentOutOfRangeException(nameof(index));
             }
              
             this.ParticleIndex = (SdbIndex)index;

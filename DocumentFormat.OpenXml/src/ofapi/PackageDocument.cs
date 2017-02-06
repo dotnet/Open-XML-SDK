@@ -193,7 +193,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (string.IsNullOrEmpty(path))
             {
-                throw new ArgumentNullException("path");
+                throw new ArgumentNullException(nameof(path));
             }
             WordprocessingDocument doc = new WordprocessingDocument();
             doc.DocumentType = type;
@@ -279,7 +279,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public static WordprocessingDocument CreateFromTemplate(string path, bool isTemplateAttached)
         {
             if (path == null)
-                throw new ArgumentNullException("path");
+                throw new ArgumentNullException(nameof(path));
 
             // Check extensions as the template must have a valid Word Open XML extension.
             string extension = Path.GetExtension(path);
@@ -511,7 +511,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (relationshipType == null)
             {
-                throw new ArgumentNullException("relationshipType");
+                throw new ArgumentNullException(nameof(relationshipType));
             }
             switch (relationshipType)
             {
@@ -546,7 +546,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 case WebExTaskpanesPart.RelationshipTypeConstant:
                     return new WebExTaskpanesPart();
             }
-            throw new ArgumentOutOfRangeException("relationshipType");
+            throw new ArgumentOutOfRangeException(nameof(relationshipType));
         }
 
         /// <summary>
@@ -565,7 +565,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (contentType == null)
             {
-                throw new ArgumentNullException("contentType");
+                throw new ArgumentNullException(nameof(contentType));
             }
 
             if (typeof(MainDocumentPart).GetTypeInfo().IsAssignableFrom(typeof(T).GetTypeInfo()) && contentType != WordprocessingDocument.MainPartContentTypes[this._documentType])
@@ -889,9 +889,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public static WordprocessingDocument FromFlatOpcDocument(XDocument document, Stream stream, bool isEditable)
         {
             if (document == null)
-                throw new ArgumentNullException("document");
+                throw new ArgumentNullException(nameof(document));
             if (stream == null)
-                throw new ArgumentNullException("stream");
+                throw new ArgumentNullException(nameof(stream));
 
             return WordprocessingDocument.Open(FromFlatOpcDocumentCore(document, stream), isEditable);
         }
@@ -907,9 +907,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public static WordprocessingDocument FromFlatOpcDocument(XDocument document, string path, bool isEditable)
         {
             if (document == null)
-                throw new ArgumentNullException("document");
+                throw new ArgumentNullException(nameof(document));
             if (path == null)
-                throw new ArgumentNullException("path");
+                throw new ArgumentNullException(nameof(path));
 
             return WordprocessingDocument.Open(FromFlatOpcDocumentCore(document, path), isEditable);
         }
@@ -924,9 +924,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public static WordprocessingDocument FromFlatOpcDocument(XDocument document, Package package)
         {
             if (document == null)
-                throw new ArgumentNullException("document");
+                throw new ArgumentNullException(nameof(document));
             if (package == null)
-                throw new ArgumentNullException("package");
+                throw new ArgumentNullException(nameof(package));
 
             return WordprocessingDocument.Open(FromFlatOpcDocumentCore(document, package));
         }
@@ -941,7 +941,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public static WordprocessingDocument FromFlatOpcString(string text)
         {
             if (text == null)
-                throw new ArgumentNullException("text");
+                throw new ArgumentNullException(nameof(text));
 
             return FromFlatOpcDocument(XDocument.Parse(text), new MemoryStream(), true);
         }
@@ -957,9 +957,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public static WordprocessingDocument FromFlatOpcString(string text, Stream stream, bool isEditable)
         {
             if (text == null)
-                throw new ArgumentNullException("text");
+                throw new ArgumentNullException(nameof(text));
             if (stream == null)
-                throw new ArgumentNullException("stream");
+                throw new ArgumentNullException(nameof(stream));
 
             return FromFlatOpcDocument(XDocument.Parse(text), stream, isEditable);
         }
@@ -975,9 +975,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public static WordprocessingDocument FromFlatOpcString(string text, string path, bool isEditable)
         {
             if (text == null)
-                throw new ArgumentNullException("text");
+                throw new ArgumentNullException(nameof(text));
             if (path == null)
-                throw new ArgumentNullException("path");
+                throw new ArgumentNullException(nameof(path));
 
             return FromFlatOpcDocument(XDocument.Parse(text), path, isEditable);
         }
@@ -992,9 +992,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public static WordprocessingDocument FromFlatOpcString(string text, Package package)
         {
             if (text == null)
-                throw new ArgumentNullException("text");
+                throw new ArgumentNullException(nameof(text));
             if (package == null)
-                throw new ArgumentNullException("package");
+                throw new ArgumentNullException(nameof(package));
 
             return FromFlatOpcDocument(XDocument.Parse(text), package);
         }
@@ -1186,7 +1186,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (string.IsNullOrEmpty(path))
             {
-                throw new ArgumentNullException("path");
+                throw new ArgumentNullException(nameof(path));
             }
             SpreadsheetDocument doc = new SpreadsheetDocument();
             doc.DocumentType = type;
@@ -1248,7 +1248,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public static SpreadsheetDocument CreateFromTemplate(string path)
         {
             if (path == null)
-                throw new ArgumentNullException("path");
+                throw new ArgumentNullException(nameof(path));
 
             // Check extensions as the template must have a valid Word Open XML extension.
             string extension = Path.GetExtension(path);
@@ -1462,7 +1462,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (relationshipType == null)
             {
-                throw new ArgumentNullException("relationshipType");
+                throw new ArgumentNullException(nameof(relationshipType));
             }
             switch (relationshipType)
             {
@@ -1496,7 +1496,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 case WebExTaskpanesPart.RelationshipTypeConstant:
                     return new WebExTaskpanesPart();
             }
-            throw new ArgumentOutOfRangeException("relationshipType");
+            throw new ArgumentOutOfRangeException(nameof(relationshipType));
         }
 
         /// <summary>
@@ -1515,7 +1515,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (contentType == null)
             {
-                throw new ArgumentNullException("contentType");
+                throw new ArgumentNullException(nameof(contentType));
             }
 
             if (typeof(WorkbookPart).GetTypeInfo().IsAssignableFrom(typeof(T).GetTypeInfo()) && contentType != SpreadsheetDocument.MainPartContentTypes[this._documentType])
@@ -1838,9 +1838,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public static SpreadsheetDocument FromFlatOpcDocument(XDocument document, Stream stream, bool isEditable)
         {
             if (document == null)
-                throw new ArgumentNullException("document");
+                throw new ArgumentNullException(nameof(document));
             if (stream == null)
-                throw new ArgumentNullException("stream");
+                throw new ArgumentNullException(nameof(stream));
 
             return SpreadsheetDocument.Open(FromFlatOpcDocumentCore(document, stream), true);
         }
@@ -1856,9 +1856,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public static SpreadsheetDocument FromFlatOpcDocument(XDocument document, string path, bool isEditable)
         {
             if (document == null)
-                throw new ArgumentNullException("document");
+                throw new ArgumentNullException(nameof(document));
             if (path == null)
-                throw new ArgumentNullException("path");
+                throw new ArgumentNullException(nameof(path));
 
             return SpreadsheetDocument.Open(FromFlatOpcDocumentCore(document, path), isEditable);
         }
@@ -1873,9 +1873,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public static SpreadsheetDocument FromFlatOpcDocument(XDocument document, Package package)
         {
             if (document == null)
-                throw new ArgumentNullException("document");
+                throw new ArgumentNullException(nameof(document));
             if (package == null)
-                throw new ArgumentNullException("package");
+                throw new ArgumentNullException(nameof(package));
 
             return SpreadsheetDocument.Open(FromFlatOpcDocumentCore(document, package));
         }
@@ -1890,7 +1890,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public static SpreadsheetDocument FromFlatOpcString(string text)
         {
             if (text == null)
-                throw new ArgumentNullException("text");
+                throw new ArgumentNullException(nameof(text));
 
             return FromFlatOpcDocument(XDocument.Parse(text), new MemoryStream(), true);
         }
@@ -1906,9 +1906,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public static SpreadsheetDocument FromFlatOpcString(string text, Stream stream, bool isEditable)
         {
             if (text == null)
-                throw new ArgumentNullException("text");
+                throw new ArgumentNullException(nameof(text));
             if (stream == null)
-                throw new ArgumentNullException("stream");
+                throw new ArgumentNullException(nameof(stream));
 
             return FromFlatOpcDocument(XDocument.Parse(text), stream, isEditable);
         }
@@ -1924,9 +1924,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public static SpreadsheetDocument FromFlatOpcString(string text, string path, bool isEditable)
         {
             if (text == null)
-                throw new ArgumentNullException("text");
+                throw new ArgumentNullException(nameof(text));
             if (path == null)
-                throw new ArgumentNullException("path");
+                throw new ArgumentNullException(nameof(path));
 
             return FromFlatOpcDocument(XDocument.Parse(text), path, isEditable);
         }
@@ -1941,9 +1941,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public static SpreadsheetDocument FromFlatOpcString(string text, Package package)
         {
             if (text == null)
-                throw new ArgumentNullException("text");
+                throw new ArgumentNullException(nameof(text));
             if (package == null)
-                throw new ArgumentNullException("package");
+                throw new ArgumentNullException(nameof(package));
 
             return FromFlatOpcDocument(XDocument.Parse(text), package);
         }
@@ -2194,7 +2194,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public static PresentationDocument CreateFromTemplate(string path)
         {
             if (path == null)
-                throw new ArgumentNullException("path");
+                throw new ArgumentNullException(nameof(path));
 
             // Check extensions as the template must have a valid Word Open XML extension.
             string extension = Path.GetExtension(path);
@@ -2410,7 +2410,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (relationshipType == null)
             {
-                throw new ArgumentNullException("relationshipType");
+                throw new ArgumentNullException(nameof(relationshipType));
             }
             switch (relationshipType)
             {
@@ -2444,7 +2444,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 case WebExTaskpanesPart.RelationshipTypeConstant:
                     return new WebExTaskpanesPart();
             }
-            throw new ArgumentOutOfRangeException("relationshipType");
+            throw new ArgumentOutOfRangeException(nameof(relationshipType));
         }
 
 
@@ -2543,7 +2543,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (contentType == null)
             {
-                throw new ArgumentNullException("contentType");
+                throw new ArgumentNullException(nameof(contentType));
             }
 
             if (typeof(PresentationPart).GetTypeInfo().IsAssignableFrom(typeof(T).GetTypeInfo()) && contentType != PresentationDocument.MainPartContentTypes[this._documentType])
@@ -2793,9 +2793,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public static PresentationDocument FromFlatOpcDocument(XDocument document, Stream stream, bool isEditable)
         {
             if (document == null)
-                throw new ArgumentNullException("document");
+                throw new ArgumentNullException(nameof(document));
             if (stream == null)
-                throw new ArgumentNullException("stream");
+                throw new ArgumentNullException(nameof(stream));
 
             return PresentationDocument.Open(FromFlatOpcDocumentCore(document, stream), isEditable);
         }
@@ -2811,9 +2811,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public static PresentationDocument FromFlatOpcDocument(XDocument document, string path, bool isEditable)
         {
             if (document == null)
-                throw new ArgumentNullException("document");
+                throw new ArgumentNullException(nameof(document));
             if (path == null)
-                throw new ArgumentNullException("path");
+                throw new ArgumentNullException(nameof(path));
 
             return PresentationDocument.Open(FromFlatOpcDocumentCore(document, path), isEditable);
         }
@@ -2828,9 +2828,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public static PresentationDocument FromFlatOpcDocument(XDocument document, Package package)
         {
             if (document == null)
-                throw new ArgumentNullException("document");
+                throw new ArgumentNullException(nameof(document));
             if (package == null)
-                throw new ArgumentNullException("package");
+                throw new ArgumentNullException(nameof(package));
 
             return PresentationDocument.Open(FromFlatOpcDocumentCore(document, package));
         }
@@ -2845,7 +2845,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public static PresentationDocument FromFlatOpcString(string text)
         {
             if (text == null)
-                throw new ArgumentNullException("text");
+                throw new ArgumentNullException(nameof(text));
 
             return FromFlatOpcDocument(XDocument.Parse(text), new MemoryStream(), true);
         }
@@ -2861,9 +2861,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public static PresentationDocument FromFlatOpcString(string text, Stream stream, bool isEditable)
         {
             if (text == null)
-                throw new ArgumentNullException("text");
+                throw new ArgumentNullException(nameof(text));
             if (stream == null)
-                throw new ArgumentNullException("stream");
+                throw new ArgumentNullException(nameof(stream));
 
             return FromFlatOpcDocument(XDocument.Parse(text), stream, isEditable);
         }
@@ -2879,9 +2879,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public static PresentationDocument FromFlatOpcString(string text, string path, bool isEditable)
         {
             if (text == null)
-                throw new ArgumentNullException("text");
+                throw new ArgumentNullException(nameof(text));
             if (path == null)
-                throw new ArgumentNullException("path");
+                throw new ArgumentNullException(nameof(path));
 
             return FromFlatOpcDocument(XDocument.Parse(text), path, isEditable);
         }
@@ -2896,9 +2896,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public static PresentationDocument FromFlatOpcString(string text, Package package)
         {
             if (text == null)
-                throw new ArgumentNullException("text");
+                throw new ArgumentNullException(nameof(text));
             if (package == null)
-                throw new ArgumentNullException("package");
+                throw new ArgumentNullException(nameof(package));
 
             return FromFlatOpcDocument(XDocument.Parse(text), package);
         }
