@@ -51,11 +51,11 @@ namespace DocumentFormat.OpenXml.Tests
 
         private const string DirectoryPath = "SaveAndClone";
 
-        private const string DocumentPath = DirectoryPath + "\\Document.docx";
-        private const string PresentationPath = DirectoryPath + "\\Presentation.pptx";
-        private const string SpreadsheetPath = DirectoryPath + "\\Spreadsheet.xlsx";
+        private static readonly string DocumentPath = Path.Combine(DirectoryPath, "Document.docx");
+        private static readonly string PresentationPath = Path.Combine(DirectoryPath, "Presentation.pptx");
+        private static readonly string SpreadsheetPath = Path.Combine(DirectoryPath, "Spreadsheet.xlsx");
 
-        private const string DocPropertiesPath = DirectoryPath + "\\DocProperties.xml";
+        private static readonly string DocPropertiesPath = Path.Combine(DirectoryPath, "DocProperties.xml");
 
         /// <summary>
         /// Creates a new instance of this test fixture, registering our test folder
