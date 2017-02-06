@@ -1385,7 +1385,8 @@ namespace DocumentFormat.OpenXml.Packaging
             private Dictionary<string, int> _reservedUri = new Dictionary<string, int>();
 
             //List of contentTypes that need to have a 1 appended to the name
-            //for the first item in the package
+            //for the first item in the package. Section numbers in comments
+            //refer to the ISO/IEC 29500 standard.
             private static readonly HashSet<string> _numberedContentTypes = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
             {
                 //11.3 WordprocessingML Parts
