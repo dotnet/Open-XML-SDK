@@ -1384,9 +1384,9 @@ namespace DocumentFormat.OpenXml.Packaging
             private Dictionary<string, int> _sequenceNumbers = new Dictionary<string, int>(20);
             private Dictionary<string, int> _reservedUri = new Dictionary<string, int>();
 
-            //Added for issue #123, some contentTypes need to have a 1 appended to the name
+            //List of contentTypes that need to have a 1 appended to the name
             //for the first item in the package
-            private List<string> _numberedContentTypes = new List<string>
+            private static readonly HashSet<string> _numberedContentTypes = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
             {
                 //11.3 WordprocessingML Parts
                 "application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml",
@@ -1465,8 +1465,6 @@ namespace DocumentFormat.OpenXml.Packaging
                     string sequenceNumber = this.GetNextSequenceNumber(contentType);
                     string path = Path.Combine(targetPath, targetName + sequenceNumber + targetExt);
 
-
-
                     Uri uri = new Uri(path, UriKind.RelativeOrAbsolute);
                     partUri = PackUriHelper.ResolvePartUri(parentUri, uri);
                     // partUri = PackUriHelper.GetNormalizedPartUri(PackUriHelper.CreatePartUri(uri));
@@ -1516,17 +1514,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 else
                 {
                     this._sequenceNumbers.Add(contentType, 1);
-                    //return "";
 
-                    //Certain types need to contain an initial 1 value. Issue #123
-                    if (_numberedContentTypes.Contains(contentType))
-                    {
-                        return "1";
-                    }
-                    else
-                    {
-                        return "";
-                    }
+                    //Certain contentTypes need to be numbered starting with 1.
+                    return _numberedContentTypes.Contains(contentType) ? "1" : "";
                 }
             }
         }
