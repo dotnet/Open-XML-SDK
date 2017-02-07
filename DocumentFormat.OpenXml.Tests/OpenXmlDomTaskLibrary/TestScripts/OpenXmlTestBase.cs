@@ -283,9 +283,9 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// <param name="searchPattern">Search pattern of file name. Wildcard chars are allowed.</param>
         /// <param name="pred">Filter function which limits files to be searched.</param>
         /// <returns></returns>
-        public IEnumerable<FileInfo> GetTestFiles(string sourceFolder)
+        public IEnumerable<FileInfo> GetTestFiles(string sourceFolder, string subFolder)
         {
-            string inputPath = Path.Combine(sourcePath, sourceFolder);
+            string inputPath = Path.Combine(sourcePath, sourceFolder, subFolder);
             return new DirectoryInfo(inputPath).GetFiles("*", SearchOption.AllDirectories);
         }
 
@@ -315,6 +315,10 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             bool recursive = true;
             Func<FileInfo, bool> pred = IsOpenXmlFile;
             return CopyTestFiles(sourceFolder, recursive, searchPattern, pred);
+        }
+        public IEnumerable<FileInfo> CopyTestFiles(string sourceFolder, string subFolder)
+        {
+            return CopyTestFiles(Path.Combine(sourceFolder, subFolder));
         }
         private static string[] _wordprocessingExtension = new string[] { ".docx", ".docm", ".dotx", ".dotm" };
         private static string[] _spreadsheetExtension = new string[] { ".xlam", ".xltm", ".xlsm", ".xltx", ".xlsx" };

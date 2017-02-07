@@ -230,10 +230,10 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                 //return "OnOffValue":
 
                 default:
-                    throw new ArgumentOutOfRangeException("xsdType");
+                    throw new ArgumentOutOfRangeException(nameof(xsdType));
             }
 
-            throw new ArgumentOutOfRangeException("xsdType");;
+            throw new ArgumentOutOfRangeException(nameof(xsdType));;
         }
     }
 
@@ -305,14 +305,41 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <returns></returns>
         internal static SimpleTypeRestrictions Deserialize(Stream stream, FileFormatVersions fileFormat)
         {
-            BinaryFormatter binaryFormatter = new BinaryFormatter();
-            binaryFormatter.AssemblyFormat = System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full;
+            var binaryFormatter = new BinaryFormatter
+            {
+                AssemblyFormat = System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full,
+                Binder = new DocumentFormatBinder()
+            };
+
             var simpleTypeRestrictions = (SimpleTypeRestrictions)(binaryFormatter.Deserialize(stream));
             foreach (var simpleType in simpleTypeRestrictions.SimpleTypes)
             {
                 simpleType.FileFormat = fileFormat;
             }
             return simpleTypeRestrictions;
+        }
+
+        /// <summary>
+        /// The validation data is contained in a binary file that was generated with an older, non-signed version of the library.
+        /// Deserialization will fail without this binder, which redirects any attempt at loading the old type to the new type
+        /// </summary>
+        private sealed class DocumentFormatBinder : System.Runtime.Serialization.SerializationBinder
+        {
+            private const string FullStrongName = "DocumentFormat.OpenXml, Version=2.6.0.0, Culture=neutral, PublicKeyToken=null";
+
+            private static readonly System.Reflection.Assembly s_assembly = typeof(DocumentFormatBinder).Assembly;
+
+            public override Type BindToType(string assemblyName, string typeName)
+            {
+                if (string.Equals(assemblyName, FullStrongName, StringComparison.Ordinal))
+                {
+                    return s_assembly.GetType(typeName);
+                }
+                else
+                {
+                    return null;
+                }
+            }
         }
 #endif
 

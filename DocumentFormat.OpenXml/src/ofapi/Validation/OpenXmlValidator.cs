@@ -214,7 +214,7 @@ namespace DocumentFormat.OpenXml.Validation
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("value");
+                    throw new ArgumentOutOfRangeException(nameof(value));
                 }
 
                 this._settings.MaxNumberOfErrors = value;
@@ -235,7 +235,7 @@ namespace DocumentFormat.OpenXml.Validation
         {
             if (openXmlPackage == null)
             {
-                throw new ArgumentNullException("openXmlPackage");
+                throw new ArgumentNullException(nameof(openXmlPackage));
             }
 
             if (openXmlPackage.OpenSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess &&
@@ -285,7 +285,7 @@ namespace DocumentFormat.OpenXml.Validation
         {
             if (openXmlPart == null)
             {
-                throw new ArgumentNullException("openXmlPart");
+                throw new ArgumentNullException(nameof(openXmlPart));
             }
 
             var openXmlPackage = openXmlPart.OpenXmlPackage;
@@ -373,7 +373,7 @@ namespace DocumentFormat.OpenXml.Validation
         {
             if (openXmlElement == null)
             {
-                throw new ArgumentNullException("openXmlElement");
+                throw new ArgumentNullException(nameof(openXmlElement));
             }
 
             if (openXmlElement is OpenXmlUnknownElement)

@@ -97,7 +97,7 @@ namespace DocumentFormat.OpenXml.Packaging
             this.BasePackage = package;
             if (this.BasePackage == null)
             {
-                throw new ArgumentNullException("BasePackage");
+                throw new ArgumentNullException(nameof(BasePackage));
             }
 
             this.BasePackageRelationshipCollection = this.BasePackage.GetRelationships();
@@ -128,7 +128,7 @@ namespace DocumentFormat.OpenXml.Packaging
             this.BasePackagePart = packagePart;
             if (this.BasePackagePart == null)
             {
-                throw new ArgumentNullException("BasePackagePart");
+                throw new ArgumentNullException(nameof(BasePackagePart));
             }
 
             this.BasePackageRelationshipCollection = this.BasePackagePart.GetRelationships();
@@ -213,7 +213,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (package == null)
             {
-                throw new ArgumentNullException("package");
+                throw new ArgumentNullException(nameof(package));
             }
 
             if (package.FileOpenAccess == FileAccess.Write)
@@ -239,7 +239,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (package == null)
             {
-                throw new ArgumentNullException("package");
+                throw new ArgumentNullException(nameof(package));
             }
 
             //if (package.FileOpenAccess != FileAccess.Write)
@@ -262,7 +262,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (stream == null)
             {
-                throw new ArgumentNullException("stream");
+                throw new ArgumentNullException(nameof(stream));
             }
 
             if (readWriteMode)
@@ -288,7 +288,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (stream == null)
             {
-                throw new ArgumentNullException("stream");
+                throw new ArgumentNullException(nameof(stream));
             }
 
             if (!stream.CanWrite)
@@ -312,7 +312,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (path == null)
             {
-                throw new ArgumentNullException("path");
+                throw new ArgumentNullException(nameof(path));
             }
 
             if (readWriteMode)
@@ -337,7 +337,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (path == null)
             {
-                throw new ArgumentNullException("path");
+                throw new ArgumentNullException(nameof(path));
             }
 
             this._accessMode = FileAccess.ReadWrite;
@@ -525,7 +525,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (part == null)
             {
-                throw new ArgumentNullException("part");
+                throw new ArgumentNullException(nameof(part));
             }
 
             if (part.RelationshipType == this.MainPartRelationshipType &&
@@ -581,7 +581,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (contentType == null)
             {
-                throw new ArgumentNullException("contentType");
+                throw new ArgumentNullException(nameof(contentType));
             }
 
             MediaDataPart mediaDataPart = new MediaDataPart();
@@ -607,12 +607,12 @@ namespace DocumentFormat.OpenXml.Packaging
             
             if (contentType == null)
             {
-                throw new ArgumentNullException("contentType");
+                throw new ArgumentNullException(nameof(contentType));
             }
 
             if (extension == null)
             {
-                throw new ArgumentNullException("extension");
+                throw new ArgumentNullException(nameof(extension));
             }
 
             MediaDataPart mediaDataPart = new MediaDataPart();
@@ -654,7 +654,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (dataPart == null)
             {
-                throw new ArgumentNullException("dataPart");
+                throw new ArgumentNullException(nameof(dataPart));
             }
 
             if (dataPart.OpenXmlPackage != this)
@@ -1200,7 +1200,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (contentType == null)
             {
-                throw new ArgumentNullException("contentType");
+                throw new ArgumentNullException(nameof(contentType));
             }
 
             PartConstraintRule partConstraintRule;
@@ -1227,7 +1227,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 return child;
             }
-            throw new ArgumentOutOfRangeException("relationshipType");
+            throw new ArgumentOutOfRangeException(nameof(relationshipType));
         }
 
         internal sealed override OpenXmlPackage InternalOpenXmlPackage
@@ -1247,7 +1247,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (reachableParts == null)
             {
-                throw new ArgumentNullException("reachableParts");
+                throw new ArgumentNullException(nameof(reachableParts));
             }
 
             foreach (OpenXmlPart part in this.ChildrenParts.Values)
@@ -1384,6 +1384,57 @@ namespace DocumentFormat.OpenXml.Packaging
             private Dictionary<string, int> _sequenceNumbers = new Dictionary<string, int>(20);
             private Dictionary<string, int> _reservedUri = new Dictionary<string, int>();
 
+            //List of contentTypes that need to have a 1 appended to the name
+            //for the first item in the package. Section numbers in comments
+            //refer to the ISO/IEC 29500 standard.
+            private static readonly HashSet<string> _numberedContentTypes = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+            {
+                //11.3 WordprocessingML Parts
+                "application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml",
+                "application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml",
+                //12.3 SpreadsheetML Parts
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.chartsheet+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.comments+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.dialogsheet+xml",
+                "application/vnd.openxmlformats-officedocument.drawing+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.externalLink+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.dialogsheet+xml",
+                "application/vnd.openxmlformats-officedocument.drawing+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.externalLink+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheetMetadata+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.pivotCacheDefinition+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.pivotCacheRecords+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.queryTable+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.revisionLog+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.tableSingleCells+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.table+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml",
+                //13.3 PresentationML Parts
+                "application/vnd.openxmlformats-officedocument.presentationml.comments+xml",
+                "application/vnd.openxmlformats-officedocument.presentationml.handoutMaster+xml",
+                "application/vnd.openxmlformats-officedocument.presentationml.notesMaster+xml",
+                "application/vnd.openxmlformats-officedocument.presentationml.notesSlide+xml",
+                "application/vnd.openxmlformats-officedocument.presentationml.slide+xml",
+                "application/vnd.openxmlformats-officedocument.presentationml.slideLayout+xml",
+                "application/vnd.openxmlformats-officedocument.presentationml.slideMaster+xml",
+                "application/vnd.openxmlformats-officedocument.presentationml.slideUpdateInfo+xml",
+                "application/vnd.openxmlformats-officedocument.presentationml.tags+xml",
+                //14.2 DrawingML Parts
+                "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+                "application/vnd.openxmlformats-officedocument.drawingml.chartshapes+xml",
+                "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
+                "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
+                "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
+                "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
+                "application/vnd.openxmlformats-officedocument.theme+xml",
+                "application/vnd.openxmlformats-officedocument.themeOverride+xml",
+                //15.2 Shared Parts
+                "application/vnd.openxmlformats-officedocument.customXmlProperties+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.printerSettings",
+                "application/vnd.openxmlformats-officedocument.wordprocessingml.printerSettings",
+                "application/vnd.openxmlformats-officedocument.presentationml.printerSettings"
+            };
+
             public PartUriHelper()
             {
             }
@@ -1414,8 +1465,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     string sequenceNumber = this.GetNextSequenceNumber(contentType);
                     string path = Path.Combine(targetPath, targetName + sequenceNumber + targetExt);
-
-
 
                     Uri uri = new Uri(path, UriKind.RelativeOrAbsolute);
                     partUri = PackUriHelper.ResolvePartUri(parentUri, uri);
@@ -1466,7 +1515,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 else
                 {
                     this._sequenceNumbers.Add(contentType, 1);
-                    return "";
+
+                    //Certain contentTypes need to be numbered starting with 1.
+                    return _numberedContentTypes.Contains(contentType) ? "1" : "";
                 }
             }
         }
@@ -1565,7 +1616,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public OpenXmlPackage Clone(Stream stream, bool isEditable, OpenSettings openSettings)
         {
             if (stream == null)
-                throw new ArgumentNullException("stream");
+                throw new ArgumentNullException(nameof(stream));
 
             // Use this OpenXml package's OpenSettings if none are provided.
             // This is more in line with cloning than providing the default
@@ -1660,7 +1711,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public OpenXmlPackage Clone(string path, bool isEditable, OpenSettings openSettings)
         {
             if (path == null)
-                throw new ArgumentNullException("path");
+                throw new ArgumentNullException(nameof(path));
 
             // Use this OpenXml package's OpenSettings if none are provided.
             // This is more in line with cloning than providing the default
@@ -1731,7 +1782,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public OpenXmlPackage Clone(Package package, OpenSettings openSettings)
         {
             if (package == null)
-                throw new ArgumentNullException("package");
+                throw new ArgumentNullException(nameof(package));
 
             // Use this OpenXml package's OpenSettings if none are provided.
             // This is more in line with cloning than providing the default

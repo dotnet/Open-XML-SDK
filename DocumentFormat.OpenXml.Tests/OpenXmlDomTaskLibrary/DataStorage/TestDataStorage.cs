@@ -39,37 +39,37 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries.DataStorage
                 throw new Exception("Can't access the root folder of the TestDataStorage at: '" + TestUtil.TestDataStorage + "'");
             }
 
-            string o14IsoStrictFolder = Path.Combine(TestUtil.TestDataStorage, @"O14ISOStrict\");
-            string o14ValidationFolder = Path.Combine(TestUtil.TestDataStorage, @"ValidationTestFiles\");
-            string o15ConformanceFolder = Path.Combine(TestUtil.TestDataStorage, @"O15Conformance\");
-            string robustnessFolder = Path.Combine(TestUtil.TestDataStorage, @"Robustness\");
-            string lowLevelFolder = Path.Combine(TestUtil.TestDataStorage, @"SDKLowLevelTestFiles\");
+            string o14IsoStrictFolder = Path.Combine(TestUtil.TestDataStorage, @"O14ISOStrict");
+            string o14ValidationFolder = Path.Combine(TestUtil.TestDataStorage, @"ValidationTestFiles");
+            string o15ConformanceFolder = Path.Combine(TestUtil.TestDataStorage, @"O15Conformance");
+            string robustnessFolder = Path.Combine(TestUtil.TestDataStorage, @"Robustness");
+            string lowLevelFolder = Path.Combine(TestUtil.TestDataStorage, @"SDKLowLevelTestFiles");
 
             this.RegisterDataGroup(
                 new FileDataGroup(
                     DataGroups.O14IsoStrictWord.ToString(),
                     "Wordprocessing Files in ISO Strict",
-                    o14IsoStrictFolder + @"Word\"));
+                    Path.Combine(o14IsoStrictFolder, @"Word")));
             this.RegisterDataGroup(
                 new FileDataGroup(
                     DataGroups.O14IsoStrictExcel.ToString(),
                     "SpreadsheetML Files in ISO Strict",
-                    o14IsoStrictFolder + @"Excel\"));
+                    Path.Combine(o14IsoStrictFolder, @"Excel")));
             this.RegisterDataGroup(
                 new FileDataGroup(
                     DataGroups.O14IsoStrictPowerPoint.ToString(),
                     "PresentationML Files in ISO Strict",
-                    o14IsoStrictFolder + @"PowerPoint\"));
+                    Path.Combine(o14IsoStrictFolder, @"PowerPoint")));
             this.RegisterDataGroup(
                 new FileDataGroup(
                     DataGroups.O14IsoStrictGraphics.ToString(),
                     "DrawingML Files in ISO Strict",
-                    o14IsoStrictFolder + @"Graphics\"));
+                    Path.Combine(o14IsoStrictFolder, @"Graphics")));
             this.RegisterDataGroup(
                 new FileDataGroup(
                     DataGroups.O14IsoStrictAdditional.ToString(),
                     "Additional Test Files in ISO Strict",
-                    o14IsoStrictFolder + @"AdditionalFiles\"));
+                    Path.Combine(o14IsoStrictFolder, @"AdditionalFiles")));
             this.RegisterDataGroup(
                 new FileDataGroup(
                     DataGroups.O14Validation.ToString(),
@@ -80,43 +80,43 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries.DataStorage
                 new FileDataGroup(
                     DataGroups.O15ConformanceWord.ToString(),
                     "O15 Conformance WordprocessingML Test Files",
-                    o15ConformanceFolder + @"WD\"));
+                    Path.Combine(o15ConformanceFolder, @"WD")));
             this.RegisterDataGroup(
                 new FileDataGroup(
                     DataGroups.O15ConformanceExcel.ToString(),
                     "O15 Conformance SpreadsheetML Test Files",
-                    o15ConformanceFolder + @"XL\"));
+                    Path.Combine(o15ConformanceFolder, @"XL")));
             this.RegisterDataGroup(
                 new FileDataGroup(
                     DataGroups.O15ConformancePowerPoint.ToString(),
                     "O15 Conformance PresentationML Test Files",
-                    o15ConformanceFolder + @"PPT\"));
+                    Path.Combine(o15ConformanceFolder, @"PPT")));
             this.RegisterDataGroup(
                 new FileDataGroup(
                     DataGroups.O15ConformanceM2.ToString(),
                     "O15 Conformance M2 Converted Test Files",
-                    o15ConformanceFolder + @"M2\"));
+                    Path.Combine(o15ConformanceFolder, @"M2")));
             this.RegisterDataGroup(
                 new FileDataGroup(
                     DataGroups.O15ConformanceBeta1.ToString(),
                     "O15 Conformance Beta1 Converted Test Files",
-                    o15ConformanceFolder + @"Beta1\"));
+                    Path.Combine(o15ConformanceFolder, @"Beta1")));
 
             this.RegisterDataGroup(
                 new FileDataGroup(
                     DataGroups.RobustnessOFCAT.ToString(),
                     "Various Test Files created by non-Office products",
-                    robustnessFolder + @"OFCAT\"));
+                    Path.Combine(robustnessFolder, @"OFCAT")));
             this.RegisterDataGroup(
                 new FileDataGroup(
                     DataGroups.RobustnessWindowsPhone7.ToString(),
                     "Various Test Files created by non-Office products",
-                    robustnessFolder + @"WP7\"));
+                    Path.Combine(robustnessFolder, @"WP7")));
             this.RegisterDataGroup(
                 new FileDataGroup(
                     DataGroups.RobustnessBugRegression.ToString(),
                     "Various Test Files created by non-Office products",
-                    robustnessFolder + @"BugRegression\"));
+                    Path.Combine(robustnessFolder, @"BugRegression")));
 
             this.RegisterDataGroup(
                 new FileDataGroup(

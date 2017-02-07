@@ -44,13 +44,13 @@ namespace DocumentFormat.OpenXml.Tests
 
         private const string DirectoryPath = "FlatOpc";
 
-        private const string DocumentPath = DirectoryPath + "\\Document.docx";
-        private const string PresentationPath = DirectoryPath + "\\Presentation.pptx";
-        private const string SpreadsheetPath = DirectoryPath + "\\Spreadsheet.xlsx";
+        private static readonly string DocumentPath = Path.Combine(DirectoryPath, "Document.docx");
+        private static readonly string PresentationPath = Path.Combine(DirectoryPath, "Presentation.pptx");
+        private static readonly string SpreadsheetPath = Path.Combine(DirectoryPath, "Spreadsheet.xlsx");
 
-        private const string DocumentClonePath = DirectoryPath + "\\Document Clone.docx";
-        private const string PresentationClonePath = DirectoryPath + "\\Presentation Clone.pptx";
-        private const string SpreadsheetClonePath = DirectoryPath + "\\Spreadsheet Clone.xlsx";
+        private static readonly string DocumentClonePath = Path.Combine(DirectoryPath, "Document Clone.docx");
+        private static readonly string PresentationClonePath = Path.Combine(DirectoryPath, "Presentation Clone.pptx");
+        private static readonly string SpreadsheetClonePath = Path.Combine(DirectoryPath, "Spreadsheet Clone.xlsx");
 
         /// <summary>
         /// Creates a new instance of this test fixture, registering our test folder
