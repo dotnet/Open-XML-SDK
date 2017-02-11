@@ -59,7 +59,7 @@ The **Install-Package** command considers the package source either via configur
 - To specify the package source via a configuration option, see https://docs.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior. Note that usually a NuGet.config file is placed in the directory and the configuration options are added there to ensure the sources are persisted in the version control.
 
 	```
-	PM> Install-Package DocumentFormat.OpenXml -Verison <version retrieved from the web>
+	PM> Install-Package DocumentFormat.OpenXml -Version <version retrieved from the web>
 	```
 
 - To pass the feed URL as an argument, here is an example for Visual Studio 2015 and later. 
