@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
         {
             OpenXmlSimpleType attributeValue = context.Element.Attributes[_attribute];
 
-            //if the attribute is omited, semantic validation will do nothing 
+            //if the attribute is omited, semantic validation will do nothing
             if (attributeValue == null || string.IsNullOrEmpty(attributeValue.InnerText))
             {
                 return null;
@@ -36,7 +36,7 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
 
             bool err = false;
 
-            if (_values.Where(v => string.Compare(v, attributeValue.InnerText, !_caseSensitive, CultureInfo.InvariantCulture) == 0).Count() > 0)
+            if (_values.Where(v => string.Equals(v, attributeValue.InnerText, _caseSensitive ? StringComparison.OrdinalIgnoreCase : StringComparison.Ordinal)).Any())
             {
                 err = true;
             }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,16 +9,20 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
     using Xunit;
     using DocumentFormat.OpenXml.Tests.TaskLibraries;
     using DocumentFormat.OpenXml.Tests.PivotClass;
+    using System.IO;
+    using OxTest;
 
-    
+
     public class PivotTest : OpenXmlTestBase
     {
         ConnectionTestEntities connectionTestEntities = null;
 
-        private readonly string generatedOldbConnectionDocumentFile = "TestPivotOldbConnectionBase.xlsx";
-        private readonly string editedOldbConnectionDocumentFile = "EditPivotOldbConnection.xlsx";
-        private readonly string deletedOldbConnectionDocumentFile = "DeletePivotOldbConnection.xlsx";
-        private readonly string addedOldbConnectionDocumentFile = "AddedPivotOldbConnection.xlsx";
+        //private readonly string generatedOldbConnectionDocumentFile = "TestPivotOldbConnectionBase.xlsx";
+        private readonly string generatedOldbConnectionDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
+
+        private readonly string editedOldbConnectionDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
+        private readonly string deletedOldbConnectionDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
+        private readonly string addedOldbConnectionDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
 
         #region Constructor
         /// <summary>
@@ -25,8 +30,6 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
         /// </summary>
         public PivotTest()
         {
-            // Set the flag to notify MSTest of Ots Log failure
-            this.OtsLogFailureToFailTest = true;
         }
         #endregion
 
@@ -37,19 +40,12 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
         /// <param name="createFilePath">Create Word file path</param>
         private void Initialize(string createFilePath)
         {
-            try
-            {
-                ConnectionGeneratedDocument connectionGeneratedDocument = new ConnectionGeneratedDocument();
-                connectionGeneratedDocument.CreatePackage(createFilePath);
+            ConnectionGeneratedDocument connectionGeneratedDocument = new ConnectionGeneratedDocument();
+            connectionGeneratedDocument.CreatePackage(createFilePath);
 
-                this.Log.Pass("Create Word file. File path=[{0}]", createFilePath);
+            this.Log.Pass("Create Word file. File path=[{0}]", createFilePath);
 
-                this.connectionTestEntities = new ConnectionTestEntities(createFilePath);
-            }
-            catch (Exception e)
-            {
-                this.Log.Fail(string.Format(e.Message + ". :File path={0}", createFilePath));
-            }
+            this.connectionTestEntities = new ConnectionTestEntities(createFilePath);
         }
         #endregion
 
@@ -71,20 +67,14 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
         public void PivotConnection01EditElement()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            try
-            {
-                string originalFilepath = this.GetTestFilePath(this.generatedOldbConnectionDocumentFile);
-                string editFilePath = this.GetTestFilePath(this.editedOldbConnectionDocumentFile);
 
-                System.IO.File.Copy(originalFilepath, editFilePath, true);
+            string originalFilepath = this.GetTestFilePath(this.generatedOldbConnectionDocumentFile);
+            string editFilePath = this.GetTestFilePath(this.editedOldbConnectionDocumentFile);
 
-                this.connectionTestEntities.EditElement(editFilePath, this.Log);
-                this.connectionTestEntities.VerifyElement(editFilePath, this.Log);
-            }
-            catch (Exception e)
-            {
-                this.Log.Fail(e.Message);
-            }
+            System.IO.File.Copy(originalFilepath, editFilePath, true);
+
+            this.connectionTestEntities.EditElement(editFilePath, this.Log);
+            this.connectionTestEntities.VerifyElement(editFilePath, this.Log);
         }
 
         /// <summary>
@@ -94,26 +84,20 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
         public void PivotConnection03DeleteAddElement()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            try
-            {
-                string originalFilepath = this.GetTestFilePath(this.generatedOldbConnectionDocumentFile);
-                string deleteFilePath = this.GetTestFilePath(this.deletedOldbConnectionDocumentFile);
-                string addFilePath = this.GetTestFilePath(this.addedOldbConnectionDocumentFile);
 
-                System.IO.File.Copy(originalFilepath, deleteFilePath, true);
+            string originalFilepath = this.GetTestFilePath(this.generatedOldbConnectionDocumentFile);
+            string deleteFilePath = this.GetTestFilePath(this.deletedOldbConnectionDocumentFile);
+            string addFilePath = this.GetTestFilePath(this.addedOldbConnectionDocumentFile);
 
-                this.connectionTestEntities.DeleteElement(deleteFilePath, this.Log);
-                this.connectionTestEntities.VerifyDeletedElement(deleteFilePath, this.Log);
+            System.IO.File.Copy(originalFilepath, deleteFilePath, true);
 
-                System.IO.File.Copy(deleteFilePath, addFilePath, true);
+            this.connectionTestEntities.DeleteElement(deleteFilePath, this.Log);
+            this.connectionTestEntities.VerifyDeletedElement(deleteFilePath, this.Log);
 
-                this.connectionTestEntities.AddElement(addFilePath, this.Log);
-                this.connectionTestEntities.VerifyAddedElement(addFilePath, this.Log);
-            }
-            catch (Exception e)
-            {
-                this.Log.Fail(e.Message);
-            }
+            System.IO.File.Copy(deleteFilePath, addFilePath, true);
+
+            this.connectionTestEntities.AddElement(addFilePath, this.Log);
+            this.connectionTestEntities.VerifyAddedElement(addFilePath, this.Log);
         }
         #endregion
     }

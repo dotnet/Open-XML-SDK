@@ -1,4 +1,5 @@
-﻿using DocumentFormat.OpenXml;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using DocumentFormat.OpenXml;
 using Xunit;
 using System.Collections.ObjectModel;
 using DocumentFormat.OpenXml.Wordprocessing;
@@ -38,44 +39,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        #region Additional test attributes
-        // 
-        //You can use the following additional attributes as you write your tests:
-        //
-        //Use ClassInitialize to run code before running the first test in the class
-        //[ClassInitialize()]
-        //public static void MyClassInitialize(TestContext testContext)
-        //{
-        //}
-        //
-        //Use ClassCleanup to run code after all tests in a class have run
-        //[ClassCleanup()]
-        //public static void MyClassCleanup()
-        //{
-        //}
-        //
-        //Use TestInitialize to run code before running each test
-        //[TestInitialize()]
-        //public void MyTestInitialize()
-        //{
-        //}
-        //
-        //Use TestCleanup to run code after each test has run
-        //[TestCleanup()]
-        //public void MyTestCleanup()
-        //{
-        //}
-        //
-        #endregion
-
-
-        //internal virtual OpenXmlReader CreateOpenXmlReader()
-        //{
-        //    // TODO: Instantiate an appropriate concrete class.
-        //    OpenXmlReader target = null;
-        //    return target;
-        //}
-
         /// <summary>
         ///A test for OpenXmlDomReader
         ///</summary>
@@ -95,13 +58,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             Assert.False(moved);
             Assert.True(targetReader.EOF);
-            // Assert.NotNull(targetReader.Attributes);
-            // Assert.Equal(0, targetReader.Attributes.Count);
-            // Assert.False(targetReader.HasAttributes);
-            // Assert.False(targetReader.IsStartElement);
-            // Assert.False(targetReader.IsEndElement);
-            // Assert.False(targetReader.IsMiscNode);
-            // Assert.Equal(typeof(Paragraph), targetReader.ElementType);
             Assert.True(string.IsNullOrEmpty(targetReader.GetText()));
 
             targetReader.Close();

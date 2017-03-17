@@ -1,4 +1,5 @@
-﻿using DocumentFormat.OpenXml.Internal.SchemaValidation;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using DocumentFormat.OpenXml.Internal.SchemaValidation;
 using Xunit;
 using DocumentFormat.OpenXml.Wordprocessing;
 using DocumentFormat.OpenXml.Bibliography;
@@ -6,8 +7,6 @@ using DocumentFormat.OpenXml;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    
-    
     /// <summary>
     ///This is a test class for SdbSchemaDatasTest and is intended
     ///to contain all SdbSchemaDatasTest Unit Tests
@@ -15,8 +14,6 @@ namespace DocumentFormat.OpenXml.Tests
     
     public class SdbSchemaDatasTest
     {
-
-
         private TestContext testContextInstance;
 
         /// <summary>
@@ -34,37 +31,6 @@ namespace DocumentFormat.OpenXml.Tests
                 testContextInstance = value;
             }
         }
-
-        #region Additional test attributes
-        // 
-        //You can use the following additional attributes as you write your tests:
-        //
-        //Use ClassInitialize to run code before running the first test in the class
-        //[ClassInitialize()]
-        //public static void MyClassInitialize(TestContext testContext)
-        //{
-        //}
-        //
-        //Use ClassCleanup to run code after all tests in a class have run
-        //[ClassCleanup()]
-        //public static void MyClassCleanup()
-        //{
-        //}
-        //
-        //Use TestInitialize to run code before running each test
-        //[TestInitialize()]
-        //public void MyTestInitialize()
-        //{
-        //}
-        //
-        //Use TestCleanup to run code after each test has run
-        //[TestCleanup()]
-        //public void MyTestCleanup()
-        //{
-        //}
-        //
-        #endregion
-
 
         /// <summary>
         ///A test for Load
@@ -502,74 +468,6 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.True(anyParticle.IsSimple());
             }
         }
-
-        // ****** The CT_PictureBase has been changed to not use "xsd:any" in deviation.
-        //private void EmbeddedObjectConstraintTest(SdbSchemaDatas actual)
-        //{
-        //    // test xsd:any
-
-        //    //<xsd:complexType name="CT_PictureBase">
-        //    //  <xsd:sequence maxOccurs="unbounded">
-        //    //    <xsd:any processContents="lax" namespace="urn:schemas-microsoft-com:vml" minOccurs="0" />
-        //    //    <xsd:any processContents="lax" namespace="urn:schemas-microsoft-com:office:office" minOccurs="0" />
-        //    //  </xsd:sequence>
-        //    //</xsd:complexType>
-        //    //<xsd:complexType name="CT_Object">
-        //    //  <xsd:complexContent>
-        //    //    <xsd:extension base="CT_PictureBase">
-        //    //      <xsd:sequence>
-        //    //        <xsd:element name="control" type="CT_Control" minOccurs="0" />
-        //    //      </xsd:sequence>
-        //    //      <xsd:attribute name="dxaOrig" type="ST_TwipsMeasure" use="optional" />
-        //    //      <xsd:attribute name="dyaOrig" type="ST_TwipsMeasure" use="optional" />
-        //    //    </xsd:extension>
-        //    //  </xsd:complexContent>
-        //    //</xsd:complexType>
-
-        //    EmbeddedObject embededObject = new EmbeddedObject();
-        //    var embededObjectData = actual.GetSchemaTypeData(embededObject);
-        //    Assert.Equal(embededObject.ElementTypeId, embededObjectData.OpenXmlTypeId);
-        //    Assert.True(embededObjectData.HasAttributeConstraints);
-        //    Assert.Equal(2, embededObjectData.AttributeConstraintsCount);
-        //    Assert.Null(embededObjectData.SimpleTypeConstraint);
-        //    Assert.True(embededObjectData.IsCompositeType);
-        //    Assert.False(embededObjectData.IsSimpleContent);
-
-        //    var particle = embededObjectData.ParticleConstraint;
-        //    Assert.Equal(ParticleType.Sequence, particle.ParticleType);
-        //    Assert.Equal(1, particle.MinOccurs);
-        //    Assert.Equal(1, particle.MaxOccurs);
-        //    Assert.Equal(2, particle.ChildrenParticles.Length);
-        //    Assert.False(particle.UnboundedMaxOccurs);
-        //    Assert.False(particle.IsSimple());
-        //    {
-        //        // the sequence in CT_PictureBase
-        //        particle = embededObjectData.ParticleConstraint.ChildrenParticles[0];
-        //        Assert.Equal(ParticleType.Sequence, particle.ParticleType);
-        //        Assert.Equal(1, particle.MinOccurs);
-        //        Assert.True(particle.UnboundedMaxOccurs);
-        //        Assert.Equal(2, particle.ChildrenParticles.Length);
-        //        Assert.True(particle.IsSimple());
-
-        //        NsAnyParticle anyParticle = particle.ChildrenParticles[0] as NsAnyParticle;
-        //        Assert.Equal(ParticleType.AnyWithUri, anyParticle.ParticleType);
-        //        Assert.Equal(0, anyParticle.MinOccurs);
-        //        Assert.False(anyParticle.UnboundedMaxOccurs);
-        //        Assert.Equal(1, anyParticle.MaxOccurs);
-        //        Assert.Null(anyParticle.ChildrenParticles);
-        //        Assert.True(anyParticle.IsSimple());
-        //        Assert.Equal(NamespaceIdMap.GetNamespaceId("urn:schemas-microsoft-com:vml"), anyParticle.NamespaceId);
-
-        //        anyParticle = particle.ChildrenParticles[1] as NsAnyParticle;
-        //        Assert.Equal(ParticleType.AnyWithUri, anyParticle.ParticleType);
-        //        Assert.Equal(0, anyParticle.MinOccurs);
-        //        Assert.False(anyParticle.UnboundedMaxOccurs);
-        //        Assert.Equal(1, anyParticle.MaxOccurs);
-        //        Assert.Null(anyParticle.ChildrenParticles);
-        //        Assert.True(anyParticle.IsSimple());
-        //        Assert.Equal(NamespaceIdMap.GetNamespaceId("urn:schemas-microsoft-com:office:office"), anyParticle.NamespaceId);
-        //    }
-        //}
 
         private void SimpleTypeConstraintTest(SdbSchemaDatas actual)
         {

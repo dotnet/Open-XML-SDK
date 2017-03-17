@@ -1,6 +1,8 @@
+// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 using DocumentFormat.OpenXml.Packaging;
 using Ap = DocumentFormat.OpenXml.ExtendedProperties;
 using DocumentFormat.OpenXml.Wordprocessing;
+using System.Xml;
 using DocumentFormat.OpenXml;
 using W15 = DocumentFormat.OpenXml.Office2013.Word;
 using A = DocumentFormat.OpenXml.Drawing;
@@ -2279,10 +2281,10 @@ namespace DocumentFormat.OpenXml.Tests.FootnoteColumnsClass
         // Generates content of customXmlPart1.
         private void GenerateCustomXmlPart1Content(CustomXmlPart customXmlPart1)
         {
-            System.Xml.XmlTextWriter writer = new System.Xml.XmlTextWriter(customXmlPart1.GetStream(System.IO.FileMode.Create), System.Text.Encoding.UTF8);
-            writer.WriteRaw("<b:Sources SelectedStyle=\"\" StyleName=\"\" Version=\"0\" xmlns:b=\"http://schemas.openxmlformats.org/officeDocument/2006/bibliography\" xmlns=\"http://schemas.openxmlformats.org/officeDocument/2006/bibliography\"></b:Sources>\r\n");
-            writer.Flush();
-            writer.Close();
+            using (XmlWriter writer = XmlWriter.Create(customXmlPart1.GetStream(System.IO.FileMode.Create)))
+            {
+                writer.WriteRaw("<b:Sources SelectedStyle=\"\" StyleName=\"\" Version=\"0\" xmlns:b=\"http://schemas.openxmlformats.org/officeDocument/2006/bibliography\" xmlns=\"http://schemas.openxmlformats.org/officeDocument/2006/bibliography\"></b:Sources>\r\n");
+            }
         }
 
         // Generates content of customXmlPropertiesPart1.

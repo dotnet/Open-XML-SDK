@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,21 +33,14 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, false))
             {
-                try
-                {
-                    //Get Extension Uri value
-                    Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
-                    P15.ThreadingInfo threadingInfo = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Single();
-                    CommentExtension commentExtension = (CommentExtension)threadingInfo.Parent;
-                    this.ThreadingInfoExtUri = commentExtension.Uri; ;
+                //Get Extension Uri value
+                Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
+                P15.ThreadingInfo threadingInfo = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Single();
+                CommentExtension commentExtension = (CommentExtension)threadingInfo.Parent;
+                this.ThreadingInfoExtUri = commentExtension.Uri; ;
 
-                    if (string.IsNullOrEmpty(ThreadingInfoExtUri))
-                        throw new Exception("Uri attribute value in Extension element is not set.");
-                }
-                catch (Exception e)
-                {
-                    throw e;
-                }
+                if (string.IsNullOrEmpty(ThreadingInfoExtUri))
+                    throw new Exception("Uri attribute value in Extension element is not set.");
             }
         }
 
@@ -59,18 +53,11 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, true))
             {
-                try
-                {
-                    Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
-                    P15.ThreadingInfo threadingInfo = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Single();
-                    threadingInfo.TimeZoneBias.Value = this.timeZoneBiasValue;
+                Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
+                P15.ThreadingInfo threadingInfo = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Single();
+                threadingInfo.TimeZoneBias.Value = this.timeZoneBiasValue;
 
-                    log.Pass("Edited ThreadingInfo value.");
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                log.Pass("Edited ThreadingInfo value.");
             }
         }
 
@@ -83,17 +70,10 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, false))
             {
-                try
-                {
-                    Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
-                    P15.ThreadingInfo threadingInfo = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Single();
+                Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
+                P15.ThreadingInfo threadingInfo = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Single();
 
-                    log.Verify(threadingInfo.TimeZoneBias.Value == this.timeZoneBiasValue, "UnChanged in the ThreadingInfo element.");
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                log.Verify(threadingInfo.TimeZoneBias.Value == this.timeZoneBiasValue, "UnChanged in the ThreadingInfo element.");
             }
         }
 
@@ -106,22 +86,15 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, true))
             {
-                try
-                {
-                    Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
-                    CommentExtension commentExtension = comment.CommentExtensionList.Descendants<CommentExtension>().Where(e => e.Uri == this.ThreadingInfoExtUri).Single();
-                    P15.ThreadingInfo threadingInfo = commentExtension.Descendants<P15.ThreadingInfo>().Single();
+                Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
+                CommentExtension commentExtension = comment.CommentExtensionList.Descendants<CommentExtension>().Where(e => e.Uri == this.ThreadingInfoExtUri).Single();
+                P15.ThreadingInfo threadingInfo = commentExtension.Descendants<P15.ThreadingInfo>().Single();
 
-                    threadingInfo.Remove();
-                    log.Pass("Deleted ThreadingInfo element.");
+                threadingInfo.Remove();
+                log.Pass("Deleted ThreadingInfo element.");
 
-                    commentExtension.Remove();
-                    log.Pass("Deleted ThreadingInfo extension element.");
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                commentExtension.Remove();
+                log.Pass("Deleted ThreadingInfo extension element.");
             }
         }
 
@@ -134,20 +107,13 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, false))
             {
-                try
-                {
-                    Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
+                Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
 
-                    int threadingInfoExtCount = comment.CommentExtensionList.Descendants<CommentExtension>().Where(e => e.Uri == this.ThreadingInfoExtUri).Count();
-                    log.Verify(threadingInfoExtCount == 0, "ThreadingInfo extension element is not deleted.");
+                int threadingInfoExtCount = comment.CommentExtensionList.Descendants<CommentExtension>().Where(e => e.Uri == this.ThreadingInfoExtUri).Count();
+                log.Verify(threadingInfoExtCount == 0, "ThreadingInfo extension element is not deleted.");
 
-                    int threadingInfoCount = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Count();
-                    log.Verify(threadingInfoCount == 0, "ThreadingInfo element is not deleted.");
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                int threadingInfoCount = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Count();
+                log.Verify(threadingInfoCount == 0, "ThreadingInfo element is not deleted.");
             }
         }
 
@@ -160,20 +126,13 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, true))
             {
-                try
-                {
-                    Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
-                    CommentExtension commentExtension = new CommentExtension() { Uri = this.ThreadingInfoExtUri };
-                    P15.ThreadingInfo threadingInfo = new P15.ThreadingInfo() { TimeZoneBias = this.timeZoneBiasValue };
-                    commentExtension.AppendChild<P15.ThreadingInfo>(threadingInfo);
-                    comment.CommentExtensionList.AppendChild<CommentExtension>(commentExtension);
+                Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
+                CommentExtension commentExtension = new CommentExtension() { Uri = this.ThreadingInfoExtUri };
+                P15.ThreadingInfo threadingInfo = new P15.ThreadingInfo() { TimeZoneBias = this.timeZoneBiasValue };
+                commentExtension.AppendChild<P15.ThreadingInfo>(threadingInfo);
+                comment.CommentExtensionList.AppendChild<CommentExtension>(commentExtension);
 
-                    log.Pass("Added ThreadingInfo element.");
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                log.Pass("Added ThreadingInfo element.");
             }
         }
 
@@ -186,20 +145,13 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, false))
             {
-                try
-                {
-                    Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
+                Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
 
-                    int threadingInfoExtCount = comment.CommentExtensionList.Descendants<CommentExtension>().Where(e => e.Uri == this.ThreadingInfoExtUri).Count();
-                    log.Verify(threadingInfoExtCount == 1, "ThreadingInfo element is not added.");
+                int threadingInfoExtCount = comment.CommentExtensionList.Descendants<CommentExtension>().Where(e => e.Uri == this.ThreadingInfoExtUri).Count();
+                log.Verify(threadingInfoExtCount == 1, "ThreadingInfo element is not added.");
 
-                    int threadingInfoCount = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Count();
-                    log.Verify(threadingInfoCount == 1, "ThreadingInfo element is not added.");
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                int threadingInfoCount = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Count();
+                log.Verify(threadingInfoCount == 1, "ThreadingInfo element is not added.");
             }
         }
 

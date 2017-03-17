@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,125 +38,79 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
                 X15.TableSlicerCache tableSlicerCache2 = slicerCachePart2.RootElement.Descendants<X15.TableSlicerCache>().Single();
                 X15.TableSlicerCache tableSlicerCache3 = slicerCachePart3.RootElement.Descendants<X15.TableSlicerCache>().Single();
 
-                //Change TableId attribute value.
-                try
-                {
-                    //Change TableId attribute value of TableSlicerCache.
-                    tableSlicerCache1.TableId.Value = 2;
-                    log.Pass("Edited TableSlicerCache attribute of TableId.");
-                }
-                catch(Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                //Change TableId attribute value of TableSlicerCache.
+                tableSlicerCache1.TableId.Value = 2;
+                log.Pass("Edited TableSlicerCache attribute of TableId.");
 
                 //Change Column attribute value.
-                try
-                {
-                    //Change Column attribute value of TableSlicerCache.
-                    tableSlicerCache1.Column.Value = 2;
-                    log.Pass("Edited TableSlicerCache attribute of Column.");
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+
+                //Change Column attribute value of TableSlicerCache.
+                tableSlicerCache1.Column.Value = 2;
+                log.Pass("Edited TableSlicerCache attribute of Column.");
 
                 //Change SortOrder attribute value.
-                try
-                {
-                    //Change SortOrder attribute value of TableSlicerCache. Set value is Descending.
-                    tableSlicerCache1.SortOrder = X14.TabularSlicerCacheSortOrderValues.Descending;
-                    log.Pass("Edited TableSlicerCache attribute of SortOrder. Set value is Descending.");
 
-                    //Change SortOrder attribute value of TableSlicerCache. Set value is Ascending.
-                    tableSlicerCache2.SortOrder = X14.TabularSlicerCacheSortOrderValues.Ascending;
-                    log.Pass("Edited TableSlicerCache attribute of SortOrder. Set value is Ascending.");
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                //Change SortOrder attribute value of TableSlicerCache. Set value is Descending.
+                tableSlicerCache1.SortOrder = X14.TabularSlicerCacheSortOrderValues.Descending;
+                log.Pass("Edited TableSlicerCache attribute of SortOrder. Set value is Descending.");
+
+                //Change SortOrder attribute value of TableSlicerCache. Set value is Ascending.
+                tableSlicerCache2.SortOrder = X14.TabularSlicerCacheSortOrderValues.Ascending;
+                log.Pass("Edited TableSlicerCache attribute of SortOrder. Set value is Ascending.");
 
                 //Change CustomListSort attribute value.
-                try
-                {
-                    //Change CustomListSort attribute value of TableSlicerCache. Set value is false.
-                    tableSlicerCache1.CustomListSort = false;
-                    log.Pass("Edited TableSlicerCache attribute of CustomListSort. Set value is false.");
 
-                    //Change CustomListSort attribute value of TableSlicerCache. Set value is true.
-                    tableSlicerCache2.CustomListSort = true;
-                    log.Pass("Edited TableSlicerCache attribute of CustomListSort. Set value is true.");
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                //Change CustomListSort attribute value of TableSlicerCache. Set value is false.
+                tableSlicerCache1.CustomListSort = false;
+                log.Pass("Edited TableSlicerCache attribute of CustomListSort. Set value is false.");
+
+                //Change CustomListSort attribute value of TableSlicerCache. Set value is true.
+                tableSlicerCache2.CustomListSort = true;
+                log.Pass("Edited TableSlicerCache attribute of CustomListSort. Set value is true.");
 
                 //Change CrossFilter attribute value.
-                try
-                {
-                    //Change CrossFilter attribute value of TableSlicerCache. Set value is None.
-                    tableSlicerCache1.CrossFilter = X14.SlicerCacheCrossFilterValues.None;
-                    log.Pass("Edited TableSlicerCache attribute of CrossFilter. Set value is None.");
 
-                    //Change CrossFilter attribute value of TableSlicerCache. Set value is ShowItemsWithDataAtTop.
-                    tableSlicerCache2.CrossFilter = X14.SlicerCacheCrossFilterValues.ShowItemsWithDataAtTop;
-                    log.Pass("Edited TableSlicerCache attribute of CrossFilter. Set value is ShowItemsWithDataAtTop.");
+                //Change CrossFilter attribute value of TableSlicerCache. Set value is None.
+                tableSlicerCache1.CrossFilter = X14.SlicerCacheCrossFilterValues.None;
+                log.Pass("Edited TableSlicerCache attribute of CrossFilter. Set value is None.");
 
-                    //Change CrossFilter attribute value of TableSlicerCache. Set value is ShowItemsWithNoData.
-                    tableSlicerCache3.CrossFilter = X14.SlicerCacheCrossFilterValues.ShowItemsWithNoData;
-                    log.Pass("Edited TableSlicerCache attribute of CrossFilter. Set value is ShowItemsWithNoData.");
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                //Change CrossFilter attribute value of TableSlicerCache. Set value is ShowItemsWithDataAtTop.
+                tableSlicerCache2.CrossFilter = X14.SlicerCacheCrossFilterValues.ShowItemsWithDataAtTop;
+                log.Pass("Edited TableSlicerCache attribute of CrossFilter. Set value is ShowItemsWithDataAtTop.");
 
-                try
-                {
-                    X15.TableSlicerCache newTableSlicerCache1 = tableSlicerCache1.Clone() as X15.TableSlicerCache;
-                    X15.TableSlicerCache newTableSlicerCache2 = tableSlicerCache2.Clone() as X15.TableSlicerCache;
-                    X15.TableSlicerCache newTableSlicerCache3 = tableSlicerCache3.Clone() as X15.TableSlicerCache;
-                    //Remove the existing Extension, to set the new Extension.
-                    slicerCachePart1.RootElement.Descendants<SlicerCacheDefinitionExtension>().Single().Remove();
-                    slicerCachePart2.RootElement.Descendants<SlicerCacheDefinitionExtension>().Single().Remove();
-                    slicerCachePart3.RootElement.Descendants<SlicerCacheDefinitionExtension>().Single().Remove();
-                    SlicerCacheDefinitionExtension extension1 = new SlicerCacheDefinitionExtension() { Uri = "{2F2917AC-EB37-4324-AD4E-5DD8C200BD13}" };
-                    extension1.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
-                    extension1.Append(newTableSlicerCache1);
-                    slicerCachePart1.SlicerCacheDefinition.SlicerCacheDefinitionExtensionList.AppendChild(extension1);
+                //Change CrossFilter attribute value of TableSlicerCache. Set value is ShowItemsWithNoData.
+                tableSlicerCache3.CrossFilter = X14.SlicerCacheCrossFilterValues.ShowItemsWithNoData;
+                log.Pass("Edited TableSlicerCache attribute of CrossFilter. Set value is ShowItemsWithNoData.");
 
-                    SlicerCacheDefinitionExtension extension2 = new SlicerCacheDefinitionExtension() { Uri = "{2F2917AC-EB37-4324-AD4E-5DD8C200BD13}" };
-                    extension2.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
-                    extension2.Append(newTableSlicerCache2);
-                    slicerCachePart2.SlicerCacheDefinition.SlicerCacheDefinitionExtensionList.AppendChild(extension2);
+                X15.TableSlicerCache newTableSlicerCache1 = tableSlicerCache1.Clone() as X15.TableSlicerCache;
+                X15.TableSlicerCache newTableSlicerCache2 = tableSlicerCache2.Clone() as X15.TableSlicerCache;
+                X15.TableSlicerCache newTableSlicerCache3 = tableSlicerCache3.Clone() as X15.TableSlicerCache;
+                //Remove the existing Extension, to set the new Extension.
+                slicerCachePart1.RootElement.Descendants<SlicerCacheDefinitionExtension>().Single().Remove();
+                slicerCachePart2.RootElement.Descendants<SlicerCacheDefinitionExtension>().Single().Remove();
+                slicerCachePart3.RootElement.Descendants<SlicerCacheDefinitionExtension>().Single().Remove();
+                SlicerCacheDefinitionExtension extension1 = new SlicerCacheDefinitionExtension() { Uri = "{2F2917AC-EB37-4324-AD4E-5DD8C200BD13}" };
+                extension1.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
+                extension1.Append(newTableSlicerCache1);
+                slicerCachePart1.SlicerCacheDefinition.SlicerCacheDefinitionExtensionList.AppendChild(extension1);
 
-                    SlicerCacheDefinitionExtension extension3 = new SlicerCacheDefinitionExtension() { Uri = "{2F2917AC-EB37-4324-AD4E-5DD8C200BD13}" };
-                    extension3.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
-                    extension3.Append(newTableSlicerCache3);
-                    slicerCachePart3.SlicerCacheDefinition.SlicerCacheDefinitionExtensionList.AppendChild(extension3);
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                SlicerCacheDefinitionExtension extension2 = new SlicerCacheDefinitionExtension() { Uri = "{2F2917AC-EB37-4324-AD4E-5DD8C200BD13}" };
+                extension2.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
+                extension2.Append(newTableSlicerCache2);
+                slicerCachePart2.SlicerCacheDefinition.SlicerCacheDefinitionExtensionList.AppendChild(extension2);
 
-                try
-                {
-                    //Append SlicerCacheHideItemsWithNoData element.
-                    Extension extension = new Extension() { Uri = "{470722E0-AACD-4C17-9CDC-17EF765DBC7E}" };
-                    extension.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
-                    extension.AppendChild<X15.SlicerCacheHideItemsWithNoData>(new X15.SlicerCacheHideItemsWithNoData());
-                    slicerCachePart2.SlicerCacheDefinition.SlicerCacheDefinitionExtensionList.AppendChild<Extension>(extension);
+                SlicerCacheDefinitionExtension extension3 = new SlicerCacheDefinitionExtension() { Uri = "{2F2917AC-EB37-4324-AD4E-5DD8C200BD13}" };
+                extension3.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
+                extension3.Append(newTableSlicerCache3);
+                slicerCachePart3.SlicerCacheDefinition.SlicerCacheDefinitionExtensionList.AppendChild(extension3);
 
-                    log.Pass("Added SlicerCacheHideItemsWithNoData element.");
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                //Append SlicerCacheHideItemsWithNoData element.
+                Extension extension = new Extension() { Uri = "{470722E0-AACD-4C17-9CDC-17EF765DBC7E}" };
+                extension.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
+                extension.AppendChild<X15.SlicerCacheHideItemsWithNoData>(new X15.SlicerCacheHideItemsWithNoData());
+                slicerCachePart2.SlicerCacheDefinition.SlicerCacheDefinitionExtensionList.AppendChild<Extension>(extension);
+
+                log.Pass("Added SlicerCacheHideItemsWithNoData element.");
             }
         }
 
@@ -178,82 +133,42 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
                 X15.TableSlicerCache tableSlicerCache3 = slicerCachePart3.RootElement.Descendants<X15.TableSlicerCache>().Single();
 
                 //Verify TableId attribute value.
-                try
-                {
-                    //Verify TableId attribute value of TableSlicerCache.
-                    log.Verify(tableSlicerCache1.TableId.Value == 2, "Verify TableSlicerCache attribute of TableId.");
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+
+                //Verify TableId attribute value of TableSlicerCache.
+                log.Verify(tableSlicerCache1.TableId.Value == 2, "Verify TableSlicerCache attribute of TableId.");
 
                 //Verify Column attribute value.
-                try
-                {
-                    //Verify Column attribute value of TableSlicerCache.
-                    log.Verify(tableSlicerCache1.Column.Value == 2, "Verify TableSlicerCache attribute of Column.");
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+
+                //Verify Column attribute value of TableSlicerCache.
+                log.Verify(tableSlicerCache1.Column.Value == 2, "Verify TableSlicerCache attribute of Column.");
 
                 //Verify SortOrder attribute value.
-                try
-                {
-                    //Verify SortOrder attribute value of TableSlicerCache. Value is Descending.
-                    log.Verify(tableSlicerCache1.SortOrder.Value == X14.TabularSlicerCacheSortOrderValues.Descending, "Verify TableSlicerCache attribute of SortOrder. Value is not Descending.");
 
-                    //Verify SortOrder attribute value of TableSlicerCache. Value is Ascending.
-                    log.Verify(tableSlicerCache2.SortOrder.Value == X14.TabularSlicerCacheSortOrderValues.Ascending, "Verify TableSlicerCache attribute of SortOrder. Value is not Ascending.");
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                //Verify SortOrder attribute value of TableSlicerCache. Value is Descending.
+                log.Verify(tableSlicerCache1.SortOrder.Value == X14.TabularSlicerCacheSortOrderValues.Descending, "Verify TableSlicerCache attribute of SortOrder. Value is not Descending.");
+
+                //Verify SortOrder attribute value of TableSlicerCache. Value is Ascending.
+                log.Verify(tableSlicerCache2.SortOrder.Value == X14.TabularSlicerCacheSortOrderValues.Ascending, "Verify TableSlicerCache attribute of SortOrder. Value is not Ascending.");
 
                 //Verify CustomListSort attribute value.
-                try
-                {
-                    //Verify CustomListSort attribute value of TableSlicerCache. Value is false.
-                    log.Verify(tableSlicerCache1.CustomListSort.Value == false, "Verify TableSlicerCache attribute of CustomListSort. Value is not false.");
+                //Verify CustomListSort attribute value of TableSlicerCache. Value is false.
+                log.Verify(tableSlicerCache1.CustomListSort.Value == false, "Verify TableSlicerCache attribute of CustomListSort. Value is not false.");
 
-                    //Verify CustomListSort attribute value of TableSlicerCache. Value is true.
-                    log.Verify(tableSlicerCache2.CustomListSort.Value == true, "Verify TableSlicerCache attribute of CustomListSort. Value is not true.");
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                //Verify CustomListSort attribute value of TableSlicerCache. Value is true.
+                log.Verify(tableSlicerCache2.CustomListSort.Value == true, "Verify TableSlicerCache attribute of CustomListSort. Value is not true.");
 
                 //Verify CrossFilter attribute value.
-                try
-                {
-                    //Verify CrossFilter attribute value of TableSlicerCache. Value is None.
-                    log.Verify(tableSlicerCache1.CrossFilter == X14.SlicerCacheCrossFilterValues.None, "Verify TableSlicerCache attribute of CrossFilter. Value is not None");
+                //Verify CrossFilter attribute value of TableSlicerCache. Value is None.
+                log.Verify(tableSlicerCache1.CrossFilter == X14.SlicerCacheCrossFilterValues.None, "Verify TableSlicerCache attribute of CrossFilter. Value is not None");
 
-                    //Verify CrossFilter attribute value of TableSlicerCache. Value is ShowItemsWithDataAtTop.
-                    log.Verify(tableSlicerCache2.CrossFilter == X14.SlicerCacheCrossFilterValues.ShowItemsWithDataAtTop, "Verify TableSlicerCache attribute of CrossFilter. Value is ShowItemsWithDataAtTop.");
+                //Verify CrossFilter attribute value of TableSlicerCache. Value is ShowItemsWithDataAtTop.
+                log.Verify(tableSlicerCache2.CrossFilter == X14.SlicerCacheCrossFilterValues.ShowItemsWithDataAtTop, "Verify TableSlicerCache attribute of CrossFilter. Value is ShowItemsWithDataAtTop.");
 
-                    //Verify CrossFilter attribute value of TableSlicerCache. Value is ShowItemsWithNoData.
-                    log.Verify(tableSlicerCache3.CrossFilter == X14.SlicerCacheCrossFilterValues.ShowItemsWithNoData, "Verify TableSlicerCache attribute of CrossFilter. Value is ShowItemsWithNoData.");
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                //Verify CrossFilter attribute value of TableSlicerCache. Value is ShowItemsWithNoData.
+                log.Verify(tableSlicerCache3.CrossFilter == X14.SlicerCacheCrossFilterValues.ShowItemsWithNoData, "Verify TableSlicerCache attribute of CrossFilter. Value is ShowItemsWithNoData.");
 
                 //Verify SlicerCacheHideItemsWithNoData element exist.
-                try
-                {
-                    //Verify SlicerCacheHideItemsWithNoData element exist.
-                    log.Verify(slicerCachePart2.SlicerCacheDefinition.SlicerCacheDefinitionExtensionList.Descendants<X15.SlicerCacheHideItemsWithNoData>().Count() == 1, "Verify SlicerCacheHideItemsWithNoData exist.");
-                }
-                catch (Exception e)
-                {
-                    log.Fail(e.Message);
-                }
+                log.Verify(slicerCachePart2.SlicerCacheDefinition.SlicerCacheDefinitionExtensionList.Descendants<X15.SlicerCacheHideItemsWithNoData>().Count() == 1, "Verify SlicerCacheHideItemsWithNoData exist.");
             }
         }
 

@@ -29,6 +29,7 @@ using System.Text;
 using System.Xml;
 using DocumentFormat.OpenXml.Packaging;
 using Xunit;
+using OxTest;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -36,7 +37,9 @@ namespace DocumentFormat.OpenXml.Tests
     [SuppressMessage("ReSharper", "VirtualMemberNeverOverriden.Global")]
     public class BaseFixture : IDisposable
     {
-        protected const string TestFilesPath = @"..\..\..\TestFiles";
+        protected static string s_TestFileLocation = null;
+
+        public static string TestFilesPath => TestUtil.TestFilesDir;
 
         protected BaseFixture()
         {
@@ -64,7 +67,8 @@ namespace DocumentFormat.OpenXml.Tests
             if (path == null)
                 throw new ArgumentNullException("path");
 
-            return Path.Combine(TestFilesPath, Path.GetFileName(path));
+            var combinedPath = Path.Combine(TestFilesPath, Path.GetFileName(path));
+            return combinedPath;
         }
 
         /// <summary>

@@ -11,7 +11,7 @@
 
 namespace DocumentFormat.OpenXml.Validation {
     using System;
-    
+    using System.Reflection;    
     
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Validation {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class ValidationResources {
+    internal partial class ValidationResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Validation {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DocumentFormat.OpenXml.Validation.ValidationResources", typeof(ValidationResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DocumentFormat.OpenXml.src.ofapi.Validation.ValidationResources", typeof(ValidationResources).GetTypeInfo().Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -211,27 +211,6 @@ namespace DocumentFormat.OpenXml.Validation {
         internal static string MC_ShallNotContainAlternateContent {
             get {
                 return ResourceManager.GetString("MC_ShallNotContainAlternateContent", resourceCulture);
-            }
-        }
-        
-        internal static byte[] O12SchemaConstraintDatas {
-            get {
-                object obj = ResourceManager.GetObject("O12SchemaConstraintDatas", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        internal static byte[] O14SchemaConstraintDatas {
-            get {
-                object obj = ResourceManager.GetObject("O14SchemaConstraintDatas", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        internal static byte[] O15SchemaConstraintDatas {
-            get {
-                object obj = ResourceManager.GetObject("O15SchemaConstraintDatas", resourceCulture);
-                return ((byte[])(obj));
             }
         }
         

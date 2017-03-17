@@ -152,7 +152,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (sourceStream == null)
             {
-                throw new ArgumentNullException("sourceStream");
+                throw new ArgumentNullException(nameof(sourceStream));
             }
 
             using (Stream targetStream = this.GetStream(FileMode.Create))
@@ -554,7 +554,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     return "video/vc1";
 
                 default:
-                    throw new ArgumentOutOfRangeException("mediaDataPartType");
+                    throw new ArgumentOutOfRangeException(nameof(mediaDataPartType));
             }
         }
 

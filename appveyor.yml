@@ -1,15 +1,30 @@
-version: 2.6.{build}
-skip_tags: true
-clone_folder: c:\projects\Open-XML-SDK
+os: Visual Studio 2015
+
+environment:
+  SignClientSecret:
+    secure: 2QKIbnEaxM/df01+GLvTjVKdLL7RlwKmCR/APcWFRUUF2VQWBRQFQ1DP3gK49epL
+
 install:
-- ps: nuget restore Open-XML-SDK.sln
-build:
-  project: Open-XML-SDK.sln
-  verbosity: minimal
-test:
-  assemblies: '**\*.Tests.dll'
-notifications:
-- provider: Email
-  to:
-  - thomas@barnekow.info
-  on_build_status_changed: true
+  - ps: nuget install -ExcludeVersion SignClient -Version 0.5.0-beta4 -pre -OutputDirectory .\build\
+
+build_script:
+  - ps: gitversion /output buildserver
+  - ps: .\build\Update-Version.ps1 $env:GitVersion_NuGetVersion
+  - ps: dotnet --info
+  - ps: dotnet restore
+  - ps: dotnet --verbose build -c Release .\DocumentFormat.OpenXml.Tests
+
+after_build:
+  - ps: dotnet --verbose pack -c Release .\DocumentFormat.OpenXml -o .
+  - ps: .\build\SignPackage.ps1
+
+test_script:
+  - cmd: dotnet test -c Release .\DocumentFormat.OpenXml.Tests
+
+deploy:
+  provider: NuGet
+  server: https://dotnet.myget.org/F/open-xml-sdk/api/v2/package
+  api_key:
+    secure: +uagaLcg+y8G8ZBxlXm0E5VmTHeT030NeoyHZGU8V7MtIPc1+VUXru0mAPVh0KhK
+  on:
+    branch: [master, vNext, Office2016]

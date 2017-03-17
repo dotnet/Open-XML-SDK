@@ -3,6 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Diagnostics;
+using System.Collections.ObjectModel;
+
+namespace DocumentFormat.OpenXml
+{
+    internal class IgnoreAttribute : Attribute { }
+    internal class IncludeAttribute : Attribute { }
+}
 
 namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 {
@@ -22,7 +29,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 #if DEBUG
             if (attributeConstraints != null)
             {
-                this.AttributeConstraints = Array.AsReadOnly(attributeConstraints);
+                this.AttributeConstraints = new ReadOnlyCollection<AttributeConstraint>(attributeConstraints);
             }
 #else
             this.AttributeConstraints = attributeConstraints;

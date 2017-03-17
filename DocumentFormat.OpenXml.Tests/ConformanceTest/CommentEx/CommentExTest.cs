@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using System;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
@@ -21,15 +22,16 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
     using DocumentFormat.OpenXml.Tests.TaskLibraries;
     using DocumentFormat.OpenXml.Tests.TaskLibraries.DataStorage;
     using DocumentFormat.OpenXml.Tests.CommentExClass;
+    using OxTest;
 
     /// <summary>
     /// Test for CommentEx elements
     /// </summary>
     public class CommentExTest : OpenXmlTestBase
     {
-        private readonly string generatedDocumentFilePath = "TestCommentExBase.docx";
-        private readonly string editedDocumentFilePath = "EditedCommentEx.docx";
-        private readonly string deleteDocumentFilePath = "DeletedCommentEx.docx";
+        private readonly string generatedDocumentFilePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
+        private readonly string editedDocumentFilePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
+        private readonly string deleteDocumentFilePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
 
         #region Constructor
         /// <summary>
@@ -37,8 +39,6 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
         /// </summary>
         public CommentExTest()
         {
-            // Set the flag to notify MSTest of Ots Log failure
-            this.OtsLogFailureToFailTest = true;
         }
         #endregion
 
@@ -49,17 +49,10 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
         /// <param name="createFilePath">Create Word file path</param>
         private void Initialize(string createFilePath)
         {
-            try
-            {
-                GeneratedDocument generatedDocument = new GeneratedDocument();
-                generatedDocument.CreatePackage(createFilePath);
+            GeneratedDocument generatedDocument = new GeneratedDocument();
+            generatedDocument.CreatePackage(createFilePath);
 
-                this.Log.Pass("Create Word file. File path=[{0}]", createFilePath);
-            }
-            catch (Exception e)
-            {
-                this.Log.Fail(string.Format(e.Message + ". :File path={0}", createFilePath));
-            }
+            this.Log.Pass("Create Word file. File path=[{0}]", createFilePath);
         }
 
         /// <summary>
@@ -74,21 +67,6 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
         #endregion
 
         #region Test Methods
-        /// <summary>
-        /// Office15TCM: xxxxx: OASys#283289: OOXML SDK : ACC : O15 Conformance CommentEx
-        /// </summary>
-        [Fact]
-        public void CommentExAcceptance()
-        {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
-            TestDataStorage dataStorage = new TestDataStorage();
-            var entries = dataStorage.GetEntries(TestDataStorage.DataGroups.O15ConformanceWord).Where(i => i.FilePath.Contains("Sample-15-12-01"));
-
-            OpenXmlValidator validator = new OpenXmlValidator(FileFormatVersions.Office2013);
-
-            this.ValidateDocuments(validator, entries);
-        }
-
         /// <summary>
         /// Office15TCM: xxxxx: OASys#283293: OOXML SDK : COMPS : Invalid format on CommentEx 
         /// </summary>
@@ -112,21 +90,15 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
         public void CommentEx02VerifyEdit()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            try
-            {
-                string originalFilepath = this.GetTestFilePath(this.generatedDocumentFilePath);
-                string editFilePath = this.GetTestFilePath(this.editedDocumentFilePath);
 
-                System.IO.File.Copy(originalFilepath, editFilePath, true);
+            string originalFilepath = this.GetTestFilePath(this.generatedDocumentFilePath);
+            string editFilePath = this.GetTestFilePath(this.editedDocumentFilePath);
 
-                TestEntities testEntities = new TestEntities();
-                testEntities.EditElements(editFilePath, this.Log);
-                testEntities.VerifyElements(editFilePath, this.Log);
-            }
-            catch (Exception e)
-            {
-                this.Log.Fail(e.Message);
-            }
+            System.IO.File.Copy(originalFilepath, editFilePath, true);
+
+            TestEntities testEntities = new TestEntities();
+            testEntities.EditElements(editFilePath, this.Log);
+            testEntities.VerifyElements(editFilePath, this.Log);
         }
 
         /// <summary>
@@ -136,21 +108,15 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
         public void CommentEx04VerifyDelete()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            try
-            {
-                string originalFilepath = this.GetTestFilePath(this.generatedDocumentFilePath);
-                string deleteFilePath = this.GetTestFilePath(this.deleteDocumentFilePath);
 
-                System.IO.File.Copy(originalFilepath, deleteFilePath, true);
+            string originalFilepath = this.GetTestFilePath(this.generatedDocumentFilePath);
+            string deleteFilePath = this.GetTestFilePath(this.deleteDocumentFilePath);
 
-                TestEntities testEntities = new TestEntities();
-                testEntities.DeleteElements(deleteFilePath, this.Log);
-                testEntities.VerifyDeletedElements(deleteFilePath, this.Log);
-            }
-            catch (Exception e)
-            {
-                this.Log.Fail(e.Message);
-            }
+            System.IO.File.Copy(originalFilepath, deleteFilePath, true);
+
+            TestEntities testEntities = new TestEntities();
+            testEntities.DeleteElements(deleteFilePath, this.Log);
+            testEntities.VerifyDeletedElements(deleteFilePath, this.Log);
         }
         #endregion
     }

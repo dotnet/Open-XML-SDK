@@ -48,7 +48,7 @@ namespace DocumentFormat.OpenXml
         {
             if (name == null)
             {
-                throw new ArgumentNullException("name");
+                throw new ArgumentNullException(nameof(name));
             }
 
             OpenXmlElement.SplitName(name, out this._prefix, out this._tagName);
@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml
         {
             if (qualifiedName == null)
             {
-                throw new ArgumentNullException("qualifiedName");
+                throw new ArgumentNullException(nameof(qualifiedName));
             }
 
             OpenXmlElement.SplitName(qualifiedName, out this._prefix, out this._tagName);
@@ -88,7 +88,7 @@ namespace DocumentFormat.OpenXml
         {
             if (localName == null)
             {
-                throw new ArgumentNullException("localName");
+                throw new ArgumentNullException(nameof(localName));
             }
 
             if (prefix == null)
@@ -116,7 +116,7 @@ namespace DocumentFormat.OpenXml
         {
             if (String.IsNullOrEmpty(outerXml))
             {
-                throw new ArgumentNullException("outerXml");
+                throw new ArgumentNullException(nameof(outerXml));
             }
 
             TextReader stringReader = new StringReader(outerXml);
@@ -286,7 +286,7 @@ namespace DocumentFormat.OpenXml
         {
             if (xmlWriter == null)
             {
-                throw new ArgumentNullException("xmlWriter");
+                throw new ArgumentNullException(nameof(xmlWriter));
             }
 
             if (this.XmlParsed)

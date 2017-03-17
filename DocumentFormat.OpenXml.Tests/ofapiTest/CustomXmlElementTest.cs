@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using System;
 using System.Text;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +8,7 @@ using DocumentFormat.OpenXml.Wordprocessing;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using System.IO;
-#if WB
-using DocumentFormat.OpenXml.WB.Tests;
-#endif
+using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -47,28 +46,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        #region Additional test attributes
-        //
-        // You can use the following additional attributes as you write your tests:
-        //
-        // Use ClassInitialize to run code before running the first test in the class
-        // [ClassInitialize()]
-        // public static void MyClassInitialize(TestContext testContext) { }
-        //
-        // Use ClassCleanup to run code after all tests in a class have run
-        // [ClassCleanup()]
-        // public static void MyClassCleanup() { }
-        //
-        // Use TestInitialize to run code before running each test 
-        // [TestInitialize()]
-        // public void MyTestInitialize() { }
-        //
-        // Use TestCleanup to run code after each test has run
-        // [TestCleanup()]
-        // public void MyTestCleanup() { }
-        //
-        #endregion
-        
         string uri = "urn:customXmlSample";
         string element = "elementName";
 
@@ -80,7 +57,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
 
             Type baseType = typeof(CustomXmlElement);
-            Assert.True(baseType.IsAbstract);
+            Assert.True(baseType.GetTypeInfo().IsAbstract);
 
             // CustomXmlRuby
             CustomXmlRuby cxRuby = new CustomXmlRuby();
@@ -135,7 +112,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void SdtBaseClassTest()
         {
             Type baseType = typeof(SdtElement);
-            Assert.True(baseType.IsAbstract);
+            Assert.True(baseType.GetTypeInfo().IsAbstract);
 
             // Test loading and modification
             SdtRun sdtRun = new SdtRun();

@@ -1,4 +1,5 @@
-﻿using DocumentFormat.OpenXml.Packaging;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using DocumentFormat.OpenXml.Packaging;
 using Ap = DocumentFormat.OpenXml.ExtendedProperties;
 using DocumentFormat.OpenXml.Wordprocessing;
 using DocumentFormat.OpenXml;
@@ -7,6 +8,7 @@ using Ovml = DocumentFormat.OpenXml.Vml.Office;
 using V = DocumentFormat.OpenXml.Vml;
 using A = DocumentFormat.OpenXml.Drawing;
 using Ds = DocumentFormat.OpenXml.CustomXmlDataProperties;
+using System.Xml;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -2618,10 +2620,10 @@ namespace DocumentFormat.OpenXml.Tests
         // Generates content of customXmlPart1.
         private void GenerateCustomXmlPart1Content(CustomXmlPart customXmlPart1)
         {
-            System.Xml.XmlTextWriter writer = new System.Xml.XmlTextWriter(customXmlPart1.GetStream(System.IO.FileMode.Create), System.Text.Encoding.UTF8);
-            writer.WriteRaw("<?xml version=\"1.0\" encoding=\"utf-8\"?><Root><Name>Eric White</Name><Company>Microsoft Corporation</Company><Address>One Microsoft Way</Address><City>Redmond</City><State>WA</State><Country>USA</Country><PostalCode>98052</PostalCode></Root>");
-            writer.Flush();
-            writer.Close();
+            using (XmlWriter writer = XmlWriter.Create(customXmlPart1.GetStream(System.IO.FileMode.Create)))
+            {
+                writer.WriteRaw("<?xml version=\"1.0\" encoding=\"utf-8\"?><Root><Name>Eric White</Name><Company>Microsoft Corporation</Company><Address>One Microsoft Way</Address><City>Redmond</City><State>WA</State><Country>USA</Country><PostalCode>98052</PostalCode></Root>");
+            }
         }
 
         // Generates content of customXmlPropertiesPart1.

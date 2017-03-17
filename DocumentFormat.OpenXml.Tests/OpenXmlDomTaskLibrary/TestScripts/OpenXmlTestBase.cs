@@ -1,12 +1,4 @@
-﻿/****************************************************
- * OpenXmlTestBase.cs
- * 
- * Created By: Yeongsu Han (yeohan)
- * Modified By: 
- * Last Modified Date: 
- * 
- * *************************************************/
-
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,6 +7,7 @@ using System.Text;
 using System.Xml;
 using System.Xml.Linq;
 using System.Reflection;
+using OxTest;
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
@@ -50,69 +43,20 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
                         Directory.CreateDirectory(resultPath);
 
                     // New a log instance
-                    string logPath = Path.Combine(resultPath, TestContext.TestName + ".otl");
                     string description = this.GetType().FullName;
-                    this.log = new VerifiableLog(TestContext.TestName, description, logPath);
+                    this.log = new VerifiableLog(TestContext.TestName, description, resultPath);
                 }
                 return log;
             }
         }
 
-        /// <summary>
-        /// Summary log for all test results for the test suite
-        /// </summary>
-        public VerifiableLog SummaryLog
-        {
-            get
-            {
-                if (this._SummaryLog == null)
-                {
-                    // Compute OTL file path
-                    string partialAssemblyName = this.GetType().Assembly.GetName().Name;
-                    // Removes an extension
-                    if (partialAssemblyName.EndsWith(".dll",
-                        StringComparison.InvariantCultureIgnoreCase) == true)
-                    {
-                        partialAssemblyName = partialAssemblyName.Substring(0, partialAssemblyName.Length - 4);
-                    }
-                    //int lastDelimiter = partialAssemblyName.LastIndexOf('.');
-                    //if (lastDelimiter > 0)
-                    //{
-                    //    partialAssemblyName = partialAssemblyName.Substring(lastDelimiter + 1);
-                    //}
-                    
-                    string logDir = ResultRootPath;
-                    string logName = String.Format("summary-{0}.otl", partialAssemblyName);
-                    string logPath = Path.Combine(logDir, logName);
-
-                    // To record test name as the Source column in OTL file
-                    string description = this.GetType().FullName;
-
-                    // Create log instance
-                    this._SummaryLog = new VerifiableLog(TestContext.TestName, description, logPath);
-                }
-                return this._SummaryLog;
-            }
-        }
-
-        public bool OtsLogFailureToFailTest
-        {
-            get { return this.otsLogFailureToFailTest; }
-            set { this.otsLogFailureToFailTest = value; }
-        }
-        
         private VerifiableLog log = null;
-        private VerifiableLog _SummaryLog = null;
-        private bool otsLogFailureToFailTest = false;
         #endregion Log
 
         #region Initialize/Cleanup
         public void MyTestInitialize(string currentTest)
         {
             this.TestContext = new TestContext(currentTest);
-
-            // Reset sub test name
-            this.SubTestName = null;
 
             // Initialize the list of created result folders
             this.resultFoldersCreated = new List<string>();
@@ -121,13 +65,13 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             this.log = null;
 
             // Create result root directory if not exists
-            if (!Directory.Exists(ResultRootPath))
+            if (!Directory.Exists(TestResultsDirectory))
             {
-                Directory.CreateDirectory(ResultRootPath);
+                Directory.CreateDirectory(TestResultsDirectory);
             }
 
             // Record test start time to summary log
-            var summaryLog = this.SummaryLog;
+            var summaryLog = this.Log;
             summaryLog.Comment("Test has been started.");
 
             // Calls overridable logics
@@ -138,65 +82,6 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             }
             TestInitialize();
         }
-        
-        //public void MyTestCleanup()
-        //{
-        //    // Call overridable logic
-        //    TestCleanup();
-
-        //    //
-        //    // Log test result in top OTL file
-        //    //
-
-        //    // Record test start time to summary log
-        //    this.SummaryLog.Comment("Test has been ended.");
-
-        //    if (this.TestContext.CurrentTestOutcome != UnitTestOutcome.Passed)
-        //    {
-        //        this.SummaryLog.Fail("Test ended with unexpected outcome. CurrentTestOutcome: {0}", this.TestContext.CurrentTestOutcome);
-        //    }
-        //    else
-        //    {
-        //        // Log pass or failure
-        //        if (Log.IsFirstFailureLogged)
-        //        {
-        //            var errorMessage = String.Format(
-        //                "{0} failure(s) occured. {1}/{2} passed. First failure message: {3}"
-        //                , Log.FailureCount, Log.PassCount, Log.PassCount + Log.FailureCount
-        //                , Log.FailureMessage);
-
-        //            // OTS logging
-        //            SummaryLog.Fail("{0}", errorMessage);
-
-        //            // Report failure to VS test result
-        //            if (OtsLogFailureToFailTest)
-        //            {
-        //                Assert.Fail(errorMessage);
-        //            }
-        //        }
-        //        else if(Log.PassCount == 0 && Log.FailureCount == 0) {
-        //            // Log failure if no passes or failures have been logged
-        //            SummaryLog.Fail("No passes or failures logged.");
-        //        }
-        //        else
-        //        {
-        //            SummaryLog.Pass(
-        //                "{0}/{1} passed."
-        //                , Log.PassCount, Log.PassCount + Log.FailureCount);
-
-        //            // Cleans all result folder to minimize the logging folder size
-        //            string resultFolder = this.currentResultFolder;
-        //            try
-        //            {
-        //                OpenXmlTestBase.DeleteFolder(resultFolder);
-        //            }
-        //            catch(Exception e)
-        //            {
-        //                SummaryLog.Warning("Unable to delete a result folder: " + e.Message);
-        //            }
-        //        }
-        //    }
-        //}
 
         /// <summary>
         /// The method is called once prior to call the first test method.
@@ -247,27 +132,12 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// </summary>
         private List<string> resultFoldersCreated;
 
-        /// <summary>
-        /// Sub test name. This affects result folder only.
-        /// </summary>
-        public string SubTestName
-        {
-            get { return this.subTestName; }
-            set {
-                this.subTestName = value;
-
-                // Reset current result folder path so as to try to create it
-                this.currentResultFolder = null;
-            }
-        }
-        private string subTestName;
-
         public string TestClassName
         {
             get
             {
                 string testClassName = this.TestContext.FullyQualifiedTestClassName;
-                
+
                 int lastIndexOfNamespace = testClassName.LastIndexOf('.');
                 if (lastIndexOfNamespace > 0)
                 {
@@ -318,9 +188,13 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// </summary>
         public static string SourceRootPath
         {
-            get { return _SourceRootPath; }
+            get
+            {
+                _SourceRootPath = TestUtil.TestDataStorage;
+                return _SourceRootPath;
+            }
         }
-        private static string _SourceRootPath = @"Z:\";
+        private static string _SourceRootPath = null;
         protected void SetSourceRootPath(string path)
         {
             _SourceRootPath = path;
@@ -331,12 +205,10 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// </summary>
         public string SourcePath
         {
-            get {
-                if (this._SourcePath == null)
-                {
-                    this._SourcePath = SourceRootPath;
-                }
-                return this._SourcePath; }
+            get
+            {
+                return _SourcePath ?? TestUtil.TestDataStorage;
+            }
             set
             {
                 // Expand the specified relative path based on source root folder
@@ -353,50 +225,13 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// Test pass script specifies _OXMLSDKLOG environment variable so that
         /// it becomes the value for this property.
         /// </summary>
-        public static string ResultRootPath
+        public static string TestResultsDirectory
         {
-            get {
-                if (_ResultRootFolder == null)
-                {
-                    var dir = new DirectoryInfo(Environment.CurrentDirectory);
-                    var n = DateTime.Now;
-                    var testResultDirName = string.Format("TestResults-{0}-{1}-{2}-{3}{4}{5}", n.Year - 2000, n.Month, n.Day, n.Hour, n.Minute, n.Second);
-                    var testDataStorageDirInfo = new DirectoryInfo(Path.Combine(dir.FullName, testResultDirName));
-                    _ResultRootFolder = testDataStorageDirInfo.FullName;
-                    return _ResultRootFolder;
-#if false
-                    // old code
-                    string envRoot = System.Environment.GetEnvironmentVariable("_OXMLSDKLOG");
-
-                    if (string.IsNullOrEmpty(envRoot) == false)
-                    {
-                        var freeDrive = GetLargestFreeDrive();
-                        try
-                        {
-                            _ResultRootFolder = Path.Combine(freeDrive.Name, envRoot);
-                        }
-                        catch
-                        {
-                            _ResultRootFolder = string.Empty;
-                        }
-                    }
-                    else if (Directory.Exists(envRoot) == true)
-                    {
-                        _ResultRootFolder = envRoot;
-                    }
-
-                    if (string.IsNullOrEmpty(_ResultRootFolder) == true)
-                    {
-                        _ResultRootFolder = Path.Combine(
-                                System.Environment.GetEnvironmentVariable("SystemDrive") + @"\oxmlsdklog"
-                                , MethodInfo.GetCurrentMethod().Module.Assembly.GetName().Name);
-                    }
-#endif
-                }
-                return _ResultRootFolder;
+            get
+            {
+                return TestUtil.TestResultsDirectory;
             }
         }
-        private static string _ResultRootFolder = null;
 
         public string ResultPath
         {
@@ -404,13 +239,14 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             {
                 if (this._ResultPath == null)
                 {
-                    this._ResultPath = ResultRootPath;
+                    this._ResultPath = TestResultsDirectory;
                 }
                 return this._ResultPath;
             }
-            set {
+            set
+            {
                 // Expand the specified relative path based on result root folder
-                this._ResultPath = Path.Combine(ResultRootPath, value);
+                this._ResultPath = Path.Combine(TestResultsDirectory, value);
             }
         }
         private string _ResultPath = null;
@@ -425,7 +261,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
                 this.Log.Comment("Create a test file folder : {0}", testFileFolder);
                 Directory.CreateDirectory(testFileFolder);
             }
-            
+
             this.Log.Comment("Test file path: {0}", testFilePath);
 
             return testFilePath;
@@ -439,22 +275,6 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             return testFile.CopyTo("source-" + testFile.Name);
         }
 
-        public static DriveInfo GetLargestFreeDrive()
-        {
-            DriveInfo largetstDrive = null;
-            long largestSize = 0;
-
-            foreach (DriveInfo driveInfo in DriveInfo.GetDrives())
-            {
-                if (driveInfo.IsReady && driveInfo.AvailableFreeSpace > largestSize)
-                {
-                    largetstDrive = driveInfo;
-                    largestSize = driveInfo.AvailableFreeSpace;
-                }
-            }
-            return largetstDrive;
-        }
-
         /// <summary>
         /// Get test files in the test file storage.
         /// </summary>
@@ -463,9 +283,9 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// <param name="searchPattern">Search pattern of file name. Wildcard chars are allowed.</param>
         /// <param name="pred">Filter function which limits files to be searched.</param>
         /// <returns></returns>
-        public IEnumerable<FileInfo> GetTestFiles(string sourceFolder)
+        public IEnumerable<FileInfo> GetTestFiles(string sourceFolder, string subFolder)
         {
-            string inputPath = Path.Combine(sourcePath, sourceFolder);
+            string inputPath = Path.Combine(sourcePath, sourceFolder, subFolder);
             return new DirectoryInfo(inputPath).GetFiles("*", SearchOption.AllDirectories);
         }
 
@@ -496,6 +316,10 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             Func<FileInfo, bool> pred = IsOpenXmlFile;
             return CopyTestFiles(sourceFolder, recursive, searchPattern, pred);
         }
+        public IEnumerable<FileInfo> CopyTestFiles(string sourceFolder, string subFolder)
+        {
+            return CopyTestFiles(Path.Combine(sourceFolder, subFolder));
+        }
         private static string[] _wordprocessingExtension = new string[] { ".docx", ".docm", ".dotx", ".dotm" };
         private static string[] _spreadsheetExtension = new string[] { ".xlam", ".xltm", ".xlsm", ".xltx", ".xlsx" };
         private static string[] _presentationExtension = new string[] { ".ppam", ".pptm", ".ppsm", ".potm", ".pptx", ".ppsx", ".potx" };
@@ -514,11 +338,11 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// <param name="searchPattern">Search pattern of file name. Wildcard chars are allowed.</param>
         /// <param name="pred">Filter function which limits files to be copied.</param>
         /// <returns></returns>
-        public IEnumerable<FileInfo> CopyTestFiles(string sourceFolder, bool recursive)
+        public IEnumerable<FileInfo> CopyTestFiles(string sourceFolder, bool recursive, int? maxFiles = null)
         {
             string searchPattern = "*";
             Func<FileInfo, bool> pred = IsOpenXmlFile;
-            return CopyTestFiles(sourceFolder, recursive, searchPattern, pred);
+            return CopyTestFiles(sourceFolder, recursive, searchPattern, pred, maxFiles);
         }
         /// <summary>
         /// Copy test files to result folder.
@@ -541,13 +365,13 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// <param name="searchPattern">Search pattern of file name. Wildcard chars are allowed.</param>
         /// <param name="pred">Filter function which limits files to be copied.</param>
         /// <returns></returns>
-        public IEnumerable<FileInfo> CopyTestFiles(string sourceFolder, bool recursive, string searchPattern, Func<FileInfo, bool> pred)
+        public IEnumerable<FileInfo> CopyTestFiles(string sourceFolder, bool recursive, string searchPattern, Func<FileInfo, bool> pred, int? maxFiles = null)
         {
             string inputPath = Path.Combine(sourcePath, sourceFolder);
             string outputPath = this.CurrentResultFolder;
 
             // Cd to the outputPath folder
-            Environment.CurrentDirectory = outputPath;
+            Directory.SetCurrentDirectory(outputPath);
 
             // Ensure pred is not null
             if (pred == null) { pred = (file => { return true; }); }
@@ -555,8 +379,9 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             // Copy sourcefiles to output as testfiles
             var inputDirItem = new DirectoryInfo(inputPath);
             var searchOption = (recursive ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly);
-            var sourcefiles = inputDirItem.GetFiles(searchPattern, searchOption)
-                .Where(pred);
+            var sourcefiles = inputDirItem.GetFiles(searchPattern, searchOption).Where(pred);
+            if (maxFiles != null)
+                sourcefiles = sourcefiles.Take((int)maxFiles);
 
             // Create return value's instance
             var retFiles = new List<FileInfo>();
@@ -565,14 +390,17 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             foreach (var file in sourcefiles)
             {
                 // Calculate destination file path
-                string destfile = file.FullName.Replace(inputDirItem.FullName, outputPath);
+                string destfile = System.IO.Path.Combine(outputPath, file.Name);
 
                 // Create target directory if not exists
                 if (!Directory.Exists(Path.GetDirectoryName(destfile)))
                     Directory.CreateDirectory(Path.GetDirectoryName(destfile));
 
-                // Copy the file
-                retFiles.Add(file.CopyTo(destfile, true));
+                if (!File.Exists(destfile))
+                {
+                    // Copy the file
+                    retFiles.Add(file.CopyTo(destfile, true));
+                }
             }
 
             // Return list of copied files
@@ -589,7 +417,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             var sourceFolder = Path.GetDirectoryName(sourceFile);
             var sourceFileName = Path.GetFileName(sourceFile);
             Func<FileInfo, bool> pred =
-                file => file.Name.Equals(sourceFileName, StringComparison.InvariantCultureIgnoreCase);
+                file => file.Name.Equals(sourceFileName, StringComparison.OrdinalIgnoreCase);
             return CopyTestFiles(sourceFolder, false, sourceFileName, pred).First();
         }
 
@@ -629,9 +457,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         private string CreateResultFolder()
         {
             // Caculate result folder path
-            var resultFolder = (this.SubTestName != null)
-                ? Path.Combine(this.TestContext.TestName, this.SubTestName)
-                : this.TestContext.TestName;
+            var resultFolder = this.TestContext.TestName;
             string outputPath = Path.Combine(resultPath, resultFolder);
 
             // Create folder
@@ -643,19 +469,6 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
 
             // Return folder path
             return outputPath;
-        }
-
-        protected void CreateLog(String folderName)
-        {
-            // Create log folder if not exists
-            string logFolder = Path.Combine(resultPath, folderName);
-            if (!Directory.Exists(logFolder))
-                Directory.CreateDirectory(logFolder);
-
-            // New a log instance
-            string logPath = Path.Combine(logFolder, folderName + ".otl");
-            string description = this.GetType().FullName;
-            this.log = new VerifiableLog(folderName, description, logPath);
         }
 
         #endregion TestFiles
@@ -677,7 +490,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
                         foreach (var result in validateResults)
                         {
                             if (OpenXmlDomTaskLibrary.IsKnownIssue(
-                                TestDataStorage.RootFolder, file.FilePath, result.Description) == false)
+                                TestUtil.TestDataStorage, file.FilePath, result.Description) == false)
                             {
                                 errorDetected = true;
                                 Log.Fail("Validation Error: {0}", result.Description);
@@ -694,7 +507,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
                 catch (Exception e)
                 {
                     if (OpenXmlDomTaskLibrary.IsKnownIssue(
-                        TestDataStorage.RootFolder, file.FilePath, e.Message) == false)
+                        TestUtil.TestDataStorage, file.FilePath, e.Message) == false)
                     {
                         errorDetected = true;
                         Log.Fail("Exception: {0}", e.Message);
@@ -731,23 +544,15 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
                 this.Log.Comment("Open: {0}", entry.FilePath);
                 System.Diagnostics.Debug.WriteLine("Open: {0}", entry.FilePath);
 
-                try
+                using (var doc = this.OpenDocument(entry, false))
                 {
-                    using (var doc = this.OpenDocument(entry, false))
+                    this.AnalyzeElementUsage(doc);
+                    this.log.Pass(string.Format("Verified {0}", entry.FilePath));
+
+                    foreach (var e in this.elementUsageInPackage)
                     {
-                        this.AnalyzeElementUsage(doc);
-                        this.log.Pass(string.Format("Verified {0}", entry.FilePath));
-                        
-                        foreach (var e in this.elementUsageInPackage)
-                        {
-                            this.Log.Comment("ElementInPackage: {0}", e);
-                        }
+                        this.Log.Comment("ElementInPackage: {0}", e);
                     }
-                }
-                catch (Exception e)
-                {
-                    this.Log.Fail("Error during opening package: [{0}] {1}",
-                        entry.FilePath, e.Message);
                 }
             }
 
@@ -807,7 +612,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             foreach (var id in part.Parts)
             {
                 OpenXmlReader reader = null;
-                
+
                 try
                 {
                     reader = OpenXmlDomReader.Create(id.OpenXmlPart);
@@ -816,23 +621,16 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
                 {
                     // Skips unread parts such as embedded font
                 }
-                
+
                 if (reader != null)
                 {
-                    try
+                    while (reader.Read() == true)
                     {
-                        while (reader.Read() == true)
+                        if (reader.IsStartElement == true)
                         {
-                            if (reader.IsStartElement == true)
-                            {
-                                OpenXmlElement element = reader.LoadCurrentElement();
-                                this.AnalyzeElementUsage(element);
-                            }
+                            OpenXmlElement element = reader.LoadCurrentElement();
+                            this.AnalyzeElementUsage(element);
                         }
-                    }
-                    catch(Exception e)
-                    {
-                        this.Log.Warning(e.Message);
                     }
                 }
 

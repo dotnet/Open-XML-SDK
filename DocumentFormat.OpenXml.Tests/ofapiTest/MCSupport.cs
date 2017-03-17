@@ -1,22 +1,18 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using System;
 using System.Text;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using Xunit;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Wordprocessing;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Drawing;
-#if WB
-using DocumentFormat.OpenXml.WB.Tests;
-#endif
+using OxTest;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    /// <summary>
-    /// MCSupport 的摘要说明
-    /// </summary>
-    
     public class MCSupport
     {
         ///<summary>
@@ -24,17 +20,10 @@ namespace DocumentFormat.OpenXml.Tests
         ///</summary>
         public MCSupport()
         {
-            //
-            //TODO: 在此处添加构造函数逻辑
-            //
         }
 
         private TestContext testContextInstance;
 
-        /// <summary>
-        ///获取或设置测试上下文，该上下文提供
-        ///有关当前测试运行及其功能的信息。
-        ///</summary>
         public TestContext TestContext
         {
             get
@@ -58,28 +47,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        #region 附加测试属性
-        //
-        // 编写测试时，还可使用以下附加属性:
-        //
-        // 在运行类中的第一个测试之前使用 ClassInitialize 运行代码
-        // [ClassInitialize()]
-        // public static void MyClassInitialize(TestContext testContext) { }
-        //
-        // 在类中的所有测试都已运行之后使用 ClassCleanup 运行代码
-        // [ClassCleanup()]
-        // public static void MyClassCleanup() { }
-        //
-        // 在运行每个测试之前，使用 TestInitialize 来运行代码
-        // [TestInitialize()]
-        // public void MyTestInitialize() { }
-        //
-        // 在每个测试运行完之后，使用 TestCleanup 来运行代码
-        // [TestCleanup()]
-        // public void MyTestCleanup() { }
-        //
-        #endregion
-
         /// <summary>
         ///Load MC attribute
         ///set attributes
@@ -87,7 +54,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void LoadAttributeTest()
         {
-            string file = "mcdoc.docx";
+            string file = System.IO.Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
             CopyFileStream(TestFileStreams.mcdoc, file);
 
 
@@ -148,18 +115,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void LoadIgnorable()
         {
-            string file = "mcdoc.docx";
+            string file = System.IO.Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
             CopyFileStream(TestFileStreams.mcdoc, file);
-
-            //using (WordprocessingDocument testDocument = WordprocessingDocument.Open(file, false, DocumentFormat.OpenXml.MCMode.Full, false))
-            //using (WordprocessingDocument testDocument = WordprocessingDocument.Open(file, false))
-            //{
-            //    OpenXmlPart target = testDocument.MainDocumentPart;
-            //    OpenXmlPartRootElement root = target.RootElement;
-            //    OpenXmlElement p = root.FirstChild.FirstChild;
-            //    var attr = p.GetAttribute("editId", "http://schemas.microsoft.com/office/word/2008/9/12/wordml");
-            //    Assert.Equal("w14", attr.Prefix);
-            //}
 
             OpenXmlElement p1 = null;
             OpenSettings settings = new OpenSettings();            
@@ -187,7 +144,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void LoadPreserveAttr()
         {
-            string file = "mcdoc.docx";
+            string file = System.IO.Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
             CopyFileStream(TestFileStreams.mcdoc, file);
             OpenSettings settings = new OpenSettings();
             settings.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007);
@@ -226,7 +183,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void LoadProcessContent()
         {
-            string file = "mcexcel.docx";
+            string file = System.IO.Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
             CopyFileStream(TestFileStreams.MCExecl, file);
             OpenSettings settings = new OpenSettings();
             settings.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007);
@@ -257,7 +214,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void LoadACB()
         {
-            string file = "mcdoc.docx";
+            string file = System.IO.Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
             CopyFileStream(TestFileStreams.mcdoc, file);
 
             OpenSettings settings = new OpenSettings();
@@ -284,7 +241,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void LoadACB2()
         {
-            string file = "mcppt.pptx";
+            string file = System.IO.Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
             CopyFileStream(TestFileStreams.mcppt, file);
             OpenSettings settings = new OpenSettings();
             settings.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007);
@@ -329,7 +286,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MCSave()
         {
-            string file = "mcdoc.docx";
+            string file = System.IO.Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
             CopyFileStream(TestFileStreams.mcdoc, file);
 
             //didn't process whole package ,should not process style part
@@ -393,7 +350,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MCMustUnderstand()
         {
-            string file = "mcdoc.docx";
+            string file = System.IO.Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
             CopyFileStream(TestFileStreams.mcdoc, file);
             OpenSettings settings = new OpenSettings();
             settings.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007);
@@ -426,7 +383,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ParticalProperty()
         {
-            string file = "simpleSdt.docx";
+            string file = System.IO.Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
             CopyFileStream(TestFileStreams.simpleSdt, file);
             OpenSettings settings = new OpenSettings();
             settings.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007);
@@ -462,7 +419,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void WriteExtraAttr()
         {
-            string file = "mcdoc.docx";
+            string file = System.IO.Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
             CopyFileStream(TestFileStreams.HelloO14, file);
 
             //open it using the sdk
@@ -480,12 +437,15 @@ namespace DocumentFormat.OpenXml.Tests
             using (WordprocessingDocument testDocument = WordprocessingDocument.Open(file, true))
             {
                 OpenXmlPart target = testDocument.MainDocumentPart.FontTablePart;
-                var reader = System.Xml.XmlReader.Create(target.GetStream());
-                reader.Read();
-                reader.MoveToContent();
+                using (Stream stream = target.GetStream())
+                using (System.Xml.XmlReader reader = System.Xml.XmlReader.Create(stream))
+                {
+                    reader.Read();
+                    reader.MoveToContent();
 
-                var ns = reader.LookupNamespace("w14");
-                Assert.NotEqual(null, ns);
+                    var ns = reader.LookupNamespace("w14");
+                    Assert.NotEqual(null, ns);
+                }
             }
             System.IO.File.Delete(file);
         }
@@ -496,7 +456,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug718314()
         {
-            using(WordprocessingDocument doc = WordprocessingDocument.Create("tmp.docx", WordprocessingDocumentType.Document))
+            string testFile = System.IO.Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
+            using (WordprocessingDocument doc = WordprocessingDocument.Create(testFile, WordprocessingDocumentType.Document))
             {
                 var mpart = doc.AddMainDocumentPart();
                 mpart.Document = new Document();
@@ -506,11 +467,11 @@ namespace DocumentFormat.OpenXml.Tests
 
             OpenSettings s = new OpenSettings();
             s.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007);
-            using(var doc = WordprocessingDocument.Open("tmp.docx", true, s))
+            using (var doc = WordprocessingDocument.Open(testFile, true, s))
             {
                 Assert.Null(doc.MainDocumentPart.Document.Body.FirstChild);
             }
-            System.IO.File.Delete("tmp.docx");
+            System.IO.File.Delete(testFile);
         }
 
         ///<summary>
@@ -519,7 +480,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug718316()
         {
-            using (WordprocessingDocument doc = WordprocessingDocument.Create("tmp.docx", WordprocessingDocumentType.Document))
+            string testFile = System.IO.Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
+            using (WordprocessingDocument doc = WordprocessingDocument.Create(testFile, WordprocessingDocumentType.Document))
             {
                 var mpart = doc.AddMainDocumentPart();
                 mpart.Document = new Document();
@@ -534,14 +496,11 @@ namespace DocumentFormat.OpenXml.Tests
 
             OpenSettings s = new OpenSettings();
             s.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007);
-            using (var doc = WordprocessingDocument.Open("tmp.docx", true, s))
+            using (var doc = WordprocessingDocument.Open(testFile, true, s))
             {
                 Assert.Null(doc.MainDocumentPart.Document.Body.FirstChild);
             }
-            System.IO.File.Delete("tmp.docx");
+            System.IO.File.Delete(testFile);
         }
-
     }
-
-  
 }

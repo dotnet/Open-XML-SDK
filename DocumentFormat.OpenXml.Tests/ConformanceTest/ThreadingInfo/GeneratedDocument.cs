@@ -1,3 +1,4 @@
+// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Presentation;
 using P = DocumentFormat.OpenXml.Presentation;
@@ -135,9 +136,10 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfoClass
         // Generates content of thumbnailPart1.
         private void GenerateThumbnailPart1Content(ThumbnailPart thumbnailPart1)
         {
-            System.IO.Stream data = GetBinaryDataStream(thumbnailPart1Data);
-            thumbnailPart1.FeedData(data);
-            data.Close();
+            using (System.IO.Stream data = GetBinaryDataStream(thumbnailPart1Data))
+            {
+                thumbnailPart1.FeedData(data);
+            }
         }
 
         // Generates content of presentationPart1.

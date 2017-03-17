@@ -147,7 +147,7 @@ namespace DocumentFormat.OpenXml
                 
             }            
             // return null;
-            throw new ArgumentOutOfRangeException("index");
+            throw new ArgumentOutOfRangeException(nameof(index));
         }
 
         public override int Count
@@ -190,7 +190,7 @@ namespace DocumentFormat.OpenXml
         
         public override OpenXmlElement GetItem(int index)
         {
-            throw new ArgumentOutOfRangeException("index");
+            throw new ArgumentOutOfRangeException(nameof(index));
         }
 
         public override int Count

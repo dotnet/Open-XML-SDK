@@ -126,7 +126,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     return "image/x-wmf";
 
                 default:
-                    throw new ArgumentOutOfRangeException("imageType");
+                    throw new ArgumentOutOfRangeException(nameof(imageType));
             }
         }
 
@@ -208,7 +208,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 case MailMergeRecipientDataPartType.MsWordMailMergeRecipientData:
                     return "application/vnd.ms-word.mailMergeRecipientData+xml";
                 default:
-                    throw new ArgumentOutOfRangeException("mailMergeRecipientDataPartType");
+                    throw new ArgumentOutOfRangeException(nameof(mailMergeRecipientDataPartType));
             }
         }
 
@@ -257,7 +257,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     return "application/vnd.openxmlformats-officedocument.obfuscatedFont";
 
                 default:
-                    throw new ArgumentOutOfRangeException("fontType");
+                    throw new ArgumentOutOfRangeException(nameof(fontType));
             }
         }
 
@@ -313,7 +313,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     return "application/xml";
 
                 default:
-                    throw new ArgumentOutOfRangeException("partType");
+                    throw new ArgumentOutOfRangeException(nameof(partType));
             }
         }
 
@@ -374,7 +374,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     return "image/x-wmf";
 
                 default:
-                    throw new ArgumentOutOfRangeException("imageType");
+                    throw new ArgumentOutOfRangeException(nameof(imageType));
             }
         }
 
@@ -430,7 +430,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     return "application/vnd.ms-office.activeX";
 
                 default:
-                    throw new ArgumentOutOfRangeException("controlType");
+                    throw new ArgumentOutOfRangeException(nameof(controlType));
             }
         }
 
@@ -475,7 +475,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     return "application/vnd.ms-office.activeX";
 
                 default:
-                    throw new ArgumentOutOfRangeException("controlType");
+                    throw new ArgumentOutOfRangeException(nameof(controlType));
             }
         }
 
@@ -607,7 +607,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     return "text/html";
 
                 default:
-                    throw new ArgumentOutOfRangeException("partType");
+                    throw new ArgumentOutOfRangeException(nameof(partType));
             }
         }
 
@@ -707,7 +707,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     return "application/inkml+xml";
 
                 default:
-                    throw new ArgumentOutOfRangeException("partType");
+                    throw new ArgumentOutOfRangeException(nameof(partType));
             }
         }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using System;
 using System.Text;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +11,8 @@ using DocumentFormat.OpenXml.Presentation;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing.Diagrams;
 using DocumentFormat.OpenXml.Packaging;
-
-#if WB
-using DocumentFormat.OpenXml.WB.Tests;
-#endif
+using OxTest;
+using System.IO;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -21,7 +20,7 @@ namespace DocumentFormat.OpenXml.Tests
     /// Summary description for BugRegressionTest
     /// </summary>
     
-    public class BugRegressionTest
+    public class BugRegressionTest : OpenXmlDomTestBase
     {
         /// <summary>
         ///Constructor.
@@ -33,45 +32,23 @@ namespace DocumentFormat.OpenXml.Tests
             //
         }
 
-        private TestContext testContextInstance;
+        //private TestContext testContextInstance;
 
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-
-        #region Additional test attributes
-        //
-        // You can use the following additional attributes as you write your tests:
-        //
-        // Use ClassInitialize to run code before running the first test in the class
-        // [ClassInitialize()]
-        // public static void MyClassInitialize(TestContext testContext) { }
-        //
-        // Use ClassCleanup to run code after all tests in a class have run
-        // [ClassCleanup()]
-        // public static void MyClassCleanup() { }
-        //
-        // Use TestInitialize to run code before running each test 
-        // [TestInitialize()]
-        // public void MyTestInitialize() { }
-        //
-        // Use TestCleanup to run code after each test has run
-        // [TestCleanup()]
-        // public void MyTestCleanup() { }
-        //
-        #endregion
+        ///// <summary>
+        /////Gets or sets the test context which provides
+        /////information about and functionality for the current test run.
+        /////</summary>
+        //public TestContext TestContext
+        //{
+        //    get
+        //    {
+        //        return testContextInstance;
+        //    }
+        //    set
+        //    {
+        //        testContextInstance = value;
+        //    }
+        //}
 
         /// <summary>
         /// Regress OpenXmlValidator bugs when validating against Office2007.
@@ -79,6 +56,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validator2007BugRegressionTest()
         {
+            this.MyTestInitialize(TestContext.GetCurrentMethod());
+
             OpenXmlValidator validator = new OpenXmlValidator(FileFormatVersions.Office2007);
 
             Bug423998(validator);
@@ -104,6 +83,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validator2010BugRegressionTest()
         {
+            this.MyTestInitialize(TestContext.GetCurrentMethod());
+
             OpenXmlValidator validator = new OpenXmlValidator(FileFormatVersions.Office2010);
 
             Bug662644(validator);
@@ -457,30 +438,11 @@ namespace DocumentFormat.OpenXml.Tests
         
         #endregion
 
-        //[Fact]
-        //public void Bug520767()
-        //{
-        //    string file = "temp.xlxs";
-        //    CopyFileStream(TestFileStreams.vmldrawingroot, file);
-        //    using (SpreadsheetDocument sd = SpreadsheetDocument.Open(file, false))
-        //    {
-        //        foreach (WorksheetPart ws in sd.WorkbookPart.WorksheetParts)
-        //        {
-        //            if (ws.VmlDrawingParts.Count() > 0)
-        //            {
-        //                VmlDrawingPart part = ws.VmlDrawingParts.First();
-        //                Assert.Equal(5, part.VmlDrawingRoot.ChildElements.Count);
-                        
-        //                OpenXmlValidator validator = new OpenXmlValidator();
-        //                var errors = validator.Validate(part);
-        //                Assert.Equal(0, errors.Count());
-        //            }
-        //        }
-        //    }
-        //}
-
         private void CopyFileStream(byte[] srcBuffer, string fileName)
         {
+            FileInfo fi = new FileInfo(fileName);
+            if (!fi.Directory.Exists)
+                fi.Directory.Create();
             using (var target = System.IO.File.Create(fileName))
             {
                 using (var src = new System.IO.MemoryStream(srcBuffer, false))
@@ -496,6 +458,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug448241()
         {
+            this.MyTestInitialize(TestContext.GetCurrentMethod());
             DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault tablecellmar = new DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault();
             var wrongChild = tablecellmar.AppendChild(new DocumentFormat.OpenXml.Wordprocessing.LeftMargin());
             var leftmar = tablecellmar.TableCellLeftMargin;
@@ -546,31 +509,14 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(correctBg, shapeTaget.BackgroundAnimation);
         }
 
-        //[Fact]
-        //public void Bug537826()
-        //{
-        //    string vmldrawingXml = "<xml xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">" +
-        //                            "<o:shapelayout v:ext=\"edit\"><o:idmap v:ext=\"edit\" data=\"1\"/></o:shapelayout></xml>";
-
-        //    using (var stream = new System.IO.MemoryStream(Encoding.UTF8.GetBytes(vmldrawingXml)))
-        //    {
-        //        using (OpenXmlReader reader = OpenXmlReader.Create(stream))
-        //        {
-        //            reader.Read();
-        //            Assert.Same(typeof(DocumentFormat.OpenXml.Vml.VmlDrawingRoot), reader.ElementType);
-        //            var elem = reader.LoadCurrentElement();
-        //            Assert.True(elem is DocumentFormat.OpenXml.Vml.VmlDrawingRoot); // Assert fails here.
-        //        }
-        //    }
-        //}
-
         /// <summary>
         ///Bug396358
         ///</summary>
         [Fact]
         public void Bug396358()
         {
-            string file = "temp.xlxs";
+            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            string file = Path.Combine(TestUtil.TestResultsDirectory, this.TestClassName, Guid.NewGuid().ToString().Replace("-", "") + ".xlsx");
             CopyFileStream(TestFileStreams.mailmerge, file);
             using (WordprocessingDocument doc = WordprocessingDocument.Open(file, true))
             {
@@ -603,7 +549,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug537858()
         {
-            string file = "temp.xlxs";
+            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            string file = Path.Combine(TestUtil.TestResultsDirectory, this.TestClassName, Guid.NewGuid().ToString().Replace("-", "") + ".xlsx");
             CopyFileStream(TestFileStreams.animation, file);
             OpenSettings s = new OpenSettings();
             s.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007);
@@ -623,6 +570,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug544244()
         {
+            this.MyTestInitialize(TestContext.GetCurrentMethod());
             var pageMargins = new DocumentFormat.OpenXml.Spreadsheet.PageMargins();
             pageMargins.Header = new DoubleValue();
             pageMargins.Header.InnerText = "0.51200000000000001";
@@ -640,6 +588,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug665268()
         {
+            this.MyTestInitialize(TestContext.GetCurrentMethod());
             var comment = new DocumentFormat.OpenXml.Wordprocessing.Comment();
             comment.Date = new DateTimeValue();
             comment.Date.InnerText = "2007-04-24T15:42:11.037";

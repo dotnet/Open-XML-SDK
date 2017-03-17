@@ -30,6 +30,7 @@ using System.Xml.Linq;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using Xunit;
+using OxTest;
 using Text = DocumentFormat.OpenXml.Wordprocessing.Text;
 
 namespace DocumentFormat.OpenXml.Tests
@@ -37,48 +38,60 @@ namespace DocumentFormat.OpenXml.Tests
     [SuppressMessage("ReSharper", "UnusedMember.Global")]
     public class SaveAndCloneFixture : BaseFixture
     {
+
+        private static string s_SubDirectory = "SaveAndClone";
+
+        private static string TestResultsDirectory
+        {
+            get
+            {
+                return Path.Combine(TestUtil.TestResultsDirectory, s_SubDirectory);
+            }
+        }
+
         private const string DirectoryPath = "SaveAndClone";
 
-        private const string DocumentPath = DirectoryPath + "\\Document.docx";
-        private const string PresentationPath = DirectoryPath + "\\Presentation.pptx";
-        private const string SpreadsheetPath = DirectoryPath + "\\Spreadsheet.xlsx";
+        private static readonly string DocumentPath = Path.Combine(DirectoryPath, "Document.docx");
+        private static readonly string PresentationPath = Path.Combine(DirectoryPath, "Presentation.pptx");
+        private static readonly string SpreadsheetPath = Path.Combine(DirectoryPath, "Spreadsheet.xlsx");
 
-        private const string DocPropertiesPath = DirectoryPath + "\\DocProperties.xml";
+        private static readonly string DocPropertiesPath = Path.Combine(DirectoryPath, "DocProperties.xml");
 
         /// <summary>
         /// Creates a new instance of this test fixture, registering our test folder
         /// with the base fixture for cleanup after testing.
         /// </summary>
         public SaveAndCloneFixture()
-            : base(DirectoryPath)
+            : base(TestResultsDirectory)
         {
-            Directory.CreateDirectory(DirectoryPath);
+            Directory.CreateDirectory(TestResultsDirectory);
 
-            File.Copy(GetTestFilePath(DocumentPath), DocumentPath, true);
-            File.Copy(GetTestFilePath(PresentationPath), PresentationPath, true);
-            File.Copy(GetTestFilePath(SpreadsheetPath), SpreadsheetPath, true);
+            File.Copy(GetTestFilePath(DocumentPath), Path.Combine(TestUtil.TestResultsDirectory, DocumentPath), true);
+            File.Copy(GetTestFilePath(PresentationPath), Path.Combine(TestUtil.TestResultsDirectory, PresentationPath), true);
+            File.Copy(GetTestFilePath(SpreadsheetPath), Path.Combine(TestUtil.TestResultsDirectory, SpreadsheetPath), true);
 
-            File.Copy(GetTestFilePath(DocPropertiesPath), DocPropertiesPath, true);
+            File.Copy(GetTestFilePath(DocPropertiesPath), Path.Combine(TestUtil.TestResultsDirectory, DocPropertiesPath), true);
 
-            PrepareWordprocessingDocument(DocumentPath);
-            PreparePresentationDocument(PresentationPath);
-            PrepareSpreadsheetDocument(SpreadsheetPath);
+            PrepareWordprocessingDocument(Path.Combine(TestUtil.TestResultsDirectory, DocumentPath));
+            PreparePresentationDocument(Path.Combine(TestUtil.TestResultsDirectory, PresentationPath));
+            PrepareSpreadsheetDocument(Path.Combine(TestUtil.TestResultsDirectory, SpreadsheetPath));
         }
 
         [Fact]
         public void CanCloneDocument()
         {
-            using (var source = WordprocessingDocument.Open(DocumentPath, false))
+            string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
+            using (var source = WordprocessingDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, DocumentPath), false))
             using (var clone = (WordprocessingDocument) source.Clone())
             {
                 var body = clone.MainDocumentPart.Document.Body;
                 body.InsertBefore(new Paragraph(new Run(new Text("Hello World"))), body.FirstChild);
-                clone.SaveAs(DocumentPath + ".Default.docx").Close();
+                clone.SaveAs(file).Close();
             }
 
             try
             {
-                CheckWordprocessingDocument(DocumentPath, DocumentPath + ".Default.docx");
+                CheckWordprocessingDocument(DocumentPath, file);
             }
             catch (Exception)
             {
@@ -93,32 +106,35 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanDoFileBasedClone()
         {
+            string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
             // Test WordprocessingDocument.
-            using (var source = WordprocessingDocument.Open(DocumentPath, false))
-            using (source.Clone(DocumentPath + ".File.docx", false))
+            using (var source = WordprocessingDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, DocumentPath), false))
+            using (source.Clone(file, false))
             {
-                CheckWordprocessingDocument(DocumentPath, DocumentPath + ".File.docx");
+                CheckWordprocessingDocument(Path.Combine(TestUtil.TestResultsDirectory, DocumentPath), file);
             }
 
+            string file2 = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
             // Test SpreadsheetDocument.
-            using (var source = SpreadsheetDocument.Open(SpreadsheetPath, false))
-            using (source.Clone(SpreadsheetPath + ".File.xlsx", false))
+            using (var source = SpreadsheetDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, SpreadsheetPath), false))
+            using (source.Clone(file2, false))
             {
-                CheckSpreadsheetDocument(SpreadsheetPath, SpreadsheetPath + ".File.xlsx");
+                CheckSpreadsheetDocument(Path.Combine(TestUtil.TestResultsDirectory, SpreadsheetPath), file2);
             }
 
+            string file3 = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
             // Test PresentationDocument.
-            using (var source = PresentationDocument.Open(PresentationPath, false))
-            using (source.Clone(PresentationPath + ".File.pptx", false))
+            using (var source = PresentationDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, PresentationPath), false))
+            using (source.Clone(file3, false))
             {
-                CheckPresentationDocument(PresentationPath, PresentationPath + ".File.pptx");
+                CheckPresentationDocument(Path.Combine(TestUtil.TestResultsDirectory, PresentationPath), file3);
             }
         }
 
         [Fact]
         public void CanDoMultithreadedMultipleCloning()
         {
-            var source = WordprocessingDocument.Open(DocumentPath, true);
+            var source = WordprocessingDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, DocumentPath), true);
             Parallel.For(0, 10, index =>
             {
                 using (var clone1 = (WordprocessingDocument) source.Clone())
@@ -127,7 +143,7 @@ namespace DocumentFormat.OpenXml.Tests
                     body1.GetFirstChild<Paragraph>()
                         .InsertBeforeSelf(new Paragraph(new Run(new Text("Clone 1"))));
 
-                    using (var clone2 = (WordprocessingDocument) clone1.SaveAs(Path.Combine(DirectoryPath, "Test" + index + ".docx")))
+                    using (var clone2 = (WordprocessingDocument) clone1.SaveAs(Path.Combine(TestResultsDirectory, "Test" + index + ".docx")))
                     {
                         var body2 = clone2.MainDocumentPart.Document.Body;
                         body2.GetFirstChild<Paragraph>()
@@ -155,7 +171,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanDoMultithreadedSimpleCloning()
         {
-            var source = WordprocessingDocument.Open(DocumentPath, true);
+            var source = WordprocessingDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, DocumentPath), true);
             Parallel.For(0, 10, index =>
             {
                 using (var clone = (WordprocessingDocument) source.Clone())
@@ -170,11 +186,11 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanWildlyCloneAndFlush()
         {
-            var directoryName = Path.GetDirectoryName(DocumentPath) ?? string.Empty;
+            var directoryName = Path.GetDirectoryName(Path.Combine(TestUtil.TestResultsDirectory, DocumentPath)) ?? string.Empty;
             var fileName = Path.GetFileNameWithoutExtension(DocumentPath);
             var destDocumentPath = Path.Combine(directoryName, fileName + "_Flushing.docx");
 
-            var wordDoc = WordprocessingDocument.Open(DocumentPath, false);
+            var wordDoc = WordprocessingDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, DocumentPath), false);
             Parallel.For(0, 10, index =>
             {
                 using (var clone = (WordprocessingDocument) wordDoc.Clone())
@@ -195,7 +211,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var part = clone.MainDocumentPart.AddCustomXmlPart(CustomXmlPartType.CustomXml);
                     using (var stream = part.GetStream())
                     using (var xw = XmlWriter.Create(stream))
-                        XElement.Load(DocPropertiesPath).WriteTo(xw);
+                        XElement.Load(Path.Combine(TestUtil.TestResultsDirectory, DocPropertiesPath)).WriteTo(xw);
 
                     // Flush the clone (the removal of which fixed the original error).
                     clone.Package.Flush();
@@ -216,35 +232,35 @@ namespace DocumentFormat.OpenXml.Tests
         public void CanDoPackageBasedCloning()
         {
             // Test WordprocessingDocument.
-            using (var source = WordprocessingDocument.Open(DocumentPath, true))
-            using (var package = Package.Open(DocumentPath + ".Package.docx", FileMode.Create))
+            using (var source = WordprocessingDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, DocumentPath), true))
+            using (var package = Package.Open(Path.Combine(TestUtil.TestResultsDirectory, DocumentPath + ".Package.docx"), FileMode.Create))
             {
                 source.Clone(package).Close();
             }
-            CheckWordprocessingDocument(DocumentPath, DocumentPath + ".Package.docx");
+            CheckWordprocessingDocument(Path.Combine(TestUtil.TestResultsDirectory, DocumentPath), Path.Combine(TestUtil.TestResultsDirectory, DocumentPath + ".Package.docx"));
 
             // Test SpreadsheetDocument.
-            using (var source = SpreadsheetDocument.Open(SpreadsheetPath, true))
-            using (var package = Package.Open(SpreadsheetPath + ".Package.xlsx", FileMode.Create))
+            using (var source = SpreadsheetDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, SpreadsheetPath), true))
+            using (var package = Package.Open(Path.Combine(TestUtil.TestResultsDirectory, SpreadsheetPath + ".Package.xlsx"), FileMode.Create))
             {
                 source.Clone(package).Close();
             }
-            CheckSpreadsheetDocument(SpreadsheetPath, SpreadsheetPath + ".Package.xlsx");
+            CheckSpreadsheetDocument(Path.Combine(TestUtil.TestResultsDirectory, SpreadsheetPath), Path.Combine(TestUtil.TestResultsDirectory, SpreadsheetPath + ".Package.xlsx"));
 
             // Test PresentationDocument.
-            using (var source = PresentationDocument.Open(PresentationPath, true))
-            using (var package = Package.Open(PresentationPath + ".Package.pptx", FileMode.Create))
+            using (var source = PresentationDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, PresentationPath), true))
+            using (var package = Package.Open(Path.Combine(TestUtil.TestResultsDirectory, PresentationPath + ".Package.pptx"), FileMode.Create))
             {
                 source.Clone(package).Close();
             }
-            CheckPresentationDocument(PresentationPath, PresentationPath + ".Package.pptx");
+            CheckPresentationDocument(Path.Combine(TestUtil.TestResultsDirectory, PresentationPath), Path.Combine(TestUtil.TestResultsDirectory, PresentationPath + ".Package.pptx"));
         }
 
         [Fact]
         public void CanSave()
         {
             using (var memoryStream = new MemoryStream())
-            using (var source = WordprocessingDocument.Open(DocumentPath, true))
+            using (var source = WordprocessingDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, DocumentPath), true))
             using (var dest = (WordprocessingDocument) source.Clone(memoryStream))
             {
                 var document = dest.MainDocumentPart.Document;
@@ -276,24 +292,24 @@ namespace DocumentFormat.OpenXml.Tests
             // But let's pretend we didn't know that.
 
             // Test WordprocessingDocument.
-            using (var source = WordprocessingDocument.Open(DocumentPath, false))
-            using (source.SaveAs(DocumentPath + ".SaveAs.docx"))
+            using (var source = WordprocessingDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, DocumentPath), false))
+            using (source.SaveAs(Path.Combine(TestUtil.TestResultsDirectory, DocumentPath + ".SaveAs.docx")))
             {
-                CheckWordprocessingDocument(DocumentPath, DocumentPath + ".SaveAs.docx");
+                CheckWordprocessingDocument(Path.Combine(TestUtil.TestResultsDirectory, DocumentPath), Path.Combine(TestUtil.TestResultsDirectory, DocumentPath + ".SaveAs.docx"));
             }
 
             // Test SpreadsheetDocument.
-            using (var source = SpreadsheetDocument.Open(SpreadsheetPath, false))
-            using (source.SaveAs(SpreadsheetPath + ".SaveAs.xlsx"))
+            using (var source = SpreadsheetDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, SpreadsheetPath), false))
+            using (source.SaveAs(Path.Combine(TestUtil.TestResultsDirectory, SpreadsheetPath + ".SaveAs.xlsx")))
             {
-                CheckSpreadsheetDocument(SpreadsheetPath, SpreadsheetPath + ".SaveAs.xlsx");
+                CheckSpreadsheetDocument(Path.Combine(TestUtil.TestResultsDirectory, SpreadsheetPath), Path.Combine(TestUtil.TestResultsDirectory, SpreadsheetPath + ".SaveAs.xlsx"));
             }
 
             // Test PresentationDocument.
-            using (var source = PresentationDocument.Open(PresentationPath, false))
-            using (source.SaveAs(PresentationPath + ".SaveAs.pptx"))
+            using (var source = PresentationDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, PresentationPath), false))
+            using (source.SaveAs(Path.Combine(TestUtil.TestResultsDirectory, PresentationPath + ".SaveAs.pptx")))
             {
-                CheckPresentationDocument(PresentationPath, PresentationPath + ".SaveAs.pptx");
+                CheckPresentationDocument(Path.Combine(TestUtil.TestResultsDirectory, PresentationPath), Path.Combine(TestUtil.TestResultsDirectory, PresentationPath + ".SaveAs.pptx"));
             }
         }
 
@@ -301,34 +317,34 @@ namespace DocumentFormat.OpenXml.Tests
         public void CanDoStreamBasedCloning()
         {
             // Test WordprocessingDocument.
-            using (var source = WordprocessingDocument.Open(DocumentPath, true))
+            using (var source = WordprocessingDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, DocumentPath), true))
             using (var memoryStream = new MemoryStream())
             using (source.Clone(memoryStream, true))
-            using (var fileStream = new FileStream(DocumentPath + ".Stream.docx", FileMode.Create))
+            using (var fileStream = new FileStream(Path.Combine(TestUtil.TestResultsDirectory, DocumentPath + ".Stream.docx"), FileMode.Create))
             {
                 memoryStream.WriteTo(fileStream);
             }
-            CheckWordprocessingDocument(DocumentPath, DocumentPath + ".Stream.docx");
+            CheckWordprocessingDocument(Path.Combine(TestUtil.TestResultsDirectory, DocumentPath), Path.Combine(TestUtil.TestResultsDirectory, DocumentPath + ".Stream.docx"));
 
             // Test SpreadsheetDocument.
-            using (var source = SpreadsheetDocument.Open(SpreadsheetPath, true))
+            using (var source = SpreadsheetDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, SpreadsheetPath), true))
             using (var memoryStream = new MemoryStream())
             using (source.Clone(memoryStream, true))
-            using (var fileStream = new FileStream(SpreadsheetPath + ".Stream.xlsx", FileMode.Create))
+            using (var fileStream = new FileStream(Path.Combine(TestUtil.TestResultsDirectory, SpreadsheetPath + ".Stream.xlsx"), FileMode.Create))
             {
                 memoryStream.WriteTo(fileStream);
             }
-            CheckSpreadsheetDocument(SpreadsheetPath, SpreadsheetPath + ".Stream.xlsx");
+            CheckSpreadsheetDocument(Path.Combine(TestUtil.TestResultsDirectory, SpreadsheetPath), Path.Combine(TestUtil.TestResultsDirectory, SpreadsheetPath + ".Stream.xlsx"));
 
             // Test PresentationDocument.
-            using (var source = PresentationDocument.Open(PresentationPath, true))
+            using (var source = PresentationDocument.Open(Path.Combine(TestUtil.TestResultsDirectory, PresentationPath), true))
             using (var memoryStream = new MemoryStream())
             using (source.Clone(memoryStream, true))
-            using (var fileStream = new FileStream(PresentationPath + ".Stream.pptx", FileMode.Create))
+            using (var fileStream = new FileStream(Path.Combine(TestUtil.TestResultsDirectory, PresentationPath + ".Stream.pptx"), FileMode.Create))
             {
                 memoryStream.WriteTo(fileStream);
             }
-            CheckPresentationDocument(PresentationPath, PresentationPath + ".Stream.pptx");
+            CheckPresentationDocument(Path.Combine(TestUtil.TestResultsDirectory, PresentationPath), Path.Combine(TestUtil.TestResultsDirectory, PresentationPath + ".Stream.pptx"));
         }
 
         /// <summary>

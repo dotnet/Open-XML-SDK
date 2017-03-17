@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using System;
 using System.IO;
 using System.IO.Packaging;
 using System.Linq;
@@ -9,19 +10,17 @@ using P = DocumentFormat.OpenXml.Presentation;
 using D = DocumentFormat.OpenXml.Drawing;
 using A = DocumentFormat.OpenXml.Drawing;
 using PIC = DocumentFormat.OpenXml.Drawing.Pictures;
+using OxTest;
 
 namespace DocumentFormat.OpenXml.Tests
 {
     public class PptxTests01
     {
-        public static string s_TestFileLocation = "../../../TestFiles/";
-
-
         [Fact]
         public void P007_PptxCreation_Package_Settings()
         {
-            var fiSource = new FileInfo(Path.Combine(s_TestFileLocation, "Presentation.pptx"));
-            var fiCopy = new FileInfo(Path.Combine(TestUtil.TempDir.FullName, Guid.NewGuid().ToString() + ".pptx"));
+            var fiSource = new FileInfo(Path.Combine(TestUtil.TestFilesDir, "Presentation.pptx"));
+            var fiCopy = new FileInfo(Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx"));
             File.Copy(fiSource.FullName, fiCopy.FullName);
             using (Package package = Package.Open(fiCopy.FullName, FileMode.Open, FileAccess.ReadWrite))
             {
@@ -41,8 +40,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void P006_PresentationDocument_Open()
         {
-            var fiSource = new FileInfo(Path.Combine(s_TestFileLocation, "Presentation.pptx"));
-            var fiCopy = new FileInfo(Path.Combine(TestUtil.TempDir.FullName, Guid.NewGuid().ToString() + ".pptx"));
+            var fiSource = new FileInfo(Path.Combine(TestUtil.TestFilesDir, "Presentation.pptx"));
+            var fiCopy = new FileInfo(Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx"));
             File.Copy(fiSource.FullName, fiCopy.FullName);
             OpenSettings openSettings = new OpenSettings();
             openSettings.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013);
@@ -59,8 +58,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void P005_PptxCreation_Package_Settings()
         {
-            var fiSource = new FileInfo(Path.Combine(s_TestFileLocation, "Presentation.pptx"));
-            var fiCopy = new FileInfo(Path.Combine(TestUtil.TempDir.FullName, Guid.NewGuid().ToString() + ".pptx"));
+            var fiSource = new FileInfo(Path.Combine(TestUtil.TestFilesDir, "Presentation.pptx"));
+            var fiCopy = new FileInfo(Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx"));
             File.Copy(fiSource.FullName, fiCopy.FullName);
             using (Package package = Package.Open(fiCopy.FullName, FileMode.Open, FileAccess.ReadWrite))
             {
@@ -80,8 +79,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void P004_SpreadsheetDocument_Open()
         {
-            var fiSource = new FileInfo(Path.Combine(s_TestFileLocation, "Presentation.pptx"));
-            var fiCopy = new FileInfo(Path.Combine(TestUtil.TempDir.FullName, Guid.NewGuid().ToString() + ".pptx"));
+            var fiSource = new FileInfo(Path.Combine(TestUtil.TestFilesDir, "Presentation.pptx"));
+            var fiCopy = new FileInfo(Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx"));
             File.Copy(fiSource.FullName, fiCopy.FullName);
             OpenSettings openSettings = new OpenSettings();
             openSettings.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013);
@@ -353,7 +352,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void P002_Pptx_DeleteAdd_CoreExtendedProperties()
         {
             var docName = "Presentation.pptx";
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+            var ba = File.ReadAllBytes(Path.Combine(TestUtil.TestFilesDir, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -391,7 +390,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         private static void PptxValidationHelper(string docName, int expectedErrorCount)
         {
-            var ba = File.ReadAllBytes(s_TestFileLocation + docName);
+            var ba = File.ReadAllBytes(Path.Combine(TestUtil.TestFilesDir, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using System;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
@@ -27,11 +28,12 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
     using DocumentFormat.OpenXml.Tests.TaskLibraries;
     using DocumentFormat.OpenXml.Tests.TaskLibraries.DataStorage;
     using DocumentFormat.OpenXml.Tests.WebExtensionClass;
+    using OxTest;
 
     /// <summary>
     /// Test for Web Extension elements
     /// </summary>
-    
+
     public class WebExtensionTest : OpenXmlTestBase
     {
         #region Data members
@@ -45,8 +47,6 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
         /// </summary>
         public WebExtensionTest()
         {
-            // Set the flag to notify MSTest of Ots Log failure
-            this.OtsLogFailureToFailTest = true;
             this.dayOfTest = DateTime.Today.Day;
         }
         #endregion
@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
 
                 // Verify that OOXML SDK can write WebExtension Elements
                 string fixedId = "OSM Test - " + this.dayOfTest.ToString();
-                this.VerifyWriteRead<WebExtensionPart>( entry.FilePath,
+                this.VerifyWriteRead<WebExtensionPart>(entry.FilePath,
                                                         (wep) =>
                                                         {
                                                             Log.Comment("Fixing Reference ID to `{0}`", fixedId);
@@ -118,23 +118,16 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
                     // Instanciating a validator object for validating invalid documents
                     OpenXmlValidator validator = new OpenXmlValidator(FileFormatVersions.Office2013);
 
-                    try
-                    {
-                        // Verify the number of validation errrors
-                        Log.VerifyTrue(validator.Validate(package).Count() > 0, "Verifying the number of validation errors...Errors = {0}", validator.Validate(package).Count());
+                    // Verify the number of validation errrors
+                    Log.VerifyTrue(validator.Validate(package).Count() > 0, "Verifying the number of validation errors...Errors = {0}", validator.Validate(package).Count());
 
-                        foreach (ValidationErrorInfo error in validator.Validate(package))
-                        {
-                            // Verify an error type
-                            Log.VerifyTrue((error.ErrorType.ToString() == "Schema"), "Verifying an error type...");
-                            Log.Comment("Error Type = " + error.ErrorType);
-                            Log.Comment("Error Node = " + error.Node);
-                            Log.Comment("Error Parth = " + error.Path);
-                        }
-                    }
-                    catch (Exception e)
+                    foreach (ValidationErrorInfo error in validator.Validate(package))
                     {
-                        Log.Fail(e.Message);
+                        // Verify an error type
+                        Log.VerifyTrue((error.ErrorType.ToString() == "Schema"), "Verifying an error type...");
+                        Log.Comment("Error Type = " + error.ErrorType);
+                        Log.Comment("Error Node = " + error.Node);
+                        Log.Comment("Error Parth = " + error.Path);
                     }
                 }
 
@@ -148,25 +141,23 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
             this.MyTestInitialize(TestContext.GetCurrentMethod());
 
             // create an Excel file containing a fully fledged WebExtension here:
-            string filePath = this.GetTestFilePath("WebExtensionFullFledgeValidation.xlsx");
+            string filePath = Path.Combine(TestUtil.TestResultsDirectory, "WebExtensionFullFledgeValidation.xlsx");
             WebExtensionData gen = new WebExtensionData();
             gen.CreatePackage(filePath);
 
-            {
-                Log.BeginGroup(filePath);
+            Log.BeginGroup(filePath);
 
-                // make sure the file created is valid
-                this.VerifyValidator(filePath);
+            // make sure the file created is valid
+            this.VerifyValidator(filePath);
 
-                // Verify that OOXML SDK can write WebExtension section
-                this.VerifyWriteRead<WebExtensionPart>(filePath, (wep) => { WalkWep(wep, StringValueFixer, Int32ValueFixer); },
-                                                                    (wep) => { WalkWep(wep, StringValueChecker, Int32ValueChecker); });
+            // Verify that OOXML SDK can write WebExtension section
+            this.VerifyWriteRead<WebExtensionPart>(filePath, (wep) => { WalkWep(wep, StringValueFixer, Int32ValueFixer); },
+                                                                (wep) => { WalkWep(wep, StringValueChecker, Int32ValueChecker); });
 
-                // Verify that OOXML SDK can write Taskpanes section
-                this.VerifyWriteRead<Wetp.Taskpanes>(filePath, (tps) => { Walker_WebExtentionPane(tps, StringValueFixer, DoubleValueFixer, UInt32ValueFixer, BooleanValueFixer); },
-                                                                (tps) => { Walker_WebExtentionPane(tps, StringValueChecker, DoubleValueChecker, UInt32ValueChecker, BooleanValueChecker); });
-                Log.EndGroup(filePath);
-            }
+            // Verify that OOXML SDK can write Taskpanes section
+            this.VerifyWriteRead<Wetp.Taskpanes>(filePath, (tps) => { Walker_WebExtentionPane(tps, StringValueFixer, DoubleValueFixer, UInt32ValueFixer, BooleanValueFixer); },
+                                                            (tps) => { Walker_WebExtentionPane(tps, StringValueChecker, DoubleValueChecker, UInt32ValueChecker, BooleanValueChecker); });
+            Log.EndGroup(filePath);
         }
 
 
@@ -183,7 +174,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
         /// <param name="iv">The current value</param>
         /// <returns></returns>
         delegate T TypedValueFoo<T>(T iv);
-        
+
         // append the today's day: [1..31]
         private StringValue StringValueFixer(StringValue sv)
         {
@@ -367,34 +358,27 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
             FileInfo fi = GetTestFileOne(filePath).GetCopy();
             Log.VerifyNotNull(fi, "Test File is copied successfully.");
 
-            try
+            using (OpenXmlPackage package = OpenXmlDomTestExtension.OpenPackage(fi, false))
             {
-                using (OpenXmlPackage package = OpenXmlDomTestExtension.OpenPackage(fi, false))
+                Log.VerifyNotNull(package, "File is opened successfully.");
+
+                var xl = package as SpreadsheetDocument;
+
+                foreach (var wsPart in xl.WorkbookPart.WorksheetParts)
                 {
-                    Log.VerifyNotNull(package, "File is opened successfully.");
-
-                    var xl = package as SpreadsheetDocument;
-
-                    foreach (var wsPart in xl.WorkbookPart.WorksheetParts)
+                    // Try to get WebExtensionPart
+                    foreach (WebExtensionPart we in wsPart.DrawingsPart.WebExtensionParts)
                     {
-                        // Try to get WebExtensionPart
-                        foreach (WebExtensionPart we in wsPart.DrawingsPart.WebExtensionParts)
-                        {
-                            Log.VerifyValue(we.WebExtension.WebExtensionStoreReference.Version.ToString(), "1.0", "Verifying WebExtension.OsfWebExtensionReference.Version");
-                            Log.VerifyValue(we.WebExtension.LocalName, "webextension", "Verifying WebExtension.LocalName");
-                        }
+                        Log.VerifyValue(we.WebExtension.WebExtensionStoreReference.Version.ToString(), "1.0", "Verifying WebExtension.OsfWebExtensionReference.Version");
+                        Log.VerifyValue(we.WebExtension.LocalName, "webextension", "Verifying WebExtension.LocalName");
                     }
                 }
-            }
-            catch (Exception e)
-            {
-                Log.Fail("File = {0}, Message = {1}", filePath, e.Message);
             }
         }
 
         delegate void WebExtentionPartHandler(WebExtensionPart wep);
         delegate void ElementHandler<T>(T wep);
-        
+
         /// <summary>
         /// The template class to faclilitate the enumeration over the elemnts of different section of a SpreadsheetDocument.
         /// Currently supported types are:
@@ -451,44 +435,37 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
             FileInfo fi = GetTestFileOne(filePath).GetCopy();
             Log.VerifyNotNull(fi, "Test file is copied successfully into {0}", fi.FullName);
 
-            try
+            // Open OOXML File with writable mode
+            using (OpenXmlPackage package = OpenXmlDomTestExtension.OpenPackage(fi, true))
             {
-                // Open OOXML File with writable mode
-                using (OpenXmlPackage package = OpenXmlDomTestExtension.OpenPackage(fi, true))
+                Log.VerifyNotNull(package, "The file is opened for writing");
+
+                // Cast package to SpreadsheetDocument
+                using (var xl = package as SpreadsheetDocument)
                 {
-                    Log.VerifyNotNull(package, "The file is opened for writing");
-
-                    // Cast package to SpreadsheetDocument
-                    using (var xl = package as SpreadsheetDocument)
+                    foreach (T elem in new SectionFetcher<T>(xl))
                     {
-                        foreach (T elem in new SectionFetcher<T>(xl))
-                        {
-                            elemFixer(elem);
-                        }
-                    }
-                }
-
-                // Re-open the file just saved above with read-only mode
-                using (OpenXmlPackage package = OpenXmlDomTestExtension.OpenPackage(fi, false))
-                {
-                    Log.VerifyNotNull(package, "The file is re-opened read-only");
-
-                    using (var xl = package as SpreadsheetDocument)
-                    {
-                        foreach (T elem in new SectionFetcher<T>(xl))
-                        {
-                            elemTester(elem);
-                        }
+                        elemFixer(elem);
                     }
                 }
             }
-            catch (Exception e)
+
+            // Re-open the file just saved above with read-only mode
+            using (OpenXmlPackage package = OpenXmlDomTestExtension.OpenPackage(fi, false))
             {
-                Log.Fail("File = {0}, Message = {1}", filePath, e.Message);
+                Log.VerifyNotNull(package, "The file is re-opened read-only");
+
+                using (var xl = package as SpreadsheetDocument)
+                {
+                    foreach (T elem in new SectionFetcher<T>(xl))
+                    {
+                        elemTester(elem);
+                    }
+                }
             }
         }
-        
-        
+
+
         /// <summary>
         /// Verify that OOXML SDK can properly validate an OOXML file
         /// </summary>
@@ -499,33 +476,26 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
             FileInfo fi = GetTestFileOne(filePath).GetCopy();
             Log.VerifyNotNull(fi, "Test File is copied successfully.");
 
-            try
+            using (OpenXmlPackage package = OpenXmlDomTestExtension.OpenPackage(fi, true))
             {
-                using (OpenXmlPackage package = OpenXmlDomTestExtension.OpenPackage(fi, true))
+                Log.VerifyNotNull(package, "File is opened successfully.");
+
+                OpenXmlValidator validator = new OpenXmlValidator(FileFormatVersions.Office2013);
+
+                // Verify the number of validation errrors
+                Log.VerifyValue(validator.Validate(package).Count(), 0, "Verifying the number of validation errors...Errors = {0}", validator.Validate(package).Count());
+
+                if (validator.Validate(package).Count() != 0)
                 {
-                    Log.VerifyNotNull(package, "File is opened successfully.");
-
-                    OpenXmlValidator validator = new OpenXmlValidator(FileFormatVersions.Office2013);
-
-                    // Verify the number of validation errrors
-                    Log.VerifyValue(validator.Validate(package).Count(), 0, "Verifying the number of validation errors...Errors = {0}", validator.Validate(package).Count());
-
-                    if (validator.Validate(package).Count() != 0)
+                    foreach (ValidationErrorInfo error in validator.Validate(package))
                     {
-                        foreach (ValidationErrorInfo error in validator.Validate(package))
-                        {
-                            // List error information
-                            Log.Comment("*** Error: {0}", error.Description);
-                            Log.Comment("Type = " + error.ErrorType);
-                            Log.Comment("Node = " + error.Node);
-                            Log.Comment("Parth = " + error.Path);
-                        }
+                        // List error information
+                        Log.Comment("*** Error: {0}", error.Description);
+                        Log.Comment("Type = " + error.ErrorType);
+                        Log.Comment("Node = " + error.Node);
+                        Log.Comment("Parth = " + error.Path);
                     }
                 }
-            }
-            catch (Exception e)
-            {
-                Log.Fail("File = {0}, Message = {1}", filePath, e.Message);
             }
         }
         #endregion

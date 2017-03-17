@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,15 +10,20 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
     using DocumentFormat.OpenXml.Tests.TaskLibraries;
     using DocumentFormat.OpenXml.Tests.TaskLibraries.DataStorage;
     using DocumentFormat.OpenXml.Tests.SlicerClass;
+    using System.IO;
+    using OxTest;
 
     /// <summary>
     /// Test for Slicer elements
     /// </summary>
-    
+
     public class SlicerTest : OpenXmlTestBase
     {
-        private readonly string generateDocumentFilePath = "TestSlicerBase.xlsx";
-        private readonly string editeDocumentFilePath = "EditedSlicer.xlsx";
+        
+        //private readonly string generateDocumentFilePath = "TestSlicerBase.xlsx";
+        //private readonly string editeDocumentFilePath = "EditedSlicer.xlsx";
+        private readonly string generateDocumentFilePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
+        private readonly string editeDocumentFilePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
 
         #region Constructor
         /// <summary>
@@ -25,8 +31,6 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
         /// </summary>
         public SlicerTest()
         {
-            // Set the flag to notify MSTest of Ots Log failure
-            this.OtsLogFailureToFailTest = true;
         }
         #endregion
 
@@ -37,17 +41,10 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
         /// <param name="createFilePath">Create Excel file path</param>
         private void Initialize(string createFilePath)
         {
-            try
-            {
-                GeneratedDocument generatedDocument = new GeneratedDocument();
-                generatedDocument.CreatePackage(createFilePath);
+            GeneratedDocument generatedDocument = new GeneratedDocument();
+            generatedDocument.CreatePackage(createFilePath);
 
-                this.Log.Pass("Create Word file. File path=[{0}]", createFilePath);
-            }
-            catch (Exception e)
-            {
-                this.Log.Fail(string.Format(e.Message + ". :File path={0}", createFilePath));
-            }
+            this.Log.Pass("Create Word file. File path=[{0}]", createFilePath);
         }
 
         /// <summary>
@@ -69,21 +66,15 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
         public void Slicer01EditElement()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            try
-            {
-                string originalFilepath = this.GetTestFilePath(this.generateDocumentFilePath);
-                string editFilePath = this.GetTestFilePath(this.editeDocumentFilePath);
 
-                System.IO.File.Copy(originalFilepath, editFilePath, true);
+            string originalFilepath = this.GetTestFilePath(this.generateDocumentFilePath);
+            string editFilePath = this.GetTestFilePath(this.editeDocumentFilePath);
 
-                TestEntities testEntities = new TestEntities();
-                testEntities.EditElements(editFilePath, this.Log);
-                testEntities.VerifyElements(editFilePath, this.Log);
-            }
-            catch (Exception e)
-            {
-                this.Log.Fail(e.Message);
-            }
+            System.IO.File.Copy(originalFilepath, editFilePath, true);
+
+            TestEntities testEntities = new TestEntities();
+            testEntities.EditElements(editFilePath, this.Log);
+            testEntities.VerifyElements(editFilePath, this.Log);
         }
 
         #endregion

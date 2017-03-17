@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using System;
 using System.Text.RegularExpressions;
 using System.IO;
 using System.Xml;
@@ -16,7 +17,15 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         {
             if (false == table.ContainsKey(key))
             {
-                table.Add(key, new Regex(key, RegexOptions.Compiled));
+                try
+                {
+                    table.Add(key, new Regex(key, RegexOptions.Compiled));
+                }
+                catch (ArgumentException ae)
+                {
+                    if (!ae.Message.Contains("An item with the same key has already been added."))
+                        throw ae;
+                }
                 return table[key];
             }
             else
@@ -25,6 +34,8 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             }
         }
 
+        private static XmlDocument s_SafeListXDoc = null;
+        private static XmlNodeList safeItems = null;
 
         public static bool IsKnownIssue(string safeListPath, string filePath, string errorMessage)
         {
@@ -32,14 +43,20 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
 
             if (File.Exists(safeListFilePath) == true)
             {
-                XmlDocument doc = new XmlDocument();
-                doc.Load(safeListFilePath);
+                if (s_SafeListXDoc == null)
+                {
+                    s_SafeListXDoc = new XmlDocument();
+                    s_SafeListXDoc.Load(File.OpenRead(safeListFilePath));
+                    safeItems = s_SafeListXDoc.GetElementsByTagName("item");
+                }
 
-                XmlNodeList safeItems = doc.GetElementsByTagName("item");
                 foreach (XmlNode safeItem in safeItems)
                 {
                     // using ToUpper, so that I can avoid RegexOptions.IgnoreCase
-                    if (getCachedRegex(safeItem.Attributes["pathMatch"].Value.ToUpper(), pathMatches).IsMatch(filePath.ToUpper()))
+                    //if (getCachedRegex(safeItem.Attributes["pathMatch"].Value.ToUpper(), pathMatches).IsMatch(filePath.ToUpper()))
+                    var pathMatch = safeItem.Attributes["pathMatch"].Value.ToUpper();
+                    var upperName = filePath.ToUpper();
+                    if (getCachedRegex(pathMatch, pathMatches).IsMatch(upperName))
                     {
                         if (getCachedRegex(safeItem.Attributes["errMatch"].Value.ToUpper(), pathMatches).IsMatch(errorMessage.ToUpper()))
                         {

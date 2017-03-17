@@ -1,3 +1,4 @@
+// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 using DocumentFormat.OpenXml.Packaging;
 using Wetp = DocumentFormat.OpenXml.Office2013.WebExtentionPane;
 using DocumentFormat.OpenXml;
@@ -1057,17 +1058,19 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
         // Generates content of imagePart1.
         private void GenerateImagePart1Content(ImagePart imagePart1)
         {
-            System.IO.Stream data = GetBinaryDataStream(imagePart1Data);
-            imagePart1.FeedData(data);
-            data.Close();
+            using (System.IO.Stream data = GetBinaryDataStream(imagePart1Data))
+            {
+                imagePart1.FeedData(data);
+            }
         }
 
         // Generates content of imagePart2.
         private void GenerateImagePart2Content(ImagePart imagePart2)
         {
-            System.IO.Stream data = GetBinaryDataStream(imagePart2Data);
-            imagePart2.FeedData(data);
-            data.Close();
+            using (System.IO.Stream data = GetBinaryDataStream(imagePart2Data))
+            {
+                imagePart2.FeedData(data);
+            }
         }
 
         // Generates content of webExtensionPart4.
@@ -1263,9 +1266,10 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
         // Generates content of imagePart3.
         private void GenerateImagePart3Content(ImagePart imagePart3)
         {
-            System.IO.Stream data = GetBinaryDataStream(imagePart3Data);
-            imagePart3.FeedData(data);
-            data.Close();
+            using (System.IO.Stream data = GetBinaryDataStream(imagePart3Data))
+            {
+                imagePart3.FeedData(data);
+            }
         }
 
         // Generates content of webExtensionPart5.

@@ -9,12 +9,17 @@ using System.Collections.Specialized;
 using System.Text;
 using System.IO;
 using System.IO.Packaging;
-using System.Runtime.Serialization;
 using System.Globalization;
 using DocumentFormat.OpenXml;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
+
+#if FEATURE_SERIALIZATION
+using System.Runtime.Serialization;
+#endif
+
+using static System.ReflectionExtensions;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
@@ -29,77 +34,11 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the base class for PackageRelationshipPropertyCollection and PackagePartRelationshipPropertyCollection objects.
     /// </summary>
-    abstract internal class RelationshipCollection : CollectionBase
+    abstract internal class RelationshipCollection : List<RelationshipProperty>
     {
         protected PackageRelationshipCollection BasePackageRelationshipCollection { get; set; }
 
-        private bool _strictTranslation = false;
-        internal bool StrictTranslation
-        {
-            get
-            {
-               return this._strictTranslation;
-            }
-            set
-            {
-               this._strictTranslation = value;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the relationship properties of the element at the specified index in the collection.
-        /// </summary>
-        public RelationshipProperty this[int index]
-        {
-            get
-            {
-                return (RelationshipProperty)this.List[index];
-            }
-            set
-            {
-                this.List[index] = value;
-            }
-        }
-
-        /// <summary>
-        /// Adds the specified relationship properties to the collection.
-        /// </summary>
-        public int Add(RelationshipProperty value)
-        {
-            return this.List.Add(value);
-        }
-
-        /// <summary>
-        /// Gets the index of the specified relationship properties in the collection.
-        /// </summary>
-        public int IndexOf(RelationshipProperty value)
-        {
-            return this.List.IndexOf(value);
-        }
-
-        /// <summary>
-        /// Inserts the specified relationship properties at the specified index in the collection.
-        /// </summary>
-        public void Insert(int index, RelationshipProperty value)
-        {
-            this.List.Insert(index, value);
-        }
-
-        /// <summary>
-        /// Removes the specified relationship properties from the collection.
-        /// </summary>
-        public void Remove(RelationshipProperty value)
-        {
-            this.List.Remove(value);
-        }
-
-        /// <summary>
-        /// Gets a value that indicates whether the collection contains the specified relationship properties.
-        /// </summary>
-        public bool Contains(RelationshipProperty value)
-        {
-            return this.List.Contains(value);
-        }
+        internal bool StrictTranslation { get; set; }
 
         /// <summary>
         /// This method fills the collection with PackageRels from the PackageRelationshipCollection that is given in the sub class.
@@ -158,7 +97,7 @@ namespace DocumentFormat.OpenXml.Packaging
             this.BasePackage = package;
             if (this.BasePackage == null)
             {
-                throw new ArgumentNullException("BasePackage");
+                throw new ArgumentNullException(nameof(BasePackage));
             }
 
             this.BasePackageRelationshipCollection = this.BasePackage.GetRelationships();
@@ -189,7 +128,7 @@ namespace DocumentFormat.OpenXml.Packaging
             this.BasePackagePart = packagePart;
             if (this.BasePackagePart == null)
             {
-                throw new ArgumentNullException("BasePackagePart");
+                throw new ArgumentNullException(nameof(BasePackagePart));
             }
 
             this.BasePackageRelationshipCollection = this.BasePackagePart.GetRelationships();
@@ -274,7 +213,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (package == null)
             {
-                throw new ArgumentNullException("package");
+                throw new ArgumentNullException(nameof(package));
             }
 
             if (package.FileOpenAccess == FileAccess.Write)
@@ -300,7 +239,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (package == null)
             {
-                throw new ArgumentNullException("package");
+                throw new ArgumentNullException(nameof(package));
             }
 
             //if (package.FileOpenAccess != FileAccess.Write)
@@ -323,7 +262,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (stream == null)
             {
-                throw new ArgumentNullException("stream");
+                throw new ArgumentNullException(nameof(stream));
             }
 
             if (readWriteMode)
@@ -349,7 +288,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (stream == null)
             {
-                throw new ArgumentNullException("stream");
+                throw new ArgumentNullException(nameof(stream));
             }
 
             if (!stream.CanWrite)
@@ -373,7 +312,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (path == null)
             {
-                throw new ArgumentNullException("path");
+                throw new ArgumentNullException(nameof(path));
             }
 
             if (readWriteMode)
@@ -398,7 +337,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (path == null)
             {
-                throw new ArgumentNullException("path");
+                throw new ArgumentNullException(nameof(path));
             }
 
             this._accessMode = FileAccess.ReadWrite;
@@ -586,7 +525,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (part == null)
             {
-                throw new ArgumentNullException("part");
+                throw new ArgumentNullException(nameof(part));
             }
 
             if (part.RelationshipType == this.MainPartRelationshipType &&
@@ -642,7 +581,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (contentType == null)
             {
-                throw new ArgumentNullException("contentType");
+                throw new ArgumentNullException(nameof(contentType));
             }
 
             MediaDataPart mediaDataPart = new MediaDataPart();
@@ -668,12 +607,12 @@ namespace DocumentFormat.OpenXml.Packaging
             
             if (contentType == null)
             {
-                throw new ArgumentNullException("contentType");
+                throw new ArgumentNullException(nameof(contentType));
             }
 
             if (extension == null)
             {
-                throw new ArgumentNullException("extension");
+                throw new ArgumentNullException(nameof(extension));
             }
 
             MediaDataPart mediaDataPart = new MediaDataPart();
@@ -715,7 +654,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (dataPart == null)
             {
-                throw new ArgumentNullException("dataPart");
+                throw new ArgumentNullException(nameof(dataPart));
             }
 
             if (dataPart.OpenXmlPackage != this)
@@ -1170,10 +1109,12 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new OpenXmlPackageException(ExceptionMessages.CannotChangeDocumentType, e);
             }
+#if FEATURE_SYSTEMEXCEPTION
             catch (SystemException e)
             {
                 throw new OpenXmlPackageException(ExceptionMessages.CannotChangeDocumentType, e);
             }
+#endif
 
             try
             {
@@ -1186,7 +1127,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 mainPart.Destroy();
 
                 // create new part
-                T newMainPart = (T)Activator.CreateInstance(typeof(T), true);
+                T newMainPart = CreateInstance<T>();
 
                 // do not call this.InitPart( ).  copy the code here
 
@@ -1235,10 +1176,12 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new OpenXmlPackageException(ExceptionMessages.CannotChangeDocumentType, e);
             }
+#if FEATURE_SYSTEMEXCEPTION
             catch (SystemException e)
             {
                 throw new OpenXmlPackageException(ExceptionMessages.CannotChangeDocumentTypeSerious, e);
             }
+#endif
         }
 
         #endregion 
@@ -1257,7 +1200,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (contentType == null)
             {
-                throw new ArgumentNullException("contentType");
+                throw new ArgumentNullException(nameof(contentType));
             }
 
             PartConstraintRule partConstraintRule;
@@ -1284,7 +1227,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 return child;
             }
-            throw new ArgumentOutOfRangeException("relationshipType");
+            throw new ArgumentOutOfRangeException(nameof(relationshipType));
         }
 
         internal sealed override OpenXmlPackage InternalOpenXmlPackage
@@ -1304,7 +1247,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (reachableParts == null)
             {
-                throw new ArgumentNullException("reachableParts");
+                throw new ArgumentNullException(nameof(reachableParts));
             }
 
             foreach (OpenXmlPart part in this.ChildrenParts.Values)
@@ -1441,6 +1384,57 @@ namespace DocumentFormat.OpenXml.Packaging
             private Dictionary<string, int> _sequenceNumbers = new Dictionary<string, int>(20);
             private Dictionary<string, int> _reservedUri = new Dictionary<string, int>();
 
+            //List of contentTypes that need to have a 1 appended to the name
+            //for the first item in the package. Section numbers in comments
+            //refer to the ISO/IEC 29500 standard.
+            private static readonly HashSet<string> _numberedContentTypes = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+            {
+                //11.3 WordprocessingML Parts
+                "application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml",
+                "application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml",
+                //12.3 SpreadsheetML Parts
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.chartsheet+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.comments+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.dialogsheet+xml",
+                "application/vnd.openxmlformats-officedocument.drawing+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.externalLink+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.dialogsheet+xml",
+                "application/vnd.openxmlformats-officedocument.drawing+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.externalLink+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheetMetadata+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.pivotCacheDefinition+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.pivotCacheRecords+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.queryTable+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.revisionLog+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.tableSingleCells+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.table+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml",
+                //13.3 PresentationML Parts
+                "application/vnd.openxmlformats-officedocument.presentationml.comments+xml",
+                "application/vnd.openxmlformats-officedocument.presentationml.handoutMaster+xml",
+                "application/vnd.openxmlformats-officedocument.presentationml.notesMaster+xml",
+                "application/vnd.openxmlformats-officedocument.presentationml.notesSlide+xml",
+                "application/vnd.openxmlformats-officedocument.presentationml.slide+xml",
+                "application/vnd.openxmlformats-officedocument.presentationml.slideLayout+xml",
+                "application/vnd.openxmlformats-officedocument.presentationml.slideMaster+xml",
+                "application/vnd.openxmlformats-officedocument.presentationml.slideUpdateInfo+xml",
+                "application/vnd.openxmlformats-officedocument.presentationml.tags+xml",
+                //14.2 DrawingML Parts
+                "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+                "application/vnd.openxmlformats-officedocument.drawingml.chartshapes+xml",
+                "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
+                "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
+                "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
+                "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
+                "application/vnd.openxmlformats-officedocument.theme+xml",
+                "application/vnd.openxmlformats-officedocument.themeOverride+xml",
+                //15.2 Shared Parts
+                "application/vnd.openxmlformats-officedocument.customXmlProperties+xml",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.printerSettings",
+                "application/vnd.openxmlformats-officedocument.wordprocessingml.printerSettings",
+                "application/vnd.openxmlformats-officedocument.presentationml.printerSettings"
+            };
+
             public PartUriHelper()
             {
             }
@@ -1471,8 +1465,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     string sequenceNumber = this.GetNextSequenceNumber(contentType);
                     string path = Path.Combine(targetPath, targetName + sequenceNumber + targetExt);
-
-
 
                     Uri uri = new Uri(path, UriKind.RelativeOrAbsolute);
                     partUri = PackUriHelper.ResolvePartUri(parentUri, uri);
@@ -1515,15 +1507,14 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     this._sequenceNumbers[contentType] += 1;
                     // use the default read-only NumberFormatInfo that is culture-independent (invariant). 
-                    // return this._sequenceNumbers[contentType].ToString(NumberFormatInfo.InvariantInfo);
-
-                    // Let's use the number string in hex
-                    return Convert.ToString(this._sequenceNumbers[contentType], 16);
+                    return this._sequenceNumbers[contentType].ToString(NumberFormatInfo.InvariantInfo);
                 }
                 else
                 {
                     this._sequenceNumbers.Add(contentType, 1);
-                    return "";
+
+                    //Certain contentTypes need to be numbered starting with 1.
+                    return _numberedContentTypes.Contains(contentType) ? "1" : "";
                 }
             }
         }
@@ -1622,7 +1613,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public OpenXmlPackage Clone(Stream stream, bool isEditable, OpenSettings openSettings)
         {
             if (stream == null)
-                throw new ArgumentNullException("stream");
+                throw new ArgumentNullException(nameof(stream));
 
             // Use this OpenXml package's OpenSettings if none are provided.
             // This is more in line with cloning than providing the default
@@ -1717,7 +1708,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public OpenXmlPackage Clone(string path, bool isEditable, OpenSettings openSettings)
         {
             if (path == null)
-                throw new ArgumentNullException("path");
+                throw new ArgumentNullException(nameof(path));
 
             // Use this OpenXml package's OpenSettings if none are provided.
             // This is more in line with cloning than providing the default
@@ -1788,7 +1779,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public OpenXmlPackage Clone(Package package, OpenSettings openSettings)
         {
             if (package == null)
-                throw new ArgumentNullException("package");
+                throw new ArgumentNullException(nameof(package));
 
             // Use this OpenXml package's OpenSettings if none are provided.
             // This is more in line with cloning than providing the default
@@ -2228,6 +2219,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
         }
 
+#if FEATURE_SERIALIZATION
         /// <summary>
         /// Initializes a new instance of the OpenXmlPackageException class using the supplied serialized data. 
         /// </summary>
@@ -2237,6 +2229,7 @@ namespace DocumentFormat.OpenXml.Packaging
             : base(info, context)
         {
         }
+#endif
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPackageException class using the supplied error message and a reference to the inner exception that caused the current exception. 

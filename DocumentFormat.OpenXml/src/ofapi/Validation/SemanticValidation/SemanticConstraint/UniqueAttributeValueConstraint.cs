@@ -35,16 +35,16 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
             {
                 return null;
             }
-            
+
             OpenXmlSimpleType attributeValue = context.Element.Attributes[_attribute];
 
-            //if the attribute is omited, semantic validation will do nothing 
+            //if the attribute is omited, semantic validation will do nothing
             if (attributeValue == null || string.IsNullOrEmpty(attributeValue.InnerText))
             {
                 return null;
             }
 
-            if (_values.Where(v => string.Compare(v, attributeValue.InnerText, !_caseSensitive, System.Globalization.CultureInfo.InvariantCulture) == 0).Count() == 0)
+            if (!_values.Where(v => string.Equals(v, attributeValue.InnerText, _caseSensitive ? StringComparison.OrdinalIgnoreCase : StringComparison.Ordinal)).Any())
             {
                 _values.Add(attributeValue.InnerText);
                 return null;

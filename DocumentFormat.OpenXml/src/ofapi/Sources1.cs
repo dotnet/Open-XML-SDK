@@ -505,7 +505,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (value == null)
                 {
-                    throw new ArgumentNullException("value");
+                    throw new ArgumentNullException(nameof(value));
                 }
                 if (this.MailMergeRecipients != null)
                 {
@@ -530,7 +530,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (value == null)
                 {
-                    throw new ArgumentNullException("value");
+                    throw new ArgumentNullException(nameof(value));
                 }
                 if (this.Recipients != null)
                 {

@@ -1,3 +1,4 @@
+// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 using DocumentFormat.OpenXml.Packaging;
 using Ap = DocumentFormat.OpenXml.ExtendedProperties;
 using Vt = DocumentFormat.OpenXml.VariantTypes;
@@ -745,9 +746,10 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
         // Generates content of extendedPart1.
         private void GenerateExtendedPart1Content(ExtendedPart extendedPart1)
         {
-            System.IO.Stream data = GetBinaryDataStream(extendedPart1Data);
-            extendedPart1.FeedData(data);
-            data.Close();
+            using (System.IO.Stream data = GetBinaryDataStream(extendedPart1Data))
+            {
+                extendedPart1.FeedData(data);
+            }
         }
 
         // Generates content of pivotTableCacheDefinitionPart1.
@@ -1776,9 +1778,10 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
         // Generates content of spreadsheetPrinterSettingsPart1.
         private void GenerateSpreadsheetPrinterSettingsPart1Content(SpreadsheetPrinterSettingsPart spreadsheetPrinterSettingsPart1)
         {
-            System.IO.Stream data = GetBinaryDataStream(spreadsheetPrinterSettingsPart1Data);
-            spreadsheetPrinterSettingsPart1.FeedData(data);
-            data.Close();
+            using (System.IO.Stream data = GetBinaryDataStream(spreadsheetPrinterSettingsPart1Data))
+            {
+                spreadsheetPrinterSettingsPart1.FeedData(data);
+            }
         }
 
         // Generates content of pivotTablePart1.
