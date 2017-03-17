@@ -23,10 +23,12 @@
     <Compile Remove="src\GeneratedCode\Office2007Schema.cs" />
     <Compile Remove="src\GeneratedCode\Office2010Schema.cs" />
     <Compile Remove="src\GeneratedCode\Office2013Schema.cs" />
+    <Compile Remove="src\GeneratedCode\Office2016Schema.cs" />
     <Compile Remove="src\ofapi\Validation\SchemaValidation\OfficeStaticSchemaDatas.cs" />
     <EmbeddedResource Include="src\GeneratedCode\O12SchemaConstraintDatas.bin" />
     <EmbeddedResource Include="src\GeneratedCode\O14SchemaConstraintDatas.bin" />
     <EmbeddedResource Include="src\GeneratedCode\O15SchemaConstraintDatas.bin" />
+    <EmbeddedResource Include="src\GeneratedCode\O16SchemaConstraintDatas.bin" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">

@@ -92,6 +92,20 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         }
 
         /// <summary>
+        /// Return an instance of SchemaConstraintDatabase which will load Office2010 schemas.
+        /// </summary>
+        public static SdbSchemaDatas GetOffice2016SchemaDatas()
+        {
+#if FEATURE_BINARYFORMATTER
+            var data = new BinarySdbSchemaDatas(FileFormatVersions.Office2016);
+#else
+            var data = new Office2016Schema();
+#endif
+            data.Initialize();
+            return data;
+        }
+
+        /// <summary>
         /// Load schema type constraint data for the specified element.
         /// </summary>
         /// <param name="openxmlElement">The element.</param>
