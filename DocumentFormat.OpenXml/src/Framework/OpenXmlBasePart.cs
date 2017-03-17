@@ -453,9 +453,15 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(schemas));
             }
 
-            XmlReaderSettings xmlReaderSettings = new XmlReaderSettings();
-            xmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set true explicitly for security fix
-            xmlReaderSettings.MaxCharactersInDocument = this.MaxCharactersInPart;
+            XmlReaderSettings xmlReaderSettings = new XmlReaderSettings
+            {
+#if FEATURE_XML_PROHIBIT_DTD
+                ProhibitDtd = true, // set true explicitly for security fix
+#else
+                DtdProcessing = DtdProcessing.Prohibit, // set to prohibit explicitly for security fix
+#endif
+                MaxCharactersInDocument = this.MaxCharactersInPart
+            };
             XmlReader xmlReader = null;
 
             // XML validator object

@@ -12,7 +12,7 @@ using System.Xml;
 using System.Linq;
 using System.Reflection;
 
-using static System.ReflectionExtensions;
+using static DocumentFormat.OpenXml.ReflectionExtensions;
 
 namespace DocumentFormat.OpenXml.Packaging
 {

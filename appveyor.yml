@@ -1,7 +1,7 @@
 os: Visual Studio 2015
 
 environment:
-  image: Visual Studio 2017
+  image: Visual Studio 2015
   SignClientSecret:
     secure: 2QKIbnEaxM/df01+GLvTjVKdLL7RlwKmCR/APcWFRUUF2VQWBRQFQ1DP3gK49epL
 
@@ -23,6 +23,7 @@ build_script:
   - ps: .\build\Update-Version.ps1 $env:GitVersion_NuGetVersion
   - ps: dotnet --info
   - ps: dotnet restore
+  - ps: dotnet build /p:Configuration=Release .\DocumentFormat.OpenXml
   - ps: dotnet build /p:Configuration=Release .\DocumentFormat.OpenXml.Tests
 
 after_build:

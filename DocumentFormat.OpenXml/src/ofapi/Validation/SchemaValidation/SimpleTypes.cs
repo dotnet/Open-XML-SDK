@@ -325,13 +325,13 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// </summary>
         private sealed class DocumentFormatBinder : System.Runtime.Serialization.SerializationBinder
         {
-            private const string FullStrongName = "DocumentFormat.OpenXml, Version=2.6.0.0, Culture=neutral, PublicKeyToken=null";
-
             private static readonly System.Reflection.Assembly s_assembly = typeof(DocumentFormatBinder).Assembly;
 
             public override Type BindToType(string assemblyName, string typeName)
             {
-                if (string.Equals(assemblyName, FullStrongName, StringComparison.Ordinal))
+                var name = new System.Reflection.AssemblyName(assemblyName);
+
+                if (string.Equals(name.Name, "DocumentFormat.OpenXml", StringComparison.Ordinal))
                 {
                     return s_assembly.GetType(typeName);
                 }
