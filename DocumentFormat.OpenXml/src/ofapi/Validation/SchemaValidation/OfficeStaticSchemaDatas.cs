@@ -56,4 +56,9 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     {
         protected override FileFormatVersions Version { get; } = FileFormatVersions.Office2013;
     }
+
+    internal partial class Office2016Schema : OfficeStaticSchemaDatas
+    {
+        protected override FileFormatVersions Version { get; } = FileFormatVersions.Office2016;
+    }
 }
