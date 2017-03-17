@@ -29,6 +29,7 @@ using System.Text;
 using System.Xml;
 using DocumentFormat.OpenXml.Packaging;
 using Xunit;
+using OxTest;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -38,26 +39,7 @@ namespace DocumentFormat.OpenXml.Tests
     {
         protected static string s_TestFileLocation = null;
 
-        public static string TestFilesPath
-        {
-            get
-            {
-                if (s_TestFileLocation != null)
-                    return s_TestFileLocation;
-                // find the directory, wherever it may be, to get to the TestFiles directory
-                var dir = new DirectoryInfo(Environment.CurrentDirectory);
-                while (true)
-                {
-                    if (dir.Name == "DocumentFormat.OpenXml.Tests" || dir.Name == "DocumentFormat.OpenXml.WB.Tests")
-                        break;
-                    dir = dir.Parent;
-                }
-                dir = dir.Parent; // go up one more, to the parent of the above dirs
-                var testDataStorageDirInfo = new DirectoryInfo(Path.Combine(dir.FullName, "TestFiles/"));
-                s_TestFileLocation = testDataStorageDirInfo.FullName;
-                return s_TestFileLocation;
-            }
-        }
+        public static string TestFilesPath => TestUtil.TestFilesDir;
 
         protected BaseFixture()
         {

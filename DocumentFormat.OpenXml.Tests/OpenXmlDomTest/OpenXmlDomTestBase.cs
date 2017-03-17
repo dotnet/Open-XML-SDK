@@ -582,7 +582,7 @@ namespace DocumentFormat.OpenXml.Tests
             if (pendOp == null)
                 throw new ArgumentNullException("pender");
 
-            Log.Comment("Pending child with {0}...", pendOp.Method.Name);
+            Log.Comment("Pending child with {0}...", pendOp.GetMethodInfo().Name);
             OpenXmlElement result = pendOp(pendee);
 
             Log.Comment("Checking if returned element is reference equal to pass-in element...");
@@ -712,7 +712,7 @@ namespace DocumentFormat.OpenXml.Tests
             if (insertOp == null || insertee == null)
                 throw new ArgumentNullException("insertOp|insertee");
 
-            Log.Comment("New child element is {0} the reference child", insertOp.Method.Name);
+            Log.Comment("New child element is {0} the reference child", insertOp.GetMethodInfo().Name);
             OpenXmlElement result = insertOp(insertee, refChild);
 
             Log.Comment("Check if the element inserted is the same as the element inserted");

@@ -51,7 +51,7 @@ namespace DocumentFormat.OpenXml
         {
             if (openXmlPart == null)
             {
-                throw new ArgumentNullException("openXmlPart");
+                throw new ArgumentNullException(nameof(openXmlPart));
             }
 
             this._elementContext = new OpenXmlElementContext();
@@ -207,7 +207,7 @@ namespace DocumentFormat.OpenXml
         {
             if (openXmlPart == null)
             {
-                throw new ArgumentNullException("openXmlPart");
+                throw new ArgumentNullException(nameof(openXmlPart));
             }
 
             XmlWriterSettings settings = new XmlWriterSettings();
@@ -327,7 +327,7 @@ namespace DocumentFormat.OpenXml
         {
             if (xmlWriter == null)
             {
-                throw new ArgumentNullException("xmlWriter");
+                throw new ArgumentNullException(nameof(xmlWriter));
             }
 
             if (this.XmlParsed)

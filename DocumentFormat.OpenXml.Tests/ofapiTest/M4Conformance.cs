@@ -10,9 +10,6 @@ using DocumentFormat.OpenXml.Packaging;
 using excel = DocumentFormat.OpenXml.Spreadsheet;
 using System.Reflection;
 using OxTest;
-#if WB
-using DocumentFormat.OpenXml.WB.Tests;
-#endif
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -49,9 +46,8 @@ namespace DocumentFormat.OpenXml.Tests
             //its class is StartBorder
             //its parent is TableCellBorder
             //its parent should have corresponding attring
-            foreach (var attr in typeof(TableCellBorders).GetCustomAttributes(typeof(ChildElementInfoAttribute), false))
+            foreach (var ce in typeof(TableCellBorders).GetTypeInfo().GetCustomAttributes<ChildElementInfoAttribute>(false))
             {
-                var ce = attr as ChildElementInfoAttribute;
                 if (ce.ElementType == typeof(TopBorder))
                 {
                     Assert.True((ce.AvailableInVersion & FileFormatVersions.Office2007) > 0);
@@ -67,10 +63,10 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(eb.IsInVersion(FileFormatVersions.Office2010));
             Assert.False(eb.IsInVersion(FileFormatVersions.Office2007));
 
-            var attr1 = typeof(EndBorder).GetCustomAttributes(false).OfType<OfficeAvailabilityAttribute>().First();
+            var attr1 = typeof(EndBorder).GetTypeInfo().GetCustomAttributes<OfficeAvailabilityAttribute>(false).First();
             Assert.True(attr1.OfficeVersion == FileFormatVersions.Office2010);
 
-            Assert.True(typeof(TableCellBorders).GetCustomAttributes(false).OfType<OfficeAvailabilityAttribute>().FirstOrDefault() == null);
+            Assert.True(typeof(TableCellBorders).GetTypeInfo().GetCustomAttributes<OfficeAvailabilityAttribute>(false).FirstOrDefault() == null);
         }
 
         ///<summary>
@@ -79,7 +75,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void O14ElesInO14()
         {
-            foreach (var attr in typeof(TableCellBorders).GetCustomAttributes(typeof(ChildElementInfoAttribute), false))
+            foreach (var attr in typeof(TableCellBorders).GetTypeInfo().GetCustomAttributes<ChildElementInfoAttribute>(false))
             {
                 var ce = attr as ChildElementInfoAttribute;
                 if (ce.ElementType == typeof(TopBorder))
@@ -100,10 +96,10 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(eb.IsInVersion(FileFormatVersions.Office2010));
             Assert.False(eb.IsInVersion(FileFormatVersions.Office2007));
 
-            var attr1 = typeof(EndBorder).GetCustomAttributes(false).OfType<OfficeAvailabilityAttribute>().First();
+            var attr1 = typeof(EndBorder).GetTypeInfo().GetCustomAttributes<OfficeAvailabilityAttribute>(false).First();
             Assert.True(attr1.OfficeVersion == FileFormatVersions.Office2010);
 
-            Assert.True(typeof(TableCellBorders).GetCustomAttributes(false).OfType<OfficeAvailabilityAttribute>().FirstOrDefault() == null);
+            Assert.True(typeof(TableCellBorders).GetTypeInfo().GetCustomAttributes<OfficeAvailabilityAttribute>(false).FirstOrDefault() == null);
         }
 
         ///<summary>

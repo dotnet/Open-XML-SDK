@@ -6,9 +6,6 @@ using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System.Linq;
 using System.IO;
-#if WB
-using DocumentFormat.OpenXml.WB.Tests;
-#endif
 
 namespace DocumentFormat.OpenXml.Tests
 {

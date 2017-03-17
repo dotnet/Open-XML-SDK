@@ -1,26 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentFormat.OpenXml", "DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj", "{E5D39C6A-9067-477E-B0D3-A9419B86E6E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormat.OpenXml", "DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj", "{16941A4A-F8DE-4C8D-BA2B-3C0774848D4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.IO.Packaging", "System.IO.Packaging\System.IO.Packaging.csproj", "{4C88A3AD-1241-4A04-854B-8372DF29828D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormat.OpenXml.Tests", "DocumentFormat.OpenXml.Tests\DocumentFormat.OpenXml.Tests.csproj", "{B92240AF-6E87-4428-9C5A-371178A04E5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.IO.Packaging.Tests", "System.IO.Packaging.Tests\System.IO.Packaging.Tests.csproj", "{78E2D77F-FCA9-4809-BB75-0AC76DF9B95D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinaryFormatConverter", "BinaryFormatConverter\BinaryFormatConverter.csproj", "{E97A956D-8113-45B6-9002-2ED651A6CD6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentFormat.OpenXml.Tests", "DocumentFormat.OpenXml.Tests\DocumentFormat.OpenXml.Tests.csproj", "{CFC3F992-E450-4D7F-9ADB-22212AAC650A}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E43CE613-45B8-4FFC-AE29-3876ABD68244}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0B53C729-D408-450D-B755-7A57184CDE93}"
 	ProjectSection(SolutionItems) = preProject
-		.nuget\packages.config = .nuget\packages.config
+		appveyor.yml = appveyor.yml
+		dir.props = dir.props
+		dir.targets = dir.targets
+		GitVersion.yml = GitVersion.yml
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentFormat.OpenXml.WB", "DocumentFormat.OpenXml.WB\DocumentFormat.OpenXml.WB.csproj", "{55FB0A8A-B816-4DC9-9BB4-4DB5B5950F5A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentFormat.OpenXml.WB.Tests", "DocumentFormat.OpenXml.WB.Tests\DocumentFormat.OpenXml.WB.Tests.csproj", "{CD991B25-9DDE-4480-BC90-0B9F3428BDFC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUtil", "TestUtil\TestUtil.csproj", "{B63E969B-F7EC-4B6C-8540-67FC0C0C3E56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,34 +25,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E5D39C6A-9067-477E-B0D3-A9419B86E6E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E5D39C6A-9067-477E-B0D3-A9419B86E6E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E5D39C6A-9067-477E-B0D3-A9419B86E6E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E5D39C6A-9067-477E-B0D3-A9419B86E6E5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4C88A3AD-1241-4A04-854B-8372DF29828D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C88A3AD-1241-4A04-854B-8372DF29828D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C88A3AD-1241-4A04-854B-8372DF29828D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C88A3AD-1241-4A04-854B-8372DF29828D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{78E2D77F-FCA9-4809-BB75-0AC76DF9B95D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{78E2D77F-FCA9-4809-BB75-0AC76DF9B95D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{78E2D77F-FCA9-4809-BB75-0AC76DF9B95D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{78E2D77F-FCA9-4809-BB75-0AC76DF9B95D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CFC3F992-E450-4D7F-9ADB-22212AAC650A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CFC3F992-E450-4D7F-9ADB-22212AAC650A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CFC3F992-E450-4D7F-9ADB-22212AAC650A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CFC3F992-E450-4D7F-9ADB-22212AAC650A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{55FB0A8A-B816-4DC9-9BB4-4DB5B5950F5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{55FB0A8A-B816-4DC9-9BB4-4DB5B5950F5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{55FB0A8A-B816-4DC9-9BB4-4DB5B5950F5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{55FB0A8A-B816-4DC9-9BB4-4DB5B5950F5A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CD991B25-9DDE-4480-BC90-0B9F3428BDFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CD991B25-9DDE-4480-BC90-0B9F3428BDFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CD991B25-9DDE-4480-BC90-0B9F3428BDFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CD991B25-9DDE-4480-BC90-0B9F3428BDFC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B63E969B-F7EC-4B6C-8540-67FC0C0C3E56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B63E969B-F7EC-4B6C-8540-67FC0C0C3E56}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B63E969B-F7EC-4B6C-8540-67FC0C0C3E56}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B63E969B-F7EC-4B6C-8540-67FC0C0C3E56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16941A4A-F8DE-4C8D-BA2B-3C0774848D4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16941A4A-F8DE-4C8D-BA2B-3C0774848D4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16941A4A-F8DE-4C8D-BA2B-3C0774848D4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16941A4A-F8DE-4C8D-BA2B-3C0774848D4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B92240AF-6E87-4428-9C5A-371178A04E5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B92240AF-6E87-4428-9C5A-371178A04E5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B92240AF-6E87-4428-9C5A-371178A04E5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B92240AF-6E87-4428-9C5A-371178A04E5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E97A956D-8113-45B6-9002-2ED651A6CD6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E97A956D-8113-45B6-9002-2ED651A6CD6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E97A956D-8113-45B6-9002-2ED651A6CD6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E97A956D-8113-45B6-9002-2ED651A6CD6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

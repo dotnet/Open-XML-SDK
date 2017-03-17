@@ -29,11 +29,6 @@ Documents (DOCX, XLSX, and PPTX).  It supports scenarios such as:
 [Open-Xml-PowerTools](https://github.com/OfficeDev/Open-Xml-PowerTools) provides example code and guidance for implementing many of the above important Open XML scenarios.  Be sure to check it out
 before re-inventing your own solutions.
 
-The Open-Xml-Sdk relies on the System.IO.Packaging namespace.  There is an implementation of System.IO.Packaging in the WindowsBase assembly,
-and there is a new, open source implementation of System.IO.Packaging that is included with version 2.6 of the Open-Xml-Sdk.  Because of this, there
-are six projects in the Visual Studio solution.  [This screen-cast](https://www.youtube.com/watch?v=B13IYHKhcc8) describes the six projects, and explains
-the purpose behind each.
-
 Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.
 Licensed under the Apache License, Version 2.0.
 See License.txt in the project root for license information.
@@ -41,67 +36,97 @@ See License.txt in the project root for license information.
 Portions of this project are licensed under the MIT license.
 See MIT-License.txt in the project root for license information.
 
+
+The Latest Builds
+=================
+
+##Where to get the NuGet package?
+The NuGet package for Open XML SDK is currently available as a custom feed on MyGet. You can trust this package source, since the custom feed is locked and only this project feeds into the source.
+
+##How to install the NuGet package?
+The package you want to install is DocumentFormat.OpenXml. See https://dotnet.myget.org/gallery/open-xml-sdk 
+
+The package feed or the package source is specified by the feed URL. Depending on your version of Visual Studio, choose the appropriate feed URL from the table below. 
+
+Table 1: The latest builds are available via a MyGet feed
+
+| Client | Feed URL |
+| ------ | -------- |
+| NuGet V3 (Visual Studio 2015+) | https://dotnet.myget.org/F/open-xml-sdk/api/v3/index.json |
+| NuGet V2 (Visual Studio 2012+) | https://dotnet.myget.org/F/open-xml-sdk/api/v2 |
+
+The **Install-Package** command considers the package source either via configuration or argument. Also the package version can vary. For the latest version info, see https://dotnet.myget.org/feed/open-xml-sdk/package/nuget/DocumentFormat.OpenXml 
+
+- To specify the package source via a configuration option, see https://docs.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior. Note that usually a NuGet.config file is placed in the directory and the configuration options are added there to ensure the sources are persisted in the version control.
+
+	```
+	PM> Install-Package DocumentFormat.OpenXml -Version <version retrieved from the web>
+	```
+
+- To pass the feed URL as an argument, here is an example for Visual Studio 2015 and later. 
+
+	```
+	PM> Install-Package DocumentFormat.OpenXml -Version <version retrieved from the web> -Source https://dotnet.myget.org/F/open-xml-sdk/api/v3/index.json 
+	```
+
+**Note**:  If you have trouble installing the package, try restarting Visual Studio. Package sources could be cached, and changes you've made to any NuGet.config files may not be detected.
+	
+	
 News
 ====
-The most recent release of the Open XML SDK is Version 2.6.1, which includes a total of 1333 XUnit tests.
-
-We are also happy to announce the release of Open-Xml-PowerTools on GitHub.  Open-Xml-PowerTools provides
-example code and guidance for implementing a wide range of Open XML scenarios.  You can find PowerTools
-for Open XML, which previously lived at [PowerTools.CodePlex.com](http://powertools.codeplex.com) at
-[github.com/OfficeDev/Open-Xml-PowerTools](https://github.com/OfficeDev/Open-Xml-PowerTools).
+We are also happy to announce the release of Open-Xml-PowerTools on GitHub.  Open-Xml-PowerTools provides example code and guidance for implementing a wide range of Open XML scenarios.  You can find PowerTools for Open XML, which previously lived at [PowerTools.CodePlex.com](http://powertools.codeplex.com) at [github.com/OfficeDev/Open-Xml-PowerTools] https://github.com/OfficeDev/Open-Xml-PowerTools).
 
 Change Log
 ==========
+
+Version 2.7.1 : January 31, 2017
+- Fixed crash when validation is invoked on .NET Framework with strong-naming enforced
+
+Version 2.7.0 : January 24, 2017
+- Added support for .NET Standard 1.3
+- Moved to using System.IO.Packaging from dotnet/corefx for .NET Standard 1.3 and WindowsBase for .NET 4.5
+- Cleaned up project build system to use .NET CLI
 
 Version 2.6.1 : January 15, 2016
 - Added hundreds of XUnit tests.  There are now a total of 1333 tests.  They take about 20 minutes to run, so be patient.
 
 Version 2.6.0 : June 29, 2015
-- The big feature in 2.6 is the inclusion of a replacement for System.IO.Packaging, which
-has a serious bug that causes it (albeit rarely and in specific circumstances)
-to throw exceptions (ObjectDisposedException and NullReferenceException).  You can
-find out more about this bug and whether it affects you in [the blog post that announces the release of the new System.IO.Packaging](http://openxmldeveloper.org/blog/b/openxmldeveloper/archive/2015/06/29/announcing-the-release-of-a-new-system-io-packaging-implementation.aspx).
+- The big feature in 2.6 is the inclusion of a replacement for System.IO.Packaging, which has a serious bug that causes it (albeit rarely and in specific circumstances) to throw exceptions (ObjectDisposedException and NullReferenceException).  You can find out more about this bug and whether it affects you in [the blog post that announces the release of the new System.IO.Packaging] (http://openxmldeveloper.org/blog/b/openxmldeveloper/archive/2015/06/29/announcing-the-release-of-a-new-system-io-packaging-implementation.aspx).
 
-Going forward, the Open XML SDK will be based on this new implementation of System.IO.Packaging.
 
 Documentation
 =============
 
-The functionality of the specific classes in Open XML SDK Version 2.6.0 is the same as for version 2.5, therefore
-the documentation available on MSDN is still accurate.
+The functionality of the specific classes in Open XML SDK Version 2.7.0 is similar to version 2.5, therefore the documentation available on MSDN is still accurate.
 
 [Open XML SDK 2.5 for Office](http://msdn.microsoft.com/en-us/library/office/bb448854.aspx)
 
-In addition to open sourcing of the SDK, Microsoft has opened up the
-conceptual documentation for public review / contributions.  A copy of
-the documentation is [now in GitHub](https://github.com/OfficeDev/office-content) for you to edit and review.
+In addition to open sourcing of the SDK, Microsoft has opened up the conceptual documentation for public review / contributions.  A copy of the documentation is [now in GitHub](https://github.com/OfficeDev/office-content) for you to edit and review.
 
 Build Instructions
 ==================
 
-Note: for this first release, you must have some version of Visual Studio
-installed.  Visual Studio 2015 Community Edition will work just fine:
-https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs
+This project uses the `project.json` for the project build system. Please see the [.NET Core SDK](https://www.microsoft.com/net/core#windows) for more information on how to use this project type.
 
 To build the Open XML SDK:
 - Clone the repo at https://github.com/OfficeDev/Open-XML-SDK
-- Open the solution using Visual Studio 2013 or 2015.  Community Edition of VS2015 works just fine.
+- Open the solution using Visual Studio 2015.  Community Edition of VS2015 works just fine.
 - Build the solution (using either Debug or Release configuration)
 - Run the Xunit tests to verify the installation
 
 If you want to use a command line approach:
-- Start a Visual Studio command prompt, and change into the directory that contains the repo
-- Use MSBUILD to build the SDK  (C:> MSBUILD Open-Xml-Sdk.sln)
-- You can also use MSBUILD to build the individual projects.
+- Go to the directory the solution is in
+- Run `dotnet restore` in the directory
+- Run `dotnet test DocumentFormat.OpenXml.Tests` to run the tests
+- Run `dotnet pack DocumentFormat.OpenXml` to generate a nupkg
 
-To use the SDK:
-- In your program that uses the Open XML SDK, add references to the newly built libraries in DocumentFormat.OpenXml/bin/Debug (or in DocumentFormat.OpenXml/bin/Release)
+Schema Files
+============
 
-Previously, we were using PowerShell to generate a new version number for each build.  This is no longer required, and it is more convenient to build the SDK using MSBUILD, therefore I have removed the instructions for building using the PowerShell script.
+The data for schema validation is contained in static binary files that are not compatible in .NET Standard. At this moment, a converter tool is used to transform the binary file into a set of POCO objects that will not require deserialization at runtime. This tool is located in the `BinaryFormatConverter` folder. In order to run it:
 
-Building with Mono
-=================
-- First, ensure you have mono installed in a manner appropriate to your linux/unix distribution.
-- `make -f Makefile-Linux-Mono build`
-- Find libraries in the folder: ./build/OpenXmlSdkLib
-- [Screen-Cast: Using the Open XML SDK on Linux using Mono](http://openxmldeveloper.org/blog/b/openxmldeveloper/archive/2014/07/03/screen-cast-using-open-xml-sdk-on-linux-using-mono.aspx)
+- Run `dotnet restore` in the solution directory
+- `cd BinaryFormatConverter`
+- `dotnet run`
+
+This will go through and update schema files in the form of `DocumentFormat.OpenXml/src/GeneratedCode/Office*Schema.cs`. This update only needs to be run when there is a change to the binary files; otherwise, they will return the same result. These updated files are only used in the .NET Sandard implementation, while the binary files will continue to be used in the .NET 4.5 builds.

@@ -190,20 +190,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         {
             get
             {
-                if (_SourceRootPath != null)
-                    return _SourceRootPath;
-
-                // find the directory, wherever it may be, to get to the TestDataStorage directory
-                var dir = new DirectoryInfo(Environment.CurrentDirectory);
-                while (true)
-                {
-                    if (dir.Name == "DocumentFormat.OpenXml.Tests" || dir.Name == "DocumentFormat.OpenXml.WB.Tests")
-                        break;
-                    dir = dir.Parent;
-                }
-                dir = dir.Parent; // go up one more, to the parent of the above dirs
-                var testDataStorageDirInfo = new DirectoryInfo(Path.Combine(dir.FullName, "TestDataStorage"));
-                _SourceRootPath = testDataStorageDirInfo.FullName;
+                _SourceRootPath = TestUtil.TestDataStorage;
                 return _SourceRootPath;
             }
         }
@@ -220,22 +207,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         {
             get
             {
-                if (this._SourcePath == null)
-                {
-                    // find the directory, wherever it may be, to get to the TestDataStorage directory
-                    var dir = new DirectoryInfo(Environment.CurrentDirectory);
-                    while (true)
-                    {
-                        if (dir.Name == "DocumentFormat.OpenXml.Tests" || dir.Name == "DocumentFormat.OpenXml.WB.Tests")
-                            break;
-                        dir = dir.Parent;
-                    }
-                    dir = dir.Parent; // go up one more, to the parent of the above dirs
-                    var testDataStorageDirInfo = new DirectoryInfo(Path.Combine(dir.FullName, "TestDataStorage"));
-                    this._SourcePath = testDataStorageDirInfo.FullName;
-                    return this._SourcePath;
-                }
-                return this._SourcePath;
+                return _SourcePath ?? TestUtil.TestDataStorage;
             }
             set
             {
@@ -303,22 +275,6 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             return testFile.CopyTo("source-" + testFile.Name);
         }
 
-        public static DriveInfo GetLargestFreeDrive()
-        {
-            DriveInfo largetstDrive = null;
-            long largestSize = 0;
-
-            foreach (DriveInfo driveInfo in DriveInfo.GetDrives())
-            {
-                if (driveInfo.IsReady && driveInfo.AvailableFreeSpace > largestSize)
-                {
-                    largetstDrive = driveInfo;
-                    largestSize = driveInfo.AvailableFreeSpace;
-                }
-            }
-            return largetstDrive;
-        }
-
         /// <summary>
         /// Get test files in the test file storage.
         /// </summary>
@@ -327,9 +283,9 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// <param name="searchPattern">Search pattern of file name. Wildcard chars are allowed.</param>
         /// <param name="pred">Filter function which limits files to be searched.</param>
         /// <returns></returns>
-        public IEnumerable<FileInfo> GetTestFiles(string sourceFolder)
+        public IEnumerable<FileInfo> GetTestFiles(string sourceFolder, string subFolder)
         {
-            string inputPath = Path.Combine(sourcePath, sourceFolder);
+            string inputPath = Path.Combine(sourcePath, sourceFolder, subFolder);
             return new DirectoryInfo(inputPath).GetFiles("*", SearchOption.AllDirectories);
         }
 
@@ -359,6 +315,10 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             bool recursive = true;
             Func<FileInfo, bool> pred = IsOpenXmlFile;
             return CopyTestFiles(sourceFolder, recursive, searchPattern, pred);
+        }
+        public IEnumerable<FileInfo> CopyTestFiles(string sourceFolder, string subFolder)
+        {
+            return CopyTestFiles(Path.Combine(sourceFolder, subFolder));
         }
         private static string[] _wordprocessingExtension = new string[] { ".docx", ".docm", ".dotx", ".dotm" };
         private static string[] _spreadsheetExtension = new string[] { ".xlam", ".xltm", ".xlsm", ".xltx", ".xlsx" };
@@ -411,7 +371,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             string outputPath = this.CurrentResultFolder;
 
             // Cd to the outputPath folder
-            Environment.CurrentDirectory = outputPath;
+            Directory.SetCurrentDirectory(outputPath);
 
             // Ensure pred is not null
             if (pred == null) { pred = (file => { return true; }); }
@@ -457,7 +417,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             var sourceFolder = Path.GetDirectoryName(sourceFile);
             var sourceFileName = Path.GetFileName(sourceFile);
             Func<FileInfo, bool> pred =
-                file => file.Name.Equals(sourceFileName, StringComparison.InvariantCultureIgnoreCase);
+                file => file.Name.Equals(sourceFileName, StringComparison.OrdinalIgnoreCase);
             return CopyTestFiles(sourceFolder, false, sourceFileName, pred).First();
         }
 
@@ -530,7 +490,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
                         foreach (var result in validateResults)
                         {
                             if (OpenXmlDomTaskLibrary.IsKnownIssue(
-                                TestDataStorage.RootFolder, file.FilePath, result.Description) == false)
+                                TestUtil.TestDataStorage, file.FilePath, result.Description) == false)
                             {
                                 errorDetected = true;
                                 Log.Fail("Validation Error: {0}", result.Description);
@@ -547,7 +507,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
                 catch (Exception e)
                 {
                     if (OpenXmlDomTaskLibrary.IsKnownIssue(
-                        TestDataStorage.RootFolder, file.FilePath, e.Message) == false)
+                        TestUtil.TestDataStorage, file.FilePath, e.Message) == false)
                     {
                         errorDetected = true;
                         Log.Fail("Exception: {0}", e.Message);

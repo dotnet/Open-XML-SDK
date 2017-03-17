@@ -14,9 +14,6 @@ using a = DocumentFormat.OpenXml.Drawing;
 using pic = DocumentFormat.OpenXml.Drawing.Pictures;
 using x = DocumentFormat.OpenXml.Spreadsheet;
 using OxTest;
-#if WB
-using DocumentFormat.OpenXml.WB.Tests;
-#endif
 
 namespace DocumentFormat.OpenXml.Tests
 {

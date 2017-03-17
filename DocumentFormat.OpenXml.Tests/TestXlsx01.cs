@@ -20,27 +20,7 @@ namespace DocumentFormat.OpenXml.Tests
     {
         public static string s_TestFileLocation = null;
 
-        public static string TestFileLocation
-        {
-            get
-            {
-                if (s_TestFileLocation != null)
-                    return s_TestFileLocation;
-                // find the directory, wherever it may be, to get to the TestFiles directory
-                var dir = new DirectoryInfo(Environment.CurrentDirectory);
-                while (true)
-                {
-                    if (dir.Name == "DocumentFormat.OpenXml.Tests" || dir.Name == "DocumentFormat.OpenXml.WB.Tests")
-                        break;
-                    dir = dir.Parent;
-                }
-                dir = dir.Parent; // go up one more, to the parent of the above dirs
-                var testDataStorageDirInfo = new DirectoryInfo(Path.Combine(dir.FullName, "TestFiles/"));
-                s_TestFileLocation = testDataStorageDirInfo.FullName;
-                return s_TestFileLocation;
-            }
-        }
-
+        public static string TestFileLocation => TestUtil.TestFilesDir;
 
         [Fact]
         public void X008_XlsxCreation_Package_Settings()
@@ -87,7 +67,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void X006_Xlsx_DeleteAdd_CoreExtendedProperties()
         {
             var docName = "Spreadsheet.xlsx";
-            var ba = File.ReadAllBytes(TestFileLocation + docName);
+            var ba = File.ReadAllBytes(Path.Combine(TestFileLocation, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -222,7 +202,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         private static void XlsxValidationHelper(string docName, int expectedErrorCount, int expectedErrorCount2)
         {
-            var ba = File.ReadAllBytes(TestFileLocation + docName);
+            var ba = File.ReadAllBytes(Path.Combine(TestFileLocation, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
