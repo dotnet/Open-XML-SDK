@@ -109,7 +109,7 @@ This project uses the `project.json` for the project build system. Please see th
 
 To build the Open XML SDK:
 - Clone the repo at https://github.com/OfficeDev/Open-XML-SDK
-- Open the solution using Visual Studio 2015.  Community Edition of VS2015 works just fine.
+- Open the solution with an editor that supports the latest .NET project files, such as Visual Studio 2017, VS Code, VS for Mac, or .NET CLI. See https://www.microsoft.com/net/download/core for details.
 - Build the solution (using either Debug or Release configuration)
 - Run the Xunit tests to verify the installation
 
