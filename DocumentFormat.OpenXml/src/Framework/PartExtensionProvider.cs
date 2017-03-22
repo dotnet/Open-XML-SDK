@@ -2,7 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+
+#if FEATURE_SERIALIZATION
 using System.Runtime.Serialization;
+#endif
 
 namespace DocumentFormat.OpenXml.Packaging
 {
@@ -39,6 +42,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
         }
 
+#if FEATURE_SERIALIZATION
         // This is the serialization constructor.
         // Satisfies rule: ImplementSerializationConstructors.
 
@@ -52,6 +56,7 @@ namespace DocumentFormat.OpenXml.Packaging
            StreamingContext context) : base ( info, context )
         {
         }
+#endif
 
         /// <summary>
         /// Add a part extension for the specified ContentType.
@@ -74,12 +79,12 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (contentType == null)
             {
-                throw new ArgumentNullException("contentType");
+                throw new ArgumentNullException(nameof(contentType));
             }
 
             if (partExtension == null)
             {
-                throw new ArgumentNullException("partExtension");
+                throw new ArgumentNullException(nameof(partExtension));
             }
 
             string existedPartExtension = null;

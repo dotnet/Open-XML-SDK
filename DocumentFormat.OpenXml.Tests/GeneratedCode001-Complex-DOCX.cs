@@ -22,6 +22,7 @@ using Dsp = DocumentFormat.OpenXml.Office.Drawing;
 using Ds = DocumentFormat.OpenXml.CustomXmlDataProperties;
 using Thm15 = DocumentFormat.OpenXml.Office2013.Theme;
 using W15 = DocumentFormat.OpenXml.Office2013.Word;
+using System.Xml;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -9379,9 +9380,10 @@ namespace DocumentFormat.OpenXml.Tests
         // Generates content of embeddedPackagePart1.
         private void GenerateEmbeddedPackagePart1Content(EmbeddedPackagePart embeddedPackagePart1)
         {
-            System.IO.Stream data = GetBinaryDataStream(embeddedPackagePart1Data);
-            embeddedPackagePart1.FeedData(data);
-            data.Close();
+            using (System.IO.Stream data = GetBinaryDataStream(embeddedPackagePart1Data))
+            {
+                embeddedPackagePart1.FeedData(data);
+            }
         }
 
         // Generates content of headerPart1.
@@ -9518,9 +9520,10 @@ namespace DocumentFormat.OpenXml.Tests
         // Generates content of imagePart1.
         private void GenerateImagePart1Content(ImagePart imagePart1)
         {
-            System.IO.Stream data = GetBinaryDataStream(imagePart1Data);
-            imagePart1.FeedData(data);
-            data.Close();
+            using (System.IO.Stream data = GetBinaryDataStream(imagePart1Data))
+            {
+                imagePart1.FeedData(data);
+            }
         }
 
         // Generates content of footerPart1.
@@ -14986,9 +14989,10 @@ namespace DocumentFormat.OpenXml.Tests
         // Generates content of imagePart2.
         private void GenerateImagePart2Content(ImagePart imagePart2)
         {
-            System.IO.Stream data = GetBinaryDataStream(imagePart2Data);
-            imagePart2.FeedData(data);
-            data.Close();
+            using (System.IO.Stream data = GetBinaryDataStream(imagePart2Data))
+            {
+                imagePart2.FeedData(data);
+            }
         }
 
         // Generates content of footerPart3.
@@ -15029,10 +15033,10 @@ namespace DocumentFormat.OpenXml.Tests
         // Generates content of customXmlPart1.
         private void GenerateCustomXmlPart1Content(CustomXmlPart customXmlPart1)
         {
-            System.Xml.XmlTextWriter writer = new System.Xml.XmlTextWriter(customXmlPart1.GetStream(System.IO.FileMode.Create), System.Text.Encoding.UTF8);
-            writer.WriteRaw("<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?><CoverPageProperties xmlns=\"http://schemas.microsoft.com/office/2006/coverPageProps\"><PublishDate/><Abstract>This is my interesting abstract</Abstract><CompanyAddress/><CompanyPhone/><CompanyFax/><CompanyEmail/></CoverPageProperties>");
-            writer.Flush();
-            writer.Close();
+            using (XmlWriter writer = XmlWriter.Create(customXmlPart1.GetStream(System.IO.FileMode.Create)))
+            {
+                writer.WriteRaw("<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?><CoverPageProperties xmlns=\"http://schemas.microsoft.com/office/2006/coverPageProps\"><PublishDate/><Abstract>This is my interesting abstract</Abstract><CompanyAddress/><CompanyPhone/><CompanyFax/><CompanyEmail/></CoverPageProperties>");
+            }
         }
 
         // Generates content of customXmlPropertiesPart1.
@@ -15152,9 +15156,10 @@ namespace DocumentFormat.OpenXml.Tests
         // Generates content of imagePart3.
         private void GenerateImagePart3Content(ImagePart imagePart3)
         {
-            System.IO.Stream data = GetBinaryDataStream(imagePart3Data);
-            imagePart3.FeedData(data);
-            data.Close();
+            using (System.IO.Stream data = GetBinaryDataStream(imagePart3Data))
+            {
+                imagePart3.FeedData(data);
+            }
         }
 
         // Generates content of footerPart4.
@@ -19468,9 +19473,10 @@ namespace DocumentFormat.OpenXml.Tests
         // Generates content of embeddedPackagePart2.
         private void GenerateEmbeddedPackagePart2Content(EmbeddedPackagePart embeddedPackagePart2)
         {
-            System.IO.Stream data = GetBinaryDataStream(embeddedPackagePart2Data);
-            embeddedPackagePart2.FeedData(data);
-            data.Close();
+            using (System.IO.Stream data = GetBinaryDataStream(embeddedPackagePart2Data))
+            {
+                embeddedPackagePart2.FeedData(data);
+            }
         }
 
         // Generates content of headerPart7.

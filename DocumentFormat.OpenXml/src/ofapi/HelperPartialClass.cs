@@ -57,7 +57,7 @@ namespace DocumentFormat.OpenXml.Packaging
             set
             {
                 if (value == null)
-                    throw new ArgumentNullException("value");
+                    throw new ArgumentNullException(nameof(value));
                 SetDomTree(value);
             }
         }
@@ -113,7 +113,7 @@ namespace DocumentFormat.OpenXml.Packaging
             set
             {
                 if (value == null)
-                    throw new ArgumentNullException("value");
+                    throw new ArgumentNullException(nameof(value));
                 SetDomTree(value);
             }
         }

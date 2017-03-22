@@ -54,7 +54,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void TestRootElementOfVmlDrawingPartIsLoadedAsUnknown()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var file = CopyTestFiles(@"BugRegression", true, "537826.vmlpart.xlsx", f => f.IsSpreadsheetFile())
+            var file = CopyTestFiles(@"bugregression", true, "537826.vmlpart.xlsx", f => f.IsSpreadsheetFile())
                 .FirstOrDefault();
 
             using (var vmldoc = SpreadsheetDocument.Open(file.FullName, false))

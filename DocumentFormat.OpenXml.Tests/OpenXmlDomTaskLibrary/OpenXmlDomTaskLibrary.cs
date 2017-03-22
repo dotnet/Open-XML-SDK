@@ -46,7 +46,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
                 if (s_SafeListXDoc == null)
                 {
                     s_SafeListXDoc = new XmlDocument();
-                    s_SafeListXDoc.Load(safeListFilePath);
+                    s_SafeListXDoc.Load(File.OpenRead(safeListFilePath));
                     safeItems = s_SafeListXDoc.GetElementsByTagName("item");
                 }
 

@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void DummyObjectForEmptyChildElementsTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             var testfile = testfiles.FirstOrDefault();
@@ -60,9 +60,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void AppendArrayPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\presentation")
+            FileInfo source = GetTestFiles(@"asSources", "presentation")
                 .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             foreach (var testfile in testfiles)
@@ -73,9 +73,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void AppendArrayXSLTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\spreadsheet")
+            FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
                 .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"spreadsheet\smallset")
+            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
                 .Where(f => f.IsSpreadsheetFile());
 
             foreach (var testfile in testfiles)
@@ -86,9 +86,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void AppendIEnumerableTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\wordprocessing")
+            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
                 .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
             foreach (var testfile in testfiles)
                 AppendCollectionOnFile(testfile, getMainPart, getBody, source, getMainPart, getAnyComposite, AppendCollectionType.IEnumerable);
@@ -98,9 +98,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void AppendIEnumerablePPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\presentation")
+            FileInfo source = GetTestFiles(@"asSources", "presentation")
                 .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
             foreach (var testfile in testfiles)
                 AppendCollectionOnFile(testfile, getSlidePart, getSlideTextBody, source, getSlidePart, getAnyComposite, AppendCollectionType.IEnumerable);
@@ -111,9 +111,9 @@ namespace DocumentFormat.OpenXml.Tests
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
 
-            FileInfo source = GetTestFiles(@"asSources\spreadsheet")
+            FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
                 .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"spreadsheet\smallset")
+            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
                 .Where(f => f.IsSpreadsheetFile());
 
             foreach (var testfile in testfiles)
@@ -128,9 +128,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void AppendChildTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\wordprocessing")
+            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
                 .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             foreach (var testfile in testfiles)
@@ -141,9 +141,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void AppendChildPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\presentation")
+            FileInfo source = GetTestFiles(@"asSources", "presentation")
                 .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             foreach (var testfile in testfiles)
@@ -154,9 +154,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void AppendChildXSLTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\spreadsheet")
+            FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
                 .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"spreadsheet\smallset")
+            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
                 .Where(f => f.IsSpreadsheetFile());
 
             foreach (var testfile in testfiles)
@@ -167,9 +167,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void PreppendChildTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\wordprocessing")
+			FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
                 .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             foreach (var testfile in testfiles)
@@ -180,9 +180,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void PreppendChildPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\presentation")
+            FileInfo source = GetTestFiles(@"asSources", "presentation")
                 .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
             foreach (var testfile in testfiles)
                 PendTestOnFile(testfile, getSlidePart, getSlideTextBody, source, getSlidePart, getSlideTextBody, PendType.Prepend);
@@ -192,9 +192,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void PreppendChildXSLTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\spreadsheet")
+            FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
                 .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"spreadsheet\smallset")
+            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
                  .Where(f => f.IsSpreadsheetFile());
             foreach (var testfile in testfiles)
                 PendTestOnFile(testfile, getFirstSheetPart, getSheetData, source, getFirstSheetPart, getSheetData, PendType.Prepend);
@@ -208,9 +208,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void InsertBeforeTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\wordprocessing")
+            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
                 .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
             foreach (var testfile in testfiles)
             {
@@ -223,9 +223,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void InsertBeforePPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\presentation")
+            FileInfo source = GetTestFiles(@"asSources", "presentation")
                 .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             foreach (var testfile in testfiles)
@@ -239,9 +239,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void InsertBeforeXSLTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\spreadsheet")
+            FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
                 .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"spreadsheet\smallset")
+            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
                 .Where(f => f.IsSpreadsheetFile());
             foreach (var testfile in testfiles)
             {
@@ -254,9 +254,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void InsertAfterTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\wordprocessing")
+            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
                 .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
             foreach (var testfile in testfiles)
             {
@@ -269,9 +269,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void InsertAfterPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\presentation")
+            FileInfo source = GetTestFiles(@"asSources", "presentation")
                 .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
             foreach (var testfile in testfiles)
             {
@@ -284,9 +284,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void InsertAfterXSLTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\spreadsheet")
+            FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
                 .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"spreadsheet\smallset")
+            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
                 .Where(f => f.IsSpreadsheetFile());
             foreach (var testfile in testfiles)
             {
@@ -303,9 +303,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void InsertAtTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\wordprocessing")
+            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
                 .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             foreach (var testfile in testfiles)
@@ -318,9 +318,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void InsertAtPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\presentation")
+            FileInfo source = GetTestFiles(@"asSources", "presentation")
                 .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
             foreach (var testfile in testfiles)
             {
@@ -336,9 +336,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void InsertAtXSLTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\spreadsheet")
+            FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
                 .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"spreadsheet\smallset")
+            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
                 .Where(f => f.IsSpreadsheetFile());
             foreach (var testfile in testfiles)
             {
@@ -358,9 +358,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void InsertRelativeTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\wordprocessing")
+            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
                 .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
             foreach (var testfile in testfiles)
             {
@@ -373,9 +373,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void InsertRelativePPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\presentation")
+            FileInfo source = GetTestFiles(@"asSources", "presentation")
                 .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
             foreach (var testfile in testfiles)
             {
@@ -388,9 +388,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void InsertRelativeXSLTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\spreadsheet")
+            FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
                 .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"spreadsheet\smallset")
+            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
                 .Where(f => f.IsSpreadsheetFile());
             foreach (var testfile in testfiles)
             {
@@ -407,7 +407,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void RemoveAllChildrenTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             foreach (var testfile in testfiles)
@@ -421,7 +421,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void RemoveAllChildrenPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                 .Where(f => f.IsPresentationFile());
 
             foreach (var testfile in testfiles)
@@ -436,7 +436,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void RemoveAllChildrenXSLTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"spreadsheet\smallset")
+            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
                 .Where(f => f.IsSpreadsheetFile());
 
             foreach (var testfile in testfiles)
@@ -451,7 +451,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void RemoveAllTypedChildrenTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             foreach (var testfile in testfiles)
@@ -464,7 +464,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void RemoveAllTypedChildrenPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                 .Where(f => f.IsPresentationFile());
 
             foreach (var testfile in testfiles)
@@ -479,7 +479,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void RemoveAllTypedChildrenXSLTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"spreadsheet\smallset")
+            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
                 .Where(f => f.IsSpreadsheetFile());
 
             foreach (var testfile in testfiles)
@@ -497,7 +497,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void RemoveChildTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             foreach (var testfile in testfiles)
@@ -510,7 +510,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void RemoveChildPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                 .Where(f => f.IsPresentationFile());
 
             foreach (var testfile in testfiles)
@@ -525,7 +525,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void RemoveChildXSLTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"spreadsheet\smallset")
+            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
                 .Where(f => f.IsSpreadsheetFile());
 
             var testfile = testfiles.FirstOrDefault();
@@ -540,7 +540,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void RemoveTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             foreach (var testfile in testfiles)
@@ -554,7 +554,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void RemovePPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                 .Where(f => f.IsPresentationFile());
 
             foreach (var testfile in testfiles)
@@ -570,7 +570,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void RemoveXSLTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"spreadsheet\smallset")
+            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
                 .Where(f => f.IsSpreadsheetFile());
 
             foreach (var testfile in testfiles)
@@ -589,9 +589,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void ReplaceChildTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\wordprocessing")
+            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
                 .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             foreach (var testfile in testfiles)
@@ -604,9 +604,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void ReplaceChildPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\presentation")
+            FileInfo source = GetTestFiles(@"asSources", "presentation")
                 .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                 .Where(f => f.IsPresentationFile());
 
             foreach (var testfile in testfiles)
@@ -621,9 +621,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void ReplaceChildXSLTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\spreadsheet")
+            FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
                 .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"spreadsheet\smallset")
+            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
                 .Where(f => f.IsSpreadsheetFile());
 
             foreach (var testfile in testfiles)
@@ -709,9 +709,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void DummyIEnumerableForExtendedAttributesTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\wordprocessing")
+            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
                 .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             var testfile = testfiles.FirstOrDefault();
@@ -732,7 +732,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void GetAttributeTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             foreach (var testfile in testfiles)
@@ -745,7 +745,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void GetAttributePPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                 .Where(f => f.IsPresentationFile());
 
             foreach (var testfile in testfiles)
@@ -758,7 +758,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void GetAttributeXSLTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"spreadsheet\smallset")
+            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
                 .Where(f => f.IsSpreadsheetFile());
 
             foreach (var testfile in testfiles)
@@ -776,7 +776,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void GetAttributesTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             foreach (var testfile in testfiles)
@@ -790,7 +790,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void GetAttributesPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                 .Where(f => f.IsPresentationFile());
 
             foreach (var testfile in testfiles)
@@ -804,7 +804,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void GetAttributesXSLTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"spreadsheet\smallset")
+            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
                 .Where(f => f.IsSpreadsheetFile());
 
             foreach (var testfile in testfiles)
@@ -822,9 +822,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void SetAttributeTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\wordprocessing")
+            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
                 .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             foreach (var testfile in testfiles)
@@ -837,9 +837,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void SetAttributePPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\presentation")
+            FileInfo source = GetTestFiles(@"asSources", "presentation")
                 .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             foreach (var testfile in testfiles)
@@ -852,9 +852,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void SetAttributeXSLTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\spreadsheet")
+            FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
                 .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"spreadsheet\smallset")
+            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
                 .Where(f => f.IsSpreadsheetFile());
 
             foreach (var testfile in testfiles)
@@ -867,9 +867,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void SetAttributesTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\wordprocessing")
+            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
                 .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             foreach (var testfile in testfiles)
@@ -883,9 +883,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void SetAttributesPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\presentation")
+            FileInfo source = GetTestFiles(@"asSources","presentation")
                 .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             foreach (var testfile in testfiles)
@@ -899,9 +899,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void SetAttributesXSLTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\spreadsheet")
+            FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
                 .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"spreadsheet\smallset")
+            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
                 .Where(f => f.IsSpreadsheetFile());
 
             foreach (var testfile in testfiles)
@@ -919,7 +919,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void RemoveAttributeTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             foreach (var testfile in testfiles)
@@ -935,7 +935,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void RemoveAttributePPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             foreach (var testfile in testfiles)
@@ -948,7 +948,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void RemoveAttributeXSLTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"spreadsheet\smallset")
+            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
                 .Where(f => f.IsSpreadsheetFile());
 
             foreach (var testfile in testfiles)
@@ -965,7 +965,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void ClearAllAttributesTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             foreach (var testfile in testfiles)
@@ -979,7 +979,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void ClearAllAttributesPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             foreach (var testfile in testfiles)
@@ -993,7 +993,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void ClearAllAttributesXSLTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"spreadsheet\smallset")
+            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
                 .Where(f => f.IsSpreadsheetFile());
 
             foreach (var testfile in testfiles)
@@ -1010,9 +1010,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void AddNamespaceDeclarationTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\wordprocessing")
+            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
                 .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             foreach (var testfile in testfiles)
@@ -1028,7 +1028,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void NamespaceDeclarationsTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             foreach (var testfile in testfiles)
@@ -1044,7 +1044,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void RemoveNamespaceDeclarationTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             foreach (var testfile in testfiles)
@@ -1062,7 +1062,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void GetOuterXmlTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             foreach (var testfile in testfiles)
@@ -1078,7 +1078,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void GetOuterXmlPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             foreach (var testfile in testfiles)
@@ -1094,7 +1094,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void GetOuterXmlXSLTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"spreadsheet\smallset")
+            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
                 .Where(f => f.IsSpreadsheetFile());
 
             foreach (var testfile in testfiles)
@@ -1114,7 +1114,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void CloneTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             foreach (var testfile in testfiles)
@@ -1130,7 +1130,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void ClonePPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             foreach (var testfile in testfiles)
@@ -1146,7 +1146,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void CloneXSLTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"spreadsheet\smallset")
+            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
                 .Where(f => f.IsSpreadsheetFile());
 
             foreach (var testfile in testfiles)
@@ -1162,7 +1162,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void CloneNodeFalseTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph", true, "empty.docx", f => f.IsWordprocessingFile(), 1);
+            var testfiles = CopyTestFiles(System.IO.Path.Combine(@"wordprocessing", "paragraph"), true, "empty.docx", f => f.IsWordprocessingFile(), 1);
 
             foreach (var testfile in testfiles)
             {
@@ -1177,7 +1177,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void CloneNodeFalsePPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             foreach (var testfile in testfiles)
@@ -1193,7 +1193,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void CloneNodeFalseXSLTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"spreadsheet\smallset")
+            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
                 .Where(f => f.IsSpreadsheetFile());
 
             foreach (var testfile in testfiles)
@@ -1213,7 +1213,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void GetInnerXmlTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             foreach (var testfile in testfiles)
@@ -1227,7 +1227,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void GetInnerXmlPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             foreach (var testfile in testfiles)
@@ -1241,7 +1241,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void GetInnerXmlXSLTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"spreadsheet\smallset")
+            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
                 .Where(f => f.IsSpreadsheetFile());
 
             foreach (var testfile in testfiles)
@@ -1255,9 +1255,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void SetInnerXmlPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\presentation")
+            FileInfo source = GetTestFiles(@"asSources", "presentation")
                 .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             foreach (var testfile in testfiles)
@@ -1273,9 +1273,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void SetInnerXmlXSLTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\spreadsheet")
+            FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
                 .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"spreadsheet\smallset")
+            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
                 .Where(f => f.IsSpreadsheetFile());
 
             foreach (var testfile in testfiles)
@@ -1295,7 +1295,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void WriteToTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             foreach (var testfile in testfiles)
@@ -1311,7 +1311,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void WriteToPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             foreach (var testfile in testfiles)
@@ -1327,7 +1327,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void WriteToXSLTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"spreadsheet\smallset")
+            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
                 .Where(f => f.IsSpreadsheetFile());
 
             foreach (var testfile in testfiles)
@@ -1353,9 +1353,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventAppendChildTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\wordprocessing")
+            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
                 .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validInsertEventHandler);
@@ -1369,9 +1369,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventPreppendChildTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\wordprocessing")
+            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
                 .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validInsertEventHandler);
@@ -1385,9 +1385,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventAppendArrayTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\wordprocessing")
+            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
                 .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validInsertEventHandler);
@@ -1402,9 +1402,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventAppendIEnumerableTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\wordprocessing")
+            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
                 .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validInsertEventHandler);
@@ -1418,9 +1418,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventInsertBeforeTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\wordprocessing")
+            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
                 .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validInsertEventHandler);
@@ -1437,9 +1437,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventInsertAfterTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\wordprocessing")
+            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
                 .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validInsertEventHandler);
@@ -1456,9 +1456,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventInsertAtTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\wordprocessing")
+            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
                 .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validInsertEventHandler);
@@ -1474,9 +1474,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventInsertRelativeTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\wordprocessing")
+            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
                 .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validInsertEventHandler);
@@ -1493,7 +1493,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventRemoveAllChildrenTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validRemoveEventHandler);
@@ -1510,7 +1510,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventRemoveAllTypedChildrenTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             GetTargetElement getAnyWithLeafAndCompositeElement4Event = e => getAnyWithLeafAndCompositeChild(e).SetEventHandler(validRemoveEventHandler);
@@ -1526,7 +1526,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventRemoveChildTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validRemoveEventHandler);
@@ -1542,7 +1542,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventRemoveTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validRemoveEventHandler);
@@ -1560,9 +1560,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventReplaceChildTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\wordprocessing")
+            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
                 .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validReplaceEventHandler);
@@ -1584,7 +1584,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventGetAttributeTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             GetTargetElement getElementWithAttributesNoEvent = e => getElementWithAttributes(e).SetEventHandler(invalidEventHandler);
@@ -1598,7 +1598,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventGetAttributesTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
@@ -1618,9 +1618,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventSetAttributeTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\wordprocessing")
+            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
                 .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
@@ -1638,9 +1638,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventSetAttributesTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\wordprocessing")
+            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
                 .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
@@ -1660,7 +1660,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventRemoveAttributeTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
@@ -1680,7 +1680,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventClearAllAttributesTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
@@ -1702,7 +1702,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventGetOuterXmlTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
@@ -1722,7 +1722,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventCloneTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
@@ -1742,7 +1742,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventCloneNodeFalseTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
@@ -1762,7 +1762,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventGetInnerXmlTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             GetTargetElement getAnyLeafNoEvent = e => getAnyLeaf(e).SetEventHandler(invalidEventHandler);
@@ -1780,9 +1780,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventSetInnerXmlTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\wordprocessing")
+            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
                 .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             GetTargetElement getElementWithoutChildren4Event = e => getElementWithoutChildren(e).SetEventHandler(validReplaceEventHandler);
@@ -1801,7 +1801,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventWriteToTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             GetTargetElement getBodyNoEvent = e => getBody(e).SetEventHandler(invalidEventHandler);
@@ -1823,9 +1823,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventAppendChildPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\presentation")
+            FileInfo source = GetTestFiles(@"asSources", "presentation")
                 .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validInsertEventHandler);
@@ -1839,9 +1839,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventPreppendChildPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\presentation")
+            FileInfo source = GetTestFiles(@"asSources", "presentation")
                 .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validInsertEventHandler);
@@ -1855,9 +1855,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventAppendArrayPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\presentation")
+            FileInfo source = GetTestFiles(@"asSources", "presentation")
                 .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validInsertEventHandler);
@@ -1872,9 +1872,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventAppendIEnumerablePPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\presentation")
+            FileInfo source = GetTestFiles(@"asSources", "presentation")
                 .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validInsertEventHandler);
@@ -1889,9 +1889,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventInsertBeforePPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\presentation")
+            FileInfo source = GetTestFiles(@"asSources", "presentation")
                 .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validInsertEventHandler);
@@ -1906,9 +1906,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventInsertAfterPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\presentation")
+            FileInfo source = GetTestFiles(@"asSources", "presentation")
                 .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validInsertEventHandler);
@@ -1923,9 +1923,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventInsertAtPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\presentation")
+            FileInfo source = GetTestFiles(@"asSources", "presentation")
                 .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validInsertEventHandler);
@@ -1943,9 +1943,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventInertRelativePPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\presentation")
+            FileInfo source = GetTestFiles(@"asSources", "presentation")
                 .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validInsertEventHandler);
@@ -1960,7 +1960,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventRemoveAllChildrenPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validRemoveEventHandler);
@@ -1976,7 +1976,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventRemoveAllTypedChildrenPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             GetTargetElement getAnyWithLeafAndCompositeElement4Event = e => getAnyWithLeafAndCompositeChild(e).SetEventHandler(validRemoveEventHandler);
@@ -1990,7 +1990,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventRemoveChildPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validRemoveEventHandler);
@@ -2008,7 +2008,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventRemovePPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validRemoveEventHandler);
@@ -2027,9 +2027,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventReplaceChildPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\presentation")
+            FileInfo source = GetTestFiles(@"asSources", "presentation")
                 .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validReplaceEventHandler);
@@ -2053,7 +2053,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventGetAttributePPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                 .Where(f => f.IsPresentationFile());
 
             GetTargetElement getElementWithAttributesNoEvent = e => getElementWithAttributes(e).SetEventHandler(invalidEventHandler);
@@ -2067,7 +2067,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventGetAttributesPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                 .Where(f => f.IsPresentationFile());
 
             GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
@@ -2083,9 +2083,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventSetAttributePPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\presentation")
+            FileInfo source = GetTestFiles(@"asSources", "presentation")
                 .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
@@ -2105,9 +2105,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventSetAttributesPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\presentation")
+            FileInfo source = GetTestFiles(@"asSources", "presentation")
                 .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
@@ -2125,7 +2125,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventRemoveAttributePPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                 .Where(f => f.IsPresentationFile());
 
             GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
@@ -2142,7 +2142,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventClearAllAttributesPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                 .Where(f => f.IsPresentationFile());
 
             GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
@@ -2160,7 +2160,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventGetOuterXmlPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                 .Where(f => f.IsPresentationFile());
 
             GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
@@ -2180,7 +2180,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventClonePPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                 .Where(f => f.IsPresentationFile());
 
             GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
@@ -2200,7 +2200,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventCloneNodeFalsePPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                 .Where(f => f.IsPresentationFile());
 
             GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
@@ -2220,7 +2220,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventGetInnerXmlPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                 .Where(f => f.IsPresentationFile());
 
             GetTargetElement getAnyLeafNoEvent = e => getAnyLeaf(e).SetEventHandler(invalidEventHandler);
@@ -2238,9 +2238,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventSetInnerXmlPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\presentation")
+            FileInfo source = GetTestFiles(@"asSources", "presentation")
                 .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                 .Where(f => f.IsPresentationFile());
 
             GetTargetElement getElementWithoutChildren4Event = e => getElementWithoutChildren(e).SetEventHandler(validReplaceEventHandler);
@@ -2262,7 +2262,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void EventWriteToPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                 .Where(f => f.IsPresentationFile());
 
             GetTargetElement getSlideTextBodyNoEvent = e => getSlideTextBody(e).SetEventHandler(invalidEventHandler);
@@ -2293,7 +2293,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void AnnotationTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             var testfile = testfiles.FirstOrDefault();
@@ -2319,7 +2319,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void AnnotationPPTTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"presentation\smallset")
+            var testfiles = CopyTestFiles(@"presentation", "smallset")
                .Where(f => f.IsPresentationFile());
 
             var testfile = testfiles.FirstOrDefault();
@@ -2345,7 +2345,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void AnnotationXSLTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"spreadsheet\smallset")
+            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
               .Where(f => f.IsSpreadsheetFile());
 
             var testfile = testfiles.FirstOrDefault();
@@ -2375,13 +2375,13 @@ namespace DocumentFormat.OpenXml.Tests
         public void AppendArrayWithElementsOnTree()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            CopyTestFiles(@"wordprocessing\paragraph")
+            CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile())
                .FirstOrDefault().OpenPackage(true).MainPart().RootElement()
                .InvalidOperation<InvalidOperationException>(Log, e =>
                {
                    getFirstChild(e).AppendChild<OpenXmlElement>(
-                       GetTestFiles(@"asSources\wordprocessing")
+                       GetTestFiles(@"asSources", "wordprocessing")
                        .Where(f => f.IsWordprocessingFile()).FirstOrDefault()
                        .OpenPackage(false).MainPart().RootElement().Elements().FirstOrDefault());
                });
@@ -2391,13 +2391,13 @@ namespace DocumentFormat.OpenXml.Tests
         public void AppentArryWithElementsOnTreePPT()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            CopyTestFiles(@"presentation\smallset")
+            CopyTestFiles(@"presentation", "smallset")
                 .Where(f => f.IsPresentationFile())
                 .FirstOrDefault().OpenPackage(true).MainPart().RootElement()
                 .InvalidOperation<InvalidOperationException>(Log, e =>
                 {
                     getFirstChild(e).AppendChild<OpenXmlElement>(
-                        GetTestFiles(@"asSources\presentation")
+                        GetTestFiles(@"asSources", "presentation")
                         .Where(f => f.IsPresentationFile()).FirstOrDefault()
                         .OpenPackage(false).MainPart().RootElement().Elements().FirstOrDefault());
                 });
@@ -2407,13 +2407,13 @@ namespace DocumentFormat.OpenXml.Tests
         public void AppentArryWithElementsOnTreeXSLT()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            CopyTestFiles(@"spreadsheet\smallset")
+            CopyTestFiles(@"spreadsheet", "smallset")
                 .Where(f => f.IsSpreadsheetFile())
                 .FirstOrDefault().OpenPackage(true).MainPart().RootElement()
                 .InvalidOperation<InvalidOperationException>(Log, e =>
                 {
                     getFirstChild(e).AppendChild<OpenXmlElement>(
-                        GetTestFiles(@"asSources\spreadsheet")
+                        GetTestFiles(@"asSources", "spreadsheet")
                         .Where(f => f.IsSpreadsheetFile()).FirstOrDefault()
                         .OpenPackage(false).MainPart().RootElement().Elements().FirstOrDefault());
                 });
@@ -2427,9 +2427,9 @@ namespace DocumentFormat.OpenXml.Tests
         public void Bug242463_SetRootXmlTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            FileInfo source = GetTestFiles(@"asSources\wordprocessing")
+            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
                 .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             using (var testpackage = testfiles.FirstOrDefault().OpenPackage(true))
@@ -2448,7 +2448,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void Bug247894_LoadDocumentTest()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfiles = CopyTestFiles(@"wordprocessing\paragraph")
+            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
                .Where(f => f.IsWordprocessingFile());
 
             using (var testpackage = testfiles.FirstOrDefault().OpenPackage(true))
@@ -2543,7 +2543,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void Bug680607_SaveOutWord14Beta2File()
         {
             this.MyTestInitialize(TestContext.GetCurrentMethod());
-            var testfile = CopyTestFiles("BugRegression", true, "680607.HelloO14.docx", f => f.IsWordprocessingFile())
+            var testfile = CopyTestFiles("bugregression", true, "680607.HelloO14.docx", f => f.IsWordprocessingFile())
                 .FirstOrDefault();
 
             using (var Package = testfile.OpenPackage(true))

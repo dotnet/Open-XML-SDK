@@ -36,7 +36,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
 
             this.TextValue = source.TextValue;
@@ -216,7 +216,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
 
             this.InnerText = source.InnerText;
@@ -338,7 +338,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -484,7 +484,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
          
@@ -642,7 +642,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -795,7 +795,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -947,7 +947,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -1118,7 +1118,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -1278,7 +1278,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -1434,7 +1434,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -1586,7 +1586,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -1736,7 +1736,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -1889,7 +1889,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -2048,7 +2048,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -2223,7 +2223,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -2404,7 +2404,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -2564,7 +2564,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -2671,7 +2671,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -2781,7 +2781,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -2882,7 +2882,7 @@ namespace DocumentFormat.OpenXml
         {
             if (list == null)
             {
-                throw new ArgumentNullException("list");
+                throw new ArgumentNullException(nameof(list));
             }
 
             this._list =  new ObservableCollection<T>();
@@ -2903,7 +2903,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
         }
 
@@ -3139,7 +3139,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
             this._enumValue = source._enumValue;
         }
@@ -3289,8 +3289,9 @@ namespace DocumentFormat.OpenXml
 
         internal static string ToString(T enumVal)
         {
-            FieldInfo fi = enumVal.GetType().GetField(enumVal.ToString());
-            EnumStringAttribute stringAttr = Attribute.GetCustomAttribute(fi, typeof(EnumStringAttribute)) as EnumStringAttribute;
+            FieldInfo fi = enumVal.GetType().GetTypeInfo().GetDeclaredField(enumVal.ToString());
+            EnumStringAttribute stringAttr = fi.GetCustomAttribute<EnumStringAttribute>();
+
             if (stringAttr != null)
             {
                 return stringAttr.Value;
@@ -3313,8 +3314,9 @@ namespace DocumentFormat.OpenXml
                     Array values = Enum.GetValues(typeof(T));
                     foreach (T enumVal in values)
                     {
-                        FieldInfo fi = enumVal.GetType().GetField(enumVal.ToString());
-                        EnumStringAttribute stringAttr = Attribute.GetCustomAttribute(fi, typeof(EnumStringAttribute)) as EnumStringAttribute;
+                        FieldInfo fi = enumVal.GetType().GetTypeInfo().GetDeclaredField(enumVal.ToString());
+                        EnumStringAttribute stringAttr = fi.GetCustomAttribute<EnumStringAttribute>();
+
                         lookupTable.Add(stringAttr.Value, enumVal);
                     }
 
@@ -3328,13 +3330,13 @@ namespace DocumentFormat.OpenXml
             {
                 parseCount++;
 
-
                 Array values = Enum.GetValues(typeof(T));
 
                 foreach (T enumVal in values)
                 {
-                    FieldInfo fi = enumVal.GetType().GetField(enumVal.ToString());
-                    EnumStringAttribute stringAttr = Attribute.GetCustomAttribute(fi, typeof(EnumStringAttribute)) as EnumStringAttribute;
+                    FieldInfo fi = enumVal.GetType().GetTypeInfo().GetDeclaredField(enumVal.ToString());
+                    EnumStringAttribute stringAttr = fi.GetCustomAttribute<EnumStringAttribute>();
+
                     if (stringAttr != null && stringAttr.Value == stringVal)
                     {
                         result = enumVal;
@@ -3380,8 +3382,9 @@ namespace DocumentFormat.OpenXml
 
                 foreach (T enumVal in values)
                 {
-                    FieldInfo fi = this.Value.GetType().GetField(enumVal.ToString());
-                    OfficeAvailabilityAttribute versionAttr = Attribute.GetCustomAttribute(fi, typeof(OfficeAvailabilityAttribute)) as OfficeAvailabilityAttribute;
+                    FieldInfo fi = this.Value.GetType().GetTypeInfo().GetDeclaredField(enumVal.ToString());
+                    OfficeAvailabilityAttribute versionAttr = fi.GetCustomAttribute<OfficeAvailabilityAttribute>();
+
                     if (versionAttr != null)
                     {
                         if (lookupTable == null)
@@ -3622,7 +3625,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
 
             Initialize();
@@ -3813,7 +3816,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
             Initialize();
             _impl.InnerText = source.InnerText;
@@ -4009,7 +4012,7 @@ namespace DocumentFormat.OpenXml
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
             Initialize();
             _impl.InnerText = source.InnerText;
@@ -4130,7 +4133,7 @@ namespace DocumentFormat.OpenXml
         {
             if (xmlAttribute == null)
             {
-                throw new ArgumentNullException("xmlAttribute");
+                throw new ArgumentNullException(nameof(xmlAttribute));
             }
 
             return ToBoolean(xmlAttribute);

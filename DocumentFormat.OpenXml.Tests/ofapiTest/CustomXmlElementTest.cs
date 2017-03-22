@@ -8,9 +8,7 @@ using DocumentFormat.OpenXml.Wordprocessing;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using System.IO;
-#if WB
-using DocumentFormat.OpenXml.WB.Tests;
-#endif
+using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -59,7 +57,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
 
             Type baseType = typeof(CustomXmlElement);
-            Assert.True(baseType.IsAbstract);
+            Assert.True(baseType.GetTypeInfo().IsAbstract);
 
             // CustomXmlRuby
             CustomXmlRuby cxRuby = new CustomXmlRuby();
@@ -114,7 +112,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void SdtBaseClassTest()
         {
             Type baseType = typeof(SdtElement);
-            Assert.True(baseType.IsAbstract);
+            Assert.True(baseType.GetTypeInfo().IsAbstract);
 
             // Test loading and modification
             SdtRun sdtRun = new SdtRun();

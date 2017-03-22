@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml
         {
             if (String.IsNullOrEmpty(qualifiedName))
             {
-                throw new ArgumentNullException("qualifiedName");
+                throw new ArgumentNullException(nameof(qualifiedName));
             }
 
             this._namespaceUri = namespaceUri;
@@ -53,7 +53,7 @@ namespace DocumentFormat.OpenXml
         {
             if (String.IsNullOrEmpty(localName))
             {
-                throw new ArgumentNullException("localName");
+                throw new ArgumentNullException(nameof(localName));
             }
 
             this._namespaceUri = namespaceUri;

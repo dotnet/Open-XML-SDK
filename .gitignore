@@ -174,3 +174,9 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
+*.nuget.props
+*.nuget.targets
+project.lock.json
+.vs/
+Tests/
+TestFiles/

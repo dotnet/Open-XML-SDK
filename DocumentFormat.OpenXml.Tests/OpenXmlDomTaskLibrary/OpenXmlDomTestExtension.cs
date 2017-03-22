@@ -517,10 +517,10 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
                 }
                 catch (XmlException)
                 {
-                    sourceStm.Close();
+                    sourceStm.Dispose();
                     sourceStm = sourcePart.GetStream();
 
-                    targetStm.Close();
+                    targetStm.Dispose();
                     targetStm = targetPart.GetStream();
 
                     if (sourceStm.Length != targetStm.Length)
@@ -662,7 +662,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         {
             var flag = BindingFlags.FlattenHierarchy | BindingFlags.Instance | BindingFlags.Public;
             var properties = e.GetType().GetProperties(flag)
-                .Where(p => p.GetCustomAttributes(typeof(SchemaAttrAttribute), false).Length > 0);
+                .Where(p => p.GetCustomAttributes(typeof(SchemaAttrAttribute), false).Any());
             return properties
                 .Select(p => p.GetCustomAttributes(typeof(SchemaAttrAttribute), false).First() as SchemaAttrAttribute)
                 .Select(sa => new OpenXmlAttribute(sa.Tag, sa.NamespaceUri, null));
@@ -712,9 +712,10 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             }
             else
             {
-                XmlWriter partWriter = XmlWriter.Create(part.GetStream());
-                element.WriteTo(partWriter);
-                partWriter.Close();
+                using (XmlWriter partWriter = XmlWriter.Create(part.GetStream()))
+                {
+                    element.WriteTo(partWriter);
+                }
             }
         }
 
@@ -807,14 +808,14 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         // Get concrete derived classes of OpenXmlElement class
         public static IEnumerable<Type> GetConcreteDerivesOfOpenXmlElement()
         {
-            return Assembly.GetAssembly(typeof(OpenXmlElement)).GetTypes()
-                .Where(t => !t.IsAbstract && t.IsSubclassOf(typeof(OpenXmlElement)));
+            return typeof(OpenXmlElement).GetTypeInfo().Assembly.GetTypes()
+                .Where(t => !t.GetTypeInfo().IsAbstract && t.IsSubclassOf(typeof(OpenXmlElement)));
         }
 
         // construct an instance of OpenXmlElement derives and return its XmlQualifiedName
         public static XmlQualifiedName GetElementTagName(this Type elementType)
         {
-            if (elementType.IsAbstract || !elementType.IsSubclassOf(typeof(OpenXmlElement)))
+            if (elementType.GetTypeInfo().IsAbstract || !elementType.IsSubclassOf(typeof(OpenXmlElement)))
                 return null;
 
             var element = elementType.GetConstructor(Type.EmptyTypes).Invoke(null) as OpenXmlElement;
@@ -853,8 +854,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             if (!hostType.IsSubclassOf(typeof(OpenXmlElement)))
                 return null;
 
-            return hostType.GetCustomAttributes(typeof(OfficeAvailabilityAttribute), true)
-                .FirstOrDefault() as OfficeAvailabilityAttribute;
+            return hostType.GetTypeInfo().GetCustomAttributes<OfficeAvailabilityAttribute>(true).FirstOrDefault();
         }
 
         public static IEnumerable<ChildElementInfoAttribute> GetChildElementInfoAttributes(this Type type)
@@ -862,8 +862,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             if (!type.IsSubclassOf(typeof(OpenXmlElement)))
                 return null;
 
-            return type.GetCustomAttributes(typeof(ChildElementInfoAttribute), true)
-                .Cast<ChildElementInfoAttribute>();
+            return type.GetTypeInfo().GetCustomAttributes<ChildElementInfoAttribute>(true);
         }
 
         public static IEnumerable<Type> GetChildElementTypes(this Type type)
@@ -871,8 +870,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             if (!type.IsSubclassOf(typeof(OpenXmlElement)))
                 return null;
 
-            return type.GetCustomAttributes(typeof(ChildElementInfoAttribute), true)
-                .Cast<ChildElementInfoAttribute>()
+            return type.GetTypeInfo().GetCustomAttributes<ChildElementInfoAttribute>(true)
                 .Select(cta => cta.ElementType);
         }
 
@@ -881,19 +879,18 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             if (!type.IsSubclassOf(typeof(OpenXmlElement)))
                 return null;
 
-            return type.Assembly.GetExportedTypes()
-                .Where(et => !et.IsAbstract && et.IsSubclassOf(typeof(OpenXmlElement)) && et.GetChildElementTypes().Any(ct => ct == type));
+            return type.GetTypeInfo().Assembly.GetExportedTypes()
+                .Where(et => !et.GetTypeInfo().IsAbstract && et.IsSubclassOf(typeof(OpenXmlElement)) && et.GetChildElementTypes().Any(ct => ct == type));
         }
 
         public static SchemaAttrAttribute GetSchemaAttribute(this PropertyInfo propertyInfo)
         {
-            return propertyInfo.GetCustomAttributes(typeof(SchemaAttrAttribute), true)
-                .FirstOrDefault() as SchemaAttrAttribute;
+            return propertyInfo.GetCustomAttributes<SchemaAttrAttribute>(true).FirstOrDefault();
         }
 
         public static OfficeAvailabilityAttribute GetOfficeAvailability(this PropertyInfo propertyInfo)
         {
-            if (!propertyInfo.ReflectedType.IsSubclassOf(typeof(OpenXmlElement)))
+            if (!propertyInfo.DeclaringType.IsSubclassOf(typeof(OpenXmlElement)))
                 return null;
 
             return propertyInfo.GetCustomAttributes(typeof(OfficeAvailabilityAttribute), true)
@@ -902,36 +899,34 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
 
         public static IEnumerable<Type> GetEnumTypes()
         {
-            return typeof(OpenXmlElement).Assembly.GetTypes().Where(t => t.IsEnum);
+            return typeof(OpenXmlElement).GetTypeInfo().Assembly.GetTypes().Where(t => t.GetTypeInfo().IsEnum);
         }
 
         public static IEnumerable<FieldInfo> GetEnumStringFields(this Type enumType)
         {
-            if (!enumType.IsEnum)
+            if (!enumType.GetTypeInfo().IsEnum)
                 return null;
 
             return enumType.GetFields()
-                .Where(fi => fi.GetCustomAttributes(typeof(EnumStringAttribute), false).Length > 0);
+                .Where(fi => fi.GetCustomAttributes<EnumStringAttribute>(false).Any());
         }
 
         public static EnumStringAttribute GetEnumString(this FieldInfo enumField)
         {
-            return enumField.GetCustomAttributes(typeof(EnumStringAttribute), false)
-                .FirstOrDefault() as EnumStringAttribute;
+            return enumField.GetCustomAttributes<EnumStringAttribute>(false).FirstOrDefault(); 
         }
 
         public static OfficeAvailabilityAttribute GetOfficeAvailability(this FieldInfo enumField)
         {
-            if (!enumField.ReflectedType.IsEnum)
+            if (!enumField.DeclaringType.GetTypeInfo().IsEnum)
                 return null;
 
-            return enumField.GetCustomAttributes(typeof(OfficeAvailabilityAttribute), false)
-                .FirstOrDefault() as OfficeAvailabilityAttribute;
+            return enumField.GetCustomAttributes<OfficeAvailabilityAttribute>(false).FirstOrDefault(); 
         }
 
         public static bool IsInVersion(this Type hostType, FileFormatVersions version)
         {
-            if (hostType.IsAbstract || !hostType.IsSubclassOf(typeof(OpenXmlElement)))
+            if (hostType.GetTypeInfo().IsAbstract || !hostType.IsSubclassOf(typeof(OpenXmlElement)))
                 return false;
 
             var oa = hostType.GetOfficeAvailability();
@@ -942,7 +937,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
 
         public static bool IsInVersion(this PropertyInfo propertyInfo, FileFormatVersions version)
         {
-            var hostType = propertyInfo.ReflectedType;
+            var hostType = propertyInfo.DeclaringType;
             if (hostType.IsInVersion(version))
             {
                 var oa = propertyInfo.GetOfficeAvailability();
@@ -1207,31 +1202,27 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             if (!type.IsSubclassOf(typeof(OpenXmlElement)))
                 return null;
 
-            return type.GetCustomAttributes(typeof(ChildElementInfoAttribute), true)
-                .Cast<ChildElementInfoAttribute>();
+            return type.GetTypeInfo().GetCustomAttributes<ChildElementInfoAttribute>(true);
         }
 
         public static SchemaAttrAttribute getSchemaAttribute(this PropertyInfo propertyInfo)
         {
-            return propertyInfo.GetCustomAttributes(typeof(SchemaAttrAttribute), true)
-                .FirstOrDefault() as SchemaAttrAttribute;
+            return propertyInfo.GetCustomAttributes<SchemaAttrAttribute>(true).FirstOrDefault(); 
         }
 
         public static IEnumerable<EnumStringAttribute> getEnumStrings(this Type enumType)
         {
-            if (!enumType.IsEnum)
+            if (!enumType.GetTypeInfo().IsEnum)
                 return null;
 
             return enumType.GetFields()
-                .Where(fi => fi.GetCustomAttributes(typeof(EnumStringAttribute), false).Length > 0)
-                .SelectMany(fi => fi.GetCustomAttributes(typeof(EnumStringAttribute), true))
-                .Cast<EnumStringAttribute>();
+                .Where(fi => fi.GetCustomAttributes<EnumStringAttribute>(false).Any())
+                .SelectMany(fi => fi.GetCustomAttributes<EnumStringAttribute>(true));
         }
 
         public static EnumStringAttribute getEnumString(this FieldInfo enumField)
         {
-            return enumField.GetCustomAttributes(typeof(EnumStringAttribute), true)
-                .FirstOrDefault() as EnumStringAttribute;
+            return enumField.GetCustomAttributes<EnumStringAttribute>(true).FirstOrDefault();
         }
         #endregion Extensions for Custom Attributes
     }

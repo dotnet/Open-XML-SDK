@@ -14,10 +14,6 @@ using DocumentFormat.OpenXml.Packaging;
 using OxTest;
 using System.IO;
 
-#if WB
-using DocumentFormat.OpenXml.WB.Tests;
-#endif
-
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>

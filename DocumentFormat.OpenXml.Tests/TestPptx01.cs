@@ -16,32 +16,10 @@ namespace DocumentFormat.OpenXml.Tests
 {
     public class PptxTests01
     {
-        public static string s_TestFileLocation = null;
-
-        public static string TestFileLocation {
-            get {
-                if (s_TestFileLocation != null)
-                    return s_TestFileLocation;
-                // find the directory, wherever it may be, to get to the TestFiles directory
-                var dir = new DirectoryInfo(Environment.CurrentDirectory);
-                while (true)
-                {
-                    if (dir.Name == "DocumentFormat.OpenXml.Tests" || dir.Name == "DocumentFormat.OpenXml.WB.Tests")
-                        break;
-                    dir = dir.Parent;
-                }
-                dir = dir.Parent; // go up one more, to the parent of the above dirs
-                var testDataStorageDirInfo = new DirectoryInfo(Path.Combine(dir.FullName, "TestFiles/"));
-                s_TestFileLocation = testDataStorageDirInfo.FullName;
-                return s_TestFileLocation;
-            }
-        }
-
-
         [Fact]
         public void P007_PptxCreation_Package_Settings()
         {
-            var fiSource = new FileInfo(Path.Combine(TestFileLocation, "Presentation.pptx"));
+            var fiSource = new FileInfo(Path.Combine(TestUtil.TestFilesDir, "Presentation.pptx"));
             var fiCopy = new FileInfo(Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx"));
             File.Copy(fiSource.FullName, fiCopy.FullName);
             using (Package package = Package.Open(fiCopy.FullName, FileMode.Open, FileAccess.ReadWrite))
@@ -63,7 +41,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void P006_PresentationDocument_Open()
         {
-            var fiSource = new FileInfo(Path.Combine(TestFileLocation, "Presentation.pptx"));
+            var fiSource = new FileInfo(Path.Combine(TestUtil.TestFilesDir, "Presentation.pptx"));
             var fiCopy = new FileInfo(Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx"));
             File.Copy(fiSource.FullName, fiCopy.FullName);
             OpenSettings openSettings = new OpenSettings();
@@ -82,7 +60,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void P005_PptxCreation_Package_Settings()
         {
-            var fiSource = new FileInfo(Path.Combine(TestFileLocation, "Presentation.pptx"));
+            var fiSource = new FileInfo(Path.Combine(TestUtil.TestFilesDir, "Presentation.pptx"));
             var fiCopy = new FileInfo(Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx"));
             File.Copy(fiSource.FullName, fiCopy.FullName);
             using (Package package = Package.Open(fiCopy.FullName, FileMode.Open, FileAccess.ReadWrite))
@@ -104,7 +82,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void P004_SpreadsheetDocument_Open()
         {
-            var fiSource = new FileInfo(Path.Combine(TestFileLocation, "Presentation.pptx"));
+            var fiSource = new FileInfo(Path.Combine(TestUtil.TestFilesDir, "Presentation.pptx"));
             var fiCopy = new FileInfo(Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx"));
             File.Copy(fiSource.FullName, fiCopy.FullName);
             OpenSettings openSettings = new OpenSettings();
@@ -378,7 +356,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void P002_Pptx_DeleteAdd_CoreExtendedProperties()
         {
             var docName = "Presentation.pptx";
-            var ba = File.ReadAllBytes(TestFileLocation + docName);
+            var ba = File.ReadAllBytes(Path.Combine(TestUtil.TestFilesDir, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);
@@ -417,7 +395,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         private static void PptxValidationHelper(string docName, int expectedErrorCount, int expectedErrorCount2)
         {
-            var ba = File.ReadAllBytes(TestFileLocation + docName);
+            var ba = File.ReadAllBytes(Path.Combine(TestUtil.TestFilesDir, docName));
             using (MemoryStream ms = new MemoryStream())
             {
                 ms.Write(ba, 0, ba.Length);

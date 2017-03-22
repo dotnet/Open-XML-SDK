@@ -446,7 +446,7 @@ namespace DocumentFormat.OpenXml
         {
             if (strictNamespace == null)
             {
-                throw new ArgumentNullException("strictNamespace");
+                throw new ArgumentNullException(nameof(strictNamespace));
             }
 
             return _namespaceTranslationDic.TryGetValue(strictNamespace, out transitionalNamespace);
@@ -462,7 +462,7 @@ namespace DocumentFormat.OpenXml
         {
             if (strictRelationship == null)
             {
-                throw new ArgumentNullException("strictRelationship");
+                throw new ArgumentNullException(nameof(strictRelationship));
             }
 
             return _relationshipTranslationDic.TryGetValue(strictRelationship, out transitionalRelationship);
@@ -518,7 +518,7 @@ namespace DocumentFormat.OpenXml
         {
             if (namespaceUri == null)
             {
-                throw new ArgumentNullException("namespaceUri");
+                throw new ArgumentNullException(nameof(namespaceUri));
             }
 
             int index = Array.IndexOf(_namespaceList, namespaceUri);
@@ -547,7 +547,7 @@ namespace DocumentFormat.OpenXml
         {
             if (namespaceUri == null)
             {
-                throw new ArgumentNullException("namespaceUri");
+                throw new ArgumentNullException(nameof(namespaceUri));
             }
 
             int index = Array.IndexOf(_namespaceList, namespaceUri);
@@ -592,7 +592,7 @@ namespace DocumentFormat.OpenXml
         {
             if (prefix == null)
             {
-                throw new ArgumentNullException("prefix");
+                throw new ArgumentNullException(nameof(prefix));
             }
 
             int index = Array.IndexOf(_namespacePrefixList, prefix);

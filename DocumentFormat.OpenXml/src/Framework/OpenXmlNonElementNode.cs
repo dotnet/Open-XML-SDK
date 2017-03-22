@@ -48,7 +48,7 @@ namespace DocumentFormat.OpenXml
                 case XmlNodeType.EntityReference:
                 case XmlNodeType.Notation: // not allowed when DtdProcessing = DtdProcessing.Prohibit
                 case XmlNodeType.None:
-                    throw new ArgumentOutOfRangeException("nodeType");
+                    throw new ArgumentOutOfRangeException(nameof(nodeType));
             }
 
             this.XmlNodeType = nodeType;
@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml
         {
             if ( String.IsNullOrEmpty( outerXml ) )
             {
-                throw new ArgumentNullException("outerXml");
+                throw new ArgumentNullException(nameof(outerXml));
             }
             
             // check the out XML match the nodeType
@@ -76,13 +76,11 @@ namespace DocumentFormat.OpenXml
                 using (XmlReader xmlReader = XmlConvertingReaderFactory.Create(stringReader, settings))
                 {
                     xmlReader.Read();
-                
+
                     if (xmlReader.NodeType != nodeType)
                     {
                         throw new ArgumentException(ExceptionMessages.InvalidOuterXmlForMiscNode);
                     }
-
-                    xmlReader.Close();
                 }
             }
 
@@ -151,7 +149,6 @@ namespace DocumentFormat.OpenXml
                             {
                                 xmlReader.Read();
                                 localName = xmlReader.LocalName;
-                                xmlReader.Close();
                             }
                         }
                         break;
@@ -284,7 +281,7 @@ namespace DocumentFormat.OpenXml
         {
             if (xmlWriter == null)
             {
-                throw new ArgumentNullException("xmlWriter");
+                throw new ArgumentNullException(nameof(xmlWriter));
             }
 
             // write out the raw xml

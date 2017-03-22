@@ -15,6 +15,7 @@ using C14 = DocumentFormat.OpenXml.Office2010.Drawing.Charts;
 using Cs = DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle;
 using X14 = DocumentFormat.OpenXml.Office2010.Excel;
 using X15 = DocumentFormat.OpenXml.Office2013.Excel;
+using System.Xml;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -3370,9 +3371,10 @@ namespace DocumentFormat.OpenXml.Tests
         // Generates content of extendedPart1.
         private void GenerateExtendedPart1Content(ExtendedPart extendedPart1)
         {
-            System.IO.Stream data = GetBinaryDataStream(extendedPart1Data);
-            extendedPart1.FeedData(data);
-            data.Close();
+            using (System.IO.Stream data = GetBinaryDataStream(extendedPart1Data))
+            {
+                extendedPart1.FeedData(data);
+            }
         }
 
         // Generates content of diagramLayoutDefinitionPart1.
@@ -4268,9 +4270,10 @@ namespace DocumentFormat.OpenXml.Tests
         // Generates content of imagePart1.
         private void GenerateImagePart1Content(ImagePart imagePart1)
         {
-            System.IO.Stream data = GetBinaryDataStream(imagePart1Data);
-            imagePart1.FeedData(data);
-            data.Close();
+            using (System.IO.Stream data = GetBinaryDataStream(imagePart1Data))
+            {
+                imagePart1.FeedData(data);
+            }
         }
 
         // Generates content of diagramPersistLayoutPart1.
@@ -8706,9 +8709,10 @@ namespace DocumentFormat.OpenXml.Tests
         // Generates content of spreadsheetPrinterSettingsPart1.
         private void GenerateSpreadsheetPrinterSettingsPart1Content(SpreadsheetPrinterSettingsPart spreadsheetPrinterSettingsPart1)
         {
-            System.IO.Stream data = GetBinaryDataStream(spreadsheetPrinterSettingsPart1Data);
-            spreadsheetPrinterSettingsPart1.FeedData(data);
-            data.Close();
+            using (System.IO.Stream data = GetBinaryDataStream(spreadsheetPrinterSettingsPart1Data))
+            {
+                spreadsheetPrinterSettingsPart1.FeedData(data);
+            }
         }
 
         // Generates content of worksheetCommentsPart1.
@@ -8805,10 +8809,10 @@ namespace DocumentFormat.OpenXml.Tests
         // Generates content of vmlDrawingPart1.
         private void GenerateVmlDrawingPart1Content(VmlDrawingPart vmlDrawingPart1)
         {
-            System.Xml.XmlTextWriter writer = new System.Xml.XmlTextWriter(vmlDrawingPart1.GetStream(System.IO.FileMode.Create), System.Text.Encoding.UTF8);
-            writer.WriteRaw("<xml xmlns:v=\"urn:schemas-microsoft-com:vml\"\r\n xmlns:o=\"urn:schemas-microsoft-com:office:office\"\r\n xmlns:x=\"urn:schemas-microsoft-com:office:excel\">\r\n <o:shapelayout v:ext=\"edit\">\r\n  <o:idmap v:ext=\"edit\" data=\"1\"/>\r\n </o:shapelayout><v:shapetype id=\"_x0000_t202\" coordsize=\"21600,21600\" o:spt=\"202\"\r\n  path=\"m,l,21600r21600,l21600,xe\">\r\n  <v:stroke joinstyle=\"miter\"/>\r\n  <v:path gradientshapeok=\"t\" o:connecttype=\"rect\"/>\r\n </v:shapetype><v:shape id=\"_x0000_s1025\" type=\"#_x0000_t202\" style=\'position:absolute;\r\n  margin-left:1067.25pt;margin-top:247.5pt;width:108pt;height:59.25pt;\r\n  z-index:1;visibility:visible\' fillcolor=\"#ffffe1\" o:insetmode=\"auto\">\r\n  <v:fill color2=\"#ffffe1\"/>\r\n  <v:shadow color=\"black\" obscured=\"t\"/>\r\n  <v:path o:connecttype=\"none\"/>\r\n  <v:textbox style=\'mso-direction-alt:auto\'>\r\n   <div style=\'text-align:left\'></div>\r\n  </v:textbox>\r\n  <x:ClientData ObjectType=\"Note\">\r\n   <x:MoveWithCells/>\r\n   <x:SizeWithCells/>\r\n   <x:Anchor>\r\n    22, 15, 8, 10, 24, 31, 12, 9</x:Anchor>\r\n   <x:AutoFill>False</x:AutoFill>\r\n   <x:Row>9</x:Row>\r\n   <x:Column>21</x:Column>\r\n   <x:Visible/>\r\n  </x:ClientData>\r\n </v:shape></xml>");
-            writer.Flush();
-            writer.Close();
+            using (XmlWriter writer = XmlWriter.Create(vmlDrawingPart1.GetStream(System.IO.FileMode.Create)))
+            {
+                writer.WriteRaw("<xml xmlns:v=\"urn:schemas-microsoft-com:vml\"\r\n xmlns:o=\"urn:schemas-microsoft-com:office:office\"\r\n xmlns:x=\"urn:schemas-microsoft-com:office:excel\">\r\n <o:shapelayout v:ext=\"edit\">\r\n  <o:idmap v:ext=\"edit\" data=\"1\"/>\r\n </o:shapelayout><v:shapetype id=\"_x0000_t202\" coordsize=\"21600,21600\" o:spt=\"202\"\r\n  path=\"m,l,21600r21600,l21600,xe\">\r\n  <v:stroke joinstyle=\"miter\"/>\r\n  <v:path gradientshapeok=\"t\" o:connecttype=\"rect\"/>\r\n </v:shapetype><v:shape id=\"_x0000_s1025\" type=\"#_x0000_t202\" style=\'position:absolute;\r\n  margin-left:1067.25pt;margin-top:247.5pt;width:108pt;height:59.25pt;\r\n  z-index:1;visibility:visible\' fillcolor=\"#ffffe1\" o:insetmode=\"auto\">\r\n  <v:fill color2=\"#ffffe1\"/>\r\n  <v:shadow color=\"black\" obscured=\"t\"/>\r\n  <v:path o:connecttype=\"none\"/>\r\n  <v:textbox style=\'mso-direction-alt:auto\'>\r\n   <div style=\'text-align:left\'></div>\r\n  </v:textbox>\r\n  <x:ClientData ObjectType=\"Note\">\r\n   <x:MoveWithCells/>\r\n   <x:SizeWithCells/>\r\n   <x:Anchor>\r\n    22, 15, 8, 10, 24, 31, 12, 9</x:Anchor>\r\n   <x:AutoFill>False</x:AutoFill>\r\n   <x:Row>9</x:Row>\r\n   <x:Column>21</x:Column>\r\n   <x:Visible/>\r\n  </x:ClientData>\r\n </v:shape></xml>");
+            }
         }
 
         // Generates content of calculationChainPart1.
