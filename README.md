@@ -39,10 +39,10 @@ See MIT-License.txt in the project root for license information.
 The Latest Builds
 =================
 
-##Where to get the NuGet package?
+## Where to get the NuGet package?
 The NuGet package for Open XML SDK is currently available as a custom feed on MyGet. You can trust this package source, since the custom feed is locked and only this project feeds into the source.
 
-##How to install the NuGet package?
+## How to install the NuGet package?
 The package you want to install is DocumentFormat.OpenXml. See https://dotnet.myget.org/gallery/open-xml-sdk 
 
 The package feed or the package source is specified by the feed URL. Depending on your version of Visual Studio, choose the appropriate feed URL from the table below. 
