@@ -105,11 +105,11 @@ In addition to open sourcing of the SDK, Microsoft has opened up the conceptual 
 Build Instructions
 ==================
 
-This project uses the new csproj format and the release versions of the tooling in Visual Studio 2017. For more info on how to use this project type to build your project, see the release notes for Visual Studio 2017: https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes#dotnetcore
+This project uses the new csproj format and the release versions of the tooling in Visual Studio 2017. For more information on how to use this project type to build your project, see the release notes for Visual Studio 2017: https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes#dotnetcore. Other editors that support the latest .NET project files include VS Code, VS for Mac, or .NET CLI. See https://www.microsoft.com/net/download/core for details.
 
 To build the Open XML SDK:
 - Clone the repo at https://github.com/OfficeDev/Open-XML-SDK
-- Open the solution with an editor that supports the latest .NET project files, such as Visual Studio 2017, VS Code, VS for Mac, or .NET CLI. See https://www.microsoft.com/net/download/core for details.
+- Open the solution with an editor that supports the latest .NET project files
 - Build the solution (using either Debug or Release configuration)
 - Run the Xunit tests to verify the installation
 
