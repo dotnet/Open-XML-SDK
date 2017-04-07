@@ -105,7 +105,7 @@ In addition to open sourcing of the SDK, Microsoft has opened up the conceptual 
 Build Instructions
 ==================
 
-This project uses the `project.json` for the project build system. Please see the [.NET Core SDK](https://www.microsoft.com/net/core#windows) for more information on how to use this project type.
+This project uses the new csproj format and the release versions of the tooling in Visual Studio 2017. For more info on how to use this project type to build your project, see the release notes for Visual Studio 2017: https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes#dotnetcore
 
 To build the Open XML SDK:
 - Clone the repo at https://github.com/OfficeDev/Open-XML-SDK
