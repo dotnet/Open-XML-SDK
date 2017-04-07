@@ -59,7 +59,7 @@ The **Install-Package** command considers the package source either via configur
 - To specify the package source via a configuration option, see https://docs.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior. Note that usually a NuGet.config file is placed in the directory and the configuration options are added there to ensure the sources are persisted in the version control.
 
 	```
-	PM> Install-Package DocumentFormat.OpenXml -Verison <version retrieved from the web>
+	PM> Install-Package DocumentFormat.OpenXml -Version <version retrieved from the web>
 	```
 
 - To pass the feed URL as an argument, here is an example for Visual Studio 2015 and later. 
@@ -109,7 +109,7 @@ This project uses the `project.json` for the project build system. Please see th
 
 To build the Open XML SDK:
 - Clone the repo at https://github.com/OfficeDev/Open-XML-SDK
-- Open the solution using Visual Studio 2015.  Community Edition of VS2015 works just fine.
+- Open the solution with an editor that supports the latest .NET project files, such as Visual Studio 2017, VS Code, VS for Mac, or .NET CLI. See https://www.microsoft.com/net/download/core for details.
 - Build the solution (using either Debug or Release configuration)
 - Run the Xunit tests to verify the installation
 

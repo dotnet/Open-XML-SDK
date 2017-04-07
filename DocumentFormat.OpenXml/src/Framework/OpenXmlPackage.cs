@@ -1507,10 +1507,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     this._sequenceNumbers[contentType] += 1;
                     // use the default read-only NumberFormatInfo that is culture-independent (invariant). 
-                    // return this._sequenceNumbers[contentType].ToString(NumberFormatInfo.InvariantInfo);
-
-                    // Let's use the number string in hex
-                    return Convert.ToString(this._sequenceNumbers[contentType], 16);
+                    return this._sequenceNumbers[contentType].ToString(NumberFormatInfo.InvariantInfo);
                 }
                 else
                 {
