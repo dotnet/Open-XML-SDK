@@ -164,6 +164,12 @@ namespace DocumentFormat.OpenXml
 
                 byte nsId;
 
+                if (xmlReader.NamespaceURI == "http://schemas.microsoft.com/office/drawing/2014/chartex")
+                    Console.WriteLine();
+
+                if (xmlReader.NamespaceURI == "http://schemas.openxmlformats.org/drawingml/2006/chart")
+                    Console.WriteLine();
+
                 if (!NamespaceIdMap.TryGetNamespaceId(xmlReader.NamespaceURI, out nsId) ||
                     nsId != this.NamespaceId ||
                     xmlReader.LocalName != this.LocalName)

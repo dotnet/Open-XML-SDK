@@ -217,6 +217,16 @@ namespace DocumentFormat.OpenXml
                                                    @"http://schemas.microsoft.com/office/word/2012/wordprocessingDrawing",
                                                    @"http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings",
                                                    @"http://schemas.microsoft.com/office/drawing/2012/timeslicer",
+                                                   //o16 extension
+			                                       @"http://schemas.microsoft.com/office/powerpoint/2015/main",
+			                                       @"http://schemas.microsoft.com/office/drawing/2014/main",
+			                                       @"http://schemas.microsoft.com/office/drawing/2014/chartex",
+			                                       @"http://schemas.microsoft.com/office/drawing/2014/chart/ac",
+			                                       @"http://schemas.microsoft.com/office/drawing/2014/chart",
+			                                       @"http://schemas.microsoft.com/office/spreadsheetml/2014/revision",
+			                                       @"http://schemas.microsoft.com/office/spreadsheetml/2014/11/main",
+			                                       @"http://schemas.microsoft.com/office/spreadsheetml/2015/02/main",
+			                                       @"http://schemas.microsoft.com/office/word/2015/wordml/symex",
                                                  };
 
         // We ended up with _extendedNamespaceDic to work around the issues O15: 3053450, 2316103 and 320403. The namespaces listed in this dic are somewhat obsolete ones that we need to
@@ -314,6 +324,16 @@ namespace DocumentFormat.OpenXml
                                                    @"wp15",
                                                    @"pRoam",
                                                    @"tsle",
+                                                   // o16 extension
+                                                   @"p16",
+                                                   @"a16",
+                                                   @"cx",
+                                                   @"c16ac",
+                                                   @"c16",
+                                                   @"xr",
+                                                   @"x16",
+                                                   @"x16r2",
+                                                   @"w16se",
                                                  };
 
         private static HashSet<string>  _O12NamespaceSet = new HashSet<string>{
@@ -404,6 +424,18 @@ namespace DocumentFormat.OpenXml
                                                    @"http://schemas.microsoft.com/office/drawing/2012/timeslicer",
         };
 
+        private static HashSet<string> _O16NamespaceSet = new HashSet<string>{ // o16 extension
+			@"http://schemas.microsoft.com/office/powerpoint/2015/main",
+			@"http://schemas.microsoft.com/office/drawing/2014/main",
+			@"http://schemas.microsoft.com/office/drawing/2014/chartex",
+			@"http://schemas.microsoft.com/office/drawing/2014/chart/ac",
+			@"http://schemas.microsoft.com/office/drawing/2014/chart",
+			@"http://schemas.microsoft.com/office/spreadsheetml/2014/revision",
+			@"http://schemas.microsoft.com/office/spreadsheetml/2014/11/main",
+			@"http://schemas.microsoft.com/office/spreadsheetml/2015/02/main",
+			@"http://schemas.microsoft.com/office/word/2015/wordml/symex",
+        };
+
         /// <summary>
         /// Attempts to get the Transitional equivalent namespace.
         /// </summary>
@@ -457,6 +489,14 @@ namespace DocumentFormat.OpenXml
             else if (format == FileFormatVersions.Office2013)
             {
                 if (_O15NamespaceSet.Contains(ns))
+                {
+                    return true;
+                }
+                return false;
+            }
+            else if (format == FileFormatVersions.Office2016)
+            {
+                if (_O16NamespaceSet.Contains(ns))
                 {
                     return true;
                 }

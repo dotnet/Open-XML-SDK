@@ -20,11 +20,15 @@
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
-    <Compile Remove="src\GeneratedCode\Office2007Schema.cs;src\GeneratedCode\Office2010Schema.cs;src\GeneratedCode\Office2013Schema.cs;src\ofapi\Validation\SchemaValidation\OfficeStaticSchemaDatas.cs" />
-    <EmbeddedResource Include="src\GeneratedCode\O12SchemaConstraintDatas.bin;src\GeneratedCode\O14SchemaConstraintDatas.bin;src\GeneratedCode\O15SchemaConstraintDatas.bin" Exclude="bin\**;obj\**;**\*.xproj;packages\**;@(EmbeddedResource)" />
-
-    <!-- This file does not get included or is removed somehow. Manually adding it back for net45 gets it included -->
-    <Compile Include="src\ofapi\Validation\SchemaValidation\SdbDataHead.cs" />
+    <Compile Remove="src\GeneratedCode\Office2007Schema.cs" />
+    <Compile Remove="src\GeneratedCode\Office2010Schema.cs" />
+    <Compile Remove="src\GeneratedCode\Office2013Schema.cs" />
+    <Compile Remove="src\GeneratedCode\Office2016Schema.cs" />
+    <Compile Remove="src\ofapi\Validation\SchemaValidation\OfficeStaticSchemaDatas.cs" />
+    <EmbeddedResource Include="src\GeneratedCode\O12SchemaConstraintDatas.bin" />
+    <EmbeddedResource Include="src\GeneratedCode\O14SchemaConstraintDatas.bin" />
+    <EmbeddedResource Include="src\GeneratedCode\O15SchemaConstraintDatas.bin" />
+    <EmbeddedResource Include="src\GeneratedCode\O16SchemaConstraintDatas.bin" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">

@@ -33,8 +33,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
-    [ChildElementInfo(typeof(ColorStyleVariation),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(ColorStyleVariation),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ColorStyle : OpenXmlPartRootElement
@@ -72,7 +72,7 @@ public partial class ColorStyle : OpenXmlPartRootElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -294,38 +294,38 @@ if( 0 == namespaceId && "id" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(AxisTitle),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(CategoryAxis),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(ChartArea),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(DataLabel),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(DataLabelCallout),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(DataPoint),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(DataPoint3D),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(DataPointLine),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(DataPointMarker),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(MarkerLayoutProperties),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(DataPointWireframe),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(DataTableStyle),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(DownBar),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(DropLine),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(ErrorBar),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(Floor),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(GridlineMajor),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(GridlineMinor),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(HiLoLine),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(LeaderLine),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(LegendStyle),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(PlotArea),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(PlotArea3D),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(SeriesAxis),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(SeriesLine),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(TitleStyle),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(TrendlineStyle),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(TrendlineLabel),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(UpBar),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(ValueAxis),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(Wall),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(AxisTitle),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(CategoryAxis),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(ChartArea),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(DataLabel),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(DataLabelCallout),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(DataPoint),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(DataPoint3D),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(DataPointLine),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(DataPointMarker),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(MarkerLayoutProperties),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(DataPointWireframe),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(DataTableStyle),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(DownBar),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(DropLine),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(ErrorBar),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(Floor),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(GridlineMajor),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(GridlineMinor),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(HiLoLine),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(LeaderLine),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(LegendStyle),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(PlotArea),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(PlotArea3D),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(SeriesAxis),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(SeriesLine),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(TitleStyle),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(TrendlineStyle),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(TrendlineLabel),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(UpBar),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(ValueAxis),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(Wall),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ChartStyle : OpenXmlPartRootElement
@@ -363,7 +363,7 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1199,7 +1199,7 @@ if( 65 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the ColorStyleVariation Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:variation.</para>
 /// </summary>
 /// <remarks>
@@ -1301,7 +1301,7 @@ public partial class ColorStyleVariation : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1452,7 +1452,7 @@ if( 10 == namespaceId && "invGamma" == name)
 }
 /// <summary>
 /// <para>Defines the OfficeArtExtensionList Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -1500,7 +1500,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1570,7 +1570,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the StyleColor Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:styleClr.</para>
 /// </summary>
 /// <remarks>
@@ -1672,7 +1672,7 @@ public partial class StyleColor : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1858,7 +1858,7 @@ if( 10 == namespaceId && "invGamma" == name)
 }
 /// <summary>
 /// <para>Defines the LineReference Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:lnRef.</para>
 /// </summary>
 /// <remarks>
@@ -1911,7 +1911,7 @@ public partial class LineReference : StyleReference
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1963,7 +1963,7 @@ public partial class LineReference : StyleReference
 }
 /// <summary>
 /// <para>Defines the FillReference Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:fillRef.</para>
 /// </summary>
 /// <remarks>
@@ -2016,7 +2016,7 @@ public partial class FillReference : StyleReference
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2068,7 +2068,7 @@ public partial class FillReference : StyleReference
 }
 /// <summary>
 /// <para>Defines the EffectReference Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:effectRef.</para>
 /// </summary>
 /// <remarks>
@@ -2121,7 +2121,7 @@ public partial class EffectReference : StyleReference
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2193,7 +2193,7 @@ public partial class EffectReference : StyleReference
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
-    [ChildElementInfo(typeof(StyleColor),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(StyleColor),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class StyleReference : OpenXmlCompositeElement
 {
@@ -2314,7 +2314,7 @@ if( 0 == namespaceId && "mods" == name)
 }
 /// <summary>
 /// <para>Defines the LineWidthScale Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:lineWidthScale.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -2355,7 +2355,7 @@ public partial class LineWidthScale : OpenXmlLeafTextElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2405,7 +2405,7 @@ public partial class LineWidthScale : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Defines the FontReference Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:fontRef.</para>
 /// </summary>
 /// <remarks>
@@ -2427,7 +2427,7 @@ public partial class LineWidthScale : OpenXmlLeafTextElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
-    [ChildElementInfo(typeof(StyleColor),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(StyleColor),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class FontReference : OpenXmlCompositeElement
@@ -2465,7 +2465,7 @@ public partial class FontReference : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2602,7 +2602,7 @@ if( 0 == namespaceId && "mods" == name)
 }
 /// <summary>
 /// <para>Defines the ShapeProperties Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:spPr.</para>
 /// </summary>
 /// <remarks>
@@ -2678,7 +2678,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2863,7 +2863,7 @@ if( 10 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the TextCharacterPropertiesType Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:defRPr.</para>
 /// </summary>
 /// <remarks>
@@ -2953,7 +2953,7 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2961,8 +2961,8 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "kumimoji","lang","altLang","sz","b","i","u","strike","kern","cap","spc","normalizeH","baseline","noProof","dirty","err","bmk" };
-    private static byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+    private static string[] attributeTagNames = { "kumimoji","lang","altLang","sz","b","i","u","strike","kern","cap","spc","normalizeH","baseline","noProof","dirty","err","smtClean","smtId","bmk" };
+    private static byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
     internal override string[] AttributeTagNames {
         get{
@@ -3155,14 +3155,36 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     }
     
     /// <summary>
+    /// <para> smtClean.</para>
+    /// <para>Represents the following attribute in the schema: smtClean </para>
+    /// </summary>
+    [SchemaAttr(0, "smtClean")]
+    public BooleanValue SmtClean
+    {
+        get { return (BooleanValue)Attributes[16]; }
+        set { Attributes[16] = value; }
+    }
+    
+    /// <summary>
+    /// <para> smtId.</para>
+    /// <para>Represents the following attribute in the schema: smtId </para>
+    /// </summary>
+    [SchemaAttr(0, "smtId")]
+    public UInt32Value SmtId
+    {
+        get { return (UInt32Value)Attributes[17]; }
+        set { Attributes[17] = value; }
+    }
+    
+    /// <summary>
     /// <para> bmk.</para>
     /// <para>Represents the following attribute in the schema: bmk </para>
     /// </summary>
     [SchemaAttr(0, "bmk")]
     public StringValue Bookmark
     {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (StringValue)Attributes[18]; }
+        set { Attributes[18] = value; }
     }
     
 
@@ -3361,6 +3383,12 @@ if( 0 == namespaceId && "dirty" == name)
 if( 0 == namespaceId && "err" == name)
     return new BooleanValue();
     
+if( 0 == namespaceId && "smtClean" == name)
+    return new BooleanValue();
+    
+if( 0 == namespaceId && "smtId" == name)
+    return new UInt32Value();
+    
 if( 0 == namespaceId && "bmk" == name)
     return new StringValue();
     
@@ -3383,7 +3411,7 @@ if( 0 == namespaceId && "bmk" == name)
 }
 /// <summary>
 /// <para>Defines the TextBodyProperties Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:bodyPr.</para>
 /// </summary>
 /// <remarks>
@@ -3445,7 +3473,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3861,7 +3889,7 @@ if( 0 == namespaceId && "compatLnSpc" == name)
 }
 /// <summary>
 /// <para>Defines the CategoryAxisProperties Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:categoryAxis.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -3902,7 +3930,7 @@ public partial class CategoryAxisProperties : AxisProperties
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3929,7 +3957,7 @@ public partial class CategoryAxisProperties : AxisProperties
 }
 /// <summary>
 /// <para>Defines the SeriesAxisProperties Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:seriesAxis.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -3970,7 +3998,7 @@ public partial class SeriesAxisProperties : AxisProperties
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3997,7 +4025,7 @@ public partial class SeriesAxisProperties : AxisProperties
 }
 /// <summary>
 /// <para>Defines the ValueAxisProperties Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:valueAxis.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -4038,7 +4066,7 @@ public partial class ValueAxisProperties : AxisProperties
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4205,7 +4233,7 @@ if( 0 == namespaceId && "title" == name)
 }
 /// <summary>
 /// <para>Defines the DataSeries Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:dataSeries.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -4246,7 +4274,7 @@ public partial class DataSeries : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4415,7 +4443,7 @@ if( 0 == namespaceId && "seriesLines" == name)
 }
 /// <summary>
 /// <para>Defines the DataLabels Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:dataLabels.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -4456,7 +4484,7 @@ public partial class DataLabels : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4597,7 +4625,7 @@ if( 0 == namespaceId && "percentage" == name)
 }
 /// <summary>
 /// <para>Defines the DataTable Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:dataTable.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -4638,7 +4666,7 @@ public partial class DataTable : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4751,7 +4779,7 @@ if( 0 == namespaceId && "outlineBorder" == name)
 }
 /// <summary>
 /// <para>Defines the Legend Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:legend.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -4792,7 +4820,7 @@ public partial class Legend : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4891,7 +4919,7 @@ if( 0 == namespaceId && "position" == name)
 }
 /// <summary>
 /// <para>Defines the Title Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:title.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -4932,7 +4960,7 @@ public partial class Title : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5003,7 +5031,7 @@ public partial class Title : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the Trendline Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:trendline.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -5044,7 +5072,7 @@ public partial class Trendline : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5143,7 +5171,7 @@ if( 0 == namespaceId && "rsquared" == name)
 }
 /// <summary>
 /// <para>Defines the View3DProperties Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:view3D.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -5184,7 +5212,7 @@ public partial class View3DProperties : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5325,7 +5353,7 @@ if( 0 == namespaceId && "depthPercent" == name)
 }
 /// <summary>
 /// <para>Defines the AxisTitle Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:axisTitle.</para>
 /// </summary>
 /// <remarks>
@@ -5380,7 +5408,7 @@ public partial class AxisTitle : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5432,7 +5460,7 @@ public partial class AxisTitle : StyleEntry
 }
 /// <summary>
 /// <para>Defines the CategoryAxis Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:categoryAxis.</para>
 /// </summary>
 /// <remarks>
@@ -5487,7 +5515,7 @@ public partial class CategoryAxis : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5539,7 +5567,7 @@ public partial class CategoryAxis : StyleEntry
 }
 /// <summary>
 /// <para>Defines the ChartArea Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:chartArea.</para>
 /// </summary>
 /// <remarks>
@@ -5594,7 +5622,7 @@ public partial class ChartArea : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5646,7 +5674,7 @@ public partial class ChartArea : StyleEntry
 }
 /// <summary>
 /// <para>Defines the DataLabel Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:dataLabel.</para>
 /// </summary>
 /// <remarks>
@@ -5701,7 +5729,7 @@ public partial class DataLabel : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5753,7 +5781,7 @@ public partial class DataLabel : StyleEntry
 }
 /// <summary>
 /// <para>Defines the DataLabelCallout Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:dataLabelCallout.</para>
 /// </summary>
 /// <remarks>
@@ -5808,7 +5836,7 @@ public partial class DataLabelCallout : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5860,7 +5888,7 @@ public partial class DataLabelCallout : StyleEntry
 }
 /// <summary>
 /// <para>Defines the DataPoint Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:dataPoint.</para>
 /// </summary>
 /// <remarks>
@@ -5915,7 +5943,7 @@ public partial class DataPoint : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5967,7 +5995,7 @@ public partial class DataPoint : StyleEntry
 }
 /// <summary>
 /// <para>Defines the DataPoint3D Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:dataPoint3D.</para>
 /// </summary>
 /// <remarks>
@@ -6022,7 +6050,7 @@ public partial class DataPoint3D : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6074,7 +6102,7 @@ public partial class DataPoint3D : StyleEntry
 }
 /// <summary>
 /// <para>Defines the DataPointLine Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:dataPointLine.</para>
 /// </summary>
 /// <remarks>
@@ -6129,7 +6157,7 @@ public partial class DataPointLine : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6181,7 +6209,7 @@ public partial class DataPointLine : StyleEntry
 }
 /// <summary>
 /// <para>Defines the DataPointMarker Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:dataPointMarker.</para>
 /// </summary>
 /// <remarks>
@@ -6236,7 +6264,7 @@ public partial class DataPointMarker : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6288,7 +6316,7 @@ public partial class DataPointMarker : StyleEntry
 }
 /// <summary>
 /// <para>Defines the DataPointWireframe Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:dataPointWireframe.</para>
 /// </summary>
 /// <remarks>
@@ -6343,7 +6371,7 @@ public partial class DataPointWireframe : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6395,7 +6423,7 @@ public partial class DataPointWireframe : StyleEntry
 }
 /// <summary>
 /// <para>Defines the DataTableStyle Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:dataTable.</para>
 /// </summary>
 /// <remarks>
@@ -6450,7 +6478,7 @@ public partial class DataTableStyle : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6502,7 +6530,7 @@ public partial class DataTableStyle : StyleEntry
 }
 /// <summary>
 /// <para>Defines the DownBar Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:downBar.</para>
 /// </summary>
 /// <remarks>
@@ -6557,7 +6585,7 @@ public partial class DownBar : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6609,7 +6637,7 @@ public partial class DownBar : StyleEntry
 }
 /// <summary>
 /// <para>Defines the DropLine Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:dropLine.</para>
 /// </summary>
 /// <remarks>
@@ -6664,7 +6692,7 @@ public partial class DropLine : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6716,7 +6744,7 @@ public partial class DropLine : StyleEntry
 }
 /// <summary>
 /// <para>Defines the ErrorBar Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:errorBar.</para>
 /// </summary>
 /// <remarks>
@@ -6771,7 +6799,7 @@ public partial class ErrorBar : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6823,7 +6851,7 @@ public partial class ErrorBar : StyleEntry
 }
 /// <summary>
 /// <para>Defines the Floor Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:floor.</para>
 /// </summary>
 /// <remarks>
@@ -6878,7 +6906,7 @@ public partial class Floor : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6930,7 +6958,7 @@ public partial class Floor : StyleEntry
 }
 /// <summary>
 /// <para>Defines the GridlineMajor Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:gridlineMajor.</para>
 /// </summary>
 /// <remarks>
@@ -6985,7 +7013,7 @@ public partial class GridlineMajor : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -7037,7 +7065,7 @@ public partial class GridlineMajor : StyleEntry
 }
 /// <summary>
 /// <para>Defines the GridlineMinor Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:gridlineMinor.</para>
 /// </summary>
 /// <remarks>
@@ -7092,7 +7120,7 @@ public partial class GridlineMinor : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -7144,7 +7172,7 @@ public partial class GridlineMinor : StyleEntry
 }
 /// <summary>
 /// <para>Defines the HiLoLine Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:hiLoLine.</para>
 /// </summary>
 /// <remarks>
@@ -7199,7 +7227,7 @@ public partial class HiLoLine : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -7251,7 +7279,7 @@ public partial class HiLoLine : StyleEntry
 }
 /// <summary>
 /// <para>Defines the LeaderLine Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:leaderLine.</para>
 /// </summary>
 /// <remarks>
@@ -7306,7 +7334,7 @@ public partial class LeaderLine : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -7358,7 +7386,7 @@ public partial class LeaderLine : StyleEntry
 }
 /// <summary>
 /// <para>Defines the LegendStyle Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:legend.</para>
 /// </summary>
 /// <remarks>
@@ -7413,7 +7441,7 @@ public partial class LegendStyle : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -7465,7 +7493,7 @@ public partial class LegendStyle : StyleEntry
 }
 /// <summary>
 /// <para>Defines the PlotArea Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:plotArea.</para>
 /// </summary>
 /// <remarks>
@@ -7520,7 +7548,7 @@ public partial class PlotArea : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -7572,7 +7600,7 @@ public partial class PlotArea : StyleEntry
 }
 /// <summary>
 /// <para>Defines the PlotArea3D Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:plotArea3D.</para>
 /// </summary>
 /// <remarks>
@@ -7627,7 +7655,7 @@ public partial class PlotArea3D : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -7679,7 +7707,7 @@ public partial class PlotArea3D : StyleEntry
 }
 /// <summary>
 /// <para>Defines the SeriesAxis Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:seriesAxis.</para>
 /// </summary>
 /// <remarks>
@@ -7734,7 +7762,7 @@ public partial class SeriesAxis : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -7786,7 +7814,7 @@ public partial class SeriesAxis : StyleEntry
 }
 /// <summary>
 /// <para>Defines the SeriesLine Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:seriesLine.</para>
 /// </summary>
 /// <remarks>
@@ -7841,7 +7869,7 @@ public partial class SeriesLine : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -7893,7 +7921,7 @@ public partial class SeriesLine : StyleEntry
 }
 /// <summary>
 /// <para>Defines the TitleStyle Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:title.</para>
 /// </summary>
 /// <remarks>
@@ -7948,7 +7976,7 @@ public partial class TitleStyle : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -8000,7 +8028,7 @@ public partial class TitleStyle : StyleEntry
 }
 /// <summary>
 /// <para>Defines the TrendlineStyle Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:trendline.</para>
 /// </summary>
 /// <remarks>
@@ -8055,7 +8083,7 @@ public partial class TrendlineStyle : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -8107,7 +8135,7 @@ public partial class TrendlineStyle : StyleEntry
 }
 /// <summary>
 /// <para>Defines the TrendlineLabel Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:trendlineLabel.</para>
 /// </summary>
 /// <remarks>
@@ -8162,7 +8190,7 @@ public partial class TrendlineLabel : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -8214,7 +8242,7 @@ public partial class TrendlineLabel : StyleEntry
 }
 /// <summary>
 /// <para>Defines the UpBar Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:upBar.</para>
 /// </summary>
 /// <remarks>
@@ -8269,7 +8297,7 @@ public partial class UpBar : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -8321,7 +8349,7 @@ public partial class UpBar : StyleEntry
 }
 /// <summary>
 /// <para>Defines the ValueAxis Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:valueAxis.</para>
 /// </summary>
 /// <remarks>
@@ -8376,7 +8404,7 @@ public partial class ValueAxis : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -8428,7 +8456,7 @@ public partial class ValueAxis : StyleEntry
 }
 /// <summary>
 /// <para>Defines the Wall Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:wall.</para>
 /// </summary>
 /// <remarks>
@@ -8483,7 +8511,7 @@ public partial class Wall : StyleEntry
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -8551,15 +8579,15 @@ public partial class Wall : StyleEntry
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(LineReference),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(LineWidthScale),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(FillReference),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(EffectReference),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(FontReference),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(ShapeProperties),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(TextBodyProperties),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(LineReference),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(LineWidthScale),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(FillReference),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(EffectReference),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(FontReference),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(ShapeProperties),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(TextCharacterPropertiesType),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(TextBodyProperties),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class StyleEntry : OpenXmlCompositeElement
 {
@@ -8854,7 +8882,7 @@ if( 65 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the MarkerLayoutProperties Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:dataPointMarkerLayout.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -8895,7 +8923,7 @@ public partial class MarkerLayoutProperties : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}

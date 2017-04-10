@@ -16,6 +16,7 @@ namespace Converter
             Write("Office2007Schema", SdbSchemaDatas.GetOffice2007SchemaDatas());
             Write("Office2010Schema", SdbSchemaDatas.GetOffice2010SchemaDatas());
             Write("Office2013Schema", SdbSchemaDatas.GetOffice2013SchemaDatas());
+            Write("Office2016Schema", SdbSchemaDatas.GetOffice2016SchemaDatas());
         }
 
         private static void Write(string name, SdbSchemaDatas data)
@@ -46,7 +47,7 @@ namespace Converter
                 return GetRootDirectory(Directory.GetCurrentDirectory());
             }
 
-            if (File.Exists(Path.Combine(path, "global.json")))
+            if (File.Exists(Path.Combine(path, "Open-XML-SDK.sln")))
             {
                 return Path.GetFullPath(path);
             }

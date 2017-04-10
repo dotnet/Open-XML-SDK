@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
 {
 /// <summary>
 /// <para>Defines the PivotCaches Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:pivotCaches.</para>
 /// </summary>
 /// <remarks>
@@ -60,7 +60,7 @@ public partial class PivotCaches : OpenXmlPivotCachesElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -112,7 +112,7 @@ public partial class PivotCaches : OpenXmlPivotCachesElement
 }
 /// <summary>
 /// <para>Defines the TimelineCachePivotCaches Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:timelineCachePivotCaches.</para>
 /// </summary>
 /// <remarks>
@@ -159,7 +159,7 @@ public partial class TimelineCachePivotCaches : OpenXmlPivotCachesElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -273,7 +273,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the PivotTableReferences Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:pivotTableReferences.</para>
 /// </summary>
 /// <remarks>
@@ -283,7 +283,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(PivotTableReference),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(PivotTableReference),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class PivotTableReferences : OpenXmlCompositeElement
@@ -321,7 +321,7 @@ public partial class PivotTableReferences : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -391,7 +391,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the QueryTable Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:queryTable.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -432,7 +432,7 @@ public partial class QueryTable : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -531,7 +531,7 @@ if( 0 == namespaceId && "drillThrough" == name)
 }
 /// <summary>
 /// <para>Defines the WebExtensions Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:webExtensions.</para>
 /// </summary>
 /// <remarks>
@@ -541,7 +541,7 @@ if( 0 == namespaceId && "drillThrough" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(WebExtension),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(WebExtension),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class WebExtensions : OpenXmlCompositeElement
@@ -579,7 +579,7 @@ public partial class WebExtensions : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -649,7 +649,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the TimelineCacheReferences Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:timelineCacheRefs.</para>
 /// </summary>
 /// <remarks>
@@ -659,7 +659,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(TimelineCacheReference),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(TimelineCacheReference),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class TimelineCacheReferences : OpenXmlCompositeElement
@@ -697,7 +697,7 @@ public partial class TimelineCacheReferences : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -767,7 +767,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the TimelineReferences Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:timelineRefs.</para>
 /// </summary>
 /// <remarks>
@@ -777,7 +777,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(TimelineReference),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(TimelineReference),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class TimelineReferences : OpenXmlCompositeElement
@@ -815,7 +815,7 @@ public partial class TimelineReferences : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -885,7 +885,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the WorkbookProperties Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:workbookPr.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -926,7 +926,7 @@ public partial class WorkbookProperties : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -997,7 +997,7 @@ public partial class WorkbookProperties : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the TimelineStyles Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:timelineStyles.</para>
 /// </summary>
 /// <remarks>
@@ -1007,7 +1007,7 @@ public partial class WorkbookProperties : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(TimelineStyle),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(TimelineStyle),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class TimelineStyles : OpenXmlCompositeElement
@@ -1045,7 +1045,7 @@ public partial class TimelineStyles : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1150,7 +1150,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the DifferentialFormats Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:dxfs.</para>
 /// </summary>
 /// <remarks>
@@ -1198,7 +1198,7 @@ public partial class DifferentialFormats : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1303,7 +1303,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the Connection Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:connection.</para>
 /// </summary>
 /// <remarks>
@@ -1317,11 +1317,11 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(TextProperties),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(ModelTextProperties),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(RangeProperties),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(OleDbPrpoperties),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(DataFeedProperties),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(TextProperties),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(ModelTextProperties),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(RangeProperties),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(OleDbPrpoperties),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(DataFeedProperties),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Connection : OpenXmlCompositeElement
@@ -1359,7 +1359,7 @@ public partial class Connection : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1642,7 +1642,7 @@ if( 0 == namespaceId && "usedByAddin" == name)
 }
 /// <summary>
 /// <para>Defines the CalculatedMember Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:calculatedMember.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1683,7 +1683,7 @@ public partial class CalculatedMember : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1782,7 +1782,7 @@ if( 0 == namespaceId && "measure" == name)
 }
 /// <summary>
 /// <para>Defines the PivotTableUISettings Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:pivotTableUISettings.</para>
 /// </summary>
 /// <remarks>
@@ -1793,8 +1793,8 @@ if( 0 == namespaceId && "measure" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(FieldListActiveTabTopLevelEntity),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(ExtensionList),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(FieldListActiveTabTopLevelEntity),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(ExtensionList),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class PivotTableUISettings : OpenXmlCompositeElement
@@ -1832,7 +1832,7 @@ public partial class PivotTableUISettings : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1954,7 +1954,7 @@ if( 0 == namespaceId && "relNeededHidden" == name)
 }
 /// <summary>
 /// <para>Defines the PivotFilter Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:pivotFilter.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1995,7 +1995,7 @@ public partial class PivotFilter : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2066,7 +2066,7 @@ public partial class PivotFilter : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the CachedUniqueNames Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:cachedUniqueNames.</para>
 /// </summary>
 /// <remarks>
@@ -2076,7 +2076,7 @@ public partial class PivotFilter : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(CachedUniqueName),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(CachedUniqueName),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class CachedUniqueNames : OpenXmlCompositeElement
@@ -2114,7 +2114,7 @@ public partial class CachedUniqueNames : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2184,7 +2184,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the CacheHierarchy Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:cacheHierarchy.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -2225,7 +2225,7 @@ public partial class CacheHierarchy : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2296,7 +2296,7 @@ public partial class CacheHierarchy : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the TimelinePivotCacheDefinition Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:timelinePivotCacheDefinition.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -2337,7 +2337,7 @@ public partial class TimelinePivotCacheDefinition : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2408,7 +2408,7 @@ public partial class TimelinePivotCacheDefinition : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the PivotCacheIdVersion Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:pivotCacheIdVersion.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -2449,7 +2449,7 @@ public partial class PivotCacheIdVersion : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2534,7 +2534,7 @@ if( 0 == namespaceId && "cacheIdCreatedVersion" == name)
 }
 /// <summary>
 /// <para>Defines the DataModel Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:dataModel.</para>
 /// </summary>
 /// <remarks>
@@ -2546,9 +2546,9 @@ if( 0 == namespaceId && "cacheIdCreatedVersion" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ModelTables),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(ModelRelationships),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(ExtensionList),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(ModelTables),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(ModelRelationships),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(ExtensionList),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataModel : OpenXmlCompositeElement
@@ -2586,7 +2586,7 @@ public partial class DataModel : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2771,7 +2771,7 @@ if( 71 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the PivotTableData Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:pivotTableData.</para>
 /// </summary>
 /// <remarks>
@@ -2781,7 +2781,7 @@ if( 71 == namespaceId && "extLst" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(PivotRow),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(PivotRow),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class PivotTableData : OpenXmlCompositeElement
@@ -2819,7 +2819,7 @@ public partial class PivotTableData : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2952,7 +2952,7 @@ if( 0 == namespaceId && "cacheId" == name)
 }
 /// <summary>
 /// <para>Defines the PivotCacheDecoupled Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:pivotCacheDecoupled.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -2993,7 +2993,7 @@ public partial class PivotCacheDecoupled : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3064,7 +3064,7 @@ public partial class PivotCacheDecoupled : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the DataField Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:dataField.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -3105,7 +3105,7 @@ public partial class DataField : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3176,7 +3176,7 @@ public partial class DataField : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the MovingPeriodState Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:movingPeriodState.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -3217,7 +3217,7 @@ public partial class MovingPeriodState : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3344,7 +3344,7 @@ if( 0 == namespaceId && "movingMultiple" == name)
 }
 /// <summary>
 /// <para>Defines the SlicerCaches Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:slicerCaches.</para>
 /// </summary>
 /// <remarks>
@@ -3354,7 +3354,7 @@ if( 0 == namespaceId && "movingMultiple" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerCache),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerCache),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class SlicerCaches : OpenXmlCompositeElement
@@ -3392,7 +3392,7 @@ public partial class SlicerCaches : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3462,7 +3462,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the TableSlicerCache Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:tableSlicerCache.</para>
 /// </summary>
 /// <remarks>
@@ -3472,7 +3472,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ExtensionList),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(ExtensionList),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class TableSlicerCache : OpenXmlCompositeElement
@@ -3510,7 +3510,7 @@ public partial class TableSlicerCache : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3709,7 +3709,7 @@ if( 0 == namespaceId && "crossFilter" == name)
 }
 /// <summary>
 /// <para>Defines the SlicerCacheHideItemsWithNoData Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:slicerCacheHideItemsWithNoData.</para>
 /// </summary>
 /// <remarks>
@@ -3719,7 +3719,7 @@ if( 0 == namespaceId && "crossFilter" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(SlicerCacheOlapLevelName),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(SlicerCacheOlapLevelName),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class SlicerCacheHideItemsWithNoData : OpenXmlCompositeElement
@@ -3757,7 +3757,7 @@ public partial class SlicerCacheHideItemsWithNoData : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3862,7 +3862,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the SlicerCachePivotTables Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:slicerCachePivotTables.</para>
 /// </summary>
 /// <remarks>
@@ -3872,7 +3872,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class SlicerCachePivotTables : OpenXmlCompositeElement
@@ -3910,7 +3910,7 @@ public partial class SlicerCachePivotTables : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3980,7 +3980,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the Survey Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:survey.</para>
 /// </summary>
 /// <remarks>
@@ -3994,11 +3994,11 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(SurveyPrSurveyElementPr),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(TitlePrSurveyElementPr),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(DescriptionPrSurveyElementPr),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(SurveyQuestions),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(ExtensionList),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(SurveyPrSurveyElementPr),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(TitlePrSurveyElementPr),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(DescriptionPrSurveyElementPr),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(SurveyQuestions),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(ExtensionList),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Survey : OpenXmlCompositeElement
@@ -4036,7 +4036,7 @@ public partial class Survey : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4314,7 +4314,7 @@ if( 0 == namespaceId && "description" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(Timeline),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(Timeline),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Timelines : OpenXmlPartRootElement
@@ -4352,7 +4352,7 @@ public partial class Timelines : OpenXmlPartRootElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4475,9 +4475,9 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(TimelineCachePivotTables),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(TimelineState),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(ExtensionList),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(TimelineCachePivotTables),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(TimelineState),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(ExtensionList),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class TimelineCacheDefinition : OpenXmlPartRootElement
@@ -4515,7 +4515,7 @@ public partial class TimelineCacheDefinition : OpenXmlPartRootElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4756,7 +4756,7 @@ if( 0 == namespaceId && "sourceName" == name)
 }
 /// <summary>
 /// <para>Defines the PivotTableReference Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:pivotTableReference.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -4797,7 +4797,7 @@ public partial class PivotTableReference : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4870,7 +4870,7 @@ public partial class PivotTableReference : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the WebExtension Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:webExtension.</para>
 /// </summary>
 /// <remarks>
@@ -4918,7 +4918,7 @@ public partial class WebExtension : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5061,7 +5061,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the TimelineCacheReference Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:timelineCacheRef.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -5102,7 +5102,7 @@ public partial class TimelineCacheReference : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5175,7 +5175,7 @@ public partial class TimelineCacheReference : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the TimelineReference Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:timelineRef.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -5216,7 +5216,7 @@ public partial class TimelineReference : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5289,7 +5289,7 @@ public partial class TimelineReference : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the TimelineStyle Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:timelineStyle.</para>
 /// </summary>
 /// <remarks>
@@ -5299,7 +5299,7 @@ public partial class TimelineReference : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(TimelineStyleElements),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(TimelineStyleElements),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class TimelineStyle : OpenXmlCompositeElement
@@ -5337,7 +5337,7 @@ public partial class TimelineStyle : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5480,7 +5480,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the TimelineStyleElement Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:timelineStyleElement.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -5521,7 +5521,7 @@ public partial class TimelineStyleElement : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5606,7 +5606,7 @@ if( 0 == namespaceId && "dxfId" == name)
 }
 /// <summary>
 /// <para>Defines the TimelineStyleElements Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:timelineStyleElements.</para>
 /// </summary>
 /// <remarks>
@@ -5616,7 +5616,7 @@ if( 0 == namespaceId && "dxfId" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(TimelineStyleElement),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(TimelineStyleElement),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class TimelineStyleElements : OpenXmlCompositeElement
@@ -5654,7 +5654,7 @@ public partial class TimelineStyleElements : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5724,7 +5724,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the DbTable Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:dbTable.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -5765,7 +5765,7 @@ public partial class DbTable : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5836,7 +5836,7 @@ public partial class DbTable : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the DbTables Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:dbTables.</para>
 /// </summary>
 /// <remarks>
@@ -5846,7 +5846,7 @@ public partial class DbTable : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DbTable),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(DbTable),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DbTables : OpenXmlCompositeElement
@@ -5884,7 +5884,7 @@ public partial class DbTables : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5954,7 +5954,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the DbCommand Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:dbCommand.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -5995,7 +5995,7 @@ public partial class DbCommand : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6066,7 +6066,7 @@ public partial class DbCommand : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the TextProperties Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:textPr.</para>
 /// </summary>
 /// <remarks>
@@ -6114,7 +6114,7 @@ public partial class TextProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6467,7 +6467,7 @@ if( 0 == namespaceId && "delimiter" == name)
 }
 /// <summary>
 /// <para>Defines the ModelTextProperties Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:modelTextPr.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -6508,7 +6508,7 @@ public partial class ModelTextProperties : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6579,7 +6579,7 @@ public partial class ModelTextProperties : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the RangeProperties Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:rangePr.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -6620,7 +6620,7 @@ public partial class RangeProperties : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6691,7 +6691,7 @@ public partial class RangeProperties : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the OleDbPrpoperties Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:oledbPr.</para>
 /// </summary>
 /// <remarks>
@@ -6702,8 +6702,8 @@ public partial class RangeProperties : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DbTables),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(DbCommand),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(DbTables),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(DbCommand),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class OleDbPrpoperties : OpenXmlCompositeElement
@@ -6741,7 +6741,7 @@ public partial class OleDbPrpoperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6905,7 +6905,7 @@ if( 71 == namespaceId && "dbCommand" == name)
 }
 /// <summary>
 /// <para>Defines the DataFeedProperties Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:dataFeedPr.</para>
 /// </summary>
 /// <remarks>
@@ -6915,7 +6915,7 @@ if( 71 == namespaceId && "dbCommand" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DbTables),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(DbTables),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataFeedProperties : OpenXmlCompositeElement
@@ -6953,7 +6953,7 @@ public partial class DataFeedProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -7096,7 +7096,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the FieldListActiveTabTopLevelEntity Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:activeTabTopLevelEntity.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -7137,7 +7137,7 @@ public partial class FieldListActiveTabTopLevelEntity : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -7222,7 +7222,7 @@ if( 0 == namespaceId && "type" == name)
 }
 /// <summary>
 /// <para>Defines the ExtensionList Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -7270,7 +7270,7 @@ public partial class ExtensionList : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -7340,7 +7340,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the CachedUniqueName Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:cachedUniqueName.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -7381,7 +7381,7 @@ public partial class CachedUniqueName : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -7466,7 +7466,7 @@ if( 0 == namespaceId && "name" == name)
 }
 /// <summary>
 /// <para>Defines the ModelTable Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:modelTable.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -7507,7 +7507,7 @@ public partial class ModelTable : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -7606,7 +7606,7 @@ if( 0 == namespaceId && "connection" == name)
 }
 /// <summary>
 /// <para>Defines the ModelRelationship Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:modelRelationship.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -7647,7 +7647,7 @@ public partial class ModelRelationship : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -7760,7 +7760,7 @@ if( 0 == namespaceId && "toColumn" == name)
 }
 /// <summary>
 /// <para>Defines the ModelTables Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:modelTables.</para>
 /// </summary>
 /// <remarks>
@@ -7770,7 +7770,7 @@ if( 0 == namespaceId && "toColumn" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ModelTable),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(ModelTable),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ModelTables : OpenXmlCompositeElement
@@ -7808,7 +7808,7 @@ public partial class ModelTables : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -7878,7 +7878,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the ModelRelationships Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:modelRelationships.</para>
 /// </summary>
 /// <remarks>
@@ -7888,7 +7888,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ModelRelationship),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(ModelRelationship),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ModelRelationships : OpenXmlCompositeElement
@@ -7926,7 +7926,7 @@ public partial class ModelRelationships : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -7996,7 +7996,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the PivotValueCell Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:c.</para>
 /// </summary>
 /// <remarks>
@@ -8007,8 +8007,8 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(Xstring),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(PivotValueCellExtra),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(Xstring),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(PivotValueCellExtra),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class PivotValueCell : OpenXmlCompositeElement
@@ -8046,7 +8046,7 @@ public partial class PivotValueCell : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -8224,7 +8224,7 @@ if( 0 == namespaceId && "t" == name)
 }
 /// <summary>
 /// <para>Defines the Xstring Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:v.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -8265,7 +8265,7 @@ public partial class Xstring : OpenXmlLeafTextElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -8315,7 +8315,7 @@ public partial class Xstring : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Defines the PivotValueCellExtra Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:x.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -8356,7 +8356,7 @@ public partial class PivotValueCellExtra : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -8511,7 +8511,7 @@ if( 0 == namespaceId && "b" == name)
 }
 /// <summary>
 /// <para>Defines the PivotTableServerFormats Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:pivotTableServerFormats.</para>
 /// </summary>
 /// <remarks>
@@ -8521,7 +8521,7 @@ if( 0 == namespaceId && "b" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ServerFormat),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(ServerFormat),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class PivotTableServerFormats : OpenXmlCompositeElement
@@ -8559,7 +8559,7 @@ public partial class PivotTableServerFormats : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -8664,7 +8664,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the ServerFormat Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:serverFormat.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -8705,7 +8705,7 @@ public partial class ServerFormat : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -8790,7 +8790,7 @@ if( 0 == namespaceId && "format" == name)
 }
 /// <summary>
 /// <para>Defines the SlicerCacheOlapLevelName Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:slicerCacheOlapLevelName.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -8831,7 +8831,7 @@ public partial class SlicerCacheOlapLevelName : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -8916,7 +8916,7 @@ if( 0 == namespaceId && "count" == name)
 }
 /// <summary>
 /// <para>Defines the SurveyPrSurveyElementPr Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:surveyPr.</para>
 /// </summary>
 /// <remarks>
@@ -8963,7 +8963,7 @@ public partial class SurveyPrSurveyElementPr : OpenXmlSurveyElementPrElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -9015,7 +9015,7 @@ public partial class SurveyPrSurveyElementPr : OpenXmlSurveyElementPrElement
 }
 /// <summary>
 /// <para>Defines the TitlePrSurveyElementPr Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:titlePr.</para>
 /// </summary>
 /// <remarks>
@@ -9062,7 +9062,7 @@ public partial class TitlePrSurveyElementPr : OpenXmlSurveyElementPrElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -9114,7 +9114,7 @@ public partial class TitlePrSurveyElementPr : OpenXmlSurveyElementPrElement
 }
 /// <summary>
 /// <para>Defines the DescriptionPrSurveyElementPr Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:descriptionPr.</para>
 /// </summary>
 /// <remarks>
@@ -9161,7 +9161,7 @@ public partial class DescriptionPrSurveyElementPr : OpenXmlSurveyElementPrElemen
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -9213,7 +9213,7 @@ public partial class DescriptionPrSurveyElementPr : OpenXmlSurveyElementPrElemen
 }
 /// <summary>
 /// <para>Defines the QuestionsPrSurveyElementPr Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:questionsPr.</para>
 /// </summary>
 /// <remarks>
@@ -9260,7 +9260,7 @@ public partial class QuestionsPrSurveyElementPr : OpenXmlSurveyElementPrElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -9312,7 +9312,7 @@ public partial class QuestionsPrSurveyElementPr : OpenXmlSurveyElementPrElement
 }
 /// <summary>
 /// <para>Defines the QuestionPrSurveyElementPr Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:questionPr.</para>
 /// </summary>
 /// <remarks>
@@ -9359,7 +9359,7 @@ public partial class QuestionPrSurveyElementPr : OpenXmlSurveyElementPrElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -9419,7 +9419,7 @@ public partial class QuestionPrSurveyElementPr : OpenXmlSurveyElementPrElement
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ExtensionList),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(ExtensionList),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class OpenXmlSurveyElementPrElement : OpenXmlCompositeElement
 {
@@ -9644,7 +9644,7 @@ if( 0 == namespaceId && "position" == name)
 }
 /// <summary>
 /// <para>Defines the SurveyQuestions Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:questions.</para>
 /// </summary>
 /// <remarks>
@@ -9655,8 +9655,8 @@ if( 0 == namespaceId && "position" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(QuestionsPrSurveyElementPr),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(SurveyQuestion),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(QuestionsPrSurveyElementPr),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(SurveyQuestion),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class SurveyQuestions : OpenXmlCompositeElement
@@ -9694,7 +9694,7 @@ public partial class SurveyQuestions : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -9805,7 +9805,7 @@ if( 71 == namespaceId && "question" == name)
 }
 /// <summary>
 /// <para>Defines the SurveyQuestion Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:question.</para>
 /// </summary>
 /// <remarks>
@@ -9816,8 +9816,8 @@ if( 71 == namespaceId && "question" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(QuestionPrSurveyElementPr),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(ExtensionList),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(QuestionPrSurveyElementPr),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(ExtensionList),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class SurveyQuestion : OpenXmlCompositeElement
@@ -9855,7 +9855,7 @@ public partial class SurveyQuestion : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -10131,7 +10131,7 @@ if( 0 == namespaceId && "rowSource" == name)
 }
 /// <summary>
 /// <para>Defines the Timeline Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:timeline.</para>
 /// </summary>
 /// <remarks>
@@ -10141,7 +10141,7 @@ if( 0 == namespaceId && "rowSource" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ExtensionList),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(ExtensionList),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Timeline : OpenXmlCompositeElement
@@ -10179,7 +10179,7 @@ public partial class Timeline : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -10462,7 +10462,7 @@ if( 0 == namespaceId && "style" == name)
 }
 /// <summary>
 /// <para>Defines the TimelineCachePivotTable Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:pivotTable.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -10503,7 +10503,7 @@ public partial class TimelineCachePivotTable : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -10588,7 +10588,7 @@ if( 0 == namespaceId && "name" == name)
 }
 /// <summary>
 /// <para>Defines the SelectionTimelineRange Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:selection.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -10629,7 +10629,7 @@ public partial class SelectionTimelineRange : TimelineRange
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -10656,7 +10656,7 @@ public partial class SelectionTimelineRange : TimelineRange
 }
 /// <summary>
 /// <para>Defines the BoundsTimelineRange Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:bounds.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -10697,7 +10697,7 @@ public partial class BoundsTimelineRange : TimelineRange
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -10794,7 +10794,7 @@ if( 0 == namespaceId && "endDate" == name)
 }
 /// <summary>
 /// <para>Defines the AutoFilter Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:autoFilter.</para>
 /// </summary>
 /// <remarks>
@@ -10846,7 +10846,7 @@ public partial class AutoFilter : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -10957,7 +10957,7 @@ if( 22 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the TimelineCachePivotTables Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:pivotTables.</para>
 /// </summary>
 /// <remarks>
@@ -10967,7 +10967,7 @@ if( 22 == namespaceId && "extLst" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(TimelineCachePivotTable),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(TimelineCachePivotTable),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class TimelineCachePivotTables : OpenXmlCompositeElement
@@ -11005,7 +11005,7 @@ public partial class TimelineCachePivotTables : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -11075,7 +11075,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the TimelineState Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:state.</para>
 /// </summary>
 /// <remarks>
@@ -11088,10 +11088,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(SelectionTimelineRange),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(BoundsTimelineRange),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(MovingPeriodState),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(ExtensionList),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(SelectionTimelineRange),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(BoundsTimelineRange),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(MovingPeriodState),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(ExtensionList),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class TimelineState : OpenXmlCompositeElement
@@ -11129,7 +11129,7 @@ public partial class TimelineState : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -11433,7 +11433,7 @@ if( 0 == namespaceId && "filterPivotName" == name)
 }
 /// <summary>
 /// <para>Defines the PivotRow Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:pivotRow.</para>
 /// </summary>
 /// <remarks>
@@ -11443,7 +11443,7 @@ if( 0 == namespaceId && "filterPivotName" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(PivotValueCell),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(PivotValueCell),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class PivotRow : OpenXmlCompositeElement
@@ -11481,7 +11481,7 @@ public partial class PivotRow : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
