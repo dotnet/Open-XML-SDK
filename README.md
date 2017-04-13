@@ -39,10 +39,10 @@ See MIT-License.txt in the project root for license information.
 The Latest Builds
 =================
 
-##Where to get the NuGet package?
+## Where to get the NuGet package?
 The NuGet package for Open XML SDK is currently available as a custom feed on MyGet. You can trust this package source, since the custom feed is locked and only this project feeds into the source.
 
-##How to install the NuGet package?
+## How to install the NuGet package?
 The package you want to install is DocumentFormat.OpenXml. See https://dotnet.myget.org/gallery/open-xml-sdk 
 
 The package feed or the package source is specified by the feed URL. Depending on your version of Visual Studio, choose the appropriate feed URL from the table below. 
@@ -105,11 +105,11 @@ In addition to open sourcing of the SDK, Microsoft has opened up the conceptual 
 Build Instructions
 ==================
 
-This project uses the `project.json` for the project build system. Please see the [.NET Core SDK](https://www.microsoft.com/net/core#windows) for more information on how to use this project type.
+This project uses the new csproj format and the release versions of the tooling in Visual Studio 2017. For more information on how to use this project type to build your project, see the release notes for Visual Studio 2017: https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes#dotnetcore. Other editors that support the latest .NET project files include VS Code, VS for Mac, or .NET CLI. See https://www.microsoft.com/net/download/core for details.
 
 To build the Open XML SDK:
 - Clone the repo at https://github.com/OfficeDev/Open-XML-SDK
-- Open the solution with an editor that supports the latest .NET project files, such as Visual Studio 2017, VS Code, VS for Mac, or .NET CLI. See https://www.microsoft.com/net/download/core for details.
+- Open the solution with an editor that supports the latest .NET project files
 - Build the solution (using either Debug or Release configuration)
 - Run the Xunit tests to verify the installation
 
