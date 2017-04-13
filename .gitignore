@@ -180,3 +180,6 @@ project.lock.json
 .vs/
 Tests/
 TestFiles/
+ 
+# git merge files
+*.orig
