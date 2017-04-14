@@ -42,6 +42,16 @@ The Latest Builds
 ## Where to get the NuGet package?
 The NuGet package for Open XML SDK is currently available as a custom feed on MyGet. You can trust this package source, since the custom feed is locked and only this project feeds into the source.
 
+## WindowsBase or System.IO.Packaging
+There is a known issue in WindowsBase that causes crashes when handling large data sources. This is fixed in later versions of the library, based on the platform availability of the `System.IO.Packaging` package. When possible, we use this package instead of WindowsBase. This not only fixes the crash seen by some users, but is available cross platform. However, it is only available on .NET Standard 1.3+ and .NET Framework 4.6+. For this reason, the NuGet package has multiple targets to bring in this when possible. The targets (which are determined by NuGet at installation and build time) are:
+
+| Platform      | System.IO.Packing Source | Tested by     |
+| --------      | ------------------------ | ------------- |
+| .NET 3.5      | WindowsBase              | N/A           |
+| .NET 4.0      | WindowsBase              | .NET 4.5.2    |
+| .NET 4.6      | NuGet                    | .NET 4.6      |
+| .NET Standard | NuGet                    | .NET Core 1.0 |
+
 ## How to install the NuGet package?
 The package you want to install is DocumentFormat.OpenXml. See https://dotnet.myget.org/gallery/open-xml-sdk 
 
