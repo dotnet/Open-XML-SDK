@@ -2,7 +2,7 @@
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />
 
   <PropertyGroup>
-    <TargetFrameworks>net452;netcoreapp1.0</TargetFrameworks>
+    <TargetFrameworks>net452;net46;netcoreapp1.0</TargetFrameworks>
     <AssemblyName>DocumentFormat.OpenXml.Tests</AssemblyName>
   </PropertyGroup>
 
@@ -33,6 +33,12 @@
     <PackageReference Include="System.Xml.XmlDocument" Version="4.3.0" />
     <PackageReference Include="System.Reflection.Extensions" Version="4.3.0" />
     <PackageReference Include="System.Runtime.Extensions" Version="4.3.0" />
+    <PackageReference Include="System.IO.Packaging" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
     <PackageReference Include="System.IO.Packaging" Version="4.3.0" />
   </ItemGroup>
 
