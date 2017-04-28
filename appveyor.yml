@@ -8,7 +8,11 @@ environment:
 install:
   - ps: nuget install -ExcludeVersion SignClient -Version 0.5.0-beta4 -pre -OutputDirectory .\build\
 
+before_build:
+  - ps: gitversion /l console /output buildserver
+
 build_script:
+  - ps: .\build\Update-Version.ps1 
   - cmd: msbuild /t:restore;build /p:Configuration=Release /m .\Open-Xml-SDK.sln
 
 after_build:
@@ -19,7 +23,7 @@ test_script:
   - dotnet vstest /logger:trx DocumentFormat.OpenXml.Tests\bin\Release\netcoreapp1.0\DocumentFormat.OpenXml.Tests.dll /Framework:FrameworkCore10
   - vstest.console.exe /logger:appveyor DocumentFormat.OpenXml.Tests\bin\Release\net46\DocumentFormat.OpenXml.Tests.dll /Framework:Framework45
   - vstest.console.exe /logger:appveyor DocumentFormat.OpenXml.Tests\bin\Release\net452\DocumentFormat.OpenXml.Tests.dll /Framework:Framework45
-  
+
 deploy:
   provider: NuGet
   server: https://dotnet.myget.org/F/open-xml-sdk/api/v2/package
