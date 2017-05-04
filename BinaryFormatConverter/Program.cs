@@ -46,7 +46,7 @@ namespace Converter
                 return GetRootDirectory(Directory.GetCurrentDirectory());
             }
 
-            if (File.Exists(Path.Combine(path, "global.json")))
+            if (File.Exists(Path.Combine(path, "Open-XML-SDK.sln")))
             {
                 return Path.GetFullPath(path);
             }
