@@ -88,6 +88,9 @@ We are also happy to announce the release of Open-Xml-PowerTools on GitHub.  Ope
 Change Log
 ==========
 
+Version 2.7.2 : June 6, 2017
+- Fixed assembly versioning.
+
 Version 2.7.1 : January 31, 2017
 - Fixed crash when validation is invoked on .NET Framework with strong-naming enforced
 
