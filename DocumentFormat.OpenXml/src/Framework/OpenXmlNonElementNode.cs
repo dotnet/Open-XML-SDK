@@ -71,8 +71,15 @@ namespace DocumentFormat.OpenXml
             // check the out XML match the nodeType
             using (StringReader stringReader = new StringReader(outerXml))
             {
-                XmlReaderSettings settings = new XmlReaderSettings();
-                settings.DtdProcessing = DtdProcessing.Prohibit; // set true explicitly for serucity fix
+                XmlReaderSettings settings = new XmlReaderSettings
+                {
+#if FEATURE_XML_PROHIBIT_DTD
+                    ProhibitDtd = true, // set true explicitly for security fix
+#else
+                    DtdProcessing = DtdProcessing.Prohibit, // set to prohibit explicitly for security fix
+#endif
+                };
+
                 using (XmlReader xmlReader = XmlConvertingReaderFactory.Create(stringReader, settings))
                 {
                     xmlReader.Read();
@@ -143,8 +150,15 @@ namespace DocumentFormat.OpenXml
                     case XmlNodeType.ProcessingInstruction:
                         using (StringReader stringReader = new StringReader(this.OuterXml))
                         {
-                            XmlReaderSettings settings = new XmlReaderSettings();
-                            settings.DtdProcessing = DtdProcessing.Prohibit; // set true explicitly for security fix
+                            XmlReaderSettings settings = new XmlReaderSettings
+                            {
+#if FEATURE_XML_PROHIBIT_DTD
+                                ProhibitDtd = true // set true explicitly for security fix
+#else
+                                DtdProcessing = DtdProcessing.Prohibit, // set to prohibit explicitly for security fix
+#endif
+                            };
+
                             using (XmlReader xmlReader = XmlConvertingReaderFactory.Create(stringReader, settings))
                             {
                                 xmlReader.Read();

@@ -116,7 +116,9 @@ namespace DocumentFormat.OpenXml
             }
 #endif
 
+#if !FEATURE_XML_DISPOSE_PROTECTED
             this.BaseReader.Dispose();
+#endif
         }
 
         /// <summary>
@@ -1646,7 +1648,13 @@ namespace DocumentFormat.OpenXml
         private void Init(Stream partStream, bool closeInput)
         {
             _elementContext.XmlReaderSettings.CloseInput = closeInput;
-            _elementContext.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set true explicitly for security fix
+
+#if FEATURE_XML_PROHIBIT_DTD
+            _elementContext.XmlReaderSettings.ProhibitDtd = true; // set true explicitly for security fix
+#else
+            _elementContext.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set to prohibit explicitly for security fix
+#endif
+
             _elementContext.XmlReaderSettings.IgnoreWhitespace = true; // O15:#3024890, the default is false, but we set it to True for compatibility of OpenXmlPartReader behavior
             this._xmlReader = XmlConvertingReaderFactory.Create(partStream, _elementContext.XmlReaderSettings);
 

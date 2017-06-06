@@ -1,14 +1,12 @@
-param([Parameter(Mandatory = $true)] $version)
 
-$root = "$PSScriptRoot\..\"
-Write-Host "Updating version to $version"
+$gitversion = gitversion | ConvertFrom-Json
 
-$project = "$root\DocumentFormat.OpenXml\project.json"
-$content = Get-Content $project
-$newcontent = $content.Replace("`"version`": `"0.0.1-*`"","`"version`": `"$version`"")
-Set-Content $project $newcontent
+Write-Host "Updating to $($gitversion.NuGetVersionV2)"
 
-$project = "$root\DocumentFormat.OpenXml.Tests\project.json"
-$content = Get-Content $project
-$newcontent = $content.Replace("`"DocumentFormat.OpenXml`": `"0.0.1-*`"","`"DocumentFormat.OpenXml`": `"$version`"")
-Set-Content $project $newcontent
+$props = "$PSScriptRoot\..\dir.props"
+[xml]$xml = Get-Content $props
+
+$xml.Project.PropertyGroup.Version = $gitversion.NuGetVersionV2
+$xml.Project.PropertyGroup.AssemblyInformationalVersion = $gitversion.InformationalVersion
+
+$xml.Save($props)

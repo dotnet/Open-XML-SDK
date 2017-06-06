@@ -1,0 +1,85 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />
+
+  <PropertyGroup>
+    <TargetFrameworks>net35;net40;net46;netstandard1.3</TargetFrameworks>
+    <NoWarn>$(NoWarn);3003</NoWarn>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <!--
+    Since this project supports multiple configurations which don't all have the same surface area, the following define
+    constants are used to conditionally compile features:
+
+    FEATURE_ABSTRACT_XML_CLOSE       : XmlWriter.Close is defined as abstract
+    FEATURE_ACTIVATOR_PRIVATE_CREATE : Activator.Create can create an object from a private constructor
+    FEATURE_BINARYFORMATTER          : BinaryFormatter is supported
+    FEATURE_CLONEABLE                : Interface ICloneable is available in the platform
+    FEATURE_CLOSE                    : Stream.Close is available in the platform
+    FEATURE_IREADONLYLIST            : The IReadOnlyList<T> interface is available in the platform
+    FEATURE_ISSUBCLASSOF             : Type.IsSubClassOf is available in the platform
+    FEATURE_SECURITY                 : Security (CAS) related APIs are available
+    FEATURE_SERIALIZATION            : Serialization using ISerializable is in the platform
+    FEATURE_SYSTEMEXCEPTION          : SytemException is available in the platform
+    FEATURE_TYPEINFO                 : System.Reflection.TypeInfo is available in the platform
+    FEATURE_XML_DISPOSE_PROTECTED    : XmlWriter.Dispose is protected
+    FEATURE_XML_PROHIBIT_DTD         : XML settings only has ProhibitDtd property
+    FEATURE_XML_QUOTECHAR            : XmlReader.QuoteChar is an abstract member
+    FEATURE_XML_SCHEMA               : XML Schema is available in the platform
+    FEATURE_XML_VERIFYTOKEN          : XmlConvert.VerifyTOKEN is available in the platform
+  -->
+
+  <!-- .NET 3.5 Support -->
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net35' ">
+    <DefineConstants>$(DefineConstants);FEATURE_ABSTRACT_XML_CLOSE;FEATURE_ACTIVATOR_PRIVATE_CREATE;FEATURE_BINARYFORMATTER;FEATURE_CLONEABLE;FEATURE_CLOSE;FEATURE_ISSUBCLASSOF;FEATURE_SERIALIZATION;FEATURE_SYSTEMEXCEPTION;FEATURE_XML_DISPOSE_PROTECTED;FEATURE_XML_PROHIBIT_DTD;FEATURE_XML_QUOTECHAR;FEATURE_XML_SCHEMA;FEATURE_XML_VERIFYTOKEN</DefineConstants>
+  </PropertyGroup>
+
+  <!-- .NET 4.0 Support -->
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net40' ">
+    <DefineConstants>$(DefineConstants);FEATURE_ABSTRACT_XML_CLOSE;FEATURE_ACTIVATOR_PRIVATE_CREATE;FEATURE_BINARYFORMATTER;FEATURE_CLONEABLE;FEATURE_CLOSE;FEATURE_ISSUBCLASSOF;FEATURE_SECURITY;FEATURE_SERIALIZATION;FEATURE_SYSTEMEXCEPTION;FEATURE_XML_DISPOSE_PROTECTED;FEATURE_XML_QUOTECHAR;FEATURE_XML_SCHEMA;FEATURE_XML_VERIFYTOKEN</DefineConstants>
+  </PropertyGroup>
+
+  <!-- Builds targeting .NET Framework < 4.6 use WindowsBase as System.IO.Packaging is not supported on those platforms -->
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net35' OR '$(TargetFramework)' == 'net40' ">
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+
+  <!-- .NET 4.6 Support -->
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net46' ">
+    <DefineConstants>$(DefineConstants);FEATURE_IREADONLYLIST;FEATURE_TYPEINFO;FEATURE_BINARYFORMATTER;FEATURE_CLONEABLE;FEATURE_CLOSE;FEATURE_ACTIVATOR_PRIVATE_CREATE;FEATURE_ISSUBCLASSOF;FEATURE_SECURITY;FEATURE_SERIALIZATION;FEATURE_SYSTEMEXCEPTION;FEATURE_XML_QUOTECHAR;FEATURE_XML_SCHEMA;FEATURE_XML_VERIFYTOKEN</DefineConstants>
+  </PropertyGroup>
+
+  <!-- Builds targeting .NET 4.6 use System.IO.Packaging -->
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <PackageReference Include="System.IO.Packaging" Version="4.0.0" />
+  </ItemGroup>
+
+  <!-- .NET Framework builds will all use the binary serialized schema definitions -->
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net35' OR '$(TargetFramework)' == 'net40' OR '$(TargetFramework)' == 'net46' ">
+    <Compile Remove="src\GeneratedCode\Office2007Schema.cs" />
+    <Compile Remove="src\GeneratedCode\Office2010Schema.cs" />
+    <Compile Remove="src\GeneratedCode\Office2013Schema.cs" />
+    <Compile Remove="src\ofapi\Validation\SchemaValidation\OfficeStaticSchemaDatas.cs" />
+    <EmbeddedResource Include="src\GeneratedCode\O12SchemaConstraintDatas.bin" />
+    <EmbeddedResource Include="src\GeneratedCode\O14SchemaConstraintDatas.bin" />
+    <EmbeddedResource Include="src\GeneratedCode\O15SchemaConstraintDatas.bin" />
+  </ItemGroup>
+
+  <!-- .NET Standard 1.3 builds will use the static schemas and System.IO.Packaging -->
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
+    <DefineConstants> $(DefineConstants);FEATURE_TYPEINFO;FEATURE_IREADONLYLIST</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
+    <Compile Remove="src\ofapi\Validation\SchemaValidation\BinarySdbSchemaDatas.cs" />
+    <PackageReference Include="System.IO.Packaging" Version="4.0.0" />
+  </ItemGroup>
+
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
+</Project>

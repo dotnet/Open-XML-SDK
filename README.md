@@ -39,10 +39,20 @@ See MIT-License.txt in the project root for license information.
 The Latest Builds
 =================
 
-##Where to get the NuGet package?
+## Where to get the NuGet package?
 The NuGet package for Open XML SDK is currently available as a custom feed on MyGet. You can trust this package source, since the custom feed is locked and only this project feeds into the source.
 
-##How to install the NuGet package?
+## WindowsBase or System.IO.Packaging
+There is a known issue in WindowsBase that causes crashes when handling large data sources. This is fixed in later versions of the library, based on the platform availability of the `System.IO.Packaging` package. When possible, we use this package instead of WindowsBase. This not only fixes the crash seen by some users, but is available cross platform. However, it is only available on .NET Standard 1.3+ and .NET Framework 4.6+. For this reason, the NuGet package has multiple targets to bring in this when possible. The targets (which are determined by NuGet at installation and build time) are:
+
+| Platform      | System.IO.Packing Source | Tested by     |
+| --------      | ------------------------ | ------------- |
+| .NET 3.5      | WindowsBase              | N/A           |
+| .NET 4.0      | WindowsBase              | .NET 4.5.2    |
+| .NET 4.6      | NuGet                    | .NET 4.6      |
+| .NET Standard | NuGet                    | .NET Core 1.0 |
+
+## How to install the NuGet package?
 The package you want to install is DocumentFormat.OpenXml. See https://dotnet.myget.org/gallery/open-xml-sdk 
 
 The package feed or the package source is specified by the feed URL. Depending on your version of Visual Studio, choose the appropriate feed URL from the table below. 
@@ -78,6 +88,9 @@ We are also happy to announce the release of Open-Xml-PowerTools on GitHub.  Ope
 Change Log
 ==========
 
+Version 2.7.2 : June 6, 2017
+- Fixed assembly versioning.
+
 Version 2.7.1 : January 31, 2017
 - Fixed crash when validation is invoked on .NET Framework with strong-naming enforced
 
@@ -105,11 +118,11 @@ In addition to open sourcing of the SDK, Microsoft has opened up the conceptual 
 Build Instructions
 ==================
 
-This project uses the `project.json` for the project build system. Please see the [.NET Core SDK](https://www.microsoft.com/net/core#windows) for more information on how to use this project type.
+This project uses the new csproj format and the release versions of the tooling in Visual Studio 2017. For more information on how to use this project type to build your project, see the release notes for Visual Studio 2017: https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes#dotnetcore. Other editors that support the latest .NET project files include VS Code, VS for Mac, or .NET CLI. See https://www.microsoft.com/net/download/core for details.
 
 To build the Open XML SDK:
 - Clone the repo at https://github.com/OfficeDev/Open-XML-SDK
-- Open the solution using Visual Studio 2015.  Community Edition of VS2015 works just fine.
+- Open the solution with an editor that supports the latest .NET project files
 - Build the solution (using either Debug or Release configuration)
 - Run the Xunit tests to verify the installation
 

@@ -1,25 +1,28 @@
-os: Visual Studio 2015
+os: Visual Studio 2017
 
 environment:
+  image: Visual Studio 2017
   SignClientSecret:
     secure: 2QKIbnEaxM/df01+GLvTjVKdLL7RlwKmCR/APcWFRUUF2VQWBRQFQ1DP3gK49epL
 
 install:
   - ps: nuget install -ExcludeVersion SignClient -Version 0.5.0-beta4 -pre -OutputDirectory .\build\
 
+before_build:
+  - ps: gitversion /l console /output buildserver
+
 build_script:
-  - ps: gitversion /output buildserver
-  - ps: .\build\Update-Version.ps1 $env:GitVersion_NuGetVersion
-  - ps: dotnet --info
-  - ps: dotnet restore
-  - ps: dotnet --verbose build -c Release .\DocumentFormat.OpenXml.Tests
+  - ps: .\build\Update-Version.ps1 
+  - cmd: msbuild /t:restore;build /p:Configuration=Release /m .\Open-Xml-SDK.sln
 
 after_build:
-  - ps: dotnet --verbose pack -c Release .\DocumentFormat.OpenXml -o .
+  - cmd: msbuild /t:pack /p:Configuration=Release .\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj
   - ps: .\build\SignPackage.ps1
 
 test_script:
-  - cmd: dotnet test -c Release .\DocumentFormat.OpenXml.Tests
+  - dotnet vstest /logger:trx DocumentFormat.OpenXml.Tests\bin\Release\netcoreapp1.0\DocumentFormat.OpenXml.Tests.dll /Framework:FrameworkCore10
+  - vstest.console.exe /logger:appveyor DocumentFormat.OpenXml.Tests\bin\Release\net46\DocumentFormat.OpenXml.Tests.dll /Framework:Framework45
+  - vstest.console.exe /logger:appveyor DocumentFormat.OpenXml.Tests\bin\Release\net452\DocumentFormat.OpenXml.Tests.dll /Framework:Framework45
 
 deploy:
   provider: NuGet
