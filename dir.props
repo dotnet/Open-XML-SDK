@@ -17,8 +17,13 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Copyright>Copyright 2017 (c) Microsoft Corporation. All rights reserved.</Copyright>
     <PackageTags>openxml office</PackageTags>
-    <PackageReleaseNotes><![CDATA[2.7.1 : January 31, 2017
--Fixed crash when validation is invoked on .NET Framework with strong-naming enforced
+    <PackageReleaseNotes><![CDATA[
+Version 2.7.2 : June 7, 2017
+- Fixed assembly version information for strong naming.
+- Added support for .NET 3.5 and .NET 4.0
+
+Version 2.7.1 : January 31, 2017
+- Fixed crash when validation is invoked on .NET Framework with strong-naming enforced
 
 Version 2.7.0 : January 24, 2017
 - Added support for .NET Standard 1.3

@@ -35,12 +35,15 @@ See License.txt in the project root for license information.
 Portions of this project are licensed under the MIT license.
 See MIT-License.txt in the project root for license information.
 
+The Release Package on Nuget.org
+================================
+The official release NuGet packages for Open XML SDK are available on Nuget.org at https://www.nuget.org/packages/DocumentFormat.OpenXml. 
 
 The Latest Builds
 =================
 
-## Where to get the NuGet package?
-The NuGet package for Open XML SDK is currently available as a custom feed on MyGet. You can trust this package source, since the custom feed is locked and only this project feeds into the source.
+## Where to get the latest build NuGet package?
+The NuGet package for the latest builds of the Open XML SDK is available as a custom feed on MyGet. You can trust this package source, since the custom feed is locked and only this project feeds into the source.
 
 ## WindowsBase or System.IO.Packaging
 There is a known issue in WindowsBase that causes crashes when handling large data sources. This is fixed in later versions of the library, based on the platform availability of the `System.IO.Packaging` package. When possible, we use this package instead of WindowsBase. This not only fixes the crash seen by some users, but is available cross platform. However, it is only available on .NET Standard 1.3+ and .NET Framework 4.6+. For this reason, the NuGet package has multiple targets to bring in this when possible. The targets (which are determined by NuGet at installation and build time) are:
@@ -53,7 +56,9 @@ There is a known issue in WindowsBase that causes crashes when handling large da
 | .NET Standard | NuGet                    | .NET Core 1.0 |
 
 ## How to install the NuGet package?
-The package you want to install is DocumentFormat.OpenXml. See https://dotnet.myget.org/gallery/open-xml-sdk 
+The package you want to install is DocumentFormat.OpenXml. 
+
+See https://www.nuget.org/packages/DocumentFormat.OpenXml for the release packages or https://dotnet.myget.org/gallery/open-xml-sdk for the latest build packages.
 
 The package feed or the package source is specified by the feed URL. Depending on your version of Visual Studio, choose the appropriate feed URL from the table below. 
 
@@ -89,7 +94,8 @@ Change Log
 ==========
 
 Version 2.7.2 : June 6, 2017
-- Fixed assembly versioning.
+- Fixed assembly versioning
+- Added support for .NET 3.5 and .NET 4.0
 
 Version 2.7.1 : January 31, 2017
 - Fixed crash when validation is invoked on .NET Framework with strong-naming enforced
