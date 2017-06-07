@@ -42,7 +42,7 @@ The official release NuGet packages for Open XML SDK are available on Nuget.org 
 The Latest Builds
 =================
 
-## Where to get the latest build NuGet package?
+## Where to get the NuGet packages of the latest builds?
 The NuGet package for the latest builds of the Open XML SDK is available as a custom feed on MyGet. You can trust this package source, since the custom feed is locked and only this project feeds into the source.
 
 ## WindowsBase or System.IO.Packaging
@@ -58,7 +58,7 @@ There is a known issue in WindowsBase that causes crashes when handling large da
 ## How to install the NuGet package?
 The package you want to install is DocumentFormat.OpenXml. 
 
-See https://www.nuget.org/packages/DocumentFormat.OpenXml for the release packages or https://dotnet.myget.org/gallery/open-xml-sdk for the latest build packages.
+NuGet packages are available for [release builds](https://www.nuget.org/packages/DocumentFormat.OpenXml) or [CI Builds](https://dotnet.myget.org/gallery/open-xml-sdk) and follow [semantic versioning](http://www.semver.org/).
 
 The package feed or the package source is specified by the feed URL. Depending on your version of Visual Studio, choose the appropriate feed URL from the table below. 
 
@@ -94,7 +94,7 @@ Change Log
 ==========
 
 Version 2.7.2 : June 6, 2017
-- Fixed assembly versioning
+- Fixed issue where assembly version wasn't set in assembly
 - Added support for .NET 3.5 and .NET 4.0
 
 Version 2.7.1 : January 31, 2017
