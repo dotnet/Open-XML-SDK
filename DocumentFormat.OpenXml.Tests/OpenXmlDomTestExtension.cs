@@ -1,4 +1,8 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using DocumentFormat.OpenXml.Bibliography;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation;
+using OxTest;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,32 +11,25 @@ using System.Reflection;
 using System.Text;
 using System.Xml;
 using System.Xml.Linq;
-using System.Collections;
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Bibliography;
-using DocumentFormat.OpenXml.AdditionalCharacteristics;
-using DocumentFormat.OpenXml.Validation;
-using OxTest;
 
-namespace DocumentFormat.OpenXml.Tests.TaskLibraries
+namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>Extension Class for OpenXml Testing.</summary>
     public static class OpenXmlDomTestExtension
     {
         #region FileInfo Extensions
-        private static string[] _wordprocessingExtension = new string[] { ".docx", ".docm", ".dotx", ".dotm" };
-        private static string[] _spreadsheetExtension = new string[] { ".xlam", ".xltm", ".xlsm", ".xltx", ".xlsx" };
-        private static string[] _presentationExtension = new string[] { ".ppam", ".pptm", ".ppsm", ".potm", ".pptx", ".ppsx", ".potx" };
+        private static readonly HashSet<string> _wordprocessingExtension = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { ".docx", ".docm", ".dotx", ".dotm" };
+        private static readonly HashSet<string> _spreadsheetExtension = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { ".xlam", ".xltm", ".xlsm", ".xltx", ".xlsx" };
+        private static readonly HashSet<string> _presentationExtension = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { ".ppam", ".pptm", ".ppsm", ".potm", ".pptx", ".ppsx", ".potx" };
 
         /// <summary> Check if the file is of OpenXml package extension.</summary>
         /// <param name="file">current file</param>
         /// <returns>True if it's with OpenXml package extension, otherwise return false.</returns>
         public static bool IsOpenXmlFile(this FileInfo file)
         {
-            return _wordprocessingExtension.Contains(file.Extension.ToLower())
-                || _spreadsheetExtension.Contains(file.Extension.ToLower())
-                || _presentationExtension.Contains(file.Extension.ToLower());
+            return IsWordprocessingFile(file)
+                || IsSpreadsheetFile(file)
+                || IsPresentationFile(file);
         }
 
         /// <summary> Check if the file is of OpenXml Wordprocessing document extension.</summary>
@@ -40,7 +37,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// <returns>True if it's with OpenXml Wordprocessing document extension, otherwise return false.</returns>
         public static bool IsWordprocessingFile(this FileInfo file)
         {
-            return _wordprocessingExtension.Contains(file.Extension.ToLower());
+            return _wordprocessingExtension.Contains(file.Extension);
         }
 
         /// <summary> Check if the file is of OpenXml Speadsheet document extension.</summary>
@@ -48,7 +45,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// <returns>True if it's with OpenXml Speadsheet document extension, otherwise return false.</returns>
         public static bool IsSpreadsheetFile(this FileInfo file)
         {
-            return _spreadsheetExtension.Contains(file.Extension.ToLower());
+            return _spreadsheetExtension.Contains(file.Extension);
         }
 
         /// <summary> Check if the file is of OpenXml Presentation document extension.</summary>
@@ -56,7 +53,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// <returns>True if it's with OpenXml Presentation document extension, otherwise return false.</returns>
         public static bool IsPresentationFile(this FileInfo file)
         {
-            return _presentationExtension.Contains(file.Extension.ToLower());
+            return _presentationExtension.Contains(file.Extension);
         }
 
         /// <summary> Get a copy of pass in file </summary>
@@ -65,10 +62,14 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         public static FileInfo GetCopy(this FileInfo file)
         {
             if (!file.Exists)
+            {
                 throw new FileNotFoundException(string.Format("Specified file {0} does not exist.", file.Name));
+            }
 
-            string copy = System.IO.Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", "") + file.Extension);
+            var copy = System.IO.Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + file.Extension);
+
             file.CopyTo(copy, true);
+
             return new FileInfo(copy);
         }
 
@@ -80,26 +81,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// <returns>OpenXmlPackage instance for opened package</returns>
         public static OpenXmlPackage OpenPackage(this FileInfo file, bool writable)
         {
-            if (!file.Exists)
-                throw new FileNotFoundException(string.Format("Specified file {0} does not exist.", file.Name));
-
-            string ext = file.Extension.ToLower();
-            OpenXmlPackage srcPackage = null;
-
-            if (_wordprocessingExtension.Contains(ext))
-            {
-                return srcPackage = WordprocessingDocument.Open(file.FullName, writable);
-            }
-            else if (_spreadsheetExtension.Contains(ext))
-            {
-                return srcPackage = SpreadsheetDocument.Open(file.FullName, writable);
-            }
-            else if (_presentationExtension.Contains(ext))
-            {
-                return srcPackage = PresentationDocument.Open(file.FullName, writable);
-            }
-            else
-                throw new Exception("Not Supported Document Type!");
+            return OpenPackage(file, writable, new OpenSettings());
         }
 
         /// <summary>
@@ -111,25 +93,80 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// <returns>OpenXmlPackage instance for opened package</returns>
         public static OpenXmlPackage OpenPackage(this FileInfo file, bool writable, bool autosave)
         {
-            if (!file.Exists)
-                throw new FileNotFoundException(string.Format("Specified file {0} does not exist.", file.Name));
+            return OpenPackage(file, writable, new OpenSettings { AutoSave = autosave });
+        }
 
-            string ext = file.Extension.ToLower();
-            OpenXmlPackage srcPackage = null;
-            if (_wordprocessingExtension.Contains(ext))
+        /// <summary>
+        /// Open specified existing package.
+        /// </summary>
+        /// <param name="file">File to be opened.</param>
+        /// <param name="writable">Open package in read/write mode if true, false for readonly.</param>
+        /// <returns>OpenXmlPackage instance for opened package.</returns>
+        public static OpenXmlPackage OpenPackage(this FileInfo file, bool writable, FileFormatVersions format, MarkupCompatibilityProcessMode mcProcessMode)
+        {
+            var settings = new OpenSettings()
             {
-                return srcPackage = WordprocessingDocument.Open(file.FullName, writable, new OpenSettings() { AutoSave = autosave });
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(mcProcessMode, format)
+            };
+
+            return OpenPackage(file, writable, settings);
+        }
+
+        /// <summary>
+        /// Open specified existing package.
+        /// </summary>
+        /// <param name="file">File to be opened.</param>
+        /// <param name="writable">Open package in read/write mode if true, false for readonly.</param>
+        /// <param name="settings">Settings on AutoSave, MaxCharactersInPart, MarkupCompatibilityProcessSettings and ProcessMCInWholePackage.</param>
+        /// <returns>OpenXmlPackage instance for opened package.</returns>
+        public static OpenXmlPackage OpenPackage(this FileInfo file, bool writable, OpenSettings settings)
+        {
+            if (!file.Exists)
+            {
+                throw new FileNotFoundException(string.Format("Specified file {0} does not exist.", file.Name));
             }
-            else if (_spreadsheetExtension.Contains(ext))
+
+            if (IsWordprocessingFile(file))
             {
-                return srcPackage = SpreadsheetDocument.Open(file.FullName, writable, new OpenSettings() { AutoSave = autosave });
+                return WordprocessingDocument.Open(file.FullName, writable, settings);
             }
-            else if (_presentationExtension.Contains(ext))
+            else if (IsSpreadsheetFile(file))
             {
-                return srcPackage = PresentationDocument.Open(file.FullName, writable, new OpenSettings() { AutoSave = autosave });
+                return SpreadsheetDocument.Open(file.FullName, writable, settings);
+            }
+            else if (IsPresentationFile(file))
+            {
+                return PresentationDocument.Open(file.FullName, writable, settings);
             }
             else
+            {
                 throw new Exception("Not Supported Document Type!");
+            }
+        }
+
+        public static OpenXmlPackage CreatePackage(this FileInfo file, Boolean overwiteIfExist)
+        {
+            if (file.Exists)
+            {
+                throw new InvalidOperationException(String.Format("The file {0} exists!!", file.FullName));
+            }
+
+            if (IsWordprocessingFile(file))
+            {
+                return WordprocessingDocument.Create(file.FullName, WordprocessingDocumentType.Document);
+            }
+            else if (IsSpreadsheetFile(file))
+            {
+                return SpreadsheetDocument.Create(file.FullName, SpreadsheetDocumentType.Workbook);
+            }
+            else if (IsPresentationFile(file))
+            {
+                return PresentationDocument.Create(file.FullName, PresentationDocumentType.Presentation);
+            }
+            else
+            {
+                throw new Exception("Not Supported Document Type!");
+            }
         }
 
         public static void CreateIfNotExist(this DirectoryInfo dir)
@@ -155,16 +192,26 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         public static OpenXmlPart MainPart(this OpenXmlPackage package)
         {
             if (null == package)
-                throw new ArgumentNullException("package");
+            {
+                throw new ArgumentNullException(nameof(package));
+            }
 
-            if (package is WordprocessingDocument)
-                return (package as WordprocessingDocument).MainDocumentPart;
-            else if (package is SpreadsheetDocument)
-                return (package as SpreadsheetDocument).WorkbookPart;
-            else if (package is PresentationDocument)
-                return (package as PresentationDocument).PresentationPart;
+            if (package is WordprocessingDocument word)
+            {
+                return word.MainDocumentPart;
+            }
+            else if (package is SpreadsheetDocument spreadsheet)
+            {
+                return spreadsheet.WorkbookPart;
+            }
+            else if (package is PresentationDocument presentation)
+            {
+                return presentation.PresentationPart;
+            }
             else
+            {
                 return null;
+            }
         }
 
         /// <summary>
@@ -189,7 +236,8 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
                 throw new ArgumentNullException("root");
 
             IList<OpenXmlPart> parts = new List<OpenXmlPart>();
-            addChildParts(parts, root);
+            List<string> uriList = new List<string>();
+            addChildParts(parts, uriList, root);
             return parts;
         }
 
@@ -273,8 +321,8 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
                     if (sourcePackPr.Created.HasValue && sourcePackPr.Created.Value.CompareTo(targetPackPr.Created.Value) != 0)
                         return false;
 
-                    if(sourcePackPr.Creator != targetPackPr.Creator)
-                    return false;
+                    if (sourcePackPr.Creator != targetPackPr.Creator)
+                        return false;
 
                     if (sourcePackPr.Description != targetPackPr.Description)
                         return false;
@@ -317,6 +365,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
 
         #endregion Package Extensions
 
+
         #region Part Extensions
 
         /// <summary>
@@ -336,7 +385,10 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         {
             if (part is CustomXmlPart)
             {
-                XElement PartRoot = XElement.Load(XmlReader.Create(part.GetStream()));
+                XElement PartRoot = null;
+                using (var stream = part.GetStream())
+                using (var reader = XmlReader.Create(stream))
+                    PartRoot = XElement.Load(reader);
 
                 if (PartRoot.Name.LocalName == "Sources")
                     return true;
@@ -348,7 +400,10 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         {
             if (part is CustomXmlPart)
             {
-                XElement PartRoot = XElement.Load(XmlReader.Create(part.GetStream()));
+                XElement PartRoot = null;
+                using (var stream = part.GetStream())
+                using (var reader = XmlReader.Create(stream))
+                    PartRoot = XElement.Load(reader);
 
                 if (PartRoot.Name.LocalName == "additionalCharacteristics")
                     return true;
@@ -360,7 +415,10 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         {
             if (part is CustomXmlPart)
             {
-                XElement PartRoot = XElement.Load(XmlReader.Create(part.GetStream()));
+                XElement PartRoot = null;
+                using (var stream = part.GetStream())
+                using (var reader = XmlReader.Create(stream))
+                    PartRoot = XElement.Load(reader);
 
                 if (PartRoot.Name.LocalName == "ink")
                     return true;
@@ -369,15 +427,15 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
 
 
         }
-        private static void addChildParts(IList<OpenXmlPart> list, OpenXmlPartContainer root)
+        private static void addChildParts(IList<OpenXmlPart> list, List<string> uriList, OpenXmlPartContainer root)
         {
             foreach (var ip in root.Parts)
             {
-                if (!list.Contains(ip.OpenXmlPart))
+                if (!uriList.Contains(ip.OpenXmlPart.Uri.ToString()))
                 {
                     list.Add(ip.OpenXmlPart);
-                    //if (ip.OpenXmlPart.Parts != null)
-                    addChildParts(list, ip.OpenXmlPart);
+                    uriList.Add(ip.OpenXmlPart.Uri.ToString());
+                    addChildParts(list, uriList, ip.OpenXmlPart);
                 }
             }
         }
@@ -429,9 +487,11 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             if (part is CustomXmlPart)
             {
                 XmlDocument xmlDoc = new XmlDocument();
-                xmlDoc.Load(part.GetStream());
+                using (var stream = part.GetStream())
+                    xmlDoc.Load(stream);
                 if (part.IsBibliographyPart())
                     return new Sources(xmlDoc.DocumentElement.OuterXml);
+
                 else if (part.IsInkPart())
                 {
                     return new DocumentFormat.OpenXml.InkML.Ink(xmlDoc.DocumentElement.OuterXml);
@@ -455,9 +515,9 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// <returns>TRUE, if two parts contains the same content. FALSE, if not</returns>
         public static Boolean Compare(this OpenXmlPart sourcePart, OpenXmlPart targetPart)
         {
-                HashSet<Uri> ComparedParts = new HashSet<Uri>();
+            HashSet<Uri> ComparedParts = new HashSet<Uri>();
 
-                return sourcePart.CompareDescendentsAndSelf(targetPart, ComparedParts);
+            return sourcePart.CompareDescendentsAndSelf(targetPart, ComparedParts);
         }
 
         private static Boolean CompareDescendentsAndSelf(this OpenXmlPart sourcePart, OpenXmlPart targetPart, HashSet<Uri> ComparedPart)
@@ -503,38 +563,43 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             if (sourcePart.RootElement == null)
             {
                 // if the part is binary part, compare binary
-                var sourceStm = sourcePart.GetStream();
-                var targetStm = targetPart.GetStream();
-
-                try
+                bool xmlCompareSuccess = false;
+                using (var sourceStm = sourcePart.GetStream())
+                using (var targetStm = targetPart.GetStream())
                 {
-                    var xsource = XElement.Load(XmlReader.Create(sourceStm));
-                    var xtarget = XElement.Load(XmlReader.Create(targetStm));
-
-                    if (xsource.Compare(xtarget) == false)
-                        return false;
-
-                }
-                catch (XmlException)
-                {
-                    sourceStm.Dispose();
-                    sourceStm = sourcePart.GetStream();
-
-                    targetStm.Dispose();
-                    targetStm = targetPart.GetStream();
-
-                    if (sourceStm.Length != targetStm.Length)
-                        return false;
-
-                    int i; int j;
-
-                    do
+                    try
                     {
-                        i = sourceStm.ReadByte();
-                        j = targetStm.ReadByte();
-                        if (i != j) return false;
+                        var xsource = XElement.Load(XmlReader.Create(sourceStm));
+                        var xtarget = XElement.Load(XmlReader.Create(targetStm));
 
-                    } while (i != -1 && j != -1);
+                        if (xsource.Compare(xtarget) == false)
+                            return false;
+                        xmlCompareSuccess = true;
+                    }
+                    catch (XmlException)
+                    {
+                        xmlCompareSuccess = false;
+                    }
+                }
+                // else need to do binary compare
+                if (!xmlCompareSuccess)
+                {
+                    using (var sourceStm = sourcePart.GetStream())
+                    using (var targetStm = targetPart.GetStream())
+                    {
+                        if (sourceStm.Length != targetStm.Length)
+                            return false;
+
+                        int i; int j;
+
+                        do
+                        {
+                            i = sourceStm.ReadByte();
+                            j = targetStm.ReadByte();
+                            if (i != j) return false;
+
+                        } while (i != -1 && j != -1);
+                    }
                 }
             }
             else
@@ -654,7 +719,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         }
 
         /// <summary>
-        /// Retrieve built-in OpenXmlAttributes of the type of pass-in OpenXmlElement 
+        /// Retrieve built-in OpenXmlAttributes of the type of pass-in OpenXmlElement
         /// </summary>
         /// <param name="e">OpenXmlElement or derived classes that has properties with SchemaAttrAttribute</param>
         /// <returns>IEnumerable<OpenXmlAttribute> for fixed attributes of type of pass-in OpenXmlElement</returns>
@@ -893,8 +958,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             if (!propertyInfo.DeclaringType.IsSubclassOf(typeof(OpenXmlElement)))
                 return null;
 
-            return propertyInfo.GetCustomAttributes(typeof(OfficeAvailabilityAttribute), true)
-                .FirstOrDefault() as OfficeAvailabilityAttribute;
+            return propertyInfo.GetCustomAttributes<OfficeAvailabilityAttribute>(true).FirstOrDefault();
         }
 
         public static IEnumerable<Type> GetEnumTypes()
@@ -913,7 +977,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
 
         public static EnumStringAttribute GetEnumString(this FieldInfo enumField)
         {
-            return enumField.GetCustomAttributes<EnumStringAttribute>(false).FirstOrDefault(); 
+            return enumField.GetCustomAttributes<EnumStringAttribute>(false).FirstOrDefault();
         }
 
         public static OfficeAvailabilityAttribute GetOfficeAvailability(this FieldInfo enumField)
@@ -921,7 +985,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             if (!enumField.DeclaringType.GetTypeInfo().IsEnum)
                 return null;
 
-            return enumField.GetCustomAttributes<OfficeAvailabilityAttribute>(false).FirstOrDefault(); 
+            return enumField.GetCustomAttributes<OfficeAvailabilityAttribute>(false).FirstOrDefault();
         }
 
         public static bool IsInVersion(this Type hostType, FileFormatVersions version)
@@ -981,7 +1045,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         #endregion Attribute Extensions
 
         #region IEnumerable Extensions
-        /// <summary>Pick the second element from source collection.  If there is only one element, picks the first.</summary>
+        /// <summary>Pick the second element from source collection.  If only one, then return the first.</summary>
         /// <typeparam name="TSource">Type of collection content</typeparam>
         /// <param name="source">source collection</param>
         /// <returns>chosen element of source collection</returns>
@@ -992,23 +1056,19 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
                 return chosenElement;
             chosenElement = source.FirstOrDefault();
             return chosenElement;
-            // this used to return a random element.  Bad idea for a test suite.
+            // This used to return a random element.  Bad idea for a test suite.
+            //int index = new Random ().Next(source.Count());
+            //return source.ElementAtOrDefault(index);
         }
 
-        /// <summary>Pick the second element from source collection.  If there is only one element, picks the first.</summary>
+        /// <summary> Pick an element from source collection randomly. </summary>
         /// <typeparam name="TSource">Type of collection content</typeparam>
         /// <param name="source">source collection</param>
         /// <param name="predicate">predicate on collection element</param>
         /// <returns>chosen element of source collection</returns>
-        public static TSource PickSecond<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
+        public static TSource PickFirst<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
         {
-            var filteredCollection = source.Where(predicate);
-            var chosenElement = filteredCollection.Skip(1).FirstOrDefault();
-            if (chosenElement != null)
-                return chosenElement;
-            chosenElement = filteredCollection.FirstOrDefault();
-            return chosenElement;
-            //this used to return a random element.  Bad idea for a test suite.
+            return source.Where(predicate).FirstOrDefault();
         }
 
         /// <summary> Conduct specified action on each member of current collection. </summary>
@@ -1153,10 +1213,6 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
                 error.RelatedPart == null ? string.Empty : error.RelatedPart.Uri.ToString(),
                 error.RelatedNode == null ? string.Empty : error.RelatedNode.Path());
             message.AppendLine();
-            //#if DEBUG
-            //            message.AppendFormat("SemanticConstraintId: {0}", error.SemanticConstraintId);
-            //            message.AppendLine();
-            //#endif
             var pi = typeof(ValidationErrorInfo).GetProperty("SemanticConstraintId");
             string SemanticConstraintId = pi == null ? string.Empty : pi.GetValue(error, null) as string;
             message.AppendFormat("SemanticConstraintId: {0}", SemanticConstraintId);
@@ -1207,7 +1263,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
 
         public static SchemaAttrAttribute getSchemaAttribute(this PropertyInfo propertyInfo)
         {
-            return propertyInfo.GetCustomAttributes<SchemaAttrAttribute>(true).FirstOrDefault(); 
+            return propertyInfo.GetCustomAttributes<SchemaAttrAttribute>(true).FirstOrDefault();
         }
 
         public static IEnumerable<EnumStringAttribute> getEnumStrings(this Type enumType)
@@ -1225,5 +1281,6 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             return enumField.GetCustomAttributes<EnumStringAttribute>(true).FirstOrDefault();
         }
         #endregion Extensions for Custom Attributes
+
     }
 }
