@@ -85,7 +85,18 @@ The **Install-Package** command considers the package source either via configur
 
 **Note**:  If you have trouble installing the package, try restarting Visual Studio. Package sources could be cached, and changes you've made to any NuGet.config files may not be detected.
 	
-	
+
+Having Problems?
+================
+
+If you want to report a problem (bug, behavior, build, distribution, feature request, etc... ) with the SDK built by this repository, please feel free to post a new issue and the someone will try to help out.
+
+If you have "how-to" questions please post to one of the following resources: 
+
+- https://social.msdn.microsoft.com/Forums/office/en-US/home?forum=oxmlsdk
+- http://stackoverflow.com (tags: "openxml" or "openxml-sdk")
+
+
 News
 ====
 We are also happy to announce the release of Open-Xml-PowerTools on GitHub.  Open-Xml-PowerTools provides example code and guidance for implementing a wide range of Open XML scenarios.  You can find PowerTools for Open XML, which previously lived at [PowerTools.CodePlex.com](http://powertools.codeplex.com) at [github.com/OfficeDev/Open-Xml-PowerTools] https://github.com/OfficeDev/Open-Xml-PowerTools).
