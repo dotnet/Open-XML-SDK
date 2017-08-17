@@ -7,9 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="..\TestFiles\**\*.*" />
-    <TestFiles Include="..\TestFiles\**\*" />
-    <TestDataStorage Include="..\TestDataStorage\**\*.*" />
+    <EmbeddedResource Include="assets\TestFiles\**\*.*" />
+    <TestFiles Include="assets\TestFiles\**\*" />
+    <TestDataStorage Include="assets\TestDataStorage\**\*.*" />
   </ItemGroup>
 
   <Target Name="CopyTestFiles" AfterTargets="Build">
