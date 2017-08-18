@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void EnumValueTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
 
             DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault tablecellmar = new DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault();
             tablecellmar.AppendChild(new DocumentFormat.OpenXml.Wordprocessing.LeftMargin());
@@ -251,7 +251,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ListValueTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             //String, Int32, UInt32, Boolean used as T in OpenXml SDK
             String defaultValue = default(String);
             String validString = "Normal String Content";
@@ -380,7 +380,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void StringValueTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             String defaultValue = default(String);
             String validValue = "Normal String Content";
             String specialString = @"</pPr>";
@@ -504,7 +504,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Base64BinaryValueTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             String defaultValue = default(String);
             String validValue = "Normal String Content";
             String specialString = @"</pPr>";
@@ -628,7 +628,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void HexBinaryValueTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             String defaultValue = default(String);
             String validValue = "Normal String Content";
             String specialString = @"</pPr>";
@@ -752,7 +752,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void OnOffValueTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             bool maxValue = true;
             bool minValue = false;
             bool validValue = true;
@@ -864,7 +864,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void TrueFalseBlankValueTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             bool maxValue = true;
             bool minValue = false;
             bool validValue = true;
@@ -1110,7 +1110,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void BooleanValueTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             Boolean defaultValue = default(Boolean);
             Boolean maxValue = true;
             Boolean minValue = false;
@@ -1229,7 +1229,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ByteValueTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             Byte defaultValue = default(Byte);
             Byte maxValue = Byte.MaxValue;
             Byte minValue = Byte.MinValue;
@@ -1297,7 +1297,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void SByteValueTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             SByte defaultValue = default(SByte);
             SByte maxValue = SByte.MaxValue;
             SByte minValue = SByte.MinValue;
@@ -1365,7 +1365,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void UInt16ValueTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             UInt16 defaultValue = default(UInt16);
             UInt16 maxValue = UInt16.MaxValue;
             UInt16 minValue = UInt16.MinValue;
@@ -1433,7 +1433,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void UInt32ValueTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             UInt32 defaultValue = default(UInt32);
             UInt32 maxValue = UInt32.MaxValue;
             UInt32 minValue = UInt32.MinValue;
@@ -1501,7 +1501,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Int32ValueTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             Int32 defaultValue = default(Int32);
             Int32 maxValue = Int32.MaxValue;
             Int32 minValue = Int32.MinValue;
@@ -1569,7 +1569,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void UInt64ValueTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             UInt64 defaultValue = default(UInt64);
             UInt64 maxValue = UInt64.MaxValue;
             UInt64 minValue = UInt64.MinValue;
@@ -1637,7 +1637,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Int64ValueTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             Int64 defaultValue = default(Int64);
             Int64 maxValue = Int64.MaxValue;
             Int64 minValue = Int64.MinValue;
@@ -1708,7 +1708,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void IntegerValueTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             Int64 defaultValue = default(Int64);
             Int64 maxValue = Int64.MaxValue;
             Int64 minValue = Int64.MinValue;
@@ -1779,7 +1779,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void DecimalValueTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             Decimal defaultValue = default(Decimal);
             Decimal maxValue = Decimal.MaxValue;
             Decimal minValue = Decimal.MinValue;
@@ -1860,7 +1860,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void SingleValueTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             Single defaultValue = default(Single);
             Single maxValue = Single.MaxValue;
             Single minValue = Single.MinValue;
@@ -1994,7 +1994,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void DoubleValueTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             Double defaultValue = default(Double);
             Double maxValue = Double.MaxValue;
             Double minValue = Double.MinValue;
@@ -2128,7 +2128,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void DateTimeValueTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             DateTime defaultValue = default(DateTime);
             DateTime maxValue = DateTime.MaxValue;
             DateTime minValue = DateTime.MinValue;

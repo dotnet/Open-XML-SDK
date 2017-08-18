@@ -56,7 +56,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validator2007BugRegressionTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
 
             OpenXmlValidator validator = new OpenXmlValidator(FileFormatVersions.Office2007);
 
@@ -83,7 +83,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validator2010BugRegressionTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
 
             OpenXmlValidator validator = new OpenXmlValidator(FileFormatVersions.Office2010);
 
@@ -458,7 +458,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug448241()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault tablecellmar = new DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault();
             var wrongChild = tablecellmar.AppendChild(new DocumentFormat.OpenXml.Wordprocessing.LeftMargin());
             var leftmar = tablecellmar.TableCellLeftMargin;
@@ -515,7 +515,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug396358()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             string file = Path.Combine(TestUtil.TestResultsDirectory, this.TestClassName, Guid.NewGuid().ToString().Replace("-", "") + ".xlsx");
             CopyFileStream(TestFileStreams.mailmerge, file);
             using (WordprocessingDocument doc = WordprocessingDocument.Open(file, true))
@@ -549,7 +549,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug537858()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             string file = Path.Combine(TestUtil.TestResultsDirectory, this.TestClassName, Guid.NewGuid().ToString().Replace("-", "") + ".xlsx");
             CopyFileStream(TestFileStreams.animation, file);
             OpenSettings s = new OpenSettings();
@@ -570,7 +570,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug544244()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var pageMargins = new DocumentFormat.OpenXml.Spreadsheet.PageMargins();
             pageMargins.Header = new DoubleValue();
             pageMargins.Header.InnerText = "0.51200000000000001";
@@ -588,7 +588,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug665268()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var comment = new DocumentFormat.OpenXml.Wordprocessing.Comment();
             comment.Date = new DateTimeValue();
             comment.Date.InnerText = "2007-04-24T15:42:11.037";

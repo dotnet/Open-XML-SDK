@@ -268,7 +268,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void TraverseWordDocument()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             //description = " Case ID: 75567, 75568, 75505, 75506, 76083, 76084";
             foreach (var testfile in CopyTestFiles(Path.Combine(@"wordprocessing", "paragraph"), false, 3))
             {
@@ -315,7 +315,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void TraverseSpreadSheetDocument()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             foreach (var testfile in CopyTestFiles(Path.Combine(@"spreadsheet", "smallset"), false, 3))
             {
                 Log.BeginGroup(testfile.Name);
@@ -362,7 +362,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void TraversePPTDocument()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             foreach (var testfile in CopyTestFiles(Path.Combine(@"presentation", "smallset"), false, 3))
             {
                 Log.BeginGroup(testfile.Name);

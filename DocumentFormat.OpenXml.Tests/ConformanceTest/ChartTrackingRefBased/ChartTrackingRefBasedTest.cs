@@ -63,7 +63,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         [Fact]
         public void ChartTrackingRefBasedTest01()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             string originalFilepath = this.GetTestFilePath(this.generateDocumentFile);
             string editFilePath = this.GetTestFilePath(this.editDocumentFile);
 
@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         [Fact]
         public void ChartTrackingRefBasedTest03DeleteElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
 
             string originalFilepath = this.GetTestFilePath(this.generateDocumentFile);
             string deleteFilePath = this.GetTestFilePath(this.deleteDocumentFile);

@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void OFCATFull()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod()); 
+            this.MyTestInitialize();
             TestDataStorage dataStorage = new TestDataStorage();
             var entries = dataStorage.GetEntries(
                 TestDataStorage.DataGroups.RobustnessOFCAT);

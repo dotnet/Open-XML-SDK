@@ -58,7 +58,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
         [Fact]
         public void WebExtensionAcceptance()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             TestDataStorage dataStorage = new TestDataStorage();
             var entries = dataStorage.GetEntries(TestDataStorage.DataGroups.O15ConformanceExcel).Where(e => e.FilePath.Contains(@"WebExtension\"));
 
@@ -101,7 +101,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
         [Fact]
         public void WebExtensionInvalidFormat()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
 
             // Instanciating a DataStorage object to get test files
             TestDataStorage dataStorage = new TestDataStorage();
@@ -138,7 +138,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
         [Fact]
         public void WebExtensionFullyFledgedValidation()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
 
             // create an Excel file containing a fully fledged WebExtension here:
             string filePath = Path.Combine(TestUtil.TestResultsDirectory, "WebExtensionFullFledgeValidation.xlsx");

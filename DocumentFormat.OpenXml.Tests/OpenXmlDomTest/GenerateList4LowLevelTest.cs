@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void TestAutosaveAfterSettingNullRootElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault(f => f.IsWordprocessingFile());
 
@@ -53,7 +53,7 @@ namespace DocumentFormat.OpenXml.Tests
         // [Description("O14:537826")]
         public void TestRootElementOfVmlDrawingPartIsLoadedAsUnknown()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var file = CopyTestFiles(@"bugregression", true, "537826.vmlpart.xlsx", f => f.IsSpreadsheetFile())
                 .FirstOrDefault();
 
@@ -74,7 +74,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void TestAssertInInnerTextForPlusSymbol()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
 
             // same issue for SByteValue, Int16Value, IntegerValue, DecimalValue, SingleValue, DoubleValue
             {
@@ -159,7 +159,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void TestAssertInInnerTextOfDoubleValue()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var v = new DoubleValue();
             v.InnerText = "0.51200000000000001";
             double v2 = v.Value;
@@ -173,7 +173,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void TwiceCallsToLoadAttributeOnUnknown()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var rawxml = @"<dgm14:cNvPr xmlns:dgm14=""http://schemas.microsoft.com/officeart/2007/7/20/diagram"" id=""0"" name="""" />";
             var ele = OpenXmlUnknownElement.CreateOpenXmlUnknownElement(rawxml);
             Log.VerifyTrue(ele.GetAttributes().Count == 2, "ele.GetAttributes().Count"); // The count should be 2 as now namespace declaration is not considered as attribute.
@@ -187,7 +187,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ExceptionForDuplicatedNsDeclarionWhenClosePackage()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var file = CopyTestFiles(@"ForTestCase", true, "Bug571679_Brownbag.pptx", f => f.IsPresentationFile())
                 .FirstOrDefault();
 
@@ -208,7 +208,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MaxNumberOfErrorsTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var file = CopyTestFiles(@"ForTestCase", true, "Bug539654_529755.xlsm", f => f.IsSpreadsheetFile())
                 .FirstOrDefault();
             using (var package = file.OpenPackage(false))
@@ -239,7 +239,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ChangeRelationshipId()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault().GetCopy();
             using (var package = testfile.OpenPackage(true, true))
@@ -321,7 +321,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void LoadCurrentElementTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault().GetCopy();
             using (var package = testfile.OpenPackage(true, true))
@@ -341,7 +341,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void LoadParagraphWithRedefinedPrefixTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             Log.Comment("Constructing a Paragraph with rawxml...");
             var rawxml = "<w:p w:rsidR=\"006B669D\" w:rsidRDefault=\"006B669D\" w:rsidP=\"006B669D\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:myw=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" >\n"
                 + "	<w12:r xmlns:w12=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" >\n"
@@ -368,7 +368,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void NamespaceDeclarationForNewUnknownElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt")
                 .Where(fi => fi.IsOpenXmlFile());
 

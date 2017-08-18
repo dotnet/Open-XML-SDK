@@ -13,27 +13,9 @@ namespace DocumentFormat.OpenXml.Tests
     ///This is a test class for BooleanValueTest and is intended
     ///to contain all BooleanValueTest Unit Tests
     ///</summary>
-    
+
     public class OpenXmlSimpleValueTest2
     {
-        private TestContext testContextInstance;
-
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-
         /// <summary>
         ///A test for BooleanValue Constructor
         ///</summary>
@@ -78,7 +60,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("0", target.ToString());
         }
 
-        
+
         /// <summary>
         ///A test for EnumValue
         ///</summary>
@@ -164,7 +146,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("default", objB.InnerText);
         }
 
-         
+
         /// <summary>
         ///A test for StringValue
         ///</summary>
@@ -195,8 +177,8 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("test", target.ToString());
 
         }
-    
-                
+
+
         /// <summary>
         ///A test for DateTimeValue
         ///</summary>
@@ -206,7 +188,7 @@ namespace DocumentFormat.OpenXml.Tests
             string utcTime = "2008-07-17T16:11:10.518Z";
             // System.Globalization.CultureInfo cultureInfo = System.Globalization.CultureInfo.GetCultureInfo("zh-CN");
             DateTime dateTime = System.Xml.XmlConvert.ToDateTime(utcTime, System.Xml.XmlDateTimeSerializationMode.Utc);
-                                    
+
             DateTimeValue target = new DateTimeValue( dateTime );
 
             Assert.True(target.HasValue);
@@ -220,7 +202,7 @@ namespace DocumentFormat.OpenXml.Tests
 
 
         }
-    
+
         /// <summary>
         ///A test for DateTimeValue
         ///</summary>
@@ -258,7 +240,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(double.NegativeInfinity, target.Value);
             Assert.Equal("-Infinity", target.InnerText);
             Assert.Equal("-Infinity", target.InnerText);
-            
+
             target.InnerText = "765.43211234E11";
             Assert.True(target.HasValue);
             Assert.Equal((double)765.43211234E11, target.Value);
@@ -831,8 +813,8 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(uint64, uint64Value.Value);
             Assert.Equal(uint64, UInt64Value.ToUInt64(uint64Value));
         }
-    
-    
+
+
         /// <summary>
         /// A test for signed numbers (ex. "+23") for int, uint, etc.
         /// </summary>
@@ -840,7 +822,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void Bug520719()
         {
             // the following test should pass without Assert() in debug version.
-            
+
             var int8 = new SByteValue();
             int8.InnerText = "+10";
             Assert.Equal(10, int8.Value);

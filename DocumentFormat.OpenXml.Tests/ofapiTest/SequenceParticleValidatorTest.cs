@@ -12,27 +12,8 @@ namespace DocumentFormat.OpenXml.Tests
     ///This is a test class for SequenceParticleValidatorTest and is intended
     ///to contain all SequenceParticleValidatorTest Unit Tests
     ///</summary>
-    
     public class SequenceParticleValidatorTest
     {
-        private TestContext testContextInstance;
-
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-
         /// <summary>
         ///A test for SequenceParticleValidator.Validate
         ///</summary>
@@ -162,7 +143,7 @@ namespace DocumentFormat.OpenXml.Tests
             var target = particleConstraint.ParticleValidator as SequenceParticleValidator;
             validationContext.Element = divs;
             var expected = divs;
-       
+
               //<xsd:complexType name="CT_Divs">
               //  <xsd:sequence minOccurs="1" maxOccurs="unbounded">
               //    <xsd:element name="div" type="CT_Div">

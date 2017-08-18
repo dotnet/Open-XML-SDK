@@ -1,42 +1,16 @@
-﻿using System;
-using System.Text;
+﻿using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.Validation;
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;
-using DocumentFormat.OpenXml.Validation;
-using DocumentFormat.OpenXml.Spreadsheet;
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Packaging;
 
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
     /// SemanticValidationTest
     /// </summary>
-    
     public class SemanticValidationTest
     {
-        ///<summary>
-        ///Constructor.
-        ///</summary>
-        public SemanticValidationTest()
-        {
-        }
-
-        private TestContext testContextInstance;
-
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-
         private static bool ErrorShowsUp(IEnumerable<ValidationErrorInfo> errors, string errorDescription)
         {
             bool errShowsUp = false;

@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
         [Fact]
         public void PivotConnection01EditElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
 
             string originalFilepath = this.GetTestFilePath(this.generatedOldbConnectionDocumentFile);
             string editFilePath = this.GetTestFilePath(this.editedOldbConnectionDocumentFile);
@@ -83,7 +83,7 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
         [Fact]
         public void PivotConnection03DeleteAddElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
 
             string originalFilepath = this.GetTestFilePath(this.generatedOldbConnectionDocumentFile);
             string deleteFilePath = this.GetTestFilePath(this.deletedOldbConnectionDocumentFile);

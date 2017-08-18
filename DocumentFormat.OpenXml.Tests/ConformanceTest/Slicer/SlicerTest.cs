@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
         [Fact]
         public void Slicer01EditElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
 
             string originalFilepath = this.GetTestFilePath(this.generateDocumentFilePath);
             string editFilePath = this.GetTestFilePath(this.editeDocumentFilePath);
