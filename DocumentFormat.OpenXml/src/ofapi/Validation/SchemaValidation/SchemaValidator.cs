@@ -47,6 +47,10 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             {
                 this._sdbSchemaDatas = SdbSchemaDatas.GetOffice2013SchemaDatas();
             }
+            else if (fileFormat == FileFormatVersions.Office2016)
+            {
+                this._sdbSchemaDatas = SdbSchemaDatas.GetOffice2016SchemaDatas();
+            }
             else
             {
                 string message = String.Format(System.Globalization.CultureInfo.CurrentUICulture,

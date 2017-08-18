@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
 {
 /// <summary>
 /// <para>Defines the WordprocessingShape Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wps:wsp.</para>
 /// </summary>
 /// <remarks>
@@ -30,15 +30,15 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(NonVisualDrawingProperties),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(NonVisualDrawingShapeProperties),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(NonVisualConnectorProperties),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ShapeProperties),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ShapeStyle),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(TextBoxInfo2),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(LinkedTextBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(TextBodyProperties),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(NonVisualDrawingProperties),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(NonVisualDrawingShapeProperties),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(NonVisualConnectorProperties),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ShapeProperties),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ShapeStyle),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(TextBoxInfo2),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(LinkedTextBox),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(TextBodyProperties),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class WordprocessingShape : OpenXmlCompositeElement
@@ -76,7 +76,7 @@ public partial class WordprocessingShape : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -243,7 +243,7 @@ if( 61 == namespaceId && "bodyPr" == name)
 }
 /// <summary>
 /// <para>Defines the OfficeArtExtensionList Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wps:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -291,7 +291,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -361,7 +361,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the NonVisualDrawingProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wps:cNvPr.</para>
 /// </summary>
 /// <remarks>
@@ -413,7 +413,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -654,7 +654,7 @@ if( 0 == namespaceId && "title" == name)
 }
 /// <summary>
 /// <para>Defines the NonVisualDrawingShapeProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wps:cNvSpPr.</para>
 /// </summary>
 /// <remarks>
@@ -704,7 +704,7 @@ public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -868,7 +868,7 @@ if( 10 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the NonVisualConnectorProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wps:cNvCnPr.</para>
 /// </summary>
 /// <remarks>
@@ -922,7 +922,7 @@ public partial class NonVisualConnectorProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1093,7 +1093,7 @@ if( 10 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the ShapeProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wps:spPr.</para>
 /// </summary>
 /// <remarks>
@@ -1169,7 +1169,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1354,7 +1354,7 @@ if( 10 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the ShapeStyle Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wps:style.</para>
 /// </summary>
 /// <remarks>
@@ -1408,7 +1408,7 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1579,7 +1579,7 @@ if( 10 == namespaceId && "fontRef" == name)
 }
 /// <summary>
 /// <para>Defines the TextBoxInfo2 Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wps:txbx.</para>
 /// </summary>
 /// <remarks>
@@ -1591,7 +1591,7 @@ if( 10 == namespaceId && "fontRef" == name)
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent))]
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class TextBoxInfo2 : OpenXmlCompositeElement
@@ -1629,7 +1629,7 @@ public partial class TextBoxInfo2 : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1793,7 +1793,7 @@ if( 61 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the LinkedTextBox Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wps:linkedTxbx.</para>
 /// </summary>
 /// <remarks>
@@ -1803,7 +1803,7 @@ if( 61 == namespaceId && "extLst" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class LinkedTextBox : OpenXmlCompositeElement
@@ -1841,7 +1841,7 @@ public partial class LinkedTextBox : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1998,7 +1998,7 @@ if( 0 == namespaceId && "seq" == name)
 }
 /// <summary>
 /// <para>Defines the TextBodyProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wps:bodyPr.</para>
 /// </summary>
 /// <remarks>
@@ -2060,7 +2060,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}

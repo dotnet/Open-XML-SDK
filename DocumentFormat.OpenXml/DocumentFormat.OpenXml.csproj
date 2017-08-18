@@ -65,10 +65,12 @@
     <Compile Remove="src\GeneratedCode\Office2007Schema.cs" />
     <Compile Remove="src\GeneratedCode\Office2010Schema.cs" />
     <Compile Remove="src\GeneratedCode\Office2013Schema.cs" />
+    <Compile Remove="src\GeneratedCode\Office2016Schema.cs" />
     <Compile Remove="src\ofapi\Validation\SchemaValidation\OfficeStaticSchemaDatas.cs" />
     <EmbeddedResource Include="src\GeneratedCode\O12SchemaConstraintDatas.bin" />
     <EmbeddedResource Include="src\GeneratedCode\O14SchemaConstraintDatas.bin" />
     <EmbeddedResource Include="src\GeneratedCode\O15SchemaConstraintDatas.bin" />
+    <EmbeddedResource Include="src\GeneratedCode\O16SchemaConstraintDatas.bin" />
   </ItemGroup>
 
   <!-- .NET Standard 1.3 builds will use the static schemas and System.IO.Packaging -->

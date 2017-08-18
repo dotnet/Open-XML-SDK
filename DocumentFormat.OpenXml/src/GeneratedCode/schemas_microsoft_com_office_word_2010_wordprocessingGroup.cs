@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
 {
 /// <summary>
 /// <para>Defines the WordprocessingGroup Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wpg:wgp.</para>
 /// </summary>
 /// <remarks>
@@ -69,7 +69,7 @@ public partial class WordprocessingGroup : WordprocessingGroupType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -121,7 +121,7 @@ public partial class WordprocessingGroup : WordprocessingGroupType
 }
 /// <summary>
 /// <para>Defines the GroupShape Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wpg:grpSp.</para>
 /// </summary>
 /// <remarks>
@@ -176,7 +176,7 @@ public partial class GroupShape : WordprocessingGroupType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -244,15 +244,15 @@ public partial class GroupShape : WordprocessingGroupType
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(NonVisualDrawingProperties),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(NonVisualGroupDrawingShapeProperties),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(GroupShapeProperties),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(GroupShape),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(GraphicFrame),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(NonVisualDrawingProperties),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(NonVisualGroupDrawingShapeProperties),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(GroupShapeProperties),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(GroupShape),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(GraphicFrame),(FileFormatVersions)14)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Pictures.Picture))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.ContentPart),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.ContentPart),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class WordprocessingGroupType : OpenXmlCompositeElement
 {
@@ -404,7 +404,7 @@ if( 60 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the NonVisualDrawingProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wpg:cNvPr.</para>
 /// </summary>
 /// <remarks>
@@ -456,7 +456,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -697,7 +697,7 @@ if( 0 == namespaceId && "title" == name)
 }
 /// <summary>
 /// <para>Defines the NonVisualGraphicFrameProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wpg:cNvFrPr.</para>
 /// </summary>
 /// <remarks>
@@ -747,7 +747,7 @@ public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -876,7 +876,7 @@ if( 10 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the Transform2D Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wpg:xfrm.</para>
 /// </summary>
 /// <remarks>
@@ -926,7 +926,7 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1118,7 +1118,7 @@ if( 0 == namespaceId && "flipV" == name)
 }
 /// <summary>
 /// <para>Defines the OfficeArtExtensionList Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wpg:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -1166,7 +1166,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1236,7 +1236,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the NonVisualGroupDrawingShapeProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wpg:cNvGrpSpPr.</para>
 /// </summary>
 /// <remarks>
@@ -1286,7 +1286,7 @@ public partial class NonVisualGroupDrawingShapeProperties : OpenXmlCompositeElem
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1415,7 +1415,7 @@ if( 10 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the GroupShapeProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wpg:grpSpPr.</para>
 /// </summary>
 /// <remarks>
@@ -1483,7 +1483,7 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1656,7 +1656,7 @@ if( 10 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the GraphicFrame Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wpg:graphicFrame.</para>
 /// </summary>
 /// <remarks>
@@ -1670,11 +1670,11 @@ if( 10 == namespaceId && "extLst" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(NonVisualDrawingProperties),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(NonVisualGraphicFrameProperties),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Transform2D),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(NonVisualDrawingProperties),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(NonVisualGraphicFrameProperties),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(Transform2D),(FileFormatVersions)14)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Graphic))]
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class GraphicFrame : OpenXmlCompositeElement
@@ -1712,7 +1712,7 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}

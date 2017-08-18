@@ -4007,4 +4007,56 @@ public partial class TimeLineCachePart
 		}
 	}
 }
+public partial class ExtendedChartPart
+{  
+    [System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)]
+	private DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartSpace _rootEle;
+	
+	/// <summary>
+    /// Only for OpenXmlPart derived classes.
+    /// </summary>
+	internal override OpenXmlPartRootElement _rootElement
+	{
+		get
+		{
+			return _rootEle;
+		}
+		set
+		{
+			_rootEle = value as DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartSpace;
+		}
+	}
+	
+	/// <summary>
+    /// Gets the root element of this part. The DOM tree will be loaded on demand.
+    /// </summary>
+	internal override OpenXmlPartRootElement PartRootElement
+	{
+		get
+		{
+			return this.ChartSpace;
+		}
+	}
+	 
+	/// <summary>
+    /// Gets/Sets the root element of this part.
+    /// </summary>
+	public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartSpace  ChartSpace
+	{
+		get
+		{
+			if(_rootEle == null)
+			{
+				LoadDomTree< DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartSpace >();
+			}
+			return _rootEle;
+		}
+		set
+		{
+			if(value == null)
+				throw new ArgumentNullException("value");
+			SetDomTree(value);
+		}
+	}
+}
 }
