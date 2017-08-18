@@ -20,7 +20,6 @@ namespace DocumentFormat.OpenXml.Tests
     /// <summary>
     /// Summary description for BugRegressionTest
     /// </summary>
-
     public class BugRegressionTest : OpenXmlDomTestBase
     {
         /// <summary>
@@ -29,28 +28,7 @@ namespace DocumentFormat.OpenXml.Tests
         public BugRegressionTest(ITestOutputHelper output)
             : base(output)
         {
-            //
-            // TODO: Add constructor logic here
-            //
         }
-
-        //private TestContext testContextInstance;
-
-        ///// <summary>
-        /////Gets or sets the test context which provides
-        /////information about and functionality for the current test run.
-        /////</summary>
-        //public TestContext TestContext
-        //{
-        //    get
-        //    {
-        //        return testContextInstance;
-        //    }
-        //    set
-        //    {
-        //        testContextInstance = value;
-        //    }
-        //}
 
         /// <summary>
         /// Regress OpenXmlValidator bugs when validating against Office2007.
@@ -58,7 +36,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validator2007BugRegressionTest()
         {
-            this.MyTestInitialize();
 
             OpenXmlValidator validator = new OpenXmlValidator(FileFormatVersions.Office2007);
 
@@ -85,7 +62,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validator2010BugRegressionTest()
         {
-            this.MyTestInitialize();
 
             OpenXmlValidator validator = new OpenXmlValidator(FileFormatVersions.Office2010);
 
@@ -460,7 +436,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug448241()
         {
-            this.MyTestInitialize();
             DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault tablecellmar = new DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault();
             var wrongChild = tablecellmar.AppendChild(new DocumentFormat.OpenXml.Wordprocessing.LeftMargin());
             var leftmar = tablecellmar.TableCellLeftMargin;
@@ -517,7 +492,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug396358()
         {
-            this.MyTestInitialize();
             string file = Path.Combine(TestUtil.TestResultsDirectory, this.TestClassName, Guid.NewGuid().ToString().Replace("-", "") + ".xlsx");
             CopyFileStream(TestFileStreams.mailmerge, file);
             using (WordprocessingDocument doc = WordprocessingDocument.Open(file, true))
@@ -551,7 +525,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug537858()
         {
-            this.MyTestInitialize();
             string file = Path.Combine(TestUtil.TestResultsDirectory, this.TestClassName, Guid.NewGuid().ToString().Replace("-", "") + ".xlsx");
             CopyFileStream(TestFileStreams.animation, file);
             OpenSettings s = new OpenSettings();
@@ -572,7 +545,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug544244()
         {
-            this.MyTestInitialize();
             var pageMargins = new DocumentFormat.OpenXml.Spreadsheet.PageMargins();
             pageMargins.Header = new DoubleValue();
             pageMargins.Header.InnerText = "0.51200000000000001";
@@ -590,7 +562,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug665268()
         {
-            this.MyTestInitialize();
             var comment = new DocumentFormat.OpenXml.Wordprocessing.Comment();
             comment.Date = new DateTimeValue();
             comment.Date.InnerText = "2007-04-24T15:42:11.037";

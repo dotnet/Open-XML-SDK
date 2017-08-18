@@ -26,10 +26,8 @@ namespace DocumentFormat.OpenXml.Tests
     public class OpenXmlDomTestBase : OpenXmlTestBase
     {
         public OpenXmlDomTestBase(ITestOutputHelper output)
-            : base(output)
+            : base(output, "v2FxTestFiles")
         {
-            // Specify source path which includes test input files
-            this.SourcePath = @"v2FxTestFiles";
         }
 
         #region Delegation ...

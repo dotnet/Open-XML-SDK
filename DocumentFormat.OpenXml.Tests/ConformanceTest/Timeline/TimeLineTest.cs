@@ -10,62 +10,30 @@ namespace DocumentFormat.OpenXml.Tests.TimeLine
     using Xunit;
     using Xunit.Abstractions;
 
-
     /// <summary>
     /// Tests for TimeLine elements
     /// </summary>
-
     public class TimeLineTest : OpenXmlTestBase
     {
-        //private readonly string generateDocumentFile = "TestTimeLineBase.xlsx";
-        //private readonly string editeDocumentFile = "EditedTimeLine.xlsx";
-        //private readonly string deleteTimelineStyleDocumentFile = "DeletedTimelineStyleTimeLine.xlsx";
-        //private readonly string addTimelineStyleDocumentFile = "AddedTimelineStyleTimeLine.xlsx";
         private readonly string generateDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
         private readonly string editeDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
         private readonly string deleteTimelineStyleDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
         private readonly string addTimelineStyleDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
+        private readonly TestEntities testEntities = null;
 
-
-
-        TestEntities testEntities = null;
-
-        #region Constructor
         /// <summary>
         /// Constructor
         /// </summary>
         public TimeLineTest(ITestOutputHelper output)
             : base(output)
         {
-        }
-        #endregion
-
-        #region Initialize
-        /// <summary>
-        /// Create is a Excel file, It's test base file.
-        /// </summary>
-        /// <param name="createFilePath">Create Excel file path</param>
-        /// <returns>Excel file path</returns>
-        private void Initialize(string createFilePath)
-        {
+            string createFilePath = this.GetTestFilePath(this.generateDocumentFile);
             GeneratedDocument generatedDocument = new GeneratedDocument();
             generatedDocument.CreatePackage(createFilePath);
 
             this.Log.Pass("Create Excel file. File path=[{0}]", createFilePath);
 
             this.testEntities = new TestEntities(createFilePath);
-        }
-        #endregion
-
-        #region Test Methods
-        /// <summary>
-        /// Creates a base Excel file for the tests
-        /// </summary>
-        protected override void TestInitializeOnce()
-        {
-            string generatDocumentFilePath = this.GetTestFilePath(this.generateDocumentFile);
-
-            Initialize(generatDocumentFilePath);
         }
 
         /// <summary>
@@ -74,8 +42,6 @@ namespace DocumentFormat.OpenXml.Tests.TimeLine
         [Fact]
         public void TimeLine01EditDeleteAddAttribute()
         {
-            this.MyTestInitialize();
-
             string originalFilepath = this.GetTestFilePath(this.generateDocumentFile);
             string editFilePath = this.GetTestFilePath(this.editeDocumentFile);
             string deleteTimelineStyleFilePath = this.GetTestFilePath(this.deleteTimelineStyleDocumentFile);
@@ -96,7 +62,5 @@ namespace DocumentFormat.OpenXml.Tests.TimeLine
             this.testEntities.AddTimelineStyle(addTimelineStyleFilePath, this.Log);
             this.testEntities.VerifyAddedTimelineStyle(addTimelineStyleFilePath, this.Log);
         }
-
-        #endregion
     }
 }

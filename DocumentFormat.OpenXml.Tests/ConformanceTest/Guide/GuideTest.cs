@@ -19,43 +19,21 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         private readonly string editDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
         private readonly string deleteDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
         private readonly string addDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
-        TestEntities testEntities = null;
+        private readonly TestEntities testEntities;
 
-        #region Constructor
         /// <summary>
         /// Constructor
         /// </summary>
         public GuideTest(ITestOutputHelper output)
             : base(output)
         {
-        }
-        #endregion
-
-        #region Initialize
-        /// <summary>
-        /// Creates a base Word file for the tests
-        /// </summary>
-        /// <param name="createFilePath">Create Word file path</param>
-        private void Initialize(string createFilePath)
-        {
+            string createFilePath = this.GetTestFilePath(this.generateDocumentFile);
             GeneratedDocument generatedDocument = new GeneratedDocument();
             generatedDocument.CreatePackage(createFilePath);
 
             this.Log.Pass("Create Power Point file. File path=[{0}]", createFilePath);
 
             this.testEntities = new TestEntities(createFilePath);
-        }
-        #endregion
-
-        #region Test Methods
-        /// <summary>
-        /// Creates a base Excel file for the tests
-        /// </summary>
-        protected override void TestInitializeOnce()
-        {
-            string generatDocumentFilePath = this.GetTestFilePath(this.generateDocumentFile);
-
-            Initialize(generatDocumentFilePath);
         }
 
         /// <summary>
@@ -64,8 +42,6 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         [Fact]
         public void Guide01EditElement()
         {
-            this.MyTestInitialize();
-
             string originalFilepath = this.GetTestFilePath(this.generateDocumentFile);
             string editFilePath = this.GetTestFilePath(this.editDocumentFile);
 
@@ -81,8 +57,6 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         [Fact]
         public void Guide03DeleteAddElement()
         {
-            this.MyTestInitialize();
-
             string originalFilepath = this.GetTestFilePath(this.generateDocumentFile);
             string deleteFilePath = this.GetTestFilePath(this.deleteDocumentFile);
             string addFilePath = this.GetTestFilePath(this.addDocumentFile);
@@ -97,7 +71,5 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
             this.testEntities.AddElement(addFilePath, this.Log);
             this.testEntities.VerifyAddedElemenet(addFilePath, this.Log);
         }
-
-        #endregion
     }
 }

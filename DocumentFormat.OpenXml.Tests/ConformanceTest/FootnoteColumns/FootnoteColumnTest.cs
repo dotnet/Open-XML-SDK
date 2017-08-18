@@ -23,14 +23,12 @@ namespace DocumentFormat.OpenXml.Tests.FootnoteColumns
         {
         }
 
-        #region Test Methods
         /// <summary>
         /// Document Read/Write Test for FootnoteColumns
         /// </summary>
         [Fact]
         public void FootnoteColumnsReadWriteTest()
         {
-            this.MyTestInitialize();
             this.SimpleReadWriteTest(
                 (e) =>
                 {
@@ -49,6 +47,5 @@ namespace DocumentFormat.OpenXml.Tests.FootnoteColumns
                         "Verified the updated attribute");
                 });
         }
-        #endregion
     }
 }

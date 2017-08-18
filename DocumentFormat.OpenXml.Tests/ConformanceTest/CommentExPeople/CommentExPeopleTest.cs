@@ -18,23 +18,13 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
         private readonly string generateDocumentFilePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
         private readonly string editedDocumentFilePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
 
-        #region Constructor
         /// <summary>
         /// Constructor
         /// </summary>
         public CommentExPeopleTest(ITestOutputHelper output)
             : base(output)
         {
-        }
-        #endregion
-
-        #region Initialize
-        /// <summary>
-        /// Creates a base Word file for the tests.
-        /// </summary>
-        /// <param name="createFilePath">Create Word file path</param>
-        private void Initialize(string createFilePath)
-        {
+            string createFilePath = this.GetTestFilePath(this.generateDocumentFilePath);
             GeneratedDocument generatedDocument = new GeneratedDocument();
             generatedDocument.CreatePackage(createFilePath);
 
@@ -42,25 +32,11 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
         }
 
         /// <summary>
-        /// Creates a base Word file for the tests.
-        /// </summary>
-        protected override void TestInitializeOnce()
-        {
-            string generatDocumentFilePath = this.GetTestFilePath(this.generateDocumentFilePath);
-
-            Initialize(generatDocumentFilePath);
-        }
-        #endregion
-
-        #region Test Methods
-        /// <summary>
         /// Element reading test for "Comment PeoplePart".
         /// </summary>
         [Fact]
         public void CommentExPeople01ReadElement()
         {
-            this.MyTestInitialize();
-
             string originalFilepath = this.GetTestFilePath(this.generateDocumentFilePath);
 
             TestEntities testEntities = new TestEntities();
@@ -73,8 +49,6 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
         [Fact]
         public void CommentExPeople02EditElement()
         {
-            this.MyTestInitialize();
-
             string originalFilepath = this.GetTestFilePath(this.generateDocumentFilePath);
             string editFilePath = this.GetTestFilePath(this.editedDocumentFilePath);
 
@@ -84,6 +58,5 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
             testEntities.EditElements(editFilePath, this.Log);
             testEntities.VerifyElements(editFilePath, this.Log);
         }
-        #endregion
     }
 }

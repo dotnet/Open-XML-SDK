@@ -1,17 +1,13 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace DocumentFormat.OpenXml.Tests.ContentControl
 {
-    using Xunit;
-    using DocumentFormat.OpenXml.Tests.TaskLibraries;
-    using DocumentFormat.OpenXml.Tests.TaskLibraries.DataStorage;
     using DocumentFormat.OpenXml.Tests.ContentControlClass;
-    using System.IO;
+    using DocumentFormat.OpenXml.Tests.TaskLibraries;
     using OxTest;
+    using System.IO;
+    using Xunit;
     using Xunit.Abstractions;
 
     /// <summary>
@@ -23,39 +19,17 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
         private readonly string editedDocumentFilePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
         private readonly string deletedDocumentFilePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
 
-        #region Constructor
         /// <summary>
         /// Constructor
         /// </summary>
         public ContentControlTest(ITestOutputHelper output)
             : base(output)
         {
-        }
-        #endregion
-
-        #region Initialize
-        /// <summary>
-        /// Creates a base Word file for the tests
-        /// </summary>
-        /// <param name="createFilePath">Create Word file path</param>
-        private void Initialize(string createFilePath)
-        {
+            string createFilePath = this.GetTestFilePath(this.generatedDocumentFilePath);
             GeneratedDocument generatedDocument = new GeneratedDocument();
             generatedDocument.CreatePackage(createFilePath);
 
             this.Log.Pass("Create Word file. File path=[{0}]", createFilePath);
-        }
-        #endregion
-
-        #region Test Methods
-        /// <summary>
-        /// Creates a base Word file for the tests
-        /// </summary>
-        protected override void TestInitializeOnce()
-        {
-            string generatDocumentFilePath = this.GetTestFilePath(this.generatedDocumentFilePath);
-
-            Initialize(generatDocumentFilePath);
         }
 
         /// <summary>
@@ -64,8 +38,6 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
         [Fact]
         public void ContentControl01EditElement()
         {
-            this.MyTestInitialize();
-
             string originalFilepath = this.GetTestFilePath(this.generatedDocumentFilePath);
             string editFilePath = this.GetTestFilePath(this.editedDocumentFilePath);
 
@@ -81,8 +53,6 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
         [Fact]
         public void ContentControl03DeleteElement()
         {
-            this.MyTestInitialize();
-
             string originalFilepath = this.GetTestFilePath(this.generatedDocumentFilePath);
             string deleteFilePath = this.GetTestFilePath(this.deletedDocumentFilePath);
 
@@ -92,6 +62,5 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
             DeleteElement.DeleteContentControlElements(deleteFilePath, this.Log);
             int sdtElementNum = VerifyDeletedElement.DeletedElementVerify(deleteFilePath, this.Log);
         }
-        #endregion
     }
 }

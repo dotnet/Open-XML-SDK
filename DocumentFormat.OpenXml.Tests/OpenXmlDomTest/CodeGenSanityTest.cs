@@ -26,7 +26,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ThemeAsPartRootClassTest()
         {
-            this.MyTestInitialize();
             var testfile = CopyTestFiles(@"wordprocessing", true, "complex0.docx", f => f.IsWordprocessingFile())
                 .FirstOrDefault();
 
@@ -99,7 +98,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ThemeAsClassWithFixedOrderChildTest()
         {
-            this.MyTestInitialize();
             var testfile = CopyTestFiles(@"wordprocessing", true, "complex0.docx", f => f.IsWordprocessingFile())
                 .Where(f => f.IsWordprocessingFile() || f.IsSpreadsheetFile())
                 .FirstOrDefault();
@@ -168,7 +166,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ColorAsLeafElementTest()
         {
-            this.MyTestInitialize();
             var testfile = CopyTestFiles(@"wordprocessing", true, "complex0.docx", f => f.IsWordprocessingFile())
                 .FirstOrDefault();
 
@@ -219,7 +216,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void FieldCodeAsLeafTextElement()
         {
-            this.MyTestInitialize();
             var testfile = CopyTestFiles(@"wordprocessing", true, "complex0.docx", f => f.IsWordprocessingFile())
                 .FirstOrDefault();
 
@@ -272,7 +268,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug225919_MitigateNamespaceIssue()
         {
-            this.MyTestInitialize();
             //var testfiles = GetTestfile(@"wordprocessing", MethodInfo.GetCurrentMethod().Name)
             //    .Where(f => f.IsWordprocessingFile());
             //var testfiles = GetTestfile(@"spreadsheet", MethodInfo.GetCurrentMethod().Name)
