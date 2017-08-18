@@ -169,12 +169,18 @@ namespace DocumentFormat.OpenXml
 
         internal static XmlReaderSettings CreateDefaultXmlReaderSettings()
         {
-            
-            XmlReaderSettings xmlReaderSettings = new XmlReaderSettings();
-            xmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set true explicitly for security fix
 
-            // init XmlReaderSettings
-            xmlReaderSettings.NameTable = new NameTable();
+            XmlReaderSettings xmlReaderSettings = new XmlReaderSettings
+            {
+#if FEATURE_XML_PROHIBIT_DTD
+                ProhibitDtd = true, // set true explicitly for security fix
+#else
+                DtdProcessing = DtdProcessing.Prohibit, // set to prohibit explicitly for security fix
+#endif
+
+                // init XmlReaderSettings
+                NameTable = new NameTable()
+            };
 
             // O15:#3024890, Set IgnoreWhitespace to false for the SDK to handle the whitespace node type. We have to do this because
             // PPT does not use the preserve attribute (xml:space="preserve") for non-ignorable whitespaces. (See the bug for details.)
