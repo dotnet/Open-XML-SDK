@@ -44,7 +44,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
 
                     // New a log instance
                     string description = this.GetType().FullName;
-                    this.log = new VerifiableLog(TestContext.TestName, description, resultPath);
+                    this.log = new VerifiableLog(TestClassName, description, resultPath);
                 }
                 return log;
             }
