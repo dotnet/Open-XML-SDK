@@ -21,6 +21,7 @@ using Xunit;
 using System.IO.Packaging;
 
 using DocumentFormat.OpenXml.Tests;
+using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -32,7 +33,9 @@ namespace DocumentFormat.OpenXml.Tests
     {
         internal bool[] IsEditable;
         internal bool[] AutoSave;
-        public AutoSaveTestClass()
+
+        public AutoSaveTestClass(ITestOutputHelper output)
+            : base(output)
         {
             IsEditable = new bool[] { true, false };
             AutoSave = new bool[] { true, false };
@@ -513,9 +516,12 @@ namespace DocumentFormat.OpenXml.Tests
         }
     }
 
-
     public class OpenSettingsTestClass : OpenXmlDomTestBase
     {
+        public OpenSettingsTestClass(ITestOutputHelper output)
+            : base(output)
+        {
+        }
 
         [Fact]
         public void OpenWithInvalidFileFormatTest()
@@ -620,6 +626,11 @@ namespace DocumentFormat.OpenXml.Tests
 
     public class CreateDocumentTestClass : OpenXmlDomTestBase
     {
+        public CreateDocumentTestClass(ITestOutputHelper output)
+            : base(output)
+        {
+        }
+
         [Fact]
         public void CreateWithFalseAutoSaveTest()
         {

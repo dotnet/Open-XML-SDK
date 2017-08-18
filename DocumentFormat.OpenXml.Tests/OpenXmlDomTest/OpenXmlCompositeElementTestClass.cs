@@ -1,31 +1,20 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Xml;
-using System.Xml.Linq;
-
-using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
-using DocumentFormat.OpenXml.Presentation;
-using DocumentFormat.OpenXml.Spreadsheet;
-using DocumentFormat.OpenXml.Drawing;
-
+using System;
+using System.IO;
+using System.Linq;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    using DocumentFormat.OpenXml.Tests.TaskLibraries;
-
-    /// <summary>OpenXmlCompositeElementTestClass</summary>
-
     public class OpenXmlCompositeElementTestClass : OpenXmlDomTestBase
     {
+        public OpenXmlCompositeElementTestClass(ITestOutputHelper output)
+            : base(output)
+        {
+        }
 
         #region Elements
 
@@ -637,14 +626,14 @@ namespace DocumentFormat.OpenXml.Tests
         #region OpenXmlAttribute
 
         //w:rsidR="00B327F7" w:rsidRPr="00B327F7" w:rsidRDefault="00BB7AFC" w:rsidP="00EC35BB"
-        // xmlns:ve="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-        // xmlns:objA="urn:schemas-microsoft-com:office:office" 
-        // xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" 
-        // xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" 
-        // xmlns:v="urn:schemas-microsoft-com:vml" 
-        // xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" 
-        // xmlns:w10="urn:schemas-microsoft-com:office:word" 
-        // xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" 
+        // xmlns:ve="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        // xmlns:objA="urn:schemas-microsoft-com:office:office"
+        // xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+        // xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"
+        // xmlns:v="urn:schemas-microsoft-com:vml"
+        // xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
+        // xmlns:w10="urn:schemas-microsoft-com:office:word"
+        // xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
         // xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml"
 
         //xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"
@@ -2548,9 +2537,9 @@ namespace DocumentFormat.OpenXml.Tests
 
             using (var Package = testfile.OpenPackage(true))
             {
-                //<w:fonts xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-                //xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" 
-                //xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" 
+                //<w:fonts xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                //xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                //xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
                 //xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" mc:Ignorable="w14">
                 //   ....
                 //</w:fonts>

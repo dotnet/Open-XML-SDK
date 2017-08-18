@@ -1,24 +1,14 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Tests.TaskLibraries.DataStorage;
+using DocumentFormat.OpenXml.Validation;
+using LogUtil;
+using OxTest;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Xml;
-using System.Xml.Linq;
-using System.Reflection;
-using OxTest;
-
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Validation;
-using DocumentFormat.OpenXml.Wordprocessing;
-using DocumentFormat.OpenXml.Spreadsheet;
-using DocumentFormat.OpenXml.Presentation;
-
-using DocumentFormat.OpenXml.Tests.TaskLibraries.DataStorage;
-using LogUtil;
-using Xunit;
+using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests.TaskLibraries
 {
@@ -27,31 +17,12 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
     /// </summary>
     public class OpenXmlTestBase
     {
-        #region Log
-        /// <summary>
-        /// Log instance. This is initialized whenever before a test method is being initialized
-        /// in the TestInitialize event of VS UnitTesting.
-        /// </summary>
-        public VerifiableLog Log
+        protected OpenXmlTestBase(ITestOutputHelper output)
         {
-            get
-            {
-                if (this.log == null)
-                {
-                    // Create directory if not exists
-                    if (!Directory.Exists(resultPath))
-                        Directory.CreateDirectory(resultPath);
-
-                    // New a log instance
-                    string description = this.GetType().FullName;
-                    this.log = new VerifiableLog(TestContext.TestName, description, resultPath);
-                }
-                return log;
-            }
+            Log = new VerifiableLog(output);
         }
 
-        private VerifiableLog log = null;
-        #endregion Log
+        protected VerifiableLog Log { get; }
 
         #region Initialize/Cleanup
         public void MyTestInitialize(string currentTest)
@@ -61,8 +32,6 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             // Initialize the list of created result folders
             this.resultFoldersCreated = new List<string>();
 
-            // Reset log file
-            this.log = null;
 
             // Create result root directory if not exists
             if (!Directory.Exists(TestResultsDirectory))
@@ -547,7 +516,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
                 using (var doc = this.OpenDocument(entry, false))
                 {
                     this.AnalyzeElementUsage(doc);
-                    this.log.Pass(string.Format("Verified {0}", entry.FilePath));
+                    Log.Pass(string.Format("Verified {0}", entry.FilePath));
 
                     foreach (var e in this.elementUsageInPackage)
                     {
@@ -649,48 +618,6 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         private List<string> elementUsage = new List<string>();
         private List<string> elementUsageInPackage = new List<string>();
         private List<string> parsedParts = new List<string>();
-        #endregion
-    }
-
-    /// <summary>
-    /// Base class of the test logic classes that are not TestClass that has TestMethod.
-    /// </summary>
-    public abstract class OpenXmlTestLogicBase
-    {
-        public OpenXmlTestLogicBase(OpenXmlTestBase testClassInstance)
-        {
-            this._TestClassInstance = testClassInstance;
-        }
-
-        /// <summary>
-        /// Test class instance which is specified in the constructor argument.
-        /// </summary>
-        public OpenXmlTestBase TestClassInstance
-        {
-            get { return this._TestClassInstance; }
-        }
-        private OpenXmlTestBase _TestClassInstance = null;
-
-        #region References to TestClassInstance
-
-        /// <summary>
-        /// VerifiableLog instance that is of TestClassInstance.
-        /// </summary>
-        public LogUtil.VerifiableLog Log
-        {
-            get { return TestClassInstance.Log; }
-        }
-
-        public string resultPath
-        {
-            get { return this.TestClassInstance.ResultPath; }
-        }
-
-        public string sourcePath
-        {
-            get { return this.TestClassInstance.SourcePath; }
-        }
-
         #endregion
     }
 }

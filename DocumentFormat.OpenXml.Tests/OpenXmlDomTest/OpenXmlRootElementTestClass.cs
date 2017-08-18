@@ -1,24 +1,17 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Xml;
-using System.Xml.Linq;
-
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Packaging;
-
 using Xunit;
+using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-
     public class OpenXmlRootElementTestClass : OpenXmlDomTestBase
     {
+        public OpenXmlRootElementTestClass(ITestOutputHelper output)
+            : base(output)
+        {
+        }
+
         [Fact]
         public void PartRootElementFactoryTest()
         {
