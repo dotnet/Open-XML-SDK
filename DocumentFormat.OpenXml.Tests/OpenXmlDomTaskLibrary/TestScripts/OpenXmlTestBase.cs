@@ -1,24 +1,13 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Tests.TaskLibraries.DataStorage;
+using DocumentFormat.OpenXml.Validation;
+using LogUtil;
+using OxTest;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Xml;
-using System.Xml.Linq;
-using System.Reflection;
-using OxTest;
-
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Validation;
-using DocumentFormat.OpenXml.Wordprocessing;
-using DocumentFormat.OpenXml.Spreadsheet;
-using DocumentFormat.OpenXml.Presentation;
-
-using DocumentFormat.OpenXml.Tests.TaskLibraries.DataStorage;
-using LogUtil;
-using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests.TaskLibraries
 {
@@ -311,23 +300,12 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// <returns></returns>
         public IEnumerable<FileInfo> CopyTestFiles(string sourceFolder)
         {
-            string searchPattern = "*";
-            bool recursive = true;
-            Func<FileInfo, bool> pred = IsOpenXmlFile;
-            return CopyTestFiles(sourceFolder, recursive, searchPattern, pred);
+            return CopyTestFiles(sourceFolder, true, "*", OpenXmlDomTestExtension.IsOpenXmlFile);
         }
+
         public IEnumerable<FileInfo> CopyTestFiles(string sourceFolder, string subFolder)
         {
             return CopyTestFiles(Path.Combine(sourceFolder, subFolder));
-        }
-        private static string[] _wordprocessingExtension = new string[] { ".docx", ".docm", ".dotx", ".dotm" };
-        private static string[] _spreadsheetExtension = new string[] { ".xlam", ".xltm", ".xlsm", ".xltx", ".xlsx" };
-        private static string[] _presentationExtension = new string[] { ".ppam", ".pptm", ".ppsm", ".potm", ".pptx", ".ppsx", ".potx" };
-        private static bool IsOpenXmlFile(FileInfo file)
-        {
-            return _wordprocessingExtension.Contains(file.Extension.ToLower())
-                || _spreadsheetExtension.Contains(file.Extension.ToLower())
-                || _presentationExtension.Contains(file.Extension.ToLower());
         }
 
         /// <summary>
@@ -340,9 +318,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// <returns></returns>
         public IEnumerable<FileInfo> CopyTestFiles(string sourceFolder, bool recursive, int? maxFiles = null)
         {
-            string searchPattern = "*";
-            Func<FileInfo, bool> pred = IsOpenXmlFile;
-            return CopyTestFiles(sourceFolder, recursive, searchPattern, pred, maxFiles);
+            return CopyTestFiles(sourceFolder, recursive, "*", OpenXmlDomTestExtension.IsOpenXmlFile, maxFiles);
         }
         /// <summary>
         /// Copy test files to result folder.
@@ -354,8 +330,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// <returns></returns>
         public IEnumerable<FileInfo> CopyTestFiles(string sourceFolder, bool recursive, string searchPattern)
         {
-            Func<FileInfo, bool> pred = IsOpenXmlFile;
-            return CopyTestFiles(sourceFolder, recursive, searchPattern, pred);
+            return CopyTestFiles(sourceFolder, recursive, searchPattern, OpenXmlDomTestExtension.IsOpenXmlFile);
         }
         /// <summary>
         /// Copy test files to result folder.
