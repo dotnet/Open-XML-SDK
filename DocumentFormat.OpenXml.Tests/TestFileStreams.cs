@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Linq;
 using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Tests
@@ -7,7 +8,7 @@ namespace DocumentFormat.OpenXml.Tests
     {
         private static byte[] GetStream(string name)
         {
-            using (var stream = typeof(TestFileStreams).GetTypeInfo().Assembly.GetManifestResourceStream($"DocumentFormat.OpenXml.Tests.{name}"))
+            using (var stream = typeof(TestFileStreams).GetTypeInfo().Assembly.GetManifestResourceStream($"DocumentFormat.OpenXml.Tests.assets.TestFiles.{name}"))
             using (var ms = new MemoryStream())
             {
                 stream.CopyTo(ms);
