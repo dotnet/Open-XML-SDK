@@ -1,25 +1,26 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation;
-using Xunit;
 using OxTest;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using Xunit;
+using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
     /// Generate list of type and associating (attribute/child element) properties for low-level testing.
     /// </summary>
-
     public class GenerateList4LowLevelTest : OpenXmlDomTestBase
     {
+        public GenerateList4LowLevelTest(ITestOutputHelper output)
+            : base(output)
+        {
+        }
+
         [Fact]
         public void TestAutosaveAfterSettingNullRootElement()
         {

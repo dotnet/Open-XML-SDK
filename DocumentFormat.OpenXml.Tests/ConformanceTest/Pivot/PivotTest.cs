@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
     using DocumentFormat.OpenXml.Tests.PivotClass;
     using System.IO;
     using OxTest;
-
+    using Xunit.Abstractions;
 
     public class PivotTest : OpenXmlTestBase
     {
@@ -28,7 +28,8 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
         /// <summary>
         /// Constructor
         /// </summary>
-        public PivotTest()
+        public PivotTest(ITestOutputHelper output)
+            : base(output)
         {
         }
         #endregion

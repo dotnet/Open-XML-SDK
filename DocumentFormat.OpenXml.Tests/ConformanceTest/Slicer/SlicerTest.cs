@@ -12,6 +12,7 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
     using DocumentFormat.OpenXml.Tests.SlicerClass;
     using System.IO;
     using OxTest;
+    using Xunit.Abstractions;
 
     /// <summary>
     /// Test for Slicer elements
@@ -19,7 +20,7 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
 
     public class SlicerTest : OpenXmlTestBase
     {
-        
+
         //private readonly string generateDocumentFilePath = "TestSlicerBase.xlsx";
         //private readonly string editeDocumentFilePath = "EditedSlicer.xlsx";
         private readonly string generateDocumentFilePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
@@ -29,7 +30,8 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
         /// <summary>
         /// Constructor
         /// </summary>
-        public SlicerTest()
+        public SlicerTest(ITestOutputHelper output)
+            : base(output)
         {
         }
         #endregion

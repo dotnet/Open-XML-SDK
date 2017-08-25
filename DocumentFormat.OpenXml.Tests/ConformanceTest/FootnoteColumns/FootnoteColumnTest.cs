@@ -2,11 +2,12 @@
 namespace DocumentFormat.OpenXml.Tests.FootnoteColumns
 {
     using DocumentFormat.OpenXml.Packaging;
-    using Xunit;
     using DocumentFormat.OpenXml.Tests;
     using DocumentFormat.OpenXml.Tests.FootnoteColumnsClass;
+    using Xunit;
+    using Xunit.Abstractions;
 
-    using W15 = DocumentFormat.OpenXml.Office2013.Word;
+    using W15 = Office2013.Word;
 
     /// <summary>
     /// Test for Footnote Column
@@ -16,6 +17,11 @@ namespace DocumentFormat.OpenXml.Tests.FootnoteColumns
     {
         private const int OriginalValue = 4;
         private const int ModifiedValue = 99;
+
+        public FootnoteColumnsTest(ITestOutputHelper output)
+            : base(output)
+        {
+        }
 
         #region Test Methods
         /// <summary>

@@ -23,6 +23,7 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
     using DocumentFormat.OpenXml.Tests.TaskLibraries.DataStorage;
     using DocumentFormat.OpenXml.Tests.CommentExClass;
     using OxTest;
+    using Xunit.Abstractions;
 
     /// <summary>
     /// Test for CommentEx elements
@@ -37,7 +38,8 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
         /// <summary>
         /// Constructor
         /// </summary>
-        public CommentExTest()
+        public CommentExTest(ITestOutputHelper output)
+            : base(output)
         {
         }
         #endregion
@@ -68,7 +70,7 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
 
         #region Test Methods
         /// <summary>
-        /// Office15TCM: xxxxx: OASys#283293: OOXML SDK : COMPS : Invalid format on CommentEx 
+        /// Office15TCM: xxxxx: OASys#283293: OOXML SDK : COMPS : Invalid format on CommentEx
         /// </summary>
         [Fact]
         public void CommentExInvalidFormat()

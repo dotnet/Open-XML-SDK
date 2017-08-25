@@ -1,17 +1,16 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.IO;
-using System.Text;
-using System.Linq;
-using System.Reflection;
-using System.Collections.Generic;
-using System.Xml;
-using System.Xml.Linq;
-using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
-using Xunit;
 using OxTest;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Xml;
+using System.Xml.Linq;
+using Xunit;
+using Xunit.Abstractions;
 
 #pragma warning disable 162
 
@@ -23,6 +22,11 @@ namespace DocumentFormat.OpenXml.Tests
 
     public class OpenXmlReaderWriterTest : OpenXmlDomTestBase
     {
+        public OpenXmlReaderWriterTest(ITestOutputHelper output)
+            : base(output)
+        {
+        }
+
         /// <summary>
         /// Switch for the IgnoreWhitespace fix O15#3024890
         /// </summary>
@@ -579,8 +583,8 @@ namespace DocumentFormat.OpenXml.Tests
         private delegate void WriteStartEle(OpenXmlWriter writer, object writeSource, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations);
 
         /// <summary>
-        /// Call OpenXmlReader LoadCurrentElement() method, and move the corresponding XmlReader to 
-        /// the match point as the OpenXmlReader according to the Read algorithm. 
+        /// Call OpenXmlReader LoadCurrentElement() method, and move the corresponding XmlReader to
+        /// the match point as the OpenXmlReader according to the Read algorithm.
         /// </summary>
         /// <param name="reader"></param>
         /// <param name="Xreader"></param>
@@ -928,7 +932,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        /// Call OpenXmlReader Read() method, and move the corresponding XmlReader to 
+        /// Call OpenXmlReader Read() method, and move the corresponding XmlReader to
         /// the match point as the OpenXmlReader according to the Read algorithm
         /// </summary>
         /// <param name="Oreader">Oreader to be called</param>
@@ -1000,8 +1004,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        /// Call OpenXmlReader ReadFirstChild() method, and move the corresponding XmlReader to 
-        /// the match point as the OpenXmlReader according to the Read algorithm. If ReadFirstChild 
+        /// Call OpenXmlReader ReadFirstChild() method, and move the corresponding XmlReader to
+        /// the match point as the OpenXmlReader according to the Read algorithm. If ReadFirstChild
         /// return false, the next element will be read instead.
         /// </summary>
         /// <param name="Oreader">Oreader to be called</param>
@@ -1048,8 +1052,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        /// Call OpenXmlReader ReadNextSibling() method, and move the corresponding XmlReader to 
-        /// the match point as the OpenXmlReader according to the Read algorithm. 
+        /// Call OpenXmlReader ReadNextSibling() method, and move the corresponding XmlReader to
+        /// the match point as the OpenXmlReader according to the Read algorithm.
         /// </summary>
         /// <param name="Oreader">Oreader to be called</param>
         /// <param name="Treader">XmlReader that keeps synchronous with Oreader</param>
@@ -1122,7 +1126,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        /// Call OpenXmlReader Skip() method, and move the corresponding XmlReader to 
+        /// Call OpenXmlReader Skip() method, and move the corresponding XmlReader to
         /// the match point as the OpenXmlReader according to the Read algorithm.
         /// </summary>
         /// <param name="Oreader">Oreader to be called<</param>
@@ -1259,7 +1263,7 @@ namespace DocumentFormat.OpenXml.Tests
             Body body = new Body(new Paragraph(new ParagraphProperties(), new Run(new Text("test"))));
             body.PrependChild(new OpenXmlMiscNode(System.Xml.XmlNodeType.Comment, "<!-- start body -->"));
 
-            OpenXmlReader reader = OpenXmlReader.Create(body, true); // read misc nodes 
+            OpenXmlReader reader = OpenXmlReader.Create(body, true); // read misc nodes
             bool moved = reader.Read();
             moved = reader.Read();
             Log.VerifyTrue(reader.IsMiscNode, "reader.IsMiscNode");

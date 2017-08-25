@@ -12,6 +12,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
     using DocumentFormat.OpenXml.Tests.ContentControlClass;
     using System.IO;
     using OxTest;
+    using Xunit.Abstractions;
 
     /// <summary>
     /// Tests for Content Controls
@@ -26,7 +27,8 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
         /// <summary>
         /// Constructor
         /// </summary>
-        public ContentControlTest()
+        public ContentControlTest(ITestOutputHelper output)
+            : base(output)
         {
         }
         #endregion

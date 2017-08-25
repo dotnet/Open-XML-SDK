@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Tests.Theme
     using DocumentFormat.OpenXml.Tests.ThemeClass;
     using System.IO;
     using OxTest;
-
+    using Xunit.Abstractions;
 
     public class ThemeTest : OpenXmlTestBase
     {
@@ -29,7 +29,8 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         /// <summary>
         /// Constructor
         /// </summary>
-        public ThemeTest()
+        public ThemeTest(ITestOutputHelper output)
+            : base(output)
         {
         }
         #endregion

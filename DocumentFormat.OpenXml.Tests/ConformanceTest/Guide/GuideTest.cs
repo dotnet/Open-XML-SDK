@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
     using DocumentFormat.OpenXml.Tests.GuideClass;
     using System.IO;
     using OxTest;
-
+    using Xunit.Abstractions;
 
     public class GuideTest : OpenXmlTestBase
     {
@@ -25,7 +25,8 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// <summary>
         /// Constructor
         /// </summary>
-        public GuideTest()
+        public GuideTest(ITestOutputHelper output)
+            : base(output)
         {
         }
         #endregion

@@ -10,12 +10,17 @@ using DocumentFormat.OpenXml.Presentation;
 using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Wordprocessing;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-
     public class DocumentTraverseTest : OpenXmlDomTestBase
     {
+        public DocumentTraverseTest(ITestOutputHelper output)
+            : base(output)
+        {
+        }
+
         /// <summary>
         /// Traversing up the specified Document Part using Parent, Ancestors(), and Ancestors&ltT&gt Methods
         /// </summary>
@@ -144,7 +149,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        /// Traversing siblings of the specified element using PreviousSibling, PreviousSibling &lt T &gt 
+        /// Traversing siblings of the specified element using PreviousSibling, PreviousSibling &lt T &gt
         /// NextSibling, NextSibling&ltT&gt, ElementsBefore, ElementsAfter, IsBefore, IsAfter"/>
         /// </summary>
         /// <typeparam name="U">Type of the sibling used by generic traversing method</typeparam>

@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
     using DocumentFormat.OpenXml.Tests.WorkBookPrClass;
     using System.IO;
     using OxTest;
-
+    using Xunit.Abstractions;
 
     public class WorkBookPrTest : OpenXmlTestBase
     {
@@ -25,12 +25,13 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
         private readonly string editedDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
         private readonly string deletedDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
         private readonly string addedDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
-        
+
         #region Constructor
         /// <summary>
         /// Constructor
         /// </summary>
-        public WorkBookPrTest()
+        public WorkBookPrTest(ITestOutputHelper output)
+            : base(output)
         {
         }
         #endregion
