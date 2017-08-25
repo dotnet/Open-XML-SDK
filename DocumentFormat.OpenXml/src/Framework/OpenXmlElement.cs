@@ -2076,7 +2076,11 @@ namespace DocumentFormat.OpenXml
 
             if (this.OpenXmlElementContext != null)
             {
-                this.OpenXmlElementContext.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set true explicitly for security fix
+#if FEATURE_XML_PROHIBIT_DTD
+                this.OpenXmlElementContext.XmlReaderSettings.ProhibitDtd = true; // set true explicitly for security fix
+#else
+                this.OpenXmlElementContext.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set to prohibit explicitly for security fix
+#endif
                 xmlReader = XmlConvertingReaderFactory.Create(stringReader, this.OpenXmlElementContext.XmlReaderSettings);
             }
             else
@@ -2094,7 +2098,11 @@ namespace DocumentFormat.OpenXml
 
             if (this.OpenXmlElementContext != null)
             {
-                this.OpenXmlElementContext.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set true explicitly for security fix
+#if FEATURE_XML_PROHIBIT_DTD
+                this.OpenXmlElementContext.XmlReaderSettings.ProhibitDtd = true; // set true explicitly for security fix
+#else
+                this.OpenXmlElementContext.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set to prohibit explicitly for security fix
+#endif
                 xmlReader = XmlConvertingReaderFactory.Create(stringReader, this.OpenXmlElementContext.XmlReaderSettings);
             }
             else

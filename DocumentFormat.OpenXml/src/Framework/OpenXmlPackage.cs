@@ -19,7 +19,7 @@ using System.Xml.Linq;
 using System.Runtime.Serialization;
 #endif
 
-using static System.ReflectionExtensions;
+using static DocumentFormat.OpenXml.ReflectionExtensions;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
