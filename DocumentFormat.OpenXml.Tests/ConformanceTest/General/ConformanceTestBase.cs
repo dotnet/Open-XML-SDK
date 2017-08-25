@@ -12,6 +12,7 @@ namespace DocumentFormat.OpenXml.Tests
 
     using DocumentFormat.OpenXml;
     using DocumentFormat.OpenXml.Packaging;
+    using Xunit.Abstractions;
 
     public abstract class ConformanceTestBase<TReflectedCode, TPackage, TElement> : OpenXmlTestBase
         where TElement : OpenXmlElement
@@ -58,7 +59,8 @@ namespace DocumentFormat.OpenXml.Tests
         /// <summary>
         /// Default Constructor
         /// </summary>
-        public ConformanceTestBase()
+        public ConformanceTestBase(ITestOutputHelper output)
+            : base(output)
         {
         }
 

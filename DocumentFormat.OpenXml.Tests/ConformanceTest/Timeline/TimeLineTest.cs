@@ -1,20 +1,14 @@
 // Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 using System;
-using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
-using System.Text;
 using System.IO;
-using System.Reflection;
-using System.Xml;
-using System.Xml.Linq;
 
 namespace DocumentFormat.OpenXml.Tests.TimeLine
 {
-    using Xunit;
     using DocumentFormat.OpenXml.Tests.TaskLibraries;
     using DocumentFormat.OpenXml.Tests.TimelineClass;
     using OxTest;
+    using Xunit;
+    using Xunit.Abstractions;
 
 
     /// <summary>
@@ -32,7 +26,7 @@ namespace DocumentFormat.OpenXml.Tests.TimeLine
         private readonly string deleteTimelineStyleDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
         private readonly string addTimelineStyleDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
 
-        
+
 
         TestEntities testEntities = null;
 
@@ -40,7 +34,8 @@ namespace DocumentFormat.OpenXml.Tests.TimeLine
         /// <summary>
         /// Constructor
         /// </summary>
-        public TimeLineTest()
+        public TimeLineTest(ITestOutputHelper output)
+            : base(output)
         {
         }
         #endregion
