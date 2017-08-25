@@ -1,33 +1,27 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.IO;
-
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using Xunit;
-
-using System.Xml;
-using System.Xml.Linq;
-
-using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
-using Dr = DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Wordprocessing;
-
 using OxTest;
+using System;
+using System.Linq;
+using System.Xml.Linq;
+using Xunit;
+using Xunit.Abstractions;
+using Dr = DocumentFormat.OpenXml.Drawing;
 
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
     /// Summary description for PackagingIntegrationTest
     /// </summary>
-
     public class CodeGenSanityTest : OpenXmlDomTestBase
     {
+        public CodeGenSanityTest(ITestOutputHelper output)
+            : base(output)
+        {
+        }
+
         // Constructors, CloneNode, Load, Save, Properties for attributes, LocalName, Assosicated Part
         [Fact]
         public void ThemeAsPartRootClassTest()

@@ -18,13 +18,15 @@ using Xunit;
 namespace DocumentFormat.OpenXml.Tests
 {
     using DocumentFormat.OpenXml.Tests.TaskLibraries;
+    using Xunit.Abstractions;
 
     /// <summary>
     /// The OpenXmlDom test framework. It contains help methods for testing OpenXmlDom Classes
     /// </summary>
     public class OpenXmlDomTestBase : OpenXmlTestBase
     {
-        public OpenXmlDomTestBase()
+        public OpenXmlDomTestBase(ITestOutputHelper output)
+            : base(output)
         {
             // Specify source path which includes test input files
             this.SourcePath = @"v2FxTestFiles";

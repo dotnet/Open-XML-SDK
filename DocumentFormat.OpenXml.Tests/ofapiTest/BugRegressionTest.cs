@@ -13,19 +13,21 @@ using DocumentFormat.OpenXml.Drawing.Diagrams;
 using DocumentFormat.OpenXml.Packaging;
 using OxTest;
 using System.IO;
+using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
     /// Summary description for BugRegressionTest
     /// </summary>
-    
+
     public class BugRegressionTest : OpenXmlDomTestBase
     {
         /// <summary>
         ///Constructor.
         ///</summary>
-        public BugRegressionTest()
+        public BugRegressionTest(ITestOutputHelper output)
+            : base(output)
         {
             //
             // TODO: Add constructor logic here
@@ -96,7 +98,7 @@ namespace DocumentFormat.OpenXml.Tests
             Bug743591(validator);
         }
 
-        #region validator bugs resgression 
+        #region validator bugs resgression
 
         [System.Diagnostics.Conditional("DEBUG")]
         private void AssertValidationErrorCategory(string expected, ValidationErrorInfo targetErrorInfo)
@@ -197,7 +199,7 @@ namespace DocumentFormat.OpenXml.Tests
             var errors = validator.Validate(element);
             Assert.Equal(7, errors.Count());
             Assert.Equal(ValidationErrorType.Schema, errors.First().ErrorType);
-            Assert.Equal("Sch_MissRequiredAttribute", errors.First().Id);            
+            Assert.Equal("Sch_MissRequiredAttribute", errors.First().Id);
         }
 
         private void Bug669663(OpenXmlValidator validator)
@@ -250,7 +252,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(ValidationErrorType.Schema, errors.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", errors.First().Id);
         }
-        
+
         private void Bug662644(OpenXmlValidator validator)
         {
             DocumentFormat.OpenXml.Office2010.Excel.FormControlProperties fp = new DocumentFormat.OpenXml.Office2010.Excel.FormControlProperties();
@@ -272,7 +274,7 @@ namespace DocumentFormat.OpenXml.Tests
             // the EmbeddedObjectProperties is only valid in Office2010.
             element.EmbeddedObjectProperties = new DocumentFormat.OpenXml.Spreadsheet.EmbeddedObjectProperties();
 
-            // In Office2007, the OleObject has no children. 
+            // In Office2007, the OleObject has no children.
             var errors = validator.Validate(element);
             Assert.Equal(1, errors.Count());
             Assert.Same(element, errors.First().Node);
@@ -392,7 +394,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void Bug424104(OpenXmlValidator validator)
         {
-            // 
+            //
             // change <xsd:any > to <xsd:any minOccurs=0 in CT_OfficeArtExtension"
             DocumentFormat.OpenXml.Drawing.Extension ext = new DocumentFormat.OpenXml.Drawing.Extension() { Uri = "test" };
             var errors = validator.Validate(ext);
@@ -435,7 +437,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(list1, list2);
 
         }
-        
+
         #endregion
 
         private void CopyFileStream(byte[] srcBuffer, string fileName)
@@ -525,7 +527,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Equal(null, part.MailMergeRecipients);
 
                 Assert.NotEqual(null, part.Recipients);
-                
+
                 Assert.NotEqual(null, part.PartRootElement);
                 Assert.True(part.PartRootElement is DocumentFormat.OpenXml.Wordprocessing.Recipients);
 

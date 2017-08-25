@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
     using DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass;
     using System.IO;
     using OxTest;
-
+    using Xunit.Abstractions;
 
     public class ThreadingInfoTest : OpenXmlTestBase
     {
@@ -23,14 +23,15 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         private readonly string editDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
         private readonly string deleteDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
         private readonly string addDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
-        
+
         TestEntities testEntities = null;
 
         #region Constructor
         /// <summary>
         /// Constructor
         /// </summary>
-        public ThreadingInfoTest()
+        public ThreadingInfoTest(ITestOutputHelper output)
+            : base(output)
         {
         }
         #endregion

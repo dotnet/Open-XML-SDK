@@ -1,30 +1,27 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Tests.TaskLibraries;
+using DocumentFormat.OpenXml.Validation;
+using OxTest;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Text;
 using System.Xml.Linq;
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Validation;
 using Xunit;
-using OxTest;
+using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    using DocumentFormat.OpenXml.Tests.TaskLibraries;
-    using DocumentFormat.OpenXml.Tests.TaskLibraries.DataStorage;
-
     /// <summary>
     /// Summary description for MarkupCompatibilityTest
     /// </summary>
-    
     public class MarkupCompatibilityTest : OpenXmlDomTestBase
     {
-        public MarkupCompatibilityTest()
-        { }
+        public MarkupCompatibilityTest(ITestOutputHelper output)
+            : base(output)
+        {
+        }
 
         #region Private Fields
         internal static string xmlNS = "http://www.w3.org/XML/1998/namespace";
@@ -1307,7 +1304,7 @@ namespace DocumentFormat.OpenXml.Tests
                     unknownElement11.SetAttribute(unknownAttribute11);
                     unknownElement11.SetAttribute(unprefixedAttribute);
 
-                    // unknownAttribute12 should be ignored as it's not specified with PreserveAttributes. 
+                    // unknownAttribute12 should be ignored as it's not specified with PreserveAttributes.
                     expectedElement = unknownElement11.CloneNode(true);
                     unknownElement11.SetAttribute(unknownAttribute12);
                 });
@@ -1488,7 +1485,7 @@ namespace DocumentFormat.OpenXml.Tests
                     unknownElement11.SetAttribute(unknownAttribute11);
                     unknownElement11.SetAttribute(unprefixedAttribute);
 
-                    // unknownAttribute12 should be ignored as it's not specified with PreserveAttributes. 
+                    // unknownAttribute12 should be ignored as it's not specified with PreserveAttributes.
                     expectedElement = unknownElement11.CloneNode(true);
                     unknownElement11.SetAttribute(unknownAttribute12);
 
@@ -1677,7 +1674,7 @@ namespace DocumentFormat.OpenXml.Tests
                     unknownElement11.SetAttribute(unknownAttribute11);
                     unknownElement11.SetAttribute(unprefixedAttribute);
 
-                    // unknownAttribute12 should be ignored as it's not specified with PreserveAttributes. 
+                    // unknownAttribute12 should be ignored as it's not specified with PreserveAttributes.
                     expectedElement = unknownElement11.CloneNode(true);
                     unknownElement11.SetAttribute(unknownAttribute12);
                 });
@@ -3704,7 +3701,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Log.Warning("[Known] Exception {0} thrown out when validating... {1}", ex.GetType().FullName, ex.ToString());
                 }
             }
-            
+
             if (errors != null && errors.FirstOrDefault() != null)
             {
                 foreach (var error in errors)
@@ -3749,7 +3746,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Warning("Exception {0} thrown out when validating...", ex.GetType().FullName);
                 Log.Fail(ex.ToString());
             }
-            
+
             bool unknownErrorDetected = false;
             if (errors != null && errors.FirstOrDefault() != null)
             {

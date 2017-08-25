@@ -11,6 +11,7 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -22,9 +23,14 @@ namespace DocumentFormat.OpenXml.Tests
     //   DocumentFormat.OpenXml.HexBinaryValue
     //   DocumentFormat.OpenXml.OpenXmlSimpleValue<T>
 
-    
+
     public class OpenXmlSimpleTypeTest : OpenXmlDomTestBase
     {
+        public OpenXmlSimpleTypeTest(ITestOutputHelper output)
+            : base(output)
+        {
+        }
+
         #region EnumValue
 
         [Fact]
@@ -747,7 +753,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Leaving Non-Generic Test Method...");
         }
         #endregion HexBinaryValue
-        
+
         #region OnOffValue
         [Fact]
         public void OnOffValueTest()
@@ -844,7 +850,7 @@ namespace DocumentFormat.OpenXml.Tests
             objA = new OnOffValue();
             objA.InnerText = invalidValueTrue;
             InvalidOperation(objA, invalidValueTrue, (a, b) => actionOfCompare(a, b));
-            
+
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidValue);
             objA = new OnOffValue();
             objA.InnerText = invalidValue;
@@ -928,7 +934,7 @@ namespace DocumentFormat.OpenXml.Tests
             simpleTypeValueValidTest(objA, true, validValueTrue);
             objA.InnerText = validValueBlank;
             simpleTypeValueValidTest(objA, false, validValueBlank);
-            
+
 
             Log.Comment("ErrorHandling: Constructing with another instance of null...");
             objA = null;
@@ -974,7 +980,7 @@ namespace DocumentFormat.OpenXml.Tests
         private void simpleTypeValueValidTest(OpenXmlSimpleType oxObj, bool expectedValue, string expectedText)
         {
             Log.Comment("Entering Non-Generic Test Method...");
-            
+
             bool val=expectedValue;
 
             if (oxObj.GetType() == typeof(OnOffValue))
@@ -1006,7 +1012,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyTrue(val.Equals(expectedValue),
                 "Property Value {0} does NOT equal to expected {1}.", val, expectedValue);
 
-            
+
             Log.VerifyTrue(val.Equals(expectedValue),
                 "{0} operator result {1} does NOT equal to expected {2}.", typeof(OpenXmlSimpleType).Name, val, expectedValue);
 
@@ -1084,7 +1090,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Verify(expectedValue.ToString().Equals(a.InnerText), "Instance constructed with invalid value does NOT keep the text.");
             Log.Verify(expectedValue.Equals(a.Value), "Instance constructed with invalid value CAN parse without error!");
         }
-        
+
         #endregion
 
     }
@@ -1104,9 +1110,14 @@ namespace DocumentFormat.OpenXml.Tests
     //       DocumentFormat.OpenXml.UInt16Value
     //       DocumentFormat.OpenXml.UInt32Value
     //       DocumentFormat.OpenXml.UInt64Value
-    
+
     public class OpenXmlSimpleValueTest : OpenXmlDomTestBase
     {
+        public OpenXmlSimpleValueTest(ITestOutputHelper output)
+            : base(output)
+        {
+        }
+
         [Fact]
         public void BooleanValueTest()
         {
@@ -2014,7 +2025,7 @@ namespace DocumentFormat.OpenXml.Tests
             string invalidStringINF = "Inf";
             string invalidStringNINF = "-Inf";
             string invalidStringValue = "Invalid String!";
-       
+
             Log.Comment("Testing default value...");
             string expectedText = defaultValue.ToString();
             DoubleValue defaultObj = default(DoubleValue);

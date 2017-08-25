@@ -22,6 +22,7 @@ namespace DocumentFormat.OpenXml.Tests
     using Xunit;
     using DocumentFormat.OpenXml.Tests.TaskLibraries;
     using DocumentFormat.OpenXml.Tests.TaskLibraries.DataStorage;
+    using Xunit.Abstractions;
 
     /// <summary>
     /// Test for CommentEx elements
@@ -32,7 +33,8 @@ namespace DocumentFormat.OpenXml.Tests
         /// <summary>
         /// Constructor
         /// </summary>
-        public Robustness()
+        public Robustness(ITestOutputHelper output)
+            : base(output)
         {
         }
         #endregion
@@ -41,7 +43,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void OFCATFull()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod()); 
+            this.MyTestInitialize(TestContext.GetCurrentMethod());
             TestDataStorage dataStorage = new TestDataStorage();
             var entries = dataStorage.GetEntries(
                 TestDataStorage.DataGroups.RobustnessOFCAT);
