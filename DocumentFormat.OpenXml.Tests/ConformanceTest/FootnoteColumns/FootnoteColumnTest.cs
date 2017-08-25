@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Tests.FootnoteColumns
         [Fact]
         public void FootnoteColumnsReadWriteTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             this.SimpleReadWriteTest(
                 (e) =>
                 {

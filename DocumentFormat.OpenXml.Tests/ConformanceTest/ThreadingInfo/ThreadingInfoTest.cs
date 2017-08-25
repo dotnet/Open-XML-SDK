@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         [Fact]
         public void ThreadingInfo01EditElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
 
             string originalFilepath = this.GetTestFilePath(this.generateDocumentFile);
             string editFilePath = this.GetTestFilePath(this.editDocumentFile);
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         [Fact]
         public void ThreadingInfo03DeleteAddElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
 
             string originalFilepath = this.GetTestFilePath(this.generateDocumentFile);
             string deleteFilePath = this.GetTestFilePath(this.deleteDocumentFile);

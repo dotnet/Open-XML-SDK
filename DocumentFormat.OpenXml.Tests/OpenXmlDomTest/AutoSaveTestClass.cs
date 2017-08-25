@@ -44,7 +44,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void DefaultStreamReadOnly()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt")
                .Where(f => f.IsOpenXmlFile());
             foreach (var testfile in testfiles)
@@ -137,7 +137,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void DefaultStreamReadWrite()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt")
                .Where(f => f.IsOpenXmlFile());
             foreach (var testfile in testfiles)
@@ -206,7 +206,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void DefaultStreamWrite()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt")
                .Where(f => f.IsOpenXmlFile());
             foreach (var testfile in testfiles)
@@ -277,7 +277,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void DefaultWithFilePath()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt")
                .Where(f => f.IsOpenXmlFile());
             foreach (var testfile in testfiles)
@@ -339,28 +339,28 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void DefaultPackage_Read_Editable()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             OpenPackage(FileAccess.Read, true);
         }
 
         [Fact]
         public void DefaultPackage_Read_NonEditable()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             OpenPackage(FileAccess.Read, false);
         }
 
         [Fact]
         public void DefaultPackage_ReadWrite_Editable()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             OpenPackage(FileAccess.ReadWrite, true);
         }
 
         [Fact]
         public void DefaultPackage_ReadWrite_NonEditable()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             OpenPackage(FileAccess.ReadWrite, false);
         }
 
@@ -411,7 +411,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void AutoSaveStream2x2()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             foreach (bool e in IsEditable)
             {
                 foreach (bool s in AutoSave)
@@ -460,21 +460,21 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void AutoSaveMc_2007_NoProcess()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             OpenMcPackage(FileFormatVersions.Office2007, MarkupCompatibilityProcessMode.NoProcess);
         }
 
         [Fact]
         public void AutoSaveMc_2007_ProcessAllParts()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             OpenMcPackage(FileFormatVersions.Office2007, MarkupCompatibilityProcessMode.ProcessAllParts);
         }
 
         [Fact]
         public void AutoSaveMc_2007_ProcessLoadedParts()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             OpenMcPackage(FileFormatVersions.Office2007, MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly);
         }
 
@@ -526,7 +526,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void OpenWithInvalidFileFormatTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles("bvt")
                 .Where(fi => fi.IsOpenXmlFile());
             var testfile = testfiles.FirstOrDefault();
@@ -559,7 +559,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void OpenWithFileFormatVersionsDefaultValueTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles("bvt")
                 .Where(fi => fi.IsOpenXmlFile());
             var testfile = testfiles.FirstOrDefault();
@@ -592,7 +592,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void OpenWithFileFormatVersionsDefaultValueNoMCProcessTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles("bvt")
                 .Where(fi => fi.IsOpenXmlFile());
             var testfile = testfiles.FirstOrDefault();
@@ -634,7 +634,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CreateWithFalseAutoSaveTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles("bvt")
                 .Where(fi => fi.IsOpenXmlFile());
 
@@ -694,7 +694,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CreateWithTrueAutoSaveTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles("bvt")
                 .Where(fi => fi.IsOpenXmlFile());
 
@@ -756,7 +756,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CreateWithNoAutoSaveTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles("bvt")
                 .Where(fi => fi.IsOpenXmlFile());
 

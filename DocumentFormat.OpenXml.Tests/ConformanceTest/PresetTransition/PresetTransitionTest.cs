@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransition
         [Fact]
         public void PresetTransitionReadWriteTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             this.SimpleReadWriteTest(
                 (e) =>
                 {

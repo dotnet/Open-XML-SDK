@@ -60,7 +60,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void NonIgnored_UnknownAttribute_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -96,7 +96,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void NonIgnored_UnknownAttribute_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -129,7 +129,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_NonIgnored_UnknownAttribute()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -155,7 +155,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void NonIgnored_UnknownElement_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -189,7 +189,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void NonIgnored_UnknownElement_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -223,7 +223,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_NonIgnored_UnknownElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -249,7 +249,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Ignored_UnknownAttribute_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -281,7 +281,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Ignored_UnknownAttribute_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -311,7 +311,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_Ignored_UnknownAttribute()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -334,7 +334,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Ignored_KnownAttribute_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -363,7 +363,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Ignored_KnownAttribute_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -391,7 +391,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_Ignored_KnownAttribute()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -411,7 +411,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Ignored_UnknownElement_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -443,7 +443,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Ignored_UnknownElement_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -475,7 +475,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_Ignored_UnknownElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -498,7 +498,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Ignored_KnownElement_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -527,7 +527,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Ignored_KnownElement_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -555,7 +555,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_Ignored_KnownElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -575,7 +575,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Ignore_Whitespaces_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -603,7 +603,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_Ignore_Whitespaces()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -630,7 +630,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ProcessContent_Ignored_UnknownElement_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -678,7 +678,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ProcessContent_Ignored_UnknownElement_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -726,7 +726,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_ProcessContent_Ignored_UnknownElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -759,7 +759,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ProcessContent_Ignored_UnknownElement_Wildcard_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -807,7 +807,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ProcessContent_NonIgnored_UnknownElement_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -856,7 +856,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ProcessContent_NonIgnored_UnknownElement_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -914,7 +914,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_ProcessContent_NonIgnored_UnknownElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -949,7 +949,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ProcessContent_Ignored_KnownElement_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -994,7 +994,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ProcessContent_Ignored_KnownElement_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -1035,7 +1035,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_ProcessContent_Ignored_KnownElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -1068,7 +1068,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ProcessContent_xmlSpace_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -1120,7 +1120,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ProcessContent_xmlLang_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -1172,7 +1172,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_ProcessContent_xmlLang()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -1211,7 +1211,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Preserve_Ignored_UnknownElement_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -1269,7 +1269,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Preserve_Ignored_UnknownElement_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -1331,7 +1331,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_Preserve_Ignored_UnknownElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -1377,7 +1377,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Preserve_Ignored_UnknownElement_InnerIgnorable_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -1449,7 +1449,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Preserve_Ignored_UnknownElement_InnerIgnorable_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -1523,7 +1523,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_Preserve_Ignored_UnknownElement_InnerIgnorable()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -1581,7 +1581,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Preserve_Ignored_UnknownElement_Wildcard_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -1639,7 +1639,7 @@ namespace DocumentFormat.OpenXml.Tests
         //[Fact]
         public void Preserve_Ignored_UnknownElement_Wildcard_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -1701,7 +1701,7 @@ namespace DocumentFormat.OpenXml.Tests
         //[Fact]
         public void Validate_Preserve_Ignored_UnknownElement_Wildcard()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -1747,7 +1747,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Preserve_NonIgnored_UnknownElement_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -1803,7 +1803,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Preserve_NonIgnored_UnknownElement_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -1866,7 +1866,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_Preserve_NonIgnored_UnknownElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -1910,7 +1910,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Preserve_NonIgnored_UnknownAttribute_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -1963,7 +1963,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Preserve_NonIgnored_UnknownAttribute_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2025,7 +2025,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_Preserve_NonIgnored_UnknownAttribute()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2068,7 +2068,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Preserve_NoElement_UnknownAttribute_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2124,7 +2124,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Preserve_NoElement_UnknownAttribute_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2188,7 +2188,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_Preserve_NoElement_UnknownAttribute()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2236,7 +2236,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MustUnderstand_Ignored_UnknownElement_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2284,7 +2284,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MustUnderstand_Ignored_UnknownElement_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2341,7 +2341,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_MustUnderstand_Ignored_UnknownElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2378,7 +2378,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MustUnderstand_NonIgnored_UnknownElement_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2420,7 +2420,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MustUnderstand_NonIgnored_UnknownElement_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2472,7 +2472,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_MustUnderstand_NonIgnored_UnknownElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2509,7 +2509,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void NoChoice_NoFallback_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2538,7 +2538,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void NoChoice_NoFallback_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2572,7 +2572,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_NoChoice_NoFallback()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2591,7 +2591,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void OneChoice_NoFallback_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2621,7 +2621,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void OneChoice_NoFallback_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2647,7 +2647,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_OneChoice_NoFallback()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2666,7 +2666,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MultipleChoice_NoMatches_NoFallback_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2693,7 +2693,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MultipleChoice_NoMatches_NoFallback_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2723,7 +2723,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_MultipleChoice_NoMatches_NoFallback()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2743,7 +2743,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MultipleChoice_NoMatches_OneFallback_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2770,7 +2770,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MultipleChoice_NoMatches_OneFallback_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2800,7 +2800,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_MultipleChoice_NoMatches_OneFallback()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2819,7 +2819,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MultipleChoice_OneFallback_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2845,7 +2845,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MultipleChoice_OneFallback_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2871,7 +2871,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_MultipleChoice_OneFallback()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2890,7 +2890,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MultipleChoice_LeadingFallback_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2916,7 +2916,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MultipleChoice_LeadingFallback_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2954,7 +2954,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_MultipleChoice_LeadingFallback()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2973,7 +2973,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void OneChoice_MultipleFallback_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -2999,7 +2999,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void OneChoice_MultipleFallback_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -3036,7 +3036,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_OneChoice_MultipleFallback()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -3055,7 +3055,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MustUnderstand_Unselected_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -3093,7 +3093,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MustUnderstand_Unselected_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -3141,7 +3141,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_MustUnderstand_Unselected()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -3171,7 +3171,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MultipleChoice_OneFallback_Ignorable_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -3206,7 +3206,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MultipleChoice_OneFallback_Ignorable_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -3241,7 +3241,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_MultipleChoice_OneFallback_Ignorable()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -3269,7 +3269,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MultipleChoice_OneFallback_UnPrefixedMCAttributes_FullMode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -3305,7 +3305,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MultipleChoice_OneFallback_UnPrefixedMCAttributes_O12Mode()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 
@@ -3341,7 +3341,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_MultipleChoice_OneFallback_UnPrefixedMCAttributes()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"bvt");
             var testfile = testfiles.FirstOrDefault();
 

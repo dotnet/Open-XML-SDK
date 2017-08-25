@@ -75,7 +75,7 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
         [Fact]
         public void CommentExInvalidFormat()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             TestDataStorage dataStorage = new TestDataStorage();
             var entries = dataStorage.GetEntries(
                 TestDataStorage.DataGroups.O15ConformanceWord).Where(i => i.FilePath.Contains("Invalid_Word15Comments.docx"));
@@ -91,7 +91,7 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
         [Fact]
         public void CommentEx02VerifyEdit()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
 
             string originalFilepath = this.GetTestFilePath(this.generatedDocumentFilePath);
             string editFilePath = this.GetTestFilePath(this.editedDocumentFilePath);
@@ -109,7 +109,7 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
         [Fact]
         public void CommentEx04VerifyDelete()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
 
             string originalFilepath = this.GetTestFilePath(this.generatedDocumentFilePath);
             string deleteFilePath = this.GetTestFilePath(this.deleteDocumentFilePath);

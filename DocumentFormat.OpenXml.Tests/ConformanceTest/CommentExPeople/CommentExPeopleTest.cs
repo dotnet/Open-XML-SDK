@@ -59,7 +59,7 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
         [Fact]
         public void CommentExPeople01ReadElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
 
             string originalFilepath = this.GetTestFilePath(this.generateDocumentFilePath);
 
@@ -73,7 +73,7 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
         [Fact]
         public void CommentExPeople02EditElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
 
             string originalFilepath = this.GetTestFilePath(this.generateDocumentFilePath);
             string editFilePath = this.GetTestFilePath(this.editedDocumentFilePath);

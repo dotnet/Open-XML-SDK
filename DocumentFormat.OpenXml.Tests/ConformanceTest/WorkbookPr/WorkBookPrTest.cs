@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
         [Fact]
         public void WorkBookPr01EditElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
 
             string originalFilepath = this.GetTestFilePath(this.generatedDocumentFile);
             string editFilePath = this.GetTestFilePath(this.editedDocumentFile);
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
         [Fact]
         public void WorkBookPr03DeleteElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
 
             string originalFilepath = this.GetTestFilePath(this.generatedDocumentFile);
             string deleteFilePath = this.GetTestFilePath(this.deletedDocumentFile);

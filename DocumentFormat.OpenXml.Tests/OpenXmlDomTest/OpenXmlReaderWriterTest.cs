@@ -93,7 +93,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteStartDocumentTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             TestWriteStartDocument(WConstrWithPart, WriteStartD, null);
         }
 
@@ -101,7 +101,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteStartDocumentWithStandalone()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             TestWriteStartDocument(WConstrWithPartEnc, WriteStartD, true);
         }
 
@@ -109,7 +109,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteStartDocumentMultiple()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", "") + ".docx");
             using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
             {
@@ -135,7 +135,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteStartDocumentOtherPlace()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", "") + ".docx");
             using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
             {
@@ -162,7 +162,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteStartElementWithOpenXmlReaderAttr()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
             OpenXmlReader reader = OpenXmlReader.Create(p);
             reader.Read();
@@ -174,7 +174,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteStartElementWithOpenXmlReader()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
             OpenXmlReader reader = OpenXmlReader.Create(p);
             reader.Read();
@@ -186,7 +186,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteStartElementWithEndElementReader()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
             OpenXmlReader reader = OpenXmlReader.Create(p);
             reader.Read();
@@ -207,7 +207,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteStartElementWithOpenXmlElementAttr()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
 
             TestWriteStartElement(WConstrWithStream, WriteStartE, p, GetTestAttributes(), null);
@@ -217,7 +217,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteStartElementWithOpenXmlElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
 
             TestWriteStartElement(WConstrWithStream, WriteStartE, p, null, null);
@@ -227,7 +227,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteStringAndEndElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", "") + ".docx");
 
             Text t = new Text();
@@ -261,7 +261,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteEndElementWithoutStart()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", "") + ".docx");
             Text t = new Text();
             using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
@@ -289,7 +289,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteStringWithNonLeafText()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             Paragraph p = new Paragraph() { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
             string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
             using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
@@ -315,7 +315,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
             string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
             using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
@@ -339,7 +339,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void WriteStartElementWithMisc()
         {
 
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             OpenXmlMiscNode node = new OpenXmlMiscNode(XmlNodeType.Comment);
 
             OpenXmlReader miscReader = OpenXmlReader.Create(node, true);
@@ -359,7 +359,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void TestWriteStartDocument(ConstrWriter writerConstr, WriteStartDoc write, bool? standalone)
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", "") + ".docx");
             using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
             {
@@ -439,7 +439,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void TestWriteStartElement(ConstrWriter writerConstr, WriteStartEle write, object writeSource, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations)
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", "") + ".docx");
             using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
             {
@@ -1242,7 +1242,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void bug247883()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"wordprocessing", "paragraph").Where(fi => fi.IsWordprocessingFile());
             var testfile0 = testfiles.ElementAtOrDefault(0);
             var testfile1 = testfiles.ElementAtOrDefault(1);
@@ -1259,7 +1259,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void bug251677()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             Body body = new Body(new Paragraph(new ParagraphProperties(), new Run(new Text("test"))));
             body.PrependChild(new OpenXmlMiscNode(System.Xml.XmlNodeType.Comment, "<!-- start body -->"));
 
@@ -1273,7 +1273,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void bug251835_ReaderDispose()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles(@"wordprocessing", "paragraph").Where(fi => fi.IsWordprocessingFile());
             var testfile = testfiles.FirstOrDefault();
             try
@@ -1297,7 +1297,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug253893_Write2Declaration()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
             using (WordprocessingDocument doc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
             {

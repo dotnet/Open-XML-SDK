@@ -64,7 +64,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
         [Fact]
         public void ContentControl01EditElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
 
             string originalFilepath = this.GetTestFilePath(this.generatedDocumentFilePath);
             string editFilePath = this.GetTestFilePath(this.editedDocumentFilePath);
@@ -81,7 +81,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
         [Fact]
         public void ContentControl03DeleteElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
 
             string originalFilepath = this.GetTestFilePath(this.generatedDocumentFilePath);
             string deleteFilePath = this.GetTestFilePath(this.deletedDocumentFilePath);

@@ -1,41 +1,17 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Wordprocessing;
+using OxTest;
 using System;
-using System.Text;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Xunit;
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Wordprocessing;
-using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Drawing;
-using OxTest;
 
 namespace DocumentFormat.OpenXml.Tests
 {
     public class MCSupport
     {
-        ///<summary>
-        ///Constructor.
-        ///</summary>
-        public MCSupport()
-        {
-        }
-
-        private TestContext testContextInstance;
-
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-
         private void CopyFileStream(byte[] srcBuffer, string fileName)
         {
             using (var target = System.IO.File.Create(fileName))
@@ -119,7 +95,7 @@ namespace DocumentFormat.OpenXml.Tests
             CopyFileStream(TestFileStreams.mcdoc, file);
 
             OpenXmlElement p1 = null;
-            OpenSettings settings = new OpenSettings();            
+            OpenSettings settings = new OpenSettings();
             settings.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007);
             using (WordprocessingDocument testDocument = WordprocessingDocument.Open(file, true, settings))
             {
@@ -303,7 +279,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 OpenXmlPart target = testDocument.MainDocumentPart;
                 OpenXmlPartRootElement root = target.RootElement;
-                OpenXmlElement p1 = null;    
+                OpenXmlElement p1 = null;
                 p1 = root.FirstChild.FirstChild;
                 //should throw exception
                 var attrs = p1.GetAttributes();
@@ -317,13 +293,13 @@ namespace DocumentFormat.OpenXml.Tests
 
 
             //process whole package ,should process style part
-            
+
             settings.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007);
             using (WordprocessingDocument testDocument = WordprocessingDocument.Open(file, true, settings))
             {
                 OpenXmlPart target = testDocument.MainDocumentPart;
                 OpenXmlPartRootElement root = target.RootElement;
-                
+
             }
 
             //open in full mode, style part has no MC

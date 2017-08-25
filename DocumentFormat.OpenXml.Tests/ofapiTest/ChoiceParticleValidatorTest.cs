@@ -1,44 +1,19 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 using DocumentFormat.OpenXml.Internal.SchemaValidation;
-using Xunit;
+using DocumentFormat.OpenXml.Presentation;
+using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Wordprocessing;
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Presentation;
-using Drawing = DocumentFormat.OpenXml.Drawing;
-using DocumentFormat.OpenXml.Spreadsheet;
+using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    
-    
     /// <summary>
     ///This is a test class for ChoiceParticleValidatorTest and is intended
     ///to contain all ChoiceParticleValidatorTest Unit Tests
     ///</summary>
-    
     public class ChoiceParticleValidatorTest
     {
-
-
-        private TestContext testContextInstance;
-
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-
         /// <summary>
         ///A test for ChoiceParticleValidator.Validate()
         ///</summary>
@@ -48,7 +23,7 @@ namespace DocumentFormat.OpenXml.Tests
             SdbSchemaDatas sdbSchemaDatas = SdbSchemaDatas.GetOffice2007SchemaDatas();
 
             TestSimpleChoice(sdbSchemaDatas);
-            TestSimpleChoice2(sdbSchemaDatas); 
+            TestSimpleChoice2(sdbSchemaDatas);
             TestSimpleChoice3(sdbSchemaDatas);
             TestSimpleChoice4(sdbSchemaDatas);
         }
@@ -65,13 +40,13 @@ namespace DocumentFormat.OpenXml.Tests
             var target = particleConstraint.ParticleValidator as ChoiceParticleValidator;
             validationContext.Element = rRowColumn;
             var expected = rRowColumn;
-              
+
               //<xsd:complexType name="CT_RevisionRowColumn">
               //  <xsd:choice minOccurs="0" maxOccurs="unbounded">
               //    <xsd:element name="undo" type="CT_UndoInfo" minOccurs="0" maxOccurs="unbounded">
               //    <xsd:element name="rcc" type="CT_RevisionCellChange" minOccurs="0" maxOccurs="unbounded">
               //    <xsd:element name="rfmt" type="CT_RevisionFormatting" minOccurs="0" maxOccurs="unbounded">
-              //  </xsd:choice>   
+              //  </xsd:choice>
               //</xsd:complexType>
 
             // ***** good case ******
@@ -80,7 +55,7 @@ namespace DocumentFormat.OpenXml.Tests
             target.Validate(validationContext);
             Assert.True(actual.Valid);
 
-            // 
+            //
             rRowColumn.AppendChild(new RevisionCellChange());
             target.Validate(validationContext);
             Assert.True(actual.Valid);
@@ -143,7 +118,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(actual.Errors[0].Description.Contains(":rfmt"));
 
         }
-        
+
         private void TestSimpleChoice3(SdbSchemaDatas sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
@@ -156,7 +131,7 @@ namespace DocumentFormat.OpenXml.Tests
             var target = particleConstraint.ParticleValidator as ChoiceParticleValidator;
             validationContext.Element = ffData;
             var expected = ffData;
-            
+
             //<xs:complexType name="CT_FFData">
             //  <xs:choice maxOccurs="unbounded">
             //    <xs:element name="name" type="CT_FFName">
@@ -179,7 +154,7 @@ namespace DocumentFormat.OpenXml.Tests
             // empty is ok, as there are child with minOccurs="0"
             target.Validate(validationContext);
             Assert.True(actual.Valid);
-  
+
             ffData.AppendChild(new FormFieldName());
             target.Validate(validationContext);
             Assert.True(actual.Valid);
@@ -218,7 +193,7 @@ namespace DocumentFormat.OpenXml.Tests
             ffData.AppendChild(new TextInput());
             target.Validate(validationContext);
             Assert.True(actual.Valid);
-            
+
             // ***** error case ******
             ffData.RemoveAllChildren();
             ffData.AppendChild(new HelpText());
@@ -264,7 +239,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(actual.Errors[0].Description.Contains(":name"));
             Assert.True(actual.Errors[0].Description.Contains(":textInput"));
         }
-        
+
         private void TestSimpleChoice2(SdbSchemaDatas sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
@@ -277,7 +252,7 @@ namespace DocumentFormat.OpenXml.Tests
             var target = particleConstraint.ParticleValidator as ChoiceParticleValidator;
             validationContext.Element = bldSub;
             var expected = bldSub;
-            
+
               //<xsd:complexType name="CT_AnimationGraphicalObjectBuildProperties">
               //  <xsd:choice>
               //    <xsd:element name="bldDgm" type="CT_AnimationDgmBuildProperties">
@@ -402,7 +377,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
             Assert.False(actual.Errors[0].Description.Contains(ValidationErrorStrings.Fmt_ListOfPossibleElements));
-            
+
             actual.Clear();
             // dup first child
             fldChar.RemoveAllChildren();
@@ -418,7 +393,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.False(actual.Errors[0].Description.Contains(ValidationErrorStrings.Fmt_ListOfPossibleElements));
 
             actual.Clear();
-            // two different 
+            // two different
             fldChar.RemoveAllChildren();
             fldChar.Append(new FieldData(), new FormFieldData());
             errorChild = fldChar.LastChild;
@@ -432,7 +407,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.False(actual.Errors[0].Description.Contains(ValidationErrorStrings.Fmt_ListOfPossibleElements));
 
             actual.Clear();
-            // two different 
+            // two different
             fldChar.RemoveAllChildren();
             fldChar.Append(new FormFieldData(), new FieldData());
             errorChild = fldChar.LastChild;

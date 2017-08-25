@@ -74,7 +74,7 @@ namespace DocumentFormat.OpenXml.Tests.TimeLine
         [Fact]
         public void TimeLine01EditDeleteAddAttribute()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
 
             string originalFilepath = this.GetTestFilePath(this.generateDocumentFile);
             string editFilePath = this.GetTestFilePath(this.editeDocumentFile);

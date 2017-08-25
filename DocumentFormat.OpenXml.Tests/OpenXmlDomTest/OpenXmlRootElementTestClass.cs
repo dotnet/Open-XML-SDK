@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void PartRootElementFactoryTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             var testfiles = CopyTestFiles("asSources")
                .Where(f => f.IsOpenXmlFile());
 

@@ -36,7 +36,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void TestISOStrictNamespaceWordprocessingML()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             TestDataStorage dataStorage = new TestDataStorage();
             var entries = dataStorage.GetEntries(TestDataStorage.DataGroups.O14IsoStrictWord);
 
@@ -52,7 +52,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void TestISOStrictNamespacePresentationML()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             TestDataStorage dataStorage = new TestDataStorage();
             var entries = dataStorage.GetEntries(TestDataStorage.DataGroups.O14IsoStrictPowerPoint);
 
@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ValidateISOStrictNamespaceSpreadsheetML()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             TestDataStorage dataStorage = new TestDataStorage();
             var entries = dataStorage.GetEntries(TestDataStorage.DataGroups.O14IsoStrictExcel).Take(10);
 
@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ValidateISOStrictNamespacePresentationML()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             TestDataStorage dataStorage = new TestDataStorage();
             var entries = dataStorage.GetEntries(TestDataStorage.DataGroups.O14IsoStrictPowerPoint).Take(50);
 
@@ -100,7 +100,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ValidateISOStrictNamespaceDrawingML()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             TestDataStorage dataStorage = new TestDataStorage();
             var entries = dataStorage.GetEntries(TestDataStorage.DataGroups.O14IsoStrictGraphics).Take(50);
 
@@ -116,7 +116,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ValidateISOStrictNamespaceWordprocessingML()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
             TestDataStorage dataStorage = new TestDataStorage();
             var entries = dataStorage.GetEntries(TestDataStorage.DataGroups.O14IsoStrictWord).Take(50);
 

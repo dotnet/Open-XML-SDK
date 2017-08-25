@@ -25,10 +25,8 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         protected VerifiableLog Log { get; }
 
         #region Initialize/Cleanup
-        public void MyTestInitialize(string currentTest)
+        public void MyTestInitialize()
         {
-            this.TestContext = new TestContext(currentTest);
-
             // Initialize the list of created result folders
             this.resultFoldersCreated = new List<string>();
 
@@ -68,30 +66,6 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         private bool initialized = false;
         #endregion
 
-        #region TestContext
-        /// <summary>
-        /// See http://msdn.microsoft.com/ja-jp/library/ms404699%28VS.80%29.aspx
-        /// </summary>
-
-        private TestContext testContextInstance;
-
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-        #endregion
-
         #region TestFiles
 
         /// <summary>
@@ -100,22 +74,6 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// but if test logic specifies sub test name, it could have two or more paths.
         /// </summary>
         private List<string> resultFoldersCreated;
-
-        public string TestClassName
-        {
-            get
-            {
-                string testClassName = this.TestContext.FullyQualifiedTestClassName;
-
-                int lastIndexOfNamespace = testClassName.LastIndexOf('.');
-                if (lastIndexOfNamespace > 0)
-                {
-                    return testClassName.Substring(lastIndexOfNamespace + 1);
-                }
-
-                return this.TestContext.FullyQualifiedTestClassName;
-            }
-        }
 
         /// <summary>
         /// Get current result folder path.
@@ -412,7 +370,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         private string CreateResultFolder()
         {
             // Caculate result folder path
-            var resultFolder = this.TestContext.TestName;
+            var resultFolder = this.TestClassName;
             string outputPath = Path.Combine(resultPath, resultFolder);
 
             // Create folder
@@ -425,6 +383,9 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             // Return folder path
             return outputPath;
         }
+
+        // TODO: Remove this
+        protected string TestClassName { get; } = Guid.NewGuid().ToString();
 
         #endregion TestFiles
 

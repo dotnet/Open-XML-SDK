@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         [Fact]
         public void Theme01EditAttribute()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
 
             string originalFilepath = this.GetTestFilePath(this.generateDocumentFilePath);
             string editFilePath = this.GetTestFilePath(this.editDocumentFilePath);
@@ -91,7 +91,7 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         [Fact]
         public void Theme03DeleteAttribute()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            this.MyTestInitialize();
 
             string originalFilepath = this.GetTestFilePath(this.generateDocumentFilePath);
             string deleteFilePath = this.GetTestFilePath(this.deleteDocumentFilePath);

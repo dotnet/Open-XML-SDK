@@ -11,35 +11,14 @@ using System.IO;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    
-    
+
+
     /// <summary>
     ///This is a test class for XmlPathTest and is intended
     ///to contain all XmlPathTest Unit Tests
     ///</summary>
-    
     public class XmlPathTest
     {
-
-
-        private TestContext testContextInstance;
-
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-
         /// <summary>
         ///A test for GetXPath
         ///</summary>
