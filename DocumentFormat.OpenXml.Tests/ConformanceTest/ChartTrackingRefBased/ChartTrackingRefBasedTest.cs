@@ -12,7 +12,6 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
 
     public class ChartTrackingRefBasedTest : OpenXmlTestBase
     {
-        //private readonly string generateDocumentFile = "TestChartTrackingRefBasedBase.pptx";
         private readonly string generateDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
         private readonly string editDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
         private readonly string deleteDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
@@ -20,39 +19,17 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
 
         private TestEntities testEntities = null;
 
-        #region Constructor
         /// <summary>
         /// Constructor
         /// </summary>
         public ChartTrackingRefBasedTest(ITestOutputHelper output)
-            :base(output)
+            : base(output)
         {
-        }
-        #endregion
-
-        #region Initialize
-        /// <summary>
-        /// Creates a base Power Point file for the tests
-        /// </summary>
-        /// <param name="createFilePath">Create Power Point file path</param>
-        private void Initialize(string createFilePath)
-        {
+            string createFilePath = this.GetTestFilePath(this.generateDocumentFile);
             GeneratedDocument generatedDocument = new GeneratedDocument();
             generatedDocument.CreatePackage(createFilePath);
 
             this.testEntities = new TestEntities(createFilePath);
-        }
-        #endregion
-
-        #region Test Methods
-        /// <summary>
-        /// Creates a base Power Point file for the tests
-        /// </summary>
-        protected override void TestInitializeOnce()
-        {
-            string generatDocumentFilePath = this.GetTestFilePath(this.generateDocumentFile);
-
-            Initialize(generatDocumentFilePath);
         }
 
         /// <summary>
@@ -61,7 +38,6 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         [Fact]
         public void ChartTrackingRefBasedTest01()
         {
-            this.MyTestInitialize();
             string originalFilepath = this.GetTestFilePath(this.generateDocumentFile);
             string editFilePath = this.GetTestFilePath(this.editDocumentFile);
 
@@ -77,8 +53,6 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         [Fact]
         public void ChartTrackingRefBasedTest03DeleteElement()
         {
-            this.MyTestInitialize();
-
             string originalFilepath = this.GetTestFilePath(this.generateDocumentFile);
             string deleteFilePath = this.GetTestFilePath(this.deleteDocumentFile);
             string addFilePath = this.GetTestFilePath(this.addDocumentFile);
@@ -97,7 +71,5 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
 
             this.Log.Pass("Element deletion is complete.");
         }
-
-        #endregion
     }
 }

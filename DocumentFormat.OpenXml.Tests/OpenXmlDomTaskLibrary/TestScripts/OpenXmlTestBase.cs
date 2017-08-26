@@ -17,64 +17,23 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
     /// </summary>
     public class OpenXmlTestBase
     {
-        protected OpenXmlTestBase(ITestOutputHelper output)
+        protected OpenXmlTestBase(ITestOutputHelper output, string path = null)
         {
             Log = new VerifiableLog(output);
+
+            if (path == null)
+            {
+                SourcePath = TestUtil.TestDataStorage;
+            }
+            else
+            {
+                SourcePath = Path.Combine(TestUtil.TestDataStorage, path);
+            }
         }
 
         protected VerifiableLog Log { get; }
 
-        #region Initialize/Cleanup
-        public void MyTestInitialize()
-        {
-            // Initialize the list of created result folders
-            this.resultFoldersCreated = new List<string>();
-
-
-            // Create result root directory if not exists
-            if (!Directory.Exists(TestResultsDirectory))
-            {
-                Directory.CreateDirectory(TestResultsDirectory);
-            }
-
-            // Record test start time to summary log
-            var summaryLog = this.Log;
-            summaryLog.Comment("Test has been started.");
-
-            // Calls overridable logics
-            if (this.initialized == false)
-            {
-                this.TestInitializeOnce();
-                this.initialized = true;
-            }
-            TestInitialize();
-        }
-
-        /// <summary>
-        /// The method is called once prior to call the first test method.
-        /// Use TestInitialize() instead if you need everytime initialization for each test method.
-        /// </summary>
-        protected virtual void TestInitializeOnce() { }
-
-        /// <summary>
-        /// The method is called multiply prior to call each test method.
-        /// Use TestInitializeOnce() instead if you need once initialization.
-        /// </summary>
-        protected virtual void TestInitialize() { }
-        protected virtual void TestCleanup() { }
-
-        private bool initialized = false;
-        #endregion
-
         #region TestFiles
-
-        /// <summary>
-        /// List of created result folders.
-        /// This will basically contains one directory path,
-        /// but if test logic specifies sub test name, it could have two or more paths.
-        /// </summary>
-        private List<string> resultFoldersCreated;
-
         /// <summary>
         /// Get current result folder path.
         /// If result folder is not yet created, create it and return the path.
@@ -93,56 +52,14 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         private string currentResultFolder;
 
         /// <summary>
-        /// Alias of SourcePath
-        /// </summary>
-        protected String sourcePath
-        {
-            get { return this.SourcePath; }
-        }
-
-        /// <summary>
-        /// Alias of ResultRootPath.
-        /// </summary>
-        protected String resultPath
-        {
-            get { return this.ResultPath; }
-        }
-
-        public String indexFolder = @"\\no-such-server\bjoffhost12\resultfile\_index";
-
-        /// <summary>
         /// Root of source folder.
         /// </summary>
-        public static string SourceRootPath
-        {
-            get
-            {
-                _SourceRootPath = TestUtil.TestDataStorage;
-                return _SourceRootPath;
-            }
-        }
-        private static string _SourceRootPath = null;
-        protected void SetSourceRootPath(string path)
-        {
-            _SourceRootPath = path;
-        }
+        public static string SourceRootPath { get; } = TestUtil.TestDataStorage;
 
         /// <summary>
         /// Source folder.
         /// </summary>
-        public string SourcePath
-        {
-            get
-            {
-                return _SourcePath ?? TestUtil.TestDataStorage;
-            }
-            set
-            {
-                // Expand the specified relative path based on source root folder
-                this._SourcePath = Path.Combine(SourceRootPath, value);
-            }
-        }
-        private String _SourcePath = null;
+        public string SourcePath { get; }
 
         /// <summary>
         /// Root of result folder.
@@ -152,35 +69,13 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// Test pass script specifies _OXMLSDKLOG environment variable so that
         /// it becomes the value for this property.
         /// </summary>
-        public static string TestResultsDirectory
-        {
-            get
-            {
-                return TestUtil.TestResultsDirectory;
-            }
-        }
+        public static string TestResultsDirectory { get; } = TestUtil.TestResultsDirectory;
 
-        public string ResultPath
-        {
-            get
-            {
-                if (this._ResultPath == null)
-                {
-                    this._ResultPath = TestResultsDirectory;
-                }
-                return this._ResultPath;
-            }
-            set
-            {
-                // Expand the specified relative path based on result root folder
-                this._ResultPath = Path.Combine(TestResultsDirectory, value);
-            }
-        }
-        private string _ResultPath = null;
+        public string ResultPath { get; } = TestResultsDirectory;
 
         public string GetTestFilePath(string filename)
         {
-            string testFileFolder = Path.Combine(resultPath, this.TestClassName + "_files");
+            string testFileFolder = Path.Combine(ResultPath, this.TestClassName + "_files");
             string testFilePath = Path.Combine(testFileFolder, filename);
 
             if (Directory.Exists(testFileFolder) == false)
@@ -194,14 +89,6 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             return testFilePath;
         }
 
-        public FileInfo GetSourceFile(FileInfo testFile)
-        {
-            if (File.Exists("source-" + testFile.Name))
-                File.Delete("source-" + testFile.Name);
-
-            return testFile.CopyTo("source-" + testFile.Name);
-        }
-
         /// <summary>
         /// Get test files in the test file storage.
         /// </summary>
@@ -212,7 +99,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// <returns></returns>
         public IEnumerable<FileInfo> GetTestFiles(string sourceFolder, string subFolder)
         {
-            string inputPath = Path.Combine(sourcePath, sourceFolder, subFolder);
+            string inputPath = Path.Combine(SourcePath, sourceFolder, subFolder);
             return new DirectoryInfo(inputPath).GetFiles("*", SearchOption.AllDirectories);
         }
 
@@ -224,7 +111,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// <returns></returns>
         public FileInfo GetTestFileOne(string sourceFile)
         {
-            string inputPath = Path.Combine(sourcePath, sourceFile);
+            string inputPath = Path.Combine(SourcePath, sourceFile);
             return new FileInfo(inputPath);
         }
 
@@ -280,7 +167,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// <returns></returns>
         public IEnumerable<FileInfo> CopyTestFiles(string sourceFolder, bool recursive, string searchPattern, Func<FileInfo, bool> pred, int? maxFiles = null)
         {
-            string inputPath = Path.Combine(sourcePath, sourceFolder);
+            string inputPath = Path.Combine(SourcePath, sourceFolder);
             string outputPath = this.CurrentResultFolder;
 
             // Cd to the outputPath folder
@@ -321,20 +208,6 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         }
 
         /// <summary>
-        /// Copy the test file specified with the sourceFile parameter.
-        /// </summary>
-        /// <param name="sourceFile"></param>
-        /// <returns></returns>
-        public FileInfo CopyTestFileOne(string sourceFile)
-        {
-            var sourceFolder = Path.GetDirectoryName(sourceFile);
-            var sourceFileName = Path.GetFileName(sourceFile);
-            Func<FileInfo, bool> pred =
-                file => file.Name.Equals(sourceFileName, StringComparison.OrdinalIgnoreCase);
-            return CopyTestFiles(sourceFolder, false, sourceFileName, pred).First();
-        }
-
-        /// <summary>
         /// Helper method to create result folder.
         /// </summary>
         /// <param name="outputPath"></param>
@@ -371,14 +244,9 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         {
             // Caculate result folder path
             var resultFolder = this.TestClassName;
-            string outputPath = Path.Combine(resultPath, resultFolder);
+            string outputPath = Path.Combine(ResultPath, resultFolder);
 
-            // Create folder
-            if (!resultFoldersCreated.Contains(outputPath))
-            {
-                resultFoldersCreated.Add(outputPath);
-                CreateResultFolder(outputPath);
-            }
+            CreateResultFolder(outputPath);
 
             // Return folder path
             return outputPath;
