@@ -1,65 +1,36 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
 {
-    using Xunit;
-    using DocumentFormat.OpenXml.Tests.TaskLibraries;
     using DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass;
-    using System.IO;
+    using DocumentFormat.OpenXml.Tests.TaskLibraries;
     using OxTest;
-
+    using System.IO;
+    using Xunit;
+    using Xunit.Abstractions;
 
     public class ThreadingInfoTest : OpenXmlTestBase
     {
-        //private readonly string generateDocumentFile = "TestThreadingInfoBase.pptx";
-        //private readonly string editDocumentFile = "EditedThreadingInfo.pptx";
-        //private readonly string deleteDocumentFile = "DeletedThreadingInfo.pptx";
-        //private readonly string addDocumentFile = "AddedThreadingInfo.pptx";
         private readonly string generateDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
         private readonly string editDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
         private readonly string deleteDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
         private readonly string addDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
-        
-        TestEntities testEntities = null;
+        private readonly TestEntities testEntities;
 
-        #region Constructor
         /// <summary>
         /// Constructor
         /// </summary>
-        public ThreadingInfoTest()
+        public ThreadingInfoTest(ITestOutputHelper output)
+            : base(output)
         {
-        }
-        #endregion
-
-        #region Initialize
-        /// <summary>
-        /// Creates a base Word file for the tests
-        /// </summary>
-        /// <param name="createFilePath">Create Power Point file path</param>
-        private void Initialize(string createFilePath)
-        {
+            string createFilePath = this.GetTestFilePath(this.generateDocumentFile);
             GeneratedDocument generatedDocument = new GeneratedDocument();
             generatedDocument.CreatePackage(createFilePath);
 
             this.Log.Pass("Create Power Point file. File path=[{0}]", createFilePath);
 
             this.testEntities = new TestEntities(createFilePath);
-        }
-        #endregion
-
-        #region Test Methods
-        /// <summary>
-        /// Creates a base Excel file for the tests
-        /// </summary>
-        protected override void TestInitializeOnce()
-        {
-            string generatDocumentFilePath = this.GetTestFilePath(this.generateDocumentFile);
-
-            Initialize(generatDocumentFilePath);
         }
 
         /// <summary>
@@ -68,8 +39,6 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         [Fact]
         public void ThreadingInfo01EditElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
-
             string originalFilepath = this.GetTestFilePath(this.generateDocumentFile);
             string editFilePath = this.GetTestFilePath(this.editDocumentFile);
 
@@ -85,8 +54,6 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         [Fact]
         public void ThreadingInfo03DeleteAddElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
-
             string originalFilepath = this.GetTestFilePath(this.generateDocumentFile);
             string deleteFilePath = this.GetTestFilePath(this.deleteDocumentFile);
             string addFilePath = this.GetTestFilePath(this.addDocumentFile);
@@ -101,7 +68,5 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
             this.testEntities.AddElements(addFilePath, this.Log);
             this.testEntities.VerifyAddElements(addFilePath, this.Log);
         }
-
-        #endregion
     }
 }

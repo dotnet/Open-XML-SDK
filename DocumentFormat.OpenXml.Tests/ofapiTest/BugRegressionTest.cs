@@ -13,42 +13,22 @@ using DocumentFormat.OpenXml.Drawing.Diagrams;
 using DocumentFormat.OpenXml.Packaging;
 using OxTest;
 using System.IO;
+using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
     /// Summary description for BugRegressionTest
     /// </summary>
-    
     public class BugRegressionTest : OpenXmlDomTestBase
     {
         /// <summary>
         ///Constructor.
         ///</summary>
-        public BugRegressionTest()
+        public BugRegressionTest(ITestOutputHelper output)
+            : base(output)
         {
-            //
-            // TODO: Add constructor logic here
-            //
         }
-
-        //private TestContext testContextInstance;
-
-        ///// <summary>
-        /////Gets or sets the test context which provides
-        /////information about and functionality for the current test run.
-        /////</summary>
-        //public TestContext TestContext
-        //{
-        //    get
-        //    {
-        //        return testContextInstance;
-        //    }
-        //    set
-        //    {
-        //        testContextInstance = value;
-        //    }
-        //}
 
         /// <summary>
         /// Regress OpenXmlValidator bugs when validating against Office2007.
@@ -56,7 +36,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validator2007BugRegressionTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
 
             OpenXmlValidator validator = new OpenXmlValidator(FileFormatVersions.Office2007);
 
@@ -83,7 +62,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validator2010BugRegressionTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
 
             OpenXmlValidator validator = new OpenXmlValidator(FileFormatVersions.Office2010);
 
@@ -96,7 +74,7 @@ namespace DocumentFormat.OpenXml.Tests
             Bug743591(validator);
         }
 
-        #region validator bugs resgression 
+        #region validator bugs resgression
 
         [System.Diagnostics.Conditional("DEBUG")]
         private void AssertValidationErrorCategory(string expected, ValidationErrorInfo targetErrorInfo)
@@ -197,7 +175,7 @@ namespace DocumentFormat.OpenXml.Tests
             var errors = validator.Validate(element);
             Assert.Equal(7, errors.Count());
             Assert.Equal(ValidationErrorType.Schema, errors.First().ErrorType);
-            Assert.Equal("Sch_MissRequiredAttribute", errors.First().Id);            
+            Assert.Equal("Sch_MissRequiredAttribute", errors.First().Id);
         }
 
         private void Bug669663(OpenXmlValidator validator)
@@ -250,7 +228,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(ValidationErrorType.Schema, errors.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", errors.First().Id);
         }
-        
+
         private void Bug662644(OpenXmlValidator validator)
         {
             DocumentFormat.OpenXml.Office2010.Excel.FormControlProperties fp = new DocumentFormat.OpenXml.Office2010.Excel.FormControlProperties();
@@ -272,7 +250,7 @@ namespace DocumentFormat.OpenXml.Tests
             // the EmbeddedObjectProperties is only valid in Office2010.
             element.EmbeddedObjectProperties = new DocumentFormat.OpenXml.Spreadsheet.EmbeddedObjectProperties();
 
-            // In Office2007, the OleObject has no children. 
+            // In Office2007, the OleObject has no children.
             var errors = validator.Validate(element);
             Assert.Equal(1, errors.Count());
             Assert.Same(element, errors.First().Node);
@@ -392,7 +370,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void Bug424104(OpenXmlValidator validator)
         {
-            // 
+            //
             // change <xsd:any > to <xsd:any minOccurs=0 in CT_OfficeArtExtension"
             DocumentFormat.OpenXml.Drawing.Extension ext = new DocumentFormat.OpenXml.Drawing.Extension() { Uri = "test" };
             var errors = validator.Validate(ext);
@@ -435,7 +413,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(list1, list2);
 
         }
-        
+
         #endregion
 
         private void CopyFileStream(byte[] srcBuffer, string fileName)
@@ -458,7 +436,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug448241()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault tablecellmar = new DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault();
             var wrongChild = tablecellmar.AppendChild(new DocumentFormat.OpenXml.Wordprocessing.LeftMargin());
             var leftmar = tablecellmar.TableCellLeftMargin;
@@ -515,7 +492,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug396358()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             string file = Path.Combine(TestUtil.TestResultsDirectory, this.TestClassName, Guid.NewGuid().ToString().Replace("-", "") + ".xlsx");
             CopyFileStream(TestFileStreams.mailmerge, file);
             using (WordprocessingDocument doc = WordprocessingDocument.Open(file, true))
@@ -525,7 +501,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Equal(null, part.MailMergeRecipients);
 
                 Assert.NotEqual(null, part.Recipients);
-                
+
                 Assert.NotEqual(null, part.PartRootElement);
                 Assert.True(part.PartRootElement is DocumentFormat.OpenXml.Wordprocessing.Recipients);
 
@@ -549,7 +525,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug537858()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             string file = Path.Combine(TestUtil.TestResultsDirectory, this.TestClassName, Guid.NewGuid().ToString().Replace("-", "") + ".xlsx");
             CopyFileStream(TestFileStreams.animation, file);
             OpenSettings s = new OpenSettings();
@@ -570,7 +545,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug544244()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             var pageMargins = new DocumentFormat.OpenXml.Spreadsheet.PageMargins();
             pageMargins.Header = new DoubleValue();
             pageMargins.Header.InnerText = "0.51200000000000001";
@@ -588,7 +562,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug665268()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             var comment = new DocumentFormat.OpenXml.Wordprocessing.Comment();
             comment.Date = new DateTimeValue();
             comment.Date.InnerText = "2007-04-24T15:42:11.037";

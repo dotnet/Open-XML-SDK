@@ -1,41 +1,17 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 using DocumentFormat.OpenXml.Internal.SchemaValidation;
-using Xunit;
 using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Wordprocessing;
-using DocumentFormat.OpenXml;
+using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    
-    
     /// <summary>
     ///This is a test class for GroupParticleValidatorTest and is intended
     ///to contain all GroupParticleValidatorTest Unit Tests
     ///</summary>
-    
     public class GroupParticleValidatorTest
     {
-
-
-        private TestContext testContextInstance;
-
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-
         /// <summary>
         ///A test for GroupParticleValidator.TryMatch()
         ///</summary>
@@ -184,7 +160,7 @@ namespace DocumentFormat.OpenXml.Tests
             var particleConstraint = sdbSchemaDatas.GetSchemaTypeData(sectPr).ParticleConstraint;
             var target = particleConstraint.ParticleValidator as SequenceParticleValidator;
             validationContext.Element = sectPr;
-                          
+
               //<xsd:complexType name="CT_SectPr">
               //  <xsd:sequence>
               //    <xsd:group ref="EG_HdrFtrReferences" minOccurs="0" maxOccurs="6"></xsd:group>
@@ -270,7 +246,7 @@ namespace DocumentFormat.OpenXml.Tests
             sectPr.Append(new HeaderReference(), new FooterReference(), new SectionType());
             Assert.True(actual.Valid);
 
-            // 
+            //
             sectPr.AppendChild(new PaperSource());
             Assert.True(actual.Valid);
 

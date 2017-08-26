@@ -2,16 +2,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    using Xunit;
-    using DocumentFormat.OpenXml.Tests.TaskLibraries;
-
     using DocumentFormat.OpenXml;
     using DocumentFormat.OpenXml.Packaging;
+    using DocumentFormat.OpenXml.Tests.TaskLibraries;
+    using Xunit.Abstractions;
 
     public abstract class ConformanceTestBase<TReflectedCode, TPackage, TElement> : OpenXmlTestBase
         where TElement : OpenXmlElement
@@ -54,23 +52,15 @@ namespace DocumentFormat.OpenXml.Tests
         }
         #endregion
 
-        #region Initialize
         /// <summary>
         /// Default Constructor
         /// </summary>
-        public ConformanceTestBase()
-        {
-        }
-
-        /// <summary>
-        /// Creates a base Word file for the tests.
-        /// </summary>
-        protected override void TestInitializeOnce()
+        public ConformanceTestBase(ITestOutputHelper output)
+            : base(output)
         {
             // Creates the test document
             this.CreatePackage(this.GetTestFilePath(this.BaseFileName));
         }
-        #endregion
 
         #region Preset Tests
         protected delegate void ElementHandler(TElement element);

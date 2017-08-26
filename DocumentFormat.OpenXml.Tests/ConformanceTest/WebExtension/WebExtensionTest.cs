@@ -1,39 +1,29 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 using System;
-using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
-using System.Text;
 using System.IO;
-using System.Reflection;
-using System.Xml;
-using System.Xml.Linq;
-
 
 namespace DocumentFormat.OpenXml.Tests.WebExtension
 {
     using DocumentFormat.OpenXml;
     using DocumentFormat.OpenXml.Validation;
     using DocumentFormat.OpenXml.Packaging;
-    using Pres = DocumentFormat.OpenXml.Presentation;
-    using SSht = DocumentFormat.OpenXml.Spreadsheet;
-    using WPrc = DocumentFormat.OpenXml.Wordprocessing;
-    using Wetp = DocumentFormat.OpenXml.Office2013.WebExtentionPane;
+    using Wetp = Office2013.WebExtentionPane;
 
-    using We = DocumentFormat.OpenXml.Office2013.WebExtension;
-    using A = DocumentFormat.OpenXml.Drawing;
-
+    using We = Office2013.WebExtension;
+    using A = Drawing;
 
     using Xunit;
     using DocumentFormat.OpenXml.Tests.TaskLibraries;
     using DocumentFormat.OpenXml.Tests.TaskLibraries.DataStorage;
     using DocumentFormat.OpenXml.Tests.WebExtensionClass;
     using OxTest;
+    using Xunit.Abstractions;
 
     /// <summary>
     /// Test for Web Extension elements
     /// </summary>
-
     public class WebExtensionTest : OpenXmlTestBase
     {
         #region Data members
@@ -45,7 +35,8 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
         /// <summary>
         /// Constructor
         /// </summary>
-        public WebExtensionTest()
+        public WebExtensionTest(ITestOutputHelper output)
+            : base(output)
         {
             this.dayOfTest = DateTime.Today.Day;
         }
@@ -58,7 +49,6 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
         [Fact]
         public void WebExtensionAcceptance()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             TestDataStorage dataStorage = new TestDataStorage();
             var entries = dataStorage.GetEntries(TestDataStorage.DataGroups.O15ConformanceExcel).Where(e => e.FilePath.Contains(@"WebExtension\"));
 
@@ -96,13 +86,11 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
         }
 
         /// <summary>
-        /// OASys#283290: OOXML SDK : COMPS : Invalid format on WebExtension 
+        /// OASys#283290: OOXML SDK : COMPS : Invalid format on WebExtension
         /// </summary>
         [Fact]
         public void WebExtensionInvalidFormat()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
-
             // Instanciating a DataStorage object to get test files
             TestDataStorage dataStorage = new TestDataStorage();
 
@@ -138,8 +126,6 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
         [Fact]
         public void WebExtensionFullyFledgedValidation()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
-
             // create an Excel file containing a fully fledged WebExtension here:
             string filePath = Path.Combine(TestUtil.TestResultsDirectory, "WebExtensionFullFledgeValidation.xlsx");
             WebExtensionData gen = new WebExtensionData();
@@ -290,27 +276,27 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
                 else
 
                     if (blipKid is A.AlphaCeiling)
-                    {
-                    }
-                    else
+                {
+                }
+                else
 
                         if (blipKid is A.AlphaFloor)
-                        {
-                        }
-                        else
+                {
+                }
+                else
 
                             if (blipKid is A.BlipExtensionList)
-                            {
-                                A.BlipExtensionList bel = blipKid as A.BlipExtensionList;
+                {
+                    A.BlipExtensionList bel = blipKid as A.BlipExtensionList;
 
-                                foreach (A.BlipExtension be in bel)
-                                {
-                                    be.Uri = svCallback(be.Uri);
+                    foreach (A.BlipExtension be in bel)
+                    {
+                        be.Uri = svCallback(be.Uri);
 
-                                }
-                                // it's possible to try and access the childs of be, but these are OpenXmlUnknownElement
-                                // and it's not possible to modify them in an intelligent way.
-                            }
+                    }
+                    // it's possible to try and access the childs of be, but these are OpenXmlUnknownElement
+                    // and it's not possible to modify them in an intelligent way.
+                }
             }
 
             we.Id = svCallback(we.Id);

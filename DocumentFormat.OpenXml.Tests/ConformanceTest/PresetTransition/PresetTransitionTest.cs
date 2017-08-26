@@ -3,20 +3,26 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransition
 {
     using DocumentFormat.OpenXml;
     using DocumentFormat.OpenXml.Packaging;
-    using Xunit;
     using DocumentFormat.OpenXml.Tests;
     using DocumentFormat.OpenXml.Tests.PresetTransitionClass;
+    using Xunit;
+    using Xunit.Abstractions;
     using P15 = DocumentFormat.OpenXml.Office2013.PowerPoint;
 
     /// <summary>
     /// Test for Footnote Column
     /// </summary>
-    
+
     public class PresetTransitionTest :
         ConformanceTestBase<GeneratedDocument, PresentationDocument, P15.PresetTransition>
     {
         private const string OriginalPresetTransition = "pageCurlDouble";
         private const string ModifiedPresetTransition = "pageCurlSingle";
+
+        public PresetTransitionTest(ITestOutputHelper output)
+            : base(output)
+        {
+        }
 
         #region Test Methods
         /// <summary>
@@ -25,7 +31,6 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransition
         [Fact]
         public void PresetTransitionReadWriteTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             this.SimpleReadWriteTest(
                 (e) =>
                 {

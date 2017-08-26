@@ -1,52 +1,19 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Text;
-using System.Collections.Generic;
+using DocumentFormat.OpenXml.Internal.SchemaValidation;
+using DocumentFormat.OpenXml.Validation;
+using DocumentFormat.OpenXml.Wordprocessing;
 using System.Linq;
 using Xunit;
-using DocumentFormat.OpenXml.Wordprocessing;
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Validation;
-using DocumentFormat.OpenXml.Internal.SchemaValidation;
 
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
     /// Summary description for McValidationTest
     /// </summary>
-    
     public class McValidationTest
     {
-        ///<summary>
-        ///Constructor.
-        ///</summary>
-        public McValidationTest()
-        {
-            //
-            // TODO: Add constructor logic here
-            //
-        }
-
-        private TestContext testContextInstance;
-
         /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-
-        /// <summary>
-        /// Test ACB syntax 
+        /// Test ACB syntax
         /// </summary>
         [Fact]
         public void AcbSyntaxValidationTest()
@@ -155,7 +122,7 @@ namespace DocumentFormat.OpenXml.Tests
             var validator = new SchemaValidator();
             var element = new Paragraph();
             var run = new Run();
-            
+
             element.AppendChild(run);
 
             var result = validator.Validate(element);
@@ -228,7 +195,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(ValidationErrorType.MarkupCompatibility, result.Errors[0].ErrorType);
             Assert.Equal("MC_InvalidXmlAttributeWithProcessContent", result.Errors[0].Id);
             run.MCAttributes.ProcessContent = null;
-            
+
             run.SetAttribute(new OpenXmlAttribute("o15:id", "http://o15.com", "1"));
             result = validator.Validate(element);
             Assert.True(result.Valid);
@@ -275,7 +242,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             ignorableElement.MCAttributes = new MarkupCompatibilityAttributes() { Ignorable="w14test" };
             p.InsertAfter(ignorableElement, pPr);
-            
+
             mcContext = new MCContext();
             target = p.GetFirstChildMc(mcContext, FileFormatVersions.Office2007);
             Assert.Same(pPr, target);
@@ -299,7 +266,7 @@ namespace DocumentFormat.OpenXml.Tests
             target = p.GetNextChildMc(target, mcContext, FileFormatVersions.Office2007);
             Assert.Same(run2, target);
         }
-         
+
         /// <summary>
         /// Validating MC.
         /// </summary>
@@ -340,7 +307,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(1, errors.Count());
         }
 
-               
+
         /// <summary>
         /// Validating content under ACB.
         /// </summary>

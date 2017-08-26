@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
     using DocumentFormat.OpenXml.Tests.PivotClass;
     using System.IO;
     using OxTest;
-
+    using Xunit.Abstractions;
 
     public class PivotTest : OpenXmlTestBase
     {
@@ -24,40 +24,19 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
         private readonly string deletedOldbConnectionDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
         private readonly string addedOldbConnectionDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
 
-        #region Constructor
         /// <summary>
         /// Constructor
         /// </summary>
-        public PivotTest()
+        public PivotTest(ITestOutputHelper output)
+            : base(output)
         {
-        }
-        #endregion
-
-        #region Initialize
-        /// <summary>
-        /// Creates a base Word file for the tests
-        /// </summary>
-        /// <param name="createFilePath">Create Word file path</param>
-        private void Initialize(string createFilePath)
-        {
+            string createFilePath = this.GetTestFilePath(this.generatedOldbConnectionDocumentFile);
             ConnectionGeneratedDocument connectionGeneratedDocument = new ConnectionGeneratedDocument();
             connectionGeneratedDocument.CreatePackage(createFilePath);
 
             this.Log.Pass("Create Word file. File path=[{0}]", createFilePath);
 
             this.connectionTestEntities = new ConnectionTestEntities(createFilePath);
-        }
-        #endregion
-
-        #region Test Methods
-        /// <summary>
-        /// Creates a base Excel file for the tests
-        /// </summary>
-        protected override void TestInitializeOnce()
-        {
-            string generatDocumentFilePath = this.GetTestFilePath(this.generatedOldbConnectionDocumentFile);
-
-            Initialize(generatDocumentFilePath);
         }
 
         /// <summary>
@@ -66,8 +45,6 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
         [Fact]
         public void PivotConnection01EditElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
-
             string originalFilepath = this.GetTestFilePath(this.generatedOldbConnectionDocumentFile);
             string editFilePath = this.GetTestFilePath(this.editedOldbConnectionDocumentFile);
 
@@ -83,8 +60,6 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
         [Fact]
         public void PivotConnection03DeleteAddElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
-
             string originalFilepath = this.GetTestFilePath(this.generatedOldbConnectionDocumentFile);
             string deleteFilePath = this.GetTestFilePath(this.deletedOldbConnectionDocumentFile);
             string addFilePath = this.GetTestFilePath(this.addedOldbConnectionDocumentFile);
@@ -99,6 +74,5 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
             this.connectionTestEntities.AddElement(addFilePath, this.Log);
             this.connectionTestEntities.VerifyAddedElement(addFilePath, this.Log);
         }
-        #endregion
     }
 }

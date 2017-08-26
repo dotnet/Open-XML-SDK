@@ -1,48 +1,23 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Xunit;
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Wordprocessing;
 using DocumentFormat.OpenXml.Packaging;
-using excel = DocumentFormat.OpenXml.Spreadsheet;
-using System.Reflection;
+using DocumentFormat.OpenXml.Wordprocessing;
 using OxTest;
+using System;
+using System.Linq;
+using System.Reflection;
+using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
 {
     public class M4Conformance
     {
         ///<summary>
-        ///Constructor.
-        ///</summary>
-        public M4Conformance()
-        {
-        }
-
-        private TestContext testContextInstance;
-
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-
-        ///<summary>
         ///O14OnlyElesInO12.
         ///</summary>
         [Fact]
         public void O14OnlyElesInO12()
         {
-            //"w:start" element is newly added 
+            //"w:start" element is newly added
             //its class is StartBorder
             //its parent is TableCellBorder
             //its parent should have corresponding attring

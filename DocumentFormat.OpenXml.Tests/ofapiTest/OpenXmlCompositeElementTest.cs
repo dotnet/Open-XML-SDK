@@ -1,41 +1,17 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using DocumentFormat.OpenXml;
-using Xunit;
-using DocumentFormat.OpenXml.Wordprocessing;
-using W = DocumentFormat.OpenXml.Wordprocessing;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Wordprocessing;
+using Xunit;
+using W = DocumentFormat.OpenXml.Wordprocessing;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    
-    
     /// <summary>
     ///This is a test class for OpenXmlCompositeElementTest and is intended
     ///to contain all OpenXmlCompositeElementTest Unit Tests
     ///</summary>
-    
     public class OpenXmlCompositeElementTest
     {
-
-
-        private TestContext testContextInstance;
-
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-
         /// <summary>
         ///A test for PrependChild
         ///</summary>
@@ -100,7 +76,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // test case for OpenXmlCompositeType.OneChoice
             FieldChar fieldChar = new FieldChar();
-           
+
             FieldData fldData = new FieldData();
             fieldChar.FieldData = fldData;
             Assert.Same(fldData, fieldChar.FieldData);
@@ -127,7 +103,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         }
 
-    
+
         /// <summary>
         /// Test the class factory of GraphicObjectData
         /// The schema for CT_GraphicalObjectData is xsd:any without namespace specified
@@ -153,9 +129,9 @@ namespace DocumentFormat.OpenXml.Tests
             DocumentFormat.OpenXml.Drawing.LockedCanvas.LockedCanvas lockedCanvas = drawing.FirstChild.FirstChild.FirstChild.FirstChild as DocumentFormat.OpenXml.Drawing.LockedCanvas.LockedCanvas;
 
             Assert.IsType(typeof(DocumentFormat.OpenXml.Drawing.Run), lockedCanvas.FirstChild.FirstChild.FirstChild.FirstChild.FirstChild);
-            
+
             DocumentFormat.OpenXml.Drawing.Run run = lockedCanvas.FirstChild.FirstChild.FirstChild.FirstChild.FirstChild as DocumentFormat.OpenXml.Drawing.Run;
-            
+
             Assert.Equal("Text in drawing.", run.Text.Text);
             Assert.Equal("Text in drawing.", run.InnerText);
             Assert.Equal("Text in drawing.", lockedCanvas.InnerText);
@@ -205,7 +181,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         }
 
-                
+
         /// <summary>
         /// Test the exception case for OpenXmlCompositeElement.ReplaceChild().
         /// </summary>
@@ -249,7 +225,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void Bug242463Test()
         {
             string tempFile = System.IO.Path.GetTempFileName();
-            
+
             using (WordprocessingDocument myDoc = WordprocessingDocument.Create(tempFile, WordprocessingDocumentType.Document))
             {
                 MainDocumentPart mainPart = myDoc.AddMainDocumentPart();
@@ -265,7 +241,7 @@ namespace DocumentFormat.OpenXml.Tests
             System.IO.File.Delete(tempFile);
         }
 
-                
+
         /// <summary>
         /// Test the bug case for OpenXmlPartRootElement.
         /// </summary>
@@ -279,7 +255,7 @@ namespace DocumentFormat.OpenXml.Tests
                                             "</vt:vector>" +
                                         "</ap:TitlesOfParts>" +
                                     "</ap:Properties>";
-                    
+
             var properties = new DocumentFormat.OpenXml.ExtendedProperties.Properties();
             var property = properties.AppendChild( new DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts() );;
             property.VTVector = new DocumentFormat.OpenXml.VariantTypes.VTVector();
