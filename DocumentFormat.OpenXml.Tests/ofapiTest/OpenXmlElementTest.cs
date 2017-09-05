@@ -12,33 +12,12 @@ using System.Xml;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    
-    
     /// <summary>
     ///This is a test class for OpenXmlElementTest and is intended
     ///to contain all OpenXmlElementTest Unit Tests
     ///</summary>
-    
     public class OpenXmlElementTest
     {
-        private TestContext testContextInstance;
-
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-
         /// <summary>
         ///A test for RemoveAttribute
         ///</summary>
@@ -83,7 +62,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void RemoveAttributeTest()
         {
-            // create an element to hold 3 attributes 
+            // create an element to hold 3 attributes
             FooterReference target = new FooterReference();
 
             Assert.False(target.HasAttributes);
@@ -307,7 +286,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(paragraphOuterXml, unknownElement.OuterXml);
             Assert.Equal(paragraphInnerXml, unknownElement.InnerXml);
         }
- 
+
         /// <summary>
         ///A test for OpenXmlElement.RemoveAllChildren
         ///</summary>
@@ -338,10 +317,10 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.NotNull(r1.FirstChild);
             Assert.NotNull(r1.LastChild);
 
-            r1.RemoveAllChildren<RunProperties>(); 
+            r1.RemoveAllChildren<RunProperties>();
             Assert.Null(r1.FirstChild);
             Assert.Null(r1.LastChild);
-            
+
             para.RemoveAllChildren<BookmarkStart>();
             Assert.Null(bkStart.Parent);
 
@@ -386,8 +365,8 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(bkStart, r1.NextSibling());
             Assert.Same(r1, bkStart.PreviousSibling());
         }
- 
-        
+
+
         /// <summary>
         ///A test for OpenXmlElement.RemoveAllChildren
         ///</summary>
@@ -622,7 +601,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.NotNull(clonedMiscNode);
                 Assert.Equal(miscNode.XmlNodeType, clonedMiscNode.XmlNodeType);
                 Assert.Equal(miscNode.OuterXml, clonedMiscNode.OuterXml);
-                
+
                 // Shallow clone mc element
                 var acb = body.Descendants<AlternateContent>().First();
                 acb.MCAttributes = new MarkupCompatibilityAttributes();
@@ -892,7 +871,7 @@ namespace DocumentFormat.OpenXml.Tests
                     target.WriteEndElement();
 
                     target.WriteEndElement();
-                    
+
                     target.WriteEndElement();
                     target.Close();
                 }
@@ -949,7 +928,7 @@ namespace DocumentFormat.OpenXml.Tests
             string runOuterXml = "<w:r xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\">" +
             "<w:rPr><w:strike /><w:vanish><!-- comments is ok --></w:vanish><w:webHidden><w:invalidChild /></w:webHidden></w:rPr>" +
             "<w:t>Run Text.</w:t><w:t><!-- comments is ok -->Text 2</w:t><w:t>Text 3.<invalidElement /></w:t></w:r>";
-        
+
             var openxmlElement = new Run(runOuterXml);
 
             var strike = openxmlElement.RunProperties.Strike;

@@ -1,65 +1,36 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace DocumentFormat.OpenXml.Tests.WorkBookPr
 {
-    using Xunit;
     using DocumentFormat.OpenXml.Tests.TaskLibraries;
     using DocumentFormat.OpenXml.Tests.WorkBookPrClass;
-    using System.IO;
     using OxTest;
-
+    using System.IO;
+    using Xunit;
+    using Xunit.Abstractions;
 
     public class WorkBookPrTest : OpenXmlTestBase
     {
-        TestEntities testEntities = null;
-
-        //private readonly string generatedDocumentFile = "TestWorkBookPrBase.xlsx";
-        //private readonly string editedDocumentFile = "EditWorkBookPr.xlsx";
-        //private readonly string deletedDocumentFile = "DeleteWorkBookPr.xlsx";
-        //private readonly string addedDocumentFile = "AddedWorkBookPr.xlsx";
         private readonly string generatedDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
         private readonly string editedDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
         private readonly string deletedDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
         private readonly string addedDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
-        
-        #region Constructor
+        private readonly TestEntities testEntities = null;
+
         /// <summary>
         /// Constructor
         /// </summary>
-        public WorkBookPrTest()
+        public WorkBookPrTest(ITestOutputHelper output)
+            : base(output)
         {
-        }
-        #endregion
-
-        #region Initialize
-        /// <summary>
-        /// Creates a base Word file for the tests
-        /// </summary>
-        /// <param name="createFilePath">Create Word file path</param>
-        private void Initialize(string createFilePath)
-        {
+            string createFilePath = this.GetTestFilePath(this.generatedDocumentFile);
             GeneratedDocument generatedDocument = new GeneratedDocument();
             generatedDocument.CreatePackage(createFilePath);
 
             this.Log.Pass("Create Word file. File path=[{0}]", createFilePath);
 
             this.testEntities = new TestEntities(createFilePath);
-        }
-        #endregion
-
-        #region Test Methods
-        /// <summary>
-        /// Creates a base Excel file for the tests
-        /// </summary>
-        protected override void TestInitializeOnce()
-        {
-            string generatDocumentFilePath = this.GetTestFilePath(this.generatedDocumentFile);
-
-            Initialize(generatDocumentFilePath);
         }
 
         /// <summary>
@@ -68,8 +39,6 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
         [Fact]
         public void WorkBookPr01EditElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
-
             string originalFilepath = this.GetTestFilePath(this.generatedDocumentFile);
             string editFilePath = this.GetTestFilePath(this.editedDocumentFile);
 
@@ -85,8 +54,6 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
         [Fact]
         public void WorkBookPr03DeleteElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
-            
             string originalFilepath = this.GetTestFilePath(this.generatedDocumentFile);
             string deleteFilePath = this.GetTestFilePath(this.deletedDocumentFile);
             string addFilePath = this.GetTestFilePath(this.addedDocumentFile);
@@ -102,7 +69,5 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
             this.testEntities.AddElement(addFilePath, this.Log);
             this.testEntities.VerifyAddElements(addFilePath, this.Log);
         }
-
-        #endregion
     }
 }

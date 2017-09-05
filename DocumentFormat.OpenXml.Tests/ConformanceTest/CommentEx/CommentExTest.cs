@@ -23,6 +23,7 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
     using DocumentFormat.OpenXml.Tests.TaskLibraries.DataStorage;
     using DocumentFormat.OpenXml.Tests.CommentExClass;
     using OxTest;
+    using Xunit.Abstractions;
 
     /// <summary>
     /// Test for CommentEx elements
@@ -33,22 +34,13 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
         private readonly string editedDocumentFilePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
         private readonly string deleteDocumentFilePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
 
-        #region Constructor
         /// <summary>
         /// Constructor
         /// </summary>
-        public CommentExTest()
+        public CommentExTest(ITestOutputHelper output)
+            : base(output)
         {
-        }
-        #endregion
-
-        #region Initialize
-        /// <summary>
-        /// Creates a base Word file for the tests
-        /// </summary>
-        /// <param name="createFilePath">Create Word file path</param>
-        private void Initialize(string createFilePath)
-        {
+            string createFilePath = this.GetTestFilePath(this.generatedDocumentFilePath);
             GeneratedDocument generatedDocument = new GeneratedDocument();
             generatedDocument.CreatePackage(createFilePath);
 
@@ -56,24 +48,11 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
         }
 
         /// <summary>
-        /// Creates a base Word file for the tests
-        /// </summary>
-        protected override void TestInitializeOnce()
-        {
-            string generatDocumentFilePath = this.GetTestFilePath(this.generatedDocumentFilePath);
-
-            Initialize(generatDocumentFilePath);
-        }
-        #endregion
-
-        #region Test Methods
-        /// <summary>
-        /// Office15TCM: xxxxx: OASys#283293: OOXML SDK : COMPS : Invalid format on CommentEx 
+        /// Office15TCM: xxxxx: OASys#283293: OOXML SDK : COMPS : Invalid format on CommentEx
         /// </summary>
         [Fact]
         public void CommentExInvalidFormat()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             TestDataStorage dataStorage = new TestDataStorage();
             var entries = dataStorage.GetEntries(
                 TestDataStorage.DataGroups.O15ConformanceWord).Where(i => i.FilePath.Contains("Invalid_Word15Comments.docx"));
@@ -89,8 +68,6 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
         [Fact]
         public void CommentEx02VerifyEdit()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
-
             string originalFilepath = this.GetTestFilePath(this.generatedDocumentFilePath);
             string editFilePath = this.GetTestFilePath(this.editedDocumentFilePath);
 
@@ -107,8 +84,6 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
         [Fact]
         public void CommentEx04VerifyDelete()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
-
             string originalFilepath = this.GetTestFilePath(this.generatedDocumentFilePath);
             string deleteFilePath = this.GetTestFilePath(this.deleteDocumentFilePath);
 
@@ -118,6 +93,5 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
             testEntities.DeleteElements(deleteFilePath, this.Log);
             testEntities.VerifyDeletedElements(deleteFilePath, this.Log);
         }
-        #endregion
     }
 }

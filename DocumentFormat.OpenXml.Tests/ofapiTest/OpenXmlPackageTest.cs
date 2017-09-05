@@ -20,34 +20,8 @@ namespace DocumentFormat.OpenXml.Tests
     /// <summary>
     /// Summary description for OpenXmlPackageTest
     /// </summary>
-    
     public class OpenXmlPackageTest
     {
-        ///<summary>
-        ///Constructor.
-        ///</summary>
-        public OpenXmlPackageTest()
-        {
-        }
-
-        private TestContext testContextInstance;
-
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-
         ///<summary>
         ///AutoSaveTestDocx.
         ///</summary>

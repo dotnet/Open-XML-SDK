@@ -11,27 +11,8 @@ namespace DocumentFormat.OpenXml.Tests
     ///This is a test class for SdbSchemaDatasTest and is intended
     ///to contain all SdbSchemaDatasTest Unit Tests
     ///</summary>
-    
     public class SdbSchemaDatasTest
     {
-        private TestContext testContextInstance;
-
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-
         /// <summary>
         ///A test for Load
         ///</summary>
@@ -48,7 +29,7 @@ namespace DocumentFormat.OpenXml.Tests
             SimpleLoadTest(actual);
 
             DocumentConstraintTest(actual);
-            
+
             BodyConstraintTest(actual);
 
             ParagraphConstraintTest(actual);
@@ -107,7 +88,7 @@ namespace DocumentFormat.OpenXml.Tests
             attributeConstraint = schemaTypeData.AttributeConstraints[2];
             Assert.Equal(XsdAttributeUse.None, attributeConstraint.XsdAttributeUse);
             Assert.IsType(typeof(Int32ValueRestriction), attributeConstraint.SimpleTypeConstraint);
-            
+
             attributeConstraint = schemaTypeData.AttributeConstraints[3];
             Assert.Equal(XsdAttributeUse.None, attributeConstraint.XsdAttributeUse);
             Assert.IsType(typeof(BooleanValueRestriction), attributeConstraint.SimpleTypeConstraint);
@@ -127,11 +108,11 @@ namespace DocumentFormat.OpenXml.Tests
               //    </xsd:extension>
               //  </xsd:complexContent>
               //</xsd:complexType>
-            
+
               //<xsd:complexType name="CT_Rel">
               //  <xsd:attribute ref="r:id" use="required">
               //</xsd:complexType>
-        
+
               //<xsd:simpleType name="ST_HdrFtr">
               //  <xsd:restriction base="xsd:string">
               //    <xsd:enumeration value="even">
@@ -167,7 +148,7 @@ namespace DocumentFormat.OpenXml.Tests
         private void DocumentConstraintTest(SdbSchemaDatas actual)
         {
             ElementParticle elementParticle;
-            // CT_Document 
+            // CT_Document
             //<xsd:complexType name="CT_DocumentBase">
             //  <xsd:sequence>
             //    <xsd:element name="background" type="CT_Background" minOccurs="0"/>
@@ -182,7 +163,7 @@ namespace DocumentFormat.OpenXml.Tests
             //      <xsd:attribute name="conformance" type="ST_DocumentConformance" />
             //    </xsd:extension>
             //  </xsd:complexContent>
-            //</xsd:complexType>  
+            //</xsd:complexType>
             var document = new Document();
             var body = new Body();
             var documentData = actual.GetSchemaTypeData(document.ElementTypeId);
@@ -248,7 +229,7 @@ namespace DocumentFormat.OpenXml.Tests
         private void BodyConstraintTest(SdbSchemaDatas actual)
         {
             ElementParticle elementParticle;
-            
+
             //<xsd:complexType name="CT_Body">
             //  <xsd:sequence>
             //    <xsd:group ref="EG_BlockLevelElts" minOccurs="0" maxOccurs="unbounded" />

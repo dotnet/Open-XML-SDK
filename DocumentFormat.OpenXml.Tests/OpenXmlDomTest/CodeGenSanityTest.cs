@@ -1,38 +1,31 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.IO;
-
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using Xunit;
-
-using System.Xml;
-using System.Xml.Linq;
-
-using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
-using Dr = DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Wordprocessing;
-
 using OxTest;
+using System;
+using System.Linq;
+using System.Xml.Linq;
+using Xunit;
+using Xunit.Abstractions;
+using Dr = DocumentFormat.OpenXml.Drawing;
 
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
     /// Summary description for PackagingIntegrationTest
     /// </summary>
-
     public class CodeGenSanityTest : OpenXmlDomTestBase
     {
+        public CodeGenSanityTest(ITestOutputHelper output)
+            : base(output)
+        {
+        }
+
         // Constructors, CloneNode, Load, Save, Properties for attributes, LocalName, Assosicated Part
         [Fact]
         public void ThemeAsPartRootClassTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             var testfile = CopyTestFiles(@"wordprocessing", true, "complex0.docx", f => f.IsWordprocessingFile())
                 .FirstOrDefault();
 
@@ -105,7 +98,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ThemeAsClassWithFixedOrderChildTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             var testfile = CopyTestFiles(@"wordprocessing", true, "complex0.docx", f => f.IsWordprocessingFile())
                 .Where(f => f.IsWordprocessingFile() || f.IsSpreadsheetFile())
                 .FirstOrDefault();
@@ -174,7 +166,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ColorAsLeafElementTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             var testfile = CopyTestFiles(@"wordprocessing", true, "complex0.docx", f => f.IsWordprocessingFile())
                 .FirstOrDefault();
 
@@ -225,7 +216,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void FieldCodeAsLeafTextElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             var testfile = CopyTestFiles(@"wordprocessing", true, "complex0.docx", f => f.IsWordprocessingFile())
                 .FirstOrDefault();
 
@@ -278,7 +268,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug225919_MitigateNamespaceIssue()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             //var testfiles = GetTestfile(@"wordprocessing", MethodInfo.GetCurrentMethod().Name)
             //    .Where(f => f.IsWordprocessingFile());
             //var testfiles = GetTestfile(@"spreadsheet", MethodInfo.GetCurrentMethod().Name)

@@ -10,12 +10,17 @@ using DocumentFormat.OpenXml.Presentation;
 using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Wordprocessing;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-
     public class DocumentTraverseTest : OpenXmlDomTestBase
     {
+        public DocumentTraverseTest(ITestOutputHelper output)
+            : base(output)
+        {
+        }
+
         /// <summary>
         /// Traversing up the specified Document Part using Parent, Ancestors(), and Ancestors&ltT&gt Methods
         /// </summary>
@@ -144,7 +149,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        /// Traversing siblings of the specified element using PreviousSibling, PreviousSibling &lt T &gt 
+        /// Traversing siblings of the specified element using PreviousSibling, PreviousSibling &lt T &gt
         /// NextSibling, NextSibling&ltT&gt, ElementsBefore, ElementsAfter, IsBefore, IsAfter"/>
         /// </summary>
         /// <typeparam name="U">Type of the sibling used by generic traversing method</typeparam>
@@ -268,7 +273,6 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void TraverseWordDocument()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             //description = " Case ID: 75567, 75568, 75505, 75506, 76083, 76084";
             foreach (var testfile in CopyTestFiles(Path.Combine(@"wordprocessing", "paragraph"), false, 3))
             {
@@ -315,7 +319,6 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void TraverseSpreadSheetDocument()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             foreach (var testfile in CopyTestFiles(Path.Combine(@"spreadsheet", "smallset"), false, 3))
             {
                 Log.BeginGroup(testfile.Name);
@@ -362,7 +365,6 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void TraversePPTDocument()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             foreach (var testfile in CopyTestFiles(Path.Combine(@"presentation", "smallset"), false, 3))
             {
                 Log.BeginGroup(testfile.Name);
