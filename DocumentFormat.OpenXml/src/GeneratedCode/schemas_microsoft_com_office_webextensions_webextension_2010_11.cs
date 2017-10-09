@@ -25,12 +25,12 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(WebExtensionStoreReference),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(WebExtensionReferenceList),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(WebExtensionPropertyBag),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(WebExtensionBindingList),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(Snapshot),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(WebExtensionStoreReference),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(WebExtensionReferenceList),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(WebExtensionPropertyBag),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(WebExtensionBindingList),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(Snapshot),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class WebExtension : OpenXmlPartRootElement
@@ -68,7 +68,7 @@ public partial class WebExtension : OpenXmlPartRootElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -372,7 +372,7 @@ if( 0 == namespaceId && "frozen" == name)
 }
 /// <summary>
 /// <para>Defines the WebExtensionReference Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is we:webextensionref.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -413,7 +413,7 @@ public partial class WebExtensionReference : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -486,7 +486,7 @@ public partial class WebExtensionReference : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the WebExtensionProperty Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is we:property.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -527,7 +527,7 @@ public partial class WebExtensionProperty : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -612,7 +612,7 @@ if( 0 == namespaceId && "value" == name)
 }
 /// <summary>
 /// <para>Defines the OfficeArtExtensionList Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is we:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -660,7 +660,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -730,7 +730,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the WebExtensionBinding Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is we:binding.</para>
 /// </summary>
 /// <remarks>
@@ -740,7 +740,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class WebExtensionBinding : OpenXmlCompositeElement
@@ -778,7 +778,7 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -949,7 +949,7 @@ if( 0 == namespaceId && "appref" == name)
 }
 /// <summary>
 /// <para>Defines the WebExtensionStoreReference Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is we:reference.</para>
 /// </summary>
 /// <remarks>
@@ -959,7 +959,7 @@ if( 0 == namespaceId && "appref" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class WebExtensionStoreReference : OpenXmlCompositeElement
@@ -997,7 +997,7 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1182,7 +1182,7 @@ if( 0 == namespaceId && "storeType" == name)
 }
 /// <summary>
 /// <para>Defines the WebExtensionReferenceList Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is we:alternateReferences.</para>
 /// </summary>
 /// <remarks>
@@ -1192,7 +1192,7 @@ if( 0 == namespaceId && "storeType" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(WebExtensionStoreReference),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(WebExtensionStoreReference),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class WebExtensionReferenceList : OpenXmlCompositeElement
@@ -1230,7 +1230,7 @@ public partial class WebExtensionReferenceList : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1300,7 +1300,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the WebExtensionPropertyBag Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is we:properties.</para>
 /// </summary>
 /// <remarks>
@@ -1310,7 +1310,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(WebExtensionProperty),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(WebExtensionProperty),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class WebExtensionPropertyBag : OpenXmlCompositeElement
@@ -1348,7 +1348,7 @@ public partial class WebExtensionPropertyBag : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1418,7 +1418,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the WebExtensionBindingList Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is we:bindings.</para>
 /// </summary>
 /// <remarks>
@@ -1428,7 +1428,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(WebExtensionBinding),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(WebExtensionBinding),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class WebExtensionBindingList : OpenXmlCompositeElement
@@ -1466,7 +1466,7 @@ public partial class WebExtensionBindingList : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1536,7 +1536,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the Snapshot Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is we:snapshot.</para>
 /// </summary>
 /// <remarks>
@@ -1618,7 +1618,7 @@ public partial class Snapshot : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}

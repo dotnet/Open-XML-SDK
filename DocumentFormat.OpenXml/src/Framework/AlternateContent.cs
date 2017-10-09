@@ -816,7 +816,7 @@ namespace DocumentFormat.OpenXml
 
         internal AttributeAction GetAttributeAction(string ns, string localName, FileFormatVersions format)
         {
-            if (format == (FileFormatVersions.Office2010|FileFormatVersions.Office2007) || format == (FileFormatVersions.Office2010|FileFormatVersions.Office2007|FileFormatVersions.Office2013))
+            if (format == (FileFormatVersions.Office2010 | FileFormatVersions.Office2007) || format == (FileFormatVersions.Office2010 | FileFormatVersions.Office2007 | FileFormatVersions.Office2013 | FileFormatVersions.Office2016))
             {
                 return AttributeAction.Normal;
             }
@@ -846,7 +846,7 @@ namespace DocumentFormat.OpenXml
 
         internal ElementAction GetElementAction(OpenXmlElement element, FileFormatVersions format)
         {
-            if (format == (FileFormatVersions.Office2010 | FileFormatVersions.Office2007) || format == (FileFormatVersions.Office2010 | FileFormatVersions.Office2007 | FileFormatVersions.Office2013))
+            if (format == (FileFormatVersions.Office2010 | FileFormatVersions.Office2007) || format == (FileFormatVersions.Office2010 | FileFormatVersions.Office2007 | FileFormatVersions.Office2013 | FileFormatVersions.Office2016))
             {
                 return ElementAction.Normal;
             }
@@ -1003,7 +1003,7 @@ namespace DocumentFormat.OpenXml
         #region Helper functions
         internal OpenXmlCompositeElement GetContentFromACBlock(AlternateContent acblk, FileFormatVersions format)
         {
-            Debug.Assert(format != (FileFormatVersions.Office2007 | FileFormatVersions.Office2010 | FileFormatVersions.Office2013));
+            Debug.Assert(format != (FileFormatVersions.Office2007 | FileFormatVersions.Office2010 | FileFormatVersions.Office2013 | FileFormatVersions.Office2016));
 
             foreach (var choice in acblk.ChildElements.OfType<AlternateContentChoice>())
             {

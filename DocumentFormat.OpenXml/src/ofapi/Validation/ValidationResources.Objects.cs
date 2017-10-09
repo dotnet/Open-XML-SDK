@@ -16,8 +16,10 @@ namespace DocumentFormat.OpenXml.Validation
                     return GetEmbeddedResource("O14SchemaConstraintDatas");
                 case FileFormatVersions.Office2013:
                     return GetEmbeddedResource("O15SchemaConstraintDatas");
+                case FileFormatVersions.Office2016:
+                    return GetEmbeddedResource("O16SchemaConstraintDatas");
                 default:
-                    Debug.Assert(fileFormat == FileFormatVersions.Office2007 || fileFormat == FileFormatVersions.Office2010 || fileFormat == FileFormatVersions.Office2013);
+                    Debug.Assert(fileFormat == FileFormatVersions.Office2007 || fileFormat == FileFormatVersions.Office2010 || fileFormat == FileFormatVersions.Office2013 || fileFormat == FileFormatVersions.Office2016);
                     return GetEmbeddedResource("O12SchemaConstraintDatas");
             }
         }

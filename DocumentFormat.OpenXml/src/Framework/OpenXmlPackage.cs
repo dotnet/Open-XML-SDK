@@ -724,7 +724,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             this.ThrowIfObjectDisposed();
             Debug.Assert(validationSettings != null);
-            Debug.Assert(fileFormatVersion == FileFormatVersions.Office2007 || fileFormatVersion == FileFormatVersions.Office2010 || fileFormatVersion == FileFormatVersions.Office2013);
+            Debug.Assert(fileFormatVersion == FileFormatVersions.Office2007 || fileFormatVersion == FileFormatVersions.Office2010 || fileFormatVersion == FileFormatVersions.Office2013 || fileFormatVersion == FileFormatVersions.Office2016);
 
             validationSettings.FileFormat = fileFormatVersion;
 

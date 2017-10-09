@@ -252,6 +252,15 @@ namespace DocumentFormat.OpenXml {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The validator is set to validate content based on Microsoft Office 2016 rules. The passed in element is not defined in Microsoft Office 2016..
+        /// </summary>
+        internal static string ElementIsNotInOffice2016 {
+            get {
+                return ResourceManager.GetString("ElementIsNotInOffice2016", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cannot insert the OpenXmlElement &quot;newChild&quot; because it is part of a tree. .
         /// </summary>
         internal static string ElementIsPartOfTree {
@@ -692,6 +701,15 @@ namespace DocumentFormat.OpenXml {
         internal static string PartIsNotInOffice2013 {
             get {
                 return ResourceManager.GetString("PartIsNotInOffice2013", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The validator is set to validate content based on Microsoft Office 2016 rules. The passed in part is not defined in Microsoft Office 2016..
+        /// </summary>
+        internal static string PartIsNotInOffice2016 {
+            get {
+                return ResourceManager.GetString("PartIsNotInOffice2016", resourceCulture);
             }
         }
         
