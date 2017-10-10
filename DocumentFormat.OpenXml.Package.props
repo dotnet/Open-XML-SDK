@@ -4,6 +4,7 @@
     <Version></Version>
     <AssemblyInformationalVersion></AssemblyInformationalVersion>
     <Authors>Microsoft</Authors>
+    <Summary>Provides tooling to create, manipulate, and update Office documents</Summary>
     <Description><![CDATA[The Open XML SDK provides open-source libraries for working with Open XML Documents (DOCX, XLSX, and PPTX). It supports scenarios such as:
 
 - High-performance generation of word-processing documents, spreadsheets, and presentations.
