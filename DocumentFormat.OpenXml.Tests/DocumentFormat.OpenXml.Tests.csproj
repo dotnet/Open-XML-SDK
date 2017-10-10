@@ -1,6 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />
-
+  
   <PropertyGroup>
     <TargetFrameworks>net452;net46;netcoreapp1.0</TargetFrameworks>
     <AssemblyName>DocumentFormat.OpenXml.Tests</AssemblyName>
@@ -58,5 +57,4 @@
     </None>
   </ItemGroup>
 
-  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>
