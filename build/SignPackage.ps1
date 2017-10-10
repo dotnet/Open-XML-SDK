@@ -4,7 +4,7 @@ $currentDirectory = split-path $MyInvocation.MyCommand.Definition
 $appSettings = "$currentDirectory\SignClientSettings.json"
 $appPath = "$currentDirectory\SignClient\tools\SignClient.dll"
 
-$nupkg = Get-ChildItem $currentDirectory\..\DocumentFormat.OpenXML\*.nupkg -Recurse
+$nupkg = Get-ChildItem $currentDirectory\..\bin\*.nupkg -Recurse
 
 if($nupkg.Count -ne 1)
 {
