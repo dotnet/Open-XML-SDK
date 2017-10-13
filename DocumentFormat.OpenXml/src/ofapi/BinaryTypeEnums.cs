@@ -651,7 +651,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 case AlternativeFormatImportPartType.Html:
                     return ".htm";
 
-                
                 default:
                     return ".dat";
             }

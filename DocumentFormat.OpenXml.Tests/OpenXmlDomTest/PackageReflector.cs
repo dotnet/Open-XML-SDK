@@ -162,7 +162,6 @@ namespace DocumentFormat.OpenXml.Tests
                 throw new Exception("Not Supported Document Type!");
         }
 
-
         /// <summary>
         /// Build an in-memory Package instance of given type
         /// </summary>

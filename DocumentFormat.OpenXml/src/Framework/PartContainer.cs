@@ -521,7 +521,6 @@ namespace DocumentFormat.OpenXml.Packaging
             return dataPartReferenceRelationship;
         }
 
-
         #endregion
 
         #region methods to operate parts
@@ -677,8 +676,6 @@ namespace DocumentFormat.OpenXml.Packaging
             return (T)AddPartFrom(part, null);
         }
 
-
-
         /// <summary>
         /// Adds the part to the document with a given relationship identifier (ID).
         /// Must use the returned part to operate on the part added to the document
@@ -718,7 +715,6 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new InvalidOperationException(ExceptionMessages.PartNotInSamePackage);
             }
-                
 
             OpenXmlPart addedPart = AddPart<OpenXmlPart>(targetPart);
             string relationshipId = this.GetIdOfPart(addedPart);
@@ -929,7 +925,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 DeletePart(relationshipId);
             }
         }
-
 
         /// <summary>
         /// Gets the count of all parts of type T.
@@ -1146,7 +1141,6 @@ namespace DocumentFormat.OpenXml.Packaging
                     }
                 }
             }
-
 
         }
 
@@ -1709,7 +1703,6 @@ namespace DocumentFormat.OpenXml.Packaging
                     child.AddHyperlinkRelationship(hyperlinkRel.Uri, hyperlinkRel.IsExternal, hyperlinkRel.Id);
                 }
 
-
                 // First, we need copy the referenced media data part.
                 foreach (var dataPartReferenceRelationship in part.DataPartReferenceRelationships)
                 {
@@ -1756,7 +1749,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         }
 
-
         /// <summary>
         /// Attachs the child to the package (create the relationship)
         /// </summary>
@@ -1766,7 +1758,6 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             return AttachChild(part, null);
         }
-
 
         /// <summary>
         /// Attachs the child to the package (create the relationship)
@@ -2128,7 +2119,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 partOccurs[part.RelationshipType] = occurs + 1;
 
-
                 if (!(this is ExtendedPart) &&
                     !this.GetPartConstraint().Keys.Contains(part.RelationshipType) &&
                     part.IsInVersion(validationSettings.FileFormat))
@@ -2189,7 +2179,6 @@ namespace DocumentFormat.OpenXml.Packaging
                     }
                 }
             }
-
 
             foreach (OpenXmlPart part in this.ChildrenParts.Values)
             {
@@ -2349,7 +2338,6 @@ namespace DocumentFormat.OpenXml.Packaging
             set { this._id = value; }
         }
 
-
         /// <summary>
         /// Gets or sets the OpenXmlPart in the pair.
         /// </summary>
@@ -2386,7 +2374,6 @@ namespace DocumentFormat.OpenXml.Packaging
             return (this._id.Equals(value._id)) && (this._part == value._part);
         }
     }
-
 
     /// <summary>
     /// Global OpenXmlPart factory to create strong typed OpenXmlPart based on the relationship type.

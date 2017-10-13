@@ -10,7 +10,6 @@ using Xunit;
 namespace DocumentFormat.OpenXml.Tests
 {
 
-
     /// <summary>
     ///This is a test class for AnyParticleValidatorTest and is intended
     ///to contain all AnyParticleValidatorTest Unit Tests

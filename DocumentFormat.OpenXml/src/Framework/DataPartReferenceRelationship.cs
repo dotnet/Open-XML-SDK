@@ -44,7 +44,6 @@ namespace DocumentFormat.OpenXml.Packaging
             private set;
         }
 
-
         /// <summary>
         /// Initializes the current instance of the DataPartRelationship class.
         /// </summary>
@@ -61,7 +60,6 @@ namespace DocumentFormat.OpenXml.Packaging
             this.Container = containter;
             this.DataPart = dataPart;
         }
-
 
         internal static bool IsDataPartReferenceRelationship(string relationshipType)
         {

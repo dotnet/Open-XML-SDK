@@ -78,7 +78,6 @@ namespace DocumentFormat.OpenXml.Tests
               //  </xs:choice>
               //</xs:group>
 
-
             // ***** good case ******
             // empty is ok
             target.Validate(validationContext);

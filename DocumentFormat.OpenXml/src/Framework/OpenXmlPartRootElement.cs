@@ -8,7 +8,6 @@ using System.Xml;
 using System.Diagnostics;
 using DocumentFormat.OpenXml.Packaging;
 
-
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
@@ -41,7 +40,6 @@ namespace DocumentFormat.OpenXml
         {
             this._elementContext = new OpenXmlElementContext();
         }
-
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPartRootElement class using the supplied OpenXmlPart.
@@ -141,7 +139,6 @@ namespace DocumentFormat.OpenXml
             using (XmlReader xmlReader = XmlConvertingReaderFactory.Create(partStream, this.OpenXmlElementContext.XmlReaderSettings, openXmlPart.OpenXmlPackage.StrictTranslation))
             {
                 this.OpenXmlElementContext.MCSettings = openXmlPart.MCSettings;
-
 
                 xmlReader.Read();
 

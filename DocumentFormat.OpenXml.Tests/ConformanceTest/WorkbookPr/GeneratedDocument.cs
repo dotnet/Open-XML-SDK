@@ -849,6 +849,5 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPrClass
             document.PackageProperties.LastModifiedBy = "Dan Ito";
         }
 
-
     }
 }

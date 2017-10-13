@@ -33,7 +33,6 @@ namespace DocumentFormat.OpenXml.Tests
             string file = System.IO.Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
             CopyFileStream(TestFileStreams.mcdoc, file);
 
-
             using (WordprocessingDocument testDocument = WordprocessingDocument.Open(file, true))
             {
                 OpenXmlPart target = testDocument.MainDocumentPart;
@@ -291,7 +290,6 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Equal(2, rprDefault.GetAttributes().Count);
             }
 
-
             //process whole package ,should process style part
 
             settings.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007);
@@ -407,7 +405,6 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var docNode = doc.MainDocumentPart.Document;
             }
-
 
             //open it again, mark sure in font part, the "w14" prefix is still recognized
             using (WordprocessingDocument testDocument = WordprocessingDocument.Open(file, true))

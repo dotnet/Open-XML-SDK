@@ -2576,6 +2576,5 @@ namespace DocumentFormat.OpenXml.Tests.FootnoteColumnsClass
             document.PackageProperties.LastModifiedBy = "Dan Ito";
         }
 
-
     }
 }

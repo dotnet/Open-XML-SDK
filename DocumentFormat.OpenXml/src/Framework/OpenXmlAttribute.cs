@@ -170,7 +170,6 @@ namespace DocumentFormat.OpenXml
             return !(attribute1 == attribute2);
         }
 
-
         ///// <summary>
         ///// Determines if two instances of OpenXmlAttribute structures are equal.
         ///// </summary>
@@ -198,7 +197,6 @@ namespace DocumentFormat.OpenXml
             OpenXmlAttribute attribute = (OpenXmlAttribute)obj;
             return this.Equals(attribute);
         }
-
 
         // FDG ***** DO override GetHashCode whenever you override Equals.
 
