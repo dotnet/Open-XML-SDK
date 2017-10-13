@@ -6,6 +6,7 @@
 
   <PropertyGroup>
     <DebugType>portable</DebugType>
+    <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)\rules.ruleset</CodeAnalysisRuleSet>
 
     <!-- Signing -->
     <SignAssembly>true</SignAssembly>
