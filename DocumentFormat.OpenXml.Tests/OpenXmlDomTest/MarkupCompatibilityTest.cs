@@ -1596,7 +1596,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        //[Fact]
+        [Fact(Skip = "Currently failing")]
         public void Preserve_Ignored_UnknownElement_Wildcard_O12Mode()
         {
             var testfiles = CopyTestFiles(@"bvt");
@@ -1657,7 +1657,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        //[Fact]
+        [Fact(Skip = "Currently failing")]
         public void Validate_Preserve_Ignored_UnknownElement_Wildcard()
         {
             var testfiles = CopyTestFiles(@"bvt");

@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml.Tests
             // at the end of the run
             Assert.False(targetReader.EOF);
             Assert.NotNull(targetReader.Attributes);
-            Assert.Equal(0, targetReader.Attributes.Count);
+            Assert.Empty(targetReader.Attributes);
             Assert.False(targetReader.HasAttributes);
             Assert.False(targetReader.IsStartElement);
             Assert.True(targetReader.IsEndElement);
@@ -55,7 +55,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // loaded element is Run
             Assert.NotNull(element);
-            Assert.IsType(typeof(Run), element);
+            Assert.IsType<Run>(element);
 
             Run run = (Run)element;
             Assert.Equal("Run Text.", (run.FirstChild as Text).Text);
@@ -394,7 +394,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Assert.False(targetReader.EOF);
             Assert.NotNull(targetReader.Attributes);
-            Assert.Equal(0, targetReader.Attributes.Count);
+            Assert.Empty(targetReader.Attributes);
             Assert.False(targetReader.HasAttributes);
             Assert.True(targetReader.IsStartElement);
             Assert.False(targetReader.IsEndElement);
@@ -409,7 +409,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Assert.False(targetReader.EOF);
             Assert.NotNull(targetReader.Attributes);
-            Assert.Equal(0, targetReader.Attributes.Count);
+            Assert.Empty(targetReader.Attributes);
             Assert.False(targetReader.HasAttributes);
             Assert.False(targetReader.IsStartElement);
             Assert.True(targetReader.IsEndElement);
@@ -424,7 +424,7 @@ namespace DocumentFormat.OpenXml.Tests
             // at </w:p>
             Assert.False(targetReader.EOF);
             Assert.NotNull(targetReader.Attributes);
-            Assert.Equal(0, targetReader.Attributes.Count);
+            Assert.Empty(targetReader.Attributes);
             Assert.False(targetReader.HasAttributes);
             Assert.False(targetReader.IsStartElement);
             Assert.True(targetReader.IsEndElement);
@@ -434,7 +434,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // loaded element is Run
             Assert.NotNull(element);
-            Assert.IsType(typeof(Paragraph), element);
+            Assert.IsType<Paragraph>(element);
 
             Run run = (Run)(element.FirstChild);
             Assert.Equal("Run Text.", (run.FirstChild as Text).Text);
@@ -447,13 +447,13 @@ namespace DocumentFormat.OpenXml.Tests
         ///<summary>
         ///TestReaderOnPragraph.
         ///</summary>
-        public void TestReaderOnParagraph(OpenXmlReader targetReader)
+        private void TestReaderOnParagraph(OpenXmlReader targetReader)
         {
             bool moved = false;
 
             Assert.False(targetReader.EOF);
             Assert.NotNull(targetReader.Attributes);
-            Assert.Equal(1, targetReader.Attributes.Count);
+            Assert.Single(targetReader.Attributes);
             Assert.True(targetReader.HasAttributes);
             Assert.True(targetReader.IsStartElement);
             Assert.False(targetReader.IsEndElement);
@@ -466,7 +466,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(moved);
             Assert.False(targetReader.EOF);
             Assert.NotNull(targetReader.Attributes);
-            Assert.Equal(0, targetReader.Attributes.Count);
+            Assert.Empty(targetReader.Attributes);
             Assert.False(targetReader.HasAttributes);
             Assert.True(targetReader.IsStartElement);
             Assert.False(targetReader.IsEndElement);
@@ -479,7 +479,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(moved);
             Assert.False(targetReader.EOF);
             Assert.NotNull(targetReader.Attributes);
-            Assert.Equal(0, targetReader.Attributes.Count);
+            Assert.Empty(targetReader.Attributes);
             Assert.False(targetReader.HasAttributes);
             Assert.True(targetReader.IsStartElement);
             Assert.False(targetReader.IsEndElement);
@@ -493,7 +493,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(moved);
             Assert.False(targetReader.EOF);
             Assert.NotNull(targetReader.Attributes);
-            Assert.Equal(0, targetReader.Attributes.Count);
+            Assert.Empty(targetReader.Attributes);
             Assert.False(targetReader.HasAttributes);
             Assert.False(targetReader.IsStartElement);
             Assert.True(targetReader.IsEndElement);
@@ -506,7 +506,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(moved);
             Assert.False(targetReader.EOF);
             Assert.NotNull(targetReader.Attributes);
-            Assert.Equal(0, targetReader.Attributes.Count);
+            Assert.Empty(targetReader.Attributes);
             Assert.False(targetReader.HasAttributes);
             Assert.True(targetReader.IsStartElement);
             Assert.False(targetReader.IsEndElement);
@@ -520,7 +520,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.False(moved);
             Assert.False(targetReader.EOF);
             Assert.NotNull(targetReader.Attributes);
-            Assert.Equal(0, targetReader.Attributes.Count);
+            Assert.Empty(targetReader.Attributes);
             Assert.False(targetReader.HasAttributes);
             Assert.False(targetReader.IsStartElement);
             Assert.True(targetReader.IsEndElement);
@@ -533,7 +533,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(moved);
             Assert.False(targetReader.EOF);
             Assert.NotNull(targetReader.Attributes);
-            Assert.Equal(0, targetReader.Attributes.Count);
+            Assert.Empty(targetReader.Attributes);
             Assert.False(targetReader.HasAttributes);
             Assert.False(targetReader.IsStartElement);
             Assert.True(targetReader.IsEndElement);

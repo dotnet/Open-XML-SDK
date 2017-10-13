@@ -81,13 +81,13 @@ namespace DocumentFormat.OpenXml.Tests
             errorChild = rRowColumn.PrependChild(new Paragraph());
             target.Validate(validationContext);
             Assert.False(actual.Valid);
-            Assert.Equal(1, actual.Errors.Count);
+            Assert.Single(actual.Errors);
             Assert.Same(expected, actual.Errors[0].Node);
             Assert.Same(errorChild, actual.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.True(actual.Errors[0].Description.Contains(":undo"));
-            Assert.True(actual.Errors[0].Description.Contains(":rfmt"));
+            Assert.Contains(":undo", actual.Errors[0].Description);
+            Assert.Contains(":rfmt", actual.Errors[0].Description);
 
             actual.Clear();
             //invalid child in middle
@@ -95,13 +95,13 @@ namespace DocumentFormat.OpenXml.Tests
             errorChild = rRowColumn.InsertBefore(new Paragraph(), rRowColumn.LastChild);
             target.Validate(validationContext);
             Assert.False(actual.Valid);
-            Assert.Equal(1, actual.Errors.Count);
+            Assert.Single(actual.Errors);
             Assert.Same(expected, actual.Errors[0].Node);
             Assert.Same(errorChild, actual.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.True(actual.Errors[0].Description.Contains(":undo"));
-            Assert.True(actual.Errors[0].Description.Contains(":rfmt"));
+            Assert.Contains(":undo", actual.Errors[0].Description);
+            Assert.Contains(":rfmt", actual.Errors[0].Description);
 
             actual.Clear();
             //invalid child in last
@@ -109,13 +109,13 @@ namespace DocumentFormat.OpenXml.Tests
             errorChild = rRowColumn.AppendChild(new Paragraph());
             target.Validate(validationContext);
             Assert.False(actual.Valid);
-            Assert.Equal(1, actual.Errors.Count);
+            Assert.Single(actual.Errors);
             Assert.Same(expected, actual.Errors[0].Node);
             Assert.Same(errorChild, actual.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.True(actual.Errors[0].Description.Contains(":undo"));
-            Assert.True(actual.Errors[0].Description.Contains(":rfmt"));
+            Assert.Contains(":undo", actual.Errors[0].Description);
+            Assert.Contains(":rfmt", actual.Errors[0].Description);
 
         }
 
@@ -203,13 +203,13 @@ namespace DocumentFormat.OpenXml.Tests
             errorChild = ffData.PrependChild(new Paragraph());
             target.Validate(validationContext);
             Assert.False(actual.Valid);
-            Assert.Equal(1, actual.Errors.Count);
+            Assert.Single(actual.Errors);
             Assert.Same(expected, actual.Errors[0].Node);
             Assert.Same(errorChild, actual.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.True(actual.Errors[0].Description.Contains(":name"));
-            Assert.True(actual.Errors[0].Description.Contains(":textInput"));
+            Assert.Contains(":name", actual.Errors[0].Description);
+            Assert.Contains(":textInput", actual.Errors[0].Description);
 
             actual.Clear();
             //invalid child in middle
@@ -217,13 +217,13 @@ namespace DocumentFormat.OpenXml.Tests
             errorChild = ffData.InsertBefore(new Paragraph(), ffData.LastChild);
             target.Validate(validationContext);
             Assert.False(actual.Valid);
-            Assert.Equal(1, actual.Errors.Count);
+            Assert.Single(actual.Errors);
             Assert.Same(expected, actual.Errors[0].Node);
             Assert.Same(errorChild, actual.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.True(actual.Errors[0].Description.Contains(":name"));
-            Assert.True(actual.Errors[0].Description.Contains(":textInput"));
+            Assert.Contains(":name", actual.Errors[0].Description);
+            Assert.Contains(":textInput", actual.Errors[0].Description);
 
             actual.Clear();
             //invalid child in last
@@ -231,13 +231,13 @@ namespace DocumentFormat.OpenXml.Tests
             errorChild = ffData.AppendChild(new Paragraph());
             target.Validate(validationContext);
             Assert.False(actual.Valid);
-            Assert.Equal(1, actual.Errors.Count);
+            Assert.Single(actual.Errors);
             Assert.Same(expected, actual.Errors[0].Node);
             Assert.Same(errorChild, actual.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.True(actual.Errors[0].Description.Contains(":name"));
-            Assert.True(actual.Errors[0].Description.Contains(":textInput"));
+            Assert.Contains(":name", actual.Errors[0].Description);
+            Assert.Contains(":textInput", actual.Errors[0].Description);
         }
 
         private void TestSimpleChoice2(SdbSchemaDatas sdbSchemaDatas)
@@ -276,12 +276,12 @@ namespace DocumentFormat.OpenXml.Tests
             bldSub.RemoveAllChildren();
             target.Validate(validationContext);
             Assert.False(actual.Valid);
-            Assert.Equal(1, actual.Errors.Count);
+            Assert.Single(actual.Errors);
             Assert.Same(expected, actual.Errors[0].Node);
             Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
             Assert.Equal("Sch_IncompleteContentExpectingComplex", actual.Errors[0].Id);
-            Assert.True(actual.Errors[0].Description.Contains(":bldDgm"));
-            Assert.True(actual.Errors[0].Description.Contains(":bldChart"));
+            Assert.Contains(":bldDgm", actual.Errors[0].Description);
+            Assert.Contains(":bldChart", actual.Errors[0].Description);
 
             actual.Clear();
             // both element are exist
@@ -289,25 +289,25 @@ namespace DocumentFormat.OpenXml.Tests
             errorChild = bldSub.LastChild;
             target.Validate(validationContext);
             Assert.False(actual.Valid);
-            Assert.Equal(1, actual.Errors.Count);
+            Assert.Single(actual.Errors);
             Assert.Same(expected, actual.Errors[0].Node);
             Assert.Same(errorChild, actual.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.False(actual.Errors[0].Description.Contains(ValidationErrorStrings.Fmt_ListOfPossibleElements));
+            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, actual.Errors[0].Description);
 
             actual.Clear();
             //first is invalid
             errorChild = bldSub.PrependChild(new Paragraph());
             target.Validate(validationContext);
             Assert.False(actual.Valid);
-            Assert.Equal(1, actual.Errors.Count);
+            Assert.Single(actual.Errors);
             Assert.Same(expected, actual.Errors[0].Node);
             Assert.Same(errorChild, actual.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.True(actual.Errors[0].Description.Contains(":bldDgm"));
-            Assert.True(actual.Errors[0].Description.Contains(":bldChart"));
+            Assert.Contains(":bldDgm", actual.Errors[0].Description);
+            Assert.Contains(":bldChart", actual.Errors[0].Description);
 
         }
 
@@ -356,14 +356,14 @@ namespace DocumentFormat.OpenXml.Tests
             errorChild = fldChar.PrependChild(new Paragraph());
             target.Validate(validationContext);
             Assert.False(actual.Valid);
-            Assert.Equal(1, actual.Errors.Count);
+            Assert.Single(actual.Errors);
             Assert.Same(expected, actual.Errors[0].Node);
             Assert.Same(errorChild, actual.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.True(actual.Errors[0].Description.Contains(":fldData"));
-            Assert.True(actual.Errors[0].Description.Contains(":ffData"));
-            Assert.True(actual.Errors[0].Description.Contains(":numberingChange"));
+            Assert.Contains(":fldData", actual.Errors[0].Description);
+            Assert.Contains(":ffData", actual.Errors[0].Description);
+            Assert.Contains(":numberingChange", actual.Errors[0].Description);
 
             actual.Clear();
             // second is invalid
@@ -371,12 +371,12 @@ namespace DocumentFormat.OpenXml.Tests
             errorChild = fldChar.AppendChild(new Paragraph());
             target.Validate(validationContext);
             Assert.False(actual.Valid);
-            Assert.Equal(1, actual.Errors.Count);
+            Assert.Single(actual.Errors);
             Assert.Same(expected, actual.Errors[0].Node);
             Assert.Same(errorChild, actual.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.False(actual.Errors[0].Description.Contains(ValidationErrorStrings.Fmt_ListOfPossibleElements));
+            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, actual.Errors[0].Description);
 
             actual.Clear();
             // dup first child
@@ -385,12 +385,12 @@ namespace DocumentFormat.OpenXml.Tests
             errorChild = fldChar.LastChild;
             target.Validate(validationContext);
             Assert.False(actual.Valid);
-            Assert.Equal(1, actual.Errors.Count);
+            Assert.Single(actual.Errors);
             Assert.Same(expected, actual.Errors[0].Node);
             Assert.Same(errorChild, actual.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.False(actual.Errors[0].Description.Contains(ValidationErrorStrings.Fmt_ListOfPossibleElements));
+            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, actual.Errors[0].Description);
 
             actual.Clear();
             // two different
@@ -399,12 +399,12 @@ namespace DocumentFormat.OpenXml.Tests
             errorChild = fldChar.LastChild;
             target.Validate(validationContext);
             Assert.False(actual.Valid);
-            Assert.Equal(1, actual.Errors.Count);
+            Assert.Single(actual.Errors);
             Assert.Same(expected, actual.Errors[0].Node);
             Assert.Same(errorChild, actual.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.False(actual.Errors[0].Description.Contains(ValidationErrorStrings.Fmt_ListOfPossibleElements));
+            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, actual.Errors[0].Description);
 
             actual.Clear();
             // two different
@@ -413,12 +413,12 @@ namespace DocumentFormat.OpenXml.Tests
             errorChild = fldChar.LastChild;
             target.Validate(validationContext);
             Assert.False(actual.Valid);
-            Assert.Equal(1, actual.Errors.Count);
+            Assert.Single(actual.Errors);
             Assert.Same(expected, actual.Errors[0].Node);
             Assert.Same(errorChild, actual.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.False(actual.Errors[0].Description.Contains(ValidationErrorStrings.Fmt_ListOfPossibleElements));
+            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, actual.Errors[0].Description);
         }
     }
 }

@@ -13,27 +13,6 @@ namespace DocumentFormat.OpenXml.Tests
     public class OpenXmlCompositeElementTest
     {
         /// <summary>
-        ///A test for PrependChild
-        ///</summary>
-        public void PrependChildTestHelper<T>()
-            where T : OpenXmlElement
-        {
-            OpenXmlCompositeElement target = CreateOpenXmlCompositeElement();
-            T newChild = default(T);
-            T expected = default(T);
-            T actual;
-            actual = target.PrependChild<T>(newChild);
-            Assert.Equal(expected, actual);
-        }
-
-        internal virtual OpenXmlCompositeElement CreateOpenXmlCompositeElement()
-        {
-            // TODO: Instantiate an appropriate concrete class.
-            OpenXmlCompositeElement target = null;
-            return target;
-        }
-
-        /// <summary>
         /// Test the GetElement() / SetElement() in class OpenXmlCompositeElement
         /// </summary>
         [Fact]
@@ -121,14 +100,14 @@ namespace DocumentFormat.OpenXml.Tests
 
             W.Drawing drawing = new W.Drawing(outerXml);
 
-            Assert.IsType(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline), drawing.FirstChild);
-            Assert.IsType(typeof(DocumentFormat.OpenXml.Drawing.Graphic), drawing.FirstChild.FirstChild);
-            Assert.IsType(typeof(DocumentFormat.OpenXml.Drawing.GraphicData), drawing.FirstChild.FirstChild.FirstChild);
-            Assert.IsType(typeof(DocumentFormat.OpenXml.Drawing.LockedCanvas.LockedCanvas), drawing.FirstChild.FirstChild.FirstChild.FirstChild);
+            Assert.IsType<DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline>(drawing.FirstChild);
+            Assert.IsType<DocumentFormat.OpenXml.Drawing.Graphic>(drawing.FirstChild.FirstChild);
+            Assert.IsType<DocumentFormat.OpenXml.Drawing.GraphicData>(drawing.FirstChild.FirstChild.FirstChild);
+            Assert.IsType<DocumentFormat.OpenXml.Drawing.LockedCanvas.LockedCanvas>(drawing.FirstChild.FirstChild.FirstChild.FirstChild);
 
             DocumentFormat.OpenXml.Drawing.LockedCanvas.LockedCanvas lockedCanvas = drawing.FirstChild.FirstChild.FirstChild.FirstChild as DocumentFormat.OpenXml.Drawing.LockedCanvas.LockedCanvas;
 
-            Assert.IsType(typeof(DocumentFormat.OpenXml.Drawing.Run), lockedCanvas.FirstChild.FirstChild.FirstChild.FirstChild.FirstChild);
+            Assert.IsType<DocumentFormat.OpenXml.Drawing.Run>(lockedCanvas.FirstChild.FirstChild.FirstChild.FirstChild.FirstChild);
 
             DocumentFormat.OpenXml.Drawing.Run run = lockedCanvas.FirstChild.FirstChild.FirstChild.FirstChild.FirstChild as DocumentFormat.OpenXml.Drawing.Run;
 
@@ -149,9 +128,9 @@ namespace DocumentFormat.OpenXml.Tests
 
             OpenXmlUnknownElement unknownElement = OpenXmlUnknownElement.CreateOpenXmlUnknownElement(outerXml);
 
-            Assert.IsType(typeof(OpenXmlUnknownElement), unknownElement.FirstChild);
-            Assert.IsType(typeof(OpenXmlUnknownElement), unknownElement.FirstChild.FirstChild);
-            Assert.IsType(typeof(OpenXmlUnknownElement), unknownElement.FirstChild.FirstChild.FirstChild);
+            Assert.IsType<OpenXmlUnknownElement>(unknownElement.FirstChild);
+            Assert.IsType<OpenXmlUnknownElement>(unknownElement.FirstChild.FirstChild);
+            Assert.IsType<OpenXmlUnknownElement>(unknownElement.FirstChild.FirstChild.FirstChild);
             // Assert.IsType(unknownElement.FirstChild.FirstChild.FirstChild.FirstChild, typeof(OpenXmlMiscNode));
             Assert.Equal("Text in <drawing>.", (unknownElement.FirstChild.FirstChild.FirstChild as OpenXmlUnknownElement).Text);
 
@@ -162,11 +141,11 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("txBody", clonedElement.LocalName);
             Assert.Equal("a", clonedElement.Prefix);
             Assert.Equal("http://schemas.openxmlformats.org/drawingml/2006/main", clonedElement.NamespaceUri);
-            Assert.IsType(typeof(OpenXmlUnknownElement), clonedElement);
+            Assert.IsType<OpenXmlUnknownElement>(clonedElement);
 
-            Assert.IsType(typeof(OpenXmlUnknownElement), clonedElement.FirstChild);
-            Assert.IsType(typeof(OpenXmlUnknownElement), clonedElement.FirstChild.FirstChild);
-            Assert.IsType(typeof(OpenXmlUnknownElement), clonedElement.FirstChild.FirstChild.FirstChild);
+            Assert.IsType<OpenXmlUnknownElement>(clonedElement.FirstChild);
+            Assert.IsType<OpenXmlUnknownElement>(clonedElement.FirstChild.FirstChild);
+            Assert.IsType<OpenXmlUnknownElement>(clonedElement.FirstChild.FirstChild.FirstChild);
             //Assert.IsType(typeof(OpenXmlMiscNode), clonedElement.FirstChild.FirstChild.FirstChild.FirstChild);
             Assert.Equal("Text in <drawing>.", (clonedElement.FirstChild.FirstChild.FirstChild as OpenXmlUnknownElement).Text);
 

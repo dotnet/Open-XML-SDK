@@ -27,13 +27,13 @@ namespace DocumentFormat.OpenXml.Tests
                     OpenXmlPart target = testDocument.MainDocumentPart;
                     OpenXmlPartRootElement actual;
                     actual = target.RootElement;
-                    Assert.IsType(typeof(Document), actual);
+                    Assert.IsType<Document>(actual);
                     Assert.Same(testDocument.MainDocumentPart.Document, actual);
 
 
                     target = testDocument.MainDocumentPart.WordprocessingCommentsPart;
                     actual = target.RootElement;
-                    Assert.IsType(typeof(Comments), actual);
+                    Assert.IsType<Comments>(actual);
                     Assert.Same(testDocument.MainDocumentPart.WordprocessingCommentsPart.Comments, actual);
 
                     target = testDocument.MainDocumentPart.ImageParts.First();
@@ -71,11 +71,11 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     OpenXmlValidator validator = new OpenXmlValidator();
                     var errors = validator.Validate(testDocument);
-                    Assert.Equal(0, errors.Count());
+                    Assert.Empty(errors);
 
                     var mainPart = testDocument.MainDocumentPart;
 
-                    Assert.Equal(0, mainPart.ExternalRelationships.Count());
+                    Assert.Empty(mainPart.ExternalRelationships);
                     Assert.Equal(71, mainPart.HyperlinkRelationships.Count());
 
                     var rid15 = mainPart.GetReferenceRelationship("rId15");
@@ -108,7 +108,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.Equal(HyperlinkRelationship.RelationshipTypeConst, newRel.RelationshipType);
 
                     mainPart.DeleteReferenceRelationship(ridnew);
-                    Assert.Equal(0, mainPart.HyperlinkRelationships.Count());
+                    Assert.Empty(mainPart.HyperlinkRelationships);
 
                     newUri = new System.Uri("http://microsoft.com", System.UriKind.Absolute);
                     ridnew = mainPart.AddHyperlinkRelationship(newUri, true, ridnew.Id);
@@ -187,7 +187,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var rId = mainDocPart.GetIdOfPart(mainDocPart.WordprocessingCommentsPart);
                     Assert.Equal("rId3", rId);
                     var rId1Part = mainDocPart.GetPartById("rId1");
-                    Assert.IsType(typeof(HeaderPart), rId1Part);
+                    Assert.IsType<HeaderPart>(rId1Part);
                     Assert.Same(headerPart, rId1Part);
                 }
 
@@ -201,7 +201,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var rId = mainDocPart.GetIdOfPart(mainDocPart.WordprocessingCommentsPart);
                     Assert.Equal("rId3", rId);
                     var headerPart = mainDocPart.GetPartById("rId1");
-                    Assert.IsType(typeof(HeaderPart), headerPart);
+                    Assert.IsType<HeaderPart>(headerPart);
                     Assert.Same(mainDocPart.HeaderParts.First(), headerPart);
                 }
             }
