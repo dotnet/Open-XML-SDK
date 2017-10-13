@@ -438,7 +438,7 @@ namespace DocumentFormat.OpenXml.Tests
                     OpenXmlPackagePartIterator iterator = new OpenXmlPackagePartIterator(document);
                     Assert.Equal(65, iterator.Count());
                     // There is one audio part.
-                    Assert.Equal(1, document.DataParts.Count());
+                    Assert.Single(document.DataParts);
                 }
             }
         }
@@ -570,7 +570,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                     // add new O14 part
                     doc.MainDocumentPart.AddNewPart<StylesWithEffectsPart>();
-                    Assert.IsType(typeof(StylesWithEffectsPart), doc.MainDocumentPart.StylesWithEffectsPart);
+                    Assert.IsType<StylesWithEffectsPart>(doc.MainDocumentPart.StylesWithEffectsPart);
                     // should no exception
                     doc.Validate(null);
 
@@ -642,11 +642,11 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (PresentationDocument testDocument = PresentationDocument.Open(stream, true))
                 {
-                    Assert.Equal(1, testDocument.DataParts.Count());
+                    Assert.Single(testDocument.DataParts);
 
                     var slidePart1 = testDocument.PresentationPart.SlideParts.First();
-                    Assert.Equal(1, slidePart1.DataPartReferenceRelationships.Count());
-                    Assert.IsType(typeof(MediaReferenceRelationship), slidePart1.DataPartReferenceRelationships.First());
+                    Assert.Single(slidePart1.DataPartReferenceRelationships);
+                    Assert.IsType<MediaReferenceRelationship>(slidePart1.DataPartReferenceRelationships.First());
                     var mediaReference = slidePart1.DataPartReferenceRelationships.First() as MediaReferenceRelationship;
                     Assert.Same(slidePart1, mediaReference.Container);
 
@@ -656,7 +656,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.Same(slidePart2, slidePart2.DataPartReferenceRelationships.Last().Container);
 
                     var dataPart = testDocument.DataParts.First();
-                    Assert.IsType(typeof(MediaDataPart), dataPart);
+                    Assert.IsType<MediaDataPart>(dataPart);
                     Assert.Same(testDocument, dataPart.OpenXmlPackage);
                     Assert.NotNull(dataPart.PackagePart);
                     Assert.Same(testDocument.Package.GetPart(dataPart.Uri), dataPart.PackagePart);
@@ -671,13 +671,13 @@ namespace DocumentFormat.OpenXml.Tests
 
                     // delete the old reference
                     slidePart1.DeleteReferenceRelationship(mediaReference);
-                    Assert.Equal(1, slidePart1.DataPartReferenceRelationships.Count());
+                    Assert.Single(slidePart1.DataPartReferenceRelationships);
                     Assert.Null(mediaReference.Container);
 
                     // delete one reference from slide2
                     DataPartReferenceRelationship dataPartReference = slidePart2.DataPartReferenceRelationships.First();
                     slidePart2.DeleteReferenceRelationship(dataPartReference.Id);
-                    Assert.Equal(1, slidePart2.DataPartReferenceRelationships.Count());
+                    Assert.Single(slidePart2.DataPartReferenceRelationships);
                     Assert.Null(mediaReference.Container);
 
                 }
@@ -687,20 +687,20 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (PresentationDocument testDocument = PresentationDocument.Open(stream, true))
                 {
-                    Assert.Equal(1, testDocument.DataParts.Count());
+                    Assert.Single(testDocument.DataParts);
 
                     var slidePart1 = testDocument.PresentationPart.SlideParts.First();
-                    Assert.Equal(1, slidePart1.DataPartReferenceRelationships.Count());
-                    Assert.IsType(typeof(AudioReferenceRelationship), slidePart1.DataPartReferenceRelationships.First());
+                    Assert.Single(slidePart1.DataPartReferenceRelationships);
+                    Assert.IsType<AudioReferenceRelationship>(slidePart1.DataPartReferenceRelationships.First());
                     var audioReference = slidePart1.DataPartReferenceRelationships.First() as AudioReferenceRelationship;
                     Assert.Same(slidePart1, audioReference.Container);
 
                     var slidePart2 = testDocument.PresentationPart.SlideParts.ElementAt(1);
-                    Assert.Equal(1, slidePart2.DataPartReferenceRelationships.Count());
+                    Assert.Single(slidePart2.DataPartReferenceRelationships);
                     Assert.Same(slidePart2, slidePart2.DataPartReferenceRelationships.First().Container);
 
                     var dataPart = testDocument.DataParts.First();
-                    Assert.IsType(typeof(MediaDataPart), dataPart);
+                    Assert.IsType<MediaDataPart>(dataPart);
                     Assert.Same(testDocument, dataPart.OpenXmlPackage);
                     Assert.NotNull(dataPart.PackagePart);
                     Assert.Same(testDocument.Package.GetPart(dataPart.Uri), dataPart.PackagePart);
@@ -713,10 +713,10 @@ namespace DocumentFormat.OpenXml.Tests
 
                     // dataPart is still there
                     dataPart = testDocument.DataParts.First();
-                    Assert.IsType(typeof(MediaDataPart), dataPart);
+                    Assert.IsType<MediaDataPart>(dataPart);
                     Assert.Same(testDocument, dataPart.OpenXmlPackage);
                     Assert.NotNull(dataPart.PackagePart);
-                    Assert.Equal(0, dataPart.GetDataPartReferenceRelationships().Count());
+                    Assert.Empty(dataPart.GetDataPartReferenceRelationships());
                 }
 
                 stream.Flush();
@@ -725,7 +725,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (PresentationDocument testDocument = PresentationDocument.Open(stream, false))
                 {
                     // there should be no data part any more
-                    Assert.Equal(0, testDocument.DataParts.Count());
+                    Assert.Empty(testDocument.DataParts);
                 }
             }
         }
@@ -743,11 +743,11 @@ namespace DocumentFormat.OpenXml.Tests
                     doc.AddPresentationPart();
                     var mediaDataPart = doc.CreateMediaDataPart("audio/wav", ".wav");
 
-                    Assert.True(mediaDataPart.Uri.OriginalString.EndsWith(".wav"));
+                    Assert.EndsWith(".wav", mediaDataPart.Uri.OriginalString);
 
                     var aviDataPart = doc.CreateMediaDataPart(MediaDataPartType.Avi);
 
-                    Assert.True(aviDataPart.Uri.OriginalString.EndsWith(".avi"));
+                    Assert.EndsWith(".avi", aviDataPart.Uri.OriginalString);
                 }
             }
         }

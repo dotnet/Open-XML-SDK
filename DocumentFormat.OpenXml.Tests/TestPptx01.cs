@@ -103,11 +103,11 @@ namespace DocumentFormat.OpenXml.Tests
                 CreatePresentation(doc);
                 OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                 var errs = v.Validate(doc);
-                Assert.Equal(0, errs.Count());
+                Assert.Empty(errs);
             }
         }
 
-        public static void CreatePresentation(PresentationDocument presentationDoc)
+        private static void CreatePresentation(PresentationDocument presentationDoc)
         {
             PresentationPart presentationPart = presentationDoc.AddPresentationPart();
             presentationPart.Presentation = new P.Presentation();

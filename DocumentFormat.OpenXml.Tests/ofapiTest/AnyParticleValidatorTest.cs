@@ -67,13 +67,13 @@ namespace DocumentFormat.OpenXml.Tests
             errorChild = textBox.AppendChild(new TextBox());
             target.Validate(validationContext);
             Assert.False(actual.Valid);
-            Assert.Equal(1, actual.Errors.Count);
+            Assert.Single(actual.Errors);
             Assert.Same(expected, actual.Errors[0].Node);
             Assert.Same(errorChild, actual.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.True(actual.Errors[0].Description.Contains(":txbxContent"));
-            Assert.True(actual.Errors[0].Description.Contains("##local"));
+            Assert.Contains(":txbxContent", actual.Errors[0].Description);
+            Assert.Contains("##local", actual.Errors[0].Description);
             textBox.RemoveChild(errorChild);
 
             actual.Clear();
@@ -81,13 +81,13 @@ namespace DocumentFormat.OpenXml.Tests
             errorChild = textBox.AppendChild(new OpenXmlUnknownElement("", "test", "http://test"));
             target.Validate(validationContext);
             Assert.False(actual.Valid);
-            Assert.Equal(1, actual.Errors.Count);
+            Assert.Single(actual.Errors);
             Assert.Same(expected, actual.Errors[0].Node);
             Assert.Same(errorChild, actual.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.True(actual.Errors[0].Description.Contains(":txbxContent"));
-            Assert.True(actual.Errors[0].Description.Contains("##local"));
+            Assert.Contains(":txbxContent", actual.Errors[0].Description);
+            Assert.Contains("##local", actual.Errors[0].Description);
             textBox.RemoveChild(errorChild);
 
             actual.Clear();
@@ -95,13 +95,13 @@ namespace DocumentFormat.OpenXml.Tests
             errorChild = textBox.AppendChild(new OpenXmlUnknownElement("t", "test", "http://test"));
             target.Validate(validationContext);
             Assert.False(actual.Valid);
-            Assert.Equal(1, actual.Errors.Count);
+            Assert.Single(actual.Errors);
             Assert.Same(expected, actual.Errors[0].Node);
             Assert.Same(errorChild, actual.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.True(actual.Errors[0].Description.Contains(":txbxContent"));
-            Assert.True(actual.Errors[0].Description.Contains("##local"));
+            Assert.Contains(":txbxContent", actual.Errors[0].Description);
+            Assert.Contains("##local", actual.Errors[0].Description);
             textBox.RemoveChild(errorChild);
 
             actual.Clear();
@@ -110,12 +110,12 @@ namespace DocumentFormat.OpenXml.Tests
             errorChild = textBox.AppendChild(new OpenXmlUnknownElement("errorElement"));
             target.Validate(validationContext);
             Assert.False(actual.Valid);
-            Assert.Equal(1, actual.Errors.Count);
+            Assert.Single(actual.Errors);
             Assert.Same(expected, actual.Errors[0].Node);
             Assert.Same(errorChild, actual.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.False(actual.Errors[0].Description.Contains(ValidationErrorStrings.Fmt_ListOfPossibleElements));
+            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, actual.Errors[0].Description);
             textBox.RemoveAllChildren();
 
             actual.Clear();
@@ -124,12 +124,12 @@ namespace DocumentFormat.OpenXml.Tests
             errorChild = textBox.AppendChild(new OpenXmlUnknownElement("test"));
             target.Validate(validationContext);
             Assert.False(actual.Valid);
-            Assert.Equal(1, actual.Errors.Count);
+            Assert.Single(actual.Errors);
             Assert.Same(expected, actual.Errors[0].Node);
             Assert.Same(errorChild, actual.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.False(actual.Errors[0].Description.Contains(ValidationErrorStrings.Fmt_ListOfPossibleElements));
+            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, actual.Errors[0].Description);
             textBox.RemoveAllChildren();
         }
     }

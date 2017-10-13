@@ -24,28 +24,28 @@ namespace DocumentFormat.OpenXml.Tests
             var ac = element.AppendChild(new AlternateContent());
             var errors = validator.Validate(ac).Errors;
             // Error case: must have one choice, can not have AlternateContent as di
-            Assert.Equal(1, errors.Count());
+            Assert.Single(errors);
             Assert.Equal("Sch_IncompleteContentExpectingComplex", errors[0].Id);
 
             ac.AddNamespaceDeclaration("o15", "http://o15.com");
             //ac.NamespaceDeclarations
             ac.AppendChild(new AlternateContentChoice() { Requires = "o15" });
             errors = validator.Validate(ac).Errors;
-            Assert.Equal(0, errors.Count());
+            Assert.Empty(errors);
 
             ac.AddNamespaceDeclaration("o14", "http://o14.com");
             ac.PrependChild(new AlternateContentChoice() { Requires = "o14" });
             errors = validator.Validate(ac).Errors;
-            Assert.Equal(0, errors.Count());
+            Assert.Empty(errors);
 
             ac.AppendChild(acFallback);
             errors = validator.Validate(ac).Errors;
-            Assert.Equal(0, errors.Count());
+            Assert.Empty(errors);
 
             // Error case: should not contains AlternateContent directly as child.
             ac.AppendChild(new AlternateContent());
             errors = validator.Validate(ac).Errors;
-            Assert.Equal(1, errors.Count());
+            Assert.Single(errors);
             Assert.Equal(ValidationErrorType.MarkupCompatibility, errors.First().ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", errors.First().Id);
             ac.RemoveChild(ac.LastChild);
@@ -53,7 +53,7 @@ namespace DocumentFormat.OpenXml.Tests
             // Error case: can only contains one Fallback.
             ac.AppendChild(new AlternateContentFallback());
             errors = validator.Validate(ac).Errors;
-            Assert.Equal(1, errors.Count());
+            Assert.Single(errors);
             Assert.Equal(ValidationErrorType.MarkupCompatibility, errors.First().ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", errors.First().Id);
             ac.RemoveChild(ac.LastChild);
@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml.Tests
             // Error case: wrong sequence
             ac.PrependChild(acFallback);
             errors = validator.Validate(ac).Errors;
-            Assert.Equal(1, errors.Count());
+            Assert.Single(errors);
             Assert.Equal(ValidationErrorType.MarkupCompatibility, errors.First().ErrorType);
             Assert.Equal("Sch_IncompleteContentExpectingComplex", errors.First().Id);
             ac.RemoveChild(acFallback);
@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Tests
             var langAttribute = new OpenXmlAttribute("xml:lang", "http://www.w3.org/XML/1998/namespace", "en-us");
             ac.SetAttribute(langAttribute);
             errors = validator.Validate(ac).Errors;
-            Assert.Equal(1, errors.Count());
+            Assert.Single(errors);
             Assert.Equal(ValidationErrorType.MarkupCompatibility, errors.First().ErrorType);
             Assert.Equal("MC_InvalidXmlAttribute", errors.First().Id);
             Assert.Equal( "The AlternateContent element should not have an xml:lang or xml:space attribute.", errors[0].Description);
@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             ac.FirstChild.SetAttribute(langAttribute);
             errors = validator.Validate(ac).Errors;
-            Assert.Equal(1, errors.Count());
+            Assert.Single(errors);
             Assert.Same(ac.FirstChild, errors[0].Node);
             Assert.Equal(ValidationErrorType.MarkupCompatibility, errors.First().ErrorType);
             Assert.Equal("MC_InvalidXmlAttribute", errors.First().Id);
@@ -88,7 +88,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             ac.LastChild.SetAttribute(langAttribute);
             errors = validator.Validate(ac).Errors;
-            Assert.Equal(1, errors.Count());
+            Assert.Single(errors);
             Assert.Same(ac.LastChild, errors[0].Node);
             Assert.Equal(ValidationErrorType.MarkupCompatibility, errors.First().ErrorType);
             Assert.Equal("MC_InvalidXmlAttribute", errors.First().Id);
@@ -98,7 +98,7 @@ namespace DocumentFormat.OpenXml.Tests
             AlternateContentChoice choice1 = ac.FirstChild as AlternateContentChoice;
             choice1.Requires = "o17 o15";
             errors = validator.Validate(ac).Errors;
-            Assert.Equal(1, errors.Count());
+            Assert.Single(errors);
             Assert.Equal(ValidationErrorType.MarkupCompatibility, errors.First().ErrorType);
             Assert.Same(choice1, errors[0].Node);
             Assert.Equal("MC_InvalidRequiresAttribute", errors.First().Id);
@@ -107,7 +107,7 @@ namespace DocumentFormat.OpenXml.Tests
             choice1.Requires = null;
             errors = validator.Validate(ac).Errors;
             Assert.Equal(ValidationErrorType.MarkupCompatibility, errors.First().ErrorType);
-            Assert.Equal(1, errors.Count());
+            Assert.Single(errors);
             Assert.Same(choice1, errors[0].Node);
             Assert.Equal("MC_MissedRequiresAttribute", errors.First().Id);
             Assert.Equal("All Choice elements must have a Requires attribute whose value contains a whitespace delimited list of namespace prefixes.", errors[0].Description);
@@ -154,7 +154,7 @@ namespace DocumentFormat.OpenXml.Tests
             run.MCAttributes.PreserveElements = "x15:* ";
             result = validator.Validate(element);
             Assert.False(result.Valid);
-            Assert.Equal(1, result.Errors.Count);
+            Assert.Single(result.Errors);
             Assert.Equal(ValidationErrorType.MarkupCompatibility, result.Errors[0].ErrorType);
             Assert.Equal("MC_InvalidPreserveElementsAttribute", result.Errors[0].Id);
 
@@ -164,7 +164,7 @@ namespace DocumentFormat.OpenXml.Tests
             run.MCAttributes.ProcessContent = "";
             result = validator.Validate(element);
             Assert.False(result.Valid);
-            Assert.Equal(1, result.Errors.Count);
+            Assert.Single(result.Errors);
             Assert.Equal(ValidationErrorType.MarkupCompatibility, result.Errors[0].ErrorType);
             Assert.Equal("MC_InvalidPreserveElementsAttribute", result.Errors[0].Id);
 
@@ -173,7 +173,7 @@ namespace DocumentFormat.OpenXml.Tests
             run.MCAttributes.PreserveElements = "w15:*";
             result = validator.Validate(element);
             Assert.False(result.Valid);
-            Assert.Equal(1, result.Errors.Count);
+            Assert.Single(result.Errors);
             Assert.Equal(ValidationErrorType.MarkupCompatibility, result.Errors[0].ErrorType);
             Assert.Equal("MC_InvalidPreserveElementsAttribute", result.Errors[0].Id);
             run.MCAttributes.PreserveElements = null;
@@ -181,7 +181,7 @@ namespace DocumentFormat.OpenXml.Tests
             run.MCAttributes.ProcessContent = "w14:newW";
             result = validator.Validate(element);
             Assert.False(result.Valid);
-            Assert.Equal(1, result.Errors.Count);
+            Assert.Single(result.Errors);
             Assert.Equal(ValidationErrorType.MarkupCompatibility, result.Errors[0].ErrorType);
             Assert.Equal("MC_InvalidProcessContentAttribute", result.Errors[0].Id);
             run.MCAttributes.ProcessContent = null;
@@ -191,7 +191,7 @@ namespace DocumentFormat.OpenXml.Tests
             run.SetAttribute(spaceAttribute);
             result = validator.Validate(element);
             Assert.False(result.Valid);
-            Assert.Equal(1, result.Errors.Count);
+            Assert.Single(result.Errors);
             Assert.Equal(ValidationErrorType.MarkupCompatibility, result.Errors[0].ErrorType);
             Assert.Equal("MC_InvalidXmlAttributeWithProcessContent", result.Errors[0].Id);
             run.MCAttributes.ProcessContent = null;
@@ -203,7 +203,7 @@ namespace DocumentFormat.OpenXml.Tests
             run.MCAttributes.Ignorable = "o15 w15 x15";
             result = validator.Validate(element);
             Assert.False(result.Valid);
-            Assert.Equal(1, result.Errors.Count);
+            Assert.Single(result.Errors);
             Assert.Equal(ValidationErrorType.MarkupCompatibility, result.Errors[0].ErrorType);
             Assert.Equal("MC_InvalidIgnorableAttribute", result.Errors[0].Id);
 
@@ -211,7 +211,7 @@ namespace DocumentFormat.OpenXml.Tests
             run.SetAttribute(new OpenXmlAttribute("x15:id", "http://x15.com", "1"));
             result = validator.Validate(element);
             Assert.False(result.Valid);
-            Assert.Equal(1, result.Errors.Count);
+            Assert.Single(result.Errors);
         }
 
         /// <summary>
@@ -295,16 +295,16 @@ namespace DocumentFormat.OpenXml.Tests
 
             var validator = new OpenXmlValidator();
             var errors = validator.Validate(p);
-            Assert.Equal(0, errors.Count());
+            Assert.Empty(errors);
 
             p.AppendChild(new OpenXmlUnknownElement("w15test", "art", "http://w15.com"));
             errors = validator.Validate(p);
-            Assert.Equal(1, errors.Count());
+            Assert.Single(errors);
             p.RemoveChild(p.LastChild);
 
             acb.LastChild.Append(new OpenXmlUnknownElement("w15test", "art", "http://w15.com"));
             errors = validator.Validate(p);
-            Assert.Equal(1, errors.Count());
+            Assert.Single(errors);
         }
 
 
@@ -329,14 +329,14 @@ namespace DocumentFormat.OpenXml.Tests
             // Should report error in the "Choice" branch.
             var validator = new OpenXmlValidator(FileFormatVersions.Office2010);
             var errors = validator.Validate(p);
-            Assert.Equal(1, errors.Count());
+            Assert.Single(errors);
             Assert.Same(acb.FirstChild.FirstChild, errors.First().Node);
 
 
             // Should report error in "Fallback" branch.
             validator = new OpenXmlValidator(FileFormatVersions.Office2007);
             errors = validator.Validate(p);
-            Assert.Equal(1, errors.Count());
+            Assert.Single(errors);
             Assert.Same(acb.LastChild.FirstChild, errors.First().Node);
         }
     }

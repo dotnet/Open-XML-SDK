@@ -356,7 +356,7 @@ namespace DocumentFormat.OpenXml.Tests
             File.Delete(file);
         }
 
-        public void VerifyDocumentStart(OpenXmlPart part, bool? standalone)
+        private void VerifyDocumentStart(OpenXmlPart part, bool? standalone)
         {
             XmlReader reader = XmlReader.Create(part.GetStream());
             reader.Read();

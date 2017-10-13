@@ -10,20 +10,6 @@ namespace DocumentFormat.OpenXml.Tests
     ///</summary>
     public class ListValueTest
     {
-        /// <summary>
-        ///A test for InnerText
-        ///</summary>
-        public void InnerTextTestHelper<T>()
-            where T : OpenXmlSimpleType, new()
-        {
-            ListValue<T> target = new ListValue<T>();
-            string expected = string.Empty;
-            string actual;
-            target.InnerText = expected;
-            actual = target.InnerText;
-            Assert.Equal(expected, actual);
-        }
-
         ///<summary>
         ///ListValueSanityTest.
         ///</summary>
