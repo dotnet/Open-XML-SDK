@@ -79,9 +79,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(numChange, fieldChar.NumberingChange);
             Assert.Null(fieldChar.FieldData);
 
-
         }
-
 
         /// <summary>
         /// Test the class factory of GraphicObjectData
@@ -116,7 +114,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("Text in drawing.", lockedCanvas.InnerText);
             Assert.Equal("Text in drawing.", drawing.InnerText);
         }
-
 
         /// <summary>
         /// Test the Clone on OpenXmlUnknownElement.
@@ -159,7 +156,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Null(clonedElement.FirstChild);
 
         }
-
 
         /// <summary>
         /// Test the exception case for OpenXmlCompositeElement.ReplaceChild().
@@ -219,7 +215,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             System.IO.File.Delete(tempFile);
         }
-
 
         /// <summary>
         /// Test the bug case for OpenXmlPartRootElement.

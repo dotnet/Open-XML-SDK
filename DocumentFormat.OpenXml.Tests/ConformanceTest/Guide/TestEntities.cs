@@ -155,7 +155,6 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                 A.RgbColorModelHex rgbColorModelHex2 = extendedGuide2.Descendants<A.RgbColorModelHex>().First();
                 log.Verify(rgbColorModelHex2.Val.Value == this.Color2, "An incorrect value, RgbColorModelHex value. Guide Id=[{0}].", extendedGuide1.Id);
 
-
                 //Verify NotesGuideList
                 PresentationExtension PresentationExtension2 = package.PresentationPart.RootElement.Descendants<PresentationExtension>().Where(e => e.Uri == this.NotesExtUri).Single();
                 P15.NotesGuideList notesGuideList = PresentationExtension2.Descendants<P15.NotesGuideList>().Single();

@@ -2647,6 +2647,5 @@ namespace DocumentFormat.OpenXml.Tests
             document.PackageProperties.LastModifiedBy = "Eric White (DPE)";
         }
 
-
     }
 }

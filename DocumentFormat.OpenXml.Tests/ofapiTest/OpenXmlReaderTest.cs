@@ -64,7 +64,6 @@ namespace DocumentFormat.OpenXml.Tests
             targetReader.Close();
         }
 
-
         /// <summary>
         ///A test for OpenXmlDomReader operations on root element.
         ///</summary>
@@ -182,7 +181,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             reader.Close();
         }
-
 
         /// <summary>
         ///A test for OpenXmlDomReader on misc node
@@ -326,7 +324,6 @@ namespace DocumentFormat.OpenXml.Tests
             // call ReadNextSibling() on EndElement
             reader.ReadNextSibling();
             Assert.True(reader.EOF);
-
 
         }
 

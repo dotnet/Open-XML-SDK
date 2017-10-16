@@ -307,7 +307,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Single(errors);
         }
 
-
         /// <summary>
         /// Validating content under ACB.
         /// </summary>
@@ -331,7 +330,6 @@ namespace DocumentFormat.OpenXml.Tests
             var errors = validator.Validate(p);
             Assert.Single(errors);
             Assert.Same(acb.FirstChild.FirstChild, errors.First().Node);
-
 
             // Should report error in "Fallback" branch.
             validator = new OpenXmlValidator(FileFormatVersions.Office2007);

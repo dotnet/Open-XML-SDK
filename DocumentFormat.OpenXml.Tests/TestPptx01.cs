@@ -129,7 +129,6 @@ namespace DocumentFormat.OpenXml.Tests
             SlideMasterPart slideMasterPart1;
             ThemePart themePart1;
 
-
             slidePart1 = CreateSlidePart(presentationPart);
             slideLayoutPart1 = CreateSlideLayoutPart(slidePart1);
             slideMasterPart1 = CreateSlideMasterPart(slideLayoutPart1);

@@ -231,7 +231,6 @@ namespace DocumentFormat.OpenXml
         }
     }
 
-
 #if DEBUG
     
     /// <summary>

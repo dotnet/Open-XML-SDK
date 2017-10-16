@@ -304,7 +304,6 @@ namespace DocumentFormat.OpenXml
             WriteStartElement(elementReader, elementReader.Attributes, elementReader.NamespaceDeclarations);
         }
 
-
         /// <summary>
         /// Writes out a start element tag of the current element of the OpenXmlReader. And write the attributes in attributes. 
         /// </summary>
@@ -566,6 +565,5 @@ namespace DocumentFormat.OpenXml
         #endregion
 
     }
-
 
 }

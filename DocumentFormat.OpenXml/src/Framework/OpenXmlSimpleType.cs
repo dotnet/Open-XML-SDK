@@ -102,8 +102,6 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-
-
         /// <summary>
         /// Returns a String that represents the current value. 
         /// </summary>
@@ -145,7 +143,6 @@ namespace DocumentFormat.OpenXml
 
             return xmlAttribute.InnerText;
         }
-
 
         #region internal methods to be used by validation
 
@@ -1524,7 +1521,6 @@ namespace DocumentFormat.OpenXml
             return FromUInt16(value);
         }
 
-
         /// <summary>
         /// Returns a new UInt16Value object created from a UInt16 value.
         /// </summary>
@@ -2609,7 +2605,6 @@ namespace DocumentFormat.OpenXml
             return FromString(value);
         }
 
-
         /// <summary>
         /// Returns a new StringValue object that was created from a String value.
         /// </summary>
@@ -3265,7 +3260,6 @@ namespace DocumentFormat.OpenXml
             return value.InnerText;
         }
 
-
         internal override OpenXmlSimpleType CloneImp()
         {
             return new EnumValue<T>(this); 
@@ -3368,7 +3362,6 @@ namespace DocumentFormat.OpenXml
 
             throw new FormatException(ExceptionMessages.TextIsInvalidEnumValue);
         }
-
 
         /// <summary>
         /// Test whether the value is allowed in the specified file format version.
@@ -4164,7 +4157,6 @@ namespace DocumentFormat.OpenXml
         {
             return FromBoolean(value);
         }
-
 
         /// <summary>
         /// Returns a new OnOffValue object created from a Boolean value.

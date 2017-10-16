@@ -1068,7 +1068,6 @@ namespace DocumentFormat.OpenXml.Packaging
             return ValidMainPartContentTypes.Contains(contentType);
         }
 
-
         /// <summary>
         /// Changes the type of the document. 
         /// </summary>
@@ -1096,7 +1095,6 @@ namespace DocumentFormat.OpenXml.Packaging
                     memoryStream = new MemoryStream(Convert.ToInt32(mainPartStream.Length));
                     OpenXmlPart.CopyStream(mainPartStream, memoryStream);
                 }
-
 
                 // 
                 tempPart = this.AddExtendedPart(@"http://temp", this.MainPartContentType, @".xml");

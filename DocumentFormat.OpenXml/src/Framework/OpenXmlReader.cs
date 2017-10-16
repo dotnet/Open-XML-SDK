@@ -848,7 +848,6 @@ namespace DocumentFormat.OpenXml
 
 #endregion
 
-
 #region IDisposable Members
 
         /// <summary>
@@ -874,7 +873,6 @@ namespace DocumentFormat.OpenXml
         MiscNode,
         EOF
     }
-
 
     /// <summary>
     /// Represents the Open XML part reader class.
@@ -1168,7 +1166,6 @@ namespace DocumentFormat.OpenXml
                 ThrowIfNull();
                 ThrowIfEof();
 
-
                 Debug.Assert(this._elementStack.Count > 0);
                 return this._elementStack.Count - 1;  // depth of root element is 0
             }
@@ -1257,7 +1254,6 @@ namespace DocumentFormat.OpenXml
             return result;
         }
 
-     
         /// <summary>
         /// Moves to read the first child element.
         /// </summary>
@@ -1354,7 +1350,6 @@ namespace DocumentFormat.OpenXml
                     // do not move the cursor
                     this._elementState = ElementState.LeafEnd;
                     return true;
-
 
                 case ElementState.LeafEnd:
                 case ElementState.LoadEnd:
@@ -1556,7 +1551,6 @@ namespace DocumentFormat.OpenXml
                     GetElementInformation();
                     return element;
 
-
                 case ElementState.Null:
                     ThrowIfNull();
                     break;
@@ -1627,7 +1621,6 @@ namespace DocumentFormat.OpenXml
             }
             return String.Empty;
         }
-
 
         /// <summary>
         /// Closes the reader.
@@ -2188,7 +2181,6 @@ namespace DocumentFormat.OpenXml
 
             return result;
         }
-
 
         /// <summary>
         /// Moves to read the first child element.

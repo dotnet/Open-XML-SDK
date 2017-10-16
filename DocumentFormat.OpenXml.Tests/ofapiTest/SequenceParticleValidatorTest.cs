@@ -64,7 +64,6 @@ namespace DocumentFormat.OpenXml.Tests
             target.Validate(validationContext);
             Assert.True(actual.Valid);
 
-
             // ***** error case ******
 
             // 1st child is invalid

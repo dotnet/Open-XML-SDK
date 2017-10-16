@@ -44,7 +44,6 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
                 }
             }
 
-
             OpenXmlSimpleType conditionAttributeValue = context.Element.Attributes[_conditionAttribute];
 
             if (conditionAttributeValue == null)

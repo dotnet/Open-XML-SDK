@@ -570,7 +570,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-
         /// <summary>
         /// Perform pre/append operation.
         /// </summary>
@@ -1297,7 +1296,6 @@ namespace DocumentFormat.OpenXml.Tests
                 .Where(fa => e.GetAttributes().All(ea => ea.NamespaceUri != fa.NamespaceUri || ea.LocalName != fa.LocalName))
                 .FirstOrDefault();
 
-
         internal GetTargetAttribute getExistingAttribute =
             e => e.GetAttributes().PickSecond();
 
@@ -1615,7 +1613,6 @@ namespace DocumentFormat.OpenXml.Tests
                 if (null != remove && default(OpenXmlAttribute) != remove)
                 {
                     Log.Comment("Removing Attribute {0}", remove.GetFullName());
-
 
                     hostElement.RemoveAttribute(remove.LocalName, remove.NamespaceUri);
 
@@ -2625,7 +2622,6 @@ namespace DocumentFormat.OpenXml.Tests
             if (childPosition.HasValue && (childPosition.Value < 0 || childPosition.Value >= resultElement.Elements().Count()))
                 throw new IndexOutOfRangeException("the child position is out of range");
 
-
             XElement targetElement = null;
 
             if (childPosition != null)
@@ -2717,7 +2713,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-
         /// <summary>
         /// verify if an source of element are removed successfully
         /// </summary>
@@ -2754,7 +2749,6 @@ namespace DocumentFormat.OpenXml.Tests
 
     }
 }
-
 
 /// <summary>
 /// XElement Extension Class

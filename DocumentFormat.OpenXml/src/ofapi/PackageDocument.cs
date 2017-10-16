@@ -70,7 +70,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private static Dictionary<WordprocessingDocumentType, string> _validMainPartContentType;
 
-
         private static Dictionary<WordprocessingDocumentType, string> MainPartContentTypes
         {
             get
@@ -99,7 +98,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 return MainPartContentTypes.Values;
             }
         }
-
 
         /// <summary>
         /// Creates a WordprocessingDocument.
@@ -204,7 +202,6 @@ namespace DocumentFormat.OpenXml.Packaging
             doc.CreateCore(path);
             return doc;
         }
-
 
         /// <summary>
         /// Creates a new instance of the WordprocessingDocument class from the IO stream.
@@ -441,7 +438,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
             return doc;
         }
-
 
         /// <summary>
         /// Creates a new instance of the WordprocessingDocument class from the spcified package.
@@ -740,7 +736,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 return this.GetSubPartOfType<ThumbnailPart>();
             }
         }
-
 
         /// <summary>
         /// Gets the DigitalSignatureOriginPart of the WordprocessingDocument.
@@ -1137,7 +1132,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-
         /// <summary>
         /// Creates a new instance of the SpreadsheetDocument class from the specified file.
         /// </summary>
@@ -1218,8 +1212,6 @@ namespace DocumentFormat.OpenXml.Packaging
             doc.CreateCore(stream);
             return doc;
         }
-
-
 
         /// <summary>
         /// Creates a new instance of the SpreadsheetDocument class from the spcified package.
@@ -2356,8 +2348,6 @@ namespace DocumentFormat.OpenXml.Packaging
             return doc;
         }
 
-
-
         /// <summary>
         /// Changes the document type.
         /// </summary>
@@ -2450,7 +2440,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
             throw new ArgumentOutOfRangeException(nameof(relationshipType));
         }
-
 
         /// <summary>
         /// Creates the PresentationPart and add it to this document.
@@ -2555,7 +2544,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new OpenXmlPackageException(ExceptionMessages.ErrorContentType);
             }
 
-
             return base.AddNewPart<T>(contentType, id);
         }
 
@@ -2647,7 +2635,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-
         /// <summary>
         /// Gets the DigitalSignatureOriginPart of the PresentationDocument.
         /// </summary>
@@ -2655,7 +2642,6 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get { return GetSubPartOfType<DigitalSignatureOriginPart>(); }
         }
-
 
         /// <summary>
         /// Gets the RibbonExtensibilityPart of the PresentationDocument.

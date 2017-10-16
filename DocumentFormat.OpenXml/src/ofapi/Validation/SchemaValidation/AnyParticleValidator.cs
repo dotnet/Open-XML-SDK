@@ -237,7 +237,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         #endregion 
     }
 
-        
     /// <summary>
     /// NsAny particle validator.
     /// </summary>

@@ -265,7 +265,6 @@ namespace DocumentFormat.OpenXml.Tests
           //    <xsd:group ref="EG_BlockLevelChunkElts" minOccurs="0" maxOccurs="unbounded" />
           //  </xsd:choice>
 
-
             var body = new Body();
             var bodyData = actual.GetSchemaTypeData(body.ElementTypeId);
             Assert.Equal(body.ElementTypeId, bodyData.OpenXmlTypeId);
@@ -399,7 +398,6 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Single(particle.ChildrenParticles);
                 Assert.False(particle.IsSimple());
             }
-
 
         }
 

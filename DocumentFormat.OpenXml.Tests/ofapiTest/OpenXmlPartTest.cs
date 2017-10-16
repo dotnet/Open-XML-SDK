@@ -30,7 +30,6 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.IsType<Document>(actual);
                     Assert.Same(testDocument.MainDocumentPart.Document, actual);
 
-
                     target = testDocument.MainDocumentPart.WordprocessingCommentsPart;
                     actual = target.RootElement;
                     Assert.IsType<Comments>(actual);

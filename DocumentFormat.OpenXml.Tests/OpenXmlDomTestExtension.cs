@@ -365,7 +365,6 @@ namespace DocumentFormat.OpenXml.Tests
 
         #endregion Package Extensions
 
-
         #region Part Extensions
 
         /// <summary>
@@ -424,7 +423,6 @@ namespace DocumentFormat.OpenXml.Tests
                     return true;
             }
             return false;
-
 
         }
 

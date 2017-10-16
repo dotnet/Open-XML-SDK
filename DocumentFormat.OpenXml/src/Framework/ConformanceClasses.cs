@@ -90,6 +90,4 @@ namespace DocumentFormat.OpenXml
         }
     }
 
-    
-    
 }

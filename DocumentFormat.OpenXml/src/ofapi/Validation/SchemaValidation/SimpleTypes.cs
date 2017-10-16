@@ -1500,7 +1500,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             get { return SByte.MaxValue; }
         }
 
-
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
@@ -1532,7 +1531,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         {
             get { return Int16.MaxValue; }
         }
-
 
         /// <summary>
         /// Gets the XsdType - type defined in schema.
@@ -1566,7 +1564,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             get { return Int32.MaxValue; }
         }
 
-
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
@@ -1598,7 +1595,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         {
             get { return Int64.MaxValue; }
         }
-
 
         /// <summary>
         /// Gets the XsdType - type defined in schema.
@@ -2151,7 +2147,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             return true;
         }
 
-       
         /// <summary>
         /// Get the lenght of the attribute value according to the xsd type.
         /// </summary>
@@ -2906,7 +2901,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
             return true;
         }
-     
 
         /// <summary>
         /// Get the lenght of the attribute value according to the xsd type.
@@ -2985,7 +2979,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             {
                 return false;
             }
-
 
             return Regex.IsMatch(attributeValue.InnerText, LanguageLexicalPattern, RegexOptions.CultureInvariant);
         }

@@ -67,7 +67,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             var element = new DocumentFormat.OpenXml.Drawing.Charts.Overlay();
 
-
             // ***** good case ******
             element.Val = true;
             var actual = O12Validator.Validate(element);
@@ -121,7 +120,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'val' has invalid value '00'. The string '00' is not a valid 'Boolean' value.", actual.First().Description);
-
 
         }
 
@@ -1274,7 +1272,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             var element = new DocumentFormat.OpenXml.Vml.Arc();
 
-
             // ***** good case ******
 
             element.StartAngle = decimal.MaxValue;
@@ -1351,7 +1348,6 @@ namespace DocumentFormat.OpenXml.Tests
               //</xsd:complexType>
 
             var element = new DocumentFormat.OpenXml.Math.ArgumentSize();
-
 
             // ***** good case ******
 
@@ -1453,7 +1449,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             var element = new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder();
 
-
             // ***** good case ******
 
             element.Width = 1;
@@ -1506,7 +1501,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             var element = new DocumentFormat.OpenXml.Wordprocessing.SdtContentDate();
 
-
             // ***** good case ******
 
             element.FullDate = DateTime.MinValue;
@@ -1528,7 +1522,6 @@ namespace DocumentFormat.OpenXml.Tests
             element.FullDate = DateTime.UtcNow;
             actual = O12Validator.Validate(element);
             Assert.Empty(actual);
-
 
             element.FullDate.InnerText = XmlConvert.ToString(DateTime.Now, XmlDateTimeSerializationMode.Local);
             actual = O12Validator.Validate(element);
@@ -1832,7 +1825,6 @@ namespace DocumentFormat.OpenXml.Tests
               //  </xsd:restriction>
               //</xsd:simpleType>
 
-
             var element = new DocumentFormat.OpenXml.VariantTypes.VTCurrency();
 
             // ***** good case ******
@@ -1907,7 +1899,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("Sch_ElementValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The Pattern constraint failed. The expected pattern is \\s*[0-9]*\\.[0-9]{4}\\s*.", actual.First().Description);
         }
-
 
         /// <summary>
         ///A test for Validate(element) - validating NCName attribute.
@@ -2046,7 +2037,6 @@ namespace DocumentFormat.OpenXml.Tests
               //  <xsd:attribute name="val" type="ST_Panose" use="required">
               //</xsd:complexType>
 
-
             // ***** good case ******
             var element = new Panose1Number();
             element.Val = "1234567890ABCDEFabcd";
@@ -2122,7 +2112,6 @@ namespace DocumentFormat.OpenXml.Tests
             actual = O12Validator.Validate(element);
             Assert.Empty(actual);
 
-
             element.Hash = "R3k/CLjN768ujxMXkKZOuw==";
             actual = O12Validator.Validate(element);
             Assert.Empty(actual);
@@ -2166,7 +2155,6 @@ namespace DocumentFormat.OpenXml.Tests
             element.Val = "fUmpYmCMpTxTA4pfvlhKSAgB848=";
             actual = O12Validator.Validate(element);
             Assert.Empty(actual);
-
 
             element.Val = "R3k/CLjN768ujxMXkKZOuw==";
             actual = O12Validator.Validate(element);
@@ -2574,7 +2562,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'st' has invalid value '1 23 4a'.", actual.First().Description);
 
-
         }
 
         /// <summary>
@@ -2723,7 +2710,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.EndsWith("is not valid according to any of the memberTypes of the union.", actual.First().Description);
         }
 
-
         /// <summary>
         ///A test for Validate(element) - validating ST_OnOff attribute.
         ///</summary>
@@ -2804,7 +2790,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.EndsWith(" The Enumeration constraint failed.", actual.First().Description);
             Assert.Equal("The attribute 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:val' has invalid value 'False'. The Enumeration constraint failed.", actual.First().Description);
         }
-
 
         /// <summary>
         ///A test for Validate(element) - validating ST_TrueFalseBlank attribute.
@@ -3153,7 +3138,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-
         /// <summary>
         ///A test for Validate(part) and Validate(element).
         ///</summary>
@@ -3185,7 +3169,6 @@ namespace DocumentFormat.OpenXml.Tests
                 }
             }
         }
-
 
         /// <summary>
         ///A test for Validate package structure.
@@ -3251,7 +3234,6 @@ namespace DocumentFormat.OpenXml.Tests
                 }
             }
         }
-
 
         /// <summary>
         ///A test for invalid xml in part.
@@ -3365,12 +3347,10 @@ namespace DocumentFormat.OpenXml.Tests
                                                 new DocumentFormat.OpenXml.Office.Drawing.GroupShapeProperties()
                                                 );
 
-
             // ***** good case ******
             var actual = O12Validator.Validate(element);
             Assert.Empty(actual);
         }
-
 
         ///<summary>
         ///ExpectedExceptionOnValidate1Test.
@@ -3405,7 +3385,6 @@ namespace DocumentFormat.OpenXml.Tests
                 var actual = O12Validator.Validate(o14Element);
             });
         }
-
 
         /// <summary>
         /// A test for the O14 schema constraint data.
@@ -3714,7 +3693,6 @@ namespace DocumentFormat.OpenXml.Tests
             actual = O14Validator.Validate(element);
             Assert.Empty(actual);
 
-
             // ***** error case ******
 
             // following are invalid for both Office2007 and Office2010
@@ -3746,8 +3724,6 @@ namespace DocumentFormat.OpenXml.Tests
 
         }
 
-
-
         /// <summary>
         /// Test new Office2010 new added attributes / elements validation.
         /// </summary>
@@ -3766,7 +3742,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             actual = O14Validator.Validate(tblPr);
             Assert.Empty(actual);
-
 
             //// ***** error case ******
 
@@ -3798,7 +3773,6 @@ namespace DocumentFormat.OpenXml.Tests
             // should NOT report error in Office2010 validator.
             actual = O14Validator.Validate(element);
             Assert.Empty(actual);
-
 
             // ***** good case ******
 

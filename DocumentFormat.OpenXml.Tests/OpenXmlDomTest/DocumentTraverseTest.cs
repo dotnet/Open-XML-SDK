@@ -86,7 +86,6 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Comment("check if the decndants if the first child returned are correct");
                 VerifyEqual(Xroot.Descendants(), root.Descendants(), part);
 
-
                 Log.Comment(" ******test Elements<T> ******");
                 Log.Comment("check if the Element<OpenXmlElement> returned are correct");
                 VerifyEqual(Xroot.Elements(), root.Elements<OpenXmlElement>(), part);
@@ -190,7 +189,6 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("****** test ElementsBefore ******");
             VerifyEqual(Xwalker.ElementsBeforeSelf(), walker.ElementsBefore(), part);
 
-
             Log.Comment("****** test PreviousSibling ******");
             while (Xwalker.PreviousNode != null && walker.PreviousSibling() != null)
             {
@@ -208,7 +206,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
             else
                 Log.Fail("PreviousSibling doesn't return correctly");
-
 
             Log.Comment("****** test NextSibling<OpenXmlElement> ******");
 
@@ -229,7 +226,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
             else
                 Log.Fail("nextSibling doesn't return correctly");
-
 
             Log.Comment("****** test PreviousSibling<OpenXmlElement>() ******");
             while (Xwalker.PreviousNode != null && walker.PreviousSibling<OpenXmlElement>() != null)
@@ -343,7 +339,6 @@ namespace DocumentFormat.OpenXml.Tests
                     Log.Comment("   <<<<<<< Traverse Down >>>>>>>>");
                     Log.Comment(" <<<<<< traversing WorkSheet >>>>>>");
                     TestTraverseDown<SheetData>(excel.WorkbookPart.WorksheetParts.First(), excel.WorkbookPart.WorksheetParts.First().Worksheet);
-
 
                     Log.Comment(" <<<<<< traversing SheetData >>>>>>");
                     TestTraverseDown<Row>(excel.WorkbookPart.WorksheetParts.First(), excel.WorkbookPart.WorksheetParts.First().Worksheet.GetFirstChild<SheetData>());

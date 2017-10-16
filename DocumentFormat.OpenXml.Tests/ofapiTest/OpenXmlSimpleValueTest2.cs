@@ -61,7 +61,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("0", target.ToString());
         }
 
-
         /// <summary>
         ///A test for EnumValue
         ///</summary>
@@ -147,7 +146,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("default", objB.InnerText);
         }
 
-
         /// <summary>
         ///A test for StringValue
         ///</summary>
@@ -179,7 +177,6 @@ namespace DocumentFormat.OpenXml.Tests
 
         }
 
-
         /// <summary>
         ///A test for DateTimeValue
         ///</summary>
@@ -200,7 +197,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             Assert.True(target.HasValue);
             Assert.Equal(dateTime, target.Value);
-
 
         }
 
@@ -814,7 +810,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(uint64, uint64Value.Value);
             Assert.Equal(uint64, UInt64Value.ToUInt64(uint64Value));
         }
-
 
         /// <summary>
         /// A test for signed numbers (ex. "+23") for int, uint, etc.

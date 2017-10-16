@@ -17,7 +17,6 @@ namespace DocumentFormat.OpenXml.Validation
     {
         private SpreadsheetDocument _spreadsheetDocument;
 
-
         /// <summary>
         /// Initializes a new instance of the SpreadsheetDocumentValidator.
         /// </summary>

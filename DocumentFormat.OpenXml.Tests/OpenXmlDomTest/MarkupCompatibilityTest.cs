@@ -2491,7 +2491,6 @@ namespace DocumentFormat.OpenXml.Tests
                 ref hostPath, e => e.Descendants().PickFirst(d => d is OpenXmlCompositeElement && !d.ChildElements.Any(c => c is OpenXmlUnknownElement)),
                 e => { expected = appendEmptyChildACB(e, children).CloneNode(true) as AlternateContent; });
 
-
             Log.Comment("ReOpening file:{0}...", testfile.FullName);
             OpenXmlPackage package = null;
             try
@@ -2542,7 +2541,6 @@ namespace DocumentFormat.OpenXml.Tests
                 ref hostPath, e => e.Descendants().PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren),
                 e => { acb = wrapWithChoice(e, children).CloneNode(true); });
 
-
             Log.Comment("ReOpening file:{0}...", testfile.FullName);
             using (var package = testfile.OpenPackage(true, FileFormatVersions.Office2007, MarkupCompatibilityProcessMode.NoProcess))
             {
@@ -2570,7 +2568,6 @@ namespace DocumentFormat.OpenXml.Tests
                 ref partUri, pkg => pkg.MainPart(),
                 ref hostPath, e => e.Descendants().PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren),
                 e => { acb = wrapWithChoice(e, children).CloneNode(true); });
-
 
             Log.Comment("ReOpening file:{0}...", testfile.FullName);
             using (var package = testfile.OpenPackage(true, FileFormatVersions.Office2007, MarkupCompatibilityProcessMode.ProcessAllParts))
@@ -2614,7 +2611,6 @@ namespace DocumentFormat.OpenXml.Tests
                 ref hostPath, e => e.Descendants().PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && d.ChildElements.Count > 1),
                 e => { acb = wrapEachChildWithUnselectableChoice_NoFallback(e, children).CloneNode(true); });
 
-
             Log.Comment("ReOpening file:{0}...", testfile.FullName);
             using (var package = testfile.OpenPackage(true, FileFormatVersions.Office2007, MarkupCompatibilityProcessMode.NoProcess))
             {
@@ -2644,7 +2640,6 @@ namespace DocumentFormat.OpenXml.Tests
                     expected = e.CloneNode(false);
                 });
 
-
             Log.Comment("ReOpening file:{0}...", testfile.FullName);
             using (var package = testfile.OpenPackage(true, FileFormatVersions.Office2007, MarkupCompatibilityProcessMode.ProcessAllParts))
             {
@@ -2673,7 +2668,6 @@ namespace DocumentFormat.OpenXml.Tests
             validateMC(testfile, FileFormatVersions.Office2007);
         }
 
-
         [Fact]
         public void MultipleChoice_NoMatches_OneFallback_FullMode()
         {
@@ -2687,7 +2681,6 @@ namespace DocumentFormat.OpenXml.Tests
                 ref partUri, pkg => pkg.MainPart(),
                 ref hostPath, e => e.Descendants().PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && d.ChildElements.Count > 1),
                 e => { acb = wrapEachChildWithUnselectableChoice_OneFallback(e, children).CloneNode(true); });
-
 
             Log.Comment("ReOpening file:{0}...", testfile.FullName);
             using (var package = testfile.OpenPackage(true, FileFormatVersions.Office2007, MarkupCompatibilityProcessMode.NoProcess))
@@ -2717,7 +2710,6 @@ namespace DocumentFormat.OpenXml.Tests
                     acb = wrapEachChildWithUnselectableChoice_OneFallback(e, children).CloneNode(true);
                     expected = e.CloneNode(false);
                 });
-
 
             Log.Comment("ReOpening file:{0}...", testfile.FullName);
             using (var package = testfile.OpenPackage(true, FileFormatVersions.Office2007, MarkupCompatibilityProcessMode.ProcessAllParts))
@@ -2858,7 +2850,6 @@ namespace DocumentFormat.OpenXml.Tests
                     acb = wrapEachChildWithChoice_LeadingFallback(e, children).CloneNode(true);
                 });
 
-
             Log.Comment("ReOpening file:{0}...", testfile.FullName);
             OpenXmlPackage package = null;
             try
@@ -2998,7 +2989,6 @@ namespace DocumentFormat.OpenXml.Tests
                     mupath = firstChoice.Path();
                     acb = acb.CloneNode(true);
                 });
-
 
             Log.Comment("ReOpening file:{0}...", testfile.FullName);
             using (var package = testfile.OpenPackage(true, FileFormatVersions.Office2007, MarkupCompatibilityProcessMode.NoProcess))
