@@ -3386,6 +3386,7 @@ namespace DocumentFormat.OpenXml.Tests
             e.SetAttribute(unknownAttribute11);    // append unknown element/attribute to make its ns resolvable
             return e.AppendChild(acb);
         }
+
         private AlternateContent wrapEachChildWithChoice_LeadingFallback(OpenXmlElement e, List<OpenXmlElement> children)
         {
             var acb = new AlternateContent();

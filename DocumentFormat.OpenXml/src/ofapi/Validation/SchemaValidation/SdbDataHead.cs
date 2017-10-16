@@ -27,6 +27,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         }
 
         public byte[] Signature { get; set; }
+
         //public byte[] 
         public int DataVersion { get; set; }
 
@@ -41,21 +42,27 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         public int StartClassId { get; set; }
 
         public int ClassIdsCount { get; set; }
+
         public int ClassIdsDataOffset { get; set; }
 
         public int SchemaTypeCount { get; set; }
+
         public int SchemaTypeDataOffset { get; set; }
 
         public int ParticleCount { get; set; }
+
         public int ParticleDataOffset { get; set; }
 
         public int ParticleChildrenIndexCount { get; set; }
+
         public int ParticleChildrenIndexDataOffset { get; set; }
 
         public int AttributeCount { get; set; }
+
         public int AttributeDataOffset { get; set; }
 
         public int SimpleTypeCount { get; set; }
+
         public int SimpleTypeDataOffset { get; set; }
 
         /// <summary>

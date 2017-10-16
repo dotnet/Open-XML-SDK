@@ -35,16 +35,15 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         private readonly uint Id4 = 4;
         #endregion
 
-        #region Property
         /// <summary>
         /// URI attribute value of PresentationExtension.(Parent of P15.SlideGuideList elemenet)
         /// </summary>
         private string SldExtUri { get; set; }
+
         /// <summary>
         /// URI attribute value of PresentationExtension.(Parent of P15.NotesGuideList elemenet)
         /// </summary>
         private string NotesExtUri { get; set; }
-        #endregion
 
         /// <summary>
         /// Constructor

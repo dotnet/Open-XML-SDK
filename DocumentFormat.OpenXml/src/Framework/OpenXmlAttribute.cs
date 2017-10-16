@@ -76,6 +76,7 @@ namespace DocumentFormat.OpenXml
                 }
                 return _namespaceUri;
             }
+
             set { _namespaceUri = value; }
         }
 

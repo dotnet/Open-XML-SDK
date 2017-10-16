@@ -72,6 +72,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         private enum RootElementConstructors { defaultCtor, IEnumerable, Params, OuterXml };
+
         private Dr.Theme buildRootElementFromPart(ThemePart part, RootElementConstructors buildWay)
         {
             Dr.Theme root = null;

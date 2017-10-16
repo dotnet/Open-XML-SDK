@@ -56,6 +56,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 ThrowIfObjectDisposed();
                 return this._childrenPartsDictionary;
             }
+
             set
             {
                 ThrowIfObjectDisposed();
@@ -2303,7 +2304,9 @@ namespace DocumentFormat.OpenXml.Packaging
         abstract internal OpenXmlPart NewPart(string relationshipType, string contentType);
 
         abstract internal void DeleteRelationship(string id);
+
         abstract internal PackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType);
+
         abstract internal PackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType, string id);
 
         // find all reachable parts from the package root, the dictionary also used for cycle reference defence

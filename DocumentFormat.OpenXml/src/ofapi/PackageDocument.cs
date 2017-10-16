@@ -118,6 +118,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 ThrowIfObjectDisposed();
                 return this._documentType;
             }
+
             private set
             {
                 ThrowIfObjectDisposed();
@@ -1107,6 +1108,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 ThrowIfObjectDisposed();
                 return this._documentType;
             }
+
             private set
             {
                 ThrowIfObjectDisposed();
@@ -2002,6 +2004,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         private static Dictionary<PresentationDocumentType, string> _validMainPartContentType;
+
         private static Dictionary<PresentationDocumentType, string> MainPartContentTypes
         {
             get
@@ -2054,6 +2057,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 ThrowIfObjectDisposed();
                 return this._documentType;
             }
+
             private set
             {
                 ThrowIfObjectDisposed();

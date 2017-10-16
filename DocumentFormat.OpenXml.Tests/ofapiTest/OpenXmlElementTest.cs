@@ -686,6 +686,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.StartsWith(ExceptionMessages.InvalidOuterXml, ex1.Message);
             }
         }
+
         /// <summary>
         /// A test for the OpenXmlElement.ChildElements{get;}.
         /// </summary>

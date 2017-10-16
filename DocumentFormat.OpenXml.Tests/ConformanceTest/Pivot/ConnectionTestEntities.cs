@@ -14,18 +14,27 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
     public class ConnectionTestEntities
     {
         private string ConnectionString { get; set; }
+
         private string DBCommandText { get; set; }
+
         private string ConnectionExtUri { get; set; }
 
         private uint ConnectionId { get; set; }
+
         private string ConnectionOdcFile { get; set; }
+
         private string ConnectionName { get; set; }
+
         private uint ConnectionType { get; set; }
+
         private byte ConnectionRefreshedVersion { get; set; }
+
         private byte ConnectionMinRefreshedVersion { get; set; }
+
         private bool ConnectionBackground { get; set; }
 
         private string X15ConnectionId { get; set; }
+
         private bool X15ConnectionAutoDelete { get; set; }
 
         public ConnectionTestEntities(string filePath)
