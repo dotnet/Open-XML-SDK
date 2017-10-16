@@ -285,6 +285,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     internal class SimpleTypeRestrictions
     {
         public int SimpleTypeCount { get; set; }
+
         public SimpleTypeRestriction[] SimpleTypes { get; set; }
 
 #if FEATURE_BINARYFORMATTER
@@ -793,6 +794,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             {
                 return this.unionField;
             }
+
             set
             {
                 this.unionField = value;
@@ -1145,6 +1147,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         public override XsdType XsdType
         {
             get { return this._xsdType; }
+
             set
             {
                 Debug.Assert(value == XsdType.Boolean || value == XsdType.SpecialBoolean);

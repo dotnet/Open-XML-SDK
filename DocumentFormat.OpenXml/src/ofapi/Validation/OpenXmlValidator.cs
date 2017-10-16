@@ -210,6 +210,7 @@ namespace DocumentFormat.OpenXml.Validation
         public int MaxNumberOfErrors
         {
             get { return this._settings.MaxNumberOfErrors; }
+
             set
             {
                 if (value < 0)

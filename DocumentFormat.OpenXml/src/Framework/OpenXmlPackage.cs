@@ -82,6 +82,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         abstract internal void ReplaceRelationship(Uri targetUri, TargetMode targetMode, string strRelationshipType, string strId);
+
         abstract internal Package GetPackage();
     }
 
@@ -180,12 +181,14 @@ namespace DocumentFormat.OpenXml.Packaging
         internal OpenSettings OpenSettings { get; set; }
 
         private bool _strictTranslation = false;
+
         internal bool StrictTranslation
         {
             get
             {
                 return this._strictTranslation;
             }
+
             set
             {
                 this._strictTranslation = value;
@@ -2095,6 +2098,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 this.valEventHandler = (EventHandler<OpenXmlPackageValidationEventArgs>)Delegate.Combine(this.valEventHandler, value);
             }
+
             remove
             {
                 this.valEventHandler = (EventHandler<OpenXmlPackageValidationEventArgs>)Delegate.Remove(this.valEventHandler, value);
@@ -2147,6 +2151,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     return this._message;
                 }
             }
+
             set
             {
                 this._message = value;
@@ -2264,6 +2269,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
                 return (bool)autoSave;
             }
+
             set
             {
                 autoSave = value;
@@ -2281,6 +2287,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     _mcSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007);
                 return _mcSettings;
             }
+
             set
             {
                 _mcSettings = value;

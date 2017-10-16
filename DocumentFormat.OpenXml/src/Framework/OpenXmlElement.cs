@@ -74,6 +74,7 @@ namespace DocumentFormat.OpenXml
                     return MiscAttrContainer.ExtendedAttributesField;
                 }
             }
+
             set
             {
                 if (MiscAttrContainer == null)
@@ -97,6 +98,7 @@ namespace DocumentFormat.OpenXml
                     return MiscAttrContainer._mcAttributes;
                 }
             }
+
             set
             {
                 if (MiscAttrContainer == null)
@@ -121,6 +123,7 @@ namespace DocumentFormat.OpenXml
                     return MiscAttrContainer._nsMappings;
                 }
             }
+
             set
             {
                 if (MiscAttrContainer == null)
@@ -193,6 +196,7 @@ namespace DocumentFormat.OpenXml
             { 
                 return _rawOuterXml; 
             }
+
             set 
             {
                 if (String.IsNullOrEmpty(value))
@@ -513,6 +517,7 @@ namespace DocumentFormat.OpenXml
             {
                 return string.Empty;
             }
+
             protected set
             {
                 throw new InvalidOperationException();
@@ -547,6 +552,7 @@ namespace DocumentFormat.OpenXml
                     }
                 }
             }
+
             set
             {
                 throw new InvalidOperationException(ExceptionMessages.InnerXmlCannotBeSet);
@@ -577,6 +583,7 @@ namespace DocumentFormat.OpenXml
                     return this.RawOuterXml;
                 }
             }
+
             internal set
             {
                 //if (!String.IsNullOrEmpty(value))

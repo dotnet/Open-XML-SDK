@@ -3063,6 +3063,7 @@ namespace DocumentFormat.OpenXml.Tests
                 }
             }
         }
+
         /// <summary>
         ///A test for Validate(OpenXmlPart) - validating Slide part.
         ///</summary>

@@ -79,6 +79,7 @@ namespace DocumentFormat.OpenXml
                     return string.Empty;
                 } 
             }
+
             protected set
             {
                 MakeSureParsed();
@@ -132,6 +133,7 @@ namespace DocumentFormat.OpenXml
         public virtual string Text
         {
             get { return this.InnerText; }
+
             set 
             {
                 this.InnerText = value;

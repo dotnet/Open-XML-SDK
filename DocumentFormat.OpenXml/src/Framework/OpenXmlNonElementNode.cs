@@ -246,6 +246,7 @@ namespace DocumentFormat.OpenXml
             {
                 return String.Empty;
             }
+
             set
             {
                 throw new InvalidOperationException(ExceptionMessages.InnerXmlCannotBeSet);

@@ -52,6 +52,7 @@ namespace DocumentFormat.OpenXml
             {
                 return _textValue; 
             }
+
             set 
             {
                 _textValue = value; 
@@ -94,6 +95,7 @@ namespace DocumentFormat.OpenXml
             {
                 return _textValue;
             }
+
             set
             {
                 _textValue = value;
@@ -183,6 +185,7 @@ namespace DocumentFormat.OpenXml
     {
         //can not use System.Nullable<T> _value;
         private T? _value;
+
         internal T? InnerValue
         {
             get { return this._value; }
@@ -261,6 +264,7 @@ namespace DocumentFormat.OpenXml
                 }
                 return  this._value.Value;
             }
+
             set
             {
                 this._value = value;
@@ -277,6 +281,7 @@ namespace DocumentFormat.OpenXml
             {
                 throw new NotImplementedException();
             }
+
             set
             {
                 // do not check whether format is ok.
@@ -3039,6 +3044,7 @@ namespace DocumentFormat.OpenXml
                 } 
                 return this.TextValue;
             }
+
             set
             {
                 this.TextValue = value;
@@ -3184,6 +3190,7 @@ namespace DocumentFormat.OpenXml
                 }
                 return this._enumValue.Value;
             }
+
             set
             {
                 // bug O14 #253976
@@ -3209,6 +3216,7 @@ namespace DocumentFormat.OpenXml
                 }
                 return this.TextValue;
             }
+
             set
             {
                 this.TextValue = value;
@@ -3497,6 +3505,7 @@ namespace DocumentFormat.OpenXml
                 }
                 return this.TextValue;
             }
+
             set
             {
                 this.TextValue = value;
@@ -3550,6 +3559,7 @@ namespace DocumentFormat.OpenXml
                 }
                 return this._innerValue.Value;
             }
+
             set
             {
                 this._innerValue = value;
@@ -3659,6 +3669,7 @@ namespace DocumentFormat.OpenXml
             {
                 return _impl.Value;
             }
+
             set
             {
                 _impl.Value = value;
@@ -3674,6 +3685,7 @@ namespace DocumentFormat.OpenXml
             {
                 return _impl.InnerText;
             }
+
             set
             {
                 _impl.InnerText = value;
@@ -3849,6 +3861,7 @@ namespace DocumentFormat.OpenXml
             {
                 return _impl.Value;
             }
+
             set
             {
                 _impl.Value = value;
@@ -3864,6 +3877,7 @@ namespace DocumentFormat.OpenXml
             {
                 return _impl.InnerText;
             }
+
             set
             {
                 _impl.InnerText = value;
@@ -4045,6 +4059,7 @@ namespace DocumentFormat.OpenXml
             {
                 return _impl.Value;
             }
+
             set
             {
                 _impl.Value = value;
@@ -4060,6 +4075,7 @@ namespace DocumentFormat.OpenXml
             {
                 return _impl.InnerText;
             }
+
             set
             {
                 _impl.InnerText = value;

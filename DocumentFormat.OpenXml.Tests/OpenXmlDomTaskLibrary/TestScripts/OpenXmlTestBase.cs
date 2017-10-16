@@ -49,6 +49,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
                 return this.currentResultFolder;
             }
         }
+
         private string currentResultFolder;
 
         /// <summary>
@@ -145,6 +146,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         {
             return CopyTestFiles(sourceFolder, recursive, "*", OpenXmlDomTestExtension.IsOpenXmlFile, maxFiles);
         }
+
         /// <summary>
         /// Copy test files to result folder.
         /// </summary>
@@ -157,6 +159,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         {
             return CopyTestFiles(sourceFolder, recursive, searchPattern, OpenXmlDomTestExtension.IsOpenXmlFile);
         }
+
         /// <summary>
         /// Copy test files to result folder.
         /// </summary>

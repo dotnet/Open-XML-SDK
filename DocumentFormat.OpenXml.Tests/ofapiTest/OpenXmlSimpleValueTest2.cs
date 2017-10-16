@@ -7,6 +7,7 @@ using M = DocumentFormat.OpenXml.Math;
 using System;
 using System.Globalization;
 using Xunit;
+
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
