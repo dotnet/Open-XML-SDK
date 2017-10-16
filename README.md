@@ -1,32 +1,18 @@
 Open-XML-SDK
 ============
 
-Release Version 2.7
+[![NuGet](https://img.shields.io/nuget/v/DocumentFormat.OpenXml.svg)]()
+[![NuGet](https://img.shields.io/nuget/dt/DocumentFormat.OpenXml.svg)]()
 
-    News: The Office2016 branch on this repo contains a preview of the Open-Xml-Sdk v2.7, which
-	supports the Office 2016 extensions in the file format.  The biggest change to the markup was
-	the introduction of the ExtendedChartPart, which support the new chart types, such as Waterfall,
-	Box and Whisker, and Sunburst.  You can specify FileFormatVersions.Office2016 to validate this
-	markup.  This version of the SDK also supports using the strongly-typed OM to access the markup
-	in the new parts.
-	
-	We will merge the Office2016 branch into vNext at some point in the future, after receiving
-	feedback.
+The Open XML SDK provides tools for working with Office Word, Excel, and PowerPoint documents. It supports scenarios such as:
 
-The Open XML SDK provides open-source libraries for working with Open XML Documents (DOCX, XLSX, and PPTX).  It supports scenarios such as:
 - High-performance generation of word-processing documents, spreadsheets, and presentations.
-- Populating content in DOCX files from an XML data source.
-- Splitting up (shredding) a DOCX or PPTX file into multiple files, and combining
-  multiple DOCX / PPTX files into a single file.
-- High fidelity conversion of DOCX => HTML/CSS and HTML/CSS => DOCX.
-- Extraction of data from XLSX.
-- Searching and replacing content in DOCX / PPTX using regular expressions.
-- Updating cached data and embedded spreadsheets for charts in DOCX / PPTX.
-- Document modification, such as removing tracked revisions or removing
-  unacceptable content from documents.
-
-[Open-Xml-PowerTools](https://github.com/OfficeDev/Open-Xml-PowerTools) provides example code and guidance for implementing many of the above important Open XML scenarios.  Be sure to check it out
-before re-inventing your own solutions.
+- Populating content in Word files from an XML data source.
+- Splitting up (shredding) a Word or PowerPoint file into multiple files, and combining multiple Word/PowerPoint files into a single file.
+- Extraction of data from Excel documents.
+- Searching and replacing content in Word/PowerPoint using regular expressions.
+- Updating cached data and embedded spreadsheets for charts in Word/PowerPoint.
+- Document modification, such as removing tracked revisions or removing unacceptable content from documents.
 
 Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.
 Licensed under the Apache License, Version 2.0.
