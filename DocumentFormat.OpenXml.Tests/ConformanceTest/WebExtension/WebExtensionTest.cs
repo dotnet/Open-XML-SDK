@@ -487,4 +487,3 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
         #endregion
     }
 }
-
