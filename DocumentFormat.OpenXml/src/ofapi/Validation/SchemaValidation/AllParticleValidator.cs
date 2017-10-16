@@ -72,7 +72,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             particleMatchInfo.LastMatchedElement = null;
             particleMatchInfo.Match = ParticleMatch.Nomatch;
 
-
             foreach (var childParticle in this.ParticleConstraint.ChildrenParticles)
             {
                 this._childrenParticles[childParticle.ElementId] = false;

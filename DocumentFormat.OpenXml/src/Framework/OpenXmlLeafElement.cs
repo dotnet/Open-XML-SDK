@@ -55,6 +55,7 @@ namespace DocumentFormat.OpenXml
                 }
                 return string.Empty;
             }
+
             set
             {
                 // only accept null or empty string.

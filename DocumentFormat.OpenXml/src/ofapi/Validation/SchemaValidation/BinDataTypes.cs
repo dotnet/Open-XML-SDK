@@ -169,7 +169,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             return result;
         }
 
-
         public static byte LoadByte(byte[] bytes, ref int startIndex)
         {
             startIndex++;
@@ -662,7 +661,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
         #endregion
     }
-
 
     /// <summary>
     /// Define some extension methods to make coding clear.

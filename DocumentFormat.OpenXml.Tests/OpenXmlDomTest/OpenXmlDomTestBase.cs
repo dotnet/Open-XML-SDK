@@ -570,7 +570,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-
         /// <summary>
         /// Perform pre/append operation.
         /// </summary>
@@ -1297,7 +1296,6 @@ namespace DocumentFormat.OpenXml.Tests
                 .Where(fa => e.GetAttributes().All(ea => ea.NamespaceUri != fa.NamespaceUri || ea.LocalName != fa.LocalName))
                 .FirstOrDefault();
 
-
         internal GetTargetAttribute getExistingAttribute =
             e => e.GetAttributes().PickSecond();
 
@@ -1312,6 +1310,7 @@ namespace DocumentFormat.OpenXml.Tests
                         .All(ex => ex.NamespaceUri != a.NamespaceUri || ex.LocalName != a.LocalName));
                 return attributes.PickSecond();
             };
+
         internal GetTargetNamespaceDeclaration getNonExistingNamespaceDeclaration =
             e => e.Ancestors()
                 .SelectMany(a => a.NamespaceDeclarations)
@@ -1614,7 +1613,6 @@ namespace DocumentFormat.OpenXml.Tests
                 if (null != remove && default(OpenXmlAttribute) != remove)
                 {
                     Log.Comment("Removing Attribute {0}", remove.GetFullName());
-
 
                     hostElement.RemoveAttribute(remove.LocalName, remove.NamespaceUri);
 
@@ -2264,6 +2262,7 @@ namespace DocumentFormat.OpenXml.Tests
             hostElement.OpenXmlElementContext.ElementRemoved += new EventHandler<ElementEventArgs>(expectedElementRemoved);
             return hostElement;
         }
+
         internal OpenXmlElement validInsertEventHandler(OpenXmlElement hostElement)
         {
             hostElement.OpenXmlElementContext.ElementInserting += new EventHandler<ElementEventArgs>(expectedElementInserting);
@@ -2272,6 +2271,7 @@ namespace DocumentFormat.OpenXml.Tests
             hostElement.OpenXmlElementContext.ElementRemoved += new EventHandler<ElementEventArgs>(surprisingElementRemoved);
             return hostElement;
         }
+
         internal OpenXmlElement validRemoveEventHandler(OpenXmlElement hostElement)
         {
             hostElement.OpenXmlElementContext.ElementInserting += new EventHandler<ElementEventArgs>(surprisingElementInserting);
@@ -2622,7 +2622,6 @@ namespace DocumentFormat.OpenXml.Tests
             if (childPosition.HasValue && (childPosition.Value < 0 || childPosition.Value >= resultElement.Elements().Count()))
                 throw new IndexOutOfRangeException("the child position is out of range");
 
-
             XElement targetElement = null;
 
             if (childPosition != null)
@@ -2714,7 +2713,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-
         /// <summary>
         /// verify if an source of element are removed successfully
         /// </summary>
@@ -2751,7 +2749,6 @@ namespace DocumentFormat.OpenXml.Tests
 
     }
 }
-
 
 /// <summary>
 /// XElement Extension Class

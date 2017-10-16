@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 
-
 namespace DocumentFormat.OpenXml.Packaging
 {
     internal static class RelationshipTypeList

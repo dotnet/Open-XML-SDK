@@ -428,7 +428,6 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.Equal(31, iterator.Count());
                 }
             }
-        
 
             // Test with PresentationDocument
             using (var stream = new MemoryStream(TestFileStreams.o09_Performance_typical_pptx))
@@ -762,7 +761,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-
         /// <summary>
         /// A test for opening Strict files as read-write(editable)/read-only
         /// </summary>
@@ -887,7 +885,6 @@ namespace DocumentFormat.OpenXml.Tests
             File.Delete(testXlsxFile);
             #endregion
         }
-
 
         /// <summary>
         /// A test for opening O15 files

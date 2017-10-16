@@ -35,16 +35,15 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         private readonly uint Id4 = 4;
         #endregion
 
-        #region Property
         /// <summary>
         /// URI attribute value of PresentationExtension.(Parent of P15.SlideGuideList elemenet)
         /// </summary>
         private string SldExtUri { get; set; }
+
         /// <summary>
         /// URI attribute value of PresentationExtension.(Parent of P15.NotesGuideList elemenet)
         /// </summary>
         private string NotesExtUri { get; set; }
-        #endregion
 
         /// <summary>
         /// Constructor
@@ -155,7 +154,6 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                 log.Verify(extendedGuide2.Orientation == this.directionValues2, "An incorrect value, Orientation value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id);
                 A.RgbColorModelHex rgbColorModelHex2 = extendedGuide2.Descendants<A.RgbColorModelHex>().First();
                 log.Verify(rgbColorModelHex2.Val.Value == this.Color2, "An incorrect value, RgbColorModelHex value. Guide Id=[{0}].", extendedGuide1.Id);
-
 
                 //Verify NotesGuideList
                 PresentationExtension PresentationExtension2 = package.PresentationPart.RootElement.Descendants<PresentationExtension>().Where(e => e.Uri == this.NotesExtUri).Single();

@@ -16,6 +16,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
     public class TestEntities
     {
         private string workbookPrExtUri { get; set; }
+
         private string AbsolutePathUri { get; set; }
 
         public TestEntities(string filePath)

@@ -166,7 +166,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(p.FirstChild.NextSibling().FirstChild.NextSibling(), errors.ElementAt(0).RelatedNode);
         }
 
-
         private void Bug583585(OpenXmlValidator validator)
         {
             var element = new DocumentFormat.OpenXml.Presentation.ModificationVerifier();
@@ -376,7 +375,6 @@ namespace DocumentFormat.OpenXml.Tests
             var errors = validator.Validate(ext);
             Assert.Empty(errors);
 
-
             // CT_Extension in PPT, <xsd:any > wihtout minOccurs
             var pext = new DocumentFormat.OpenXml.Presentation.Extension();
             pext.Uri = "http://www.live.com";
@@ -471,7 +469,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             // the wrong child should still be there.
             Assert.Same(wrongChild, tablecellmar.FirstChild.NextSibling());
-
 
             // =========== case for xsd:choice ==============
             var shapeTaget = new DocumentFormat.OpenXml.Presentation.ShapeTarget();

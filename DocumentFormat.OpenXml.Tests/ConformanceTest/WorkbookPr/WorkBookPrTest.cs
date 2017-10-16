@@ -63,7 +63,6 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
             this.testEntities.DeleteElements(deleteFilePath, this.Log);
             this.testEntities.VerifyDeleteElements(deleteFilePath, this.Log);
 
-
             System.IO.File.Copy(deleteFilePath, addFilePath, true);
 
             this.testEntities.AddElement(addFilePath, this.Log);

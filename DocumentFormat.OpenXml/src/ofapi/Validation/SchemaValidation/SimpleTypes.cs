@@ -285,6 +285,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     internal class SimpleTypeRestrictions
     {
         public int SimpleTypeCount { get; set; }
+
         public SimpleTypeRestriction[] SimpleTypes { get; set; }
 
 #if FEATURE_BINARYFORMATTER
@@ -793,6 +794,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             {
                 return this.unionField;
             }
+
             set
             {
                 this.unionField = value;
@@ -1145,6 +1147,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         public override XsdType XsdType
         {
             get { return this._xsdType; }
+
             set
             {
                 Debug.Assert(value == XsdType.Boolean || value == XsdType.SpecialBoolean);
@@ -1497,7 +1500,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             get { return SByte.MaxValue; }
         }
 
-
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
@@ -1529,7 +1531,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         {
             get { return Int16.MaxValue; }
         }
-
 
         /// <summary>
         /// Gets the XsdType - type defined in schema.
@@ -1563,7 +1564,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             get { return Int32.MaxValue; }
         }
 
-
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
@@ -1595,7 +1595,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         {
             get { return Int64.MaxValue; }
         }
-
 
         /// <summary>
         /// Gets the XsdType - type defined in schema.
@@ -2148,7 +2147,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             return true;
         }
 
-       
         /// <summary>
         /// Get the lenght of the attribute value according to the xsd type.
         /// </summary>
@@ -2903,7 +2901,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
             return true;
         }
-     
 
         /// <summary>
         /// Get the lenght of the attribute value according to the xsd type.
@@ -2982,7 +2979,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             {
                 return false;
             }
-
 
             return Regex.IsMatch(attributeValue.InnerText, LanguageLexicalPattern, RegexOptions.CultureInvariant);
         }

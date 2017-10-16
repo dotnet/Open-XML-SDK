@@ -91,7 +91,6 @@ namespace DocumentFormat.OpenXml.Validation
 #endif
         }
 
-
         /// <summary>
         /// Gets the unique identifier of this error.
         /// </summary>

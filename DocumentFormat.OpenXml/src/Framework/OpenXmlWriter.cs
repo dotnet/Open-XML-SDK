@@ -195,6 +195,7 @@ namespace DocumentFormat.OpenXml
     public class OpenXmlPartWriter : OpenXmlWriter
     {
         private static Type _openXmlLeafTextElementClass;
+
         private static Type OpenXmlLeafTextElementClass
         {
             get
@@ -302,7 +303,6 @@ namespace DocumentFormat.OpenXml
         {
             WriteStartElement(elementReader, elementReader.Attributes, elementReader.NamespaceDeclarations);
         }
-
 
         /// <summary>
         /// Writes out a start element tag of the current element of the OpenXmlReader. And write the attributes in attributes. 
@@ -565,6 +565,5 @@ namespace DocumentFormat.OpenXml
         #endregion
 
     }
-
 
 }

@@ -608,7 +608,6 @@ namespace DocumentFormat.OpenXml.Tests
         }
     }
 
-
     public class CreateDocumentTestClass : OpenXmlDomTestBase
     {
         public CreateDocumentTestClass(ITestOutputHelper output)
@@ -734,7 +733,6 @@ namespace DocumentFormat.OpenXml.Tests
                     fz.Delete();
             }
         }
-
 
         [Fact]
         public void CreateWithNoAutoSaveTest()

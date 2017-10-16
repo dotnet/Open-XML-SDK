@@ -35,6 +35,7 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
             _refElementName = referencedElementName;
             _indexBase = indexBase;
         }
+
         public override SemanticValidationLevel StateScope
         {
             get

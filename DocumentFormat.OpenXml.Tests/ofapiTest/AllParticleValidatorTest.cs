@@ -26,7 +26,6 @@ namespace DocumentFormat.OpenXml.Tests
             TestSimpleAll2(sdbSchemaDatas);
         }
 
-
         private void TestSimpleAll(SdbSchemaDatas sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
@@ -142,7 +141,6 @@ namespace DocumentFormat.OpenXml.Tests
             properties.RemoveChild(errorChild);
 
         }
-
 
         private void TestSimpleAll2(SdbSchemaDatas sdbSchemaDatas)
         {

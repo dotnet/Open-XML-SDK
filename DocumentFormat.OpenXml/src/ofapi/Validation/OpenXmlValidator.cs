@@ -210,6 +210,7 @@ namespace DocumentFormat.OpenXml.Validation
         public int MaxNumberOfErrors
         {
             get { return this._settings.MaxNumberOfErrors; }
+
             set
             {
                 if (value < 0)
@@ -360,7 +361,6 @@ namespace DocumentFormat.OpenXml.Validation
             return this.YieldResult(validationResult);
         }
 
-
         /// <summary>
         /// Validates the specified element.
         /// </summary>
@@ -465,7 +465,6 @@ namespace DocumentFormat.OpenXml.Validation
         //{
         //    yield break;
         //}
-
 
         ///// <summary>
         ///// Validate the specified element.

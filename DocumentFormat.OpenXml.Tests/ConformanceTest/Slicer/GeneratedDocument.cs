@@ -1875,6 +1875,5 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             document.PackageProperties.LastModifiedBy = "Dan Ito";
         }
 
-
     }
 }

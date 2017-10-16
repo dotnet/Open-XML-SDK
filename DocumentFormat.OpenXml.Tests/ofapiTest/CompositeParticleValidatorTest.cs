@@ -33,7 +33,6 @@ namespace DocumentFormat.OpenXml.Tests
             ValidateBlip(sdbSchemaDatas);
         }
 
-
         private void ValidatePpr(SdbSchemaDatas sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();

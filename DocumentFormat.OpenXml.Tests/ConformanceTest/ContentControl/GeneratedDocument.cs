@@ -4807,6 +4807,5 @@ namespace DocumentFormat.OpenXml.Tests.ContentControlClass
             document.PackageProperties.LastModifiedBy = "Masaki Tamura (Pasona Tech)";
         }
 
-
     }
 }

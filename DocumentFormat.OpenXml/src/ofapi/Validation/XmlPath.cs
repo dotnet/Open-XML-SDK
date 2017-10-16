@@ -140,7 +140,6 @@ namespace DocumentFormat.OpenXml
                 xpath.Append("]");
             }
 
-
         }
     }
 }

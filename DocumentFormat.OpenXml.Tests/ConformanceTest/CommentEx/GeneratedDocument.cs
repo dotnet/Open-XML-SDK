@@ -2243,6 +2243,5 @@ namespace DocumentFormat.OpenXml.Tests.CommentExClass
             document.PackageProperties.LastModifiedBy = "Dan Ito";
         }
 
-
     }
 }

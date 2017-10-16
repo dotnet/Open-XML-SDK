@@ -360,14 +360,12 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(r1, pPr.NextSibling());
             Assert.Same(pPr, r1.PreviousSibling());
 
-
             BookmarkStart bkStart = new BookmarkStart();
 
             r1.InsertAfterSelf(bkStart);
             Assert.Same(bkStart, r1.NextSibling());
             Assert.Same(r1, bkStart.PreviousSibling());
         }
-
 
         /// <summary>
         ///A test for OpenXmlElement.RemoveAllChildren
@@ -403,7 +401,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(bkEnd, bkStart.NextSibling<BookmarkEnd>());
             Assert.Same(bkEnd, r2.NextSibling<BookmarkEnd>());
         }
-
 
         /// <summary>
         ///A test for OpenXmlElement
@@ -689,6 +686,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.StartsWith(ExceptionMessages.InvalidOuterXml, ex1.Message);
             }
         }
+
         /// <summary>
         /// A test for the OpenXmlElement.ChildElements{get;}.
         /// </summary>
@@ -899,7 +897,6 @@ namespace DocumentFormat.OpenXml.Tests
                     reader.ReadNextSibling();
                     Assert.EndsWith("Table", reader.ElementType.Name);
                     Assert.Single(reader.NamespaceDeclarations);
-
 
                 }
             }
