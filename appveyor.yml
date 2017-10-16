@@ -13,10 +13,10 @@ before_build:
 
 build_script:
   - ps: .\build\Update-Version.ps1 
-  - cmd: msbuild /t:restore;build /p:Configuration=Release /m .\Open-Xml-SDK.sln
+  - cmd: msbuild /t:restore;build /p:Configuration=Release /m .\Open-Xml-SDK.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 
 after_build:
-  - cmd: msbuild /t:pack /p:Configuration=Release .\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj
+  - cmd: msbuild /t:pack /p:Configuration=Release .\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
   - ps: .\build\SignPackage.ps1
 
 test_script:
