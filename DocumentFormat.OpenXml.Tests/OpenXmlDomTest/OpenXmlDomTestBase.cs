@@ -1312,6 +1312,7 @@ namespace DocumentFormat.OpenXml.Tests
                         .All(ex => ex.NamespaceUri != a.NamespaceUri || ex.LocalName != a.LocalName));
                 return attributes.PickSecond();
             };
+
         internal GetTargetNamespaceDeclaration getNonExistingNamespaceDeclaration =
             e => e.Ancestors()
                 .SelectMany(a => a.NamespaceDeclarations)
@@ -2264,6 +2265,7 @@ namespace DocumentFormat.OpenXml.Tests
             hostElement.OpenXmlElementContext.ElementRemoved += new EventHandler<ElementEventArgs>(expectedElementRemoved);
             return hostElement;
         }
+
         internal OpenXmlElement validInsertEventHandler(OpenXmlElement hostElement)
         {
             hostElement.OpenXmlElementContext.ElementInserting += new EventHandler<ElementEventArgs>(expectedElementInserting);
@@ -2272,6 +2274,7 @@ namespace DocumentFormat.OpenXml.Tests
             hostElement.OpenXmlElementContext.ElementRemoved += new EventHandler<ElementEventArgs>(surprisingElementRemoved);
             return hostElement;
         }
+
         internal OpenXmlElement validRemoveEventHandler(OpenXmlElement hostElement)
         {
             hostElement.OpenXmlElementContext.ElementInserting += new EventHandler<ElementEventArgs>(surprisingElementInserting);

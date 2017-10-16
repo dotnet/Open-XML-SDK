@@ -195,6 +195,7 @@ namespace DocumentFormat.OpenXml
     public class OpenXmlPartWriter : OpenXmlWriter
     {
         private static Type _openXmlLeafTextElementClass;
+
         private static Type OpenXmlLeafTextElementClass
         {
             get

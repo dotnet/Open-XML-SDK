@@ -1030,6 +1030,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("Leaving Non-Generic Test Method...");
         }
+
         private void InvalidOperation<T>(
             OnOffValue a, T expectedValue,
             Action<OnOffValue, T> action)

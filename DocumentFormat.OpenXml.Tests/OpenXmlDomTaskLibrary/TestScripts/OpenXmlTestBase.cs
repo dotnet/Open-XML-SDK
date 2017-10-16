@@ -49,6 +49,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
                 return this.currentResultFolder;
             }
         }
+
         private string currentResultFolder;
 
         /// <summary>

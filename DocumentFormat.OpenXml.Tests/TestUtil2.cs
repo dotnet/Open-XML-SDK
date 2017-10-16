@@ -27,6 +27,7 @@ namespace OxTest
         }
 
         private static DirectoryInfo s_TempDir = null;
+
         public static string TestResultsDirectory
         {
             get

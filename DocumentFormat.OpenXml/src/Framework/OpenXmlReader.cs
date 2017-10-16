@@ -67,6 +67,7 @@ namespace DocumentFormat.OpenXml
     {
         // The xmlReader obtained from the Package class.
         protected XmlReader BaseReader { get; set; }
+
         private bool _strictTranslation { get; set; }
 
         /// <summary>

@@ -28,6 +28,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Saved changes successfully.");
             Log.Pass("Specified actions executed without any exceptions.");
         }
+
         public delegate void ValidAction(OpenXmlElement e);
 
         /// <summary> Extension to invalid actions on specified element with log functionality.</summary>
@@ -54,6 +55,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Comment(e.ToString());
             }
         }
+
         public delegate void InvalidAction(OpenXmlElement e);
         #endregion Extensions for Operations
     }

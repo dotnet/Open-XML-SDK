@@ -38,6 +38,7 @@ namespace DocumentFormat.OpenXml.Validation
             {
                 return this._spreadsheetDocument;
             }
+
             set
             {
                 this._spreadsheetDocument = (SpreadsheetDocument)value;

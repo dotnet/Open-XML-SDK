@@ -36,6 +36,7 @@ namespace DocumentFormat.OpenXml.Validation
             {
                 return this._presentationDocument;
             }
+
             set
             {
                 this._presentationDocument = (PresentationDocument)value;

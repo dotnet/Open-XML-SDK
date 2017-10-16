@@ -363,6 +363,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
         }
 
         delegate void WebExtentionPartHandler(WebExtensionPart wep);
+
         delegate void ElementHandler<T>(T wep);
 
         /// <summary>
@@ -375,6 +376,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
         public class SectionFetcher<T> : IEnumerable
         {
             private SpreadsheetDocument xl;
+
             public SectionFetcher(SpreadsheetDocument xl)
             {
                 this.xl = xl;
