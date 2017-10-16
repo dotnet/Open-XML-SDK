@@ -207,7 +207,6 @@ namespace DocumentFormat.OpenXml.Tests
             else
                 Log.Fail("PreviousSibling doesn't return correctly");
 
-
             Log.Comment("****** test NextSibling<OpenXmlElement> ******");
 
             while (Xwalker.NextNode != null && walker.NextSibling() != null)
@@ -227,7 +226,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
             else
                 Log.Fail("nextSibling doesn't return correctly");
-
 
             Log.Comment("****** test PreviousSibling<OpenXmlElement>() ******");
             while (Xwalker.PreviousNode != null && walker.PreviousSibling<OpenXmlElement>() != null)

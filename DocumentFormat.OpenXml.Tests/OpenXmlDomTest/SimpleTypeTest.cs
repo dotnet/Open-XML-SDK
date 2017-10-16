@@ -821,7 +821,6 @@ namespace DocumentFormat.OpenXml.Tests
             else
                 Log.Fail("Implicit string operator on null reference return NON-null.");
 
-
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidValueFalse);
             objA = new OnOffValue();
             objA.InnerText = invalidValueFalse;
@@ -928,7 +927,6 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Pass("implicit string operator on null reference returned null, as expected.");
             else
                 Log.Fail("Implicit string operator on null reference return NON-null.");
-
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidValueFalse);
             objA = new TrueFalseBlankValue();

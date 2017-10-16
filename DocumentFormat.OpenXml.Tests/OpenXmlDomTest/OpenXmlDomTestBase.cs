@@ -2619,7 +2619,6 @@ namespace DocumentFormat.OpenXml.Tests
             if (childPosition.HasValue && (childPosition.Value < 0 || childPosition.Value >= resultElement.Elements().Count()))
                 throw new IndexOutOfRangeException("the child position is out of range");
 
-
             XElement targetElement = null;
 
             if (childPosition != null)
