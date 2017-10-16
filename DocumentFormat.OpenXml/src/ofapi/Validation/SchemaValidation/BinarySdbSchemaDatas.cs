@@ -71,7 +71,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             dataStream.Read(dataBytes, 0, count);
             this.SdbClassIdMap = new SdbDataArray<SdbClassIdToSchemaTypeIndex>(dataBytes, SdbDataHead.ClassIdsCount);
 
-
             // schema types
             count = this.SdbDataHead.SchemaTypeCount * SdbSchemaType.TypeSize;
             dataBytes = new byte[count];

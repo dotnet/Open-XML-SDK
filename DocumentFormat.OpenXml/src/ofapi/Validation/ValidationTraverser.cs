@@ -68,7 +68,6 @@ namespace DocumentFormat.OpenXml.Validation
                     // do not validate this element.
                 }
 
-             
                 foreach (OpenXmlElement child in element.ChildElements)
                 {
                     validationContext.Element = child;

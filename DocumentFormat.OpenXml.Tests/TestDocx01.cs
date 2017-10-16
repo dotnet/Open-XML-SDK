@@ -102,7 +102,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var cnt = mdp.Document.Descendants().Count();
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(1, errs.Count());
+                    Assert.Single(errs);
                 }
             }
         }
@@ -121,7 +121,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var wpcp = pkg.AddNewPart<RibbonExtensibilityPart>("application/xml", "rid1232131");
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(0, errs.Count());
+                    Assert.Empty(errs);
                 }
             }
         }
@@ -150,7 +150,7 @@ namespace DocumentFormat.OpenXml.Tests
                     tnPart = doc.AddThumbnailPart("image/jpg");
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(0, errs.Count());
+                    Assert.Empty(errs);
                 }
             }
         }
@@ -168,7 +168,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var wpcp = doc.AddNewPart<RibbonExtensibilityPart>("application/xml", "rid1232131");
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(0, errs.Count());
+                    Assert.Empty(errs);
                 }
             }
         }
@@ -204,7 +204,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var wpcp = doc.AddNewPart<RibbonExtensibilityPart>("rid123123");
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(0, errs.Count());
+                    Assert.Empty(errs);
                 }
             }
         }
@@ -224,7 +224,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var wpcp = doc.AddNewPart<RibbonExtensibilityPart>();
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(1, errs.Count());
+                    Assert.Single(errs);
                 }
             }
         }
@@ -242,7 +242,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var wpcp = doc.MainDocumentPart.AddNewPart<WordprocessingCommentsPart>("application/vnd.openxmlformats-officedocument.wordprocessingml.comments+xml", "rid1232131");
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(0, errs.Count());
+                    Assert.Empty(errs);
                 }
             }
         }
@@ -278,7 +278,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var wpcp = doc.MainDocumentPart.AddNewPart<WordprocessingCommentsPart>("rid123123");
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(0, errs.Count());
+                    Assert.Empty(errs);
                 }
             }
         }
@@ -296,7 +296,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var wpcp = doc.MainDocumentPart.AddNewPart<WordprocessingCommentsPart>();
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(0, errs.Count());
+                    Assert.Empty(errs);
                 }
             }
         }
@@ -314,7 +314,7 @@ namespace DocumentFormat.OpenXml.Tests
                     doc.MainDocumentPart.AddAlternativeFormatImportPart(AlternativeFormatImportPartType.Html);
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(0, errs.Count());
+                    Assert.Empty(errs);
                 }
             }
         }
@@ -339,7 +339,7 @@ namespace DocumentFormat.OpenXml.Tests
                                             new Uri(@"c:/resources/image1.jpg", UriKind.Absolute));
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(0, errs.Count());
+                    Assert.Empty(errs);
                 }
             }
         }
@@ -457,7 +457,7 @@ namespace DocumentFormat.OpenXml.Tests
                 doc.MainDocumentPart.Document.Save();
                 OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                 var errs = v.Validate(doc);
-                Assert.Equal(0, errs.Count());
+                Assert.Empty(errs);
             }
             if (TestUtil.DeleteTempFiles)
                 fi.Delete();
@@ -479,7 +479,7 @@ namespace DocumentFormat.OpenXml.Tests
                 doc.MainDocumentPart.Document.Save();
                 OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                 var errs = v.Validate(doc);
-                Assert.Equal(0, errs.Count());
+                Assert.Empty(errs);
             }
             if (TestUtil.DeleteTempFiles)
                 fi.Delete();
@@ -501,7 +501,7 @@ namespace DocumentFormat.OpenXml.Tests
                 doc.MainDocumentPart.Document.Save();
                 OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                 var errs = v.Validate(doc);
-                Assert.Equal(0, errs.Count());
+                Assert.Empty(errs);
             }
             if (TestUtil.DeleteTempFiles)
                 fi.Delete();
@@ -1013,7 +1013,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var hyperlinkRel = extRels.First();
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(0, errs.Count());
+                    Assert.Empty(errs);
                 }
             }
         }
@@ -1060,7 +1060,7 @@ namespace DocumentFormat.OpenXml.Tests
                     AddImageToBody(doc, mainPart.GetIdOfPart(imagePart));
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(1, errs.Count());
+                    Assert.Single(errs);
                 }
             }
         }
@@ -1145,7 +1145,7 @@ namespace DocumentFormat.OpenXml.Tests
                     doc.MainDocumentPart.DeleteParts(partList);
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(0, errs.Count());
+                    Assert.Empty(errs);
                 }
             }
         }
@@ -1208,7 +1208,7 @@ namespace DocumentFormat.OpenXml.Tests
                 firstParagraph.InsertAfter(new W.Run(new W.CommentReference() { Id = id }), cmtEnd);
                 OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                 var errs = v.Validate(doc);
-                Assert.Equal(0, errs.Count());
+                Assert.Empty(errs);
             }
             if (TestUtil.DeleteTempFiles)
                 fileInfo.Delete();
@@ -1237,7 +1237,7 @@ namespace DocumentFormat.OpenXml.Tests
                     doc.MainDocumentPart.Document.Save();
                     OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
-                    Assert.Equal(0, errs.Count());
+                    Assert.Empty(errs);
                 }
             }
         }
@@ -1287,7 +1287,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     MainDocumentPart mdp = wDoc.MainDocumentPart;
                     var cnt = mdp.Document.Descendants().Count();
-                    Assert.Equal(cnt, 11);
+                    Assert.Equal(11, cnt);
                 }
             }
         }

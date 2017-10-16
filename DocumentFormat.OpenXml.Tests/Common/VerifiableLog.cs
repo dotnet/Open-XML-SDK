@@ -134,6 +134,7 @@ namespace LogUtil
             else
                 Pass(message, arguments);
         }
+
         public void VerifyFalse(bool pass, string message)
         {
             if (pass)
@@ -153,6 +154,7 @@ namespace LogUtil
         {
             VerifyNotValue(test, null, message, arguments);
         }
+
         public void VerifyNotNull(object test, string message)
         {
             VerifyNotValue(test, null, message);
@@ -170,6 +172,7 @@ namespace LogUtil
         {
             VerifyFalse((object.ReferenceEquals(actualObjectReference, expectedNotToBeReference)), message, arguments);
         }
+
         public void VerifyNotReference(object actualObjectReference, object expectedNotToBeReference, string message)
         {
             VerifyFalse((object.ReferenceEquals(actualObjectReference, expectedNotToBeReference)), message);
@@ -230,6 +233,7 @@ namespace LogUtil
             var messageModified = String.Format("{0} [Actual: {1}, Expected Not: {2}]", message, actualValue, expectedNotValue);
             VerifyFalse(object.Equals(actualValue, expectedNotValue), messageModified, arguments);
         }
+
         public void VerifyNotValue(object actualValue, object expectedNotValue, string message)
         {
             var messageModified = String.Format("{0} [Actual: {1}, Expected Not: {2}]", message, actualValue, expectedNotValue);
@@ -260,6 +264,7 @@ namespace LogUtil
         {
             VerifyValue(test, null, message, arguments);
         }
+
         public void VerifyNull(object test, string message)
         {
             VerifyValue(test, null, message);
@@ -277,6 +282,7 @@ namespace LogUtil
         {
             VerifyTrue(object.ReferenceEquals(actualObjectReference, expectedObjectReference), message, arguments);
         }
+
         public void VerifyReference(object actualObjectReference, object expectedObjectReference, string message)
         {
             VerifyTrue(object.ReferenceEquals(actualObjectReference, expectedObjectReference), message);
@@ -352,6 +358,7 @@ namespace LogUtil
             else
                 Fail(message, arguments);
         }
+
         public void VerifyTrue(bool pass, string message)
         {
             if (pass)
@@ -373,6 +380,7 @@ namespace LogUtil
             var messageModified = String.Format("{0} [Actual: {1}, Expected: {2}]", message, actualValue, expectedValue);
             VerifyTrue(object.Equals(actualValue, expectedValue), messageModified, arguments);
         }
+
         public void VerifyValue(IComparable actualValue, IComparable expectedValue, string message)
         {
             var messageModified = String.Format("{0} [Actual: {1}, Expected: {2}]", message, actualValue, expectedValue);
@@ -384,6 +392,7 @@ namespace LogUtil
             var messageModified = String.Format("{0} [Actual: {1}, Expected: {2}]", message, actualValue, expectedValue);
             VerifyTrue(object.Equals(actualValue, expectedValue), messageModified, arguments);
         }
+
         public void VerifyValue(object actualValue, object expectedValue, string message)
         {
             var messageModified = String.Format("{0} [Actual: {1}, Expected: {2}]", message, actualValue, expectedValue);

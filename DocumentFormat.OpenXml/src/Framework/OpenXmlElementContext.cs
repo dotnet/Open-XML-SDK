@@ -63,6 +63,7 @@ namespace DocumentFormat.OpenXml
         private EventHandler<ElementEventArgs> _onElementRemoved;
 
         private MarkupCompatibilityProcessSettings _mcSettings;
+
         internal MarkupCompatibilityProcessSettings MCSettings 
         {
             get
@@ -73,6 +74,7 @@ namespace DocumentFormat.OpenXml
                 }
                 return _mcSettings;
             }
+
             set
             {
                 _mcSettings = value;
@@ -120,6 +122,7 @@ namespace DocumentFormat.OpenXml
         internal int LazySteps
         {
             get { return this._lazySteps; }
+
             set
             {
                 if (value < 0)
@@ -288,6 +291,7 @@ namespace DocumentFormat.OpenXml
             {
                 this._onElementInserting = (EventHandler<ElementEventArgs>)Delegate.Combine(this._onElementInserting, value);
             }
+
             remove
             {
                 this._onElementInserting = (EventHandler<ElementEventArgs>)Delegate.Remove(this._onElementInserting, value);
@@ -303,6 +307,7 @@ namespace DocumentFormat.OpenXml
             {
                 this._onElementInserted = (EventHandler<ElementEventArgs>)Delegate.Combine(this._onElementInserted, value);
             }
+
             remove
             {
                 this._onElementInserted = (EventHandler<ElementEventArgs>)Delegate.Remove(this._onElementInserted, value);
@@ -318,6 +323,7 @@ namespace DocumentFormat.OpenXml
             {
                 this._onElementRemoving = (EventHandler<ElementEventArgs>)Delegate.Combine(this._onElementRemoving, value);
             }
+
             remove
             {
                 this._onElementRemoving = (EventHandler<ElementEventArgs>)Delegate.Remove(this._onElementRemoving, value);
@@ -333,6 +339,7 @@ namespace DocumentFormat.OpenXml
             {
                 this._onElementRemoved = (EventHandler<ElementEventArgs>)Delegate.Combine(this._onElementRemoved, value);
             }
+
             remove
             {
                 this._onElementRemoved = (EventHandler<ElementEventArgs>)Delegate.Remove(this._onElementRemoved, value);

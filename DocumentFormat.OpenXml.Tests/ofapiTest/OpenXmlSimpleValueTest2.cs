@@ -7,6 +7,7 @@ using M = DocumentFormat.OpenXml.Math;
 using System;
 using System.Globalization;
 using Xunit;
+
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
@@ -59,7 +60,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.False(target.Value);
             Assert.Equal("0", target.ToString());
         }
-
 
         /// <summary>
         ///A test for EnumValue
@@ -146,7 +146,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("default", objB.InnerText);
         }
 
-
         /// <summary>
         ///A test for StringValue
         ///</summary>
@@ -178,7 +177,6 @@ namespace DocumentFormat.OpenXml.Tests
 
         }
 
-
         /// <summary>
         ///A test for DateTimeValue
         ///</summary>
@@ -199,7 +197,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             Assert.True(target.HasValue);
             Assert.Equal(dateTime, target.Value);
-
 
         }
 
@@ -367,22 +364,22 @@ namespace DocumentFormat.OpenXml.Tests
 
             target.InnerText = "true";
             Assert.True(target.HasValue);
-            Assert.Equal(true, target.Value);
+            Assert.True(target.Value);
             Assert.True(true == target);
 
             target.InnerText = "false";
             Assert.True(target.HasValue);
-            Assert.Equal(false, target.Value);
+            Assert.False(target.Value);
             Assert.True(false == target);
 
             target.InnerText = "t";
             Assert.True(target.HasValue);
-            Assert.Equal(true, target.Value);
+            Assert.True(target.Value);
             Assert.True(true == target);
 
             target.InnerText = "f";
             Assert.True(target.HasValue);
-            Assert.Equal(false, target.Value);
+            Assert.False(target.Value);
             Assert.True(false == target);
 
             target.InnerText = "invalid";
@@ -410,18 +407,18 @@ namespace DocumentFormat.OpenXml.Tests
 
             TrueFalseValue target2 = new TrueFalseValue(true);
             Assert.True(target2.HasValue);
-            Assert.Equal(true, target2.Value);
+            Assert.True(target2.Value);
 
             TrueFalseValue target3 = new TrueFalseValue(false);
             Assert.True(target3.HasValue);
-            Assert.Equal(false, target3.Value);
+            Assert.False(target3.Value);
 
             TrueFalseValue target4 = new TrueFalseValue(target2);
             Assert.True(target4.HasValue);
-            Assert.Equal(true, target4.Value);
+            Assert.True(target4.Value);
 
             TrueFalseValue target5 = new TrueFalseValue(target3);
-            Assert.Equal(false, target5.Value);
+            Assert.False(target5.Value);
 
             TrueFalseValue target6 = target5.Clone() as TrueFalseValue;
             Assert.True(false == target6);
@@ -439,27 +436,27 @@ namespace DocumentFormat.OpenXml.Tests
 
             target.InnerText = "true";
             Assert.True(target.HasValue);
-            Assert.Equal(true, target.Value);
+            Assert.True(target.Value);
             Assert.True(true == target);
 
             target.InnerText = "false";
             Assert.True(target.HasValue);
-            Assert.Equal(false, target.Value);
+            Assert.False(target.Value);
             Assert.True(false == target);
 
             target.InnerText = "t";
             Assert.True(target.HasValue);
-            Assert.Equal(true, target.Value);
+            Assert.True(target.Value);
             Assert.True(true == target);
 
             target.InnerText = "f";
             Assert.True(target.HasValue);
-            Assert.Equal(false, target.Value);
+            Assert.False(target.Value);
             Assert.True(false == target);
 
             target.InnerText = string.Empty;
             Assert.True(target.HasValue);
-            Assert.Equal(false, target.Value);
+            Assert.False(target.Value);
             Assert.True(false == target);
 
             target.InnerText = "invalid";
@@ -487,18 +484,18 @@ namespace DocumentFormat.OpenXml.Tests
 
             TrueFalseBlankValue target2 = new TrueFalseBlankValue(true);
             Assert.True(target2.HasValue);
-            Assert.Equal(true, target2.Value);
+            Assert.True(target2.Value);
 
             TrueFalseBlankValue target3 = new TrueFalseBlankValue(false);
             Assert.True(target3.HasValue);
-            Assert.Equal(false, target3.Value);
+            Assert.False(target3.Value);
 
             TrueFalseBlankValue target4 = new TrueFalseBlankValue(target2);
             Assert.True(target4.HasValue);
-            Assert.Equal(true, target4.Value);
+            Assert.True(target4.Value);
 
             TrueFalseBlankValue target5 = new TrueFalseBlankValue(target3);
-            Assert.Equal(false, target5.Value);
+            Assert.False(target5.Value);
 
         }
 
@@ -514,32 +511,32 @@ namespace DocumentFormat.OpenXml.Tests
 
             target.InnerText = "true";
             Assert.True(target.HasValue);
-            Assert.Equal(true, target.Value);
+            Assert.True(target.Value);
             Assert.True(true == target);
 
             target.InnerText = "false";
             Assert.True(target.HasValue);
-            Assert.Equal(false, target.Value);
+            Assert.False(target.Value);
             Assert.True(false == target);
 
             target.InnerText = "on";
             Assert.True(target.HasValue);
-            Assert.Equal(true, target.Value);
+            Assert.True(target.Value);
             Assert.True(true == target);
 
             target.InnerText = "off";
             Assert.True(target.HasValue);
-            Assert.Equal(false, target.Value);
+            Assert.False(target.Value);
             Assert.True(false == target);
 
             target.InnerText = "1";
             Assert.True(target.HasValue);
-            Assert.Equal(true, target.Value);
+            Assert.True(target.Value);
             Assert.True(true == target);
 
             target.InnerText = "0";
             Assert.True(target.HasValue);
-            Assert.Equal(false, target.Value);
+            Assert.False(target.Value);
             Assert.True(false == target);
 
             target.InnerText = "invalid";
@@ -567,18 +564,18 @@ namespace DocumentFormat.OpenXml.Tests
 
             OnOffValue target2 = new OnOffValue(true);
             Assert.True(target2.HasValue);
-            Assert.Equal(true, target2.Value);
+            Assert.True(target2.Value);
 
             OnOffValue target3 = new OnOffValue(false);
             Assert.True(target3.HasValue);
-            Assert.Equal(false, target3.Value);
+            Assert.False(target3.Value);
 
             OnOffValue target4 = new OnOffValue(target2);
             Assert.True(target4.HasValue);
-            Assert.Equal(true, target4.Value);
+            Assert.True(target4.Value);
 
             OnOffValue target5 = new OnOffValue(target3);
-            Assert.Equal(false, target5.Value);
+            Assert.False(target5.Value);
 
         }
 
@@ -638,7 +635,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(booleanValue.Value);
             booleanValue = BooleanValue.FromBoolean(false);
             Assert.False(booleanValue);
-            Assert.Equal(false, BooleanValue.ToBoolean(booleanValue));
+            Assert.False(BooleanValue.ToBoolean(booleanValue));
 
             // 3. ByteValue
             ByteValue byteValue = new ByteValue();
@@ -733,8 +730,8 @@ namespace DocumentFormat.OpenXml.Tests
             onOffValue = true;
             Assert.True(onOffValue);
             onOffValue = OnOffValue.FromBoolean(false);
-            Assert.Equal(false, onOffValue.Value);
-            Assert.Equal(false, OnOffValue.ToBoolean(onOffValue));
+            Assert.False(onOffValue.Value);
+            Assert.False(OnOffValue.ToBoolean(onOffValue));
 
             // 13. SByteValue
             SByteValue sbyteValue = new SByteValue();
@@ -772,16 +769,16 @@ namespace DocumentFormat.OpenXml.Tests
             tfbValue = true;
             Assert.True(tfbValue);
             tfbValue = TrueFalseBlankValue.FromBoolean(false);
-            Assert.Equal(false, tfbValue.Value);
-            Assert.Equal(false, TrueFalseBlankValue.ToBoolean(tfbValue));
+            Assert.False(tfbValue.Value);
+            Assert.False(TrueFalseBlankValue.ToBoolean(tfbValue));
 
             // 17. TrueFalseValue
             TrueFalseValue tfValue = new TrueFalseValue();
             tfValue = true;
             Assert.True(tfValue);
             tfValue = TrueFalseValue.FromBoolean(false);
-            Assert.Equal(false, tfValue.Value);
-            Assert.Equal(false, TrueFalseValue.ToBoolean(tfValue));
+            Assert.False(tfValue.Value);
+            Assert.False(TrueFalseValue.ToBoolean(tfValue));
 
             // 18. UInt16Value
             UInt16Value uint16Value = new UInt16Value();
@@ -813,7 +810,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(uint64, uint64Value.Value);
             Assert.Equal(uint64, UInt64Value.ToUInt64(uint64Value));
         }
-
 
         /// <summary>
         /// A test for signed numbers (ex. "+23") for int, uint, etc.

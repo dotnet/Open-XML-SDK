@@ -31,8 +31,7 @@ namespace DocumentFormat.OpenXml
 
             _nsId = nsId;
             _tag = tag;
-            
-            
+
         }
 
         /// <summary>
@@ -85,7 +84,6 @@ namespace DocumentFormat.OpenXml
             _type = elementType;
             format = availableInOfficeVersion;
         }
-
 
         /// <summary>
         /// Get the  type of the possible child element.

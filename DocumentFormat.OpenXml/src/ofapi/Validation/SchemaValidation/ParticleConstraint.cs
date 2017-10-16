@@ -402,7 +402,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             get { return this._xsdAnyValue; }
         }
 
-
         /// <summary>
         /// Gets a ParticleValidator for this particle constraint.
         /// </summary>
@@ -463,7 +462,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             get { return this._namespaceId; }
         }
 
-
         /// <summary>
         /// Gets a ParticleValidator for this particle constraint.
         /// </summary>
@@ -496,8 +494,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             : base()
         {
         }
-    
-               
+
         /// <summary>
         /// Gets the type of the particle.
         /// </summary>

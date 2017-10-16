@@ -3,7 +3,7 @@ $gitversion = gitversion | ConvertFrom-Json
 
 Write-Host "Updating to $($gitversion.NuGetVersionV2)"
 
-$props = "$PSScriptRoot\..\dir.props"
+$props = "$PSScriptRoot\..\DocumentFormat.OpenXml.Package.props"
 [xml]$xml = Get-Content $props
 
 $xml.Project.PropertyGroup.Version = $gitversion.NuGetVersionV2

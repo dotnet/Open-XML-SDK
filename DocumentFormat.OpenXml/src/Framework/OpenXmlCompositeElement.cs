@@ -78,7 +78,6 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        
         /// <summary>
         /// Initializes a new instance of the OpenXmlCompositeElement class using the supplied collection of OpenXmlElement elements.
         /// </summary>
@@ -138,7 +137,6 @@ namespace DocumentFormat.OpenXml
                 return null;
             }
         }
-
 
         /// <summary>
         /// Gets the last child of the current OpenXmlElement element.
@@ -991,7 +989,6 @@ namespace DocumentFormat.OpenXml
                         }
                     }
 
-
                     // TODO: should we handle error case?
                     //  1: there are more than 1 elements for a type?
                     //  2: there are more than 2 elements?
@@ -1030,7 +1027,6 @@ namespace DocumentFormat.OpenXml
                             this.InsertAfter(newChild, previousChild);
                         }
                     }
-
 
                     // TODO: should we handle error case?
                     //  1: there are more than 1 elements for a type?
@@ -1088,7 +1084,6 @@ namespace DocumentFormat.OpenXml
                             this.InsertAfter(newChild, prev);
                         }
                     }
-
 
                     // TODO: should we handle error case?
                     //  1: there are more than 1 elements for a type?

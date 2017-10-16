@@ -103,7 +103,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                             continue;
                         }
 
-
                     case ParticleMatch.Matched:
                         particleMatchInfo.LastMatchedElement = _childMatchInfo.LastMatchedElement;
                         next = validationContext.GetNextChildMc(particleMatchInfo.LastMatchedElement);
@@ -160,7 +159,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         }
 
         // TODO: do better job for simple sequence ( children are elements only ).
-
 
         /// <summary>
         /// Get the required elements - elements which minOccurs > 0.

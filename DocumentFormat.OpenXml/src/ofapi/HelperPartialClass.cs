@@ -24,6 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 return _rootEle;
             }
+
             set
             {
                 _rootEle = value as DocumentFormat.OpenXml.Office.CustomUI.CustomUI;
@@ -54,6 +55,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
                 return _rootEle;
             }
+
             set
             {
                 if (value == null)
@@ -80,6 +82,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 return _rootEle;
             }
+
             set
             {
                 _rootEle = value as DocumentFormat.OpenXml.Wordprocessing.Styles;
@@ -110,6 +113,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
                 return _rootEle;
             }
+
             set
             {
                 if (value == null)

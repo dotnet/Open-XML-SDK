@@ -106,7 +106,6 @@ namespace DocumentFormat.OpenXml
             this._tagName = localName;
         }
 
-
         /// <summary>
         /// Creates a new OpenXmlUnknownElement class by using the outer XML.
         /// </summary>

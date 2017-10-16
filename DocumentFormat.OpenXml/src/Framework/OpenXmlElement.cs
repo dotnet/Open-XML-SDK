@@ -74,6 +74,7 @@ namespace DocumentFormat.OpenXml
                     return MiscAttrContainer.ExtendedAttributesField;
                 }
             }
+
             set
             {
                 if (MiscAttrContainer == null)
@@ -97,6 +98,7 @@ namespace DocumentFormat.OpenXml
                     return MiscAttrContainer._mcAttributes;
                 }
             }
+
             set
             {
                 if (MiscAttrContainer == null)
@@ -106,7 +108,6 @@ namespace DocumentFormat.OpenXml
                 MiscAttrContainer._mcAttributes = value;
             }
         }
-
 
         internal List<KeyValuePair<string,string>> NamespaceDeclField
         {
@@ -121,6 +122,7 @@ namespace DocumentFormat.OpenXml
                     return MiscAttrContainer._nsMappings;
                 }
             }
+
             set
             {
                 if (MiscAttrContainer == null)
@@ -193,6 +195,7 @@ namespace DocumentFormat.OpenXml
             { 
                 return _rawOuterXml; 
             }
+
             set 
             {
                 if (String.IsNullOrEmpty(value))
@@ -513,6 +516,7 @@ namespace DocumentFormat.OpenXml
             {
                 return string.Empty;
             }
+
             protected set
             {
                 throw new InvalidOperationException();
@@ -547,6 +551,7 @@ namespace DocumentFormat.OpenXml
                     }
                 }
             }
+
             set
             {
                 throw new InvalidOperationException(ExceptionMessages.InnerXmlCannotBeSet);
@@ -577,6 +582,7 @@ namespace DocumentFormat.OpenXml
                     return this.RawOuterXml;
                 }
             }
+
             internal set
             {
                 //if (!String.IsNullOrEmpty(value))
@@ -613,7 +619,6 @@ namespace DocumentFormat.OpenXml
                 }
             }
         }
-
 
         #endregion
 
@@ -761,7 +766,6 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-
         /// <summary>
         /// Sets an attribute to the specified element.
         /// If the attribute is a known attribute, the value of the attribute is set.
@@ -781,7 +785,6 @@ namespace DocumentFormat.OpenXml
             {
                 throw new InvalidOperationException(ExceptionMessages.CannotSetAttribute);
             }
-
 
             MakeSureParsed();
             if (!this.TrySetFixedAttribute(openXmlAttribute.NamespaceUri, openXmlAttribute.LocalName, openXmlAttribute.Value, false))
@@ -1039,7 +1042,6 @@ namespace DocumentFormat.OpenXml
             return null;
         }
 
-
         /// <summary>
         /// Gets the OpenXmlElement element that immediately follows the current OpenXmlElement element. 
         /// Returns null (Nothing in Visual Basic) if there is no next OpenXmlElement element. 
@@ -1196,7 +1198,6 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-
         /// <summary>
         /// Enumerates all of the sibling elements that precede the current element and have the same parent as the current element. 
         /// </summary>
@@ -1234,7 +1235,6 @@ namespace DocumentFormat.OpenXml
                 }
             }
         }
-
 
         /// <summary>
         /// When overridden in a derived class, creates a duplicate of the node. 
@@ -1326,7 +1326,6 @@ namespace DocumentFormat.OpenXml
             throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
         }
 
-
         /// <summary>
         /// Inserts the specified element immediately after the specified reference element.
         /// </summary>
@@ -1407,7 +1406,6 @@ namespace DocumentFormat.OpenXml
             throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
         }
 
-
         /// <summary>
         /// Inserts the specified element at the beginning of the current element's list of child elements. 
         /// </summary>
@@ -1438,7 +1436,6 @@ namespace DocumentFormat.OpenXml
         {
             throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
         }
-
 
         /// <summary>
         /// Removes all of the current element's child elements.
@@ -1510,7 +1507,6 @@ namespace DocumentFormat.OpenXml
 
             return (GetOrder(this, element) == ElementOrder.Before);
         }
-
 
         private enum ElementOrder
         {
@@ -1712,7 +1708,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="w">The XmlWriter at which to save the child nodes. </param>
         internal abstract void WriteContentTo(XmlWriter w);
-
 
         internal int TryFindAttributeIndex(string namespaceUri, string tagName)
         {
@@ -2194,7 +2189,6 @@ namespace DocumentFormat.OpenXml
                 }
             }
 
-
             if (newElement == null)
             {
                 newElement = new OpenXmlUnknownElement(prefix, name, namespaceUri);
@@ -2513,7 +2507,6 @@ namespace DocumentFormat.OpenXml
                     }
                 }
             }
-
 
         }
 
@@ -3628,7 +3621,6 @@ namespace DocumentFormat.OpenXml
         private static string[] arrayOfOrigTagAttrValues = { "name", "priority", "default", "font", "basedOn", "type" };
         private static string[] arrayOfNewTagAttrValues = { "0000", "0001", "0002", "0003", "0004", "0005" };
         private static long[] arrayOfTagAttrTraits = { 0, 0, 0, 0, 0, 0 };
-
 
         internal StylePaneSortMethodTagAttributeTranslator()
         {

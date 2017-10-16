@@ -220,7 +220,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 parentUri = new Uri("/", UriKind.Relative);
             }
 
-
             //OpenXmlPart parentPart = this._ownerPart;
 
             //Uri is auto generated to make sure it's unique
@@ -295,7 +294,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         }
 
-
         #endregion
 
         #region public properties
@@ -368,7 +366,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
             return this.PackagePart.GetStream();
         }
-
 
         /// <summary>
         /// Returns the content stream that was opened using a specified I/O FileMode. 
@@ -564,7 +561,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-
         #endregion
 
         #region internal virtual methods / properties
@@ -625,7 +621,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the file base name to be used for the part name in the package.
         /// </summary>
         internal abstract string TargetName { get; }
-
 
         private const string DefaultTargetExt = ".xml";
         /// <summary>
@@ -859,7 +854,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
             return this._metroPart.CreateRelationship(targetUri, targetMode, relationshipType, id);
         }
-
 
         #endregion
 

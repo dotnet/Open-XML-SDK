@@ -38,7 +38,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             private set;
         }
 
-
         // the name of the attribute will be gotten from the CodeGen info.
         // public string PropertyName { get; set; } // the Property name of the xsd:attribute.
 

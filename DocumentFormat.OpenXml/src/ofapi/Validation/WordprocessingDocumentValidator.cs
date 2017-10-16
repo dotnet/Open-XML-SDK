@@ -36,6 +36,7 @@ namespace DocumentFormat.OpenXml.Validation
             {
                 return this._wordprossingDocument;
             }
+
             set
             {
                 this._wordprossingDocument = (WordprocessingDocument)value;

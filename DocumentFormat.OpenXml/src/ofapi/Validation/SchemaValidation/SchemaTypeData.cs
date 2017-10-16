@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 namespace DocumentFormat.OpenXml
 {
     internal class IgnoreAttribute : Attribute { }
+
     internal class IncludeAttribute : Attribute { }
 }
 

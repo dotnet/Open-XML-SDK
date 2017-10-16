@@ -128,7 +128,6 @@ namespace DocumentFormat.OpenXml
             get { return false; }
         }
 
-
         /// <summary>
         /// When overridden in a derived class, gets the local name of the node.
         /// </summary>
@@ -235,7 +234,6 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        
         /// <summary>
         /// Gets or sets the markup that represents only the child nodes of the
         /// current node.
@@ -246,6 +244,7 @@ namespace DocumentFormat.OpenXml
             {
                 return String.Empty;
             }
+
             set
             {
                 throw new InvalidOperationException(ExceptionMessages.InnerXmlCannotBeSet);
