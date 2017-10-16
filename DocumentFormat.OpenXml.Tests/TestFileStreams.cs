@@ -1,66 +1,76 @@
 ﻿using System.IO;
-using System.Linq;
 using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Tests
 {
     internal static class TestFileStreams
     {
-        private static byte[] GetStream(string name)
+        private static Stream GetStream(string name)
         {
-            using (var stream = typeof(TestFileStreams).GetTypeInfo().Assembly.GetManifestResourceStream($"DocumentFormat.OpenXml.Tests.assets.TestFiles.{name}"))
-            using (var ms = new MemoryStream())
-            {
-                stream.CopyTo(ms);
+            return typeof(TestFileStreams).GetTypeInfo().Assembly.GetManifestResourceStream($"DocumentFormat.OpenXml.Tests.assets.TestFiles.{name}");
+        }
 
-                return ms.ToArray();
+        public static MemoryStream AsMemoryStream(this Stream stream)
+        {
+            if (stream is MemoryStream ms)
+            {
+                return ms;
+            }
+            else
+            {
+                using (stream)
+                {
+                    var result = new MemoryStream();
+                    stream.CopyTo(result);
+                    return result;
+                }
             }
         }
 
-        public static byte[] _5Errors => GetStream("5Errors.docx");
+        public static Stream _5Errors => GetStream("5Errors.docx");
 
-        public static byte[] Algn_tab_TabAlignment => GetStream("Algn_tab_TabAlignment.pptx");
+        public static Stream Algn_tab_TabAlignment => GetStream("Algn_tab_TabAlignment.pptx");
 
-        public static byte[] animation => GetStream("animation.pptx");
+        public static Stream animation => GetStream("animation.pptx");
 
-        public static byte[] AnnotationRef => GetStream("AnnotationRef.docx");
+        public static Stream AnnotationRef => GetStream("AnnotationRef.docx");
 
-        public static byte[] autosave => GetStream("autosave.pptx");
+        public static Stream autosave => GetStream("autosave.pptx");
 
-        public static byte[] basicspreadsheet => GetStream("basicspreadsheet.xlsx");
+        public static Stream basicspreadsheet => GetStream("basicspreadsheet.xlsx");
 
-        public static byte[] Comments => GetStream("Comments.xlsx");
+        public static Stream Comments => GetStream("Comments.xlsx");
 
-        public static byte[] complex0docx => GetStream("complex0.docx");
+        public static Stream complex0docx => GetStream("complex0.docx");
 
-        public static byte[] complex2010docx => GetStream("complex2010.docx");
+        public static Stream complex2010docx => GetStream("complex2010.docx");
 
-        public static byte[] excel14 => GetStream("excel14.xlsx");
+        public static Stream excel14 => GetStream("excel14.xlsx");
 
-        public static byte[] extlst => GetStream("extlst.xlsx");
+        public static Stream extlst => GetStream("extlst.xlsx");
 
-        public static byte[] HelloO14 => GetStream("HelloO14.docx");
+        public static Stream HelloO14 => GetStream("HelloO14.docx");
 
-        public static byte[] mailmerge => GetStream("mailmerge.docx");
+        public static Stream mailmerge => GetStream("mailmerge.docx");
 
-        public static byte[] May_12_04 => GetStream("May_12_04.docx");
+        public static Stream May_12_04 => GetStream("May_12_04.docx");
 
-        public static byte[] mcdoc => GetStream("mcdoc.docx");
+        public static Stream mcdoc => GetStream("mcdoc.docx");
 
-        public static byte[] MCExecl => GetStream("MCExecl.xlsx");
+        public static Stream MCExecl => GetStream("MCExecl.xlsx");
 
-        public static byte[] mcppt => GetStream("mcppt.pptx");
+        public static Stream mcppt => GetStream("mcppt.pptx");
 
-        public static byte[] mediareference => GetStream("mediareference.pptx");
+        public static Stream mediareference => GetStream("mediareference.pptx");
 
-        public static byte[] o09_Performance_typical_pptx => GetStream("o09_Performance_typical.pptx");
+        public static Stream o09_Performance_typical_pptx => GetStream("o09_Performance_typical.pptx");
 
-        public static byte[] Revision___NameCommentChange => GetStream("Revision_NameCommentChange.xlsx");
+        public static Stream Revision___NameCommentChange => GetStream("Revision_NameCommentChange.xlsx");
 
-        public static byte[] simpleSdt => GetStream("simpleSdt.docx");
+        public static Stream simpleSdt => GetStream("simpleSdt.docx");
 
-        public static byte[] vmldrawingroot => GetStream("vmldrawingroot.xlsx");
+        public static Stream vmldrawingroot => GetStream("vmldrawingroot.xlsx");
 
-        public static byte[] Youtube => GetStream("Youtube.xlsx");
+        public static Stream Youtube => GetStream("Youtube.xlsx");
     }
 }

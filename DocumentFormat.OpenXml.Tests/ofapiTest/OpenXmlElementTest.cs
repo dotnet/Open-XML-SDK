@@ -300,7 +300,7 @@ namespace DocumentFormat.OpenXml.Tests
             Bold b1 = r1.AppendChild(new RunProperties()).AppendChild(new Bold());
             Text t1 = r1.AppendChild(new Text());
 
-            BookmarkStart bkStart =  para.AppendChild(new BookmarkStart());
+            BookmarkStart bkStart = para.AppendChild(new BookmarkStart());
 
             Run r2 = para.AppendChild(new Run());
             r2.AppendChild(new Text());
@@ -537,7 +537,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ElementCloneTest()
         {
-            using(MemoryStream stream = new MemoryStream(TestFileStreams.mcdoc))
+            using (var stream = TestFileStreams.mcdoc)
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 // Shallow clone the body, which doesn't have attributes
@@ -576,7 +576,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.Equal(curElem.ExtendedAttributes.Count(), elem.ExtendedAttributes.Count());
                     var a1 = curElem.ExtendedAttributes.ToArray();
                     var a2 = elem.ExtendedAttributes.ToArray();
-                    for(int i = 0; i< a1.Length; i++)
+                    for (int i = 0; i < a1.Length; i++)
                     {
                         Assert.Equal(a1[i].NamespaceUri, a2[i].NamespaceUri);
                         Assert.Equal(a1[i].LocalName, a2[i].LocalName);
@@ -819,7 +819,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ReaderWithNsTest()
         {
-            using (MemoryStream stream = new MemoryStream(TestFileStreams.mcdoc))
+            using (var stream = TestFileStreams.mcdoc)
             using (var doc = WordprocessingDocument.Open(stream, false))
             using (var reader = OpenXmlPartReader.Create(doc.MainDocumentPart))
             {
