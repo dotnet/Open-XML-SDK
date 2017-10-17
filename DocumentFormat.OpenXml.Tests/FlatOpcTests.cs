@@ -67,7 +67,6 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var flatOpcDoc = source.ToFlatOpcDocument();
 
-                // Check FromFlatOpcDocument(XDocument, string, bool).
                 using (var tempFile = TemporaryFile.Create())
                 using (PresentationDocument.FromFlatOpcDocument(flatOpcDoc, tempFile.Path, false))
                 using (var dest = PresentationDocument.Open(tempFile.Path, false))
@@ -102,8 +101,6 @@ namespace DocumentFormat.OpenXml.Tests
             using (var inputStream = TestFileStreams.Presentation)
             using (var source = PresentationDocument.Open(inputStream, false))
             {
-                // Test FlatOpcString methods.
-                // Check ToFlatOpcString() and FromFlatOpcString(string).
                 var flatOpcString = source.ToFlatOpcString();
 
                 using (var dest = PresentationDocument.FromFlatOpcString(flatOpcString))
