@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void X008_XlsxCreation_Package_Settings()
         {
-            using (var stream = TestFileStreams.Spreadsheet)
+            using (var stream = TestFileStreams.Spreadsheet.AsMemoryStream())
             using (var package = Package.Open(stream))
             {
                 var openSettings = new OpenSettings
@@ -89,7 +89,7 @@ namespace DocumentFormat.OpenXml.Tests
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
             };
 
-            using (var stream = TestFileStreams.Spreadsheet)
+            using (var stream = TestFileStreams.Spreadsheet.AsMemoryStream())
             using (var package = Package.Open(stream))
             using (var doc = SpreadsheetDocument.Open(package, openSettings))
             {
