@@ -86,12 +86,12 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void Bug743591(OpenXmlValidator validator)
         {
-              //<xsd:complexType name="CT_ColorScale">
-              //  <xsd:sequence>
-              //    <xsd:element name="cfvo" type="CT_Cfvo" minOccurs="2" maxOccurs="unbounded">
-              //    <xsd:element name="color" type="x:CT_Color" minOccurs="2" maxOccurs="unbounded">
-              //  </xsd:sequence>
-              //</xsd:complexType>
+            //<xsd:complexType name="CT_ColorScale">
+            //  <xsd:sequence>
+            //    <xsd:element name="cfvo" type="CT_Cfvo" minOccurs="2" maxOccurs="unbounded">
+            //    <xsd:element name="color" type="x:CT_Color" minOccurs="2" maxOccurs="unbounded">
+            //  </xsd:sequence>
+            //</xsd:complexType>
 
             DocumentFormat.OpenXml.Spreadsheet.ColorScale colorScale = new DocumentFormat.OpenXml.Spreadsheet.ColorScale(
 "<x:colorScale xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\">" +
@@ -100,7 +100,7 @@ namespace DocumentFormat.OpenXml.Tests
 "    <x:color theme=\"6\" />" +
 "</x:colorScale>");
 
-            var results = validator.Validate( colorScale);
+            var results = validator.Validate(colorScale);
             Assert.Single(results);
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", results.First().Id);
             Assert.EndsWith(":cfvo>.", results.First().Description);
@@ -160,7 +160,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(p.FirstChild.NextSibling().FirstChild.NextSibling(), errors.ElementAt(0).RelatedNode);
 
             // append an empty "Fallback"
-            acb.AppendChild(new AlternateContentFallback() );
+            acb.AppendChild(new AlternateContentFallback());
             errors = validator.Validate(p); // should no hang, no OOM
             Assert.Single(errors);
             Assert.Same(p.FirstChild.NextSibling().FirstChild.NextSibling(), errors.ElementAt(0).RelatedNode);
@@ -414,20 +414,6 @@ namespace DocumentFormat.OpenXml.Tests
 
         #endregion
 
-        private void CopyFileStream(byte[] srcBuffer, string fileName)
-        {
-            FileInfo fi = new FileInfo(fileName);
-            if (!fi.Directory.Exists)
-                fi.Directory.Create();
-            using (var target = System.IO.File.Create(fileName))
-            {
-                using (var src = new System.IO.MemoryStream(srcBuffer, false))
-                {
-                    src.WriteTo(target);
-                }
-            }
-        }
-
         /// <summary>
         ///Bug448241
         ///</summary>
@@ -489,30 +475,19 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug396358()
         {
-            string file = Path.Combine(TestUtil.TestResultsDirectory, this.TestClassName, Guid.NewGuid().ToString().Replace("-", "") + ".xlsx");
-            CopyFileStream(TestFileStreams.mailmerge, file);
-            using (WordprocessingDocument doc = WordprocessingDocument.Open(file, true))
+            using (var stream = TestFileStreams.mailmerge.AsMemoryStream())
+            using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 var part = doc.MainDocumentPart.DocumentSettingsPart.MailMergeRecipientDataPart;
 
                 Assert.Null(part.MailMergeRecipients);
-
                 Assert.NotNull(part.Recipients);
-
                 Assert.NotNull(part.PartRootElement);
-                Assert.True(part.PartRootElement is DocumentFormat.OpenXml.Wordprocessing.Recipients);
+                Assert.IsType<Recipients>(part.PartRootElement); 
 
                 part.Recipients = new Recipients();
 
-                try
-                {
-                    part.MailMergeRecipients = new DocumentFormat.OpenXml.Office.Word.MailMergeRecipients();
-                    Assert.True(false); // Assert.Fail("Should not be here");
-                }
-                catch (InvalidOperationException)
-                {
-                }
-
+                Assert.Throws<InvalidOperationException>(() => part.MailMergeRecipients = new DocumentFormat.OpenXml.Office.Word.MailMergeRecipients());
             }
         }
 
@@ -522,17 +497,19 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug537858()
         {
-            string file = Path.Combine(TestUtil.TestResultsDirectory, this.TestClassName, Guid.NewGuid().ToString().Replace("-", "") + ".xlsx");
-            CopyFileStream(TestFileStreams.animation, file);
-            OpenSettings s = new OpenSettings();
-            s.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007);
-            using (PresentationDocument doc = PresentationDocument.Open(file, true, s))
+            var s = new OpenSettings
+            {
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+            };
+
+            using(var stream = TestFileStreams.animation.AsMemoryStream())
+            using (var doc = PresentationDocument.Open(stream, true, s))
             {
                 var sp = doc.PresentationPart.GetPartById("rId4") as SlidePart;
-                Transition t = sp.Slide.ChildElements[2] as Transition;
-                Assert.True(t.ExtendedAttributes.Count() == 0);
-                Assert.True(t.NamespaceDeclarations.Count() == 1);
+                var t = sp.Slide.ChildElements[2] as Transition;
 
+                Assert.Empty(t.ExtendedAttributes);
+                Assert.Single(t.NamespaceDeclarations);
             }
         }
 
