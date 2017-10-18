@@ -19,56 +19,22 @@
  * Email: thomas<at/>barnekow<dot/>info
  */
 
+using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Xml;
-using DocumentFormat.OpenXml.Packaging;
 using Xunit;
-using OxTest;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    [SuppressMessage("ReSharper", "UnusedMember.Global")]
-    [SuppressMessage("ReSharper", "VirtualMemberNeverOverriden.Global")]
-    public class BaseFixture : IDisposable
+    public class BaseFixture
     {
-        protected static string s_TestFileLocation = null;
-
-        public static string TestFilesPath => TestUtil.TestFilesDir;
-
         protected BaseFixture()
         {
-        }
-
-        protected BaseFixture(string directoryPath)
-        {
-            DirectoryPath = directoryPath;
-        }
-
-        /// <summary>
-        /// Gets or sets the test fixture's test directory path.
-        /// When set, this directory will be emptied upon disposal.
-        /// </summary>
-        private string DirectoryPath { get; set; }
-
-        /// <summary>
-        /// Given the path of a test document, potentially including a directory portion,
-        /// produces the path of the document within the TestFiles folder.
-        /// </summary>
-        /// <param name="path"></param>
-        /// <returns></returns>
-        protected static string GetTestFilePath(string path)
-        {
-            if (path == null)
-                throw new ArgumentNullException("path");
-
-            var combinedPath = Path.Combine(TestFilesPath, Path.GetFileName(path));
-            return combinedPath;
         }
 
         /// <summary>
@@ -159,27 +125,6 @@ namespace DocumentFormat.OpenXml.Tests
                 foreach (var part in document.GetAllParts())
                     if (part.RootElement != null)
                         part.RootElement.Save();
-            }
-        }
-
-        //protected static void RemoveFiles(string path, string searchPattern)
-        //{
-        //    var directory = new DirectoryInfo(path);
-        //    foreach (var file in directory.GetFiles(searchPattern))
-        //        file.Delete();
-        //}
-
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
-        }
-
-        protected virtual void Dispose(bool disposing)
-        {
-            if (disposing && DirectoryPath != null)
-            {
-                Directory.Delete(DirectoryPath, true);
             }
         }
     }

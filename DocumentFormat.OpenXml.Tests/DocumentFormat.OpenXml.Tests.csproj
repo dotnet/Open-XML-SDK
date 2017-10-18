@@ -7,12 +7,10 @@
 
   <ItemGroup>
     <EmbeddedResource Include="assets\TestFiles\**\*.*" />
-    <TestFiles Include="assets\TestFiles\**\*" />
     <TestDataStorage Include="assets\TestDataStorage\**\*.*" />
   </ItemGroup>
 
   <Target Name="CopyTestFiles" AfterTargets="Build">
-    <Copy SourceFiles="@(TestFiles)" DestinationFolder="$(OutputPath)\TestFiles\%(RecursiveDir)" SkipUnchangedFiles="true" OverwriteReadOnlyFiles="true" Retries="3" RetryDelayMilliseconds="300" />
     <Copy SourceFiles="@(TestDataStorage)" DestinationFolder="$(OutputPath)\TestDataStorage\%(RecursiveDir)" SkipUnchangedFiles="true" OverwriteReadOnlyFiles="true" Retries="3" RetryDelayMilliseconds="300" />
   </Target>
 
