@@ -58,12 +58,12 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 attributeConstraint = schemaTypeData.AttributeConstraints[i];
                 Assert.Equal(XsdAttributeUse.Optional, attributeConstraint.XsdAttributeUse);
-                Assert.IsType(typeof(StringRestriction), attributeConstraint.SimpleTypeConstraint);
+                Assert.IsType<StringRestriction>(attributeConstraint.SimpleTypeConstraint);
             }
 
             attributeConstraint = schemaTypeData.AttributeConstraints[4];
             Assert.Equal(XsdAttributeUse.Optional, attributeConstraint.XsdAttributeUse);
-            Assert.IsType(typeof(TokenRestriction), attributeConstraint.SimpleTypeConstraint);
+            Assert.IsType<TokenRestriction>(attributeConstraint.SimpleTypeConstraint);
 
               //<xsd:complexType name="CT_LsdException">
               //  <xsd:attribute name="name" type="ST_String" use="required">
@@ -79,27 +79,27 @@ namespace DocumentFormat.OpenXml.Tests
 
             attributeConstraint = schemaTypeData.AttributeConstraints[0];
             Assert.Equal(XsdAttributeUse.Required, attributeConstraint.XsdAttributeUse);
-            Assert.IsType(typeof(StringRestriction), attributeConstraint.SimpleTypeConstraint);
+            Assert.IsType<StringRestriction>(attributeConstraint.SimpleTypeConstraint);
 
             attributeConstraint = schemaTypeData.AttributeConstraints[1];
             Assert.Equal(XsdAttributeUse.None, attributeConstraint.XsdAttributeUse);
-            Assert.IsType(typeof(BooleanValueRestriction), attributeConstraint.SimpleTypeConstraint);
+            Assert.IsType<BooleanValueRestriction>(attributeConstraint.SimpleTypeConstraint);
 
             attributeConstraint = schemaTypeData.AttributeConstraints[2];
             Assert.Equal(XsdAttributeUse.None, attributeConstraint.XsdAttributeUse);
-            Assert.IsType(typeof(Int32ValueRestriction), attributeConstraint.SimpleTypeConstraint);
+            Assert.IsType<Int32ValueRestriction>(attributeConstraint.SimpleTypeConstraint);
 
             attributeConstraint = schemaTypeData.AttributeConstraints[3];
             Assert.Equal(XsdAttributeUse.None, attributeConstraint.XsdAttributeUse);
-            Assert.IsType(typeof(BooleanValueRestriction), attributeConstraint.SimpleTypeConstraint);
+            Assert.IsType<BooleanValueRestriction>(attributeConstraint.SimpleTypeConstraint);
 
             attributeConstraint = schemaTypeData.AttributeConstraints[4];
             Assert.Equal(XsdAttributeUse.None, attributeConstraint.XsdAttributeUse);
-            Assert.IsType(typeof(BooleanValueRestriction), attributeConstraint.SimpleTypeConstraint);
+            Assert.IsType<BooleanValueRestriction>(attributeConstraint.SimpleTypeConstraint);
 
             attributeConstraint = schemaTypeData.AttributeConstraints[5];
             Assert.Equal(XsdAttributeUse.None, attributeConstraint.XsdAttributeUse);
-            Assert.IsType(typeof(BooleanValueRestriction), attributeConstraint.SimpleTypeConstraint);
+            Assert.IsType<BooleanValueRestriction>(attributeConstraint.SimpleTypeConstraint);
 
               //<xsd:complexType name="CT_HdrFtrRef">
               //  <xsd:complexContent>
@@ -126,11 +126,11 @@ namespace DocumentFormat.OpenXml.Tests
             // in generated code, @type if the first, and @r:id is the second
             attributeConstraint = schemaTypeData.AttributeConstraints[0];
             Assert.Equal(XsdAttributeUse.Required, attributeConstraint.XsdAttributeUse);
-            Assert.IsType(typeof(EnumValueRestriction), attributeConstraint.SimpleTypeConstraint);
+            Assert.IsType<EnumValueRestriction>(attributeConstraint.SimpleTypeConstraint);
 
             attributeConstraint = schemaTypeData.AttributeConstraints[1];
             Assert.Equal(XsdAttributeUse.Required, attributeConstraint.XsdAttributeUse);
-            Assert.IsType(typeof(StringRestriction), attributeConstraint.SimpleTypeConstraint);
+            Assert.IsType<StringRestriction>(attributeConstraint.SimpleTypeConstraint);
 
         }
 
@@ -187,7 +187,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Equal(ParticleType.Sequence, particle.ParticleType);
                 Assert.Equal(1, particle.MinOccurs);
                 Assert.Equal(1, particle.MaxOccurs);
-                Assert.Equal(1, particle.ChildrenParticles.Length);
+                Assert.Single(particle.ChildrenParticles);
                 Assert.False(particle.UnboundedMaxOccurs);
                 Assert.True(particle.IsSimple());
 
@@ -208,7 +208,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Equal(ParticleType.Sequence, particle.ParticleType);
                 Assert.Equal(1, particle.MinOccurs);
                 Assert.Equal(1, particle.MaxOccurs);
-                Assert.Equal(1, particle.ChildrenParticles.Length);
+                Assert.Single(particle.ChildrenParticles);
                 Assert.False(particle.UnboundedMaxOccurs);
                 Assert.True(particle.IsSimple());
 
@@ -265,7 +265,6 @@ namespace DocumentFormat.OpenXml.Tests
           //    <xsd:group ref="EG_BlockLevelChunkElts" minOccurs="0" maxOccurs="unbounded" />
           //  </xsd:choice>
 
-
             var body = new Body();
             var bodyData = actual.GetSchemaTypeData(body.ElementTypeId);
             Assert.Equal(body.ElementTypeId, bodyData.OpenXmlTypeId);
@@ -287,7 +286,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Equal(ParticleType.Group, particle.ParticleType);
                 Assert.Equal(0, particle.MinOccurs);
                 Assert.True(particle.UnboundedMaxOccurs);
-                Assert.Equal(1, particle.ChildrenParticles.Length);
+                Assert.Single(particle.ChildrenParticles);
                 Assert.False(particle.IsSimple());
 
                 {
@@ -396,10 +395,9 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Equal(ParticleType.Group, particle.ParticleType);
                 Assert.Equal(0, particle.MinOccurs);
                 Assert.True(particle.UnboundedMaxOccurs);
-                Assert.Equal(1, particle.ChildrenParticles.Length);
+                Assert.Single(particle.ChildrenParticles);
                 Assert.False(particle.IsSimple());
             }
-
 
         }
 
@@ -466,7 +464,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Null(schemaTypeData.ParticleConstraint);
 
             // ST_SourceType is ST_String255 based enum
-            Assert.IsType(typeof(EnumValueRestriction), schemaTypeData.SimpleTypeConstraint);
+            Assert.IsType<EnumValueRestriction>(schemaTypeData.SimpleTypeConstraint);
             Assert.Equal(XsdType.Enum, schemaTypeData.SimpleTypeConstraint.XsdType);
             Assert.Equal(RestrictionField.None, schemaTypeData.SimpleTypeConstraint.RestrictionField);
             Assert.True(schemaTypeData.SimpleTypeConstraint.IsEnum);
@@ -492,7 +490,7 @@ namespace DocumentFormat.OpenXml.Tests
             //    <xsd:maxLength value="255" />
             //  </xsd:restriction>
             //</xsd:simpleType>
-            Assert.IsType(typeof(StringRestriction), schemaTypeData.SimpleTypeConstraint);
+            Assert.IsType<StringRestriction>(schemaTypeData.SimpleTypeConstraint);
             Assert.Equal(XsdType.String, schemaTypeData.SimpleTypeConstraint.XsdType);
             Assert.False(schemaTypeData.SimpleTypeConstraint.IsEnum);
             Assert.False(schemaTypeData.SimpleTypeConstraint.IsList);

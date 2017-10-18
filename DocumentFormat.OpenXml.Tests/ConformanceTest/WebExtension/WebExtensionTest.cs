@@ -74,7 +74,6 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
                                                         }
                                                     );
 
-
                 // Verify that OOXML SDK can properly validate WebExtension Features
                 this.VerifyValidator(entry.FilePath);
 
@@ -145,7 +144,6 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
                                                             (tps) => { Walker_WebExtentionPane(tps, StringValueChecker, DoubleValueChecker, UInt32ValueChecker, BooleanValueChecker); });
             Log.EndGroup(filePath);
         }
-
 
         #endregion
 
@@ -229,7 +227,6 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
 
         #endregion
 
-
         /// <summary>
         /// Walks the children of a Taskpanes element.
         /// </summary>
@@ -253,7 +250,6 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
                 tp.Width = dblCallback(tp.Width);
             }
         }
-
 
         /// <summary>
         /// Walks the WebExtension element, invoking the delegates provided on all the Strings and Int32 values
@@ -333,7 +329,6 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
             }
         }
 
-
         /// <summary>
         /// Verify that OOXML SDK can read OOXML files containing MOE (WebExtension) feature
         /// </summary>
@@ -363,6 +358,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
         }
 
         delegate void WebExtentionPartHandler(WebExtensionPart wep);
+
         delegate void ElementHandler<T>(T wep);
 
         /// <summary>
@@ -375,6 +371,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
         public class SectionFetcher<T> : IEnumerable
         {
             private SpreadsheetDocument xl;
+
             public SectionFetcher(SpreadsheetDocument xl)
             {
                 this.xl = xl;
@@ -451,7 +448,6 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
             }
         }
 
-
         /// <summary>
         /// Verify that OOXML SDK can properly validate an OOXML file
         /// </summary>
@@ -487,4 +483,3 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
         #endregion
     }
 }
-

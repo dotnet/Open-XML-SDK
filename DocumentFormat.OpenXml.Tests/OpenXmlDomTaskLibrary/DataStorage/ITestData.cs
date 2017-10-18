@@ -10,8 +10,11 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries.DataStorage
     public interface ITestData
     {
         FileType Type { get; }
+
         string FilePath { get; }
+
         Stream GetStream();
+
         string Description { get; }
     }
 }

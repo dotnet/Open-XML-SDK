@@ -164,7 +164,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.StringArgumentEmptyException, "contentType");
             }
 
-
             newPart.CreateInternal(this.InternalOpenXmlPackage, this.ThisOpenXmlPart, contentType, null);
 
             string relationshipId = this.AttachChild(newPart, id);

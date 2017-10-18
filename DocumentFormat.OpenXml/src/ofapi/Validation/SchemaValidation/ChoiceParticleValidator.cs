@@ -110,7 +110,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                     }
                 }
 
-
                 if (requiredElements && result != null)
                 {
                     result.Add(requiredChoiceChildren);

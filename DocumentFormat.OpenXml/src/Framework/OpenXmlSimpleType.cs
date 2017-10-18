@@ -52,6 +52,7 @@ namespace DocumentFormat.OpenXml
             {
                 return _textValue; 
             }
+
             set 
             {
                 _textValue = value; 
@@ -94,13 +95,12 @@ namespace DocumentFormat.OpenXml
             {
                 return _textValue;
             }
+
             set
             {
                 _textValue = value;
             }
         }
-
-
 
         /// <summary>
         /// Returns a String that represents the current value. 
@@ -144,7 +144,6 @@ namespace DocumentFormat.OpenXml
             return xmlAttribute.InnerText;
         }
 
-
         #region internal methods to be used by validation
 
         /// <summary>
@@ -183,6 +182,7 @@ namespace DocumentFormat.OpenXml
     {
         //can not use System.Nullable<T> _value;
         private T? _value;
+
         internal T? InnerValue
         {
             get { return this._value; }
@@ -261,6 +261,7 @@ namespace DocumentFormat.OpenXml
                 }
                 return  this._value.Value;
             }
+
             set
             {
                 this._value = value;
@@ -277,6 +278,7 @@ namespace DocumentFormat.OpenXml
             {
                 throw new NotImplementedException();
             }
+
             set
             {
                 // do not check whether format is ok.
@@ -1519,7 +1521,6 @@ namespace DocumentFormat.OpenXml
             return FromUInt16(value);
         }
 
-
         /// <summary>
         /// Returns a new UInt16Value object created from a UInt16 value.
         /// </summary>
@@ -2604,7 +2605,6 @@ namespace DocumentFormat.OpenXml
             return FromString(value);
         }
 
-
         /// <summary>
         /// Returns a new StringValue object that was created from a String value.
         /// </summary>
@@ -3039,6 +3039,7 @@ namespace DocumentFormat.OpenXml
                 } 
                 return this.TextValue;
             }
+
             set
             {
                 this.TextValue = value;
@@ -3184,6 +3185,7 @@ namespace DocumentFormat.OpenXml
                 }
                 return this._enumValue.Value;
             }
+
             set
             {
                 // bug O14 #253976
@@ -3209,6 +3211,7 @@ namespace DocumentFormat.OpenXml
                 }
                 return this.TextValue;
             }
+
             set
             {
                 this.TextValue = value;
@@ -3256,7 +3259,6 @@ namespace DocumentFormat.OpenXml
             
             return value.InnerText;
         }
-
 
         internal override OpenXmlSimpleType CloneImp()
         {
@@ -3360,7 +3362,6 @@ namespace DocumentFormat.OpenXml
 
             throw new FormatException(ExceptionMessages.TextIsInvalidEnumValue);
         }
-
 
         /// <summary>
         /// Test whether the value is allowed in the specified file format version.
@@ -3497,6 +3498,7 @@ namespace DocumentFormat.OpenXml
                 }
                 return this.TextValue;
             }
+
             set
             {
                 this.TextValue = value;
@@ -3550,6 +3552,7 @@ namespace DocumentFormat.OpenXml
                 }
                 return this._innerValue.Value;
             }
+
             set
             {
                 this._innerValue = value;
@@ -3659,6 +3662,7 @@ namespace DocumentFormat.OpenXml
             {
                 return _impl.Value;
             }
+
             set
             {
                 _impl.Value = value;
@@ -3674,6 +3678,7 @@ namespace DocumentFormat.OpenXml
             {
                 return _impl.InnerText;
             }
+
             set
             {
                 _impl.InnerText = value;
@@ -3849,6 +3854,7 @@ namespace DocumentFormat.OpenXml
             {
                 return _impl.Value;
             }
+
             set
             {
                 _impl.Value = value;
@@ -3864,6 +3870,7 @@ namespace DocumentFormat.OpenXml
             {
                 return _impl.InnerText;
             }
+
             set
             {
                 _impl.InnerText = value;
@@ -4045,6 +4052,7 @@ namespace DocumentFormat.OpenXml
             {
                 return _impl.Value;
             }
+
             set
             {
                 _impl.Value = value;
@@ -4060,6 +4068,7 @@ namespace DocumentFormat.OpenXml
             {
                 return _impl.InnerText;
             }
+
             set
             {
                 _impl.InnerText = value;
@@ -4148,7 +4157,6 @@ namespace DocumentFormat.OpenXml
         {
             return FromBoolean(value);
         }
-
 
         /// <summary>
         /// Returns a new OnOffValue object created from a Boolean value.

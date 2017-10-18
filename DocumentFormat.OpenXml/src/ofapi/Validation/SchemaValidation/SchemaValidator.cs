@@ -86,7 +86,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
             ValidationTraverser.ValidatingTraverse(validationContext, this.ValidateElement, null, this.StopSignal);
 
-
             // validationContext.Element = openxmlElement;
 
             return;

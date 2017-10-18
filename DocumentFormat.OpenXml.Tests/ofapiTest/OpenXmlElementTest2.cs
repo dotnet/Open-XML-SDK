@@ -100,7 +100,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-
         ///<summary>
         ///TestGetXPathIndex.
         ///</summary>

@@ -57,8 +57,6 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
                         valueString += " or '" + _values[_values.Length - 1] + "'";
                     }
 
-                    
-
                     return new ValidationErrorInfo()
                     {
                         Id = "Sem_AttributeRequiredConditionToValue",

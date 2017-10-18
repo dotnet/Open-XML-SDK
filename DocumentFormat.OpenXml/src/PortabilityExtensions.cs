@@ -39,7 +39,6 @@ namespace DocumentFormat.OpenXml
 #endif
         }
 
-
 #if !FEATURE_ISSUBCLASSOF
         /// <summary>
         /// .NET Standard 1.3 does not have an equivalent API for this, but it is fairly

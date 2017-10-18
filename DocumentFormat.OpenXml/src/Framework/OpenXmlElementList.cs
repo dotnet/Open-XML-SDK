@@ -226,7 +226,6 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-
         #region IEnumerator<OpenXmlElement> Members
 
         public T Current

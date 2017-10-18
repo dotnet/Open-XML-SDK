@@ -127,6 +127,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
             {
                 return OpenXmlPart as CustomUIPart;
             }
+
             internal set
             {
                 OpenXmlPart = value;
@@ -171,6 +172,7 @@ namespace DocumentFormat.OpenXml.InkML
         }
     }
 }
+
 namespace DocumentFormat.OpenXml.Wordprocessing
 {
     /// <summary>
@@ -215,6 +217,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             {   
                 return OpenXmlPart as StylesPart;
             }
+
             internal set
             {
                 OpenXmlPart = value;
@@ -262,6 +265,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             {
                 return GetElement<SdtProperties>(0);
             }
+
             set
             {
                 this.SetElement(0, value);
@@ -277,6 +281,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             {
                 return GetElement<SdtEndCharProperties>(1);
             }
+
             set
             {
                 this.SetElement(1, value);
@@ -368,6 +373,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             {
                 return GetElement<CustomXmlProperties>(0);
             }
+
             set
             {
                 SetElement(0, value);
@@ -466,6 +472,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 return _rootEle;
             }
+
             set
             {
                 _rootEle = value as DocumentFormat.OpenXml.OpenXmlPartRootElement;
@@ -501,6 +508,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 TryLoadRootElement();
                 return _rootEle as DocumentFormat.OpenXml.Wordprocessing.Recipients;
             }
+
             set
             {
                 if (value == null)
@@ -526,6 +534,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 TryLoadRootElement();
                 return _rootEle as MailMergeRecipients;
             }
+
             set
             {
                 if (value == null)

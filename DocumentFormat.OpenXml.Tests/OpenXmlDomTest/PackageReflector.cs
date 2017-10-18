@@ -29,6 +29,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Fields
         private OpenXmlPackage _srcPackage = null;
+
         public OpenXmlPackage SrcPackage
         {
             get
@@ -38,6 +39,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         private OpenXmlPackage _destPackage = null;
+
         public OpenXmlPackage DestPackage
         {
             get
@@ -47,6 +49,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         private VerifiableLog _log;
+
         internal VerifiableLog Log
         {
             get
@@ -62,6 +65,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         // Part-RootElement Map
         private Dictionary<Type, Type> _partRootElementMap = null;
+
         public Dictionary<Type, Type> PartRootElementMap
         {
             get
@@ -161,7 +165,6 @@ namespace DocumentFormat.OpenXml.Tests
             else
                 throw new Exception("Not Supported Document Type!");
         }
-
 
         /// <summary>
         /// Build an in-memory Package instance of given type
@@ -668,6 +671,7 @@ namespace DocumentFormat.OpenXml.Tests
             Predicate<ParameterInfo> matchReturn = null;
             return GetMethodInfo(hostType, prefix, matchMethod, matchParams, matchReturn);
         }
+
         public MethodInfo SetAttributes(Type hostType)
         {
             var prefix = "SetAttributes";
@@ -678,6 +682,7 @@ namespace DocumentFormat.OpenXml.Tests
             Predicate<ParameterInfo> matchReturn = null;
             return GetMethodInfo(hostType, prefix, matchMethod, matchParams, matchReturn);
         }
+
         public MethodInfo ClearAllAttributes(Type hostType)
         {
             var prefix = "ClearAllAttributes";

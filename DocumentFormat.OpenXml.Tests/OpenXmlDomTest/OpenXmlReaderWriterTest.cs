@@ -66,7 +66,6 @@ namespace DocumentFormat.OpenXml.Tests
             z = XmlReader.Create(new StringReader(firstChild.OuterXml));
         };
 
-
         PreRead initialReader = (OpenXmlReader x, XmlReader y, out string standalone) =>
         {
             Read(x);
@@ -356,7 +355,7 @@ namespace DocumentFormat.OpenXml.Tests
             File.Delete(file);
         }
 
-        public void VerifyDocumentStart(OpenXmlPart part, bool? standalone)
+        private void VerifyDocumentStart(OpenXmlPart part, bool? standalone)
         {
             XmlReader reader = XmlReader.Create(part.GetStream());
             reader.Read();
@@ -525,7 +524,6 @@ namespace DocumentFormat.OpenXml.Tests
                 }
             }
         }
-
 
         #region Writer Construction ...
 
@@ -1098,7 +1096,6 @@ namespace DocumentFormat.OpenXml.Tests
                 else if ((Treader.Depth == oldDepth + 1 && Treader.NodeType == XmlNodeType.EndElement) || Treader.EOF)
                     foundNextSibling = false;
             }
-
 
             Log.Comment("check if the ReadNextSibling() results matches with XmlReader");
             Log.VerifyTrue(OfoundNextSibling == foundNextSibling, "OpenXmlReader and XmlReader don't match");

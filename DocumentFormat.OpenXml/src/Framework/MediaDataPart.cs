@@ -114,7 +114,6 @@ namespace DocumentFormat.OpenXml.Packaging
             return this.PackagePart.GetStream();
         }
 
-
         /// <summary>
         /// Returns the content stream that was opened using a specified I/O FileMode. 
         /// </summary>
@@ -208,7 +207,6 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get { return DefaultTargetName; }
         }
-
 
         /// <summary>
         /// The file extension to be used for the part in the package.
@@ -357,7 +355,6 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get { return DefaultTargetName; }
         }
-
 
         /// <summary>
         /// The file extension to be used for the part in the package.

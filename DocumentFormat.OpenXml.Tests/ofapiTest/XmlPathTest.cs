@@ -12,7 +12,6 @@ using System.IO;
 namespace DocumentFormat.OpenXml.Tests
 {
 
-
     /// <summary>
     ///This is a test class for XmlPathTest and is intended
     ///to contain all XmlPathTest Unit Tests

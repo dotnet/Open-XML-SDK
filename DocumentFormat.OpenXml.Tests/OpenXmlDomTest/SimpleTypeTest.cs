@@ -16,7 +16,6 @@ namespace DocumentFormat.OpenXml.Tests
     //   DocumentFormat.OpenXml.HexBinaryValue
     //   DocumentFormat.OpenXml.OpenXmlSimpleValue<T>
 
-
     public class OpenXmlSimpleTypeTest : OpenXmlDomTestBase
     {
         public OpenXmlSimpleTypeTest(ITestOutputHelper output)
@@ -188,7 +187,6 @@ namespace DocumentFormat.OpenXml.Tests
             objA.InnerText = invalidString2;
             InvalidOperation(objA, invalidString2, (a, expectedValue) => actionOfCompare(a, expectedValue));
         }
-
 
         private void InvalidOperation<T1, T2>(EnumValue<T1> a, T2 expectedValue, Action<EnumValue<T1>, T2> action)
             where T1 : struct
@@ -443,7 +441,6 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Fail("Implicit string operator on null reference return NON-null.");
         }
 
-
         private void InvalidOperation<T>(
             StringValue a, T expectedValue,
             Action<StringValue, T> action)
@@ -566,7 +563,6 @@ namespace DocumentFormat.OpenXml.Tests
             InvalidOperation(objA, objB, (a, expectedValue) => { expectedValue = new Base64BinaryValue(a); });
         }
 
-
         private void InvalidOperation<T>(
             Base64BinaryValue a, T expectedValue,
             Action<Base64BinaryValue, T> action)
@@ -688,7 +684,6 @@ namespace DocumentFormat.OpenXml.Tests
             objB = null;
             InvalidOperation(objA, objB, (a, expectedValue) => { expectedValue = new HexBinaryValue(a); });
         }
-
 
         private void InvalidOperation<T>(
             HexBinaryValue a, T expectedValue,
@@ -826,7 +821,6 @@ namespace DocumentFormat.OpenXml.Tests
             else
                 Log.Fail("Implicit string operator on null reference return NON-null.");
 
-
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidValueFalse);
             objA = new OnOffValue();
             objA.InnerText = invalidValueFalse;
@@ -920,7 +914,6 @@ namespace DocumentFormat.OpenXml.Tests
             objA.InnerText = validValueBlank;
             simpleTypeValueValidTest(objA, false, validValueBlank);
 
-
             Log.Comment("ErrorHandling: Constructing with another instance of null...");
             objA = null;
             objB = null;
@@ -934,7 +927,6 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Pass("implicit string operator on null reference returned null, as expected.");
             else
                 Log.Fail("Implicit string operator on null reference return NON-null.");
-
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidValueFalse);
             objA = new TrueFalseBlankValue();
@@ -997,7 +989,6 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyTrue(val.Equals(expectedValue),
                 "Property Value {0} does NOT equal to expected {1}.", val, expectedValue);
 
-
             Log.VerifyTrue(val.Equals(expectedValue),
                 "{0} operator result {1} does NOT equal to expected {2}.", typeof(OpenXmlSimpleType).Name, val, expectedValue);
 
@@ -1030,6 +1021,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("Leaving Non-Generic Test Method...");
         }
+
         private void InvalidOperation<T>(
             OnOffValue a, T expectedValue,
             Action<OnOffValue, T> action)

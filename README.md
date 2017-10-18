@@ -100,7 +100,7 @@ If you have "how-to" questions please post to one of the following resources:
 
 News
 ====
-We are also happy to announce the release of Open-Xml-PowerTools on GitHub.  Open-Xml-PowerTools provides example code and guidance for implementing a wide range of Open XML scenarios.  You can find PowerTools for Open XML, which previously lived at [PowerTools.CodePlex.com](http://powertools.codeplex.com) at [github.com/OfficeDev/Open-Xml-PowerTools] https://github.com/OfficeDev/Open-Xml-PowerTools).
+We are also happy to announce the release of Open-Xml-PowerTools on GitHub.  Open-Xml-PowerTools provides example code and guidance for implementing a wide range of Open XML scenarios.  You can find PowerTools for Open XML, which previously lived at [PowerTools.CodePlex.com](http://powertools.codeplex.com) at [github.com/OfficeDev/Open-Xml-PowerTools](https://github.com/OfficeDev/Open-Xml-PowerTools).
 
 Change Log
 ==========

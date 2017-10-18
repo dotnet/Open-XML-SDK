@@ -481,8 +481,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             return expectedElements;
         }
 
-
-
         internal static ParticleValidator CreateParticleValidator(ParticleConstraint particleConstraint)
         {
             var compositeParticle = particleConstraint as CompositeParticle;
@@ -600,7 +598,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             {
                 _particleMatchInfo.Reset(child);
             }
-
 
             this.TryMatch(_particleMatchInfo, validationContext);
 
@@ -849,7 +846,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             validationContext.EmitError(errorInfo);
         }
     }
-
 
     /**********************************************************************************************
      * Some assumption for schema complex type.

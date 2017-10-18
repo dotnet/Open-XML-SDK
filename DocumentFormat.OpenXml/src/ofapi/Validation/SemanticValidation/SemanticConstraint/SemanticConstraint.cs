@@ -35,6 +35,7 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
 #endif
                 return result;
             }
+
             set
             {
 #if DEBUG

@@ -41,7 +41,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         //    throw new InvalidOperationException();
         //}
 
-
         /// <summary>
         /// Try match the particle once.
         /// </summary>

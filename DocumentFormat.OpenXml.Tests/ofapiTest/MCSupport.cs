@@ -33,14 +33,13 @@ namespace DocumentFormat.OpenXml.Tests
             string file = System.IO.Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
             CopyFileStream(TestFileStreams.mcdoc, file);
 
-
             using (WordprocessingDocument testDocument = WordprocessingDocument.Open(file, true))
             {
                 OpenXmlPart target = testDocument.MainDocumentPart;
                 OpenXmlPartRootElement actual;
                 actual = target.RootElement;
 
-                Assert.NotEqual(null, actual.MCAttributes.Ignorable);
+                Assert.NotNull(actual.MCAttributes.Ignorable);
 
                 //get attribute, no exception thrown
                 OpenXmlAttribute attr = actual.GetAttribute("Ignorable", AlternateContent.MarkupCompatibilityNamespace);
@@ -69,9 +68,9 @@ namespace DocumentFormat.OpenXml.Tests
                 OpenXmlPartRootElement actual;
                 actual = target.RootElement;
 
-                Assert.Equal(null, actual.MCAttributes);
+                Assert.Null(actual.MCAttributes);
 
-                Assert.NotEqual(null, actual.FirstChild.MCAttributes.PreserveAttributes);
+                Assert.NotNull(actual.FirstChild.MCAttributes.PreserveAttributes);
 
                 Assert.True(actual.FirstChild.HasChildren);
                 //get attribute, no exception thrown
@@ -137,17 +136,17 @@ namespace DocumentFormat.OpenXml.Tests
                 attr = space.GetAttribute("myattr", "http://schemas.microsoft.com/office/word/2008/9/12/wordml");
                 Assert.Equal("myattr", attr.Value);
 
-                Assert.Equal(1, space.ExtendedAttributes.Count());
+                Assert.Single(space.ExtendedAttributes);
 
                 var r = ppr.NextSibling();
                 attr = r.GetAttribute("myattr", "http://schemas.microsoft.com/office/word/2008/9/12/wordml");
                 Assert.Equal("myattr", attr.Value);
-                Assert.Equal(1, r.ExtendedAttributes.Count());
+                Assert.Single(r.ExtendedAttributes);
 
                 var rpr = r.FirstChild;
                 attr = rpr.GetAttribute("myanotherAttr", "http://schemas.microsoft.com/office/word/2008/9/12/wordml");
                 Assert.Equal("anotherattr", attr.Value);
-                Assert.Equal(1, r.ExtendedAttributes.Count());
+                Assert.Single(r.ExtendedAttributes);
 
             }
             System.IO.File.Delete(file);
@@ -168,7 +167,7 @@ namespace DocumentFormat.OpenXml.Tests
                 OpenXmlPart target = doc.WorkbookPart.SharedStringTablePart;
                 OpenXmlPartRootElement root = target.RootElement;
                 var si = root.FirstChild;
-                Assert.Equal(0, si.ExtendedAttributes.Count());
+                Assert.Empty(si.ExtendedAttributes);
 
                 Assert.Equal(3, si.ChildElements.Count);
 
@@ -248,7 +247,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.True(ele is DocumentFormat.OpenXml.Drawing.TableStyleEntry);
 
                 ele = ele.NextSibling();
-                Assert.Equal(null, ele);
+                Assert.Null(ele);
 
                 root.Save();
 
@@ -290,7 +289,6 @@ namespace DocumentFormat.OpenXml.Tests
                 var rprDefault = root.FirstChild.FirstChild;
                 Assert.Equal(2, rprDefault.GetAttributes().Count);
             }
-
 
             //process whole package ,should process style part
 
@@ -408,7 +406,6 @@ namespace DocumentFormat.OpenXml.Tests
                 var docNode = doc.MainDocumentPart.Document;
             }
 
-
             //open it again, mark sure in font part, the "w14" prefix is still recognized
             using (WordprocessingDocument testDocument = WordprocessingDocument.Open(file, true))
             {
@@ -420,7 +417,7 @@ namespace DocumentFormat.OpenXml.Tests
                     reader.MoveToContent();
 
                     var ns = reader.LookupNamespace("w14");
-                    Assert.NotEqual(null, ns);
+                    Assert.NotNull(ns);
                 }
             }
             System.IO.File.Delete(file);

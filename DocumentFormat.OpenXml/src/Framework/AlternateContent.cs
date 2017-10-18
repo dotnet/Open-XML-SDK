@@ -24,7 +24,6 @@ namespace DocumentFormat.OpenXml
 
         private static string tagName = "AlternateContent";
 
-
         /// <summary>
         /// Initializes a new instance of the AlternateContent 
         /// class.
@@ -68,7 +67,6 @@ namespace DocumentFormat.OpenXml
             : base(outerXml)
         {
         }
-
 
         /// <summary>
         /// Gets a value that represents the markup compatibility 
@@ -138,7 +136,6 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-
         internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         {
             if (MarkupCompatibilityNamespaceId == namespaceId && AlternateContentChoice.TagName == name)
@@ -149,7 +146,6 @@ namespace DocumentFormat.OpenXml
 
             return null;
         }
-
 
         /// <summary>
         /// Appends a new child of type T:DocumentFormat.OpenXml.AlternateContentChoice
@@ -441,7 +437,6 @@ namespace DocumentFormat.OpenXml
         {
         }
 
-
         /// <summary>
         /// Gets a value that represents the tag name of the AlternateContentFallback element.
         /// </summary>
@@ -600,11 +595,9 @@ namespace DocumentFormat.OpenXml
         internal const string MustUnderstand = "MustUnderstand";
     }
 
-        
     internal class MCContext
     {
         internal delegate string LookupNamespace(string prefix);
-
 
         Stack<string> _currentIgnorable;
         Stack<XmlQualifiedName> _currentPreserveAttr;
@@ -635,7 +628,6 @@ namespace DocumentFormat.OpenXml
         {
             this._noExceptionOnError = ! exceptionOnError;
         }
-
 
         internal LookupNamespace LookupNamespaceDelegate { get; set; }
 

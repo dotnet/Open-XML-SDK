@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
   <PropertyGroup>
     <Version></Version>
     <AssemblyInformationalVersion></AssemblyInformationalVersion>
@@ -38,11 +38,5 @@ Version 2.6.0 : June 29, 2015
 ]]></PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/OfficeDev/Open-XML-SDK</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/OfficeDev/Open-XML-SDK/blob/master/LICENSE.txt</PackageLicenseUrl>
-
-    <DebugType>portable</DebugType>
-
-    <!-- Signing -->
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)DocumentFormat.OpenXml.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 </Project>

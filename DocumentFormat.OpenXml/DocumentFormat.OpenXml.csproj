@@ -1,5 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />
+
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), DocumentFormat.OpenXml.Package.props))\DocumentFormat.OpenXml.Package.props" />
 
   <PropertyGroup>
     <TargetFrameworks>net35;net40;net46;netstandard1.3</TargetFrameworks>
@@ -62,10 +63,10 @@
 
   <!-- .NET Framework builds will all use the binary serialized schema definitions -->
   <ItemGroup Condition=" '$(TargetFramework)' == 'net35' OR '$(TargetFramework)' == 'net40' OR '$(TargetFramework)' == 'net46' ">
-    <Compile Remove="src\GeneratedCode\Office2007Schema.cs" />
-    <Compile Remove="src\GeneratedCode\Office2010Schema.cs" />
-    <Compile Remove="src\GeneratedCode\Office2013Schema.cs" />
-    <Compile Remove="src\GeneratedCode\Office2016Schema.cs" />
+    <Compile Remove="src\GeneratedCode\Office2007Schema.g.cs" />
+    <Compile Remove="src\GeneratedCode\Office2010Schema.g.cs" />
+    <Compile Remove="src\GeneratedCode\Office2013Schema.g.cs" />
+    <Compile Remove="src\GeneratedCode\Office2016Schema.g.cs" />
     <Compile Remove="src\ofapi\Validation\SchemaValidation\OfficeStaticSchemaDatas.cs" />
     <EmbeddedResource Include="src\GeneratedCode\O12SchemaConstraintDatas.bin" />
     <EmbeddedResource Include="src\GeneratedCode\O14SchemaConstraintDatas.bin" />
@@ -83,5 +84,4 @@
     <PackageReference Include="System.IO.Packaging" Version="4.0.0" />
   </ItemGroup>
 
-  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>

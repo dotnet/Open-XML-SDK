@@ -57,7 +57,7 @@ namespace DocumentFormat.OpenXml.Tests
             sf.Format = "test";
             var errors = new OpenXmlValidator(FileFormatVersions.Office2010).Validate(sf);
 
-            Assert.Equal(errors.Count(), 1);
+            Assert.Single(errors);
         }
     }
 }

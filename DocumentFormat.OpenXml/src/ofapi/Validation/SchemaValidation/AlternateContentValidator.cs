@@ -149,7 +149,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             // validate MC attribues (Ignorable, PreserveElements, etc.) of this element.
             CompatibilityRuleAttributesValidator.ValidateMcAttributes(validationContext);
 
-
             AlternateContentChoice choice = acElement as AlternateContentChoice;
             if (choice != null)
             {
@@ -243,7 +242,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                         }
                     }
                 }
-
 
                 // validate PreserveAttributes attribute
                 if (!string.IsNullOrEmpty(element.MCAttributes.PreserveAttributes))

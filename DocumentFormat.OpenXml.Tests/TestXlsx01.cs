@@ -158,7 +158,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
                 var errs = v.Validate(doc);
-                Assert.Equal(0, errs.Count());
+                Assert.Empty(errs);
             }
         }
 
@@ -185,7 +185,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
             var errs = v.Validate(doc);
-            Assert.Equal(0, errs.Count());
+            Assert.Empty(errs);
 
             doc.Close();
 
