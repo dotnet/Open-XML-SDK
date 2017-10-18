@@ -23,7 +23,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CustomXmlElementTests()
         {
-
             Type baseType = typeof(CustomXmlElement);
             Assert.True(baseType.GetTypeInfo().IsAbstract);
 
@@ -48,7 +47,8 @@ namespace DocumentFormat.OpenXml.Tests
             ValidateCustomXmlElement(cxCell);
 
             // Test loading and modification on DOM tree
-            using (var doc = WordprocessingDocument.Open(new MemoryStream(TestFileStreams.simpleSdt), false))
+            using (var stream = TestFileStreams.simpleSdt)
+            using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 // find customXml
                 var customXml = doc.MainDocumentPart.Document.Descendants<CustomXmlRun>().First();
@@ -85,7 +85,8 @@ namespace DocumentFormat.OpenXml.Tests
             // Test loading and modification
             SdtRun sdtRun = new SdtRun();
 
-            using (var doc = WordprocessingDocument.Open(new MemoryStream(TestFileStreams.simpleSdt), false))
+            using (var stream = TestFileStreams.simpleSdt)
+            using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 // find sdt
                 var sdt = doc.MainDocumentPart.Document.Descendants<SdtBlock>().First();
