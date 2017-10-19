@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Tests
 
     internal static class TestFileStreams
     {
-        private static Stream GetStream(string name)
+        public static Stream GetStream(string name)
         {
             return typeof(TestFileStreams).GetTypeInfo().Assembly.GetManifestResourceStream($"DocumentFormat.OpenXml.Tests.assets.TestFiles.{name}");
         }
