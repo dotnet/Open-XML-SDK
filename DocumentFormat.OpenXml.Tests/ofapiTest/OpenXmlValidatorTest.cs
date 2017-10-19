@@ -123,22 +123,22 @@ namespace DocumentFormat.OpenXml.Tests
 
         }
 
-       /// <summary>
+        /// <summary>
         ///A test for Validate(element) - validating byte attribute.
         ///</summary>
         [Fact]
         public void SByteAttributeValidationTest()
         {
-              //<xsd:simpleType name="ST_RotX">
-              //  <xsd:restriction base="xsd:byte">
-              //    <xsd:minInclusive value="-90" />
-              //    <xsd:maxInclusive value="90" />
-              //  </xsd:restriction>
-              //</xsd:simpleType>
+            //<xsd:simpleType name="ST_RotX">
+            //  <xsd:restriction base="xsd:byte">
+            //    <xsd:minInclusive value="-90" />
+            //    <xsd:maxInclusive value="90" />
+            //  </xsd:restriction>
+            //</xsd:simpleType>
 
-              //<xsd:complexType name="CT_RotX">
-              //  <xsd:attribute name="val" type="ST_RotX" default="0">
-              //</xsd:complexType>
+            //<xsd:complexType name="CT_RotX">
+            //  <xsd:attribute name="val" type="ST_RotX" default="0">
+            //</xsd:complexType>
 
             var element = new DocumentFormat.OpenXml.Drawing.Charts.RotateX();
 
@@ -205,16 +205,16 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ByteAttributeValidationTest()
         {
-              // <xsd:simpleType name="ST_HoleSize">
-              //  <xsd:restriction base="xsd:unsignedByte">
-              //    <xsd:minInclusive value="10" />
-                //*** Office 2007 defines this simple type to have a minimum value of greater than or equal to 1.
-              //    <xsd:maxInclusive value="90" />
-              //  </xsd:restriction>
-              //</xsd:simpleType>
-              //<xsd:complexType name="CT_HoleSize">
-              //  <xsd:attribute name="val" type="ST_HoleSize" default="10">
-              //</xsd:complexType>
+            // <xsd:simpleType name="ST_HoleSize">
+            //  <xsd:restriction base="xsd:unsignedByte">
+            //    <xsd:minInclusive value="10" />
+            //*** Office 2007 defines this simple type to have a minimum value of greater than or equal to 1.
+            //    <xsd:maxInclusive value="90" />
+            //  </xsd:restriction>
+            //</xsd:simpleType>
+            //<xsd:complexType name="CT_HoleSize">
+            //  <xsd:attribute name="val" type="ST_HoleSize" default="10">
+            //</xsd:complexType>
 
             var element = new DocumentFormat.OpenXml.Drawing.Charts.HoleSize();
 
@@ -341,15 +341,15 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void UInt16AttributeValidationTest()
         {
-              //<xsd:simpleType name="ST_HPercent">
-              //  <xsd:restriction base="xsd:unsignedShort">
-              //    <xsd:minInclusive value="5" />
-              //    <xsd:maxInclusive value="500" />
-              //  </xsd:restriction>
-              //</xsd:simpleType>
-              //<xsd:complexType name="CT_HPercent">
-              //  <xsd:attribute name="val" type="ST_HPercent" default="100">
-              //</xsd:complexType>
+            //<xsd:simpleType name="ST_HPercent">
+            //  <xsd:restriction base="xsd:unsignedShort">
+            //    <xsd:minInclusive value="5" />
+            //    <xsd:maxInclusive value="500" />
+            //  </xsd:restriction>
+            //</xsd:simpleType>
+            //<xsd:complexType name="CT_HPercent">
+            //  <xsd:attribute name="val" type="ST_HPercent" default="100">
+            //</xsd:complexType>
 
             var element = new DocumentFormat.OpenXml.Drawing.Charts.HeightPercent();
 
@@ -419,18 +419,18 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Int32AttributeValidationTest()
         {
-              //<xsd:simpleType name="ST_Angle">
-              //  <xsd:restriction base="xsd:int" />
-              //</xsd:simpleType
-              //<xsd:simpleType name="ST_PositiveFixedAngle">
-              //  <xsd:restriction base="ST_Angle">
-              //    <xsd:minInclusive value="0" />
-              //    <xsd:maxExclusive value="21600000" />
-              //  </xsd:restriction>
-              //</xsd:simpleType>
-              //<xsd:complexType name="CT_PositiveFixedAngle">
-              //  <xsd:attribute name="val" type="ST_PositiveFixedAngle" use="required">
-              //</xsd:complexType>
+            //<xsd:simpleType name="ST_Angle">
+            //  <xsd:restriction base="xsd:int" />
+            //</xsd:simpleType
+            //<xsd:simpleType name="ST_PositiveFixedAngle">
+            //  <xsd:restriction base="ST_Angle">
+            //    <xsd:minInclusive value="0" />
+            //    <xsd:maxExclusive value="21600000" />
+            //  </xsd:restriction>
+            //</xsd:simpleType>
+            //<xsd:complexType name="CT_PositiveFixedAngle">
+            //  <xsd:attribute name="val" type="ST_PositiveFixedAngle" use="required">
+            //</xsd:complexType>
 
             var element = new Hue();
 
@@ -498,30 +498,30 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The MaxExclusive constraint failed. The value must be less than 21600000.", actual.First().Description);
 
-              //<xsd:simpleType name="ST_FixedAngle">
-              //  </xsd:annotation>
-              //  <xsd:restriction base="ST_Angle">
-              //    <xsd:minExclusive value="-5400000" />
-              //    <xsd:maxExclusive value="5400000" />
-              //  </xsd:restriction>
-              //</xsd:simpleType>
+            //<xsd:simpleType name="ST_FixedAngle">
+            //  </xsd:annotation>
+            //  <xsd:restriction base="ST_Angle">
+            //    <xsd:minExclusive value="-5400000" />
+            //    <xsd:maxExclusive value="5400000" />
+            //  </xsd:restriction>
+            //</xsd:simpleType>
 
-              //<xsd:complexType name="CT_OuterShadowEffect">
-              //  <xsd:sequence>
-              //    <xsd:group ref="EG_ColorChoice" minOccurs="1" maxOccurs="1"></xsd:group>
-              //  </xsd:sequence>
-              //  <xsd:attribute name="blurRad" type="ST_PositiveCoordinate" use="optional" default="0">
-              //  <xsd:attribute name="dist" type="ST_PositiveCoordinate" use="optional" default="0">
-              //  <xsd:attribute name="dir" type="ST_PositiveFixedAngle" use="optional" default="0">
-              //  <xsd:attribute name="sx" type="ST_Percentage" use="optional" default="100000">
-              //  <xsd:attribute name="sy" type="ST_Percentage" use="optional" default="100000">
-              //  <xsd:attribute name="kx" type="ST_FixedAngle" use="optional" default="0">
-              //  <xsd:attribute name="ky" type="ST_FixedAngle" use="optional" default="0">
-              //  <xsd:attribute name="algn" type="ST_RectAlignment" use="optional" default="b">
-              //  <xsd:attribute name="rotWithShape" type="xsd:boolean" use="optional" default="true">
-              //</xsd:complexType>
+            //<xsd:complexType name="CT_OuterShadowEffect">
+            //  <xsd:sequence>
+            //    <xsd:group ref="EG_ColorChoice" minOccurs="1" maxOccurs="1"></xsd:group>
+            //  </xsd:sequence>
+            //  <xsd:attribute name="blurRad" type="ST_PositiveCoordinate" use="optional" default="0">
+            //  <xsd:attribute name="dist" type="ST_PositiveCoordinate" use="optional" default="0">
+            //  <xsd:attribute name="dir" type="ST_PositiveFixedAngle" use="optional" default="0">
+            //  <xsd:attribute name="sx" type="ST_Percentage" use="optional" default="100000">
+            //  <xsd:attribute name="sy" type="ST_Percentage" use="optional" default="100000">
+            //  <xsd:attribute name="kx" type="ST_FixedAngle" use="optional" default="0">
+            //  <xsd:attribute name="ky" type="ST_FixedAngle" use="optional" default="0">
+            //  <xsd:attribute name="algn" type="ST_RectAlignment" use="optional" default="b">
+            //  <xsd:attribute name="rotWithShape" type="xsd:boolean" use="optional" default="true">
+            //</xsd:complexType>
 
-            var outerShadow = new OuterShadow( new PresetColor(){Val = PresetColorValues.AliceBlue} );
+            var outerShadow = new OuterShadow(new PresetColor() { Val = PresetColorValues.AliceBlue });
             // ***** good case ******
 
             outerShadow.HorizontalSkew = 0;
@@ -566,16 +566,16 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The MaxExclusive constraint failed. The value must be less than 5400000.", actual.First().Description);
 
-              //<xsd:simpleType name="ST_TextBulletStartAtNum">
-              //  <xsd:restriction base="xsd:int">
-              //    <xsd:minInclusive value="1" />
-              //    <xsd:maxInclusive value="32767" />
-              //  </xsd:restriction>
-              //</xsd:simpleType>
-              //<xsd:complexType name="CT_TextAutonumberBullet">
-              //  <xsd:attribute name="type" type="ST_TextAutonumberScheme" use="required">
-              //  <xsd:attribute name="startAt" type="ST_TextBulletStartAtNum" use="optional" default="1">
-              //</xsd:complexType>
+            //<xsd:simpleType name="ST_TextBulletStartAtNum">
+            //  <xsd:restriction base="xsd:int">
+            //    <xsd:minInclusive value="1" />
+            //    <xsd:maxInclusive value="32767" />
+            //  </xsd:restriction>
+            //</xsd:simpleType>
+            //<xsd:complexType name="CT_TextAutonumberBullet">
+            //  <xsd:attribute name="type" type="ST_TextAutonumberScheme" use="required">
+            //  <xsd:attribute name="startAt" type="ST_TextBulletStartAtNum" use="optional" default="1">
+            //</xsd:complexType>
 
             var autoNum = new AutoNumberedBullet() { Type = TextAutoNumberSchemeValues.AlphaLowerCharacterParenBoth };
             // ***** good case ******
@@ -716,15 +716,15 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void UInt32AttributeValidationTest()
         {
-              //<xsd:simpleType name="ST_BubbleScale">
-              //  <xsd:restriction base="xsd:unsignedInt">
-              //    <xsd:minInclusive value="0" />
-              //    <xsd:maxInclusive value="300" />
-              //  </xsd:restriction>
-              //</xsd:simpleType>
-              //<xsd:complexType name="CT_BubbleScale">
-              //  <xsd:attribute name="val" type="ST_BubbleScale" default="100">
-              //</xsd:complexType>
+            //<xsd:simpleType name="ST_BubbleScale">
+            //  <xsd:restriction base="xsd:unsignedInt">
+            //    <xsd:minInclusive value="0" />
+            //    <xsd:maxInclusive value="300" />
+            //  </xsd:restriction>
+            //</xsd:simpleType>
+            //<xsd:complexType name="CT_BubbleScale">
+            //  <xsd:attribute name="val" type="ST_BubbleScale" default="100">
+            //</xsd:complexType>
 
             var element = new DocumentFormat.OpenXml.Drawing.Charts.BubbleScale();
 
@@ -773,28 +773,28 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Int32AttributeValidationTest2()
         {
-                  //<xsd:simpleType name="ST_Coordinate32">
-                  //  <xsd:restriction base="xsd:int" />
-                  //</xsd:simpleType>
+            //<xsd:simpleType name="ST_Coordinate32">
+            //  <xsd:restriction base="xsd:int" />
+            //</xsd:simpleType>
 
-                  //<xsd:simpleType name="ST_PositiveCoordinate32">
-                  //  <xsd:restriction base="ST_Coordinate32">
-                  //    <xsd:minInclusive value="0" />
-                  //  </xsd:restriction>
-                  //</xsd:simpleType>
+            //<xsd:simpleType name="ST_PositiveCoordinate32">
+            //  <xsd:restriction base="ST_Coordinate32">
+            //    <xsd:minInclusive value="0" />
+            //  </xsd:restriction>
+            //</xsd:simpleType>
 
-                  //<xsd:simpleType name="ST_SlideSizeCoordinate">
-                  //  <xsd:restriction base="a:ST_PositiveCoordinate32">
-                  //    <xsd:minInclusive value="914400" />
-                  //    <xsd:maxInclusive value="51206400" />
-                  //  </xsd:restriction>
-                  //</xsd:simpleType>
+            //<xsd:simpleType name="ST_SlideSizeCoordinate">
+            //  <xsd:restriction base="a:ST_PositiveCoordinate32">
+            //    <xsd:minInclusive value="914400" />
+            //    <xsd:maxInclusive value="51206400" />
+            //  </xsd:restriction>
+            //</xsd:simpleType>
 
-                  //<xsd:complexType name="CT_SlideSize">
-                  //  <xsd:attribute name="cx" type="ST_SlideSizeCoordinate" use="required">
-                  //  <xsd:attribute name="cy" type="ST_SlideSizeCoordinate" use="required">
-                  //  <xsd:attribute name="type" type="ST_SlideSizeType" use="optional" default="custom">
-                  //</xsd:complexType>
+            //<xsd:complexType name="CT_SlideSize">
+            //  <xsd:attribute name="cx" type="ST_SlideSizeCoordinate" use="required">
+            //  <xsd:attribute name="cy" type="ST_SlideSizeCoordinate" use="required">
+            //  <xsd:attribute name="type" type="ST_SlideSizeType" use="optional" default="custom">
+            //</xsd:complexType>
 
             var element = new DocumentFormat.OpenXml.Presentation.SlideSize();
             element.Cy = 914400;
@@ -874,32 +874,32 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Int64AttributeValidationTest()
         {
-             // <xs:simpleType name="ST_Coordinate">
-             //   <xs:restriction base="xsd:long">
-             //     <xs:minInclusive value="-27273042329600" />
-             //     <xs:maxInclusive value="27273042316900" />
-             //   </xs:restriction>
-             // </xs:simpleType>
+            // <xs:simpleType name="ST_Coordinate">
+            //   <xs:restriction base="xsd:long">
+            //     <xs:minInclusive value="-27273042329600" />
+            //     <xs:maxInclusive value="27273042316900" />
+            //   </xs:restriction>
+            // </xs:simpleType>
 
-             // <xs:simpleType name="ST_PositiveCoordinate">
-             //   <xs:annotation>
-             //     <xs:documentation>Positive Coordinate</xs:documentation>
-             //   </xs:annotation>
-             //   <xs:restriction base="xsd:long">
-             //     <xs:minInclusive value="0" />
-             //     <xs:maxInclusive value="2147483647" />
-             //   </xs:restriction>
-             // </xs:simpleType>
+            // <xs:simpleType name="ST_PositiveCoordinate">
+            //   <xs:annotation>
+            //     <xs:documentation>Positive Coordinate</xs:documentation>
+            //   </xs:annotation>
+            //   <xs:restriction base="xsd:long">
+            //     <xs:minInclusive value="0" />
+            //     <xs:maxInclusive value="2147483647" />
+            //   </xs:restriction>
+            // </xs:simpleType>
 
-             //<xs:complexType name="CT_Point2D">
-             //   <xs:attribute name="x" type="ST_Coordinate" use="required">
-             //   <xs:attribute name="y" type="ST_Coordinate" use="required">
-             // </xs:complexType>
+            //<xs:complexType name="CT_Point2D">
+            //   <xs:attribute name="x" type="ST_Coordinate" use="required">
+            //   <xs:attribute name="y" type="ST_Coordinate" use="required">
+            // </xs:complexType>
 
-             // <xs:complexType name="CT_PositiveSize2D">
-             //   <xs:attribute name="cx" type="ST_PositiveCoordinate" use="required">
-             //   <xs:attribute name="cy" type="ST_PositiveCoordinate" use="required">
-             // </xs:complexType>
+            // <xs:complexType name="CT_PositiveSize2D">
+            //   <xs:attribute name="cx" type="ST_PositiveCoordinate" use="required">
+            //   <xs:attribute name="cy" type="ST_PositiveCoordinate" use="required">
+            // </xs:complexType>
 
             var element = new DocumentFormat.OpenXml.Drawing.ChildExtents();
             element.Cy = 914400;
@@ -1038,9 +1038,9 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void FloatAttributeValidationTest()
         {
-              //<xsd:complexType name="CT_TLAnimVariantFloatVal">
-              //  <xsd:attribute name="val" type="xsd:float" use="required">
-              //</xsd:complexType>
+            //<xsd:complexType name="CT_TLAnimVariantFloatVal">
+            //  <xsd:attribute name="val" type="xsd:float" use="required">
+            //</xsd:complexType>
 
             var element = new DocumentFormat.OpenXml.Presentation.FloatVariantValue();
 
@@ -1110,15 +1110,15 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void DoubleAttributeValidationTest()
         {
-              //<xsd:simpleType name="ST_AxisUnit">
-              //  <xsd:restriction base="xsd:double">
-              //    <xsd:minExclusive value="0" />
-              //  </xsd:restriction>
-              //</xsd:simpleType>
+            //<xsd:simpleType name="ST_AxisUnit">
+            //  <xsd:restriction base="xsd:double">
+            //    <xsd:minExclusive value="0" />
+            //  </xsd:restriction>
+            //</xsd:simpleType>
 
-              //<xsd:complexType name="CT_AxisUnit">
-              //  <xsd:attribute name="val" type="ST_AxisUnit" use="required">
-              //</xsd:complexType>
+            //<xsd:complexType name="CT_AxisUnit">
+            //  <xsd:attribute name="val" type="ST_AxisUnit" use="required">
+            //</xsd:complexType>
 
             var element = new DocumentFormat.OpenXml.Drawing.Charts.MajorUnit();
 
@@ -1196,15 +1196,15 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The MinExclusive constraint failed. The value must be greater than 0.", actual.First().Description);
 
-              //<xsd:simpleType name="ST_LogBase">
-              //  <xsd:restriction base="xsd:double">
-              //    <xsd:minInclusive value="2" />
-              //    <xsd:maxInclusive value="1000" />
-              //  </xsd:restriction>
-              //</xsd:simpleType>
-              //<xsd:complexType name="CT_LogBase">
-              //  <xsd:attribute name="val" type="ST_LogBase" use="required">
-              //</xsd:complexType>
+            //<xsd:simpleType name="ST_LogBase">
+            //  <xsd:restriction base="xsd:double">
+            //    <xsd:minInclusive value="2" />
+            //    <xsd:maxInclusive value="1000" />
+            //  </xsd:restriction>
+            //</xsd:simpleType>
+            //<xsd:complexType name="CT_LogBase">
+            //  <xsd:attribute name="val" type="ST_LogBase" use="required">
+            //</xsd:complexType>
 
             var logBase = new DocumentFormat.OpenXml.Drawing.Charts.LogBase();
 
@@ -1337,15 +1337,15 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void IntegerAttributeValidationTest()
         {
-              //<xsd:simpleType name="ST_Integer2">
-              //  <xsd:restriction base="xsd:integer">
-              //    <xsd:minInclusive value="-2" />
-              //    <xsd:maxInclusive value="2" />
-              //  </xsd:restriction>
-              //</xsd:simpleType>
-              //<xsd:complexType name="CT_Integer2">
-              //  <xsd:attribute name="val" type="ST_Integer2" use="required">
-              //</xsd:complexType>
+            //<xsd:simpleType name="ST_Integer2">
+            //  <xsd:restriction base="xsd:integer">
+            //    <xsd:minInclusive value="-2" />
+            //    <xsd:maxInclusive value="2" />
+            //  </xsd:restriction>
+            //</xsd:simpleType>
+            //<xsd:complexType name="CT_Integer2">
+            //  <xsd:attribute name="val" type="ST_Integer2" use="required">
+            //</xsd:complexType>
 
             var element = new DocumentFormat.OpenXml.Math.ArgumentSize();
 
@@ -1441,11 +1441,11 @@ namespace DocumentFormat.OpenXml.Tests
         public void PositiveIntegerAttributeValidationTest()
         {
             // In vml-wordprocessingDrawing
-              //<xsd:complexType name="CT_Border">
-              //  <xsd:attribute name="type" type="ST_BorderType" use="optional">
-              //  <xsd:attribute name="width" type="xsd:positiveInteger" use="optional">
-              //  <xsd:attribute name="shadow" type="ST_BorderShadow" use="optional">
-              //</xsd:complexType>
+            //<xsd:complexType name="CT_Border">
+            //  <xsd:attribute name="type" type="ST_BorderType" use="optional">
+            //  <xsd:attribute name="width" type="xsd:positiveInteger" use="optional">
+            //  <xsd:attribute name="shadow" type="ST_BorderShadow" use="optional">
+            //</xsd:complexType>
 
             var element = new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder();
 
@@ -1492,12 +1492,12 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void DateTimeAttributeValidationTest()
         {
-              //<xsd:simpleType name="ST_DateTime">
-              //  <xsd:annotation>
-              //    <xsd:documentation>Standard Date and Time Storage Format</xsd:documentation>
-              //  </xsd:annotation>
-              //  <xsd:restriction base="xsd:dateTime" />
-              //</xsd:simpleType>
+            //<xsd:simpleType name="ST_DateTime">
+            //  <xsd:annotation>
+            //    <xsd:documentation>Standard Date and Time Storage Format</xsd:documentation>
+            //  </xsd:annotation>
+            //  <xsd:restriction base="xsd:dateTime" />
+            //</xsd:simpleType>
 
             var element = new DocumentFormat.OpenXml.Wordprocessing.SdtContentDate();
 
@@ -1557,19 +1557,19 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void EnumAttributeValidationTest()
         {
-             //<xsd:simpleType name="ST_FontFamily">
-             //   <xsd:restriction base="xsd:string">
-             //     <xsd:enumeration value="decorative">
-             //     <xsd:enumeration value="modern">
-             //     <xsd:enumeration value="roman">
-             //     <xsd:enumeration value="script">
-             //     <xsd:enumeration value="swiss">
-             //     <xsd:enumeration value="auto">
-             //   </xsd:restriction>
-             // </xsd:simpleType>
-             // <xsd:complexType name="CT_FontFamily">
-             //   <xsd:attribute name="val" type="ST_FontFamily" use="required">
-             // </xsd:complexType>
+            //<xsd:simpleType name="ST_FontFamily">
+            //   <xsd:restriction base="xsd:string">
+            //     <xsd:enumeration value="decorative">
+            //     <xsd:enumeration value="modern">
+            //     <xsd:enumeration value="roman">
+            //     <xsd:enumeration value="script">
+            //     <xsd:enumeration value="swiss">
+            //     <xsd:enumeration value="auto">
+            //   </xsd:restriction>
+            // </xsd:simpleType>
+            // <xsd:complexType name="CT_FontFamily">
+            //   <xsd:attribute name="val" type="ST_FontFamily" use="required">
+            // </xsd:complexType>
 
             FontFamily element = new FontFamily();
 
@@ -1632,27 +1632,27 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void EnumValueValidationTest()
         {
-              //<xsd:simpleType name="ST_SourceType">
-              //  <xsd:restriction base="ST_String255">
-              //    <xsd:enumeration value="ArticleInAPeriodical">
-              //    <xsd:enumeration value="Book">
-              //    <xsd:enumeration value="BookSection">
-              //    <xsd:enumeration value="JournalArticle">
-              //    <xsd:enumeration value="ConferenceProceedings">
-              //    <xsd:enumeration value="Report">
-              //    <xsd:enumeration value="SoundRecording">
-              //    <xsd:enumeration value="Performance">
-              //    <xsd:enumeration value="Art">
-              //    <xsd:enumeration value="DocumentFromInternetSite">
-              //    <xsd:enumeration value="InternetSite">
-              //    <xsd:enumeration value="Film">
-              //    <xsd:enumeration value="Interview">
-              //    <xsd:enumeration value="Patent">
-              //    <xsd:enumeration value="ElectronicSource">
-              //    <xsd:enumeration value="Case">
-              //    <xsd:enumeration value="Misc">
-              //  </xsd:restriction>
-              //</xsd:simpleType>
+            //<xsd:simpleType name="ST_SourceType">
+            //  <xsd:restriction base="ST_String255">
+            //    <xsd:enumeration value="ArticleInAPeriodical">
+            //    <xsd:enumeration value="Book">
+            //    <xsd:enumeration value="BookSection">
+            //    <xsd:enumeration value="JournalArticle">
+            //    <xsd:enumeration value="ConferenceProceedings">
+            //    <xsd:enumeration value="Report">
+            //    <xsd:enumeration value="SoundRecording">
+            //    <xsd:enumeration value="Performance">
+            //    <xsd:enumeration value="Art">
+            //    <xsd:enumeration value="DocumentFromInternetSite">
+            //    <xsd:enumeration value="InternetSite">
+            //    <xsd:enumeration value="Film">
+            //    <xsd:enumeration value="Interview">
+            //    <xsd:enumeration value="Patent">
+            //    <xsd:enumeration value="ElectronicSource">
+            //    <xsd:enumeration value="Case">
+            //    <xsd:enumeration value="Misc">
+            //  </xsd:restriction>
+            //</xsd:simpleType>
 
             var element = new DocumentFormat.OpenXml.Bibliography.SourceType();
 
@@ -1696,15 +1696,15 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void StringAttributeValidationTest()
         {
-              //<xsd:simpleType name="ST_Cnf">
-              //  <xsd:restriction base="xsd:string">
-              //    <xsd:length value="12" />
-              //    <xsd:pattern value="[01]*" />
-              //  </xsd:restriction>
-              //</xsd:simpleType>
-              //<xsd:complexType name="CT_Cnf">
-              //  <xsd:attribute name="val" type="ST_Cnf" use="required">
-              //</xsd:complexType>
+            //<xsd:simpleType name="ST_Cnf">
+            //  <xsd:restriction base="xsd:string">
+            //    <xsd:length value="12" />
+            //    <xsd:pattern value="[01]*" />
+            //  </xsd:restriction>
+            //</xsd:simpleType>
+            //<xsd:complexType name="CT_Cnf">
+            //  <xsd:attribute name="val" type="ST_Cnf" use="required">
+            //</xsd:complexType>
 
             var element = new ConditionalFormatStyle();
 
@@ -1765,21 +1765,21 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.EndsWith(" The Pattern constraint failed. The expected pattern is [01]*.", actual.Last().Description);
 
             // minLength. maxLength
-              //<xsd:simpleType name="ST_String255">
-              //  <xsd:restriction base="xsd:string">
-              //    <xsd:minLength value="0" />
-              //    <xsd:maxLength value="255" />
-              //  </xsd:restriction>
-              //</xsd:simpleType>
+            //<xsd:simpleType name="ST_String255">
+            //  <xsd:restriction base="xsd:string">
+            //    <xsd:minLength value="0" />
+            //    <xsd:maxLength value="255" />
+            //  </xsd:restriction>
+            //</xsd:simpleType>
 
-             //<xsd:complexType name="CT_Sources">
-             //   <xsd:sequence>
-             //     <xsd:element name="Source" type="CT_SourceType" minOccurs="0" maxOccurs="unbounded">
-             //   </xsd:sequence>
-             //   <xsd:attribute name="SelectedStyle" type="ST_String255">
-             //   <xsd:attribute name="StyleName" type="ST_String255">
-             //   <xsd:attribute name="URI" type="ST_String255">
-             // </xsd:complexType>
+            //<xsd:complexType name="CT_Sources">
+            //   <xsd:sequence>
+            //     <xsd:element name="Source" type="CT_SourceType" minOccurs="0" maxOccurs="unbounded">
+            //   </xsd:sequence>
+            //   <xsd:attribute name="SelectedStyle" type="ST_String255">
+            //   <xsd:attribute name="StyleName" type="ST_String255">
+            //   <xsd:attribute name="URI" type="ST_String255">
+            // </xsd:complexType>
 
             // ***** good case ******
             var sources = new Sources();
@@ -1816,14 +1816,14 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void StringPatternAttributeValidationTest()
         {
-              //<xsd:simpleType name="ST_Cy">
-              //  <xsd:annotation>
-              //    <xsd:documentation>Currency Simple Type</xsd:documentation>
-              //  </xsd:annotation>
-              //  <xsd:restriction base="xsd:string">
-              //    <xsd:pattern value="\s*[0-9]*\.[0-9]{4}\s*" />
-              //  </xsd:restriction>
-              //</xsd:simpleType>
+            //<xsd:simpleType name="ST_Cy">
+            //  <xsd:annotation>
+            //    <xsd:documentation>Currency Simple Type</xsd:documentation>
+            //  </xsd:annotation>
+            //  <xsd:restriction base="xsd:string">
+            //    <xsd:pattern value="\s*[0-9]*\.[0-9]{4}\s*" />
+            //  </xsd:restriction>
+            //</xsd:simpleType>
 
             var element = new DocumentFormat.OpenXml.VariantTypes.VTCurrency();
 
@@ -1908,14 +1908,14 @@ namespace DocumentFormat.OpenXml.Tests
         {
             // in EcmaD wml.xsd
 
-              //<xsd:complexType name="CT_CustomXmlRun">
-              //  <xsd:sequence>
-              //    <xsd:element name="customXmlPr" type="CT_CustomXmlPr" minOccurs="0" maxOccurs="1"></xsd:element>
-              //    <xsd:group ref="EG_PContent" minOccurs="0" maxOccurs="unbounded" />
-              //  </xsd:sequence>
-              //  <xsd:attribute name="uri" type="ST_CustomXmlURI"></xsd:attribute>
-              //  <xsd:attribute name="element" type="ST_NcName255" use="required"></xsd:attribute>
-              //</xsd:complexType>
+            //<xsd:complexType name="CT_CustomXmlRun">
+            //  <xsd:sequence>
+            //    <xsd:element name="customXmlPr" type="CT_CustomXmlPr" minOccurs="0" maxOccurs="1"></xsd:element>
+            //    <xsd:group ref="EG_PContent" minOccurs="0" maxOccurs="unbounded" />
+            //  </xsd:sequence>
+            //  <xsd:attribute name="uri" type="ST_CustomXmlURI"></xsd:attribute>
+            //  <xsd:attribute name="element" type="ST_NcName255" use="required"></xsd:attribute>
+            //</xsd:complexType>
 
             // ***** good case ******
             var element = new CustomXmlRun();
@@ -1959,14 +1959,14 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void TokenAttributeValidationTest()
         {
-              //<xsd:simpleType name="ST_Guid">
-              //  <xsd:restriction base="xsd:token">
-              //    <xsd:pattern value="\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}" />
-              //  </xsd:restriction>
-              //</xsd:simpleType>
-              //<xsd:complexType name="CT_Guid">
-              //  <xsd:attribute name="val" type="ST_Guid">
-              //</xsd:complexType>
+            //<xsd:simpleType name="ST_Guid">
+            //  <xsd:restriction base="xsd:token">
+            //    <xsd:pattern value="\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}" />
+            //  </xsd:restriction>
+            //</xsd:simpleType>
+            //<xsd:complexType name="CT_Guid">
+            //  <xsd:attribute name="val" type="ST_Guid">
+            //</xsd:complexType>
 
             // ***** good case ******
             var element = new DocPartId();
@@ -2028,14 +2028,14 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void HexBinaryAttributeValidationTest()
         {
-              //<xsd:simpleType name="ST_Panose">
-              //  <xsd:restriction base="xsd:hexBinary">
-              //    <xsd:length value="10" />
-              //  </xsd:restriction>
-              //</xsd:simpleType>
-              //<xsd:complexType name="CT_Panose">
-              //  <xsd:attribute name="val" type="ST_Panose" use="required">
-              //</xsd:complexType>
+            //<xsd:simpleType name="ST_Panose">
+            //  <xsd:restriction base="xsd:hexBinary">
+            //    <xsd:length value="10" />
+            //  </xsd:restriction>
+            //</xsd:simpleType>
+            //<xsd:complexType name="CT_Panose">
+            //  <xsd:attribute name="val" type="ST_Panose" use="required">
+            //</xsd:complexType>
 
             // ***** good case ******
             var element = new Panose1Number();
@@ -2190,10 +2190,10 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void AnyUriAttributeValidationTest()
         {
-              //<xsd:complexType name="CT_Category">
-              //  <xsd:attribute name="type" type="xsd:anyURI" use="required">
-              //  <xsd:attribute name="pri" type="xsd:unsignedInt" use="required">
-              //</xsd:complexType>
+            //<xsd:complexType name="CT_Category">
+            //  <xsd:attribute name="type" type="xsd:anyURI" use="required">
+            //  <xsd:attribute name="pri" type="xsd:unsignedInt" use="required">
+            //</xsd:complexType>
 
             // ***** good case ******
 
@@ -2256,21 +2256,21 @@ namespace DocumentFormat.OpenXml.Tests
         {
             // In customUI.xsd
 
-              //<xsd:simpleType name="ST_UniqueID">
-              //  <xsd:restriction base="xsd:ID">
-              //    <xsd:minLength value="1" />
-              //    <xsd:maxLength value="1024" />
-              //  </xsd:restriction>
-              //</xsd:simpleType>
+            //<xsd:simpleType name="ST_UniqueID">
+            //  <xsd:restriction base="xsd:ID">
+            //    <xsd:minLength value="1" />
+            //    <xsd:maxLength value="1024" />
+            //  </xsd:restriction>
+            //</xsd:simpleType>
 
-              //<xsd:complexType name="CT_Item">
-              //  <xsd:attribute name="id" type="ST_UniqueID" use="optional"></xsd:attribute>
-              //  <xsd:attribute name="label" type="ST_String" use="optional"></xsd:attribute>
-              //  <xsd:attribute name="image" type="ST_Uri" use="optional"></xsd:attribute>
-              //  <xsd:attribute name="imageMso" type="ST_ID" use="optional"></xsd:attribute>
-              //  <xsd:attribute name="screentip" type="ST_String" use="optional"></xsd:attribute>
-              //  <xsd:attribute name="supertip" type="ST_String" use="optional"></xsd:attribute>
-              //</xsd:complexType>
+            //<xsd:complexType name="CT_Item">
+            //  <xsd:attribute name="id" type="ST_UniqueID" use="optional"></xsd:attribute>
+            //  <xsd:attribute name="label" type="ST_String" use="optional"></xsd:attribute>
+            //  <xsd:attribute name="image" type="ST_Uri" use="optional"></xsd:attribute>
+            //  <xsd:attribute name="imageMso" type="ST_ID" use="optional"></xsd:attribute>
+            //  <xsd:attribute name="screentip" type="ST_String" use="optional"></xsd:attribute>
+            //  <xsd:attribute name="supertip" type="ST_String" use="optional"></xsd:attribute>
+            //</xsd:complexType>
 
             // ***** good case ******
 
@@ -2338,24 +2338,24 @@ namespace DocumentFormat.OpenXml.Tests
         {
             // In customUI.xsd
 
-              //<xsd:simpleType name="ST_QID">
-              //  <xsd:restriction base="xsd:QName">
-              //    <xsd:minLength value="1" />
-              //    <xsd:maxLength value="1024" />
-              //  </xsd:restriction>
-              //</xsd:simpleType>
+            //<xsd:simpleType name="ST_QID">
+            //  <xsd:restriction base="xsd:QName">
+            //    <xsd:minLength value="1" />
+            //    <xsd:maxLength value="1024" />
+            //  </xsd:restriction>
+            //</xsd:simpleType>
 
-              //<xsd:complexType name="CT_ControlCloneQat">
-              //  <xsd:complexContent>
-              //    <xsd:extension base="CT_ControlBase">
-              //      <xsd:attribute name="id" type="ST_ID" use="optional"></xsd:attribute>
-              //      <xsd:attribute name="idQ" type="ST_QID" use="optional"></xsd:attribute>
-              //      <xsd:attributeGroup ref="AG_IDMso" />
-              //      <xsd:attributeGroup ref="AG_Description" />
-              //      <xsd:attributeGroup ref="AG_SizeAttributes" />
-              //    </xsd:extension>
-              //  </xsd:complexContent>
-              //</xsd:complexType>
+            //<xsd:complexType name="CT_ControlCloneQat">
+            //  <xsd:complexContent>
+            //    <xsd:extension base="CT_ControlBase">
+            //      <xsd:attribute name="id" type="ST_ID" use="optional"></xsd:attribute>
+            //      <xsd:attribute name="idQ" type="ST_QID" use="optional"></xsd:attribute>
+            //      <xsd:attributeGroup ref="AG_IDMso" />
+            //      <xsd:attributeGroup ref="AG_Description" />
+            //      <xsd:attributeGroup ref="AG_SizeAttributes" />
+            //    </xsd:extension>
+            //  </xsd:complexContent>
+            //</xsd:complexType>
 
             // ***** good case ******
 
@@ -2445,22 +2445,22 @@ namespace DocumentFormat.OpenXml.Tests
         {
             // ST_AxisType is enum
 
-              //<xsd:simpleType name="ST_AxisTypes">
-              //  <xsd:annotation>
-              //    <xsd:documentation>Axis Type List</xsd:documentation>
-              //  </xsd:annotation>
-              //  <xsd:list itemType="ST_AxisType" />
-              //</xsd:simpleType>
+            //<xsd:simpleType name="ST_AxisTypes">
+            //  <xsd:annotation>
+            //    <xsd:documentation>Axis Type List</xsd:documentation>
+            //  </xsd:annotation>
+            //  <xsd:list itemType="ST_AxisType" />
+            //</xsd:simpleType>
 
             var element = new DocumentFormat.OpenXml.Drawing.Diagrams.PresentationOf();
 
-              //<xsd:simpleType name="ST_CellSpan">
-              //  <xsd:restriction base="xsd:string" />
-              //</xsd:simpleType>
+            //<xsd:simpleType name="ST_CellSpan">
+            //  <xsd:restriction base="xsd:string" />
+            //</xsd:simpleType>
 
-              //<xsd:simpleType name="ST_CellSpans">
-              //  <xsd:list itemType="ST_CellSpan" />
-              //</xsd:simpleType>
+            //<xsd:simpleType name="ST_CellSpans">
+            //  <xsd:list itemType="ST_CellSpan" />
+            //</xsd:simpleType>
 
             var row = new DocumentFormat.OpenXml.Spreadsheet.Row();
 
@@ -2501,9 +2501,9 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'spans' has invalid value ' '.", actual.First().Description);
 
-              //<xsd:simpleType name="ST_Ints">
-              //  <xsd:list itemType="xsd:int" />
-              //</xsd:simpleType>
+            //<xsd:simpleType name="ST_Ints">
+            //  <xsd:list itemType="xsd:int" />
+            //</xsd:simpleType>
             // ***** good case ******
             element.Start = new ListValue<Int32Value>();
             element.Start.InnerText = "1";
@@ -2643,22 +2643,22 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void UnionAttributeValidationTest2()
         {
-              //<xsd:simpleType name="ST_NonZeroDecimalNumber">
-              //  <xsd:union memberTypes="ST_UnsignedDecimalNumberMin1 ST_SignedDecimalNumberMax-1" />
-              //</xsd:simpleType>
-              //<xsd:complexType name="CT_NonZeroDecimalNumber">
-              //  <xsd:attribute name="val" type="ST_NonZeroDecimalNumber" use="required"></xsd:attribute>
-              //</xsd:complexType>
-              //<xsd:simpleType name="ST_UnsignedDecimalNumberMin1">
-              //  <xsd:restriction base="xsd:int">
-              //    <xsd:minInclusive value="1" />
-              //  </xsd:restriction>
-              //</xsd:simpleType>
-              //<xsd:simpleType name="ST_SignedDecimalNumberMax-1">
-              //  <xsd:restriction base="xsd:int">
-              //    <xsd:maxInclusive value="-1" />
-              //  </xsd:restriction>
-              //</xsd:simpleType>
+            //<xsd:simpleType name="ST_NonZeroDecimalNumber">
+            //  <xsd:union memberTypes="ST_UnsignedDecimalNumberMin1 ST_SignedDecimalNumberMax-1" />
+            //</xsd:simpleType>
+            //<xsd:complexType name="CT_NonZeroDecimalNumber">
+            //  <xsd:attribute name="val" type="ST_NonZeroDecimalNumber" use="required"></xsd:attribute>
+            //</xsd:complexType>
+            //<xsd:simpleType name="ST_UnsignedDecimalNumberMin1">
+            //  <xsd:restriction base="xsd:int">
+            //    <xsd:minInclusive value="1" />
+            //  </xsd:restriction>
+            //</xsd:simpleType>
+            //<xsd:simpleType name="ST_SignedDecimalNumberMax-1">
+            //  <xsd:restriction base="xsd:int">
+            //    <xsd:maxInclusive value="-1" />
+            //  </xsd:restriction>
+            //</xsd:simpleType>
 
             var element = new DocumentFormat.OpenXml.Wordprocessing.DivId();
             element.Val = new StringValue();
@@ -2798,22 +2798,22 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void TrueFalseBlankValueValidationTest2()
         {
-              //<xsd:simpleType name="ST_TrueFalseBlank">
-              //  <xsd:annotation>
-              //    <xsd:documentation>Boolean Value with Blank [False] State</xsd:documentation>
-              //  </xsd:annotation>
-              //  <xsd:restriction base="xsd:string">
-              //    <xsd:enumeration value="t">
-              //    <xsd:enumeration value="f">
-              //    <xsd:enumeration value="true">
-              //    <xsd:enumeration value="false">
-              //    <xsd:enumeration value="">
-              //      <xsd:annotation>
-              //        <xsd:documentation>Blank – Logical False</xsd:documentation>
-              //      </xsd:annotation>
-              //    </xsd:enumeration>
-              //  </xsd:restriction>
-              //</xsd:simpleType>
+            //<xsd:simpleType name="ST_TrueFalseBlank">
+            //  <xsd:annotation>
+            //    <xsd:documentation>Boolean Value with Blank [False] State</xsd:documentation>
+            //  </xsd:annotation>
+            //  <xsd:restriction base="xsd:string">
+            //    <xsd:enumeration value="t">
+            //    <xsd:enumeration value="f">
+            //    <xsd:enumeration value="true">
+            //    <xsd:enumeration value="false">
+            //    <xsd:enumeration value="">
+            //      <xsd:annotation>
+            //        <xsd:documentation>Blank – Logical False</xsd:documentation>
+            //      </xsd:annotation>
+            //    </xsd:enumeration>
+            //  </xsd:restriction>
+            //</xsd:simpleType>
 
             var element = new DocumentFormat.OpenXml.Vml.ShapeHandle();
 
@@ -2888,20 +2888,15 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void SpreadsheetDocumentValidatingTest()
         {
-
-            using (Stream stream = new MemoryStream(TestFileStreams.basicspreadsheet, false))
+            using (var stream = TestFileStreams.basicspreadsheet)
+            using (var sdoc = SpreadsheetDocument.Open(stream, false))
             {
-                // use stream
-                IEnumerable<ValidationErrorInfo> actual;
-                using (SpreadsheetDocument sdoc = SpreadsheetDocument.Open(stream, false))
-                {
-                    actual = O12Validator.Validate(sdoc);
-                    Assert.Empty(actual);
+                var o12actual = O12Validator.Validate(sdoc);
+                Assert.Empty(o12actual);
 
-                    // Office2010
-                    actual = O14Validator.Validate(sdoc);
-                    Assert.Empty(actual);
-                }
+                // Office2010
+                var o14actual = O14Validator.Validate(sdoc);
+                Assert.Empty(o14actual);
             }
         }
 
@@ -2911,19 +2906,16 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void WordprocessingDocumentValidatingTest()
         {
-            using (Stream stream = new MemoryStream(TestFileStreams.complex0docx, false))
+            using (Stream stream = TestFileStreams.complex0docx)
+            using (WordprocessingDocument wordTestDocument = WordprocessingDocument.Open(stream, false))
             {
-                // use OpenXmlPackage
-                using (WordprocessingDocument wordTestDocument = WordprocessingDocument.Open(stream, false))
-                {
-                    IEnumerable<ValidationErrorInfo> actual;
-                    actual = O12Validator.Validate(wordTestDocument);
-                    Assert.Single(actual); // The value 'actual' should contain one validation error for 'doNotEmbedSmartTags' in the test document.
+                // TODO: Abstract for version
+                var o12actual = O12Validator.Validate(wordTestDocument);
+                Assert.Single(o12actual); // The value 'actual' should contain one validation error for 'doNotEmbedSmartTags' in the test document.
 
-                    // Office2010
-                    actual = O14Validator.Validate(wordTestDocument);
-                    Assert.Single(actual); // The value 'actual' should contain one validation error for 'doNotEmbedSmartTags' in the test document.
-                }
+                // Office2010
+                var o14actual = O14Validator.Validate(wordTestDocument);
+                Assert.Single(o14actual); // The value 'actual' should contain one validation error for 'doNotEmbedSmartTags' in the test document.
             }
         }
 
@@ -2933,7 +2925,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Wordprocessing2010DocumentValidatingTest()
         {
-            using (Stream stream = new MemoryStream(TestFileStreams.complex2010docx, false))
+            using (Stream stream = TestFileStreams.complex2010docx)
             {
                 // use OpenXmlPackage
                 using (WordprocessingDocument wordTestDocument = WordprocessingDocument.Open(stream, false))
@@ -2956,24 +2948,18 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void PresentationDocumentValidatingTest()
         {
-
-            using (Stream stream = new MemoryStream(TestFileStreams.o09_Performance_typical_pptx, false))
+            using (var stream = TestFileStreams.o09_Performance_typical_pptx)
+            using (var pDoc = PresentationDocument.Open(stream, false))
             {
-                using (PresentationDocument pDoc = PresentationDocument.Open(stream, false))
-                {
-                    // use stream
-                    IEnumerable<ValidationErrorInfo> actual;
-                    actual = O12Validator.Validate(pDoc);
-                    var cnt = actual.Count();
-                    var passed = cnt == 109 || cnt == 0;
-                    Assert.True(passed); // In old versions of SDK, the value 'actual' should contain 109 validation errors for 'smtClean' in the test document.
+                // use stream
+                var o12actual = O12Validator.Validate(pDoc);
+                var o12count = o12actual.Count();
+                Assert.True(o12count == 109 || o12count == 0); // The value 'actual' should contain 109 validtion errors for 'smtClean' in the test document.
 
-                    // Office2010
-                    actual = O14Validator.Validate(pDoc);
-                    cnt = actual.Count();
-                    passed = cnt == 109 || cnt == 0;
-                    Assert.True(passed); // In old versions of SDK, the value 'actual' should contain 109 validation errors for 'smtClean' in the test document.
-                }
+                // Office2010
+                var o14actual = O14Validator.Validate(pDoc);
+                var o14count = o14actual.Count();
+                Assert.True(o14count == 109 || o14count == 0); // The value 'actual' should contain 109 validtion errors for 'smtClean' in the test document.
             }
         }
 
@@ -2983,20 +2969,16 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void SpreadsheetPartValidatingTest()
         {
-
-            using (Stream stream = new MemoryStream(TestFileStreams.basicspreadsheet, false))
+            using (var stream = TestFileStreams.basicspreadsheet)
+            using (var testDocument = SpreadsheetDocument.Open(stream, false))
             {
-                using (SpreadsheetDocument testDocument = SpreadsheetDocument.Open(stream, false))
-                {
-                    IEnumerable<ValidationErrorInfo> actual;
-                    // validate the workbook part only.
-                    actual = O12Validator.Validate(testDocument.WorkbookPart);
-                    Assert.Empty(actual);
+                // validate the workbook part only.
+                var o12actual = O12Validator.Validate(testDocument.WorkbookPart);
+                Assert.Empty(o12actual);
 
-                    // Office2010
-                    actual = O14Validator.Validate(testDocument.WorkbookPart);
-                    Assert.Empty(actual);
-                }
+                // Office2010
+                var o14actual = O14Validator.Validate(testDocument.WorkbookPart);
+                Assert.Empty(o14actual);
             }
         }
 
@@ -3006,19 +2988,16 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void WordprocessingPartValidatingTest()
         {
-            using (Stream stream = new MemoryStream(TestFileStreams.complex0docx, false))
+            using (var stream = TestFileStreams.complex0docx)
+            using (var testDocument = WordprocessingDocument.Open(stream, false))
             {
-                using (WordprocessingDocument testDocument = WordprocessingDocument.Open(stream, false))
-                {
-                    IEnumerable<ValidationErrorInfo> actual;
-                    // validate the main document part only
-                    actual = O12Validator.Validate(testDocument.MainDocumentPart);
-                    Assert.Empty(actual);
+                // validate the main document part only
+                var o12actual = O12Validator.Validate(testDocument.MainDocumentPart);
+                Assert.Empty(o12actual);
 
-                    // Office2010
-                    actual = O14Validator.Validate(testDocument.MainDocumentPart);
-                    Assert.Empty(actual);
-                }
+                // Office2010
+                var o14actual = O14Validator.Validate(testDocument.MainDocumentPart);
+                Assert.Empty(o14actual);
             }
         }
 
@@ -3028,28 +3007,24 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Wordprocessing2010PartValidatingTest()
         {
-            using (Stream stream = new MemoryStream(TestFileStreams.complex2010docx, false))
+            using (var stream = TestFileStreams.complex2010docx)
+            using (var testDocument = WordprocessingDocument.Open(stream, false))
             {
-                using (WordprocessingDocument testDocument = WordprocessingDocument.Open(stream, false))
-                {
-                    IEnumerable<ValidationErrorInfo> actual;
+                // validate the StyleDefinitionsPart
+                var o12actual = O12Validator.Validate(testDocument.MainDocumentPart.StyleDefinitionsPart);
+                Assert.Empty(o12actual);
 
-                    // validate the StyleDefinitionsPart
-                    actual = O12Validator.Validate(testDocument.MainDocumentPart.StyleDefinitionsPart);
-                    Assert.Empty(actual);
+                // Office2010
+                var o14actual = O14Validator.Validate(testDocument.MainDocumentPart.StyleDefinitionsPart);
+                Assert.Empty(o14actual);
 
-                    // Office2010
-                    actual = O14Validator.Validate(testDocument.MainDocumentPart.StyleDefinitionsPart);
-                    Assert.Empty(actual);
+                // can not validate the StylesWithEffectsPart against Office2007
+                //actual = O12Validator.Validate(testDocument.MainDocumentPart.StylesWithEffectsPart);
+                //Assert.Equal(0, actual.Count());
 
-                    // can not validate the StylesWithEffectsPart against Office2007
-                    //actual = O12Validator.Validate(testDocument.MainDocumentPart.StylesWithEffectsPart);
-                    //Assert.Equal(0, actual.Count());
-
-                    // Office2010
-                    actual = O14Validator.Validate(testDocument.MainDocumentPart.StylesWithEffectsPart);
-                    Assert.Empty(actual);
-                }
+                // Office2010
+                var o14effectsActual = O14Validator.Validate(testDocument.MainDocumentPart.StylesWithEffectsPart);
+                Assert.Empty(o14effectsActual);
             }
         }
 
@@ -3059,19 +3034,16 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void SlidePartValidatingTest()
         {
-            using (Stream stream = new MemoryStream(TestFileStreams.o09_Performance_typical_pptx, false))
+            using (var stream = TestFileStreams.o09_Performance_typical_pptx)
+            using (var testDocument = PresentationDocument.Open(stream, false))
             {
-                using (PresentationDocument testDocument = PresentationDocument.Open(stream, false))
-                {
-                    IEnumerable<ValidationErrorInfo> actual;
-                    // validate one Slide part only
-                    actual = O12Validator.Validate(testDocument.PresentationPart.SlideParts.First());
-                    Assert.Empty(actual);
+                // validate one Slide part only
+                var o12actual = O12Validator.Validate(testDocument.PresentationPart.SlideParts.First());
+                Assert.Empty(o12actual);
 
-                    // Office2010
-                    actual = O14Validator.Validate(testDocument.PresentationPart.SlideParts.First());
-                    Assert.Empty(actual);
-                }
+                // Office2010
+                var o14actual = O14Validator.Validate(testDocument.PresentationPart.SlideParts.First());
+                Assert.Empty(o14actual);
             }
         }
 
@@ -3081,20 +3053,16 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void SpreadsheetElementValidatingTest()
         {
-
-            using (Stream stream = new MemoryStream(TestFileStreams.basicspreadsheet, false))
+            using (var stream = TestFileStreams.basicspreadsheet)
+            using (var testDocument = SpreadsheetDocument.Open(stream, false))
             {
-                using (SpreadsheetDocument testDocument = SpreadsheetDocument.Open(stream, false))
-                {
-                    IEnumerable<ValidationErrorInfo> actual;
-                    // validate the workbook part only.
-                    actual = O12Validator.Validate(testDocument.WorkbookPart.Workbook);
-                    Assert.Empty(actual);
+                // validate the workbook part only.
+                var o12actual = O12Validator.Validate(testDocument.WorkbookPart.Workbook);
+                Assert.Empty(o12actual);
 
-                    // Office2010
-                    actual = O14Validator.Validate(testDocument.WorkbookPart.Workbook);
-                    Assert.Empty(actual);
-                }
+                // Office2010
+                var o14actual = O14Validator.Validate(testDocument.WorkbookPart.Workbook);
+                Assert.Empty(o14actual);
             }
         }
 
@@ -3104,19 +3072,16 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void WordprocessingElementValidatingTest()
         {
-            using (Stream stream = new MemoryStream(TestFileStreams.complex0docx, false))
+            using (var stream = TestFileStreams.complex0docx)
+            using (var testDocument = WordprocessingDocument.Open(stream, false))
             {
-                using (WordprocessingDocument testDocument = WordprocessingDocument.Open(stream, false))
-                {
-                    IEnumerable<ValidationErrorInfo> actual;
-                    // validate the main document part only
-                    actual = O12Validator.Validate(testDocument.MainDocumentPart.Document);
-                    Assert.Empty(actual);
+                // validate the main document part only
+                var o12actual = O12Validator.Validate(testDocument.MainDocumentPart.Document);
+                Assert.Empty(o12actual);
 
-                    // Office2010
-                    actual = O14Validator.Validate(testDocument.MainDocumentPart.Document);
-                    Assert.Empty(actual);
-                }
+                // Office2010
+                var o14actual = O14Validator.Validate(testDocument.MainDocumentPart.Document);
+                Assert.Empty(o14actual);
             }
         }
 
@@ -3126,19 +3091,16 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void SlideElementValidatingTest()
         {
-            using (Stream stream = new MemoryStream(TestFileStreams.o09_Performance_typical_pptx, false))
+            using (var stream = TestFileStreams.o09_Performance_typical_pptx)
+            using (var testDocument = PresentationDocument.Open(stream, false))
             {
-                using (PresentationDocument testDocument = PresentationDocument.Open(stream, false))
-                {
-                    IEnumerable<ValidationErrorInfo> actual;
-                    // validate the Slide element
-                    actual = O12Validator.Validate(testDocument.PresentationPart.SlideParts.First().Slide);
-                    Assert.Empty(actual);
+                // validate the Slide element
+                var o12actual = O12Validator.Validate(testDocument.PresentationPart.SlideParts.First().Slide);
+                Assert.Empty(o12actual);
 
-                    // Office2010
-                    actual = O14Validator.Validate(testDocument.PresentationPart.SlideParts.First().Slide);
-                    Assert.Empty(actual);
-                }
+                // Office2010
+                var o14actual = O14Validator.Validate(testDocument.PresentationPart.SlideParts.First().Slide);
+                Assert.Empty(o14actual);
             }
         }
 
@@ -3288,7 +3250,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MaxErrorsTest()
         {
-            using (Stream stream = new MemoryStream(TestFileStreams._5Errors, false))
+            using (Stream stream = TestFileStreams._5Errors)
             {
                 using (WordprocessingDocument testDocument = WordprocessingDocument.Open(stream, false))
                 {
@@ -3675,15 +3637,15 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ChangedAttributeValueTypeValidationO14SupportTest()
         {
-              //<xs:simpleType name="ST_DecimalNumberOrPercent">
-              //  <xs:union memberTypes="ST_Percentage ST_DecimalNumber" />
-              //</xs:simpleType>
-              //<xs:simpleType name="ST_Percentage">
-              //  <xs:annotation>
-              //    <xs:documentation>Percentage</xs:documentation>
-              //  </xs:annotation>
-              //  <xs:restriction base="xsd:int" />
-              //</xs:simpleType>
+            //<xs:simpleType name="ST_DecimalNumberOrPercent">
+            //  <xs:union memberTypes="ST_Percentage ST_DecimalNumber" />
+            //</xs:simpleType>
+            //<xs:simpleType name="ST_Percentage">
+            //  <xs:annotation>
+            //    <xs:documentation>Percentage</xs:documentation>
+            //  </xs:annotation>
+            //  <xs:restriction base="xsd:int" />
+            //</xs:simpleType>
 
             var element = new Zoom();
 
@@ -3896,10 +3858,10 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void VersionMismatchValidatingTest()
         {
-            using (Stream stream = new MemoryStream(TestFileStreams.complex0docx, false))
+            using (Stream stream = TestFileStreams.complex0docx)
             {
                 // use OpenXmlPackage
-                using (WordprocessingDocument wordTestDocument = WordprocessingDocument.Open(stream, false, new OpenSettings() { MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2010)}))
+                using (WordprocessingDocument wordTestDocument = WordprocessingDocument.Open(stream, false, new OpenSettings() { MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2010) }))
 
                 {
                     IEnumerable<ValidationErrorInfo> actual;
@@ -3922,22 +3884,13 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void VersionMismatchPartValidatingTest()
         {
-            using (Stream stream = new MemoryStream(TestFileStreams.complex0docx, false))
+            using (Stream stream = TestFileStreams.complex0docx)
+            using (WordprocessingDocument wordTestDocument = WordprocessingDocument.Open(stream, false, new OpenSettings() { MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007) }))
             {
-                // use OpenXmlPackage
-                using (WordprocessingDocument wordTestDocument = WordprocessingDocument.Open(stream, false, new OpenSettings() { MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007) }))
-                {
-                    IEnumerable<ValidationErrorInfo> actual;
-                    actual = O12Validator.Validate(wordTestDocument.MainDocumentPart);
-                    Assert.Empty(actual);
+                var actual = O12Validator.Validate(wordTestDocument.MainDocumentPart);
+                Assert.Empty(actual);
 
-                    // the following line should throw exception.
-                    // Office2010
-                    Assert.Throws<System.InvalidOperationException>(() =>
-                    {
-                        actual = O14Validator.Validate(wordTestDocument.MainDocumentPart);
-                    });
-                }
+                Assert.Throws<System.InvalidOperationException>(() => O14Validator.Validate(wordTestDocument.MainDocumentPart));
             }
         }
     }
