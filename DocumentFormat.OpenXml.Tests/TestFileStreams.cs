@@ -37,13 +37,14 @@ namespace DocumentFormat.OpenXml.Tests
     {
         private TemporaryFile(string path)
         {
+            Path = path;
         }
 
         public static IFile Create() => new TemporaryFile(System.IO.Path.GetTempFileName());
 
         public string Path { get; }
 
-        public Stream Open() => File.OpenRead(Path);
+        public Stream Open() => File.Open(Path, FileMode.OpenOrCreate, FileAccess.ReadWrite);
 
         public void Dispose()
         {
