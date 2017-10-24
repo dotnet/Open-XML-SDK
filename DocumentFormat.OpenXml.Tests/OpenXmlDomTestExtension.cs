@@ -40,6 +40,11 @@ namespace DocumentFormat.OpenXml.Tests
             return _wordprocessingExtension.Contains(file.Extension);
         }
 
+        public static bool IsWordprocessingFile(this IFile file)
+        {
+            return _wordprocessingExtension.Contains(System.IO.Path.GetExtension(file.Path));
+        }
+
         /// <summary> Check if the file is of OpenXml Speadsheet document extension.</summary>
         /// <param name="file">current file</param>
         /// <returns>True if it's with OpenXml Speadsheet document extension, otherwise return false.</returns>
@@ -48,12 +53,22 @@ namespace DocumentFormat.OpenXml.Tests
             return _spreadsheetExtension.Contains(file.Extension);
         }
 
+        public static bool IsSpreadsheetFile(this IFile file)
+        {
+            return _spreadsheetExtension.Contains(System.IO.Path.GetExtension(file.Path));
+        }
+
         /// <summary> Check if the file is of OpenXml Presentation document extension.</summary>
         /// <param name="file">current file</param>
         /// <returns>True if it's with OpenXml Presentation document extension, otherwise return false.</returns>
         public static bool IsPresentationFile(this FileInfo file)
         {
             return _presentationExtension.Contains(file.Extension);
+        }
+
+        public static bool IsPresentationFile(this IFile file)
+        {
+            return _presentationExtension.Contains(System.IO.Path.GetExtension(file.Path));
         }
 
         /// <summary> Get a copy of pass in file </summary>
@@ -71,6 +86,31 @@ namespace DocumentFormat.OpenXml.Tests
             file.CopyTo(copy, true);
 
             return new FileInfo(copy);
+        }
+
+        internal static OpenXmlPackage Open(this IFile file, bool isEditable)
+        {
+            return Open(file, isEditable, new OpenSettings());
+        }
+
+        internal static OpenXmlPackage Open(this IFile file, bool isEditable, OpenSettings settings)
+        {
+            if (file.IsWordprocessingFile())
+            {
+                return WordprocessingDocument.Open(file.Open(), isEditable, settings);
+            }
+            else if (file.IsSpreadsheetFile())
+            {
+                return SpreadsheetDocument.Open(file.Open(), isEditable, settings);
+            }
+            else if (file.IsPresentationFile())
+            {
+                return PresentationDocument.Open(file.Open(), isEditable, settings);
+            }
+            else
+            {
+                throw new ArgumentException();
+            }
         }
 
         /// <summary>
