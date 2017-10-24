@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 
 using DocumentFormat.OpenXml.Packaging;
+using System;
 using System.IO;
 using System.IO.Packaging;
 using Xunit;
@@ -9,17 +10,45 @@ namespace DocumentFormat.OpenXml.Tests
 {
     public class AutoSaveTestClass
     {
-        [Theory]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm)]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.PerformanceEng)]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.O12Typical)]
-        public void DefaultStreamReadOnly(string testfile)
+        [Fact]
+        public void DefaultStreamReadOnlyWord()
         {
-            using (var file = TestAssets.AsFile(testfile, FileAccess.Read))
+            using (var file = TestAssets.AsFile(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, FileAccess.Read))
             {
-                Assert.Throws<IOException>(() =>
+                Assert.Throws<ArgumentException>(() =>
                 {
-                    using (var package = file.Open(true))
+                    using (var stream = file.Open())
+                    using (var package = WordprocessingDocument.Open(stream, true))
+                    {
+                    }
+                });
+            }
+        }
+
+        [Fact]
+        public void DefaultStreamReadOnlyExcel()
+        {
+            using (var file = TestAssets.AsFile(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.PerformanceEng, FileAccess.Read))
+            {
+                Assert.Throws<ArgumentException>(() =>
+                {
+                    using (var stream = file.Open())
+                    using (var package = SpreadsheetDocument.Open(stream, true))
+                    {
+                    }
+                });
+            }
+        }
+
+        [Fact]
+        public void DefaultStreamReadOnlyPresentation()
+        {
+            using (var file = TestAssets.AsFile(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.O12Typical, FileAccess.Read))
+            {
+                Assert.Throws<ArgumentException>(() =>
+                {
+                    using (var stream = file.Open())
+                    using (var package = PresentationDocument.Open(stream, true))
                     {
                     }
                 });
@@ -65,7 +94,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var file = TestAssets.AsFile(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, FileAccess.Write))
             using (var stream = file.Open())
             {
-                Assert.Throws<IOException>(() =>
+                Assert.Throws<ArgumentException>(() =>
                 {
                     using (var package = WordprocessingDocument.Open(stream, true))
                     {
@@ -80,7 +109,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var file = TestAssets.AsFile(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.PerformanceEng, FileAccess.Write))
             using (var stream = file.Open())
             {
-                Assert.Throws<IOException>(() =>
+                Assert.Throws<ArgumentException>(() =>
                 {
                     using (var package = WordprocessingDocument.Open(stream, true))
                     {
@@ -95,7 +124,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var file = TestAssets.AsFile(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.O12Typical, FileAccess.Write))
             using (var stream = file.Open())
             {
-                Assert.Throws<IOException>(() =>
+                Assert.Throws<ArgumentException>(() =>
                 {
                     using (var package = WordprocessingDocument.Open(stream, true))
                     {
