@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Tests
         [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.O12Typical)]
         public void DefaultStreamReadOnly(string testfile)
         {
-            using (var file = TestAssets.Open(testfile))
+            using (var file = TestAssets.AsFile(testfile, FileAccess.Read))
             {
                 Assert.Throws<IOException>(() =>
                 {
@@ -77,7 +77,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void DefaultStreamWriteExcel()
         {
-            using (var file = TestAssets.Open(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.PerformanceEng, FileAccess.Write))
+            using (var file = TestAssets.AsFile(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.PerformanceEng, FileAccess.Write))
             using (var stream = file.Open())
             {
                 Assert.Throws<IOException>(() =>
