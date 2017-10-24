@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void DefaultStreamWriteWord()
         {
-            using (var file = TestAssets.Open(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, FileAccess.Write))
+            using (var file = TestAssets.AsFile(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, FileAccess.Write))
             using (var stream = file.Open())
             {
                 Assert.Throws<IOException>(() =>
@@ -92,7 +92,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void DefaultStreamWritePowerpoint()
         {
-            using (var file = TestAssets.Open(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.O12Typical, FileAccess.Write))
+            using (var file = TestAssets.AsFile(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.O12Typical, FileAccess.Write))
             using (var stream = file.Open())
             {
                 Assert.Throws<IOException>(() =>
