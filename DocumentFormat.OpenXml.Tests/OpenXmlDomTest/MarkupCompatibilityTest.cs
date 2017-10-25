@@ -127,8 +127,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_NonIgnored_UnknownAttribute()
         {
-            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm).AsMemoryStream())
-            using (var package = WordprocessingDocument.Open(stream, true))
+            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var package = WordprocessingDocument.Open(stream, false))
             {
                 var part = package.MainPart();
                 var host = part
@@ -1861,49 +1861,33 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Preserve_NonIgnored_UnknownAttribute_FullMode()
         {
-            var testfiles = CopyTestFiles(@"bvt");
-            var testfile = testfiles.FirstOrDefault();
+            var unknownElement = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
+            var unknownAttribute = new OpenXmlAttribute(prefixUnknown1, a1Unknown1, nsUnknown1, "attribute1 from unknown namespace1.");
 
-            string partUri = null, hostPath = null, targetPath = null;
-            List<OpenXmlElement> children = new List<OpenXmlElement>();
-            OpenXmlElement expectedElement = null;
-            string pehostPath = null;
-            setupElements(testfile,
-                ref partUri, pkg => pkg.MainPart(),
-                ref hostPath, e => e.Descendants().PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !d.ChildElements.Any(c => c is OpenXmlUnknownElement)),
-                e =>
-                {
-                    Log.Comment("Skipping setting Ignorable @{0} with value: {1}", e.Path(), unknownElement11.Prefix);
-                    var pehost = e;
-                    pehostPath = pehost.Path();
-
-                    Log.Comment("Skipping setting PreserveElements@ {0} with value: {1}", pehost.Path(), unknownElement11.GetFullName());
-
-                    Log.Comment("Setting PreserveAttributes@ {0} with value: {1}", pehost.Path(), unknownAttribute11.GetFullName());
-                    pehost.SetPreserveAttributes(unknownAttribute11.GetFullName());
-                    pehost.AddNamespaceDeclaration(unknownAttribute11.Prefix, unknownAttribute11.NamespaceUri);
-                },
-                ref targetPath, e => e.Descendants().PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !d.ChildElements.Any(c => c is OpenXmlUnknownElement)),
-                e =>
-                {
-                    foreach (var d in e.ChildElements)
-                        children.Add(d.CloneNode(true));
-                    e.AppendChild(unknownElement11);
-                    unknownElement11.SetAttribute(unknownAttribute11);
-                    unknownElement11.SetAttribute(unknownAttribute12);
-                    unknownElement11.SetAttribute(unprefixedAttribute);
-
-                    expectedElement = unknownElement11.CloneNode(true);
-                });
-
-            Log.Comment("ReOpening file:{0}...", testfile.FullName);
-            using (var package = testfile.OpenPackage(true, FileFormatVersions.Office2007, MarkupCompatibilityProcessMode.NoProcess))
+            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var package = WordprocessingDocument.Open(stream, false))
             {
-                OpenXmlElement host, target, pehost;
-                locateElements(package, partUri, hostPath, out host, targetPath, out target);
-                locateElements(package, partUri, hostPath, out host, pehostPath, out pehost);
+                var part = package.MainPart();
+                var host = part
+                    .RootElement()
+                    .Descendants()
+                    .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !d.ChildElements.Any(c => c is OpenXmlUnknownElement));
+                var target = host
+                    .Descendants()
+                    .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !d.ChildElements.Any(c => c is OpenXmlUnknownElement));
 
-                verifyMcAttribute(pehost, "PreserveAttributes", unknownAttribute11.GetFullName());
+                host.SetPreserveAttributes(unknownAttribute.GetFullName());
+                host.AddNamespaceDeclaration(unknownAttribute.Prefix, unknownAttribute.NamespaceUri);
+
+                var children = target.ChildElements.Select(t => t.CloneNode(true)).ToList();
+                target.AppendChild(unknownElement);
+
+                unknownElement.SetAttribute(unknownAttribute);
+                unknownElement.SetAttribute(unknownAttribute12);
+                unknownElement.SetAttribute(unprefixedAttribute);
+
+                var expectedElement = unknownElement.CloneNode(true);
+                verifyMcAttribute(host, "PreserveAttributes", unknownAttribute.GetFullName());
 
                 verifyUnknownElement(target.LastChild, expectedElement);
                 verifyKnownChildren(target, children);
@@ -2284,8 +2268,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_MustUnderstand_Ignored_UnknownElement()
         {
-            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm).AsMemoryStream())
-            using (var package = WordprocessingDocument.Open(stream, true))
+            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var package = WordprocessingDocument.Open(stream, false))
             {
                 var part = package.MainPart();
                 var partUri = part.Uri.ToString();
@@ -2879,8 +2863,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void OneChoice_MultipleFallback_FullMode()
         {
-            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm).AsMemoryStream())
-            using (var package = WordprocessingDocument.Open(stream, true))
+            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var package = WordprocessingDocument.Open(stream, false))
             {
                 var part = package.MainPart();
                 var dom = part.RootElement();
@@ -2934,8 +2918,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_OneChoice_MultipleFallback()
         {
-            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm).AsMemoryStream())
-            using (var package = WordprocessingDocument.Open(stream, true))
+            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var package = WordprocessingDocument.Open(stream, false))
             {
                 var host = package
                     .MainPart()
