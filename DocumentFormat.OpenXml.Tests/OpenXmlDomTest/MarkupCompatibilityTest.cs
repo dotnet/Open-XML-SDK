@@ -2889,23 +2889,19 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void OneChoice_MultipleFallback_FullMode()
         {
-            var testfiles = CopyTestFiles(@"bvt");
-            var testfile = testfiles.FirstOrDefault();
-
-            string partUri = null, hostPath = null;
-            OpenXmlElement acb = null;
-            setupElements(testfile,
-                ref partUri, pkg => pkg.MainPart(),
-                ref hostPath, e => e.Descendants().PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && d.ChildElements.Count > 1),
-                e => WrapEachChildWithFallback_OneChoice(e));
-
-            Log.Comment("ReOpening file:{0}...", testfile.FullName);
-            using (var package = testfile.OpenPackage(true, FileFormatVersions.Office2007, MarkupCompatibilityProcessMode.NoProcess))
+            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm).AsMemoryStream())
+            using (var package = WordprocessingDocument.Open(stream, true))
             {
-                OpenXmlElement host;
-                locateElements(package, partUri, hostPath, out host);
+                var part = package.MainPart();
+                var dom = part.RootElement();
+                var host = dom
+                    .Descendants()
+                    .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && d.ChildElements.Count > 1);
 
-                Log.Comment("Verifying ACB...");
+                var acb = WrapEachChildWithFallback_OneChoice(host);
+
+                locateElements(package, part.Uri.ToString(), host.Path(), out host);
+
                 verifyKnownElement(host.FirstChild, acb);
             }
         }
@@ -3408,7 +3404,7 @@ namespace DocumentFormat.OpenXml.Tests
             return e.AppendChild(acb);
         }
 
-        private void WrapEachChildWithFallback_OneChoice(OpenXmlElement e)
+        private AlternateContent WrapEachChildWithFallback_OneChoice(OpenXmlElement e)
         {
             var acb = new AlternateContent();
             var choice = new AlternateContentChoice();
@@ -3435,7 +3431,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
 
             e.RemoveAllChildren();
-            e.AppendChild(acb);
+            return e.AppendChild(acb);
         }
 
         #endregion AlternateContent
