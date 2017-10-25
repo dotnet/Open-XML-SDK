@@ -2288,37 +2288,31 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_MustUnderstand_Ignored_UnknownElement()
         {
-            var testfiles = CopyTestFiles(@"bvt");
-            var testfile = testfiles.FirstOrDefault();
+            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm).AsMemoryStream())
+            using (var package = WordprocessingDocument.Open(stream, true))
+            {
+                var part = package.MainPart();
+                var partUri = part.Uri.ToString();
+                var host = part
+                    .RootElement()
+                    .Descendants()
+                    .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren);
+                var target = host
+                    .Descendants()
+                    .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren);
 
-            string partUri = null, hostPath = null, targetPath = null;
-            List<OpenXmlElement> children = new List<OpenXmlElement>();
-            OpenXmlElement expectedElement = null;
-            string muhostPath = null;
-            setupElements(testfile,
-                ref partUri, pkg => pkg.MainPart(),
-                ref hostPath, e => e.Descendants().PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren),
-                e =>
-                {
-                    Log.Comment("Setting @Ignorable with value: {0} on {1}...", unknownElement11.Prefix, e.Path());
-                    e.SetIgnorable(unknownElement11.Prefix);
-                    e.AddNamespaceDeclaration(unknownElement11.Prefix, unknownElement11.NamespaceUri);
-                },
-                ref targetPath, e => e.Descendants().PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren),
-                e =>
-                {
-                    expectedElement = e.CloneNode(true);
+                host.SetIgnorable(unknownElement11.Prefix);
+                host.AddNamespaceDeclaration(unknownElement11.Prefix, unknownElement11.NamespaceUri);
 
-                    wrapChildrenWithElement(e, unknownElement11, children);
+                var children = new List<OpenXmlElement>();
+                wrapChildrenWithElement(target, unknownElement11, children);
 
-                    var muhost = chooseElementBetween(e, hostPath, targetPath);
-                    muhostPath = muhost.Path();
-                    Log.Comment("Setting @MustUnderstand with value: {0} on {1}", unknownElement11.Prefix, muhostPath);
-                    muhost.SetMustUnderstand(unknownElement11.Prefix);
-                });
+                var muhost = chooseElementBetween(target, host.Path(), target.Path());
+                Log.Comment("Setting @MustUnderstand with value: {0} on {1}", unknownElement11.Prefix, muhost.Path());
+                muhost.SetMustUnderstand(unknownElement11.Prefix);
 
-            Log.Warning("Validating and Expecting validation error for MustUnderstand...");
-            validateMC(testfile, FileFormatVersions.Office2007, hostPath);
+                validateMC(package, FileFormatVersions.Office2007, host.Path(), 1);
+            }
         }
 
         [Fact]
@@ -3638,6 +3632,15 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 Log.Pass("No MC validation error found.");
             }
+        }
+
+        private void validateMC(OpenXmlPackage package, FileFormatVersions fileformat, string path, int expectedCount)
+        {
+            var validator = new OpenXmlValidator(fileformat);
+            var errors = validator.Validate(package)
+                .Where(e => e.ErrorType == ValidationErrorType.MarkupCompatibility || (e.ErrorType == ValidationErrorType.Schema && e.Node.Path().StartsWith(path)));
+
+            Assert.Equal(expectedCount, errors.Count());
         }
 
         private void validateMC(FileInfo testfile, FileFormatVersions fileformat, string path)
