@@ -962,38 +962,21 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ProcessContent_Ignored_KnownElement_O12Mode()
         {
-            var testfiles = CopyTestFiles(@"bvt");
-            var testfile = testfiles.FirstOrDefault();
-
-            string partUri = null, hostPath = null, targetPath = null;
-            List<OpenXmlElement> children = new List<OpenXmlElement>();
-            OpenXmlElement known = null;
-            string pchostPath = null;
-            setupElements(testfile,
-                ref partUri, pkg => pkg.MainPart(),
-                ref hostPath, e => e.Descendants().PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !(d.FirstChild is OpenXmlUnknownElement)),
-                e =>
-                {
-                    Log.Comment("Setting Ignorable @{0} with value: {1}", e.Path(), known.Prefix);
-                    e.SetIgnorable(known.Prefix);
-
-                    var pchost = e;
-                    pchostPath = pchost.Path();
-                    Log.Comment("Setting ProcessContent @ {0} with value: {1}", pchost.Path(), known.GetFullName());
-                    pchost.SetProcessContent(known.GetFullName());
-                },
-                ref targetPath, e => e.Descendants().PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !(d.FirstChild is OpenXmlUnknownElement)),
-                e =>
-                {
-                    known = e.FirstChild.CloneNode(true);
-                });
-
-            Log.Comment("ReOpening file:{0}...", testfile.FullName);
-            using (var package = testfile.OpenPackage(true, FileFormatVersions.Office2007, MarkupCompatibilityProcessMode.ProcessAllParts))
+            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var package = WordprocessingDocument.Open(stream, false))
             {
-                OpenXmlElement host, target, pchost;
-                locateElements(package, partUri, hostPath, out host, targetPath, out target);
-                locateElements(package, partUri, hostPath, out host, pchostPath, out pchost);
+                var part = package.MainPart();
+                var host = part
+                    .RootElement()
+                    .Descendants()
+                    .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !(d.FirstChild is OpenXmlUnknownElement));
+                var target = host
+                    .Descendants()
+                    .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !(d.FirstChild is OpenXmlUnknownElement));
+
+                var known = target.FirstChild.CloneNode(true);
+                host.SetIgnorable(known.Prefix);
+                host.SetProcessContent(known.GetFullName());
 
                 verifyKnownElement(target.FirstChild, known);
             }
