@@ -127,26 +127,22 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_NonIgnored_UnknownAttribute()
         {
-            var testfiles = CopyTestFiles(@"bvt");
-            var testfile = testfiles.FirstOrDefault();
+            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm).AsMemoryStream())
+            using (var package = WordprocessingDocument.Open(stream, true))
+            {
+                var part = package.MainPart();
+                var host = part
+                    .RootElement()
+                    .Descendants()
+                    .PickSecond();
+                var target = host
+                    .Descendants()
+                    .PickSecond();
 
-            string partUri = null, hostPath = null, targetPath = null;
-            setupElements(testfile,
-                ref partUri, pkg => pkg.MainPart(),
-                ref hostPath, e => e.Descendants().PickSecond(),
-                e =>
-                {
-                    Log.Comment("Skipping setting Ignorable @{0} with value: {1}", e.Path(), unknownAttribute11.Prefix);
-                },
-                ref targetPath, e => e.Descendants().PickSecond(),
-                e =>
-                {
-                    Log.Comment("Setting attribute {0} @{1}...", unknownAttribute11.GetFullName(), e.Path());
-                    e.SetAttribute(unknownAttribute11);
-                });
+                target.SetAttribute(unknownAttribute11);
 
-            Log.Warning("Validating and Expecting validation error for Non-Ignored unknown attribute...");
-            validateMC(testfile, FileFormatVersions.Office2007, hostPath);
+                validateMC(package, FileFormatVersions.Office2007, host.Path(), 1);
+            }
         }
 
         [Fact]
