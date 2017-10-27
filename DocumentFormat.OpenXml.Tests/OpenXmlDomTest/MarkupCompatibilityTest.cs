@@ -2090,45 +2090,35 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_Preserve_NoElement_UnknownAttribute()
         {
-            var testfiles = CopyTestFiles(@"bvt");
-            var testfile = testfiles.FirstOrDefault();
+            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var package = WordprocessingDocument.Open(stream, false))
+            {
+                var part = package.MainPart();
+                var host = part
+                    .RootElement()
+                    .Descendants()
+                    .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !d.ChildElements.Any(c => c is OpenXmlUnknownElement));
+                var target = host
+                    .Descendants()
+                    .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !d.ChildElements.Any(c => c is OpenXmlUnknownElement));
 
-            string partUri = null, hostPath = null, targetPath = null;
-            List<OpenXmlElement> children = new List<OpenXmlElement>();
-            OpenXmlElement expectedElement = null;
-            string pehostPath = null;
-            setupElements(testfile,
-                ref partUri, pkg => pkg.MainPart(),
-                ref hostPath, e => e.Descendants().PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !d.ChildElements.Any(c => c is OpenXmlUnknownElement)),
-                e =>
-                {
-                    Log.Comment("Setting Ignorable @{0} with value: {1}", e.Path(), unknownElement11.Prefix);
-                    e.SetIgnorable(unknownElement11.Prefix);
-                    e.AddNamespaceDeclaration(unknownAttribute11.Prefix, unknownAttribute11.NamespaceUri);
+                var unknownElement = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
+                var unknownAttribute1 = new OpenXmlAttribute(prefixUnknown1, a1Unknown1, nsUnknown1, "attribute1 from unknown namespace1.");
+                var unknownAttribute2 = new OpenXmlAttribute(prefixUnknown1, a2Unknown1, nsUnknown1, "attribute2 from unknown namespace1.");
+                var unprefixedAttribute = new OpenXmlAttribute(string.Empty, "name", null, "unprefixed attributes");
 
-                    var pehost = e;
-                    pehostPath = pehost.Path();
+                target.AppendChild(unknownElement11);
+                unknownElement.SetAttribute(unknownAttribute1);
+                unknownElement.SetAttribute(unknownAttribute2);
+                unknownElement.SetAttribute(unprefixedAttribute);
 
-                    Log.Comment("Skipping setting PreserveElements@ {0} with value: {1}", pehost.Path(), unknownElement11.GetFullName());
+                host.SetIgnorable(unknownElement.Prefix);
+                host.AddNamespaceDeclaration(unknownAttribute1.Prefix, unknownAttribute1.NamespaceUri);
 
-                    Log.Comment("Setting PreserveAttributes@ {0} with value: {1}", pehost.Path(), unknownAttribute11.GetFullName());
-                    pehost.SetPreserveAttributes(unknownAttribute11.GetFullName());
-                },
-                ref targetPath, e => e.Descendants().PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !d.ChildElements.Any(c => c is OpenXmlUnknownElement)),
-                e =>
-                {
-                    foreach (var d in e.ChildElements)
-                        children.Add(d.CloneNode(true));
-                    e.AppendChild(unknownElement11);
-                    unknownElement11.SetAttribute(unknownAttribute11);
-                    unknownElement11.SetAttribute(unknownAttribute12);
-                    unknownElement11.SetAttribute(unprefixedAttribute);
+                host.SetPreserveAttributes(unknownAttribute1.GetFullName());
 
-                    expectedElement = unknownElement11.CloneNode(true);
-                });
-
-            Log.Warning("Validating and Expecting MC validation error for PreserveAttributes...");
-            validateMC(testfile, FileFormatVersions.Office2007, hostPath);
+                validateMC(package, FileFormatVersions.Office2007, host.Path(), 1);
+            }
         }
         #endregion Preserve Elements & Attributes
 
