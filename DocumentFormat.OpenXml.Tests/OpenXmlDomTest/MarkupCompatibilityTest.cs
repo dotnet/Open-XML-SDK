@@ -2764,25 +2764,38 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MultipleChoice_OneFallback_O12Mode()
         {
-            var testfiles = CopyTestFiles(@"bvt");
-            var testfile = testfiles.FirstOrDefault();
-
-            string partUri = null, hostPath = null;
-            List<OpenXmlElement> children = new List<OpenXmlElement>();
-            OpenXmlElement acb = null;
-            setupElements(testfile,
-                ref partUri, pkg => pkg.MainPart(),
-                ref hostPath, e => e.Descendants().PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren),
-                e => { acb = wrapEachChildWithChoice_OneFallback(e, children).CloneNode(true); });
-
-            Log.Comment("ReOpening file:{0}...", testfile.FullName);
-            using (var package = testfile.OpenPackage(true, FileFormatVersions.Office2007, MarkupCompatibilityProcessMode.ProcessAllParts))
+            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm).AsMemoryStream())
             {
-                OpenXmlElement host;
-                locateElements(package, partUri, hostPath, out host);
+                (Uri part, string host, OpenXmlElement expected) Setup()
+                {
+                    using (var package = WordprocessingDocument.Open(stream, true))
+                    {
+                        var part = package.MainPart();
+                        var host = part
+                            .RootElement()
+                            .Descendants()
+                            .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren);
 
-                Log.Comment("Verifying first choice is selected...");
-                verifyKnownElement(host.FirstChild, children[0]);
+                        var children = new List<OpenXmlElement>();
+                        wrapEachChildWithChoice_OneFallback(host, children);
+
+                        return (part.Uri, host.Path(), children[0]);
+                    }
+                }
+
+                var result = Setup();
+
+                var settings = new OpenSettings
+                {
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                };
+
+                using (var package = WordprocessingDocument.Open(stream, false, settings))
+                {
+                    var host = LocateElements(package, result.part, result.host);
+
+                    verifyKnownElement(host.FirstChild, result.expected);
+                }
             }
         }
 
