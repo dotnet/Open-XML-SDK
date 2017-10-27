@@ -1862,44 +1862,36 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_Preserve_NonIgnored_UnknownElement()
         {
-            var testfiles = CopyTestFiles(@"bvt");
-            var testfile = testfiles.FirstOrDefault();
-
-            string partUri = null, hostPath = null, targetPath = null;
-            List<OpenXmlElement> children = new List<OpenXmlElement>();
-            OpenXmlElement expectedElement = null;
-            string pehostPath = null;
-            setupElements(testfile,
-                ref partUri, pkg => pkg.MainPart(),
-                ref hostPath, e => e.Descendants().PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !d.ChildElements.Any(c => c is OpenXmlUnknownElement)),
-                e =>
+            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            {
+                using (var package = WordprocessingDocument.Open(stream, false))
                 {
-                    Log.Comment("Skipping setting Ignorable @{0} with value: {1}", e.Path(), unknownElement11.Prefix);
-                    var pehost = e;
-                    pehostPath = pehost.Path();
+                    var part = package.MainPart();
+                    var host = part
+                        .RootElement()
+                        .Descendants()
+                        .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !d.ChildElements.Any(c => c is OpenXmlUnknownElement));
+                    var target = host
+                        .Descendants()
+                        .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !d.ChildElements.Any(c => c is OpenXmlUnknownElement));
 
-                    Log.Comment("Setting PreserveElements@ {0} with value: {1}", pehost.Path(), unknownElement11.GetFullName());
-                    pehost.SetPreserveElements(unknownElement11.GetFullName());
-                    pehost.AddNamespaceDeclaration(unknownElement11.Prefix, unknownElement11.NamespaceUri);
+                    var unknownElement = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
+                    var unknownAttribute1 = new OpenXmlAttribute(prefixUnknown1, a1Unknown1, nsUnknown1, "attribute1 from unknown namespace1.");
+                    var unknownAttribute2 = new OpenXmlAttribute(prefixUnknown1, a2Unknown1, nsUnknown1, "attribute2 from unknown namespace1.");
+                    var unprefixedAttribute = new OpenXmlAttribute(string.Empty, "name", null, "unprefixed attributes");
 
-                    Log.Comment("Setting PreserveAttributes@ {0} with value: {1}", pehost.Path(), unknownAttribute11.GetFullName());
-                    pehost.SetPreserveAttributes(unknownAttribute11.GetFullName());
-                },
-                ref targetPath, e => e.Descendants().PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !d.ChildElements.Any(c => c is OpenXmlUnknownElement)),
-                e =>
-                {
-                    foreach (var d in e.ChildElements)
-                        children.Add(d.CloneNode(true));
-                    e.AppendChild(unknownElement11);
-                    unknownElement11.SetAttribute(unknownAttribute11);
-                    unknownElement11.SetAttribute(unknownAttribute12);
-                    unknownElement11.SetAttribute(unprefixedAttribute);
+                    target.AppendChild(unknownElement);
+                    unknownElement.SetAttribute(unknownAttribute1);
+                    unknownElement.SetAttribute(unknownAttribute2);
+                    unknownElement.SetAttribute(unprefixedAttribute);
 
-                    expectedElement = unknownElement11.CloneNode(true);
-                });
+                    host.SetPreserveElements(unknownElement.GetFullName());
+                    host.AddNamespaceDeclaration(unknownElement.Prefix, unknownElement.NamespaceUri);
+                    host.SetPreserveAttributes(unknownAttribute1.GetFullName());
 
-            Log.Warning("Validating and Expecting validation error for PreserveElements...");
-            validateMC(testfile, FileFormatVersions.Office2007);
+                    ValidateMarkupCompatibility(package, FileFormatVersions.Office2007, 2);
+                }
+            }
         }
 
         [Fact]
@@ -3648,7 +3640,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Comment("Opening Package {0}...", testfile.FullName);
                 var package = testfile.OpenPackage(false);
                 Log.Comment("Validating file:{0}...", testfile.FullName);
-                errors = validator.Validate(package).Where(e => e.ErrorType == ValidationErrorType.MarkupCompatibility);
+                errors = validator.Validate(package).Where(e => e.ErrorType == ValidationErrorType.MarkupCompatibility).ToList();
             }
             catch (Exception ex)
             {
