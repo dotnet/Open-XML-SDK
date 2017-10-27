@@ -1214,62 +1214,123 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Preserve_Ignored_UnknownElement_O12Mode()
         {
-            var testfiles = CopyTestFiles(@"bvt");
-            var testfile = testfiles.FirstOrDefault();
+            var unknownElement = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
+            var unknownAttribute1 = new OpenXmlAttribute(prefixUnknown1, a1Unknown1, nsUnknown1, "attribute1 from unknown namespace1.");
+            var unknownAttribute2 = new OpenXmlAttribute(prefixUnknown1, a2Unknown1, nsUnknown1, "attribute2 from unknown namespace1.");
+            var unprefixedAttribute = new OpenXmlAttribute(string.Empty, "name", null, "unprefixed attributes");
 
-            string partUri = null, hostPath = null, targetPath = null;
-            List<OpenXmlElement> children = new List<OpenXmlElement>();
-            OpenXmlElement expectedElement = null;
-            string pehostPath = null;
-            setupElements(testfile,
-                ref partUri, pkg => pkg.MainPart(),
-                ref hostPath, e => e.Descendants().PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !d.ChildElements.Any(c => c is OpenXmlUnknownElement)),
-                e =>
-                {
-                    Log.Comment("Setting Ignorable @{0} with value: {1}", e.Path(), unknownElement11.Prefix);
-                    e.SetIgnorable(unknownElement11.Prefix);
-                    e.AddNamespaceDeclaration(unknownElement11.Prefix, unknownElement11.NamespaceUri);
-
-                    var pehost = e;
-                    pehostPath = pehost.Path();
-
-                    Log.Comment("Setting PreserveElements@ {0} with value: {1}", pehost.Path(), unknownElement11.GetFullName());
-                    pehost.SetPreserveElements(unknownElement11.GetFullName());
-
-                    Log.Comment("Setting PreserveAttributes@ {0} with value: {1}", pehost.Path(), unknownAttribute11.GetFullName());
-                    pehost.SetPreserveAttributes(unknownAttribute11.GetFullName());
-                },
-                ref targetPath, e => e.Descendants().PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !d.ChildElements.Any(c => c is OpenXmlUnknownElement)),
-                e =>
-                {
-                    foreach (var d in e.ChildElements)
-                        children.Add(d.CloneNode(true));
-                    e.AppendChild(unknownElement11);
-                    unknownElement11.SetAttribute(unknownAttribute11);
-                    unknownElement11.SetAttribute(unprefixedAttribute);
-
-                    // unknownAttribute12 should be ignored as it's not specified with PreserveAttributes.
-                    expectedElement = unknownElement11.CloneNode(true);
-                    unknownElement11.SetAttribute(unknownAttribute12);
-                });
-
-            Log.Comment("ReOpening file:{0}...", testfile.FullName);
-            using (var package = testfile.OpenPackage(true, FileFormatVersions.Office2007, MarkupCompatibilityProcessMode.ProcessAllParts))
+            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm).AsMemoryStream())
             {
-                OpenXmlElement host, target, pehost;
-                locateElements(package, partUri, hostPath, out host, targetPath, out target);
-                locateElements(package, partUri, hostPath, out host, pehostPath, out pehost);
+                (Uri part, string host, string target, List<OpenXmlElement> children, OpenXmlElement expected) Setup()
+                {
+                    using (var package = WordprocessingDocument.Open(stream, true))
+                    {
+                        var part = package.MainPart();
+                        var host = part
+                            .RootElement()
+                            .Descendants()
+                            .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !d.ChildElements.Any(c => c is OpenXmlUnknownElement));
+                        var target = host
+                            .Descendants()
+                            .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !d.ChildElements.Any(c => c is OpenXmlUnknownElement));
 
-                verifyUnknownElement(target.LastChild, expectedElement);
+                        var children = new List<OpenXmlElement>();
+                        foreach (var d in target.ChildElements)
+                        {
+                            children.Add(d.CloneNode(true));
+                        }
 
-                verifyAttribute(target.LastChild, unknownAttribute11);
+                        target.AppendChild(unknownElement);
+                        unknownElement.SetAttribute(unknownAttribute1);
+                        unknownElement.SetAttribute(unprefixedAttribute);
 
-                verifyAttribute(target.LastChild, unprefixedAttribute);
+                        var expectedElement = unknownElement.CloneNode(true);
 
-                verifyNoAttribute(target.LastChild, unknownAttribute12);
+                        unknownElement.SetAttribute(unknownAttribute2);
 
-                verifyKnownChildren(target, children);
+                        host.SetIgnorable(unknownElement.Prefix);
+                        host.AddNamespaceDeclaration(unknownElement.Prefix, unknownElement.NamespaceUri);
+                        host.SetPreserveElements(unknownElement.GetFullName());
+                        host.SetPreserveAttributes(unknownAttribute1.GetFullName());
+
+                        return (part.Uri, host.Path(), target.Path(), children, expectedElement);
+                    }
+                }
+
+                var paths = Setup();
+
+                var settings = new OpenSettings()
+                {
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                };
+
+                using (var package = WordprocessingDocument.Open(stream, false, settings))
+                {
+                    var elements = LocateElements(package, paths.part, paths.host, paths.target);
+
+                    verifyUnknownElement(elements.target.LastChild, paths.expected);
+                    verifyAttribute(elements.target.LastChild, unknownAttribute1);
+                    verifyAttribute(elements.target.LastChild, unprefixedAttribute);
+                    verifyNoAttribute(elements.target.LastChild, unknownAttribute2);
+                    verifyKnownChildren(elements.target, paths.children);
+                }
             }
+            //var testfiles = CopyTestFiles(@"bvt");
+            //var testfile = testfiles.FirstOrDefault();
+
+            //string partUri = null, hostPath = null, targetPath = null;
+            //List<OpenXmlElement> children = new List<OpenXmlElement>();
+            //OpenXmlElement expectedElement = null;
+            //string pehostPath = null;
+            //setupElements(testfile,
+            //    ref partUri, pkg => pkg.MainPart(),
+            //    ref hostPath, e => e.Descendants().PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !d.ChildElements.Any(c => c is OpenXmlUnknownElement)),
+            //    e =>
+            //    {
+            //        Log.Comment("Setting Ignorable @{0} with value: {1}", e.Path(), unknownElement11.Prefix);
+            //        e.SetIgnorable(unknownElement11.Prefix);
+            //        e.AddNamespaceDeclaration(unknownElement11.Prefix, unknownElement11.NamespaceUri);
+
+            //        var pehost = e;
+            //        pehostPath = pehost.Path();
+
+            //        Log.Comment("Setting PreserveElements@ {0} with value: {1}", pehost.Path(), unknownElement11.GetFullName());
+            //        pehost.SetPreserveElements(unknownElement11.GetFullName());
+
+            //        Log.Comment("Setting PreserveAttributes@ {0} with value: {1}", pehost.Path(), unknownAttribute11.GetFullName());
+            //        pehost.SetPreserveAttributes(unknownAttribute11.GetFullName());
+            //    },
+            //    ref targetPath, e => e.Descendants().PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !d.ChildElements.Any(c => c is OpenXmlUnknownElement)),
+            //    e =>
+            //    {
+            //        foreach (var d in e.ChildElements)
+            //            children.Add(d.CloneNode(true));
+            //        e.AppendChild(unknownElement11);
+            //        unknownElement11.SetAttribute(unknownAttribute11);
+            //        unknownElement11.SetAttribute(unprefixedAttribute);
+
+            //        // unknownAttribute12 should be ignored as it's not specified with PreserveAttributes.
+            //        expectedElement = unknownElement11.CloneNode(true);
+            //        unknownElement11.SetAttribute(unknownAttribute12);
+            //    });
+
+            //Log.Comment("ReOpening file:{0}...", testfile.FullName);
+            //using (var package = testfile.OpenPackage(true, FileFormatVersions.Office2007, MarkupCompatibilityProcessMode.ProcessAllParts))
+            //{
+            //    OpenXmlElement host, target, pehost;
+            //    locateElements(package, partUri, hostPath, out host, targetPath, out target);
+            //    locateElements(package, partUri, hostPath, out host, pehostPath, out pehost);
+
+            //    verifyUnknownElement(target.LastChild, expectedElement);
+
+            //    verifyAttribute(target.LastChild, unknownAttribute11);
+
+            //    verifyAttribute(target.LastChild, unprefixedAttribute);
+
+            //    verifyNoAttribute(target.LastChild, unknownAttribute12);
+
+            //    verifyKnownChildren(target, children);
+            //}
         }
 
         [Fact]
@@ -3461,7 +3522,12 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         // TODO: Rename to AssertElementsExist
-        private void LocateElements(OpenXmlPackage package, Uri partUri, string hostPath, string targetPath = null)
+        private OpenXmlElement LocateElements(OpenXmlPackage package, Uri partUri, string hostPath)
+        {
+            return LocateElements(package, partUri, hostPath, null).host;
+        }
+
+        private (OpenXmlElement host, OpenXmlElement target) LocateElements(OpenXmlPackage package, Uri partUri, string hostPath, string targetPath)
         {
             var part = package
                 .DescendantParts()
@@ -3482,7 +3548,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             if (targetPath == null)
             {
-                return;
+                return (host, null);
             }
 
             var target = host
@@ -3491,6 +3557,8 @@ namespace DocumentFormat.OpenXml.Tests
                 .FirstOrDefault(d => d.Path() == targetPath);
 
             Assert.NotNull(target);
+
+            return (host, target);
         }
 
         private void locateElements(OpenXmlPackage package, string partUri,
@@ -3684,14 +3752,12 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void verifyAttribute(OpenXmlElement host, OpenXmlAttribute expectedAttribute)
         {
-            Log.Comment("Verifying attribute {0} is preserved as expected...", expectedAttribute.GetFullName());
-            var verified = host.GetAttributes().
-                Where(a => a.Prefix == expectedAttribute.Prefix && a.LocalName == expectedAttribute.LocalName && a.Value == expectedAttribute.Value)
-                .FirstOrDefault() != default(OpenXmlAttribute);
-            if (verified)
-                Log.Pass("Verified attribute {0} exist with value {1}.", expectedAttribute.GetFullName(), expectedAttribute.Value);
-            else
-                Log.Fail("Verified Attribute {0} NOT exist with value {1}.", expectedAttribute.GetFullName(), expectedAttribute.Value);
+            var verified = host
+                .GetAttributes()
+                .Where(a => a.Prefix == expectedAttribute.Prefix && a.LocalName == expectedAttribute.LocalName && a.Value == expectedAttribute.Value)
+                .FirstOrDefault();
+
+            Assert.True(verified != default(OpenXmlAttribute));
         }
 
         private void verifyNoAttribute(OpenXmlElement host, OpenXmlAttribute expectedAttribute)
@@ -3747,12 +3813,8 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void verifyUnknownElement(OpenXmlElement host, OpenXmlElement expectedElement)
         {
-            Log.Comment("Verifying unknown element is loaded as OpenXmlUnkownElement...");
-            var verified = (host is OpenXmlUnknownElement) && (host.ToXElement().Compare(expectedElement.ToXElement()));
-            if (verified)
-                Log.Pass("Verified element {0} from unkown ns is loaded as OpenXmlUnknownElement.", expectedElement.GetFullName());
-            else
-                Log.Fail("Element {0} from unknown ns is NOT loaded as OpenXmlUnknownElement.", expectedElement.GetFullName());
+            Assert.IsType<OpenXmlUnknownElement>(host);
+            Assert.True(host.ToXElement().Compare(expectedElement.ToXElement()));
         }
 
         private void verifyNoUnknownElement(OpenXmlElement host, OpenXmlElement expectedElement)
