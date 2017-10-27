@@ -141,7 +141,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 target.SetAttribute(unknownAttribute11);
 
-                validateMC(package, FileFormatVersions.Office2007, host.Path(), 1);
+                ValidateMarkupCompatibility(package, FileFormatVersions.Office2007, host.Path(), 1);
             }
         }
 
@@ -214,26 +214,26 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_NonIgnored_UnknownElement()
         {
-            var testfiles = CopyTestFiles(@"bvt");
-            var testfile = testfiles.FirstOrDefault();
-
-            string partUri = null, hostPath = null, targetPath = null;
-            setupElements(testfile,
-                ref partUri, pkg => pkg.MainPart(),
-                ref hostPath, e => e.Descendants().PickFirst(d => d is OpenXmlCompositeElement),
-                e =>
+            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            {
+                using (var package = WordprocessingDocument.Open(stream, false))
                 {
-                    Log.Comment("Skipping setting Ignorable @{0} with value: {1}", e.Path(), unknownElement11.Prefix);
-                },
-                ref targetPath, e => e.Descendants().PickFirst(d => d is OpenXmlCompositeElement),
-                e =>
-                {
-                    Log.Comment("Appending element {0} to {1}...", unknownElement11.GetFullName(), e.Path());
-                    e.AppendChild(unknownElement11);
-                });
+                    var part = package.MainPart();
+                    var host = part
+                        .RootElement()
+                        .Descendants()
+                        .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !d.ChildElements.Any(c => c is OpenXmlUnknownElement));
+                    var target = host
+                        .Descendants()
+                        .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !d.ChildElements.Any(c => c is OpenXmlUnknownElement));
 
-            Log.Warning("Validating and Expecting validation error for Non-Ignored unknown element...");
-            validateMC(testfile, FileFormatVersions.Office2007, hostPath);
+                    var unknownElement = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
+
+                    target.AppendChild(unknownElement);
+
+                    ValidateMarkupCompatibility(package, FileFormatVersions.Office2007, host.Path(), 2);
+                }
+            }
         }
 
         [Fact]
@@ -2170,7 +2170,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 host.SetPreserveAttributes(unknownAttribute1.GetFullName());
 
-                validateMC(package, FileFormatVersions.Office2007, host.Path(), 1);
+                ValidateMarkupCompatibility(package, FileFormatVersions.Office2007, host.Path(), 1);
             }
         }
         #endregion Preserve Elements & Attributes
@@ -2306,7 +2306,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Comment("Setting @MustUnderstand with value: {0} on {1}", unknownElement11.Prefix, muhost.Path());
                 muhost.SetMustUnderstand(unknownElement11.Prefix);
 
-                validateMC(package, FileFormatVersions.Office2007, host.Path(), 1);
+                ValidateMarkupCompatibility(package, FileFormatVersions.Office2007, host.Path(), 1);
             }
         }
 
@@ -3682,7 +3682,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        private void validateMC(OpenXmlPackage package, FileFormatVersions fileformat, string path, int expectedCount)
+        private void ValidateMarkupCompatibility(OpenXmlPackage package, FileFormatVersions fileformat, string path, int expectedCount)
         {
             var validator = new OpenXmlValidator(fileformat);
             var errors = validator.Validate(package)
