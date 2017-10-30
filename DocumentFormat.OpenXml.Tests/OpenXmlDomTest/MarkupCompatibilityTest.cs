@@ -2913,7 +2913,7 @@ namespace DocumentFormat.OpenXml.Tests
             var testfile = testfiles.FirstOrDefault();
 
             string partUri = null, hostPath = null;
-            OpenXmlElement acb = null, expected = null;
+            OpenXmlElement expected = null;
             setupElements(testfile,
                 ref partUri, pkg => pkg.MainPart(),
                 ref hostPath, e => e.Descendants().PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && d.ChildElements.Count > 1),
