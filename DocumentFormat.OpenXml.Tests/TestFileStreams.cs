@@ -1,12 +1,36 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Reflection;
+using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    internal interface IFile : IDisposable
+    public interface IFile : IDisposable
     {
         string Path { get; }
+
+        Stream Open();
+    }
+
+    internal class MemoryFile : IFile
+    {
+        private readonly Stream _stream;
+
+        public MemoryFile(Stream stream, string path)
+        {
+            Path = path;
+            _stream = stream;
+        }
+
+        public string Path { get; }
+
+        public Stream Open() => _stream;
+
+        public void Dispose()
+        {
+            _stream.Dispose();
+        }
     }
 
     internal class TemporaryFile : IFile
@@ -20,6 +44,8 @@ namespace DocumentFormat.OpenXml.Tests
 
         public string Path { get; }
 
+        public Stream Open() => File.Open(Path, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+
         public void Dispose()
         {
             if (File.Exists(Path))
@@ -29,6 +55,57 @@ namespace DocumentFormat.OpenXml.Tests
         }
     }
 
+    internal static class TestAssets
+    {
+        public static IFile Open(string name, FileAccess access)
+        {
+            switch (access)
+            {
+                case FileAccess.Read:
+                    return new MemoryFile(GetStream(name), name);
+                case FileAccess.ReadWrite:
+                    return new MemoryFile(GetStream(name).AsMemoryStream(), name);
+                case FileAccess.Write:
+                    return GetStream(name).AsFile(Path.GetExtension(name), access);
+                default:
+                    throw new InvalidOperationException();
+            }
+        }
+
+        public static IFile Open(string name) => Open(name, FileAccess.Read);
+
+        public static IFile AsFile(string name) => GetStream(name).AsFile(Path.GetExtension(name));
+
+        public static IFile AsFile(string name, FileAccess access) => GetStream(name).AsFile(Path.GetExtension(name), access);
+
+        public static Stream GetStream(string name)
+        {
+            var assembly = typeof(TestFileStreams).GetTypeInfo().Assembly;
+            var stream = assembly.GetManifestResourceStream($"DocumentFormat.OpenXml.Tests.assets.{name}");
+            var names = assembly.GetManifestResourceNames().OrderBy(t => t).ToList();
+
+            Assert.NotNull(stream);
+
+            return stream;
+        }
+
+        public static class TestDataStorage
+        {
+            public static class V2FxTestFiles
+            {
+                public static class Bvt
+                {
+                    public const string complex2005_12rtm = "TestDataStorage.v2FxTestFiles.bvt.complex2005_12rtm.docx";
+
+                    public const string O12Typical = "TestDataStorage.v2FxTestFiles.bvt.O12Typical.pptx";
+
+                    public const string PerformanceEng = "TestDataStorage.v2FxTestFiles.bvt.PerformanceEng.xlsx";
+                }
+            }
+        }
+
+    }
+
     internal static class TestFileStreams
     {
         private static Stream GetStream(string name)
@@ -36,13 +113,19 @@ namespace DocumentFormat.OpenXml.Tests
             return typeof(TestFileStreams).GetTypeInfo().Assembly.GetManifestResourceStream($"DocumentFormat.OpenXml.Tests.assets.TestFiles.{name}");
         }
 
-        public static IFile AsFile(this Stream stream, string extension) => new CopiedFile(stream, extension);
+        public static IFile AsFile(this Stream stream, string extension) => new CopiedFile(stream, extension, FileAccess.ReadWrite);
+
+        public static IFile AsFile(this Stream stream, string extension, FileAccess access) => new CopiedFile(stream, extension, access);
 
         private class CopiedFile : IFile
         {
-            public CopiedFile(Stream stream, string extension)
+            private readonly FileAccess _access;
+
+            public CopiedFile(Stream stream, string extension, FileAccess access)
             {
                 Path = System.IO.Path.Combine(System.IO.Path.GetTempPath(), $"{Guid.NewGuid()}{extension}");
+
+                _access = access;
 
                 using (var fs = File.OpenWrite(Path))
                 {
@@ -51,6 +134,8 @@ namespace DocumentFormat.OpenXml.Tests
             }
 
             public string Path { get; }
+
+            public Stream Open() => File.Open(Path, FileMode.Open, _access);
 
             public void Dispose()
             {
