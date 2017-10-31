@@ -91,6 +91,30 @@ namespace DocumentFormat.OpenXml.Tests
 
         public static class TestDataStorage
         {
+            public static class O15Conformance
+            {
+                public static class WD
+                {
+                    public static class CommentExTest
+                    {
+                        public const string Invalid_Word15Comments = "TestDataStorage.O15Conformance.WD.CommentExTest.Invalid_Word15Comments.docx";
+                    }
+                }
+            }
+
+            public static class Robustness
+            {
+                public const string File00a5835dd770438aaa36c7cdcd4e61d1 = "TestDataStorage.Robustness.OFCAT.00a5835d-d770-438a-aa36-c7cdcd4e61d1.xlsx";
+                public const string File00a5888d6d634643acbb35c6f317cd75 = "TestDataStorage.Robustness.OFCAT.00a5888d-6d63-4643-acbb-35c6f317cd75.xlsx";
+                public const string File00bd6e64896c4ad0980ce7abdd4b0a52 = "TestDataStorage.Robustness.OFCAT.00bd6e64-896c-4ad0-980c-e7abdd4b0a52.xlsx";
+                public const string File00c6a24ea99f42c1a26ba086b273f3f4 = "TestDataStorage.Robustness.OFCAT.00c6a24e-a99f-42c1-a26b-a086b273f3f4.xlsx";
+                public const string File00cb49edf9964a3b9bad8676e765c4b2 = "TestDataStorage.Robustness.OFCAT.00cb49ed-f996-4a3b-9bad-8676e765c4b2.xlsx";
+                public const string File00d43c8b890a4b6ca1010fe55f2dd917 = "TestDataStorage.Robustness.OFCAT.00d43c8b-890a-4b6c-a101-0fe55f2dd917.xlsx";
+                public const string File00D4EE78301DA16F3BF92631CA9B68E6 = "TestDataStorage.Robustness.OFCAT.00D4EE78301DA16F3BF92631CA9B68E6.xlsx";
+                public const string File00d63cddee444e6a99afa7966ffbdda0 = "TestDataStorage.Robustness.OFCAT.00d63cdd-ee44-4e6a-99af-a7966ffbdda0.xlsx";
+                public const string File00df219ff99a4e93b049a666df53894c = "TestDataStorage.Robustness.OFCAT.00df219f-f99a-4e93-b049-a666df53894c.xlsx";
+            }
+
             public static class V2FxTestFiles
             {
                 public static class Bvt

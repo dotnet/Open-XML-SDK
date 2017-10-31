@@ -1,65 +1,29 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
-using System.Text;
+
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Tests.CommentExClass;
+using DocumentFormat.OpenXml.Validation;
 using System.IO;
-using System.Reflection;
-using System.Xml;
-using System.Xml.Linq;
+using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests.CommentEx
 {
-    using DocumentFormat.OpenXml;
-    using DocumentFormat.OpenXml.Validation;
-    using DocumentFormat.OpenXml.Packaging;
-    using DocumentFormat.OpenXml.Presentation;
-    using DocumentFormat.OpenXml.Spreadsheet;
-    using DocumentFormat.OpenXml.Wordprocessing;
-
-    using Xunit;
-    using DocumentFormat.OpenXml.Tests.TaskLibraries;
-    using DocumentFormat.OpenXml.Tests.TaskLibraries.DataStorage;
-    using DocumentFormat.OpenXml.Tests.CommentExClass;
-    using OxTest;
-    using Xunit.Abstractions;
-
-    /// <summary>
-    /// Test for CommentEx elements
-    /// </summary>
-    public class CommentExTest : OpenXmlTestBase
+    public class CommentExTest
     {
-        private readonly string generatedDocumentFilePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
-        private readonly string editedDocumentFilePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
-        private readonly string deleteDocumentFilePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
-
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        public CommentExTest(ITestOutputHelper output)
-            : base(output)
-        {
-            string createFilePath = this.GetTestFilePath(this.generatedDocumentFilePath);
-            GeneratedDocument generatedDocument = new GeneratedDocument();
-            generatedDocument.CreatePackage(createFilePath);
-
-            this.Log.Pass("Create Word file. File path=[{0}]", createFilePath);
-        }
-
         /// <summary>
         /// Office15TCM: xxxxx: OASys#283293: OOXML SDK : COMPS : Invalid format on CommentEx
         /// </summary>
         [Fact]
         public void CommentExInvalidFormat()
         {
-            TestDataStorage dataStorage = new TestDataStorage();
-            var entries = dataStorage.GetEntries(
-                TestDataStorage.DataGroups.O15ConformanceWord).Where(i => i.FilePath.Contains("Invalid_Word15Comments.docx"));
+            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.O15Conformance.WD.CommentExTest.Invalid_Word15Comments))
+            using (var doc = WordprocessingDocument.Open(stream, false))
+            {
+                var validator = new OpenXmlValidator(FileFormatVersions.Office2013);
+                var validateResults = validator.Validate(doc);
 
-            OpenXmlValidator validator = new OpenXmlValidator(FileFormatVersions.Office2013);
-
-            this.ValidateDocuments(validator, entries);
+                Assert.Empty(validateResults);
+            }
         }
 
         /// <summary>
@@ -68,14 +32,13 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
         [Fact]
         public void CommentEx02VerifyEdit()
         {
-            string originalFilepath = this.GetTestFilePath(this.generatedDocumentFilePath);
-            string editFilePath = this.GetTestFilePath(this.editedDocumentFilePath);
+            using (var stream = new MemoryStream())
+            {
+                GeneratedDocument.Generate(stream);
 
-            System.IO.File.Copy(originalFilepath, editFilePath, true);
-
-            TestEntities testEntities = new TestEntities();
-            testEntities.EditElements(editFilePath, this.Log);
-            testEntities.VerifyElements(editFilePath, this.Log);
+                TestEntities.EditElements(stream);
+                TestEntities.VerifyElements(stream);
+            }
         }
 
         /// <summary>
@@ -84,14 +47,13 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
         [Fact]
         public void CommentEx04VerifyDelete()
         {
-            string originalFilepath = this.GetTestFilePath(this.generatedDocumentFilePath);
-            string deleteFilePath = this.GetTestFilePath(this.deleteDocumentFilePath);
+            using (var stream = new MemoryStream())
+            {
+                GeneratedDocument.Generate(stream);
 
-            System.IO.File.Copy(originalFilepath, deleteFilePath, true);
-
-            TestEntities testEntities = new TestEntities();
-            testEntities.DeleteElements(deleteFilePath, this.Log);
-            testEntities.VerifyDeletedElements(deleteFilePath, this.Log);
+                TestEntities.DeleteElements(stream);
+                TestEntities.VerifyDeletedElements(stream);
+            }
         }
     }
 }

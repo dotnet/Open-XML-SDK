@@ -1,27 +1,26 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Wordprocessing;
+using LogUtil;
 using System;
-using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
+using Xunit;
+using W15 = DocumentFormat.OpenXml.Office2013.Word;
 
 namespace DocumentFormat.OpenXml.Tests.CommentEx
 {
-    using DocumentFormat.OpenXml;
-    using DocumentFormat.OpenXml.Packaging;
-    using DocumentFormat.OpenXml.Wordprocessing;
-    using W15 = DocumentFormat.OpenXml.Office2013.Word;
-    using LogUtil;
-
-    public class TestEntities
+    public static class TestEntities
     {
         /// <summary>
         /// Edit Comment and CommentEx
         /// </summary>
-        /// <param name="filePath">Editing target file path</param>
+        /// <param name="stream">Package stream</param>
         /// <param name="log">Logger</param>
-        public void EditElements(string filePath, VerifiableLog log)
+        public static void EditElements(Stream stream)
         {
-            using (WordprocessingDocument package = WordprocessingDocument.Open(filePath, true))
+            using (WordprocessingDocument package = WordprocessingDocument.Open(stream, true))
             {
                 WordprocessingCommentsPart commentPart = package.MainDocumentPart.WordprocessingCommentsPart;
                 WordprocessingCommentsExPart commentExPart = package.MainDocumentPart.WordprocessingCommentsExPart;
@@ -33,40 +32,31 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
                 Text text = comment.Descendants<Text>().First();
                 text.Text = CommentStrings.CommentChangeString1;
 
-                log.Pass("Edited comment text. comment ID=[{0}]. comment text=[{1}].", CommentIDs.CommentID1, CommentStrings.CommentChangeString1);
-
                 //2.2 Change commnet initials attribute
                 comment = GetComment(commentPart, CommentIDs.CommentID1);
 
                 comment.Initials = CommentInitials.Initial2;
-                log.Pass("Edited comment attribute of Initials. comment ID=[{0}]. Initials=[{1}].", CommentIDs.CommentID1, CommentInitials.Initial2);
 
                 //2.2 Change commnet date attribute
                 comment.Date = new DateTimeValue(new DateTime(2015, 12, 24, 12, 34, 56, 77));
-                log.Pass("Edited comment attribute of Date. comment ID=[{0}]. Date=[{1}/{2}/{3}-{4}:{5}:{6}-{7}].", CommentIDs.CommentID1, 12, 24, 2015, 12, 34, 56, 77);
 
                 //2.2 Change commnet author attribute
                 comment.Author = CommentAuthors.Author2;
-                log.Pass("Edited comment attribute of Author. comment ID=[{0}]. Author=[{1}].", CommentIDs.CommentID1, CommentAuthors.Author2);
 
                 //2.3 Change comment parent-child relationship, Case of parent attribute deleteing.
                 commentEx = GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID2);
                 commentEx.ParaIdParent = null;
-                log.Pass("Edited CommentEx parent-child relationship, Set CommentEx parent id is null. comment ID=[{0}]. CommentEx.ParaIdParent=[null].", CommentIDs.CommentID2);
 
                 //2.3 Change comment parent-child relationship, Case of parent attribute appending.
                 commentEx = GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID3);
                 W15.CommentEx comEx = GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID2);
                 commentEx.ParaIdParent = comEx.ParaId;
-                log.Pass("Edited CommentEx parent-child relationship, Set CommentEx parent id is comment(id=1) have id. comment ID=[{0}]. CommentEx.ParaIdParent=[{1}].", CommentIDs.CommentID3, comEx.ParaId.Value);
 
-                //2.4 Change CommnetEx done attribute, Case of value "1" setting. 
+                //2.4 Change CommnetEx done attribute, Case of value "1" setting.
                 GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID1).Done = true;
-                log.Pass("Edited CommentEx attribute of Done. comment ID=[{0}]. Done=[true].", CommentIDs.CommentID1);
 
-                //2.4 Change CommnetEx done attribute, Case of value "0" setting. 
+                //2.4 Change CommnetEx done attribute, Case of value "0" setting.
                 GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID3).Done = false;
-                log.Pass("Edited CommentEx attribute of Done. comment ID=[{0}]. Done=[false].", CommentIDs.CommentID3);
 
                 //2.5 Add comment and CommentEx.
                 CommentRangeStart commentRangeStart1 = new CommentRangeStart();
@@ -95,8 +85,6 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
                 commentEx1.ParaId = AppendCommentExIDs.AppendCommentID1;
                 commentExPart.CommentsEx.AppendChild<W15.CommentEx>(commentEx1);
 
-                log.Pass("Append new comment. comment ID=[{0}]. comment text=[{1}]. CommentEx.ParaIdParent=[null].", CommentIDs.CommentID4, CommentStrings.CommentAppendString1);
-
                 //2.5 Add comment and CommentEx.
                 CommentRangeStart commentRangeStart2 = new CommentRangeStart();
                 commentRangeStart2.Id = CommentIDs.CommentID5;
@@ -124,19 +112,17 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
                 commentEx2.ParaId = AppendCommentExIDs.AppendCommentID2;
                 commentEx2.ParaIdParent = AppendCommentExIDs.AppendCommentID1;
                 commentExPart.CommentsEx.AppendChild<W15.CommentEx>(commentEx2);
-
-                log.Pass("Append new comment. comment ID=[{0}]. comment text=[{1}]. CommentEx.ParaIdParent=[{2}].", CommentIDs.CommentID5, CommentStrings.CommentAppendString2, AppendCommentExIDs.AppendCommentID1);
             }
         }
 
         /// <summary>
         /// Verify Comment and CommentEx
         /// </summary>
-        /// <param name="filePath">Verifying target file path</param>
+        /// <param name="stream">Package stream</param>
         /// <param name="log">Logger</param>
-        public void VerifyElements(string filePath, VerifiableLog log)
+        public static void VerifyElements(Stream stream)
         {
-            using (WordprocessingDocument package = WordprocessingDocument.Open(filePath, false))
+            using (WordprocessingDocument package = WordprocessingDocument.Open(stream, false))
             {
                 WordprocessingCommentsPart commentPart = package.MainDocumentPart.WordprocessingCommentsPart;
                 WordprocessingCommentsExPart commentExPart = package.MainDocumentPart.WordprocessingCommentsExPart;
@@ -146,109 +132,93 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
                 //2.1 Verifying comment text
                 comment = GetComment(commentPart, CommentIDs.CommentID1);
                 Text text = comment.Descendants<Text>().First();
-                log.Verify(text.Text == CommentStrings.CommentChangeString1, "Verify comment text.");
+                Assert.Equal(text.Text, CommentStrings.CommentChangeString1);
 
                 //2.2 Verifying commnet initials attribute
                 comment = GetComment(commentPart, CommentIDs.CommentID1);
-                log.Verify(comment.Initials == CommentInitials.Initial2, "Verify comment attribute of initials.");
+                Assert.Equal(comment.Initials, CommentInitials.Initial2);
 
                 //2.2 Verifying commnet date attribute
-                log.Verify(comment.Date.Value.Year == 2015
-                    && comment.Date.Value.Month == 12
-                    && comment.Date.Value.Day == 24
-                    && comment.Date.Value.Hour == 12
-                    && comment.Date.Value.Minute == 34
-                    && comment.Date.Value.Second == 56
-                    && comment.Date.Value.Millisecond == 77, "Verify comment attribute of date.");
+                Assert.Equal(2015, comment.Date.Value.Year);
+                Assert.Equal(12, comment.Date.Value.Month);
+                Assert.Equal(24, comment.Date.Value.Day);
+                Assert.Equal(12, comment.Date.Value.Hour);
+                Assert.Equal(34, comment.Date.Value.Minute);
+                Assert.Equal(56, comment.Date.Value.Second);
+                Assert.Equal(77, comment.Date.Value.Millisecond);
 
                 //2.2 Verifying commnet author attribute
-                log.Verify(comment.Author == CommentAuthors.Author2, "Verify comment attribute of author.");
+                Assert.Equal(comment.Author, CommentAuthors.Author2);
 
                 //2.3 Verifying comment parent-child relationship, Case of parent attribute deleteing.
                 commentEx = GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID2);
-                log.Verify(commentEx.ParaIdParent == null, "Verify parent-child relationship. Parent is null.");
+                Assert.Null(commentEx.ParaIdParent);
 
                 //2.3 Verifying comment parent-child relationship, Case of parent attribute appending.
                 commentEx = GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID3);
                 W15.CommentEx comEx = GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID2);
-                log.Verify(commentEx.ParaIdParent.Value == GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID2).ParaId.Value, "Verify parent-child relationship. This ID is [{0}]. Parent ID is [{0}].", commentEx.ParaId, commentEx.ParaIdParent);
+                Assert.Equal(commentEx.ParaIdParent.Value, GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID2).ParaId.Value);
 
-                //2.4 Verifying CommnetEx done attribute, Case of value "1" setting. 
-                log.Verify(GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID1).Done == true, "Verify CommentEx attribute of done.");
+                //2.4 Verifying CommnetEx done attribute, Case of value "1" setting.
+                Assert.True(GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID1).Done);
 
-                //2.4 Verifying CommnetEx done attribute, Case of value "0" setting. 
-                log.Verify(GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID3).Done == false, "Verify CommentEx attribute of done.");
-
-                //2.5 Verifying comment and CommentEx append.
-                log.Verify(GetComment(commentPart, CommentIDs.CommentID4) != null
-                    && GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID4) != null, "Verify Comment and CommentEx append.");
+                //2.4 Verifying CommnetEx done attribute, Case of value "0" setting.
+                Assert.False(GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID3).Done);
 
                 //2.5 Verifying comment and CommentEx append.
-                log.Verify(GetComment(commentPart, CommentIDs.CommentID5) != null
-                    && GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID5) != null
-                    && GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID5).ParaIdParent.Value == GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID4).ParaId.Value,
-                    "Verify Comment and CommentEx append, And CommentEx parent-child relationship");
+                Assert.NotNull(GetComment(commentPart, CommentIDs.CommentID4));
+                Assert.NotNull(GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID4));
+
+                //2.5 Verifying comment and CommentEx append.
+                Assert.NotNull(GetComment(commentPart, CommentIDs.CommentID5));
+                Assert.NotNull(GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID5));
+                Assert.Equal(GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID5).ParaIdParent.Value, GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID4).ParaId.Value);
             }
         }
 
         /// <summary>
         /// Delete Comment and CommentEx
         /// </summary>
-        /// <param name="filePath">Deleting target file path</param>
+        /// <param name="stream">Package stream</param>
         /// <param name="log">Logger</param>
-        public void DeleteElements(string filePath, VerifiableLog log)
+        public static void DeleteElements(Stream stream)
         {
-            using (WordprocessingDocument package = WordprocessingDocument.Open(filePath, true))
+            using (WordprocessingDocument package = WordprocessingDocument.Open(stream, true))
             {
                 foreach (CommentRangeStart commentRangeStart in package.MainDocumentPart.Document.Descendants<CommentRangeStart>().Reverse())
                 {
                     commentRangeStart.Remove();
                 }
 
-                log.Pass("Deleted CommentRangeStart element.");
-
                 foreach (CommentRangeEnd commentRangeEnd in package.MainDocumentPart.Document.Descendants<CommentRangeEnd>().Reverse())
                 {
                     commentRangeEnd.Remove();
                 }
-
-                log.Pass("Deleted CommentRangeEnd element.");
 
                 foreach (CommentReference commentReference in package.MainDocumentPart.Document.Descendants<CommentReference>().Reverse())
                 {
                     commentReference.Ancestors<Run>().First().Remove();
                 }
 
-                log.Pass("Deleted CommentReference element.");
-
                 package.MainDocumentPart.DeletePart(package.MainDocumentPart.WordprocessingCommentsPart);
-
-                log.Pass("Deleted WordprocessingCommentsPart.");
-
                 package.MainDocumentPart.DeletePart(package.MainDocumentPart.WordprocessingCommentsExPart);
-
-                log.Pass("Deleted WordprocessingCommentsExPart.");
             }
         }
 
         /// <summary>
         /// Verify Comment and CommentEx is deleted
         /// </summary>
-        /// <param name="filePath">Verifying target file path</param>
+        /// <param name="stream">Package stream</param>
         /// <param name="log">Logger</param>
-        public void VerifyDeletedElements(string filePath, VerifiableLog log)
+        public static void VerifyDeletedElements(Stream stream)
         {
-            using (WordprocessingDocument package = WordprocessingDocument.Open(filePath, false))
+            using (WordprocessingDocument package = WordprocessingDocument.Open(stream, false))
             {
-                log.Verify(package.MainDocumentPart.WordprocessingCommentsPart == null, "Verify WordprocessingCommentsPart is deleted.");
-
-                log.Verify(package.MainDocumentPart.WordprocessingCommentsExPart == null, "Verify WordprocessingCommentsExPart is deleted.");
-
-                log.Verify(package.MainDocumentPart.Document.Descendants<CommentRangeStart>().Count() == 0, "Verify CommentRangeStart elements is deleted.");
-
-                log.Verify(package.MainDocumentPart.Document.Descendants<CommentRangeEnd>().Count() == 0, "Verify CommentRangeEnd elements is deleted.");
-
-                log.Verify(package.MainDocumentPart.Document.Descendants<CommentReference>().Count() == 0, "Verify CommentReference elements is deleted.");
+                Assert.Null(package.MainDocumentPart.WordprocessingCommentsPart);
+                Assert.Null(package.MainDocumentPart.WordprocessingCommentsExPart );
+                Assert.Empty(package.MainDocumentPart.Document.Descendants<CommentRangeStart>());
+                Assert.Empty(package.MainDocumentPart.Document.Descendants<CommentRangeEnd>());
+                Assert.Empty(package.MainDocumentPart.Document.Descendants<CommentReference>());
             }
         }
 
@@ -258,7 +228,7 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
         /// <param name="commentsPart">Target comment include commentsPart</param>
         /// <param name="commentID">Comment ID</param>
         /// <returns>Comment Object</returns>
-        private Comment GetComment(WordprocessingCommentsPart commentsPart, string commentID)
+        private static Comment GetComment(WordprocessingCommentsPart commentsPart, string commentID)
         {
             return commentsPart.Comments.Descendants<Comment>().Where(e => e.Id == commentID).Single();
         }
@@ -270,7 +240,7 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
         /// <param name="commentsExPart">Target comment include commentsExPart</param>
         /// <param name="commentID">Comment ID</param>
         /// <returns>CommentEx Object</returns>
-        private W15.CommentEx GetCommentEx(WordprocessingCommentsPart commentsPart, WordprocessingCommentsExPart commentsExPart, string commentID)
+        private static W15.CommentEx GetCommentEx(WordprocessingCommentsPart commentsPart, WordprocessingCommentsExPart commentsExPart, string commentID)
         {
             Comment comment = GetComment(commentsPart, commentID);
             Paragraph p = comment.Descendants<Paragraph>().First();
