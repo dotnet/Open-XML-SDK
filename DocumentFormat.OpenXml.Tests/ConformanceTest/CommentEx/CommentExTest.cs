@@ -1,33 +1,17 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Tests.CommentExClass;
+using DocumentFormat.OpenXml.Tests.TaskLibraries;
+using DocumentFormat.OpenXml.Validation;
+using OxTest;
 using System;
-using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
-using System.Text;
 using System.IO;
-using System.Reflection;
-using System.Xml;
-using System.Xml.Linq;
+using Xunit;
+using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests.CommentEx
 {
-    using DocumentFormat.OpenXml;
-    using DocumentFormat.OpenXml.Validation;
-    using DocumentFormat.OpenXml.Packaging;
-    using DocumentFormat.OpenXml.Presentation;
-    using DocumentFormat.OpenXml.Spreadsheet;
-    using DocumentFormat.OpenXml.Wordprocessing;
-
-    using Xunit;
-    using DocumentFormat.OpenXml.Tests.TaskLibraries;
-    using DocumentFormat.OpenXml.Tests.TaskLibraries.DataStorage;
-    using DocumentFormat.OpenXml.Tests.CommentExClass;
-    using OxTest;
-    using Xunit.Abstractions;
-
-    /// <summary>
-    /// Test for CommentEx elements
-    /// </summary>
     public class CommentExTest : OpenXmlTestBase
     {
         private readonly string generatedDocumentFilePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
@@ -53,13 +37,14 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
         [Fact]
         public void CommentExInvalidFormat()
         {
-            TestDataStorage dataStorage = new TestDataStorage();
-            var entries = dataStorage.GetEntries(
-                TestDataStorage.DataGroups.O15ConformanceWord).Where(i => i.FilePath.Contains("Invalid_Word15Comments.docx"));
+            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.O15Conformance.WD.CommentExTest.Invalid_Word15Comments))
+            using (var doc = WordprocessingDocument.Open(stream, false))
+            {
+                var validator = new OpenXmlValidator(FileFormatVersions.Office2013);
+                var validateResults = validator.Validate(doc);
 
-            OpenXmlValidator validator = new OpenXmlValidator(FileFormatVersions.Office2013);
-
-            this.ValidateDocuments(validator, entries);
+                Assert.Empty(validateResults);
+            }
         }
 
         /// <summary>

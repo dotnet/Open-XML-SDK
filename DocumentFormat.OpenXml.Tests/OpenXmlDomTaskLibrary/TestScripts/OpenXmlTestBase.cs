@@ -261,54 +261,10 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         #endregion TestFiles
 
         #region Validation Helpers
-        public void ValidateDocuments(OpenXmlValidator validator, IEnumerable<ITestData> entries)
-        {
-            foreach (var file in entries)
-            {
-                Log.Comment("Open: {0}", file.FilePath);
-                bool errorDetected = false;
-
-                try
-                {
-                    using (var doc = this.OpenDocument(file, false))
-                    {
-                        var validateResults = validator.Validate(doc);
-
-                        foreach (var result in validateResults)
-                        {
-                            if (OpenXmlDomTaskLibrary.IsKnownIssue(
-                                TestUtil.TestDataStorage, file.FilePath, result.Description) == false)
-                            {
-                                errorDetected = true;
-                                Log.Fail("Validation Error: {0}", result.Description);
-                            }
-                            else
-                            {
-                                Log.Warning("Known Issue: {0}", result.Description);
-                            }
-                        }
-                    }
-
-                    Log.VerifyFalse(errorDetected, "Validation passed: " + file.FilePath);
-                }
-                catch (Exception e)
-                {
-                    if (OpenXmlDomTaskLibrary.IsKnownIssue(
-                        TestUtil.TestDataStorage, file.FilePath, e.Message) == false)
-                    {
-                        errorDetected = true;
-                        Log.Fail("Exception: {0}", e.Message);
-                    }
-                    else
-                    {
-                        Log.Warning("Known Exception: {0}", e.Message);
-                    }
-                }
-            }
-        }
-
         public OpenXmlPackage OpenDocument(ITestData entry, bool isEditable)
         {
+            Log.Comment($"Opening {entry.FilePath}");
+
             switch (entry.Type)
             {
                 case FileType.Word:
