@@ -3031,6 +3031,8 @@ namespace DocumentFormat.OpenXml.Tests
                         .Descendants()
                         .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren);
 
+                    hostPath = host.Path();
+
                     var unknownElement11 = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
 
                     var children = new List<OpenXmlElement>();
@@ -3041,8 +3043,6 @@ namespace DocumentFormat.OpenXml.Tests
                     firstChoice.SetRequires(unknownElement11.Prefix);
                     firstChoice.AddNamespaceDeclaration(unknownElement11.Prefix, unknownElement11.NamespaceUri);
                     firstChoice.AppendChild(unknownElement11);
-
-                    hostPath = host.Path();
                 }
 
                 using (var package = WordprocessingDocument.Open(stream, false))
