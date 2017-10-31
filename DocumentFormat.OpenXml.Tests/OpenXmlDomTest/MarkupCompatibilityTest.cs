@@ -3019,11 +3019,11 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_MustUnderstand_Unselected()
         {
-            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm).AsMemoryStream())
             {
                 string hostPath = null;
 
-                using (var package = WordprocessingDocument.Open(stream, false))
+                using (var package = WordprocessingDocument.Open(stream, true))
                 {
                     var part = package.MainPart();
                     var dom = part.RootElement();
@@ -3047,7 +3047,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var package = WordprocessingDocument.Open(stream, false))
                 {
-                    ValidateMarkupCompatibility(package, FileFormatVersions.Office2007, hostPath, 1);
+                    ValidateMarkupCompatibility(package, FileFormatVersions.Office2007, hostPath, 0);
                 }
             }
         }
