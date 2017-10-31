@@ -3047,7 +3047,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var package = WordprocessingDocument.Open(stream, false))
                 {
-                    ValidateMarkupCompatibility(package, FileFormatVersions.Office2007, hostPath, 0);
+                    ValidateMarkupCompatibility(package, FileFormatVersions.Office2007, hostPath, 1);
                 }
             }
         }
