@@ -125,34 +125,12 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries.DataStorage
                     lowLevelFolder));
         }
 
-        public List<ITestData> GetEntries(DataGroups dataGroup, string fileMatch)
-        {
-            return this.GetEntries(dataGroup.ToString(), fileMatch);
-        }
-
-            public List<ITestData> GetEntries(string groupPattern, string fileMatch)
-        {
-            try
-            {
-                Regex fileMatchPattern = new Regex(fileMatch);
-                var matchedEntries = from f in this.GetEntries(groupPattern)
-                                     where fileMatchPattern.IsMatch(f.FilePath) == true
-                                     select f;
-
-                return matchedEntries.ToList();
-            }
-            catch(Exception ex)
-            {
-                throw ex;
-            }
-        }
-
         public List<ITestData> GetEntries(DataGroups dataGroup)
         {
             return this.GetEntries(dataGroup.ToString());
         }
 
-        public List<ITestData> GetEntries(string groupPattern)
+        private List<ITestData> GetEntries(string groupPattern)
         {
             List<ITestData> results = new List<ITestData>();
 
@@ -167,7 +145,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries.DataStorage
                     results.AddRange(group.GetEntries());
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
@@ -175,11 +153,9 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries.DataStorage
             return results;
         }
 
-        #region Support Methods
         public void RegisterDataGroup(ITestDataGroup group)
         {
             this.dataGroups.Add(group);
         }
-        #endregion
     }
 }
