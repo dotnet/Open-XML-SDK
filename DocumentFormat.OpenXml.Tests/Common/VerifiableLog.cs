@@ -44,18 +44,6 @@ namespace LogUtil
         }
 
         /// <summary>
-        /// Produce an error in "script" category
-        /// </summary>
-        /// <param name="message">Message containing zero or more format specifications</param>
-        /// <param name="arguments">List of objects to be formatted</param>
-        public void Error(string message, params object[] arguments)
-        {
-            var formatted = string.Format(message, arguments);
-
-            _output.WriteLine($"Error: {formatted}");
-        }
-
-        /// <summary>
         /// Logs explicit Fail in "script" category
         /// </summary>
         /// <param name="message">Message containing zero or more format specifications</param>
@@ -165,26 +153,6 @@ namespace LogUtil
             VerifyFalse((object.ReferenceEquals(actualObjectReference, expectedNotToBeReference)), message);
         }
 
-        /// <summary>
-        /// Tests that two input parameters do not have equal values. If the two input objects have equal values, the test is considered to fail. If the two input objects differ,
-        /// the test is considered to succeed.
-        /// </summary>
-        /// <param name="actualValue">The actual value returned by the test subject</param>
-        /// <param name="expectedNotValue">The value that the test subject is not supposed to return</param>
-        /// <param name="message">Message to associate with the Verify if the test fails.</param>
-        /// <param name="arguments">List of objects to be formatted</param>
-        public void VerifyNotValue(IComparable actualValue, IComparable expectedNotValue, string message, params object[] arguments)
-        {
-            var messageModified = String.Format("{0} [Actual: {1}, Expected Not: {2}]", message, actualValue, expectedNotValue);
-            VerifyFalse(object.Equals(actualValue, expectedNotValue), messageModified, arguments);
-        }
-
-        public void VerifyNotValue(IComparable actualValue, IComparable expectedNotValue, string message)
-        {
-            var messageModified = String.Format("{0} [Actual: {1}, Expected Not: {2}]", message, actualValue, expectedNotValue);
-            VerifyFalse(object.Equals(actualValue, expectedNotValue), messageModified);
-        }
-
         public void VerifyNotValue(object actualValue, object expectedNotValue, string message, params object[] arguments)
         {
             var messageModified = String.Format("{0} [Actual: {1}, Expected Not: {2}]", message, actualValue, expectedNotValue);
@@ -195,20 +163,6 @@ namespace LogUtil
         {
             var messageModified = String.Format("{0} [Actual: {1}, Expected Not: {2}]", message, actualValue, expectedNotValue);
             VerifyFalse(object.Equals(actualValue, expectedNotValue), messageModified);
-        }
-
-        /// <summary>
-        /// Tests that two input parameters do not have equal values. If the two input objects have equal values, the test is considered to fail. If the two input objects differ,
-        /// the test is considered to succeed.
-        /// </summary>
-        /// <param name="actualValue">The actual value returned by the test subject</param>
-        /// <param name="expectedNotValue">The value that the test subject is not supposed to return</param>
-        /// <param name="message">Message to associate with the Verify if the test fails</param>
-        /// <param name="ignoreCase">If true, causes a case insensitive string comparison to occur</param>
-        public void VerifyNotValue(string actualValue, string expectedNotValue, string message, bool ignoreCase)
-        {
-            var messageModified = String.Format("{0} [Actual: {1}, Expected Not: {2}]", message, actualValue, expectedNotValue);
-            VerifyFalse(String.Equals(actualValue, expectedNotValue, ignoreCase ? StringComparison.CurrentCultureIgnoreCase : StringComparison.CurrentCulture), messageModified, null);
         }
 
         /// <summary>
@@ -225,19 +179,6 @@ namespace LogUtil
         public void VerifyNull(object test, string message)
         {
             VerifyValue(test, null, message);
-        }
-
-        /// <summary>
-        /// Tests whether the input object references refer to the same object. VerifyReference succeeds if the references refer to the same object and
-        /// fails if the references do not refer to the same object.
-        /// </summary>
-        /// <param name="actualObjectReference">Object that was returned by the test subject</param>
-        /// <param name="expectedObjectReference">Object that is expected to be returned by the test subject</param>
-        /// <param name="message">Message to display if the test fails</param>
-        /// <param name="arguments">List of objects to be formatted</param>
-        public void VerifyReference(object actualObjectReference, object expectedObjectReference, string message, params object[] arguments)
-        {
-            VerifyTrue(object.ReferenceEquals(actualObjectReference, expectedObjectReference), message, arguments);
         }
 
         public void VerifyReference(object actualObjectReference, object expectedObjectReference, string message)
@@ -270,36 +211,6 @@ namespace LogUtil
         public void VerifySubString(string actualFullString, string expectedSubString, string message, params object[] arguments)
         {
             VerifyTrue(actualFullString.Contains(expectedSubString), message, arguments);
-        }
-
-        /// <summary>
-        /// VerifySubString Method Tests whether the input parameter contains a specific substring. If the actual value contains the substring,
-        /// the test is considered a success. If the actual value does not contain the substring, the test is considered to fail.
-        /// </summary>
-        /// <param name="actualFullString">The actual value returned by the test subject</param>
-        /// <param name="expectedSubString">The substring that the test subject is supposed to contain.</param>
-        /// <param name="ignoreCase">If true, causes a case insensitive string comparison to occur</param>
-        /// <param name="message">Message to associate with the Verify if the test fails</param>
-        /// <param name="arguments">List of objects to be formatted</param>
-        public void VerifySubString(string actualFullString, string expectedSubString, bool ignoreCase, string message, params object[] arguments)
-        {
-            if (ignoreCase)
-                VerifyTrue(actualFullString.ToLowerInvariant().Contains(expectedSubString.ToLowerInvariant()), message, arguments);
-            else
-                VerifySubString(actualFullString, expectedSubString, message, arguments);
-        }
-
-        /// <summary>
-        /// VerifySubString Method Tests whether the input parameter contains a specific substring. If the actual value contains the substring,
-        /// the test is considered a success. If the actual value does not contain the substring, the test is considered to fail.
-        /// </summary>
-        /// <param name="actualFullString">The actual value returned by the test subject</param>
-        /// <param name="expectedSubString">The substring that the test subject is supposed to contain</param>
-        /// <param name="ignoreCase">If true, causes a case insensitive string comparison to occur</param>
-        /// <param name="comparison">The type of comparison that should be tested.</param>
-        public void VerifySubString(string actualFullString, string expectedSubString, bool ignoreCase, VerifiableLog.ComparisonType comparison)
-        {
-            throw new NotImplementedException("This method is not implemented yet!");
         }
 
         /// <summary>
@@ -357,54 +268,6 @@ namespace LogUtil
         }
 
         /// <summary>
-        /// VerifyValue Method Tests that two input parameters have equal values. If the two input objects have equal values, the test is considered a success.
-        /// If the two input objects differ, the test is considered to fail
-        /// </summary>
-        /// <param name="actualValue">The actual value returned by the test subject</param>
-        /// <param name="expectedValue">The value that the test subject is supposed to return</param>
-        /// <param name="message">Message to associate with the Verify if the test fails</param>
-        /// <param name="comparison">The type of comparison that should be tested</param>
-        public void VerifyValue(IComparable actualValue, IComparable expectedValue, string message, VerifiableLog.ComparisonType comparison)
-        {
-            if (comparison == ComparisonType.Equal)
-                VerifyValue(actualValue, expectedValue, message);
-            else
-                VerifyNotValue(actualValue, expectedValue, message);
-        }
-
-        /// <summary>
-        /// VerifyValue Method Tests that two input parameters have equal values. If the two input objects have equal values, the test is considered a success.
-        /// If the two input objects differ, the test is considered to fail
-        /// </summary>
-        /// <param name="actualValue">The actual value returned by the test subject</param>
-        /// <param name="expectedValue">The value that the test subject is supposed to return</param>
-        /// <param name="message">Message to associate with the Verify if the test fails</param>
-        /// <param name="ignoreCase">If true, causes a case insensitive string comparison to occur</param>
-        public void VerifyValue(string actualValue, string expectedValue, string message, bool ignoreCase)
-        {
-            var messageModified = String.Format("{0} [Actual: {1}, Expected: {2}]", message, actualValue, expectedValue);
-            Verify(actualValue.Equals(expectedValue, ignoreCase ? StringComparison.CurrentCultureIgnoreCase : StringComparison.CurrentCulture), messageModified, null);
-        }
-
-        /// <summary>
-        /// VerifyValue Method Tests that two input parameters have equal values. If the two input objects have equal values, the test is considered a success.
-        /// If the two input objects differ, the test is considered to fail
-        /// </summary>
-        /// <param name="actualValue">The actual value returned by the test subject</param>
-        /// <param name="expectedValue">The value that the test subject is supposed to return</param>
-        /// <param name="message">Message to associate with the Verify if the test fails</param>
-        /// <param name="ignoreCase">If true, causes a case insensitive string comparison to occur</param>
-        /// <param name="comparison">The type of comparison that should be tested</param>
-        public void VerifyValue(string actualValue, string expectedValue, string message, bool ignoreCase, VerifiableLog.ComparisonType comparison)
-        {
-            var messageModified = String.Format("{0} [Actual: {1}, Expected: {2}]", message, actualValue, expectedValue);
-            if (comparison == ComparisonType.Equal)
-                VerifyTrue(string.Equals(actualValue, expectedValue, ignoreCase ? StringComparison.CurrentCultureIgnoreCase : StringComparison.CurrentCulture), messageModified);
-            else
-                VerifyFalse(string.Equals(actualValue, expectedValue, ignoreCase ? StringComparison.CurrentCultureIgnoreCase : StringComparison.CurrentCulture), messageModified);
-        }
-
-        /// <summary>
         /// Produce a warning in "script" category
         /// </summary>
         /// <param name="message">Warning message to display</param>
@@ -414,12 +277,6 @@ namespace LogUtil
             var m = string.Format(message, arguments);
 
             _output.WriteLine($"Warning: {m}");
-        }
-
-        public enum ComparisonType
-        {
-            Equal = 0,
-            NotEqual = 1,
         }
     }
 }
