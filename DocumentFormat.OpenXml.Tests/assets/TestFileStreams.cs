@@ -6,49 +6,50 @@ using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    public interface IFile : IDisposable
+    internal static class TestAssetExtensions
     {
-        string Path { get; }
+        public static IFile AsFile(this Stream stream, string extension) => new CopiedFile(stream, extension, FileAccess.ReadWrite);
 
-        Stream Open();
-    }
+        public static IFile AsFile(this Stream stream, string extension, FileAccess access) => new CopiedFile(stream, extension, access);
 
-    internal class MemoryFile : IFile
-    {
-        private readonly Stream _stream;
-
-        public MemoryFile(Stream stream, string path)
+        public static MemoryStream AsMemoryStream(this Stream stream)
         {
-            Path = path;
-            _stream = stream;
+            if (stream is MemoryStream ms)
+            {
+                return ms;
+            }
+            else
+            {
+                using (stream)
+                {
+                    var result = new MemoryStream();
+                    stream.CopyTo(result);
+                    return result;
+                }
+            }
         }
 
-        public string Path { get; }
-
-        public Stream Open() => _stream;
-
-        public void Dispose()
+        private class CopiedFile : IFile
         {
-            _stream.Dispose();
-        }
-    }
+            private readonly FileAccess _access;
 
-    internal class TemporaryFile : IFile
-    {
-        private TemporaryFile(string path)
-        {
-            Path = path;
-        }
+            public CopiedFile(Stream stream, string extension, FileAccess access)
+            {
+                Path = System.IO.Path.Combine(System.IO.Path.GetTempPath(), $"{Guid.NewGuid()}{extension}");
 
-        public static IFile Create() => new TemporaryFile(System.IO.Path.GetTempFileName());
+                _access = access;
 
-        public string Path { get; }
+                using (var fs = File.OpenWrite(Path))
+                {
+                    stream.CopyTo(fs);
+                }
+            }
 
-        public Stream Open() => File.Open(Path, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            public string Path { get; }
 
-        public void Dispose()
-        {
-            if (File.Exists(Path))
+            public Stream Open() => File.Open(Path, FileMode.Open, _access);
+
+            public void Dispose()
             {
                 File.Delete(Path);
             }
@@ -151,6 +152,26 @@ namespace DocumentFormat.OpenXml.Tests
                 }
             }
         }
+
+        private class MemoryFile : IFile
+        {
+            private readonly Stream _stream;
+
+            public MemoryFile(Stream stream, string path)
+            {
+                Path = path;
+                _stream = stream;
+            }
+
+            public string Path { get; }
+
+            public Stream Open() => _stream;
+
+            public void Dispose()
+            {
+                _stream.Dispose();
+            }
+        }
     }
 
     internal static class TestFileStreams
@@ -158,53 +179,6 @@ namespace DocumentFormat.OpenXml.Tests
         private static Stream GetStream(string name)
         {
             return typeof(TestFileStreams).GetTypeInfo().Assembly.GetManifestResourceStream($"DocumentFormat.OpenXml.Tests.assets.TestFiles.{name}");
-        }
-
-        public static IFile AsFile(this Stream stream, string extension) => new CopiedFile(stream, extension, FileAccess.ReadWrite);
-
-        public static IFile AsFile(this Stream stream, string extension, FileAccess access) => new CopiedFile(stream, extension, access);
-
-        private class CopiedFile : IFile
-        {
-            private readonly FileAccess _access;
-
-            public CopiedFile(Stream stream, string extension, FileAccess access)
-            {
-                Path = System.IO.Path.Combine(System.IO.Path.GetTempPath(), $"{Guid.NewGuid()}{extension}");
-
-                _access = access;
-
-                using (var fs = File.OpenWrite(Path))
-                {
-                    stream.CopyTo(fs);
-                }
-            }
-
-            public string Path { get; }
-
-            public Stream Open() => File.Open(Path, FileMode.Open, _access);
-
-            public void Dispose()
-            {
-                File.Delete(Path);
-            }
-        }
-
-        public static MemoryStream AsMemoryStream(this Stream stream)
-        {
-            if (stream is MemoryStream ms)
-            {
-                return ms;
-            }
-            else
-            {
-                using (stream)
-                {
-                    var result = new MemoryStream();
-                    stream.CopyTo(result);
-                    return result;
-                }
-            }
         }
 
         public static class Templates

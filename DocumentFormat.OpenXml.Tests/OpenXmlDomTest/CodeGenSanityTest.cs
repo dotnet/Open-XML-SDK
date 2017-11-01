@@ -6,6 +6,8 @@ using Xunit;
 using Xunit.Abstractions;
 using Dr = DocumentFormat.OpenXml.Drawing;
 
+using static DocumentFormat.OpenXml.Tests.TestAssets;
+
 namespace DocumentFormat.OpenXml.Tests
 {
     public class CodeGenSanityTest : OpenXmlDomTestBase
@@ -18,7 +20,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ThemeAsPartRootClassTest()
         {
-            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
             using (var package = WordprocessingDocument.Open(stream, false))
             {
                 var themePart = package.MainDocumentPart.ThemePart;
@@ -51,7 +53,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ThemeAsClassWithFixedOrderChildTest()
         {
-            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
             using (var package = WordprocessingDocument.Open(stream, false))
             {
                 var themePart = package.MainDocumentPart.ThemePart;
@@ -82,7 +84,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ColorAsLeafElementTest()
         {
-            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
             using (var package = WordprocessingDocument.Open(stream, false))
             {
                 var mainPart = package.MainDocumentPart;
@@ -108,7 +110,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void FieldCodeAsLeafTextElement()
         {
-            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
             using (var package = WordprocessingDocument.Open(stream, false))
             {
                 var mainPart = package.MainDocumentPart;
@@ -136,29 +138,29 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Theory]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.AllSlidesConverterSc)]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.AllSlidesConverterTc)]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.AutoShapes_2D_Default_styles)]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.AutoShapes_2D_Reflection)]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.AutoShapes_2D_Shadow)]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.AutoShapes_2D_Soft_Edges)]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.AutoShapes_3D_Bevel_Circle_Shadow)]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.AutoShapes_3D_Bevel_Circle_Soft_Edges)]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.AutoShapes_3D_Bevel_Circle)]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.AutoShapes_3D_Bevel_Riblet_Reflection)]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.AutoShapes_3D_Rotation_Parallel)]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.Block_hyperlink_crash)]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.Chart_2D_Animation_Box_In_One_Object)]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.Chart_2D_Animation_Box_In_By_Element)]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.Chart_2D_Animation_Fly_In_One_Object)]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.Chart_2D_Animation_Fly_In_By_Category)]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.Chart_2D)]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.Chart_3D_Animation_Box_In_One_Object)]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.Chart_3D_Animation_Box_Out_One_Object)]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.Chart_3D_Animation_Fly_In_One_Object)]
+        [InlineData(TestDataStorage.V2FxTestFiles.Presentation.AllSlidesConverterSc)]
+        [InlineData(TestDataStorage.V2FxTestFiles.Presentation.AllSlidesConverterTc)]
+        [InlineData(TestDataStorage.V2FxTestFiles.Presentation.AutoShapes_2D_Default_styles)]
+        [InlineData(TestDataStorage.V2FxTestFiles.Presentation.AutoShapes_2D_Reflection)]
+        [InlineData(TestDataStorage.V2FxTestFiles.Presentation.AutoShapes_2D_Shadow)]
+        [InlineData(TestDataStorage.V2FxTestFiles.Presentation.AutoShapes_2D_Soft_Edges)]
+        [InlineData(TestDataStorage.V2FxTestFiles.Presentation.AutoShapes_3D_Bevel_Circle_Shadow)]
+        [InlineData(TestDataStorage.V2FxTestFiles.Presentation.AutoShapes_3D_Bevel_Circle_Soft_Edges)]
+        [InlineData(TestDataStorage.V2FxTestFiles.Presentation.AutoShapes_3D_Bevel_Circle)]
+        [InlineData(TestDataStorage.V2FxTestFiles.Presentation.AutoShapes_3D_Bevel_Riblet_Reflection)]
+        [InlineData(TestDataStorage.V2FxTestFiles.Presentation.AutoShapes_3D_Rotation_Parallel)]
+        [InlineData(TestDataStorage.V2FxTestFiles.Presentation.Block_hyperlink_crash)]
+        [InlineData(TestDataStorage.V2FxTestFiles.Presentation.Chart_2D_Animation_Box_In_One_Object)]
+        [InlineData(TestDataStorage.V2FxTestFiles.Presentation.Chart_2D_Animation_Box_In_By_Element)]
+        [InlineData(TestDataStorage.V2FxTestFiles.Presentation.Chart_2D_Animation_Fly_In_One_Object)]
+        [InlineData(TestDataStorage.V2FxTestFiles.Presentation.Chart_2D_Animation_Fly_In_By_Category)]
+        [InlineData(TestDataStorage.V2FxTestFiles.Presentation.Chart_2D)]
+        [InlineData(TestDataStorage.V2FxTestFiles.Presentation.Chart_3D_Animation_Box_In_One_Object)]
+        [InlineData(TestDataStorage.V2FxTestFiles.Presentation.Chart_3D_Animation_Box_Out_One_Object)]
+        [InlineData(TestDataStorage.V2FxTestFiles.Presentation.Chart_3D_Animation_Fly_In_One_Object)]
         public void Bug225919_MitigateNamespaceIssue(string testfile)
         {
-            using (var stream = TestAssets.GetStream(testfile).AsMemoryStream())
+            using (var stream = GetStream(testfile).AsMemoryStream())
             using (var package = PresentationDocument.Open(stream, true))
             {
                 var parts = package.DescendantParts().Where(p => p.IsReflectable())
