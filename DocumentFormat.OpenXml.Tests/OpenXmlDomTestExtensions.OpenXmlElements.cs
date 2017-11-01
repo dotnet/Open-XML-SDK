@@ -1,0 +1,117 @@
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Xml.Linq;
+
+namespace DocumentFormat.OpenXml.Tests
+{
+    public static partial class OpenXmlDomTestExtensions
+    {
+        /// <summary>
+        /// Get PartRootElement of current element
+        /// </summary>
+        /// <param name="element">current element</param>
+        /// <returns>Part root element of current elemen, null if root element is not of OpenXmlPartRootElement.</returns>
+        public static OpenXmlPartRootElement PartRootElement(this OpenXmlElement element)
+        {
+            if (null == element)
+                throw new ArgumentNullException("element");
+
+            if (element is OpenXmlPartRootElement)
+                return element as OpenXmlPartRootElement;
+
+            return element.Ancestors<OpenXmlPartRootElement>().FirstOrDefault();
+        }
+
+        /// <summary>
+        /// Get index of specified element in the ChildElement of parent element.
+        /// </summary>
+        /// <param name="element">element in question</param>
+        /// <returns>index of pass-in element, 0 for root/orphan element</returns>
+        public static int Index(this OpenXmlElement element)
+        {
+            if (null == element)
+                throw new ArgumentNullException("element");
+
+            if (element.Parent == null)   // root/orphan element itself
+                return 0;
+
+            return element.Parent.ChildElements.TakeWhile(c => element != c).Count();
+        }
+
+        /// <summary>
+        /// Get path to specified element.
+        /// </summary>
+        /// <param name="element">element in question</param>
+        /// <returns>path to specified element</returns>
+        public static string Path(this OpenXmlElement element)
+        {
+            if (null == element)
+                throw new ArgumentNullException("element");
+
+            var path = string.Format(@"/{0}@{1}", element.LocalName, element.Index());
+
+            return element.Ancestors().Aggregate(path, (s, a) => string.Format(@"/{0}@{1}", a.LocalName, a.Index()) + s);
+        }
+
+        /// <summary>
+        /// Get name of element in <w:p> fashion.
+        /// </summary>
+        /// <param name="element">element in question</param>
+        /// <returns>name of element in <w:p> format</returns>
+        public static string GetFullName(this OpenXmlElement element)
+        {
+            if (null == element)
+                throw new ArgumentNullException("element");
+
+            if (string.IsNullOrEmpty(element.Prefix))
+                return element.LocalName;
+            return string.Format("{0}:{1}", element.Prefix, element.LocalName);
+        }
+
+        /// <summary>
+        /// Retrieve built-in OpenXmlAttributes of the type of pass-in OpenXmlElement
+        /// </summary>
+        /// <param name="e">OpenXmlElement or derived classes that has properties with SchemaAttrAttribute</param>
+        /// <returns>IEnumerable<OpenXmlAttribute> for fixed attributes of type of pass-in OpenXmlElement</returns>
+        public static IEnumerable<OpenXmlAttribute> GetFixedAttributes(this OpenXmlElement e)
+        {
+            var flag = BindingFlags.FlattenHierarchy | BindingFlags.Instance | BindingFlags.Public;
+            var properties = e.GetType().GetProperties(flag)
+                .Where(p => p.GetCustomAttributes(typeof(SchemaAttrAttribute), false).Any());
+            return properties
+                .Select(p => p.GetCustomAttributes(typeof(SchemaAttrAttribute), false).First() as SchemaAttrAttribute)
+                .Select(sa => new OpenXmlAttribute(sa.Tag, sa.NamespaceUri, null));
+        }
+
+        /// <summary>
+        /// Get XName of pass-in OpenXmlElement.
+        /// </summary>
+        /// <param name="element">element in question</param>
+        /// <returns>XName of pass-in OpenXmlElement</returns>
+        public static XName GetXName(this OpenXmlElement element)
+        {
+            if (null == element)
+                throw new ArgumentNullException("element");
+
+            XNamespace xns = element.NamespaceUri;
+            return xns + element.LocalName;
+        }
+
+        /// <summary>
+        /// Convert an OpenXmlElement to an XElement using its OuterXml
+        /// </summary>
+        /// <param name="element">OpenXml element to be converted</param>
+        /// <returns>XElement for specified OpenXmlElement</returns>
+        public static XElement ToXElement(this OpenXmlElement element)
+        {
+            if (element == null)
+                throw new ArgumentNullException("element");
+            return XElement.Load(new StringReader(element.OuterXml));
+        }
+    }
+}
