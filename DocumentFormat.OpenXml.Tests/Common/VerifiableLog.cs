@@ -160,52 +160,9 @@ namespace LogUtil
             VerifyNotValue(test, null, message);
         }
 
-        /// <summary>
-        /// Tests whether the input object references refer to the same object. VerifyNotReference succeeds if the references do not refer to the same
-        /// object and fails if the references do refer to the same object
-        /// </summary>
-        /// <param name="actualObjectReference">Object that was returned by the test subject</param>
-        /// <param name="expectedNotToBeReference">Object that is expected to not be returned by the test subject</param>
-        /// <param name="message">Message to display if the test fails</param>
-        /// <param name="arguments">List of objects to be formatted</param>
-        public void VerifyNotReference(object actualObjectReference, object expectedNotToBeReference, string message, params object[] arguments)
-        {
-            VerifyFalse((object.ReferenceEquals(actualObjectReference, expectedNotToBeReference)), message, arguments);
-        }
-
         public void VerifyNotReference(object actualObjectReference, object expectedNotToBeReference, string message)
         {
             VerifyFalse((object.ReferenceEquals(actualObjectReference, expectedNotToBeReference)), message);
-        }
-
-        /// <summary>
-        /// Tests whether the input parameter contains a specific substring. If the actual value contains the substring, the test is considered to fail. If the actual value does not contain
-        /// the substring, the test is considered to succeed.
-        /// </summary>
-        /// <param name="actualFullString">The actual value returned by the test subject</param>
-        /// <param name="expectedSubString">The substring that the test subject is not supposed to contain</param>
-        /// <param name="message">Message to associate with the Verify if the test fails</param>
-        /// <param name="arguments">List of objects to be formatted</param>
-        public void VerifyNotSubString(string actualFullString, string expectedSubString, string message, params object[] arguments)
-        {
-            VerifyFalse(actualFullString.Contains(expectedSubString), message, arguments);
-        }
-
-        /// <summary>
-        /// Tests whether the input parameter contains a specific substring. If the actual value contains the substring, the test is considered to fail. If the actual value does not contain
-        /// the substring, the test is considered to succeed.
-        /// </summary>
-        /// <param name="actualFullString">The actual value returned by the test subject</param>
-        /// <param name="expectedSubString">The substring that the test subject is not supposed to contain</param>
-        /// <param name="ignoreCase">If true, causes a case insensitive string comparison to occur</param>
-        /// <param name="message">Message to associate with the Verify if the test fails</param>
-        /// <param name="arguments">List of objects to be formatted</param>
-        public void VerifyNotSubString(string actualFullString, string expectedSubString, bool ignoreCase, string message, params object[] arguments)
-        {
-            if (ignoreCase)
-                VerifyFalse(actualFullString.ToLowerInvariant().Contains(expectedSubString.ToLowerInvariant()), message, arguments);
-            else
-                VerifyNotSubString(actualFullString, expectedSubString, message, arguments);
         }
 
         /// <summary>

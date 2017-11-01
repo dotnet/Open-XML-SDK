@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    public static partial class OpenXmlDomTestExtensions
+    public static class EnumerableExtensions
     {
         /// <summary>Pick the second element from source collection.  If only one, then return the first.</summary>
         /// <typeparam name="TSource">Type of collection content</typeparam>

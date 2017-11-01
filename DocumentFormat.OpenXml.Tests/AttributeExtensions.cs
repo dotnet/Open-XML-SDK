@@ -5,7 +5,7 @@ using System.Xml.Linq;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    public static partial class OpenXmlDomTestExtensions
+    public static class AttributeExtensions
     {
         /// <summary>
         /// Get XName of pass-in OpenXmlAttribute.

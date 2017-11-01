@@ -119,7 +119,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// <returns></returns>
         public IEnumerable<FileInfo> CopyTestFiles(string sourceFolder)
         {
-            return CopyTestFiles(sourceFolder, true, "*", OpenXmlDomTestExtensions.IsOpenXmlFile);
+            return CopyTestFiles(sourceFolder, true, "*", FileExtensions.IsOpenXmlFile);
         }
 
         public IEnumerable<FileInfo> CopyTestFiles(string sourceFolder, string subFolder)
@@ -137,7 +137,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// <returns></returns>
         public IEnumerable<FileInfo> CopyTestFiles(string sourceFolder, bool recursive, int? maxFiles = null)
         {
-            return CopyTestFiles(sourceFolder, recursive, "*", OpenXmlDomTestExtensions.IsOpenXmlFile, maxFiles);
+            return CopyTestFiles(sourceFolder, recursive, "*", FileExtensions.IsOpenXmlFile, maxFiles);
         }
 
         /// <summary>

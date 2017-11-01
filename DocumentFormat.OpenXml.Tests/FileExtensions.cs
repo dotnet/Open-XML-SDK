@@ -8,7 +8,7 @@ using System.IO;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    public static partial class OpenXmlDomTestExtensions
+    public static class FileExtensions
     {
         private static readonly HashSet<string> _wordprocessingExtension = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { ".docx", ".docm", ".dotx", ".dotm" };
         private static readonly HashSet<string> _spreadsheetExtension = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { ".xlam", ".xltm", ".xlsm", ".xltx", ".xlsx" };

@@ -6,12 +6,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Text;
 using System.Xml;
 using System.Xml.Linq;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    public static partial class OpenXmlDomTestExtensions
+    public static partial class OpenXmlPartExtensions
     {
         /// <summary>
         /// Check if current <paramref name="part"/> is main part of the package.
@@ -68,7 +69,24 @@ namespace DocumentFormat.OpenXml.Tests
                     return true;
             }
             return false;
+        }
 
+        /// <summary>
+        /// Get All Parts of the specified package/part in depth-first pre-order.
+        /// </summary>
+        /// <param name="root">package or part which can contain parts.</param>
+        /// <returns>IEnumerable<OpenXmlPart> of parts in the pass-in <paramref name="root"/>.</returns>
+        public static IEnumerable<OpenXmlPart> DescendantParts(this OpenXmlPartContainer root)
+        {
+            if (null == root)
+                throw new ArgumentNullException("root");
+
+            var parts = new List<OpenXmlPart>();
+            var uriList = new List<string>();
+
+            addChildParts(parts, uriList, root);
+
+            return parts;
         }
 
         private static void addChildParts(IList<OpenXmlPart> list, List<string> uriList, OpenXmlPartContainer root)
@@ -265,6 +283,24 @@ namespace DocumentFormat.OpenXml.Tests
                 }
             }
             return true;
+        }
+
+        /// <summary>
+        /// Lets the given part's RootElement produce the XML string.
+        /// </summary>
+        /// <param name="part"></param>
+        /// <returns></returns>
+        public static string GetXmlString(this OpenXmlPart part)
+        {
+            var sb = new StringBuilder();
+            using (var xw = XmlWriter.Create(sb))
+            {
+                if (part.RootElement != null)
+                    part.RootElement.WriteTo(xw);
+                else
+                    sb.Append(string.Empty);
+            }
+            return sb.ToString();
         }
     }
 }

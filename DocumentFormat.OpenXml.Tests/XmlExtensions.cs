@@ -7,11 +7,13 @@ using System.Xml.Linq;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    public static partial class OpenXmlDomTestExtensions
+    public static class XmlExtensions
     {
+        private static readonly HashSet<string> True = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { "1", "TRUE", "ON", "T" };
+        private static readonly HashSet<string> False = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { "0", "FALSE", "OFF", "F" };
+
         public static bool Compare(this XElement left, XElement right)
         {
-
             //Verify NameSpace
             if (left.Name.Namespace != right.Name.Namespace || left.Name.LocalName != right.Name.LocalName)
                 return false;
@@ -50,34 +52,43 @@ namespace DocumentFormat.OpenXml.Tests
 
         private static Boolean SpecialAttrValueCompare(XAttribute source, XAttribute target)
         {
-            List<String> True = new List<string>() { "1", "TRUE", "ON", "T" };
-            List<String> False = new List<string>() { "0", "FALSE", "OFF", "F" };
-
-            Double src = 0;
-
-            if (True.Contains(source.Value.ToUpper()) && True.Contains(target.Value.ToUpper()))
-                return true;
-            else if (False.Contains(source.Value.ToUpper()) && False.Contains(target.Value.ToUpper()))
-                return true;
-            else if (Double.TryParse(source.Value, out src))
+            if (True.Contains(source.Value) && True.Contains(target.Value))
             {
-                Double tgt = Double.Parse(target.Value);
+                return true;
+            }
+            else if (False.Contains(source.Value) && False.Contains(target.Value))
+            {
+                return true;
+            }
+            else if (Double.TryParse(source.Value, out var src))
+            {
+                var tgt = Double.Parse(target.Value);
+
                 if (Double.IsNaN(src) && Double.IsNaN(tgt))
+                {
                     return true;
+                }
                 else if (src != tgt)
+                {
                     return false;
+                }
             }
             else if (source.Name.LocalName == "ole")
             {
-                if (source.Value == "" && !(False.Contains(target.Value.ToUpper())) && !(target.Value == ""))
+                if (string.IsNullOrEmpty(source.Value) && !False.Contains(target.Value) && !string.IsNullOrEmpty(target.Value))
+                {
                     return false;
+                }
             }
             else if (source.Value + "Z" == target.Value)
+            {
                 return true;
+            }
             else
             {
                 return source.Value.Equals(target.Value, StringComparison.OrdinalIgnoreCase);
             }
+
             return true;
         }
     }
