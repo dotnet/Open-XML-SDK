@@ -119,7 +119,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// <returns></returns>
         public IEnumerable<FileInfo> CopyTestFiles(string sourceFolder)
         {
-            return CopyTestFiles(sourceFolder, true, "*", OpenXmlDomTestExtension.IsOpenXmlFile);
+            return CopyTestFiles(sourceFolder, true, "*", FileExtensions.IsOpenXmlFile);
         }
 
         public IEnumerable<FileInfo> CopyTestFiles(string sourceFolder, string subFolder)
@@ -137,20 +137,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         /// <returns></returns>
         public IEnumerable<FileInfo> CopyTestFiles(string sourceFolder, bool recursive, int? maxFiles = null)
         {
-            return CopyTestFiles(sourceFolder, recursive, "*", OpenXmlDomTestExtension.IsOpenXmlFile, maxFiles);
-        }
-
-        /// <summary>
-        /// Copy test files to result folder.
-        /// </summary>
-        /// <param name="sourceFolder">Relative path to source folder.</param>
-        /// <param name="recursive">True to search files recursively</param>
-        /// <param name="searchPattern">Search pattern of file name. Wildcard chars are allowed.</param>
-        /// <param name="pred">Filter function which limits files to be copied.</param>
-        /// <returns></returns>
-        public IEnumerable<FileInfo> CopyTestFiles(string sourceFolder, bool recursive, string searchPattern)
-        {
-            return CopyTestFiles(sourceFolder, recursive, searchPattern, OpenXmlDomTestExtension.IsOpenXmlFile);
+            return CopyTestFiles(sourceFolder, recursive, "*", FileExtensions.IsOpenXmlFile, maxFiles);
         }
 
         /// <summary>

@@ -339,7 +339,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
             FileInfo fi = GetTestFileOne(filePath).GetCopy();
             Log.VerifyNotNull(fi, "Test File is copied successfully.");
 
-            using (OpenXmlPackage package = OpenXmlDomTestExtension.OpenPackage(fi, false))
+            using (OpenXmlPackage package = fi.OpenPackage(false))
             {
                 Log.VerifyNotNull(package, "File is opened successfully.");
 
@@ -419,7 +419,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
             Log.VerifyNotNull(fi, "Test file is copied successfully into {0}", fi.FullName);
 
             // Open OOXML File with writable mode
-            using (OpenXmlPackage package = OpenXmlDomTestExtension.OpenPackage(fi, true))
+            using (OpenXmlPackage package = fi.OpenPackage(true))
             {
                 Log.VerifyNotNull(package, "The file is opened for writing");
 
@@ -434,7 +434,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
             }
 
             // Re-open the file just saved above with read-only mode
-            using (OpenXmlPackage package = OpenXmlDomTestExtension.OpenPackage(fi, false))
+            using (OpenXmlPackage package = fi.OpenPackage(false))
             {
                 Log.VerifyNotNull(package, "The file is re-opened read-only");
 
@@ -458,7 +458,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
             FileInfo fi = GetTestFileOne(filePath).GetCopy();
             Log.VerifyNotNull(fi, "Test File is copied successfully.");
 
-            using (OpenXmlPackage package = OpenXmlDomTestExtension.OpenPackage(fi, true))
+            using (OpenXmlPackage package = fi.OpenPackage(true))
             {
                 Log.VerifyNotNull(package, "File is opened successfully.");
 
