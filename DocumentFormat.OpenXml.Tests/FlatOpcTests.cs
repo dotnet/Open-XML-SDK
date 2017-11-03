@@ -24,6 +24,8 @@ using System.IO;
 using System.IO.Packaging;
 using Xunit;
 
+using static DocumentFormat.OpenXml.Tests.TestAssets;
+
 namespace DocumentFormat.OpenXml.Tests
 {
     public class FlatOpcTests : BaseFixture
@@ -31,7 +33,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateFlatOpcPresentationDocuments()
         {
-            using (var inputStream = TestFileStreams.Presentation)
+            using (var inputStream = GetStream(TestFiles.Presentation))
             using (var source = PresentationDocument.Open(inputStream, false))
             {
                 var flatOpcDoc = source.ToFlatOpcDocument();
@@ -45,7 +47,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateFlatOpcPresentationDocuments2()
         {
-            using (var inputStream = TestFileStreams.Presentation)
+            using (var inputStream = GetStream(TestFiles.Presentation))
             using (var source = PresentationDocument.Open(inputStream, false))
             using (Stream stream = new MemoryStream())
             {
@@ -62,7 +64,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateFlatOpcPresentationDocuments3()
         {
-            using (var inputStream = TestFileStreams.Presentation)
+            using (var inputStream = GetStream(TestFiles.Presentation))
             using (var source = PresentationDocument.Open(inputStream, false))
             {
                 var flatOpcDoc = source.ToFlatOpcDocument();
@@ -79,7 +81,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateFlatOpcPresentationDocuments4()
         {
-            using (var inputStream = TestFileStreams.Presentation)
+            using (var inputStream = GetStream(TestFiles.Presentation))
             using (var source = PresentationDocument.Open(inputStream, false))
             {
                 using (var stream = new MemoryStream())
@@ -98,7 +100,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateFlatOpcPresentationDocuments5()
         {
-            using (var inputStream = TestFileStreams.Presentation)
+            using (var inputStream = GetStream(TestFiles.Presentation))
             using (var source = PresentationDocument.Open(inputStream, false))
             {
                 var flatOpcString = source.ToFlatOpcString();
@@ -113,7 +115,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateFlatOpcPresentationDocuments6()
         {
-            using (var inputStream = TestFileStreams.Presentation)
+            using (var inputStream = GetStream(TestFiles.Presentation))
             using (var source = PresentationDocument.Open(inputStream, false))
             {
                 var flatOpcString = source.ToFlatOpcString();
@@ -130,7 +132,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateFlatOpcPresentationDocuments7()
         {
-            using (var inputStream = TestFileStreams.Presentation)
+            using (var inputStream = GetStream(TestFiles.Presentation))
             using (var source = PresentationDocument.Open(inputStream, false))
             {
                 var flatOpcString = source.ToFlatOpcString();
@@ -147,7 +149,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateFlatOpcPresentationDocuments8()
         {
-            using (var inputStream = TestFileStreams.Presentation)
+            using (var inputStream = GetStream(TestFiles.Presentation))
             using (var source = PresentationDocument.Open(inputStream, false))
             {
                 var flatOpcString = source.ToFlatOpcString();
@@ -164,7 +166,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateFlatOpcSpreadsheetDocuments1()
         {
-            using (var inputStream = TestFileStreams.Spreadsheet)
+            using (var inputStream = GetStream(TestFiles.Spreadsheet))
             using (var source = SpreadsheetDocument.Open(inputStream, false))
             {
                 var flatOpcDoc = source.ToFlatOpcDocument();
@@ -179,7 +181,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateFlatOpcSpreadsheetDocuments2()
         {
-            using (var inputStream = TestFileStreams.Spreadsheet)
+            using (var inputStream = GetStream(TestFiles.Spreadsheet))
             using (var source = SpreadsheetDocument.Open(inputStream, false))
             using (Stream stream = new MemoryStream())
             {
@@ -196,7 +198,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateFlatOpcSpreadsheetDocuments3()
         {
-            using (var inputStream = TestFileStreams.Spreadsheet)
+            using (var inputStream = GetStream(TestFiles.Spreadsheet))
             using (var source = SpreadsheetDocument.Open(inputStream, false))
             {
                 var flatOpcDoc = source.ToFlatOpcDocument();
@@ -213,7 +215,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateFlatOpcSpreadsheetDocuments4()
         {
-            using (var inputStream = TestFileStreams.Spreadsheet)
+            using (var inputStream = GetStream(TestFiles.Spreadsheet))
             using (var source = SpreadsheetDocument.Open(inputStream, false))
             using (var stream = new MemoryStream())
             using (var package = Package.Open(stream, FileMode.Create, FileAccess.ReadWrite))
@@ -230,7 +232,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateFlatOpcSpreadsheetDocuments5()
         {
-            using (var inputStream = TestFileStreams.Spreadsheet)
+            using (var inputStream = GetStream(TestFiles.Spreadsheet))
             using (var source = SpreadsheetDocument.Open(inputStream, false))
             {
                 var flatOpcString = source.ToFlatOpcString();
@@ -245,7 +247,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateFlatOpcSpreadsheetDocuments6()
         {
-            using (var inputStream = TestFileStreams.Spreadsheet)
+            using (var inputStream = GetStream(TestFiles.Spreadsheet))
             using (var source = SpreadsheetDocument.Open(inputStream, false))
             using (Stream stream = new MemoryStream())
             {
@@ -262,7 +264,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateFlatOpcSpreadsheetDocuments7()
         {
-            using (var inputStream = TestFileStreams.Spreadsheet)
+            using (var inputStream = GetStream(TestFiles.Spreadsheet))
             using (var source = SpreadsheetDocument.Open(inputStream, false))
             {
                 var flatOpcString = source.ToFlatOpcString();
@@ -279,7 +281,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateFlatOpcSpreadsheetDocuments8()
         {
-            using (var inputStream = TestFileStreams.Spreadsheet)
+            using (var inputStream = GetStream(TestFiles.Spreadsheet))
             using (var source = SpreadsheetDocument.Open(inputStream, false))
             using (var stream = new MemoryStream())
             using (var package = Package.Open(stream, FileMode.Create, FileAccess.ReadWrite))
@@ -296,7 +298,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateFlatOpcWordprocessingDocuments1()
         {
-            using (var inputStream = TestFileStreams.Document)
+            using (var inputStream = GetStream(TestFiles.Document))
             using (var source = WordprocessingDocument.Open(inputStream, false))
             {
                 var flatOpcDoc = source.ToFlatOpcDocument();
@@ -311,7 +313,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateFlatOpcWordprocessingDocuments2()
         {
-            using (var inputStream = TestFileStreams.Document)
+            using (var inputStream = GetStream(TestFiles.Document))
             using (var source = WordprocessingDocument.Open(inputStream, false))
             {
                 var flatOpcDoc = source.ToFlatOpcDocument();
@@ -328,7 +330,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateFlatOpcWordprocessingDocuments3()
         {
-            using (var inputStream = TestFileStreams.Document)
+            using (var inputStream = GetStream(TestFiles.Document))
             using (var source = WordprocessingDocument.Open(inputStream, false))
             {
                 var flatOpcDoc = source.ToFlatOpcDocument();
@@ -345,7 +347,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateFlatOpcWordprocessingDocuments4()
         {
-            using (var inputStream = TestFileStreams.Document)
+            using (var inputStream = GetStream(TestFiles.Document))
             using (var source = WordprocessingDocument.Open(inputStream, false))
             {
                 var flatOpcDoc = source.ToFlatOpcDocument();
@@ -362,7 +364,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateFlatOpcWordprocessingDocuments5()
         {
-            using (var inputStream = TestFileStreams.Document)
+            using (var inputStream = GetStream(TestFiles.Document))
             using (var source = WordprocessingDocument.Open(inputStream, false))
             {
                 var flatOpcString = source.ToFlatOpcString();
@@ -377,7 +379,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateFlatOpcWordprocessingDocuments6()
         {
-            using (var inputStream = TestFileStreams.Document)
+            using (var inputStream = GetStream(TestFiles.Document))
             using (var source = WordprocessingDocument.Open(inputStream, false))
             {
                 var flatOpcString = source.ToFlatOpcString();
@@ -394,7 +396,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateFlatOpcWordprocessingDocuments7()
         {
-            using (var inputStream = TestFileStreams.Document)
+            using (var inputStream = GetStream(TestFiles.Document))
             using (var source = WordprocessingDocument.Open(inputStream, false))
             {
                 var flatOpcString = source.ToFlatOpcString();
@@ -411,7 +413,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateFlatOpcWordprocessingDocuments8()
         {
-            using (var inputStream = TestFileStreams.Document)
+            using (var inputStream = GetStream(TestFiles.Document))
             using (var source = WordprocessingDocument.Open(inputStream, false))
             {
                 var flatOpcString = source.ToFlatOpcString();

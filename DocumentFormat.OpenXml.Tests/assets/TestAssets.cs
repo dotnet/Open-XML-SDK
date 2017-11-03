@@ -23,15 +23,9 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        public static IFile Open(string name) => Open(name, FileAccess.Read);
-
-        public static IFile AsFile(string name) => GetStream(name).AsFile(Path.GetExtension(name));
-
-        public static IFile AsFile(string name, FileAccess access) => GetStream(name).AsFile(Path.GetExtension(name), access);
-
         public static Stream GetStream(string name)
         {
-            var assembly = typeof(TestFileStreams).GetTypeInfo().Assembly;
+            var assembly = typeof(TestFiles).GetTypeInfo().Assembly;
             var stream = assembly.GetManifestResourceStream($"DocumentFormat.OpenXml.Tests.assets.{name}");
             var names = assembly.GetManifestResourceNames().OrderBy(t => t).ToList();
 
@@ -39,6 +33,21 @@ namespace DocumentFormat.OpenXml.Tests
 
             return stream;
         }
+
+        public static Stream GetStream(string name, bool writeable)
+        {
+            var stream = GetStream(name);
+
+            return writeable ? stream.AsMemoryStream() : stream;
+        }
+
+        public static IFile Open(string name) => Open(name, FileAccess.Read);
+
+        public static IFile OpenAsFile(string name) => Open(name, FileAccess.Write);
+
+        public static IFile AsFile(string name) => GetStream(name).AsFile(Path.GetExtension(name));
+
+        public static IFile AsFile(string name, FileAccess access) => GetStream(name).AsFile(Path.GetExtension(name), access);
 
         private class MemoryFile : IFile
         {

@@ -1,11 +1,13 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
-using OxTest;
 using System;
 using System.Linq;
 using System.Reflection;
 using Xunit;
+
+using static DocumentFormat.OpenXml.Tests.TestAssets;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -83,7 +85,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void LoadExt()
         {
-            using (var stream = TestFileStreams.excel14)
+            using (var stream = GetStream(TestFiles.excel14))
             using (var doc = SpreadsheetDocument.Open(stream, false))
             {
                 var ele14 = doc.WorkbookPart.RootElement.LastChild.First().First();
@@ -94,7 +96,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void LoadExt2()
         {
-            using (var stream = TestFileStreams.extlst)
+            using (var stream = GetStream(TestFiles.extlst))
             using (var doc = SpreadsheetDocument.Open(stream, false))
             {
                 var ele14 = doc.WorkbookPart.GetPartById("rId1").GetPartById("rId2").GetPartById("rId1").RootElement.LastChild.FirstChild.FirstChild;

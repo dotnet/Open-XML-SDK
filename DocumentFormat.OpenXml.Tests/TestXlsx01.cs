@@ -1,12 +1,14 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation;
-using OxTest;
-using System;
 using System.IO;
 using System.IO.Packaging;
 using System.Linq;
 using Xunit;
+
+using static DocumentFormat.OpenXml.Tests.TestAssets;
+
 using S = DocumentFormat.OpenXml.Spreadsheet;
 
 namespace DocumentFormat.OpenXml.Tests
@@ -16,7 +18,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void X008_XlsxCreation_Package_Settings()
         {
-            using (var stream = TestFileStreams.Spreadsheet.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Spreadsheet, true))
             using (var package = Package.Open(stream))
             {
                 var openSettings = new OpenSettings
@@ -43,7 +45,7 @@ namespace DocumentFormat.OpenXml.Tests
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
             };
 
-            using (var stream = TestFileStreams.Spreadsheet)
+            using (var stream = GetStream(TestFiles.Spreadsheet))
             using (var doc = SpreadsheetDocument.Open(stream, false))
             {
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
@@ -57,7 +59,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void X006_Xlsx_DeleteAdd_CoreExtendedProperties()
         {
-            using (var stream = TestFileStreams.Spreadsheet.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Spreadsheet, true))
             using (var doc = SpreadsheetDocument.Open(stream, true))
             {
                 var corePart = doc.CoreFilePropertiesPart;
@@ -89,7 +91,7 @@ namespace DocumentFormat.OpenXml.Tests
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
             };
 
-            using (var stream = TestFileStreams.Spreadsheet.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Spreadsheet, true))
             using (var package = Package.Open(stream))
             using (var doc = SpreadsheetDocument.Open(package, openSettings))
             {
@@ -109,7 +111,7 @@ namespace DocumentFormat.OpenXml.Tests
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
             };
 
-            using (var stream = TestFileStreams.Spreadsheet.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Spreadsheet, true))
             using (var doc = SpreadsheetDocument.Open(stream, true, openSettings))
             {
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
@@ -184,7 +186,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void X001_XlsxValidation()
         {
-            using (var stream = TestFileStreams.Spreadsheet)
+            using (var stream = GetStream(TestFiles.Spreadsheet))
             {
                 XlsxValidationHelper(stream, 2, 1);
             }

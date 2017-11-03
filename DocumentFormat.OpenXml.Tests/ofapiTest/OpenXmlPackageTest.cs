@@ -12,6 +12,8 @@ using w = DocumentFormat.OpenXml.Wordprocessing;
 using wp = DocumentFormat.OpenXml.Drawing.Wordprocessing;
 using x = DocumentFormat.OpenXml.Spreadsheet;
 
+using static DocumentFormat.OpenXml.Tests.TestAssets;
+
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
@@ -22,7 +24,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void AutoSaveTestDocxNoWrite()
         {
-            using (var stream = TestFileStreams.complex0docx.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.complex0docx, true).AsMemoryStream())
             {
                 var dataBefore = stream.ToArray();
 
@@ -53,7 +55,7 @@ namespace DocumentFormat.OpenXml.Tests
                 return result;
             }
 
-            using (var stream = NormalizeDocument(TestFileStreams.complex0docx))
+            using (var stream = NormalizeDocument(GetStream(TestFiles.complex0docx)))
             {
                 // open the file in readWrite mode, and then changes should be saved
                 using (var document = WordprocessingDocument.Open(stream, true))
@@ -78,7 +80,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.Equal("000000", heading1Style.Descendants<Color>().First().Val.Value);
                 }
 
-                using (var originalStream = TestFileStreams.complex0docx)
+                using (var originalStream = GetStream(TestFiles.complex0docx))
                 using (var orginalDoc = WordprocessingDocument.Open(originalStream, false))
                 using (var changedDoc = WordprocessingDocument.Open(stream, false))
                 {
@@ -205,7 +207,7 @@ namespace DocumentFormat.OpenXml.Tests
             // Change something in the master part.
             var textCount = 0;
 
-            using (var stream = TestFileStreams.autosave.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.autosave, true))
             {
                 using (var doc = PresentationDocument.Open(stream, true))
                 {
@@ -245,7 +247,7 @@ namespace DocumentFormat.OpenXml.Tests
                 AutoSave = false
             };
 
-            using (var stream = TestFileStreams.complex0docx.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.complex0docx, true))
             {
                 using (var doc = WordprocessingDocument.Open(stream, true, s))
                 {
@@ -306,7 +308,7 @@ namespace DocumentFormat.OpenXml.Tests
                 AutoSave = false
             };
 
-            using (var stream = TestFileStreams.autosave.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.autosave, true))
             {
                 using (var doc = PresentationDocument.Open(stream, true, s))
                 {
@@ -387,7 +389,7 @@ namespace DocumentFormat.OpenXml.Tests
                 AutoSave = false
             };
 
-            using (var stream = TestFileStreams.basicspreadsheet.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.basicspreadsheet, true))
             {
                 using (var doc = SpreadsheetDocument.Open(stream, true, s))
                 {
@@ -461,7 +463,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void OpenXmlPackagePartIteraterTestWord()
         {
-            using (var stream = TestFileStreams.complex0docx)
+            using (var stream = GetStream(TestFiles.complex0docx))
             using (var document = WordprocessingDocument.Open(stream, false))
             {
                 var iterator = new OpenXmlPackagePartIterator(document);
@@ -475,7 +477,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void OpenXmlPackagePartIteraterTestPowerPoint()
         {
-            using (var stream = TestFileStreams.o09_Performance_typical_pptx)
+            using (var stream = GetStream(TestFiles.o09_Performance_typical_pptx))
             using (var document = PresentationDocument.Open(stream, false))
             {
                 var iterator = new OpenXmlPackagePartIterator(document);
@@ -493,7 +495,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CreateRelationshipToPartTest()
         {
-            using (var stream = TestFileStreams.autosave.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.autosave, true))
             using (var doc = PresentationDocument.Open(stream, true))
             {
                 var slide1 = doc.PresentationPart.GetPartById("rId2");
@@ -530,7 +532,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ChangeDocumentTypeInternalTest()
         {
-            using (var stream = TestFileStreams.May_12_04.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.May_12_04, true))
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 Assert.Equal(WordprocessingDocumentType.Document, doc.DocumentType);
@@ -642,7 +644,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void LoadPackageWithMediaReferenceTest()
         {
-            using (var stream = TestFileStreams.mediareference.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.mediareference, true))
             {
                 using (var testDocument = PresentationDocument.Open(stream, true))
                 {
@@ -773,10 +775,10 @@ namespace DocumentFormat.OpenXml.Tests
         [Theory]
         [InlineData(true)]
         [InlineData(false)]
-        public void StrictFileOpenTestWord(bool isReadonly)
+        public void StrictFileOpenTestWord(bool isEditable)
         {
-            using (var stream = TestFileStreams.AnnotationRef.AsMemoryStream())
-            using (var doc = WordprocessingDocument.Open(stream, isReadonly))
+            using (var stream = GetStream(TestFiles.AnnotationRef, isEditable))
+            using (var doc = WordprocessingDocument.Open(stream, isEditable))
             {
                 // Should open without exception.
 
@@ -792,10 +794,10 @@ namespace DocumentFormat.OpenXml.Tests
         [Theory]
         [InlineData(true)]
         [InlineData(false)]
-        public void StrictFileOpenTestPowerpoint(bool isReadonly)
+        public void StrictFileOpenTestPowerpoint(bool isEditable)
         {
-            using (var stream = TestFileStreams.Algn_tab_TabAlignment.AsMemoryStream())
-            using (var doc = PresentationDocument.Open(stream, isReadonly))
+            using (var stream = GetStream(TestFiles.Algn_tab_TabAlignment, isEditable))
+            using (var doc = PresentationDocument.Open(stream, isEditable))
             {
                 // Should open without exception.
 
@@ -811,10 +813,10 @@ namespace DocumentFormat.OpenXml.Tests
         [Theory]
         [InlineData(true)]
         [InlineData(false)]
-        public void StrictFileOpenTestExcelReadOnly(bool isReadonly)
+        public void StrictFileOpenTestExcelReadOnly(bool isEditable)
         {
-            using (var stream = TestFileStreams.Comments.AsMemoryStream())
-            using (var doc = SpreadsheetDocument.Open(stream, isReadonly))
+            using (var stream = GetStream(TestFiles.Comments, isEditable))
+            using (var doc = SpreadsheetDocument.Open(stream, isEditable))
             {
                 // Should open without exception.
 
@@ -837,7 +839,7 @@ namespace DocumentFormat.OpenXml.Tests
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
             };
 
-            using (var stream = TestFileStreams.Youtube)
+            using (var stream = GetStream(TestFiles.Youtube))
             using (var doc = SpreadsheetDocument.Open(stream, false, settings2012))
             {
                 var worksheetPart = doc.WorkbookPart.WorksheetParts.First();
