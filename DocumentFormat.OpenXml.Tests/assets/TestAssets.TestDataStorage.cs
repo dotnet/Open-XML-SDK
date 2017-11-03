@@ -189,6 +189,15 @@
                         public const string Invalid_Word15Comments = "TestDataStorage.O15Conformance.WD.CommentExTest.Invalid_Word15Comments.docx";
                     }
                 }
+
+                public static class XL
+                {
+                    public static class WebExtension
+                    {
+                        public const string Bing_xlsx = "TestDataStorage.O15Conformance.XL.WebExtension.Bing.xlsx";
+                        public const string Youtube_xlsx = "TestDataStorage.O15Conformance.XL.WebExtension.Youtube.xlsx";
+                    }
+                }
             }
 
             public static class Robustness
