@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Tests
         [InlineData(TestDataStorage.V2FxTestFiles.Bvt.O12Typical, false)]
         public void DefaultStreamReadWriteAutosave(string testfile, bool autosave)
         {
-            using (var stream = Open(testfile, FileAccess.ReadWrite))
+            using (var stream = OpenFile(testfile, FileAccess.ReadWrite))
             {
                 string expected;
 
@@ -140,7 +140,7 @@ namespace DocumentFormat.OpenXml.Tests
         [InlineData(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, false)]
         public void DefaultWithFilePathWord(string testfile, bool isEditable)
         {
-            using (var file = AsFile(testfile))
+            using (var file = OpenAsFile(testfile, FileAccess.ReadWrite))
             using (var package = WordprocessingDocument.Open(file.Path, isEditable))
             {
                 Assert.NotNull(package);
@@ -152,7 +152,7 @@ namespace DocumentFormat.OpenXml.Tests
         [InlineData(TestDataStorage.V2FxTestFiles.Bvt.PerformanceEng, false)]
         public void DefaultWithFilePathExcel(string testfile, bool isEditable)
         {
-            using (var file = AsFile(testfile))
+            using (var file = OpenAsFile(testfile, FileAccess.ReadWrite))
             using (var package = SpreadsheetDocument.Open(file.Path, isEditable))
             {
                 Assert.NotNull(package);
@@ -164,7 +164,7 @@ namespace DocumentFormat.OpenXml.Tests
         [InlineData(TestDataStorage.V2FxTestFiles.Bvt.O12Typical, false)]
         public void DefaultWithFilePathPresentation(string testfile, bool isEditable)
         {
-            using (var file = AsFile(testfile))
+            using (var file = OpenAsFile(testfile, FileAccess.ReadWrite))
             using (var package = PresentationDocument.Open(file.Path, isEditable))
             {
                 Assert.NotNull(package);
@@ -176,7 +176,7 @@ namespace DocumentFormat.OpenXml.Tests
         [InlineData(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, FileAccess.ReadWrite)]
         public void OpenPackageWord(string testfile, FileAccess access)
         {
-            using (var file = AsFile(testfile, access))
+            using (var file = OpenAsFile(testfile, access))
             {
                 using (var p = Package.Open(file.Path, FileMode.Open, access))
                 using (var package = WordprocessingDocument.Open(p))
@@ -231,7 +231,7 @@ namespace DocumentFormat.OpenXml.Tests
         [InlineData(TestDataStorage.V2FxTestFiles.Bvt.PerformanceEng, false, false)]
         public void AutoSaveStream(string testfile, bool edit, bool autosave)
         {
-            using (var stream = Open(testfile, FileAccess.ReadWrite))
+            using (var stream = OpenFile(testfile, FileAccess.ReadWrite))
             {
                 string expected;
 
@@ -267,7 +267,7 @@ namespace DocumentFormat.OpenXml.Tests
         [InlineData(TestDataStorage.V2FxTestFiles.Bvt.O12Typical, FileFormatVersions.Office2007, MarkupCompatibilityProcessMode.NoProcess)]
         public void OpenMcPackage(string testfile, FileFormatVersions format, MarkupCompatibilityProcessMode mcMode)
         {
-            using (var file = Open(testfile, FileAccess.ReadWrite))
+            using (var file = OpenFile(testfile, FileAccess.ReadWrite))
             {
                 var settings = new OpenSettings() { MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(mcMode, format) };
 

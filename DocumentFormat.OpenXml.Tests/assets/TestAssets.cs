@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Tests
 {
     internal static partial class TestAssets
     {
-        public static IFile Open(string name, FileAccess access)
+        public static IFile OpenFile(string name, FileAccess access)
         {
             switch (access)
             {
@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Tests
                 case FileAccess.ReadWrite:
                     return new MemoryFile(GetStream(name).AsMemoryStream(), name);
                 case FileAccess.Write:
-                    return GetStream(name).AsFile(Path.GetExtension(name), access);
+                    return new CopiedFile(GetStream(name), Path.GetExtension(name), FileAccess.Write);
                 default:
                     throw new InvalidOperationException();
             }
@@ -41,13 +41,33 @@ namespace DocumentFormat.OpenXml.Tests
             return writeable ? stream.AsMemoryStream() : stream;
         }
 
-        public static IFile Open(string name) => Open(name, FileAccess.Read);
+        public static IFile OpenFile(string name) => OpenFile(name, FileAccess.Read);
 
-        public static IFile OpenAsFile(string name) => Open(name, FileAccess.Write);
-
-        public static IFile AsFile(string name) => GetStream(name).AsFile(Path.GetExtension(name));
+        public static IFile OpenAsFile(string name, FileAccess access)
+        {
+            return new CopiedFile(GetStream(name), Path.GetExtension(name), access);
+        }
 
         public static IFile AsFile(string name, FileAccess access) => GetStream(name).AsFile(Path.GetExtension(name), access);
+
+        public static IFile AsFile(this Stream stream, string extension, FileAccess access) => new CopiedFile(stream, extension, access);
+
+        public static MemoryStream AsMemoryStream(this Stream stream)
+        {
+            if (stream is MemoryStream ms)
+            {
+                return ms;
+            }
+            else
+            {
+                using (stream)
+                {
+                    var result = new MemoryStream();
+                    stream.CopyTo(result);
+                    return result;
+                }
+            }
+        }
 
         private class MemoryFile : IFile
         {
@@ -66,6 +86,32 @@ namespace DocumentFormat.OpenXml.Tests
             public void Dispose()
             {
                 _stream.Dispose();
+            }
+        }
+
+        private class CopiedFile : IFile
+        {
+            private readonly FileAccess _access;
+
+            public CopiedFile(Stream stream, string extension, FileAccess access)
+            {
+                Path = System.IO.Path.Combine(System.IO.Path.GetTempPath(), $"{Guid.NewGuid()}{extension}");
+
+                _access = access;
+
+                using (var fs = File.OpenWrite(Path))
+                {
+                    stream.CopyTo(fs);
+                }
+            }
+
+            public string Path { get; }
+
+            public Stream Open() => File.Open(Path, FileMode.Open, _access);
+
+            public void Dispose()
+            {
+                File.Delete(Path);
             }
         }
     }

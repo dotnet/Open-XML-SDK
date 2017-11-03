@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreatePresentationFromTemplate()
         {
-            using (var stream = OpenAsFile(TestFiles.Templates.Presentation))
+            using (var stream = OpenAsFile(TestFiles.Templates.Presentation, FileAccess.ReadWrite))
             using (var packageDocument = PresentationDocument.CreateFromTemplate(stream.Path))
             {
                 var part = packageDocument.PresentationPart;
@@ -48,7 +48,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateSpreadsheetFromTemplate()
         {
-            using (var stream = OpenAsFile(TestFiles.Templates.Spreadsheet))
+            using (var stream = OpenAsFile(TestFiles.Templates.Spreadsheet, FileAccess.ReadWrite))
             using (var packageDocument = SpreadsheetDocument.CreateFromTemplate(stream.Path))
             {
                 var part = packageDocument.WorkbookPart;
@@ -64,7 +64,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateWordprocessingDocumentFromTemplate()
         {
-            using (var stream = OpenAsFile(TestFiles.Templates.Document))
+            using (var stream = OpenAsFile(TestFiles.Templates.Document, FileAccess.ReadWrite))
             using (var packageDocument = WordprocessingDocument.CreateFromTemplate(stream.Path))
             {
                 var part = packageDocument.MainDocumentPart;
