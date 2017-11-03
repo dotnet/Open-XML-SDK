@@ -24,9 +24,22 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void AutoSaveTestDocxNoWrite()
         {
-            using (var stream = GetStream(TestFiles.complex0docx, true).AsMemoryStream())
+            byte[] GetBytes(Stream input)
             {
-                var dataBefore = stream.ToArray();
+                input.Position = 0;
+
+                using (var ms = new MemoryStream())
+                {
+                    input.CopyTo(ms);
+                    input.Position = 0;
+
+                    return ms.ToArray();
+                }
+            }
+
+            using (var stream = GetStream(TestFiles.complex0docx))
+            {
+                var dataBefore = GetBytes(stream);
 
                 // open the file in readonly mode, nothing should be saved on disposing
                 using (var document = WordprocessingDocument.Open(stream, false))
@@ -34,8 +47,7 @@ namespace DocumentFormat.OpenXml.Tests
                     document.MainDocumentPart.Document.Body.Append(new Paragraph());
                 }
 
-                Assert.Equal(dataBefore, stream.ToArray());
-
+                Assert.Equal(dataBefore, GetBytes(stream));
             }
         }
 
@@ -46,17 +58,17 @@ namespace DocumentFormat.OpenXml.Tests
             // since the SDK will change contents when closing the package.
             Stream NormalizeDocument(Stream input)
             {
-                var result = input.AsMemoryStream();
-
-                using (var doc = WordprocessingDocument.Open(result, true))
+                using (var doc = WordprocessingDocument.Open(input, true))
                 {
                 }
 
-                return result;
+                return input;
             }
 
-            using (var stream = NormalizeDocument(GetStream(TestFiles.complex0docx)))
+            using (var stream = GetStream(TestFiles.complex0docx, true))
             {
+                NormalizeDocument(stream);
+
                 // open the file in readWrite mode, and then changes should be saved
                 using (var document = WordprocessingDocument.Open(stream, true))
                 {

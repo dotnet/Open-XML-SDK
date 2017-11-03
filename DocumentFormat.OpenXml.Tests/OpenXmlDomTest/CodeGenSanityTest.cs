@@ -160,7 +160,7 @@ namespace DocumentFormat.OpenXml.Tests
         [InlineData(TestDataStorage.V2FxTestFiles.Presentation.Chart_3D_Animation_Fly_In_One_Object)]
         public void Bug225919_MitigateNamespaceIssue(string testfile)
         {
-            using (var stream = GetStream(testfile).AsMemoryStream())
+            using (var stream = GetStream(testfile, true))
             using (var package = PresentationDocument.Open(stream, true))
             {
                 var parts = package.DescendantParts().Where(p => p.IsReflectable())

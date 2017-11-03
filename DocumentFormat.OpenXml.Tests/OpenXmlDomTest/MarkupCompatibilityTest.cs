@@ -327,7 +327,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Ignored_KnownAttribute_FullMode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm).AsMemoryStream())
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
             {
                 (OpenXmlAttribute known, Uri part, string host) Setup()
                 {
@@ -366,7 +366,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Ignored_KnownAttribute_O12Mode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm).AsMemoryStream())
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
             {
                 (Uri part, string host, OpenXmlAttribute known) Setup()
                 {
@@ -1232,7 +1232,7 @@ namespace DocumentFormat.OpenXml.Tests
             var unknownAttribute2 = new OpenXmlAttribute(prefixUnknown1, a2Unknown1, nsUnknown1, "attribute2 from unknown namespace1.");
             var unprefixedAttribute = new OpenXmlAttribute(string.Empty, "name", null, "unprefixed attributes");
 
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm).AsMemoryStream())
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
             {
                 (Uri part, string host, string target, List<OpenXmlElement> children, OpenXmlElement expected) Setup()
                 {
@@ -1771,7 +1771,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Preserve_NonIgnored_UnknownElement_O12Mode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm).AsMemoryStream())
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
             {
                 (Uri part, string host, string target) Setup()
                 {
@@ -2598,7 +2598,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_MultipleChoice_NoMatches_NoFallback()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm).AsMemoryStream())
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
             {
                 using (var package = WordprocessingDocument.Open(stream, true))
                 {
@@ -2675,7 +2675,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_MultipleChoice_NoMatches_OneFallback()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm).AsMemoryStream())
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
             {
                 using (var package = WordprocessingDocument.Open(stream, true))
                 {
@@ -2724,7 +2724,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MultipleChoice_OneFallback_O12Mode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm).AsMemoryStream())
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
             {
                 (Uri part, string host, OpenXmlElement expected) Setup()
                 {
@@ -2762,7 +2762,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_MultipleChoice_OneFallback()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm).AsMemoryStream())
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
             {
                 using (var package = WordprocessingDocument.Open(stream, true))
                 {
@@ -3022,7 +3022,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_MustUnderstand_Unselected()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm).AsMemoryStream())
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
             {
                 string hostPath = null;
 
@@ -3126,7 +3126,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_MultipleChoice_OneFallback_Ignorable()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm).AsMemoryStream())
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
             {
                 using (var package = WordprocessingDocument.Open(stream, true))
                 {

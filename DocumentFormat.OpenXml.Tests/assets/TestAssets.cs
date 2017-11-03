@@ -8,21 +8,40 @@ namespace DocumentFormat.OpenXml.Tests
 {
     internal static partial class TestAssets
     {
-        public static IFile OpenFile(string name, FileAccess access)
+        /// <summary>
+        /// Open a file in memory for a test stream
+        /// </summary>
+        /// <param name="name">Name of embedded resource</param>
+        /// <param name="isEditable">Whether resulting stream should be editable</param>
+        /// <returns></returns>
+        public static IFile OpenFile(string name, bool isEditable)
         {
-            switch (access)
+            if (isEditable)
             {
-                case FileAccess.Read:
-                    return new MemoryFile(GetStream(name), name);
-                case FileAccess.ReadWrite:
-                    return new MemoryFile(GetStream(name).AsMemoryStream(), name);
-                case FileAccess.Write:
-                    return new CopiedFile(GetStream(name), Path.GetExtension(name), FileAccess.Write);
-                default:
-                    throw new InvalidOperationException();
+                return new MemoryFile(GetStream(name).AsMemoryStream(), name);
+            }
+            else
+            {
+                return new MemoryFile(GetStream(name), name);
             }
         }
 
+        /// <summary>
+        /// Open a test file as an actual file on disk. Must be disposed to delete file
+        /// </summary>
+        /// <param name="name">Name of embedded resource</param>
+        /// <param name="access">FileAccess type for file</param>
+        /// <returns></returns>
+        public static IFile OpenFile(string name, FileAccess access)
+        {
+            return new CopiedFile(GetStream(name), Path.GetExtension(name), access);
+        }
+
+        /// <summary>
+        /// Gets a readonly stream for a test file
+        /// </summary>
+        /// <param name="name">Name of embedded resource</param>
+        /// <returns></returns>
         public static Stream GetStream(string name)
         {
             var assembly = typeof(TestFiles).GetTypeInfo().Assembly;
@@ -34,25 +53,20 @@ namespace DocumentFormat.OpenXml.Tests
             return stream;
         }
 
-        public static Stream GetStream(string name, bool writeable)
+        /// <summary>
+        /// Gets a stream for a test file
+        /// </summary>
+        /// <param name="name">Name of embedded resource</param>
+        /// <param name="isEditable">Whether resulting stream should be editable</param>
+        /// <returns></returns>
+        public static Stream GetStream(string name, bool isEditable)
         {
             var stream = GetStream(name);
 
-            return writeable ? stream.AsMemoryStream() : stream;
+            return isEditable ? stream.AsMemoryStream() : stream;
         }
 
-        public static IFile OpenFile(string name) => OpenFile(name, FileAccess.Read);
-
-        public static IFile OpenAsFile(string name, FileAccess access)
-        {
-            return new CopiedFile(GetStream(name), Path.GetExtension(name), access);
-        }
-
-        public static IFile AsFile(string name, FileAccess access) => GetStream(name).AsFile(Path.GetExtension(name), access);
-
-        public static IFile AsFile(this Stream stream, string extension, FileAccess access) => new CopiedFile(stream, extension, access);
-
-        public static MemoryStream AsMemoryStream(this Stream stream)
+        private static Stream AsMemoryStream(this Stream stream)
         {
             if (stream is MemoryStream ms)
             {
