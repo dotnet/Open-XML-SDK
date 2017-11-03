@@ -26,7 +26,7 @@ using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    public class FlatOpcTests : BaseFixture
+    public class FlatOpcTests
     {
         [Fact]
         public void CanCreateFlatOpcPresentationDocuments()
@@ -37,7 +37,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var flatOpcDoc = source.ToFlatOpcDocument();
                 using (var dest = PresentationDocument.FromFlatOpcDocument(flatOpcDoc))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -54,7 +54,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (PresentationDocument.FromFlatOpcDocument(flatOpcDoc, stream, false))
                 using (var dest = PresentationDocument.Open(stream, false))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (PresentationDocument.FromFlatOpcDocument(flatOpcDoc, tempFile.Path, false))
                 using (var dest = PresentationDocument.Open(tempFile.Path, false))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -89,7 +89,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                     using (var dest = PresentationDocument.FromFlatOpcDocument(flatOpcDoc, package))
                     {
-                        AssertThatPackagesAreEqual(source, dest);
+                        PackageAssert.Equal(source, dest);
                     }
                 }
             }
@@ -105,7 +105,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var dest = PresentationDocument.FromFlatOpcString(flatOpcString))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -122,7 +122,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (PresentationDocument.FromFlatOpcString(flatOpcString, stream, false))
                 using (var dest = PresentationDocument.Open(stream, false))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -139,7 +139,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (PresentationDocument.FromFlatOpcString(flatOpcString, tempFile.Path, false))
                 using (var dest = PresentationDocument.Open(tempFile.Path, false))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -156,7 +156,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (var package = Package.Open(stream, FileMode.Create, FileAccess.ReadWrite))
                 using (var dest = PresentationDocument.FromFlatOpcString(flatOpcString, package))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -171,7 +171,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var dest = SpreadsheetDocument.FromFlatOpcDocument(flatOpcDoc))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -188,7 +188,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (SpreadsheetDocument.FromFlatOpcDocument(flatOpcDoc, stream, false))
                 using (var dest = SpreadsheetDocument.Open(stream, false))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -205,7 +205,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (SpreadsheetDocument.FromFlatOpcDocument(flatOpcDoc, tempFile.Path, false))
                 using (var dest = SpreadsheetDocument.Open(tempFile.Path, false))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -222,7 +222,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var dest = SpreadsheetDocument.FromFlatOpcDocument(flatOpcDoc, package))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -237,7 +237,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var dest = SpreadsheetDocument.FromFlatOpcString(flatOpcString))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -254,7 +254,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (SpreadsheetDocument.FromFlatOpcString(flatOpcString, stream, false))
                 using (var dest = SpreadsheetDocument.Open(stream, false))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -271,7 +271,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (SpreadsheetDocument.FromFlatOpcString(flatOpcString, tempFile.Path, false))
                 using (var dest = SpreadsheetDocument.Open(tempFile.Path, false))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -288,7 +288,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var dest = SpreadsheetDocument.FromFlatOpcString(flatOpcString, package))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -303,7 +303,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var dest = WordprocessingDocument.FromFlatOpcDocument(flatOpcDoc))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -320,7 +320,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (WordprocessingDocument.FromFlatOpcDocument(flatOpcDoc, stream, false))
                 using (var dest = WordprocessingDocument.Open(stream, false))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -337,7 +337,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (WordprocessingDocument.FromFlatOpcDocument(flatOpcDoc, tempFile.Path, false))
                 using (var dest = WordprocessingDocument.Open(tempFile.Path, false))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -354,7 +354,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (var package = Package.Open(stream, FileMode.Create, FileAccess.ReadWrite))
                 using (var dest = WordprocessingDocument.FromFlatOpcDocument(flatOpcDoc, package))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -369,7 +369,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var dest = WordprocessingDocument.FromFlatOpcString(flatOpcString))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -386,7 +386,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (WordprocessingDocument.FromFlatOpcString(flatOpcString, stream, false))
                 using (var dest = WordprocessingDocument.Open(stream, false))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -403,7 +403,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (WordprocessingDocument.FromFlatOpcString(flatOpcString, tempFile.Path, false))
                 using (var dest = WordprocessingDocument.Open(tempFile.Path, false))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -420,7 +420,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (var package = Package.Open(stream, FileMode.Create, FileAccess.ReadWrite))
                 using (var dest = WordprocessingDocument.FromFlatOpcString(flatOpcString, package))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
