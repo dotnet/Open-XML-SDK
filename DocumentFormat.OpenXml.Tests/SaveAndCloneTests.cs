@@ -35,7 +35,7 @@ using Text = DocumentFormat.OpenXml.Wordprocessing.Text;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    public class SaveAndCloneTests : BaseFixture
+    public class SaveAndCloneTests
     {
         [Fact]
         public void CanCloneDocument()
@@ -53,7 +53,7 @@ namespace DocumentFormat.OpenXml.Tests
                     using (var dest = WordprocessingDocument.Open(file.Path, false))
                     {
                         // We want the documents to be different.
-                        Assert.Throws<Xunit.Sdk.EqualException>(() => AssertThatPackagesAreEqual(source, dest));
+                        Assert.Throws<Xunit.Sdk.EqualException>(() => PackageAssert.Equal(source, dest));
                     }
                 }
             }
@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (source.Clone(tempFile.Path, false))
             using (var dest = WordprocessingDocument.Open(tempFile.Path, false))
             {
-                AssertThatPackagesAreEqual(source, dest);
+                PackageAssert.Equal(source, dest);
             }
         }
 
@@ -81,7 +81,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (source.Clone(tempFile.Path, false))
             using (var dest = SpreadsheetDocument.Open(tempFile.Path, false))
             {
-                AssertThatPackagesAreEqual(source, dest);
+                PackageAssert.Equal(source, dest);
             }
         }
 
@@ -94,7 +94,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (source.Clone(tempFile.Path, false))
             using (var dest = PresentationDocument.Open(tempFile.Path, false))
             {
-                AssertThatPackagesAreEqual(source, dest);
+                PackageAssert.Equal(source, dest);
             }
         }
 
@@ -221,7 +221,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var destination = WordprocessingDocument.Open(ms, true))
                 {
-                    AssertThatPackagesAreEqual(source, destination);
+                    PackageAssert.Equal(source, destination);
                 }
             }
         }
@@ -242,7 +242,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var destination = SpreadsheetDocument.Open(ms, true))
                 {
-                    AssertThatPackagesAreEqual(source, destination);
+                    PackageAssert.Equal(source, destination);
                 }
             }
         }
@@ -263,7 +263,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var destination = PresentationDocument.Open(ms, true))
                 {
-                    AssertThatPackagesAreEqual(source, destination);
+                    PackageAssert.Equal(source, destination);
                 }
             }
         }
@@ -314,7 +314,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var dest = WordprocessingDocument.Open(tempFile.Path, false))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -332,7 +332,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var dest = SpreadsheetDocument.Open(tempFile.Path, false))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -350,7 +350,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var dest = PresentationDocument.Open(tempFile.Path, false))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -370,7 +370,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var dest = WordprocessingDocument.Open(memoryStream, false))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -390,7 +390,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var dest = SpreadsheetDocument.Open(memoryStream, false))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -410,7 +410,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var dest = PresentationDocument.Open(memoryStream, false))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
