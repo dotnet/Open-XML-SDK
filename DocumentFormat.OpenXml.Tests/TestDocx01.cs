@@ -1,13 +1,16 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation;
-using OxTest;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Packaging;
 using System.Linq;
 using Xunit;
+
+using static DocumentFormat.OpenXml.Tests.TestAssets;
+
 using A = DocumentFormat.OpenXml.Drawing;
 using DW = DocumentFormat.OpenXml.Drawing.Wordprocessing;
 using PIC = DocumentFormat.OpenXml.Drawing.Pictures;
@@ -20,7 +23,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W055_Load_Save_Data_Bound_Content_Controls()
         {
-            using (var stream = TestFileStreams.DataBoundContentControls.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.DataBoundContentControls, true))
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 var body = doc.MainDocumentPart.Document.Body;
@@ -40,7 +43,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W054_Load_Save_Strict()
         {
-            using (var stream = TestFileStreams.Strict01.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Strict01, true))
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 var body = doc.MainDocumentPart.Document.Body;
@@ -58,8 +61,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W053_AddPart_ToOpenXmlPackage()
         {
-            using (var stream1 = TestFileStreams.Hyperlink.AsMemoryStream())
-            using (var stream2 = TestFileStreams.Hyperlink.AsMemoryStream())
+            using (var stream1 = GetStream(TestFiles.Hyperlink, true))
+            using (var stream2 = GetStream(TestFiles.Hyperlink, true))
             {
                 using (var doc1 = WordprocessingDocument.Open(stream1, true))
                 using (var doc2 = WordprocessingDocument.Open(stream2, true))
@@ -79,7 +82,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W052_CreateElementFromOuterXml()
         {
-            using (var stream = TestFileStreams.UnknownElement)
+            using (var stream = GetStream(TestFiles.UnknownElement))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 var mdp = doc.MainDocumentPart;
@@ -94,7 +97,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W051_AddNewPart_ToOpenXmlPackage()
         {
-            using (var stream = TestFileStreams.Hyperlink.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Hyperlink, true))
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 var pkg = (OpenXmlPackage)doc;
@@ -109,7 +112,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W050_DeleteAdd_CoreExtendedProperties()
         {
-            using (var stream = TestFileStreams.Hyperlink.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Hyperlink, true))
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 var corePart = doc.CoreFilePropertiesPart;
@@ -137,7 +140,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W049_AddNewPart_ToPackage()
         {
-            using (var stream = TestFileStreams.Hyperlink.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Hyperlink, true))
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 var wpcp = doc.AddNewPart<RibbonExtensibilityPart>("application/xml", "rid1232131");
@@ -151,7 +154,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W048_AddNewPart_ToPackage()
         {
-            using (var stream = TestFileStreams.Hyperlink.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Hyperlink, true))
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 Assert.Throws<ArgumentOutOfRangeException>(() =>
@@ -164,7 +167,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W047_AddNewPart_ToPackage()
         {
-            using (var stream = TestFileStreams.Hyperlink.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Hyperlink, true))
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 var wpcp = doc.AddNewPart<RibbonExtensibilityPart>("rid123123");
@@ -178,7 +181,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W046_AddNewPart_ToPackage()
         {
-            using (var stream = TestFileStreams.Hyperlink.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Hyperlink, true))
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 var mdp = doc.MainDocumentPart;
@@ -196,7 +199,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W045_AddNewPart_ToPart()
         {
-            using (var stream = TestFileStreams.Hyperlink.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Hyperlink, true))
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 var wpcp = doc.MainDocumentPart.AddNewPart<WordprocessingCommentsPart>("application/vnd.openxmlformats-officedocument.wordprocessingml.comments+xml", "rid1232131");
@@ -210,7 +213,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W044_AddNewPart_ToPart()
         {
-            using (var stream = TestFileStreams.Hyperlink.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Hyperlink, true))
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 Assert.Throws<ArgumentOutOfRangeException>(() =>
@@ -223,7 +226,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W043_AddNewPart()
         {
-            using (var stream = TestFileStreams.Hyperlink.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Hyperlink, true))
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 var wpcp = doc.MainDocumentPart.AddNewPart<WordprocessingCommentsPart>("rid123123");
@@ -237,7 +240,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W042_AddNewPart()
         {
-            using (var stream = TestFileStreams.Hyperlink.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Hyperlink, true))
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 var wpcp = doc.MainDocumentPart.AddNewPart<WordprocessingCommentsPart>();
@@ -251,7 +254,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W041_AddAlternativeFormatImportPart()
         {
-            using (var stream = TestFileStreams.Hyperlink.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Hyperlink, true))
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 doc.MainDocumentPart.AddAlternativeFormatImportPart(AlternativeFormatImportPartType.Html);
@@ -268,7 +271,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             const string ResourceRelationshipType = "http://resourceRelType";
 
-            using (var stream = TestFileStreams.Hyperlink.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Hyperlink, true))
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 var mdp = doc.MainDocumentPart;
@@ -290,7 +293,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W039_ChangeDocumentType()
         {
-            using (var stream = TestFileStreams.Document.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Document, true))
             using (var package = Package.Open(stream, FileMode.Open, FileAccess.ReadWrite))
             using (var doc = WordprocessingDocument.Open(package))
             {
@@ -307,7 +310,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W038_DocxCreation_Package()
         {
-            using (var stream = TestFileStreams.Document.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Document, true))
             using (var package = Package.Open(stream, FileMode.Open, FileAccess.ReadWrite))
             using (var doc = WordprocessingDocument.Open(package))
             {
@@ -323,7 +326,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W037_DocxCreation_Package_Settings()
         {
-            using (var stream = TestFileStreams.Document.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Document, true))
             using (var package = Package.Open(stream, FileMode.Open, FileAccess.ReadWrite))
             {
                 var openSettings = new OpenSettings
@@ -348,7 +351,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W036_DocxCreation_File()
         {
-            using (var stream = TestFileStreams.Document.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Document, true))
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 Assert.Throws<OpenXmlPackageException>(() =>
@@ -435,7 +438,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W032_AnnotationsOnElements()
         {
-            using (var stream = TestFileStreams.Document)
+            using (var stream = GetStream(TestFiles.Document))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 var mdp = doc.MainDocumentPart;
@@ -462,7 +465,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W031_AnnotationsOnParts()
         {
-            using (var stream = TestFileStreams.Document)
+            using (var stream = GetStream(TestFiles.Document))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 var mdp = doc.MainDocumentPart;
@@ -487,7 +490,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W030_DeleteReferenceRelationship2()
         {
-            using (var stream = TestFileStreams.Document.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Document, true))
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 var mdp = doc.MainDocumentPart;
@@ -506,7 +509,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W029_NonExistant_ReferenceRelationship()
         {
-            using (var stream = TestFileStreams.Document)
+            using (var stream = GetStream(TestFiles.Document))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 var mdp = doc.MainDocumentPart;
@@ -518,7 +521,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W028_Ancestors()
         {
-            using (var stream = TestFileStreams.Document)
+            using (var stream = GetStream(TestFiles.Document))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 var mdp = doc.MainDocumentPart;
@@ -532,7 +535,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W027_PreviousSibling_NextSibling()
         {
-            using (var stream = TestFileStreams.Document)
+            using (var stream = GetStream(TestFiles.Document))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 var mdp = doc.MainDocumentPart;
@@ -551,7 +554,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W026_AddRemoveNamespaceDeclaration()
         {
-            using (var stream = TestFileStreams.Document)
+            using (var stream = GetStream(TestFiles.Document))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 var mdp = doc.MainDocumentPart;
@@ -571,7 +574,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W025_ClearAllAttributes()
         {
-            using (var stream = TestFileStreams.Document)
+            using (var stream = GetStream(TestFiles.Document))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 var mdp = doc.MainDocumentPart;
@@ -590,7 +593,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W024_LastChild_LookupPrefix()
         {
-            using (var stream = TestFileStreams.Document)
+            using (var stream = GetStream(TestFiles.Document))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 var mdp = doc.MainDocumentPart;
@@ -607,7 +610,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W023_NamespaceDeclarations()
         {
-            using (var stream = TestFileStreams.Document)
+            using (var stream = GetStream(TestFiles.Document))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 var mdp = doc.MainDocumentPart;
@@ -624,7 +627,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W022_InnerXml_InnerText()
         {
-            using (var stream = TestFileStreams.Document)
+            using (var stream = GetStream(TestFiles.Document))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 var mdp = doc.MainDocumentPart;
@@ -641,7 +644,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W021_OuterXml()
         {
-            using (var stream = TestFileStreams.Document)
+            using (var stream = GetStream(TestFiles.Document))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 var mdp = doc.MainDocumentPart;
@@ -658,7 +661,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W020_GetAttribute()
         {
-            using (var stream = TestFileStreams.Document)
+            using (var stream = GetStream(TestFiles.Document))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 var mdp = doc.MainDocumentPart;
@@ -679,7 +682,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W019_SetAttributes()
         {
-            using (var stream = TestFileStreams.Document)
+            using (var stream = GetStream(TestFiles.Document))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 var mdp = doc.MainDocumentPart;
@@ -704,7 +707,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W018_RemoveAttributes()
         {
-            using (var stream = TestFileStreams.Document)
+            using (var stream = GetStream(TestFiles.Document))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 var mdp = doc.MainDocumentPart;
@@ -722,7 +725,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W017_InsertBefore_InsertAfter()
         {
-            using (var stream = TestFileStreams.Document)
+            using (var stream = GetStream(TestFiles.Document))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 var mdp = doc.MainDocumentPart;
@@ -746,7 +749,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W016_InsertAfterSelf()
         {
-            using (var stream = TestFileStreams.Document)
+            using (var stream = GetStream(TestFiles.Document))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 var mdp = doc.MainDocumentPart;
@@ -768,7 +771,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W015_InsertBeforeSelf()
         {
-            using (var stream = TestFileStreams.Document)
+            using (var stream = GetStream(TestFiles.Document))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 var mdp = doc.MainDocumentPart;
@@ -790,7 +793,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W014_MaxCharactersInPart()
         {
-            using (var stream = TestFileStreams.Hyperlink)
+            using (var stream = GetStream(TestFiles.Hyperlink))
             {
                 var openSettings = new OpenSettings
                 {
@@ -811,7 +814,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W013_MarkupCompat_ProcessLoadedPartsOnly()
         {
-            using (var stream = TestFileStreams.Hyperlink)
+            using (var stream = GetStream(TestFiles.Hyperlink))
             {
                 var openSettings = new OpenSettings
                 {
@@ -836,7 +839,7 @@ namespace DocumentFormat.OpenXml.Tests
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
             };
 
-            using (var stream = TestFileStreams.Hyperlink)
+            using (var stream = GetStream(TestFiles.Hyperlink))
             using (var doc = WordprocessingDocument.Open(stream, false, openSettings))
             {
                 var validator = new OpenXmlValidator(FileFormatVersions.Office2013);
@@ -854,7 +857,7 @@ namespace DocumentFormat.OpenXml.Tests
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
             };
 
-            using (var stream = TestFileStreams.Hyperlink)
+            using (var stream = GetStream(TestFiles.Hyperlink))
             using (var doc = WordprocessingDocument.Open(stream, false, openSettings))
             {
                 Assert.Throws<InvalidOperationException>(() =>
@@ -876,7 +879,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W010_HyperlinkRelationships()
         {
-            using (var stream = TestFileStreams.Hyperlink)
+            using (var stream = GetStream(TestFiles.Hyperlink))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 var mdp = doc.MainDocumentPart;
@@ -892,7 +895,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W009_DeleteAllParts()
         {
-            using (var stream = TestFileStreams.CommentsDocx.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.CommentsDocx, true))
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 var allParts = doc.GetAllParts();
@@ -904,13 +907,13 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W008_AddImageToDocx()
         {
-            using (var stream = TestFileStreams.CommentsDocx.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.CommentsDocx, true))
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 var mainPart = doc.MainDocumentPart;
                 var imagePart = mainPart.AddImagePart(ImagePartType.Jpeg);
 
-                using (var image = TestFileStreams.Image)
+                using (var image = GetStream(TestFiles.Image))
                 {
                     imagePart.FeedData(image);
                 }
@@ -995,7 +998,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W007_GetPartById_DeleteParts()
         {
-            using (var stream = TestFileStreams.CommentsDocx.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.CommentsDocx, true))
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 var partList = new[] { doc.MainDocumentPart.GetPartById("rId1") };
@@ -1011,7 +1014,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W006_RemoveCommentsPart()
         {
-            using (var stream = TestFileStreams.CommentsDocx.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.CommentsDocx, true))
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 var commentsPart = doc.MainDocumentPart.WordprocessingCommentsPart;
@@ -1032,7 +1035,7 @@ namespace DocumentFormat.OpenXml.Tests
             const string initials = "ABC";
             const string id = "0";
 
-            using (var stream = TestFileStreams.Plain.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Plain, true))
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 W.Paragraph firstParagraph =
@@ -1101,7 +1104,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W003_DocxValidation()
         {
-            using (var stream = TestFileStreams.Document.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Document, true))
             {
                 DocxValidationHelper(stream, 832, 418); // v2.5.1 reports more errors than 3.0
             }
@@ -1110,7 +1113,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W002_PlainDocxValidation()
         {
-            using (var stream = TestFileStreams.Plain.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Plain, true))
             {
                 DocxValidationHelper(stream, 0, 0); // v2.5.1 reports more errors than 3.0
             }
@@ -1136,7 +1139,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W001_OpenMemoryStream()
         {
-            using (var stream = TestFileStreams.Plain.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Plain, true))
             using (var wDoc = WordprocessingDocument.Open(stream, true))
             {
                 Assert.Equal(11, wDoc.MainDocumentPart.Document.Descendants().Count());

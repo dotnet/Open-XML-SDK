@@ -29,6 +29,8 @@ using System.Xml;
 using System.Xml.Linq;
 using Xunit;
 
+using static DocumentFormat.OpenXml.Tests.TestAssets;
+
 using Text = DocumentFormat.OpenXml.Wordprocessing.Text;
 
 namespace DocumentFormat.OpenXml.Tests
@@ -40,7 +42,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             using (var file = TemporaryFile.Create())
             {
-                using (var stream = TestFileStreams.Document)
+                using (var stream = GetStream(TestFiles.Document))
                 using (var source = WordprocessingDocument.Open(stream, false))
                 using (var clone = (WordprocessingDocument)source.Clone())
                 {
@@ -61,7 +63,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void CanDoFileBasedClone()
         {
             using (var tempFile = TemporaryFile.Create())
-            using (var stream = TestFileStreams.Document)
+            using (var stream = GetStream(TestFiles.Document))
             using (var source = WordprocessingDocument.Open(stream, false))
             using (source.Clone(tempFile.Path, false))
             using (var dest = WordprocessingDocument.Open(tempFile.Path, false))
@@ -74,7 +76,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void CanDoFileBasedCloneSpreadsheet()
         {
             using (var tempFile = TemporaryFile.Create())
-            using (var stream = TestFileStreams.Spreadsheet)
+            using (var stream = GetStream(TestFiles.Spreadsheet))
             using (var source = SpreadsheetDocument.Open(stream, false))
             using (source.Clone(tempFile.Path, false))
             using (var dest = SpreadsheetDocument.Open(tempFile.Path, false))
@@ -87,7 +89,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void CanDoFileBasedClonePresentation()
         {
             using (var tempFile = TemporaryFile.Create())
-            using (var stream = TestFileStreams.Presentation)
+            using (var stream = GetStream(TestFiles.Presentation))
             using (var source = PresentationDocument.Open(stream, false))
             using (source.Clone(tempFile.Path, false))
             using (var dest = PresentationDocument.Open(tempFile.Path, false))
@@ -99,7 +101,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanDoMultithreadedMultipleCloning()
         {
-            using (var stream = TestFileStreams.Document.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Document, true))
             using (var source = WordprocessingDocument.Open(stream, true))
             {
                 Parallel.For(0, 10, index =>
@@ -139,7 +141,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanDoMultithreadedSimpleCloning()
         {
-            using (var stream = TestFileStreams.Document.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Document, true))
             using (var source = WordprocessingDocument.Open(stream, true))
             {
                 Parallel.For(0, 10, index =>
@@ -156,7 +158,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanWildlyCloneAndFlush()
         {
-            using (var input = TestFileStreams.Document.AsMemoryStream())
+            using (var input = GetStream(TestFiles.Document, true))
             using (var wordDoc = WordprocessingDocument.Open(input, true))
             {
                 Parallel.For(0, 10, index =>
@@ -180,7 +182,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                         using (var stream = part.GetStream())
                         using (var xw = XmlWriter.Create(stream))
-                        using (var docProperties = TestFileStreams.DocPropertiesPath)
+                        using (var docProperties = GetStream(TestFiles.DocPropertiesPath))
                         {
                             XElement.Load(docProperties).WriteTo(xw);
                         }
@@ -206,7 +208,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanDoPackageBasedCloningWord()
         {
-            using (var stream = TestFileStreams.Document.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Document, true))
             using (var source = WordprocessingDocument.Open(stream, true))
             using (var ms = new MemoryStream())
             {
@@ -227,7 +229,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanDoPackageBasedCloningSpreadsheet()
         {
-            using (var stream = TestFileStreams.Spreadsheet.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Spreadsheet, true))
             using (var source = SpreadsheetDocument.Open(stream, true))
             using (var ms = new MemoryStream())
             {
@@ -248,7 +250,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanDoPackageBasedCloningPowerpoint()
         {
-            using (var stream = TestFileStreams.Presentation.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Presentation, true))
             using (var source = PresentationDocument.Open(stream, true))
             using (var ms = new MemoryStream())
             {
@@ -269,7 +271,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanSave()
         {
-            using (var stream = TestFileStreams.Document)
+            using (var stream = GetStream(TestFiles.Document))
             using (var source = WordprocessingDocument.Open(stream, false))
             using (var memoryStream = new MemoryStream())
             using (var dest = (WordprocessingDocument)source.Clone(memoryStream))
@@ -303,7 +305,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void CanSaveAsWord()
         {
             using (var tempFile = TemporaryFile.Create())
-            using (var stream = TestFileStreams.Document)
+            using (var stream = GetStream(TestFiles.Document))
             using (var source = WordprocessingDocument.Open(stream, false))
             {
                 using (source.SaveAs(tempFile.Path))
@@ -321,7 +323,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void CanSaveAsExcel()
         {
             using (var tempFile = TemporaryFile.Create())
-            using (var stream = TestFileStreams.Spreadsheet)
+            using (var stream = GetStream(TestFiles.Spreadsheet))
             using (var source = SpreadsheetDocument.Open(stream, false))
             {
                 using (source.SaveAs(tempFile.Path))
@@ -338,7 +340,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanSaveAsPowerpoint()
         {
-            using (var stream = TestFileStreams.Presentation)
+            using (var stream = GetStream(TestFiles.Presentation))
             using (var source = PresentationDocument.Open(stream, false))
             using (var tempFile = TemporaryFile.Create())
             {
@@ -356,7 +358,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanDoStreamBasedCloningWord()
         {
-            using (var stream = TestFileStreams.Document)
+            using (var stream = GetStream(TestFiles.Document))
             using (var source = WordprocessingDocument.Open(stream, false))
             using (var memoryStream = new MemoryStream())
             {
@@ -376,7 +378,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanDoStreamBasedCloningExcel()
         {
-            using (var stream = TestFileStreams.Spreadsheet)
+            using (var stream = GetStream(TestFiles.Spreadsheet))
             using (var source = SpreadsheetDocument.Open(stream, false))
             using (var memoryStream = new MemoryStream())
             {
@@ -396,7 +398,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanDoStreamBasedCloningPowerpoint()
         {
-            using (var stream = TestFileStreams.Presentation)
+            using (var stream = GetStream(TestFiles.Presentation))
             using (var source = PresentationDocument.Open(stream, false))
             using (var memoryStream = new MemoryStream())
             {

@@ -4,6 +4,8 @@ using System;
 using Xunit;
 using Xunit.Abstractions;
 
+using static DocumentFormat.OpenXml.Tests.TestAssets;
+
 namespace DocumentFormat.OpenXml.Tests
 {
     public class OpenSettingsTestClass : OpenXmlDomTestBase
@@ -32,7 +34,7 @@ namespace DocumentFormat.OpenXml.Tests
         [InlineData(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, int.MaxValue)]
         public void OpenWithInvalidFileFormatTest(MarkupCompatibilityProcessMode mode, int format)
         {
-            using (var file = TestAssets.Open(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var file = OpenFile(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, false))
             {
                 var invalidSettings = new OpenSettings()
                 {
@@ -59,7 +61,7 @@ namespace DocumentFormat.OpenXml.Tests
         [InlineData(MarkupCompatibilityProcessMode.NoProcess, int.MaxValue)]
         public void OpenWithFileFormatVersionsDefaultValue(MarkupCompatibilityProcessMode mode, int format)
         {
-            using (var file = TestAssets.Open(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var file = OpenFile(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, false))
             {
                 var invalidSettings = new OpenSettings()
                 {

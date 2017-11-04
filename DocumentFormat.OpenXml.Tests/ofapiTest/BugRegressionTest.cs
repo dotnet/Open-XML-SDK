@@ -1,19 +1,15 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Xunit;
-using DocumentFormat.OpenXml.Internal.SchemaValidation;
+
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Presentation;
 using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Wordprocessing;
-using DocumentFormat.OpenXml.Presentation;
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Drawing.Diagrams;
-using DocumentFormat.OpenXml.Packaging;
-using OxTest;
-using System.IO;
+using System;
+using System.Linq;
+using Xunit;
 using Xunit.Abstractions;
+
+using static DocumentFormat.OpenXml.Tests.TestAssets;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -475,7 +471,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug396358()
         {
-            using (var stream = TestFileStreams.mailmerge.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.mailmerge, true))
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 var part = doc.MainDocumentPart.DocumentSettingsPart.MailMergeRecipientDataPart;
@@ -483,7 +479,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Null(part.MailMergeRecipients);
                 Assert.NotNull(part.Recipients);
                 Assert.NotNull(part.PartRootElement);
-                Assert.IsType<Recipients>(part.PartRootElement); 
+                Assert.IsType<Recipients>(part.PartRootElement);
 
                 part.Recipients = new Recipients();
 
@@ -502,7 +498,7 @@ namespace DocumentFormat.OpenXml.Tests
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
             };
 
-            using(var stream = TestFileStreams.animation.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.animation, true))
             using (var doc = PresentationDocument.Open(stream, true, s))
             {
                 var sp = doc.PresentationPart.GetPartById("rId4") as SlidePart;
