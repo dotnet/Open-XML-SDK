@@ -6,6 +6,8 @@ using DocumentFormat.OpenXml.Validation;
 using System.IO;
 using Xunit;
 
+using static DocumentFormat.OpenXml.Tests.TestAssets;
+
 namespace DocumentFormat.OpenXml.Tests.CommentEx
 {
     public class CommentExTest
@@ -16,7 +18,7 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
         [Fact]
         public void CommentExInvalidFormat()
         {
-            using (var stream = TestAssets.GetStream(TestAssets.TestDataStorage.O15Conformance.WD.CommentExTest.Invalid_Word15Comments))
+            using (var stream = GetStream(TestDataStorage.O15Conformance.WD.CommentExTest.Invalid_Word15Comments))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 var validator = new OpenXmlValidator(FileFormatVersions.Office2013);

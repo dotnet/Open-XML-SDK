@@ -1,16 +1,18 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using DocumentFormat.OpenXml;
-using Xunit;
-using System.IO;
-using System;
-using System.Linq;
-using System.Xml;
-using System.Collections.Generic;
-using DocumentFormat.OpenXml.Validation;
-using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Wordprocessing;
+
 using DocumentFormat.OpenXml.Bibliography;
 using DocumentFormat.OpenXml.Drawing;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation;
+using DocumentFormat.OpenXml.Wordprocessing;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Xml;
+using Xunit;
+
+using static DocumentFormat.OpenXml.Tests.TestAssets;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -2888,7 +2890,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void SpreadsheetDocumentValidatingTest()
         {
-            using (var stream = TestFileStreams.basicspreadsheet)
+            using (var stream = GetStream(TestFiles.basicspreadsheet))
             using (var sdoc = SpreadsheetDocument.Open(stream, false))
             {
                 var o12actual = O12Validator.Validate(sdoc);
@@ -2906,7 +2908,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void WordprocessingDocumentValidatingTest()
         {
-            using (Stream stream = TestFileStreams.complex0docx)
+            using (Stream stream = GetStream(TestFiles.complex0docx))
             using (WordprocessingDocument wordTestDocument = WordprocessingDocument.Open(stream, false))
             {
                 // TODO: Abstract for version
@@ -2925,7 +2927,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Wordprocessing2010DocumentValidatingTest()
         {
-            using (Stream stream = TestFileStreams.complex2010docx)
+            using (Stream stream = GetStream(TestFiles.complex2010docx))
             {
                 // use OpenXmlPackage
                 using (WordprocessingDocument wordTestDocument = WordprocessingDocument.Open(stream, false))
@@ -2948,7 +2950,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void PresentationDocumentValidatingTest()
         {
-            using (var stream = TestFileStreams.o09_Performance_typical_pptx)
+            using (var stream = GetStream(TestFiles.o09_Performance_typical_pptx))
             using (var pDoc = PresentationDocument.Open(stream, false))
             {
                 // use stream
@@ -2967,7 +2969,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void SpreadsheetPartValidatingTest()
         {
-            using (var stream = TestFileStreams.basicspreadsheet)
+            using (var stream = GetStream(TestFiles.basicspreadsheet))
             using (var testDocument = SpreadsheetDocument.Open(stream, false))
             {
                 // validate the workbook part only.
@@ -2986,7 +2988,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void WordprocessingPartValidatingTest()
         {
-            using (var stream = TestFileStreams.complex0docx)
+            using (var stream = GetStream(TestFiles.complex0docx))
             using (var testDocument = WordprocessingDocument.Open(stream, false))
             {
                 // validate the main document part only
@@ -3005,7 +3007,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Wordprocessing2010PartValidatingTest()
         {
-            using (var stream = TestFileStreams.complex2010docx)
+            using (var stream = GetStream(TestFiles.complex2010docx))
             using (var testDocument = WordprocessingDocument.Open(stream, false))
             {
                 // validate the StyleDefinitionsPart
@@ -3032,7 +3034,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void SlidePartValidatingTest()
         {
-            using (var stream = TestFileStreams.o09_Performance_typical_pptx)
+            using (var stream = GetStream(TestFiles.o09_Performance_typical_pptx))
             using (var testDocument = PresentationDocument.Open(stream, false))
             {
                 // validate one Slide part only
@@ -3051,7 +3053,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void SpreadsheetElementValidatingTest()
         {
-            using (var stream = TestFileStreams.basicspreadsheet)
+            using (var stream = GetStream(TestFiles.basicspreadsheet))
             using (var testDocument = SpreadsheetDocument.Open(stream, false))
             {
                 // validate the workbook part only.
@@ -3070,7 +3072,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void WordprocessingElementValidatingTest()
         {
-            using (var stream = TestFileStreams.complex0docx)
+            using (var stream = GetStream(TestFiles.complex0docx))
             using (var testDocument = WordprocessingDocument.Open(stream, false))
             {
                 // validate the main document part only
@@ -3089,7 +3091,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void SlideElementValidatingTest()
         {
-            using (var stream = TestFileStreams.o09_Performance_typical_pptx)
+            using (var stream = GetStream(TestFiles.o09_Performance_typical_pptx))
             using (var testDocument = PresentationDocument.Open(stream, false))
             {
                 // validate the Slide element
@@ -3248,47 +3250,45 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MaxErrorsTest()
         {
-            using (Stream stream = TestFileStreams._5Errors)
+            using (Stream stream = GetStream(TestFiles._5Errors))
+            using (WordprocessingDocument testDocument = WordprocessingDocument.Open(stream, false))
             {
-                using (WordprocessingDocument testDocument = WordprocessingDocument.Open(stream, false))
-                {
-                    IEnumerable<ValidationErrorInfo> actual;
-                    // validate the main document part only
-                    actual = O12Validator.Validate(testDocument);
-                    Assert.Equal(5, actual.Count());
-                    actual = O12Validator.Validate(testDocument.MainDocumentPart);
-                    Assert.Equal(2, actual.Count());
-                    actual = O12Validator.Validate(testDocument.MainDocumentPart.Document);
-                    Assert.Equal(2, actual.Count());
+                IEnumerable<ValidationErrorInfo> actual;
+                // validate the main document part only
+                actual = O12Validator.Validate(testDocument);
+                Assert.Equal(5, actual.Count());
+                actual = O12Validator.Validate(testDocument.MainDocumentPart);
+                Assert.Equal(2, actual.Count());
+                actual = O12Validator.Validate(testDocument.MainDocumentPart.Document);
+                Assert.Equal(2, actual.Count());
 
-                    int savedMaxErrors = O12Validator.MaxNumberOfErrors;
+                int savedMaxErrors = O12Validator.MaxNumberOfErrors;
 
-                    O12Validator.MaxNumberOfErrors = 4;
-                    actual = O12Validator.Validate(testDocument);
-                    Assert.Equal(4, actual.Count());
-                    actual = O12Validator.Validate(testDocument.MainDocumentPart);
-                    Assert.Equal(2, actual.Count());
-                    actual = O12Validator.Validate(testDocument.MainDocumentPart.Document);
-                    Assert.Equal(2, actual.Count());
+                O12Validator.MaxNumberOfErrors = 4;
+                actual = O12Validator.Validate(testDocument);
+                Assert.Equal(4, actual.Count());
+                actual = O12Validator.Validate(testDocument.MainDocumentPart);
+                Assert.Equal(2, actual.Count());
+                actual = O12Validator.Validate(testDocument.MainDocumentPart.Document);
+                Assert.Equal(2, actual.Count());
 
-                    O12Validator.MaxNumberOfErrors = 3;
-                    actual = O12Validator.Validate(testDocument);
-                    Assert.Equal(3, actual.Count());
-                    actual = O12Validator.Validate(testDocument.MainDocumentPart);
-                    Assert.Equal(2, actual.Count());
-                    actual = O12Validator.Validate(testDocument.MainDocumentPart.Document);
-                    Assert.Equal(2, actual.Count());
+                O12Validator.MaxNumberOfErrors = 3;
+                actual = O12Validator.Validate(testDocument);
+                Assert.Equal(3, actual.Count());
+                actual = O12Validator.Validate(testDocument.MainDocumentPart);
+                Assert.Equal(2, actual.Count());
+                actual = O12Validator.Validate(testDocument.MainDocumentPart.Document);
+                Assert.Equal(2, actual.Count());
 
-                    O12Validator.MaxNumberOfErrors = 1;
-                    actual = O12Validator.Validate(testDocument);
-                    Assert.Single(actual);
-                    actual = O12Validator.Validate(testDocument.MainDocumentPart);
-                    Assert.Single(actual);
-                    actual = O12Validator.Validate(testDocument.MainDocumentPart.Document);
-                    Assert.Single(actual);
+                O12Validator.MaxNumberOfErrors = 1;
+                actual = O12Validator.Validate(testDocument);
+                Assert.Single(actual);
+                actual = O12Validator.Validate(testDocument.MainDocumentPart);
+                Assert.Single(actual);
+                actual = O12Validator.Validate(testDocument.MainDocumentPart.Document);
+                Assert.Single(actual);
 
-                    O12Validator.MaxNumberOfErrors = savedMaxErrors;
-                }
+                O12Validator.MaxNumberOfErrors = savedMaxErrors;
             }
         }
 
@@ -3856,7 +3856,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void VersionMismatchValidatingTest()
         {
-            using (Stream stream = TestFileStreams.complex0docx)
+            using (Stream stream = GetStream(TestFiles.complex0docx))
             {
                 // use OpenXmlPackage
                 using (WordprocessingDocument wordTestDocument = WordprocessingDocument.Open(stream, false, new OpenSettings() { MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2010) }))
@@ -3882,7 +3882,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void VersionMismatchPartValidatingTest()
         {
-            using (Stream stream = TestFileStreams.complex0docx)
+            using (Stream stream = GetStream(TestFiles.complex0docx))
             using (WordprocessingDocument wordTestDocument = WordprocessingDocument.Open(stream, false, new OpenSettings() { MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007) }))
             {
                 var actual = O12Validator.Validate(wordTestDocument.MainDocumentPart);

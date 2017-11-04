@@ -1,12 +1,14 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using OxTest;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using Xunit;
+
+using static DocumentFormat.OpenXml.Tests.TestAssets;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -30,7 +32,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void LoadAttributeTest()
         {
-            using (var stream = TestFileStreams.mcdoc.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.mcdoc, true))
             {
                 using (var testDocument = WordprocessingDocument.Open(stream, true))
                 {
@@ -94,7 +96,7 @@ namespace DocumentFormat.OpenXml.Tests
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007)
             };
 
-            using (var stream = TestFileStreams.mcdoc)
+            using (var stream = GetStream(TestFiles.mcdoc))
             using (var testDocument = WordprocessingDocument.Open(stream, false, settings))
             {
                 var target = testDocument.MainDocumentPart;
@@ -120,7 +122,7 @@ namespace DocumentFormat.OpenXml.Tests
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007)
             };
 
-            using (var stream = TestFileStreams.mcdoc)
+            using (var stream = GetStream(TestFiles.mcdoc))
             using (var testDocument = WordprocessingDocument.Open(stream, false, settings))
             {
                 OpenXmlPart target = testDocument.MainDocumentPart;
@@ -159,7 +161,7 @@ namespace DocumentFormat.OpenXml.Tests
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007)
             };
 
-            using (var stream = TestFileStreams.MCExecl)
+            using (var stream = GetStream(TestFiles.MCExecl))
             using (var doc = SpreadsheetDocument.Open(stream, false, settings))
             {
                 OpenXmlPart target = doc.WorkbookPart.SharedStringTablePart;
@@ -190,7 +192,7 @@ namespace DocumentFormat.OpenXml.Tests
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007)
             };
 
-            using (var stream = TestFileStreams.mcdoc.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.mcdoc, true))
             using (var testDocument = WordprocessingDocument.Open(stream, true, settings))
             {
                 OpenXmlPart target = testDocument.MainDocumentPart;
@@ -216,7 +218,7 @@ namespace DocumentFormat.OpenXml.Tests
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007)
             };
 
-            using (var stream = TestFileStreams.mcppt)
+            using (var stream = GetStream(TestFiles.mcppt))
             using (var doc = PresentationDocument.Open(stream, false, settings))
             {
                 OpenXmlPart target = doc.PresentationPart.TableStylesPart;
@@ -260,7 +262,7 @@ namespace DocumentFormat.OpenXml.Tests
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007)
             };
 
-            using (var stream = TestFileStreams.mcdoc.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.mcdoc, true))
             {
                 using (var testDocument = WordprocessingDocument.Open(stream, true, settings))
                 {
@@ -328,7 +330,7 @@ namespace DocumentFormat.OpenXml.Tests
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007)
             };
 
-            using (var stream = TestFileStreams.mcdoc.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.mcdoc, true))
             {
                 using (var testDocument = WordprocessingDocument.Open(stream, true, settings))
                 {
@@ -370,7 +372,7 @@ namespace DocumentFormat.OpenXml.Tests
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007)
             };
 
-            using (var stream = TestFileStreams.simpleSdt.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.simpleSdt, true))
             {
                 using (var testDocument = WordprocessingDocument.Open(stream, true, settings))
                 {
@@ -406,7 +408,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void WriteExtraAttr()
         {
-            using (var testStream = TestFileStreams.HelloO14.AsMemoryStream())
+            using (var testStream = GetStream(TestFiles.HelloO14, true))
             {
                 using (var doc = WordprocessingDocument.Open(testStream, true))
                 {
