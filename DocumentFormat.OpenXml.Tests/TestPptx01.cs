@@ -1,12 +1,13 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation;
-using OxTest;
-using System;
 using System.IO;
 using System.IO.Packaging;
 using System.Linq;
 using Xunit;
+
+using static DocumentFormat.OpenXml.Tests.TestAssets;
+
 using D = DocumentFormat.OpenXml.Drawing;
 using P = DocumentFormat.OpenXml.Presentation;
 
@@ -17,7 +18,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void P007_PptxCreation_Package_Settings()
         {
-            using (var stream = TestFileStreams.Presentation.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Presentation, true))
             using (var package = Package.Open(stream))
             {
                 var openSettings = new OpenSettings
@@ -44,7 +45,7 @@ namespace DocumentFormat.OpenXml.Tests
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
             };
 
-            using (var stream = TestFileStreams.Presentation)
+            using (var stream = GetStream(TestFiles.Presentation))
             using (var doc = PresentationDocument.Open(stream, false, openSettings))
             {
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
@@ -58,7 +59,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void P005_PptxCreation_Package_Settings()
         {
-            using (var stream = TestFileStreams.Presentation.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Presentation, true))
             using (var package = Package.Open(stream))
             {
                 var openSettings = new OpenSettings
@@ -85,7 +86,7 @@ namespace DocumentFormat.OpenXml.Tests
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
             };
 
-            using (var stream = TestFileStreams.Presentation)
+            using (var stream = GetStream(TestFiles.Presentation))
             using (var doc = PresentationDocument.Open(stream, false))
             {
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
@@ -382,7 +383,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void P002_Pptx_DeleteAdd_CoreExtendedProperties()
         {
-            using (var stream = TestFileStreams.Presentation.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Presentation, true))
             using (var doc = PresentationDocument.Open(stream, true))
             {
                 var corePart = doc.CoreFilePropertiesPart;
@@ -416,17 +417,11 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        [Fact]
-        public void P001_PptxValidation()
+        [Theory]
+        [InlineData(TestFiles.Presentation, 0)]
+        public void PptxValidation(string path, int expectedErrorCount)
         {
-            using (var stream = TestFileStreams.Presentation)
-            {
-                PptxValidationHelper(stream, 282, 0);
-            }
-        }
-
-        private static void PptxValidationHelper(Stream stream, int expectedErrorCount, int expectedErrorCount2)
-        {
+            using (var stream = GetStream(path))
             using (var doc = PresentationDocument.Open(stream, false))
             {
                 var validator = new OpenXmlValidator(FileFormatVersions.Office2007);
@@ -438,7 +433,7 @@ namespace DocumentFormat.OpenXml.Tests
                 validator = new OpenXmlValidator(FileFormatVersions.Office2013);
                 cnt += validator.Validate(doc).Count();
 
-                Assert.True(cnt == expectedErrorCount || cnt == expectedErrorCount2);
+                Assert.True(expectedErrorCount, cnt);
             }
         }
     }

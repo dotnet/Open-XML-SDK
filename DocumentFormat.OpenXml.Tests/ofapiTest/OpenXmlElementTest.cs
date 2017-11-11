@@ -1,14 +1,15 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Wordprocessing;
-using Xunit;
-using System.Collections.Generic;
-using System.Linq;
-using System.IO;
+
 using DocumentFormat.OpenXml.Packaging;
-using w = DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.Wordprocessing;
 using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Xml;
+using Xunit;
+
+using static DocumentFormat.OpenXml.Tests.TestAssets;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -537,7 +538,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ElementCloneTest()
         {
-            using (var stream = TestFileStreams.mcdoc)
+            using (var stream = GetStream(TestFiles.mcdoc))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 // Shallow clone the body, which doesn't have attributes
@@ -819,7 +820,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ReaderWithNsTest()
         {
-            using (var stream = TestFileStreams.mcdoc)
+            using (var stream = GetStream(TestFiles.mcdoc))
             using (var doc = WordprocessingDocument.Open(stream, false))
             using (var reader = OpenXmlPartReader.Create(doc.MainDocumentPart))
             {

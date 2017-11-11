@@ -23,6 +23,8 @@ using DocumentFormat.OpenXml.Packaging;
 using System.IO;
 using Xunit;
 
+using static DocumentFormat.OpenXml.Tests.TestAssets;
+
 namespace DocumentFormat.OpenXml.Tests
 {
     public class CreateFromTemplateTests
@@ -30,7 +32,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreatePresentationFromTemplate()
         {
-            using (var stream = TestFileStreams.Templates.Presentation.AsFile(".potx"))
+            using (var stream = OpenFile(TestFiles.Templates.Presentation, FileAccess.ReadWrite))
             using (var packageDocument = PresentationDocument.CreateFromTemplate(stream.Path))
             {
                 var part = packageDocument.PresentationPart;
@@ -46,7 +48,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateSpreadsheetFromTemplate()
         {
-            using (var stream = TestFileStreams.Templates.Spreadsheet.AsFile(".xltx"))
+            using (var stream = OpenFile(TestFiles.Templates.Spreadsheet, FileAccess.ReadWrite))
             using (var packageDocument = SpreadsheetDocument.CreateFromTemplate(stream.Path))
             {
                 var part = packageDocument.WorkbookPart;
@@ -62,7 +64,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanCreateWordprocessingDocumentFromTemplate()
         {
-            using (var stream = TestFileStreams.Templates.Document.AsFile(".dotx"))
+            using (var stream = OpenFile(TestFiles.Templates.Document, FileAccess.ReadWrite))
             using (var packageDocument = WordprocessingDocument.CreateFromTemplate(stream.Path))
             {
                 var part = packageDocument.MainDocumentPart;

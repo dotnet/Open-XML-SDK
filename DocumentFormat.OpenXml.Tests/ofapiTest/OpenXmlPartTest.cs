@@ -6,6 +6,8 @@ using System.IO;
 using System.Linq;
 using Xunit;
 
+using static DocumentFormat.OpenXml.Tests.TestAssets;
+
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
@@ -20,7 +22,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void RootElementTest()
         {
-            using (var stream = TestFileStreams.complex0docx)
+            using (var stream = GetStream(TestFiles.complex0docx))
             using (var testDocument = WordprocessingDocument.Open(stream, false))
             {
                 OpenXmlPart target = testDocument.MainDocumentPart;
@@ -65,7 +67,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void HyperlinkRelationshipTest()
         {
-            using (var stream = TestFileStreams.May_12_04)
+            using (var stream = GetStream(TestFiles.May_12_04))
             using (var testDocument = WordprocessingDocument.Open(stream, false))
             {
                 var validator = new OpenXmlValidator();
@@ -125,7 +127,7 @@ namespace DocumentFormat.OpenXml.Tests
                 // The method should import all hyperlink relationships.
                 stream.Seek(0, SeekOrigin.Begin);
                 using (var testDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
-                using (var sourcestream = TestFileStreams.May_12_04)
+                using (var sourcestream = GetStream(TestFiles.May_12_04))
                 using (var sourceDocument = WordprocessingDocument.Open(sourcestream, false))
                 {
                     var parts = new System.Collections.Generic.Dictionary<OpenXmlPart, bool>();

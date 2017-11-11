@@ -1,11 +1,13 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System;
-using System.IO;
 using System.Linq;
 using System.Reflection;
 using Xunit;
+
+using static DocumentFormat.OpenXml.Tests.TestAssets;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -47,7 +49,7 @@ namespace DocumentFormat.OpenXml.Tests
             ValidateCustomXmlElement(cxCell);
 
             // Test loading and modification on DOM tree
-            using (var stream = TestFileStreams.simpleSdt)
+            using (var stream = GetStream(TestFiles.simpleSdt))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 // find customXml
@@ -85,7 +87,7 @@ namespace DocumentFormat.OpenXml.Tests
             // Test loading and modification
             SdtRun sdtRun = new SdtRun();
 
-            using (var stream = TestFileStreams.simpleSdt)
+            using (var stream = GetStream(TestFiles.simpleSdt))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 // find sdt

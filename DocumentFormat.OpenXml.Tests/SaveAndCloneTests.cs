@@ -1,6 +1,6 @@
 ﻿/*
  * SaveAndCloneFixture.cs - Testing Save and Clone functionality in Open XML SDK
- * 
+ *
  * Copyright 2014-2015 Thomas Barnekow
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +14,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
+ *
  * Developer: Thomas Barnekow
  * Email: thomas<at/>barnekow<dot/>info
  */
@@ -29,18 +29,20 @@ using System.Xml;
 using System.Xml.Linq;
 using Xunit;
 
+using static DocumentFormat.OpenXml.Tests.TestAssets;
+
 using Text = DocumentFormat.OpenXml.Wordprocessing.Text;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    public class SaveAndCloneTests : BaseFixture
+    public class SaveAndCloneTests
     {
         [Fact]
         public void CanCloneDocument()
         {
             using (var file = TemporaryFile.Create())
             {
-                using (var stream = TestFileStreams.Document)
+                using (var stream = GetStream(TestFiles.Document))
                 using (var source = WordprocessingDocument.Open(stream, false))
                 using (var clone = (WordprocessingDocument)source.Clone())
                 {
@@ -51,7 +53,7 @@ namespace DocumentFormat.OpenXml.Tests
                     using (var dest = WordprocessingDocument.Open(file.Path, false))
                     {
                         // We want the documents to be different.
-                        Assert.Throws<Xunit.Sdk.EqualException>(() => AssertThatPackagesAreEqual(source, dest));
+                        Assert.Throws<Xunit.Sdk.EqualException>(() => PackageAssert.Equal(source, dest));
                     }
                 }
             }
@@ -61,12 +63,12 @@ namespace DocumentFormat.OpenXml.Tests
         public void CanDoFileBasedClone()
         {
             using (var tempFile = TemporaryFile.Create())
-            using (var stream = TestFileStreams.Document)
+            using (var stream = GetStream(TestFiles.Document))
             using (var source = WordprocessingDocument.Open(stream, false))
             using (source.Clone(tempFile.Path, false))
             using (var dest = WordprocessingDocument.Open(tempFile.Path, false))
             {
-                AssertThatPackagesAreEqual(source, dest);
+                PackageAssert.Equal(source, dest);
             }
         }
 
@@ -74,12 +76,12 @@ namespace DocumentFormat.OpenXml.Tests
         public void CanDoFileBasedCloneSpreadsheet()
         {
             using (var tempFile = TemporaryFile.Create())
-            using (var stream = TestFileStreams.Spreadsheet)
+            using (var stream = GetStream(TestFiles.Spreadsheet))
             using (var source = SpreadsheetDocument.Open(stream, false))
             using (source.Clone(tempFile.Path, false))
             using (var dest = SpreadsheetDocument.Open(tempFile.Path, false))
             {
-                AssertThatPackagesAreEqual(source, dest);
+                PackageAssert.Equal(source, dest);
             }
         }
 
@@ -87,19 +89,19 @@ namespace DocumentFormat.OpenXml.Tests
         public void CanDoFileBasedClonePresentation()
         {
             using (var tempFile = TemporaryFile.Create())
-            using (var stream = TestFileStreams.Presentation)
+            using (var stream = GetStream(TestFiles.Presentation))
             using (var source = PresentationDocument.Open(stream, false))
             using (source.Clone(tempFile.Path, false))
             using (var dest = PresentationDocument.Open(tempFile.Path, false))
             {
-                AssertThatPackagesAreEqual(source, dest);
+                PackageAssert.Equal(source, dest);
             }
         }
 
         [Fact]
         public void CanDoMultithreadedMultipleCloning()
         {
-            using (var stream = TestFileStreams.Document.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Document, true))
             using (var source = WordprocessingDocument.Open(stream, true))
             {
                 Parallel.For(0, 10, index =>
@@ -139,7 +141,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanDoMultithreadedSimpleCloning()
         {
-            using (var stream = TestFileStreams.Document.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Document, true))
             using (var source = WordprocessingDocument.Open(stream, true))
             {
                 Parallel.For(0, 10, index =>
@@ -156,7 +158,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanWildlyCloneAndFlush()
         {
-            using (var input = TestFileStreams.Document.AsMemoryStream())
+            using (var input = GetStream(TestFiles.Document, true))
             using (var wordDoc = WordprocessingDocument.Open(input, true))
             {
                 Parallel.For(0, 10, index =>
@@ -180,7 +182,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                         using (var stream = part.GetStream())
                         using (var xw = XmlWriter.Create(stream))
-                        using (var docProperties = TestFileStreams.DocPropertiesPath)
+                        using (var docProperties = GetStream(TestFiles.DocPropertiesPath))
                         {
                             XElement.Load(docProperties).WriteTo(xw);
                         }
@@ -206,7 +208,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanDoPackageBasedCloningWord()
         {
-            using (var stream = TestFileStreams.Document.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Document, true))
             using (var source = WordprocessingDocument.Open(stream, true))
             using (var ms = new MemoryStream())
             {
@@ -219,7 +221,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var destination = WordprocessingDocument.Open(ms, true))
                 {
-                    AssertThatPackagesAreEqual(source, destination);
+                    PackageAssert.Equal(source, destination);
                 }
             }
         }
@@ -227,7 +229,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanDoPackageBasedCloningSpreadsheet()
         {
-            using (var stream = TestFileStreams.Spreadsheet.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Spreadsheet, true))
             using (var source = SpreadsheetDocument.Open(stream, true))
             using (var ms = new MemoryStream())
             {
@@ -240,7 +242,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var destination = SpreadsheetDocument.Open(ms, true))
                 {
-                    AssertThatPackagesAreEqual(source, destination);
+                    PackageAssert.Equal(source, destination);
                 }
             }
         }
@@ -248,7 +250,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanDoPackageBasedCloningPowerpoint()
         {
-            using (var stream = TestFileStreams.Presentation.AsMemoryStream())
+            using (var stream = GetStream(TestFiles.Presentation, true))
             using (var source = PresentationDocument.Open(stream, true))
             using (var ms = new MemoryStream())
             {
@@ -261,7 +263,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var destination = PresentationDocument.Open(ms, true))
                 {
-                    AssertThatPackagesAreEqual(source, destination);
+                    PackageAssert.Equal(source, destination);
                 }
             }
         }
@@ -269,7 +271,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanSave()
         {
-            using (var stream = TestFileStreams.Document)
+            using (var stream = GetStream(TestFiles.Document))
             using (var source = WordprocessingDocument.Open(stream, false))
             using (var memoryStream = new MemoryStream())
             using (var dest = (WordprocessingDocument)source.Clone(memoryStream))
@@ -289,11 +291,11 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var sourceXml = sb.ToString();
 
-                // Save the document. 
+                // Save the document.
                 dest.Save();
 
                 // Get the part's root element's XML.
-                var partXml = GetXmlString(dest.MainDocumentPart);
+                var partXml = dest.MainDocumentPart.GetXmlString();
 
                 Assert.Equal(sourceXml, partXml);
             }
@@ -303,7 +305,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void CanSaveAsWord()
         {
             using (var tempFile = TemporaryFile.Create())
-            using (var stream = TestFileStreams.Document)
+            using (var stream = GetStream(TestFiles.Document))
             using (var source = WordprocessingDocument.Open(stream, false))
             {
                 using (source.SaveAs(tempFile.Path))
@@ -312,7 +314,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var dest = WordprocessingDocument.Open(tempFile.Path, false))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -321,7 +323,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void CanSaveAsExcel()
         {
             using (var tempFile = TemporaryFile.Create())
-            using (var stream = TestFileStreams.Spreadsheet)
+            using (var stream = GetStream(TestFiles.Spreadsheet))
             using (var source = SpreadsheetDocument.Open(stream, false))
             {
                 using (source.SaveAs(tempFile.Path))
@@ -330,7 +332,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var dest = SpreadsheetDocument.Open(tempFile.Path, false))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -338,7 +340,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanSaveAsPowerpoint()
         {
-            using (var stream = TestFileStreams.Presentation)
+            using (var stream = GetStream(TestFiles.Presentation))
             using (var source = PresentationDocument.Open(stream, false))
             using (var tempFile = TemporaryFile.Create())
             {
@@ -348,7 +350,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var dest = PresentationDocument.Open(tempFile.Path, false))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -356,7 +358,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanDoStreamBasedCloningWord()
         {
-            using (var stream = TestFileStreams.Document)
+            using (var stream = GetStream(TestFiles.Document))
             using (var source = WordprocessingDocument.Open(stream, false))
             using (var memoryStream = new MemoryStream())
             {
@@ -368,7 +370,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var dest = WordprocessingDocument.Open(memoryStream, false))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -376,7 +378,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanDoStreamBasedCloningExcel()
         {
-            using (var stream = TestFileStreams.Spreadsheet)
+            using (var stream = GetStream(TestFiles.Spreadsheet))
             using (var source = SpreadsheetDocument.Open(stream, false))
             using (var memoryStream = new MemoryStream())
             {
@@ -388,7 +390,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var dest = SpreadsheetDocument.Open(memoryStream, false))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
@@ -396,7 +398,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CanDoStreamBasedCloningPowerpoint()
         {
-            using (var stream = TestFileStreams.Presentation)
+            using (var stream = GetStream(TestFiles.Presentation))
             using (var source = PresentationDocument.Open(stream, false))
             using (var memoryStream = new MemoryStream())
             {
@@ -408,7 +410,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var dest = PresentationDocument.Open(memoryStream, false))
                 {
-                    AssertThatPackagesAreEqual(source, dest);
+                    PackageAssert.Equal(source, dest);
                 }
             }
         }
