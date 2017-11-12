@@ -2745,7 +2745,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                     return false;
                 }
             }
-            if (!Uri.TryCreate(uriString, UriKind.RelativeOrAbsolute, out result))
+            if (!Uri.TryCreate(uriString, UriHelper.RelativeOrAbsolute, out result))
             {
                 return false;
             }

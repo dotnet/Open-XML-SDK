@@ -1467,7 +1467,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     string sequenceNumber = this.GetNextSequenceNumber(contentType);
                     string path = Path.Combine(targetPath, targetName + sequenceNumber + targetExt);
 
-                    Uri uri = new Uri(path, UriKind.RelativeOrAbsolute);
+                    Uri uri = new Uri(path, UriHelper.RelativeOrAbsolute);
                     partUri = PackUriHelper.ResolvePartUri(parentUri, uri);
                     // partUri = PackUriHelper.GetNormalizedPartUri(PackUriHelper.CreatePartUri(uri));
                 } while (this.IsReservedUri(partUri));
