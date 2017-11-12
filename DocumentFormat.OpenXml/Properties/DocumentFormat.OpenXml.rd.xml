@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
+  <Library Name="DocumentFormat.OpenXml">
+    <Assembly Name="DocumentFormat.OpenXml" Dynamic="All" />
+
+    <!-- TODO: We can potentially minimize the metadata needed, but further
+         investigation is needed to fill this in and adequately test this -->
+    
+    <!--
+    <Type Name="DocumentFormat.OpenXml.ReflectionExtensions">
+      <Method Name="CreateInstance{T}">
+        <GenericParameter Name="T" Dynamic="Required All" />
+      </Method>
+    </Type>
+    <Type Name="DocumentFormat.OpenXml.OpenXmlType" Dynamic="Required All">
+      <Subtypes Dynamic="Required All" />
+    </Type>-->
+  </Library>
+</Directives>
