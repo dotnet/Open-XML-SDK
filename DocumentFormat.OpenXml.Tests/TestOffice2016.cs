@@ -6,15 +6,17 @@ using System.Linq;
 using System.Text;
 using Xunit;
 
+using static DocumentFormat.OpenXml.Tests.TestAssets;
+
 namespace DocumentFormat.OpenXml.Tests
 {
     public class TestOffice2016
     {
         [Theory]
-        [InlineData("Of16-10-SymEx.docx")]
+        [InlineData(TestFiles.Of16_10_symex_docx)]
         public void OF16_007_SymEx(string name)
         {
-            using (var stream = TestFileStreams.GetStream(name))
+            using (var stream = GetStream(name))
             using (var wDoc = WordprocessingDocument.Open(stream, false))
             {
                 var v = new OpenXmlValidator(FileFormatVersions.Office2016);
@@ -25,16 +27,18 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Theory]
-        [InlineData("Of16-09-UnknownElement.docx")]
+        [InlineData(TestFiles.Of16_09_unknownelement_docx)]
         public void OF16_006_AccessChartPart_IntentionalUnknownElement(string name)
         {
-            using (var stream = TestFileStreams.GetStream(name))
+            using (var stream = GetStream(name))
             using (var wDoc = WordprocessingDocument.Open(stream, false))
             {
                 var mainDocPart = wDoc.MainDocumentPart;
                 var extChartPart = mainDocPart.ExtendedChartParts.First();
                 var chartSpace = extChartPart.ChartSpace;
+
                 Assert.Equal("DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartSpace", chartSpace.GetType().ToString());
+
                 var hasUnknownElement = TestIfHasUnknownElement(chartSpace);
                 if (hasUnknownElement)
                 {
@@ -45,16 +49,16 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Theory]
-        [InlineData("Of16-01.docx")]
-        [InlineData("Of16-02.docx")]
-        [InlineData("Of16-03.docx")]
-        [InlineData("Of16-04.docx")]
-        [InlineData("Of16-05.docx")]
-        [InlineData("Of16-06.docx")]
-        [InlineData("Of16-07.docx")]
+        [InlineData(TestFiles.Of16_01_docx)]
+        [InlineData(TestFiles.Of16_02_docx)]
+        [InlineData(TestFiles.Of16_03_docx)]
+        [InlineData(TestFiles.Of16_04_docx)]
+        [InlineData(TestFiles.Of16_05_docx)]
+        [InlineData(TestFiles.Of16_06_docx)]
+        [InlineData(TestFiles.Of16_07_docx)]
         public void OF16_005_AccessChartPart(string name)
         {
-            using (var stream = TestFileStreams.GetStream(name))
+            using (var stream = GetStream(name))
             using (var wDoc = WordprocessingDocument.Open(stream, false))
             {
                 var mainDocPart = wDoc.MainDocumentPart;
@@ -71,13 +75,13 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Theory]
-        [InlineData("Of16-01.pptx")]
-        [InlineData("Of16-02.pptx")]
-        [InlineData("Of16-03.pptx")]
+        [InlineData(TestFiles.Of16_01_pptx)]
+        [InlineData(TestFiles.Of16_02_pptx)]
+        [InlineData(TestFiles.Of16_03_pptx)]
 
         public void OF16_004_ValidatePptx_2013(string name)
         {
-            using (var stream = TestFileStreams.GetStream(name))
+            using (var stream = GetStream(name))
             using (var pDoc = PresentationDocument.Open(stream, false))
             {
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
@@ -88,18 +92,18 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Theory]
-        [InlineData("Of16-01.docx")]
-        [InlineData("Of16-02.docx")]
-        [InlineData("Of16-03.docx")]
-        [InlineData("Of16-04.docx")]
-        [InlineData("Of16-05.docx")]
-        [InlineData("Of16-06.docx")]
-        [InlineData("Of16-07.docx")]
-        [InlineData("Of16-08.docx")]
+        [InlineData(TestFiles.Of16_01_docx)]
+        [InlineData(TestFiles.Of16_02_docx)]
+        [InlineData(TestFiles.Of16_03_docx)]
+        [InlineData(TestFiles.Of16_04_docx)]
+        [InlineData(TestFiles.Of16_05_docx)]
+        [InlineData(TestFiles.Of16_06_docx)]
+        [InlineData(TestFiles.Of16_07_docx)]
+        [InlineData(TestFiles.Of16_08_docx)]
 
         public void OF16_003_ValidateDocx_2013(string name)
         {
-            using (var stream = TestFileStreams.GetStream(name))
+            using (var stream = GetStream(name))
             using (var wDoc = WordprocessingDocument.Open(stream, false))
             {
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
@@ -110,13 +114,13 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Theory]
-        [InlineData("Of16-01.pptx")]
-        [InlineData("Of16-02.pptx")]
-        [InlineData("Of16-03.pptx")]
+        [InlineData(TestFiles.Of16_01_pptx)]
+        [InlineData(TestFiles.Of16_02_pptx)]
+        [InlineData(TestFiles.Of16_03_pptx)]
 
         public void OF16_002_ValidatePptx_2016(string name)
         {
-            using (var stream = TestFileStreams.GetStream(name))
+            using (var stream = GetStream(name))
             using (var pDoc = PresentationDocument.Open(stream, false))
             {
                 var v = new OpenXmlValidator(FileFormatVersions.Office2016);
@@ -127,18 +131,18 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Theory]
-        [InlineData("Of16-01.docx")]
-        [InlineData("Of16-02.docx")]
-        [InlineData("Of16-03.docx")]
-        [InlineData("Of16-04.docx")]
-        [InlineData("Of16-05.docx")]
-        [InlineData("Of16-06.docx")]
-        [InlineData("Of16-07.docx")]
-        [InlineData("Of16-08.docx")]
+        [InlineData(TestFiles.Of16_01_docx)]
+        [InlineData(TestFiles.Of16_02_docx)]
+        [InlineData(TestFiles.Of16_03_docx)]
+        [InlineData(TestFiles.Of16_04_docx)]
+        [InlineData(TestFiles.Of16_05_docx)]
+        [InlineData(TestFiles.Of16_06_docx)]
+        [InlineData(TestFiles.Of16_07_docx)]
+        [InlineData(TestFiles.Of16_08_docx)]
 
         public void OF16_001_ValidateDocx_2016(string name)
         {
-            using (var stream = TestFileStreams.GetStream(name))
+            using (var stream = GetStream(name))
             using (var wDoc = WordprocessingDocument.Open(stream, false))
             {
                 var v = new OpenXmlValidator(FileFormatVersions.Office2016);

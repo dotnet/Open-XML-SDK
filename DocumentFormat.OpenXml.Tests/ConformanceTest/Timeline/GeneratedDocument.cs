@@ -1,34 +1,35 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+
 using DocumentFormat.OpenXml.Packaging;
-using Ap = DocumentFormat.OpenXml.ExtendedProperties;
-using Vt = DocumentFormat.OpenXml.VariantTypes;
-using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Spreadsheet;
+using System.IO;
+using A = DocumentFormat.OpenXml.Drawing;
+using Ap = DocumentFormat.OpenXml.ExtendedProperties;
+using C = DocumentFormat.OpenXml.Drawing.Charts;
+using C14 = DocumentFormat.OpenXml.Office2010.Drawing.Charts;
 using S = DocumentFormat.OpenXml.Spreadsheet;
-using X15ac = DocumentFormat.OpenXml.Office2013.ExcelAc;
+using Tsle = DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer;
+using Vt = DocumentFormat.OpenXml.VariantTypes;
 using X14 = DocumentFormat.OpenXml.Office2010.Excel;
 using X15 = DocumentFormat.OpenXml.Office2013.Excel;
+using X15ac = DocumentFormat.OpenXml.Office2013.ExcelAc;
 using Xdr = DocumentFormat.OpenXml.Drawing.Spreadsheet;
-using A = DocumentFormat.OpenXml.Drawing;
-using C = DocumentFormat.OpenXml.Drawing.Charts;
-using Tsle = DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer;
-using C14 = DocumentFormat.OpenXml.Office2010.Drawing.Charts;
 
 namespace DocumentFormat.OpenXml.Tests.TimelineClass
 {
-    public class GeneratedDocument
+    public static class GeneratedDocument
     {
         // Creates a SpreadsheetDocument.
-        public void CreatePackage(string filePath)
+        public static void CreatePackage(Stream stream)
         {
-            using(SpreadsheetDocument package = SpreadsheetDocument.Create(filePath, SpreadsheetDocumentType.Workbook))
+            using(SpreadsheetDocument package = SpreadsheetDocument.Create(stream, SpreadsheetDocumentType.Workbook))
             {
                 CreateParts(package);
             }
         }
 
         // Adds child parts and generates content of the specified part.
-        private void CreateParts(SpreadsheetDocument document)
+        private static void CreateParts(SpreadsheetDocument document)
         {
             ExtendedFilePropertiesPart extendedFilePropertiesPart1 = document.AddNewPart<ExtendedFilePropertiesPart>("rId3");
             GenerateExtendedFilePropertiesPart1Content(extendedFilePropertiesPart1);
@@ -292,7 +293,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of extendedFilePropertiesPart1.
-        private void GenerateExtendedFilePropertiesPart1Content(ExtendedFilePropertiesPart extendedFilePropertiesPart1)
+        private static void GenerateExtendedFilePropertiesPart1Content(ExtendedFilePropertiesPart extendedFilePropertiesPart1)
         {
             Ap.Properties properties1 = new Ap.Properties();
             properties1.AddNamespaceDeclaration("vt", "http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes");
@@ -386,7 +387,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of workbookPart1.
-        private void GenerateWorkbookPart1Content(WorkbookPart workbookPart1)
+        private static void GenerateWorkbookPart1Content(WorkbookPart workbookPart1)
         {
             Workbook workbook1 = new Workbook(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x15" }  };
             workbook1.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
@@ -533,7 +534,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of worksheetPart1.
-        private void GenerateWorksheetPart1Content(WorksheetPart worksheetPart1)
+        private static void GenerateWorksheetPart1Content(WorksheetPart worksheetPart1)
         {
             Worksheet worksheet1 = new Worksheet(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x14ac" }  };
             worksheet1.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
@@ -688,7 +689,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of timeLinePart1.
-        private void GenerateTimeLinePart1Content(TimeLinePart timeLinePart1)
+        private static void GenerateTimeLinePart1Content(TimeLinePart timeLinePart1)
         {
             X15.Timelines timelines1 = new X15.Timelines(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x" }  };
             timelines1.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
@@ -703,7 +704,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of drawingsPart1.
-        private void GenerateDrawingsPart1Content(DrawingsPart drawingsPart1)
+        private static void GenerateDrawingsPart1Content(DrawingsPart drawingsPart1)
         {
             Xdr.WorksheetDrawing worksheetDrawing1 = new Xdr.WorksheetDrawing();
             worksheetDrawing1.AddNamespaceDeclaration("xdr", "http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing");
@@ -1176,7 +1177,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of chartPart1.
-        private void GenerateChartPart1Content(ChartPart chartPart1)
+        private static void GenerateChartPart1Content(ChartPart chartPart1)
         {
             C.ChartSpace chartSpace1 = new C.ChartSpace();
             chartSpace1.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
@@ -1489,7 +1490,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of chartPart2.
-        private void GenerateChartPart2Content(ChartPart chartPart2)
+        private static void GenerateChartPart2Content(ChartPart chartPart2)
         {
             C.ChartSpace chartSpace2 = new C.ChartSpace();
             chartSpace2.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
@@ -2446,7 +2447,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of pivotTablePart1.
-        private void GeneratePivotTablePart1Content(PivotTablePart pivotTablePart1)
+        private static void GeneratePivotTablePart1Content(PivotTablePart pivotTablePart1)
         {
             PivotTableDefinition pivotTableDefinition1 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = (UInt32Value)1U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "Values", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = (UInt32Value)0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = (UInt32Value)15U };
             Location location1 = new Location(){ Reference = "A1:B5", FirstHeaderRow = (UInt32Value)1U, FirstDataRow = (UInt32Value)1U, FirstDataColumn = (UInt32Value)1U };
@@ -2834,7 +2835,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of pivotTableCacheDefinitionPart1.
-        private void GeneratePivotTableCacheDefinitionPart1Content(PivotTableCacheDefinitionPart pivotTableCacheDefinitionPart1)
+        private static void GeneratePivotTableCacheDefinitionPart1Content(PivotTableCacheDefinitionPart pivotTableCacheDefinitionPart1)
         {
             PivotCacheDefinition pivotCacheDefinition1 = new PivotCacheDefinition(){ Id = "rId1", RefreshedBy = "Masaki Tamura (Pasona Tech)", RefreshedDate = 40946.731165509256D, CreatedVersion = 4, RefreshedVersion = 5, MinRefreshableVersion = 3, RecordCount = (UInt32Value)4U };
             pivotCacheDefinition1.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
@@ -3005,7 +3006,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of pivotTableCacheRecordsPart1.
-        private void GeneratePivotTableCacheRecordsPart1Content(PivotTableCacheRecordsPart pivotTableCacheRecordsPart1)
+        private static void GeneratePivotTableCacheRecordsPart1Content(PivotTableCacheRecordsPart pivotTableCacheRecordsPart1)
         {
             PivotCacheRecords pivotCacheRecords1 = new PivotCacheRecords(){ Count = (UInt32Value)4U };
             pivotCacheRecords1.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
@@ -3079,7 +3080,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of timeLineCachePart1.
-        private void GenerateTimeLineCachePart1Content(TimeLineCachePart timeLineCachePart1)
+        private static void GenerateTimeLineCachePart1Content(TimeLineCachePart timeLineCachePart1)
         {
             X15.TimelineCacheDefinition timelineCacheDefinition1 = new X15.TimelineCacheDefinition(){ Name = "NativeTimeline_DeliveryDate3", SourceName = "DeliveryDate" };
             timelineCacheDefinition1.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
@@ -3101,7 +3102,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of worksheetPart2.
-        private void GenerateWorksheetPart2Content(WorksheetPart worksheetPart2)
+        private static void GenerateWorksheetPart2Content(WorksheetPart worksheetPart2)
         {
             Worksheet worksheet2 = new Worksheet(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x14ac" }  };
             worksheet2.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
@@ -3244,7 +3245,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of timeLinePart2.
-        private void GenerateTimeLinePart2Content(TimeLinePart timeLinePart2)
+        private static void GenerateTimeLinePart2Content(TimeLinePart timeLinePart2)
         {
             X15.Timelines timelines2 = new X15.Timelines(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x" }  };
             timelines2.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
@@ -3259,7 +3260,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of drawingsPart2.
-        private void GenerateDrawingsPart2Content(DrawingsPart drawingsPart2)
+        private static void GenerateDrawingsPart2Content(DrawingsPart drawingsPart2)
         {
             Xdr.WorksheetDrawing worksheetDrawing2 = new Xdr.WorksheetDrawing();
             worksheetDrawing2.AddNamespaceDeclaration("xdr", "http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing");
@@ -3724,7 +3725,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of chartPart3.
-        private void GenerateChartPart3Content(ChartPart chartPart3)
+        private static void GenerateChartPart3Content(ChartPart chartPart3)
         {
             C.ChartSpace chartSpace3 = new C.ChartSpace();
             chartSpace3.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
@@ -3989,7 +3990,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of chartPart4.
-        private void GenerateChartPart4Content(ChartPart chartPart4)
+        private static void GenerateChartPart4Content(ChartPart chartPart4)
         {
             C.ChartSpace chartSpace4 = new C.ChartSpace();
             chartSpace4.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
@@ -4330,7 +4331,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of pivotTablePart2.
-        private void GeneratePivotTablePart2Content(PivotTablePart pivotTablePart2)
+        private static void GeneratePivotTablePart2Content(PivotTablePart pivotTablePart2)
         {
             PivotTableDefinition pivotTableDefinition3 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = (UInt32Value)0U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "値", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = (UInt32Value)0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = (UInt32Value)2U };
             Location location2 = new Location(){ Reference = "A1:B5", FirstHeaderRow = (UInt32Value)1U, FirstDataRow = (UInt32Value)1U, FirstDataColumn = (UInt32Value)1U };
@@ -4504,7 +4505,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of pivotTableCacheDefinitionPart2.
-        private void GeneratePivotTableCacheDefinitionPart2Content(PivotTableCacheDefinitionPart pivotTableCacheDefinitionPart2)
+        private static void GeneratePivotTableCacheDefinitionPart2Content(PivotTableCacheDefinitionPart pivotTableCacheDefinitionPart2)
         {
             PivotCacheDefinition pivotCacheDefinition3 = new PivotCacheDefinition(){ Id = "rId1", RefreshedBy = "Masaki Tamura (Pasona Tech)", RefreshedDate = 40946.730963773145D, CreatedVersion = 4, RefreshedVersion = 5, MinRefreshableVersion = 3, RecordCount = (UInt32Value)5U };
             pivotCacheDefinition3.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
@@ -4605,7 +4606,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of pivotTableCacheRecordsPart2.
-        private void GeneratePivotTableCacheRecordsPart2Content(PivotTableCacheRecordsPart pivotTableCacheRecordsPart2)
+        private static void GeneratePivotTableCacheRecordsPart2Content(PivotTableCacheRecordsPart pivotTableCacheRecordsPart2)
         {
             PivotCacheRecords pivotCacheRecords2 = new PivotCacheRecords(){ Count = (UInt32Value)5U };
             pivotCacheRecords2.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
@@ -4695,7 +4696,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of timeLineCachePart2.
-        private void GenerateTimeLineCachePart2Content(TimeLineCachePart timeLineCachePart2)
+        private static void GenerateTimeLineCachePart2Content(TimeLineCachePart timeLineCachePart2)
         {
             X15.TimelineCacheDefinition timelineCacheDefinition2 = new X15.TimelineCacheDefinition(){ Name = "NativeTimeline_DeliveryDate6", SourceName = "DeliveryDate" };
             timelineCacheDefinition2.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
@@ -4717,7 +4718,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of worksheetPart3.
-        private void GenerateWorksheetPart3Content(WorksheetPart worksheetPart3)
+        private static void GenerateWorksheetPart3Content(WorksheetPart worksheetPart3)
         {
             Worksheet worksheet3 = new Worksheet(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x14ac" }  };
             worksheet3.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
@@ -4872,7 +4873,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of timeLinePart3.
-        private void GenerateTimeLinePart3Content(TimeLinePart timeLinePart3)
+        private static void GenerateTimeLinePart3Content(TimeLinePart timeLinePart3)
         {
             X15.Timelines timelines3 = new X15.Timelines(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x" }  };
             timelines3.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
@@ -4887,7 +4888,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of drawingsPart3.
-        private void GenerateDrawingsPart3Content(DrawingsPart drawingsPart3)
+        private static void GenerateDrawingsPart3Content(DrawingsPart drawingsPart3)
         {
             Xdr.WorksheetDrawing worksheetDrawing3 = new Xdr.WorksheetDrawing();
             worksheetDrawing3.AddNamespaceDeclaration("xdr", "http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing");
@@ -5362,7 +5363,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of chartPart5.
-        private void GenerateChartPart5Content(ChartPart chartPart5)
+        private static void GenerateChartPart5Content(ChartPart chartPart5)
         {
             C.ChartSpace chartSpace5 = new C.ChartSpace();
             chartSpace5.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
@@ -5663,7 +5664,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of chartPart6.
-        private void GenerateChartPart6Content(ChartPart chartPart6)
+        private static void GenerateChartPart6Content(ChartPart chartPart6)
         {
             C.ChartSpace chartSpace6 = new C.ChartSpace();
             chartSpace6.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
@@ -6586,7 +6587,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of pivotTablePart3.
-        private void GeneratePivotTablePart3Content(PivotTablePart pivotTablePart3)
+        private static void GeneratePivotTablePart3Content(PivotTablePart pivotTablePart3)
         {
             PivotTableDefinition pivotTableDefinition5 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = (UInt32Value)1U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "Values", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = (UInt32Value)0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = (UInt32Value)13U };
             Location location3 = new Location(){ Reference = "A1:B5", FirstHeaderRow = (UInt32Value)1U, FirstDataRow = (UInt32Value)1U, FirstDataColumn = (UInt32Value)1U };
@@ -6938,7 +6939,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of timeLineCachePart3.
-        private void GenerateTimeLineCachePart3Content(TimeLineCachePart timeLineCachePart3)
+        private static void GenerateTimeLineCachePart3Content(TimeLineCachePart timeLineCachePart3)
         {
             X15.TimelineCacheDefinition timelineCacheDefinition3 = new X15.TimelineCacheDefinition(){ Name = "NativeTimeline_DeliveryDate2", SourceName = "DeliveryDate" };
             timelineCacheDefinition3.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
@@ -6960,7 +6961,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of sharedStringTablePart1.
-        private void GenerateSharedStringTablePart1Content(SharedStringTablePart sharedStringTablePart1)
+        private static void GenerateSharedStringTablePart1Content(SharedStringTablePart sharedStringTablePart1)
         {
             SharedStringTable sharedStringTable1 = new SharedStringTable(){ Count = (UInt32Value)130U, UniqueCount = (UInt32Value)32U };
 
@@ -7247,7 +7248,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of worksheetPart4.
-        private void GenerateWorksheetPart4Content(WorksheetPart worksheetPart4)
+        private static void GenerateWorksheetPart4Content(WorksheetPart worksheetPart4)
         {
             Worksheet worksheet4 = new Worksheet(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x14ac" }  };
             worksheet4.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
@@ -7836,7 +7837,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of tableDefinitionPart1.
-        private void GenerateTableDefinitionPart1Content(TableDefinitionPart tableDefinitionPart1)
+        private static void GenerateTableDefinitionPart1Content(TableDefinitionPart tableDefinitionPart1)
         {
             Table table1 = new Table(){ Id = (UInt32Value)6U, Name = "SalesTable2", DisplayName = "SalesTable2", Reference = "K1:K11", TotalsRowShown = false, HeaderRowFormatId = (UInt32Value)0U };
             AutoFilter autoFilter1 = new AutoFilter(){ Reference = "K1:K11" };
@@ -7855,7 +7856,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of tableDefinitionPart2.
-        private void GenerateTableDefinitionPart2Content(TableDefinitionPart tableDefinitionPart2)
+        private static void GenerateTableDefinitionPart2Content(TableDefinitionPart tableDefinitionPart2)
         {
             Table table2 = new Table(){ Id = (UInt32Value)5U, Name = "ProductTable2", DisplayName = "ProductTable2", Reference = "H1:I11", TotalsRowShown = false, HeaderRowFormatId = (UInt32Value)2U };
             AutoFilter autoFilter2 = new AutoFilter(){ Reference = "H1:I11" };
@@ -7876,7 +7877,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of tableDefinitionPart3.
-        private void GenerateTableDefinitionPart3Content(TableDefinitionPart tableDefinitionPart3)
+        private static void GenerateTableDefinitionPart3Content(TableDefinitionPart tableDefinitionPart3)
         {
             Table table3 = new Table(){ Id = (UInt32Value)4U, Name = "DataTable2", DisplayName = "DataTable2", Reference = "A1:F6", TotalsRowShown = false };
             AutoFilter autoFilter3 = new AutoFilter(){ Reference = "A1:F6" };
@@ -7911,7 +7912,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of timeLineCachePart4.
-        private void GenerateTimeLineCachePart4Content(TimeLineCachePart timeLineCachePart4)
+        private static void GenerateTimeLineCachePart4Content(TimeLineCachePart timeLineCachePart4)
         {
             X15.TimelineCacheDefinition timelineCacheDefinition4 = new X15.TimelineCacheDefinition(){ Name = "NativeTimeline_DeliveryDate1", SourceName = "DeliveryDate" };
             timelineCacheDefinition4.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
@@ -7933,7 +7934,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of timeLineCachePart5.
-        private void GenerateTimeLineCachePart5Content(TimeLineCachePart timeLineCachePart5)
+        private static void GenerateTimeLineCachePart5Content(TimeLineCachePart timeLineCachePart5)
         {
             X15.TimelineCacheDefinition timelineCacheDefinition5 = new X15.TimelineCacheDefinition(){ Name = "NativeTimeline_DeliveryDate5", SourceName = "DeliveryDate" };
             timelineCacheDefinition5.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
@@ -7957,7 +7958,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of worksheetPart5.
-        private void GenerateWorksheetPart5Content(WorksheetPart worksheetPart5)
+        private static void GenerateWorksheetPart5Content(WorksheetPart worksheetPart5)
         {
             Worksheet worksheet5 = new Worksheet(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x14ac" }  };
             worksheet5.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
@@ -8504,7 +8505,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of tableDefinitionPart4.
-        private void GenerateTableDefinitionPart4Content(TableDefinitionPart tableDefinitionPart4)
+        private static void GenerateTableDefinitionPart4Content(TableDefinitionPart tableDefinitionPart4)
         {
             Table table4 = new Table(){ Id = (UInt32Value)3U, Name = "SalesTable1", DisplayName = "SalesTable1", Reference = "K1:K11", TotalsRowShown = false, HeaderRowFormatId = (UInt32Value)9U };
             AutoFilter autoFilter4 = new AutoFilter(){ Reference = "K1:K11" };
@@ -8523,7 +8524,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of tableDefinitionPart5.
-        private void GenerateTableDefinitionPart5Content(TableDefinitionPart tableDefinitionPart5)
+        private static void GenerateTableDefinitionPart5Content(TableDefinitionPart tableDefinitionPart5)
         {
             Table table5 = new Table(){ Id = (UInt32Value)2U, Name = "ProductTable1", DisplayName = "ProductTable1", Reference = "H1:I11", TotalsRowShown = false, HeaderRowFormatId = (UInt32Value)11U };
             AutoFilter autoFilter5 = new AutoFilter(){ Reference = "H1:I11" };
@@ -8544,7 +8545,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of tableDefinitionPart6.
-        private void GenerateTableDefinitionPart6Content(TableDefinitionPart tableDefinitionPart6)
+        private static void GenerateTableDefinitionPart6Content(TableDefinitionPart tableDefinitionPart6)
         {
             Table table6 = new Table(){ Id = (UInt32Value)1U, Name = "DataTable1", DisplayName = "DataTable1", Reference = "A1:F5", TotalsRowShown = false };
             AutoFilter autoFilter6 = new AutoFilter(){ Reference = "A1:F5" };
@@ -8579,7 +8580,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of worksheetPart6.
-        private void GenerateWorksheetPart6Content(WorksheetPart worksheetPart6)
+        private static void GenerateWorksheetPart6Content(WorksheetPart worksheetPart6)
         {
             Worksheet worksheet6 = new Worksheet(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x14ac" }  };
             worksheet6.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
@@ -8734,7 +8735,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of timeLinePart4.
-        private void GenerateTimeLinePart4Content(TimeLinePart timeLinePart4)
+        private static void GenerateTimeLinePart4Content(TimeLinePart timeLinePart4)
         {
             X15.Timelines timelines4 = new X15.Timelines(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x" }  };
             timelines4.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
@@ -8749,7 +8750,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of drawingsPart4.
-        private void GenerateDrawingsPart4Content(DrawingsPart drawingsPart4)
+        private static void GenerateDrawingsPart4Content(DrawingsPart drawingsPart4)
         {
             Xdr.WorksheetDrawing worksheetDrawing4 = new Xdr.WorksheetDrawing();
             worksheetDrawing4.AddNamespaceDeclaration("xdr", "http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing");
@@ -9224,7 +9225,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of chartPart7.
-        private void GenerateChartPart7Content(ChartPart chartPart7)
+        private static void GenerateChartPart7Content(ChartPart chartPart7)
         {
             C.ChartSpace chartSpace7 = new C.ChartSpace();
             chartSpace7.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
@@ -9513,7 +9514,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of chartPart8.
-        private void GenerateChartPart8Content(ChartPart chartPart8)
+        private static void GenerateChartPart8Content(ChartPart chartPart8)
         {
             C.ChartSpace chartSpace8 = new C.ChartSpace();
             chartSpace8.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
@@ -10402,7 +10403,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of pivotTablePart4.
-        private void GeneratePivotTablePart4Content(PivotTablePart pivotTablePart4)
+        private static void GeneratePivotTablePart4Content(PivotTablePart pivotTablePart4)
         {
             PivotTableDefinition pivotTableDefinition7 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = (UInt32Value)1U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "Values", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = (UInt32Value)0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = (UInt32Value)11U };
             Location location4 = new Location(){ Reference = "A1:B5", FirstHeaderRow = (UInt32Value)1U, FirstDataRow = (UInt32Value)1U, FirstDataColumn = (UInt32Value)1U };
@@ -10718,7 +10719,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of worksheetPart7.
-        private void GenerateWorksheetPart7Content(WorksheetPart worksheetPart7)
+        private static void GenerateWorksheetPart7Content(WorksheetPart worksheetPart7)
         {
             Worksheet worksheet7 = new Worksheet(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x14ac" }  };
             worksheet7.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
@@ -10873,7 +10874,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of timeLinePart5.
-        private void GenerateTimeLinePart5Content(TimeLinePart timeLinePart5)
+        private static void GenerateTimeLinePart5Content(TimeLinePart timeLinePart5)
         {
             X15.Timelines timelines5 = new X15.Timelines(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x" }  };
             timelines5.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
@@ -10888,7 +10889,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of drawingsPart5.
-        private void GenerateDrawingsPart5Content(DrawingsPart drawingsPart5)
+        private static void GenerateDrawingsPart5Content(DrawingsPart drawingsPart5)
         {
             Xdr.WorksheetDrawing worksheetDrawing5 = new Xdr.WorksheetDrawing();
             worksheetDrawing5.AddNamespaceDeclaration("xdr", "http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing");
@@ -11363,7 +11364,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of chartPart9.
-        private void GenerateChartPart9Content(ChartPart chartPart9)
+        private static void GenerateChartPart9Content(ChartPart chartPart9)
         {
             C.ChartSpace chartSpace9 = new C.ChartSpace();
             chartSpace9.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
@@ -11712,7 +11713,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of chartPart10.
-        private void GenerateChartPart10Content(ChartPart chartPart10)
+        private static void GenerateChartPart10Content(ChartPart chartPart10)
         {
             C.ChartSpace chartSpace10 = new C.ChartSpace();
             chartSpace10.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
@@ -12771,7 +12772,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of pivotTablePart5.
-        private void GeneratePivotTablePart5Content(PivotTablePart pivotTablePart5)
+        private static void GeneratePivotTablePart5Content(PivotTablePart pivotTablePart5)
         {
             PivotTableDefinition pivotTableDefinition9 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = (UInt32Value)1U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "Values", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = (UInt32Value)0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = (UInt32Value)21U };
             Location location5 = new Location(){ Reference = "A1:B5", FirstHeaderRow = (UInt32Value)1U, FirstDataRow = (UInt32Value)1U, FirstDataColumn = (UInt32Value)1U };
@@ -13267,7 +13268,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of workbookStylesPart1.
-        private void GenerateWorkbookStylesPart1Content(WorkbookStylesPart workbookStylesPart1)
+        private static void GenerateWorkbookStylesPart1Content(WorkbookStylesPart workbookStylesPart1)
         {
             Stylesheet stylesheet1 = new Stylesheet(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x14ac" }  };
             stylesheet1.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
@@ -13510,7 +13511,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of worksheetPart8.
-        private void GenerateWorksheetPart8Content(WorksheetPart worksheetPart8)
+        private static void GenerateWorksheetPart8Content(WorksheetPart worksheetPart8)
         {
             Worksheet worksheet8 = new Worksheet(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x14ac" }  };
             worksheet8.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
@@ -13665,7 +13666,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of timeLinePart6.
-        private void GenerateTimeLinePart6Content(TimeLinePart timeLinePart6)
+        private static void GenerateTimeLinePart6Content(TimeLinePart timeLinePart6)
         {
             X15.Timelines timelines6 = new X15.Timelines(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x" }  };
             timelines6.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
@@ -13680,7 +13681,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of drawingsPart6.
-        private void GenerateDrawingsPart6Content(DrawingsPart drawingsPart6)
+        private static void GenerateDrawingsPart6Content(DrawingsPart drawingsPart6)
         {
             Xdr.WorksheetDrawing worksheetDrawing6 = new Xdr.WorksheetDrawing();
             worksheetDrawing6.AddNamespaceDeclaration("xdr", "http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing");
@@ -14155,7 +14156,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of chartPart11.
-        private void GenerateChartPart11Content(ChartPart chartPart11)
+        private static void GenerateChartPart11Content(ChartPart chartPart11)
         {
             C.ChartSpace chartSpace11 = new C.ChartSpace();
             chartSpace11.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
@@ -14432,7 +14433,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of chartPart12.
-        private void GenerateChartPart12Content(ChartPart chartPart12)
+        private static void GenerateChartPart12Content(ChartPart chartPart12)
         {
             C.ChartSpace chartSpace12 = new C.ChartSpace();
             chartSpace12.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
@@ -15287,7 +15288,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of pivotTablePart6.
-        private void GeneratePivotTablePart6Content(PivotTablePart pivotTablePart6)
+        private static void GeneratePivotTablePart6Content(PivotTablePart pivotTablePart6)
         {
             PivotTableDefinition pivotTableDefinition11 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = (UInt32Value)1U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "Values", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = (UInt32Value)0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = (UInt32Value)9U };
             Location location6 = new Location(){ Reference = "A1:B5", FirstHeaderRow = (UInt32Value)1U, FirstDataRow = (UInt32Value)1U, FirstDataColumn = (UInt32Value)1U };
@@ -15567,7 +15568,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of timeLineCachePart6.
-        private void GenerateTimeLineCachePart6Content(TimeLineCachePart timeLineCachePart6)
+        private static void GenerateTimeLineCachePart6Content(TimeLineCachePart timeLineCachePart6)
         {
             X15.TimelineCacheDefinition timelineCacheDefinition6 = new X15.TimelineCacheDefinition(){ Name = "NativeTimeline_DeliveryDate", SourceName = "DeliveryDate" };
             timelineCacheDefinition6.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
@@ -15589,7 +15590,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of themePart1.
-        private void GenerateThemePart1Content(ThemePart themePart1)
+        private static void GenerateThemePart1Content(ThemePart themePart1)
         {
             A.Theme theme1 = new A.Theme(){ Name = "Office Theme" };
             theme1.AddNamespaceDeclaration("a", "http://schemas.openxmlformats.org/drawingml/2006/main");
@@ -16095,7 +16096,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of worksheetPart9.
-        private void GenerateWorksheetPart9Content(WorksheetPart worksheetPart9)
+        private static void GenerateWorksheetPart9Content(WorksheetPart worksheetPart9)
         {
             Worksheet worksheet9 = new Worksheet(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x14ac" }  };
             worksheet9.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
@@ -16250,7 +16251,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of timeLinePart7.
-        private void GenerateTimeLinePart7Content(TimeLinePart timeLinePart7)
+        private static void GenerateTimeLinePart7Content(TimeLinePart timeLinePart7)
         {
             X15.Timelines timelines7 = new X15.Timelines(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x" }  };
             timelines7.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
@@ -16265,7 +16266,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of drawingsPart7.
-        private void GenerateDrawingsPart7Content(DrawingsPart drawingsPart7)
+        private static void GenerateDrawingsPart7Content(DrawingsPart drawingsPart7)
         {
             Xdr.WorksheetDrawing worksheetDrawing7 = new Xdr.WorksheetDrawing();
             worksheetDrawing7.AddNamespaceDeclaration("xdr", "http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing");
@@ -16740,7 +16741,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of chartPart13.
-        private void GenerateChartPart13Content(ChartPart chartPart13)
+        private static void GenerateChartPart13Content(ChartPart chartPart13)
         {
             C.ChartSpace chartSpace13 = new C.ChartSpace();
             chartSpace13.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
@@ -17077,7 +17078,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of chartPart14.
-        private void GenerateChartPart14Content(ChartPart chartPart14)
+        private static void GenerateChartPart14Content(ChartPart chartPart14)
         {
             C.ChartSpace chartSpace14 = new C.ChartSpace();
             chartSpace14.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
@@ -18102,7 +18103,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of pivotTablePart7.
-        private void GeneratePivotTablePart7Content(PivotTablePart pivotTablePart7)
+        private static void GeneratePivotTablePart7Content(PivotTablePart pivotTablePart7)
         {
             PivotTableDefinition pivotTableDefinition13 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = (UInt32Value)1U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "Values", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = (UInt32Value)0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = (UInt32Value)19U };
             Location location7 = new Location(){ Reference = "A1:B5", FirstHeaderRow = (UInt32Value)1U, FirstDataRow = (UInt32Value)1U, FirstDataColumn = (UInt32Value)1U };
@@ -18562,7 +18563,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of timeLineCachePart7.
-        private void GenerateTimeLineCachePart7Content(TimeLineCachePart timeLineCachePart7)
+        private static void GenerateTimeLineCachePart7Content(TimeLineCachePart timeLineCachePart7)
         {
             X15.TimelineCacheDefinition timelineCacheDefinition7 = new X15.TimelineCacheDefinition(){ Name = "NativeTimeline_DeliveryDate4", SourceName = "DeliveryDate" };
             timelineCacheDefinition7.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
@@ -18584,7 +18585,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of worksheetPart10.
-        private void GenerateWorksheetPart10Content(WorksheetPart worksheetPart10)
+        private static void GenerateWorksheetPart10Content(WorksheetPart worksheetPart10)
         {
             Worksheet worksheet10 = new Worksheet(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x14ac" }  };
             worksheet10.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
@@ -18739,7 +18740,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of timeLinePart8.
-        private void GenerateTimeLinePart8Content(TimeLinePart timeLinePart8)
+        private static void GenerateTimeLinePart8Content(TimeLinePart timeLinePart8)
         {
             X15.Timelines timelines8 = new X15.Timelines(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x" }  };
             timelines8.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
@@ -18758,7 +18759,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of drawingsPart8.
-        private void GenerateDrawingsPart8Content(DrawingsPart drawingsPart8)
+        private static void GenerateDrawingsPart8Content(DrawingsPart drawingsPart8)
         {
             Xdr.WorksheetDrawing worksheetDrawing8 = new Xdr.WorksheetDrawing();
             worksheetDrawing8.AddNamespaceDeclaration("xdr", "http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing");
@@ -19539,7 +19540,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of chartPart15.
-        private void GenerateChartPart15Content(ChartPart chartPart15)
+        private static void GenerateChartPart15Content(ChartPart chartPart15)
         {
             C.ChartSpace chartSpace15 = new C.ChartSpace();
             chartSpace15.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
@@ -19804,7 +19805,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of chartPart16.
-        private void GenerateChartPart16Content(ChartPart chartPart16)
+        private static void GenerateChartPart16Content(ChartPart chartPart16)
         {
             C.ChartSpace chartSpace16 = new C.ChartSpace();
             chartSpace16.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
@@ -20608,7 +20609,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of pivotTablePart8.
-        private void GeneratePivotTablePart8Content(PivotTablePart pivotTablePart8)
+        private static void GeneratePivotTablePart8Content(PivotTablePart pivotTablePart8)
         {
             PivotTableDefinition pivotTableDefinition15 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = (UInt32Value)1U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "Values", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = (UInt32Value)0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = (UInt32Value)7U };
             Location location8 = new Location(){ Reference = "A1:B5", FirstHeaderRow = (UInt32Value)1U, FirstDataRow = (UInt32Value)1U, FirstDataColumn = (UInt32Value)1U };
@@ -20852,7 +20853,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of worksheetPart11.
-        private void GenerateWorksheetPart11Content(WorksheetPart worksheetPart11)
+        private static void GenerateWorksheetPart11Content(WorksheetPart worksheetPart11)
         {
             Worksheet worksheet11 = new Worksheet(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x14ac" }  };
             worksheet11.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
@@ -21007,7 +21008,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of timeLinePart9.
-        private void GenerateTimeLinePart9Content(TimeLinePart timeLinePart9)
+        private static void GenerateTimeLinePart9Content(TimeLinePart timeLinePart9)
         {
             X15.Timelines timelines9 = new X15.Timelines(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x" }  };
             timelines9.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
@@ -21022,7 +21023,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of drawingsPart9.
-        private void GenerateDrawingsPart9Content(DrawingsPart drawingsPart9)
+        private static void GenerateDrawingsPart9Content(DrawingsPart drawingsPart9)
         {
             Xdr.WorksheetDrawing worksheetDrawing9 = new Xdr.WorksheetDrawing();
             worksheetDrawing9.AddNamespaceDeclaration("xdr", "http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing");
@@ -21495,7 +21496,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of chartPart17.
-        private void GenerateChartPart17Content(ChartPart chartPart17)
+        private static void GenerateChartPart17Content(ChartPart chartPart17)
         {
             C.ChartSpace chartSpace17 = new C.ChartSpace();
             chartSpace17.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
@@ -21820,7 +21821,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of chartPart18.
-        private void GenerateChartPart18Content(ChartPart chartPart18)
+        private static void GenerateChartPart18Content(ChartPart chartPart18)
         {
             C.ChartSpace chartSpace18 = new C.ChartSpace();
             chartSpace18.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
@@ -22811,7 +22812,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of pivotTablePart9.
-        private void GeneratePivotTablePart9Content(PivotTablePart pivotTablePart9)
+        private static void GeneratePivotTablePart9Content(PivotTablePart pivotTablePart9)
         {
             PivotTableDefinition pivotTableDefinition17 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = (UInt32Value)1U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "Values", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = (UInt32Value)0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = (UInt32Value)17U };
             Location location9 = new Location(){ Reference = "A1:B5", FirstHeaderRow = (UInt32Value)1U, FirstDataRow = (UInt32Value)1U, FirstDataColumn = (UInt32Value)1U };
@@ -23270,7 +23271,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of timeLineCachePart8.
-        private void GenerateTimeLineCachePart8Content(TimeLineCachePart timeLineCachePart8)
+        private static void GenerateTimeLineCachePart8Content(TimeLineCachePart timeLineCachePart8)
         {
             X15.TimelineCacheDefinition timelineCacheDefinition8 = new X15.TimelineCacheDefinition(){ Name = "NativeTimeline_Date", SourceName = "Date" };
             timelineCacheDefinition8.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
@@ -23292,7 +23293,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         }
 
         // Generates content of timeLineCachePart9.
-        private void GenerateTimeLineCachePart9Content(TimeLineCachePart timeLineCachePart9)
+        private static void GenerateTimeLineCachePart9Content(TimeLineCachePart timeLineCachePart9)
         {
             X15.TimelineCacheDefinition timelineCacheDefinition9 = new X15.TimelineCacheDefinition(){ Name = "NativeTimeline_DeliveryDate7", SourceName = "DeliveryDate" };
             timelineCacheDefinition9.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
@@ -23313,7 +23314,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             timeLineCachePart9.TimelineCacheDefinition = timelineCacheDefinition9;
         }
 
-        private void SetPackageProperties(OpenXmlPackage document)
+        private static void SetPackageProperties(OpenXmlPackage document)
         {
             document.PackageProperties.Creator = "Masaki Tamura (Pasona Tech)";
             document.PackageProperties.Created = System.Xml.XmlConvert.ToDateTime("2011-12-19T07:19:18Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind);
