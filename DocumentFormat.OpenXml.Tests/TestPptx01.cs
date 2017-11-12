@@ -433,7 +433,7 @@ namespace DocumentFormat.OpenXml.Tests
                 validator = new OpenXmlValidator(FileFormatVersions.Office2013);
                 cnt += validator.Validate(doc).Count();
 
-                Assert.True(expectedErrorCount, cnt);
+                Assert.Equal(expectedErrorCount, cnt);
             }
         }
     }
