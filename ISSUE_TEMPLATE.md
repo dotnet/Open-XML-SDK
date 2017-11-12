@@ -1,6 +1,10 @@
 # Before submitting an issue, please fill this out and remove this line!
 
-**Description:**
+**Description**
+
+Please provide a simple description of the issue encountered.
+
+**Information**
 
 - .NET Target: (ie .NET Framework, .NET Core, UWP, Xamarin, etc)
 - DocumentFormat.OpenXml Version: (ie 2.7.2)
