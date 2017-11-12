@@ -9,6 +9,7 @@
 
 ```csharp
 // Please add a self-contained minimum viable repro of the issue. If you require external resources, please provide a gist or GitHub repro
+// Ideally, this will be an Xunit style test, but a console application would work too.
 ``` 
 
 **Observed**
