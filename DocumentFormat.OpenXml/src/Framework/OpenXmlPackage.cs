@@ -1538,8 +1538,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 lock (_saveAndCloneLock)
                 {
                     SavePartContents();
-                    // TODO: Revisit.
-                    // Package.Flush();
+                    Package.Flush();
                 }
             }
         }
