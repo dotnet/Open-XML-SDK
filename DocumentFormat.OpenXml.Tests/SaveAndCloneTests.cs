@@ -269,6 +269,33 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Fact]
+        public void CanSaveAutosaveFalse()
+        {
+            using (var stream = new MemoryStream())
+            {
+                using (var package = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
+                {
+                    package.AddMainDocumentPart();
+                }
+
+                using (var package = WordprocessingDocument.Open(stream, true, new OpenSettings { AutoSave = false }))
+                {
+                    Assert.Null(package.MainDocumentPart.Document);
+                    package.MainDocumentPart.Document = new Document();
+                    Assert.NotNull(package.MainDocumentPart.Document);
+
+                    package.Save();
+                }
+
+                using (var package = WordprocessingDocument.Open(stream, false, new OpenSettings { AutoSave = false }))
+                {
+                    Assert.NotNull(package.MainDocumentPart);
+                    Assert.NotNull(package.MainDocumentPart.Document);
+                }
+            }
+        }
+
+        [Fact]
         public void CanSave()
         {
             using (var stream = GetStream(TestFiles.Document))

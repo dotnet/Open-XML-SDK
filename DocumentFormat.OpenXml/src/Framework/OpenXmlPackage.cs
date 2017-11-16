@@ -831,7 +831,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 if (disposing)
                 {
                     // Try to save contents of every part in the package
-                    SavePartContents();
+                    SavePartContents(AutoSave);
                     DeleteUnusedDataPartOnClose();
 
                     // TODO: Close resources
@@ -909,7 +909,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        private void SavePartContents()
+        private void SavePartContents(bool save)
         {
             OpenXmlPackagePartIterator iterator;
             bool isAnyPartChanged;
@@ -919,10 +919,10 @@ namespace DocumentFormat.OpenXml.Packaging
                 return; // do nothing if the package is open in read-only mode.
             }
 
-            // When this.StrictTranslation is true, we ignore AutoSave to do the translation if isAnyPartChanged is true. That's the way to keep consistency.
-            if (!this.AutoSave && !this.StrictTranslation)
+            // When this.StrictTranslation is true, we ignore the save argument to do the translation if isAnyPartChanged is true. That's the way to keep consistency.
+            if (!save && !this.StrictTranslation)
             {
-                return; // do nothing if AutoSave is false.
+                return; // do nothing if saving is false.
             }
 
             // Traversal the whole package and save changed contents.
@@ -1537,7 +1537,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 lock (_saveAndCloneLock)
                 {
-                    SavePartContents();
+                    SavePartContents(true);
                     Package.Flush();
                 }
             }
