@@ -31,6 +31,19 @@ The Latest Builds
 ## Where to get the NuGet packages of the latest builds?
 The NuGet package for the latest builds of the Open XML SDK is available as a custom feed on MyGet. You can trust this package source, since the custom feed is locked and only this project feeds into the source.
 
+## Support platforms
+This library supports many platforms. There are builds for .NET 3.5, .NET 4.0, .NET 4.6, and .NET Standard 1.3. The following platforms are currently supported:
+
+    Platform    | Minimum Version 
+----------------|---------
+.NET Framework  | 3.5
+.NET Core       | 1.0
+UWP             | 10.0
+Mono            | 3.5
+Xamarin.iOS     | 10.0
+Xamarin.Mac     | 3.0
+Xamarin.Android | 7.0
+
 ## WindowsBase or System.IO.Packaging
 There is a known issue in WindowsBase that causes crashes when handling large data sources. This is fixed in later versions of the library, based on the platform availability of the `System.IO.Packaging` package. When possible, we use this package instead of WindowsBase. This not only fixes the crash seen by some users, but is available cross platform. However, it is only available on .NET Standard 1.3+ and .NET Framework 4.6+. For this reason, the NuGet package has multiple targets to bring in this when possible. The targets (which are determined by NuGet at installation and build time) are:
 
@@ -88,6 +101,7 @@ Known Issues
 - On Mono platforms that use the System.IO.Package NuGet package (ie Xamarin), opening some documents will fail due to an [issue](https://github.com/dotnet/corefx/issues/24822) in System.IO.Packaging. For now, you must manually set the environment variable as described at the [Mono description](http://www.mono-project.com/docs/faq/known-issues/urikind-relativeorabsolute/)
 - On .NET Core, zip packages do not have a way to stream data. Thus, the working set can explode in certain situations. This is a [known issue](https://github.com/dotnet/corefx/issues/24457)
 - On .NET Framework, an IsolatedStorageException may be thrown under certain circumstances, generally when manipulating a large document in an environment with an AppDomain that does not have enough evidence.
+- Out of the box, the library will not compile on .NET Native. This [issue](https://github.com/OfficeDev/Open-XML-SDK/issues/181) is tracking this
 
 Once System.IO.Packaging on .NET Core has feature parity with WindowsBase (ie streaming support), we can investigate using the new .NET Core on .NET Framework
 
