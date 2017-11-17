@@ -41,6 +41,8 @@ There is a known issue in WindowsBase that causes crashes when handling large da
 | .NET 4.6      | NuGet                    | .NET 4.6      |
 | .NET Standard | NuGet                    | .NET Core 1.0 |
 
+Keep in mind, though, that the System.IO.Packaging on .NET 4.6+ is simply a facade over WindowsBase, and thus everything running on .NET 4.6 will use WindowsBase instead of the newer implementation.
+
 ## How to install the NuGet package?
 The package you want to install is DocumentFormat.OpenXml. 
 
@@ -70,7 +72,6 @@ The **Install-Package** command considers the package source either via configur
 	```
 
 **Note**:  If you have trouble installing the package, try restarting Visual Studio. Package sources could be cached, and changes you've made to any NuGet.config files may not be detected.
-	
 
 Having Problems?
 ================
@@ -82,14 +83,21 @@ If you have "how-to" questions please post to one of the following resources:
 - https://social.msdn.microsoft.com/Forums/office/en-US/home?forum=oxmlsdk
 - http://stackoverflow.com (tags: "openxml" or "openxml-sdk")
 
+Known Issues
+==========
+- On Mono platforms that use the System.IO.Package (ie Xamarin), opening some documents will fail due to an [issue](https://github.com/dotnet/corefx/issues/24822) in System.IO.Packaging. For now, you must manually set the environment variable as described at the [Mono description](http://www.mono-project.com/docs/faq/known-issues/urikind-relativeorabsolute/)
+- On .NET Core, zip packages do not have a way to stream data. Thus, the working set can explode in certain situations. This is a [known issue](https://github.com/dotnet/corefx/issues/24457)
+- On .NET Framework, an IsolatedStorageException may be thrown under certain circumstances, generally when manipulating a large document in an environment with an AppDomain that does not have enough evidence.
 
-News
-====
-We are also happy to announce the release of Open-Xml-PowerTools on GitHub.  Open-Xml-PowerTools provides example code and guidance for implementing a wide range of Open XML scenarios.  You can find PowerTools for Open XML, which previously lived at [PowerTools.CodePlex.com](http://powertools.codeplex.com) at [github.com/OfficeDev/Open-Xml-PowerTools](https://github.com/OfficeDev/Open-Xml-PowerTools).
+Once System.IO.Packaging on .NET Core has feature parity with WindowsBase (ie streaming support), we can investigate using the new .NET Core on .NET Framework
 
 Change Log
 ==========
 
+Version 2.7.3 : *In development*
+- Manual saving was fixed when autosave is false
+- Fixed issue on modern Mono platforms (Xamarin, etc) when creating a document
+ 
 Version 2.7.2 : June 6, 2017
 - Fixed issue where assembly version wasn't set in assembly
 - Added support for .NET 3.5 and .NET 4.0
@@ -145,3 +153,8 @@ The data for schema validation is contained in static binary files that are not 
 - `dotnet run`
 
 This will go through and update schema files in the form of `DocumentFormat.OpenXml/src/GeneratedCode/Office*Schema.cs`. This update only needs to be run when there is a change to the binary files; otherwise, they will return the same result. These updated files are only used in the .NET Sandard implementation, while the binary files will continue to be used in the .NET 4.5 builds.
+
+Related tools
+====
+
+- **Open XML Powertools**: This is available on [Github](https://github.com/OfficeDev/Open-Xml-PowerTools) and provides example code and guidance for implementing a wide range of Open XML scenarios.
