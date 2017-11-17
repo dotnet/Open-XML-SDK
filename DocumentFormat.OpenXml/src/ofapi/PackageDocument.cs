@@ -307,7 +307,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     DocumentSettingsPart documentSettingsPart = mainDocumentPart.DocumentSettingsPart;
                     ExternalRelationship relationship = documentSettingsPart.AddExternalRelationship(
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/attachedTemplate",
-                        new Uri(path, UriKind.RelativeOrAbsolute));
+                        new Uri(path, UriHelper.RelativeOrAbsolute));
                     documentSettingsPart.Settings.Append(
                         new DocumentFormat.OpenXml.Wordprocessing.AttachedTemplate() { Id = relationship.Id });
                 }
