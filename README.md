@@ -34,15 +34,15 @@ The NuGet package for the latest builds of the Open XML SDK is available as a cu
 ## Support platforms
 This library supports many platforms. There are builds for .NET 3.5, .NET 4.0, .NET 4.6, and .NET Standard 1.3. The following platforms are currently supported:
 
-    Platform    | Minimum Version 
-----------------|---------
-.NET Framework  | 3.5
-.NET Core       | 1.0
-UWP             | 10.0
-Mono            | 3.5
-Xamarin.iOS     | 10.0
-Xamarin.Mac     | 3.0
-Xamarin.Android | 7.0
+|    Platform     | Minimum Version |
+|-----------------|-----------------|
+| .NET Framework  | 3.5             |
+| .NET Core       | 1.0             |
+| UWP             | 10.0            |
+| Mono            | 3.5             |
+| Xamarin.iOS     | 10.0            |
+| Xamarin.Mac     | 3.0             |
+| Xamarin.Android | 7.0             |
 
 ## WindowsBase or System.IO.Packaging
 There is a known issue in WindowsBase that causes crashes when handling large data sources. This is fixed in later versions of the library, based on the platform availability of the `System.IO.Packaging` package. When possible, we use this package instead of WindowsBase. This not only fixes the crash seen by some users, but is available cross platform. However, it is only available on .NET Standard 1.3+ and .NET Framework 4.6+. For this reason, the NuGet package has multiple targets to bring in this when possible. The targets (which are determined by NuGet at installation and build time) are:
