@@ -1,4 +1,13 @@
-# Before submitting an issue, please fill this out and remove this line!
+# Before submitting an issue, please fill this out
+
+Is this a:
+- [ ] Issue with the OpenXml library
+- [ ] Question on library usage
+
+If you have answered that this is a question, please ask it on StackOverflow instead of here.
+This issue tracker is meant to track product issues while StackOverflow excels at answering questions
+
+---------------- Remove this line and above before posting ----------------
 
 **Description**
 
