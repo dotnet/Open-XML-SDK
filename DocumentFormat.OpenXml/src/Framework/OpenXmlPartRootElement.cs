@@ -119,8 +119,6 @@ namespace DocumentFormat.OpenXml
         /// <exception cref="InvalidDataException">Thrown when the part stream contains an incorrect root element.</exception>
         internal bool LoadFromPart(OpenXmlPart openXmlPart, Stream partStream)
         {
-            Profiler.CommentMarkProfile(Profiler.MarkId.OpenXmlPartRootElement_LoadFromPart_In);
-
             if (partStream.Length < 4)
             {
                 // The XmlReader.Read() method requires at least four bytes from the data stream in order to begin parsing. 
@@ -185,8 +183,6 @@ namespace DocumentFormat.OpenXml
                 }
             }
 
-            Profiler.CommentMarkProfile(Profiler.MarkId.OpenXmlPartRootElement_LoadFromPart_Out);
-
             return true;
         }
 
@@ -206,13 +202,10 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
 
-            XmlWriterSettings settings = new XmlWriterSettings();
-            settings.CloseOutput = true;
-            // default is UTF8, Indent=false, OmitXmlDeclaration=false, NewLineOnAttributes=false
-            // settings.Indent = false;
-            // settings.Encoding = Encoding.UTF8;
-            // settings.OmitXmlDeclaration = false;
-            // settings.NewLineOnAttributes = false;
+            XmlWriterSettings settings = new XmlWriterSettings
+            {
+                settings.CloseOutput = true
+            };
 
             using (Stream partStream = openXmlPart.GetStream(FileMode.Create))
             using (XmlWriter xmlWriter = XmlWriter.Create(partStream, settings))
@@ -244,8 +237,10 @@ namespace DocumentFormat.OpenXml
         /// </param>
         public void Save(Stream stream)
         {
-            XmlWriterSettings settings = new XmlWriterSettings();
-            settings.CloseOutput = true;
+            XmlWriterSettings settings = new XmlWriterSettings
+            {
+                settings.CloseOutput = true
+            };
 
             using (XmlWriter xmlWriter = XmlWriter.Create(stream, settings))
             {
@@ -330,7 +325,7 @@ namespace DocumentFormat.OpenXml
             {
                 //check the namespace mapping defined in this node first. because till now xmlWriter don't know the mapping defined in the current node.
                 string prefix = LookupNamespaceLocal(this.NamespaceUri);
-                
+
                 //if not defined in the current node, try the xmlWriter
                 if (this.Parent != null && string.IsNullOrEmpty(prefix))
                 {
@@ -388,9 +383,9 @@ namespace DocumentFormat.OpenXml
                 {
                     if (!String.IsNullOrEmpty(namespacePair.Key))
                     {
-                        if (NamespaceDeclField != null && 
+                        if (NamespaceDeclField != null &&
                             string.IsNullOrEmpty(this.LookupPrefixLocal(namespacePair.Value)) &&
-                            string.IsNullOrEmpty(this.LookupNamespaceLocal(namespacePair.Key))) 
+                            string.IsNullOrEmpty(this.LookupNamespaceLocal(namespacePair.Key)))
                         {
                             xmlWrite.WriteAttributeString(OpenXmlElementContext.xmlnsPrefix, namespacePair.Key, OpenXmlElementContext.xmlnsUri, namespacePair.Value);
                         }

@@ -355,8 +355,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         private void Load()
         {
-            Profiler.CommentMarkProfile(Profiler.MarkId.OpenXmlPackage_Load_In);
-
             try
             {
                 Dictionary<Uri, OpenXmlPart> loadedParts = new Dictionary<Uri, OpenXmlPart>();
@@ -388,8 +386,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                         if (!this.IsValidMainPartContentType(metroPart.ContentType))
                         {
-                            OpenXmlPackageException exception = new OpenXmlPackageException(ExceptionMessages.InvalidPackageType);
-                            throw exception;
+                            throw new OpenXmlPackageException(ExceptionMessages.InvalidPackageType);
                         }
 
                         this.MainPartContentType = metroPart.ContentType;
@@ -399,33 +396,22 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 if (!hasMainPart)
                 {
-                    // throw exception is the package do not have the main part (MainDocument / Workbook / Presentation part)
-                    OpenXmlPackageException exception = new OpenXmlPackageException(ExceptionMessages.NoMainPart);
-                    throw exception;
+                    throw new OpenXmlPackageException(ExceptionMessages.NoMainPart);
                 }
 
                 this.LoadReferencedPartsAndRelationships(this, null, relationshipCollection, loadedParts);
             }
-            catch (OpenXmlPackageException)
+            catch (UriFormatException exception)
             {
-                // invalid part ( content type is not expected )
+                // UriFormatException is wrapped here in an OpenXmlPackageException
                 this.Close();
-                throw;
-            }
-            catch (System.UriFormatException)
-            {
-                // UriFormatException is replaced here with OpenXmlPackageException. <O15:#322821>
-                OpenXmlPackageException exception = new OpenXmlPackageException(ExceptionMessages.InvalidUriFormat);
-                this.Close();
-                throw exception;
+                throw new OpenXmlPackageException(ExceptionMessages.InvalidUriFormat, exception);
             }
             catch (Exception)
             {
                 this.Close();
                 throw;
             }
-
-            Profiler.CommentMarkProfile(Profiler.MarkId.OpenXmlPackage_Load_Out);
         }
 
         #endregion
@@ -607,7 +593,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public MediaDataPart CreateMediaDataPart(string contentType, string extension)
         {
             ThrowIfObjectDisposed();
-            
+
             if (contentType == null)
             {
                 throw new ArgumentNullException(nameof(contentType));
@@ -901,7 +887,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets a flag that indicates whether the parts should be saved when disposed. 
         /// </summary>
-        public bool AutoSave 
+        public bool AutoSave
         {
             get
             {
@@ -1001,7 +987,7 @@ namespace DocumentFormat.OpenXml.Packaging
             // If the root element of the part is loaded,
             // consider the part changed and should be saved.
             Debug.Assert(part.OpenXmlPackage != null);
-            if (!part.IsRootElementLoaded && 
+            if (!part.IsRootElementLoaded &&
                 part.OpenXmlPackage.MarkupCompatibilityProcessSettings.ProcessMode == MarkupCompatibilityProcessMode.ProcessAllParts)
             {
                 if (part.PartRootElement != null)
@@ -1300,7 +1286,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #endregion
 
         #region methods on DataPart 
-        
+
         private static bool IsOrphanDataPart(DataPart dataPart)
         {
             return !dataPart.GetDataPartReferenceRelationships().Any();
