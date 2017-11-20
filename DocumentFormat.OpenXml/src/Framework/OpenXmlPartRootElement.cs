@@ -204,7 +204,7 @@ namespace DocumentFormat.OpenXml
 
             XmlWriterSettings settings = new XmlWriterSettings
             {
-                settings.CloseOutput = true
+                CloseOutput = true
             };
 
             using (Stream partStream = openXmlPart.GetStream(FileMode.Create))
@@ -239,7 +239,7 @@ namespace DocumentFormat.OpenXml
         {
             XmlWriterSettings settings = new XmlWriterSettings
             {
-                settings.CloseOutput = true
+                CloseOutput = true
             };
 
             using (XmlWriter xmlWriter = XmlWriter.Create(stream, settings))
