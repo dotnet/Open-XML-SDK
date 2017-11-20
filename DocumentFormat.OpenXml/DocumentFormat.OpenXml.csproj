@@ -3,7 +3,11 @@
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), DocumentFormat.OpenXml.Package.props))\DocumentFormat.OpenXml.Package.props" />
 
   <PropertyGroup>
-    <TargetFrameworks>net35;net40;net46;netstandard1.3</TargetFrameworks>
+      <!--
+      .NET Standard target must be first to avoid a ResXFileCodeGenerator issue
+      (tracked at https://github.com/dotnet/project-system/issues/1519)
+    -->
+    <TargetFrameworks>netstandard1.3;net35;net40;net46</TargetFrameworks>
     <NoWarn>$(NoWarn);3003</NoWarn>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
@@ -80,6 +84,22 @@
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
     <Compile Remove="src\ofapi\Validation\SchemaValidation\BinarySdbSchemaDatas.cs" />
     <PackageReference Include="System.IO.Packaging" Version="4.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\ExceptionMessages.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ExceptionMessages.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\ExceptionMessages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExceptionMessages.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>DocumentFormat.OpenXml</CustomToolNamespace>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
