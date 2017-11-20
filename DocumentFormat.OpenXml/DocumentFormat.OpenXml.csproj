@@ -62,7 +62,7 @@
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
-    <PackageReference Include="System.IO.Packaging" Version="4.0.0" />
+    <PackageReference Include="System.IO.Packaging" Version="4.4.0" />
   </ItemGroup>
 
   <!-- .NET Framework builds will all use the binary serialized schema definitions -->
@@ -83,7 +83,7 @@
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
     <Compile Remove="src\ofapi\Validation\SchemaValidation\BinarySdbSchemaDatas.cs" />
-    <PackageReference Include="System.IO.Packaging" Version="4.0.0" />
+    <PackageReference Include="System.IO.Packaging" Version="4.4.0" />
   </ItemGroup>
 
   <ItemGroup>
