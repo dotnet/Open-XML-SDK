@@ -8,11 +8,7 @@ environment:
 install:
   - ps: nuget install -ExcludeVersion SignClient -Version 0.5.0-beta4 -pre -OutputDirectory .\build\
 
-before_build:
-  - ps: gitversion /l console /output buildserver
-
 build_script:
-  - ps: .\build\Update-Version.ps1 
   - cmd: msbuild /t:restore;build /p:Configuration=Release /m .\Open-Xml-SDK.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 
 after_build:
