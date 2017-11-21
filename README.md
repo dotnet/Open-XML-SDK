@@ -112,6 +112,7 @@ Version 2.8.0 : *In development*
 - Manual saving was fixed when autosave is false
 - Fixed issue on Mono platforms using System.IO.Packaging NuGet package (Xamarin, etc) when creating a document
 - Upgraded to System.IO.Packaging 4.4.0 which fixes some consistency with .NET Framework in opening packages
+- Simplify schema constraint data and standardize across .NET Standard and .NET Framework
  
 Version 2.7.2 : June 6, 2017
 - Fixed issue where assembly version wasn't set in assembly
@@ -157,17 +158,6 @@ If you want to use a command line approach:
 - Run `dotnet restore` in the directory
 - Run `dotnet test DocumentFormat.OpenXml.Tests` to run the tests
 - Run `dotnet pack DocumentFormat.OpenXml` to generate a nupkg
-
-Schema Files
-============
-
-The data for schema validation is contained in static binary files that are not compatible in .NET Standard. At this moment, a converter tool is used to transform the binary file into a set of POCO objects that will not require deserialization at runtime. This tool is located in the `BinaryFormatConverter` folder. In order to run it:
-
-- Run `dotnet restore` in the solution directory
-- `cd BinaryFormatConverter`
-- `dotnet run`
-
-This will go through and update schema files in the form of `DocumentFormat.OpenXml/src/GeneratedCode/Office*Schema.cs`. This update only needs to be run when there is a change to the binary files; otherwise, they will return the same result. These updated files are only used in the .NET Sandard implementation, while the binary files will continue to be used in the .NET 4.5 builds.
 
 Related tools
 ====
