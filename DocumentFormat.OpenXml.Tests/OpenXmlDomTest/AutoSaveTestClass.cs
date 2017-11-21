@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             using (var file = OpenFile(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, FileAccess.Read))
             {
-                Assert.Throws<IOException>(() =>
+                Assert.Throws<OpenXmlPackageException>(() =>
                 {
                     using (var stream = file.Open())
                     using (var package = WordprocessingDocument.Open(stream, true))
@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             using (var file = OpenFile(TestDataStorage.V2FxTestFiles.Bvt.PerformanceEng, FileAccess.Read))
             {
-                Assert.Throws<IOException>(() =>
+                Assert.Throws<OpenXmlPackageException>(() =>
                 {
                     using (var stream = file.Open())
                     using (var package = SpreadsheetDocument.Open(stream, true))
@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             using (var file = OpenFile(TestDataStorage.V2FxTestFiles.Bvt.O12Typical, FileAccess.Read))
             {
-                Assert.ThrowsAny<IOException>(() =>
+                Assert.Throws<OpenXmlPackageException>(() =>
                 {
                     using (var stream = file.Open())
                     using (var package = PresentationDocument.Open(stream, true))

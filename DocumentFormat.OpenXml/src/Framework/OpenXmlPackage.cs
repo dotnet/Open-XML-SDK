@@ -210,7 +210,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="package">The target package for the OpenXmlPackage class.</param>
         /// <exception cref="ArgumentNullException">Thrown when package is a null reference.</exception>
-        /// <exception cref="IOException">Thrown when package is not opened with read access.</exception>
+        /// <exception cref="OpenXmlPackageException">Thrown when package is not opened with read access.</exception>
         /// <exception cref="OpenXmlPackageException">Thrown when the package is not a valid Open XML document.</exception>
         internal void OpenCore(Package package)
         {
@@ -221,8 +221,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (package.FileOpenAccess == FileAccess.Write)
             {
-                // TODO: move this line to derived class
-                throw new IOException(ExceptionMessages.PackageMustCanBeRead);
+                throw new OpenXmlPackageException(ExceptionMessages.PackageMustCanBeRead);
             }
 
             this._accessMode = package.FileOpenAccess;
@@ -236,20 +235,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="package">The target package for the OpenXmlPackage class.</param>
         /// <exception cref="ArgumentNullException">Thrown when package is a null reference.</exception>
-        /// <exception cref="IOException">Thrown when package is not opened with write access.</exception>
-        /// <exception cref="OpenXmlPackageException">Thrown when the package is not a valid Open XML document.</exception>
         internal void CreateCore(Package package)
         {
             if (package == null)
             {
                 throw new ArgumentNullException(nameof(package));
             }
-
-            //if (package.FileOpenAccess != FileAccess.Write)
-            //{
-            //    // TODO: move this line to derived class
-            //    throw new IOException(ExceptionMessages.PackageAccessModeShouldBeWrite);
-            //}
 
             this._accessMode = package.FileOpenAccess;
             this._metroPackage = package;
@@ -260,7 +251,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="stream">The I/O stream on which to open the package.</param>
         /// <param name="readWriteMode">Indicates whether or not the package is in read/write mode. False indicates read-only mode.</param>
-        /// <exception cref="IOException">Thrown when the specified stream is write-only. The package to open requires read or read/write permission.</exception>
+        /// <exception cref="ArgumentNullException">Thrown when stream is a null reference.</exception>
+        /// <exception cref="OpenXmlPackageException">Thrown when the specified stream is read-only and <paramref name="readWriteMode"/> is true. The package to open requires write or read/write permission.</exception>
         internal void OpenCore(Stream stream, bool readWriteMode)
         {
             if (stream == null)
@@ -271,6 +263,11 @@ namespace DocumentFormat.OpenXml.Packaging
             if (readWriteMode)
             {
                 this._accessMode = FileAccess.ReadWrite;
+
+                if (!stream.CanWrite)
+                {
+                    throw new OpenXmlPackageException(ExceptionMessages.StreamAccessModeShouldBeWrite);
+                }
             }
             else
             {
@@ -286,7 +283,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Initializes a new instance of the OpenXmlPackage class using the supplied I/O stream class.
         /// </summary>
         /// <param name="stream">The I/O stream on which to open the package.</param>
-        /// <exception cref="IOException">Thrown when the specified stream is read-only. The package to open requires write or read/write permission. </exception>
+        /// <exception cref="ArgumentNullException">Thrown when stream is a null reference.</exception>
+        /// <exception cref="OpenXmlPackageException">Thrown when the specified stream is read-only. The package to open requires write or read/write permission.</exception>
         internal void CreateCore(Stream stream)
         {
             if (stream == null)
@@ -300,10 +298,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             this._accessMode = FileAccess.ReadWrite;
-            //this._accessMode = FileAccess.Write;
-            // below line will exception by Package. Packaging API bug?
-            // this._metroPackage = Package.Open(stream, FileMode.Create, packageAccess);
-            this._metroPackage = Package.Open(stream, FileMode.Create, FileAccess.ReadWrite);
+            this._metroPackage = Package.Open(stream, FileMode.Create, this._accessMode);
         }
 
         /// <summary>
@@ -311,6 +306,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="path">The path and file name of the target package for the OpenXmlPackage.</param>
         /// <param name="readWriteMode">Indicates whether or not the package is in read/write mode. False for read only mode.</param>
+        /// <exception cref="ArgumentNullException">Thrown when path is a null reference.</exception>
+        /// <exception cref="FileNotFoundException">Thrown when the supplied path cannot be found</exception>
         internal void OpenCore(string path, bool readWriteMode)
         {
             if (path == null)
@@ -327,6 +324,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 this._accessMode = FileAccess.Read;
             }
 
+            if (!File.Exists(path))
+            {
+                throw new FileNotFoundException(ExceptionMessages.FileNotFound, path);
+            }
+
             this._metroPackage = Package.Open(path, (this._accessMode == FileAccess.Read) ? FileMode.Open : FileMode.OpenOrCreate, this._accessMode, (this._accessMode == FileAccess.Read) ? FileShare.Read : FileShare.None);
 
             this.Load();
@@ -336,6 +338,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Initializes a new instance of the OpenXmlPackage class using the supplied file.
         /// </summary>
         /// <param name="path">The path and file name of the target package for the OpenXmlPackage.</param>
+        /// <exception cref="ArgumentNullException">Thrown when path is a null reference.</exception>
         internal void CreateCore(string path)
         {
             if (path == null)
@@ -344,10 +347,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             this._accessMode = FileAccess.ReadWrite;
-            //this._accessMode = FileAccess.Write;
-            // below line will exception by Package. Packaging API bug?
-            // this._metroPackage = Package.Open(path, FileMode.Create, packageAccess, FileShare.None);
-            this._metroPackage = Package.Open(path, FileMode.Create, FileAccess.ReadWrite, FileShare.None);
+            this._metroPackage = Package.Open(path, FileMode.Create, this._accessMode, FileShare.None);
         }
 
         /// <summary>
