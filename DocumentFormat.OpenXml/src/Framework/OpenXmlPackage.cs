@@ -260,6 +260,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(stream));
             }
 
+            if (!stream.CanRead)
+            {
+                throw new OpenXmlPackageException(ExceptionMessages.StreamAccessModeShouldRead);
+            }
+
             if (readWriteMode)
             {
                 this._accessMode = FileAccess.ReadWrite;

@@ -821,6 +821,15 @@ namespace DocumentFormat.OpenXml {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The stream was not opened for reading..
+        /// </summary>
+        internal static string StreamAccessModeShouldRead {
+            get {
+                return ResourceManager.GetString("StreamAccessModeShouldRead", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ISO 29500 Strict formatted document can&apos;t be opened while edit operation is enabled..
         /// </summary>
         internal static string StrictReadOnly {

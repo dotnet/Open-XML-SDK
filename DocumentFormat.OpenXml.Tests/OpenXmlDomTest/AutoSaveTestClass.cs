@@ -96,7 +96,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var file = OpenFile(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, FileAccess.Write))
             using (var stream = file.Open())
             {
-                Assert.ThrowsAny<IOException>(() =>
+                Assert.ThrowsAny<OpenXmlPackageException>(() =>
                 {
                     using (var package = WordprocessingDocument.Open(stream, true))
                     {
@@ -111,7 +111,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var file = OpenFile(TestDataStorage.V2FxTestFiles.Bvt.PerformanceEng, FileAccess.Write))
             using (var stream = file.Open())
             {
-                Assert.ThrowsAny<IOException>(() =>
+                Assert.ThrowsAny<OpenXmlPackageException>(() =>
                 {
                     using (var package = WordprocessingDocument.Open(stream, true))
                     {
@@ -126,7 +126,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var file = OpenFile(TestDataStorage.V2FxTestFiles.Bvt.O12Typical, FileAccess.Write))
             using (var stream = file.Open())
             {
-                Assert.ThrowsAny<IOException>(() =>
+                Assert.ThrowsAny<OpenXmlPackageException>(() =>
                 {
                     using (var package = WordprocessingDocument.Open(stream, true))
                     {
