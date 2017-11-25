@@ -231,7 +231,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                     throw new ArgumentOutOfRangeException(nameof(xsdType));
             }
 
-            throw new ArgumentOutOfRangeException(nameof(xsdType)); ;
+            throw new ArgumentOutOfRangeException(nameof(xsdType));
         }
     }
 
