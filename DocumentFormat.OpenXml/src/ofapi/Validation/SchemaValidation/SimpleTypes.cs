@@ -995,25 +995,25 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Gets the minInclusive facets.
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
+        [DataMember]
         public T MinInclusive { get; set; }
 
         /// <summary>
         /// Gets the maxInclusive facets.
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
+        [DataMember]
         public T MaxInclusive { get; set; }
 
         /// <summary>
         /// Gets the minExclusive facets.
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
+        [DataMember]
         public T MinExclusive { get; set; }
 
         /// <summary>
         /// Gets the maxExclusive facets.
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
+        [DataMember]
         public T MaxExclusive { get; set; }
 
         /// <inheritdoc />
