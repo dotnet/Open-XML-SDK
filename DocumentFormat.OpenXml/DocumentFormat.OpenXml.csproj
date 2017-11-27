@@ -84,6 +84,9 @@
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
     <Compile Remove="src\ofapi\Validation\SchemaValidation\BinarySdbSchemaDatas.cs" />
     <PackageReference Include="System.IO.Packaging" Version="4.4.0" />
+
+    <!-- In order to support .NET Native, we need to include an appropriate .rd.xml -->
+    <EmbeddedResource Include="Properties\DocumentFormat.OpenXml.rd.xml" />
   </ItemGroup>
 
   <ItemGroup>

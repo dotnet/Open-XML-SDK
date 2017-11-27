@@ -109,9 +109,10 @@ Change Log
 ==========
 
 Version 2.8.0 : *In development*
-- Manual saving was fixed when autosave is false
+- Fixed manual saving of a package when autosave is false
 - Fixed issue on Mono platforms using System.IO.Packaging NuGet package (Xamarin, etc) when creating a document
 - Upgraded to System.IO.Packaging 4.4.0 which fixes some consistency with .NET Framework in opening packages
+- Added default runtime directive for better .NET Native support
  
 Version 2.7.2 : June 6, 2017
 - Fixed issue where assembly version wasn't set in assembly
