@@ -314,6 +314,15 @@ namespace DocumentFormat.OpenXml {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Could not find document.
+        /// </summary>
+        internal static string FileNotFound {
+            get {
+                return ResourceManager.GetString("FileNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The root XML element &quot;{0}&quot; in the part is incorrect. The expected root XML element is: &quot;{1}&quot;..
         /// </summary>
         internal static string Fmt_PartRootIsInvalid {
@@ -808,6 +817,15 @@ namespace DocumentFormat.OpenXml {
         internal static string StreamAccessModeShouldBeWrite {
             get {
                 return ResourceManager.GetString("StreamAccessModeShouldBeWrite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The stream was not opened for reading..
+        /// </summary>
+        internal static string StreamAccessModeShouldRead {
+            get {
+                return ResourceManager.GetString("StreamAccessModeShouldRead", resourceCulture);
             }
         }
         

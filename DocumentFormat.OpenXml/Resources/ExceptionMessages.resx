@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information. -->
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -402,5 +401,11 @@
   </data>
   <data name="InvalidUriFormat" xml:space="preserve">
     <value>Invalid Hyperlink: Malformed URI is embedded as a hyperlink in the document.</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>Could not find document</value>
+  </data>
+  <data name="StreamAccessModeShouldRead" xml:space="preserve">
+    <value>The stream was not opened for reading.</value>
   </data>
 </root>

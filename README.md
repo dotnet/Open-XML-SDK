@@ -110,8 +110,9 @@ Change Log
 
 Version 2.8.0 : *In development*
 - Added default runtime directive for better .NET Native support
-- Fixed manual saving of a package when autosave is false
+- Fixed exceptions thrown when errors are encountered while opening packages to be consistent across platforms
 - Fixed issue on Mono platforms using System.IO.Packaging NuGet package (Xamarin, etc) when creating a document
+- Fixed manual saving of a package when autosave is false
 - Fixed schema constraint data and standardize serialization across platforms
 - Upgraded to System.IO.Packaging 4.4.0 which fixes some consistency with .NET Framework in opening packages
  
