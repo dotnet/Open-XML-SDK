@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             this.SdbDataHead.LoadFromBytes(headBytes, 0);
 
 #if DEBUG
-            CheckDataHead((int)(dataStream.Length));
+            CheckDataHead((int)dataStream.Length);
 #endif
 
             byte[] dataBytes;

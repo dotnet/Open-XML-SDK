@@ -198,7 +198,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.Equal(ParticleType.Element, elementParticle.ParticleType);
                     Assert.Equal(0, elementParticle.MinOccurs);
                     Assert.Equal(1, elementParticle.MaxOccurs);
-                    Assert.Equal((new DocumentBackground()).ElementTypeId, elementParticle.ElementId);
+                    Assert.Equal( new DocumentBackground().ElementTypeId, elementParticle.ElementId);
                     Assert.Null(elementParticle.ChildrenParticles);
                     Assert.False(elementParticle.UnboundedMaxOccurs);
                 }
@@ -342,7 +342,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Equal(ParticleType.Element, elementParticle.ParticleType);
                 Assert.Equal(0, elementParticle.MinOccurs);
                 Assert.Equal(1, elementParticle.MaxOccurs);
-                Assert.Equal((new SectionProperties()).ElementTypeId, elementParticle.ElementId);
+                Assert.Equal( new SectionProperties().ElementTypeId, elementParticle.ElementId);
                 Assert.Null(elementParticle.ChildrenParticles);
                 Assert.False(elementParticle.UnboundedMaxOccurs);
             }
@@ -386,7 +386,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Equal(ParticleType.Element, elementParticle.ParticleType);
                 Assert.Equal(0, elementParticle.MinOccurs);
                 Assert.Equal(1, elementParticle.MaxOccurs);
-                Assert.Equal((new ParagraphProperties()).ElementTypeId, elementParticle.ElementId);
+                Assert.Equal( new ParagraphProperties().ElementTypeId, elementParticle.ElementId);
                 Assert.Null(elementParticle.ChildrenParticles);
                 Assert.False(elementParticle.UnboundedMaxOccurs);
 
