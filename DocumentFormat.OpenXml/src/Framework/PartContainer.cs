@@ -1004,7 +1004,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 if (annotations == null)
                 {
-                    return (this._annotations as T);
+                    return this._annotations as T;
                 }
 
                 for (int i = 0; i < annotations.Length; i++)
@@ -2374,7 +2374,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 return false;
             }
 
-            return (this._id.Equals(value._id)) && (this._part == value._part);
+            return this._id.Equals(value._id) && (this._part == value._part);
         }
     }
 

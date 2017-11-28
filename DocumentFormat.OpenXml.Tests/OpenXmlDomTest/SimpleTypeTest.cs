@@ -74,7 +74,7 @@ namespace DocumentFormat.OpenXml.Tests
             simpleValueValidTest(new EnumValue<HeaderFooterValues>(validValue0i), validValue0i, validString0);
 
             Log.Comment("Constructing with value {0} and testing with Clone()...", validValue1);
-            var clone = (new EnumValue<HeaderFooterValues>(validValue1)).Clone();
+            var clone = new EnumValue<HeaderFooterValues>(validValue1).Clone();
             simpleValueValidTest(clone as EnumValue<HeaderFooterValues>, validValue1, validString1);  // O14: 253869
 
             Log.Comment("Set Value with value {0} and testing...", validValue2);

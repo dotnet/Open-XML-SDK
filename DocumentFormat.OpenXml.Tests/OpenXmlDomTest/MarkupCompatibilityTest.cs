@@ -3682,7 +3682,7 @@ namespace DocumentFormat.OpenXml.Tests
         private void verifyKnownAttribute(OpenXmlElement host, OpenXmlAttribute expectedAttribute)
         {
             Log.Comment("Verifying known attribute is loaded as built-in attribute...");
-            var verified = (host.GetAttributes().First() == expectedAttribute) && (host.ExtendedAttributes.All(ea => ea != expectedAttribute));
+            var verified = (host.GetAttributes().First() == expectedAttribute) && host.ExtendedAttributes.All(ea => ea != expectedAttribute);
             if (verified)
                 Log.Pass("Verified attribute {0} from kown ns is loaded as built-in attribute.", expectedAttribute.GetFullName());
             else
@@ -3698,7 +3698,7 @@ namespace DocumentFormat.OpenXml.Tests
         private void verifyNoUnknownElement(OpenXmlElement host, OpenXmlElement expectedElement)
         {
             Log.Comment("Verifying unknown element is ignored...");
-            var unknown = (host is OpenXmlUnknownElement) && (host.ToXElement().Compare(expectedElement.ToXElement()));
+            var unknown = (host is OpenXmlUnknownElement) && host.ToXElement().Compare(expectedElement.ToXElement());
             if (unknown)
                 Log.Fail("Element {0} from unkown ns is loaded as OpenXmlUnknownElement.", expectedElement.GetFullName());
             else
@@ -3722,7 +3722,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("Verifying content of unknown element is loaded as OpenXmlUnkownElement...");
             for (int i = 0; i < children.Count; i++)
-                if (!(host.ChildElements[i] is OpenXmlUnknownElement) || !(host.ChildElements[i].ToXElement().Compare(children[i].ToXElement())))
+                if (!(host.ChildElements[i] is OpenXmlUnknownElement) || ! host.ChildElements[i].ToXElement().Compare(children[i].ToXElement()))
                     Log.Fail("Element {0} under unknown element is NOT loaded as OpenXmlUnknownElement.", host.ChildElements[i].GetFullName());
                 else
                     Log.Pass("Verified element {0} under unkown element is loaded as OpenXmlUnknownElement.", host.ChildElements[i].GetFullName());

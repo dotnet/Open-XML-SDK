@@ -1056,7 +1056,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     Log.Comment("Target element found: {0}", deleteElement.Path());
 
-                    int childPosition = (null == deleteElement ? -1 : deleteElement.Index());
+                    int childPosition = null == deleteElement ? -1 : deleteElement.Index();
                     XElement xBefore = ConvertToXElement(hostPart, hostElement);
 
                     Log.Comment("Removing specified child element...");
@@ -1138,7 +1138,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     Log.Comment("Parent element found: {0}", parent.Path());
 
-                    int targetPosition = (null == targetElement ? -1 : targetElement.Index());
+                    int targetPosition = null == targetElement ? -1 : targetElement.Index();
                     XElement xBefore = ConvertToXElement(hostPart, parent);
 
                     Log.Comment("Removing current element...");
@@ -1314,7 +1314,7 @@ namespace DocumentFormat.OpenXml.Tests
         internal GetTargetNamespaceDeclaration getNonExistingNamespaceDeclaration =
             e => e.Ancestors()
                 .SelectMany(a => a.NamespaceDeclarations)
-                .FirstOrDefault(an => !(e.NamespaceDeclarations.Select(en => en.Key).Contains(an.Key)));
+                .FirstOrDefault(an => ! e.NamespaceDeclarations.Select(en => en.Key).Contains(an.Key));
 
         internal GetTargetNamespaceDeclaration getExistingNamespaceDeclaration =
             e => e.NamespaceDeclarations.PickSecond();
