@@ -89,7 +89,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
                 return sv;
             }
 
-            UInt32Value UInt32ValueFixer(UInt32Value iv) => new UInt32Value((uint)(seed));
+            UInt32Value UInt32ValueFixer(UInt32Value iv) => new UInt32Value((uint)seed);
 
             UInt32Value UInt32ValueChecker(UInt32Value iv)
             {

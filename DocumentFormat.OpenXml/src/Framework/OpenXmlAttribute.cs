@@ -138,10 +138,10 @@ namespace DocumentFormat.OpenXml
         /// <returns>Returns true if instances are equal; otherwise, returns false.</returns>
         public bool Equals(OpenXmlAttribute other)
         {
-            return (this.LocalName == other.LocalName &&
+            return this.LocalName == other.LocalName &&
                     this.NamespaceUri == other.NamespaceUri &&
                     this.Prefix == other.Prefix &&
-                    this.Value == other.Value);
+                    this.Value == other.Value;
         }
 
         #endregion

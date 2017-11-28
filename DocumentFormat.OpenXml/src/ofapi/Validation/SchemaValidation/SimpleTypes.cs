@@ -312,7 +312,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                 Binder = new DocumentFormatBinder()
             };
 
-            var simpleTypeRestrictions = (SimpleTypeRestrictions)(binaryFormatter.Deserialize(stream));
+            var simpleTypeRestrictions = (SimpleTypeRestrictions) binaryFormatter.Deserialize(stream);
             foreach (var simpleType in simpleTypeRestrictions.SimpleTypes)
             {
                 simpleType.FileFormat = fileFormat;

@@ -60,7 +60,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             dataStream.Read(headBytes, 0, SdbDataHead.HeadSize);
             this.SdbDataHead.LoadFromBytes(headBytes, 0);
 
-            CheckDataHead((int)(dataStream.Length));
+            CheckDataHead((int) dataStream.Length);
 
             byte[] dataBytes;
             int count;

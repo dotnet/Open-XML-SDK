@@ -124,7 +124,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         {
             get
             {
-                return (this.AttributeConstraints != null && this.AttributeConstraints.Count > 0);
+                return this.AttributeConstraints != null && this.AttributeConstraints.Count > 0;
             }
         }
 
@@ -147,7 +147,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         {
             get
             {
-                return (this.ParticleConstraint != null);
+                return this.ParticleConstraint != null;
             }
         }
 

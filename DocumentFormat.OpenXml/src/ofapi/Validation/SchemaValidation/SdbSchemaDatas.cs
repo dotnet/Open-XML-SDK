@@ -221,7 +221,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                     // then load the simple type constraint for this attribute
                     var simpleTypeIndex = sdbAttributeData.SimpleTypeIndex;
                     var simpleTypeConstraint = this.SimpleTypeRestrictions[simpleTypeIndex];
-                    attributeConstraints[i] = new AttributeConstraint(sdbAttributeData.AttributeUse, simpleTypeConstraint, (FileFormatVersions)(sdbAttributeData.FileFormatVersion));
+                    attributeConstraints[i] = new AttributeConstraint(sdbAttributeData.AttributeUse, simpleTypeConstraint, (FileFormatVersions) sdbAttributeData.FileFormatVersion);
                 }
                 return attributeConstraints;
             }
