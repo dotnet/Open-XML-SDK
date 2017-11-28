@@ -415,9 +415,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="package">The specified OpenXml package</param>
         /// <param name="openSettings">The advanced settings for opening a document.</param>
         /// <returns>A new instance of WordprocessingDocument.</returns>
-        /// <exception cref="ArgumentNullException">Thrown when "package" is null reference.</exception>
-        /// <exception cref="IOException">Thrown when "package" is not opened with Read (ReadWrite) access.</exception>
-        /// <exception cref="OpenXmlPackageException">Thrown when the package is not valid Open XML WordprocessingDocument.</exception>
+        /// <exception cref="ArgumentNullException">Thrown when package is a null reference.</exception>
+        /// <exception cref="OpenXmlPackageException">Thrown when package is not opened with read access.</exception>
+        /// <exception cref="OpenXmlPackageException">Thrown when the package is not a valid Open XML document.</exception>
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static WordprocessingDocument Open(System.IO.Packaging.Package package, OpenSettings openSettings)
         {
@@ -1337,11 +1337,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="package">The specified OpenXml package.</param>
         /// <param name="openSettings">The advanced settings for opening a document.</param>
         /// <returns>A new instance of SpreadsheetDocument.</returns>
-        /// <exception cref="ArgumentNullException">Thrown when "package" is null reference.</exception>
-        /// <exception cref="IOException">Thrown when "package" is not opened with Read (ReadWrite) access.</exception>
-        /// <exception cref="OpenXmlPackageException">Thrown when the package is not valid Open XML SpreadsheetDocument.</exception>
+        /// <exception cref="ArgumentNullException">Thrown when package is a null reference.</exception>
+        /// <exception cref="OpenXmlPackageException">Thrown when package is not opened with read access.</exception>
+        /// <exception cref="OpenXmlPackageException">Thrown when the package is not a valid Open XML document.</exception>
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
-        public static SpreadsheetDocument Open(System.IO.Packaging.Package package, OpenSettings openSettings)
+        public static SpreadsheetDocument Open(Package package, OpenSettings openSettings)
         {
             if (openSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess && (openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2007 && openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2010 && openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2013))
             {
@@ -2324,11 +2324,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="package">The specified OpenXml package.</param>
         /// <param name="openSettings">The advanced settings for opening a document.</param>
         /// <returns>A new instance of PresentationDocument.</returns>
-        /// <exception cref="ArgumentNullException">Thrown when "package" is null reference.</exception>
-        /// <exception cref="IOException">Thrown when "package" is not opened with Read (ReadWrite) access.</exception>
-        /// <exception cref="OpenXmlPackageException">Thrown when the package is not valid Open XML PresentationDocument.</exception>
+        /// <exception cref="ArgumentNullException">Thrown when package is a null reference.</exception>
+        /// <exception cref="OpenXmlPackageException">Thrown when package is not opened with read access.</exception>
+        /// <exception cref="OpenXmlPackageException">Thrown when the package is not a valid Open XML document.</exception>
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
-        public static PresentationDocument Open(System.IO.Packaging.Package package, OpenSettings openSettings)
+        public static PresentationDocument Open(Package package, OpenSettings openSettings)
         {
             if (openSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess && (openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2007 && openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2010 && openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2013))
             {
