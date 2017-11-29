@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2002
+VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormat.OpenXml", "DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj", "{16941A4A-F8DE-4C8D-BA2B-3C0774848D4B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormat.OpenXml.Tests", "DocumentFormat.OpenXml.Tests\DocumentFormat.OpenXml.Tests.csproj", "{B92240AF-6E87-4428-9C5A-371178A04E5B}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinaryFormatConverter", "tools\BinaryFormatConverter\BinaryFormatConverter.csproj", "{E97A956D-8113-45B6-9002-2ED651A6CD6C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0B53C729-D408-450D-B755-7A57184CDE93}"
 	ProjectSection(SolutionItems) = preProject
@@ -20,8 +18,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		rules.ruleset = rules.ruleset
 		stylecop.json = stylecop.json
 	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{76E8A693-7A83-47D6-B09C-3FDE5FB6F87A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,16 +33,9 @@ Global
 		{B92240AF-6E87-4428-9C5A-371178A04E5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B92240AF-6E87-4428-9C5A-371178A04E5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B92240AF-6E87-4428-9C5A-371178A04E5B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E97A956D-8113-45B6-9002-2ED651A6CD6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E97A956D-8113-45B6-9002-2ED651A6CD6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E97A956D-8113-45B6-9002-2ED651A6CD6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E97A956D-8113-45B6-9002-2ED651A6CD6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{E97A956D-8113-45B6-9002-2ED651A6CD6C} = {76E8A693-7A83-47D6-B09C-3FDE5FB6F87A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6F476383-E917-43D1-A1E5-9A61A47DA3F5}
