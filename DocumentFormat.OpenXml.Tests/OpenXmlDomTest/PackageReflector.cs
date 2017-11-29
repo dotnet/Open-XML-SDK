@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (OpenXmlPackage srcPackage = OpenExistingPackage(srcDocument))
             using (OpenXmlPackage destPackage = CreatePackageOn(srcPackage, destDocument))
             {
-                (new OpenXmlReflector(output)).ReflectPackage(srcPackage, destPackage);
+                new OpenXmlReflector(output).ReflectPackage(srcPackage, destPackage);
             }
         }
 
@@ -301,12 +301,12 @@ namespace DocumentFormat.OpenXml.Tests
         public MethodInfo GetAddNewPartMethod(Type parentType, Type partType)
         {
             string prefix = "AddNewPart";
-            Predicate<MethodInfo> matchMethod = (m => m.IsGenericMethod);
-            Predicate<ParameterInfo> matchReturn = (r => r.ParameterType.IsSubclassOf(typeof(OpenXmlPart)));
+            Predicate<MethodInfo> matchMethod = m => m.IsGenericMethod;
+            Predicate<ParameterInfo> matchReturn = r => r.ParameterType.IsSubclassOf(typeof(OpenXmlPart));
             Predicate<ParameterInfo[]> matchParams =
-                (ps => ps.Count() == 2 &&
+                ps => ps.Count() == 2 &&
                     ps[0].ParameterType == typeof(string) &&
-                    ps[1].ParameterType == typeof(string));
+                    ps[1].ParameterType == typeof(string);
 
             var mg = GetMethodInfo(parentType, prefix, matchMethod, matchParams, matchReturn);
             if (null == mg)
@@ -331,14 +331,14 @@ namespace DocumentFormat.OpenXml.Tests
         public MethodInfo GetAddExtendedPartMethod(Type parentType, Type partType)
         {
             string prefix = "AddExtendedPart";
-            Predicate<MethodInfo> matchMethod = (m => m.IsGenericMethod);
-            Predicate<ParameterInfo> matchReturn = (r => r.ParameterType == partType);
+            Predicate<MethodInfo> matchMethod = m => m.IsGenericMethod;
+            Predicate<ParameterInfo> matchReturn = r => r.ParameterType == partType;
             Predicate<ParameterInfo[]> matchParams =
-                (ps => ps.Count() == 4 &&
+                ps => ps.Count() == 4 &&
                     ps[0].ParameterType == typeof(string) &&
                     ps[1].ParameterType == typeof(string) &&
                     ps[2].ParameterType == typeof(string) &&
-                    ps[3].ParameterType == typeof(string));
+                    ps[3].ParameterType == typeof(string);
 
             var mng = GetMethodInfo(parentType, prefix, matchMethod, matchParams, matchReturn);
             if (null == mng)
@@ -368,7 +368,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var method = rootType.GetMethod("Load", flag);      // Find: public void Load(OpenXmlPart openXmlPart)
                 if ((null != method)
                     && (method.GetParameters().Count() == 1)
-                    && (method.GetParameters()[0].ParameterType.IsSubclassOf(typeof(OpenXmlPart))))
+                    && method.GetParameters()[0].ParameterType.IsSubclassOf(typeof(OpenXmlPart)))
                 {
                     PartRootElementMap.Add(method.GetParameters()[0].ParameterType, rootType);
                 }

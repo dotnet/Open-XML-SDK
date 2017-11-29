@@ -972,11 +972,11 @@ namespace DocumentFormat.OpenXml
                     //             this.TextValue != null && this.TextValue == this.InnerValue.ToString() ||
                     //    // special case: signed number like text is "+5", value is 5
                     //             this.TextValue != null && this.TextValue == "+" + this.InnerValue.ToString());
-                    bool assertVal = (this.TextValue == null && !this.InnerValue.HasValue ||
+                    bool assertVal = this.TextValue == null && !this.InnerValue.HasValue ||
                                  this.TextValue != null && !this.InnerValue.HasValue ||
                                  this.TextValue != null && this.TextValue == this.InnerValue.ToString() ||
 								 // special case: signed number like text is "+5", value is 5
-                                 this.TextValue != null && this.TextValue == "+" + this.InnerValue.ToString());
+                                 this.TextValue != null && this.TextValue == "+" + this.InnerValue.ToString();
                     if (assertVal)
                         return this.TextValue;
                     // special case: number formatted like "00000", value is 0
@@ -2423,9 +2423,9 @@ namespace DocumentFormat.OpenXml
                 }
                 else
                 {
-                    bool assertTest = (this.TextValue == null && !this.InnerValue.HasValue ||
+                    bool assertTest = this.TextValue == null && !this.InnerValue.HasValue ||
                                  this.TextValue != null && !this.InnerValue.HasValue ||
-                                 this.TextValue != null && this.InnerValue == XmlConvert.ToDateTime(this.TextValue, System.Xml.XmlDateTimeSerializationMode.RoundtripKind));
+                                 this.TextValue != null && this.InnerValue == XmlConvert.ToDateTime(this.TextValue, System.Xml.XmlDateTimeSerializationMode.RoundtripKind);
                     if (!assertTest)
                         Debug.Assert(false);
                 }

@@ -1490,7 +1490,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(element));
             }
 
-            return (GetOrder(this, element) == ElementOrder.After);
+            return GetOrder(this, element) == ElementOrder.After;
         }
 
         /// <summary>
@@ -1505,7 +1505,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(element));
             }
 
-            return (GetOrder(this, element) == ElementOrder.Before);
+            return GetOrder(this, element) == ElementOrder.Before;
         }
 
         private enum ElementOrder
@@ -2369,7 +2369,7 @@ namespace DocumentFormat.OpenXml
 
                 if (annotations == null)
                 {
-                    return (this._annotations as T);
+                    return this._annotations as T;
                 }
 
                 for (int i = 0; i < annotations.Length; i++)
@@ -2725,7 +2725,7 @@ namespace DocumentFormat.OpenXml
                     {
                         if (xmlReader.NodeType == XmlNodeType.Element)
                         {
-                            return (string.Equals(namespaceURI, xmlReader.NamespaceURI) && string.Equals(localName, xmlReader.LocalName));
+                            return string.Equals(namespaceURI, xmlReader.NamespaceURI) && string.Equals(localName, xmlReader.LocalName);
                         }
                     }
 

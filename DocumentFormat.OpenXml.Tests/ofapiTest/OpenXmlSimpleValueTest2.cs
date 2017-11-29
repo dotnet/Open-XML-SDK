@@ -139,7 +139,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // Clone() for EnumValue.
             objA = new EnumValue<HeaderFooterValues>(validValue0);
-            objB = (EnumValue<HeaderFooterValues>)(objA.Clone());
+            objB = (EnumValue<HeaderFooterValues>) objA.Clone();
             Assert.True(objA.HasValue);
             Assert.True(objB.HasValue);
             Assert.Equal("default", objA.InnerText);

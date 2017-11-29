@@ -40,6 +40,19 @@ The Latest Builds
 ## Where to get the NuGet packages of the latest builds?
 The NuGet package for the latest builds of the Open XML SDK is available as a custom feed on MyGet. You can trust this package source, since the custom feed is locked and only this project feeds into the source.
 
+## Support platforms
+This library supports many platforms. There are builds for .NET 3.5, .NET 4.0, .NET 4.6, and .NET Standard 1.3. The following platforms are currently supported:
+
+|    Platform     | Minimum Version |
+|-----------------|-----------------|
+| .NET Framework  | 3.5             |
+| .NET Core       | 1.0             |
+| UWP             | 10.0            |
+| Mono            | 3.5             |
+| Xamarin.iOS     | 10.0            |
+| Xamarin.Mac     | 3.0             |
+| Xamarin.Android | 7.0             |
+
 ## WindowsBase or System.IO.Packaging
 There is a known issue in WindowsBase that causes crashes when handling large data sources. This is fixed in later versions of the library, based on the platform availability of the `System.IO.Packaging` package. When possible, we use this package instead of WindowsBase. This not only fixes the crash seen by some users, but is available cross platform. However, it is only available on .NET Standard 1.3+ and .NET Framework 4.6+. For this reason, the NuGet package has multiple targets to bring in this when possible. The targets (which are determined by NuGet at installation and build time) are:
 
@@ -49,6 +62,8 @@ There is a known issue in WindowsBase that causes crashes when handling large da
 | .NET 4.0      | WindowsBase              | .NET 4.5.2    |
 | .NET 4.6      | NuGet                    | .NET 4.6      |
 | .NET Standard | NuGet                    | .NET Core 1.0 |
+
+Keep in mind, though, that the System.IO.Packaging on .NET 4.6+ is simply a facade over WindowsBase, and thus everything running on .NET 4.6 will use WindowsBase instead of the newer implementation.
 
 ## How to install the NuGet package?
 The package you want to install is DocumentFormat.OpenXml. 
@@ -79,7 +94,6 @@ The **Install-Package** command considers the package source either via configur
 	```
 
 **Note**:  If you have trouble installing the package, try restarting Visual Studio. Package sources could be cached, and changes you've made to any NuGet.config files may not be detected.
-	
 
 Having Problems?
 ================
@@ -91,14 +105,26 @@ If you have "how-to" questions please post to one of the following resources:
 - https://social.msdn.microsoft.com/Forums/office/en-US/home?forum=oxmlsdk
 - http://stackoverflow.com (tags: "openxml" or "openxml-sdk")
 
+Known Issues
+==========
+- On Mono platforms that use the System.IO.Package NuGet package (ie Xamarin), opening some documents will fail due to an [issue](https://github.com/dotnet/corefx/issues/24822) in System.IO.Packaging. For now, you must manually set the environment variable as described at the [Mono description](http://www.mono-project.com/docs/faq/known-issues/urikind-relativeorabsolute/)
+- On .NET Core, zip packages do not have a way to stream data. Thus, the working set can explode in certain situations. This is a [known issue](https://github.com/dotnet/corefx/issues/24457)
+- On .NET Framework, an IsolatedStorageException may be thrown under certain circumstances, generally when manipulating a large document in an environment with an AppDomain that does not have enough evidence.
+- Out of the box, the library will not compile on .NET Native. This [issue](https://github.com/OfficeDev/Open-XML-SDK/issues/181) is tracking this
 
-News
-====
-We are also happy to announce the release of Open-Xml-PowerTools on GitHub.  Open-Xml-PowerTools provides example code and guidance for implementing a wide range of Open XML scenarios.  You can find PowerTools for Open XML, which previously lived at [PowerTools.CodePlex.com](http://powertools.codeplex.com) at [github.com/OfficeDev/Open-Xml-PowerTools](https://github.com/OfficeDev/Open-Xml-PowerTools).
+Once System.IO.Packaging on .NET Core has feature parity with WindowsBase (ie streaming support), we can investigate using the new .NET Core on .NET Framework
 
 Change Log
 ==========
 
+Version 2.8.0 : *In development*
+- Added default runtime directive for better .NET Native support
+- Fixed exceptions thrown when errors are encountered while opening packages to be consistent across platforms
+- Fixed issue on Mono platforms using System.IO.Packaging NuGet package (Xamarin, etc) when creating a document
+- Fixed manual saving of a package when autosave is false
+- Fixed schema constraint data and standardized serialization across platforms
+- Upgraded to System.IO.Packaging 4.4.0 which fixes some consistency with .NET Framework in opening packages
+ 
 Version 2.7.2 : June 6, 2017
 - Fixed issue where assembly version wasn't set in assembly
 - Added support for .NET 3.5 and .NET 4.0
@@ -144,13 +170,7 @@ If you want to use a command line approach:
 - Run `dotnet test DocumentFormat.OpenXml.Tests` to run the tests
 - Run `dotnet pack DocumentFormat.OpenXml` to generate a nupkg
 
-Schema Files
-============
+Related tools
+====
 
-The data for schema validation is contained in static binary files that are not compatible in .NET Standard. At this moment, a converter tool is used to transform the binary file into a set of POCO objects that will not require deserialization at runtime. This tool is located in the `BinaryFormatConverter` folder. In order to run it:
-
-- Run `dotnet restore` in the solution directory
-- `cd BinaryFormatConverter`
-- `dotnet run`
-
-This will go through and update schema files in the form of `DocumentFormat.OpenXml/src/GeneratedCode/Office*Schema.cs`. This update only needs to be run when there is a change to the binary files; otherwise, they will return the same result. These updated files are only used in the .NET Sandard implementation, while the binary files will continue to be used in the .NET 4.5 builds.
+- **Open XML Powertools**: This is available on [Github](https://github.com/OfficeDev/Open-Xml-PowerTools) and provides example code and guidance for implementing a wide range of Open XML scenarios.

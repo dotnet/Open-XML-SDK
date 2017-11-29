@@ -670,12 +670,12 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Test Standalone");
             if (!String.IsNullOrEmpty(standalone) && reader.StandaloneXml.HasValue == true)
             {
-                Log.VerifyTrue(standalone.Equals((reader.StandaloneXml.Value ? "yes" : "no"), StringComparison.OrdinalIgnoreCase), "expect: {0}  actual: {1}", standalone, reader.StandaloneXml);
+                Log.VerifyTrue(standalone.Equals( reader.StandaloneXml.Value ? "yes" : "no", StringComparison.OrdinalIgnoreCase), "expect: {0}  actual: {1}", standalone, reader.StandaloneXml);
             }
             else if (String.IsNullOrEmpty(standalone) && reader.StandaloneXml.HasValue == false)
                 Log.Pass(" PASS! expect: NULL == actual: NULL");
             else
-                Log.Fail("Expect: {0} <> actual: {1}", (String.IsNullOrEmpty(standalone) ? "Null" : "Not Null"), (reader.StandaloneXml.HasValue ? "Not Null" : "Null"));
+                Log.Fail("Expect: {0} <> actual: {1}", String.IsNullOrEmpty(standalone) ? "Null" : "Not Null", reader.StandaloneXml.HasValue ? "Not Null" : "Null");
         }
 
         /// <summary>

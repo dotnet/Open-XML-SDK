@@ -90,7 +90,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.NotNull(target.Type);
             Assert.True(target.Type.HasValue);
             Assert.Equal(HeaderFooterValues.Default, target.Type.Value);
-            Assert.Equal(HeaderFooterValues.Default, (HeaderFooterValues)(target.Type));
+            Assert.Equal(HeaderFooterValues.Default, (HeaderFooterValues) target.Type);
 
             Assert.NotNull(target.Id);
             Assert.Equal("1", (string)target.Id);
@@ -104,7 +104,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.NotNull(target.Type);
             Assert.True(target.Type.HasValue);
             Assert.Equal(HeaderFooterValues.Default, target.Type.Value);
-            Assert.Equal(HeaderFooterValues.Default, (HeaderFooterValues)(target.Type));
+            Assert.Equal(HeaderFooterValues.Default, (HeaderFooterValues) target.Type);
 
             Assert.NotNull(target.Id);
             Assert.Equal("1", (string)target.Id);
@@ -119,7 +119,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.NotNull(target.Type);
             Assert.True(target.Type.HasValue);
             Assert.Equal(HeaderFooterValues.Default, target.Type.Value);
-            Assert.Equal(HeaderFooterValues.Default, (HeaderFooterValues)(target.Type));
+            Assert.Equal(HeaderFooterValues.Default, (HeaderFooterValues) target.Type);
 
             Assert.Null(target.Id);
 

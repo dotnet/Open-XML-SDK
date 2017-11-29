@@ -1,16 +1,14 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+
+using DocumentFormat.OpenXml.Validation;
 using System;
 using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Xml;
-using System.Text.RegularExpressions;
 using System.Globalization;
-using DocumentFormat.OpenXml.Validation;
-
-#if FEATURE_BINARYFORMATTER
-using System.Runtime.Serialization.Formatters.Binary;
-#endif
+using System.IO;
+using System.Runtime.Serialization;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Xml;
 
 namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 {
@@ -233,7 +231,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                     throw new ArgumentOutOfRangeException(nameof(xsdType));
             }
 
-            throw new ArgumentOutOfRangeException(nameof(xsdType));;
+            throw new ArgumentOutOfRangeException(nameof(xsdType));
         }
     }
 
@@ -281,21 +279,78 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// <summary>
     /// Holds all simple type constraints in array.
     /// </summary>
-    [Serializable()]
+    [DataContract]
+    [KnownType(typeof(AnyUriRestriction))]
+    [KnownType(typeof(Base64BinaryRestriction))]
+    [KnownType(typeof(BooleanValueRestriction))]
+    [KnownType(typeof(ByteValueRestriction))]
+    [KnownType(typeof(DateTimeValueRestriction))]
+    [KnownType(typeof(DateValueRestriction))]
+    [KnownType(typeof(DecimalValueRestriction))]
+    [KnownType(typeof(DoubleValueRestriction))]
+    [KnownType(typeof(EnumValueRestriction))]
+    [KnownType(typeof(IdStringRestriction))]
+    [KnownType(typeof(Int16ValueRestriction))]
+    [KnownType(typeof(Int32ValueRestriction))]
+    [KnownType(typeof(Int64ValueRestriction))]
+    [KnownType(typeof(IntegerValueRestriction))]
+    [KnownType(typeof(HexBinaryRestriction))]
+    [KnownType(typeof(LanguageRestriction))]
+    [KnownType(typeof(ListValueRestriction))]
+    [KnownType(typeof(NcNameRestriction))]
+    [KnownType(typeof(NonNegativeIntegerValueRestriction))]
+    [KnownType(typeof(PositiveIntegerValueRestriction))]
+    [KnownType(typeof(QnameRestriction))]
+    [KnownType(typeof(RedirectedRestriction))]
+    [KnownType(typeof(SByteValueRestriction))]
+    [KnownType(typeof(SingleValueRestriction))]
+    [KnownType(typeof(StringRestriction))]
+    [KnownType(typeof(SimpleTypeRestrictions))]
+    [KnownType(typeof(TokenRestriction))]
+    [KnownType(typeof(UInt16ValueRestriction))]
+    [KnownType(typeof(UInt32ValueRestriction))]
+    [KnownType(typeof(UInt64ValueRestriction))]
+    [KnownType(typeof(UnionValueRestriction))]
     internal class SimpleTypeRestrictions
     {
+        [DataMember]
         public int SimpleTypeCount { get; set; }
 
+        [DataMember]
         public SimpleTypeRestriction[] SimpleTypes { get; set; }
 
-#if FEATURE_BINARYFORMATTER
+        private static DataContractSerializer GetSerializer()
+        {
+#if FEATURE_DCS_SETTINGS
+            var settings = new DataContractSerializerSettings
+            {
+                PreserveObjectReferences = true
+            };
+
+            return new DataContractSerializer(typeof(SimpleTypeRestrictions), settings);
+#else
+            return new DataContractSerializer(
+                typeof(SimpleTypeRestrictions),
+                null,
+                int.MaxValue,
+                false,
+                true,
+                null);
+#endif
+        }
+
         internal void Serialize(Stream stream)
         {
-            // simpletypes
-            // use BinaryFormatter to serialize 
-            BinaryFormatter binaryFormatter = new BinaryFormatter();
-            binaryFormatter.AssemblyFormat = System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full;
-            binaryFormatter.Serialize(stream, this);
+            var settings = new XmlWriterSettings
+            {
+                Indent = true
+            };
+
+            using (var writer = new StreamWriter(stream, Encoding.UTF8))
+            using (var xml = XmlWriter.Create(writer, settings))
+            {
+                GetSerializer().WriteObject(xml, this);
+            }
         }
 
         /// <summary>
@@ -306,155 +361,88 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <returns></returns>
         internal static SimpleTypeRestrictions Deserialize(Stream stream, FileFormatVersions fileFormat)
         {
-            var binaryFormatter = new BinaryFormatter
+            using (var reader = new StreamReader(stream, Encoding.UTF8, false))
+            using (var xml = XmlReader.Create(reader))
             {
-                AssemblyFormat = System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full,
-                Binder = new DocumentFormatBinder()
-            };
+                var simpleTypeRestrictions = (SimpleTypeRestrictions)GetSerializer().ReadObject(xml);
 
-            var simpleTypeRestrictions = (SimpleTypeRestrictions)(binaryFormatter.Deserialize(stream));
-            foreach (var simpleType in simpleTypeRestrictions.SimpleTypes)
-            {
-                simpleType.FileFormat = fileFormat;
-            }
-            return simpleTypeRestrictions;
-        }
-
-        /// <summary>
-        /// The validation data is contained in a binary file that was generated with an older, non-signed version of the library.
-        /// Deserialization will fail without this binder, which redirects any attempt at loading the old type to the new type
-        /// </summary>
-        private sealed class DocumentFormatBinder : System.Runtime.Serialization.SerializationBinder
-        {
-            private static readonly System.Reflection.Assembly s_assembly = typeof(DocumentFormatBinder).Assembly;
-
-            public override Type BindToType(string assemblyName, string typeName)
-            {
-                var name = new System.Reflection.AssemblyName(assemblyName);
-
-                if (string.Equals(name.Name, "DocumentFormat.OpenXml", StringComparison.Ordinal))
+                foreach (var simpleType in simpleTypeRestrictions.SimpleTypes)
                 {
-                    return s_assembly.GetType(typeName);
+                    simpleType.FileFormat = fileFormat;
                 }
-                else
-                {
-                    return null;
-                }
+
+                return simpleTypeRestrictions;
             }
         }
-#endif
 
         /// <summary>
         /// Indexer to retriver a specified data in the SimpleTypes.
         /// </summary>
         /// <param name="index">The index of the data in the SimpleTypes array.</param>
         /// <returns>The simple type constraint data.</returns>
-        public SimpleTypeRestriction this[int index]
-        {
-            get
-            {
-                return this.SimpleTypes[index];
-            }
-        }
+        public SimpleTypeRestriction this[int index] => SimpleTypes[index];
     }
 
     /// <summary>
     /// Base class for simple type constraint.
     /// </summary>
-    [Serializable()]
     [DebuggerDisplay("RestrictionField={RestrictionField}")]
+    [DataContract]
     internal abstract class SimpleTypeRestriction
     {
-        [NonSerialized()]
-        private FileFormatVersions _fileFormat;
-
         /// <summary>
         /// The FileFormat version of this restriction.
         /// </summary>
-        internal FileFormatVersions FileFormat
-        {
-            get { return this._fileFormat; }
-            set { this._fileFormat = value; }
-        }
-
-        public SimpleTypeRestriction()
-        {
-            this.RestrictionField = RestrictionField.None;
-        }
+        internal FileFormatVersions FileFormat { get; set; }
 
         /// <summary>
-        /// Gets the XsdType - type defined in schema.
+        /// Gets the XsdType type defined in schema.
         /// </summary>
-        public abstract XsdType XsdType
-        {
-            get;
-            set;
-        }
+        public abstract XsdType XsdType { get; }
 
         /// <summary>
-        /// Returns the corresponding CLR type name. The name will be used to report error.
+        /// Gets the corresponding CLR type name. The name will be used to report error.
         /// </summary>
-        public abstract string ClrTypeName
-        {
-            get;
-        }
+        public virtual string ClrTypeName => throw new NotImplementedException();
 
         /// <summary>
-        /// Is this an enumeration simple type?
+        /// Gets if this simple type is an enum
         /// </summary>
-        public virtual bool IsEnum
-        {
-            get { return false; }
-        }
+        public virtual bool IsEnum => false;
 
         /// <summary>
-        /// Is this simple type a list?
+        /// Gets if this simple type is a list
         /// </summary>
-        public virtual bool IsList
-        {
-            get { return false; }
-        }
-
-        public string Pattern
-        {
-            get;
-            set;
-        }
+        public virtual bool IsList => false;
 
         /// <summary>
-        /// Gets the maxLength facets.
+        /// Gets or sets the pattern
         /// </summary>
-        [Ignore]
-        public virtual int MaxLength
-        {
-            get { throw new InvalidOperationException(); }
-            set { throw new InvalidOperationException(); }
-        }
+        [DataMember(EmitDefaultValue = false)]
+        public string Pattern { get; set; }
 
         /// <summary>
-        /// Gets the minLength facets.
+        /// Gets or sets the maxLength facets.
         /// </summary>
-        [Ignore]
-        public virtual int MinLength
-        {
-            get { throw new InvalidOperationException(); }
-            set { throw new InvalidOperationException(); }
-        }
-        
+        [DataMember(EmitDefaultValue = false)]
+        public virtual int MaxLength { get; set; }
+
         /// <summary>
-        /// Gets the length facets.
+        /// Gets or sets the minLength facets.
         /// </summary>
-        [Ignore]
-        public virtual int Length
-        {
-            get { throw new InvalidOperationException(); }
-            set { throw new InvalidOperationException(); }
-        }
+        [DataMember(EmitDefaultValue = false)]
+        public virtual int MinLength { get; set; }
+
+        /// <summary>
+        /// Gets or sets the length facets.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public virtual int Length { get; set; }
 
         /// <summary>
         /// Gets the restriction value in string in CultureInfo.CurrentUICulture.
         /// </summary>
-        /// <param name="restrictionField">The facet to be retrived.</param>
+        /// <param name="restrictionField">The facet to be retrieved.</param>
         /// <returns>The value in string.</returns>
         public virtual string GetRestrictionValue(RestrictionField restrictionField)
         {
@@ -479,13 +467,10 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         }
 
         /// <summary>
-        /// Gets the effective constraint facets used in this instance.
+        /// Gets or sets the effective constraint facets used in this instance.
         /// </summary>
-        public RestrictionField RestrictionField
-        {
-            get;
-            set;
-        }
+        [DataMember(EmitDefaultValue = false)]
+        public RestrictionField RestrictionField { get; set; }
 
         /// <summary>
         /// Validating the specified value is valid according the XsdType.
@@ -494,11 +479,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <returns>False if the specified value is not valid.</returns>
         public virtual bool ValidateValueType(OpenXmlSimpleType attributeValue)
         {
-            if (attributeValue.HasValue)
-            {
-                return true;
-            }
-            return false;
+            return attributeValue.HasValue;
         }
 
         /// <summary>
@@ -582,10 +563,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// </summary>
         /// <param name="attributeValue"></param>
         /// <returns></returns>
-        public virtual bool IsPatternValid(OpenXmlSimpleType attributeValue)
-        {
-            return true;
-        }
+        public virtual bool IsPatternValid(OpenXmlSimpleType attributeValue) => true;
 
         /// <summary>
         /// Validate whether the "length" constraint is ok.
@@ -684,7 +662,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 #if DEBUG
         public virtual void Verify()
         {
-            return;
         }
 #endif 
     }
@@ -694,52 +671,23 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// </summary>
     /// <remarks>
     /// </remarks>
-    [Serializable()]
+    [DataContract]
     internal class RedirectedRestriction : SimpleTypeRestriction
     {
-        public SimpleTypeRestriction TargetRestriction
-        {
-            get;
-            set;
-        }
+        [DataMember]
+        public SimpleTypeRestriction TargetRestriction { get; set; }
 
         /// <summary>
         /// An ID for this type. 
         /// </summary>
-        public int AttributeId
-        {
-            get;
-            set;
-        }
+        [DataMember]
+        public int AttributeId { get; set; }
 
-        /// <summary>
-        /// Initializes a new instance of the ValidationErrorInfo.
-        /// </summary>
-        public RedirectedRestriction()
-            : base()
-        {
-        }
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.Redirected;
 
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.Redirected; }
-            set { Debug.Assert(value == XsdType.AnySimpleType); }
-        }
-
-        /// <summary>
-        /// Returns the corresponding CLR type name. The name will be used to report error.
-        /// </summary>
-        public override string ClrTypeName
-        {
-            get
-            {
-                return this.TargetRestriction.ClrTypeName;
-            }
-        }
+        /// <inheritdoc />
+        public override string ClrTypeName => this.TargetRestriction.ClrTypeName;
 
         public OpenXmlSimpleType ConvertValue(OpenXmlSimpleType value)
         {
@@ -782,73 +730,24 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// </summary>
     /// <remarks>
     /// </remarks>
-    [Serializable()]
+    [DataContract]
     internal class UnionValueRestriction : SimpleTypeRestriction
     {
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private SimpleTypeRestriction[] unionField;
-
-        public SimpleTypeRestriction[] UnionTypes
-        {
-            get
-            {
-                return this.unionField;
-            }
-
-            set
-            {
-                this.unionField = value;
-            }
-        }
+        [DataMember]
+        public SimpleTypeRestriction[] UnionTypes { get; set; }
 
         /// <summary>
         /// An ID for union. 
         /// </summary>
-        public int UnionId
-        {
-            get;
-            set;
-        }
+        [DataMember]
+        public int UnionId { get; set; }
 
-        /// <summary>
-        /// Initializes a new instance of the ValidationErrorInfo.
-        /// </summary>
-        public UnionValueRestriction()
-            : base()
-        {
-        }
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.Union;
 
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.Union; }
-            set { Debug.Assert(value == XsdType.AnySimpleType); }
-        }
-
-        /// <summary>
-        /// Returns the corresponding CLR type name. The name will be used to report error.
-        /// </summary>
-        [Ignore]
-        public override string ClrTypeName
-        {
-            get
-            {
-                Debug.Assert(false); // should never be called.
-                return string.Empty;
-            }
-        }
-
-        /// <summary>
-        /// Validating the specified value is valid according the XsdType.
-        /// </summary>
-        /// <param name="attributeValue"></param>
-        /// <returns>False if the specified value is not valid.</returns>
+        /// <inheritdoc />
         public override bool ValidateValueType(OpenXmlSimpleType attributeValue)
         {
-            // 
             StringValue stringValue = attributeValue.InnerText;
 
             var memberValues = UnionHelper.CreatePossibleMembers(this, this.FileFormat);
@@ -859,7 +758,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             OpenXmlSimpleType simpleValue;
             SimpleTypeRestriction memberRestriction;
 
-            for (int i = 0; i < count ; i ++)
+            for (int i = 0; i < count; i++)
             {
                 simpleValue = memberValues[i];
                 simpleValue.InnerText = stringValue;
@@ -875,13 +774,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             }
             return false;
         }
-
-#if DEBUG
-        public override void Verify()
-        {
-            return;
-        }
-#endif
     }
 
     /// <summary>
@@ -891,49 +783,16 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// We do not save the enums in the database. Instead we reuse the generated enum class in the generated code.
     /// For attributes, the type of the enum is known through the code-gen'ed data.
     /// </remarks>
-    [Serializable()]
+    [DataContract]
     internal class EnumValueRestriction : SimpleTypeRestriction
     {
-        public EnumValueRestriction()
-            : base()
-        {
-        }
-        
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.Enum; }
-            set { Debug.Assert(value == XsdType.String || value == XsdType.Token); }
-        }
-        
-        /// <summary>
-        /// Returns the corresponding CLR type name. The name will be used to report error.
-        /// </summary>
-        public override string ClrTypeName
-        {
-            get
-            {
-                Debug.Assert(false); // should never be called.
-                return string.Empty;
-            }
-        }
-        
-        /// <summary>
-        /// Is this an enumeration simple type?
-        /// </summary>
-        public override bool IsEnum
-        {
-            get { return true; }
-        }
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.Enum;
 
-        /// <summary>
-        /// Validating the specified value is valid according the XsdType.
-        /// </summary>
-        /// <param name="attributeValue"></param>
-        /// <returns>False if the specified value is not valid.</returns>
+        /// <inheritdoc />
+        public override bool IsEnum => true;
+
+        /// <inheritdoc />
         public override bool ValidateValueType(OpenXmlSimpleType attributeValue)
         {
             if (attributeValue.HasValue)
@@ -945,68 +804,27 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             }
             return false;
         }
-
-#if DEBUG
-        public override void Verify()
-        {
-            return;
-        }
-#endif
     }
 
     /// <summary>
     /// Class for all list simple types.
     /// </summary>
-    /// <remarks>
-    /// </remarks>
-    [Serializable()]
+    [DataContract]
     internal class ListValueRestriction : SimpleTypeRestriction
     {
-        public ListValueRestriction()
-            : base()
-        {
-        }
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.List;
 
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.List; }
-            set { Debug.Assert(value == XsdType.AnySimpleType); }
-        }
+        /// <inheritdoc />
+        public override string ClrTypeName => this.ListItemType.ClrTypeName;
 
-        /// <summary>
-        /// Returns the corresponding CLR type name. The name will be used to report error.
-        /// </summary>
-        public override string ClrTypeName
-        {
-            get
-            {
-                return this.ListItemType.ClrTypeName;
-            }
-        }
-        
-        /// <summary>
-        /// Is this simple type a list?
-        /// </summary>
-        public override bool IsList
-        {
-            get { return true; }
-        }
+        /// <inheritdoc />
+        public override bool IsList => true;
 
-        public SimpleTypeRestriction ListItemType
-        {
-            get;
-            set;
-        }
+        [DataMember]
+        public SimpleTypeRestriction ListItemType { get; set; }
 
-        /// <summary>
-        /// Validating the specified value is valid according the XsdType.
-        /// </summary>
-        /// <param name="attributeValue"></param>
-        /// <returns>False if the specified value is not valid.</returns>
+        /// <inheritdoc />
         public override bool ValidateValueType(OpenXmlSimpleType attributeValue)
         {
             if (attributeValue.HasValue)
@@ -1025,7 +843,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             return false;
         }
 
-        // ************* No lenght, maxLength, minLength, pattern constraint on list type in current Ecma376.
+        // ************* No length, maxLength, minLength, pattern constraint on list type in current Ecma376.
 
 #if false
         /// <summary>
@@ -1115,56 +933,30 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             return true;
         }
 #endif
-
-#if DEBUG
-        public override void Verify()
-        {
-            return;
-        }
-#endif
     }
-     
+
     /// <summary>
     /// Boolean (xsd:boolean) based simple type constraint.
     /// </summary>
-    [Serializable()]
+    [DataContract]
     internal class BooleanValueRestriction : SimpleTypeRestriction
     {
-        [NonSerialized()]
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private static readonly string clrTypeName = typeof(Boolean).Name;
-
+        // BooleanValueRestriction is the only SimpleTypeRestriction that can have
+        // multiple values of XsdType, so we only need to serialize this instance
+        [DataMember(Name = nameof(XsdType))]
         private XsdType _xsdType = XsdType.Boolean;
 
-        public BooleanValueRestriction()
-            : base()
+        /// <inheritdoc />
+        public override XsdType XsdType => _xsdType;
+
+        public void SetXsdType(XsdType value)
         {
+            Debug.Assert(value == XsdType.Boolean || value == XsdType.SpecialBoolean);
+            this._xsdType = value;
         }
 
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        public override XsdType XsdType
-        {
-            get { return this._xsdType; }
-
-            set
-            {
-                Debug.Assert(value == XsdType.Boolean || value == XsdType.SpecialBoolean);
-                this._xsdType = value;
-            }
-        }
-
-        /// <summary>
-        /// Returns the corresponding CLR type name. The name will be used to report error.
-        /// </summary>
-        public override string ClrTypeName
-        {
-            get
-            {
-                return clrTypeName;
-            }
-        }
+        /// <inheritdoc />
+        public override string ClrTypeName => typeof(Boolean).Name;
 
 #if DEBUG
         public override void Verify()
@@ -1173,8 +965,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             Debug.Assert(this.IsEnum == false);
             Debug.Assert(this.IsList == false);
             Debug.Assert(this.Pattern == null);
-
-            return;
         }
 #endif
     }
@@ -1184,84 +974,49 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// </summary>
     /// <typeparam name="T">A basic number type.</typeparam>
     /// <typeparam name="ST">A type of OpenXmlSimpleType.</typeparam>
-    [Serializable()]
+    [DataContract]
     internal abstract class SimpleValueRestriction<T, ST> : SimpleTypeRestriction
         where T : struct, IComparable<T>
         where ST : OpenXmlSimpleValue<T>, new()
     {
-        protected abstract T MinValue
-        {
-            get;
-        }
+        protected abstract T MinValue { get; }
 
-        protected abstract T MaxValue
-        {
-            get;
-        }
-        
+        protected abstract T MaxValue { get; }
+
         public SimpleValueRestriction()
-            : base()
         {
             this.MinInclusive = this.MinValue;
             this.MaxInclusive = this.MaxValue;
         }
 
-        [NonSerialized()]
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private static readonly string clrTypeName = typeof(T).Name;
-
-        /// <summary>
-        /// Returns the corresponding CLR type name. The name will be used to report error.
-        /// </summary>
-        public override string ClrTypeName
-        {
-            get
-            {
-                return clrTypeName;
-            }
-        }
+        /// <inheritdoc />
+        public override string ClrTypeName => typeof(T).Name;
 
         /// <summary>
         /// Gets the minInclusive facets.
         /// </summary>
-        public T MinInclusive
-        {
-            get;
-            set;
-        }
+        [DataMember]
+        public T MinInclusive { get; set; }
 
         /// <summary>
         /// Gets the maxInclusive facets.
         /// </summary>
-        public T MaxInclusive
-        {
-            get;
-            set;
-        }
+        [DataMember]
+        public T MaxInclusive { get; set; }
 
         /// <summary>
         /// Gets the minExclusive facets.
         /// </summary>
-        public T MinExclusive
-        {
-            get;
-            set;
-        }
+        [DataMember]
+        public T MinExclusive { get; set; }
 
         /// <summary>
         /// Gets the maxExclusive facets.
         /// </summary>
-        public T MaxExclusive
-        {
-            get;
-            set;
-        }
+        [DataMember]
+        public T MaxExclusive { get; set; }
 
-        /// <summary>
-        /// Gets the restriction value in string in CultureInfo.CurrentUICulture.
-        /// </summary>
-        /// <param name="restrictionField">The facet to be retrived.</param>
-        /// <returns>The value in string.</returns>
+        /// <inheritdoc />
         public override string GetRestrictionValue(RestrictionField restrictionField)
         {
             switch (restrictionField)
@@ -1300,11 +1055,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             return simpleValue;
         }
 
-        /// <summary>
-        /// Validate whether the "minInclusive" constraint is ok.
-        /// </summary>
-        /// <param name="attributeValue"></param>
-        /// <returns></returns>
+        /// <inheritdoc />
         public override bool IsMinInclusiveValid(OpenXmlSimpleType attributeValue)
         {
             Debug.Assert(attributeValue is ST);
@@ -1320,11 +1071,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             return true;
         }
 
-        /// <summary>
-        /// Validate whether the "minExclusive" constraint is ok.
-        /// </summary>
-        /// <param name="attributeValue"></param>
-        /// <returns></returns>
+        /// <inheritdoc />
         public override bool IsMinExclusiveValid(OpenXmlSimpleType attributeValue)
         {
             Debug.Assert(attributeValue is ST);
@@ -1340,11 +1087,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             return true;
         }
 
-        /// <summary>
-        /// Validate whether the "maxInclusive" constraint is ok.
-        /// </summary>
-        /// <param name="attributeValue"></param>
-        /// <returns></returns>
+        /// <inheritdoc />
         public override bool IsMaxInclusiveValid(OpenXmlSimpleType attributeValue)
         {
             Debug.Assert(attributeValue is ST);
@@ -1360,11 +1103,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             return true;
         }
 
-        /// <summary>
-        /// Validate whether the "maxExclusive" constraint is ok.
-        /// </summary>
-        /// <param name="attributeValue"></param>
-        /// <returns></returns>
+        /// <inheritdoc />
         public override bool IsMaxExclusiveValid(OpenXmlSimpleType attributeValue)
         {
             Debug.Assert(attributeValue is ST);
@@ -1380,11 +1119,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             return true;
         }
 
-        /// <summary>
-        /// Validating the specified value is valid according the XsdType.
-        /// </summary>
-        /// <param name="attributeValue"></param>
-        /// <returns>False if the specified value is not valid.</returns>
+        /// <inheritdoc />
         public override bool ValidateValueType(OpenXmlSimpleType attributeValue)
         {
 
@@ -1412,11 +1147,9 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             Debug.Assert(this.Pattern == null);
 
             this.VerifyMinMax();
-
-            return;
         }
 
-        public void VerifyMinMax()
+        private void VerifyMinMax()
         {
             if ((this.RestrictionField & RestrictionField.MinExclusive) == RestrictionField.MinExclusive)
             {
@@ -1450,295 +1183,129 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// <summary>
     /// Byte ( xsd:unsignedByte ) based value restriction.
     /// </summary>
-    [Serializable()]
+    [DataContract]
     internal class ByteValueRestriction : SimpleValueRestriction<Byte, ByteValue>
     {
-        public ByteValueRestriction()
-            : base()
-        {
-        }
+        protected override Byte MinValue => Byte.MinValue;
 
-        protected override Byte MinValue
-        {
-            get { return Byte.MinValue; }
-        }
+        protected override Byte MaxValue => Byte.MaxValue;
 
-        protected override Byte MaxValue
-        {
-            get { return Byte.MaxValue; }
-        }
-
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.UnsignedByte; }
-            set { Debug.Assert(value == XsdType.UnsignedByte); }
-        }
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.UnsignedByte;
     }
 
     /// <summary>
-    /// SByte (xsd:bye) based value restriction. 
+    /// SByte (xsd:bye) based value restriction.
     /// </summary>
-    [Serializable()]
+    [DataContract]
     internal class SByteValueRestriction : SimpleValueRestriction<SByte, SByteValue>
     {
-        public SByteValueRestriction()
-            : base()
-        {
-        }
+        protected override SByte MinValue => SByte.MinValue;
 
-        protected override SByte MinValue
-        {
-            get { return SByte.MinValue; }
-        }
+        protected override SByte MaxValue => SByte.MaxValue;
 
-        protected override SByte MaxValue
-        {
-            get { return SByte.MaxValue; }
-        }
-
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.Byte; }
-            set { Debug.Assert(value == XsdType.Byte); }
-        }
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.Byte;
     }
 
     /// <summary>
     /// Int16 ( xsd:short ) based value restriction.
     /// </summary>
-    [Serializable()]
+    [DataContract]
     internal class Int16ValueRestriction : SimpleValueRestriction<Int16, Int16Value>
     {
-        public Int16ValueRestriction()
-            : base()
-        {
-        }
+        protected override Int16 MinValue => Int16.MinValue;
 
-        protected override Int16 MinValue
-        {
-            get { return Int16.MinValue; }
-        }
+        protected override Int16 MaxValue => Int16.MaxValue;
 
-        protected override Int16 MaxValue
-        {
-            get { return Int16.MaxValue; }
-        }
-
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.Short; }
-            set { Debug.Assert(value == XsdType.Short); }
-        }
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.Short;
     }
 
     /// <summary>
     /// Int32 (xsd:int) based value restriction.
     /// </summary>
-    [Serializable()]
+    [DataContract]
     internal class Int32ValueRestriction : SimpleValueRestriction<Int32, Int32Value>
     {
-        public Int32ValueRestriction()
-            : base()
-        {
-        }
+        protected override Int32 MinValue => Int32.MinValue;
 
-        protected override Int32 MinValue
-        {
-            get { return Int32.MinValue; }
-        }
+        protected override Int32 MaxValue => Int32.MaxValue;
 
-        protected override Int32 MaxValue
-        {
-            get { return Int32.MaxValue; }
-        }
-
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.Int; }
-            set { Debug.Assert(value == XsdType.Int); }
-        }
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.Int;
     }
 
     /// <summary>
     /// Int64 (xsd:long) based value restriction.
     /// </summary>
-    [Serializable()]
+    [DataContract]
     internal class Int64ValueRestriction : SimpleValueRestriction<Int64, Int64Value>
     {
-        public Int64ValueRestriction()
-            : base()
-        {
-        }
+        protected override Int64 MinValue => Int64.MinValue;
 
-        protected override Int64 MinValue
-        {
-            get { return Int64.MinValue; }
-        }
+        protected override Int64 MaxValue => Int64.MaxValue;
 
-        protected override Int64 MaxValue
-        {
-            get { return Int64.MaxValue; }
-        }
-
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.Long; }
-            set { Debug.Assert(value == XsdType.Long); }
-        }
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.Long;
     }
 
     /// <summary>
     /// UInt16 ( xsd:unsignedShort ) based value restriction.
     /// </summary>
-    [Serializable()]
+    [DataContract]
     internal class UInt16ValueRestriction : SimpleValueRestriction<UInt16, UInt16Value>
     {
-        public UInt16ValueRestriction()
-            : base()
-        {
-        }
+        protected override UInt16 MinValue => UInt16.MinValue;
 
-        protected override UInt16 MinValue
-        {
-            get { return UInt16.MinValue; }
-        }
+        protected override UInt16 MaxValue => UInt16.MaxValue;
 
-        protected override UInt16 MaxValue
-        {
-            get { return UInt16.MaxValue; }
-        }
-
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.UnsignedShort; }
-            set { Debug.Assert(value == XsdType.UnsignedShort); }
-        }
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.UnsignedShort;
     }
 
     /// <summary>
     /// UInt32 (xsd:unsignedInt) based value restriction.
     /// </summary>
-    [Serializable()]
+    [DataContract]
     internal class UInt32ValueRestriction : SimpleValueRestriction<UInt32, UInt32Value>
     {
-        public UInt32ValueRestriction()
-            : base()
-        {
-        }
+        protected override UInt32 MinValue => UInt32.MinValue;
 
-        protected override UInt32 MinValue
-        {
-            get { return UInt32.MinValue; }
-        }
+        protected override UInt32 MaxValue => UInt32.MaxValue;
 
-        protected override UInt32 MaxValue
-        {
-            get { return UInt32.MaxValue; }
-        }
-
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.UnsignedInt; }
-            set { Debug.Assert(value == XsdType.UnsignedInt); }
-        }
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.UnsignedInt;
     }
 
     /// <summary>
     /// UInt64 (xsd:unsignedLong) based value restriction.
     /// </summary>
-    [Serializable]
+    [DataContract]
     internal class UInt64ValueRestriction : SimpleValueRestriction<UInt64, UInt64Value>
     {
-        public UInt64ValueRestriction()
-            : base()
-        {
-        }
+        protected override UInt64 MinValue => UInt64.MinValue;
 
-        protected override UInt64 MinValue
-        {
-            get { return UInt64.MinValue; }
-        }
+        protected override UInt64 MaxValue => UInt64.MaxValue;
 
-        protected override UInt64 MaxValue
-        {
-            get { return UInt64.MaxValue; }
-        }
-
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.UnsignedLong; }
-            set { Debug.Assert(value == XsdType.UnsignedLong); }
-        }
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.UnsignedLong;
     }
 
     /// <summary>
     /// Single (xsd:float) based value restriction.
     /// </summary>
-    [Serializable()]
+    [DataContract]
     internal class SingleValueRestriction : SimpleValueRestriction<Single, SingleValue>
     {
-        public SingleValueRestriction()
-            : base()
-        {
-        }
+        protected override Single MinValue => Single.MinValue;
 
-        protected override Single MinValue
-        {
-            get { return Single.MinValue; }
-        }
+        protected override Single MaxValue => Single.MaxValue;
 
-        protected override Single MaxValue
-        {
-            get { return Single.MaxValue; }
-        }
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.Float;
 
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.Float; }
-            set { Debug.Assert(value == XsdType.Float); }
-        }
-
-        /// <summary>
-        /// Validating the specified value is valid according the XsdType.
-        /// </summary>
-        /// <param name="attributeValue"></param>
-        /// <returns>False if the specified value is not valid.</returns>
+        /// <inheritdoc />
         public override bool ValidateValueType(OpenXmlSimpleType attributeValue)
         {
             if (attributeValue.HasValue)
@@ -1756,39 +1323,17 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// <summary>
     /// Double (xsd:double) based value restriction.
     /// </summary>
-    [Serializable()]
+    [DataContract]
     internal class DoubleValueRestriction : SimpleValueRestriction<Double, DoubleValue>
     {
-        public DoubleValueRestriction()
-            : base()
-        {
-        }
+        protected override Double MinValue => Double.MinValue;
 
-        protected override Double MinValue
-        {
-            get { return Double.MinValue; }
-        }
+        protected override Double MaxValue => Double.MaxValue;
 
-        protected override Double MaxValue
-        {
-            get { return Double.MaxValue; }
-        }
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.Double;
 
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.Double; }
-            set { Debug.Assert(value == XsdType.Double); }
-        }
-
-        /// <summary>
-        /// Validating the specified value is valid according the XsdType.
-        /// </summary>
-        /// <param name="attributeValue"></param>
-        /// <returns>False if the specified value is not valid.</returns>
+        /// <inheritdoc />
         public override bool ValidateValueType(OpenXmlSimpleType attributeValue)
         {
             if (attributeValue.HasValue)
@@ -1813,33 +1358,15 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// Precision is not reflected in this value space; the number 2.0 is not distinct from the number 2.00. 
     /// The ·order-relation· on decimal is the order relation on real numbers, restricted to this subset. 
     /// </remarks>
-    [Serializable()]
+    [DataContract]
     internal class DecimalValueRestriction : SimpleValueRestriction<Decimal, DecimalValue>
     {
-        public DecimalValueRestriction()
-            : base()
-        {
-        }
+        protected override Decimal MinValue => Decimal.MinValue;
 
-        protected override Decimal MinValue
-        {
-            get { return Decimal.MinValue; }
-        }
+        protected override Decimal MaxValue => Decimal.MaxValue;
 
-        protected override Decimal MaxValue
-        {
-            get { return Decimal.MaxValue; }
-        }
-
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.Decimal; }
-            set { Debug.Assert(value == XsdType.Decimal); }
-        }
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.Decimal;
     }
 
     /// <summary>
@@ -1852,48 +1379,19 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     ///  
     /// !******************** TODO: at current, the CodeGen generate int for xsd:integer
     /// </remarks>
-    [Serializable()]
+    [DataContract]
     internal class IntegerValueRestriction : SimpleValueRestriction<Int64, IntegerValue>
     {
-        [NonSerialized()]
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private static readonly string clrTypeName = ValidationResources.TypeName_Integer;
 
-        protected override Int64 MinValue
-        {
-            get { return Int64.MinValue; }
-        }
+        protected override Int64 MinValue => Int64.MinValue;
 
-        protected override Int64 MaxValue
-        {
-            get { return Int64.MaxValue; }
-        }
+        protected override Int64 MaxValue => Int64.MaxValue;
 
-        public IntegerValueRestriction()
-            : base()
-        {
-        }
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.Integer;
 
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.Integer; }
-            set { Debug.Assert(value == XsdType.Integer); }
-        }
-
-        /// <summary>
-        /// Returns the corresponding CLR type name. The name will be used to report error.
-        /// </summary>
-        public override string ClrTypeName
-        {
-            get
-            {
-                return clrTypeName;
-            }
-        }
+        /// <inheritdoc />
+        public override string ClrTypeName => ValidationResources.TypeName_Integer;
     }
 
     /// <summary>
@@ -1907,45 +1405,22 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     ///
     /// !******************** TODO: at current, the CodeGen generate int for xsd:integer
     /// </remarks>
-    [Serializable()]
+    [DataContract]
     internal class NonNegativeIntegerValueRestriction : IntegerValueRestriction
     {
-        [NonSerialized()]
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private static readonly string clrTypeName = ValidationResources.TypeName_nonNegativeInteger;
-
-        protected override Int64 MinValue
-        {
-            get { return 0; }
-        }
+        protected override Int64 MinValue => 0;
 
         public NonNegativeIntegerValueRestriction()
-            : base()
         {
             this.RestrictionField = RestrictionField.MinInclusive;
             this.MinInclusive = 0;
         }
 
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.NonNegativeInteger; }
-            set { Debug.Assert(value == XsdType.NonNegativeInteger); }
-        }
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.NonNegativeInteger;
 
-        /// <summary>
-        /// Returns the corresponding CLR type name. The name will be used to report error.
-        /// </summary>
-        public override string ClrTypeName
-        {
-            get
-            {
-                return clrTypeName;
-            }
-        }
+        /// <inheritdoc />
+        public override string ClrTypeName => ValidationResources.TypeName_nonNegativeInteger;
     }
 
     /// <summary>
@@ -1959,111 +1434,50 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     ///
     /// !******************** TODO: at current, the CodeGen generate int for xsd:integer
     /// </remarks>
-    [Serializable()]
+    [DataContract]
     internal class PositiveIntegerValueRestriction : IntegerValueRestriction
     {
-        [NonSerialized()]
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private static readonly string clrTypeName = ValidationResources.TypeName_positiveInteger;
-        
-        // TODO: change to decimal, and the minValue should be decimal.
-
-        protected override Int64 MinValue
-        {
-            get { return 1; }
-        }
+        protected override Int64 MinValue => 1;
 
         public PositiveIntegerValueRestriction()
-            : base()
         {
             this.RestrictionField = RestrictionField.MinInclusive;
             this.MinInclusive = 1;
         }
 
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.PositiveInteger; }
-            set { Debug.Assert(value == XsdType.PositiveInteger); }
-        }
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.PositiveInteger;
 
-        /// <summary>
-        /// Returns the corresponding CLR type name. The name will be used to report error.
-        /// </summary>
-        public override string ClrTypeName
-        {
-            get
-            {
-                return clrTypeName;
-            }
-        }
+        /// <inheritdoc />
+        public override string ClrTypeName => ValidationResources.TypeName_positiveInteger;
     }
 
     /// <summary>
     /// DateTime (xsd:dateTime) based value restriction.
     /// </summary>
-    [Serializable()]
+    [DataContract]
     internal class DateTimeValueRestriction : SimpleValueRestriction<DateTime, DateTimeValue>
     {
-        protected override DateTime MinValue
-        {
-            get { return DateTime.MinValue; }
-        }
+        protected override DateTime MinValue => DateTime.MinValue;
 
-        protected override DateTime MaxValue
-        {
-            get { return DateTime.MaxValue; }
-        }
+        protected override DateTime MaxValue => DateTime.MaxValue;
 
-        public DateTimeValueRestriction()
-            : base()
-        {
-        }
-
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.DateTime; }
-            set { Debug.Assert(value == XsdType.DateTime); }
-        }
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.DateTime;
     }
 
     /// <summary>
     /// DateTime (xsd:date) based value restriction.
     /// </summary>
-    [Serializable()]
+    [DataContract]
     internal class DateValueRestriction : SimpleValueRestriction<DateTime, DateTimeValue>
     {
-        protected override DateTime MinValue
-        {
-            get { return DateTime.MinValue; }
-        }
+        protected override DateTime MinValue => DateTime.MinValue;
 
-        protected override DateTime MaxValue
-        {
-            get { return DateTime.MaxValue; }
-        }
+        protected override DateTime MaxValue => DateTime.MaxValue;
 
-        public DateValueRestriction()
-            : base()
-        {
-        }
-
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.Date; }
-            set { Debug.Assert(value == XsdType.Date); }
-        }
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.Date;
 
         // TODO: validate date.
     }
@@ -2071,72 +1485,25 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// <summary>
     /// Base class for string (xsd:string) based simple type constraints.
     /// </summary>
-    [Serializable()]
+    [DataContract]
     internal class StringRestriction : SimpleTypeRestriction
     {
-        [NonSerialized()]
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private static readonly string clrTypeName = typeof(string).Name;
+        /// <inheritdoc />
+        public override int MaxLength { get; set; }
 
-        // private XsdType _xsdType;
-        public StringRestriction()
-            : base()
-        {
-        }
+        /// <inheritdoc />
+        public override int MinLength { get; set; }
 
-        /// <summary>
-        /// Gets the maxLength facets.
-        /// </summary>
-        public override int MaxLength
-        {
-            get;
-            set;
-        }
+        /// <inheritdoc />
+        public override int Length { get; set; }
 
-        /// <summary>
-        /// Gets the minLength facets.
-        /// </summary>
-        public override int MinLength
-        {
-            get;
-            set;
-        }
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.String;
 
-        /// <summary>
-        /// Gets the length facets.
-        /// </summary>
-        public override int Length
-        {
-            get;
-            set;
-        }
+        /// <inheritdoc />
+        public override string ClrTypeName => typeof(string).Name;
 
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.String; }
-            set { Debug.Assert(value == XsdType.String); }
-        }
-
-        /// <summary>
-        /// Returns the corresponding CLR type name. The name will be used to report error.
-        /// </summary>
-        public override string ClrTypeName
-        {
-            get
-            {
-                return clrTypeName;
-            }
-        }
-
-        /// <summary>
-        /// Test whether the attribute value is valid according the patten constraint.
-        /// </summary>
-        /// <param name="attributeValue"></param>
-        /// <returns></returns>
+        /// <inheritdoc />
         public override bool IsPatternValid(OpenXmlSimpleType attributeValue)
         {
             if ((this.RestrictionField & RestrictionField.Pattern) == RestrictionField.Pattern)
@@ -2165,19 +1532,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             return attributeValue.InnerText.Length;
         }
 
-        /// <summary>
-        /// Validate whether the "length" constraint is ok.
-        /// </summary>
-        /// <param name="attributeValue"></param>
-        /// <returns>True if the length of the value is same as defined.</returns>
-        /// <remarks>
-        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows: 
-        /// 1 if the {variety} is ·atomic· then 
-        ///   1.1 if {primitive type definition} is string or anyURI, then the length of the value, as measured in characters ·must· be equal to {value}; 
-        ///   1.2 if {primitive type definition} is hexBinary or base64Binary, then the length of the value, as measured in octets of the binary data, ·must· be equal to {value}; 
-        ///   1.3 if {primitive type definition} is QName or NOTATION, then any {value} is facet-valid. 
-        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value} 
-        /// </remarks>
+        /// <inheritdoc />
         public override bool IsLengthValid(OpenXmlSimpleType attributeValue)
         {
             if ((this.RestrictionField & RestrictionField.Length) == RestrictionField.Length)
@@ -2190,19 +1545,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             return true;
         }
 
-        /// <summary>
-        /// Validate whether the "length" constraint is ok.
-        /// </summary>
-        /// <param name="attributeValue"></param>
-        /// <returns>True if the length of the value is same as defined.</returns>
-        /// <remarks>
-        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows: 
-        /// 1 if the {variety} is ·atomic· then 
-        ///   1.1 if {primitive type definition} is string or anyURI, then the length of the value, as measured in characters ·must· be equal to {value}; 
-        ///   1.2 if {primitive type definition} is hexBinary or base64Binary, then the length of the value, as measured in octets of the binary data, ·must· be equal to {value}; 
-        ///   1.3 if {primitive type definition} is QName or NOTATION, then any {value} is facet-valid. 
-        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value} 
-        /// </remarks>
+        /// <inheritdoc />
         public override bool IsMinLengthValid(OpenXmlSimpleType attributeValue)
         {
             if ((this.RestrictionField & RestrictionField.MinLength) == RestrictionField.MinLength)
@@ -2215,19 +1558,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             return true;
         }
 
-        /// <summary>
-        /// Validate whether the "length" constraint is ok.
-        /// </summary>
-        /// <param name="attributeValue"></param>
-        /// <returns>True if the length of the value is same as defined.</returns>
-        /// <remarks>
-        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows: 
-        /// 1 if the {variety} is ·atomic· then 
-        ///   1.1 if {primitive type definition} is string or anyURI, then the length of the value, as measured in characters ·must· be equal to {value}; 
-        ///   1.2 if {primitive type definition} is hexBinary or base64Binary, then the length of the value, as measured in octets of the binary data, ·must· be equal to {value}; 
-        ///   1.3 if {primitive type definition} is QName or NOTATION, then any {value} is facet-valid. 
-        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value} 
-        /// </remarks>
+        /// <inheritdoc />
         public override bool IsMaxLengthValid(OpenXmlSimpleType attributeValue)
         {
             if ((this.RestrictionField & RestrictionField.MaxLength) == RestrictionField.MaxLength)
@@ -2255,44 +1586,16 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// 
     /// In Ecma376, most token are enumerations.
     /// </remarks>
-    [Serializable()]
+    [DataContract]
     internal class TokenRestriction : StringRestriction
     {
-        [NonSerialized()]
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private static readonly string clrTypeName = ValidationResources.TypeName_token;
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.Token;
 
-        public TokenRestriction()
-            : base()
-        {
-        }
+        /// <inheritdoc />
+        public override string ClrTypeName => ValidationResources.TypeName_token;
 
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.Token; }
-            set { Debug.Assert(value == XsdType.Token); }
-        }
-
-        /// <summary>
-        /// Returns the corresponding CLR type name. The name will be used to report error.
-        /// </summary>
-        public override string ClrTypeName
-        {
-            get
-            {
-                return clrTypeName;
-            }
-        }
-
-        /// <summary>
-        /// Validating the specified value is valid according the XsdType.
-        /// </summary>
-        /// <param name="attributeValue"></param>
-        /// <returns>False if the specified value is not valid.</returns>
+        /// <inheritdoc />
         public override bool ValidateValueType(OpenXmlSimpleType attributeValue)
         {
             try
@@ -2340,44 +1643,16 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// The ·value space· of QName is the set of tuples {namespace name, local part}, where namespace name is an anyURI and local part is an NCName. 
     /// The ·lexical space· of QName is the set of strings that ·match· the QName production of [Namespaces in XML]. 
     /// </remarks>
-    [Serializable()]
+    [DataContract]
     internal class QnameRestriction : StringRestriction
     {
-        [NonSerialized()]
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private static readonly string clrTypeName = ValidationResources.TypeName_QName;
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.QName;
 
-        public QnameRestriction()
-            : base()
-        {
-        }
+        /// <inheritdoc />
+        public override string ClrTypeName => ValidationResources.TypeName_QName;
 
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.QName; }
-            set { Debug.Assert(value == XsdType.QName); }
-        }
-
-        /// <summary>
-        /// Returns the corresponding CLR type name. The name will be used to report error.
-        /// </summary>
-        public override string ClrTypeName
-        {
-            get
-            {
-                return clrTypeName;
-            }
-        }
-        
-        /// <summary>
-        /// Validating the specified value is valid according the XsdType.
-        /// </summary>
-        /// <param name="attributeValue"></param>
-        /// <returns>False if the specified value is not valid.</returns>
+        /// <inheritdoc />
         public override bool ValidateValueType(OpenXmlSimpleType attributeValue)
         {
             //Qualified Name 
@@ -2443,22 +1718,15 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// The ·lexical space· of normalizedString is the set of strings that do not contain the carriage return (#xD), line feed (#xA) nor tab (#x9) characters. 
     /// The ·base type· of normalizedString is string. 
     /// </remarks>
-    [Serializable()]
+    [DataContract]
     internal class NormalizedStringRestriction : StringRestriction
     {
-        [NonSerialized()]
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private static char[] crt = new char[] { '\n', '\r', '\t' };
-
-        public NormalizedStringRestriction()
-            : base()
-        {
-        }
 
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
-        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.NormalizedString; }
@@ -2497,18 +1765,12 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// The ·lexical space· of Name is the set of all strings which ·match· the Name production of [XML 1.0 (Second Edition)]. 
     /// The ·base type· of Name is token. 
     /// </remarks>
-    [Serializable()]
+    [DataContract]
     internal class NameRestriction : StringRestriction
     {
-        public NameRestriction()
-            : base()
-        {
-        }
-
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
-        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.Name; }
@@ -2535,6 +1797,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         }
     }
 #endif
+
     //****************************************
     // the xml:space is NcName
     // No other explicit use of xsd:NCName in Ecma376
@@ -2555,50 +1818,23 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     ///  The ·lexical space· of IDREF is the set of strings that ·match· the NCName production in [Namespaces in XML]. 
     ///  The ·base type· of IDREF is NCName. 
     /// </remarks>
-    [Serializable()]
+    [DataContract]
     internal class NcNameRestriction : StringRestriction
     {
-        [NonSerialized()]
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private static readonly string clrTypeName = ValidationResources.TypeName_NCName;
-        
-        public NcNameRestriction()
-            : base()
-        {
-        }
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.NCName;
 
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.NCName; }
-            set { Debug.Assert(value == XsdType.NCName || value == XsdType.IDREF);  }
-        }
+        /// <inheritdoc />
+        public override string ClrTypeName => ValidationResources.TypeName_NCName;
 
-        /// <summary>
-        /// Returns the corresponding CLR type name. The name will be used to report error.
-        /// </summary>
-        public override string ClrTypeName
-        {
-            get
-            {
-                return clrTypeName;
-            }
-        }
-
-        /// <summary>
-        /// Validating the specified value is valid according the XsdType.
-        /// </summary>
-        /// <param name="attributeValue"></param>
-        /// <returns>False if the specified value is not valid.</returns>
+        /// <inheritdoc />
         public override bool ValidateValueType(OpenXmlSimpleType attributeValue)
         {
             if (string.IsNullOrEmpty(attributeValue.InnerText))
             {
                 return false;
             }
+
             try
             {
                 XmlConvert.VerifyNCName(attributeValue.InnerText);
@@ -2621,44 +1857,16 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// The ·lexical space· of ID is the set of all strings that ·match· the NCName production in [Namespaces in XML]. 
     /// The ·base type· of ID is NCName. 
     /// </remarks>
-    [Serializable()]
+    [DataContract]
     internal class IdStringRestriction : StringRestriction
     {
-        [NonSerialized()]
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private static readonly string clrTypeName = ValidationResources.TypeName_ID;
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.ID;
 
-        public IdStringRestriction()
-            : base()
-        {
-        }
+        /// <inheritdoc />
+        public override string ClrTypeName => ValidationResources.TypeName_ID;
 
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.ID; }
-            set { Debug.Assert(value == XsdType.ID); }
-        }
-
-        /// <summary>
-        /// Returns the corresponding CLR type name. The name will be used to report error.
-        /// </summary>
-        public override string ClrTypeName
-        {
-            get
-            {
-                return clrTypeName;
-            }
-        }
-
-        /// <summary>
-        /// Validating the specified value is valid according the XsdType.
-        /// </summary>
-        /// <param name="attributeValue"></param>
-        /// <returns>False if the specified value is not valid.</returns>
+        /// <inheritdoc />
         public override bool ValidateValueType(OpenXmlSimpleType attributeValue)
         {
             if (string.IsNullOrEmpty(attributeValue.InnerText))
@@ -2687,48 +1895,19 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// An anyURI value can be absolute or relative, and may have an optional fragment identifier (i.e., it may be a URI Reference). 
     /// This type should be used to specify the intention that the value fulfills the role of a URI as defined by [RFC 2396], as amended by [RFC 2732]. 
     /// </remarks>
-    [Serializable()]
+    [DataContract]
     internal class AnyUriRestriction : StringRestriction
     {
-        [NonSerialized()]
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private static readonly string clrTypeName = typeof(Uri).Name;
-
-        [NonSerialized()]
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private static char[] WhitespaceChars = new char[] { ' ', '\t', '\n', '\r' };
 
-        public AnyUriRestriction()
-            : base()
-        {
-        }
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.AnyURI;
 
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.AnyURI; }
-            set { Debug.Assert(value == XsdType.AnyURI); }
-        }
+        /// <inheritdoc />
+        public override string ClrTypeName => typeof(Uri).Name;
 
-        /// <summary>
-        /// Returns the corresponding CLR type name. The name will be used to report error.
-        /// </summary>
-        public override string ClrTypeName
-        {
-            get
-            {
-                return clrTypeName;
-            }
-        }
-
-        /// <summary>
-        /// Validating the specified value is valid according the XsdType.
-        /// </summary>
-        /// <param name="attributeValue"></param>
-        /// <returns>False if the specified value is not valid.</returns>
+        /// <inheritdoc />
         public override bool ValidateValueType(OpenXmlSimpleType attributeValue)
         {
             Uri result = null;
@@ -2745,7 +1924,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                     return false;
                 }
             }
-            if (!Uri.TryCreate(uriString, UriKind.RelativeOrAbsolute, out result))
+            if (!Uri.TryCreate(uriString, UriHelper.RelativeOrAbsolute, out result))
             {
                 return false;
             }
@@ -2762,44 +1941,16 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// consisting of two hexadecimal digits ([0-9a-fA-F]) representing the octet code. 
     /// For example, "0FB7" is a hex encoding for the 16-bit integer 4023 (whose binary representation is 111110110111). 
     /// </remarks>
-    [Serializable()]
+    [DataContract]
     internal class HexBinaryRestriction : StringRestriction
     {
-        [NonSerialized()]
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private static readonly string clrTypeName = ValidationResources.TypeName_hexBinary;
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.HexBinary;
 
-        public HexBinaryRestriction()
-            : base()
-        {
-        }
+        /// <inheritdoc />
+        public override string ClrTypeName => ValidationResources.TypeName_hexBinary;
 
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.HexBinary; }
-            set { Debug.Assert(value == XsdType.HexBinary); }
-        }
-
-        /// <summary>
-        /// Returns the corresponding CLR type name. The name will be used to report error.
-        /// </summary>
-        public override string ClrTypeName
-        {
-            get
-            {
-                return clrTypeName;
-            }
-        }
-
-        /// <summary>
-        /// Validating the specified value is valid according the XsdType.
-        /// </summary>
-        /// <param name="attributeValue"></param>
-        /// <returns>False if the specified value is not valid.</returns>
+        /// <inheritdoc />
         public override bool ValidateValueType(OpenXmlSimpleType attributeValue)
         {
             if (attributeValue.InnerText == null)
@@ -2816,15 +1967,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             return Regex.IsMatch(attributeValue.InnerText, pattern, RegexOptions.CultureInvariant);
         }
 
-        /// <summary>
-        /// Get the lenght of the attribute value according to the xsd type.
-        /// </summary>
-        /// <param name="attributeValue"></param>
-        /// <returns></returns>
-        /// <remarks>
-        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows: 
-        ///   1.2 if {primitive type definition} is hexBinary or base64Binary, then the length of the value, as measured in octets of the binary data, ·must· be equal to {value}; 
-        /// </remarks>
+        /// <inheritdoc />
         internal override int GetValueLength(OpenXmlSimpleType attributeValue)
         {
             // so, the data length is the number of octets
@@ -2841,44 +1984,16 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// <remarks>
     /// The lexical forms of base64Binary values are limited to the 65 characters of the Base64 Alphabet defined in [RFC 2045], i.e., a-z, A-Z, 0-9, the plus sign (+), the forward slash (/) and the equal sign (=), together with the characters defined in [XML 1.0 (Second Edition)] as white space. No other characters are allowed. 
     /// </remarks>
-    [Serializable()]
+    [DataContract]
     internal class Base64BinaryRestriction : StringRestriction
     {
-        [NonSerialized()]
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private static readonly string clrTypeName = ValidationResources.TypeName_base64Binary;
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.Base64Binary;
 
-        public Base64BinaryRestriction()
-            : base()
-        {
-        }
+        /// <inheritdoc />
+        public override string ClrTypeName => ValidationResources.TypeName_base64Binary;
 
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.Base64Binary; }
-            set { Debug.Assert(value == XsdType.Base64Binary); }
-        }
-
-        /// <summary>
-        /// Returns the corresponding CLR type name. The name will be used to report error.
-        /// </summary>
-        public override string ClrTypeName
-        {
-            get
-            {
-                return clrTypeName;
-            }
-        }
-
-        /// <summary>
-        /// Validating the specified value is valid according the XsdType.
-        /// </summary>
-        /// <param name="attributeValue"></param>
-        /// <returns>False if the specified value is not valid.</returns>
+        /// <inheritdoc />
         public override bool ValidateValueType(OpenXmlSimpleType attributeValue)
         {
             if (attributeValue.InnerText == null)
@@ -2902,15 +2017,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             return true;
         }
 
-        /// <summary>
-        /// Get the lenght of the attribute value according to the xsd type.
-        /// </summary>
-        /// <param name="attributeValue"></param>
-        /// <returns></returns>
-        /// <remarks>
-        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows: 
-        ///   1.2 if {primitive type definition} is hexBinary or base64Binary, then the length of the value, as measured in octets of the binary data, ·must· be equal to {value}; 
-        /// </remarks>
+        /// <inheritdoc />
         internal override int GetValueLength(OpenXmlSimpleType attributeValue)
         {
             // decoded the data
@@ -2928,47 +2035,18 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     ///  The ·lexical space· of language is the set of all strings that conform to the pattern [a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})* . 
     ///  The ·base type· of language is token. 
     /// </remarks>
-    [Serializable()]
+    [DataContract]
     internal class LanguageRestriction : TokenRestriction
     {
-        [NonSerialized()]
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private static readonly string clrTypeName = ValidationResources.TypeName_language;
-
-        [NonSerialized()]
         private static string LanguageLexicalPattern = @"\A[a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*\z";
 
-        public LanguageRestriction()
-            : base()
-        {
-        }
+        /// <inheritdoc />
+        public override XsdType XsdType => XsdType.Language;
 
-        /// <summary>
-        /// Gets the XsdType - type defined in schema.
-        /// </summary>
-        [Ignore]
-        public override XsdType XsdType
-        {
-            get { return XsdType.Language; }
-            set { Debug.Assert(value == XsdType.Language); }
-        }
+        /// <inheritdoc />
+        public override string ClrTypeName => ValidationResources.TypeName_language;
 
-        /// <summary>
-        /// Returns the corresponding CLR type name. The name will be used to report error.
-        /// </summary>
-        public override string ClrTypeName
-        {
-            get
-            {
-                return clrTypeName;
-            }
-        }
-
-        /// <summary>
-        /// Validating the specified value is valid according the XsdType.
-        /// </summary>
-        /// <param name="attributeValue"></param>
-        /// <returns>False if the specified value is not valid.</returns>
+        /// <inheritdoc />
         public override bool ValidateValueType(OpenXmlSimpleType attributeValue)
         {
             try
@@ -2989,18 +2067,12 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// <summary>
     /// TrueFalseValue (ST_TrueFalse) based simple type constraint.
     /// </summary>
-    [Serializable()]
+    [DataContract]
     internal class TrueFalseValueRestriction : SimpleTypeRestriction
     {
-        public TrueFalseValueRestriction()
-            : base()
-        {
-        }
-
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
-        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.TrueFalseValue; }
@@ -3014,8 +2086,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             Debug.Assert(this.IsEnum == false);
             Debug.Assert(this.IsList == false);
             Debug.Assert(this.Pattern == null);
-
-            return;
         }
 #endif
     }
@@ -3023,18 +2093,12 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// <summary>
     /// TrueFalseBlankValue (ST_TrueFalseBlank) based simple type constraint.
     /// </summary>
-    [Serializable()]
+    [DataContract]
     internal class TrueFalseBlankValueRestriction : SimpleTypeRestriction
     {
-        public TrueFalseBlankValueRestriction()
-            : base()
-        {
-        }
-
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
-        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.TrueFalseBlankValue; }
@@ -3048,8 +2112,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             Debug.Assert(this.IsEnum == false);
             Debug.Assert(this.IsList == false);
             Debug.Assert(this.Pattern == null);
-
-            return;
         }
 #endif
     }
@@ -3057,18 +2119,12 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// <summary>
     /// OnOffValue (ST_OnOff) based simple type constraint.
     /// </summary>
-    [Serializable()]
+    [DataContract]
     internal class OnOffValueRestriction : SimpleTypeRestriction
     {
-        public OnOffValueRestriction()
-            : base()
-        {
-        }
-
         /// <summary>
         /// Gets the XsdType - type defined in schema.
         /// </summary>
-        [Ignore]
         public override XsdType XsdType
         {
             get { return XsdType.OnOffValue; }
@@ -3082,14 +2138,12 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             Debug.Assert(this.IsEnum == false);
             Debug.Assert(this.IsList == false);
             Debug.Assert(this.Pattern == null);
-
-            return;
         }
 #endif
     }
 
 #endif
-#endregion
+    #endregion
 
 #if false
     /// <summary>
@@ -3098,7 +2152,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// <remarks>
     /// TODO: this type should be removed when finished all the simple types.
     /// </remarks>
-    [Serializable()]
+    [DataContract]
     internal class OtherSimpleTypeRestriction : SimpleTypeRestriction
     {
         private XsdType _xsdType;
@@ -3117,37 +2171,18 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             get { return this._xsdType; }
             set { this._xsdType = value; }
         }
-        
-        public string MinInclusive
-        {
-            get;
-            set;
-        }
 
-        public string MaxInclusive
-        {
-            get;
-            set;
-        }
+        [DataMember]
+        public string MinInclusive { get; set; }
 
-        public string MinExclusive
-        {
-            get;
-            set;
-        }
+        [DataMember]
+        public string MaxInclusive { get; set; }
 
-        public string MaxExclusive
-        {
-            get;
-            set;
-        }
+        [DataMember]
+        public string MinExclusive { get; set; }
 
-#if DEBUG
-        public override void Verify()
-        {
-            return;
-        }
-#endif
+        [DataMember]
+        public string MaxExclusive { get; set; }
     }
 #endif
 

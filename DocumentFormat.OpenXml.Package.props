@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
   <PropertyGroup>
-    <Version></Version>
-    <AssemblyInformationalVersion></AssemblyInformationalVersion>
     <Authors>Microsoft</Authors>
     <Summary>The Open XML SDK provides tools for working with Office Word, Excel, and PowerPoint documents</Summary>
     <Description><![CDATA[The Open XML SDK provides tools for working with Office Word, Excel, and PowerPoint documents. It supports scenarios such as:
@@ -18,6 +16,10 @@
     <Copyright>Copyright 2017 (c) Microsoft Corporation. All rights reserved.</Copyright>
     <PackageTags>openxml office</PackageTags>
     <PackageReleaseNotes><![CDATA[
+Version 2.7.3 : *In development*
+- Manual saving was fixed when autosave is false
+- Fixed issue on Mono platforms using System.IO.Packaging NuGet package (Xamarin, etc) when creating a document
+
 Version 2.7.2 : June 7, 2017
 - Fixed assembly version information for strong naming.
 - Added support for .NET 3.5 and .NET 4.0

@@ -150,7 +150,7 @@ namespace LogUtil
 
         public void VerifyNotReference(object actualObjectReference, object expectedNotToBeReference, string message)
         {
-            VerifyFalse((object.ReferenceEquals(actualObjectReference, expectedNotToBeReference)), message);
+            VerifyFalse( object.ReferenceEquals(actualObjectReference, expectedNotToBeReference), message);
         }
 
         public void VerifyNotValue(object actualValue, object expectedNotValue, string message, params object[] arguments)
