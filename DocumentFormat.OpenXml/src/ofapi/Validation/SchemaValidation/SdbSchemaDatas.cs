@@ -63,13 +63,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// </summary>
         public static SdbSchemaDatas GetOffice2016SchemaDatas()
         {
-#if FEATURE_BINARYFORMATTER
-            var data = new BinarySdbSchemaDatas(FileFormatVersions.Office2016);
-#else
-            var data = new Office2016Schema();
-#endif
-            data.Initialize();
-            return data;
+            return new BinarySdbSchemaDatas(FileFormatVersions.Office2016);
         }
 
         /// <summary>
