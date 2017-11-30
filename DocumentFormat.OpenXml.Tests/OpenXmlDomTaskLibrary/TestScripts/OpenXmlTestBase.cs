@@ -157,11 +157,11 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
             Directory.SetCurrentDirectory(outputPath);
 
             // Ensure pred is not null
-            if (pred == null) { pred = (file => { return true; }); }
+            if (pred == null) { pred = file => { return true; }; }
 
             // Copy sourcefiles to output as testfiles
             var inputDirItem = new DirectoryInfo(inputPath);
-            var searchOption = (recursive ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly);
+            var searchOption = recursive ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly;
             var sourcefiles = inputDirItem.GetFiles(searchPattern, searchOption).Where(pred);
             if (maxFiles != null)
                 sourcefiles = sourcefiles.Take((int)maxFiles);

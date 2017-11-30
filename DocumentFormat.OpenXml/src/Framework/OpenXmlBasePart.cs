@@ -83,8 +83,7 @@ namespace DocumentFormat.OpenXml.Packaging
             // TODO: should we delay load?
             PackagePart metroPart = this.OpenXmlPackage.Package.GetPart(uriTarget);
 
-            if (this.IsContentTypeFixed &&
-                metroPart.ContentType != this.ContentType)
+            if (this.IsContentTypeFixed && metroPart.ContentType != this.ContentType)
             {
                 string errorMessage = String.Format(CultureInfo.CurrentUICulture,
                                                     ExceptionMessages.InvalidPartContentType,
@@ -92,13 +91,7 @@ namespace DocumentFormat.OpenXml.Packaging
                                                     metroPart.ContentType,
                                                     this.ContentType);
 
-                OpenXmlPackageException e = new OpenXmlPackageException(errorMessage);
-
-                //e.Data.Add("Part Uri", metroPart.Uri.OriginalString );
-                //e.Data.Add("Part Content Type", metroPart.ContentType);
-                //e.Data.Add("Expected Content Type", this.ContentType);
- 
-                throw e;
+                throw new OpenXmlPackageException(errorMessage);
             }
 
             this._metroPart = metroPart;

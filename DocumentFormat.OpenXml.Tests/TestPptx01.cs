@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void P007_PptxCreation_Package_Settings()
         {
-            using (var stream = GetStream(TestFiles.Presentation, true))
+            using (var stream = GetStream(TestFiles.Presentation))
             using (var package = Package.Open(stream))
             {
                 var openSettings = new OpenSettings
@@ -59,7 +59,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void P005_PptxCreation_Package_Settings()
         {
-            using (var stream = GetStream(TestFiles.Presentation, true))
+            using (var stream = GetStream(TestFiles.Presentation))
             using (var package = Package.Open(stream))
             {
                 var openSettings = new OpenSettings

@@ -733,7 +733,7 @@ namespace DocumentFormat.OpenXml
                     }
                 }
 
-                yield return (new XmlQualifiedName(items[1], ns));
+                yield return new XmlQualifiedName(items[1], ns);
             }
         }
 

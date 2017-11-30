@@ -433,7 +433,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.NotNull(element);
             Assert.IsType<Paragraph>(element);
 
-            Run run = (Run)(element.FirstChild);
+            Run run = (Run) element.FirstChild;
             Assert.Equal("Run Text.", (run.FirstChild as Text).Text);
             Assert.Equal("Run 2.", (run.LastChild as Text).Text);
 
