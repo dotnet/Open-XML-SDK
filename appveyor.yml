@@ -3,9 +3,9 @@ os: Visual Studio 2017
 environment:
   image: Visual Studio 2017
   SignClientSecret:
-    secure: <add value here>
+    secure: K2IZr2uNWnPFxfLYnpwbUIAQmLHYY5IjWvdRXfdUUMU=
   SignClientUser:
-    secure: <add value here>
+    secure: vcaNFKm7ZLGnBM/RkByidsmmpx0I16RcsdOsj3ewh8Ga3ThHll8BiG9xmW0IymLD
 
 install:
   - ps: nuget install -ExcludeVersion SignClient -Version 0.9.0 -OutputDirectory .\build\
