@@ -1,9 +1,12 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Spreadsheet;
 using System;
+using System.Linq;
 using System.IO;
 using System.IO.Packaging;
+using System.Text;
 using Xunit;
 
 using static DocumentFormat.OpenXml.Tests.TestAssets;
@@ -274,6 +277,38 @@ namespace DocumentFormat.OpenXml.Tests
                 using (var package = file.Open(true, settings))
                 {
                     Assert.NotNull(package);
+                }
+            }
+        }
+
+        [Fact]
+        public void PartsShouldBeEncodedWithUTF8WithoutBOM()
+        {
+            using (var ms = new MemoryStream())
+            {
+                using (var package = SpreadsheetDocument.Create(ms, SpreadsheetDocumentType.Workbook))
+                {
+                    var wb = package.AddWorkbookPart();
+
+                    wb.Workbook = new Workbook();
+                }
+
+                using (var package = Package.Open(ms))
+                {
+                    var part = package.GetPart(new Uri("/xl/workbook.xml", UriKind.Relative));
+
+                    using (var stream = part.GetStream())
+                    using (var msPart = new MemoryStream())
+                    {
+                        stream.CopyTo(msPart);
+                        var bytes = msPart.ToArray();
+
+                        Assert.NotEmpty(bytes);
+
+                        var preamble = Encoding.UTF8.GetPreamble();
+
+                        Assert.Empty(preamble.Where((b, i) => b == bytes[i]));
+                    }
                 }
             }
         }
