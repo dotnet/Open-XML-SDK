@@ -12,8 +12,6 @@ using System.Xml;
 using System.Linq;
 using System.Reflection;
 
-using static DocumentFormat.OpenXml.ReflectionExtensions;
-
 namespace DocumentFormat.OpenXml.Packaging
 {
     /// <summary>
@@ -457,7 +455,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new InvalidOperationException(ExceptionMessages.ForeignMediaDataPart);
             }
 
-            T dataPartReferenceRelationship = CreateInstance<T>();
+            T dataPartReferenceRelationship = PartActivator.CreateInstance<T>();
 
             PackageRelationship relationship = this.CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, dataPartReferenceRelationship.RelationshipType);
 
@@ -494,7 +492,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new InvalidOperationException(ExceptionMessages.ForeignMediaDataPart);
             }
 
-            T dataPartReferenceRelationship = CreateInstance<T>();
+            T dataPartReferenceRelationship = PartActivator.CreateInstance<T>();
 
             PackageRelationship relationship = this.CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, dataPartReferenceRelationship.RelationshipType, id);
 
@@ -1308,7 +1306,7 @@ namespace DocumentFormat.OpenXml.Packaging
             ThrowIfObjectDisposed();
 
             // use reflection to create the instance. As the default contructor of part is not "public"
-            T part = CreateInstance<T>();
+            T part = PartActivator.CreateInstance<T>();
 
             try
             {
@@ -1367,7 +1365,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             // use reflection to create the instance. As the default contructor of part is not "public"
-            T part = CreateInstance<T>();
+            T part = PartActivator.CreateInstance<T>();
 
             if (part is ExtendedPart)
             {
