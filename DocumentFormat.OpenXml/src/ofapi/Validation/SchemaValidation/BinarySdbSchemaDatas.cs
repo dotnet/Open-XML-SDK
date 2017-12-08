@@ -13,7 +13,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 {
     internal class BinarySdbSchemaDatas : SdbSchemaDatas
     {
-        private bool _loaded;
         private FileFormatVersions _fileFormat;
 
         public BinarySdbSchemaDatas(FileFormatVersions fileFormat)
@@ -22,27 +21,12 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
             this.SdbDataHead = new SdbDataHead();
             this._fileFormat = fileFormat;
-        }
 
-        public void Initialize()
-        {
-            if (this._loaded)
-            {
-                return;
-            }
-            Init();
-        }
-
-        private void Init()
-        {
-            // Load the database from disk.
             using (var schema = ValidationResources.GetSchemaStream(this._fileFormat))
             {
                 this.Load(schema);
             }
         }
-
-        #region database loading
 
         /// <summary>
         /// Load the schema constraint data from the stream.
@@ -60,7 +44,9 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             dataStream.Read(headBytes, 0, SdbDataHead.HeadSize);
             this.SdbDataHead.LoadFromBytes(headBytes, 0);
 
-            CheckDataHead((int) dataStream.Length);
+#if DEBUG
+            CheckDataHead((int)dataStream.Length);
+#endif
 
             byte[] dataBytes;
             int count;
@@ -99,11 +85,11 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             dataStream.Seek(this.SdbDataHead.SimpleTypeDataOffset, SeekOrigin.Begin);
             this.SimpleTypeRestrictions = SimpleTypeRestrictions.Deserialize(dataStream, this._fileFormat);
 
+#if DEBUG
             Assert(this.SdbDataHead.SimpleTypeCount == this.SimpleTypeRestrictions.SimpleTypeCount);
 
             CheckData();
-
-            this._loaded = true;
+#endif
         }
 
         /// <summary>
@@ -117,6 +103,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             return this.SdbClassIdMap[index];
         }
 
+#if DEBUG
         /// <summary>
         /// Make sure that the SdbDataHead data is correct.
         /// </summary>
@@ -127,8 +114,8 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
             Assert(dataHead.StartClassId == 10001);
 
-            // head data saved both in head and in tail
-            Assert(dataHead.DataByteCount + SdbDataHead.HeadSize * 2 == streamLength);
+            // head data saved only in head
+            Assert(dataHead.DataByteCount + SdbDataHead.HeadSize == streamLength);
             Assert(dataHead.ClassIdsCount > 0);
 
             Assert(dataHead.SchemaTypeCount > 0);
@@ -162,8 +149,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// </summary>
         private void CheckData()
         {
-
-#if DEBUG
             SdbClassIdToSchemaTypeIndex classIdData;
 
             // check all datas in debug build
@@ -174,12 +159,8 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
                 CheckSchemaType(classIdData.SchemaTypeIndex);
             }
-#else
-            return;
-#endif
         }
 
-#if DEBUG
         private void CheckSchemaType(int schemaTypeIndex)
         {
             if (schemaTypeIndex == ushort.MaxValue)
@@ -475,8 +456,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             simpleType.Verify();
         }
 #endif
-
-        #endregion
 
         private class SdbDataArray<T> : IReadOnlyList<T>
             where T : SdbData, new()
