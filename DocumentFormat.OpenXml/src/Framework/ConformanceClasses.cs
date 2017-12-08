@@ -40,17 +40,25 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         Office2016 = 0x8,
 
-        All = Office2007 | Office2010 | Office2013 | Office2016;
+        /// <summary>
+        /// Represents an enum for all office versions
+        /// </summary>
+        All = Office2007 | Office2010 | Office2013 | Office2016
     }
 
     internal static class FileFormatExtension
     {
+        /// <summary>
+        /// Determines whether the supplied version is within the known set of versions
+        /// </summary>
+        /// <param name="version">The version to check</param>
+        /// <returns>True if a known version, otherwise false</returns>
         public static bool Any(this FileFormatVersions version)
         {
-            return fileFormat == FileFormatVersions.Office2007
-                || fileFormat == FileFormatVersions.Office2010
-                || fileFormat == FileFormatVersions.Office2013
-                || fileFormat == FileFormatVersions.Office2016;
+            return version == FileFormatVersions.Office2007
+                || version == FileFormatVersions.Office2010
+                || version == FileFormatVersions.Office2013
+                || version == FileFormatVersions.Office2016;
         }
 
         /// <summary>
