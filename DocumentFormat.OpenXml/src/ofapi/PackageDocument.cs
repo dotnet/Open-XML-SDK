@@ -358,11 +358,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static WordprocessingDocument Open(string path, bool isEditable, OpenSettings openSettings)
         {
-            if (openSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess &&
-				(openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2007 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2010 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2013 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2016))
+            if (openSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess
+                && !openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions.Any())
             {
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
@@ -395,11 +392,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static WordprocessingDocument Open(System.IO.Stream stream, bool isEditable, OpenSettings openSettings)
         {
-            if (openSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess &&
-				(openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2007 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2010 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2013 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2016))
+            if (openSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess
+                && !openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions.Any())
             {
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
@@ -429,11 +423,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static WordprocessingDocument Open(System.IO.Packaging.Package package, OpenSettings openSettings)
         {
-            if (openSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess &&
-				(openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2007 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2010 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2013 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2016))
+            if (openSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess
+                && !openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions.Any())
             {
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
@@ -1294,11 +1285,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static SpreadsheetDocument Open(string path, bool isEditable, OpenSettings openSettings)
         {
-            if (openSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess &&
-				(openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2007 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2010 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2013 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2016))
+            if (openSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess
+                && !openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions.Any())
             {
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
@@ -1329,11 +1317,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static SpreadsheetDocument Open(System.IO.Stream stream, bool isEditable, OpenSettings openSettings)
         {
-            if (openSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess &&
-				(openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2007 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2010 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2013 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2016))
+            if (openSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess
+                && !openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions.Any())
             {
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
@@ -1363,11 +1348,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static SpreadsheetDocument Open(Package package, OpenSettings openSettings)
         {
-            if (openSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess &&
-				(openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2007 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2010 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2013 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2016))
+            if (openSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess
+                && !openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions.Any())
             {
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
@@ -2293,11 +2275,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static PresentationDocument Open(string path, bool isEditable, OpenSettings openSettings)
         {
-            if (openSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess &&
-				(openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2007 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2010 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2013 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2016))
+            if (openSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess
+                && !openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions.Any())
             {
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
@@ -2328,11 +2307,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static PresentationDocument Open(System.IO.Stream stream, bool isEditable, OpenSettings openSettings)
         {
-            if (openSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess &&
-				(openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2007 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2010 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2013 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2016))
+            if (openSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess
+                && !openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions.Any())
             {
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
@@ -2362,11 +2338,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static PresentationDocument Open(Package package, OpenSettings openSettings)
         {
-            if (openSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess &&
-				(openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2007 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2010 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2013 &&
-				 openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormatVersions.Office2016))
+            if (openSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess
+                && !openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions.Any())
             {
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
