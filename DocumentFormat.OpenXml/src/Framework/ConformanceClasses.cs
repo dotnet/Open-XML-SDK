@@ -38,11 +38,16 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Represents an enum for all office versions.
         /// </summary>
-        All = Office2007 | Office2010 | Office2013;
+        All = Office2007 | Office2010 | Office2013
     }
 
     internal static class FileFormatExtension
     {
+        /// <summary>
+        /// Determines whether the supplied version is within the known set of versions
+        /// </summary>
+        /// <param name="version">The version to check</param>
+        /// <returns>True if a known version, otherwise false</returns>
         public static bool Any(this FileFormatVersions version)
         {
             return fileFormat == FileFormatVersions.Office2007
