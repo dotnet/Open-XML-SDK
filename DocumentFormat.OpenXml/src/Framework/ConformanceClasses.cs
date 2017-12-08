@@ -50,9 +50,9 @@ namespace DocumentFormat.OpenXml
         /// <returns>True if a known version, otherwise false</returns>
         public static bool Any(this FileFormatVersions version)
         {
-            return fileFormat == FileFormatVersions.Office2007
-                || fileFormat == FileFormatVersions.Office2010
-                || fileFormat == FileFormatVersions.Office2013;
+            return version == FileFormatVersions.Office2007
+                || version == FileFormatVersions.Office2010
+                || version == FileFormatVersions.Office2013;
         }
 
         /// <summary>
