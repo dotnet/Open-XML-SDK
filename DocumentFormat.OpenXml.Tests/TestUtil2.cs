@@ -8,9 +8,7 @@ namespace OxTest
     {
         public static string RootFolder => Path.GetDirectoryName(typeof(TestUtil).GetTypeInfo().Assembly.Location);
 
-        public static string TestFilesDir => Path.Combine(RootFolder, "TestFiles");
-        
-        public static string TestDataStorage => Path.Combine(RootFolder, "TestDataStorage");
+        public static string TestDataStorage => Path.Combine(RootFolder, "Assets", "TestDataStorage");
 
         private static bool? s_DeleteTempFiles = null;
 
