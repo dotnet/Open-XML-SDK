@@ -28,16 +28,31 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Represents Microsoft Office 2010.
         /// </summary>
-        Office2010 = 0x2, 
+        Office2010 = 0x2,
 
         /// <summary>
         /// Represents Microsoft Office 2013.
         /// </summary>
-        Office2013 = 0x4, 
+        Office2013 = 0x4,
+
+        /// <summary>
+        /// Represents Microsoft Office 2016.
+        /// </summary>
+        Office2016 = 0x8,
+
+        All = Office2007 | Office2010 | Office2013 | Office2016;
     }
 
     internal static class FileFormatExtension
     {
+        public static bool Any(this FileFormatVersions version)
+        {
+            return fileFormat == FileFormatVersions.Office2007
+                || fileFormat == FileFormatVersions.Office2010
+                || fileFormat == FileFormatVersions.Office2013
+                || fileFormat == FileFormatVersions.Office2016;
+        }
+
         /// <summary>
         /// Determines whether the source FileFormatVersions includes the target FileFormatVersions. 
         /// </summary>
@@ -58,7 +73,7 @@ namespace DocumentFormat.OpenXml
         /// </remarks>
         internal static void ThrowExceptionIfFileFormatNotSupported(this FileFormatVersions fileFormat, string parameterName)
         {
-            if (! (fileFormat == FileFormatVersions.Office2007 || fileFormat == FileFormatVersions.Office2010 || fileFormat == FileFormatVersions.Office2013))
+            if (!fileFormat.Any())
             {
                 string message = String.Format(System.Globalization.CultureInfo.CurrentUICulture,
                                                     ExceptionMessages.FileFormatNotSupported,
