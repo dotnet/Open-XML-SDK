@@ -1,0 +1,54 @@
+﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Diagnostics;
+using System.IO;
+using System.IO.Packaging;
+
+namespace DocumentFormat.OpenXml.Packaging
+{
+    /// <summary>
+    /// Represents a media (Audio, Video) data part in the document.
+    /// </summary>
+    public class MediaDataPart : DataPart
+    {
+        private const string DefaultTargetPart = "media";
+        private const string DefaultTargetName = "mediadata";
+        private const string DefaultTargetExt = ".bin";
+
+        /// <summary>
+        /// Initializes a new instance of the MediaDataPart class. 
+        /// </summary>
+        internal MediaDataPart()
+            : base()
+        {
+        }
+
+        /// <summary>
+        /// The internal path to be used for the part name.
+        /// </summary>
+        internal override string TargetPath
+        {
+            get { return DefaultTargetPart; }
+        }
+
+        /// <summary>
+        /// The file base name to be used for the part name in the package
+        /// </summary>
+        internal override string TargetName
+        {
+            get { return DefaultTargetName; }
+        }
+
+        /// <summary>
+        /// The file extension to be used for the part in the package.
+        /// </summary>
+        internal override string TargetFileExtension
+        {
+            get { return DefaultTargetExt; }
+        }
+    }
+}

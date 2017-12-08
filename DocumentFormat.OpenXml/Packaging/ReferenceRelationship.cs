@@ -1,13 +1,11 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Diagnostics;
 using System.IO.Packaging;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
-
     /// <summary>
     /// Defines a reference relationship. A reference relationship can be internal or external.
     /// </summary>
@@ -118,54 +116,6 @@ namespace DocumentFormat.OpenXml.Packaging
             this.Uri = targetUri;
             this.Id = id;
             this.IsExternal = isExternal;
-        }
-         
-    }
-
-    /// <summary>
-    /// Represents an external relationship.
-    /// </summary>
-    public class ExternalRelationship : ReferenceRelationship
-    {
-        /// <summary>
-        /// Initializes a new instance of the ExternalRelationship.
-        /// </summary>
-        /// <param name="externalUri">The target uri of the relationship.</param>
-        /// <param name="relationshipType">The relationship type.</param>
-        /// <param name="id">The relationship ID.</param>
-        internal protected ExternalRelationship(Uri externalUri, string relationshipType, string id)
-            : base(externalUri, true, relationshipType, id)
-        {
-        }
-    }
-
-    /// <summary>
-    /// Represents a hyperlink relationship.
-    /// </summary>
-    public class HyperlinkRelationship : ReferenceRelationship
-    {
-        /// <summary>
-        /// The source relationship type for hyperlink. Defined as "http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink".
-        /// </summary>
-        internal const string RelationshipTypeConst = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink";
-
-        /// <summary>
-        /// Initializes a new instance of the HyperlinkRelationship.
-        /// </summary>
-        /// <param name="hyperlinkUri">The target uri of the hyperlink relationship.</param>
-        /// <param name="id">The relationship ID.</param>
-        /// <param name="isExternal">Is the URI external.</param>
-        internal protected HyperlinkRelationship(Uri hyperlinkUri, bool isExternal, string id)
-            : base(hyperlinkUri, isExternal, RelationshipTypeConst, id)
-        {
-        }
-
-        /// <summary>
-        /// Gets the relationship type.
-        /// </summary>
-        public override string RelationshipType
-        {
-            get { return RelationshipTypeConst; }
         }
     }
 }
