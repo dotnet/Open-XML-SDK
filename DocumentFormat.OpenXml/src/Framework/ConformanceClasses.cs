@@ -36,11 +36,9 @@ namespace DocumentFormat.OpenXml
         Office2013 = 0x4,
 
         /// <summary>
-        /// Represents Microsoft Office 2016.
+        /// Represents an enum for all office versions.
         /// </summary>
-        Office2016 = 0x8,
-
-        All = Office2007 | Office2010 | Office2013 | Office2016;
+        All = Office2007 | Office2010 | Office2013;
     }
 
     internal static class FileFormatExtension
@@ -49,8 +47,7 @@ namespace DocumentFormat.OpenXml
         {
             return fileFormat == FileFormatVersions.Office2007
                 || fileFormat == FileFormatVersions.Office2010
-                || fileFormat == FileFormatVersions.Office2013
-                || fileFormat == FileFormatVersions.Office2016;
+                || fileFormat == FileFormatVersions.Office2013;
         }
 
         /// <summary>
