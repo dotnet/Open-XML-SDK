@@ -8,12 +8,10 @@
   <ItemGroup>
     <EmbeddedResource Include="assets\TestFiles\**\*.*" />
     <EmbeddedResource Include="assets\TestDataStorage\**\*.*" />
-    <TestDataStorage Include="assets\TestDataStorage\**\*.*" />
+    <Content Include="assets\TestDataStorage\**\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
-
-  <Target Name="CopyTestFiles" AfterTargets="Build">
-    <Copy SourceFiles="@(TestDataStorage)" DestinationFolder="$(OutputPath)\TestDataStorage\%(RecursiveDir)" SkipUnchangedFiles="true" OverwriteReadOnlyFiles="true" Retries="3" RetryDelayMilliseconds="300" />
-  </Target>
 
   <ItemGroup>
     <ProjectReference Include="..\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj" />

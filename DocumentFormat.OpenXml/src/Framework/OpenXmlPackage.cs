@@ -19,8 +19,6 @@ using System.Xml.Linq;
 using System.Runtime.Serialization;
 #endif
 
-using static DocumentFormat.OpenXml.ReflectionExtensions;
-
 namespace DocumentFormat.OpenXml.Packaging
 {
     internal struct RelationshipProperty
@@ -1119,7 +1117,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 mainPart.Destroy();
 
                 // create new part
-                T newMainPart = CreateInstance<T>();
+                T newMainPart = PartActivator.CreateInstance<T>();
 
                 // do not call this.InitPart( ).  copy the code here
 
