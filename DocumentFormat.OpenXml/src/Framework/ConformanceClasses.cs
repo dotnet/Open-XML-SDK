@@ -28,16 +28,16 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Represents Microsoft Office 2013.
         /// </summary>
-        Office2013 = 0x4
-    }
+        Office2013 = 0x4,
 
-    internal static class OfficeVersions
-    {
         /// <summary>
         /// Represents Microsoft Office 2016.
         /// </summary>
         Office2016 = 0x8,
+    }
 
+    internal static class OfficeVersions
+    {
         /// <summary>
         /// Represents an enum for all office versions
         /// </summary>
