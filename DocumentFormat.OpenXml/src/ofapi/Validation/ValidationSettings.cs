@@ -26,10 +26,9 @@ namespace DocumentFormat.OpenXml
         /// Initializes a new instance of the ValidationSettings.
         /// </summary>
         /// <param name="fileFormat">The target file format.</param>
-        /// <exception cref="ArgumentOutOfRangeException">Thrown when the "fileFormat" parameter is not FileFormat.Office2007,  or FileFormat.Office2010 or FileFormat.Office2013.</exception>
         internal ValidationSettings(FileFormatVersions fileFormat)
         {
-            fileFormat.ThrowExceptionIfFileFormatNotSupported("fileFormat");
+            fileFormat.ThrowExceptionIfFileFormatNotSupported(nameof(fileFormat));
             this.FileFormat = fileFormat;
 
             this.MaxNumberOfErrors = _defaultMaxNumberOfErrorsReturned;
