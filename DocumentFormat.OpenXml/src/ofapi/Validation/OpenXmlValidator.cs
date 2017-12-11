@@ -72,7 +72,7 @@ namespace DocumentFormat.OpenXml.Validation
                 {
                     this._docSmenaticValidator = new SemanticValidator(this._settings.FileFormat, ApplicationType.Word);
                 }
-                
+
                 return _docSmenaticValidator;
             }
         }
@@ -92,14 +92,14 @@ namespace DocumentFormat.OpenXml.Validation
 
         private SemanticValidator PptSemanticValidator
         {
-            get 
+            get
             {
                 if (this._pptSemanticValidator == null)
                 {
                     this._pptSemanticValidator = new SemanticValidator(this._settings.FileFormat, ApplicationType.PowerPoint);
                 }
 
-                return _pptSemanticValidator; 
+                return _pptSemanticValidator;
             }
         }
 
@@ -183,10 +183,10 @@ namespace DocumentFormat.OpenXml.Validation
         /// <remarks>
         /// Default to FileFormat.Office2007.
         /// </remarks>
-        /// <exception cref="ArgumentOutOfRangeException">Thrown when the "fileFormat" parameter is not FileFormat.Office2007, FileFormat.Office2010 or FileFormat.O15.</exception>
+        /// <exception cref="ArgumentOutOfRangeException">Thrown when the <paramref name="fileFormat"/> parameter is not a known format.</exception>
         public OpenXmlValidator(FileFormatVersions fileFormat)
         {
-            fileFormat.ThrowExceptionIfFileFormatNotSupported("fileFormat");
+            fileFormat.ThrowExceptionIfFileFormatNotSupported(nameof(fileFormat));
             this._settings = new ValidationSettings(fileFormat);
         }
 
@@ -226,7 +226,7 @@ namespace DocumentFormat.OpenXml.Validation
 
         #region public methods
 
-         /// <summary>
+        /// <summary>
         /// Validates the specified document.
         /// </summary>
         /// <param name="openXmlPackage">The target WordprocessingDocument, SpreadsheetDocument or PresentationDocument.</param>
@@ -393,7 +393,7 @@ namespace DocumentFormat.OpenXml.Validation
                 throw new ArgumentOutOfRangeException("openXmlElement", ExceptionMessages.CannotValidateAcbElement);
             }
 
-            if (! openXmlElement.IsInVersion(this.FileFormat))
+            if (!openXmlElement.IsInVersion(this.FileFormat))
             {
                 switch (this.FileFormat)
                 {
@@ -428,7 +428,7 @@ namespace DocumentFormat.OpenXml.Validation
 
             validationContext.Element = openXmlElement;
             this.FullSemanticValidator.Validate(validationContext);
-            
+
             return this.YieldResult(validationResult);
         }
 

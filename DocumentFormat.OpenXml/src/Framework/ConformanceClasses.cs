@@ -1,11 +1,6 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml.Schema;
-using System.Xml;
-using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml
 {
@@ -33,16 +28,18 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Represents Microsoft Office 2013.
         /// </summary>
-        Office2013 = 0x4,
+        Office2013 = 0x4
+    }
 
+    internal static class OfficeVersions
+    {
         /// <summary>
         /// Represents an enum for all office versions.
         /// </summary>
-        All = Office2007 | Office2010 | Office2013
-    }
+        public const FileFormatVersions All = FileFormatVersions.Office2007
+                                            | FileFormatVersions.Office2010
+                                            | FileFormatVersions.Office2013;
 
-    internal static class FileFormatExtension
-    {
         /// <summary>
         /// Determines whether the supplied version is within the known set of versions
         /// </summary>
@@ -77,9 +74,8 @@ namespace DocumentFormat.OpenXml
         {
             if (!fileFormat.Any())
             {
-                string message = String.Format(System.Globalization.CultureInfo.CurrentUICulture,
-                                                    ExceptionMessages.FileFormatNotSupported,
-                                                    fileFormat);
+                var message = String.Format(System.Globalization.CultureInfo.CurrentUICulture, ExceptionMessages.FileFormatNotSupported, fileFormat);
+
                 throw new ArgumentOutOfRangeException(parameterName, message);
             }
         }
@@ -106,5 +102,4 @@ namespace DocumentFormat.OpenXml
             OfficeVersion = officeVersion;
         }
     }
-
 }
