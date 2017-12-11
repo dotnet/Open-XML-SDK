@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="fileFormat">The target file format.</param>
         internal ValidationSettings(FileFormatVersions fileFormat)
         {
-            fileFormat.ThrowExceptionIfFileFormatNotSupported("fileFormat");
+            fileFormat.ThrowExceptionIfFileFormatNotSupported(nameof(fileFormat));
             this.FileFormat = fileFormat;
 
             this.MaxNumberOfErrors = _defaultMaxNumberOfErrorsReturned;
