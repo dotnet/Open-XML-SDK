@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
         public BinarySdbSchemaDatas(FileFormatVersions fileFormat)
         {
-            Debug.Assert(fileFormat == FileFormatVersions.Office2007 || fileFormat == FileFormatVersions.Office2010 || fileFormat == FileFormatVersions.Office2013 || fileFormat == FileFormatVersions.Office2016 );
+            Debug.Assert(fileFormat.Any());
 
             this.SdbDataHead = new SdbDataHead();
             this._fileFormat = fileFormat;

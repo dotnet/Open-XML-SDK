@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                     return O16UnionHelper.CreatePossibleMembers(unionValueRestriction);
 
                 default:
-                    Debug.Assert(fileFormatVersion == FileFormatVersions.Office2007 || fileFormatVersion == FileFormatVersions.Office2010 || fileFormatVersion == FileFormatVersions.Office2013 || fileFormatVersion == FileFormatVersions.Office2016);
+                    Debug.Assert(fileFormatVersion.Any());
                     break;
             }
             return null;
@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                     return O16UnionHelper.CreateTargetValueObject(redirectedRestriction);
 
                 default:
-                    Debug.Assert(fileFormatVersion == FileFormatVersions.Office2007 || fileFormatVersion == FileFormatVersions.Office2010 || fileFormatVersion == FileFormatVersions.Office2013 || fileFormatVersion == FileFormatVersions.Office2013);
+                    Debug.Assert(fileFormatVersion.Any());
                     break;
             }
             return null;

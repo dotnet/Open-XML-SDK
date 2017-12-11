@@ -1,11 +1,6 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml.Schema;
-using System.Xml;
-using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml
 {
@@ -28,21 +23,42 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Represents Microsoft Office 2010.
         /// </summary>
-        Office2010 = 0x2, 
+        Office2010 = 0x2,
 
         /// <summary>
         /// Represents Microsoft Office 2013.
         /// </summary>
-        Office2013 = 0x4, 
+        Office2013 = 0x4,
 
         /// <summary>
         /// Represents Microsoft Office 2016.
         /// </summary>
-        Office2016 = 0x8, 
+        Office2016 = 0x8,
     }
 
-    internal static class FileFormatExtension
+    internal static class OfficeVersions
     {
+        /// <summary>
+        /// Represents an enum for all office versions
+        /// </summary>
+        public const FileFormatVersions All = FileFormatVersions.Office2007
+                                            | FileFormatVersions.Office2010
+                                            | FileFormatVersions.Office2013
+                                            | FileFormatVersions.Office2016;
+
+        /// <summary>
+        /// Determines whether the supplied version is within the known set of versions
+        /// </summary>
+        /// <param name="version">The version to check</param>
+        /// <returns>True if a known version, otherwise false</returns>
+        public static bool Any(this FileFormatVersions version)
+        {
+            return version == FileFormatVersions.Office2007
+                || version == FileFormatVersions.Office2010
+                || version == FileFormatVersions.Office2013
+                || version == FileFormatVersions.Office2016;
+        }
+
         /// <summary>
         /// Determines whether the source FileFormatVersions includes the target FileFormatVersions. 
         /// </summary>
@@ -63,11 +79,10 @@ namespace DocumentFormat.OpenXml
         /// </remarks>
         internal static void ThrowExceptionIfFileFormatNotSupported(this FileFormatVersions fileFormat, string parameterName)
         {
-            if (! (fileFormat == FileFormatVersions.Office2007 || fileFormat == FileFormatVersions.Office2010 || fileFormat == FileFormatVersions.Office2013 || fileFormat == FileFormatVersions.Office2016))
+            if (!fileFormat.Any())
             {
-                string message = String.Format(System.Globalization.CultureInfo.CurrentUICulture,
-                                                    ExceptionMessages.FileFormatNotSupported,
-                                                    fileFormat);
+                var message = String.Format(System.Globalization.CultureInfo.CurrentUICulture, ExceptionMessages.FileFormatNotSupported, fileFormat);
+
                 throw new ArgumentOutOfRangeException(parameterName, message);
             }
         }
@@ -94,5 +109,4 @@ namespace DocumentFormat.OpenXml
             OfficeVersion = officeVersion;
         }
     }
-
 }
