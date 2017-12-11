@@ -18,20 +18,8 @@ namespace DocumentFormat.OpenXml
     {
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private OpenXmlElementContext _elementContext;
-        // private object _owner;
 
         private bool? _standaloneDeclaration = null;
-
-        ///// <summary>
-        ///// The OpenXmlPart which the DOM is loaded from.
-        ///// </summary>
-        //public OpenXmlPart OpenXmlPart
-        //{
-        //    get
-        //    {
-        //        return this.OpenXmlOwner.OwnerPart;
-        //    }
-        //}
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPartRootElement class.
@@ -162,9 +150,7 @@ namespace DocumentFormat.OpenXml
                     return false;
                 }
 
-                byte nsId;
-
-                if (!NamespaceIdMap.TryGetNamespaceId(xmlReader.NamespaceURI, out nsId) ||
+                if (!NamespaceIdMap.TryGetNamespaceId(xmlReader.NamespaceURI, out byte nsId) ||
                     nsId != this.NamespaceId ||
                     xmlReader.LocalName != this.LocalName)
                 {
@@ -202,30 +188,9 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
 
-            XmlWriterSettings settings = new XmlWriterSettings
-            {
-                CloseOutput = true
-            };
-
             using (Stream partStream = openXmlPart.GetStream(FileMode.Create))
-            using (XmlWriter xmlWriter = XmlWriter.Create(partStream, settings))
             {
-                if (this._standaloneDeclaration != null)
-                {
-                    xmlWriter.WriteStartDocument(this._standaloneDeclaration.Value);
-                }
-
-                this.WriteTo(xmlWriter);
-
-                // fix bug #242463.
-                // Do not call WriteEndDocument if this root element is not parsed.
-                // In that case, the WriteTo() just call WriteRaw() with the raw xml, so no WriteStartElement() be called.
-                // So, the XmlWriter still on document start state. Call WriteEndDocument() will cause exception.
-
-                if (this.XmlParsed)
-                {
-                    xmlWriter.WriteEndDocument();
-                }
+                Save(partStream);
             }
         }
 
@@ -239,7 +204,10 @@ namespace DocumentFormat.OpenXml
         {
             XmlWriterSettings settings = new XmlWriterSettings
             {
-                CloseOutput = true
+                CloseOutput = true,
+
+                // We use UTF8 with no BOM as some viewers that consume documents cannot handle the BOM
+                Encoding = new UTF8Encoding(false)
             };
 
             using (XmlWriter xmlWriter = XmlWriter.Create(stream, settings))
@@ -251,11 +219,10 @@ namespace DocumentFormat.OpenXml
 
                 this.WriteTo(xmlWriter);
 
-                // fix bug #242463.
                 // Do not call WriteEndDocument if this root element is not parsed.
-                // In that case, the WriteTo() just call WriteRaw() with the raw xml, so no WriteStartElement() be called.
-                // So, the XmlWriter still on document start state. Call WriteEndDocument() will cause exception.
-
+                // In that case, the WriteTo() will just call WriteRaw() with the raw xml,
+                // so no WriteStartElement() needs to be called. Since the XmlWriter will 
+                // still on document start state. Call WriteEndDocument() will cause exception.
                 if (this.XmlParsed)
                 {
                     xmlWriter.WriteEndDocument();
