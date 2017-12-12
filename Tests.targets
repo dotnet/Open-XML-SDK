@@ -3,19 +3,25 @@
     <IsTestProject Condition=" '$(IsTestProject)' == '' ">false</IsTestProject>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(IsTestProject)' == 'true'">
-    <TestArchitecture Condition="'$(TestArchitecture)' == ''">x64</TestArchitecture>
-    <_TestTargetName Condition="'$(TargetFrameworks)' == ''">InnerTest</_TestTargetName>
-    <_TestTargetName Condition="'$(TargetFrameworks)' != ''">OuterTest</_TestTargetName>
+  <Choose>
+    <When Condition="'$(IsTestProject)' == 'true'">
+      <PropertyGroup >
+        <TestArchitecture Condition="'$(TestArchitecture)' == ''">x64</TestArchitecture>
+        <_TestTargetName Condition="'$(TargetFrameworks)' == ''">InnerTest</_TestTargetName>
+        <_TestTargetName Condition="'$(TargetFrameworks)' != ''">OuterTest</_TestTargetName>
 
-    <VSTest>vstest.console.exe</VSTest>
+        <TestLogger Condition=" '$(TestLogger)' == '' ">trx</TestLogger>
+      </PropertyGroup>
 
-    <TestLogger Condition=" '$(TestLogger)' == '' ">trx</TestLogger>
+      <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp1.0' ">
+        <TestExe>dotnet vstest /Framework:FrameworkCore10</TestExe>
+      </PropertyGroup>
 
-    <VSTestFramework Condition=" '$(TargetFramework)' == 'net46' ">Framework45</VSTestFramework>
-    <VSTestFramework Condition=" '$(TargetFramework)' == 'net452' ">Framework45</VSTestFramework>
-    <VSTestFramework Condition=" '$(TargetFramework)' == 'netcoreapp1.0' ">FrameworkCore10</VSTestFramework>
-  </PropertyGroup>
+      <PropertyGroup Condition=" '$(TargetFramework)' == 'net46' OR '$(TargetFramework)' == 'net452' ">
+        <TestExe>vstest.console.exe /Framework:Framework45</TestExe>
+      </PropertyGroup>
+    </When>
+  </Choose>
 
   <!-- An empty target so that we can run /t:test at the solution level and skip all non-tests -->
   <Target Name="Test">
@@ -32,7 +38,7 @@
     <Delete Files="$(_TestLogPath)" />
     <MakeDir Directories="$(ArtifactsTestResultsDir)"/>
 
-    <Exec Command='"$(VSTest)" /Logger:$(TestLogger) "$(TargetPath)" /Platform:$(TestArchitecture) /Framework:$(VSTestFramework) > $(_TestLogPath)'
+    <Exec Command='$(TestExe) /Logger:$(TestLogger) "$(TargetPath)" /Platform:$(TestArchitecture) > $(_TestLogPath)'
           LogStandardErrorAsError="true"
           WorkingDirectory="$(OutputPath)"
           IgnoreExitCode="true">
