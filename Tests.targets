@@ -4,13 +4,7 @@
     <_TestTargetName Condition="'$(TargetFrameworks)' == ''">InnerTest</_TestTargetName>
     <_TestTargetName Condition="'$(TargetFrameworks)' != ''">OuterTest</_TestTargetName>
 
-    <EnableCodeCoverage Condition=" '$(EnableCodeCoverage)' == '' ">false</EnableCodeCoverage>
-
-    <CodeCoverageString Condition="$(EnableCodeCoverage)">--collect:"Code Coverage"</CodeCoverageString>
     <VSTest>vstest.console.exe</VSTest>
-
-    <CodeCoverageToolsPath Condition=" '$(CodeCoverageToolsPath)' == '' ">$(VSInstallDir)</CodeCoverageToolsPath>
-    <CodeCoverage>$(CodeCoverageToolsPath)\Team Tools\Dynamic Code Coverage Tools\CodeCoverage.exe</CodeCoverage>
 
     <TestLogger Condition=" '$(TestLogger)' == '' ">trx</TestLogger>
 
@@ -18,10 +12,6 @@
     <VSTestFramework Condition=" '$(TargetFramework)' == 'net452' ">Framework45</VSTestFramework>
     <VSTestFramework Condition=" '$(TargetFramework)' == 'netcoreapp1.0' ">FrameworkCore10</VSTestFramework>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.CodeCoverage" Version="1.0.3" />
-  </ItemGroup>
 
   <Target Name="Test" DependsOnTargets="$(_TestTargetName)" Condition="'$(IsTestProject)' == 'true'" />
 
@@ -33,7 +23,7 @@
     <Delete Files="$(_TestLogPath)" />
     <MakeDir Directories="$(ArtifactsTestResultsDir)"/>
 
-    <Exec Command='"$(VSTest)" $(CodeCoverageString) /Logger:$(TestLogger) "$(TargetPath)" /Platform:$(TestArchitecture) /Framework:$(VSTestFramework) > $(_TestLogPath)'
+    <Exec Command='"$(VSTest)" /Logger:$(TestLogger) "$(TargetPath)" /Platform:$(TestArchitecture) /Framework:$(VSTestFramework) > $(_TestLogPath)'
           LogStandardErrorAsError="true"
           WorkingDirectory="$(OutputPath)"
           IgnoreExitCode="true">
@@ -52,55 +42,5 @@
     <PropertyGroup Condition="'$(InnerTargets)' == ''">
       <InnerTargets>InnerTest</InnerTargets>
     </PropertyGroup>
-  </Target>
-
-  <Target Name="EnsureNoCoverageFiles" Condition="$(EnableCodeCoverage)" BeforeTargets="InnerTest">
-    <ItemGroup>
-      <ExistingCoverageFiles Include="$(OutputPath)/**/*.coverage"
-                          Exclude="$(OutputPath)/**/in/**/*.coverage" />
-      <ExistingCoverageFiles Include="$(OutputPath)/*.coveragexml" />
-    </ItemGroup>
-
-    <Warning Text="Removing all coverage results files before running (Found @(ExistingCoverageFiles->Count()))." Condition=" '@(ExistingCoverageFiles->Count())' != '0' " />
-    <Delete Files="@(ExistingCoverageFiles)" />
-  </Target>
-
-  <Target Name="AnalyzeCoverageFiles" Condition="$(EnableCodeCoverage)" AfterTargets="InnerTest">
-
-    <ItemGroup>
-      <CodeCoverageResults Include="$(OutputPath)/**/*.coverage"
-                           Exclude="$(OutputPath)/**/in/**/*.coverage" />
-    </ItemGroup>
-
-    <Error Text="Found @(CodeCoverageResults->Count()) code coverage files and was expecting 1." Condition=" '@(CodeCoverageResults->Count())' != '1' " />
-
-    <Message Text="Found coverage result: %(CodeCoverageResults.FullPath)" />
-
-    <Exec Command='"$(CodeCoverage)" analyze /output:coverage.coveragexml "%(CodeCoverageResults.FullPath)"'
-          LogStandardErrorAsError="true"
-          WorkingDirectory="$(OutputPath)"
-          IgnoreExitCode="true">
-      <Output TaskParameter="ExitCode" PropertyName="ExitCode" />
-    </Exec>
-
-    <Message Text="Coverage file analyzed: $(MSBuildProjectName) [$(TargetFramework)|%(_TestArchitectureItems.Identity)]" Condition="'$(ExitCode)' == '0'" />
-    <Error Text="Coverage file analysis failed with exit code: $(ExitCode)" Condition="'$(ExitCode)' != '0'" />
-  </Target>
-
-  <Target Name="UploadCodeCoverageReport" AfterTargets="AnalyzeCoverageFiles">
-    <PropertyGroup>
-      <CodeCov>codecov</CodeCov>
-      <CodeCovTokenParam Condition=" '$(CodeCovToken)' != '' ">-t $(CodeCovToken)</CodeCovTokenParam>
-    </PropertyGroup>
-
-    <Exec Command='"$(CodeCov)" -f coverage.coveragexml $(CodeCovTokenParam) --required --name $(TargetFramework)'
-          LogStandardErrorAsError="true"
-          WorkingDirectory="$(OutputPath)"
-          IgnoreExitCode="true">
-      <Output TaskParameter="ExitCode" PropertyName="ExitCode" />
-    </Exec>
-
-    <Message Text="Coverage file uploaded: $(MSBuildProjectName) [$(TargetFramework)|%(_TestArchitectureItems.Identity)]" Condition="'$(ExitCode)' == '0'" />
-    <Error Text="Coverage file upload failed with exit code: $(ExitCode)" Condition="'$(ExitCode)' != '0'" />
   </Target>
 </Project>

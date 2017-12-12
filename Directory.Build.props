@@ -26,10 +26,6 @@
 
   <PropertyGroup>
     <IsTestProject>false</IsTestProject>
-    <EnableCodeCoverage Condition=" '$(EnableCodeCoverage)' == '' ">false</EnableCodeCoverage>
-
-     <!-- Required in both test/product projects. This is a temporary workaround for https://github.com/Microsoft/vstest/issues/800 -->
-    <DebugType Condition="$(EnableCodeCoverage)">Full</DebugType>
   </PropertyGroup>
 
 </Project>

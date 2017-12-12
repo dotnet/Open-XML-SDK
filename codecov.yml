@@ -1,5 +1,0 @@
-fixes:
-  - "Open-XML-SDK/::"
-
-ignore:
-  - "obj/**.*"

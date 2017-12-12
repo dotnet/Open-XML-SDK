@@ -6,13 +6,10 @@ environment:
     secure: K2IZr2uNWnPFxfLYnpwbUIAQmLHYY5IjWvdRXfdUUMU=
   SignClientUser:
     secure: vcaNFKm7ZLGnBM/RkByidsmmpx0I16RcsdOsj3ewh8Ga3ThHll8BiG9xmW0IymLD
-  EnableCodeCoverage: true
-  CodeCoverageToolsPath: C:\Program Files (x86)\Microsoft Visual Studio\2017\TestAgent
   Configuration: Release
 
 install:
   - ps: nuget install -ExcludeVersion SignClient -Version 0.9.0 -OutputDirectory .\build\
-  - ps: choco install codecov
 
 build_script:
   - cmd: msbuild /t:restore;build /m .\Open-Xml-SDK.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
@@ -23,9 +20,6 @@ after_build:
 
 test_script:
   - cmd: msbuild /t:test /m .\Open-Xml-SDK.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
-
-artifacts:
-  - path: bin
 
 deploy:
   provider: NuGet
