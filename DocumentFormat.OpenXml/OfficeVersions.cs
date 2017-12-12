@@ -1,18 +1,12 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 
 using System;
+using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml
 {
     internal static class OfficeVersions
     {
-        /// <summary>
-        /// Represents an enum for all office versions.
-        /// </summary>
-        public const FileFormatVersions All = FileFormatVersions.Office2007
-                                            | FileFormatVersions.Office2010
-                                            | FileFormatVersions.Office2013;
-
         /// <summary>
         /// Determines whether the supplied version is within the known set of versions
         /// </summary>
@@ -23,6 +17,25 @@ namespace DocumentFormat.OpenXml
             return version == FileFormatVersions.Office2007
                 || version == FileFormatVersions.Office2010
                 || version == FileFormatVersions.Office2013;
+        }
+
+        public static FileFormatVersions AndLater(this FileFormatVersions version)
+        {
+            switch (version)
+            {
+                case FileFormatVersions.Office2007:
+                    return FileFormatVersions.Office2007
+                         | FileFormatVersions.Office2010
+                         | FileFormatVersions.Office2013;
+                case FileFormatVersions.Office2010:
+                    return FileFormatVersions.Office2010
+                         | FileFormatVersions.Office2013;
+                case FileFormatVersions.Office2013:
+                    return FileFormatVersions.Office2013;
+                default:
+                    Debug.Assert(false, "This should only be called with a single version");
+                    return version;
+            }
         }
 
         /// <summary>
