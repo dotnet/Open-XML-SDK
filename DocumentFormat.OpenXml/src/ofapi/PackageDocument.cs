@@ -15,28 +15,28 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public class WordprocessingDocument : OpenXmlPackage
     {
-        private static System.Collections.Generic.Dictionary<string, PartConstraintRule> _partConstraint;
-        private static System.Collections.Generic.Dictionary<string, PartConstraintRule> _dataPartReferenceConstraint;
+        private static Dictionary<string, PartConstraintRule> _partConstraint;
+        private static Dictionary<string, PartConstraintRule> _dataPartReferenceConstraint;
 
         /// <summary>
         /// Gets part constraint data.
         /// </summary>
         /// <returns>The constraint data of the part.</returns>
-        internal sealed override System.Collections.Generic.IDictionary<string, PartConstraintRule> GetPartConstraint()
+        internal sealed override IDictionary<string, PartConstraintRule> GetPartConstraint()
         {
             if (_partConstraint == null)
             {
-                System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string, PartConstraintRule>();
-                tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument", new PartConstraintRule("MainDocumentPart", null, true, false, OfficeVersions.All));
-                tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties", new PartConstraintRule("CoreFilePropertiesPart", CoreFilePropertiesPart.ContentTypeConstant, false, false, OfficeVersions.All));
-                tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties", new PartConstraintRule("ExtendedFilePropertiesPart", ExtendedFilePropertiesPart.ContentTypeConstant, false, false, OfficeVersions.All));
-                tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties", new PartConstraintRule("CustomFilePropertiesPart", CustomFilePropertiesPart.ContentTypeConstant, false, false, OfficeVersions.All));
-                tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail", new PartConstraintRule("ThumbnailPart", null, false, false, OfficeVersions.All));
-                tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin", new PartConstraintRule("DigitalSignatureOriginPart", DigitalSignatureOriginPart.ContentTypeConstant, false, false, OfficeVersions.All));
-                tempData.Add("http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization", new PartConstraintRule("QuickAccessToolbarCustomizationsPart", QuickAccessToolbarCustomizationsPart.ContentTypeConstant, false, false, OfficeVersions.All));
-                tempData.Add("http://schemas.microsoft.com/office/2006/relationships/ui/extensibility", new PartConstraintRule("RibbonExtensibilityPart", RibbonExtensibilityPart.ContentTypeConstant, false, false, OfficeVersions.All));
-                tempData.Add("http://schemas.microsoft.com/office/2007/relationships/ui/extensibility", new PartConstraintRule("RibbonAndBackstageCustomizationsPart", RibbonAndBackstageCustomizationsPart.ContentTypeConstant, false, false, FileFormatVersions.Office2010 | FileFormatVersions.Office2013 | FileFormatVersions.Office2016));
-                tempData.Add("http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes", new PartConstraintRule("WebExTaskpanesPart", WebExTaskpanesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2013 | FileFormatVersions.Office2016));
+                Dictionary<string, PartConstraintRule> tempData = new Dictionary<string, PartConstraintRule>();
+                tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument", new PartConstraintRule("MainDocumentPart", null, true, false, FileFormatVersions.Office2007.AndLater()));
+                tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties", new PartConstraintRule("CoreFilePropertiesPart", CoreFilePropertiesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
+                tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties", new PartConstraintRule("ExtendedFilePropertiesPart", ExtendedFilePropertiesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
+                tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties", new PartConstraintRule("CustomFilePropertiesPart", CustomFilePropertiesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
+                tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail", new PartConstraintRule("ThumbnailPart", null, false, false, FileFormatVersions.Office2007.AndLater()));
+                tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin", new PartConstraintRule("DigitalSignatureOriginPart", DigitalSignatureOriginPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
+                tempData.Add("http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization", new PartConstraintRule("QuickAccessToolbarCustomizationsPart", QuickAccessToolbarCustomizationsPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
+                tempData.Add("http://schemas.microsoft.com/office/2006/relationships/ui/extensibility", new PartConstraintRule("RibbonExtensibilityPart", RibbonExtensibilityPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
+                tempData.Add("http://schemas.microsoft.com/office/2007/relationships/ui/extensibility", new PartConstraintRule("RibbonAndBackstageCustomizationsPart", RibbonAndBackstageCustomizationsPart.ContentTypeConstant, false, false, FileFormatVersions.Office2010.AndLater()));
+                tempData.Add("http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes", new PartConstraintRule("WebExTaskpanesPart", WebExTaskpanesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2013.AndLater()));
                 _partConstraint = tempData;
             }
             return _partConstraint;
@@ -46,11 +46,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the constraint rule of DataPartReferenceRelationship.
         /// </summary>
         /// <returns>The constraint data of the part.</returns>
-        internal sealed override System.Collections.Generic.IDictionary<string, PartConstraintRule> GetDataPartReferenceConstraint()
+        internal sealed override IDictionary<string, PartConstraintRule> GetDataPartReferenceConstraint()
         {
             if (_dataPartReferenceConstraint == null)
             {
-                System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string, PartConstraintRule>();
+                Dictionary<string, PartConstraintRule> tempData = new Dictionary<string, PartConstraintRule>();
 
                 _dataPartReferenceConstraint = tempData;
             }
@@ -1006,28 +1006,28 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public class SpreadsheetDocument : OpenXmlPackage
     {
-        private static System.Collections.Generic.Dictionary<string, PartConstraintRule> _partConstraint;
-        private static System.Collections.Generic.Dictionary<string, PartConstraintRule> _dataPartReferenceConstraint;
+        private static Dictionary<string, PartConstraintRule> _partConstraint;
+        private static Dictionary<string, PartConstraintRule> _dataPartReferenceConstraint;
 
         /// <summary>
         /// Gets part constraint data.
         /// </summary>
         /// <returns>The constraint data of the part.</returns>
-        internal sealed override System.Collections.Generic.IDictionary<string, PartConstraintRule> GetPartConstraint()
+        internal sealed override IDictionary<string, PartConstraintRule> GetPartConstraint()
         {
             if (_partConstraint == null)
             {
-                System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string, PartConstraintRule>();
-                tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument", new PartConstraintRule("WorkbookPart", null, true, false, OfficeVersions.All));
-                tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties", new PartConstraintRule("CoreFilePropertiesPart", CoreFilePropertiesPart.ContentTypeConstant, false, false, OfficeVersions.All));
-                tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties", new PartConstraintRule("ExtendedFilePropertiesPart", ExtendedFilePropertiesPart.ContentTypeConstant, false, false, OfficeVersions.All));
-                tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties", new PartConstraintRule("CustomFilePropertiesPart", CustomFilePropertiesPart.ContentTypeConstant, false, false, OfficeVersions.All));
-                tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail", new PartConstraintRule("ThumbnailPart", null, false, false, OfficeVersions.All));
-                tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin", new PartConstraintRule("DigitalSignatureOriginPart", DigitalSignatureOriginPart.ContentTypeConstant, false, false, OfficeVersions.All));
-                tempData.Add("http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization", new PartConstraintRule("QuickAccessToolbarCustomizationsPart", QuickAccessToolbarCustomizationsPart.ContentTypeConstant, false, false, OfficeVersions.All));
-                tempData.Add("http://schemas.microsoft.com/office/2006/relationships/ui/extensibility", new PartConstraintRule("RibbonExtensibilityPart", RibbonExtensibilityPart.ContentTypeConstant, false, false, OfficeVersions.All));
-                tempData.Add("http://schemas.microsoft.com/office/2007/relationships/ui/extensibility", new PartConstraintRule("RibbonAndBackstageCustomizationsPart", RibbonAndBackstageCustomizationsPart.ContentTypeConstant, false, false, FileFormatVersions.Office2010 | FileFormatVersions.Office2013 | FileFormatVersions.Office2016));
-                tempData.Add("http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes", new PartConstraintRule("WebExTaskpanesPart", WebExTaskpanesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2013 | FileFormatVersions.Office2016));
+                Dictionary<string, PartConstraintRule> tempData = new Dictionary<string, PartConstraintRule>();
+                tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument", new PartConstraintRule("WorkbookPart", null, true, false, FileFormatVersions.Office2007.AndLater()));
+                tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties", new PartConstraintRule("CoreFilePropertiesPart", CoreFilePropertiesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
+                tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties", new PartConstraintRule("ExtendedFilePropertiesPart", ExtendedFilePropertiesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
+                tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties", new PartConstraintRule("CustomFilePropertiesPart", CustomFilePropertiesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
+                tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail", new PartConstraintRule("ThumbnailPart", null, false, false, FileFormatVersions.Office2007.AndLater()));
+                tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin", new PartConstraintRule("DigitalSignatureOriginPart", DigitalSignatureOriginPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
+                tempData.Add("http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization", new PartConstraintRule("QuickAccessToolbarCustomizationsPart", QuickAccessToolbarCustomizationsPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
+                tempData.Add("http://schemas.microsoft.com/office/2006/relationships/ui/extensibility", new PartConstraintRule("RibbonExtensibilityPart", RibbonExtensibilityPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
+                tempData.Add("http://schemas.microsoft.com/office/2007/relationships/ui/extensibility", new PartConstraintRule("RibbonAndBackstageCustomizationsPart", RibbonAndBackstageCustomizationsPart.ContentTypeConstant, false, false, FileFormatVersions.Office2010.AndLater()));
+                tempData.Add("http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes", new PartConstraintRule("WebExTaskpanesPart", WebExTaskpanesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2013.AndLater()));
 
                 _partConstraint = tempData;
             }
@@ -1038,11 +1038,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the constraint rule of DataPartReferenceRelationship.
         /// </summary>
         /// <returns>The constraint data of the part.</returns>
-        internal sealed override System.Collections.Generic.IDictionary<string, PartConstraintRule> GetDataPartReferenceConstraint()
+        internal sealed override IDictionary<string, PartConstraintRule> GetDataPartReferenceConstraint()
         {
             if (_dataPartReferenceConstraint == null)
             {
-                System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string, PartConstraintRule>();
+                Dictionary<string, PartConstraintRule> tempData = new Dictionary<string, PartConstraintRule>();
 
                 _dataPartReferenceConstraint = tempData;
             }
@@ -1956,28 +1956,28 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public class PresentationDocument : OpenXmlPackage
     {
-        private static System.Collections.Generic.Dictionary<string, PartConstraintRule> _partConstraint;
-        private static System.Collections.Generic.Dictionary<string, PartConstraintRule> _dataPartReferenceConstraint;
+        private static Dictionary<string, PartConstraintRule> _partConstraint;
+        private static Dictionary<string, PartConstraintRule> _dataPartReferenceConstraint;
 
         /// <summary>
         /// Gets part constraint data.
         /// </summary>
         /// <returns>The constraint data of the part.</returns>
-        internal sealed override System.Collections.Generic.IDictionary<string, PartConstraintRule> GetPartConstraint()
+        internal sealed override IDictionary<string, PartConstraintRule> GetPartConstraint()
         {
             if (_partConstraint == null)
             {
-                System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string, PartConstraintRule>();
-                tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument", new PartConstraintRule("PresentationPart", null, true, false, OfficeVersions.All));
-                tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties", new PartConstraintRule("CoreFilePropertiesPart", CoreFilePropertiesPart.ContentTypeConstant, false, false, OfficeVersions.All));
-                tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties", new PartConstraintRule("ExtendedFilePropertiesPart", ExtendedFilePropertiesPart.ContentTypeConstant, false, false, OfficeVersions.All));
-                tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties", new PartConstraintRule("CustomFilePropertiesPart", CustomFilePropertiesPart.ContentTypeConstant, false, false, OfficeVersions.All));
-                tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail", new PartConstraintRule("ThumbnailPart", null, false, false, OfficeVersions.All));
-                tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin", new PartConstraintRule("DigitalSignatureOriginPart", DigitalSignatureOriginPart.ContentTypeConstant, false, false, OfficeVersions.All));
-                tempData.Add("http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization", new PartConstraintRule("QuickAccessToolbarCustomizationsPart", QuickAccessToolbarCustomizationsPart.ContentTypeConstant, false, false, OfficeVersions.All));
-                tempData.Add("http://schemas.microsoft.com/office/2006/relationships/ui/extensibility", new PartConstraintRule("RibbonExtensibilityPart", RibbonExtensibilityPart.ContentTypeConstant, false, false, OfficeVersions.All));
-                tempData.Add("http://schemas.microsoft.com/office/2007/relationships/ui/extensibility", new PartConstraintRule("RibbonAndBackstageCustomizationsPart", RibbonAndBackstageCustomizationsPart.ContentTypeConstant, false, false, FileFormatVersions.Office2010 | FileFormatVersions.Office2013 | FileFormatVersions.Office2016));
-                tempData.Add("http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes", new PartConstraintRule("WebExTaskpanesPart", WebExTaskpanesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2013 | FileFormatVersions.Office2016));
+                Dictionary<string, PartConstraintRule> tempData = new Dictionary<string, PartConstraintRule>();
+                tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument", new PartConstraintRule("PresentationPart", null, true, false, FileFormatVersions.Office2007.AndLater()));
+                tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties", new PartConstraintRule("CoreFilePropertiesPart", CoreFilePropertiesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
+                tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties", new PartConstraintRule("ExtendedFilePropertiesPart", ExtendedFilePropertiesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
+                tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties", new PartConstraintRule("CustomFilePropertiesPart", CustomFilePropertiesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
+                tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail", new PartConstraintRule("ThumbnailPart", null, false, false, FileFormatVersions.Office2007.AndLater()));
+                tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin", new PartConstraintRule("DigitalSignatureOriginPart", DigitalSignatureOriginPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
+                tempData.Add("http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization", new PartConstraintRule("QuickAccessToolbarCustomizationsPart", QuickAccessToolbarCustomizationsPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
+                tempData.Add("http://schemas.microsoft.com/office/2006/relationships/ui/extensibility", new PartConstraintRule("RibbonExtensibilityPart", RibbonExtensibilityPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
+                tempData.Add("http://schemas.microsoft.com/office/2007/relationships/ui/extensibility", new PartConstraintRule("RibbonAndBackstageCustomizationsPart", RibbonAndBackstageCustomizationsPart.ContentTypeConstant, false, false, FileFormatVersions.Office2010.AndLater()));
+                tempData.Add("http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes", new PartConstraintRule("WebExTaskpanesPart", WebExTaskpanesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2013.AndLater()));
                 _partConstraint = tempData;
             }
             return _partConstraint;
@@ -1987,11 +1987,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the constraint rule of DataPartReferenceRelationship.
         /// </summary>
         /// <returns>The constraint data of the part.</returns>
-        internal sealed override System.Collections.Generic.IDictionary<string, PartConstraintRule> GetDataPartReferenceConstraint()
+        internal sealed override IDictionary<string, PartConstraintRule> GetDataPartReferenceConstraint()
         {
             if (_dataPartReferenceConstraint == null)
             {
-                System.Collections.Generic.Dictionary<string, PartConstraintRule> tempData = new System.Collections.Generic.Dictionary<string, PartConstraintRule>();
+                Dictionary<string, PartConstraintRule> tempData = new Dictionary<string, PartConstraintRule>();
 
                 _dataPartReferenceConstraint = tempData;
             }

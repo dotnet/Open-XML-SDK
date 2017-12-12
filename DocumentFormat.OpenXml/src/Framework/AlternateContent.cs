@@ -995,7 +995,7 @@ namespace DocumentFormat.OpenXml
         #region Helper functions
         internal OpenXmlCompositeElement GetContentFromACBlock(AlternateContent acblk, FileFormatVersions format)
         {
-            Debug.Assert(format != OfficeVersions.All);
+            Debug.Assert(format != FileFormatVersions.Office2007.AndLater());
 
             foreach (var choice in acblk.ChildElements.OfType<AlternateContentChoice>())
             {
