@@ -6,21 +6,26 @@ environment:
     secure: K2IZr2uNWnPFxfLYnpwbUIAQmLHYY5IjWvdRXfdUUMU=
   SignClientUser:
     secure: vcaNFKm7ZLGnBM/RkByidsmmpx0I16RcsdOsj3ewh8Ga3ThHll8BiG9xmW0IymLD
+  EnableCodeCoverage: true
+  CodeCoverageToolsPath: C:\Program Files (x86)\Microsoft Visual Studio\2017\TestAgent
+  Configuration: Release
 
 install:
   - ps: nuget install -ExcludeVersion SignClient -Version 0.9.0 -OutputDirectory .\build\
+  - ps: choco install codecov
 
 build_script:
-  - cmd: msbuild /t:restore;build /p:Configuration=Release /m .\Open-Xml-SDK.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+  - cmd: msbuild /t:restore;build /m .\Open-Xml-SDK.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 
 after_build:
-  - cmd: msbuild /t:pack /p:Configuration=Release .\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+  - cmd: msbuild /t:pack /m .\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
   - ps: .\build\SignPackage.ps1
 
 test_script:
-  - dotnet vstest /logger:trx bin\Release\DocumentFormat.OpenXml.Tests\netcoreapp1.0\DocumentFormat.OpenXml.Tests.dll /Framework:FrameworkCore10
-  - vstest.console.exe /logger:appveyor bin\Release\DocumentFormat.OpenXml.Tests\net46\DocumentFormat.OpenXml.Tests.dll /Framework:Framework45
-  - vstest.console.exe /logger:appveyor bin\Release\DocumentFormat.OpenXml.Tests\net452\DocumentFormat.OpenXml.Tests.dll /Framework:Framework45
+  - cmd: msbuild /t:test /m .\Open-Xml-SDK.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+
+artifacts:
+  - path: bin
 
 deploy:
   provider: NuGet
