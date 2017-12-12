@@ -47,10 +47,10 @@
 
     <Error Message="Could not find OpenCover" Condition="!Exists($(OpenCoverExe)) AND $(EnableCodeCoverage)" />
 
-    <Delete Files="$(_TestLogPath) > $(_TestLogPath)" />
+    <Delete Files="$(_TestLogPath)" />
     <MakeDir Directories="$(ArtifactsTestResultsDir)"/>
 
-    <Exec Command='$(TestCommand)'
+    <Exec Command='$(TestCommand) > $(_TestLogPath)'
           LogStandardErrorAsError="true"
           WorkingDirectory="$(OutputPath)"
           IgnoreExitCode="true">
