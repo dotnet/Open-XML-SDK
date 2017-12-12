@@ -18,7 +18,4 @@ namespace DocumentFormat.OpenXml.Packaging
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly", MessageId = "Ms")]
         MsWordMailMergeRecipientData,
     }
-
-    #endregion
-
 }

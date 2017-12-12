@@ -79,7 +79,4 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         Wmf
     }
-
-    #endregion
-
 }

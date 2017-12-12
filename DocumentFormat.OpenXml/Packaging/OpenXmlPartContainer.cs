@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Xml;
 using System.Reflection;
+using System.Linq;
 
 namespace DocumentFormat.OpenXml.Packaging
 {

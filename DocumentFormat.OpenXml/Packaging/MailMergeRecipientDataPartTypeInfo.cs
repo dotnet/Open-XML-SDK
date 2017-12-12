@@ -24,7 +24,4 @@ namespace DocumentFormat.OpenXml.Packaging
             return ".xml";
         }
     }
-
-    #endregion
-
 }
