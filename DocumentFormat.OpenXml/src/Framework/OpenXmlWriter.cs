@@ -188,7 +188,7 @@ namespace DocumentFormat.OpenXml
 
         #endregion
     }
-    
+
     /// <summary>
     /// Defines the OpenXmlPartWriter.
     /// </summary>
@@ -280,7 +280,7 @@ namespace DocumentFormat.OpenXml
         public override void WriteStartDocument()
         {
             this.ThrowIfObjectDisposed();
-            
+
             this._xmlWriter.WriteStartDocument();
         }
 
@@ -291,7 +291,7 @@ namespace DocumentFormat.OpenXml
         public override void WriteStartDocument(bool standalone)
         {
             this.ThrowIfObjectDisposed();
-            
+
             this._xmlWriter.WriteStartDocument(standalone);
         }
 
@@ -311,7 +311,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="attributes">The attributes to be writtern, can be null if no attrbutes.</param>
         public override void WriteStartElement(OpenXmlReader elementReader, IEnumerable<OpenXmlAttribute> attributes)
         {
-            WriteStartElement(elementReader,attributes, elementReader.NamespaceDeclarations);
+            WriteStartElement(elementReader, attributes, elementReader.NamespaceDeclarations);
         }
 
         /// <summary>
@@ -388,7 +388,7 @@ namespace DocumentFormat.OpenXml
             this.ThrowIfObjectDisposed();
 
             this._xmlWriter.WriteStartElement(elementObject.Prefix, elementObject.LocalName, elementObject.NamespaceUri);
-            
+
             if (elementObject.HasAttributes)
             {
                 // write attributes
@@ -497,7 +497,7 @@ namespace DocumentFormat.OpenXml
             }
 
             // can continue WriteString(), so don't set _isLeafTextElementStart to false.
-        }     
+        }
 
         /// <summary>
         /// Write the OpenXmlElement to the writer.
@@ -541,14 +541,14 @@ namespace DocumentFormat.OpenXml
 
         #region private methods
 
-        private void Init( Stream partStream, bool closeOutput, Encoding encoding)
+        private void Init(Stream partStream, bool closeOutput, Encoding encoding)
         {
-            // this._elementStack = new Stack<OpenXmlElement>();
+            XmlWriterSettings settings = new XmlWriterSettings
+            {
+                CloseOutput = closeOutput,
+                Encoding = encoding
+            };
 
-            XmlWriterSettings settings = new XmlWriterSettings();
-            settings.CloseOutput = closeOutput;
-            settings.Encoding = encoding;
-            
             this._xmlWriter = XmlWriter.Create(partStream, settings);
         }
 
@@ -561,7 +561,7 @@ namespace DocumentFormat.OpenXml
         {
             return element is OpenXmlLeafTextElement;
         }
-        
+
         #endregion
 
     }
