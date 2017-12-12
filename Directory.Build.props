@@ -24,4 +24,9 @@
     <BaseIntermediateOutputPath>$(OutputFullPath)obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <IsTestProject Condition=" '$(IsTestProject)' == '' ">false</IsTestProject>
+    <EnableCodeCoverage Condition=" '$(EnableCodeCoverage)' == '' ">false</EnableCodeCoverage>
+    <DebugType Condition="$(EnableCodeCoverage)">Full</DebugType>
+  </PropertyGroup>
 </Project>
