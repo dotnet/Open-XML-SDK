@@ -1,0 +1,62 @@
+<Project>
+  <PropertyGroup>
+    <IsTestProject Condition=" '$(IsTestProject)' == '' ">false</IsTestProject>
+  </PropertyGroup>
+
+  <Choose>
+    <When Condition="'$(IsTestProject)' == 'true'">
+      <PropertyGroup >
+        <TestArchitecture Condition="'$(TestArchitecture)' == ''">x64</TestArchitecture>
+        <_TestTargetName Condition="'$(TargetFrameworks)' == ''">InnerTest</_TestTargetName>
+        <_TestTargetName Condition="'$(TargetFrameworks)' != ''">OuterTest</_TestTargetName>
+
+        <TestLogger Condition=" '$(TestLogger)' == '' ">trx</TestLogger>
+      </PropertyGroup>
+
+      <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp1.0' ">
+        <TestExe>dotnet vstest /Framework:FrameworkCore10</TestExe>
+      </PropertyGroup>
+
+      <PropertyGroup Condition=" '$(TargetFramework)' == 'net46' OR '$(TargetFramework)' == 'net452' ">
+        <TestExe>vstest.console.exe /Framework:Framework45</TestExe>
+      </PropertyGroup>
+    </When>
+  </Choose>
+
+  <!-- An empty target so that we can run /t:test at the solution level and skip all non-tests -->
+  <Target Name="Test">
+    <Message Text="No tests available as this is not a test project. Please mark test projects with IsTestProject=true to enable test run." />
+  </Target>
+
+  <Target Name="Test" DependsOnTargets="$(_TestTargetName)" Condition="'$(IsTestProject)' == 'true'" />
+
+  <Target Name="InnerTest">
+    <PropertyGroup>
+      <_TestLogPath>$(OutputPath)\test_log.txt</_TestLogPath>
+    </PropertyGroup>
+
+    <Delete Files="$(_TestLogPath)" />
+    <MakeDir Directories="$(ArtifactsTestResultsDir)"/>
+
+    <Exec Command='$(TestExe) /Logger:$(TestLogger) "$(TargetPath)" /Platform:$(TestArchitecture) > $(_TestLogPath)'
+          LogStandardErrorAsError="true"
+          WorkingDirectory="$(OutputPath)"
+          IgnoreExitCode="true">
+
+      <Output TaskParameter="ExitCode" PropertyName="ExitCode" />
+    </Exec>
+
+    <Message Text="Test succeeded: $(MSBuildProjectName) [$(TargetFramework)|%(_TestArchitectureItems.Identity)]" Condition="'$(ExitCode)' == '0'" />
+    <Error Text="Test failed with exit code: $(ExitCode); log: $(_TestLogPath)" Condition="'$(ExitCode)' != '0'" />
+
+  </Target>
+
+  <Target Name="OuterTest" DependsOnTargets="_SetTestInnerTarget;DispatchToInnerBuilds" />
+
+  <Target Name="_SetTestInnerTarget" Returns="@(InnerOutput)">
+    <PropertyGroup Condition="'$(InnerTargets)' == ''">
+      <InnerTargets>InnerTest</InnerTargets>
+    </PropertyGroup>
+  </Target>
+
+</Project>

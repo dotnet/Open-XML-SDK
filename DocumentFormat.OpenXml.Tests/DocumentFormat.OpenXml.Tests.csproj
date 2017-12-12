@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>net452;net46;netcoreapp1.0</TargetFrameworks>
     <AssemblyName>DocumentFormat.OpenXml.Tests</AssemblyName>
+    <IsTestProject>true</IsTestProject>
   </PropertyGroup>
 
   <ItemGroup>
