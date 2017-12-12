@@ -19,6 +19,11 @@ namespace DocumentFormat.OpenXml
                 || version == FileFormatVersions.Office2013;
         }
 
+        /// <summary>
+        /// Combines values for the given version and all versions that come after it
+        /// </summary>
+        /// <param name="version">Version to which all other versions are added</param>
+        /// <returns>A version instance with <paramref name="version"/> and all later versions</returns>
         public static FileFormatVersions AndLater(this FileFormatVersions version)
         {
             switch (version)
