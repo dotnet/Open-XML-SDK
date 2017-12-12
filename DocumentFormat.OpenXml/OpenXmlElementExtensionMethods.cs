@@ -1,20 +1,19 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+
+using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml;
 using System.Diagnostics;
+using System.Linq;
 using System.Reflection;
-using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Validation;
+using System.Xml;
 
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// Static class to hold extension methods for OpenXmlElement.
     /// </summary>
-    internal static partial class OpenXmlElementExtensionMethods
+    internal static class OpenXmlElementExtensionMethods
     {
         /// <summary>
         /// Get position index in same type in the ChildElements of it's parent element.
@@ -230,30 +229,4 @@ namespace DocumentFormat.OpenXml
             return newElement;
         }
     }
-
-#if DEBUG
-    
-    /// <summary>
-    /// Extension methods for debug use.
-    /// </summary>
-    public static class DebugExtensions
-    {
-        /// <summary>
-        /// Print the element's xpath to console.
-        /// </summary>
-        /// <param name="errors">Validation errors.</param>
-        public static void PrintNodePathInErrors(this IEnumerable<ValidationErrorInfo> errors)
-        {
-            if (errors != null)
-            {
-                foreach (var error in errors)
-                {
-                    Console.WriteLine(error.Path.XPath);
-                }
-            }
-        }
-    }
-
-#endif
-
 }
