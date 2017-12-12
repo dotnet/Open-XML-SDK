@@ -35,7 +35,8 @@
   <Target Name="InnerTest">
     <PropertyGroup>
       <_TestLogPath>$(OutputPath)\test_log.txt</_TestLogPath>
-      <TestCommand>$(TestExe) $(TestArgs) /Logger:$(TestLogger) "$(TargetPath)" /Platform:$(TestArchitecture) > $(_TestLogPath)</TestCommand>
+      <TestArgs>$(TestArgs) /Logger:$(TestLogger) "$(TargetPath)" /Platform:$(TestArchitecture)</TestArgs>
+      <TestCommand>$(TestExe) $(TestArgs) > $(_TestLogPath)</TestCommand>
     </PropertyGroup>
 
     <PropertyGroup Condition="$(EnableCodeCoverage)">
