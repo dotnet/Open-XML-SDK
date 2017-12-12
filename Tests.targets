@@ -10,7 +10,7 @@
       </PropertyGroup>
 
       <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp1.0' ">
-        <TestExe>dotnet</TestExe>
+        <TestExe>dotnet.exe</TestExe>
         <TestArgs>vstest /Framework:FrameworkCore10</TestArgs>
       </PropertyGroup>
 
@@ -36,7 +36,7 @@
     <PropertyGroup>
       <_TestLogPath>$(OutputPath)\test_log.txt</_TestLogPath>
       <TestArgs>$(TestArgs) /Logger:$(TestLogger) "$(TargetPath)" /Platform:$(TestArchitecture)</TestArgs>
-      <TestCommand>$(TestExe) $(TestArgs) > $(_TestLogPath)</TestCommand>
+      <TestCommand>$(TestExe) $(TestArgs)</TestCommand>
     </PropertyGroup>
 
     <PropertyGroup Condition="$(EnableCodeCoverage)">
@@ -47,7 +47,7 @@
 
     <Error Message="Could not find OpenCover" Condition="!Exists($(OpenCoverExe)) AND $(EnableCodeCoverage)" />
 
-    <Delete Files="$(_TestLogPath)" />
+    <Delete Files="$(_TestLogPath) > $(_TestLogPath)" />
     <MakeDir Directories="$(ArtifactsTestResultsDir)"/>
 
     <Exec Command='$(TestCommand)'
