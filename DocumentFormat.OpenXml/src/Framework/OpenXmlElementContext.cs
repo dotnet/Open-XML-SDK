@@ -70,7 +70,7 @@ namespace DocumentFormat.OpenXml
             {
                 if (_mcSettings == null)
                 {
-                    _mcSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, OfficeVersions.All);
+                    _mcSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007.AndLater());
                 }
                 return _mcSettings;
             }

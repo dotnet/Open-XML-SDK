@@ -1,45 +1,12 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 
 using System;
+using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml
 {
-    /// <summary>
-    /// Defines the Office Open XML file format version.
-    /// </summary>
-    [Flags]
-    public enum FileFormatVersions
-    {
-        /// <summary>
-        /// Represents an invalid value which will cause an exception.
-        /// </summary>
-        None = 0,
-
-        /// <summary>
-        /// Represents Microsoft Office 2007.
-        /// </summary>
-        Office2007 = 0x1,
-
-        /// <summary>
-        /// Represents Microsoft Office 2010.
-        /// </summary>
-        Office2010 = 0x2,
-
-        /// <summary>
-        /// Represents Microsoft Office 2013.
-        /// </summary>
-        Office2013 = 0x4
-    }
-
     internal static class OfficeVersions
     {
-        /// <summary>
-        /// Represents an enum for all office versions.
-        /// </summary>
-        public const FileFormatVersions All = FileFormatVersions.Office2007
-                                            | FileFormatVersions.Office2010
-                                            | FileFormatVersions.Office2013;
-
         /// <summary>
         /// Determines whether the supplied version is within the known set of versions
         /// </summary>
@@ -50,6 +17,30 @@ namespace DocumentFormat.OpenXml
             return version == FileFormatVersions.Office2007
                 || version == FileFormatVersions.Office2010
                 || version == FileFormatVersions.Office2013;
+        }
+
+        /// <summary>
+        /// Combines values for the given version and all versions that come after it
+        /// </summary>
+        /// <param name="version">Version to which all other versions are added</param>
+        /// <returns>A version instance with <paramref name="version"/> and all later versions</returns>
+        public static FileFormatVersions AndLater(this FileFormatVersions version)
+        {
+            switch (version)
+            {
+                case FileFormatVersions.Office2007:
+                    return FileFormatVersions.Office2007
+                         | FileFormatVersions.Office2010
+                         | FileFormatVersions.Office2013;
+                case FileFormatVersions.Office2010:
+                    return FileFormatVersions.Office2010
+                         | FileFormatVersions.Office2013;
+                case FileFormatVersions.Office2013:
+                    return FileFormatVersions.Office2013;
+                default:
+                    Debug.Assert(false, "This should only be called with a single version");
+                    return version;
+            }
         }
 
         /// <summary>
@@ -78,28 +69,6 @@ namespace DocumentFormat.OpenXml
 
                 throw new ArgumentOutOfRangeException(parameterName, message);
             }
-        }
-    }
-
-    /// <summary>
-    /// Defines an OfficeAvailabilityAttribute class to indicate whether the property is available in a specific version of an Office application.
-    /// </summary>
-    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Class | AttributeTargets.Field)]
-    public sealed class OfficeAvailabilityAttribute : Attribute
-    {
-        /// <summary>
-        /// Gets the Office version of the available property.
-        /// </summary>
-        public FileFormatVersions OfficeVersion { get; internal set; }
-
-        /// <summary>
-        /// Initializes a new instance of the OfficeAvailabilityAttribute class.
-        /// </summary>
-        /// <param name="officeVersion">The Office version where this class or property is available. 
-        /// If there is more than one version, use bitwise OR to specify multiple versions.</param>
-        public OfficeAvailabilityAttribute(FileFormatVersions officeVersion)
-        {
-            OfficeVersion = officeVersion;
         }
     }
 }
