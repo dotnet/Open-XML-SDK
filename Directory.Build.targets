@@ -16,11 +16,6 @@
 
   </ItemGroup>
 
-  <!-- An empty target so that we can run /t:test at the solution level and skip all non-tests -->
-  <Target Name="Test">
-    <Message Text="No tests available as this is not a test project. Please mark test projects with IsTestProject=true to enable test run." />
-  </Target>
-
-  <Import Project="$(MSBuildThisFileDirectory)\Tests.targets" Condition="$(IsTestProject)" />
+  <Import Project="$(MSBuildThisFileDirectory)\Tests.targets" />
   
 </Project>

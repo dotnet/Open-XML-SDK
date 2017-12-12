@@ -1,46 +1,61 @@
 <Project>
-  <PropertyGroup Condition="'$(IsTestProject)' == 'true'">
-    <TestArchitecture Condition="'$(TestArchitecture)' == ''">x64</TestArchitecture>
-    <_TestTargetName Condition="'$(TargetFrameworks)' == ''">InnerTest</_TestTargetName>
-    <_TestTargetName Condition="'$(TargetFrameworks)' != ''">OuterTest</_TestTargetName>
-
-    <VSTest>vstest.console.exe</VSTest>
-
-    <TestLogger Condition=" '$(TestLogger)' == '' ">trx</TestLogger>
-
-    <VSTestFramework Condition=" '$(TargetFramework)' == 'net46' ">Framework45</VSTestFramework>
-    <VSTestFramework Condition=" '$(TargetFramework)' == 'net452' ">Framework45</VSTestFramework>
-    <VSTestFramework Condition=" '$(TargetFramework)' == 'netcoreapp1.0' ">FrameworkCore10</VSTestFramework>
+  <PropertyGroup>
+    <IsTestProject Condition=" '$(IsTestProject)' == '' ">false</IsTestProject>
   </PropertyGroup>
 
-  <Target Name="Test" DependsOnTargets="$(_TestTargetName)" Condition="'$(IsTestProject)' == 'true'" />
-
-  <Target Name="InnerTest">
+<Choose>
+  <When Condition="'$(IsTestProject)' == 'true'">
     <PropertyGroup>
-      <_TestLogPath>$(OutputPath)\test_log.txt</_TestLogPath>
+      <TestArchitecture Condition="'$(TestArchitecture)' == ''">x64</TestArchitecture>
+      <_TestTargetName Condition="'$(TargetFrameworks)' == ''">InnerTest</_TestTargetName>
+      <_TestTargetName Condition="'$(TargetFrameworks)' != ''">OuterTest</_TestTargetName>
+
+      <VSTest>vstest.console.exe</VSTest>
+
+      <TestLogger Condition=" '$(TestLogger)' == '' ">trx</TestLogger>
+
+      <VSTestFramework Condition=" '$(TargetFramework)' == 'net46' ">Framework45</VSTestFramework>
+      <VSTestFramework Condition=" '$(TargetFramework)' == 'net452' ">Framework45</VSTestFramework>
+      <VSTestFramework Condition=" '$(TargetFramework)' == 'netcoreapp1.0' ">FrameworkCore10</VSTestFramework>
     </PropertyGroup>
 
-    <Delete Files="$(_TestLogPath)" />
-    <MakeDir Directories="$(ArtifactsTestResultsDir)"/>
+    <Target Name="Test" DependsOnTargets="$(_TestTargetName)" Condition="'$(IsTestProject)' == 'true'" />
 
-    <Exec Command='"$(VSTest)" /Logger:$(TestLogger) "$(TargetPath)" /Platform:$(TestArchitecture) /Framework:$(VSTestFramework) > $(_TestLogPath)'
-          LogStandardErrorAsError="true"
-          WorkingDirectory="$(OutputPath)"
-          IgnoreExitCode="true">
+    <Target Name="InnerTest">
+      <PropertyGroup>
+        <_TestLogPath>$(OutputPath)\test_log.txt</_TestLogPath>
+      </PropertyGroup>
 
-      <Output TaskParameter="ExitCode" PropertyName="ExitCode" />
-    </Exec>
+      <Delete Files="$(_TestLogPath)" />
+      <MakeDir Directories="$(ArtifactsTestResultsDir)"/>
 
-    <Message Text="Test succeeded: $(MSBuildProjectName) [$(TargetFramework)|%(_TestArchitectureItems.Identity)]" Condition="'$(ExitCode)' == '0'" />
-    <Error Text="Test failed with exit code: $(ExitCode); log: $(_TestLogPath)" Condition="'$(ExitCode)' != '0'" />
+      <Exec Command='"$(VSTest)" /Logger:$(TestLogger) "$(TargetPath)" /Platform:$(TestArchitecture) /Framework:$(VSTestFramework) > $(_TestLogPath)'
+            LogStandardErrorAsError="true"
+            WorkingDirectory="$(OutputPath)"
+            IgnoreExitCode="true">
 
-  </Target>
+        <Output TaskParameter="ExitCode" PropertyName="ExitCode" />
+      </Exec>
 
-  <Target Name="OuterTest" DependsOnTargets="_SetTestInnerTarget;DispatchToInnerBuilds" />
+      <Message Text="Test succeeded: $(MSBuildProjectName) [$(TargetFramework)|%(_TestArchitectureItems.Identity)]" Condition="'$(ExitCode)' == '0'" />
+      <Error Text="Test failed with exit code: $(ExitCode); log: $(_TestLogPath)" Condition="'$(ExitCode)' != '0'" />
 
-  <Target Name="_SetTestInnerTarget" Returns="@(InnerOutput)">
-    <PropertyGroup Condition="'$(InnerTargets)' == ''">
-      <InnerTargets>InnerTest</InnerTargets>
-    </PropertyGroup>
-  </Target>
+    </Target>
+
+    <Target Name="OuterTest" DependsOnTargets="_SetTestInnerTarget;DispatchToInnerBuilds" />
+
+    <Target Name="_SetTestInnerTarget" Returns="@(InnerOutput)">
+      <PropertyGroup Condition="'$(InnerTargets)' == ''">
+        <InnerTargets>InnerTest</InnerTargets>
+      </PropertyGroup>
+    </Target>
+  </When>
+  <Otherwise>
+    <!-- An empty target so that we can run /t:test at the solution level and skip all non-tests -->
+    <Target Name="Test">
+      <Message Text="No tests available as this is not a test project. Please mark test projects with IsTestProject=true to enable test run." />
+    </Target>
+  </Otherwise>
+</Choose>
+
 </Project>
