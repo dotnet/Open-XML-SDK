@@ -11,6 +11,7 @@ environment:
 
 install:
   - ps: nuget install -ExcludeVersion SignClient -Version 0.9.0 -OutputDirectory .\build\
+  - ps: choco install codecov
 
 build_script:
   - cmd: msbuild /t:restore;build /m .\Open-Xml-SDK.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
@@ -20,7 +21,7 @@ after_build:
   - ps: .\build\SignPackage.ps1
 
 test_script:
-  - cmd: msbuild /t:test .\Open-Xml-SDK.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+  - cmd: msbuild /t:test /m .\Open-Xml-SDK.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 
 deploy:
   provider: NuGet
