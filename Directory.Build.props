@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+  </PropertyGroup>
+
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
@@ -20,4 +24,9 @@
     <BaseIntermediateOutputPath>$(OutputFullPath)obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <IsTestProject Condition=" '$(IsTestProject)' == '' ">false</IsTestProject>
+    <EnableCodeCoverage Condition=" '$(EnableCodeCoverage)' == '' ">false</EnableCodeCoverage>
+    <DebugType Condition="$(EnableCodeCoverage)">Full</DebugType>
+  </PropertyGroup>
 </Project>
