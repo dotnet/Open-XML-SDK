@@ -42,7 +42,7 @@
     <PropertyGroup Condition="$(EnableCodeCoverage)">
       <CoverageOutput>$(OutputPath)\coverage.xml</CoverageOutput>
       <OpenCoverExe>$(NuGetPackageRoot)\OpenCover\4.6.519\tools\OpenCover.Console.exe</OpenCoverExe>
-      <TestCommand>"$(OpenCoverExe)" -register:user -target:"$(TestExe)" -targetargs:"$(TestArgs)" -output:"$(CoverageOutput)"</TestCommand>
+      <TestCommand>"$(OpenCoverExe)" -register:user -target:"$(TestExe)" -targetargs:"$(TestArgs)" -output:"$(CoverageOutput)" -filter:"+[DocumentFormat.OpenXml]*"</TestCommand>
     </PropertyGroup>
 
     <Error Message="Could not find OpenCover" Condition="!Exists($(OpenCoverExe)) AND $(EnableCodeCoverage)" />
