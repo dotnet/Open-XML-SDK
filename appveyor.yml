@@ -21,7 +21,7 @@ after_build:
   - ps: .\build\SignPackage.ps1
 
 test_script:
-  - cmd: msbuild /t:test /m .\Open-Xml-SDK.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+  - cmd: msbuild /t:test .\Open-Xml-SDK.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 
 deploy:
   provider: NuGet
