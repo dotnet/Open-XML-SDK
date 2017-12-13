@@ -32,7 +32,7 @@
 
   <Target Name="Test" DependsOnTargets="$(_TestTargetName)" Condition="$(IsTestProject)" />
 
-  <Target Name="InnerTest">
+  <Target Name="InnerTest" Condition="$(IsTestProject)">
     <PropertyGroup>
       <_TestLogPath>$(OutputPath)\test_log.txt</_TestLogPath>
       <TestArgs>$(TestArgs) /Logger:$(TestLogger) "$(TargetPath)" /Platform:$(TestArchitecture)</TestArgs>
@@ -81,9 +81,9 @@
     <Error Text="Coverage file upload failed with exit code: $(ExitCode)" Condition="'$(ExitCode)' != '0'" />
   </Target>
 
-  <Target Name="OuterTest" DependsOnTargets="_SetTestInnerTarget;DispatchToInnerBuilds" />
+  <Target Name="OuterTest" DependsOnTargets="_SetTestInnerTarget;DispatchToInnerBuilds" Condition="$(IsTestProject)"/>
 
-  <Target Name="_SetTestInnerTarget" Returns="@(InnerOutput)">
+  <Target Name="_SetTestInnerTarget" Returns="@(InnerOutput)" Condition="$(IsTestProject)">
     <PropertyGroup Condition="'$(InnerTargets)' == ''">
       <InnerTargets>InnerTest</InnerTargets>
     </PropertyGroup>
