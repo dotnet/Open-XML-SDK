@@ -35,7 +35,7 @@
   <Target Name="InnerTest" Condition="$(IsTestProject)">
     <PropertyGroup>
       <_TestLogPath>$(OutputPath)\test_log.txt</_TestLogPath>
-      <TestArgs>$(TestArgs) /Logger:$(TestLogger) '$(TargetPath)' /Platform:$(TestArchitecture)</TestArgs>
+      <TestArgs>$(TestArgs) /Logger:$(TestLogger) $(TargetPath) /Platform:$(TestArchitecture)</TestArgs>
       <TestCommand>$(TestExe) $(TestArgs)</TestCommand>
     </PropertyGroup>
 
