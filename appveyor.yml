@@ -3,9 +3,9 @@ os: Visual Studio 2017
 environment:
   image: Visual Studio 2017
   SignClientSecret:
-    secure: D4MusxgqH0XEQU5kkwGNo5TqYqADsSa0wBOHWdFTwhY=
+    secure: zO+vuYp34bSBjrqwaKPwUz+ENjMsA1Z9bsMPfU+75Ts=
   SignClientUser:
-    secure: kVWwbl6Yh3ejk1gODRdRVF0PHF6H0NU/FMA0c4Aw/p8NnQvP35dz+b+Z9ABcHxFy
+    secure: wPNGuPyt7pAx9YDKurysk5polnxcGU7GiWmJ70r4tpyDUgGEqxRSZhZ8lWvBhwuC
   Configuration: Release
   EnableCodeCoverage: true
 
@@ -27,6 +27,6 @@ deploy:
   provider: NuGet
   server: https://dotnet.myget.org/F/open-xml-sdk/api/v2/package
   api_key:
-    secure: M6rnQwI1t/4WFBSongcZCjdHB0fyrz0vrjnCvNTfhNyDw6hJ1iaPbtzbrW6E1xFf
+    secure: SSFVVP2n8gyH0kiElrqwrIJJwL3C7XFnYnntr3z/h2Rwpa7/K1nDd2BP3JPB6347
   on:
     branch: [master, vNext, Office2016]
