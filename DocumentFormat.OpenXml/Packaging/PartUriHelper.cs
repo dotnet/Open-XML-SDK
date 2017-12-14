@@ -135,7 +135,7 @@ namespace DocumentFormat.OpenXml.Packaging
             if (this._sequenceNumbers.ContainsKey(contentType))
             {
                 this._sequenceNumbers[contentType] += 1;
-                // use the default read-only NumberFormatInfo that is culture-independent (invariant). 
+                // use the default read-only NumberFormatInfo that is culture-independent (invariant).
                 return this._sequenceNumbers[contentType].ToString(NumberFormatInfo.InvariantInfo);
             }
             else

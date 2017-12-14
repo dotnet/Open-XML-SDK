@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml
     /// OpenXmlLoadMode - load mode, default is Lazy
     ///     Full - load all the OpenXmlElements recursively
     ///     Lazy (default) - load N layer descendant elements from the current element, lazy load (cache OuterXml) for others
-    ///             default is populate 3 layers 
+    ///             default is populate 3 layers
     /// </summary>
     internal enum OpenXmlLoadMode
     {
@@ -64,7 +64,7 @@ namespace DocumentFormat.OpenXml
 
         private MarkupCompatibilityProcessSettings _mcSettings;
 
-        internal MarkupCompatibilityProcessSettings MCSettings 
+        internal MarkupCompatibilityProcessSettings MCSettings
         {
             get
             {
@@ -78,7 +78,7 @@ namespace DocumentFormat.OpenXml
             set
             {
                 _mcSettings = value;
-            } 
+            }
         }
         #endregion
 
@@ -141,7 +141,7 @@ namespace DocumentFormat.OpenXml
         //    get { return _xmlNamespaceManager; }
         //    // set { _xmlNamespaceManager = value; }
         //}
-        
+
         //public XmlParserContext XmlParserContext
         //{
         //    get { return _xmlParserContext; }

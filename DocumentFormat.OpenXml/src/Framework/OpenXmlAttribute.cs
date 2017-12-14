@@ -90,7 +90,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets or sets the namespace prefix of the current attribute. 
+        /// Gets or sets the namespace prefix of the current attribute.
         /// </summary>
         public string Prefix
         {
@@ -185,7 +185,7 @@ namespace DocumentFormat.OpenXml
         // FDG ***** DO override Object.Equals whenever implementing IEquatable<T>.
 
         /// <summary>
-        /// Determines whether the specified Object is a OpenXmlAttribute structure and if so, indicates whether it is equal to this instance of an OpenXmlAttribute structure. 
+        /// Determines whether the specified Object is a OpenXmlAttribute structure and if so, indicates whether it is equal to this instance of an OpenXmlAttribute structure.
         /// </summary>
         /// <param name="obj">An Object.</param>
         /// <returns>Returns true if obj is an OpenXmlAttribute structure and it is equal to this instance of an OpenXmlAttribute structure; otherwise, returns false.</returns>
@@ -202,7 +202,7 @@ namespace DocumentFormat.OpenXml
         // FDG ***** DO override GetHashCode whenever you override Equals.
 
         /// <summary>
-        /// Gets the hash code for this instance of an OpenXmlAttribute structure. 
+        /// Gets the hash code for this instance of an OpenXmlAttribute structure.
         /// </summary>
         /// <returns>The hash code for this instance of an OpenXmlAttribute structure.</returns>
         public override int GetHashCode()

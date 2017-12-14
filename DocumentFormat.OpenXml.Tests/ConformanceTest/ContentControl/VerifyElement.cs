@@ -87,7 +87,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                         //Tag is "Test1.2.3"
                         case ConstStr.TestTagStrings.TagContent05:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
-                                
+
                             elementNum = sdtBlock.SdtProperties.Descendants<W15.Appearance>().Count();
 
                             if (elementNum != 0)

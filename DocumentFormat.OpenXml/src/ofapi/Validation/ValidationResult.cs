@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml.Validation
         }
 
         /// <summary>
-        /// Removes all errors and set Valida to true. 
+        /// Removes all errors and set Valida to true.
         /// </summary>
         internal void Clear()
         {

@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Represents an internal reference relationship to a DataPart element.
     /// </summary>
     public class DataPartReferenceRelationship : ReferenceRelationship
-    {              
+    {
         /// <summary>
         /// Initializes a new instance of the DataPartReferenceRelationship class.
         /// </summary>

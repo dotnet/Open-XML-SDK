@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private string _mainPartContentType;
 
-        // compression level for content that is stored in a PackagePart. 
+        // compression level for content that is stored in a PackagePart.
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private CompressionOption _compressionOption = CompressionOption.Normal;
 
@@ -63,7 +63,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #region internal constructors
 
         /// <summary>
-        /// Initializes a new instance of the OpenXmlPackage class. 
+        /// Initializes a new instance of the OpenXmlPackage class.
         /// </summary>
         protected OpenXmlPackage()
             : base()
@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Initializes a new instance of the OpenXmlPackage class using the supplied Open XML package. 
+        /// Initializes a new instance of the OpenXmlPackage class using the supplied Open XML package.
         /// </summary>
         /// <param name="package">The target package for the OpenXmlPackage class.</param>
         /// <exception cref="ArgumentNullException">Thrown when package is a null reference.</exception>
@@ -96,7 +96,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Initializes a new instance of the OpenXmlPackage class with access to a specified Open XML package. 
+        /// Initializes a new instance of the OpenXmlPackage class with access to a specified Open XML package.
         /// </summary>
         /// <param name="package">The target package for the OpenXmlPackage class.</param>
         /// <exception cref="ArgumentNullException">Thrown when package is a null reference.</exception>
@@ -244,7 +244,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 //    throw exception;
                 //}
 
-                // auto detect document type (main part type for Transitional) 
+                // auto detect document type (main part type for Transitional)
                 foreach (RelationshipProperty relationship in relationshipCollection)
                 {
                     if (relationship.RelationshipType == this.MainPartRelationshipType)
@@ -301,8 +301,8 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Gets the FileAccess setting for the document. 
-        /// The current I/O access settings are: Read, Write, or ReadWrite. 
+        /// Gets the FileAccess setting for the document.
+        /// The current I/O access settings are: Read, Write, or ReadWrite.
         /// </summary>
         public FileAccess FileOpenAccess
         {
@@ -310,7 +310,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Gets or sets the compression level for the content of the new part. 
+        /// Gets or sets the compression level for the content of the new part.
         /// </summary>
         public CompressionOption CompressionOption
         {
@@ -409,7 +409,7 @@ namespace DocumentFormat.OpenXml.Packaging
         // Remove this method due to bug #18394
         // User can call doc.Package.Flush( ) as a workaround.
         ///// <summary>
-        ///// Saves the contents of all parts and relationships that are contained in the OpenXml package. 
+        ///// Saves the contents of all parts and relationships that are contained in the OpenXml package.
         ///// </summary>
         //public void Save()
         //{
@@ -418,7 +418,7 @@ namespace DocumentFormat.OpenXml.Packaging
         //}
 
         /// <summary>
-        /// Saves and closes the OpenXml package and all underlying part streams.  
+        /// Saves and closes the OpenXml package and all underlying part streams.
         /// </summary>
         public void Close()
         {
@@ -628,8 +628,8 @@ namespace DocumentFormat.OpenXml.Packaging
 
             Uri partUri = null;
 
-            // fix bug #241492 
-            // check to avoid name conflict with orphan parts in the packages. 
+            // fix bug #241492
+            // check to avoid name conflict with orphan parts in the packages.
             do
             {
                 partUri = this._partUriHelper.GetUniquePartUri(contentType, parentUri, targetPath, targetName, targetExt);
@@ -651,8 +651,8 @@ namespace DocumentFormat.OpenXml.Packaging
 
             Uri partUri = null;
 
-            // fix bug #241492 
-            // check to avoid name conflict with orphan parts in the packages. 
+            // fix bug #241492
+            // check to avoid name conflict with orphan parts in the packages.
             do
             {
                 partUri = this._partUriHelper.GetUniquePartUri(contentType, parentUri, targetUri);
@@ -677,7 +677,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Flushes and saves the content, closes the document, and releases all resources. 
+        /// Flushes and saves the content, closes the document, and releases all resources.
         /// </summary>
         /// <param name="disposing">Specify true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
         protected virtual void Dispose(bool disposing)
@@ -706,7 +706,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #region IDisposable Members
 
         /// <summary>
-        /// Flushes and saves the content, closes the document, and releases all resources. 
+        /// Flushes and saves the content, closes the document, and releases all resources.
         /// </summary>
         public void Dispose()
         {
@@ -755,7 +755,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
         #region Auto-Save functions
         /// <summary>
-        /// Gets a flag that indicates whether the parts should be saved when disposed. 
+        /// Gets a flag that indicates whether the parts should be saved when disposed.
         /// </summary>
         public bool AutoSave
         {
@@ -809,7 +809,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     RelationshipCollection relationshipCollection;
 
                     // For Package: Invoking UpdateRelationshipTypesInPackage() changes the relationship types in the package.
-                    // We need to new PackageRelationshipPropertyCollection to read through the package contents right here 
+                    // We need to new PackageRelationshipPropertyCollection to read through the package contents right here
                     // because some operation may have updated the package before we get here.
                     relationshipCollection = new PackageRelationshipPropertyCollection(this._metroPackage);
                     relationshipCollection.UpdateRelationshipTypesInPackage();
@@ -829,7 +829,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 RelationshipCollection relationshipCollection;
 
                 // For PackagePart: Invoking UpdateRelationshipTypesInPackage() changes the relationship types in the package part.
-                // We need to new PackageRelationshipPropertyCollection to read through the package part contents right here 
+                // We need to new PackageRelationshipPropertyCollection to read through the package part contents right here
                 // because some operation may have updated the package part before we get here.
                 relationshipCollection = new PackagePartRelationshipPropertyCollection(part.PackagePart);
                 relationshipCollection.UpdateRelationshipTypesInPackage();
@@ -925,7 +925,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Changes the type of the document. 
+        /// Changes the type of the document.
         /// </summary>
         /// <typeparam name="T">The type of the document's main part.</typeparam>
         /// <remarks>The MainDocumentPart will be changed.</remarks>
@@ -941,7 +941,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             try
             {
-                // read the content to local string 
+                // read the content to local string
                 using (Stream mainPartStream = mainPart.GetStream())
                 {
                     if (mainPartStream.Length > Int32.MaxValue)
@@ -952,7 +952,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     OpenXmlPart.CopyStream(mainPartStream, memoryStream);
                 }
 
-                // 
+                //
                 tempPart = this.AddExtendedPart(@"http://temp", this.MainPartContentType, @".xml");
 
                 foreach (KeyValuePair<string, OpenXmlPart> idPartPair in mainPart.ChildrenParts)
@@ -1041,14 +1041,14 @@ namespace DocumentFormat.OpenXml.Packaging
 #endif
         }
 
-        #endregion 
+        #endregion
 
         #region internal methods
 
         // internal abstract IExtensionPartFactory ExtensionPartFactory { get; }
 
         // cannot use generic, at it will emit error
-        // Compiler Error CS0310 
+        // Compiler Error CS0310
         // The type 'typename' must have a public parameter less constructor in order to use it as parameter 'parameter' in the generic type or method 'generic'
 
         internal sealed override OpenXmlPart NewPart(string relationshipType, string contentType)
@@ -1155,7 +1155,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
         #endregion
 
-        #region methods on DataPart 
+        #region methods on DataPart
 
         private static bool IsOrphanDataPart(DataPart dataPart)
         {
@@ -1201,7 +1201,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     }
                 }
 
-                // 
+                //
                 foreach (var dataPart in dataPartSet)
                 {
                     // delete the part from the package

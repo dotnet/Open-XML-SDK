@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Tests
             //    <xsd:element name="AppVersion" minOccurs="0" maxOccurs="1" type="xsd:string">
             //    <xsd:element name="DocSecurity" minOccurs="0" maxOccurs="1" type="xsd:int">
             //  </xsd:all>
-            //</xsd:complexType> 
+            //</xsd:complexType>
 
             // ***** good case ******
 
@@ -127,7 +127,7 @@ namespace DocumentFormat.OpenXml.Tests
             properties.RemoveChild(errorChild);
 
             actual.Clear();
-            // dup 
+            // dup
             errorChild = properties.FirstChild;
             properties.PrependChild(new Company());
             target.Validate(validationContext);
@@ -214,7 +214,7 @@ namespace DocumentFormat.OpenXml.Tests
             shapeLayout.RemoveChild(errorChild);
 
             actual.Clear();
-            // dup 
+            // dup
             errorChild = shapeLayout.FirstChild;
             shapeLayout.PrependChild(new RegroupTable());
             target.Validate(validationContext);

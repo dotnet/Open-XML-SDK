@@ -6,7 +6,7 @@ using System.Text;
 namespace DocumentFormat.OpenXml.Packaging
 {
     /// <summary>
-    /// Called from constructors of derived parts to initialize the IFixedContentTypePart interface. All derived parts must be parts that have fixed content type. 
+    /// Called from constructors of derived parts to initialize the IFixedContentTypePart interface. All derived parts must be parts that have fixed content type.
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1040:AvoidEmptyInterfaces")]
     public interface IFixedContentTypePart

@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Used in validation event handler.
         /// </summary>
         internal string PartClassName;
-        
+
         /// <summary>
         /// Content type of the part. null for non-fixed content type.
         /// Purpose: WorksheetCommentsPart / SlideCommentsPart / CommentsPart have same relatiohship type but different content type.
@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="minOccursIsNonZero">The MinOccursIsNonZero data.</param>
         /// <param name="maxOccursGreatThanOne">The MaxOccursGreatThanOne data.</param>
         /// <param name="fileFormat">The file format version information.</param>
-        internal PartConstraintRule(string partClassName, string partContentType, 
+        internal PartConstraintRule(string partClassName, string partContentType,
                                     bool minOccursIsNonZero, bool maxOccursGreatThanOne,
                                     FileFormatVersions fileFormat)
         {

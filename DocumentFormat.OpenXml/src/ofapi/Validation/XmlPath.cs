@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml
         private XmlPath()
         {
         }
-        
+
         /// <summary>
         /// Initlizes a new instance of the XmlPath from the specified OpenXmlPart.
         /// </summary>
@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml
             }
 
             XmlPath xmlPath = new XmlPath();
-            
+
             xmlPath.PartUri = element.GetPartUri();
 
             Dictionary<string, string> namespaces = new Dictionary<string, string>();
@@ -96,7 +96,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Build the xml XPath from the element recursively. 
+        /// Build the xml XPath from the element recursively.
         /// </summary>
         /// <param name="element">The element.</param>
         /// <param name="xpath">The result XPath.</param>

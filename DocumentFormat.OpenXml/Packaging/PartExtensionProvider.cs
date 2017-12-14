@@ -47,12 +47,12 @@ namespace DocumentFormat.OpenXml.Packaging
         // Satisfies rule: ImplementSerializationConstructors.
 
         /// <summary>
-        /// Initializes a new instance of the Dictionary class with serialized data. 
+        /// Initializes a new instance of the Dictionary class with serialized data.
         /// </summary>
         /// <param name="info">A System.Runtime.Serialization.SerializationInfo object containing the information required to serialize the PartExtensionProvider.</param>
         /// <param name="context">A System.Runtime.Serialization.StreamingContext structure containing the source and destination of the serialized stream associated with the PartExtensionProvider.</param>
         private PartExtensionProvider(
-           SerializationInfo info, 
+           SerializationInfo info,
            StreamingContext context) : base ( info, context )
         {
         }
@@ -98,6 +98,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
             base.Add(contentType, partExtension);
         }
-        
+
     }
 }

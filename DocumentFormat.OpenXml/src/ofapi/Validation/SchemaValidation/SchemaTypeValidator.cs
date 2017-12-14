@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         {
             Debug.Assert(validationContext != null);
             Debug.Assert(validationContext.Element != null);
-      
+
             OpenXmlElement theElement = validationContext.Element;
 
             Debug.Assert(!(theElement is OpenXmlUnknownElement));
@@ -42,13 +42,13 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
             if (theElement.ElementTypeId < ReservedElementTypeIds.MaxReservedId)
             {
-                // MiscElement, UnknownElement, 
+                // MiscElement, UnknownElement,
                 // AlternateContent, AlternateContentChoice, AlternateContentFallback
                 if (theElement.ElementTypeId == ReservedElementTypeIds.AlternateContentId)
                 {
                     AlternateContentValidator.Validate(validationContext);
                 }
-                
+
                 Debug.Assert(!(theElement is AlternateContentChoice));
                 Debug.Assert(!(theElement is AlternateContentFallback));
 
@@ -61,7 +61,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             SchemaTypeData schemaTypeData = this._sdbSchemaDatas.GetSchemaTypeData(theElement);
 
             ValidateAttributes(validationContext, schemaTypeData);
- 
+
             // validate particles
 
             if (theElement is OpenXmlLeafTextElement)
@@ -171,7 +171,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             }
 
             // all unknown attributes (attributes not defined in schema) are in ExtendedAttributes.
-            // they should be errors 
+            // they should be errors
             foreach (var extendedAttribute in element.ExtendedAttributes)
             {
                 if (validationContext.McContext.IsIgnorableNs(extendedAttribute.NamespaceUri))

@@ -12,11 +12,11 @@ using System.Runtime.Serialization;
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
-    /// Represents the mc:AlternateContent element of markup 
+    /// Represents the mc:AlternateContent element of markup
     /// compatibility.
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    
+
     public class AlternateContent : OpenXmlCompositeElement
     {
         private static string _mcNamespace = @"http://schemas.openxmlformats.org/markup-compatibility/2006";
@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml
         private static string tagName = "AlternateContent";
 
         /// <summary>
-        /// Initializes a new instance of the AlternateContent 
+        /// Initializes a new instance of the AlternateContent
         /// class.
         /// </summary>
         public AlternateContent()
@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initializes a new instance of the AlternateContent  
+        /// Initializes a new instance of the AlternateContent
         /// class by using the supplied IEnumerable elements.
         /// </summary>
         /// <param name="childElements">
@@ -46,7 +46,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initializes a new instance of the AlternateContent  
+        /// Initializes a new instance of the AlternateContent
         /// class by using the supplied OpenXmlElement elements.
         /// </summary>
         /// <param name="childElements">
@@ -60,7 +60,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="outerXml">The outer XML of the element.
         /// </param>
         /// <summary>
-        /// Initializes a new instance of the AlternateContent  
+        /// Initializes a new instance of the AlternateContent
         /// class by using the supplied string.
         /// </summary>
         public AlternateContent(string outerXml)
@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets a value that represents the markup compatibility 
+        /// Gets a value that represents the markup compatibility
         /// namespace.
         /// </summary>
         public static string MarkupCompatibilityNamespace
@@ -78,7 +78,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets a value that represents the markup compatibility 
+        /// Gets a value that represents the markup compatibility
         /// namespace ID.
         /// </summary>
         public static byte MarkupCompatibilityNamespaceId
@@ -95,7 +95,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets a value that represents the tag name of the 
+        /// Gets a value that represents the tag name of the
         /// AlternateContent element.
         /// </summary>
         public static string TagName
@@ -104,7 +104,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets a value that represents the local name of the 
+        /// Gets a value that represents the local name of the
         /// AlternateContent element.
         /// </summary>
         public override string LocalName
@@ -180,12 +180,12 @@ namespace DocumentFormat.OpenXml
 
         /// <returns>The cloned node. </returns>
         /// <summary>
-        /// When a node is overridden in a derived class, 
+        /// When a node is overridden in a derived class,
         /// CloneNode creates a duplicate of the node.
         /// </summary>
         /// <param name="deep">
-        /// True to recursively clone the subtree under 
-        /// the specified node; False to clone only the node 
+        /// True to recursively clone the subtree under
+        /// the specified node; False to clone only the node
         /// itself.
         /// </param>
         public override OpenXmlElement CloneNode(bool deep)
@@ -194,7 +194,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// The type ID of the element. 
+        /// The type ID of the element.
         /// </summary>
         internal override int ElementTypeId
         {
@@ -203,7 +203,7 @@ namespace DocumentFormat.OpenXml
 
         /// <summary>
         /// Indicates whether this element is available in a specific version of an Office Application.
-        /// Always returns true since AlternateContent is allowed 
+        /// Always returns true since AlternateContent is allowed
         /// in every version.
         /// </summary>
         /// <param name="version">The Office file format version.</param>
@@ -221,9 +221,9 @@ namespace DocumentFormat.OpenXml
     public class AlternateContentChoice : OpenXmlCompositeElement
     {
         private static string tagName = "Choice";
-    
+
         /// <summary>
-        /// Initializes a new instance of the 
+        /// Initializes a new instance of the
         /// AlternateContentChoice class.
         /// </summary>
         public AlternateContentChoice()
@@ -232,8 +232,8 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initializes a new instance of the 
-        /// AlternateContentChoice class by using the supplied 
+        /// Initializes a new instance of the
+        /// AlternateContentChoice class by using the supplied
         /// IEnumerable elements.
         /// </summary>
         /// <param name="childElements">
@@ -245,8 +245,8 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initializes a new instance of the 
-        /// AlternateContentChoice class by using the supplied 
+        /// Initializes a new instance of the
+        /// AlternateContentChoice class by using the supplied
         /// OpenXmlElement elements.
         /// </summary>
         /// <param name="childElements">
@@ -261,8 +261,8 @@ namespace DocumentFormat.OpenXml
         /// The outer XML of the element.
         /// </param>
         /// <summary>
-        /// Initializes a new instance of the 
-        /// AlternateContentChoice class by using the supplied 
+        /// Initializes a new instance of the
+        /// AlternateContentChoice class by using the supplied
         /// string.
         /// </summary>
         public AlternateContentChoice(string outerXml)
@@ -271,7 +271,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets a value that represents the tag name of the 
+        /// Gets a value that represents the tag name of the
         /// Choice element.
         /// </summary>
         public static string TagName
@@ -320,7 +320,7 @@ namespace DocumentFormat.OpenXml
 
         /// <summary>
         /// <para>Gets or sets a whitespace-delimited list of namespace prefixes that identify the
-        /// namespaces a markup consumer needs in order to understand and select that 
+        /// namespaces a markup consumer needs in order to understand and select that
         /// Choice and process the content.</para>
         /// <para> Represents the attribute in a schema. </para>
         /// </summary>
@@ -366,7 +366,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// The type ID of the element. 
+        /// The type ID of the element.
         /// </summary>
         internal override int ElementTypeId
         {
@@ -390,11 +390,11 @@ namespace DocumentFormat.OpenXml
     /// Defines a mc:Fallback element in mc:AlternateContent.
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    
+
     public class AlternateContentFallback : OpenXmlCompositeElement
     {
         private static string tagName = "Fallback";
-   
+
         /// <summary>
         /// Initializes a new instance of the AlternateContentFallback class.
         /// </summary>
@@ -515,7 +515,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// The type ID of the element. 
+        /// The type ID of the element.
         /// </summary>
         internal override int ElementTypeId
         {
@@ -846,8 +846,8 @@ namespace DocumentFormat.OpenXml
             if (element is AlternateContent)
             {
                 return ElementAction.ACBlock;
-            } 
-            
+            }
+
             if (element.IsInVersion(format))
             {
                 return ElementAction.Normal;
@@ -1062,7 +1062,7 @@ namespace DocumentFormat.OpenXml
     public sealed class InvalidMCContentException : Exception
     {
         /// <summary>
-        /// Initializes a new instance of the InvalidMCContentException class. 
+        /// Initializes a new instance of the InvalidMCContentException class.
         /// </summary>
         public InvalidMCContentException()
             : base()
@@ -1070,7 +1070,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initializes a new instance of the InvalidMCContentException class with a specified error message. 
+        /// Initializes a new instance of the InvalidMCContentException class with a specified error message.
         /// </summary>
         /// <param name="message">The message that describes the error. </param>
         public InvalidMCContentException(string message)
@@ -1080,7 +1080,7 @@ namespace DocumentFormat.OpenXml
 
 #if FEATURE_SERIALIZATION
         /// <summary>
-        /// Initializes a new instance of the InvalidMCContentException class with serialized data. 
+        /// Initializes a new instance of the InvalidMCContentException class with serialized data.
         /// </summary>
         /// <param name="info">The SerializationInfo that holds the serialized object data about the exception being thrown.</param>
         /// <param name="context">The StreamingContext that contains contextual information about the source or destination.</param>
@@ -1091,7 +1091,7 @@ namespace DocumentFormat.OpenXml
 #endif
 
         /// <summary>
-        /// Initializes a new instance of the InvalidMCContentException class with a specified error message and a reference to the inner exception that is the cause of this exception. 
+        /// Initializes a new instance of the InvalidMCContentException class with a specified error message and a reference to the inner exception that is the cause of this exception.
         /// </summary>
         /// <param name="message">The error message that explains the reason for the exception.</param>
         /// <param name="innerException">The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.</param>
@@ -1108,7 +1108,7 @@ namespace DocumentFormat.OpenXml
     public sealed class  NamespaceNotUnderstandException : Exception
     {
         /// <summary>
-        /// Initializes a new instance of the InvalidMCContentException class. 
+        /// Initializes a new instance of the InvalidMCContentException class.
         /// </summary>
         public NamespaceNotUnderstandException()
             : base()
@@ -1116,7 +1116,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initializes a new instance of the InvalidMCContentException class with a specified error message. 
+        /// Initializes a new instance of the InvalidMCContentException class with a specified error message.
         /// </summary>
         /// <param name="message">The message that describes the error. </param>
         public NamespaceNotUnderstandException(string message)
@@ -1126,7 +1126,7 @@ namespace DocumentFormat.OpenXml
 
 #if FEATURE_SERIALIZATION
         /// <summary>
-        /// Initializes a new instance of the InvalidMCContentException class with serialized data. 
+        /// Initializes a new instance of the InvalidMCContentException class with serialized data.
         /// </summary>
         /// <param name="info">The SerializationInfo that holds the serialized object data about the exception being thrown.</param>
         /// <param name="context">The StreamingContext that contains contextual information about the source or destination.</param>
@@ -1137,7 +1137,7 @@ namespace DocumentFormat.OpenXml
 #endif
 
         /// <summary>
-        /// Initializes a new instance of the InvalidMCContentException class with a specified error message and a reference to the inner exception that is the cause of this exception. 
+        /// Initializes a new instance of the InvalidMCContentException class with a specified error message and a reference to the inner exception that is the cause of this exception.
         /// </summary>
         /// <param name="message">The error message that explains the reason for the exception.</param>
         /// <param name="innerException">The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.</param>

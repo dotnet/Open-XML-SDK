@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml
     {
 
         /// <summary>
-        /// Represents a shadow element to hold child elements if there are any. 
+        /// Represents a shadow element to hold child elements if there are any.
         /// </summary>
         internal OpenXmlElement ShadowElement
         {
@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initializes a new instance of the OpenXmlLeafElement class. 
+        /// Initializes a new instance of the OpenXmlLeafElement class.
         /// </summary>
         protected OpenXmlLeafElement()
             : base()
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml
         {
             get { return false; }
         }
-         
+
         /// <summary>
         /// Gets or sets the markup that only represents child elements of the current
         ///  element.
@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Saves all child elements of the current element to the specified XmlWriter. 
+        /// Saves all child elements of the current element to the specified XmlWriter.
         /// </summary>
         /// <param name="w">The XmlWriter to which to save the child elements. </param>
         internal override void WriteContentTo(XmlWriter w)
@@ -95,7 +95,7 @@ namespace DocumentFormat.OpenXml
         internal override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode)
         {
             // BUGBUG! following Read() move the cursor to next node, and skip the attributes of the first node
-            // xmlReader.Read(); // read this element 
+            // xmlReader.Read(); // read this element
 
             LoadAttributes(xmlReader);
 

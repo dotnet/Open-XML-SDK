@@ -121,7 +121,7 @@ namespace DocumentFormat.OpenXml
         {
             return System.Activator.CreateInstance(null, typeName);
         }
-        
+
         /// <summary>
         /// Get attribute value of the specified attribute.
         /// </summary>

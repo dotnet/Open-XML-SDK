@@ -73,7 +73,7 @@ namespace DocumentFormat.OpenXml
             _type = elementType;
             format = FileFormatVersions.Office2007 | FileFormatVersions.Office2010;
         }
-        
+
         /// <summary>
         /// Initialize a new instance of ChildElementTypeAttribute.
         /// </summary>

@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
             string actualType = _type;
 
             IEnumerable<ExternalRelationship> rels = context.Part.ExternalRelationships.Where(r => r.Id == attributeValue.InnerText);
-            
+
             if (rels.Count() == 0)
             {
                 IEnumerable<IdPartPair> pairs = context.Part.Parts.Where(p => p.RelationshipId == attributeValue.InnerText);

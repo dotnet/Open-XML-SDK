@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         internal Recipients(MailMergeRecipientDataPart ownerPart)
             : base(ownerPart)
         {
-            
+
         }
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             LoadFromPart(openXmlPart);
         }
- 
+
         /// <summary>
         /// Saves the DOM into the OpenXML part.
         /// </summary>

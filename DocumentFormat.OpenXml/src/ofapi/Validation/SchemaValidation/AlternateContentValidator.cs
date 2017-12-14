@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             }
 
             OpenXmlElement child;
-            
+
             child = acElement.GetFirstNonMiscElementChild();
 
             while (child != null)
@@ -196,9 +196,9 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         }
 
     }
-      
+
     /// <summary>
-    /// Compatibility-Rule Attributes 
+    /// Compatibility-Rule Attributes
     /// </summary>
     static class CompatibilityRuleAttributesValidator
     {
@@ -453,7 +453,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                         }
                         else
                         {
-                            // The ACB has no children elements. 
+                            // The ACB has no children elements.
                             // case like: <acb/> <acb><choice/><fallback/></acb>
                             child = null;
                         }

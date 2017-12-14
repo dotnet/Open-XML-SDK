@@ -5,7 +5,7 @@ using System;
 namespace DocumentFormat.OpenXml.Packaging
 {
     /// <summary>
-    /// Specifies event handlers that will handle OpenXmlPackage validation events and the OpenXmlPackageValidationEventArgs. 
+    /// Specifies event handlers that will handle OpenXmlPackage validation events and the OpenXmlPackageValidationEventArgs.
     /// </summary>
     [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
     public class OpenXmlPackageValidationSettings

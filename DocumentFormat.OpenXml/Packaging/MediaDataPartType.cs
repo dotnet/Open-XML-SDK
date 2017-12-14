@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Packaging
         ///// <summary>
         ///// AU Audio File (.au)
         ///// </summary>
-        //Basic, 
+        //Basic,
         /// <summary>
         /// MIDI Audio (.mid)
         /// </summary>

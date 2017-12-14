@@ -48,7 +48,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Gets/Sets the part's root element when the part's content type is MailMergeRecipientDataPartType.OpenXmlMailMergeRecipientData. 
+        /// Gets/Sets the part's root element when the part's content type is MailMergeRecipientDataPartType.OpenXmlMailMergeRecipientData.
         /// Setting this property will throw InvalidOperationException if the MailMergeRecipients property is not null.
         /// </summary>
         public DocumentFormat.OpenXml.Wordprocessing.Recipients Recipients
@@ -74,7 +74,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Gets/Sets the part's root element when the part's content type is MailMergeRecipientDataPartType.MsWordMailMergeRecipientData. 
+        /// Gets/Sets the part's root element when the part's content type is MailMergeRecipientDataPartType.MsWordMailMergeRecipientData.
         /// Setting this property will throw InvalidOperationException if the Recipients property is not null.
         /// </summary>
         public DocumentFormat.OpenXml.Office.Word.MailMergeRecipients MailMergeRecipients

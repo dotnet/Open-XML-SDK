@@ -100,6 +100,6 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// PowerPoint Add-In (*.ppam).
         /// </summary>
-        AddIn        
+        AddIn
     }
 }

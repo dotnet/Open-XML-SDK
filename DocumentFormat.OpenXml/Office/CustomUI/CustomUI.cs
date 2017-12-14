@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal CustomUI(CustomUIPart ownerPart)
             : base(ownerPart)
         {
-            
+
         }
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
             LoadFromPart(openXmlPart);
         }
- 
+
         /// <summary>
         /// Saves the DOM into the OpenXML part.
         /// </summary>

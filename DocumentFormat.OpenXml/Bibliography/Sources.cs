@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal Sources(CustomXmlPart ownerPart)
             : base(ownerPart)
         {
-            
+
         }
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             LoadFromPart(openXmlPart);
         }
- 
+
         /// <summary>
         /// Saves the DOM into the OpenXML part.
         /// </summary>

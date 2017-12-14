@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Packaging
         internal const String RelationshipTypeConst = @"http://schemas.openxmlformats.org/officeDocument/2006/relationships/audio";
 
         /// <summary>
-        /// Gets the source relationship type for an audio reference. 
+        /// Gets the source relationship type for an audio reference.
         /// </summary>
         public static string AudioReferenceRelationshipType
         {

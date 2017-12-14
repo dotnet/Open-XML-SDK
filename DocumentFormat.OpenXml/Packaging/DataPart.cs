@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private OpenXmlPackage _openXmlPackage;
-        
+
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private PackagePart _metroPart;
 
@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #endregion
 
         /// <summary>
-        /// Initializes a new instance of the DataPart class. 
+        /// Initializes a new instance of the DataPart class.
         /// </summary>
         internal DataPart()
         {
@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #endregion
 
         #region public methods
-                
+
         /// <summary>
         /// Enumerates all <see cref="DataPartReferenceRelationship" />s that reference the current data part.
         /// </summary>
@@ -102,7 +102,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Returns the content data stream of the current part. 
+        /// Returns the content data stream of the current part.
         /// </summary>
         /// <returns>The content data stream of the current part. </returns>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate")]
@@ -114,7 +114,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Returns the content stream that was opened using a specified I/O FileMode. 
+        /// Returns the content stream that was opened using a specified I/O FileMode.
         /// </summary>
         /// <param name="mode">The I/O mode to be used to open the content stream.</param>
         /// <returns>The content stream of the part. </returns>
@@ -126,7 +126,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Returns the content stream of the part that was opened by using a specified FileMode and FileAccess. 
+        /// Returns the content stream of the part that was opened by using a specified FileMode and FileAccess.
         /// </summary>
         /// <param name="mode">The I/O mode to be used to open the content stream.</param>
         /// <param name="access">The access permissions to be used to open the content stream.</param>
@@ -196,7 +196,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         internal virtual string TargetPath
         {
-            get { return DefaultTargetPart; } 
+            get { return DefaultTargetPart; }
         }
 
         /// <summary>

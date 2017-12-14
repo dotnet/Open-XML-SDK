@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// The schema type constraint for an OpenXmlElement.
     /// </summary>
     /// <remarks>
-    /// 
+    ///
     /// </remarks>
     [DebuggerDisplay("OpenXmlTypeId={OpenXmlTypeId}")]
     internal class SchemaTypeData

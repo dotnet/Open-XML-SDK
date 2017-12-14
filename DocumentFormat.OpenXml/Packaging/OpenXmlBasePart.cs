@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     public abstract class OpenXmlPart : OpenXmlPartContainer
     {
         #region private data members
-        
+
         private OpenXmlPackage _openXmlPackage;
         private PackagePart _metroPart;
         private Uri _uri;
@@ -105,7 +105,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         // can not use generic, at it will emit error
-        // Compiler Error CS0310 
+        // Compiler Error CS0310
         // The type 'typename' must have a public parameterless constructor in order to use it as parameter 'parameter' in the generic type or method 'generic'
 
         internal sealed override OpenXmlPart NewPart(string relationshipType, string contentType)
@@ -242,7 +242,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             this._metroPart = this._openXmlPackage.CreateMetroPart(this._uri, contentType);
         }
-        
+
         // create a new part in this package
         internal void CreateInternal2(OpenXmlPackage openXmlPackage, OpenXmlPart parent, string contentType, Uri partUri)
         {
@@ -326,7 +326,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #endregion
 
         #region public methods
-        
+
         /// <summary>
         /// Enumerates all parents that reference this part anywhere in the document.
         /// </summary>
@@ -349,7 +349,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Returns the part content data stream. 
+        /// Returns the part content data stream.
         /// </summary>
         /// <returns>The content data stream for the part. </returns>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate")]
@@ -361,7 +361,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Returns the content stream that was opened using a specified I/O FileMode. 
+        /// Returns the content stream that was opened using a specified I/O FileMode.
         /// </summary>
         /// <param name="mode">The I/O mode to be used to open the content stream.</param>
         /// <returns>The content stream of the part. </returns>
@@ -373,7 +373,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Returns the part content stream that was opened using a specified FileMode and FileAccess. 
+        /// Returns the part content stream that was opened using a specified FileMode and FileAccess.
         /// </summary>
         /// <param name="mode">The I/O mode to be used to open the content stream.</param>
         /// <param name="access">The access permissions to be used to open the content stream.</param>
@@ -483,7 +483,7 @@ namespace DocumentFormat.OpenXml.Packaging
         [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
         public void ValidateXml(string schemaFile, ValidationEventHandler validationEventHandler)
         {
-            
+
             ThrowIfObjectDisposed();
 
             if (schemaFile == null)
@@ -510,7 +510,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        #endregion 
+        #endregion
 
         #region internal properties
 
@@ -559,7 +559,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #region internal virtual methods / properties
 
         /// <summary>
-        /// Indicates whether the ContentType for the current part is fixed. 
+        /// Indicates whether the ContentType for the current part is fixed.
         /// </summary>
         internal virtual bool IsContentTypeFixed
         {
@@ -657,7 +657,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             return true;
         }
-  
+
         #endregion
 
         #region internal methods
@@ -674,7 +674,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Sets the PartRootElement to null. 
+        /// Sets the PartRootElement to null.
         /// </summary>
         /// <returns></returns>
         /// <remarks>
@@ -689,7 +689,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
             return rootElement;
         }
-        
+
         /// <summary>
         /// Load the DOM tree. And associate the DOM tree with this part.
         /// Only used for generated part classes which derive from this OpenXmlBasePart.
@@ -737,12 +737,12 @@ namespace DocumentFormat.OpenXml.Packaging
                     }
                 }
             }
-                
+
             return;
         }
 
         /// <summary>
-        /// Set the RootElement to be the given partRootElement. 
+        /// Set the RootElement to be the given partRootElement.
         /// Only used for generated part classes which derive from this OpenXmlBasePart.
         /// </summary>
         /// <param name="partRootElement">The given partRootElement. Can be null.</param>
@@ -857,7 +857,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(nameof(sourceStream));
             }
-            
+
             using (BinaryReader sourceReader = new BinaryReader(sourceStream))
             {
                 byte[] buffer = new byte[4096];
@@ -871,7 +871,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
                 while (num > 0);
             }
-            
+
         }
         #endregion
 

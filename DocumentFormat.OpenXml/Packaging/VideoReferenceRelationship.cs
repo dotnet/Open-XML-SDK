@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Packaging
         internal const String RelationshipTypeConst = @"http://schemas.openxmlformats.org/officeDocument/2006/relationships/video";
 
         /// <summary>
-        /// Gets the source relationship type for an audio reference. 
+        /// Gets the source relationship type for an audio reference.
         /// </summary>
         public static string VideoReferenceRelationshipType
         {
@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Initializes a new instance of the VideoReferenceRelationship class using the supplied 
+        /// Initializes a new instance of the VideoReferenceRelationship class using the supplied
         /// MediaDataPart and relationship ID.
         /// </summary>
         /// <param name="mediaDataPart">The target DataPart of the reference relationship.</param>
