@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml
             {
                 throw new ArgumentNullException(nameof(outerXml));
             }
-            
+
             // check the out XML match the nodeType
             using (StringReader stringReader = new StringReader(outerXml))
             {
@@ -95,7 +95,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Specifies the type of XML node. 
+        /// Specifies the type of XML node.
         /// </summary>
         public XmlNodeType XmlNodeType
         {
@@ -104,7 +104,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// The type ID of the element. 
+        /// The type ID of the element.
         /// </summary>
         internal override int ElementTypeId
         {
@@ -137,7 +137,7 @@ namespace DocumentFormat.OpenXml
             {
                 string localName = string.Empty;
                 switch (this._nodeType)
-                {                       
+                {
                     case XmlNodeType.CDATA:
                         localName = strCDataSectionName;
                         break;
@@ -252,7 +252,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// When overridden in a derived class, creates a duplicate of the node. 
+        /// When overridden in a derived class, creates a duplicate of the node.
         /// </summary>
         /// <param name="deep">
         /// Specify true to recursively clone the subtree under the specified
@@ -276,7 +276,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Saves all the children of the node to the specified XmlWriter. 
+        /// Saves all the children of the node to the specified XmlWriter.
         /// </summary>
         /// <param name="w">The XmlWriter to which you want to save. </param>
         internal override void WriteContentTo(XmlWriter w)
@@ -285,7 +285,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Saves the current node to the specified XmlWriter. 
+        /// Saves the current node to the specified XmlWriter.
         /// </summary>
         /// <param name="xmlWriter">
         /// The XmlWriter at which to save the current node.
@@ -308,7 +308,7 @@ namespace DocumentFormat.OpenXml
 
         internal override void ParseXml()
         {
-            // do nothing 
+            // do nothing
         }
 
         /// <summary>
@@ -411,7 +411,7 @@ namespace DocumentFormat.OpenXml
 
         /// <summary>
         /// Do nothing for MiscNode.
-        /// Override this method because the MC loading algorithm try to call this method in parent's Populate. 
+        /// Override this method because the MC loading algorithm try to call this method in parent's Populate.
         /// While the OpenXmlElement.LoadAttributes() will cause the reader be moved which should not.
         /// </summary>
         /// <param name="xmlReader"></param>

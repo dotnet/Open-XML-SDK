@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                                 log.Pass(string.Format("Edit Content Control an appearance element in attribute of target tag=[{0}], Change an appearance attribute(value=Tga).", ConstStr.TestTagStrings.TagContent03));
                             }
-                                
+
                             break;
 
                         //Tag is "Test1.2.2"
@@ -177,14 +177,14 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                                 sdtBlock.SdtProperties.AppendChild<W15.SdtRepeatedSection>(sdtRepeatedSection);
 
                                 log.Pass(string.Format("Edit Content Control a DoNotAllowInsertDeleteSection element of target tag=[{0}], Append The DoNotAllowInsertDeleteSection element. Its element in attribute value is false.", ConstStr.TestTagStrings.TagContent10));
-                            } 
+                            }
                             break;
 
                         //Tag is "Test1.4.4"
                         //Edit sectionTitle element. The value of its element, make changes or value added.
                         case ConstStr.TestTagStrings.TagContent11:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
-                                
+
                             var sectionTitles = sdtBlock.Descendants<W15.SectionTitle>();
                             if (sectionTitles.Count() > 0)
                             {

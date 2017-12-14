@@ -51,7 +51,7 @@ namespace DocumentFormat.OpenXml.Validation
             // Need bookkeep MC context
             // Need to collect MC context from ancestor
 
-            // bookkeep MC context, 
+            // bookkeep MC context,
             // MC Spec: Compatibility-rule attributes shall affect the element to which they 1 are attached, including the element’s other attributes and contents.
             validationContext.McContext.PushMCAttributes2(element.MCAttributes, prefix => element.LookupNamespace(prefix));
 

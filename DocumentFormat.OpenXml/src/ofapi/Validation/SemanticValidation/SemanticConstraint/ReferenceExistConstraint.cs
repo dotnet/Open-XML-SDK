@@ -64,8 +64,8 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
                 Node = context.Element,
                 RelatedPart = this._relatedPart,
                 RelatedNode = null,
-                Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, 
-                                            ValidationResources.Sem_MissingReferenceElement, _elementName, context.Element.LocalName, 
+                Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture,
+                                            ValidationResources.Sem_MissingReferenceElement, _elementName, context.Element.LocalName,
                                             GetAttributeQualifiedName(context.Element, _refAttribute), _relatedPart == null ? _partPath : _relatedPart.PackagePart.Uri.ToString(), attributeValue.InnerText)
             };
         }
@@ -110,7 +110,7 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
             {
                 OpenXmlSimpleType attributeValue = context.Element.Attributes[_attribute];
 
-                //Attributes whose value is empty string or null don't need to be cached. 
+                //Attributes whose value is empty string or null don't need to be cached.
                 if (attributeValue != null && !string.IsNullOrEmpty(attributeValue.InnerText))
                 {
                     Debug.Assert(_referencedAttributes != null);

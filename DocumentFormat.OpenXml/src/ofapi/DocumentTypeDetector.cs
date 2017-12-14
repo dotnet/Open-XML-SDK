@@ -40,20 +40,20 @@ namespace DocumentFormat.OpenXml
                 {
                     var tempData = new Dictionary<string, OpenXmlDocumentType>();
 
-                    // known content types for Office 2007 wordprocessing document 
+                    // known content types for Office 2007 wordprocessing document
                     tempData.Add(@"application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml", OpenXmlDocumentType.Wordprocessing);
                     tempData.Add(@"application/vnd.openxmlformats-officedocument.wordprocessingml.template.main+xml", OpenXmlDocumentType.Wordprocessing);
                     tempData.Add(@"application/vnd.ms-word.document.macroEnabled.main+xml", OpenXmlDocumentType.Wordprocessing);
                     tempData.Add(@"application/vnd.ms-word.template.macroEnabledTemplate.main+xml", OpenXmlDocumentType.Wordprocessing);
 
-                    // known content types for Office 2007 spreadsheet document 
+                    // known content types for Office 2007 spreadsheet document
                     tempData.Add(@"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml", OpenXmlDocumentType.Spreadsheet);
                     tempData.Add(@"application/vnd.openxmlformats-officedocument.spreadsheetml.template.main+xml", OpenXmlDocumentType.Spreadsheet);
                     tempData.Add(@"application/vnd.ms-excel.sheet.macroEnabled.main+xml", OpenXmlDocumentType.Spreadsheet);
                     tempData.Add(@"application/vnd.ms-excel.template.macroEnabled.main+xml", OpenXmlDocumentType.Spreadsheet);
                     tempData.Add(@"application/vnd.ms-excel.addin.macroEnabled.main+xml", OpenXmlDocumentType.Spreadsheet);
 
-                    // known content types for Office 2007 presentation document 
+                    // known content types for Office 2007 presentation document
                     tempData.Add(@"application/vnd.openxmlformats-officedocument.presentationml.presentation.main+xml", OpenXmlDocumentType.Presentation);
                     tempData.Add(@"application/vnd.openxmlformats-officedocument.presentationml.template.main+xml", OpenXmlDocumentType.Presentation);
                     tempData.Add(@"application/vnd.openxmlformats-officedocument.presentationml.slideshow.main+xml", OpenXmlDocumentType.Presentation);

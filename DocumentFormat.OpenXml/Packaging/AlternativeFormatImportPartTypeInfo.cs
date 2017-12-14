@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 case AlternativeFormatImportPartType.TextPlain:
                     return "text/plain";
-                
+
                 case AlternativeFormatImportPartType.WordprocessingML:
                     return "application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml";
 

@@ -12,7 +12,7 @@ using System.Linq;
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
-    /// Specifies the type of each child element's occurence. 
+    /// Specifies the type of each child element's occurence.
     /// Used in GetElement() and SetElement() for generated code.
     /// </summary>
     internal enum OpenXmlCompositeType
@@ -120,7 +120,7 @@ namespace DocumentFormat.OpenXml
         /// Gets the first child of the current OpenXmlElement element.
         /// </summary>
         /// <remarks>
-        /// Returns null (Nothing in Visual Basic) if there is no such OpenXmlElement element. 
+        /// Returns null (Nothing in Visual Basic) if there is no such OpenXmlElement element.
         /// </remarks>
         public override OpenXmlElement FirstChild
         {
@@ -140,7 +140,7 @@ namespace DocumentFormat.OpenXml
 
         /// <summary>
         /// Gets the last child of the current OpenXmlElement element.
-        /// Returns null (Nothing in Visual Basic) if there is no such OpenXmlElement element. 
+        /// Returns null (Nothing in Visual Basic) if there is no such OpenXmlElement element.
         /// </summary>
         public override OpenXmlElement LastChild
         {
@@ -148,23 +148,23 @@ namespace DocumentFormat.OpenXml
             {
                 this.MakeSureParsed();
 
-                return this._lastChild;                
+                return this._lastChild;
             }
         }
 
         /// <summary>
-        /// Gets a value that indicates whether the current element has any child elements. 
+        /// Gets a value that indicates whether the current element has any child elements.
         /// </summary>
         public override bool HasChildren
         {
-            get 
+            get
             {
                 return this.LastChild != null;
             }
         }
 
         /// <summary>
-        /// Gets or sets the concatenated values of the current node and all of its children. 
+        /// Gets or sets the concatenated values of the current node and all of its children.
         /// </summary>
         public override string InnerText
         {
@@ -184,7 +184,7 @@ namespace DocumentFormat.OpenXml
             //    throw new InvalidOperationException();
             //}
         }
-                
+
         /// <summary>
         /// Gets or sets the markup that represents only the child nodes of the current node.
         /// </summary>
@@ -192,7 +192,7 @@ namespace DocumentFormat.OpenXml
         {
             set
             {
-                // first, clear all children 
+                // first, clear all children
                 this.RemoveAllChildren();
 
                 if ( ! String.IsNullOrEmpty(value))
@@ -237,7 +237,7 @@ namespace DocumentFormat.OpenXml
         #region change children
 
         /// <summary>
-        /// Appends the specified element to the end of the current element's list of child nodes. 
+        /// Appends the specified element to the end of the current element's list of child nodes.
         /// </summary>
         /// <param name="newChild">The OpenXmlElement element to append.</param>
         /// <returns>The OpenXmlElement element that was appended. </returns>
@@ -270,7 +270,7 @@ namespace DocumentFormat.OpenXml
                 nextNode.next = prevNode.next;
                 prevNode.next = nextNode;
                 this._lastChild = nextNode;
-            } 
+            }
 
             newChild.Parent = this;
             // SetOwner(newChild);
@@ -439,7 +439,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Inserts the specified element at the beginning of the current element's list of child nodes. 
+        /// Inserts the specified element at the beginning of the current element's list of child nodes.
         /// </summary>
         /// <param name="newChild">The OpenXmlElement element to add.</param>
         /// <returns>The OpenXmlElement that was added.</returns>
@@ -459,9 +459,9 @@ namespace DocumentFormat.OpenXml
 
             return this.InsertBefore(newChild, this.FirstChild);
         }
-        
+
         /// <summary>
-        /// Removes the specified child element. 
+        /// Removes the specified child element.
         /// </summary>
         /// <param name="oldChild">The element to remove. </param>
         /// <returns>The element that was removed. </returns>
@@ -582,7 +582,7 @@ namespace DocumentFormat.OpenXml
         #endregion
 
         /// <summary>
-        /// Saves all of the current node's children to the specified XmlWriter. 
+        /// Saves all of the current node's children to the specified XmlWriter.
         /// </summary>
         /// <param name="w">The XmlWriter at which to save the child nodes. </param>
         internal override void WriteContentTo(XmlWriter w)
@@ -659,10 +659,10 @@ namespace DocumentFormat.OpenXml
         internal override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode)
         {
             LoadAttributes(xmlReader);
-            
+
             if (!xmlReader.IsEmptyElement)
             {
-                xmlReader.Read(); // read this element 
+                xmlReader.Read(); // read this element
 
                 while (!xmlReader.EOF)
                 {
@@ -693,10 +693,10 @@ namespace DocumentFormat.OpenXml
                     bool mcContextPushed = false;
                     if (!(element is OpenXmlMiscNode))
                     {
-                        // push MC context based on the context of the child element to be loaded 
+                        // push MC context based on the context of the child element to be loaded
                         mcContextPushed = this.PushMcContext(xmlReader);
                     }
-                    
+
                     //Process the element according to the MC behavior
                     var action = ElementAction.Normal;
                     if (OpenXmlElementContext != null && OpenXmlElementContext.MCSettings.ProcessMode != DocumentFormat.OpenXml.Packaging.MarkupCompatibilityProcessMode.NoProcess)
@@ -953,7 +953,7 @@ namespace DocumentFormat.OpenXml
                                 // skip unknown element and MiscNode
                                 child = child.NextSibling();
                             }
-                            
+
                         }
                     }
 
@@ -961,7 +961,7 @@ namespace DocumentFormat.OpenXml
                     //  1: there are more than 1 elements for a type?
                     //  2: there are more than 2 elements?
                     //  3. there are other elements other than allowed children?
-                    
+
                     break;
 
             }
@@ -993,7 +993,7 @@ namespace DocumentFormat.OpenXml
                     //  1: there are more than 1 elements for a type?
                     //  2: there are more than 2 elements?
                     //  3. there are other elements other than allowed children?
-                    
+
                     break;
 
                 case OpenXmlCompositeType.OneChoice:
@@ -1032,7 +1032,7 @@ namespace DocumentFormat.OpenXml
                     //  1: there are more than 1 elements for a type?
                     //  2: there are more than 2 elements?
                     //  3. there are other elements other than allowed children?
-                    
+
                     break;
 
                 case OpenXmlCompositeType.OneSequence:
@@ -1067,7 +1067,7 @@ namespace DocumentFormat.OpenXml
                                     break;
                                 }
                                 else
-                                {                               
+                                {
                                     // always insert after the first known element
                                     prev = child;
 
@@ -1089,7 +1089,7 @@ namespace DocumentFormat.OpenXml
                     //  1: there are more than 1 elements for a type?
                     //  2: there are more than 2 elements?
                     //  3. there are other elements other than allowed children?
-                    
+
                     break;
 
             }
@@ -1132,6 +1132,6 @@ namespace DocumentFormat.OpenXml
         //    }
         //}
 
-        #endregion 
+        #endregion
     }
 }

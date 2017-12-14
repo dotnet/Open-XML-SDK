@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
         public byte[] Signature { get; set; }
 
-        //public byte[] 
+        //public byte[]
         public int DataVersion { get; set; }
 
         /// <summary>

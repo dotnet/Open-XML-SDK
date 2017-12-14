@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         public override void TryMatchOnce(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
         {
             Debug.Assert(!(particleMatchInfo.StartElement is OpenXmlMiscNode));
-            
+
             // group only contains xsd:all, xsd:choice or xsd:sequence
             Debug.Assert(this.ParticleConstraint.ChildrenParticles.Length == 1);
 

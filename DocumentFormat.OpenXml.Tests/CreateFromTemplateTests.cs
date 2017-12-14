@@ -1,6 +1,6 @@
 ﻿/*
  * CreateFromTemplateFixture.cs - Testing Create From Template functionality in Open XML SDK
- * 
+ *
  * Copyright 2014-2015 Thomas Barnekow
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +14,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
+ *
  * Developer: Thomas Barnekow
  * Email: thomas<at/>barnekow<dot/>info
  */

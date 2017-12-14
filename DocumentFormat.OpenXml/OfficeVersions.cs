@@ -44,7 +44,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Determines whether the source FileFormatVersions includes the target FileFormatVersions. 
+        /// Determines whether the source FileFormatVersions includes the target FileFormatVersions.
         /// </summary>
         /// <param name="source">The source FileFormatVersions to be tested.</param>
         /// <param name="target">The target FileFormatVersions be tested against.</param>

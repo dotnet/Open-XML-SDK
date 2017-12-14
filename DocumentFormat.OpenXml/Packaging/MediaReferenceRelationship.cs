@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
         internal const String RelationshipTypeConst = @"http://schemas.microsoft.com/office/2007/relationships/media";
 
         /// <summary>
-        /// Gets the source relationship type for a media reference. 
+        /// Gets the source relationship type for a media reference.
         /// </summary>
         public static string MediaReferenceRelationshipType
         {
@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Initializes a new instance of the MediaReferenceRelationship class using 
+        /// Initializes a new instance of the MediaReferenceRelationship class using
         /// the supplied MediaDataPart and relationship ID.
         /// </summary>
         /// <param name="mediaDataPart">The target DataPart of the reference relationship.</param>

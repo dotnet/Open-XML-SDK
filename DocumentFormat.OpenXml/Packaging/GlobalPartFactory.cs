@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (openXmlPart == null)
             {
-                openXmlPart = new ExtendedPart(relationshipType); 
+                openXmlPart = new ExtendedPart(relationshipType);
             }
 
             return openXmlPart;
@@ -54,7 +54,7 @@ namespace DocumentFormat.OpenXml.Packaging
         static partial void CreatePartCore(OpenXmlPackage openXmlPackage, string relationshipType, ref OpenXmlPart openXmlPart);
     }
 
-    /************************ the following are code template for code generator ****** 
+    /************************ the following are code template for code generator ******
     /// <summary>
     /// Global OpenXmlPart factory to create strong typed OpenXmlPart based on the relationship type.
     /// </summary>

@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml
         private object _annotations;
 
         // Review: donghz
-        // why do we need to initialize this flag as "true"? 
+        // why do we need to initialize this flag as "true"?
         // Or do we really need this flag? I feel only _rawOuterXml is enough... null or not-null...
         // private bool _xmlParsed = true;
         // private string _rawInnerXml;
@@ -191,22 +191,22 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         internal string RawOuterXml
         {
-            get 
-            { 
-                return _rawOuterXml; 
+            get
+            {
+                return _rawOuterXml;
             }
 
-            set 
+            set
             {
                 if (String.IsNullOrEmpty(value))
                 {
                     _rawOuterXml = string.Empty;
                 }
 
-                _rawOuterXml = value; 
+                _rawOuterXml = value;
             }
         }
-    
+
         /// <summary>
         /// Gets an array of fixed attributes (attributes that are defined in the schema).
         /// </summary>
@@ -254,13 +254,13 @@ namespace DocumentFormat.OpenXml
 
         internal int FixedAttributeTotal
         {
-            get 
+            get
             {
                 if (this.AttributeTagNames != null)
                 {
                     return this.AttributeTagNames.Length;
                 }
-                return 0; 
+                return 0;
             }
         }
 
@@ -285,9 +285,9 @@ namespace DocumentFormat.OpenXml
         #region public properties
 
         /// <summary>
-        /// Gets the type ID of the current element. 
+        /// Gets the type ID of the current element.
         /// </summary>
-        internal virtual int ElementTypeId 
+        internal virtual int ElementTypeId
         {
             get { return ReservedElementTypeIds.OpenXmlElementId; }
         }
@@ -319,7 +319,7 @@ namespace DocumentFormat.OpenXml
 
         /// <summary>
         /// Gets the first child of the OpenXmlElement element.
-        /// Returns null (Nothing in Visual Basic) if there is no such OpenXmlElement element. 
+        /// Returns null (Nothing in Visual Basic) if there is no such OpenXmlElement element.
         /// </summary>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1721:PropertyNamesShouldNotMatchGetMethods")]
         public virtual OpenXmlElement FirstChild
@@ -332,7 +332,7 @@ namespace DocumentFormat.OpenXml
 
         /// <summary>
         /// Gets the last child of the OpenXmlElement element.
-        /// Returns null (Nothing in Visual Basic) if there is no such OpenXmlElement element. 
+        /// Returns null (Nothing in Visual Basic) if there is no such OpenXmlElement element.
         /// </summary>
         public virtual OpenXmlElement LastChild
         {
@@ -343,7 +343,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets a boolean value that indicates whether the current element has any attributes. 
+        /// Gets a boolean value that indicates whether the current element has any attributes.
         /// </summary>
         public bool HasAttributes
         {
@@ -392,7 +392,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets a value that indicates whether the current element has any child elements. 
+        /// Gets a value that indicates whether the current element has any child elements.
         /// </summary>
         public abstract bool HasChildren
         {
@@ -400,7 +400,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets all the child nodes of the current element. 
+        /// Gets all the child nodes of the current element.
         /// </summary>
         public virtual OpenXmlElementList ChildElements
         {
@@ -419,7 +419,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets the parent element of the current element. 
+        /// Gets the parent element of the current element.
         /// </summary>
         public OpenXmlElement Parent
         {
@@ -443,7 +443,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public virtual string LocalName
         {
-            get 
+            get
             {
 #if DEBUG
                 Debug.Assert(false, "LocalName not implemented.");
@@ -453,7 +453,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets the namespace prefix of current element. 
+        /// Gets the namespace prefix of current element.
         /// </summary>
         public virtual string Prefix
         {
@@ -484,7 +484,7 @@ namespace DocumentFormat.OpenXml
                 return NamespaceDeclField;
             }
         }
-      
+
         /// <summary>
         /// Gets the qualified name of the current element.
         /// </summary>
@@ -506,9 +506,9 @@ namespace DocumentFormat.OpenXml
                 return XName.Get(this.LocalName, this.NamespaceUri);
             }
         }
-        
+
         /// <summary>
-        /// Gets the concatenated values of the node and all of its children. 
+        /// Gets the concatenated values of the node and all of its children.
         /// </summary>
         public virtual string InnerText
         {
@@ -559,7 +559,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets the markup that represents the current element and all of its child elements. 
+        /// Gets the markup that represents the current element and all of its child elements.
         /// </summary>
         public string OuterXml
         {
@@ -681,7 +681,7 @@ namespace DocumentFormat.OpenXml
                 {
                     if (extendedAttribute.LocalName == localName && extendedAttribute.NamespaceUri == namespaceUri)
                     {
-                        // clone a copy 
+                        // clone a copy
                         attribute = new OpenXmlAttribute(extendedAttribute.Prefix, extendedAttribute.LocalName, extendedAttribute.NamespaceUri, extendedAttribute.Value);
                         return attribute;
                     }
@@ -750,7 +750,7 @@ namespace DocumentFormat.OpenXml
                 // append extended attributes
                 foreach (OpenXmlAttribute extendedAttribute in this.ExtendedAttributes)
                 {
-                    // clone a copy 
+                    // clone a copy
                     attribute = new OpenXmlAttribute(extendedAttribute.Prefix, extendedAttribute.LocalName, extendedAttribute.NamespaceUri, extendedAttribute.Value);
                     attributes.Add(attribute);
                 }
@@ -796,7 +796,7 @@ namespace DocumentFormat.OpenXml
                         return;
                     }
                 }
-                
+
                 int index = 0;
 
                 // remove the old one if there is
@@ -819,7 +819,7 @@ namespace DocumentFormat.OpenXml
                 }
                 OpenXmlAttribute attribute = new OpenXmlAttribute(openXmlAttribute.Prefix, openXmlAttribute.LocalName, openXmlAttribute.NamespaceUri, openXmlAttribute.Value);
                 this.ExtendedAttributesField.Add(attribute);
-                
+
             }
         }
 
@@ -857,7 +857,7 @@ namespace DocumentFormat.OpenXml
 
                     if (index >= 0)
                     {
-                        // remove 
+                        // remove
                         this.FixedAttributesArray[index] = null;
                         removed = true;
                     }
@@ -924,12 +924,12 @@ namespace DocumentFormat.OpenXml
 
             // clear extended attributes
             this.ExtendedAttributesField = null;
-            
+
             MCAttributes = null;
         }
 
         /// <summary>
-        /// Adds a namepace declaration to the current node. 
+        /// Adds a namepace declaration to the current node.
         /// </summary>
         /// <param name="prefix">The prefix.</param>
         /// <param name="uri">The uri.</param>
@@ -983,7 +983,7 @@ namespace DocumentFormat.OpenXml
                 }
             }
         }
-      
+
         /// <summary>
         /// Finds the first child element in type T.
         /// </summary>
@@ -993,9 +993,9 @@ namespace DocumentFormat.OpenXml
         {
             return this.ChildElements.First<T>( );
         }
-        
+
         /// <summary>
-        /// Gets the OpenXmlElement element that immediately precedes the current OpenXmlElement element. 
+        /// Gets the OpenXmlElement element that immediately precedes the current OpenXmlElement element.
         /// Returns null (Nothing in Visual Basic ) if there is no preceding OpenXmlElement element.
         /// </summary>
         /// <returns>The OpenXmlElement element that immediately precedes the current OpenXmlElement element.</returns>
@@ -1021,7 +1021,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets the OpenXmlElement element with the specified type that precedes the current OpenXmlElement. 
+        /// Gets the OpenXmlElement element with the specified type that precedes the current OpenXmlElement.
         /// Returns null (Nothing in Visual Basic) if there is no preceding OpenXmlElement element.
         /// </summary>
         /// <returns>The OpenXmlElement element with the specified type that precedes the current OpenXmlElement element.</returns>
@@ -1043,8 +1043,8 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets the OpenXmlElement element that immediately follows the current OpenXmlElement element. 
-        /// Returns null (Nothing in Visual Basic) if there is no next OpenXmlElement element. 
+        /// Gets the OpenXmlElement element that immediately follows the current OpenXmlElement element.
+        /// Returns null (Nothing in Visual Basic) if there is no next OpenXmlElement element.
         /// </summary>
         /// <returns>The OpenXmlElement element that immediately follows the current OpenXmlElement element.</returns>
         public OpenXmlElement NextSibling()
@@ -1058,7 +1058,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets the OpenXmlElement element with the specified type that follows the current OpenXmlElement element. 
+        /// Gets the OpenXmlElement element with the specified type that follows the current OpenXmlElement element.
         /// Returns null (Nothing in Visual Basic) if there is no next OpenXmlElement.
         /// </summary>
         /// <returns>The OpenXmlElement element with the specified type that follows the current OpenXmlElement element.</returns>
@@ -1078,9 +1078,9 @@ namespace DocumentFormat.OpenXml
 
             return null;
         }
-        
+
         /// <summary>
-        /// Enumerates all of the current element's ancestors. 
+        /// Enumerates all of the current element's ancestors.
         /// </summary>
         /// <returns>An IEnumerable object that contains a list of the current OpenXmlElement element's ancestors.</returns>
         public IEnumerable<OpenXmlElement> Ancestors()
@@ -1126,7 +1126,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Enumerates all of the current element's children. 
+        /// Enumerates all of the current element's children.
         /// </summary>
         /// <returns></returns>
         public IEnumerable<OpenXmlElement> Elements()
@@ -1135,7 +1135,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Enumerate all of the current element's descendants of type T. 
+        /// Enumerate all of the current element's descendants of type T.
         /// </summary>
         /// <typeparam name="T">The element type.</typeparam>
         /// <returns></returns>
@@ -1154,7 +1154,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Enumerates all of the current element's descendants. 
+        /// Enumerates all of the current element's descendants.
         /// </summary>
         /// <returns></returns>
         public IEnumerable<OpenXmlElement> Descendants()
@@ -1199,7 +1199,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Enumerates all of the sibling elements that precede the current element and have the same parent as the current element. 
+        /// Enumerates all of the sibling elements that precede the current element and have the same parent as the current element.
         /// </summary>
         /// <returns>An IEnumerable object that contains a list of OpenXmlElement elements.</returns>
         public IEnumerable<OpenXmlElement> ElementsBefore()
@@ -1218,7 +1218,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Enumerates all of the sibling elements that follow the current element and have the same parent as the current element. 
+        /// Enumerates all of the sibling elements that follow the current element and have the same parent as the current element.
         /// </summary>
         /// <returns>An IEnumerable object that contains a list of OpenXmlElement elements.</returns>
         public IEnumerable<OpenXmlElement> ElementsAfter()
@@ -1237,7 +1237,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// When overridden in a derived class, creates a duplicate of the node. 
+        /// When overridden in a derived class, creates a duplicate of the node.
         /// </summary>
         /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
         /// <returns>The cloned node. </returns>
@@ -1247,7 +1247,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Saves the current node to the specified XmlWriter. 
+        /// Saves the current node to the specified XmlWriter.
         /// </summary>
         /// <param name="xmlWriter">The XmlWriter to which to save the current node. </param>
         public virtual void WriteTo(XmlWriter xmlWriter)
@@ -1284,7 +1284,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Appends each element from a list of elements to the end of the current element's list of child elements. 
+        /// Appends each element from a list of elements to the end of the current element's list of child elements.
         /// </summary>
         /// <param name="newChildren">The list that contains the OpenXmlElement elements to be appended.</param>
         public void Append(IEnumerable<OpenXmlElement> newChildren)
@@ -1298,11 +1298,11 @@ namespace DocumentFormat.OpenXml
             {
                 this.AppendChild(child);
             }
-            
+
         }
 
         /// <summary>
-        /// Appends each element from an array of elements to the end of the current element's list of child elements. 
+        /// Appends each element from an array of elements to the end of the current element's list of child elements.
         /// </summary>
         /// <param name="newChildren">The array of OpenXmlElement elements to be appended.</param>
         public void Append(params OpenXmlElement[] newChildren)
@@ -1317,7 +1317,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Appends the specified element to the end of the current element's list of child nodes. 
+        /// Appends the specified element to the end of the current element's list of child nodes.
         /// </summary>
         /// <param name="newChild">The OpenXmlElement element to append.</param>
         /// <returns>The OpenXmlElement element that was appended. </returns>
@@ -1407,7 +1407,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Inserts the specified element at the beginning of the current element's list of child elements. 
+        /// Inserts the specified element at the beginning of the current element's list of child elements.
         /// </summary>
         /// <param name="newChild">The OpenXmlElement element to add.</param>
         /// <returns>The OpenXmlElement element that was added.</returns>
@@ -1417,7 +1417,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Removes the specified child element from the current element's list of child elements. 
+        /// Removes the specified child element from the current element's list of child elements.
         /// </summary>
         /// <param name="oldChild">The child element to remove. </param>
         /// <returns>The element that was removed. </returns>
@@ -1631,7 +1631,7 @@ namespace DocumentFormat.OpenXml
 #endif
             return ElementOrder.After;
         }
- 
+
 #if false
         /// <summary>
         /// Transforms child elements by using the user callback.
@@ -1684,7 +1684,7 @@ namespace DocumentFormat.OpenXml
                                     prefix = NamespaceIdMap.GetNamespacePrefix(AttributeNamespaceIds[i]);
                                 }
                             }
-                            
+
                             xmlWriter.WriteStartAttribute(prefix, AttributeTagNames[i], ns);
                             xmlWriter.WriteString(attribute.InnerText);
                             xmlWriter.WriteEndAttribute();
@@ -1704,7 +1704,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Saves all of the children of the current node to the specified XmlWriter. 
+        /// Saves all of the children of the current node to the specified XmlWriter.
         /// </summary>
         /// <param name="w">The XmlWriter at which to save the child nodes. </param>
         internal abstract void WriteContentTo(XmlWriter w);
@@ -1881,7 +1881,7 @@ namespace DocumentFormat.OpenXml
                 }
 
                 RemoveAttributesBasedonMC();
-                
+
                 //  Moves the reader back to the element node.
                 xmlReader.MoveToElement();
             }
@@ -2112,7 +2112,7 @@ namespace DocumentFormat.OpenXml
         {
             return null;
         }
-        
+
         internal virtual OpenXmlSimpleType AttributeFactory(string namespaceUri, string name)
         {
             Debug.Assert(!String.IsNullOrEmpty(name));
@@ -2131,7 +2131,7 @@ namespace DocumentFormat.OpenXml
                 simpleType = new StringValue();
             }
 
-            return simpleType; 
+            return simpleType;
         }
 
         internal OpenXmlElement ElementFactory(XmlReader xmlReader)
@@ -2611,12 +2611,12 @@ namespace DocumentFormat.OpenXml
             }
 
         }
-        
+
         #endregion
 
         #region IEnumerable<OpenXmlElement> Members
         /// <summary>
-        /// Returns an enumerator that iterates through the child collection. 
+        /// Returns an enumerator that iterates through the child collection.
         /// </summary>
         /// <returns>An IEnumerator object that can be used to iterate through the child collection. </returns>
         public IEnumerator<OpenXmlElement> GetEnumerator()
@@ -2638,7 +2638,7 @@ namespace DocumentFormat.OpenXml
         #region ICloneable Members
 
         /// <summary>
-        /// Creates a duplicate of the current node. 
+        /// Creates a duplicate of the current node.
         /// </summary>
         /// <remarks>
         /// Cloning an OpenXmlNode copies all attributes and their values, including those generated by the XML processor to represent defaulted attributes. This method recursively clones the node and the subtree underneath it.
@@ -3030,7 +3030,7 @@ namespace DocumentFormat.OpenXml
 
         internal void RemoveAttributesBasedonMC()
         {
-            if (this.OpenXmlElementContext == null || 
+            if (this.OpenXmlElementContext == null ||
                 this.OpenXmlElementContext.MCSettings.ProcessMode == DocumentFormat.OpenXml.Packaging.MarkupCompatibilityProcessMode.NoProcess)
             {
                 return;
@@ -3223,7 +3223,7 @@ namespace DocumentFormat.OpenXml
             length = strValue.Length;
 
             Debug.Assert(length > 0);
-            Debug.Assert(length <= 64); // The length of strValue changes depending on the attribute representation, but it at least needs to be less-than-equal 64(bit). 
+            Debug.Assert(length <= 64); // The length of strValue changes depending on the attribute representation, but it at least needs to be less-than-equal 64(bit).
 
             for (int count = 0; count < length; count++)
             {
@@ -3641,7 +3641,7 @@ namespace DocumentFormat.OpenXml
             return this.GetIndexByValue();
         }
     }
-    
+
     internal class TextDirectionTagAttributeTranslator : TagAttributeTranslator
     {
         private static string[] arrayOfOrigTagAttrNames = { "val", "val", "val", "val", "val", "val" };

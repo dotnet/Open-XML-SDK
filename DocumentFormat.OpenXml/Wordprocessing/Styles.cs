@@ -42,7 +42,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public StylesPart StylesPart
         {
             get
-            {   
+            {
                 return OpenXmlPart as StylesPart;
             }
 

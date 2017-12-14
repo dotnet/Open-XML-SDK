@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Packaging
         private const string DefaultTargetExt = ".bin";
 
         /// <summary>
-        /// Initializes a new instance of the MediaDataPart class. 
+        /// Initializes a new instance of the MediaDataPart class.
         /// </summary>
         internal MediaDataPart()
             : base()

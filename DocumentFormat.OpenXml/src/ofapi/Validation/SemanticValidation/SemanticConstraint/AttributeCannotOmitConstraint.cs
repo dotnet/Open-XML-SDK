@@ -26,13 +26,13 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
                 return null;
             }
 
-            return new ValidationErrorInfo() 
-            { 
-                Id = "Sem_MissRequiredAttribute", 
-                ErrorType = ValidationErrorType.Schema, 
+            return new ValidationErrorInfo()
+            {
+                Id = "Sem_MissRequiredAttribute",
+                ErrorType = ValidationErrorType.Schema,
                 Node = context.Element,
-                Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sch_MissRequiredAttribute, 
-                                            GetAttributeQualifiedName(context.Element, _attribute)) 
+                Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sch_MissRequiredAttribute,
+                                            GetAttributeQualifiedName(context.Element, _attribute))
             };
         }
     }

@@ -9,7 +9,7 @@ using System.Xml;
 namespace DocumentFormat.OpenXml.Internal.SemanticValidation
 {
     /// <summary>
-    /// 1.18 attribute is required if another attribute equals some value 
+    /// 1.18 attribute is required if another attribute equals some value
     /// </summary>
     internal class AttributeRequiredConditionToValue : SemanticConstraint
     {
@@ -63,7 +63,7 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
                         ErrorType = ValidationErrorType.Semantic,
                         Node = context.Element,
                         Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_AttributeRequiredConditionToValue,
-                                                    GetAttributeQualifiedName(context.Element, _requiredAttribute),                            
+                                                    GetAttributeQualifiedName(context.Element, _requiredAttribute),
                                                     GetAttributeQualifiedName(context.Element, _conditionAttribute),
                                                     valueString)
                     };

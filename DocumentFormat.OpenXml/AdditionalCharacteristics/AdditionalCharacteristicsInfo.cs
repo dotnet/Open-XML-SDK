@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         internal AdditionalCharacteristicsInfo(CustomXmlPart ownerPart)
             : base(ownerPart)
         {
-            
+
         }
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         {
             LoadFromPart(openXmlPart);
         }
- 
+
         /// <summary>
         /// Saves the DOM into the OpenXML part.
         /// </summary>

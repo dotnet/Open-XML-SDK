@@ -16,8 +16,8 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
 
         public FileFormatVersions FileFormat { get; private set; }
 
-        public ApplicationType AppType { get; private set; }        
-        
+        public ApplicationType AppType { get; private set; }
+
         public SemanticValidator(FileFormatVersions format, ApplicationType app)
         {
             FileFormat = format;

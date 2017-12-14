@@ -11,8 +11,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// Initializes a new instance of the SdtElement class.
         /// </summary>
         /// <param name="childElements">Specifies the child elements.</param>
-        protected SdtElement(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements) : base(childElements) 
-        { 
+        protected SdtElement(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
         }
 
         /// <summary>

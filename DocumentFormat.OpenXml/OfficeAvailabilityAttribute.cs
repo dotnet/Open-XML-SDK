@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Initializes a new instance of the OfficeAvailabilityAttribute class.
         /// </summary>
-        /// <param name="officeVersion">The Office version where this class or property is available. 
+        /// <param name="officeVersion">The Office version where this class or property is available.
         /// If there is more than one version, use bitwise OR to specify multiple versions.</param>
         public OfficeAvailabilityAttribute(FileFormatVersions officeVersion)
         {

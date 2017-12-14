@@ -5,22 +5,22 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines AlternativeFormatImportPartType - types of AlternativeFormatImportPart.
     /// <![CDATA[
-    /// L".bin",    L"image/unknown",                 
-    /// L".bmp",    L"image/bmp",                     
-    /// L".gif",    L"image/gif",                     
-    /// L".png",    L"image/png",                     
-    /// L".tiff",   L"image/tiff",                    
-    /// L".xbm",    L"image/xbm",                     
-    /// L".ico",    L"image/x-icon",                  
-    /// L".pcx",    L"image/x-pcx",                   
-    /// L".pcz",    L"image/x-pcz",                   
+    /// L".bin",    L"image/unknown",
+    /// L".bmp",    L"image/bmp",
+    /// L".gif",    L"image/gif",
+    /// L".png",    L"image/png",
+    /// L".tiff",   L"image/tiff",
+    /// L".xbm",    L"image/xbm",
+    /// L".ico",    L"image/x-icon",
+    /// L".pcx",    L"image/x-pcx",
+    /// L".pcz",    L"image/x-pcz",
     /// // Note: [danjump] EMZ and WMZ should never be used.
-    /// L".emz",    L"image/x-emz",   
-    /// L".wmz",    L"image/x-wmz",   
+    /// L".emz",    L"image/x-emz",
+    /// L".wmz",    L"image/x-wmz",
     /// // Note: [danjump] Jpeg-Wmf are used by thumbnail.  Don't add between them
-    /// L".jpeg",   L"image/jpeg",   
-    /// L".emf",    L"image/x-emf",  
-    /// L".wmf",    L"image/x-wmf",  
+    /// L".jpeg",   L"image/jpeg",
+    /// L".emf",    L"image/x-emf",
+    /// L".wmf",    L"image/x-wmf",
     /// ]]>
     /// </summary>
     public enum AlternativeFormatImportPartType
@@ -29,12 +29,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Extensible HyperText Markup Language File (.xhtml).
         /// </summary>
         Xhtml,
-        
+
         /// <summary>
         /// MHTML Document (.mht).
         /// </summary>
         Mht,
-        
+
         /// <summary>
         /// application/xml (.xml).
         /// </summary>
@@ -48,7 +48,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Wordprocessing (.docx).
         /// </summary>
-        WordprocessingML, 
+        WordprocessingML,
 
         /// <summary>
         /// Office Word Macro Enabled (.docm).

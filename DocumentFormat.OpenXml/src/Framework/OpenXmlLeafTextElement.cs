@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initializes a new instance of the OpenXmlLeafTextElement class using the supplied text.  
+        /// Initializes a new instance of the OpenXmlLeafTextElement class using the supplied text.
         /// </summary>
         /// <param name="text"></param>
         protected OpenXmlLeafTextElement(string text)
@@ -77,7 +77,7 @@ namespace DocumentFormat.OpenXml
                 else
                 {
                     return string.Empty;
-                } 
+                }
             }
 
             protected set
@@ -134,14 +134,14 @@ namespace DocumentFormat.OpenXml
         {
             get { return this.InnerText; }
 
-            set 
+            set
             {
                 this.InnerText = value;
             }
         }
 
         /// <summary>
-        /// Saves all the child elements of the current element to the specified XmlWriter. 
+        /// Saves all the child elements of the current element to the specified XmlWriter.
         /// </summary>
         /// <param name="w">The XmlWriter to which to save the elements. </param>
         internal override void WriteContentTo(XmlWriter w)
@@ -178,7 +178,7 @@ namespace DocumentFormat.OpenXml
             if (!xmlReader.IsEmptyElement)
             {   // only when element is not empty (not  <element />).
 
-                xmlReader.Read(); // read this element 
+                xmlReader.Read(); // read this element
 
                 this.RawInnerText = string.Empty;
 
@@ -209,7 +209,7 @@ namespace DocumentFormat.OpenXml
                             // scenario: normal text element <Application>Microsoft Office Word</Application>
                             // scenario: <w:t>This is <![CDATA[Xml Example <tag>text</tag>.]]> 1</w:t>
 
-                            // only load text when no text is loaded, 
+                            // only load text when no text is loaded,
                             // for case "<foo/>Text1<bar/>Text2", only load "Text1", very rare case
 
                             this.RawInnerText = xmlReader.Value;
@@ -222,7 +222,7 @@ namespace DocumentFormat.OpenXml
                         {
                             Debug.Assert(xmlReader.NodeType != XmlNodeType.EntityReference);
 
-                            // Load unexpected children if there are any. 
+                            // Load unexpected children if there are any.
 
                             OpenXmlElement child = this.ElementFactory(xmlReader);
                             child.Load(xmlReader, OpenXmlLoadMode.Full);

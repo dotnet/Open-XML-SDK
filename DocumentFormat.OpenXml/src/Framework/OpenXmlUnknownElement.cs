@@ -9,7 +9,7 @@ using System.Diagnostics;
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
-    /// Represents elements that are not defined in the Ecma Office Open XML. 
+    /// Represents elements that are not defined in the Ecma Office Open XML.
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     public class OpenXmlUnknownElement : OpenXmlCompositeElement
@@ -139,7 +139,7 @@ namespace DocumentFormat.OpenXml
             }
 
         }
-       
+
         /// <summary>
         /// When overridden in a derived class, gets the local name of the node.
         /// </summary>
@@ -195,7 +195,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// The type ID of the element. 
+        /// The type ID of the element.
         /// </summary>
         internal override int ElementTypeId
         {
@@ -230,7 +230,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public string Text
         {
-            get 
+            get
             {
                 MakeSureParsed();
                 return this._text;
@@ -238,7 +238,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// When overridden in a derived class, creates a duplicate of the node. 
+        /// When overridden in a derived class, creates a duplicate of the node.
         /// </summary>
         /// <param name="deep">
         /// Specify true to recursively clone the subtree under the specified
@@ -259,7 +259,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Saves all the children of the node to the specified XmlWriter. 
+        /// Saves all the children of the node to the specified XmlWriter.
         /// </summary>
         /// <param name="w">The XmlWriter to which you want to save. </param>
         internal override void WriteContentTo(XmlWriter w)
@@ -278,7 +278,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Saves the current node to the specified XmlWriter. 
+        /// Saves the current node to the specified XmlWriter.
         /// </summary>
         /// <param name="xmlWriter">The XmlWriter at which to save.</param>
         public override void WriteTo(XmlWriter xmlWriter)
@@ -325,7 +325,7 @@ namespace DocumentFormat.OpenXml
                 Debug.Assert(String.Equals(this._namespaceUri, xmlReader.NamespaceURI));
             }
 
-            // load children elements 
+            // load children elements
             base.Populate(xmlReader, loadMode);
 
             if (this.FirstChild != null && this.FirstChild.NextSibling() == null)
@@ -339,7 +339,7 @@ namespace DocumentFormat.OpenXml
                         case XmlNodeType.Text:
                         case XmlNodeType.CDATA:
                         case XmlNodeType.SignificantWhitespace:
-                            this._text = miscNode.OuterXml; // is this OK? 
+                            this._text = miscNode.OuterXml; // is this OK?
                             this.RemoveChild(miscNode);
                             break;
 

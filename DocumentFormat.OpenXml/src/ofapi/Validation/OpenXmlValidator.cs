@@ -250,7 +250,7 @@ namespace DocumentFormat.OpenXml.Validation
             }
 
             // Do NOT use "yield return" in this method, as "yield return" are deferred executed.
-            // Otherwise, the null check is not performed when the method is called, but rather, when the returned enumerator is moved for the first time. 
+            // Otherwise, the null check is not performed when the method is called, but rather, when the returned enumerator is moved for the first time.
             // That means that the exception isn't thrown until possibly far, far away from the actual site of the error, which is potentially confusing.
 
             ValidationResult validationResult = null;
@@ -333,7 +333,7 @@ namespace DocumentFormat.OpenXml.Validation
             }
 
             // Do NOT use "yield return" in this method, as "yield return" are deferred executed.
-            // Otherwise, the null check is not performed when the method is called, but rather, when the returned enumerator is moved for the first time. 
+            // Otherwise, the null check is not performed when the method is called, but rather, when the returned enumerator is moved for the first time.
             // That means that the exception isn't thrown until possibly far, far away from the actual site of the error, which is potentially confusing.
 
             OpenXmlPackage package = openXmlPart.OpenXmlPackage;
@@ -421,7 +421,7 @@ namespace DocumentFormat.OpenXml.Validation
             validationContext.ValidationErrorEventHandler += validationResult.OnValidationError;
             validationContext.Element = openXmlElement;
             // Do NOT use "yield return" in this method, as "yield return" are deferred executed.
-            // Otherwise, the null check is not performed when the method is called, but rather, when the returned enumerator is moved for the first time. 
+            // Otherwise, the null check is not performed when the method is called, but rather, when the returned enumerator is moved for the first time.
             // That means that the exception isn't thrown until possibly far, far away from the actual site of the error, which is potentially confusing.
 
             this.SchemaValidator.Validate(validationContext);

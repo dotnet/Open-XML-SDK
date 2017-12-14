@@ -57,12 +57,12 @@ namespace DocumentFormat.OpenXml.Validation
         /// The target OpenXmlPackage.
         /// </summary>
         internal OpenXmlPackage Package { get; set; }
-        
+
         /// <summary>
         /// The target OpenXmlPart
         /// </summary>
         internal OpenXmlPart Part { get; set; }
-        
+
         /// <summary>
         /// The target element.
         /// </summary>

@@ -160,7 +160,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 case MediaDataPartType.VC1:
                     return ".wmv";
-                
+
                 default:
                     return ".media";
             }

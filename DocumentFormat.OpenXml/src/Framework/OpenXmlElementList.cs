@@ -112,12 +112,12 @@ namespace DocumentFormat.OpenXml
         {
             this._container = container;
         }
-        
+
         public override IEnumerator<OpenXmlElement> GetEnumerator()
         {
             if (this._container.HasChildren && this._container.FirstChild != null)
             {
-                for ( OpenXmlElement element = this._container.FirstChild; 
+                for ( OpenXmlElement element = this._container.FirstChild;
                       element != null;
                       element = element.NextSibling() )
                 {
@@ -144,8 +144,8 @@ namespace DocumentFormat.OpenXml
                     }
                     index--;
                 }
-                
-            }            
+
+            }
             // return null;
             throw new ArgumentOutOfRangeException(nameof(index));
         }
@@ -164,7 +164,7 @@ namespace DocumentFormat.OpenXml
                         num++;
                     }
                 }
-                return num; 
+                return num;
             }
         }
     }
@@ -187,7 +187,7 @@ namespace DocumentFormat.OpenXml
                 return _EmptyElementList;
             }
         }
-        
+
         public override OpenXmlElement GetItem(int index)
         {
             throw new ArgumentOutOfRangeException(nameof(index));
@@ -294,7 +294,7 @@ namespace DocumentFormat.OpenXml
 
         private EmptyEnumerable() { }
 
-        public static EmptyEnumerable<T> EmptyEnumerableSingleton 
+        public static EmptyEnumerable<T> EmptyEnumerableSingleton
         {
             get
             {

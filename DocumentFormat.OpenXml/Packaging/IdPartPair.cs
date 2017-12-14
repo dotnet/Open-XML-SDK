@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Determines whether this instance and another specified IdPartPair object have the same value. 
+        /// Determines whether this instance and another specified IdPartPair object have the same value.
         /// </summary>
         /// <param name="value">An IdPartPair.</param>
         /// <returns>True if the value of the value parameter is the same as this instance; otherwise, false.</returns>

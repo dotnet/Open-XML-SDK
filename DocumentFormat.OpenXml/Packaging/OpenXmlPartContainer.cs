@@ -140,7 +140,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Gets the specified ReferenceRelationship. 
+        /// Gets the specified ReferenceRelationship.
         /// </summary>
         /// <param name="id">The relationship ID of the ReferenceRelationship.</param>
         /// <returns>Returns the ReferenceRelationship which has the relationship ID. </returns>
@@ -293,7 +293,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Deletes the specified ExternalRelationship. 
+        /// Deletes the specified ExternalRelationship.
         /// </summary>
         /// <param name="id">The relationship ID of the ExternalRelationship.</param>
         /// <exception cref="ArgumentNullException">Thrown when the "id" parameter is null.</exception>
@@ -320,7 +320,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Gets the specified ExternalRelationship. 
+        /// Gets the specified ExternalRelationship.
         /// </summary>
         /// <param name="id">The relationship ID of the ExternalRelationship.</param>
         /// <returns>Returns the ExternalRelationship which has the relationship ID. </returns>
@@ -344,7 +344,7 @@ namespace DocumentFormat.OpenXml.Packaging
             throw new KeyNotFoundException(ExceptionMessages.NoSpecifiedExternalRelationship);
         }
 
-        #endregion 
+        #endregion
 
         #region methods to operate HyperlinkRelationship
 
@@ -631,7 +631,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     if (oldId != null)
                     {
-                        // There are multiple relationship to the same part, 
+                        // There are multiple relationship to the same part,
                         // This case should not exist in current design.
                         throw new InvalidOperationException(ExceptionMessages.MultipleRelationshipsToSamePart);
                     }
@@ -809,7 +809,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Adds an extended part ( Application specific part ). 
+        /// Adds an extended part ( Application specific part ).
         /// </summary>
         /// <param name="relationshipType">The relationship type of the part.</param>
         /// <param name="contentType">The content type of the part.</param>
@@ -1248,7 +1248,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #endregion
 
         #region IEnumerable for children parts
-  
+
         /// <summary>
         /// Enumerates all the children parts of the specified type "T" of this part.
         /// </summary>
@@ -1443,7 +1443,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     }
                 }
 
-                // Invalid part (same relationship type, but wrong (is different to be expected )content type 
+                // Invalid part (same relationship type, but wrong (is different to be expected )content type
                 if (partConstraintRule.PartContentType != null && contentType != partConstraintRule.PartContentType)
                 {
                     throw new ArgumentOutOfRangeException(nameof(newPart));
@@ -1520,7 +1520,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
                 else
                 {
-                    //throw new ArgumentOutOfRangeException(nameof(subPart));                    
+                    //throw new ArgumentOutOfRangeException(nameof(subPart));
                     throw new InvalidOperationException(ExceptionMessages.AddedPartIsNotAllowed);
                 }
             }
@@ -1528,7 +1528,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (partConstraintRule.PartContentType != null && subPart.ContentType != partConstraintRule.PartContentType)
                 {
-                    //throw new ArgumentOutOfRangeException(nameof(subPart));                    
+                    //throw new ArgumentOutOfRangeException(nameof(subPart));
                     throw new InvalidOperationException(ExceptionMessages.AddedPartIsNotAllowed);
                 }
 
@@ -1582,7 +1582,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Adds the part to the parent. 
+        /// Adds the part to the parent.
         /// </summary>
         /// <param name="part"></param>
         /// <param name="rId">A unique relationship identifier.</param>
@@ -1874,7 +1874,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             DeletePartsOfType<T>();
 
-            // remove recursively 
+            // remove recursively
             foreach (OpenXmlPart child in this.ChildrenParts.Values)
             {
                 child.DeletePartsRecursivelyOfTypeBase<T>();
@@ -2010,7 +2010,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Loads all children parts and relationships recursively. 
+        /// Loads all children parts and relationships recursively.
         /// </summary>
         /// <param name="openXmlPackage">The OpenXmlPackage.</param>
         /// <param name="sourcePart">The source part. Be null if loading from the package root.</param>
@@ -2155,7 +2155,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
 
                 // check for parts MaxOccursGreatThanOne=false, but do have multiple instance
-                if (!constraintRule.MaxOccursGreatThanOne 
+                if (!constraintRule.MaxOccursGreatThanOne
                     // only check rules apply to the specified version.
                     && constraintRule.FileFormat.Includes(validationSettings.FileFormat))
                 {
@@ -2262,7 +2262,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #region abstract / virtual internal methods to be implemented by derived classes.
 
         /// <summary>
-        /// Internal OpenXmlPackage instance 
+        /// Internal OpenXmlPackage instance
         /// </summary>
         abstract internal OpenXmlPackage InternalOpenXmlPackage { get; }
 

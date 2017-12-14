@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.InkML
         internal Ink(CustomXmlPart ownerPart)
             : base(ownerPart)
         {
-            
+
         }
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.InkML
         {
             LoadFromPart(openXmlPart);
         }
- 
+
         /// <summary>
         /// Saves the DOM into the OpenXML part.
         /// </summary>

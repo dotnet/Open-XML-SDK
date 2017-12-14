@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         }
 
         /// <summary>
-        /// Initializes a new instance of the SchemaValidator. 
+        /// Initializes a new instance of the SchemaValidator.
         /// </summary>
         /// <param name="fileFormat">The target Open XML format.</param>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the "fileFormat" parameter is not FileFormat.Office2007, FileFormat.Office2010 or FileFormat.O15.</exception>
@@ -124,20 +124,20 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         #region error building methods
 
         // helper methods to compose a  ValidationErrorInfo for schema validtion error.
-        internal static ValidationErrorInfo ComposeSchemaValidationError(this ValidationContext validationContext, OpenXmlElement element, OpenXmlElement child, 
+        internal static ValidationErrorInfo ComposeSchemaValidationError(this ValidationContext validationContext, OpenXmlElement element, OpenXmlElement child,
                                                        string messageId, params string[] args)
         {
             return ComposeValidationError(validationContext, ValidationErrorType.Schema, element, child, messageId, args);
         }
 
         // helper methods to compose a  ValidationErrorInfo for MC validation error.
-        internal static ValidationErrorInfo ComposeMcValidationError(this ValidationContext validationContext, OpenXmlElement element, 
+        internal static ValidationErrorInfo ComposeMcValidationError(this ValidationContext validationContext, OpenXmlElement element,
                                                        string messageId, params string[] args)
         {
             return ComposeValidationError(validationContext, ValidationErrorType.MarkupCompatibility, element, null, messageId, args);
         }
 
-        internal static ValidationErrorInfo ComposeValidationError(this ValidationContext validationContext, ValidationErrorType errorType, OpenXmlElement element, OpenXmlElement child, 
+        internal static ValidationErrorInfo ComposeValidationError(this ValidationContext validationContext, ValidationErrorType errorType, OpenXmlElement element, OpenXmlElement child,
                                                        string messageId, params string[] args)
         {
             ValidationErrorInfo errorInfo = new ValidationErrorInfo()

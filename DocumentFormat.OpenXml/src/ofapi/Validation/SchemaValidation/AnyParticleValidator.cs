@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 {
 
     /******************************************************
-     * TODO: should we take care of "processContests"? - processContents = (lax | skip | strict) : strict 
+     * TODO: should we take care of "processContests"? - processContents = (lax | skip | strict) : strict
     ******************************************************/
 
     /// <summary>
@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             get { return this._particleConstraint; }
         }
 
-        protected AnyParticleValidator() 
+        protected AnyParticleValidator()
         {
         }
 
@@ -39,8 +39,8 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             Debug.Assert(particleConstraint.ParticleType == ParticleType.Any);
 
             this._particleConstraint = particleConstraint;
-        }  
-        
+        }
+
         #region IParticleValidator Members
 
         /// <summary>
@@ -128,7 +128,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             else
             {
                 // try to match multiple times.
-             
+
                 ParticleMatchInfo nextParticleMatchInfo;
                 int matchCount = 0;
                 var next = particleMatchInfo.StartElement;
@@ -192,7 +192,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             }
             return false;
         }
-        
+
         /// <summary>
         /// Get the required elements - elements which minOccurs > 0.
         /// </summary>
@@ -234,7 +234,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             return expectedElements;
         }
 
-        #endregion 
+        #endregion
     }
 
     /// <summary>
@@ -262,7 +262,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             Debug.Assert(particleConstraint.ParticleType == ParticleType.AnyWithUri);
 
             this._nsAnyParticleConstraint = particleConstraint;
-        }  
+        }
 
         /// <summary>
         /// Try match this element once.
