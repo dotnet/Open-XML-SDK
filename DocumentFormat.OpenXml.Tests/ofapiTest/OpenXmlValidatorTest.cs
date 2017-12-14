@@ -3848,7 +3848,6 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 // use OpenXmlPackage
                 using (WordprocessingDocument wordTestDocument = WordprocessingDocument.Open(stream, false, new OpenSettings() { MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2010) }))
-
                 {
                     IEnumerable<ValidationErrorInfo> actual;
                     // Office2010
