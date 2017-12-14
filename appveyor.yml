@@ -3,9 +3,9 @@ os: Visual Studio 2017
 environment:
   image: Visual Studio 2017
   SignClientSecret:
-    secure: K2IZr2uNWnPFxfLYnpwbUIAQmLHYY5IjWvdRXfdUUMU=
+    secure: D4MusxgqH0XEQU5kkwGNo5TqYqADsSa0wBOHWdFTwhY=
   SignClientUser:
-    secure: vcaNFKm7ZLGnBM/RkByidsmmpx0I16RcsdOsj3ewh8Ga3ThHll8BiG9xmW0IymLD
+    secure: kVWwbl6Yh3ejk1gODRdRVF0PHF6H0NU/FMA0c4Aw/p8NnQvP35dz+b+Z9ABcHxFy
   Configuration: Release
   EnableCodeCoverage: true
 
@@ -23,10 +23,10 @@ after_build:
 test_script:
   - cmd: msbuild /t:test .\Open-Xml-SDK.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 
-# deploy:
-#   provider: NuGet
-#   server: https://dotnet.myget.org/F/open-xml-sdk/api/v2/package
-#   api_key:
-#     secure: +uagaLcg+y8G8ZBxlXm0E5VmTHeT030NeoyHZGU8V7MtIPc1+VUXru0mAPVh0KhK
-#   on:
-#     branch: [master, vNext, Office2016]
+deploy:
+  provider: NuGet
+  server: https://dotnet.myget.org/F/open-xml-sdk/api/v2/package
+  api_key:
+    secure: M6rnQwI1t/4WFBSongcZCjdHB0fyrz0vrjnCvNTfhNyDw6hJ1iaPbtzbrW6E1xFf
+  on:
+    branch: [master, vNext, Office2016]
