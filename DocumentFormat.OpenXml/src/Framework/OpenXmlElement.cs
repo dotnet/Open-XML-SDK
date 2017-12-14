@@ -34,7 +34,6 @@ namespace DocumentFormat.OpenXml
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     public abstract partial class OpenXmlElement : IEnumerable<OpenXmlElement>, ICloneable
     {
-
         #region data members
 
         // private bool _disposed;
@@ -1662,7 +1661,6 @@ namespace DocumentFormat.OpenXml
 
             if (this.XmlParsed && this.HasAttributes)
             {
-
                 int i = 0;
 
                 if (this.Attributes != null)

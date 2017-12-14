@@ -349,7 +349,6 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void ParagraphConstraintTest(SdbSchemaDatas actual)
         {
-
             //<xsd:complexType name="CT_P">
             //  <xsd:sequence>
             //    <xsd:element name="pPr" type="CT_PPr" minOccurs="0" />

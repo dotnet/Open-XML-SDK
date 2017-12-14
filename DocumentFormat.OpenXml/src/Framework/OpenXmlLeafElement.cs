@@ -14,7 +14,6 @@ namespace DocumentFormat.OpenXml
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     public abstract class OpenXmlLeafElement : OpenXmlElement
     {
-
         /// <summary>
         /// Represents a shadow element to hold child elements if there are any.
         /// </summary>

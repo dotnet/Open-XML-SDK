@@ -57,7 +57,6 @@ namespace DocumentFormat.OpenXml.Tests
         /// <param name="root">the OpenXmlElement need to be traversed</param>
         private void TestTraverseDown<U>(OpenXmlPart part, OpenXmlElement root) where U : OpenXmlElement
         {
-
             String UTagName = (Activator.CreateInstance(typeof(U)) as OpenXmlElement).LocalName;
             XElement Xroot = ConvertToXElement(part, root);
 

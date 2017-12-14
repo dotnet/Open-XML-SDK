@@ -177,7 +177,6 @@ namespace DocumentFormat.OpenXml
 
             if (!xmlReader.IsEmptyElement)
             {   // only when element is not empty (not  <element />).
-
                 xmlReader.Read(); // read this element
 
                 this.RawInnerText = string.Empty;

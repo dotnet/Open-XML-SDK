@@ -1121,7 +1121,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <inheritdoc />
         public override bool ValidateValueType(OpenXmlSimpleType attributeValue)
         {
-
             if (attributeValue.HasValue)
             {
                 ST stValue = (ST)attributeValue;
@@ -1381,7 +1380,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     [DataContract]
     internal class IntegerValueRestriction : SimpleValueRestriction<Int64, IntegerValue>
     {
-
         protected override Int64 MinValue => Int64.MinValue;
 
         protected override Int64 MaxValue => Int64.MaxValue;

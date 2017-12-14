@@ -39,7 +39,6 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
         {
             if ((fileFormat & _format) == _format && (appType & _appType) == _appType)
             {
-
                 AddConstraintToDic(constraint, ancestorTypeID, _cleanList);
                 AddConstraintToDic(constraint, elementTypeID, _semConstraintMap);
             }

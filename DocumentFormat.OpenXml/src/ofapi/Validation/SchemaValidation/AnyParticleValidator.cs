@@ -8,7 +8,6 @@ using DocumentFormat.OpenXml.Validation;
 
 namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 {
-
     /******************************************************
      * TODO: should we take care of "processContests"? - processContents = (lax | skip | strict) : strict
     ******************************************************/

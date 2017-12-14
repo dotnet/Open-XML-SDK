@@ -412,7 +412,6 @@ namespace DocumentFormat.OpenXml
         /// <returns>A new BooleanValue instance with the value.</returns>
         public static implicit operator BooleanValue(Boolean value)
         {
-
             return FromBoolean(value);
         }
 

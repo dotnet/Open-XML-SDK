@@ -93,7 +93,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void AppendIEnumerableXSLTest()
         {
-
             FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
                 .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
             var testfiles = CopyTestFiles(@"spreadsheet", "smallset")

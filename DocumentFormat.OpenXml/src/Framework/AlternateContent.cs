@@ -174,7 +174,6 @@ namespace DocumentFormat.OpenXml
 
         internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
         {
-
             return null;
         }
 
@@ -312,7 +311,6 @@ namespace DocumentFormat.OpenXml
 
         internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
         {
-
             if (0 == namespaceId && "Requires" == name)
                 return new StringValue();
             return null;
@@ -478,7 +476,6 @@ namespace DocumentFormat.OpenXml
 
         internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
         {
-
             return null;
         }
 
@@ -785,7 +782,6 @@ namespace DocumentFormat.OpenXml
 
         internal bool IsPreservedAttribute(string ns, string localName)
         {
-
             return ContainsQName(localName, ns, _currentPreserveAttr);
         }
 

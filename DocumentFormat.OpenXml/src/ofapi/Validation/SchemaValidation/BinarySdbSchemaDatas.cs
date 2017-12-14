@@ -200,7 +200,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             var particle = this.SdbParticles[particleIndex];
             switch (particle.ParticleType)
             {
-
                 case ParticleType.Element:
                     Debug.Assert(particle.ChildrenCount == 0);
                     // element type ID must be a valid ID in the class ID map.

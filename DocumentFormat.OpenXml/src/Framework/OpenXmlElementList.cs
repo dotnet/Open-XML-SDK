@@ -270,7 +270,6 @@ namespace DocumentFormat.OpenXml
 
     internal class EmptyEnumerable<T> : IEnumerable<T>
     {
-
         private static readonly EmptyEnumerable<T> _dummy = new EmptyEnumerable<T>();
 
         #region IEnumerable<KeyValuePair<string,string>> Members

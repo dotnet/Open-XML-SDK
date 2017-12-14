@@ -172,7 +172,6 @@ namespace DocumentFormat.OpenXml
 
         internal static XmlReaderSettings CreateDefaultXmlReaderSettings()
         {
-
             XmlReaderSettings xmlReaderSettings = new XmlReaderSettings
             {
 #if FEATURE_XML_PROHIBIT_DTD

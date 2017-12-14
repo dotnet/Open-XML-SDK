@@ -9,7 +9,6 @@ namespace DocumentFormat.OpenXml.Validation
 {
     static class ValidationTraverser
     {
-
         internal delegate void ValidationAction(ValidationContext validationContext);
 
         /// <summary>
@@ -91,7 +90,6 @@ namespace DocumentFormat.OpenXml.Validation
             }
             else if (element.ElementTypeId == ReservedElementTypeIds.AlternateContentId)
             {
-
                 validateAction(validationContext);
                 validatingActed = true;
 

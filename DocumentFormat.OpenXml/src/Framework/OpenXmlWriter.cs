@@ -15,7 +15,6 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public abstract class OpenXmlWriter : IDisposable
     {
-
         private bool _disposed;
 
         /// <summary>

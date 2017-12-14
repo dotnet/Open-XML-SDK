@@ -12,7 +12,6 @@ using DocumentFormat.OpenXml.Internal.SemanticValidation;
 
 namespace DocumentFormat.OpenXml.Validation
 {
-
     /// <summary>
     /// Implement this interface when the operation is cancelable
     /// </summary>

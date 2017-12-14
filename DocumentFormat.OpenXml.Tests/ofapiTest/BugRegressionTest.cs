@@ -32,7 +32,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validator2007BugRegressionTest()
         {
-
             OpenXmlValidator validator = new OpenXmlValidator(FileFormatVersions.Office2007);
 
             Bug423998(validator);
@@ -58,7 +57,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validator2010BugRegressionTest()
         {
-
             OpenXmlValidator validator = new OpenXmlValidator(FileFormatVersions.Office2010);
 
             Bug662644(validator);

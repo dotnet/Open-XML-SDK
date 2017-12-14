@@ -73,7 +73,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void TestAssertInInnerTextForPlusSymbol()
         {
-
             // same issue for SByteValue, Int16Value, IntegerValue, DecimalValue, SingleValue, DoubleValue
             {
                 var v = new SByteValue();

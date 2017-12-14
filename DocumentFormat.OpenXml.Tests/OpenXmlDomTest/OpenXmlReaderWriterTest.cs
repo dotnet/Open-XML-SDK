@@ -583,7 +583,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
             else if (reader.IsStartElement)
             {
-
                 bool IsStart = reader.IsStartElement;
                 OpenXmlElement element = reader.LoadCurrentElement();
                 bool skip = (IsStart == true) && (reader.IsStartElement == false);
@@ -940,7 +939,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             if (Treader.IsEmptyElement == false || !(beforeIsStartElement == true && afterIsEndElement == true))
             {
-
                 while (IscontinueRead && Read(Treader))
                 {
                     switch (Treader.NodeType)
