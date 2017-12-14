@@ -15,7 +15,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal Sources(CustomXmlPart ownerPart)
             : base(ownerPart)
         {
-
         }
 
         /// <summary>

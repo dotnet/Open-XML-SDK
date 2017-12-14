@@ -2449,7 +2449,6 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 Log.Pass("Exception {0} thrown out with message.\n {1}", ex.GetType().FullName, ex.ToString());
             }
-
         }
 
         [Fact]

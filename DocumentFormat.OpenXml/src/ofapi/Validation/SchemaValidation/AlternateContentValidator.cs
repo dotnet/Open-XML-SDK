@@ -49,7 +49,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                     // Rule: An AlternateContent element shall not be the child of an AlternateContent element.
                     errorInfo = validationContext.ComposeMcValidationError(acElement, "Sch_InvalidElementContentExpectingComplex", child.XmlQualifiedName.ToString(), ValidationResources.MC_ShallNotContainAlternateContent);
                     validationContext.EmitError(errorInfo);
-
                 }
                 else
                 {
@@ -103,7 +102,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                             errorInfo = validationContext.ComposeMcValidationError(acElement, "Sch_InvalidElementContentExpectingComplex", child.XmlQualifiedName.ToString(), ValidationResources.MC_ShallContainChoice);
                             validationContext.EmitError(errorInfo);
                             break;
-
                     }
                 }
                 child = child.GetNextNonMiscElementSibling();
@@ -175,7 +173,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                     }
                 }
             }
-
         }
 
         /// <summary>
@@ -194,7 +191,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             }
             return false;
         }
-
     }
 
     /// <summary>
@@ -338,7 +334,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                             validationContext.EmitError(errorInfo);
                         }
                     }
-
                 }
             }
         }
@@ -382,7 +377,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
             return null;
         }
-
     }
 
         /// <summary>

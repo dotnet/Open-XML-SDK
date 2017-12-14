@@ -148,7 +148,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                 }
                 return;
             }
-
         }
 
         protected override void EmitInvalidElementError(ValidationContext validationContext,

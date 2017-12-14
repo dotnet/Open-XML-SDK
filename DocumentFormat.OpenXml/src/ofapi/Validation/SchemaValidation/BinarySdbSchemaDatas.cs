@@ -193,7 +193,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                 var attribute = this.SdbAttributes[schemaType.StartIndexOfAttributes + i];
                 CheckSimpleType(attribute.SimpleTypeIndex);
             }
-
         }
 
         private void CheckParticle(int particleIndex)

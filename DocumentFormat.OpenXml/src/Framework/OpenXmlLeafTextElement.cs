@@ -261,7 +261,6 @@ namespace DocumentFormat.OpenXml
                         case XmlNodeType.Whitespace: /* O15:#3024890 */
                             textNode = OpenXmlMiscNode.CreateFromSignificantWhitespace(this.RawInnerText);
                             break;
-
                     }
                     this.ShadowElement.InsertAt(textNode, textNodePosition);
                 }

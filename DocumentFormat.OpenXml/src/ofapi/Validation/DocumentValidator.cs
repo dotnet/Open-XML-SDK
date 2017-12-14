@@ -94,7 +94,6 @@ namespace DocumentFormat.OpenXml.Validation
                 // the validation engine call bookkeep information
 
                 this.ValidatePart(part);
-
             }
 
             this.FinishValidation();

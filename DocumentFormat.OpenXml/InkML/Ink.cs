@@ -16,7 +16,6 @@ namespace DocumentFormat.OpenXml.InkML
         internal Ink(CustomXmlPart ownerPart)
             : base(ownerPart)
         {
-
         }
 
         /// <summary>

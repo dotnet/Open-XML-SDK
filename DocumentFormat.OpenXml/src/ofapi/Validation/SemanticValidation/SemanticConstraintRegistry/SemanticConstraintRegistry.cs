@@ -83,7 +83,6 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
             {
                list.Add(constraint);
             }
-
         }
 
         /// <summary>

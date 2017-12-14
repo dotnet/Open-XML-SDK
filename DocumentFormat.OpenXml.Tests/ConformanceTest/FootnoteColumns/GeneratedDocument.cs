@@ -2575,6 +2575,5 @@ namespace DocumentFormat.OpenXml.Tests.FootnoteColumnsClass
             document.PackageProperties.Modified = System.Xml.XmlConvert.ToDateTime("2012-05-23T11:44:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind);
             document.PackageProperties.LastModifiedBy = "Dan Ito";
         }
-
     }
 }

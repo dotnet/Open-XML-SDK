@@ -393,5 +393,4 @@ namespace DocumentFormat.OpenXml
             get { return this._parentElement; }
         }
     }
-
 }

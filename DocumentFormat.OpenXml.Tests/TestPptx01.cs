@@ -373,7 +373,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             themePart1.Theme = theme1;
             return themePart1;
-
         }
 
         [Fact]

@@ -64,5 +64,4 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             return;
         }
     }
-
 }

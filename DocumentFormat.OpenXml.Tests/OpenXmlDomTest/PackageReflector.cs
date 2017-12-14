@@ -398,7 +398,6 @@ namespace DocumentFormat.OpenXml.Tests
 
                 OpenXmlPart newPart = BuildPart(pair, destPackage);
                 ReflectPart(pair.OpenXmlPart, newPart, srcPackage, destPackage);
-
             }
             Log.Comment("Reflected {0} sucessfully!", srcPackage);
         }
@@ -1172,5 +1171,4 @@ namespace DocumentFormat.OpenXml.Tests
 
         #endregion Reflection Helpers
     }
-
 }

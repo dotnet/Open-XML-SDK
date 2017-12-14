@@ -383,7 +383,6 @@ namespace DocumentFormat.OpenXml
         {
             return true;
         }
-
     }
 
    /// <summary>
@@ -1146,5 +1145,4 @@ namespace DocumentFormat.OpenXml
         {
         }
     }
-
 }

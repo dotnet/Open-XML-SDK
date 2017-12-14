@@ -122,7 +122,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'val' has invalid value '00'. The string '00' is not a valid 'Boolean' value.", actual.First().Description);
-
         }
 
         /// <summary>
@@ -867,7 +866,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The MaxInclusive constraint failed. The value must be less than or equal to 51206400.", actual.First().Description);
-
         }
 
         /// <summary>
@@ -1625,7 +1623,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("/w:family[1]", actual.First().Path.XPath);
             Assert.EndsWith(" The Enumeration constraint failed.", actual.First().Description);
-
         }
 
         /// <summary>
@@ -1809,7 +1806,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The actual length according to datatype 'string' is greater than the MaxLength value. The length must be smaller than or equal to 255.", actual.First().Description);
-
         }
 
         /// <summary>
@@ -2095,7 +2091,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:val' has invalid value 'ABCDEFabcdefX1234567'. The string 'ABCDEFabcdefX1234567' is not a valid 'http://www.w3.org/2001/XMLSchema:hexBinary' value.", actual.First().Description);
-
         }
 
         /// <summary>
@@ -2139,7 +2134,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:hash' has invalid value '*R3k/fUmpYmCMpTxTA4pfvlhKSAgB848='. The string '*R3k/fUmpYmCMpTxTA4pfvlhKSAgB848=' is not a valid 'http://www.w3.org/2001/XMLSchema:base64Binary' value.", actual.First().Description);
-
         }
 
         /// <summary>
@@ -2183,7 +2177,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:val' has invalid value '*R3k/fUmpYmCMpTxTA4pfvlhKSAgB848='. The string '*R3k/fUmpYmCMpTxTA4pfvlhKSAgB848=' is not a valid 'http://www.w3.org/2001/XMLSchema:base64Binary' value.", actual.First().Description);
-
         }
 
         /// <summary>
@@ -2563,7 +2556,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'st' has invalid value '1 23 4a'.", actual.First().Description);
-
         }
 
         /// <summary>
@@ -3239,7 +3231,6 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.Same(commentsPart, errors.First().Part);
                     Assert.Equal("ExceptionError", errors.First().Id);
                     Assert.Equal("/word/comments.xml", errors.First().Path.PartUri.ToString());
-
                 }
             }
         }
@@ -3551,7 +3542,6 @@ namespace DocumentFormat.OpenXml.Tests
             // should not report error in O14 validator.
             actual = O14Validator.Validate(element);
             Assert.Empty(actual);
-
         }
 
         /// <summary>
@@ -3685,7 +3675,6 @@ namespace DocumentFormat.OpenXml.Tests
             // should NOT report error in Office2010 validator.
             actual = O14Validator.Validate(element);
             Assert.Empty(actual);
-
         }
 
         /// <summary>
@@ -3845,7 +3834,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             actual = O14Validator.Validate(element);
             Assert.Empty(actual);
-
         }
 
         #endregion

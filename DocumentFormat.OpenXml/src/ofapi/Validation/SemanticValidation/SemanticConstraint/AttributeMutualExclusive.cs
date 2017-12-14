@@ -41,7 +41,6 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
 
                     existAttribute2 = GetAttributeQualifiedName(context.Element, attribute).ToString();
                 }
-
             }
 
             if (string.IsNullOrEmpty(existAttribute))

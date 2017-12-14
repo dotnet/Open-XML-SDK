@@ -52,7 +52,6 @@ namespace DocumentFormat.OpenXml
             }
 
             OpenXmlElement.SplitName(name, out this._prefix, out this._tagName);
-
         }
 
         /// <summary>
@@ -130,14 +129,12 @@ namespace DocumentFormat.OpenXml
                         newElement.OuterXml = outerXml;
                         return newElement;
                     }
-
                 } while (xmlReader.NodeType == XmlNodeType.Whitespace);
 
                 // This method always expects an Element NodeType is passed, and there may be one or more preceding Whitespace NodeTypes before the Element.
                 // If it's not the case, then throw an exception.
                 throw new ArgumentException(ExceptionMessages.InvalidOuterXml, "outerXml");
             }
-
         }
 
         /// <summary>

@@ -144,7 +144,6 @@ namespace DocumentFormat.OpenXml
                     }
                     index--;
                 }
-
             }
             // return null;
             throw new ArgumentOutOfRangeException(nameof(index));

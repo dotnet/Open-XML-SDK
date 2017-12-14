@@ -15,7 +15,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         internal Styles(StylesPart ownerPart)
             : base(ownerPart)
         {
-
         }
 
         /// <summary>

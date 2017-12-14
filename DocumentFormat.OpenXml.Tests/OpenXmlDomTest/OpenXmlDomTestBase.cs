@@ -1632,7 +1632,6 @@ namespace DocumentFormat.OpenXml.Tests
                 else
                 {
                     Log.Warning("Target attribute NOT found.");
-
                 }
             }
             else
@@ -2636,7 +2635,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
 
             Log.VerifyTrue(targetElement.Compare(originalElement), "Two elements are not same");
-
         }
 
         internal void VerifyEqual(XElement Xelement, OpenXmlElement Oelement, OpenXmlPart part)
@@ -2800,5 +2798,4 @@ internal static class XElementExtension
 
         return true;
     }
-
 }

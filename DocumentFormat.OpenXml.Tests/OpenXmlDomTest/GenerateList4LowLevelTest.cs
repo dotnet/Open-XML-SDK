@@ -151,7 +151,6 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.VerifyValue(v2, (double)100, "{0}.Value", v.GetType().Name);
                 Log.VerifyValue(t, "+100", "{0}.InnerText", v.GetType().Name);
             }
-
         }
 
         [Fact]

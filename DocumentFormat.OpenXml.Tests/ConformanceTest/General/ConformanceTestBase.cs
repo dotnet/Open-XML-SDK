@@ -89,7 +89,6 @@ namespace DocumentFormat.OpenXml.Tests
 
                 postTest(elements.First<TElement>());
             }
-
         }
         #endregion
 

@@ -144,6 +144,5 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
                 _startCollect = false;
             }
         }
-
     }
 }

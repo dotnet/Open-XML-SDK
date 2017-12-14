@@ -93,7 +93,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                     return string.Empty;
             }
         }
-
     }
 
     /// <summary>
@@ -693,5 +692,4 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             return new byte[1] { (byte)value };
         }
     }
-
 }

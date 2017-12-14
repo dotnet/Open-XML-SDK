@@ -166,5 +166,4 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
     }
-
 }

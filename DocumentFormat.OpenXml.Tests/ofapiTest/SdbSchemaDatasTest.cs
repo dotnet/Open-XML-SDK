@@ -131,7 +131,6 @@ namespace DocumentFormat.OpenXml.Tests
             attributeConstraint = schemaTypeData.AttributeConstraints[1];
             Assert.Equal(XsdAttributeUse.Required, attributeConstraint.XsdAttributeUse);
             Assert.IsType<StringRestriction>(attributeConstraint.SimpleTypeConstraint);
-
         }
 
         private void SimpleLoadTest(SdbSchemaDatas actual)
@@ -398,7 +397,6 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Single(particle.ChildrenParticles);
                 Assert.False(particle.IsSimple());
             }
-
         }
 
         private void TextboxConstraintTest(SdbSchemaDatas actual)

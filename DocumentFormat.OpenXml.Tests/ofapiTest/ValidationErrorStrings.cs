@@ -12,6 +12,5 @@ namespace DocumentFormat.OpenXml.Tests
         /// ="List of possible elements expected:"
         /// </summary>
         internal static readonly string Fmt_ListOfPossibleElements = "List of possible elements expected:";
-
     }
 }

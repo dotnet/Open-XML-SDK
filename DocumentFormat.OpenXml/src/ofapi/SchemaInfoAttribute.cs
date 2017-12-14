@@ -31,7 +31,6 @@ namespace DocumentFormat.OpenXml
 
             _nsId = nsId;
             _tag = tag;
-
         }
 
         /// <summary>

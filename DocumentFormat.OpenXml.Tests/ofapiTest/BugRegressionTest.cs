@@ -119,7 +119,6 @@ namespace DocumentFormat.OpenXml.Tests
             colorScale.Append(new DocumentFormat.OpenXml.Spreadsheet.Color());
             results = validator.Validate(colorScale);
             Assert.Empty(results);
-
         }
 
         private void Bug704004(OpenXmlValidator validator)
@@ -275,7 +274,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(ValidationErrorType.Schema, errors.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", errors.First().Id);
             Assert.Equal("The attribute 'distL' has invalid value 'Foo'. The string 'Foo' is not a valid 'UInt32' value.", errors.First().Description);
-
         }
 
         private void Bug448264(OpenXmlValidator validator)
@@ -405,7 +403,6 @@ namespace DocumentFormat.OpenXml.Tests
             var list2 = message2.Substring(message2.IndexOf("List of possible elements expected:"));
 
             Assert.Equal(list1, list2);
-
         }
 
         #endregion

@@ -324,7 +324,6 @@ namespace DocumentFormat.OpenXml.Tests
             // call ReadNextSibling() on EndElement
             reader.ReadNextSibling();
             Assert.True(reader.EOF);
-
         }
 
         /// <summary>
@@ -438,7 +437,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("Run 2.", (run.LastChild as Text).Text);
 
             targetReader.Close();
-
         }
 
         ///<summary>

@@ -73,7 +73,6 @@ namespace DocumentFormat.OpenXml.Validation
                     validationContext.Element = child;
                     ValidatingTraverse(validationContext, validateAction, finishAction, getStopSignal);
                 }
-
             }
             else if (element.ElementTypeId == ReservedElementTypeIds.OpenXmlUnknownElementId ||
                   element.ElementTypeId == ReservedElementTypeIds.OpenXmlUnknownElementId)
@@ -130,6 +129,5 @@ namespace DocumentFormat.OpenXml.Validation
                 finishAction(validationContext);
             }
         }
-
     }
 }

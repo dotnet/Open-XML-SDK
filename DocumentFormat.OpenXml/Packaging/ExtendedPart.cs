@@ -172,6 +172,5 @@ namespace DocumentFormat.OpenXml.Packaging
 
             return;
         }
-
     }
 }

@@ -1027,7 +1027,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 this.ChildrenParts.Remove(id);
                 this.DeleteRelationship(id);
                 tempPart.Destroy();
-
             }
             catch (OpenXmlPackageException e)
             {

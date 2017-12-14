@@ -517,7 +517,6 @@ namespace DocumentFormat.OpenXml.Tests
                 RemoveOnFile(testfile, getSlidePart, getAnyLeaf);
                 RemoveOnFile(testfile, getSlidePart, getAnyComposite);
             }
-
         }
 
         [Fact]
@@ -1762,7 +1761,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             var testfile = testfiles.FirstOrDefault();
             AppendCollectionOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getAnyCompositeNoEvent, AppendCollectionType.IEnumerable);
-
         }
 
         [Fact]

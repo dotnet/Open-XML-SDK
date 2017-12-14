@@ -819,7 +819,6 @@ namespace DocumentFormat.OpenXml
                 }
                 OpenXmlAttribute attribute = new OpenXmlAttribute(openXmlAttribute.Prefix, openXmlAttribute.LocalName, openXmlAttribute.NamespaceUri, openXmlAttribute.Value);
                 this.ExtendedAttributesField.Add(attribute);
-
             }
         }
 
@@ -1298,7 +1297,6 @@ namespace DocumentFormat.OpenXml
             {
                 this.AppendChild(child);
             }
-
         }
 
         /// <summary>
@@ -1700,7 +1698,6 @@ namespace DocumentFormat.OpenXml
 
                 WriteMCAttribute(xmlWriter);
             }
-
         }
 
         /// <summary>
@@ -2507,7 +2504,6 @@ namespace DocumentFormat.OpenXml
                     }
                 }
             }
-
         }
 
         /// <summary>
@@ -2556,7 +2552,6 @@ namespace DocumentFormat.OpenXml
                     }
                 }
             }
-
         }
 
         /// <summary>
@@ -2609,7 +2604,6 @@ namespace DocumentFormat.OpenXml
                     }
                 }
             }
-
         }
 
         #endregion
@@ -2728,7 +2722,6 @@ namespace DocumentFormat.OpenXml
                             return string.Equals(namespaceURI, xmlReader.NamespaceURI) && string.Equals(localName, xmlReader.LocalName);
                         }
                     }
-
                 } while (xmlReader.NodeType == XmlNodeType.Whitespace);
             }
 

@@ -647,7 +647,6 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Null(doc.MainDocumentPart.Document);
             }
             File.Delete(testFile);
-
         }
 
         ///<summary>
@@ -697,7 +696,6 @@ namespace DocumentFormat.OpenXml.Tests
                     slidePart2.DeleteReferenceRelationship(dataPartReference.Id);
                     Assert.Single(slidePart2.DataPartReferenceRelationships);
                     Assert.Null(mediaReference.Container);
-
                 }
 
                 stream.Flush();

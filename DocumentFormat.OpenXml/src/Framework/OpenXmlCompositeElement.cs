@@ -278,7 +278,6 @@ namespace DocumentFormat.OpenXml
             this.ElementInsertedEvent(newChild);
 
             return newChild;
-
         }
 
         /// <summary>
@@ -953,7 +952,6 @@ namespace DocumentFormat.OpenXml
                                 // skip unknown element and MiscNode
                                 child = child.NextSibling();
                             }
-
                         }
                     }
 
@@ -963,7 +961,6 @@ namespace DocumentFormat.OpenXml
                     //  3. there are other elements other than allowed children?
 
                     break;
-
             }
             return null;
         }
@@ -1091,7 +1088,6 @@ namespace DocumentFormat.OpenXml
                     //  3. there are other elements other than allowed children?
 
                     break;
-
             }
         }
 

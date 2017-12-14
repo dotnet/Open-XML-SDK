@@ -235,6 +235,5 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
 
             return temp;
         }
-
     }
 }

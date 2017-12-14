@@ -274,7 +274,6 @@ namespace DocumentFormat.OpenXml.Packaging
             this._uri = this._openXmlPackage.GetUniquePartUri(contentType, parentUri, partUri);
 
             this._metroPart = this._openXmlPackage.CreateMetroPart(this._uri, contentType);
-
         }
 
         internal Uri NewPartUri(OpenXmlPackage openXmlPackage, string contentType, string extension)
@@ -321,5 +320,4 @@ namespace DocumentFormat.OpenXml.Packaging
 
         #endregion
     }
-
 }

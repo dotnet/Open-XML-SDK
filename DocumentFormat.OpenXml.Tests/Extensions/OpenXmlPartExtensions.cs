@@ -157,7 +157,6 @@ namespace DocumentFormat.OpenXml.Tests
                 else if (part.IsInkPart())
                 {
                     return new DocumentFormat.OpenXml.InkML.Ink(xmlDoc.DocumentElement.OuterXml);
-
                 }
             }
 
@@ -259,7 +258,6 @@ namespace DocumentFormat.OpenXml.Tests
                             i = sourceStm.ReadByte();
                             j = targetStm.ReadByte();
                             if (i != j) return false;
-
                         } while (i != -1 && j != -1);
                     }
                 }

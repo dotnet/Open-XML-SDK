@@ -1314,7 +1314,6 @@ namespace DocumentFormat.OpenXml
                     this.InnerSkip();
                 }
             }
-
         }
 
 #region private methods
@@ -1759,7 +1758,6 @@ namespace DocumentFormat.OpenXml
                 //  Moves the reader back to the element node.
                 this._xmlReader.MoveToElement();
             }
-
         }
 
         private void GetElementInformation()
@@ -2242,7 +2240,6 @@ namespace DocumentFormat.OpenXml
                     this.InnerSkip();
                 }
             }
-
         }
 
 #region private methods

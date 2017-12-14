@@ -50,5 +50,4 @@ namespace DocumentFormat.OpenXml.Packaging
             get { return RelationshipTypeConst; }
         }
     }
-
 }

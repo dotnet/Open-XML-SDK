@@ -722,7 +722,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         //    var targetValue = UnionHelper.CreateTargetValueObject(this, this.FileFormat);
         //    return TargetRestriction.Validate(targetValue);
         //}
-
     }
 
     /// <summary>

@@ -4806,6 +4806,5 @@ namespace DocumentFormat.OpenXml.Tests.ContentControlClass
             document.PackageProperties.Modified = System.Xml.XmlConvert.ToDateTime("2012-01-12T04:45:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind);
             document.PackageProperties.LastModifiedBy = "Masaki Tamura (Pasona Tech)";
         }
-
     }
 }

@@ -139,7 +139,6 @@ namespace DocumentFormat.OpenXml
                 xpath.Append(element.GetXPathIndex());
                 xpath.Append("]");
             }
-
         }
     }
 }
