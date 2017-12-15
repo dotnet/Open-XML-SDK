@@ -23321,6 +23321,5 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             document.PackageProperties.Modified = System.Xml.XmlConvert.ToDateTime("2012-10-03T08:48:40Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind);
             document.PackageProperties.LastModifiedBy = "Dan Ito";
         }
-
     }
 }

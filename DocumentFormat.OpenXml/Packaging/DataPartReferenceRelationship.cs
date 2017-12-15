@@ -73,7 +73,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 default:
                     return false;
             }
-
         }
 
         /// <summary>

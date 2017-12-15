@@ -118,7 +118,6 @@ namespace DocumentFormat.OpenXml.Validation
         {
             return this.Element.GetNextChildMc(child, this.McContext, this.FileFormat);
         }
-
     }
 
     /// <summary>

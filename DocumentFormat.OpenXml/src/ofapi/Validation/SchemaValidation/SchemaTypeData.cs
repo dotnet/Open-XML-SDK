@@ -110,7 +110,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         {
             get;
             private set;
-
         }
 
         internal bool HasAttributeConstraints

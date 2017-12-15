@@ -384,7 +384,6 @@ namespace DocumentFormat.OpenXml
                                                   @"http://schemas.microsoft.com/office/drawing/2010/slicer",
                                                   //@"http://schemas.microsoft.com/office/2007/6/19/audiovideo",
                                                   @"http://schemas.microsoft.com/office/drawing/2010/compatibility",
-
                                                  };
 
         private static HashSet<string> _O15NamespaceSet = new HashSet<string>{ // o15 extension

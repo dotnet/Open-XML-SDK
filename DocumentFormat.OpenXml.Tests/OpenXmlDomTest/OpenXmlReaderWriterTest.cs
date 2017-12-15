@@ -316,7 +316,6 @@ namespace DocumentFormat.OpenXml.Tests
                     XEle = XElement.Load(reader);
                 VerifyEqual(XEle, p, part);
             }
-
         }
 
         [Fact]
@@ -336,7 +335,6 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 Log.Pass("ArgumentOutOfRangeException is thrown");
             }
-
         }
 
         private void TestWriteStartDocument(ConstrWriter writerConstr, WriteStartDoc write, bool? standalone)
@@ -378,7 +376,6 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Comment("verify the standalone is not presented");
                 Log.VerifyTrue(standaloneValue == null, "expected: null <> acutal: {0}", standaloneValue);
             }
-
         }
 
         private void WriteStartD(OpenXmlWriter writer, bool? standalone)
@@ -387,7 +384,6 @@ namespace DocumentFormat.OpenXml.Tests
                 writer.WriteStartDocument(standalone.Value);
             else
                 writer.WriteStartDocument();
-
         }
 
         private void WriteStartE(OpenXmlWriter writer, object writeSource, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations)
@@ -587,7 +583,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
             else if (reader.IsStartElement)
             {
-
                 bool IsStart = reader.IsStartElement;
                 OpenXmlElement element = reader.LoadCurrentElement();
                 bool skip = (IsStart == true) && (reader.IsStartElement == false);
@@ -944,7 +939,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             if (Treader.IsEmptyElement == false || !(beforeIsStartElement == true && afterIsEndElement == true))
             {
-
                 while (IscontinueRead && Read(Treader))
                 {
                     switch (Treader.NodeType)
@@ -1266,7 +1260,6 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 Log.VerifyTrue(e is ObjectDisposedException, "e is ObjectDisposedException");
             }
-
         }
 
         [Fact]
@@ -1290,6 +1283,5 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Pass("Completed");
         }
-
     }
 }

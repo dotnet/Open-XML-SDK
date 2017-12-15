@@ -15,7 +15,6 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         internal AdditionalCharacteristicsInfo(CustomXmlPart ownerPart)
             : base(ownerPart)
         {
-
         }
 
         /// <summary>

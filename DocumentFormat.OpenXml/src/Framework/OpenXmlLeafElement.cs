@@ -13,7 +13,6 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public abstract class OpenXmlLeafElement : OpenXmlElement
     {
-
         /// <summary>
         /// Represents a shadow element to hold child elements if there are any.
         /// </summary>

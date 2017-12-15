@@ -93,7 +93,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void AppendIEnumerableXSLTest()
         {
-
             FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
                 .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
             var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
@@ -517,7 +516,6 @@ namespace DocumentFormat.OpenXml.Tests
                 RemoveOnFile(testfile, getSlidePart, getAnyLeaf);
                 RemoveOnFile(testfile, getSlidePart, getAnyComposite);
             }
-
         }
 
         [Fact]
@@ -1762,7 +1760,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             var testfile = testfiles.FirstOrDefault();
             AppendCollectionOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getAnyCompositeNoEvent, AppendCollectionType.IEnumerable);
-
         }
 
         [Fact]

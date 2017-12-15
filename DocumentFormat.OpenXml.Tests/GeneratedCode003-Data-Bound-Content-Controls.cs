@@ -2646,6 +2646,5 @@ namespace DocumentFormat.OpenXml.Tests
             document.PackageProperties.Modified = System.Xml.XmlConvert.ToDateTime("2008-10-19T16:59:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind);
             document.PackageProperties.LastModifiedBy = "Eric White (DPE)";
         }
-
     }
 }

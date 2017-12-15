@@ -361,6 +361,5 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", actual.Errors[0].Id);
             Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, actual.Errors[0].Description);
         }
-
     }
 }

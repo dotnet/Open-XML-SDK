@@ -414,7 +414,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("urn:schemas-microsoft-com:office:word", target.NamespaceUri);
             Assert.Equal("w10", target.Prefix);
             Assert.Equal("wrap", target.LocalName);
-
         }
 
         /// <summary>
@@ -474,7 +473,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.False(target.Equals((object)other));
             Assert.False(OpenXmlAttribute.Equals(target, other));
             Assert.NotEqual(target.GetHashCode(), other.GetHashCode());
-
         }
 
         /// <summary>
@@ -898,7 +896,6 @@ namespace DocumentFormat.OpenXml.Tests
                     reader.ReadNextSibling();
                     Assert.EndsWith("Table", reader.ElementType.Name);
                     Assert.Single(reader.NamespaceDeclarations);
-
                 }
             }
         }
@@ -916,7 +913,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(node.ExtendedAttributes.Count(), nod1.ExtendedAttributes.Count());
             Assert.Equal(node.OuterXml, nod1.OuterXml);
             Assert.Equal(node.Body.OuterXml, nod1.Body.OuterXml);
-
         }
 
         /// <summary>

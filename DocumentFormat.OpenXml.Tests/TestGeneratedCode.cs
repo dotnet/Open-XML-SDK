@@ -48,6 +48,5 @@ namespace DocumentFormat.OpenXml.Tests
             if (TestUtil.DeleteTempFiles)
                 fileInfo.Delete();
         }
-
     }
 }

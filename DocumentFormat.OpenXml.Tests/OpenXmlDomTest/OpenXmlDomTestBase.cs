@@ -1632,7 +1632,6 @@ namespace DocumentFormat.OpenXml.Tests
                 else
                 {
                     Log.Warning("Target attribute NOT found.");
-
                 }
             }
             else
@@ -2615,7 +2614,6 @@ namespace DocumentFormat.OpenXml.Tests
         /// <param name="targetPosition">If null, compare these two elements. Otherwise, compare the originalElement with resultElement's targetPosition-th child</param>
         internal void VerifyEqual(XElement resultElement, XElement originalElement, int? childPosition)
         {
-
             if (resultElement == null || originalElement == null)
                 throw new ArgumentNullException("one of the arguments passed in is NULL");
 
@@ -2636,7 +2634,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
 
             Log.VerifyTrue(targetElement.Compare(originalElement), "Two elements are not same");
-
         }
 
         internal void VerifyEqual(XElement Xelement, OpenXmlElement Oelement, OpenXmlPart part)
@@ -2777,7 +2774,6 @@ internal static class XElementExtension
 
         foreach (XAttribute attr in A.Attributes().Where(x => x.IsNamespaceDeclaration == false))
         {
-
             if (B.Attribute(attr.Name) == null || B.Attribute(attr.Name).Value != attr.Value)
                 return false;
         }
@@ -2800,5 +2796,4 @@ internal static class XElementExtension
 
         return true;
     }
-
 }

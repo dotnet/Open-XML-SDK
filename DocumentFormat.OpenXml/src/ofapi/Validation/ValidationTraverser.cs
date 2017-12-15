@@ -9,7 +9,6 @@ namespace DocumentFormat.OpenXml.Validation
 {
     static class ValidationTraverser
     {
-
         internal delegate void ValidationAction(ValidationContext validationContext);
 
         /// <summary>
@@ -73,7 +72,6 @@ namespace DocumentFormat.OpenXml.Validation
                     validationContext.Element = child;
                     ValidatingTraverse(validationContext, validateAction, finishAction, getStopSignal);
                 }
-
             }
             else if (element.ElementTypeId == ReservedElementTypeIds.OpenXmlUnknownElementId ||
                   element.ElementTypeId == ReservedElementTypeIds.OpenXmlUnknownElementId)
@@ -92,7 +90,6 @@ namespace DocumentFormat.OpenXml.Validation
             }
             else if (element.ElementTypeId == ReservedElementTypeIds.AlternateContentId)
             {
-
                 validateAction(validationContext);
                 validatingActed = true;
 
@@ -130,6 +127,5 @@ namespace DocumentFormat.OpenXml.Validation
                 finishAction(validationContext);
             }
         }
-
     }
 }

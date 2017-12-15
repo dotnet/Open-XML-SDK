@@ -78,7 +78,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(numChange, fieldChar.LastChild);
             Assert.Same(numChange, fieldChar.NumberingChange);
             Assert.Null(fieldChar.FieldData);
-
         }
 
         /// <summary>
@@ -154,7 +153,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("a", clonedElement.Prefix);
             Assert.Equal("http://schemas.openxmlformats.org/drawingml/2006/main", clonedElement.NamespaceUri);
             Assert.Null(clonedElement.FirstChild);
-
         }
 
         /// <summary>

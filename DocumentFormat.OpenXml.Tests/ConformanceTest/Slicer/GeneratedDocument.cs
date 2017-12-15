@@ -1874,6 +1874,5 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             document.PackageProperties.Modified = System.Xml.XmlConvert.ToDateTime("2012-10-03T08:44:58Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind);
             document.PackageProperties.LastModifiedBy = "Dan Ito";
         }
-
     }
 }

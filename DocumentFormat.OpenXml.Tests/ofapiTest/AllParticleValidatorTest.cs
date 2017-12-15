@@ -139,7 +139,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("Sch_AllElement", actual.Errors[0].Id);
             Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, actual.Errors[0].Description);
             properties.RemoveChild(errorChild);
-
         }
 
         private void TestSimpleAll2(SdbSchemaDatas sdbSchemaDatas)
@@ -225,7 +224,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("Sch_AllElement", actual.Errors[0].Id);
             Assert.Same(errorChild, actual.Errors[0].RelatedNode);
             shapeLayout.RemoveChild(errorChild);
-
         }
     }
 }

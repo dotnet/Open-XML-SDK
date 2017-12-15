@@ -18,7 +18,6 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
     /// </summary>
     internal abstract partial class SemanticConstraint
     {
-
         public readonly SemanticValidationLevel SemanticValidationLevel;
 
 #if DEBUG
@@ -235,6 +234,5 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
 
             return temp;
         }
-
     }
 }

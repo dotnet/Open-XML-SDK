@@ -165,7 +165,6 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     using (var clone = (WordprocessingDocument)wordDoc.Clone())
                     {
-
                         var secondClone = (WordprocessingDocument)clone.Clone();
                         secondClone.MainDocumentPart.Document.Body
                             .GetFirstChild<Paragraph>()

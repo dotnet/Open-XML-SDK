@@ -520,7 +520,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <remarks>Mainly used for adding not-fixed content type part - ImagePart, etc.</remarks>
         public override T AddNewPart<T>(string contentType, string id)
         {
-
             if (contentType == null)
             {
                 throw new ArgumentNullException(nameof(contentType));

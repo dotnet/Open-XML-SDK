@@ -91,6 +91,5 @@ namespace DocumentFormat.OpenXml.Packaging
                 return _list;
             }
         }
-
     }
 }

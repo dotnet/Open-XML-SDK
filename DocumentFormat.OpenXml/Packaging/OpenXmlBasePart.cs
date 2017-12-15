@@ -284,7 +284,6 @@ namespace DocumentFormat.OpenXml.Packaging
             this._uri = this._openXmlPackage.GetUniquePartUri(contentType, parentUri, partUri);
 
             this._metroPart = this._openXmlPackage.CreateMetroPart(this._uri, contentType);
-
         }
 
         #endregion
@@ -481,7 +480,6 @@ namespace DocumentFormat.OpenXml.Packaging
         [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
         public void ValidateXml(string schemaFile, ValidationEventHandler validationEventHandler)
         {
-
             ThrowIfObjectDisposed();
 
             if (schemaFile == null)
@@ -869,7 +867,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
                 while (num > 0);
             }
-
         }
         #endregion
 

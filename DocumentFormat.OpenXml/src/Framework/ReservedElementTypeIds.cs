@@ -27,5 +27,4 @@ namespace DocumentFormat.OpenXml
             return element.ElementTypeId > MaxReservedId;
         }
     }
-
 }

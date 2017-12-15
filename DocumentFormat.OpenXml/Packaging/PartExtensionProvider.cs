@@ -97,6 +97,5 @@ namespace DocumentFormat.OpenXml.Packaging
 
             base.Add(contentType, partExtension);
         }
-
     }
 }

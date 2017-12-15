@@ -12,7 +12,6 @@ using DocumentFormat.OpenXml.Internal.SemanticValidation;
 
 namespace DocumentFormat.OpenXml.Validation
 {
-
     /// <summary>
     /// Implement this interface when the operation is cancelable
     /// </summary>
@@ -94,7 +93,6 @@ namespace DocumentFormat.OpenXml.Validation
                 // the validation engine call bookkeep information
 
                 this.ValidatePart(part);
-
             }
 
             this.FinishValidation();

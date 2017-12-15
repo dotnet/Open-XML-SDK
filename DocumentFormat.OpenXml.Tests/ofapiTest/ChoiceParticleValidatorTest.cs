@@ -116,7 +116,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
             Assert.Contains(":undo", actual.Errors[0].Description);
             Assert.Contains(":rfmt", actual.Errors[0].Description);
-
         }
 
         private void TestSimpleChoice3(SdbSchemaDatas sdbSchemaDatas)
@@ -308,7 +307,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
             Assert.Contains(":bldDgm", actual.Errors[0].Description);
             Assert.Contains(":bldChart", actual.Errors[0].Description);
-
         }
 
         private void TestSimpleChoice(SdbSchemaDatas sdbSchemaDatas)

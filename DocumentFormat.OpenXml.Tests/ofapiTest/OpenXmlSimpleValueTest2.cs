@@ -174,7 +174,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("test", target.InnerText);
             Assert.Equal("test", (string)target);
             Assert.Equal("test", target.ToString());
-
         }
 
         /// <summary>
@@ -197,7 +196,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             Assert.True(target.HasValue);
             Assert.Equal(dateTime, target.Value);
-
         }
 
         /// <summary>
@@ -496,7 +494,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             TrueFalseBlankValue target5 = new TrueFalseBlankValue(target3);
             Assert.False(target5.Value);
-
         }
 
         /// <summary>
@@ -576,7 +573,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             OnOffValue target5 = new OnOffValue(target3);
             Assert.False(target5.Value);
-
         }
 
         /// <summary>

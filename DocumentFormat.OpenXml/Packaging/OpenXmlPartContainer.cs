@@ -1138,7 +1138,6 @@ namespace DocumentFormat.OpenXml.Packaging
                     }
                 }
             }
-
         }
 
         /// <summary>
@@ -1187,7 +1186,6 @@ namespace DocumentFormat.OpenXml.Packaging
                     }
                 }
             }
-
         }
 
         /// <summary>
@@ -1240,7 +1238,6 @@ namespace DocumentFormat.OpenXml.Packaging
                     }
                 }
             }
-
         }
 
         #endregion
@@ -1549,7 +1546,6 @@ namespace DocumentFormat.OpenXml.Packaging
                     return SetSubPart(subPart, rId);
                 }
             }
-
         }
 
         /// <summary>
@@ -1577,7 +1573,6 @@ namespace DocumentFormat.OpenXml.Packaging
             //}
 
             return this.AddSubPart(part, rId);
-
         }
 
         /// <summary>
@@ -1646,7 +1641,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 this.ChildrenParts.Add(relationshipId, child);
 
                 return child;
-
             }
             else
             {
@@ -1742,7 +1736,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 return child;
             }
-
         }
 
         /// <summary>
@@ -2049,7 +2042,6 @@ namespace DocumentFormat.OpenXml.Packaging
                                 if (child.RelationshipType != relationship.RelationshipType)
                                 {
                                     throw new OpenXmlPackageException(ExceptionMessages.SamePartWithDifferentRelationshipType);
-
                                 }
                                 this.ChildrenParts.Add(relationship.Id, child);
                             }
@@ -2067,7 +2059,6 @@ namespace DocumentFormat.OpenXml.Packaging
                                 // Already loaded data part. Create reference relationship.
                                 var referenceRelationship = DataPartReferenceRelationship.CreateDataPartReferenceRelationship(this, dataPart, relationship.RelationshipType, relationship.Id);
                                 this.ReferenceRelationshipList.AddLast(referenceRelationship);
-
                             }
                             else
                             {
@@ -2316,6 +2307,5 @@ namespace DocumentFormat.OpenXml.Packaging
                 targetPart.OpenXmlPackage != null &&
                 targetPart.OpenXmlPackage == this.InternalOpenXmlPackage;
         }
-
     }
 }

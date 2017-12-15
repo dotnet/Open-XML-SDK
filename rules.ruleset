@@ -123,11 +123,11 @@
     <Rule Id="SA1502" Action="None" />
     <Rule Id="SA1503" Action="None" />
     <Rule Id="SA1504" Action="None" />
-    <Rule Id="SA1505" Action="None" />
-    <Rule Id="SA1506" Action="None" />
+    <Rule Id="SA1505" Action="Warning" />
+    <Rule Id="SA1506" Action="Warning" />
     <Rule Id="SA1507" Action="Warning" />
-    <Rule Id="SA1508" Action="None" />
-    <Rule Id="SA1509" Action="None" />
+    <Rule Id="SA1508" Action="Warning" />
+    <Rule Id="SA1509" Action="Warning" />
     <Rule Id="SA1510" Action="None" />
     <Rule Id="SA1511" Action="None" />
     <Rule Id="SA1512" Action="None" />

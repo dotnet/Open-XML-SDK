@@ -15,7 +15,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         internal MailMergeRecipients(MailMergeRecipientDataPart ownerPart)
             : base(ownerPart)
         {
-
         }
 
         /// <summary>

@@ -392,7 +392,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// </summary>
         /// <returns>Expected elements in this particle.</returns>
         ExpectedChildren GetExpectedElements();
-
     }
 
     /// <summary>
@@ -519,7 +518,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
             return string.Empty;
         }
-
     }
 
     /// <summary>

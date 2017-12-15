@@ -848,6 +848,5 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPrClass
             document.PackageProperties.Modified = System.Xml.XmlConvert.ToDateTime("2012-10-03T08:51:17Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind);
             document.PackageProperties.LastModifiedBy = "Dan Ito";
         }
-
     }
 }

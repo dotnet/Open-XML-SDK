@@ -15,7 +15,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal CustomUI(CustomUIPart ownerPart)
             : base(ownerPart)
         {
-
         }
 
         /// <summary>
