@@ -38,7 +38,6 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents the base class for composite elements.
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     public abstract class OpenXmlCompositeElement : OpenXmlElement
     {
         private OpenXmlElement _lastChild;
@@ -654,7 +653,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="xmlReader">The XmlReader to read the XML content.</param>
         /// <param name="loadMode">Specifies a load mode that is either lazy or full.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
         internal override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode)
         {
             LoadAttributes(xmlReader);

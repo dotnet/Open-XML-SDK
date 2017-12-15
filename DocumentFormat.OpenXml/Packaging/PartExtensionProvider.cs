@@ -13,7 +13,6 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines a Part Extension Provider which maintains a (Content Type, Part Extension (".xml")) dictionary.
     /// Used in OpenXmlPackage derived classes.
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     [SerializableAttribute]
     public sealed class PartExtensionProvider : Dictionary<string, string>
     {

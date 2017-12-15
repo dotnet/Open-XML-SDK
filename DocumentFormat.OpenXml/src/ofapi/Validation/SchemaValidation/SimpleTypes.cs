@@ -80,7 +80,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// </summary>
         /// <param name="xsdType">The XsdType type.</param>
         /// <returns>Returns the XML Schema datatype name of the specified type.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
         public static string GetXsdDataTypeName(this XsdType xsdType)
         {
             switch (xsdType)
@@ -878,8 +877,8 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <param name="attributeValue"></param>
         /// <returns></returns>
         /// <remarks>
-        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows: 
-        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value} 
+        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows:
+        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value}
         /// </remarks>
         internal int GetValueLength(OpenXmlSimpleType attributeValue)
         {
@@ -893,8 +892,8 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <param name="attributeValue"></param>
         /// <returns>True if the length of the value is same as defined.</returns>
         /// <remarks>
-        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows: 
-        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value} 
+        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows:
+        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value}
         /// </remarks>
         public bool IsLengthValid(OpenXmlSimpleType attributeValue)
         {
@@ -908,8 +907,8 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <param name="attributeValue"></param>
         /// <returns>True if the length of the value is same as defined.</returns>
         /// <remarks>
-        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows: 
-        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value} 
+        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows:
+        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value}
         /// </remarks>
         public bool IsMinLengthValid(OpenXmlSimpleType attributeValue)
         {
@@ -923,8 +922,8 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <param name="attributeValue"></param>
         /// <returns>True if the length of the value is same as defined.</returns>
         /// <remarks>
-        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows: 
-        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value} 
+        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows:
+        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value}
         /// </remarks>
         public bool IsMaxLengthValid(OpenXmlSimpleType attributeValue)
         {
@@ -1710,10 +1709,10 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// Normalized string (xsd:normalizedString) based simple type constraint.
     /// </summary>
     /// <remarks>
-    /// normalizedString represents white space normalized strings. 
-    /// The ·value space· of normalizedString is the set of strings that do not contain the carriage return (#xD), line feed (#xA) nor tab (#x9) characters. 
-    /// The ·lexical space· of normalizedString is the set of strings that do not contain the carriage return (#xD), line feed (#xA) nor tab (#x9) characters. 
-    /// The ·base type· of normalizedString is string. 
+    /// normalizedString represents white space normalized strings.
+    /// The ·value space· of normalizedString is the set of strings that do not contain the carriage return (#xD), line feed (#xA) nor tab (#x9) characters.
+    /// The ·lexical space· of normalizedString is the set of strings that do not contain the carriage return (#xD), line feed (#xA) nor tab (#x9) characters.
+    /// The ·base type· of normalizedString is string.
     /// </remarks>
     [DataContract]
     internal class NormalizedStringRestriction : StringRestriction
@@ -1758,9 +1757,9 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// Name (xsd:Name) based simple type constraint.
     /// </summary>
     /// <remarks>
-    /// Name represents XML Names. The ·value space· of Name is the set of all strings which ·match· the Name production of [XML 1.0 (Second Edition)]. 
-    /// The ·lexical space· of Name is the set of all strings which ·match· the Name production of [XML 1.0 (Second Edition)]. 
-    /// The ·base type· of Name is token. 
+    /// Name represents XML Names. The ·value space· of Name is the set of all strings which ·match· the Name production of [XML 1.0 (Second Edition)].
+    /// The ·lexical space· of Name is the set of all strings which ·match· the Name production of [XML 1.0 (Second Edition)].
+    /// The ·base type· of Name is token.
     /// </remarks>
     [DataContract]
     internal class NameRestriction : StringRestriction

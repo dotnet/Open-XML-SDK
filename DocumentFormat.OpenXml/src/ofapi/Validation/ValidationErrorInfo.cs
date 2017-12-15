@@ -81,7 +81,6 @@ namespace DocumentFormat.OpenXml.Validation
         /// </summary>
         /// <param name="attributeQualifiedName"></param>
         /// <param name="validationErrorCategory"></param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic")]
         [Conditional("DEBUG")]
         public void SetDebugField(string attributeQualifiedName, string validationErrorCategory)
         {

@@ -16,11 +16,6 @@ namespace DocumentFormat.OpenXml
         private string _tagName;
         private string _prefix;
         private string _value;
-        // private bool _readonly = false;
-
-        //internal OpenXmlAttribute()
-        //{
-        //}
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlAttribute structure using the supplied qualified name, namespace URI, and text value.
@@ -28,7 +23,6 @@ namespace DocumentFormat.OpenXml
         /// <param name="qualifiedName">The qualified attribute name.</param>
         /// <param name="namespaceUri">The namespace URI of the attribute.</param>
         /// <param name="value">The text value of the attribute.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1054:UriParametersShouldNotBeStrings", MessageId = "1#")]
         public OpenXmlAttribute(string qualifiedName, string namespaceUri, string value)
         {
             if (String.IsNullOrEmpty(qualifiedName))
@@ -48,7 +42,6 @@ namespace DocumentFormat.OpenXml
         /// <param name="localName">The local name of the attribute.</param>
         /// <param name="namespaceUri">The namespace URI of the attribute.</param>
         /// <param name="value">The text value of the attribute.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1054:UriParametersShouldNotBeStrings", MessageId = "2#")]
         public OpenXmlAttribute(string prefix, string localName, string namespaceUri, string value)
         {
             if (String.IsNullOrEmpty(localName))
@@ -65,7 +58,6 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets or sets the namespace URI of the current attribute.
         /// </summary>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1056:UriPropertiesShouldNotBeStrings")]
         public string NamespaceUri
         {
             get

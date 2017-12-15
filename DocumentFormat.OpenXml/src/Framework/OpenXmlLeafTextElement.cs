@@ -1,18 +1,16 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+
 using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Xml;
-using System.Globalization;
-using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// Represents the base class from which leaf elements that have text are derived.
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     [DebuggerDisplay("{Text}")]
     public abstract class OpenXmlLeafTextElement : OpenXmlLeafElement
     {

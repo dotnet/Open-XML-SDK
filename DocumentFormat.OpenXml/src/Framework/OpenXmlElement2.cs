@@ -15,7 +15,6 @@ namespace DocumentFormat.OpenXml
     /// <remarks>
     /// Annotations will not be cloned when calling .Clone() and .CloneNode(bool).
     /// </remarks>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     public abstract partial class OpenXmlElement : IEnumerable<OpenXmlElement>, ICloneable
     {
         /// <summary>

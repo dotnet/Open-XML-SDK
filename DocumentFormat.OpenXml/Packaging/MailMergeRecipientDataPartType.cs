@@ -15,7 +15,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Microsoft Word Mail Merge Recipient Data.
         /// </summary>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly", MessageId = "Ms")]
         MsWordMailMergeRecipientData,
     }
 }

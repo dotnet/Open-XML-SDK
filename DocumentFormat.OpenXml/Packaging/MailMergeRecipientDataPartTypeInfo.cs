@@ -18,7 +18,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "mailMergeRecipientDataPartType")]
         internal static string GetTargetExtension(MailMergeRecipientDataPartType mailMergeRecipientDataPartType)
         {
             return ".xml";
