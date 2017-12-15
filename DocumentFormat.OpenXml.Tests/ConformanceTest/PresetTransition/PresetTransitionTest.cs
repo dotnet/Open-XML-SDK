@@ -1,14 +1,13 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Tests.PresetTransitionClass;
+using Xunit;
+using Xunit.Abstractions;
+
+using P15 = DocumentFormat.OpenXml.Office2013.PowerPoint;
+
 namespace DocumentFormat.OpenXml.Tests.PresetTransition
 {
-    using DocumentFormat.OpenXml;
-    using DocumentFormat.OpenXml.Packaging;
-    using DocumentFormat.OpenXml.Tests;
-    using DocumentFormat.OpenXml.Tests.PresetTransitionClass;
-    using Xunit;
-    using Xunit.Abstractions;
-    using P15 = DocumentFormat.OpenXml.Office2013.PowerPoint;
-
     /// <summary>
     /// Test for Footnote Column
     /// </summary>

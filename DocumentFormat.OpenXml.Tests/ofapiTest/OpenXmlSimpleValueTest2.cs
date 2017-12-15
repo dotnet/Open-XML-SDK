@@ -1,12 +1,11 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Wordprocessing;
-using Vml = DocumentFormat.OpenXml.Vml;
-using xvml = DocumentFormat.OpenXml.Vml.Spreadsheet;
-using M = DocumentFormat.OpenXml.Math;
 using System;
 using System.Globalization;
 using Xunit;
+
+using M = DocumentFormat.OpenXml.Math;
+using xvml = DocumentFormat.OpenXml.Vml.Spreadsheet;
 
 namespace DocumentFormat.OpenXml.Tests
 {

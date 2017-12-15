@@ -1,7 +1,6 @@
 ﻿using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Validation;
 using System.Collections.Generic;
-using System.Linq;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests

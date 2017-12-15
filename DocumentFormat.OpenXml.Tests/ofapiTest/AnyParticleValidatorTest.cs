@@ -2,9 +2,6 @@
 using DocumentFormat.OpenXml.Internal.SchemaValidation;
 using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Vml;
-using DocumentFormat.OpenXml.Vml.Office;
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Wordprocessing;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests

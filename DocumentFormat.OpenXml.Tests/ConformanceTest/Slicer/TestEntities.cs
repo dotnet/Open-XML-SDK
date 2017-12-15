@@ -1,18 +1,13 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Spreadsheet;
+using LogUtil;
 using System.Linq;
-using System.Text;
+using X14 = DocumentFormat.OpenXml.Office2010.Excel;
+using X15 = DocumentFormat.OpenXml.Office2013.Excel;
 
 namespace DocumentFormat.OpenXml.Tests.Slicer
 {
-    using DocumentFormat.OpenXml;
-    using DocumentFormat.OpenXml.Packaging;
-    using DocumentFormat.OpenXml.Spreadsheet;
-    using X14 = DocumentFormat.OpenXml.Office2010.Excel;
-    using X15 = DocumentFormat.OpenXml.Office2013.Excel;
-    using LogUtil;
-
     public class TestEntities
     {
         //Slicer names

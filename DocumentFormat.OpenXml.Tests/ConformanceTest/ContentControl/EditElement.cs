@@ -1,18 +1,13 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Wordprocessing;
+using LogUtil;
 using System.Linq;
-using System.Text;
+using ConstStr = DocumentFormat.OpenXml.Tests.ContentControl.ConstantStrings;
+using W15 = DocumentFormat.OpenXml.Office2013.Word;
 
 namespace DocumentFormat.OpenXml.Tests.ContentControl
 {
-    using DocumentFormat.OpenXml.Packaging;
-    using DocumentFormat.OpenXml;
-    using DocumentFormat.OpenXml.Wordprocessing;
-    using W15 = DocumentFormat.OpenXml.Office2013.Word;
-    using ConstStr = DocumentFormat.OpenXml.Tests.ContentControl.ConstantStrings;
-    using LogUtil;
-
     public class EditElement
     {
         public static void EditContentControlElements(string filePath, VerifiableLog log)

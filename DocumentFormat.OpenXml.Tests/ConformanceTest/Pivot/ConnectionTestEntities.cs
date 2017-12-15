@@ -1,16 +1,13 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Spreadsheet;
+using LogUtil;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using X15 = DocumentFormat.OpenXml.Office2013.Excel;
 
 namespace DocumentFormat.OpenXml.Tests.Pivot
 {
-    using DocumentFormat.OpenXml.Packaging;
-    using DocumentFormat.OpenXml.Spreadsheet;
-    using X15 = DocumentFormat.OpenXml.Office2013.Excel;
-    using LogUtil;
-
     public class ConnectionTestEntities
     {
         private string ConnectionString { get; set; }

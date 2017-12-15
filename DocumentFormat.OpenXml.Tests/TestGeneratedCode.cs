@@ -1,19 +1,8 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.IO.Packaging;
-using System.Linq;
-using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Validation;
-using Xunit;
-using P = DocumentFormat.OpenXml.Presentation;
-using S = DocumentFormat.OpenXml.Spreadsheet;
-using W = DocumentFormat.OpenXml.Wordprocessing;
-using A = DocumentFormat.OpenXml.Drawing;
-using DW = DocumentFormat.OpenXml.Drawing.Wordprocessing;
-using PIC = DocumentFormat.OpenXml.Drawing.Pictures;
 using OxTest;
+using System;
+using System.IO;
+using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
 {

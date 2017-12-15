@@ -1,15 +1,14 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using DocumentFormat.OpenXml.Tests.CommentExPeopleClass;
+using DocumentFormat.OpenXml.Tests.TaskLibraries;
+using OxTest;
 using System;
+using System.IO;
+using Xunit;
+using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests.CommentExPeople
 {
-    using DocumentFormat.OpenXml.Tests.CommentExPeopleClass;
-    using DocumentFormat.OpenXml.Tests.TaskLibraries;
-    using OxTest;
-    using System.IO;
-    using Xunit;
-    using Xunit.Abstractions;
-
     /// <summary>
     /// Test for Comment People part.
     /// </summary>

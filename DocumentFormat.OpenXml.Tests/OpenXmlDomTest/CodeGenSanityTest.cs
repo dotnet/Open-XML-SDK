@@ -4,9 +4,10 @@ using DocumentFormat.OpenXml.Wordprocessing;
 using System.Linq;
 using Xunit;
 using Xunit.Abstractions;
-using Dr = DocumentFormat.OpenXml.Drawing;
 
 using static DocumentFormat.OpenXml.Tests.TestAssets;
+
+using Dr = DocumentFormat.OpenXml.Drawing;
 
 namespace DocumentFormat.OpenXml.Tests
 {
