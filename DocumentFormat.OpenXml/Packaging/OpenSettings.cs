@@ -7,8 +7,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public class OpenSettings
     {
-        bool? autoSave;
-        MarkupCompatibilityProcessSettings _mcSettings;
+        private bool? autoSave;
+        private MarkupCompatibilityProcessSettings _mcSettings;
 
         /// <summary>
         /// Gets or sets a value that indicates whether or not to auto save document modifications.

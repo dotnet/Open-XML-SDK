@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// <summary>
     /// All particle validator.
     /// </summary>
-    class AllParticleValidator : CompositeParticleValidator
+    internal class AllParticleValidator : CompositeParticleValidator
     {
         private  Dictionary<int, bool> _childrenParticles;
 

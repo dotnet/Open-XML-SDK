@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml
     [DebuggerDisplay("{Text}")]
     public abstract class OpenXmlLeafTextElement : OpenXmlLeafElement
     {
-        string _rawInnerText;
+        private string _rawInnerText;
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlLeafTextElement class.

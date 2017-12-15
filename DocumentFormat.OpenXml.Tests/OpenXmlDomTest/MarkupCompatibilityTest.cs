@@ -25,34 +25,34 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Private Fields
         internal static string xmlNS = "http://www.w3.org/XML/1998/namespace";
-        OpenXmlAttribute xmlSpace = new OpenXmlAttribute("xml", "space", xmlNS, "default"); // two valid value: default, preserve
-        OpenXmlAttribute xmlLang = new OpenXmlAttribute("xml", "lang", xmlNS, "en-US");
+        private OpenXmlAttribute xmlSpace = new OpenXmlAttribute("xml", "space", xmlNS, "default"); // two valid value: default, preserve
+        private OpenXmlAttribute xmlLang = new OpenXmlAttribute("xml", "lang", xmlNS, "en-US");
 
         internal static string nsUnknown1 = "http://test.openxmlsdk.microsoft.com/unknownns1";
         internal static string prefixUnknown1 = "uns1";
         internal static string a1Unknown1 = "a1uk1";
         internal static string a2Unknown1 = "a2uk1";
-        OpenXmlAttribute unknownAttribute11 = new OpenXmlAttribute(prefixUnknown1, a1Unknown1, nsUnknown1, "attribute1 from unknown namespace1.");
-        OpenXmlAttribute unknownAttribute12 = new OpenXmlAttribute(prefixUnknown1, a2Unknown1, nsUnknown1, "attribute2 from unknown namespace1.");
+        private OpenXmlAttribute unknownAttribute11 = new OpenXmlAttribute(prefixUnknown1, a1Unknown1, nsUnknown1, "attribute1 from unknown namespace1.");
+        private OpenXmlAttribute unknownAttribute12 = new OpenXmlAttribute(prefixUnknown1, a2Unknown1, nsUnknown1, "attribute2 from unknown namespace1.");
         internal static string e1Unknown1 = "e1uk1";
         internal static string e2Unknown1 = "e2uk1";
-        OpenXmlElement unknownElement11 = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
-        OpenXmlElement unknownElement12 = new OpenXmlUnknownElement(prefixUnknown1, e2Unknown1, nsUnknown1);
+        private OpenXmlElement unknownElement11 = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
+        private OpenXmlElement unknownElement12 = new OpenXmlUnknownElement(prefixUnknown1, e2Unknown1, nsUnknown1);
 
         internal static string nsUnknown2 = "http://test.openxmlsdk.microsoft.com/unknownns2";
         internal static string prefixUnknown2 = "uns2";
         internal static string a1Unknown2 = "a1uk2";
         internal static string a2Unknown2 = "a2uk2";
-        OpenXmlAttribute unknownAttribute21 = new OpenXmlAttribute(prefixUnknown2, a1Unknown2, nsUnknown2, "attribute1 from unknown namespace2.");
-        OpenXmlAttribute unknownAttribute22 = new OpenXmlAttribute(prefixUnknown2, a2Unknown2, nsUnknown2, "attribute2 from unknown namespace2.");
+        private OpenXmlAttribute unknownAttribute21 = new OpenXmlAttribute(prefixUnknown2, a1Unknown2, nsUnknown2, "attribute1 from unknown namespace2.");
+        private OpenXmlAttribute unknownAttribute22 = new OpenXmlAttribute(prefixUnknown2, a2Unknown2, nsUnknown2, "attribute2 from unknown namespace2.");
         internal static string e1Unknown2 = "e1uk2";
         internal static string e2Unknown2 = "e2uk2";
-        OpenXmlElement unknownElement21 = new OpenXmlUnknownElement(prefixUnknown2, e1Unknown2, nsUnknown2);
-        OpenXmlElement unknownElement22 = new OpenXmlUnknownElement(prefixUnknown2, e2Unknown2, nsUnknown2);
+        private OpenXmlElement unknownElement21 = new OpenXmlUnknownElement(prefixUnknown2, e1Unknown2, nsUnknown2);
+        private OpenXmlElement unknownElement22 = new OpenXmlUnknownElement(prefixUnknown2, e2Unknown2, nsUnknown2);
 
-        OpenXmlAttribute unprefixedAttribute = new OpenXmlAttribute(string.Empty, "name", null, "unprefixed attributes");
+        private OpenXmlAttribute unprefixedAttribute = new OpenXmlAttribute(string.Empty, "name", null, "unprefixed attributes");
 
-        delegate void actionOnElement(OpenXmlElement e);
+        private delegate void actionOnElement(OpenXmlElement e);
 
         #endregion Private Fields
 

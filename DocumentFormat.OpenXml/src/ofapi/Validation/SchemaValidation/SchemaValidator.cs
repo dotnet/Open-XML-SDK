@@ -117,7 +117,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         #endregion
     }
 
-    static class ValidationContextExtension
+    internal static class ValidationContextExtension
     {
         #region error building methods
 

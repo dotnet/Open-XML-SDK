@@ -10,8 +10,8 @@ namespace DocumentFormat.OpenXml
     public sealed class SchemaAttrAttribute : Attribute
     {
         //string _type;
-        string _tag;
-        byte _nsId;
+        private string _tag;
+        private byte _nsId;
 
         /// <summary>
         /// Initializes a new instance of the SchemaAttrAttribute.
@@ -57,7 +57,7 @@ namespace DocumentFormat.OpenXml
     public sealed class ChildElementInfoAttribute : Attribute
     {
         private Type _type;
-        FileFormatVersions format;
+        private FileFormatVersions format;
 
         /// <summary>
         /// Initialize a new instance of ChildElementTypeAttribute.

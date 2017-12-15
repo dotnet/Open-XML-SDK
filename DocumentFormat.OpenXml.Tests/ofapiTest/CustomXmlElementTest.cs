@@ -16,8 +16,8 @@ namespace DocumentFormat.OpenXml.Tests
     /// </summary>
     public class CustomXmlElementTest
     {
-        string uri = "urn:customXmlSample";
-        string element = "elementName";
+        private string uri = "urn:customXmlSample";
+        private string element = "elementName";
 
         ///<summary>
         ///CustomXmlElementTests.

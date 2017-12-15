@@ -2285,7 +2285,7 @@ namespace DocumentFormat.OpenXml.Tests
             return hostElement;
         }
 
-        void expectedElementInserting(object sender, ElementEventArgs args)
+        private void expectedElementInserting(object sender, ElementEventArgs args)
         {
             Log.Pass("ElementInserting event caught.");
             Log.Comment("[ElementInserting] Inserting {0} to {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
@@ -2297,7 +2297,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyNotReference(args.Element.OpenXmlElementContext, sender, "New element has same OpenXmlElementContext before inserting!");
         }
 
-        void surprisingElementInserting(object sender, ElementEventArgs args)
+        private void surprisingElementInserting(object sender, ElementEventArgs args)
         {
             Log.Fail("ElementInserting event caught.");
             Log.Comment("[ElementInserting] Inserting {0} to {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
@@ -2309,7 +2309,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyNotReference(args.Element.OpenXmlElementContext, sender, "New element has same OpenXmlElementContext before inserting!");
         }
 
-        void expectedElementInserted(object sender, ElementEventArgs args)
+        private void expectedElementInserted(object sender, ElementEventArgs args)
         {
             Log.Pass("ElementInserted event caught.");
             Log.Comment("[ElementInserted] Inserted {0} to {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
@@ -2322,7 +2322,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyReference(args.Element.OpenXmlElementContext, sender, "New child element still has different OpenXmlElementContext after been inserted!");
         }
 
-        void surprisingElementInserted(object sender, ElementEventArgs args)
+        private void surprisingElementInserted(object sender, ElementEventArgs args)
         {
             Log.Fail("ElementInserted event caught.");
             Log.Comment("[ElementInserted] Inserted {0} to {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
@@ -2335,7 +2335,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyReference(args.Element.OpenXmlElementContext, sender, "New child element still has different OpenXmlElementContext after been inserted!");
         }
 
-        void expectedElementRemoving(object sender, ElementEventArgs args)
+        private void expectedElementRemoving(object sender, ElementEventArgs args)
         {
             Log.Pass("ElementRemoving event caught.");
             Log.Comment("[ElementRemoving] Removing {0} from {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
@@ -2349,7 +2349,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyReference(args.Element.OpenXmlElementContext, sender, "Child element has different OpenXmlElementContext before removing!");
         }
 
-        void surprisingElementRemoving(object sender, ElementEventArgs args)
+        private void surprisingElementRemoving(object sender, ElementEventArgs args)
         {
             Log.Fail("ElementRemoving event caught.");
             Log.Comment("[ElementRemoving] Removing {0} from {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
@@ -2363,7 +2363,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyReference(args.Element.OpenXmlElementContext, sender, "Child element has different OpenXmlElementContext before removing!");
         }
 
-        void expectedElementRemoved(object sender, ElementEventArgs args)
+        private void expectedElementRemoved(object sender, ElementEventArgs args)
         {
             Log.Pass("ElementRemoved event caught.");
             Log.Comment("[ElementRemoved] Removed {0} from {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
@@ -2375,7 +2375,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyNotReference(args.Element.OpenXmlElementContext, sender, "Child element still has same OpenXmlElementContext after removing!");
         }
 
-        void surprisingElementRemoved(object sender, ElementEventArgs args)
+        private void surprisingElementRemoved(object sender, ElementEventArgs args)
         {
             Log.Fail("ElementRemoved event caught.");
             Log.Comment("[ElementRemoved] Removed {0} from {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());

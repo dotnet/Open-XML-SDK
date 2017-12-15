@@ -30,25 +30,25 @@ namespace DocumentFormat.OpenXml.Tests
         /// <summary>
         /// Switch for the IgnoreWhitespace fix O15#3024890
         /// </summary>
-        const bool IGNORE_WHITESPACE_SETTING = true;
+        private const bool IGNORE_WHITESPACE_SETTING = true;
 
         #region Reader Test ...
 
         #region ReaderConstruction ...
 
-        ConstrReader PartConstrWithNoMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
+        private ConstrReader PartConstrWithNoMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
         {
             y = OpenXmlReader.Create(x.MainDocumentPart);
             z = XmlReader.Create(x.MainDocumentPart.GetStream());
         };
 
-        ConstrReader PartConstrWithMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
+        private ConstrReader PartConstrWithMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
         {
             y = OpenXmlReader.Create(x.MainDocumentPart.GetStream(), true);
             z = XmlReader.Create(x.MainDocumentPart.GetStream());
         };
 
-        ConstrReader DomConstrWithNoMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
+        private ConstrReader DomConstrWithNoMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
         {
             OpenXmlElement firstChild = x.MainDocumentPart.Document.FirstChild;
             y = OpenXmlDomReader.Create(firstChild);
@@ -57,7 +57,7 @@ namespace DocumentFormat.OpenXml.Tests
             z = XmlReader.Create(new StringReader(firstChild.OuterXml));
         };
 
-        ConstrReader DomConstrWithMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
+        private ConstrReader DomConstrWithMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
         {
             OpenXmlElement firstChild = x.MainDocumentPart.Document.FirstChild;
             y = new OpenXmlDomReader(firstChild, true);
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Tests
             z = XmlReader.Create(new StringReader(firstChild.OuterXml));
         };
 
-        PreRead initialReader = (OpenXmlReader x, XmlReader y, out string standalone) =>
+        private PreRead initialReader = (OpenXmlReader x, XmlReader y, out string standalone) =>
         {
             Read(x);
             Read(y);
@@ -523,21 +523,21 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Writer Construction ...
 
-        ConstrWriter WConstrWithPart = x => OpenXmlWriter.Create(x);
+        private ConstrWriter WConstrWithPart = x => OpenXmlWriter.Create(x);
 
-        ConstrWriter WConstrWithPartEnc = x => OpenXmlWriter.Create(x, Encoding.UTF8);
+        private ConstrWriter WConstrWithPartEnc = x => OpenXmlWriter.Create(x, Encoding.UTF8);
 
-        ConstrWriter WConstrWithStream = x => OpenXmlWriter.Create(x.GetStream());
+        private ConstrWriter WConstrWithStream = x => OpenXmlWriter.Create(x.GetStream());
 
-        ConstrWriter WConstrWithStreamEnc = x => OpenXmlWriter.Create(x.GetStream(), Encoding.UTF8);
+        private ConstrWriter WConstrWithStreamEnc = x => OpenXmlWriter.Create(x.GetStream(), Encoding.UTF8);
 
-        ConstrWriter PWCosntrWithPart = x => new OpenXmlPartWriter(x);
+        private ConstrWriter PWCosntrWithPart = x => new OpenXmlPartWriter(x);
 
-        ConstrWriter PWConstrWithPartEnc = x => new OpenXmlPartWriter(x, Encoding.UTF8);
+        private ConstrWriter PWConstrWithPartEnc = x => new OpenXmlPartWriter(x, Encoding.UTF8);
 
-        ConstrWriter PWConstrWithStream = x => new OpenXmlPartWriter(x.GetStream());
+        private ConstrWriter PWConstrWithStream = x => new OpenXmlPartWriter(x.GetStream());
 
-        ConstrWriter PWConstrWithStreamEnc = x => new OpenXmlPartWriter(x.GetStream(), Encoding.UTF8);
+        private ConstrWriter PWConstrWithStreamEnc = x => new OpenXmlPartWriter(x.GetStream(), Encoding.UTF8);
 
         #endregion
 

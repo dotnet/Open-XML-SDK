@@ -12,14 +12,14 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class OpenXmlMiscNode : OpenXmlElement
     {
-        const string strCDataSectionName = "#cdata-section";
-        const string strCommentName = "#comment";
-        const string strTextName = "#text";
-        const string strNonSignificantWhitespaceName = "#whitespace";
-        const string strSignificantWhitespaceName = "#significant-whitespace";
-        const string strXmlDeclaration = "xml-declaration";
+        private const string strCDataSectionName = "#cdata-section";
+        private const string strCommentName = "#comment";
+        private const string strTextName = "#text";
+        private const string strNonSignificantWhitespaceName = "#whitespace";
+        private const string strSignificantWhitespaceName = "#significant-whitespace";
+        private const string strXmlDeclaration = "xml-declaration";
 
-        XmlNodeType _nodeType;
+        private XmlNodeType _nodeType;
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlMiscNode class using the

@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
 {
     public class PivotTest : OpenXmlTestBase
     {
-        ConnectionTestEntities connectionTestEntities = null;
+        private ConnectionTestEntities connectionTestEntities = null;
 
         //private readonly string generatedOldbConnectionDocumentFile = "TestPivotOldbConnectionBase.xlsx";
         private readonly string generatedOldbConnectionDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");

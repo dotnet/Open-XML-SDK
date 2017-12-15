@@ -192,7 +192,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// <summary>
     /// Compatibility-Rule Attributes
     /// </summary>
-    static class CompatibilityRuleAttributesValidator
+    internal static class CompatibilityRuleAttributesValidator
     {
         /// <summary>
         /// Validate compatibility rule attributes - Ignorable, ProcessContent, PreserveElements, PreserveAttributes, MustUnderstand.
