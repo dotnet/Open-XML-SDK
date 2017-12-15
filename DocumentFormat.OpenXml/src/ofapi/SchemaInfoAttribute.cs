@@ -54,6 +54,7 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Defines the attribute which is used to decorate a class for type of the possible child elements.
     /// </summary>
+    [AttributeUsage(AttributeTargets.Class, Inherited = true, AllowMultiple = true)]
     public sealed class ChildElementInfoAttribute : Attribute
     {
         private Type _type;
