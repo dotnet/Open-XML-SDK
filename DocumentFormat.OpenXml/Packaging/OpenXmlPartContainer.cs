@@ -1329,7 +1329,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="contentType">The content type of the part.</param>
         /// <param name="id">The part relationship id.</param>
         /// <returns>The added part.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2208:InstantiateArgumentExceptionsCorrectly")]
         internal T AddNewPartInternal<T>(string contentType, string id) where T : OpenXmlPart
         {
             ThrowIfObjectDisposed();

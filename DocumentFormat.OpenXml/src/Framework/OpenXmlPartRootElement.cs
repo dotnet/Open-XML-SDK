@@ -13,7 +13,6 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents a base class for all root elements.
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     public abstract class OpenXmlPartRootElement : OpenXmlCompositeElement
     {
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]

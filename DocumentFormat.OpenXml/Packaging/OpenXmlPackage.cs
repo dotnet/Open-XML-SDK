@@ -399,7 +399,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Deletes all the parts with the specified part type from the package recursively.
         /// </summary>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1004:GenericMethodsShouldProvideTypeParameter")]
         public void DeletePartsRecursivelyOfType<T>() where T : OpenXmlPart
         {
             this.ThrowIfObjectDisposed();

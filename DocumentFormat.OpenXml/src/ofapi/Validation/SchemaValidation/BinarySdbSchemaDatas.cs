@@ -234,7 +234,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             }
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
         private void CheckSimpleType(int index)
         {
             var simpleType = this.SimpleTypeRestrictions.SimpleTypes[index];

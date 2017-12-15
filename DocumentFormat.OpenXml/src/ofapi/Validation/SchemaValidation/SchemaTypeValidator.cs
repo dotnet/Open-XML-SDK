@@ -201,7 +201,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <param name="value">The value to be validated.</param>
         /// <param name="qname">The QualifiedName to be used in the error message.</param>
         /// <param name="isAttribute">Error message targeting attribute (or element).</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
         internal static void ValidateValue(ValidationContext validationContext, SimpleTypeRestriction simpleTypeConstraint,
                                                                        OpenXmlSimpleType value, string qname, bool isAttribute)
         {

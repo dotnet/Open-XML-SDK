@@ -330,7 +330,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Enumerates all parents that reference this part anywhere in the document.
         /// </summary>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate")]
         public IEnumerable<OpenXmlPart> GetParentParts()
         {
             ThrowIfObjectDisposed();
@@ -352,7 +351,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Returns the part content data stream.
         /// </summary>
         /// <returns>The content data stream for the part. </returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate")]
         public Stream GetStream( )
         {
             ThrowIfObjectDisposed();

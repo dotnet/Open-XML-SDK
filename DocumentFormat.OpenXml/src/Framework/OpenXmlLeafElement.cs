@@ -11,7 +11,6 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents the base class from which leaf elements are derived.
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     public abstract class OpenXmlLeafElement : OpenXmlElement
     {
 

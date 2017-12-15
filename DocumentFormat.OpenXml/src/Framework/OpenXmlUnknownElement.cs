@@ -11,7 +11,6 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents elements that are not defined in the Ecma Office Open XML.
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     public class OpenXmlUnknownElement : OpenXmlCompositeElement
     {
         string _namespaceUri;
@@ -61,7 +60,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="qualifiedName">The qualified element name.</param>
         /// <param name="namespaceUri">The namespace URI of the element.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1054:UriParametersShouldNotBeStrings", MessageId = "1#")]
         public OpenXmlUnknownElement(string qualifiedName, string namespaceUri)
             : this( )
         {
@@ -82,7 +80,6 @@ namespace DocumentFormat.OpenXml
         /// <param name="prefix">The namespace prefix of the element.</param>
         /// <param name="localName">The local name of the element.</param>
         /// <param name="namespaceUri">The namespace URI of the element.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1054:UriParametersShouldNotBeStrings", MessageId = "2#")]
         public OpenXmlUnknownElement(string prefix, string localName, string namespaceUri)
             : this( )
         {

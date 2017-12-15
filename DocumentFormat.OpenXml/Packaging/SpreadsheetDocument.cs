@@ -618,7 +618,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Adds a QuickAccessToolbarCustomizationsPart to the SpreadsheetDocument.
         /// </summary>
         /// <returns>The newly added QuickAccessToolbarCustomizationsPart.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1702:CompoundWordsShouldBeCasedCorrectly", MessageId = "Toolbar")]
         public QuickAccessToolbarCustomizationsPart AddQuickAccessToolbarCustomizationsPart()
         {
             QuickAccessToolbarCustomizationsPart childPart = new QuickAccessToolbarCustomizationsPart();
@@ -709,7 +708,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the QuickAccessToolbarCustomizationsPart of the SpreadsheetDocument.
         /// </summary>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1702:CompoundWordsShouldBeCasedCorrectly", MessageId = "Toolbar")]
         public QuickAccessToolbarCustomizationsPart QuickAccessToolbarCustomizationsPart
         {
             get { return GetSubPartOfType<QuickAccessToolbarCustomizationsPart>(); }
