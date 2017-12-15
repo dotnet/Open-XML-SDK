@@ -4,6 +4,7 @@ using DocumentFormat.OpenXml.Spreadsheet;
 using LogUtil;
 using System;
 using System.Linq;
+
 using X15 = DocumentFormat.OpenXml.Office2013.Excel;
 
 namespace DocumentFormat.OpenXml.Tests.Pivot

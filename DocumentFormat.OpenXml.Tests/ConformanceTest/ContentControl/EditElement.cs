@@ -3,6 +3,7 @@ using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using LogUtil;
 using System.Linq;
+
 using ConstStr = DocumentFormat.OpenXml.Tests.ContentControl.ConstantStrings;
 using W15 = DocumentFormat.OpenXml.Office2013.Word;
 

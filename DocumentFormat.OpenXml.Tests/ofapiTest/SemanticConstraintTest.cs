@@ -2,6 +2,7 @@
 using DocumentFormat.OpenXml.Internal.SemanticValidation;
 using DocumentFormat.OpenXml.Validation;
 using Xunit;
+
 using Excel = DocumentFormat.OpenXml.Spreadsheet;
 using Word = DocumentFormat.OpenXml.Wordprocessing;
 

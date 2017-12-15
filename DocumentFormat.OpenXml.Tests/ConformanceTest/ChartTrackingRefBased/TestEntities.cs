@@ -4,6 +4,7 @@ using DocumentFormat.OpenXml.Presentation;
 using LogUtil;
 using System;
 using System.Linq;
+
 using P15 = DocumentFormat.OpenXml.Office2013.PowerPoint;
 
 namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased

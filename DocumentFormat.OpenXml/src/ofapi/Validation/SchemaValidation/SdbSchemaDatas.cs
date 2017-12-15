@@ -2,6 +2,7 @@
 
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using OpenXmlTypeId = System.UInt16;
 using SdbIndex = System.UInt16;
 

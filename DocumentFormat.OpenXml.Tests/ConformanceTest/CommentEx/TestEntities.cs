@@ -6,6 +6,7 @@ using System;
 using System.IO;
 using System.Linq;
 using Xunit;
+
 using W15 = DocumentFormat.OpenXml.Office2013.Word;
 
 namespace DocumentFormat.OpenXml.Tests.CommentEx
