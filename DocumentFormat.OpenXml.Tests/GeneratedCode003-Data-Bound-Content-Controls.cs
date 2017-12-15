@@ -1,14 +1,14 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 using DocumentFormat.OpenXml.Packaging;
-using Ap = DocumentFormat.OpenXml.ExtendedProperties;
 using DocumentFormat.OpenXml.Wordprocessing;
-using DocumentFormat.OpenXml;
+using System.Xml;
+
+using A = DocumentFormat.OpenXml.Drawing;
+using Ap = DocumentFormat.OpenXml.ExtendedProperties;
+using Ds = DocumentFormat.OpenXml.CustomXmlDataProperties;
 using M = DocumentFormat.OpenXml.Math;
 using Ovml = DocumentFormat.OpenXml.Vml.Office;
 using V = DocumentFormat.OpenXml.Vml;
-using A = DocumentFormat.OpenXml.Drawing;
-using Ds = DocumentFormat.OpenXml.CustomXmlDataProperties;
-using System.Xml;
 
 namespace DocumentFormat.OpenXml.Tests
 {

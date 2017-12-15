@@ -1,9 +1,8 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using DocumentFormat.OpenXml.Validation;
 using System;
 using System.Diagnostics;
 using System.Globalization;
-using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Validation;
 
 namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 {

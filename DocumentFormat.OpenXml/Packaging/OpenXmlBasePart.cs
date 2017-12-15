@@ -1,15 +1,12 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 using System;
-using System.IO;
 using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.IO.Packaging;
 using System.Diagnostics;
-using System.Xml.Schema;
-using System.Xml;
 using System.Globalization;
+using System.IO;
+using System.IO.Packaging;
+using System.Xml;
+using System.Xml.Schema;
 
 namespace DocumentFormat.OpenXml.Packaging
 {

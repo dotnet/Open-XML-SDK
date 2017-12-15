@@ -3,9 +3,9 @@
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
 using System;
-using System.Linq;
 using System.IO;
 using System.IO.Packaging;
+using System.Linq;
 using System.Text;
 using Xunit;
 

@@ -1,9 +1,8 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using DocumentFormat.OpenXml.Internal.SchemaValidation;
-using Xunit;
-using DocumentFormat.OpenXml.Wordprocessing;
 using DocumentFormat.OpenXml.Bibliography;
-using DocumentFormat.OpenXml;
+using DocumentFormat.OpenXml.Internal.SchemaValidation;
+using DocumentFormat.OpenXml.Wordprocessing;
+using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
 {

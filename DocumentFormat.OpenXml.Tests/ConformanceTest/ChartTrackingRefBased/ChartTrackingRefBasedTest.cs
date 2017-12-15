@@ -1,15 +1,14 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass;
+using DocumentFormat.OpenXml.Tests.TaskLibraries;
+using OxTest;
 using System;
+using System.IO;
+using Xunit;
+using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
 {
-    using DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass;
-    using DocumentFormat.OpenXml.Tests.TaskLibraries;
-    using OxTest;
-    using System.IO;
-    using Xunit;
-    using Xunit.Abstractions;
-
     public class ChartTrackingRefBasedTest : OpenXmlTestBase
     {
         private readonly string generateDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");

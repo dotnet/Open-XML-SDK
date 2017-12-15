@@ -1,15 +1,14 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Diagnostics;
+using System.Globalization;
 using System.IO;
+using System.Reflection;
+using System.Text;
 using System.Xml;
 using System.Xml.Linq;
-using System.Globalization;
-using System.Diagnostics;
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Packaging;
-using System.Reflection;
 
 #if FEATURE_SERIALIZATION
 using System.Runtime.Serialization;

@@ -1,14 +1,10 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
+using DocumentFormat.OpenXml.Packaging;
+using LogUtil;
 using System.Linq;
-using System.Text;
 
 namespace DocumentFormat.OpenXml.Tests.Theme
 {
-    using DocumentFormat.OpenXml.Packaging;
-    using LogUtil;
-
     public class TestEntities
     {
         //Theme ID values

@@ -1,13 +1,12 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using DocumentFormat.OpenXml.Validation;
-using DocumentFormat.OpenXml.Packaging;
 using System.Diagnostics;
-using System.Xml;
 using System.Globalization;
+using System.Linq;
+using System.Xml;
 
 namespace DocumentFormat.OpenXml.Internal.SemanticValidation
 {

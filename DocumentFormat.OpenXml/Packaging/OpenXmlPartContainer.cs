@@ -2,13 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.IO;
-using System.IO.Packaging;
 using System.Diagnostics;
 using System.Globalization;
-using System.Xml;
-using System.Reflection;
+using System.IO;
+using System.IO.Packaging;
 using System.Linq;
+using System.Reflection;
+using System.Xml;
 
 namespace DocumentFormat.OpenXml.Packaging
 {

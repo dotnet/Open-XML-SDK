@@ -2,6 +2,7 @@
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using Xunit;
+
 using W = DocumentFormat.OpenXml.Wordprocessing;
 
 namespace DocumentFormat.OpenXml.Tests

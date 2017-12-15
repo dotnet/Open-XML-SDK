@@ -6,13 +6,14 @@ using System;
 using System.IO;
 using System.Linq;
 using Xunit;
+
+using static DocumentFormat.OpenXml.Tests.TestAssets;
+
 using a = DocumentFormat.OpenXml.Drawing;
 using pic = DocumentFormat.OpenXml.Drawing.Pictures;
 using w = DocumentFormat.OpenXml.Wordprocessing;
 using wp = DocumentFormat.OpenXml.Drawing.Wordprocessing;
 using x = DocumentFormat.OpenXml.Spreadsheet;
-
-using static DocumentFormat.OpenXml.Tests.TestAssets;
 
 namespace DocumentFormat.OpenXml.Tests
 {

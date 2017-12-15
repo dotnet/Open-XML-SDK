@@ -1,25 +1,21 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+using DocumentFormat.OpenXml;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.Tests.TaskLibraries;
+using DocumentFormat.OpenXml.Wordprocessing;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Xml;
 using System.Xml.Linq;
-using System.Reflection;
-
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Wordprocessing;
-using DocumentFormat.OpenXml.Spreadsheet;
-using DocumentFormat.OpenXml.Presentation;
-using Xunit;
+using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    using DocumentFormat.OpenXml.Tests.TaskLibraries;
-    using Xunit.Abstractions;
-
     /// <summary>
     /// The OpenXmlDom test framework. It contains help methods for testing OpenXmlDom Classes
     /// </summary>
