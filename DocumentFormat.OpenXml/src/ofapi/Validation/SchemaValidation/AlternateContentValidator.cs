@@ -427,7 +427,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <param name="mcContext">Markup Compatibility context.</param>
         /// <param name="format">Targeting file format (Office2007 or Office201).</param>
         /// <returns>The logic child (when we apply a MC pre-processer).</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "parent")]
         private static OpenXmlElement GetChildMc(this OpenXmlElement parent, OpenXmlElement child, MCContext mcContext, FileFormatVersions format)
         {
             // Use stack to cache the next siblings in different levels.

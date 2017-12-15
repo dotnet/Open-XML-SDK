@@ -105,7 +105,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Returns the content data stream of the current part.
         /// </summary>
         /// <returns>The content data stream of the current part. </returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate")]
         public Stream GetStream()
         {
             ThrowIfObjectDisposed();

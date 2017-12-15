@@ -15,7 +15,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         private SdbSchemaDatas _sdbSchemaDatas;
         private SchemaTypeValidator _schemaTypeValidator;
 #if DEBUG
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         private FileFormatVersions _fileFormat;
 #endif
         private bool _stopValidating;

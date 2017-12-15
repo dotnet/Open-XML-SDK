@@ -12,7 +12,6 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents an Open XML non element node (i.e. PT, Comments, Entity, Notation, XmlDeclaration).
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     public class OpenXmlMiscNode : OpenXmlElement
     {
         const string strCDataSectionName = "#cdata-section";

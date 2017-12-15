@@ -15,8 +15,6 @@ namespace DocumentFormat.OpenXml
     /// Represents the mc:AlternateContent element of markup
     /// compatibility.
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-
     public class AlternateContent : OpenXmlCompositeElement
     {
         private static string _mcNamespace = @"http://schemas.openxmlformats.org/markup-compatibility/2006";
@@ -217,7 +215,6 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Defines an mc:Choice element in mc:AlternateContent.
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     public class AlternateContentChoice : OpenXmlCompositeElement
     {
         private static string tagName = "Choice";
@@ -386,11 +383,9 @@ namespace DocumentFormat.OpenXml
 
     }
 
-   /// <summary>
+    /// <summary>
     /// Defines a mc:Fallback element in mc:AlternateContent.
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-
     public class AlternateContentFallback : OpenXmlCompositeElement
     {
         private static string tagName = "Fallback";
@@ -626,7 +621,7 @@ namespace DocumentFormat.OpenXml
         internal MCContext(bool exceptionOnError)
             : this()
         {
-            this._noExceptionOnError = ! exceptionOnError;
+            this._noExceptionOnError = !exceptionOnError;
         }
 
         internal LookupNamespace LookupNamespaceDelegate { get; set; }
@@ -808,7 +803,7 @@ namespace DocumentFormat.OpenXml
 
         internal AttributeAction GetAttributeAction(string ns, string localName, FileFormatVersions format)
         {
-            if (format == (FileFormatVersions.Office2010|FileFormatVersions.Office2007) || format == (FileFormatVersions.Office2010|FileFormatVersions.Office2007|FileFormatVersions.Office2013))
+            if (format == (FileFormatVersions.Office2010 | FileFormatVersions.Office2007) || format == (FileFormatVersions.Office2010 | FileFormatVersions.Office2007 | FileFormatVersions.Office2013))
             {
                 return AttributeAction.Normal;
             }
@@ -908,7 +903,7 @@ namespace DocumentFormat.OpenXml
             int ret = 0;
             if (attr != null && attr.Ignorable != null && !string.IsNullOrEmpty(attr.Ignorable.Value))
             {
-                foreach (var ns in ParsePrefixList(attr.Ignorable,   OnMcContextError))
+                foreach (var ns in ParsePrefixList(attr.Ignorable, OnMcContextError))
                 {
                     _currentIgnorable.Push(ns);
                     ret++;
@@ -917,7 +912,7 @@ namespace DocumentFormat.OpenXml
             return ret;
         }
 
-        private int PushQName(Stack<XmlQualifiedName>stack, string value)
+        private int PushQName(Stack<XmlQualifiedName> stack, string value)
         {
             int ret = 0;
 
@@ -934,7 +929,7 @@ namespace DocumentFormat.OpenXml
             int ret = 0;
             if (attr != null && attr.PreserveAttributes != null && !string.IsNullOrEmpty(attr.PreserveAttributes.Value))
             {
-                ret = PushQName(_currentPreserveAttr,attr.PreserveAttributes.Value);
+                ret = PushQName(_currentPreserveAttr, attr.PreserveAttributes.Value);
             }
             return ret;
         }
@@ -999,7 +994,7 @@ namespace DocumentFormat.OpenXml
 
             foreach (var choice in acblk.ChildElements.OfType<AlternateContentChoice>())
             {
-                if(choice.Requires == null)
+                if (choice.Requires == null)
                 {
                     //should we throw exception here?
                     continue;
@@ -1105,7 +1100,7 @@ namespace DocumentFormat.OpenXml
     /// The exception that is thrown for Markup Compatibility content errors.
     /// </summary>
     [SerializableAttribute]
-    public sealed class  NamespaceNotUnderstandException : Exception
+    public sealed class NamespaceNotUnderstandException : Exception
     {
         /// <summary>
         /// Initializes a new instance of the InvalidMCContentException class.

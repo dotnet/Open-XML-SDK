@@ -25,13 +25,13 @@ namespace DocumentFormat.OpenXml
 
         internal List<KeyValuePair<string, string>> _nsMappings { get; set; }
     }
+
     /// <summary>
     /// Represents a base class that all elements in an Office Open XML document derive from.
     /// </summary>
     /// <remarks>
     /// Annotations will not be cloned when calling .Clone() and .CloneNode(bool).
     /// </remarks>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     public abstract partial class OpenXmlElement : IEnumerable<OpenXmlElement>, ICloneable
     {
 
@@ -321,7 +321,6 @@ namespace DocumentFormat.OpenXml
         /// Gets the first child of the OpenXmlElement element.
         /// Returns null (Nothing in Visual Basic) if there is no such OpenXmlElement element.
         /// </summary>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1721:PropertyNamesShouldNotMatchGetMethods")]
         public virtual OpenXmlElement FirstChild
         {
             get
@@ -1025,7 +1024,6 @@ namespace DocumentFormat.OpenXml
         /// Returns null (Nothing in Visual Basic) if there is no preceding OpenXmlElement element.
         /// </summary>
         /// <returns>The OpenXmlElement element with the specified type that precedes the current OpenXmlElement element.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1004:GenericMethodsShouldProvideTypeParameter")]
         public T PreviousSibling<T>() where T : OpenXmlElement
         {
             OpenXmlElement element = this.PreviousSibling();
@@ -1062,7 +1060,6 @@ namespace DocumentFormat.OpenXml
         /// Returns null (Nothing in Visual Basic) if there is no next OpenXmlElement.
         /// </summary>
         /// <returns>The OpenXmlElement element with the specified type that follows the current OpenXmlElement element.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1004:GenericMethodsShouldProvideTypeParameter")]
         public T NextSibling<T>() where T : OpenXmlElement
         {
             OpenXmlElement element = this.NextSibling();
@@ -1099,7 +1096,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <typeparam name="T">The element type.</typeparam>
         /// <returns>An IEnumerable object that contains a list of the current OpenXmlElement element's ancestors.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1004:GenericMethodsShouldProvideTypeParameter")]
         public IEnumerable<T> Ancestors<T>() where T : OpenXmlElement
         {
             OpenXmlElement ancestor = this.Parent;
@@ -1119,7 +1115,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <typeparam name="T">The element type.</typeparam>
         /// <returns></returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1004:GenericMethodsShouldProvideTypeParameter")]
         public IEnumerable<T> Elements<T>() where T : OpenXmlElement
         {
             return this.ChildElements.OfType<T>();
@@ -1445,7 +1440,6 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Remove all of the current element's child elements that are of type T.
         /// </summary>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1004:GenericMethodsShouldProvideTypeParameter")]
         public void RemoveAllChildren<T>() where T : OpenXmlElement
         {
             OpenXmlElement element = this.FirstChild;
