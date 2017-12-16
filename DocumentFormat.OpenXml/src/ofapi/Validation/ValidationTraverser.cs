@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation
 {
-    static class ValidationTraverser
+    internal static class ValidationTraverser
     {
         internal delegate void ValidationAction(ValidationContext validationContext);
 

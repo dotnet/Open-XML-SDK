@@ -11,11 +11,11 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class OpenXmlUnknownElement : OpenXmlCompositeElement
     {
-        string _namespaceUri;
-        string _tagName;
-        string _prefix;
+        private string _namespaceUri;
+        private string _tagName;
+        private string _prefix;
         // int _attributeTotal;
-        string _text;
+        private string _text;
 
         /// <summary>
         /// OpenXmlUnknownElement constructor

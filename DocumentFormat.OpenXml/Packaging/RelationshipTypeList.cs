@@ -6,7 +6,7 @@ namespace DocumentFormat.OpenXml.Packaging
 {
     internal static class RelationshipTypeList
     {
-        static Dictionary<String, int> _list;
+        private static Dictionary<String, int> _list;
 
         public static Dictionary<String, int> IsoKnownRelationships
         {

@@ -589,16 +589,16 @@ namespace DocumentFormat.OpenXml
     {
         internal delegate string LookupNamespace(string prefix);
 
-        Stack<string> _currentIgnorable;
-        Stack<XmlQualifiedName> _currentPreserveAttr;
-        Stack<XmlQualifiedName> _currentPreserveEle;
-        Stack<XmlQualifiedName> _currentProcessContent;
+        private Stack<string> _currentIgnorable;
+        private Stack<XmlQualifiedName> _currentPreserveAttr;
+        private Stack<XmlQualifiedName> _currentPreserveEle;
+        private Stack<XmlQualifiedName> _currentProcessContent;
 
-        Stack<int> _pushedIgnor;
-        Stack<int> _pushedPA;
-        Stack<int> _pushedPE;
-        Stack<int> _pushedPC;
-        bool _noExceptionOnError;
+        private Stack<int> _pushedIgnor;
+        private Stack<int> _pushedPA;
+        private Stack<int> _pushedPE;
+        private Stack<int> _pushedPC;
+        private bool _noExceptionOnError;
 
         internal MCContext()
         {

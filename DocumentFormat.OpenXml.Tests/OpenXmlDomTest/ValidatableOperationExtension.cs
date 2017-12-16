@@ -3,7 +3,7 @@ using System;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    static class ValidatableOperationExtension
+    internal static class ValidatableOperationExtension
     {
         #region Extensions for Operations
         /// <summary> Extension to actions on specified element with log functionality. </summary>

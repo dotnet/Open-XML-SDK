@@ -1142,7 +1142,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         // default package validation event handler
-        static void DefaultValidationEventHandler(Object sender, OpenXmlPackageValidationEventArgs e)
+        private static void DefaultValidationEventHandler(Object sender, OpenXmlPackageValidationEventArgs e)
         {
             OpenXmlPackageException exception = new OpenXmlPackageException(ExceptionMessages.ValidationException);
 
