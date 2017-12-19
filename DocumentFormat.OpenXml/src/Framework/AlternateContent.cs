@@ -1,9 +1,10 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Xml;
 using System.Diagnostics;
+using System.Xml;
 
 #if FEATURE_SERIALIZATION
 using System.Runtime.Serialization;
@@ -12,11 +13,9 @@ using System.Runtime.Serialization;
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
-    /// Represents the mc:AlternateContent element of markup 
+    /// Represents the mc:AlternateContent element of markup
     /// compatibility.
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    
     public class AlternateContent : OpenXmlCompositeElement
     {
         private static string _mcNamespace = @"http://schemas.openxmlformats.org/markup-compatibility/2006";
@@ -25,7 +24,7 @@ namespace DocumentFormat.OpenXml
         private static string tagName = "AlternateContent";
 
         /// <summary>
-        /// Initializes a new instance of the AlternateContent 
+        /// Initializes a new instance of the AlternateContent
         /// class.
         /// </summary>
         public AlternateContent()
@@ -34,7 +33,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initializes a new instance of the AlternateContent  
+        /// Initializes a new instance of the AlternateContent
         /// class by using the supplied IEnumerable elements.
         /// </summary>
         /// <param name="childElements">
@@ -46,7 +45,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initializes a new instance of the AlternateContent  
+        /// Initializes a new instance of the AlternateContent
         /// class by using the supplied OpenXmlElement elements.
         /// </summary>
         /// <param name="childElements">
@@ -60,7 +59,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="outerXml">The outer XML of the element.
         /// </param>
         /// <summary>
-        /// Initializes a new instance of the AlternateContent  
+        /// Initializes a new instance of the AlternateContent
         /// class by using the supplied string.
         /// </summary>
         public AlternateContent(string outerXml)
@@ -69,7 +68,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets a value that represents the markup compatibility 
+        /// Gets a value that represents the markup compatibility
         /// namespace.
         /// </summary>
         public static string MarkupCompatibilityNamespace
@@ -78,7 +77,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets a value that represents the markup compatibility 
+        /// Gets a value that represents the markup compatibility
         /// namespace ID.
         /// </summary>
         public static byte MarkupCompatibilityNamespaceId
@@ -95,7 +94,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets a value that represents the tag name of the 
+        /// Gets a value that represents the tag name of the
         /// AlternateContent element.
         /// </summary>
         public static string TagName
@@ -104,7 +103,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets a value that represents the local name of the 
+        /// Gets a value that represents the local name of the
         /// AlternateContent element.
         /// </summary>
         public override string LocalName
@@ -174,18 +173,17 @@ namespace DocumentFormat.OpenXml
 
         internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
         {
-
             return null;
         }
 
         /// <returns>The cloned node. </returns>
         /// <summary>
-        /// When a node is overridden in a derived class, 
+        /// When a node is overridden in a derived class,
         /// CloneNode creates a duplicate of the node.
         /// </summary>
         /// <param name="deep">
-        /// True to recursively clone the subtree under 
-        /// the specified node; False to clone only the node 
+        /// True to recursively clone the subtree under
+        /// the specified node; False to clone only the node
         /// itself.
         /// </param>
         public override OpenXmlElement CloneNode(bool deep)
@@ -194,7 +192,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// The type ID of the element. 
+        /// The type ID of the element.
         /// </summary>
         internal override int ElementTypeId
         {
@@ -203,7 +201,7 @@ namespace DocumentFormat.OpenXml
 
         /// <summary>
         /// Indicates whether this element is available in a specific version of an Office Application.
-        /// Always returns true since AlternateContent is allowed 
+        /// Always returns true since AlternateContent is allowed
         /// in every version.
         /// </summary>
         /// <param name="version">The Office file format version.</param>
@@ -217,13 +215,12 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Defines an mc:Choice element in mc:AlternateContent.
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     public class AlternateContentChoice : OpenXmlCompositeElement
     {
         private static string tagName = "Choice";
-    
+
         /// <summary>
-        /// Initializes a new instance of the 
+        /// Initializes a new instance of the
         /// AlternateContentChoice class.
         /// </summary>
         public AlternateContentChoice()
@@ -232,8 +229,8 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initializes a new instance of the 
-        /// AlternateContentChoice class by using the supplied 
+        /// Initializes a new instance of the
+        /// AlternateContentChoice class by using the supplied
         /// IEnumerable elements.
         /// </summary>
         /// <param name="childElements">
@@ -245,8 +242,8 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initializes a new instance of the 
-        /// AlternateContentChoice class by using the supplied 
+        /// Initializes a new instance of the
+        /// AlternateContentChoice class by using the supplied
         /// OpenXmlElement elements.
         /// </summary>
         /// <param name="childElements">
@@ -261,8 +258,8 @@ namespace DocumentFormat.OpenXml
         /// The outer XML of the element.
         /// </param>
         /// <summary>
-        /// Initializes a new instance of the 
-        /// AlternateContentChoice class by using the supplied 
+        /// Initializes a new instance of the
+        /// AlternateContentChoice class by using the supplied
         /// string.
         /// </summary>
         public AlternateContentChoice(string outerXml)
@@ -271,7 +268,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets a value that represents the tag name of the 
+        /// Gets a value that represents the tag name of the
         /// Choice element.
         /// </summary>
         public static string TagName
@@ -312,7 +309,6 @@ namespace DocumentFormat.OpenXml
 
         internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
         {
-
             if (0 == namespaceId && "Requires" == name)
                 return new StringValue();
             return null;
@@ -320,7 +316,7 @@ namespace DocumentFormat.OpenXml
 
         /// <summary>
         /// <para>Gets or sets a whitespace-delimited list of namespace prefixes that identify the
-        /// namespaces a markup consumer needs in order to understand and select that 
+        /// namespaces a markup consumer needs in order to understand and select that
         /// Choice and process the content.</para>
         /// <para> Represents the attribute in a schema. </para>
         /// </summary>
@@ -366,7 +362,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// The type ID of the element. 
+        /// The type ID of the element.
         /// </summary>
         internal override int ElementTypeId
         {
@@ -383,18 +379,15 @@ namespace DocumentFormat.OpenXml
         {
             return true;
         }
-
     }
 
-   /// <summary>
+    /// <summary>
     /// Defines a mc:Fallback element in mc:AlternateContent.
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    
     public class AlternateContentFallback : OpenXmlCompositeElement
     {
         private static string tagName = "Fallback";
-   
+
         /// <summary>
         /// Initializes a new instance of the AlternateContentFallback class.
         /// </summary>
@@ -479,7 +472,6 @@ namespace DocumentFormat.OpenXml
 
         internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
         {
-
             return null;
         }
 
@@ -515,7 +507,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// The type ID of the element. 
+        /// The type ID of the element.
         /// </summary>
         internal override int ElementTypeId
         {
@@ -599,16 +591,16 @@ namespace DocumentFormat.OpenXml
     {
         internal delegate string LookupNamespace(string prefix);
 
-        Stack<string> _currentIgnorable;
-        Stack<XmlQualifiedName> _currentPreserveAttr;
-        Stack<XmlQualifiedName> _currentPreserveEle;
-        Stack<XmlQualifiedName> _currentProcessContent;
+        private Stack<string> _currentIgnorable;
+        private Stack<XmlQualifiedName> _currentPreserveAttr;
+        private Stack<XmlQualifiedName> _currentPreserveEle;
+        private Stack<XmlQualifiedName> _currentProcessContent;
 
-        Stack<int> _pushedIgnor;
-        Stack<int> _pushedPA;
-        Stack<int> _pushedPE;
-        Stack<int> _pushedPC;
-        bool _noExceptionOnError;
+        private Stack<int> _pushedIgnor;
+        private Stack<int> _pushedPA;
+        private Stack<int> _pushedPE;
+        private Stack<int> _pushedPC;
+        private bool _noExceptionOnError;
 
         internal MCContext()
         {
@@ -626,7 +618,7 @@ namespace DocumentFormat.OpenXml
         internal MCContext(bool exceptionOnError)
             : this()
         {
-            this._noExceptionOnError = ! exceptionOnError;
+            this._noExceptionOnError = !exceptionOnError;
         }
 
         internal LookupNamespace LookupNamespaceDelegate { get; set; }
@@ -786,7 +778,6 @@ namespace DocumentFormat.OpenXml
 
         internal bool IsPreservedAttribute(string ns, string localName)
         {
-
             return ContainsQName(localName, ns, _currentPreserveAttr);
         }
 
@@ -846,8 +837,8 @@ namespace DocumentFormat.OpenXml
             if (element is AlternateContent)
             {
                 return ElementAction.ACBlock;
-            } 
-            
+            }
+
             if (element.IsInVersion(format))
             {
                 return ElementAction.Normal;
@@ -908,7 +899,7 @@ namespace DocumentFormat.OpenXml
             int ret = 0;
             if (attr != null && attr.Ignorable != null && !string.IsNullOrEmpty(attr.Ignorable.Value))
             {
-                foreach (var ns in ParsePrefixList(attr.Ignorable,   OnMcContextError))
+                foreach (var ns in ParsePrefixList(attr.Ignorable, OnMcContextError))
                 {
                     _currentIgnorable.Push(ns);
                     ret++;
@@ -917,7 +908,7 @@ namespace DocumentFormat.OpenXml
             return ret;
         }
 
-        private int PushQName(Stack<XmlQualifiedName>stack, string value)
+        private int PushQName(Stack<XmlQualifiedName> stack, string value)
         {
             int ret = 0;
 
@@ -934,7 +925,7 @@ namespace DocumentFormat.OpenXml
             int ret = 0;
             if (attr != null && attr.PreserveAttributes != null && !string.IsNullOrEmpty(attr.PreserveAttributes.Value))
             {
-                ret = PushQName(_currentPreserveAttr,attr.PreserveAttributes.Value);
+                ret = PushQName(_currentPreserveAttr, attr.PreserveAttributes.Value);
             }
             return ret;
         }
@@ -999,7 +990,7 @@ namespace DocumentFormat.OpenXml
 
             foreach (var choice in acblk.ChildElements.OfType<AlternateContentChoice>())
             {
-                if(choice.Requires == null)
+                if (choice.Requires == null)
                 {
                     //should we throw exception here?
                     continue;
@@ -1062,7 +1053,7 @@ namespace DocumentFormat.OpenXml
     public sealed class InvalidMCContentException : Exception
     {
         /// <summary>
-        /// Initializes a new instance of the InvalidMCContentException class. 
+        /// Initializes a new instance of the InvalidMCContentException class.
         /// </summary>
         public InvalidMCContentException()
             : base()
@@ -1070,7 +1061,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initializes a new instance of the InvalidMCContentException class with a specified error message. 
+        /// Initializes a new instance of the InvalidMCContentException class with a specified error message.
         /// </summary>
         /// <param name="message">The message that describes the error. </param>
         public InvalidMCContentException(string message)
@@ -1080,7 +1071,7 @@ namespace DocumentFormat.OpenXml
 
 #if FEATURE_SERIALIZATION
         /// <summary>
-        /// Initializes a new instance of the InvalidMCContentException class with serialized data. 
+        /// Initializes a new instance of the InvalidMCContentException class with serialized data.
         /// </summary>
         /// <param name="info">The SerializationInfo that holds the serialized object data about the exception being thrown.</param>
         /// <param name="context">The StreamingContext that contains contextual information about the source or destination.</param>
@@ -1091,7 +1082,7 @@ namespace DocumentFormat.OpenXml
 #endif
 
         /// <summary>
-        /// Initializes a new instance of the InvalidMCContentException class with a specified error message and a reference to the inner exception that is the cause of this exception. 
+        /// Initializes a new instance of the InvalidMCContentException class with a specified error message and a reference to the inner exception that is the cause of this exception.
         /// </summary>
         /// <param name="message">The error message that explains the reason for the exception.</param>
         /// <param name="innerException">The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.</param>
@@ -1105,10 +1096,10 @@ namespace DocumentFormat.OpenXml
     /// The exception that is thrown for Markup Compatibility content errors.
     /// </summary>
     [SerializableAttribute]
-    public sealed class  NamespaceNotUnderstandException : Exception
+    public sealed class NamespaceNotUnderstandException : Exception
     {
         /// <summary>
-        /// Initializes a new instance of the InvalidMCContentException class. 
+        /// Initializes a new instance of the InvalidMCContentException class.
         /// </summary>
         public NamespaceNotUnderstandException()
             : base()
@@ -1116,7 +1107,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initializes a new instance of the InvalidMCContentException class with a specified error message. 
+        /// Initializes a new instance of the InvalidMCContentException class with a specified error message.
         /// </summary>
         /// <param name="message">The message that describes the error. </param>
         public NamespaceNotUnderstandException(string message)
@@ -1126,7 +1117,7 @@ namespace DocumentFormat.OpenXml
 
 #if FEATURE_SERIALIZATION
         /// <summary>
-        /// Initializes a new instance of the InvalidMCContentException class with serialized data. 
+        /// Initializes a new instance of the InvalidMCContentException class with serialized data.
         /// </summary>
         /// <param name="info">The SerializationInfo that holds the serialized object data about the exception being thrown.</param>
         /// <param name="context">The StreamingContext that contains contextual information about the source or destination.</param>
@@ -1137,7 +1128,7 @@ namespace DocumentFormat.OpenXml
 #endif
 
         /// <summary>
-        /// Initializes a new instance of the InvalidMCContentException class with a specified error message and a reference to the inner exception that is the cause of this exception. 
+        /// Initializes a new instance of the InvalidMCContentException class with a specified error message and a reference to the inner exception that is the cause of this exception.
         /// </summary>
         /// <param name="message">The error message that explains the reason for the exception.</param>
         /// <param name="innerException">The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.</param>
@@ -1146,5 +1137,4 @@ namespace DocumentFormat.OpenXml
         {
         }
     }
-
 }

@@ -1,7 +1,10 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using Xunit;
+
 using W = DocumentFormat.OpenXml.Wordprocessing;
 
 namespace DocumentFormat.OpenXml.Tests
@@ -78,7 +81,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(numChange, fieldChar.LastChild);
             Assert.Same(numChange, fieldChar.NumberingChange);
             Assert.Null(fieldChar.FieldData);
-
         }
 
         /// <summary>
@@ -154,7 +156,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("a", clonedElement.Prefix);
             Assert.Equal("http://schemas.openxmlformats.org/drawingml/2006/main", clonedElement.NamespaceUri);
             Assert.Null(clonedElement.FirstChild);
-
         }
 
         /// <summary>

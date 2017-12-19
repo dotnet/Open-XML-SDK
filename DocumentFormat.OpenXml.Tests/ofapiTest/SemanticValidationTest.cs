@@ -1,7 +1,9 @@
-﻿using DocumentFormat.OpenXml.Spreadsheet;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Validation;
 using System.Collections.Generic;
-using System.Linq;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests

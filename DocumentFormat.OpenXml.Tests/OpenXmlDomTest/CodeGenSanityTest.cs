@@ -1,12 +1,15 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System.Linq;
 using Xunit;
 using Xunit.Abstractions;
-using Dr = DocumentFormat.OpenXml.Drawing;
 
 using static DocumentFormat.OpenXml.Tests.TestAssets;
+
+using Dr = DocumentFormat.OpenXml.Drawing;
 
 namespace DocumentFormat.OpenXml.Tests
 {

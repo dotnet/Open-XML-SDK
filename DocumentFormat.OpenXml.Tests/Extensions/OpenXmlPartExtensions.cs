@@ -1,4 +1,5 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Bibliography;
 using DocumentFormat.OpenXml.Packaging;
@@ -157,7 +158,6 @@ namespace DocumentFormat.OpenXml.Tests
                 else if (part.IsInkPart())
                 {
                     return new DocumentFormat.OpenXml.InkML.Ink(xmlDoc.DocumentElement.OuterXml);
-
                 }
             }
 
@@ -259,7 +259,6 @@ namespace DocumentFormat.OpenXml.Tests
                             i = sourceStm.ReadByte();
                             j = targetStm.ReadByte();
                             if (i != j) return false;
-
                         } while (i != -1 && j != -1);
                     }
                 }

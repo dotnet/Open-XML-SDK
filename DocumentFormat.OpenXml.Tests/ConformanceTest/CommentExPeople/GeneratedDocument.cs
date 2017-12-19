@@ -1,15 +1,17 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Packaging;
-using Ap = DocumentFormat.OpenXml.ExtendedProperties;
-using Vt = DocumentFormat.OpenXml.VariantTypes;
-using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Wordprocessing;
+
 using A = DocumentFormat.OpenXml.Drawing;
-using W15 = DocumentFormat.OpenXml.Office2013.Word;
+using Ap = DocumentFormat.OpenXml.ExtendedProperties;
 using M = DocumentFormat.OpenXml.Math;
 using Ovml = DocumentFormat.OpenXml.Vml.Office;
 using V = DocumentFormat.OpenXml.Vml;
+using Vt = DocumentFormat.OpenXml.VariantTypes;
 using W14 = DocumentFormat.OpenXml.Office2010.Word;
+using W15 = DocumentFormat.OpenXml.Office2013.Word;
 
 namespace DocumentFormat.OpenXml.Tests.CommentExPeopleClass
 {
@@ -2250,6 +2252,5 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeopleClass
             document.PackageProperties.Modified = System.Xml.XmlConvert.ToDateTime("2012-10-05T05:32:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind);
             document.PackageProperties.LastModifiedBy = "Dan Ito";
         }
-
     }
 }

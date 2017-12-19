@@ -1,19 +1,19 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Text;
-using System.IO;
-using System.Xml;
-using System.Diagnostics;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Packaging;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+using System.Text;
+using System.Xml;
 
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// Represents a base class for all root elements.
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     public abstract class OpenXmlPartRootElement : OpenXmlCompositeElement
     {
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
@@ -109,7 +109,7 @@ namespace DocumentFormat.OpenXml
         {
             if (partStream.Length < 4)
             {
-                // The XmlReader.Read() method requires at least four bytes from the data stream in order to begin parsing. 
+                // The XmlReader.Read() method requires at least four bytes from the data stream in order to begin parsing.
                 return false;
             }
 
@@ -221,7 +221,7 @@ namespace DocumentFormat.OpenXml
 
                 // Do not call WriteEndDocument if this root element is not parsed.
                 // In that case, the WriteTo() will just call WriteRaw() with the raw xml,
-                // so no WriteStartElement() needs to be called. Since the XmlWriter will 
+                // so no WriteStartElement() needs to be called. Since the XmlWriter will
                 // still on document start state. Call WriteEndDocument() will cause exception.
                 if (this.XmlParsed)
                 {
@@ -276,7 +276,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Saves the current node to the specified XmlWriter. 
+        /// Saves the current node to the specified XmlWriter.
         /// </summary>
         /// <param name="xmlWriter">
         /// The XmlWriter to which to save the current node.
@@ -306,7 +306,7 @@ namespace DocumentFormat.OpenXml
                 }
 
                 xmlWriter.WriteStartElement(prefix, this.LocalName, this.NamespaceUri);
-                // fix bug #225919, write out all namespace into to root 
+                // fix bug #225919, write out all namespace into to root
                 WriteNamespaceAtributes(xmlWriter);
                 this.WriteAttributesTo(xmlWriter);
 

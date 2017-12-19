@@ -1,10 +1,11 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Diagnostics;
-using DocumentFormat.OpenXml.Packaging;
+using System.Text;
 
 namespace DocumentFormat.OpenXml
 {
@@ -20,7 +21,7 @@ namespace DocumentFormat.OpenXml
         private XmlPath()
         {
         }
-        
+
         /// <summary>
         /// Initlizes a new instance of the XmlPath from the specified OpenXmlPart.
         /// </summary>
@@ -68,7 +69,7 @@ namespace DocumentFormat.OpenXml
             }
 
             XmlPath xmlPath = new XmlPath();
-            
+
             xmlPath.PartUri = element.GetPartUri();
 
             Dictionary<string, string> namespaces = new Dictionary<string, string>();
@@ -96,7 +97,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Build the xml XPath from the element recursively. 
+        /// Build the xml XPath from the element recursively.
         /// </summary>
         /// <param name="element">The element.</param>
         /// <param name="xpath">The result XPath.</param>
@@ -139,7 +140,6 @@ namespace DocumentFormat.OpenXml
                 xpath.Append(element.GetXPathIndex());
                 xpath.Append("]");
             }
-
         }
     }
 }

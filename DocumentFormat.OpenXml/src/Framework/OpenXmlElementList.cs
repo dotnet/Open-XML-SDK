@@ -1,15 +1,14 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// Represents an ordered collection of OpenXmlElement elements.
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     public abstract class OpenXmlElementList : IEnumerable<OpenXmlElement>
     {
         /// <summary>
@@ -112,12 +111,12 @@ namespace DocumentFormat.OpenXml
         {
             this._container = container;
         }
-        
+
         public override IEnumerator<OpenXmlElement> GetEnumerator()
         {
             if (this._container.HasChildren && this._container.FirstChild != null)
             {
-                for ( OpenXmlElement element = this._container.FirstChild; 
+                for ( OpenXmlElement element = this._container.FirstChild;
                       element != null;
                       element = element.NextSibling() )
                 {
@@ -144,8 +143,7 @@ namespace DocumentFormat.OpenXml
                     }
                     index--;
                 }
-                
-            }            
+            }
             // return null;
             throw new ArgumentOutOfRangeException(nameof(index));
         }
@@ -164,7 +162,7 @@ namespace DocumentFormat.OpenXml
                         num++;
                     }
                 }
-                return num; 
+                return num;
             }
         }
     }
@@ -187,7 +185,7 @@ namespace DocumentFormat.OpenXml
                 return _EmptyElementList;
             }
         }
-        
+
         public override OpenXmlElement GetItem(int index)
         {
             throw new ArgumentOutOfRangeException(nameof(index));
@@ -271,7 +269,6 @@ namespace DocumentFormat.OpenXml
 
     internal class EmptyEnumerable<T> : IEnumerable<T>
     {
-
         private static readonly EmptyEnumerable<T> _dummy = new EmptyEnumerable<T>();
 
         #region IEnumerable<KeyValuePair<string,string>> Members
@@ -294,7 +291,7 @@ namespace DocumentFormat.OpenXml
 
         private EmptyEnumerable() { }
 
-        public static EmptyEnumerable<T> EmptyEnumerableSingleton 
+        public static EmptyEnumerable<T> EmptyEnumerableSingleton
         {
             get
             {

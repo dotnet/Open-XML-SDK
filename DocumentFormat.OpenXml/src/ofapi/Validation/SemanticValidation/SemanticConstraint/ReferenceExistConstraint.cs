@@ -1,11 +1,10 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Diagnostics;
-using DocumentFormat.OpenXml.Validation;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation;
+using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Internal.SemanticValidation
 {
@@ -64,8 +63,8 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
                 Node = context.Element,
                 RelatedPart = this._relatedPart,
                 RelatedNode = null,
-                Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, 
-                                            ValidationResources.Sem_MissingReferenceElement, _elementName, context.Element.LocalName, 
+                Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture,
+                                            ValidationResources.Sem_MissingReferenceElement, _elementName, context.Element.LocalName,
                                             GetAttributeQualifiedName(context.Element, _refAttribute), _relatedPart == null ? _partPath : _relatedPart.PackagePart.Uri.ToString(), attributeValue.InnerText)
             };
         }
@@ -110,7 +109,7 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
             {
                 OpenXmlSimpleType attributeValue = context.Element.Attributes[_attribute];
 
-                //Attributes whose value is empty string or null don't need to be cached. 
+                //Attributes whose value is empty string or null don't need to be cached.
                 if (attributeValue != null && !string.IsNullOrEmpty(attributeValue.InnerText))
                 {
                     Debug.Assert(_referencedAttributes != null);

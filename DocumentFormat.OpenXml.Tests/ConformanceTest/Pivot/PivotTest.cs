@@ -1,21 +1,19 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using DocumentFormat.OpenXml.Tests.PivotClass;
+using DocumentFormat.OpenXml.Tests.TaskLibraries;
+using OxTest;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.IO;
+using Xunit;
+using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests.Pivot
 {
-    using Xunit;
-    using DocumentFormat.OpenXml.Tests.TaskLibraries;
-    using DocumentFormat.OpenXml.Tests.PivotClass;
-    using System.IO;
-    using OxTest;
-    using Xunit.Abstractions;
-
     public class PivotTest : OpenXmlTestBase
     {
-        ConnectionTestEntities connectionTestEntities = null;
+        private ConnectionTestEntities connectionTestEntities = null;
 
         //private readonly string generatedOldbConnectionDocumentFile = "TestPivotOldbConnectionBase.xlsx";
         private readonly string generatedOldbConnectionDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");

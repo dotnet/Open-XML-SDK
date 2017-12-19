@@ -1,9 +1,9 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Xml;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Packaging;
+using System;
+using System.Xml;
 
 namespace DocumentFormat.OpenXml
 {
@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml
     /// OpenXmlLoadMode - load mode, default is Lazy
     ///     Full - load all the OpenXmlElements recursively
     ///     Lazy (default) - load N layer descendant elements from the current element, lazy load (cache OuterXml) for others
-    ///             default is populate 3 layers 
+    ///             default is populate 3 layers
     /// </summary>
     internal enum OpenXmlLoadMode
     {
@@ -64,7 +64,7 @@ namespace DocumentFormat.OpenXml
 
         private MarkupCompatibilityProcessSettings _mcSettings;
 
-        internal MarkupCompatibilityProcessSettings MCSettings 
+        internal MarkupCompatibilityProcessSettings MCSettings
         {
             get
             {
@@ -78,7 +78,7 @@ namespace DocumentFormat.OpenXml
             set
             {
                 _mcSettings = value;
-            } 
+            }
         }
         #endregion
 
@@ -141,7 +141,7 @@ namespace DocumentFormat.OpenXml
         //    get { return _xmlNamespaceManager; }
         //    // set { _xmlNamespaceManager = value; }
         //}
-        
+
         //public XmlParserContext XmlParserContext
         //{
         //    get { return _xmlParserContext; }
@@ -172,7 +172,6 @@ namespace DocumentFormat.OpenXml
 
         internal static XmlReaderSettings CreateDefaultXmlReaderSettings()
         {
-
             XmlReaderSettings xmlReaderSettings = new XmlReaderSettings
             {
 #if FEATURE_XML_PROHIBIT_DTD
@@ -393,5 +392,4 @@ namespace DocumentFormat.OpenXml
             get { return this._parentElement; }
         }
     }
-
 }

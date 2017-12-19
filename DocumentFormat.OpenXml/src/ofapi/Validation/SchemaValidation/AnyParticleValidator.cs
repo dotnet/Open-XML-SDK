@@ -1,16 +1,14 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Diagnostics;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Validation;
+using System;
+using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 {
-
     /******************************************************
-     * TODO: should we take care of "processContests"? - processContents = (lax | skip | strict) : strict 
+     * TODO: should we take care of "processContests"? - processContents = (lax | skip | strict) : strict
     ******************************************************/
 
     /// <summary>
@@ -25,7 +23,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             get { return this._particleConstraint; }
         }
 
-        protected AnyParticleValidator() 
+        protected AnyParticleValidator()
         {
         }
 
@@ -39,8 +37,8 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             Debug.Assert(particleConstraint.ParticleType == ParticleType.Any);
 
             this._particleConstraint = particleConstraint;
-        }  
-        
+        }
+
         #region IParticleValidator Members
 
         /// <summary>
@@ -128,7 +126,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             else
             {
                 // try to match multiple times.
-             
+
                 ParticleMatchInfo nextParticleMatchInfo;
                 int matchCount = 0;
                 var next = particleMatchInfo.StartElement;
@@ -192,7 +190,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             }
             return false;
         }
-        
+
         /// <summary>
         /// Get the required elements - elements which minOccurs > 0.
         /// </summary>
@@ -234,7 +232,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             return expectedElements;
         }
 
-        #endregion 
+        #endregion
     }
 
     /// <summary>
@@ -262,7 +260,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             Debug.Assert(particleConstraint.ParticleType == ParticleType.AnyWithUri);
 
             this._nsAnyParticleConstraint = particleConstraint;
-        }  
+        }
 
         /// <summary>
         /// Try match this element once.
@@ -322,6 +320,5 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
             return true;
         }
-
     }
 }

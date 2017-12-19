@@ -1,18 +1,17 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+/**********************************************************
+ * Define data struct for schema constraint binary database
+ **********************************************************/
+
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Diagnostics;
+
+using SdbIndex = System.UInt16;
 
 namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 {
-    /**********************************************************
-     * Define data struct for schema constraint binary database
-     **********************************************************/
-
-    using SdbIndex = UInt16;
-
     /// <summary>
     /// Particle type.
     /// </summary>
@@ -93,7 +92,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                     return string.Empty;
             }
         }
-
     }
 
     /// <summary>
@@ -110,7 +108,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// The size in bytes of this data structure.
         /// </summary>
         public abstract int DataSize { get; }
-        
+
         /// <summary>
         /// Serialize the data into byte data.
         /// </summary>
@@ -258,7 +256,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         public override byte[] GetBytes()
         {
             // !!!!Caution: keep the order of the following code lines!!!!
-            return this.GetBytes(this.ClassId.Bytes(), 
+            return this.GetBytes(this.ClassId.Bytes(),
                                  this.SchemaTypeIndex.Bytes());
         }
 
@@ -285,14 +283,14 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         // TODO: the ParticleIndex and SimpleTypeIndex can share one field.
 
         /// <summary>
-        /// The index of the particle in the SdbParticleConstraint data array. 
+        /// The index of the particle in the SdbParticleConstraint data array.
         /// Will be "SdbData.InvalidId" if the schema type is NOT composite type.
         /// </summary>
         /// <remarks>This field can be eliminated.</remarks>
         public SdbIndex ParticleIndex { get; set; }
 
         /// <summary>
-        /// The index of the simple data in the SdbSimpleTypeRestriction data array. 
+        /// The index of the simple data in the SdbSimpleTypeRestriction data array.
         /// Will be "SdbData.InvalidId" if the schema type is NOT simple content only.
         /// </summary>
         public SdbIndex SimpleTypeIndex { get; set; }
@@ -439,7 +437,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Returns the namespace ID defiend in "xsd:any" when the particle type is ParticleType.Any or ParticleType.AnyWithUri
         /// </summary>
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]        
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         public SdbIndex XsdAnyNamespaceId
         {
             get
@@ -467,7 +465,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                         sizeof(SdbIndex);
             }
         }
-        
+
         #region Override SdbData Members
 
         /// <summary>
@@ -539,7 +537,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             {
                 throw new ArgumentOutOfRangeException(nameof(index));
             }
-             
+
             this.ParticleIndex = (SdbIndex)index;
         }
 
@@ -552,7 +550,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         }
 
         #region Override SdbData Members
-        
+
         /// <summary>
         /// The size in bytes of this data structure.
         /// </summary>
@@ -594,7 +592,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         public XsdAttributeUse AttributeUse { get; set; }
 
         /// <summary>
-        /// The index of the simple data in the SdbSimpleTypeRestriction data array. 
+        /// The index of the simple data in the SdbSimpleTypeRestriction data array.
         /// </summary>
         public SdbIndex SimpleTypeIndex { get; set; }
 
@@ -693,5 +691,4 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             return new byte[1] { (byte)value };
         }
     }
-
 }

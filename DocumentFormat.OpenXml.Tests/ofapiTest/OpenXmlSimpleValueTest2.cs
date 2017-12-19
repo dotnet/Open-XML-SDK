@@ -1,12 +1,13 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using DocumentFormat.OpenXml;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Wordprocessing;
-using Vml = DocumentFormat.OpenXml.Vml;
-using xvml = DocumentFormat.OpenXml.Vml.Spreadsheet;
-using M = DocumentFormat.OpenXml.Math;
 using System;
 using System.Globalization;
 using Xunit;
+
+using M = DocumentFormat.OpenXml.Math;
+using xvml = DocumentFormat.OpenXml.Vml.Spreadsheet;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -174,7 +175,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("test", target.InnerText);
             Assert.Equal("test", (string)target);
             Assert.Equal("test", target.ToString());
-
         }
 
         /// <summary>
@@ -197,7 +197,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             Assert.True(target.HasValue);
             Assert.Equal(dateTime, target.Value);
-
         }
 
         /// <summary>
@@ -496,7 +495,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             TrueFalseBlankValue target5 = new TrueFalseBlankValue(target3);
             Assert.False(target5.Value);
-
         }
 
         /// <summary>
@@ -576,7 +574,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             OnOffValue target5 = new OnOffValue(target3);
             Assert.False(target5.Value);
-
         }
 
         /// <summary>

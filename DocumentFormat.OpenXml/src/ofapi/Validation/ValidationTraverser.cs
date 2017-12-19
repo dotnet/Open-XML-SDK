@@ -1,15 +1,12 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation
 {
-    static class ValidationTraverser
+    internal static class ValidationTraverser
     {
-
         internal delegate void ValidationAction(ValidationContext validationContext);
 
         /// <summary>
@@ -51,7 +48,7 @@ namespace DocumentFormat.OpenXml.Validation
             // Need bookkeep MC context
             // Need to collect MC context from ancestor
 
-            // bookkeep MC context, 
+            // bookkeep MC context,
             // MC Spec: Compatibility-rule attributes shall affect the element to which they 1 are attached, including the element’s other attributes and contents.
             validationContext.McContext.PushMCAttributes2(element.MCAttributes, prefix => element.LookupNamespace(prefix));
 
@@ -73,7 +70,6 @@ namespace DocumentFormat.OpenXml.Validation
                     validationContext.Element = child;
                     ValidatingTraverse(validationContext, validateAction, finishAction, getStopSignal);
                 }
-
             }
             else if (element.ElementTypeId == ReservedElementTypeIds.OpenXmlUnknownElementId ||
                   element.ElementTypeId == ReservedElementTypeIds.OpenXmlUnknownElementId)
@@ -92,7 +88,6 @@ namespace DocumentFormat.OpenXml.Validation
             }
             else if (element.ElementTypeId == ReservedElementTypeIds.AlternateContentId)
             {
-
                 validateAction(validationContext);
                 validatingActed = true;
 
@@ -130,6 +125,5 @@ namespace DocumentFormat.OpenXml.Validation
                 finishAction(validationContext);
             }
         }
-
     }
 }

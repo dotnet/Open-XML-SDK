@@ -1,28 +1,31 @@
-﻿using DocumentFormat.OpenXml.Packaging;
-using Ap = DocumentFormat.OpenXml.ExtendedProperties;
-using Vt = DocumentFormat.OpenXml.VariantTypes;
-using DocumentFormat.OpenXml;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
-using W = DocumentFormat.OpenXml.Wordprocessing;
-using Wp = DocumentFormat.OpenXml.Drawing.Wordprocessing;
-using A = DocumentFormat.OpenXml.Drawing;
-using Wps = DocumentFormat.OpenXml.Office2010.Word.DrawingShape;
-using V = DocumentFormat.OpenXml.Vml;
-using Ovml = DocumentFormat.OpenXml.Vml.Office;
-using Wvml = DocumentFormat.OpenXml.Vml.Wordprocessing;
-using C = DocumentFormat.OpenXml.Drawing.Charts;
-using Pic = DocumentFormat.OpenXml.Drawing.Pictures;
-using A14 = DocumentFormat.OpenXml.Office2010.Drawing;
-using W14 = DocumentFormat.OpenXml.Office2010.Word;
-using Wp14 = DocumentFormat.OpenXml.Office2010.Word.Drawing;
-using M = DocumentFormat.OpenXml.Math;
-using Dgm = DocumentFormat.OpenXml.Drawing.Diagrams;
-using C14 = DocumentFormat.OpenXml.Office2010.Drawing.Charts;
-using Dsp = DocumentFormat.OpenXml.Office.Drawing;
-using Ds = DocumentFormat.OpenXml.CustomXmlDataProperties;
-using Thm15 = DocumentFormat.OpenXml.Office2013.Theme;
-using W15 = DocumentFormat.OpenXml.Office2013.Word;
 using System.Xml;
+
+using A = DocumentFormat.OpenXml.Drawing;
+using A14 = DocumentFormat.OpenXml.Office2010.Drawing;
+using Ap = DocumentFormat.OpenXml.ExtendedProperties;
+using C = DocumentFormat.OpenXml.Drawing.Charts;
+using C14 = DocumentFormat.OpenXml.Office2010.Drawing.Charts;
+using Dgm = DocumentFormat.OpenXml.Drawing.Diagrams;
+using Ds = DocumentFormat.OpenXml.CustomXmlDataProperties;
+using Dsp = DocumentFormat.OpenXml.Office.Drawing;
+using M = DocumentFormat.OpenXml.Math;
+using Ovml = DocumentFormat.OpenXml.Vml.Office;
+using Pic = DocumentFormat.OpenXml.Drawing.Pictures;
+using Thm15 = DocumentFormat.OpenXml.Office2013.Theme;
+using V = DocumentFormat.OpenXml.Vml;
+using Vt = DocumentFormat.OpenXml.VariantTypes;
+using W = DocumentFormat.OpenXml.Wordprocessing;
+using W14 = DocumentFormat.OpenXml.Office2010.Word;
+using W15 = DocumentFormat.OpenXml.Office2013.Word;
+using Wp = DocumentFormat.OpenXml.Drawing.Wordprocessing;
+using Wp14 = DocumentFormat.OpenXml.Office2010.Word.Drawing;
+using Wps = DocumentFormat.OpenXml.Office2010.Word.DrawingShape;
+using Wvml = DocumentFormat.OpenXml.Vml.Wordprocessing;
 
 namespace DocumentFormat.OpenXml.Tests
 {

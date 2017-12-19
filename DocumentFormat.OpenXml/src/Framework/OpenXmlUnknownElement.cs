@@ -1,24 +1,23 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Diagnostics;
 using System.IO;
 using System.Xml;
-using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
-    /// Represents elements that are not defined in the Ecma Office Open XML. 
+    /// Represents elements that are not defined in the Ecma Office Open XML.
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     public class OpenXmlUnknownElement : OpenXmlCompositeElement
     {
-        string _namespaceUri;
-        string _tagName;
-        string _prefix;
+        private string _namespaceUri;
+        private string _tagName;
+        private string _prefix;
         // int _attributeTotal;
-        string _text;
+        private string _text;
 
         /// <summary>
         /// OpenXmlUnknownElement constructor
@@ -52,7 +51,6 @@ namespace DocumentFormat.OpenXml
             }
 
             OpenXmlElement.SplitName(name, out this._prefix, out this._tagName);
-
         }
 
         /// <summary>
@@ -61,7 +59,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="qualifiedName">The qualified element name.</param>
         /// <param name="namespaceUri">The namespace URI of the element.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1054:UriParametersShouldNotBeStrings", MessageId = "1#")]
         public OpenXmlUnknownElement(string qualifiedName, string namespaceUri)
             : this( )
         {
@@ -82,7 +79,6 @@ namespace DocumentFormat.OpenXml
         /// <param name="prefix">The namespace prefix of the element.</param>
         /// <param name="localName">The local name of the element.</param>
         /// <param name="namespaceUri">The namespace URI of the element.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1054:UriParametersShouldNotBeStrings", MessageId = "2#")]
         public OpenXmlUnknownElement(string prefix, string localName, string namespaceUri)
             : this( )
         {
@@ -130,16 +126,14 @@ namespace DocumentFormat.OpenXml
                         newElement.OuterXml = outerXml;
                         return newElement;
                     }
-
                 } while (xmlReader.NodeType == XmlNodeType.Whitespace);
 
                 // This method always expects an Element NodeType is passed, and there may be one or more preceding Whitespace NodeTypes before the Element.
                 // If it's not the case, then throw an exception.
                 throw new ArgumentException(ExceptionMessages.InvalidOuterXml, "outerXml");
             }
-
         }
-       
+
         /// <summary>
         /// When overridden in a derived class, gets the local name of the node.
         /// </summary>
@@ -195,7 +189,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// The type ID of the element. 
+        /// The type ID of the element.
         /// </summary>
         internal override int ElementTypeId
         {
@@ -230,7 +224,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public string Text
         {
-            get 
+            get
             {
                 MakeSureParsed();
                 return this._text;
@@ -238,7 +232,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// When overridden in a derived class, creates a duplicate of the node. 
+        /// When overridden in a derived class, creates a duplicate of the node.
         /// </summary>
         /// <param name="deep">
         /// Specify true to recursively clone the subtree under the specified
@@ -259,7 +253,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Saves all the children of the node to the specified XmlWriter. 
+        /// Saves all the children of the node to the specified XmlWriter.
         /// </summary>
         /// <param name="w">The XmlWriter to which you want to save. </param>
         internal override void WriteContentTo(XmlWriter w)
@@ -278,7 +272,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Saves the current node to the specified XmlWriter. 
+        /// Saves the current node to the specified XmlWriter.
         /// </summary>
         /// <param name="xmlWriter">The XmlWriter at which to save.</param>
         public override void WriteTo(XmlWriter xmlWriter)
@@ -325,7 +319,7 @@ namespace DocumentFormat.OpenXml
                 Debug.Assert(String.Equals(this._namespaceUri, xmlReader.NamespaceURI));
             }
 
-            // load children elements 
+            // load children elements
             base.Populate(xmlReader, loadMode);
 
             if (this.FirstChild != null && this.FirstChild.NextSibling() == null)
@@ -339,7 +333,7 @@ namespace DocumentFormat.OpenXml
                         case XmlNodeType.Text:
                         case XmlNodeType.CDATA:
                         case XmlNodeType.SignificantWhitespace:
-                            this._text = miscNode.OuterXml; // is this OK? 
+                            this._text = miscNode.OuterXml; // is this OK?
                             this.RemoveChild(miscNode);
                             break;
 

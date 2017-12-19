@@ -1,14 +1,11 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DocumentFormat.OpenXml.Validation;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.ExtendedProperties;
 using DocumentFormat.OpenXml.Internal.SchemaValidation;
-using Xunit;
+using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Vml.Office;
+using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -69,7 +66,7 @@ namespace DocumentFormat.OpenXml.Tests
             //    <xsd:element name="AppVersion" minOccurs="0" maxOccurs="1" type="xsd:string">
             //    <xsd:element name="DocSecurity" minOccurs="0" maxOccurs="1" type="xsd:int">
             //  </xsd:all>
-            //</xsd:complexType> 
+            //</xsd:complexType>
 
             // ***** good case ******
 
@@ -127,7 +124,7 @@ namespace DocumentFormat.OpenXml.Tests
             properties.RemoveChild(errorChild);
 
             actual.Clear();
-            // dup 
+            // dup
             errorChild = properties.FirstChild;
             properties.PrependChild(new Company());
             target.Validate(validationContext);
@@ -139,7 +136,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("Sch_AllElement", actual.Errors[0].Id);
             Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, actual.Errors[0].Description);
             properties.RemoveChild(errorChild);
-
         }
 
         private void TestSimpleAll2(SdbSchemaDatas sdbSchemaDatas)
@@ -214,7 +210,7 @@ namespace DocumentFormat.OpenXml.Tests
             shapeLayout.RemoveChild(errorChild);
 
             actual.Clear();
-            // dup 
+            // dup
             errorChild = shapeLayout.FirstChild;
             shapeLayout.PrependChild(new RegroupTable());
             target.Validate(validationContext);
@@ -225,7 +221,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("Sch_AllElement", actual.Errors[0].Id);
             Assert.Same(errorChild, actual.Errors[0].RelatedNode);
             shapeLayout.RemoveChild(errorChild);
-
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
@@ -16,8 +17,8 @@ namespace DocumentFormat.OpenXml.Tests
     /// </summary>
     public class CustomXmlElementTest
     {
-        string uri = "urn:customXmlSample";
-        string element = "elementName";
+        private string uri = "urn:customXmlSample";
+        private string element = "elementName";
 
         ///<summary>
         ///CustomXmlElementTests.

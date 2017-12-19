@@ -1,17 +1,16 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Diagnostics;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Validation;
+using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 {
     /// <summary>
     /// All particle validator.
     /// </summary>
-    class AllParticleValidator : CompositeParticleValidator
+    internal class AllParticleValidator : CompositeParticleValidator
     {
         private  Dictionary<int, bool> _childrenParticles;
 
@@ -33,7 +32,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                 // all children elements' maxOccurs must be 1
                 Debug.Assert(constraint.MaxOccurs == 1);
             }
-#endif 
+#endif
 
             this._childrenParticles = new Dictionary<int, bool>(this.ParticleConstraint.ChildrenParticles.Length);
             foreach (var childParticle in this.ParticleConstraint.ChildrenParticles)
@@ -41,7 +40,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                 this._childrenParticles.Add(childParticle.ElementId, false);
             }
         }
-               
+
         /// <summary>
         /// Try match the particle.
         /// </summary>
@@ -51,7 +50,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         {
             // maxOccurs of xsd:any can only be 1
             Debug.Assert(this.ParticleConstraint.MaxOccurs == 1);
-             
+
             this.TryMatchOnce(particleMatchInfo, validationContext);
         }
 
@@ -66,7 +65,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         public override void TryMatchOnce(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
         {
             Debug.Assert(!(particleMatchInfo.StartElement is OpenXmlMiscNode));
-            
+
             var next = particleMatchInfo.StartElement;
 
             particleMatchInfo.LastMatchedElement = null;
@@ -127,7 +126,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             {
                 particleMatchInfo.Match = ParticleMatch.Matched;
 
-                // check if matched 
+                // check if matched
                 foreach (var childParticle in this.ParticleConstraint.ChildrenParticles)
                 {
                     Debug.Assert(childParticle is ElementParticle);
@@ -148,7 +147,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                 }
                 return;
             }
-
         }
 
         protected override void EmitInvalidElementError(ValidationContext validationContext,

@@ -1,14 +1,14 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Linq;
-using System.Reflection;
-using System.Xml.Linq;
-using System.IO;
-using DocumentFormat.OpenXml;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Presentation;
 using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Wordprocessing;
+using System;
+using System.IO;
+using System.Linq;
+using System.Xml.Linq;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -57,7 +57,6 @@ namespace DocumentFormat.OpenXml.Tests
         /// <param name="root">the OpenXmlElement need to be traversed</param>
         private void TestTraverseDown<U>(OpenXmlPart part, OpenXmlElement root) where U : OpenXmlElement
         {
-
             String UTagName = (Activator.CreateInstance(typeof(U)) as OpenXmlElement).LocalName;
             XElement Xroot = ConvertToXElement(part, root);
 
@@ -124,7 +123,6 @@ namespace DocumentFormat.OpenXml.Tests
                         Log.VerifyTrue(root.FirstChild.IsBefore(element), "Expect: True <> Actual: False");
                         Log.VerifyFalse(root.FirstChild.IsAfter(element), "Expect: False <> Actual: True");
                     }
-
                 }
 
                 Log.Comment("****** test IsAfter() ******");
@@ -134,7 +132,6 @@ namespace DocumentFormat.OpenXml.Tests
                     {
                         Log.VerifyFalse(root.LastChild.IsAfter(element), "Expect: False <> Actual: True");
                         Log.VerifyFalse(root.LastChild.IsBefore(element), "Expect: False <> Actual: True");
-
                     }
                     else
                     {
@@ -392,7 +389,6 @@ namespace DocumentFormat.OpenXml.Tests
                     TestTraverseSibling<CommonSlideData>(ppt.PresentationPart.SlideParts.First(), ppt.PresentationPart.SlideParts.First().Slide.FirstChild);
                 }
             }
-
         }
 
         #endregion

@@ -1,4 +1,6 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation;
 using OxTest;
@@ -73,7 +75,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void TestAssertInInnerTextForPlusSymbol()
         {
-
             // same issue for SByteValue, Int16Value, IntegerValue, DecimalValue, SingleValue, DoubleValue
             {
                 var v = new SByteValue();
@@ -151,7 +152,6 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.VerifyValue(v2, (double)100, "{0}.Value", v.GetType().Name);
                 Log.VerifyValue(t, "+100", "{0}.InnerText", v.GetType().Name);
             }
-
         }
 
         [Fact]

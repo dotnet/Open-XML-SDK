@@ -1,4 +1,5 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Validation;
 using System;
@@ -193,7 +194,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                 var attribute = this.SdbAttributes[schemaType.StartIndexOfAttributes + i];
                 CheckSimpleType(attribute.SimpleTypeIndex);
             }
-
         }
 
         private void CheckParticle(int particleIndex)
@@ -201,7 +201,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             var particle = this.SdbParticles[particleIndex];
             switch (particle.ParticleType)
             {
-
                 case ParticleType.Element:
                     Debug.Assert(particle.ChildrenCount == 0);
                     // element type ID must be a valid ID in the class ID map.
@@ -234,7 +233,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             }
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
         private void CheckSimpleType(int index)
         {
             var simpleType = this.SimpleTypeRestrictions.SimpleTypes[index];

@@ -1,4 +1,5 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Validation;
 using System;
@@ -80,7 +81,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// </summary>
         /// <param name="xsdType">The XsdType type.</param>
         /// <returns>Returns the XML Schema datatype name of the specified type.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
         public static string GetXsdDataTypeName(this XsdType xsdType)
         {
             switch (xsdType)
@@ -242,11 +242,11 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     internal enum RestrictionField : byte
     {
         None = 0x0,
-        
+
         Length = 0x1,
         MinLength = 0x2,
         MaxLength = 0x4,
-      
+
         MinInclusive = 0x8,
         MaxInclusive = 0x10,
 
@@ -571,12 +571,12 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <param name="attributeValue"></param>
         /// <returns>True if the length of the value is same as defined.</returns>
         /// <remarks>
-        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows: 
-        /// 1 if the {variety} is ·atomic· then 
-        ///   1.1 if {primitive type definition} is string or anyURI, then the length of the value, as measured in characters ·must· be equal to {value}; 
-        ///   1.2 if {primitive type definition} is hexBinary or base64Binary, then the length of the value, as measured in octets of the binary data, ·must· be equal to {value}; 
-        ///   1.3 if {primitive type definition} is QName or NOTATION, then any {value} is facet-valid. 
-        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value} 
+        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows:
+        /// 1 if the {variety} is ·atomic· then
+        ///   1.1 if {primitive type definition} is string or anyURI, then the length of the value, as measured in characters ·must· be equal to {value};
+        ///   1.2 if {primitive type definition} is hexBinary or base64Binary, then the length of the value, as measured in octets of the binary data, ·must· be equal to {value};
+        ///   1.3 if {primitive type definition} is QName or NOTATION, then any {value} is facet-valid.
+        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value}
         /// </remarks>
         public virtual bool IsLengthValid(OpenXmlSimpleType attributeValue)
         {
@@ -589,12 +589,12 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <param name="attributeValue"></param>
         /// <returns>True if the length of the value is same as defined.</returns>
         /// <remarks>
-        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows: 
-        /// 1 if the {variety} is ·atomic· then 
-        ///   1.1 if {primitive type definition} is string or anyURI, then the length of the value, as measured in characters ·must· be equal to {value}; 
-        ///   1.2 if {primitive type definition} is hexBinary or base64Binary, then the length of the value, as measured in octets of the binary data, ·must· be equal to {value}; 
-        ///   1.3 if {primitive type definition} is QName or NOTATION, then any {value} is facet-valid. 
-        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value} 
+        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows:
+        /// 1 if the {variety} is ·atomic· then
+        ///   1.1 if {primitive type definition} is string or anyURI, then the length of the value, as measured in characters ·must· be equal to {value};
+        ///   1.2 if {primitive type definition} is hexBinary or base64Binary, then the length of the value, as measured in octets of the binary data, ·must· be equal to {value};
+        ///   1.3 if {primitive type definition} is QName or NOTATION, then any {value} is facet-valid.
+        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value}
         /// </remarks>
         public virtual bool IsMinLengthValid(OpenXmlSimpleType attributeValue)
         {
@@ -607,12 +607,12 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <param name="attributeValue"></param>
         /// <returns>True if the length of the value is same as defined.</returns>
         /// <remarks>
-        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows: 
-        /// 1 if the {variety} is ·atomic· then 
-        ///   1.1 if {primitive type definition} is string or anyURI, then the length of the value, as measured in characters ·must· be equal to {value}; 
-        ///   1.2 if {primitive type definition} is hexBinary or base64Binary, then the length of the value, as measured in octets of the binary data, ·must· be equal to {value}; 
-        ///   1.3 if {primitive type definition} is QName or NOTATION, then any {value} is facet-valid. 
-        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value} 
+        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows:
+        /// 1 if the {variety} is ·atomic· then
+        ///   1.1 if {primitive type definition} is string or anyURI, then the length of the value, as measured in characters ·must· be equal to {value};
+        ///   1.2 if {primitive type definition} is hexBinary or base64Binary, then the length of the value, as measured in octets of the binary data, ·must· be equal to {value};
+        ///   1.3 if {primitive type definition} is QName or NOTATION, then any {value} is facet-valid.
+        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value}
         /// </remarks>
         public virtual bool IsMaxLengthValid(OpenXmlSimpleType attributeValue)
         {
@@ -663,9 +663,9 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         public virtual void Verify()
         {
         }
-#endif 
+#endif
     }
-     
+
     /// <summary>
     /// Class for attributes that have different simple type in Office2007 and Office2010.
     /// </summary>
@@ -678,7 +678,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         public SimpleTypeRestriction TargetRestriction { get; set; }
 
         /// <summary>
-        /// An ID for this type. 
+        /// An ID for this type.
         /// </summary>
         [DataMember]
         public int AttributeId { get; set; }
@@ -708,7 +708,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         //    var targetValue = UnionHelper.CreateTargetValueObject(this, this.FileFormat);
 
         //    targetValue.InnerText = attributeValue.InnerText;
-            
+
         //    return TargetRestriction.ValidateValueType(targetValue);
         //}
 
@@ -722,7 +722,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         //    var targetValue = UnionHelper.CreateTargetValueObject(this, this.FileFormat);
         //    return TargetRestriction.Validate(targetValue);
         //}
-
     }
 
     /// <summary>
@@ -737,7 +736,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         public SimpleTypeRestriction[] UnionTypes { get; set; }
 
         /// <summary>
-        /// An ID for union. 
+        /// An ID for union.
         /// </summary>
         [DataMember]
         public int UnionId { get; set; }
@@ -879,8 +878,8 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <param name="attributeValue"></param>
         /// <returns></returns>
         /// <remarks>
-        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows: 
-        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value} 
+        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows:
+        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value}
         /// </remarks>
         internal int GetValueLength(OpenXmlSimpleType attributeValue)
         {
@@ -894,8 +893,8 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <param name="attributeValue"></param>
         /// <returns>True if the length of the value is same as defined.</returns>
         /// <remarks>
-        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows: 
-        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value} 
+        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows:
+        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value}
         /// </remarks>
         public bool IsLengthValid(OpenXmlSimpleType attributeValue)
         {
@@ -909,8 +908,8 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <param name="attributeValue"></param>
         /// <returns>True if the length of the value is same as defined.</returns>
         /// <remarks>
-        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows: 
-        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value} 
+        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows:
+        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value}
         /// </remarks>
         public bool IsMinLengthValid(OpenXmlSimpleType attributeValue)
         {
@@ -924,8 +923,8 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <param name="attributeValue"></param>
         /// <returns>True if the length of the value is same as defined.</returns>
         /// <remarks>
-        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows: 
-        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value} 
+        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows:
+        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value}
         /// </remarks>
         public bool IsMaxLengthValid(OpenXmlSimpleType attributeValue)
         {
@@ -1122,7 +1121,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <inheritdoc />
         public override bool ValidateValueType(OpenXmlSimpleType attributeValue)
         {
-
             if (attributeValue.HasValue)
             {
                 ST stValue = (ST)attributeValue;
@@ -1352,11 +1350,11 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// Decimal (xsd:decimal) based value restriction.
     /// </summary>
     /// <remarks>
-    /// decimal represents a subset of the real numbers, which can be represented by decimal numerals. 
-    /// The ·value space· of decimal is the set of numbers that can be obtained by multiplying an integer by a non-positive power of ten, 
-    /// i.e., expressible as i × 10^-n where i and n are integers and n >= 0. 
-    /// Precision is not reflected in this value space; the number 2.0 is not distinct from the number 2.00. 
-    /// The ·order-relation· on decimal is the order relation on real numbers, restricted to this subset. 
+    /// decimal represents a subset of the real numbers, which can be represented by decimal numerals.
+    /// The ·value space· of decimal is the set of numbers that can be obtained by multiplying an integer by a non-positive power of ten,
+    /// i.e., expressible as i × 10^-n where i and n are integers and n >= 0.
+    /// Precision is not reflected in this value space; the number 2.0 is not distinct from the number 2.00.
+    /// The ·order-relation· on decimal is the order relation on real numbers, restricted to this subset.
     /// </remarks>
     [DataContract]
     internal class DecimalValueRestriction : SimpleValueRestriction<Decimal, DecimalValue>
@@ -1373,16 +1371,15 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// Integer (xsd:integer) based value restriction.
     /// </summary>
     /// <remarks>
-    ///  integer is ·derived· from decimal by fixing the value of ·fractionDigits· to be 0 and disallowing the trailing decimal point. 
-    ///  This results in the standard mathematical concept of the integer numbers. 
-    ///  The ·value space· of integer is the infinite set {...,-2,-1,0,1,2,...}. The ·base type· of integer is decimal. 
-    ///  
+    ///  integer is ·derived· from decimal by fixing the value of ·fractionDigits· to be 0 and disallowing the trailing decimal point.
+    ///  This results in the standard mathematical concept of the integer numbers.
+    ///  The ·value space· of integer is the infinite set {...,-2,-1,0,1,2,...}. The ·base type· of integer is decimal.
+    ///
     /// !******************** TODO: at current, the CodeGen generate int for xsd:integer
     /// </remarks>
     [DataContract]
     internal class IntegerValueRestriction : SimpleValueRestriction<Int64, IntegerValue>
     {
-
         protected override Int64 MinValue => Int64.MinValue;
 
         protected override Int64 MaxValue => Int64.MaxValue;
@@ -1398,10 +1395,10 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// NonNegativeInteger (xsd:nonNegativeInteger, ) based value restriction.
     /// </summary>
     /// <remarks>
-    /// nonNegativeInteger is ·derived· from integer by setting the value of ·minInclusive· to be 0. 
-    /// This results in the standard mathematical concept of the non-negative integers. 
-    /// The ·value space· of nonNegativeInteger is the infinite set {0,1,2,...}. 
-    /// The ·base type· of nonNegativeInteger is integer. 
+    /// nonNegativeInteger is ·derived· from integer by setting the value of ·minInclusive· to be 0.
+    /// This results in the standard mathematical concept of the non-negative integers.
+    /// The ·value space· of nonNegativeInteger is the infinite set {0,1,2,...}.
+    /// The ·base type· of nonNegativeInteger is integer.
     ///
     /// !******************** TODO: at current, the CodeGen generate int for xsd:integer
     /// </remarks>
@@ -1427,9 +1424,9 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// PositiveInteger (xsd:positiveInteger, ) based value restriction.
     /// </summary>
     /// <remarks>
-    /// positiveInteger is ·derived· from nonNegativeInteger by setting the value of ·minInclusive· to be 1. 
-    /// This results in the standard mathematical concept of the positive integer numbers. 
-    /// The ·value space· of positiveInteger is the infinite set {1,2,...}. 
+    /// positiveInteger is ·derived· from nonNegativeInteger by setting the value of ·minInclusive· to be 1.
+    /// This results in the standard mathematical concept of the positive integer numbers.
+    /// The ·value space· of positiveInteger is the infinite set {1,2,...}.
     /// The ·base type· of positiveInteger is nonNegativeInteger.
     ///
     /// !******************** TODO: at current, the CodeGen generate int for xsd:integer
@@ -1520,12 +1517,12 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <param name="attributeValue"></param>
         /// <returns></returns>
         /// <remarks>
-        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows: 
-        /// 1 if the {variety} is ·atomic· then 
-        ///   1.1 if {primitive type definition} is string or anyURI, then the length of the value, as measured in characters ·must· be equal to {value}; 
-        ///   1.2 if {primitive type definition} is hexBinary or base64Binary, then the length of the value, as measured in octets of the binary data, ·must· be equal to {value}; 
-        ///   1.3 if {primitive type definition} is QName or NOTATION, then any {value} is facet-valid. 
-        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value} 
+        /// A value in a ·value space· is facet-valid with respect to ·length·, determined as follows:
+        /// 1 if the {variety} is ·atomic· then
+        ///   1.1 if {primitive type definition} is string or anyURI, then the length of the value, as measured in characters ·must· be equal to {value};
+        ///   1.2 if {primitive type definition} is hexBinary or base64Binary, then the length of the value, as measured in octets of the binary data, ·must· be equal to {value};
+        ///   1.3 if {primitive type definition} is QName or NOTATION, then any {value} is facet-valid.
+        /// 2 if the {variety} is ·list·, then the length of the value, as measured in list items, ·must· be equal to {value}
         /// </remarks>
         internal virtual int GetValueLength(OpenXmlSimpleType attributeValue)
         {
@@ -1576,14 +1573,14 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// Token (xsd:token) based simple type constraint.
     /// </summary>
     /// <remarks>
-    /// token represents tokenized strings. 
-    /// The ·value space· of token is the set of strings that do not contain the carriage return (#xD), 
-    /// line feed (#xA) nor tab (#x9) characters, that have no leading or trailing spaces (#x20) and 
-    /// that have no internal sequences of two or more spaces. 
-    /// The ·lexical space· of token is the set of strings that do not contain the carriage return (#xD), 
-    /// line feed (#xA) nor tab (#x9) characters, that have no leading or trailing spaces (#x20) and 
+    /// token represents tokenized strings.
+    /// The ·value space· of token is the set of strings that do not contain the carriage return (#xD),
+    /// line feed (#xA) nor tab (#x9) characters, that have no leading or trailing spaces (#x20) and
+    /// that have no internal sequences of two or more spaces.
+    /// The ·lexical space· of token is the set of strings that do not contain the carriage return (#xD),
+    /// line feed (#xA) nor tab (#x9) characters, that have no leading or trailing spaces (#x20) and
     /// that have no internal sequences of two or more spaces. The ·base type· of token is normalizedString
-    /// 
+    ///
     /// In Ecma376, most token are enumerations.
     /// </remarks>
     [DataContract]
@@ -1639,9 +1636,9 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// QName (xsd:QName) based simple type constraint.
     /// </summary>
     /// <remarks>
-    /// QName represents XML qualified names. 
-    /// The ·value space· of QName is the set of tuples {namespace name, local part}, where namespace name is an anyURI and local part is an NCName. 
-    /// The ·lexical space· of QName is the set of strings that ·match· the QName production of [Namespaces in XML]. 
+    /// QName represents XML qualified names.
+    /// The ·value space· of QName is the set of tuples {namespace name, local part}, where namespace name is an anyURI and local part is an NCName.
+    /// The ·lexical space· of QName is the set of strings that ·match· the QName production of [Namespaces in XML].
     /// </remarks>
     [DataContract]
     internal class QnameRestriction : StringRestriction
@@ -1655,11 +1652,11 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <inheritdoc />
         public override bool ValidateValueType(OpenXmlSimpleType attributeValue)
         {
-            //Qualified Name 
-            //[6]  QName ::=  (Prefix ':')? LocalPart 
-            //[7]  Prefix ::=  NCName 
-            //[8]  LocalPart ::=  NCName 
-             
+            //Qualified Name
+            //[6]  QName ::=  (Prefix ':')? LocalPart
+            //[7]  Prefix ::=  NCName
+            //[8]  LocalPart ::=  NCName
+
             string qname = attributeValue.InnerText;
 
             if (string.IsNullOrEmpty(qname))
@@ -1713,10 +1710,10 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// Normalized string (xsd:normalizedString) based simple type constraint.
     /// </summary>
     /// <remarks>
-    /// normalizedString represents white space normalized strings. 
-    /// The ·value space· of normalizedString is the set of strings that do not contain the carriage return (#xD), line feed (#xA) nor tab (#x9) characters. 
-    /// The ·lexical space· of normalizedString is the set of strings that do not contain the carriage return (#xD), line feed (#xA) nor tab (#x9) characters. 
-    /// The ·base type· of normalizedString is string. 
+    /// normalizedString represents white space normalized strings.
+    /// The ·value space· of normalizedString is the set of strings that do not contain the carriage return (#xD), line feed (#xA) nor tab (#x9) characters.
+    /// The ·lexical space· of normalizedString is the set of strings that do not contain the carriage return (#xD), line feed (#xA) nor tab (#x9) characters.
+    /// The ·base type· of normalizedString is string.
     /// </remarks>
     [DataContract]
     internal class NormalizedStringRestriction : StringRestriction
@@ -1761,9 +1758,9 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// Name (xsd:Name) based simple type constraint.
     /// </summary>
     /// <remarks>
-    /// Name represents XML Names. The ·value space· of Name is the set of all strings which ·match· the Name production of [XML 1.0 (Second Edition)]. 
-    /// The ·lexical space· of Name is the set of all strings which ·match· the Name production of [XML 1.0 (Second Edition)]. 
-    /// The ·base type· of Name is token. 
+    /// Name represents XML Names. The ·value space· of Name is the set of all strings which ·match· the Name production of [XML 1.0 (Second Edition)].
+    /// The ·lexical space· of Name is the set of all strings which ·match· the Name production of [XML 1.0 (Second Edition)].
+    /// The ·base type· of Name is token.
     /// </remarks>
     [DataContract]
     internal class NameRestriction : StringRestriction
@@ -1807,16 +1804,16 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// NCName (xsd:NCName) based simple type constraint.
     /// </summary>
     /// <remarks>
-    ///  NCName represents XML "non-colonized" Names. 
-    ///  The ·value space· of NCName is the set of all strings which ·match· the NCName production of [Namespaces in XML]. 
-    ///  The ·lexical space· of NCName is the set of all strings which ·match· the NCName production of [Namespaces in XML]. 
-    ///  The ·base type· of NCName is Name. 
-    ///  
+    ///  NCName represents XML "non-colonized" Names.
+    ///  The ·value space· of NCName is the set of all strings which ·match· the NCName production of [Namespaces in XML].
+    ///  The ·lexical space· of NCName is the set of all strings which ·match· the NCName production of [Namespaces in XML].
+    ///  The ·base type· of NCName is Name.
+    ///
     ///  Also Use NcName for IDREF.
-    ///  IDREF represents the IDREF attribute type from [XML 1.0 (Second Edition)]. 
-    ///  The ·value space· of IDREF is the set of all strings that ·match· the NCName production in [Namespaces in XML]. 
-    ///  The ·lexical space· of IDREF is the set of strings that ·match· the NCName production in [Namespaces in XML]. 
-    ///  The ·base type· of IDREF is NCName. 
+    ///  IDREF represents the IDREF attribute type from [XML 1.0 (Second Edition)].
+    ///  The ·value space· of IDREF is the set of all strings that ·match· the NCName production in [Namespaces in XML].
+    ///  The ·lexical space· of IDREF is the set of strings that ·match· the NCName production in [Namespaces in XML].
+    ///  The ·base type· of IDREF is NCName.
     /// </remarks>
     [DataContract]
     internal class NcNameRestriction : StringRestriction
@@ -1852,10 +1849,10 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// ID (xsd:ID) based simple type constraint.
     /// </summary>
     /// <remarks>
-    /// ID represents the ID attribute type from [XML 1.0 (Second Edition)]. 
-    /// The ·value space· of ID is the set of all strings that ·match· the NCName production in [Namespaces in XML]. 
-    /// The ·lexical space· of ID is the set of all strings that ·match· the NCName production in [Namespaces in XML]. 
-    /// The ·base type· of ID is NCName. 
+    /// ID represents the ID attribute type from [XML 1.0 (Second Edition)].
+    /// The ·value space· of ID is the set of all strings that ·match· the NCName production in [Namespaces in XML].
+    /// The ·lexical space· of ID is the set of all strings that ·match· the NCName production in [Namespaces in XML].
+    /// The ·base type· of ID is NCName.
     /// </remarks>
     [DataContract]
     internal class IdStringRestriction : StringRestriction
@@ -1891,9 +1888,9 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// AnyURI (xsd:anyURI) based simple type constraint.
     /// </summary>
     /// <remarks>
-    /// anyURI represents a Uniform Resource Identifier Reference (URI). 
-    /// An anyURI value can be absolute or relative, and may have an optional fragment identifier (i.e., it may be a URI Reference). 
-    /// This type should be used to specify the intention that the value fulfills the role of a URI as defined by [RFC 2396], as amended by [RFC 2732]. 
+    /// anyURI represents a Uniform Resource Identifier Reference (URI).
+    /// An anyURI value can be absolute or relative, and may have an optional fragment identifier (i.e., it may be a URI Reference).
+    /// This type should be used to specify the intention that the value fulfills the role of a URI as defined by [RFC 2396], as amended by [RFC 2732].
     /// </remarks>
     [DataContract]
     internal class AnyUriRestriction : StringRestriction
@@ -1937,9 +1934,9 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// Hex binary (xsd:hexBinary) based simple type constraint.
     /// </summary>
     /// <remarks>
-    /// hexBinary has a lexical representation where each binary octet is encoded as a character tuple, 
-    /// consisting of two hexadecimal digits ([0-9a-fA-F]) representing the octet code. 
-    /// For example, "0FB7" is a hex encoding for the 16-bit integer 4023 (whose binary representation is 111110110111). 
+    /// hexBinary has a lexical representation where each binary octet is encoded as a character tuple,
+    /// consisting of two hexadecimal digits ([0-9a-fA-F]) representing the octet code.
+    /// For example, "0FB7" is a hex encoding for the 16-bit integer 4023 (whose binary representation is 111110110111).
     /// </remarks>
     [DataContract]
     internal class HexBinaryRestriction : StringRestriction
@@ -1982,7 +1979,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// Base64 binary (xsd:base64Binary) based simple type constraint.
     /// </summary>
     /// <remarks>
-    /// The lexical forms of base64Binary values are limited to the 65 characters of the Base64 Alphabet defined in [RFC 2045], i.e., a-z, A-Z, 0-9, the plus sign (+), the forward slash (/) and the equal sign (=), together with the characters defined in [XML 1.0 (Second Edition)] as white space. No other characters are allowed. 
+    /// The lexical forms of base64Binary values are limited to the 65 characters of the Base64 Alphabet defined in [RFC 2045], i.e., a-z, A-Z, 0-9, the plus sign (+), the forward slash (/) and the equal sign (=), together with the characters defined in [XML 1.0 (Second Edition)] as white space. No other characters are allowed.
     /// </remarks>
     [DataContract]
     internal class Base64BinaryRestriction : StringRestriction
@@ -2030,10 +2027,10 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// language (xsd:language) based simple type constraint.
     /// </summary>
     /// <remarks>
-    ///  language represents natural language identifiers as defined by by [RFC 3066] . 
-    ///  The ·value space· of language is the set of all strings that are valid language identifiers as defined [RFC 3066] . 
-    ///  The ·lexical space· of language is the set of all strings that conform to the pattern [a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})* . 
-    ///  The ·base type· of language is token. 
+    ///  language represents natural language identifiers as defined by by [RFC 3066] .
+    ///  The ·value space· of language is the set of all strings that are valid language identifiers as defined [RFC 3066] .
+    ///  The ·lexical space· of language is the set of all strings that conform to the pattern [a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})* .
+    ///  The ·base type· of language is token.
     /// </remarks>
     [DataContract]
     internal class LanguageRestriction : TokenRestriction
@@ -2062,7 +2059,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         }
     }
 
-#region TrueFalse / OnOff 
+#region TrueFalse / OnOff
 #if false
     /// <summary>
     /// TrueFalseValue (ST_TrueFalse) based simple type constraint.

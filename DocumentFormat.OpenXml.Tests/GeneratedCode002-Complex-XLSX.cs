@@ -1,21 +1,23 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Packaging;
-using Ap = DocumentFormat.OpenXml.ExtendedProperties;
-using Vt = DocumentFormat.OpenXml.VariantTypes;
-using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Spreadsheet;
-using S = DocumentFormat.OpenXml.Spreadsheet;
+using System.Xml;
+
 using A = DocumentFormat.OpenXml.Drawing;
-using Xdr = DocumentFormat.OpenXml.Drawing.Spreadsheet;
-using Dgm = DocumentFormat.OpenXml.Drawing.Diagrams;
 using A14 = DocumentFormat.OpenXml.Office2010.Drawing;
-using Dsp = DocumentFormat.OpenXml.Office.Drawing;
+using Ap = DocumentFormat.OpenXml.ExtendedProperties;
 using C = DocumentFormat.OpenXml.Drawing.Charts;
 using C14 = DocumentFormat.OpenXml.Office2010.Drawing.Charts;
 using Cs = DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle;
+using Dgm = DocumentFormat.OpenXml.Drawing.Diagrams;
+using Dsp = DocumentFormat.OpenXml.Office.Drawing;
+using S = DocumentFormat.OpenXml.Spreadsheet;
+using Vt = DocumentFormat.OpenXml.VariantTypes;
 using X14 = DocumentFormat.OpenXml.Office2010.Excel;
 using X15 = DocumentFormat.OpenXml.Office2013.Excel;
-using System.Xml;
+using Xdr = DocumentFormat.OpenXml.Drawing.Spreadsheet;
 
 namespace DocumentFormat.OpenXml.Tests
 {

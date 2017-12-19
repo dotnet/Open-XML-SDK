@@ -1,11 +1,12 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using DocumentFormat.OpenXml.Validation;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Globalization;
-using DocumentFormat.OpenXml.Validation;
+using System.Text;
 
 namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 {
@@ -70,7 +71,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
             IncressInstanceCount();
         }
-        
+
         /// <summary>
         /// Initializes a new instance of the ParticleMatchInfo.
         /// </summary>
@@ -82,7 +83,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
             IncressInstanceCount();
         }
-        
+
         /// <summary>
         /// Particle match result.
         /// </summary>
@@ -108,7 +109,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
         /// <summary>
         /// The element type ids of expected children.
-        /// Fill this field on partial match. 
+        /// Fill this field on partial match.
         /// </summary>
         /// <remarks>
         /// Will be null if matched or not matched.
@@ -132,7 +133,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         }
 
         /// <summary>
-        /// Purpose: 
+        /// Purpose:
         /// Resue this.ExpectedChildren data field.
         /// Avoid this.ExpectedChildren be referenced by more than one object (so "this.ExpectedChildren = other.ExpectedChildren" is not allowed).
         /// </summary>
@@ -236,7 +237,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <param name="expectedChildren"></param>
         internal void Add(ExpectedChildren expectedChildren)
         {
-            if (expectedChildren._elementTypeIds != null && 
+            if (expectedChildren._elementTypeIds != null &&
                 expectedChildren._elementTypeIds.Count > 0)
             {
                 // No lock, not safe for multi-thread
@@ -244,7 +245,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                 {
                     this._elementTypeIds = new List<int>();
                 }
-                
+
                 foreach (var id in expectedChildren._elementTypeIds)
                 {
                     this._elementTypeIds.Add(id);
@@ -270,7 +271,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <summary>
         /// Returns the count of required children elements.
         /// </summary>
-        internal int Count 
+        internal int Count
         {
             get
             {
@@ -361,7 +362,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         void TryMatchOnce(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext);
 
         /// <summary>
-        /// Try match the particle,  
+        /// Try match the particle,
         /// </summary>
         /// <param name="particleMatchInfo"></param>
         /// <param name="validationContext">The context information for validation.</param>
@@ -392,7 +393,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// </summary>
         /// <returns>Expected elements in this particle.</returns>
         ExpectedChildren GetExpectedElements();
-
     }
 
     /// <summary>
@@ -519,7 +519,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
             return string.Empty;
         }
-
     }
 
     /// <summary>
@@ -533,10 +532,10 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         private ParticleMatchInfo _particleMatchInfo;
 
         /// <summary>
-        /// This data field is moved from TryMatchOnce. 
+        /// This data field is moved from TryMatchOnce.
         /// Base on the following point.
         /// - The TryMatchOnce() method will NOT be called more than once with same ChoiceParticleValidator instance on the stack when validating one element.
-        /// - That means this data field will not be overriden in recursive calling when validating one element. 
+        /// - That means this data field will not be overriden in recursive calling when validating one element.
         /// </summary>
         private ParticleMatchInfo _childMatchInfo = new ParticleMatchInfo();
 
@@ -622,7 +621,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
                         if (child != null)
                         {
-                            // invalid child 
+                            // invalid child
                             EmitInvalidElementError(validationContext, _particleMatchInfo);
                             // TODO: how can we tell the user what is the required child? Use reflection in OpenXmlElement.
                         }
@@ -714,7 +713,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             }
             return;
         }
-          
+
         /// <summary>
         /// Get the required elements - elements which minOccurs > 0.
         /// </summary>
@@ -757,7 +756,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         {
             OpenXmlElement child;
 
-            // re-validate the element, collect the expected children information 
+            // re-validate the element, collect the expected children information
             if (particleMatchInfo.Match != ParticleMatch.Nomatch)
             {
 #if DEBUG

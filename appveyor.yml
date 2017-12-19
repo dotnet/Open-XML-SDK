@@ -3,29 +3,30 @@ os: Visual Studio 2017
 environment:
   image: Visual Studio 2017
   SignClientSecret:
-    secure: K2IZr2uNWnPFxfLYnpwbUIAQmLHYY5IjWvdRXfdUUMU=
+    secure: zO+vuYp34bSBjrqwaKPwUz+ENjMsA1Z9bsMPfU+75Ts=
   SignClientUser:
-    secure: vcaNFKm7ZLGnBM/RkByidsmmpx0I16RcsdOsj3ewh8Ga3ThHll8BiG9xmW0IymLD
+    secure: wPNGuPyt7pAx9YDKurysk5polnxcGU7GiWmJ70r4tpyDUgGEqxRSZhZ8lWvBhwuC
+  Configuration: Release
+  ProjectLoadStyle: All
 
 install:
   - ps: nuget install -ExcludeVersion SignClient -Version 0.9.0 -OutputDirectory .\build\
+  - ps: choco install codecov
 
 build_script:
-  - cmd: msbuild /t:restore;build /p:Configuration=Release /m .\Open-Xml-SDK.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+  - cmd: msbuild /t:restore;build /m .\Open-Xml-SDK.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 
 after_build:
-  - cmd: msbuild /t:pack /p:Configuration=Release .\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+  - cmd: msbuild /t:pack /m .\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
   - ps: .\build\SignPackage.ps1
 
 test_script:
-  - dotnet vstest /logger:trx bin\Release\DocumentFormat.OpenXml.Tests\netcoreapp1.0\DocumentFormat.OpenXml.Tests.dll /Framework:FrameworkCore10
-  - vstest.console.exe /logger:appveyor bin\Release\DocumentFormat.OpenXml.Tests\net46\DocumentFormat.OpenXml.Tests.dll /Framework:Framework45
-  - vstest.console.exe /logger:appveyor bin\Release\DocumentFormat.OpenXml.Tests\net452\DocumentFormat.OpenXml.Tests.dll /Framework:Framework45
+  - cmd: msbuild /t:test .\Open-Xml-SDK.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 
 deploy:
   provider: NuGet
   server: https://dotnet.myget.org/F/open-xml-sdk/api/v2/package
   api_key:
-    secure: +uagaLcg+y8G8ZBxlXm0E5VmTHeT030NeoyHZGU8V7MtIPc1+VUXru0mAPVh0KhK
+    secure: SSFVVP2n8gyH0kiElrqwrIJJwL3C7XFnYnntr3z/h2Rwpa7/K1nDd2BP3JPB6347
   on:
     branch: [master, vNext, Office2016]

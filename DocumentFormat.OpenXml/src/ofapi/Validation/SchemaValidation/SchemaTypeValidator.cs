@@ -1,12 +1,9 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using DocumentFormat.OpenXml.Validation;
 using System.Diagnostics;
 using System.Globalization;
-using DocumentFormat.OpenXml.Validation;
 
 namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 {
@@ -34,7 +31,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         {
             Debug.Assert(validationContext != null);
             Debug.Assert(validationContext.Element != null);
-      
+
             OpenXmlElement theElement = validationContext.Element;
 
             Debug.Assert(!(theElement is OpenXmlUnknownElement));
@@ -42,13 +39,13 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
             if (theElement.ElementTypeId < ReservedElementTypeIds.MaxReservedId)
             {
-                // MiscElement, UnknownElement, 
+                // MiscElement, UnknownElement,
                 // AlternateContent, AlternateContentChoice, AlternateContentFallback
                 if (theElement.ElementTypeId == ReservedElementTypeIds.AlternateContentId)
                 {
                     AlternateContentValidator.Validate(validationContext);
                 }
-                
+
                 Debug.Assert(!(theElement is AlternateContentChoice));
                 Debug.Assert(!(theElement is AlternateContentFallback));
 
@@ -61,7 +58,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             SchemaTypeData schemaTypeData = this._sdbSchemaDatas.GetSchemaTypeData(theElement);
 
             ValidateAttributes(validationContext, schemaTypeData);
- 
+
             // validate particles
 
             if (theElement is OpenXmlLeafTextElement)
@@ -171,7 +168,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             }
 
             // all unknown attributes (attributes not defined in schema) are in ExtendedAttributes.
-            // they should be errors 
+            // they should be errors
             foreach (var extendedAttribute in element.ExtendedAttributes)
             {
                 if (validationContext.McContext.IsIgnorableNs(extendedAttribute.NamespaceUri))
@@ -201,7 +198,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <param name="value">The value to be validated.</param>
         /// <param name="qname">The QualifiedName to be used in the error message.</param>
         /// <param name="isAttribute">Error message targeting attribute (or element).</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
         internal static void ValidateValue(ValidationContext validationContext, SimpleTypeRestriction simpleTypeConstraint,
                                                                        OpenXmlSimpleType value, string qname, bool isAttribute)
         {

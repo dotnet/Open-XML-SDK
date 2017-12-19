@@ -1,4 +1,5 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Presentation;
@@ -32,7 +33,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validator2007BugRegressionTest()
         {
-
             OpenXmlValidator validator = new OpenXmlValidator(FileFormatVersions.Office2007);
 
             Bug423998(validator);
@@ -58,7 +58,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validator2010BugRegressionTest()
         {
-
             OpenXmlValidator validator = new OpenXmlValidator(FileFormatVersions.Office2010);
 
             Bug662644(validator);
@@ -119,7 +118,6 @@ namespace DocumentFormat.OpenXml.Tests
             colorScale.Append(new DocumentFormat.OpenXml.Spreadsheet.Color());
             results = validator.Validate(colorScale);
             Assert.Empty(results);
-
         }
 
         private void Bug704004(OpenXmlValidator validator)
@@ -275,7 +273,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(ValidationErrorType.Schema, errors.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", errors.First().Id);
             Assert.Equal("The attribute 'distL' has invalid value 'Foo'. The string 'Foo' is not a valid 'UInt32' value.", errors.First().Description);
-
         }
 
         private void Bug448264(OpenXmlValidator validator)
@@ -405,7 +402,6 @@ namespace DocumentFormat.OpenXml.Tests
             var list2 = message2.Substring(message2.IndexOf("List of possible elements expected:"));
 
             Assert.Equal(list1, list2);
-
         }
 
         #endregion

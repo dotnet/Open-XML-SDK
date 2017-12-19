@@ -1,21 +1,19 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using System;
-using System.Collections.Generic;
-using System.Text;
-using DocumentFormat.OpenXml;
 
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// Defines the attribute which is used to decorate a property for its corresponding attribute information.
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Attr"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1019:DefineAccessorsForAttributeArguments")]
     [AttributeUsage(AttributeTargets.Property)]
     public sealed class SchemaAttrAttribute : Attribute
     {
         //string _type;
-        string _tag;
-        byte _nsId;
+        private string _tag;
+        private byte _nsId;
 
         /// <summary>
         /// Initializes a new instance of the SchemaAttrAttribute.
@@ -31,7 +29,6 @@ namespace DocumentFormat.OpenXml
 
             _nsId = nsId;
             _tag = tag;
-
         }
 
         /// <summary>
@@ -58,11 +55,11 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Defines the attribute which is used to decorate a class for type of the possible child elements.
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1019:DefineAccessorsForAttributeArguments"), AttributeUsage(AttributeTargets.Class, Inherited = true, AllowMultiple = true)]
+    [AttributeUsage(AttributeTargets.Class, Inherited = true, AllowMultiple = true)]
     public sealed class ChildElementInfoAttribute : Attribute
     {
         private Type _type;
-        FileFormatVersions format;
+        private FileFormatVersions format;
 
         /// <summary>
         /// Initialize a new instance of ChildElementTypeAttribute.
@@ -73,7 +70,7 @@ namespace DocumentFormat.OpenXml
             _type = elementType;
             format = FileFormatVersions.Office2007 | FileFormatVersions.Office2010;
         }
-        
+
         /// <summary>
         /// Initialize a new instance of ChildElementTypeAttribute.
         /// </summary>
@@ -96,7 +93,6 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets the Office version(s) where the child element is available.
         /// </summary>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1702:CompoundWordsShouldBeCasedCorrectly", MessageId = "InVersion")]
         public FileFormatVersions AvailableInVersion {
             get { return format; }
         }

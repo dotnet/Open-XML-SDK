@@ -1,11 +1,9 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Diagnostics;
-using DocumentFormat.OpenXml;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Validation;
+using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 {
@@ -39,7 +37,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             }
 
             OpenXmlElement child;
-            
+
             child = acElement.GetFirstNonMiscElementChild();
 
             while (child != null)
@@ -49,7 +47,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                     // Rule: An AlternateContent element shall not be the child of an AlternateContent element.
                     errorInfo = validationContext.ComposeMcValidationError(acElement, "Sch_InvalidElementContentExpectingComplex", child.XmlQualifiedName.ToString(), ValidationResources.MC_ShallNotContainAlternateContent);
                     validationContext.EmitError(errorInfo);
-
                 }
                 else
                 {
@@ -103,7 +100,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                             errorInfo = validationContext.ComposeMcValidationError(acElement, "Sch_InvalidElementContentExpectingComplex", child.XmlQualifiedName.ToString(), ValidationResources.MC_ShallContainChoice);
                             validationContext.EmitError(errorInfo);
                             break;
-
                     }
                 }
                 child = child.GetNextNonMiscElementSibling();
@@ -175,7 +171,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                     }
                 }
             }
-
         }
 
         /// <summary>
@@ -194,13 +189,12 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             }
             return false;
         }
-
     }
-      
+
     /// <summary>
-    /// Compatibility-Rule Attributes 
+    /// Compatibility-Rule Attributes
     /// </summary>
-    static class CompatibilityRuleAttributesValidator
+    internal static class CompatibilityRuleAttributesValidator
     {
         /// <summary>
         /// Validate compatibility rule attributes - Ignorable, ProcessContent, PreserveElements, PreserveAttributes, MustUnderstand.
@@ -338,7 +332,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                             validationContext.EmitError(errorInfo);
                         }
                     }
-
                 }
             }
         }
@@ -382,7 +375,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 
             return null;
         }
-
     }
 
         /// <summary>
@@ -427,7 +419,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// <param name="mcContext">Markup Compatibility context.</param>
         /// <param name="format">Targeting file format (Office2007 or Office201).</param>
         /// <returns>The logic child (when we apply a MC pre-processer).</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "parent")]
         private static OpenXmlElement GetChildMc(this OpenXmlElement parent, OpenXmlElement child, MCContext mcContext, FileFormatVersions format)
         {
             // Use stack to cache the next siblings in different levels.
@@ -453,7 +444,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                         }
                         else
                         {
-                            // The ACB has no children elements. 
+                            // The ACB has no children elements.
                             // case like: <acb/> <acb><choice/><fallback/></acb>
                             child = null;
                         }

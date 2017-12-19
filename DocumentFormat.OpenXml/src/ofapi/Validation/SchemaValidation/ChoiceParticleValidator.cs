@@ -1,7 +1,8 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System.Diagnostics;
-using System.Collections.Generic;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Validation;
+using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 {
@@ -11,10 +12,10 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     internal class ChoiceParticleValidator : CompositeParticleValidator
     {
         /// <summary>
-        /// This data field is moved from TryMatchOnce. 
+        /// This data field is moved from TryMatchOnce.
         /// Base on the following point.
         /// - The TryMatchOnce() method will NOT be called more than once with same ChoiceParticleValidator instance on the stack when validating one element.
-        /// - That means this data field will not be overriden in recursive calling when validating one element. 
+        /// - That means this data field will not be overriden in recursive calling when validating one element.
         /// </summary>
         private ParticleMatchInfo _childMatchInfo = new ParticleMatchInfo();
 
@@ -28,7 +29,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             Debug.Assert(particleConstraint != null);
             Debug.Assert(particleConstraint.ParticleType == ParticleType.Choice);
         }
-     
+
         /// <summary>
         /// Try match the particle once.
         /// </summary>
@@ -37,7 +38,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         public override void TryMatchOnce(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
         {
             Debug.Assert(!(particleMatchInfo.StartElement is OpenXmlMiscNode));
-            
+
             var next = particleMatchInfo.StartElement;
 
             particleMatchInfo.LastMatchedElement = null;
@@ -121,6 +122,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             {
                 return false;
             }
-        }        
+        }
     }
 }

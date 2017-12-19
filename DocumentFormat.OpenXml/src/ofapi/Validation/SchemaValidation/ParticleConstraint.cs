@@ -1,9 +1,9 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Diagnostics;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Validation;
+using System;
+using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 {
@@ -170,8 +170,8 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     internal class ElementParticle : ParticleConstraint, IParticleValidator
     {
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private int _elementId;     
-       
+        private int _elementId;
+
         /// <summary>
         /// Initializes a new instance of the ElementParticle.
         /// </summary>
@@ -217,7 +217,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         {
             Debug.Assert(particleMatchInfo != null);
             Debug.Assert(particleMatchInfo.StartElement != null);
-            
+
             if (particleMatchInfo.StartElement.ElementTypeId == this.ElementId)
             {
                 particleMatchInfo.Match = ParticleMatch.Matched;
@@ -302,7 +302,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             }
             return false;
         }
-        
+
         /// <summary>
         /// Get the required elements - elements which minOccurs > 0.
         /// </summary>
@@ -350,7 +350,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// Particle constraint data for particle which type is ParticleType.Any.
     /// </summary>
     /// <remarks>
-    /// xsd:any can contains only one namespace. 
+    /// xsd:any can contains only one namespace.
     /// If there are multiple namespace in the original xsd, it will be splitted into multiple xsd:any in binary database.
     /// </remarks>
     [DebuggerDisplay("NamespaceValue={NamespaceValue}")]
@@ -383,14 +383,14 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// </summary>
         internal override int ElementId
         {
-            set 
+            set
             {
                 Debug.Assert( value == XsdAnyPrefidefinedValue.Any ||
                             value == XsdAnyPrefidefinedValue.Local ||
                             value == XsdAnyPrefidefinedValue.Other ||
                             value == XsdAnyPrefidefinedValue.TargetNamespace);
 
-                this._xsdAnyValue = (ushort)value; 
+                this._xsdAnyValue = (ushort)value;
             }
         }
 
@@ -415,7 +415,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// Particle constraint data for particle which type is ParticleType.AnyWithUri.
     /// </summary>
     /// <remarks>
-    /// xsd:any can contains only one namespace. 
+    /// xsd:any can contains only one namespace.
     /// If there are multiple namespace in the original xsd, it will be splitted into multiple xsd:any in binary database.
     /// </remarks>
     [DebuggerDisplay("NamespaceId={NamespaceId}")]
@@ -433,7 +433,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         {
             _particleValidator = new NsAnyParticleValidator(this);
         }
-        
+
         /// <summary>
         /// Gets the type of the particle.
         /// </summary>
@@ -486,7 +486,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         private ParticleConstraint[] _childrenParticles;
 
         private IParticleValidator _particleValidator;
-        
+
         /// <summary>
         /// Initializes a new instance of the CompositeParticle.
         /// </summary>

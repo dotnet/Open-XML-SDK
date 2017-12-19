@@ -1,4 +1,6 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using OxTest;
@@ -30,25 +32,25 @@ namespace DocumentFormat.OpenXml.Tests
         /// <summary>
         /// Switch for the IgnoreWhitespace fix O15#3024890
         /// </summary>
-        const bool IGNORE_WHITESPACE_SETTING = true;
+        private const bool IGNORE_WHITESPACE_SETTING = true;
 
         #region Reader Test ...
 
         #region ReaderConstruction ...
 
-        ConstrReader PartConstrWithNoMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
+        private ConstrReader PartConstrWithNoMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
         {
             y = OpenXmlReader.Create(x.MainDocumentPart);
             z = XmlReader.Create(x.MainDocumentPart.GetStream());
         };
 
-        ConstrReader PartConstrWithMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
+        private ConstrReader PartConstrWithMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
         {
             y = OpenXmlReader.Create(x.MainDocumentPart.GetStream(), true);
             z = XmlReader.Create(x.MainDocumentPart.GetStream());
         };
 
-        ConstrReader DomConstrWithNoMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
+        private ConstrReader DomConstrWithNoMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
         {
             OpenXmlElement firstChild = x.MainDocumentPart.Document.FirstChild;
             y = OpenXmlDomReader.Create(firstChild);
@@ -57,7 +59,7 @@ namespace DocumentFormat.OpenXml.Tests
             z = XmlReader.Create(new StringReader(firstChild.OuterXml));
         };
 
-        ConstrReader DomConstrWithMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
+        private ConstrReader DomConstrWithMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
         {
             OpenXmlElement firstChild = x.MainDocumentPart.Document.FirstChild;
             y = new OpenXmlDomReader(firstChild, true);
@@ -66,7 +68,7 @@ namespace DocumentFormat.OpenXml.Tests
             z = XmlReader.Create(new StringReader(firstChild.OuterXml));
         };
 
-        PreRead initialReader = (OpenXmlReader x, XmlReader y, out string standalone) =>
+        private PreRead initialReader = (OpenXmlReader x, XmlReader y, out string standalone) =>
         {
             Read(x);
             Read(y);
@@ -316,7 +318,6 @@ namespace DocumentFormat.OpenXml.Tests
                     XEle = XElement.Load(reader);
                 VerifyEqual(XEle, p, part);
             }
-
         }
 
         [Fact]
@@ -336,7 +337,6 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 Log.Pass("ArgumentOutOfRangeException is thrown");
             }
-
         }
 
         private void TestWriteStartDocument(ConstrWriter writerConstr, WriteStartDoc write, bool? standalone)
@@ -378,7 +378,6 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Comment("verify the standalone is not presented");
                 Log.VerifyTrue(standaloneValue == null, "expected: null <> acutal: {0}", standaloneValue);
             }
-
         }
 
         private void WriteStartD(OpenXmlWriter writer, bool? standalone)
@@ -387,7 +386,6 @@ namespace DocumentFormat.OpenXml.Tests
                 writer.WriteStartDocument(standalone.Value);
             else
                 writer.WriteStartDocument();
-
         }
 
         private void WriteStartE(OpenXmlWriter writer, object writeSource, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations)
@@ -527,21 +525,21 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Writer Construction ...
 
-        ConstrWriter WConstrWithPart = x => OpenXmlWriter.Create(x);
+        private ConstrWriter WConstrWithPart = x => OpenXmlWriter.Create(x);
 
-        ConstrWriter WConstrWithPartEnc = x => OpenXmlWriter.Create(x, Encoding.UTF8);
+        private ConstrWriter WConstrWithPartEnc = x => OpenXmlWriter.Create(x, Encoding.UTF8);
 
-        ConstrWriter WConstrWithStream = x => OpenXmlWriter.Create(x.GetStream());
+        private ConstrWriter WConstrWithStream = x => OpenXmlWriter.Create(x.GetStream());
 
-        ConstrWriter WConstrWithStreamEnc = x => OpenXmlWriter.Create(x.GetStream(), Encoding.UTF8);
+        private ConstrWriter WConstrWithStreamEnc = x => OpenXmlWriter.Create(x.GetStream(), Encoding.UTF8);
 
-        ConstrWriter PWCosntrWithPart = x => new OpenXmlPartWriter(x);
+        private ConstrWriter PWCosntrWithPart = x => new OpenXmlPartWriter(x);
 
-        ConstrWriter PWConstrWithPartEnc = x => new OpenXmlPartWriter(x, Encoding.UTF8);
+        private ConstrWriter PWConstrWithPartEnc = x => new OpenXmlPartWriter(x, Encoding.UTF8);
 
-        ConstrWriter PWConstrWithStream = x => new OpenXmlPartWriter(x.GetStream());
+        private ConstrWriter PWConstrWithStream = x => new OpenXmlPartWriter(x.GetStream());
 
-        ConstrWriter PWConstrWithStreamEnc = x => new OpenXmlPartWriter(x.GetStream(), Encoding.UTF8);
+        private ConstrWriter PWConstrWithStreamEnc = x => new OpenXmlPartWriter(x.GetStream(), Encoding.UTF8);
 
         #endregion
 
@@ -587,7 +585,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
             else if (reader.IsStartElement)
             {
-
                 bool IsStart = reader.IsStartElement;
                 OpenXmlElement element = reader.LoadCurrentElement();
                 bool skip = (IsStart == true) && (reader.IsStartElement == false);
@@ -944,7 +941,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             if (Treader.IsEmptyElement == false || !(beforeIsStartElement == true && afterIsEndElement == true))
             {
-
                 while (IscontinueRead && Read(Treader))
                 {
                     switch (Treader.NodeType)
@@ -1266,7 +1262,6 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 Log.VerifyTrue(e is ObjectDisposedException, "e is ObjectDisposedException");
             }
-
         }
 
         [Fact]
@@ -1290,6 +1285,5 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Pass("Completed");
         }
-
     }
 }

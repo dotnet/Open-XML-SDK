@@ -1,4 +1,5 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Tests.WebExtensionClass;
@@ -181,7 +182,6 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
                     foreach (A.BlipExtension be in bel)
                     {
                         be.Uri = svCallback(be.Uri);
-
                     }
                     // it's possible to try and access the childs of be, but these are OpenXmlUnknownElement
                     // and it's not possible to modify them in an intelligent way.

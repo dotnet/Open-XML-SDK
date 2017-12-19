@@ -1,12 +1,13 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Text;
-using System.Diagnostics;
-using System.Xml;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Packaging;
+using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Reflection;
+using System.Text;
+using System.Xml;
 
 namespace DocumentFormat.OpenXml
 {
@@ -15,7 +16,6 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public abstract class OpenXmlWriter : IDisposable
     {
-
         private bool _disposed;
 
         /// <summary>
@@ -85,14 +85,14 @@ namespace DocumentFormat.OpenXml
         public abstract void WriteStartElement(OpenXmlReader elementReader);
 
         /// <summary>
-        /// Writes out a start element tag of the current element of the OpenXmlReader. And write the attributes in attributes. 
+        /// Writes out a start element tag of the current element of the OpenXmlReader. And write the attributes in attributes.
         /// </summary>
         /// <param name="elementReader">The OpenXmlReader to read from. </param>
         /// <param name="attributes">The attributes to be writtern, can be null if no attrbutes.</param>
         public abstract void WriteStartElement(OpenXmlReader elementReader, IEnumerable<OpenXmlAttribute> attributes);
 
         /// <summary>
-        /// Writes out a start element tag of the current element of the OpenXmlReader. And write the attributes in attributes. 
+        /// Writes out a start element tag of the current element of the OpenXmlReader. And write the attributes in attributes.
         /// </summary>
         /// <param name="elementReader">The OpenXmlReader to read from. </param>
         /// <param name="attributes">The attributes to be writtern, can be null if no attrbutes.</param>
@@ -121,7 +121,7 @@ namespace DocumentFormat.OpenXml
         public abstract void WriteStartElement(OpenXmlElement elementObject, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations);
 
         /// <summary>
-        /// Closes one element.  
+        /// Closes one element.
         /// </summary>
         public abstract void WriteEndElement();
 
@@ -132,7 +132,7 @@ namespace DocumentFormat.OpenXml
         public abstract void WriteElement(OpenXmlElement elementObject);
 
         /// <summary>
-        /// When overridden in a derived class, writes the given text content. 
+        /// When overridden in a derived class, writes the given text content.
         /// </summary>
         /// <param name="text">The text to write. </param>
         public abstract void WriteString(string text);
@@ -158,7 +158,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Closes the reader, and releases all resources. 
+        /// Closes the reader, and releases all resources.
         /// </summary>
         /// <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
         protected virtual void Dispose(bool disposing)
@@ -178,7 +178,7 @@ namespace DocumentFormat.OpenXml
         #region IDisposable Members
 
         /// <summary>
-        /// Closes the writer, and releases all resources. 
+        /// Closes the writer, and releases all resources.
         /// </summary>
         public void Dispose()
         {
@@ -305,7 +305,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Writes out a start element tag of the current element of the OpenXmlReader. And write the attributes in attributes. 
+        /// Writes out a start element tag of the current element of the OpenXmlReader. And write the attributes in attributes.
         /// </summary>
         /// <param name="elementReader">The OpenXmlReader to read from. </param>
         /// <param name="attributes">The attributes to be writtern, can be null if no attrbutes.</param>
@@ -315,7 +315,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Writes out a start element tag of the current element of the OpenXmlReader. And write the attributes in attributes. 
+        /// Writes out a start element tag of the current element of the OpenXmlReader. And write the attributes in attributes.
         /// </summary>
         /// <param name="elementReader">The OpenXmlReader to read from. </param>
         /// <param name="attributes">The attributes to be writtern, can be null if no attrbutes.</param>
@@ -468,7 +468,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Closes one element.  
+        /// Closes one element.
         /// </summary>
         public override void WriteEndElement()
         {
@@ -480,7 +480,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Writes the given text content. 
+        /// Writes the given text content.
         /// </summary>
         /// <param name="text">The text to be writtern. </param>
         public override void WriteString(string text)
@@ -565,5 +565,4 @@ namespace DocumentFormat.OpenXml
         #endregion
 
     }
-
 }

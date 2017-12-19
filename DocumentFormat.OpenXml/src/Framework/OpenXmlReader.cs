@@ -1,12 +1,13 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Text;
-using System.Xml;
-using System.IO;
 using System.Diagnostics;
-using DocumentFormat.OpenXml.Packaging;
+using System.IO;
+using System.Xml;
 
 namespace DocumentFormat.OpenXml
 {
@@ -281,7 +282,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Override the property defined in XmlReader
         /// </summary>
-        public override bool CanResolveEntity 
+        public override bool CanResolveEntity
         {
             get
             {
@@ -423,7 +424,7 @@ namespace DocumentFormat.OpenXml
                 {
                     uri = translatedNamespace;
                 }
-                
+
                 return uri;
             }
         }
@@ -547,7 +548,7 @@ namespace DocumentFormat.OpenXml
     public abstract class OpenXmlReader : IDisposable
     {
         private bool _disposed;
-        
+
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private bool _readMiscNodes;
 
@@ -671,11 +672,11 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets a value that indicates whether the current node has any attributes. 
+        /// Gets a value that indicates whether the current node has any attributes.
         /// </summary>
-        public virtual bool HasAttributes 
+        public virtual bool HasAttributes
         {
-            get 
+            get
             {
                 ThrowIfObjectDisposed();
                 return this.Attributes.Count > 0;
@@ -687,7 +688,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public abstract ReadOnlyCollection<OpenXmlAttribute> Attributes
         {
-            get; 
+            get;
         }
 
         /// <summary>
@@ -704,12 +705,12 @@ namespace DocumentFormat.OpenXml
         }
 
         ///// <summary>
-        ///// When overridden in a derived class, gets a value indicating whether the current node is an empty element (for example, <MyElement/>). 
+        ///// When overridden in a derived class, gets a value indicating whether the current node is an empty element (for example, <MyElement/>).
         ///// </summary>
         //public abstract bool IsEmptyElement { get; }
 
         /// <summary>
-        /// When overridden in a derived class, gets a value that indicates whether the current node is a miscellaneous XML node (non element). 
+        /// When overridden in a derived class, gets a value that indicates whether the current node is a miscellaneous XML node (non element).
         /// </summary>
         /// <remarks>IsStartElement and IsEndElement will be false when IsMiscNode==true.</remarks>
         public abstract bool IsMiscNode
@@ -718,7 +719,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// When overridden in a derived class, gets a value that indicates whether the current node is an element start. 
+        /// When overridden in a derived class, gets a value that indicates whether the current node is an element start.
         /// </summary>
         /// <remarks>IsStartElement and IsEndElement will be false when IsMiscNode==true.</remarks>
         public abstract bool IsStartElement
@@ -727,7 +728,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// When overridden in a derived class, gets a value that indicates whether the current node is an element end. 
+        /// When overridden in a derived class, gets a value that indicates whether the current node is an element end.
         /// </summary>
         /// <remarks>IsStartElement and IsEndElement will be false when IsMiscNode==true.</remarks>
         public abstract bool IsEndElement
@@ -744,7 +745,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// When overridden in a derived class, gets a value that indicates whether the reader is positioned at the end of the stream. 
+        /// When overridden in a derived class, gets a value that indicates whether the reader is positioned at the end of the stream.
         /// </summary>
         public abstract bool EOF
         {
@@ -752,22 +753,22 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// When overridden in a derived class, gets the local name of the current node. 
+        /// When overridden in a derived class, gets the local name of the current node.
         /// </summary>
         public abstract string LocalName { get; }
 
         /// <summary>
-        /// When overridden in a derived class, gets the namespace URI (as defined in the W3C Namespace specification) of the node on which the reader is positioned. 
+        /// When overridden in a derived class, gets the namespace URI (as defined in the W3C Namespace specification) of the node on which the reader is positioned.
         /// </summary>
         public abstract string NamespaceUri { get; }
 
         ///// <summary>
-        ///// When overridden in a derived class, gets the qualified name of the current node. 
+        ///// When overridden in a derived class, gets the qualified name of the current node.
         ///// </summary>
         //public virtual string Name { get; }
 
         /// <summary>
-        /// When overridden in a derived class, gets the namespace prefix associated with the current node. 
+        /// When overridden in a derived class, gets the namespace prefix associated with the current node.
         /// </summary>
         public abstract string Prefix { get; }
 
@@ -792,7 +793,7 @@ namespace DocumentFormat.OpenXml
         public abstract bool ReadNextSibling();
 
         /// <summary>
-        /// Skips the child elements of the current node. 
+        /// Skips the child elements of the current node.
         /// </summary>
         public abstract void Skip();
 
@@ -831,7 +832,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Closes the reader, and releases all resources. 
+        /// Closes the reader, and releases all resources.
         /// </summary>
         /// <param name="disposing">Specify true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
         protected virtual void Dispose(bool disposing)
@@ -851,7 +852,7 @@ namespace DocumentFormat.OpenXml
 #region IDisposable Members
 
         /// <summary>
-        /// Closes the reader, and releases all resources. 
+        /// Closes the reader, and releases all resources.
         /// </summary>
         public void Dispose()
         {
@@ -888,7 +889,7 @@ namespace DocumentFormat.OpenXml
         private IList<KeyValuePair<string, string>> _nsDecls;
         private Stack<OpenXmlElement> _elementStack;
         private ElementState _elementState;
-        
+
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private string _encoding ;
 
@@ -1032,7 +1033,7 @@ namespace DocumentFormat.OpenXml
                         _emptyReadOnlyList = new ReadOnlyCollection<OpenXmlAttribute>(new List<OpenXmlAttribute>());
                     }
                     return _emptyReadOnlyList;
-                } 
+                }
             }
         }
 
@@ -1057,7 +1058,7 @@ namespace DocumentFormat.OpenXml
                 else
                 {
                     return EmptyEnumerable<KeyValuePair<string, string>>.EmptyEnumerableSingleton;
-                } 
+                }
             }
         }
 
@@ -1077,7 +1078,7 @@ namespace DocumentFormat.OpenXml
         }
 
         ///// <summary>
-        ///// When overridden in a derived class, gets a value indicating whether the current node is an empty element (for example, <MyElement/>). 
+        ///// When overridden in a derived class, gets a value indicating whether the current node is an empty element (for example, <MyElement/>).
         ///// </summary>
         //public override bool IsEmptyElement
         //{
@@ -1085,7 +1086,7 @@ namespace DocumentFormat.OpenXml
         //}
 
         /// <summary>
-        /// Gets a value that indicates whether the current node is a miscellaneous XML node (non element). 
+        /// Gets a value that indicates whether the current node is a miscellaneous XML node (non element).
         /// </summary>
         /// <remarks>IsStartElement and IsEndElement will be false when IsMiscNode==true.</remarks>
         public override bool IsMiscNode
@@ -1109,12 +1110,12 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets a value that indicates whether the current node is an element start. 
+        /// Gets a value that indicates whether the current node is an element start.
         /// </summary>
         /// <remarks>IsStartElement and IsEndElement will be false when IsMiscNode==true.</remarks>
         public override bool IsStartElement
         {
-            get            
+            get
             {
                 ThrowIfObjectDisposed();
                 ThrowIfNull();
@@ -1132,7 +1133,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets a value that indicates whether the current node is an element end. 
+        /// Gets a value that indicates whether the current node is an element end.
         /// </summary>
         /// <remarks>IsStartElement and IsEndElement will be false when IsMiscNode==true.</remarks>
         public override bool IsEndElement
@@ -1172,7 +1173,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets a value that indicates whether the reader is positioned at the end of the stream. 
+        /// Gets a value that indicates whether the reader is positioned at the end of the stream.
         /// </summary>
         public override bool EOF
         {
@@ -1186,7 +1187,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets the local name of the current node. 
+        /// Gets the local name of the current node.
         /// </summary>
         public override string LocalName
         {
@@ -1200,7 +1201,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets the namespace URI (as defined in the W3C Namespace specification) of the node on which the reader is positioned. 
+        /// Gets the namespace URI (as defined in the W3C Namespace specification) of the node on which the reader is positioned.
         /// </summary>
         public override string NamespaceUri
         {
@@ -1214,18 +1215,17 @@ namespace DocumentFormat.OpenXml
         }
 
         ///// <summary>
-        ///// When overridden in a derived class, gets the qualified name of the current node. 
+        ///// When overridden in a derived class, gets the qualified name of the current node.
         ///// </summary>
         //public virtual string Name { get; }
 
         /// <summary>
-        /// Gets the namespace prefix associated with the current node. 
+        /// Gets the namespace prefix associated with the current node.
         /// </summary>
         public override string Prefix
         {
             get
             {
-
                 ThrowIfObjectDisposed();
                 ThrowIfNull();
                 ThrowIfEof();
@@ -1275,7 +1275,7 @@ namespace DocumentFormat.OpenXml
 
             return result;
         }
-     
+
         /// <summary>
         /// Moves to read the next sibling element.
         /// </summary>
@@ -1299,7 +1299,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Skips the child elements of the current node. 
+        /// Skips the child elements of the current node.
         /// </summary>
         public override void Skip()
         {
@@ -1314,7 +1314,6 @@ namespace DocumentFormat.OpenXml
                     this.InnerSkip();
                 }
             }
-
         }
 
 #region private methods
@@ -1340,7 +1339,7 @@ namespace DocumentFormat.OpenXml
 
                 case ElementState.End:
                 case ElementState.MiscNode:
-                    // cursor is end element, pop stack 
+                    // cursor is end element, pop stack
                     this._elementStack.Pop();
                     break;
 
@@ -1353,7 +1352,7 @@ namespace DocumentFormat.OpenXml
 
                 case ElementState.LeafEnd:
                 case ElementState.LoadEnd:
-                    // cursor is end element, pop stack 
+                    // cursor is end element, pop stack
                     this._elementStack.Pop();
                     if (this._elementStack.Count == 0)
                     {
@@ -1371,7 +1370,7 @@ namespace DocumentFormat.OpenXml
             }
 
             this._elementState = ElementState.Null;
-           
+
             if (this._xmlReader.EOF || !this._xmlReader.Read())
             {
                 this._elementState = ElementState.EOF;
@@ -1385,7 +1384,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Move to first child 
+        /// Move to first child
         /// </summary>
         /// <returns>true if the first child element was read successfully; false if there are no child elements to read. </returns>
         /// <remarks>Only can be called on element start. Current will move to the end tag if no child element.</remarks>
@@ -1433,7 +1432,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Move to  next sibling element 
+        /// Move to  next sibling element
         /// </summary>
         /// <returns>true if the next sibling element was read successfully; false if there are no more sibling elements to read. </returns>
         /// <remarks>Current will move to the end tag of the parent if no more sibling element.</remarks>
@@ -1463,7 +1462,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Skips the children of the current node. 
+        /// Skips the children of the current node.
         /// </summary>
         private void InnerSkip()
         {
@@ -1486,12 +1485,12 @@ namespace DocumentFormat.OpenXml
 
                 case ElementState.End:
                 case ElementState.MiscNode:
-                    // cursor is end element, pop stack 
+                    // cursor is end element, pop stack
                     this._xmlReader.Skip();
                     this._elementStack.Pop();
                     GetElementInformation();
                     return;
-                
+
                 case ElementState.LeafStart:
                     // no move, just process cursor
                     this._elementStack.Pop();
@@ -1530,7 +1529,7 @@ namespace DocumentFormat.OpenXml
                     element = this._elementStack.Pop();
                     this._elementStack.Push(element.CloneNode(true));
 
-                    // stop at the end tag. 
+                    // stop at the end tag.
                     this._elementState = ElementState.LoadEnd;
                     return element;
 
@@ -1538,7 +1537,7 @@ namespace DocumentFormat.OpenXml
                     element = this._elementStack.Peek();
                     element.Load(this._xmlReader, OpenXmlLoadMode.Full);
 
-                    // stop at the end tag. 
+                    // stop at the end tag.
                     this._elementState = ElementState.LoadEnd;
                     return element;
 
@@ -1759,7 +1758,6 @@ namespace DocumentFormat.OpenXml
                 //  Moves the reader back to the element node.
                 this._xmlReader.MoveToElement();
             }
-   
         }
 
         private void GetElementInformation()
@@ -1838,7 +1836,7 @@ namespace DocumentFormat.OpenXml
             OpenXmlElement element = this._elementStack.Peek();
 
             // AlternateContent / Choice / Fallback needs special treatment
-            // The ElementFactory( ) of the Choice / Fallback depends on the parent of AlternateContentChoice 
+            // The ElementFactory( ) of the Choice / Fallback depends on the parent of AlternateContentChoice
             // TODO: find a better solution
             if (element is AlternateContentChoice || element is AlternateContentFallback)
             {
@@ -1846,7 +1844,7 @@ namespace DocumentFormat.OpenXml
                 {
                     OpenXmlElement topElement = this._elementStack.Pop( );
                     OpenXmlElement acElement = this._elementStack.Pop( );
-                    
+
                     OpenXmlElement parentsParent = this._elementStack.Peek( ).CloneNode(false);
 
                     this._elementStack.Push( acElement );
@@ -1872,7 +1870,6 @@ namespace DocumentFormat.OpenXml
 
         private void ThrowIfEof()
         {
-
             if (this._elementState == ElementState.EOF || this._elementStack.Count <= 0)
             {
                 throw new InvalidOperationException(ExceptionMessages.ReaderInEofState);
@@ -1944,12 +1941,12 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public override ReadOnlyCollection<OpenXmlAttribute> Attributes
         {
-            get 
+            get
             {
                 ThrowIfObjectDisposed();
                 ThrowIfNull();
                 ThrowIfEof();
-                
+
                 if (this._elementState == ElementState.Start)
                 {
                     Debug.Assert(this._elementStack.Count > 0);
@@ -1979,7 +1976,7 @@ namespace DocumentFormat.OpenXml
                 ThrowIfObjectDisposed();
                 ThrowIfNull();
                 ThrowIfEof();
-                
+
                 if (this._elementState == ElementState.Start)
                 {
                     Debug.Assert(this._elementStack.Count > 0);
@@ -2010,12 +2007,12 @@ namespace DocumentFormat.OpenXml
         }
 
         ///// <summary>
-        ///// When overridden in a derived class, gets a value indicating whether the current node is an empty element (for example, <MyElement/>). 
+        ///// When overridden in a derived class, gets a value indicating whether the current node is an empty element (for example, <MyElement/>).
         ///// </summary>
         //public abstract bool IsEmptyElement { get; }
 
         /// <summary>
-        /// Gets a value that indicates whether the current node is a miscellaneous XML node (non element). 
+        /// Gets a value that indicates whether the current node is a miscellaneous XML node (non element).
         /// </summary>
         /// <remarks>IsStartElement and IsEndElement will be false when IsMiscNode==true.</remarks>
         public override bool IsMiscNode
@@ -2039,7 +2036,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets a value that indicates whether the current node is an element start. 
+        /// Gets a value that indicates whether the current node is an element start.
         /// </summary>
         /// <remarks>IsStartElement and IsEndElement will be false when IsMiscNode==true.</remarks>
         public override bool IsStartElement
@@ -2049,7 +2046,7 @@ namespace DocumentFormat.OpenXml
                 ThrowIfObjectDisposed();
                 ThrowIfNull();
                 ThrowIfEof();
-                
+
                 if (!IsMiscNode)
                 {
                     if (this._elementState == ElementState.Start || this._elementState == ElementState.LeafStart)
@@ -2060,9 +2057,9 @@ namespace DocumentFormat.OpenXml
                 return false;
             }
         }
-            
+
         /// <summary>
-        /// Gets a value that indicates whether the current node is an element end. 
+        /// Gets a value that indicates whether the current node is an element end.
         /// </summary>
         /// <remarks>IsStartElement and IsEndElement will be false when IsMiscNode==true.</remarks>
         public override bool IsEndElement
@@ -2072,7 +2069,7 @@ namespace DocumentFormat.OpenXml
                 ThrowIfObjectDisposed();
                 ThrowIfNull();
                 ThrowIfEof();
-                
+
                 if (!IsMiscNode)
                 {
                     if (this._elementState == ElementState.End)
@@ -2101,7 +2098,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets a value that indicates whether the reader is positioned at the end of the stream. 
+        /// Gets a value that indicates whether the reader is positioned at the end of the stream.
         /// </summary>
         public override bool EOF
         {
@@ -2115,7 +2112,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets the local name of the current node. 
+        /// Gets the local name of the current node.
         /// </summary>
         public override string LocalName
         {
@@ -2129,7 +2126,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets the namespace URI (as defined in the W3C Namespace specification) of the node on which the reader is positioned. 
+        /// Gets the namespace URI (as defined in the W3C Namespace specification) of the node on which the reader is positioned.
         /// </summary>
         public override string NamespaceUri
         {
@@ -2143,12 +2140,12 @@ namespace DocumentFormat.OpenXml
         }
 
         ///// <summary>
-        ///// When overridden in a derived class, gets the qualified name of the current node. 
+        ///// When overridden in a derived class, gets the qualified name of the current node.
         ///// </summary>
         //public virtual string Name { get; }
 
         /// <summary>
-        /// Gets the namespace prefix associated with the current node. 
+        /// Gets the namespace prefix associated with the current node.
         /// </summary>
         public override string Prefix
         {
@@ -2227,7 +2224,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Skips the children of the current node. 
+        /// Skips the children of the current node.
         /// </summary>
         public override void Skip()
         {
@@ -2242,13 +2239,12 @@ namespace DocumentFormat.OpenXml
                     this.InnerSkip();
                 }
             }
-
         }
 
 #region private methods
 
         /// <summary>
-        /// Move to next element 
+        /// Move to next element
         /// </summary>
         /// <returns>true if the next element was read successfully; false if there are no more elements to read. </returns>
         private bool MoveToNextElement()
@@ -2335,7 +2331,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Move to first child 
+        /// Move to first child
         /// </summary>
         /// <returns>true if the first child element was read successfully; false if there are no child elements to read. </returns>
         /// <remarks>Only can be called on element start. Current will move to the end tag if no child element.</remarks>
@@ -2346,7 +2342,7 @@ namespace DocumentFormat.OpenXml
             if (this._elementState != ElementState.Start)
             {
                 return false;
-            }            
+            }
 
             OpenXmlElement element = this._elementStack.Peek();
             if (element.HasChildren)
@@ -2370,7 +2366,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Move to  next sibling element 
+        /// Move to  next sibling element
         /// </summary>
         /// <returns>true if the next sibling element was read successfully; false if there are no more sibling elements to read. </returns>
         /// <remarks>Current will move to the end tag of the parent if no more sibling element.</remarks>
@@ -2410,7 +2406,7 @@ namespace DocumentFormat.OpenXml
                 else
                 {
                     this._elementState = ElementState.Start;
-                } 
+                }
                 return true;
             }
             else
@@ -2429,7 +2425,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Skips the children of the current node. 
+        /// Skips the children of the current node.
         /// </summary>
         private void InnerSkip()
         {
@@ -2571,7 +2567,7 @@ namespace DocumentFormat.OpenXml
             else
             {
                 this._elementState = ElementState.Start;
-            } 
+            }
             return true;
         }
 
@@ -2585,7 +2581,6 @@ namespace DocumentFormat.OpenXml
 
         private void ThrowIfEof()
         {
-
             if ( this._elementState == ElementState.EOF || this._elementStack.Count <= 0)
             {
                 throw new InvalidOperationException(ExceptionMessages.ReaderInEofState);

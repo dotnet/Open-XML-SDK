@@ -1,14 +1,12 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Diagnostics;
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Packaging;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Internal.SchemaValidation;
 using DocumentFormat.OpenXml.Internal.SemanticValidation;
+using DocumentFormat.OpenXml.Packaging;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation
 {
@@ -250,7 +248,7 @@ namespace DocumentFormat.OpenXml.Validation
             }
 
             // Do NOT use "yield return" in this method, as "yield return" are deferred executed.
-            // Otherwise, the null check is not performed when the method is called, but rather, when the returned enumerator is moved for the first time. 
+            // Otherwise, the null check is not performed when the method is called, but rather, when the returned enumerator is moved for the first time.
             // That means that the exception isn't thrown until possibly far, far away from the actual site of the error, which is potentially confusing.
 
             ValidationResult validationResult = null;
@@ -337,7 +335,7 @@ namespace DocumentFormat.OpenXml.Validation
             }
 
             // Do NOT use "yield return" in this method, as "yield return" are deferred executed.
-            // Otherwise, the null check is not performed when the method is called, but rather, when the returned enumerator is moved for the first time. 
+            // Otherwise, the null check is not performed when the method is called, but rather, when the returned enumerator is moved for the first time.
             // That means that the exception isn't thrown until possibly far, far away from the actual site of the error, which is potentially confusing.
 
             OpenXmlPackage package = openXmlPart.OpenXmlPackage;
@@ -428,7 +426,7 @@ namespace DocumentFormat.OpenXml.Validation
             validationContext.ValidationErrorEventHandler += validationResult.OnValidationError;
             validationContext.Element = openXmlElement;
             // Do NOT use "yield return" in this method, as "yield return" are deferred executed.
-            // Otherwise, the null check is not performed when the method is called, but rather, when the returned enumerator is moved for the first time. 
+            // Otherwise, the null check is not performed when the method is called, but rather, when the returned enumerator is moved for the first time.
             // That means that the exception isn't thrown until possibly far, far away from the actual site of the error, which is potentially confusing.
 
             this.SchemaValidator.Validate(validationContext);

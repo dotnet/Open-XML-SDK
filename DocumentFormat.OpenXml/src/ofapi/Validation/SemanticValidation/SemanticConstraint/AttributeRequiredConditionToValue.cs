@@ -1,15 +1,12 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Validation;
-using System.Xml;
 
 namespace DocumentFormat.OpenXml.Internal.SemanticValidation
 {
     /// <summary>
-    /// 1.18 attribute is required if another attribute equals some value 
+    /// 1.18 attribute is required if another attribute equals some value
     /// </summary>
     internal class AttributeRequiredConditionToValue : SemanticConstraint
     {
@@ -63,7 +60,7 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
                         ErrorType = ValidationErrorType.Semantic,
                         Node = context.Element,
                         Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_AttributeRequiredConditionToValue,
-                                                    GetAttributeQualifiedName(context.Element, _requiredAttribute),                            
+                                                    GetAttributeQualifiedName(context.Element, _requiredAttribute),
                                                     GetAttributeQualifiedName(context.Element, _conditionAttribute),
                                                     valueString)
                     };

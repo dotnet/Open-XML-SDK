@@ -1,4 +1,6 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using OxTest;
@@ -6,13 +8,14 @@ using System;
 using System.IO;
 using System.Linq;
 using Xunit;
+
+using static DocumentFormat.OpenXml.Tests.TestAssets;
+
 using a = DocumentFormat.OpenXml.Drawing;
 using pic = DocumentFormat.OpenXml.Drawing.Pictures;
 using w = DocumentFormat.OpenXml.Wordprocessing;
 using wp = DocumentFormat.OpenXml.Drawing.Wordprocessing;
 using x = DocumentFormat.OpenXml.Spreadsheet;
-
-using static DocumentFormat.OpenXml.Tests.TestAssets;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -647,7 +650,6 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Null(doc.MainDocumentPart.Document);
             }
             File.Delete(testFile);
-
         }
 
         ///<summary>
@@ -697,7 +699,6 @@ namespace DocumentFormat.OpenXml.Tests
                     slidePart2.DeleteReferenceRelationship(dataPartReference.Id);
                     Assert.Single(slidePart2.DataPartReferenceRelationships);
                     Assert.Null(mediaReference.Container);
-
                 }
 
                 stream.Flush();

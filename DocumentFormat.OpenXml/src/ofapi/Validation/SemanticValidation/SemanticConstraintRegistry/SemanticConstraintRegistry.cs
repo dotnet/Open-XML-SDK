@@ -1,9 +1,9 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using DocumentFormat.OpenXml.Validation;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using DocumentFormat.OpenXml.Validation;
 
 namespace DocumentFormat.OpenXml.Internal.SemanticValidation
 {
@@ -39,7 +39,6 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
         {
             if ((fileFormat & _format) == _format && (appType & _appType) == _appType)
             {
-
                 AddConstraintToDic(constraint, ancestorTypeID, _cleanList);
                 AddConstraintToDic(constraint, elementTypeID, _semConstraintMap);
             }
@@ -83,7 +82,6 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
             {
                list.Add(constraint);
             }
-
         }
 
         /// <summary>

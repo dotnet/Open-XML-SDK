@@ -1,15 +1,13 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Internal.SchemaValidation;
 using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Vml;
-using DocumentFormat.OpenXml.Vml.Office;
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Wordprocessing;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-
     /// <summary>
     ///This is a test class for AnyParticleValidatorTest and is intended
     ///to contain all AnyParticleValidatorTest Unit Tests

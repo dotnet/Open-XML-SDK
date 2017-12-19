@@ -1,25 +1,23 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using DocumentFormat.OpenXml;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.Tests.TaskLibraries;
+using DocumentFormat.OpenXml.Wordprocessing;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Xml;
 using System.Xml.Linq;
-using System.Reflection;
-
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Wordprocessing;
-using DocumentFormat.OpenXml.Spreadsheet;
-using DocumentFormat.OpenXml.Presentation;
-using Xunit;
+using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    using DocumentFormat.OpenXml.Tests.TaskLibraries;
-    using Xunit.Abstractions;
-
     /// <summary>
     /// The OpenXmlDom test framework. It contains help methods for testing OpenXmlDom Classes
     /// </summary>
@@ -1632,7 +1630,6 @@ namespace DocumentFormat.OpenXml.Tests
                 else
                 {
                     Log.Warning("Target attribute NOT found.");
-
                 }
             }
             else
@@ -2290,7 +2287,7 @@ namespace DocumentFormat.OpenXml.Tests
             return hostElement;
         }
 
-        void expectedElementInserting(object sender, ElementEventArgs args)
+        private void expectedElementInserting(object sender, ElementEventArgs args)
         {
             Log.Pass("ElementInserting event caught.");
             Log.Comment("[ElementInserting] Inserting {0} to {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
@@ -2302,7 +2299,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyNotReference(args.Element.OpenXmlElementContext, sender, "New element has same OpenXmlElementContext before inserting!");
         }
 
-        void surprisingElementInserting(object sender, ElementEventArgs args)
+        private void surprisingElementInserting(object sender, ElementEventArgs args)
         {
             Log.Fail("ElementInserting event caught.");
             Log.Comment("[ElementInserting] Inserting {0} to {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
@@ -2314,7 +2311,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyNotReference(args.Element.OpenXmlElementContext, sender, "New element has same OpenXmlElementContext before inserting!");
         }
 
-        void expectedElementInserted(object sender, ElementEventArgs args)
+        private void expectedElementInserted(object sender, ElementEventArgs args)
         {
             Log.Pass("ElementInserted event caught.");
             Log.Comment("[ElementInserted] Inserted {0} to {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
@@ -2327,7 +2324,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyReference(args.Element.OpenXmlElementContext, sender, "New child element still has different OpenXmlElementContext after been inserted!");
         }
 
-        void surprisingElementInserted(object sender, ElementEventArgs args)
+        private void surprisingElementInserted(object sender, ElementEventArgs args)
         {
             Log.Fail("ElementInserted event caught.");
             Log.Comment("[ElementInserted] Inserted {0} to {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
@@ -2340,7 +2337,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyReference(args.Element.OpenXmlElementContext, sender, "New child element still has different OpenXmlElementContext after been inserted!");
         }
 
-        void expectedElementRemoving(object sender, ElementEventArgs args)
+        private void expectedElementRemoving(object sender, ElementEventArgs args)
         {
             Log.Pass("ElementRemoving event caught.");
             Log.Comment("[ElementRemoving] Removing {0} from {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
@@ -2354,7 +2351,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyReference(args.Element.OpenXmlElementContext, sender, "Child element has different OpenXmlElementContext before removing!");
         }
 
-        void surprisingElementRemoving(object sender, ElementEventArgs args)
+        private void surprisingElementRemoving(object sender, ElementEventArgs args)
         {
             Log.Fail("ElementRemoving event caught.");
             Log.Comment("[ElementRemoving] Removing {0} from {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
@@ -2368,7 +2365,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyReference(args.Element.OpenXmlElementContext, sender, "Child element has different OpenXmlElementContext before removing!");
         }
 
-        void expectedElementRemoved(object sender, ElementEventArgs args)
+        private void expectedElementRemoved(object sender, ElementEventArgs args)
         {
             Log.Pass("ElementRemoved event caught.");
             Log.Comment("[ElementRemoved] Removed {0} from {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
@@ -2380,7 +2377,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyNotReference(args.Element.OpenXmlElementContext, sender, "Child element still has same OpenXmlElementContext after removing!");
         }
 
-        void surprisingElementRemoved(object sender, ElementEventArgs args)
+        private void surprisingElementRemoved(object sender, ElementEventArgs args)
         {
             Log.Fail("ElementRemoved event caught.");
             Log.Comment("[ElementRemoved] Removed {0} from {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
@@ -2615,7 +2612,6 @@ namespace DocumentFormat.OpenXml.Tests
         /// <param name="targetPosition">If null, compare these two elements. Otherwise, compare the originalElement with resultElement's targetPosition-th child</param>
         internal void VerifyEqual(XElement resultElement, XElement originalElement, int? childPosition)
         {
-
             if (resultElement == null || originalElement == null)
                 throw new ArgumentNullException("one of the arguments passed in is NULL");
 
@@ -2636,7 +2632,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
 
             Log.VerifyTrue(targetElement.Compare(originalElement), "Two elements are not same");
-
         }
 
         internal void VerifyEqual(XElement Xelement, OpenXmlElement Oelement, OpenXmlPart part)
@@ -2777,7 +2772,6 @@ internal static class XElementExtension
 
         foreach (XAttribute attr in A.Attributes().Where(x => x.IsNamespaceDeclaration == false))
         {
-
             if (B.Attribute(attr.Name) == null || B.Attribute(attr.Name).Value != attr.Value)
                 return false;
         }
@@ -2800,5 +2794,4 @@ internal static class XElementExtension
 
         return true;
     }
-
 }

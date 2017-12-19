@@ -1,4 +1,6 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Internal.SchemaValidation;
 using DocumentFormat.OpenXml.Presentation;
 using DocumentFormat.OpenXml.Spreadsheet;
@@ -116,7 +118,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
             Assert.Contains(":undo", actual.Errors[0].Description);
             Assert.Contains(":rfmt", actual.Errors[0].Description);
-
         }
 
         private void TestSimpleChoice3(SdbSchemaDatas sdbSchemaDatas)
@@ -308,7 +309,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
             Assert.Contains(":bldDgm", actual.Errors[0].Description);
             Assert.Contains(":bldChart", actual.Errors[0].Description);
-
         }
 
         private void TestSimpleChoice(SdbSchemaDatas sdbSchemaDatas)

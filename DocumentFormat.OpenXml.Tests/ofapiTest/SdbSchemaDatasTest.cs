@@ -1,9 +1,10 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using DocumentFormat.OpenXml.Internal.SchemaValidation;
-using Xunit;
-using DocumentFormat.OpenXml.Wordprocessing;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Bibliography;
-using DocumentFormat.OpenXml;
+using DocumentFormat.OpenXml.Internal.SchemaValidation;
+using DocumentFormat.OpenXml.Wordprocessing;
+using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -131,7 +132,6 @@ namespace DocumentFormat.OpenXml.Tests
             attributeConstraint = schemaTypeData.AttributeConstraints[1];
             Assert.Equal(XsdAttributeUse.Required, attributeConstraint.XsdAttributeUse);
             Assert.IsType<StringRestriction>(attributeConstraint.SimpleTypeConstraint);
-
         }
 
         private void SimpleLoadTest(SdbSchemaDatas actual)
@@ -180,7 +180,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(2, particle.ChildrenParticles.Length);
             Assert.False(particle.UnboundedMaxOccurs);
             Assert.False(particle.IsSimple());
-
             {
                 // the sequence of CT_DocumentBase
                 particle = documentData.ParticleConstraint.ChildrenParticles[0];
@@ -190,7 +189,6 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Single(particle.ChildrenParticles);
                 Assert.False(particle.UnboundedMaxOccurs);
                 Assert.True(particle.IsSimple());
-
                 {
                     // the element <w:background>
                     elementParticle = particle.ChildrenParticles[0] as ElementParticle;
@@ -211,7 +209,6 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Single(particle.ChildrenParticles);
                 Assert.False(particle.UnboundedMaxOccurs);
                 Assert.True(particle.IsSimple());
-
                 {
                     // the element <w:body>
                     elementParticle = particle.ChildrenParticles[0] as ElementParticle;
@@ -288,7 +285,6 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.True(particle.UnboundedMaxOccurs);
                 Assert.Single(particle.ChildrenParticles);
                 Assert.False(particle.IsSimple());
-
                 {
                     // the group EG_BlockLevelElts contains 1 child - choice particle
                     particle = particle.ChildrenParticles[0];
@@ -297,7 +293,6 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.Equal(1, particle.MaxOccurs);
                     Assert.False(particle.UnboundedMaxOccurs);
                     Assert.False(particle.IsSimple());
-
                     {
                         // the choice particle contains 2 children
                         Assert.Equal(2, particle.ChildrenParticles.Length);
@@ -350,7 +345,6 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void ParagraphConstraintTest(SdbSchemaDatas actual)
         {
-
             //<xsd:complexType name="CT_P">
             //  <xsd:sequence>
             //    <xsd:element name="pPr" type="CT_PPr" minOccurs="0" />
@@ -398,7 +392,6 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Single(particle.ChildrenParticles);
                 Assert.False(particle.IsSimple());
             }
-
         }
 
         private void TextboxConstraintTest(SdbSchemaDatas actual)

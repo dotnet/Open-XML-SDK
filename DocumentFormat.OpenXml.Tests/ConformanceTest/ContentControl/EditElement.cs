@@ -1,18 +1,16 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Wordprocessing;
+using LogUtil;
 using System.Linq;
-using System.Text;
+
+using ConstStr = DocumentFormat.OpenXml.Tests.ContentControl.ConstantStrings;
+using W15 = DocumentFormat.OpenXml.Office2013.Word;
 
 namespace DocumentFormat.OpenXml.Tests.ContentControl
 {
-    using DocumentFormat.OpenXml.Packaging;
-    using DocumentFormat.OpenXml;
-    using DocumentFormat.OpenXml.Wordprocessing;
-    using W15 = DocumentFormat.OpenXml.Office2013.Word;
-    using ConstStr = DocumentFormat.OpenXml.Tests.ContentControl.ConstantStrings;
-    using LogUtil;
-
     public class EditElement
     {
         public static void EditContentControlElements(string filePath, VerifiableLog log)
@@ -71,7 +69,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                                 log.Pass(string.Format("Edit Content Control an appearance element in attribute of target tag=[{0}], Change an appearance attribute(value=Tga).", ConstStr.TestTagStrings.TagContent03));
                             }
-                                
+
                             break;
 
                         //Tag is "Test1.2.2"
@@ -177,14 +175,14 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                                 sdtBlock.SdtProperties.AppendChild<W15.SdtRepeatedSection>(sdtRepeatedSection);
 
                                 log.Pass(string.Format("Edit Content Control a DoNotAllowInsertDeleteSection element of target tag=[{0}], Append The DoNotAllowInsertDeleteSection element. Its element in attribute value is false.", ConstStr.TestTagStrings.TagContent10));
-                            } 
+                            }
                             break;
 
                         //Tag is "Test1.4.4"
                         //Edit sectionTitle element. The value of its element, make changes or value added.
                         case ConstStr.TestTagStrings.TagContent11:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
-                                
+
                             var sectionTitles = sdtBlock.Descendants<W15.SectionTitle>();
                             if (sectionTitles.Count() > 0)
                             {

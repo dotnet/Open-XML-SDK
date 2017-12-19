@@ -1,4 +1,5 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
 
@@ -18,7 +19,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Initializes a new instance of the OfficeAvailabilityAttribute class.
         /// </summary>
-        /// <param name="officeVersion">The Office version where this class or property is available. 
+        /// <param name="officeVersion">The Office version where this class or property is available.
         /// If there is more than one version, use bitwise OR to specify multiple versions.</param>
         public OfficeAvailabilityAttribute(FileFormatVersions officeVersion)
         {

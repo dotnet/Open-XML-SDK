@@ -1,4 +1,5 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
@@ -414,7 +415,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("urn:schemas-microsoft-com:office:word", target.NamespaceUri);
             Assert.Equal("w10", target.Prefix);
             Assert.Equal("wrap", target.LocalName);
-
         }
 
         /// <summary>
@@ -474,7 +474,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.False(target.Equals((object)other));
             Assert.False(OpenXmlAttribute.Equals(target, other));
             Assert.NotEqual(target.GetHashCode(), other.GetHashCode());
-
         }
 
         /// <summary>
@@ -898,7 +897,6 @@ namespace DocumentFormat.OpenXml.Tests
                     reader.ReadNextSibling();
                     Assert.EndsWith("Table", reader.ElementType.Name);
                     Assert.Single(reader.NamespaceDeclarations);
-
                 }
             }
         }
@@ -916,7 +914,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(node.ExtendedAttributes.Count(), nod1.ExtendedAttributes.Count());
             Assert.Equal(node.OuterXml, nod1.OuterXml);
             Assert.Equal(node.Body.OuterXml, nod1.Body.OuterXml);
-
         }
 
         /// <summary>

@@ -2,7 +2,23 @@ Open-XML-SDK
 ============
 
 [![NuGet](https://img.shields.io/nuget/v/DocumentFormat.OpenXml.svg)]()
-[![NuGet](https://img.shields.io/nuget/dt/DocumentFormat.OpenXml.svg)]()
+[![Downloads](https://img.shields.io/nuget/dt/DocumentFormat.OpenXml.svg)]()
+
+Builds
+
+| Branch     | Status |
+|------------|--------|
+| master     | ![master](https://img.shields.io/appveyor/ci/openxmlsdk/Open-XML-SDK/master.svg) |
+| vNext      | ![vNext](https://img.shields.io/appveyor/ci/openxmlsdk/Open-XML-SDK/vNext.svg) |
+| Office2016 | ![codecov](https://img.shields.io/appveyor/ci/openxmlsdk/Open-XML-SDKt/Office2016.svg) |
+
+Code Coverage:
+
+| Branch     | Status |
+|------------|--------|
+| master     | [![codecov](https://codecov.io/gh/OfficeDev/Open-XML-SDK/branch/master/graph/badge.svg)](https://codecov.io/gh/OfficeDev/Open-XML-SDK) |
+| vNext      | [![codecov](https://codecov.io/gh/OfficeDev/Open-XML-SDK/branch/vNext/graph/badge.svg)](https://codecov.io/gh/OfficeDev/Open-XML-SDK) |
+| Office2016 | [![codecov](https://codecov.io/gh/OfficeDev/Open-XML-SDK/branch/Office2016/graph/badge.svg)](https://codecov.io/gh/OfficeDev/Open-XML-SDK) |
 
     This is the Office2016 branch, which contains a preview of the Open-Xml-Sdk v3.0 that
 	supports the Office 2016 extensions in the file format.  The biggest change to the markup was
@@ -22,13 +38,6 @@ The Open XML SDK provides tools for working with Office Word, Excel, and PowerPo
 - Searching and replacing content in Word/PowerPoint using regular expressions.
 - Updating cached data and embedded spreadsheets for charts in Word/PowerPoint.
 - Document modification, such as removing tracked revisions or removing unacceptable content from documents.
-
-Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.
-Licensed under the Apache License, Version 2.0.
-See License.txt in the project root for license information.
-
-Portions of this project are licensed under the MIT license.
-See MIT-License.txt in the project root for license information.
 
 The Release Package on Nuget.org
 ================================

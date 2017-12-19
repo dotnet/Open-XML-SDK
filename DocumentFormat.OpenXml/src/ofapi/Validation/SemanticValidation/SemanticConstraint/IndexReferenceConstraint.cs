@@ -1,11 +1,8 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using DocumentFormat.OpenXml.Validation;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Packaging;
-using System.Diagnostics;
+using DocumentFormat.OpenXml.Validation;
 
 namespace DocumentFormat.OpenXml.Internal.SemanticValidation
 {
@@ -24,7 +21,7 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
         private OpenXmlPart _relatedPart;
         private bool _startCollect;
 
-        public IndexReferenceConstraint(byte attribute, string referencedPart, int referencedElementParent, 
+        public IndexReferenceConstraint(byte attribute, string referencedPart, int referencedElementParent,
                                                     int referencedElement, string referencedElementName, int indexBase)
             : base(SemanticValidationLevel.Package)
         {
@@ -48,7 +45,7 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
         {
             OpenXmlSimpleType attributeValue = context.Element.Attributes[_attribute];
 
-            //if the attribute is omited, semantic validation will do nothing 
+            //if the attribute is omited, semantic validation will do nothing
             if (attributeValue == null || string.IsNullOrEmpty(attributeValue.InnerText))
             {
                 return null;
@@ -72,9 +69,9 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
                 Node = context.Element,
                 RelatedPart = this._relatedPart,
                 RelatedNode = null,
-                Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_MissingIndexedElement, 
-                                            _refElementName,context.Element.LocalName, 
-                                            GetAttributeQualifiedName(context.Element, _attribute), 
+                Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_MissingIndexedElement,
+                                            _refElementName,context.Element.LocalName,
+                                            GetAttributeQualifiedName(context.Element, _attribute),
                                             _relatedPart == null? _refPartType : _relatedPart.PackagePart.Uri.ToString(), index)
             };
         }
@@ -116,7 +113,7 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
                     ValidationTraverser.ValidatingTraverse(validationContext, this.ElementTraverseStart, this.ElementTraverseEnd, null);
                 }
             }
-            
+
             return this._refElementCount;
         }
 
@@ -144,6 +141,5 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
                 _startCollect = false;
             }
         }
-
     }
 }

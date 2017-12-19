@@ -1,7 +1,10 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Internal.SemanticValidation;
 using DocumentFormat.OpenXml.Validation;
 using Xunit;
+
 using Excel = DocumentFormat.OpenXml.Spreadsheet;
 using Word = DocumentFormat.OpenXml.Wordprocessing;
 

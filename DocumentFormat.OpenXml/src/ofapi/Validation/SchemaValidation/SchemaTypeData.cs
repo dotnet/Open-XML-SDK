@@ -1,9 +1,9 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using System.Collections.Generic;
-using System.Linq;
-using System.Diagnostics;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 {
@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// The schema type constraint for an OpenXmlElement.
     /// </summary>
     /// <remarks>
-    /// 
+    ///
     /// </remarks>
     [DebuggerDisplay("OpenXmlTypeId={OpenXmlTypeId}")]
     internal class SchemaTypeData
@@ -110,7 +110,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         {
             get;
             private set;
-
         }
 
         internal bool HasAttributeConstraints

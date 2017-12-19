@@ -1,16 +1,16 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Tests.TaskLibraries;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    using DocumentFormat.OpenXml;
-    using DocumentFormat.OpenXml.Packaging;
-    using DocumentFormat.OpenXml.Tests.TaskLibraries;
-    using Xunit.Abstractions;
-
     public abstract class ConformanceTestBase<TReflectedCode, TPackage, TElement> : OpenXmlTestBase
         where TElement : OpenXmlElement
         where TPackage : OpenXmlPackage
@@ -89,7 +89,6 @@ namespace DocumentFormat.OpenXml.Tests
 
                 postTest(elements.First<TElement>());
             }
-
         }
         #endregion
 

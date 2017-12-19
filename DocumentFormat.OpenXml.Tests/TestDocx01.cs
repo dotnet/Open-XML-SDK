@@ -1,4 +1,5 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation;
@@ -1080,10 +1081,10 @@ namespace DocumentFormat.OpenXml.Tests
             using (var ms = new MemoryStream())
             using (var doc = WordprocessingDocument.Create(ms, WordprocessingDocumentType.Document))
             {
-                // Add a new main document part. 
+                // Add a new main document part.
                 doc.AddMainDocumentPart();
 
-                // Create the Document DOM. 
+                // Create the Document DOM.
                 doc.MainDocumentPart.Document =
                     new W.Document(
                     new W.Body(
@@ -1091,7 +1092,7 @@ namespace DocumentFormat.OpenXml.Tests
                         new W.Run(
                             new W.Text("Hello World!")))));
 
-                // Save changes to the main document part. 
+                // Save changes to the main document part.
                 doc.MainDocumentPart.Document.Save();
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);

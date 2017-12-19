@@ -1,12 +1,13 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
-using System.Text;
 using System.Diagnostics;
 using System.Reflection;
-using System.Globalization;
+using System.Text;
 using System.Xml;
 
 namespace DocumentFormat.OpenXml
@@ -24,7 +25,6 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlSimpleType()
             : base()
         {
-
         }
 
         /// <summary>
@@ -48,14 +48,14 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         protected string TextValue
         {
-            get 
+            get
             {
-                return _textValue; 
+                return _textValue;
             }
 
-            set 
+            set
             {
-                _textValue = value; 
+                _textValue = value;
             }
         }
 
@@ -103,7 +103,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Returns a String that represents the current value. 
+        /// Returns a String that represents the current value.
         /// </summary>
         /// <returns>A String that represents the current value. </returns>
         public override string ToString()
@@ -173,10 +173,10 @@ namespace DocumentFormat.OpenXml
 
     /// <summary>
     /// Represents a generic value for simple value types (Int32, UInt32, Byte, struct, etc).
-    /// </summary>    
+    /// </summary>
     /// <typeparam name="T">The type of the value.</typeparam>
     [DebuggerDisplay("{InnerText}")]
-    public abstract class OpenXmlSimpleValue<T> 
+    public abstract class OpenXmlSimpleValue<T>
         : OpenXmlSimpleType
         where T : struct
     {
@@ -307,7 +307,7 @@ namespace DocumentFormat.OpenXml
 
     /// <summary>
     /// Represents the Boolean value for attributes.
-    /// </summary> 
+    /// </summary>
     [DebuggerDisplay("{InnerText}")]
     public class BooleanValue : OpenXmlSimpleValue<Boolean>
     {
@@ -413,7 +413,6 @@ namespace DocumentFormat.OpenXml
         /// <returns>A new BooleanValue instance with the value.</returns>
         public static implicit operator BooleanValue(Boolean value)
         {
-
             return FromBoolean(value);
         }
 
@@ -433,7 +432,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="xmlAttribute">
         /// A BooleanValue object to retrieve a Boolean representation.
         /// </param>
-        /// <returns>A Boolean value that represents a BooleanValue object.</returns>		
+        /// <returns>A Boolean value that represents a BooleanValue object.</returns>
         public static Boolean ToBoolean(BooleanValue xmlAttribute)
         {
             if (xmlAttribute == null)
@@ -449,7 +448,7 @@ namespace DocumentFormat.OpenXml
             return new BooleanValue(this);
         }
     }
-    
+
     /// <summary>
     /// Represents the byte value for attributes.
     /// </summary>
@@ -489,7 +488,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(source));
             }
         }
-         
+
         /// <summary>
         /// Gets or sets the inner XML text.
         /// </summary>
@@ -554,7 +553,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>
         /// The converted Byte value.
         /// </returns>
-        /// <exception cref="InvalidOperationException">Thrown when xmlAttribute is null.</exception>		
+        /// <exception cref="InvalidOperationException">Thrown when xmlAttribute is null.</exception>
         public static implicit operator Byte(ByteValue xmlAttribute)
         {
             if (xmlAttribute == null)
@@ -572,7 +571,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="value">
         /// The Byte value.
         /// </param>
-        /// <returns>A new ByteValue instance with the value.</returns>		
+        /// <returns>A new ByteValue instance with the value.</returns>
         public static implicit operator ByteValue(Byte value)
         {
             return FromByte(value);
@@ -667,7 +666,6 @@ namespace DocumentFormat.OpenXml
                                  this.TextValue != null && this.TextValue == this.InnerValue.ToString() ||
                                 // special case: signed number like text is "+5", value is 5
                                  this.TextValue != null && this.TextValue == "+" + this.InnerValue.ToString());
-
                 }
                 return this.TextValue;
             }
@@ -748,7 +746,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="xmlAttribute">
         /// An SByteValue object to retrieve an SByte representation.
         /// </param>
-        /// <returns>An SByte value that represents an SByteValue object.</returns>		
+        /// <returns>An SByte value that represents an SByteValue object.</returns>
         public static SByte ToSByte(SByteValue xmlAttribute)
         {
             if (xmlAttribute == null)
@@ -820,7 +818,6 @@ namespace DocumentFormat.OpenXml
                                  this.TextValue != null && this.TextValue == this.InnerValue.ToString() ||
                                 // special case: signed number like text is "+5", value is 5
                                  this.TextValue != null && this.TextValue == "+" + this.InnerValue.ToString());
-
                 }
                 return this.TextValue;
             }
@@ -900,7 +897,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="xmlAttribute">
         /// An Int16Value object to retrieve an Int16 representation.
         /// </param>
-        /// <returns>An Int16 value that represents an Int16Value object.</returns>		
+        /// <returns>An Int16 value that represents an Int16Value object.</returns>
         public static Int16 ToInt16(Int16Value xmlAttribute)
         {
             if (xmlAttribute == null)
@@ -1071,7 +1068,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="xmlAttribute">
         /// An Int32Value object to use to retrieve an Int32 representation.
         /// </param>
-        /// <returns>An Int32 value that represents an Int32Value object.</returns>		
+        /// <returns>An Int32 value that represents an Int32Value object.</returns>
         public static Int32 ToInt32(Int32Value xmlAttribute)
         {
             if (xmlAttribute == null)
@@ -1143,7 +1140,6 @@ namespace DocumentFormat.OpenXml
                                  this.TextValue != null && this.TextValue == this.InnerValue.ToString() ||
                                 // special case: signed number like text is "+5", value is 5
                                  this.TextValue != null && this.TextValue == "+" + this.InnerValue.ToString());
-
                 }
                 return this.TextValue;
             }
@@ -1223,7 +1219,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="xmlAttribute">
         /// An Int64Value object used to retrieve an Int64 representation.
         /// </param>
-        /// <returns>An Int64 value that represents an Int64Value object.</returns>		
+        /// <returns>An Int64 value that represents an Int64Value object.</returns>
         public static Int64 ToInt64(Int64Value xmlAttribute)
         {
             if (xmlAttribute == null)
@@ -1238,17 +1234,16 @@ namespace DocumentFormat.OpenXml
         {
             return new Int64Value(this);
         }
-
     }
 
     /// <summary>
     /// Represents the xsd:integer value for attributes.
     /// </summary>
     /// <remarks>
-    /// Integer is derived from decimal by fixing the value of fractionDigits to be 0 and disallowing the trailing decimal point. 
-    /// The value space of integer is the infinite set {...,-2,-1,0,1,2,...}. The base type of integer is decimal. 
-    /// 
-    /// Use Int64 as the internal type for now. 
+    /// Integer is derived from decimal by fixing the value of fractionDigits to be 0 and disallowing the trailing decimal point.
+    /// The value space of integer is the infinite set {...,-2,-1,0,1,2,...}. The base type of integer is decimal.
+    ///
+    /// Use Int64 as the internal type for now.
     /// TODO: Should decimal be used as the internal type?
     /// </remarks>
     [DebuggerDisplay("{InnerText}")]
@@ -1303,7 +1298,6 @@ namespace DocumentFormat.OpenXml
                                  this.TextValue != null && this.TextValue == this.InnerValue.ToString() ||
                                 // special case: signed number like text is "+5", value is 5
                                  this.TextValue != null && this.TextValue == "+" + this.InnerValue.ToString());
-
                 }
                 return this.TextValue;
             }
@@ -1385,7 +1379,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="xmlAttribute">
         /// An IntegerValue object used to retrieve an Int64 representation.
         /// </param>
-        /// <returns>An Int64 value that represents an IntegerValue object.</returns>		
+        /// <returns>An Int64 value that represents an IntegerValue object.</returns>
         public static Int64 ToInt64(IntegerValue xmlAttribute)
         {
             if (xmlAttribute == null)
@@ -1400,7 +1394,6 @@ namespace DocumentFormat.OpenXml
         {
             return new IntegerValue(this);
         }
-
     }
 
     /// <summary>
@@ -1457,7 +1450,6 @@ namespace DocumentFormat.OpenXml
                     Debug.Assert(this.TextValue == null && !this.InnerValue.HasValue ||
                                  this.TextValue != null && !this.InnerValue.HasValue ||
                                  this.TextValue != null && this.TextValue == this.InnerValue.ToString());
-
                 }
                 return this.TextValue;
             }
@@ -1687,7 +1679,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="xmlAttribute">
         /// A UInt32Value object used to retrieve a UInt32 value representation.
         /// </param>
-        /// <returns>A UInt32 value that represents a UInt32Value object.</returns>		
+        /// <returns>A UInt32 value that represents a UInt32Value object.</returns>
         public static UInt32 ToUInt32(UInt32Value xmlAttribute)
         {
             if (xmlAttribute == null)
@@ -1768,7 +1760,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         internal override void Parse()
         {
-            this.InnerValue = XmlConvert.ToUInt64(this.TextValue); 
+            this.InnerValue = XmlConvert.ToUInt64(this.TextValue);
         }
 
         /// <summary>
@@ -1853,7 +1845,7 @@ namespace DocumentFormat.OpenXml
             return new UInt64Value(this);
         }
     }
-    
+
     /// <summary>
     /// Represents the decimal value for attributes.
     /// </summary>
@@ -1913,7 +1905,6 @@ namespace DocumentFormat.OpenXml
                                  this.TextValue != null && this.TextValue == this.InnerValue.ToString() ||
                                 // special case: signed number like text is "+5", value is 5
                                  this.TextValue != null && this.TextValue == "+" + this.InnerValue.ToString());
-
                 }
                 return this.TextValue;
             }
@@ -2365,9 +2356,9 @@ namespace DocumentFormat.OpenXml
         //        if (_dateTimeFormats == null)
         //        {
         //            // copied from WindowsBase System.IO.Packaging.PartBasedPackageProperties()
-        //            _dateTimeFormats = new string[] { 
-        //                "yyyy-MM-ddTHH:mm:ss", "yyyy-MM-ddTHH:mm:ssZ", "yyyy-MM-ddTHH:mm:sszzz", @"\-yyyy-MM-ddTHH:mm:ss", @"\-yyyy-MM-ddTHH:mm:ssZ", @"\-yyyy-MM-ddTHH:mm:sszzz", "yyyy-MM-ddTHH:mm:ss.ff", "yyyy-MM-ddTHH:mm:ss.fZ", "yyyy-MM-ddTHH:mm:ss.fzzz", @"\-yyyy-MM-ddTHH:mm:ss.f", @"\-yyyy-MM-ddTHH:mm:ss.fZ", @"\-yyyy-MM-ddTHH:mm:ss.fzzz", "yyyy-MM-ddTHH:mm:ss.ff", "yyyy-MM-ddTHH:mm:ss.ffZ", "yyyy-MM-ddTHH:mm:ss.ffzzz", @"\-yyyy-MM-ddTHH:mm:ss.ff", 
-        //                @"\-yyyy-MM-ddTHH:mm:ss.ffZ", @"\-yyyy-MM-ddTHH:mm:ss.ffzzz", "yyyy-MM-ddTHH:mm:ss.fff", "yyyy-MM-ddTHH:mm:ss.fffZ", "yyyy-MM-ddTHH:mm:ss.fffzzz", @"\-yyyy-MM-ddTHH:mm:ss.fff", @"\-yyyy-MM-ddTHH:mm:ss.fffZ", @"\-yyyy-MM-ddTHH:mm:ss.fffzzz", "yyyy-MM-ddTHH:mm:ss.ffff", "yyyy-MM-ddTHH:mm:ss.ffffZ", "yyyy-MM-ddTHH:mm:ss.ffffzzz", @"\-yyyy-MM-ddTHH:mm:ss.ffff", @"\-yyyy-MM-ddTHH:mm:ss.ffffZ", @"\-yyyy-MM-ddTHH:mm:ss.ffffzzz", "yyyy-MM-ddTHH:mm:ss.fffff", "yyyy-MM-ddTHH:mm:ss.fffffZ", 
+        //            _dateTimeFormats = new string[] {
+        //                "yyyy-MM-ddTHH:mm:ss", "yyyy-MM-ddTHH:mm:ssZ", "yyyy-MM-ddTHH:mm:sszzz", @"\-yyyy-MM-ddTHH:mm:ss", @"\-yyyy-MM-ddTHH:mm:ssZ", @"\-yyyy-MM-ddTHH:mm:sszzz", "yyyy-MM-ddTHH:mm:ss.ff", "yyyy-MM-ddTHH:mm:ss.fZ", "yyyy-MM-ddTHH:mm:ss.fzzz", @"\-yyyy-MM-ddTHH:mm:ss.f", @"\-yyyy-MM-ddTHH:mm:ss.fZ", @"\-yyyy-MM-ddTHH:mm:ss.fzzz", "yyyy-MM-ddTHH:mm:ss.ff", "yyyy-MM-ddTHH:mm:ss.ffZ", "yyyy-MM-ddTHH:mm:ss.ffzzz", @"\-yyyy-MM-ddTHH:mm:ss.ff",
+        //                @"\-yyyy-MM-ddTHH:mm:ss.ffZ", @"\-yyyy-MM-ddTHH:mm:ss.ffzzz", "yyyy-MM-ddTHH:mm:ss.fff", "yyyy-MM-ddTHH:mm:ss.fffZ", "yyyy-MM-ddTHH:mm:ss.fffzzz", @"\-yyyy-MM-ddTHH:mm:ss.fff", @"\-yyyy-MM-ddTHH:mm:ss.fffZ", @"\-yyyy-MM-ddTHH:mm:ss.fffzzz", "yyyy-MM-ddTHH:mm:ss.ffff", "yyyy-MM-ddTHH:mm:ss.ffffZ", "yyyy-MM-ddTHH:mm:ss.ffffzzz", @"\-yyyy-MM-ddTHH:mm:ss.ffff", @"\-yyyy-MM-ddTHH:mm:ss.ffffZ", @"\-yyyy-MM-ddTHH:mm:ss.ffffzzz", "yyyy-MM-ddTHH:mm:ss.fffff", "yyyy-MM-ddTHH:mm:ss.fffffZ",
         //                "yyyy-MM-ddTHH:mm:ss.fffffzzz", @"\-yyyy-MM-ddTHH:mm:ss.fffff", @"\-yyyy-MM-ddTHH:mm:ss.fffffZ", @"\-yyyy-MM-ddTHH:mm:ss.fffffzzz", "yyyy-MM-ddTHH:mm:ss.ffffff", "yyyy-MM-ddTHH:mm:ss.ffffffZ", "yyyy-MM-ddTHH:mm:ss.ffffffzzz", @"\-yyyy-MM-ddTHH:mm:ss.ffffff", @"\-yyyy-MM-ddTHH:mm:ss.ffffffZ", @"\-yyyy-MM-ddTHH:mm:ss.ffffffzzz", "yyyy-MM-ddTHH:mm:ss.fffffff", "yyyy-MM-ddTHH:mm:ss.fffffffZ", "yyyy-MM-ddTHH:mm:ss.fffffffzzz", @"\-yyyy-MM-ddTHH:mm:ss.fffffff", @"\-yyyy-MM-ddTHH:mm:ss.fffffffZ", @"\-yyyy-MM-ddTHH:mm:ss.fffffffzzz"
         //                };
         //        }
@@ -2462,7 +2453,7 @@ namespace DocumentFormat.OpenXml
             }
             catch (FormatException)
             {
-                // can not convert 
+                // can not convert
                 return false;
             }
         }
@@ -2836,7 +2827,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="xmlAttribute">
         /// A Base64BinaryValue object used to retrieve a String value representation.
         /// </param>
-        /// <returns>A String value that represents a Base64BinaryValue object.</returns>		
+        /// <returns>A String value that represents a Base64BinaryValue object.</returns>
         public static String ToString(Base64BinaryValue xmlAttribute)
         {
             if (xmlAttribute == null)
@@ -2937,7 +2928,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets the values.
         /// </summary>
-        public ICollection<T> Items 
+        public ICollection<T> Items
         {
             get
             {
@@ -2974,7 +2965,7 @@ namespace DocumentFormat.OpenXml
 
             if (!String.IsNullOrEmpty(this.TextValue))
             {
-                // split the string by white-space characters as the delimiters. 
+                // split the string by white-space characters as the delimiters.
                 string[] items = this.TextValue.Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
 
                 foreach (string item in items)
@@ -2994,7 +2985,7 @@ namespace DocumentFormat.OpenXml
         {
             if ( ! String.IsNullOrEmpty( this.TextValue ) )
             {
-                // split the string by white-space characters as the delimiters. 
+                // split the string by white-space characters as the delimiters.
                 string[] items = this.TextValue.Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
 
                 var list = new ObservableCollection<T>();
@@ -3010,7 +3001,7 @@ namespace DocumentFormat.OpenXml
                 this._list.CollectionChanged += this.CollectionChanged;
                 return true;
             }
-            
+
             return false;
         }
 
@@ -3036,7 +3027,7 @@ namespace DocumentFormat.OpenXml
                         }
                     }
                     this.TextValue = textString.ToString();
-                } 
+                }
                 return this.TextValue;
             }
 
@@ -3080,7 +3071,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     /// <typeparam name="T">Every enum value must be an enum with the EnumStringValueAttribute object.</typeparam>
     [DebuggerDisplay("{InnerText}")]
-    public class EnumValue<T> : OpenXmlSimpleType 
+    public class EnumValue<T> : OpenXmlSimpleType
         where T : struct
     {
         private T? _enumValue;
@@ -3089,7 +3080,7 @@ namespace DocumentFormat.OpenXml
         // Performance profile for OpenXmlValidator shows that parsing string into Enum tooks 50% overall time.
         // The reason is that each time we use reflection to get all the strings for the enum.
         // So the performance is bad, especially for enums with many items like BorderValues.
-        // 
+        //
         // Build a look up dictionary on fly if the enum is parsed for more than Threshold times.
         // This look up table will hooked on the type as static data.
         //********************************************************************************************
@@ -3180,7 +3171,7 @@ namespace DocumentFormat.OpenXml
                 }
                 else
                 {
-                    Debug.Assert( this.TextValue == null || 
+                    Debug.Assert( this.TextValue == null ||
                                   this.TextValue == ToString(this._enumValue.Value));
                 }
                 return this._enumValue.Value;
@@ -3241,7 +3232,7 @@ namespace DocumentFormat.OpenXml
         /// value.
         /// </summary>
         /// <param name="value">The specified value.</param>
-        /// <returns>A new EnumValue instance corresponding to the value.</returns>		
+        /// <returns>A new EnumValue instance corresponding to the value.</returns>
         public static implicit operator EnumValue<T>(T value)
         {
             return new EnumValue<T>(value);
@@ -3256,13 +3247,13 @@ namespace DocumentFormat.OpenXml
         {
             if (value == null)
                 return null;
-            
+
             return value.InnerText;
         }
 
         internal override OpenXmlSimpleType CloneImp()
         {
-            return new EnumValue<T>(this); 
+            return new EnumValue<T>(this);
         }
 
         /// <summary>
@@ -3414,7 +3405,7 @@ namespace DocumentFormat.OpenXml
                 }
                 else
                 {
-                    // If the OfficeAvailabilityAttribute is not set, then it means the value item exist in both versions.            
+                    // If the OfficeAvailabilityAttribute is not set, then it means the value item exist in both versions.
                     return true;
                 }
             }
@@ -3436,7 +3427,7 @@ namespace DocumentFormat.OpenXml
         /// Initializes a new instance of the EnumStringAttribute class using
         /// the supplied text string.
         /// </summary>
-        /// <param name="value">The text string.</param>		
+        /// <param name="value">The text string.</param>
         public EnumStringAttribute(string value)
         {
             this.Value = value;
@@ -3876,7 +3867,7 @@ namespace DocumentFormat.OpenXml
                 _impl.InnerText = value;
             }
         }
-        
+
         /// <summary>
         /// Implicitly converts a TrueFalseBlankValue object to a <see cref="Boolean"/> value.
         /// </summary>

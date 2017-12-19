@@ -1,4 +1,6 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System;
@@ -93,7 +95,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void AppendIEnumerableXSLTest()
         {
-
             FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
                 .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
             var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
@@ -517,7 +518,6 @@ namespace DocumentFormat.OpenXml.Tests
                 RemoveOnFile(testfile, getSlidePart, getAnyLeaf);
                 RemoveOnFile(testfile, getSlidePart, getAnyComposite);
             }
-
         }
 
         [Fact]
@@ -1762,7 +1762,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             var testfile = testfiles.FirstOrDefault();
             AppendCollectionOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getAnyCompositeNoEvent, AppendCollectionType.IEnumerable);
-
         }
 
         [Fact]

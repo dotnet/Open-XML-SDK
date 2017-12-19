@@ -1,18 +1,16 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Diagnostics;
-using System.Globalization;
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Packaging;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Internal.SchemaValidation;
 using DocumentFormat.OpenXml.Internal.SemanticValidation;
+using DocumentFormat.OpenXml.Packaging;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Globalization;
 
 namespace DocumentFormat.OpenXml.Validation
 {
-
     /// <summary>
     /// Implement this interface when the operation is cancelable
     /// </summary>
@@ -89,12 +87,11 @@ namespace DocumentFormat.OpenXml.Validation
 
             foreach (var part in PartsToBeValidated)
             {
-                // travser from the part root element (by DOM or by Reader) in post-order 
+                // travser from the part root element (by DOM or by Reader) in post-order
                 // that means validate the children firt, then validate the parent
-                // the validation engine call bookkeep information 
+                // the validation engine call bookkeep information
 
                 this.ValidatePart(part);
-
             }
 
             this.FinishValidation();
@@ -189,7 +186,7 @@ namespace DocumentFormat.OpenXml.Validation
         /// Gets or sets the target document to be validated.
         /// </summary>
         protected abstract OpenXmlPackage TargetDocument { get; set; }
-        
+
         /// <summary>
         /// Returns all the parts needs to be validated.
         /// </summary>
@@ -204,7 +201,7 @@ namespace DocumentFormat.OpenXml.Validation
             InitValidationContext();
 
             this.SemanticValidator.ClearConstraintState(SemanticValidationLevel.PackageOnly);
-            
+
             return true;
         }
 
@@ -243,12 +240,12 @@ namespace DocumentFormat.OpenXml.Validation
             packageValidationSettings.EventHandler += this.OnPackageValidationError;
 
             document.Validate(packageValidationSettings, this.ValidationSettings.FileFormat);
-            
+
             return;
         }
 
         private void OnPackageValidationError(Object sender, OpenXmlPackageValidationEventArgs e)
-        {            
+        {
             ValidationErrorInfo errorInfo = new ValidationErrorInfo();
             errorInfo.ErrorType = ValidationErrorType.Package;
             errorInfo.Id = "Pkg_" + e.MessageId;

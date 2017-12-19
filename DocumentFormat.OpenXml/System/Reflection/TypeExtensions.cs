@@ -1,8 +1,11 @@
-﻿using System;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace DocumentFormat.OpenXml 
+namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// TypeInfo is used in the code base as .NET Standard requires it. However, .NET 4.0 and .NET 3.5 do not have this or other
