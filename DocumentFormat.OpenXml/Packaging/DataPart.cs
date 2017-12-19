@@ -156,7 +156,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             using (Stream targetStream = this.GetStream(FileMode.Create))
             {
-                OpenXmlPart.CopyStream(sourceStream, targetStream);
+                sourceStream.CopyTo(targetStream);
             }
         }
 
