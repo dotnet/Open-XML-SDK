@@ -60,6 +60,10 @@
         <Compile Include="System\Collections\Generic\IReadOnlyCollection.cs" />
         <Compile Include="System\Reflection\TypeExtensions.cs" />
       </ItemGroup>
+
+      <ItemGroup Condition=" '$(TargetFramework)' == 'net35' ">
+        <Compile Include="System\IO\StreamCopyExtensions.cs" />
+      </ItemGroup>
     </When>
 
     <When Condition=" '$(TargetFramework)' == 'net46' ">

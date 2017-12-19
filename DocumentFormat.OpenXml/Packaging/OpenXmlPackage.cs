@@ -949,7 +949,7 @@ namespace DocumentFormat.OpenXml.Packaging
                         throw new OpenXmlPackageException(ExceptionMessages.DocumentTooBig);
                     }
                     memoryStream = new MemoryStream(Convert.ToInt32(mainPartStream.Length));
-                    OpenXmlPart.CopyStream(mainPartStream, memoryStream);
+                    mainPartStream.CopyTo(memoryStream);
                 }
 
                 //
