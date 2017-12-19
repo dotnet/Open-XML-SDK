@@ -398,7 +398,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             using (Stream targetStream = this.GetStream(FileMode.Create))
             {
-                CopyStream(sourceStream, targetStream);
+                sourceStream.CopyTo(targetStream);
             }
         }
 
@@ -843,30 +843,6 @@ namespace DocumentFormat.OpenXml.Packaging
             return this._metroPart.CreateRelationship(targetUri, targetMode, relationshipType, id);
         }
 
-        #endregion
-
-        #region private methods
-        internal static void CopyStream(Stream sourceStream, Stream targetStream)
-        {
-            if (sourceStream == null)
-            {
-                throw new ArgumentNullException(nameof(sourceStream));
-            }
-
-            using (BinaryReader sourceReader = new BinaryReader(sourceStream))
-            {
-                byte[] buffer = new byte[4096];
-
-                int num = 0;
-                do
-                {
-                    num = sourceReader.Read(buffer, 0, 4096);
-                    if (num > 0)
-                        targetStream.Write(buffer, 0, num);
-                }
-                while (num > 0);
-            }
-        }
         #endregion
 
         #region MC Staffs
