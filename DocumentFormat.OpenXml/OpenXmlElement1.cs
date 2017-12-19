@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Attributes.Translator;
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
@@ -8,25 +9,11 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Reflection;
-using System.Text;
 using System.Xml;
 using System.Xml.Linq;
 
-#if FEATURE_SERIALIZATION
-using System.Runtime.Serialization;
-#endif
-
 namespace DocumentFormat.OpenXml
 {
-    internal class MiscAttrContainer
-    {
-        internal List<OpenXmlAttribute> ExtendedAttributesField { get; set; }
-
-        internal MarkupCompatibilityAttributes _mcAttributes { get; set; }
-
-        internal List<KeyValuePair<string, string>> _nsMappings { get; set; }
-    }
-
     /// <summary>
     /// Represents a base class that all elements in an Office Open XML document derive from.
     /// </summary>
@@ -109,7 +96,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        internal List<KeyValuePair<string,string>> NamespaceDeclField
+        internal List<KeyValuePair<string, string>> NamespaceDeclField
         {
             get
             {
@@ -231,7 +218,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                MakeSureParsed( );
+                MakeSureParsed();
                 Debug.Assert(this.FixedAttributesArray == null && this.FixedAttributeTotal == 0 || this.FixedAttributesArray != null);
                 return this.FixedAttributesArray;
             }
@@ -349,7 +336,7 @@ namespace DocumentFormat.OpenXml
             get
             {
                 MakeSureParsed();
-                if (ExtendedAttributesField!= null && ExtendedAttributesField.Count != 0)
+                if (ExtendedAttributesField != null && ExtendedAttributesField.Count != 0)
                 {
                     return true;
                 }
@@ -971,7 +958,7 @@ namespace DocumentFormat.OpenXml
             MakeSureParsed();
             if (NamespaceDeclField != null)
             {
-                for(int i = 0; i<NamespaceDeclField.Count; i++)
+                for (int i = 0; i < NamespaceDeclField.Count; i++)
                 {
                     if (NamespaceDeclField[i].Key == prefix)
                     {
@@ -989,7 +976,7 @@ namespace DocumentFormat.OpenXml
         /// <returns></returns>
         public T GetFirstChild<T>() where T : OpenXmlElement
         {
-            return this.ChildElements.First<T>( );
+            return this.ChildElements.First<T>();
         }
 
         /// <summary>
@@ -1137,7 +1124,7 @@ namespace DocumentFormat.OpenXml
         {
             T elementT = null;
 
-            foreach(OpenXmlElement element in this.Descendants() )
+            foreach (OpenXmlElement element in this.Descendants())
             {
                 elementT = element as T;
                 if (elementT != null)
@@ -1153,7 +1140,7 @@ namespace DocumentFormat.OpenXml
         /// <returns></returns>
         public IEnumerable<OpenXmlElement> Descendants()
         {
-            if ( this.FirstChild == null )
+            if (this.FirstChild == null)
             {
                 yield break;
             }
@@ -1198,7 +1185,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>An IEnumerable object that contains a list of OpenXmlElement elements.</returns>
         public IEnumerable<OpenXmlElement> ElementsBefore()
         {
-            if ( this.Parent != null )
+            if (this.Parent != null)
             {
                 OpenXmlElement element = this.Parent.FirstChild;
 
@@ -1701,7 +1688,7 @@ namespace DocumentFormat.OpenXml
 
         internal int TryFindAttributeIndex(string namespaceUri, string tagName)
         {
-            Debug.Assert( ! String.IsNullOrEmpty(tagName));
+            Debug.Assert(!String.IsNullOrEmpty(tagName));
 
             byte nsId = 0;
 
@@ -2005,7 +1992,7 @@ namespace DocumentFormat.OpenXml
                     }
                     else
                     {
-                        this.LazyLoad( xmlReader );
+                        this.LazyLoad(xmlReader);
                     }
                     break;
             }
@@ -2018,7 +2005,7 @@ namespace DocumentFormat.OpenXml
                 return;
             }
 
-            ParseXml( );
+            ParseXml();
 
             // set raw outer xml to empty to indicate that it is pased
             this.RawOuterXml = string.Empty;
@@ -2033,7 +2020,7 @@ namespace DocumentFormat.OpenXml
 
         internal virtual void ParseXml()
         {
-            Debug.Assert( ! this.XmlParsed);
+            Debug.Assert(!this.XmlParsed);
 
             if (String.IsNullOrEmpty(this.RawOuterXml))
             {
@@ -2160,13 +2147,13 @@ namespace DocumentFormat.OpenXml
         internal virtual OpenXmlElement ElementFactory(string prefix, string name, string namespaceUri)
         {
             // Debug.Assert(namespaceUri != null);
-            Debug.Assert( ! String.IsNullOrEmpty(name));
+            Debug.Assert(!String.IsNullOrEmpty(name));
 
             //
             OpenXmlElement newElement = null;
             byte nsId;
 
-            if ( (! String.IsNullOrEmpty(namespaceUri)) && NamespaceIdMap.TryGetNamespaceId(namespaceUri, out nsId))
+            if ((!String.IsNullOrEmpty(namespaceUri)) && NamespaceIdMap.TryGetNamespaceId(namespaceUri, out nsId))
             {
                 newElement = ElementFactory(nsId, name);
 
@@ -2197,7 +2184,7 @@ namespace DocumentFormat.OpenXml
             return null;
         }
 
-        internal virtual T CloneImp<T>(bool deep) where T : OpenXmlElement, new( )
+        internal virtual T CloneImp<T>(bool deep) where T : OpenXmlElement, new()
         {
             T element = new T();
             element.CopyAttributes(this);
@@ -2676,7 +2663,7 @@ namespace DocumentFormat.OpenXml
         /// <returns></returns>
         internal static bool IsKnownElement(OpenXmlElement element)
         {
-            if (! (element is OpenXmlUnknownElement) && ! (element is OpenXmlMiscNode))
+            if (!(element is OpenXmlUnknownElement) && !(element is OpenXmlMiscNode))
             {
                 // must be composite element or leaf element.
                 Debug.Assert(element is OpenXmlCompositeElement || element is OpenXmlLeafElement);
@@ -2926,7 +2913,7 @@ namespace DocumentFormat.OpenXml
 
             if (localName.Equals(MCConsts.Ignorable))
             {
-                return new OpenXmlAttribute(mcPrefix, localName,AlternateContent.MarkupCompatibilityNamespace,MCAttributes.Ignorable);
+                return new OpenXmlAttribute(mcPrefix, localName, AlternateContent.MarkupCompatibilityNamespace, MCAttributes.Ignorable);
             }
 
             if (localName.Equals(MCConsts.ProcessContent))
@@ -3090,7 +3077,7 @@ namespace DocumentFormat.OpenXml
                     }
                 }
             }
-              return null;
+            return null;
         }
 
         /// <summary>
@@ -3146,627 +3133,62 @@ namespace DocumentFormat.OpenXml
         }
 
         #endregion
-    }
-
-    /// <summary>
-    /// The base class of the Attribute formatter. (abstract)
-    /// </summary>
-    abstract internal class AttributeFormatter
-    {
-        protected int length = 0;
 
         /// <summary>
-        /// The constructor to set the length of characters to express.
+        /// Returns the next sibling element that is not an OpenXmlMiscNode element.
         /// </summary>
-        /// <param name="length"></param>
-        internal AttributeFormatter(int length)
+        /// <returns>The next sibling element that is not an OpenXmlMiscNode element.</returns>
+        internal OpenXmlElement GetNextNonMiscElementSibling()
         {
-            Debug.Assert(length > 0);
+            var next = this.NextSibling();
 
-            this.length = length;
-        }
-
-        /// <summary>
-        /// Convert string to long. (abstract)
-        /// </summary>
-        /// <param name="strValue"></param>
-        /// <returns>the converted long value</returns>
-        abstract internal long StringToValue(string strValue);
-
-        /// <summary>
-        /// Convert long to string. (abstract)
-        /// </summary>
-        /// <param name="longValue"></param>
-        /// <returns>the converted string</returns>
-        abstract internal string ValueToString(long longValue);
-    }
-
-    /// <summary>
-    /// Convert format between long and bin.
-    /// </summary>
-    internal class BinAttributeFormatter : AttributeFormatter
-    {
-        /// <summary>
-        /// The constructor to set the length of characters to express.
-        /// </summary>
-        /// <param name="length"></param>
-        internal BinAttributeFormatter(int length) : base(length)
-        {
-        }
-
-        /// <summary>
-        /// Convert string to long.
-        /// </summary>
-        /// <param name="strValue"></param>
-        /// <returns>the converted long value</returns>
-        internal override long StringToValue(string strValue)
-        {
-            long longValue = 0;
-            int length;
-
-            Debug.Assert(strValue != null);
-
-            length = strValue.Length;
-
-            Debug.Assert(length > 0);
-            Debug.Assert(length <= 64); // The length of strValue changes depending on the attribute representation, but it at least needs to be less-than-equal 64(bit).
-
-            for (int count = 0; count < length; count++)
+            while (next != null && next is OpenXmlMiscNode)
             {
-                long bit;
-                if (strValue[count] == '1')
-                {
-                    bit = 1;
-                }
-                else if (strValue[count] == '0')
-                {
-                    bit = 0;
-                }
-                else
-                {
-                    // if strValue[count] is neither '1' nor '0', we ignore this value by setting the bit zero.
-                    bit = 0;
-                }
-
-                longValue = (bit == 0) ? (longValue & ~(bit << (length - 1 - count))) : (longValue | (bit << (length - 1 - count)));
+                next = next.NextSibling();
             }
 
-            return longValue;
+            return next;
         }
 
         /// <summary>
-        /// Convert long to string.
+        /// Returns the first child element that is not an OpenXmlMiscNode element.
         /// </summary>
-        /// <param name="longValue"></param>
-        /// <returns>the converted string</returns>
-        internal override string ValueToString(long longValue)
+        /// <returns>The first child element that is not an OpenXmlMiscNode element.</returns>
+        internal OpenXmlElement GetFirstNonMiscElementChild()
         {
-            StringBuilder strBin = new StringBuilder();
+            Debug.Assert(this is OpenXmlCompositeElement);
 
-            for (int count = this.length - 1; count >= 0; count--)
+            var element = this.FirstChild;
+
+            if (element is OpenXmlMiscNode)
             {
-                strBin.Append((longValue & (1 << count)) > 0 ? '1' : '0');
+                return element.GetNextNonMiscElementSibling();
             }
-
-            return strBin.ToString();
-        }
-    }
-
-    /// <summary>
-    /// Convert format between long and hex.
-    /// </summary>
-    internal class HexAttributeFormatter : AttributeFormatter
-    {
-        /// <summary>
-        /// The constructor to set the length of characters to express.
-        /// </summary>
-        /// <param name="length"></param>
-        internal HexAttributeFormatter(int length) : base(length)
-        {
-        }
-
-        /// <summary>
-        /// Convert string to long.
-        /// </summary>
-        /// <param name="strValue"></param>
-        /// <returns>the converted long value</returns>
-        internal override long StringToValue(string strValue)
-        {
-            long longValue = 0;
-
-            Debug.Assert(strValue != null);
-
-            try
+            else
             {
-                Int64.TryParse(strValue, NumberStyles.HexNumber, new CultureInfo("en-US"), out longValue);
-            }
-            catch
-            {
-                Debug.Assert(true, "Int64.TryParse failed.");
-            }
-
-            return longValue;
-        }
-
-        /// <summary>
-        /// Convert long to string.
-        /// </summary>
-        /// <param name="longValue"></param>
-        /// <returns>the converted string</returns>
-        internal override string ValueToString(long longValue)
-        {
-            return longValue.ToString("X4");
-        }
-    }
-
-    /// <summary>
-    /// The base class of the Attribute translator for Tag.
-    /// TagAttributeTranslator converts an attribute from OrigAttrName="OrigAttrValue" to NewAttrName="NewAttrValue".
-    /// AttrTrait is currently used as the bit mask when NewAttrValue needs to be in the bit field representation.
-    /// </summary>
-    abstract internal class TagAttributeTranslator
-    {
-        internal enum State
-        {
-            NotInitialized = -1,
-        }
-
-        protected int indexOfAttr;
-        protected string strAttrName;
-        protected string strAttrValue;
-        protected string[] arrayOfOrigAttrNames;
-        protected string[] arrayOfNewAttrNames;
-        protected string[] arrayOfOrigAttrValues;
-        protected string[] arrayOfNewAttrValues;
-        protected long[] arrayOfAttrTraits;
-        protected AttributeFormatter formatter;
-
-        internal TagAttributeTranslator()
-        {
-            this.indexOfAttr = (int)State.NotInitialized;
-            this.strAttrName = null;
-            this.strAttrValue = null;
-        }
-
-        /// <summary>
-        /// Set LocalName and Value.
-        /// </summary>
-        /// <param name="strLocalName"></param>
-        /// <param name="strValue"></param>
-        internal void SetLocalNameAndValue(string strLocalName, string strValue)
-        {
-            this.indexOfAttr = (int)State.NotInitialized;
-            this.strAttrName = strLocalName;
-            this.strAttrValue = strValue;
-        }
-
-        /// <summary>
-        /// Get the index to specify the attribute name to translate.
-        /// </summary>
-        /// <returns>The index</returns>
-        protected int GetIndexByAttributeName()
-        {
-            int index = (int)State.NotInitialized;
-
-            for (int count = 0; count < arrayOfOrigAttrNames.Length; count++)
-            {
-                if (arrayOfOrigAttrNames[count] == this.strAttrName)
-                {
-                    index = count;
-                    break;
-                }
-            }
-
-            return index;
-        }
-
-        /// <summary>
-        /// Get the index to specify the value to translate.
-        /// </summary>
-        /// <returns>The index</returns>
-        protected int GetIndexByValue()
-        {
-            int index = (int)State.NotInitialized;
-
-            for (int count = 0; count < arrayOfOrigAttrValues.Length; count++)
-            {
-                if (arrayOfOrigAttrValues[count] == this.strAttrValue)
-                {
-                    index = count;
-                    break;
-                }
-            }
-
-            return index;
-        }
-
-        /// <summary>
-        /// Set the index.
-        /// </summary>
-        /// <returns>The index</returns>
-        abstract protected int SetIndex();
-
-        /// <summary>
-        /// Get the Index
-        /// </summary>
-        /// <returns>The index</returns>
-        internal virtual int Index
-        {
-            get
-            {
-                if (this.indexOfAttr == (int)State.NotInitialized)
-                {
-                    this.indexOfAttr = this.SetIndex();
-                }
-
-                return this.indexOfAttr;
+                return element;
             }
         }
 
         /// <summary>
-        /// Get the LocalName
+        /// Gets the root element of the current OpenXmlElement element.
         /// </summary>
-        /// <returns>The LocalName</returns>
-        internal virtual string LocalName
+        /// <returns>
+        /// Returns the root element if it is an OpenXmlPartRootElement element. Returns the current element if it is an OpenXmlPartRootElement element.
+        /// Returns null (Nothing in Visual Basic) if the current element has no parent or the root element is not an OpenXmlPartRootElement element.
+        /// </returns>
+        internal OpenXmlPartRootElement GetPartRootElement()
         {
-            get { return (this.Index == (int)State.NotInitialized) ? this.strAttrName : this.arrayOfNewAttrNames[this.Index]; }
-        }
+            var root = this;
 
-        /// <summary>
-        /// Get the Value
-        /// </summary>
-        /// <returns>The value</returns>
-        internal virtual string Value
-        {
-            get { return (this.Index == (int)State.NotInitialized) ? this.strAttrValue : this.arrayOfNewAttrValues[this.Index]; }
-        }
-
-        /// <summary>
-        /// Get the Trait.
-        /// </summary>
-        /// <returns>The Trait</returns>
-        internal virtual long Trait
-        {
-            get { return (this.Index == (int)State.NotInitialized) ? 0 : this.arrayOfAttrTraits[this.Index]; }
-        }
-
-        /// <summary>
-        /// Get the formatter.
-        /// </summary>
-        internal virtual AttributeFormatter Formatter
-        {
-            get { return this.formatter; }
-        }
-    }
-
-    internal class DocumentTagAttributeTranslator : TagAttributeTranslator
-    {
-        private static string[] arrayOfOrigTagAttrNames = { "conformance" };
-        private static string[] arrayOfNewTagAttrNames = { "conformance" };
-        private static string[] arrayOfOrigTagAttrValues = { "strict" };
-        private static string[] arrayOfNewTagAttrValues = { "" }; // Must be "".
-        private static long[] arrayOfTagAttrTraits = { 0 };
-
-        internal DocumentTagAttributeTranslator()
-        {
-            arrayOfOrigAttrNames = arrayOfOrigTagAttrNames;
-            arrayOfNewAttrNames = arrayOfNewTagAttrNames;
-            arrayOfOrigAttrValues = arrayOfOrigTagAttrValues;
-            arrayOfNewAttrValues = arrayOfNewTagAttrValues;
-            arrayOfAttrTraits = arrayOfTagAttrTraits;
-            formatter = null;
-        }
-
-        /// <summary>
-        /// Set the index to specify the value to translate.
-        /// </summary>
-        /// <returns>The index</returns>
-        protected override int SetIndex()
-        {
-            return this.GetIndexByValue();
-        }
-    }
-
-    internal class CnfStyleTagAttributeTranslator : TagAttributeTranslator
-    {
-        private static string[] arrayOfOrigTagAttrNames = { "firstRow", "lastRow", "firstColumn", "lastColumn", "oddVBand", "evenVBand", "oddHBand", "evenHBand", "firstRowLastColumn", "firstRowFirstColumn", "lastRowFirstColumn", "lastRowLastColumn" };
-        private static string[] arrayOfNewTagAttrNames = { "val", "val", "val", "val", "val", "val", "val", "val", "val", "val", "val", "val" };
-        private static long[] arrayOfTagAttrTraits = { 0x800, 0x400, 0x200, 0x100, 0x080, 0x040, 0x020, 0x010, 0x008, 0x004, 0x002, 0x001 };
-
-        internal CnfStyleTagAttributeTranslator()
-        {
-            arrayOfNewAttrNames = arrayOfNewTagAttrNames;
-            arrayOfOrigAttrNames = arrayOfOrigTagAttrNames;
-            arrayOfOrigAttrValues = null;
-            arrayOfNewAttrValues = null;
-            arrayOfAttrTraits = arrayOfTagAttrTraits;
-            formatter = new BinAttributeFormatter(arrayOfTagAttrTraits.Length);
-        }
-
-        /// <summary>
-        /// Set the index to specify the attribute name to translate.
-        /// </summary>
-        /// <returns>The index</returns>
-        protected override int SetIndex()
-        {
-            return this.GetIndexByAttributeName();
-        }
-
-        /// <summary>
-        /// Get the attribute value.
-        /// </summary>
-        /// <returns>The attribute value</returns>
-        internal override string Value
-        {
-            get { return this.strAttrValue; }
-        }
-    }
-
-    internal class TblLookTagAttributeTranslator : TagAttributeTranslator
-    {
-        private static string[] arrayOfOrigTagAttrNames = { "firstRow", "lastRow", "firstColumn", "lastColumn", "noHBand", "noVBand" };
-        private static string[] arrayOfNewTagAttrNames = { "val", "val", "val", "val", "val", "val" };
-        private static long[] arrayOfTagAttrTraits = { 0x0020, 0x0040, 0x0080, 0x0100, 0x0200, 0x0400 };
-
-        internal TblLookTagAttributeTranslator()
-        {
-            arrayOfOrigAttrNames = arrayOfOrigTagAttrNames;
-            arrayOfNewAttrNames = arrayOfNewTagAttrNames;
-            arrayOfOrigAttrValues = null;
-            arrayOfNewAttrValues = null;
-            arrayOfAttrTraits = arrayOfTagAttrTraits;
-            formatter = new HexAttributeFormatter(arrayOfTagAttrTraits.Length);
-        }
-
-        /// <summary>
-        /// Set the index to specify the attribute name to translate.
-        /// </summary>
-        /// <returns>The index</returns>
-        protected override int SetIndex()
-        {
-            return this.GetIndexByAttributeName();
-        }
-
-        /// <summary>
-        /// Get the attribute value.
-        /// </summary>
-        /// <returns>The attribute value</returns>
-        internal override string Value
-        {
-            get { return this.strAttrValue; }
-        }
-    }
-
-    internal class IndTagAttributeTranslator : TagAttributeTranslator
-    {
-        private static string[] arrayOfOrigTagAttrNames = { "left", "leftChars", "right", "rightChars" };
-        private static string[] arrayOfNewTagAttrNames = { "start", "startChars", "end", "endChars" };
-        private static long[] arrayOfTagAttrTraits = { 0, 0, 0, 0 };
-
-        internal IndTagAttributeTranslator()
-        {
-            arrayOfOrigAttrNames = arrayOfOrigTagAttrNames;
-            arrayOfNewAttrNames = arrayOfNewTagAttrNames;
-            arrayOfOrigAttrValues = null;
-            arrayOfNewAttrValues = null;
-            arrayOfAttrTraits = arrayOfTagAttrTraits;
-            formatter = null;
-        }
-
-        /// <summary>
-        /// Set the index to specify the attribte name to translate.
-        /// </summary>
-        /// <returns>The index</returns>
-        protected override int SetIndex()
-        {
-            return this.GetIndexByAttributeName();
-        }
-
-        /// <summary>
-        /// Get the attribute value.
-        /// </summary>
-        /// <returns>The attribute value</returns>
-        internal override string Value
-        {
-            get { return this.strAttrValue; }
-        }
-    }
-
-    internal class JcTabTagAttributeTranslator : TagAttributeTranslator
-    {
-        private static string[] arrayOfOrigTagAttrNames = { "val", "val" };
-        private static string[] arrayOfNewTagAttrNames = { "val", "val" };
-        private static string[] arrayOfOrigTagAttrValues = { "start", "end" };
-        private static string[] arrayOfNewTagAttrValues = { "left", "right" };
-        private static long[] arrayOfTagAttrTraits = { 0, 0 };
-
-        internal JcTabTagAttributeTranslator()
-        {
-            arrayOfOrigAttrNames = arrayOfOrigTagAttrNames;
-            arrayOfNewAttrNames = arrayOfNewTagAttrNames;
-            arrayOfOrigAttrValues = arrayOfOrigTagAttrValues;
-            arrayOfNewAttrValues = arrayOfNewTagAttrValues;
-            arrayOfAttrTraits = arrayOfTagAttrTraits;
-            formatter = null;
-        }
-
-        /// <summary>
-        /// Set the index to specify the value to translate.
-        /// </summary>
-        /// <returns>The index</returns>
-        protected override int SetIndex()
-        {
-            return this.GetIndexByValue();
-        }
-    }
-
-    internal class StylePaneSortMethodTagAttributeTranslator : TagAttributeTranslator
-    {
-        private static string[] arrayOfOrigTagAttrNames = { "val", "val", "val", "val", "val", "val" };
-        private static string[] arrayOfNewTagAttrNames = { "val", "val", "val", "val", "val", "val" };
-        private static string[] arrayOfOrigTagAttrValues = { "name", "priority", "default", "font", "basedOn", "type" };
-        private static string[] arrayOfNewTagAttrValues = { "0000", "0001", "0002", "0003", "0004", "0005" };
-        private static long[] arrayOfTagAttrTraits = { 0, 0, 0, 0, 0, 0 };
-
-        internal StylePaneSortMethodTagAttributeTranslator()
-        {
-            arrayOfOrigAttrNames = arrayOfOrigTagAttrNames;
-            arrayOfNewAttrNames = arrayOfNewTagAttrNames;
-            arrayOfOrigAttrValues = arrayOfOrigTagAttrValues;
-            arrayOfNewAttrValues = arrayOfNewTagAttrValues;
-            arrayOfAttrTraits = arrayOfTagAttrTraits;
-            formatter = null;
-        }
-
-        /// <summary>
-        /// Set the index to specify the value to translate.
-        /// </summary>
-        /// <returns>The index</returns>
-        protected override int SetIndex()
-        {
-            return this.GetIndexByValue();
-        }
-    }
-
-    internal class TextDirectionTagAttributeTranslator : TagAttributeTranslator
-    {
-        private static string[] arrayOfOrigTagAttrNames = { "val", "val", "val", "val", "val", "val" };
-        private static string[] arrayOfNewTagAttrNames = { "val", "val", "val", "val", "val", "val" };
-        private static string[] arrayOfOrigTagAttrValues = { "lr", "tb", "tbV", "lrV", "rl", "rlV" };
-        private static string[] arrayOfNewTagAttrValues = { "btLr", "lrTb", "lrTbV", "tbLrV", "tbRl", "tbRlV" };
-        private static long[] arrayOfTagAttrTraits = { 0, 0, 0, 0, 0, 0 };
-
-        internal TextDirectionTagAttributeTranslator()
-        {
-            arrayOfOrigAttrNames = arrayOfOrigTagAttrNames;
-            arrayOfNewAttrNames = arrayOfNewTagAttrNames;
-            arrayOfOrigAttrValues = arrayOfOrigTagAttrValues;
-            arrayOfNewAttrValues = arrayOfNewTagAttrValues;
-            arrayOfAttrTraits = arrayOfTagAttrTraits;
-            formatter = null;
-        }
-
-        /// <summary>
-        /// Set the index to specify the value to translate.
-        /// </summary>
-        /// <returns>The index</returns>
-        protected override int SetIndex()
-        {
-            return this.GetIndexByValue();
-        }
-    }
-
-    /// <summary>
-    /// Translate Strict attributes to Transitional
-    /// </summary>
-    internal static class AttributeTranslator
-    {
-        private static TagAttributeTranslator translator;
-        private static Dictionary<string, TagAttributeTranslator> dicOfTranslators = null;
-
-        private static Dictionary<string, TagAttributeTranslator> DicOfTranslators
-        {
-            get
+            while (root.Parent != null)
             {
-                if (dicOfTranslators == null)
-                {
-                    dicOfTranslators = new Dictionary<string, TagAttributeTranslator>();
-
-                    // Add all the tags we handle.
-                    dicOfTranslators["document"] = null;
-                    dicOfTranslators["cnfStyle"] = null;
-                    dicOfTranslators["tblLook"] = null;
-                    dicOfTranslators["ind"] = null;
-                    dicOfTranslators["tab"] = null; // "tab" and "jc"
-                    dicOfTranslators["stylePaneSortMethod"] = null;
-                    dicOfTranslators["textDirection"] = null;
-                }
-
-                return dicOfTranslators;
-            }
-        }
-
-        /// <summary>
-        /// Translate Strict attribute to Transitional
-        /// </summary>
-        /// <param name="strTag"></param>
-        /// <param name="strLocalName"></param>
-        /// <param name="strValue"></param>
-        /// <returns>The translator</returns>
-        internal static TagAttributeTranslator Translate(string strTag, string strLocalName, string strValue)
-        {
-            translator = null;
-
-            if (strTag != null && strLocalName != null && strValue != null)
-            {
-                try
-                {
-                    if (DicOfTranslators.ContainsKey(strTag))
-                    {
-                        translator = DicOfTranslators[strTag];
-
-                        if (translator == null)
-                        {
-                            switch (strTag)
-                            {
-                                case "document":
-                                    translator = new DocumentTagAttributeTranslator();
-                                    break;
-
-                                case "cnfStyle":
-                                    translator = new CnfStyleTagAttributeTranslator();
-                                    break;
-
-                                case "tblLook":
-                                    translator = new TblLookTagAttributeTranslator();
-                                    break;
-
-                                case "ind":
-                                    translator = new IndTagAttributeTranslator();
-                                    break;
-
-                                case "jc": // falls through...
-                                case "tab":
-                                    translator = new JcTabTagAttributeTranslator();
-                                    break;
-
-                                case "stylePaneSortMethod":
-                                    translator = new StylePaneSortMethodTagAttributeTranslator();
-                                    break;
-
-                                case "textDirection":
-                                    translator = new TextDirectionTagAttributeTranslator();
-                                    break;
-
-                                default:
-                                    break;
-                            }
-
-                            Debug.Assert(translator != null, "AttributeTranslator.Translate() can't initialize a translator.");
-
-                            DicOfTranslators[strTag] = translator;
-                        }
-                    }
-
-                    if (translator != null)
-                    {
-                        translator.SetLocalNameAndValue(strLocalName, strValue);
-
-                        if (translator.Index == (int)TagAttributeTranslator.State.NotInitialized)
-                        {
-                            translator = null;
-                        }
-                    }
-                }
-                catch
-                {
-                    Debug.Assert(true, "AttributeTranslator.Translate() failed.");
-
-                    translator = null;
-                }
+                root = root.Parent;
             }
 
-            return translator;
+            var partRootElement = root as OpenXmlPartRootElement;
+
+            return partRootElement;
         }
     }
 }
