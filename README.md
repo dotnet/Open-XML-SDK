@@ -30,13 +30,6 @@ The Open XML SDK provides tools for working with Office Word, Excel, and PowerPo
 - Updating cached data and embedded spreadsheets for charts in Word/PowerPoint.
 - Document modification, such as removing tracked revisions or removing unacceptable content from documents.
 
-Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.
-Licensed under the Apache License, Version 2.0.
-See License.txt in the project root for license information.
-
-Portions of this project are licensed under the MIT license.
-See MIT-License.txt in the project root for license information.
-
 The Release Package on Nuget.org
 ================================
 The official release NuGet packages for Open XML SDK are available on Nuget.org at https://www.nuget.org/packages/DocumentFormat.OpenXml. 

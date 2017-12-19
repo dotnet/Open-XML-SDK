@@ -172,15 +172,15 @@
     <Rule Id="SA1630" Action="None" />
     <Rule Id="SA1631" Action="None" />
     <Rule Id="SA1632" Action="None" />
-    <Rule Id="SA1633" Action="None" />
-    <Rule Id="SA1634" Action="None" />
-    <Rule Id="SA1635" Action="None" />
-    <Rule Id="SA1636" Action="None" />
-    <Rule Id="SA1637" Action="None" />
-    <Rule Id="SA1638" Action="None" />
-    <Rule Id="SA1639" Action="None" />
-    <Rule Id="SA1640" Action="None" />
-    <Rule Id="SA1641" Action="None" />
+    <Rule Id="SA1633" Action="Warning" />
+    <Rule Id="SA1634" Action="Warning" />
+    <Rule Id="SA1635" Action="Warning" />
+    <Rule Id="SA1636" Action="Warning" />
+    <Rule Id="SA1637" Action="Warning" />
+    <Rule Id="SA1638" Action="Warning" />
+    <Rule Id="SA1639" Action="Warning" />
+    <Rule Id="SA1640" Action="Warning" />
+    <Rule Id="SA1641" Action="Warning" />
     <Rule Id="SA1642" Action="None" />
     <Rule Id="SA1643" Action="None" />
     <Rule Id="SA1644" Action="None" />
