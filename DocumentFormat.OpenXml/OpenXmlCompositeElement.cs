@@ -13,30 +13,6 @@ using System.Xml;
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
-    /// Specifies the type of each child element's occurence.
-    /// Used in GetElement() and SetElement() for generated code.
-    /// </summary>
-    internal enum OpenXmlCompositeType
-    {
-        Other,
-
-        /// <summary>
-        /// xsd:sequence, and maxOccurs=1.
-        /// </summary>
-        OneSequence,
-
-        /// <summary>
-        /// xsd:choice, and maxOccurs=1.
-        /// </summary>
-        OneChoice,
-
-        /// <summary>
-        /// xsd:all.
-        /// </summary>
-        OneAll
-    }
-
-    /// <summary>
     /// Represents the base class for composite elements.
     /// </summary>
     public abstract class OpenXmlCompositeElement : OpenXmlElement
