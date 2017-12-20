@@ -3,7 +3,7 @@
 
 using System;
 
-namespace DocumentFormat.OpenXml.Validation.Schema
+namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 {
     internal static class XsdTypeExtension
     {

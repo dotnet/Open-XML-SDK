@@ -2,7 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 
-namespace DocumentFormat.OpenXml.Validation.Schema
+namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 {
     /// <summary>
     /// All simple types built in to xml schema.
