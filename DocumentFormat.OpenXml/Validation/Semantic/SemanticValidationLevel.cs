@@ -16,13 +16,4 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
         Part = PackageOnly | PartOnly,
         Element = PackageOnly | PartOnly | ElementOnly,
     }
-
-    [Flags]
-    internal enum ApplicationType
-    {
-        Word = 1,
-        Excel = 2,
-        PowerPoint = 4,
-        All = Word | Excel | PowerPoint,
-    }
 }
