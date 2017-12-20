@@ -2947,13 +2947,9 @@ namespace DocumentFormat.OpenXml.Tests
             using (var pDoc = PresentationDocument.Open(stream, false))
             {
                 // use stream
-                var o12actual = O12Validator.Validate(pDoc);
-                Assert.Equal(109, o12actual.Count()); // The value 'actual' should contain 109 validtion errors for 'smtClean' in the test document.
-
-                // Office2010
-                var o14actual = O14Validator.Validate(pDoc);
-                Assert.Equal(109, o14actual.Count()); // The value 'actual' should contain 109 validtion errors for 'smtClean' in the test document.
-            }
+                Assert.Empty(O12Validator.Validate(pDoc));
+                Assert.Empty(O14Validator.Validate(pDoc));
+           }
         }
 
         /// <summary>

@@ -29,6 +29,11 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Represents Microsoft Office 2013.
         /// </summary>
-        Office2013 = 0x4
+        Office2013 = 0x4,
+
+        /// <summary>
+        /// Represents Microsoft Office 2016.
+        /// </summary>
+        Office2016 = 0x8
     }
 }

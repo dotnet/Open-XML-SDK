@@ -85,6 +85,32 @@ namespace DocumentFormat.OpenXml.Tests
             public const string UnknownElement = "TestFiles.UnknownElement.docx";
 
             public const string Youtube = "TestFiles.Youtube.xlsx";
+
+            public const string Of16_01_pptx = "TestFiles.Of16-01.pptx";
+
+            public const string Of16_02_pptx = "TestFiles.Of16-02.pptx";
+
+            public const string Of16_03_pptx = "TestFiles.Of16-03.pptx";
+
+            public const string Of16_01_docx = "TestFiles.Of16-01.docx";
+
+            public const string Of16_02_docx = "TestFiles.Of16-02.docx";
+
+            public const string Of16_03_docx = "TestFiles.Of16-03.docx";
+
+            public const string Of16_04_docx = "TestFiles.Of16-04.docx";
+
+            public const string Of16_05_docx = "TestFiles.Of16-05.docx";
+
+            public const string Of16_06_docx = "TestFiles.Of16-06.docx";
+
+            public const string Of16_07_docx = "TestFiles.Of16-07.docx";
+
+            public const string Of16_08_docx = "TestFiles.Of16-08.docx";
+
+            public const string Of16_09_unknownelement_docx = "TestFiles.Of16-09-UnknownElement.docx";
+
+            public const string Of16_10_symex_docx = "TestFiles.Of16-10-SymEx.docx";
         }
     }
 }

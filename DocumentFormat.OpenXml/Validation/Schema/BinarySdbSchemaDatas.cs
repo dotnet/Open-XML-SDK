@@ -46,6 +46,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     return GetEmbeddedResource("O14SchemaConstraintDatas");
                 case FileFormatVersions.Office2013:
                     return GetEmbeddedResource("O15SchemaConstraintDatas");
+                case FileFormatVersions.Office2016:
+                    return GetEmbeddedResource("O16SchemaConstraintDatas");
                 default:
                     Debug.Assert(fileFormat.Any());
                     return GetEmbeddedResource("O12SchemaConstraintDatas");

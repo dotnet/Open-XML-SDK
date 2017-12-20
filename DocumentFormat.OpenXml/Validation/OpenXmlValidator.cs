@@ -320,9 +320,13 @@ namespace DocumentFormat.OpenXml.Validation
                             strMessage = ExceptionMessages.PartIsNotInOffice2010;
                             break;
 
-                        case FileFormatVersions.Office2013: // Falls through...
-                        default:
+                        case FileFormatVersions.Office2013:
                             strMessage = ExceptionMessages.PartIsNotInOffice2013;
+                            break;
+
+                        case FileFormatVersions.Office2016: // Falls through...
+                        default:
+                            strMessage = ExceptionMessages.PartIsNotInOffice2016;
                             break;
                     }
 
@@ -403,6 +407,9 @@ namespace DocumentFormat.OpenXml.Validation
 
                     case FileFormatVersions.Office2013:
                         throw new InvalidOperationException(ExceptionMessages.ElementIsNotInOffice2013);
+
+                    case FileFormatVersions.Office2016:
+                        throw new InvalidOperationException(ExceptionMessages.ElementIsNotInOffice2016);
                 }
             }
 

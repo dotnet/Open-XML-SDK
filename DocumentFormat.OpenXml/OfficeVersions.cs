@@ -17,7 +17,8 @@ namespace DocumentFormat.OpenXml
         {
             return version == FileFormatVersions.Office2007
                 || version == FileFormatVersions.Office2010
-                || version == FileFormatVersions.Office2013;
+                || version == FileFormatVersions.Office2013
+                || version == FileFormatVersions.Office2016;
         }
 
         /// <summary>
@@ -29,7 +30,8 @@ namespace DocumentFormat.OpenXml
         {
             var all = FileFormatVersions.Office2007
                 | FileFormatVersions.Office2010
-                | FileFormatVersions.Office2013;
+                | FileFormatVersions.Office2013
+                | FileFormatVersions.Office2016;
 
             return version == all;
         }
@@ -46,12 +48,17 @@ namespace DocumentFormat.OpenXml
                 case FileFormatVersions.Office2007:
                     return FileFormatVersions.Office2007
                          | FileFormatVersions.Office2010
-                         | FileFormatVersions.Office2013;
+                         | FileFormatVersions.Office2013
+                         | FileFormatVersions.Office2016;
                 case FileFormatVersions.Office2010:
                     return FileFormatVersions.Office2010
-                         | FileFormatVersions.Office2013;
+                         | FileFormatVersions.Office2013
+                         | FileFormatVersions.Office2016;
                 case FileFormatVersions.Office2013:
-                    return FileFormatVersions.Office2013;
+                    return FileFormatVersions.Office2013
+                         | FileFormatVersions.Office2016;
+                case FileFormatVersions.Office2016:
+                    return FileFormatVersions.Office2016;
                 default:
                     Debug.Assert(false, "This should only be called with a single version");
                     return version;

@@ -5,6 +5,15 @@ Open-XML-SDK
 [![Downloads](https://img.shields.io/nuget/dt/DocumentFormat.OpenXml.svg)]()
 [![master](https://img.shields.io/appveyor/ci/openxmlsdk/Open-XML-SDK/master.svg)]()
 
+    This is the Office2016 branch, which contains a preview of the Open-Xml-Sdk v3.0 that
+	supports the Office 2016 extensions in the file format.  The biggest change to the markup was
+	the introduction of the ExtendedChartPart, which support the new chart types, such as Waterfall,
+	Box and Whisker, and Sunburst.  You can specify FileFormatVersions.Office2016 to validate this
+	markup.  This version of the SDK also supports using the strongly-typed object model to access 
+	the markup in the new parts.
+	
+	We will merge the Office2016 branch into vNext at some point in the future, after receiving
+	feedback
 The Open XML SDK provides tools for working with Office Word, Excel, and PowerPoint documents. It supports scenarios such as:
 
 - High-performance generation of word-processing documents, spreadsheets, and presentations.

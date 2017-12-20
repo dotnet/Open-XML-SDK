@@ -21,6 +21,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 case FileFormatVersions.Office2013:
                     return O15UnionHelper.CreatePossibleMembers(unionValueRestriction);
 
+                case FileFormatVersions.Office2016:
+                    return O16UnionHelper.CreatePossibleMembers(unionValueRestriction);
+
                 default:
                     Debug.Assert(fileFormatVersion.Any());
                     break;
@@ -40,6 +43,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                 case FileFormatVersions.Office2013:
                     return O15UnionHelper.CreateTargetValueObject(redirectedRestriction);
+
+                case FileFormatVersions.Office2016:
+                    return O16UnionHelper.CreateTargetValueObject(redirectedRestriction);
 
                 default:
                     Debug.Assert(fileFormatVersion.Any());
