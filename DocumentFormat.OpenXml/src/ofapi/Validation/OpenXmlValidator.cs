@@ -1,14 +1,12 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Diagnostics;
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Packaging;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Internal.SchemaValidation;
 using DocumentFormat.OpenXml.Internal.SemanticValidation;
+using DocumentFormat.OpenXml.Packaging;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation
 {
@@ -72,7 +70,7 @@ namespace DocumentFormat.OpenXml.Validation
                 {
                     this._docSmenaticValidator = new SemanticValidator(this._settings.FileFormat, ApplicationType.Word);
                 }
-                
+
                 return _docSmenaticValidator;
             }
         }
@@ -92,14 +90,14 @@ namespace DocumentFormat.OpenXml.Validation
 
         private SemanticValidator PptSemanticValidator
         {
-            get 
+            get
             {
                 if (this._pptSemanticValidator == null)
                 {
                     this._pptSemanticValidator = new SemanticValidator(this._settings.FileFormat, ApplicationType.PowerPoint);
                 }
 
-                return _pptSemanticValidator; 
+                return _pptSemanticValidator;
             }
         }
 
@@ -183,10 +181,10 @@ namespace DocumentFormat.OpenXml.Validation
         /// <remarks>
         /// Default to FileFormat.Office2007.
         /// </remarks>
-        /// <exception cref="ArgumentOutOfRangeException">Thrown when the "fileFormat" parameter is not FileFormat.Office2007, FileFormat.Office2010 or FileFormat.O15.</exception>
+        /// <exception cref="ArgumentOutOfRangeException">Thrown when the <paramref name="fileFormat"/> parameter is not a known format.</exception>
         public OpenXmlValidator(FileFormatVersions fileFormat)
         {
-            fileFormat.ThrowExceptionIfFileFormatNotSupported("fileFormat");
+            fileFormat.ThrowExceptionIfFileFormatNotSupported(nameof(fileFormat));
             this._settings = new ValidationSettings(fileFormat);
         }
 
@@ -210,6 +208,7 @@ namespace DocumentFormat.OpenXml.Validation
         public int MaxNumberOfErrors
         {
             get { return this._settings.MaxNumberOfErrors; }
+
             set
             {
                 if (value < 0)
@@ -225,7 +224,7 @@ namespace DocumentFormat.OpenXml.Validation
 
         #region public methods
 
-         /// <summary>
+        /// <summary>
         /// Validates the specified document.
         /// </summary>
         /// <param name="openXmlPackage">The target WordprocessingDocument, SpreadsheetDocument or PresentationDocument.</param>
@@ -249,7 +248,7 @@ namespace DocumentFormat.OpenXml.Validation
             }
 
             // Do NOT use "yield return" in this method, as "yield return" are deferred executed.
-            // Otherwise, the null check is not performed when the method is called, but rather, when the returned enumerator is moved for the first time. 
+            // Otherwise, the null check is not performed when the method is called, but rather, when the returned enumerator is moved for the first time.
             // That means that the exception isn't thrown until possibly far, far away from the actual site of the error, which is potentially confusing.
 
             ValidationResult validationResult = null;
@@ -332,7 +331,7 @@ namespace DocumentFormat.OpenXml.Validation
             }
 
             // Do NOT use "yield return" in this method, as "yield return" are deferred executed.
-            // Otherwise, the null check is not performed when the method is called, but rather, when the returned enumerator is moved for the first time. 
+            // Otherwise, the null check is not performed when the method is called, but rather, when the returned enumerator is moved for the first time.
             // That means that the exception isn't thrown until possibly far, far away from the actual site of the error, which is potentially confusing.
 
             OpenXmlPackage package = openXmlPart.OpenXmlPackage;
@@ -359,7 +358,6 @@ namespace DocumentFormat.OpenXml.Validation
 
             return this.YieldResult(validationResult);
         }
-
 
         /// <summary>
         /// Validates the specified element.
@@ -393,7 +391,7 @@ namespace DocumentFormat.OpenXml.Validation
                 throw new ArgumentOutOfRangeException("openXmlElement", ExceptionMessages.CannotValidateAcbElement);
             }
 
-            if (! openXmlElement.IsInVersion(this.FileFormat))
+            if (!openXmlElement.IsInVersion(this.FileFormat))
             {
                 switch (this.FileFormat)
                 {
@@ -421,14 +419,14 @@ namespace DocumentFormat.OpenXml.Validation
             validationContext.ValidationErrorEventHandler += validationResult.OnValidationError;
             validationContext.Element = openXmlElement;
             // Do NOT use "yield return" in this method, as "yield return" are deferred executed.
-            // Otherwise, the null check is not performed when the method is called, but rather, when the returned enumerator is moved for the first time. 
+            // Otherwise, the null check is not performed when the method is called, but rather, when the returned enumerator is moved for the first time.
             // That means that the exception isn't thrown until possibly far, far away from the actual site of the error, which is potentially confusing.
 
             this.SchemaValidator.Validate(validationContext);
 
             validationContext.Element = openXmlElement;
             this.FullSemanticValidator.Validate(validationContext);
-            
+
             return this.YieldResult(validationResult);
         }
 
@@ -465,7 +463,6 @@ namespace DocumentFormat.OpenXml.Validation
         //{
         //    yield break;
         //}
-
 
         ///// <summary>
         ///// Validate the specified element.

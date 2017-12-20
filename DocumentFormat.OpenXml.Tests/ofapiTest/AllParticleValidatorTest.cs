@@ -1,14 +1,11 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DocumentFormat.OpenXml.Validation;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.ExtendedProperties;
 using DocumentFormat.OpenXml.Internal.SchemaValidation;
-using Xunit;
+using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Vml.Office;
+using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -25,7 +22,6 @@ namespace DocumentFormat.OpenXml.Tests
             TestSimpleAll(sdbSchemaDatas);
             TestSimpleAll2(sdbSchemaDatas);
         }
-
 
         private void TestSimpleAll(SdbSchemaDatas sdbSchemaDatas)
         {
@@ -70,7 +66,7 @@ namespace DocumentFormat.OpenXml.Tests
             //    <xsd:element name="AppVersion" minOccurs="0" maxOccurs="1" type="xsd:string">
             //    <xsd:element name="DocSecurity" minOccurs="0" maxOccurs="1" type="xsd:int">
             //  </xsd:all>
-            //</xsd:complexType> 
+            //</xsd:complexType>
 
             // ***** good case ******
 
@@ -104,13 +100,13 @@ namespace DocumentFormat.OpenXml.Tests
             errorChild = properties.PrependChild(new Properties());
             target.Validate(validationContext);
             Assert.False(actual.Valid);
-            Assert.Equal(1, actual.Errors.Count);
+            Assert.Single(actual.Errors);
             Assert.Same(expected, actual.Errors[0].Node);
             Assert.Same(errorChild, actual.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.True(actual.Errors[0].Description.Contains(":Template"));
-            Assert.True(actual.Errors[0].Description.Contains(":DocSecurity"));
+            Assert.Contains(":Template", actual.Errors[0].Description);
+            Assert.Contains(":DocSecurity", actual.Errors[0].Description);
             properties.RemoveChild(errorChild);
 
             actual.Clear();
@@ -118,31 +114,29 @@ namespace DocumentFormat.OpenXml.Tests
             errorChild = properties.InsertBefore(new Properties(), properties.LastChild);
             target.Validate(validationContext);
             Assert.False(actual.Valid);
-            Assert.Equal(1, actual.Errors.Count);
+            Assert.Single(actual.Errors);
             Assert.Same(expected, actual.Errors[0].Node);
             Assert.Same(errorChild, actual.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.False(actual.Errors[0].Description.Contains(":Template"));
-            Assert.True(actual.Errors[0].Description.Contains(":AppVersion"));
+            Assert.DoesNotContain(":Template", actual.Errors[0].Description);
+            Assert.Contains(":AppVersion", actual.Errors[0].Description);
             properties.RemoveChild(errorChild);
 
             actual.Clear();
-            // dup 
+            // dup
             errorChild = properties.FirstChild;
             properties.PrependChild(new Company());
             target.Validate(validationContext);
             Assert.False(actual.Valid);
-            Assert.Equal(1, actual.Errors.Count);
+            Assert.Single(actual.Errors);
             Assert.Same(expected, actual.Errors[0].Node);
             Assert.Same(errorChild, actual.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
             Assert.Equal("Sch_AllElement", actual.Errors[0].Id);
-            Assert.False(actual.Errors[0].Description.Contains(ValidationErrorStrings.Fmt_ListOfPossibleElements));
+            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, actual.Errors[0].Description);
             properties.RemoveChild(errorChild);
-
         }
-
 
         private void TestSimpleAll2(SdbSchemaDatas sdbSchemaDatas)
         {
@@ -193,13 +187,13 @@ namespace DocumentFormat.OpenXml.Tests
             errorChild = shapeLayout.PrependChild(new Paragraphs());
             target.Validate(validationContext);
             Assert.False(actual.Valid);
-            Assert.Equal(1, actual.Errors.Count);
+            Assert.Single(actual.Errors);
             Assert.Same(expected, actual.Errors[0].Node);
             Assert.Same(errorChild, actual.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.True(actual.Errors[0].Description.Contains(":idmap"));
-            Assert.True(actual.Errors[0].Description.Contains(":rules"));
+            Assert.Contains(":idmap", actual.Errors[0].Description);
+            Assert.Contains(":rules", actual.Errors[0].Description);
             shapeLayout.RemoveChild(errorChild);
 
             actual.Clear();
@@ -207,27 +201,26 @@ namespace DocumentFormat.OpenXml.Tests
             errorChild = shapeLayout.InsertBefore(new Paragraphs(), shapeLayout.LastChild);
             target.Validate(validationContext);
             Assert.False(actual.Valid);
-            Assert.Equal(1, actual.Errors.Count);
+            Assert.Single(actual.Errors);
             Assert.Same(expected, actual.Errors[0].Node);
             Assert.Same(errorChild, actual.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.True(actual.Errors[0].Description.Contains(":rules"));
+            Assert.Contains(":rules", actual.Errors[0].Description);
             shapeLayout.RemoveChild(errorChild);
 
             actual.Clear();
-            // dup 
+            // dup
             errorChild = shapeLayout.FirstChild;
             shapeLayout.PrependChild(new RegroupTable());
             target.Validate(validationContext);
             Assert.False(actual.Valid);
-            Assert.Equal(1, actual.Errors.Count);
+            Assert.Single(actual.Errors);
             Assert.Same(expected, actual.Errors[0].Node);
             Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
             Assert.Equal("Sch_AllElement", actual.Errors[0].Id);
             Assert.Same(errorChild, actual.Errors[0].RelatedNode);
             shapeLayout.RemoveChild(errorChild);
-
         }
     }
 }

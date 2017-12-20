@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using System;
 using System.IO;
 using System.Reflection;
 
@@ -8,9 +11,7 @@ namespace OxTest
     {
         public static string RootFolder => Path.GetDirectoryName(typeof(TestUtil).GetTypeInfo().Assembly.Location);
 
-        public static string TestFilesDir => Path.Combine(RootFolder, "TestFiles");
-        
-        public static string TestDataStorage => Path.Combine(RootFolder, "TestDataStorage");
+        public static string TestDataStorage => Path.Combine(RootFolder, "Assets", "TestDataStorage");
 
         private static bool? s_DeleteTempFiles = null;
 
@@ -27,6 +28,7 @@ namespace OxTest
         }
 
         private static DirectoryInfo s_TempDir = null;
+
         public static string TestResultsDirectory
         {
             get

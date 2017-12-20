@@ -1,62 +1,36 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Tests.TaskLibraries;
+using DocumentFormat.OpenXml.Tests.ThemeClass;
+using OxTest;
 using System;
-using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
+using Xunit;
+using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests.Theme
 {
-    using DocumentFormat.OpenXml.Packaging;
-    using Xunit;
-    using DocumentFormat.OpenXml.Tests.TaskLibraries;
-    using DocumentFormat.OpenXml.Tests.ThemeClass;
-    using System.IO;
-    using OxTest;
-
-
     public class ThemeTest : OpenXmlTestBase
     {
-        //private readonly string generateDocumentFilePath = "TestThemeBase.pptx";
-        //private readonly string editDocumentFilePath = "EditedTheme.pptx";
-        //private readonly string deleteDocumentFilePath = "DeletedTheme.pptx";
-        //private readonly string addDocumentFilePath = "AddedTheme.pptx";
         private readonly string generateDocumentFilePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
         private readonly string editDocumentFilePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
         private readonly string deleteDocumentFilePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
         private readonly string addDocumentFilePath = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
 
-        #region Constructor
         /// <summary>
         /// Constructor
         /// </summary>
-        public ThemeTest()
+        public ThemeTest(ITestOutputHelper output)
+            : base(output)
         {
-        }
-        #endregion
-
-        #region Initialize
-        /// <summary>
-        /// Creates a base Word file for the tests
-        /// </summary>
-        /// <param name="createFilePath">Create Word file path</param>
-        private void Initialize(string createFilePath)
-        {
+            string createFilePath = this.GetTestFilePath(this.generateDocumentFilePath);
             GeneratedDocument generatedDocument = new GeneratedDocument();
             generatedDocument.CreatePackage(createFilePath);
 
             this.Log.Pass("Create Power Point file. File path=[{0}]", createFilePath);
-        }
-        #endregion
-
-        #region Test Methods
-        /// <summary>
-        /// Creates a base Excel file for the tests
-        /// </summary>
-        protected override void TestInitializeOnce()
-        {
-            string generatDocumentFilePath = this.GetTestFilePath(this.generateDocumentFilePath);
-
-            Initialize(generatDocumentFilePath);
         }
 
         /// <summary>
@@ -65,8 +39,6 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         [Fact]
         public void Theme01EditAttribute()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
-
             string originalFilepath = this.GetTestFilePath(this.generateDocumentFilePath);
             string editFilePath = this.GetTestFilePath(this.editDocumentFilePath);
 
@@ -90,8 +62,6 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         [Fact]
         public void Theme03DeleteAttribute()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
-
             string originalFilepath = this.GetTestFilePath(this.generateDocumentFilePath);
             string deleteFilePath = this.GetTestFilePath(this.deleteDocumentFilePath);
             string addFilePath = this.GetTestFilePath(this.addDocumentFilePath);
@@ -111,7 +81,5 @@ namespace DocumentFormat.OpenXml.Tests.Theme
 
             this.Log.Pass("Deleted the thm15:id attribute is complete.");
         }
-
-        #endregion
     }
 }

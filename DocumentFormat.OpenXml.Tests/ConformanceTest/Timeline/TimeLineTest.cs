@@ -1,107 +1,31 @@
-// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
-using System.Text;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using DocumentFormat.OpenXml.Tests.TimelineClass;
 using System.IO;
-using System.Reflection;
-using System.Xml;
-using System.Xml.Linq;
+using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests.TimeLine
 {
-    using Xunit;
-    using DocumentFormat.OpenXml.Tests.TaskLibraries;
-    using DocumentFormat.OpenXml.Tests.TimelineClass;
-    using OxTest;
-
-
-    /// <summary>
-    /// Tests for TimeLine elements
-    /// </summary>
-
-    public class TimeLineTest : OpenXmlTestBase
+    public class TimeLineTest
     {
-        //private readonly string generateDocumentFile = "TestTimeLineBase.xlsx";
-        //private readonly string editeDocumentFile = "EditedTimeLine.xlsx";
-        //private readonly string deleteTimelineStyleDocumentFile = "DeletedTimelineStyleTimeLine.xlsx";
-        //private readonly string addTimelineStyleDocumentFile = "AddedTimelineStyleTimeLine.xlsx";
-        private readonly string generateDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
-        private readonly string editeDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
-        private readonly string deleteTimelineStyleDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
-        private readonly string addTimelineStyleDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
-
-        
-
-        TestEntities testEntities = null;
-
-        #region Constructor
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        public TimeLineTest()
-        {
-        }
-        #endregion
-
-        #region Initialize
-        /// <summary>
-        /// Create is a Excel file, It's test base file.
-        /// </summary>
-        /// <param name="createFilePath">Create Excel file path</param>
-        /// <returns>Excel file path</returns>
-        private void Initialize(string createFilePath)
-        {
-            GeneratedDocument generatedDocument = new GeneratedDocument();
-            generatedDocument.CreatePackage(createFilePath);
-
-            this.Log.Pass("Create Excel file. File path=[{0}]", createFilePath);
-
-            this.testEntities = new TestEntities(createFilePath);
-        }
-        #endregion
-
-        #region Test Methods
-        /// <summary>
-        /// Creates a base Excel file for the tests
-        /// </summary>
-        protected override void TestInitializeOnce()
-        {
-            string generatDocumentFilePath = this.GetTestFilePath(this.generateDocumentFile);
-
-            Initialize(generatDocumentFilePath);
-        }
-
-        /// <summary>
-        /// Attribute editing test for TimeLine Control"
-        /// </summary>
         [Fact]
-        public void TimeLine01EditDeleteAddAttribute()
+        public void TimeLineEditAttributes()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
+            using (var ms = new MemoryStream())
+            {
+                GeneratedDocument.CreatePackage(ms);
 
-            string originalFilepath = this.GetTestFilePath(this.generateDocumentFile);
-            string editFilePath = this.GetTestFilePath(this.editeDocumentFile);
-            string deleteTimelineStyleFilePath = this.GetTestFilePath(this.deleteTimelineStyleDocumentFile);
-            string addTimelineStyleFilePath = this.GetTestFilePath(addTimelineStyleDocumentFile);
+                var testEntities = new TestEntities(ms);
+                testEntities.EditAttributes(ms);
+                testEntities.VerifyEditedAttribute(ms);
 
-            System.IO.File.Copy(originalFilepath, editFilePath, true);
+                testEntities.DeleteTimelineStyle(ms);
+                testEntities.VerifyDeletedTimelineStyle(ms);
 
-            this.testEntities.EditAttributes(editFilePath, this.Log);
-            this.testEntities.VerifyEditedAttribute(editFilePath, this.Log);
-
-            System.IO.File.Copy(editFilePath, deleteTimelineStyleFilePath, true);
-
-            this.testEntities.DeleteTimelineStyle(deleteTimelineStyleFilePath, this.Log);
-            this.testEntities.VerifyDeletedTimelineStyle(deleteTimelineStyleFilePath, this.Log);
-
-            System.IO.File.Copy(deleteTimelineStyleFilePath, addTimelineStyleFilePath, true);
-
-            this.testEntities.AddTimelineStyle(addTimelineStyleFilePath, this.Log);
-            this.testEntities.VerifyAddedTimelineStyle(addTimelineStyleFilePath, this.Log);
+                testEntities.AddTimelineStyle(ms);
+                testEntities.VerifyAddedTimelineStyle(ms);
+            }
         }
-
-        #endregion
     }
 }

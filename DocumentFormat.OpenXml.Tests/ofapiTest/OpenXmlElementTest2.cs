@@ -1,50 +1,16 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Xunit;
-using DocumentFormat.OpenXml.Wordprocessing;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml;
+using DocumentFormat.OpenXml.Wordprocessing;
+using System;
 using System.IO;
+using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    /// <summary>
-    /// Summary description for OpenXmlElementTest2
-    /// </summary>
-    
     public class OpenXmlElementTest2
     {
-        ///<summary>
-        ///Constructor.
-        ///</summary>
-        public OpenXmlElementTest2()
-        {
-            //
-            // TODO: Add constructor logic here
-            //
-        }
-
-        private TestContext testContextInstance;
-
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-
         ///<summary>
         ///TestGetPartRootElement.
         ///</summary>
@@ -136,7 +102,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-
         ///<summary>
         ///TestGetXPathIndex.
         ///</summary>
@@ -164,7 +129,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             target = run2.GetXPathIndex();
             Assert.Equal(2, target);
-        
+
             target = run3.GetXPathIndex();
             Assert.Equal(3, target);
 

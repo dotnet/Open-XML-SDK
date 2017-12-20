@@ -1,53 +1,24 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Xunit;
-using DocumentFormat.OpenXml.Wordprocessing;
-using DocumentFormat.OpenXml;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Packaging;
-using System.IO;
+using DocumentFormat.OpenXml.Wordprocessing;
+using System;
+using System.Linq;
 using System.Reflection;
+using Xunit;
+
+using static DocumentFormat.OpenXml.Tests.TestAssets;
 
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
     /// Summary description for CustomXmlElementTest
     /// </summary>
-    
     public class CustomXmlElementTest
     {
-        ///<summary>
-        ///Constructor
-        ///</summary>
-        public CustomXmlElementTest()
-        {
-            //
-            // TODO: Add constructor logic here
-            //
-        }
-
-        private TestContext testContextInstance;
-
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-
-        string uri = "urn:customXmlSample";
-        string element = "elementName";
+        private string uri = "urn:customXmlSample";
+        private string element = "elementName";
 
         ///<summary>
         ///CustomXmlElementTests.
@@ -55,7 +26,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CustomXmlElementTests()
         {
-
             Type baseType = typeof(CustomXmlElement);
             Assert.True(baseType.GetTypeInfo().IsAbstract);
 
@@ -80,7 +50,8 @@ namespace DocumentFormat.OpenXml.Tests
             ValidateCustomXmlElement(cxCell);
 
             // Test loading and modification on DOM tree
-            using (var doc = WordprocessingDocument.Open(new MemoryStream(TestFileStreams.simpleSdt), false))
+            using (var stream = GetStream(TestFiles.simpleSdt))
+            using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 // find customXml
                 var customXml = doc.MainDocumentPart.Document.Descendants<CustomXmlRun>().First();
@@ -117,7 +88,8 @@ namespace DocumentFormat.OpenXml.Tests
             // Test loading and modification
             SdtRun sdtRun = new SdtRun();
 
-            using (var doc = WordprocessingDocument.Open(new MemoryStream(TestFileStreams.simpleSdt), false))
+            using (var stream = GetStream(TestFiles.simpleSdt))
+            using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 // find sdt
                 var sdt = doc.MainDocumentPart.Document.Descendants<SdtBlock>().First();

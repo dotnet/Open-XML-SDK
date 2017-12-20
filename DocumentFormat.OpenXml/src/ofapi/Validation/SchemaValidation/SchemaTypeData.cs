@@ -1,15 +1,9 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Diagnostics;
-using System.Collections.ObjectModel;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-namespace DocumentFormat.OpenXml
-{
-    internal class IgnoreAttribute : Attribute { }
-    internal class IncludeAttribute : Attribute { }
-}
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Internal.SchemaValidation
 {
@@ -17,7 +11,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     /// The schema type constraint for an OpenXmlElement.
     /// </summary>
     /// <remarks>
-    /// 
+    ///
     /// </remarks>
     [DebuggerDisplay("OpenXmlTypeId={OpenXmlTypeId}")]
     internal class SchemaTypeData
@@ -116,14 +110,13 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         {
             get;
             private set;
-
         }
 
         internal bool HasAttributeConstraints
         {
             get
             {
-                return (this.AttributeConstraints != null && this.AttributeConstraints.Count > 0);
+                return this.AttributeConstraints != null && this.AttributeConstraints.Count > 0;
             }
         }
 
@@ -146,7 +139,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         {
             get
             {
-                return (this.ParticleConstraint != null);
+                return this.ParticleConstraint != null;
             }
         }
 

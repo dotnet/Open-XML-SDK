@@ -1,17 +1,18 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.IO;
-using System.Text;
-using System.Linq;
-using System.Reflection;
-using System.Collections.Generic;
-using System.Xml;
-using System.Xml.Linq;
-using DocumentFormat.OpenXml;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
-using Xunit;
 using OxTest;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Xml;
+using System.Xml.Linq;
+using Xunit;
+using Xunit.Abstractions;
 
 #pragma warning disable 162
 
@@ -23,28 +24,33 @@ namespace DocumentFormat.OpenXml.Tests
 
     public class OpenXmlReaderWriterTest : OpenXmlDomTestBase
     {
+        public OpenXmlReaderWriterTest(ITestOutputHelper output)
+            : base(output)
+        {
+        }
+
         /// <summary>
         /// Switch for the IgnoreWhitespace fix O15#3024890
         /// </summary>
-        const bool IGNORE_WHITESPACE_SETTING = true;
+        private const bool IGNORE_WHITESPACE_SETTING = true;
 
         #region Reader Test ...
 
         #region ReaderConstruction ...
 
-        ConstrReader PartConstrWithNoMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
+        private ConstrReader PartConstrWithNoMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
         {
             y = OpenXmlReader.Create(x.MainDocumentPart);
             z = XmlReader.Create(x.MainDocumentPart.GetStream());
         };
 
-        ConstrReader PartConstrWithMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
+        private ConstrReader PartConstrWithMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
         {
             y = OpenXmlReader.Create(x.MainDocumentPart.GetStream(), true);
             z = XmlReader.Create(x.MainDocumentPart.GetStream());
         };
 
-        ConstrReader DomConstrWithNoMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
+        private ConstrReader DomConstrWithNoMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
         {
             OpenXmlElement firstChild = x.MainDocumentPart.Document.FirstChild;
             y = OpenXmlDomReader.Create(firstChild);
@@ -53,7 +59,7 @@ namespace DocumentFormat.OpenXml.Tests
             z = XmlReader.Create(new StringReader(firstChild.OuterXml));
         };
 
-        ConstrReader DomConstrWithMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
+        private ConstrReader DomConstrWithMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
         {
             OpenXmlElement firstChild = x.MainDocumentPart.Document.FirstChild;
             y = new OpenXmlDomReader(firstChild, true);
@@ -62,8 +68,7 @@ namespace DocumentFormat.OpenXml.Tests
             z = XmlReader.Create(new StringReader(firstChild.OuterXml));
         };
 
-
-        PreRead initialReader = (OpenXmlReader x, XmlReader y, out string standalone) =>
+        private PreRead initialReader = (OpenXmlReader x, XmlReader y, out string standalone) =>
         {
             Read(x);
             Read(y);
@@ -89,7 +94,6 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteStartDocumentTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             TestWriteStartDocument(WConstrWithPart, WriteStartD, null);
         }
 
@@ -97,7 +101,6 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteStartDocumentWithStandalone()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             TestWriteStartDocument(WConstrWithPartEnc, WriteStartD, true);
         }
 
@@ -105,8 +108,8 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteStartDocumentMultiple()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", "") + ".docx");
+
             using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
             {
                 MainDocumentPart part = newDoc.AddMainDocumentPart();
@@ -131,7 +134,6 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteStartDocumentOtherPlace()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", "") + ".docx");
             using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
             {
@@ -158,7 +160,6 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteStartElementWithOpenXmlReaderAttr()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
             OpenXmlReader reader = OpenXmlReader.Create(p);
             reader.Read();
@@ -170,7 +171,6 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteStartElementWithOpenXmlReader()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
             OpenXmlReader reader = OpenXmlReader.Create(p);
             reader.Read();
@@ -182,7 +182,6 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteStartElementWithEndElementReader()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
             OpenXmlReader reader = OpenXmlReader.Create(p);
             reader.Read();
@@ -203,7 +202,6 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteStartElementWithOpenXmlElementAttr()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
 
             TestWriteStartElement(WConstrWithStream, WriteStartE, p, GetTestAttributes(), null);
@@ -213,7 +211,6 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteStartElementWithOpenXmlElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
 
             TestWriteStartElement(WConstrWithStream, WriteStartE, p, null, null);
@@ -223,7 +220,6 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteStringAndEndElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", "") + ".docx");
 
             Text t = new Text();
@@ -257,7 +253,6 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteEndElementWithoutStart()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", "") + ".docx");
             Text t = new Text();
             using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
@@ -282,10 +277,8 @@ namespace DocumentFormat.OpenXml.Tests
         // Comment out as the result of bug 2352836
         //
         [Fact]
-
         public void WriteStringWithNonLeafText()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             Paragraph p = new Paragraph() { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
             string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
             using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
@@ -308,10 +301,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Fact]
-
         public void WriteElement()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
             string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
             using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
@@ -327,15 +318,11 @@ namespace DocumentFormat.OpenXml.Tests
                     XEle = XElement.Load(reader);
                 VerifyEqual(XEle, p, part);
             }
-
         }
 
         [Fact]
-
         public void WriteStartElementWithMisc()
         {
-
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             OpenXmlMiscNode node = new OpenXmlMiscNode(XmlNodeType.Comment);
 
             OpenXmlReader miscReader = OpenXmlReader.Create(node, true);
@@ -350,12 +337,10 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 Log.Pass("ArgumentOutOfRangeException is thrown");
             }
-
         }
 
         private void TestWriteStartDocument(ConstrWriter writerConstr, WriteStartDoc write, bool? standalone)
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", "") + ".docx");
             using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
             {
@@ -370,7 +355,7 @@ namespace DocumentFormat.OpenXml.Tests
             File.Delete(file);
         }
 
-        public void VerifyDocumentStart(OpenXmlPart part, bool? standalone)
+        private void VerifyDocumentStart(OpenXmlPart part, bool? standalone)
         {
             XmlReader reader = XmlReader.Create(part.GetStream());
             reader.Read();
@@ -393,7 +378,6 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Comment("verify the standalone is not presented");
                 Log.VerifyTrue(standaloneValue == null, "expected: null <> acutal: {0}", standaloneValue);
             }
-
         }
 
         private void WriteStartD(OpenXmlWriter writer, bool? standalone)
@@ -402,7 +386,6 @@ namespace DocumentFormat.OpenXml.Tests
                 writer.WriteStartDocument(standalone.Value);
             else
                 writer.WriteStartDocument();
-
         }
 
         private void WriteStartE(OpenXmlWriter writer, object writeSource, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations)
@@ -435,7 +418,6 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void TestWriteStartElement(ConstrWriter writerConstr, WriteStartEle write, object writeSource, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations)
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", "") + ".docx");
             using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
             {
@@ -541,24 +523,23 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-
         #region Writer Construction ...
 
-        ConstrWriter WConstrWithPart = x => OpenXmlWriter.Create(x);
+        private ConstrWriter WConstrWithPart = x => OpenXmlWriter.Create(x);
 
-        ConstrWriter WConstrWithPartEnc = x => OpenXmlWriter.Create(x, Encoding.UTF8);
+        private ConstrWriter WConstrWithPartEnc = x => OpenXmlWriter.Create(x, Encoding.UTF8);
 
-        ConstrWriter WConstrWithStream = x => OpenXmlWriter.Create(x.GetStream());
+        private ConstrWriter WConstrWithStream = x => OpenXmlWriter.Create(x.GetStream());
 
-        ConstrWriter WConstrWithStreamEnc = x => OpenXmlWriter.Create(x.GetStream(), Encoding.UTF8);
+        private ConstrWriter WConstrWithStreamEnc = x => OpenXmlWriter.Create(x.GetStream(), Encoding.UTF8);
 
-        ConstrWriter PWCosntrWithPart = x => new OpenXmlPartWriter(x);
+        private ConstrWriter PWCosntrWithPart = x => new OpenXmlPartWriter(x);
 
-        ConstrWriter PWConstrWithPartEnc = x => new OpenXmlPartWriter(x, Encoding.UTF8);
+        private ConstrWriter PWConstrWithPartEnc = x => new OpenXmlPartWriter(x, Encoding.UTF8);
 
-        ConstrWriter PWConstrWithStream = x => new OpenXmlPartWriter(x.GetStream());
+        private ConstrWriter PWConstrWithStream = x => new OpenXmlPartWriter(x.GetStream());
 
-        ConstrWriter PWConstrWithStreamEnc = x => new OpenXmlPartWriter(x.GetStream(), Encoding.UTF8);
+        private ConstrWriter PWConstrWithStreamEnc = x => new OpenXmlPartWriter(x.GetStream(), Encoding.UTF8);
 
         #endregion
 
@@ -579,8 +560,8 @@ namespace DocumentFormat.OpenXml.Tests
         private delegate void WriteStartEle(OpenXmlWriter writer, object writeSource, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations);
 
         /// <summary>
-        /// Call OpenXmlReader LoadCurrentElement() method, and move the corresponding XmlReader to 
-        /// the match point as the OpenXmlReader according to the Read algorithm. 
+        /// Call OpenXmlReader LoadCurrentElement() method, and move the corresponding XmlReader to
+        /// the match point as the OpenXmlReader according to the Read algorithm.
         /// </summary>
         /// <param name="reader"></param>
         /// <param name="Xreader"></param>
@@ -604,7 +585,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
             else if (reader.IsStartElement)
             {
-
                 bool IsStart = reader.IsStartElement;
                 OpenXmlElement element = reader.LoadCurrentElement();
                 bool skip = (IsStart == true) && (reader.IsStartElement == false);
@@ -687,12 +667,12 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Test Standalone");
             if (!String.IsNullOrEmpty(standalone) && reader.StandaloneXml.HasValue == true)
             {
-                Log.VerifyTrue(standalone.Equals((reader.StandaloneXml.Value ? "yes" : "no"), StringComparison.OrdinalIgnoreCase), "expect: {0}  actual: {1}", standalone, reader.StandaloneXml);
+                Log.VerifyTrue(standalone.Equals( reader.StandaloneXml.Value ? "yes" : "no", StringComparison.OrdinalIgnoreCase), "expect: {0}  actual: {1}", standalone, reader.StandaloneXml);
             }
             else if (String.IsNullOrEmpty(standalone) && reader.StandaloneXml.HasValue == false)
                 Log.Pass(" PASS! expect: NULL == actual: NULL");
             else
-                Log.Fail("Expect: {0} <> actual: {1}", (String.IsNullOrEmpty(standalone) ? "Null" : "Not Null"), (reader.StandaloneXml.HasValue ? "Not Null" : "Null"));
+                Log.Fail("Expect: {0} <> actual: {1}", String.IsNullOrEmpty(standalone) ? "Null" : "Not Null", reader.StandaloneXml.HasValue ? "Not Null" : "Null");
         }
 
         /// <summary>
@@ -928,7 +908,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        /// Call OpenXmlReader Read() method, and move the corresponding XmlReader to 
+        /// Call OpenXmlReader Read() method, and move the corresponding XmlReader to
         /// the match point as the OpenXmlReader according to the Read algorithm
         /// </summary>
         /// <param name="Oreader">Oreader to be called</param>
@@ -961,7 +941,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             if (Treader.IsEmptyElement == false || !(beforeIsStartElement == true && afterIsEndElement == true))
             {
-
                 while (IscontinueRead && Read(Treader))
                 {
                     switch (Treader.NodeType)
@@ -1000,8 +979,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        /// Call OpenXmlReader ReadFirstChild() method, and move the corresponding XmlReader to 
-        /// the match point as the OpenXmlReader according to the Read algorithm. If ReadFirstChild 
+        /// Call OpenXmlReader ReadFirstChild() method, and move the corresponding XmlReader to
+        /// the match point as the OpenXmlReader according to the Read algorithm. If ReadFirstChild
         /// return false, the next element will be read instead.
         /// </summary>
         /// <param name="Oreader">Oreader to be called</param>
@@ -1048,8 +1027,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        /// Call OpenXmlReader ReadNextSibling() method, and move the corresponding XmlReader to 
-        /// the match point as the OpenXmlReader according to the Read algorithm. 
+        /// Call OpenXmlReader ReadNextSibling() method, and move the corresponding XmlReader to
+        /// the match point as the OpenXmlReader according to the Read algorithm.
         /// </summary>
         /// <param name="Oreader">Oreader to be called</param>
         /// <param name="Treader">XmlReader that keeps synchronous with Oreader</param>
@@ -1114,7 +1093,6 @@ namespace DocumentFormat.OpenXml.Tests
                     foundNextSibling = false;
             }
 
-
             Log.Comment("check if the ReadNextSibling() results matches with XmlReader");
             Log.VerifyTrue(OfoundNextSibling == foundNextSibling, "OpenXmlReader and XmlReader don't match");
 
@@ -1122,7 +1100,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        /// Call OpenXmlReader Skip() method, and move the corresponding XmlReader to 
+        /// Call OpenXmlReader Skip() method, and move the corresponding XmlReader to
         /// the match point as the OpenXmlReader according to the Read algorithm.
         /// </summary>
         /// <param name="Oreader">Oreader to be called<</param>
@@ -1238,7 +1216,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void bug247883()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             var testfiles = CopyTestFiles(@"wordprocessing", "paragraph").Where(fi => fi.IsWordprocessingFile());
             var testfile0 = testfiles.ElementAtOrDefault(0);
             var testfile1 = testfiles.ElementAtOrDefault(1);
@@ -1255,11 +1232,10 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void bug251677()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             Body body = new Body(new Paragraph(new ParagraphProperties(), new Run(new Text("test"))));
             body.PrependChild(new OpenXmlMiscNode(System.Xml.XmlNodeType.Comment, "<!-- start body -->"));
 
-            OpenXmlReader reader = OpenXmlReader.Create(body, true); // read misc nodes 
+            OpenXmlReader reader = OpenXmlReader.Create(body, true); // read misc nodes
             bool moved = reader.Read();
             moved = reader.Read();
             Log.VerifyTrue(reader.IsMiscNode, "reader.IsMiscNode");
@@ -1269,7 +1245,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void bug251835_ReaderDispose()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             var testfiles = CopyTestFiles(@"wordprocessing", "paragraph").Where(fi => fi.IsWordprocessingFile());
             var testfile = testfiles.FirstOrDefault();
             try
@@ -1287,13 +1262,11 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 Log.VerifyTrue(e is ObjectDisposedException, "e is ObjectDisposedException");
             }
-
         }
 
         [Fact]
         public void Bug253893_Write2Declaration()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
             using (WordprocessingDocument doc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
             {
@@ -1312,6 +1285,5 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Pass("Completed");
         }
-
     }
 }

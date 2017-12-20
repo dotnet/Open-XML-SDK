@@ -1,24 +1,22 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using DocumentFormat.OpenXml.Packaging;
+using LogUtil;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 using System.Text.RegularExpressions;
-
-using LogUtil;
-
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Packaging;
-using System.Collections;
+using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-
     public class OpenXmlReflector
     {
-        public static void Run(string srcDocument, string destDocument)
+        public static void Run(string srcDocument, string destDocument, ITestOutputHelper output)
         {
             if (!File.Exists(srcDocument))
                 throw new FileNotFoundException("Specified file does not exist.", srcDocument);
@@ -26,13 +24,13 @@ namespace DocumentFormat.OpenXml.Tests
             using (OpenXmlPackage srcPackage = OpenExistingPackage(srcDocument))
             using (OpenXmlPackage destPackage = CreatePackageOn(srcPackage, destDocument))
             {
-                (new OpenXmlReflector()).ReflectPackage(srcPackage, destPackage);
+                new OpenXmlReflector(output).ReflectPackage(srcPackage, destPackage);
             }
-
         }
 
         #region Fields
         private OpenXmlPackage _srcPackage = null;
+
         public OpenXmlPackage SrcPackage
         {
             get
@@ -42,6 +40,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         private OpenXmlPackage _destPackage = null;
+
         public OpenXmlPackage DestPackage
         {
             get
@@ -51,6 +50,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         private VerifiableLog _log;
+
         internal VerifiableLog Log
         {
             get
@@ -66,6 +66,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         // Part-RootElement Map
         private Dictionary<Type, Type> _partRootElementMap = null;
+
         public Dictionary<Type, Type> PartRootElementMap
         {
             get
@@ -80,15 +81,14 @@ namespace DocumentFormat.OpenXml.Tests
         #endregion Fields
 
         #region Constructors
-        public OpenXmlReflector()
+        public OpenXmlReflector(ITestOutputHelper output)
         {
-            _log = new VerifiableLog("OpenXmlPackageReflector", string.Empty, OxTest.TestUtil.TestResultsDirectory);
+            _log = new VerifiableLog(output);
         }
 
-        public OpenXmlReflector(string srcfile, string destfile)
+        public OpenXmlReflector(string srcfile, string destfile, ITestOutputHelper output)
+            : this(output)
         {
-            _log = new VerifiableLog("OpenXmlPackageReflector", string.Empty, OxTest.TestUtil.TestResultsDirectory);
-
             _srcPackage = OpenExistingPackage(srcfile);
             _destPackage = CreatePackageOn(_srcPackage, destfile);
         }
@@ -166,7 +166,6 @@ namespace DocumentFormat.OpenXml.Tests
             else
                 throw new Exception("Not Supported Document Type!");
         }
-
 
         /// <summary>
         /// Build an in-memory Package instance of given type
@@ -272,10 +271,10 @@ namespace DocumentFormat.OpenXml.Tests
                     return methodPart.Invoke(parent, new string[] { srcIdPartPair.OpenXmlPart.ContentType, srcIdPartPair.RelationshipId }) as OpenXmlPart;
                 }
 
-                // contentType, id: AlternativeFormatImportPart, EmbeddedControlPersistencePart, FontPart, 
-                // AudioPart, ImgagePart, VideoPart, ThumbnailPart, 
-                // contentType: EmbeddedPackagePart, EmbeddedObjectPart, 
-                // none: CoreFilePropertiesPart, DigitalSignatureOriginPart, ExtendedFilePropertiesPart, 
+                // contentType, id: AlternativeFormatImportPart, EmbeddedControlPersistencePart, FontPart,
+                // AudioPart, ImgagePart, VideoPart, ThumbnailPart,
+                // contentType: EmbeddedPackagePart, EmbeddedObjectPart,
+                // none: CoreFilePropertiesPart, DigitalSignatureOriginPart, ExtendedFilePropertiesPart,
                 // try to find and invoke the parent.AddXxxxPart() method that match the partType
                 foreach (var method in parent.GetType().GetMethods().Where(m => m.IsPublic))
                 {
@@ -303,12 +302,12 @@ namespace DocumentFormat.OpenXml.Tests
         public MethodInfo GetAddNewPartMethod(Type parentType, Type partType)
         {
             string prefix = "AddNewPart";
-            Predicate<MethodInfo> matchMethod = (m => m.IsGenericMethod);
-            Predicate<ParameterInfo> matchReturn = (r => r.ParameterType.IsSubclassOf(typeof(OpenXmlPart)));
+            Predicate<MethodInfo> matchMethod = m => m.IsGenericMethod;
+            Predicate<ParameterInfo> matchReturn = r => r.ParameterType.IsSubclassOf(typeof(OpenXmlPart));
             Predicate<ParameterInfo[]> matchParams =
-                (ps => ps.Count() == 2 &&
+                ps => ps.Count() == 2 &&
                     ps[0].ParameterType == typeof(string) &&
-                    ps[1].ParameterType == typeof(string));
+                    ps[1].ParameterType == typeof(string);
 
             var mg = GetMethodInfo(parentType, prefix, matchMethod, matchParams, matchReturn);
             if (null == mg)
@@ -333,14 +332,14 @@ namespace DocumentFormat.OpenXml.Tests
         public MethodInfo GetAddExtendedPartMethod(Type parentType, Type partType)
         {
             string prefix = "AddExtendedPart";
-            Predicate<MethodInfo> matchMethod = (m => m.IsGenericMethod);
-            Predicate<ParameterInfo> matchReturn = (r => r.ParameterType == partType);
+            Predicate<MethodInfo> matchMethod = m => m.IsGenericMethod;
+            Predicate<ParameterInfo> matchReturn = r => r.ParameterType == partType;
             Predicate<ParameterInfo[]> matchParams =
-                (ps => ps.Count() == 4 &&
+                ps => ps.Count() == 4 &&
                     ps[0].ParameterType == typeof(string) &&
                     ps[1].ParameterType == typeof(string) &&
                     ps[2].ParameterType == typeof(string) &&
-                    ps[3].ParameterType == typeof(string));
+                    ps[3].ParameterType == typeof(string);
 
             var mng = GetMethodInfo(parentType, prefix, matchMethod, matchParams, matchReturn);
             if (null == mng)
@@ -370,7 +369,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var method = rootType.GetMethod("Load", flag);      // Find: public void Load(OpenXmlPart openXmlPart)
                 if ((null != method)
                     && (method.GetParameters().Count() == 1)
-                    && (method.GetParameters()[0].ParameterType.IsSubclassOf(typeof(OpenXmlPart))))
+                    && method.GetParameters()[0].ParameterType.IsSubclassOf(typeof(OpenXmlPart)))
                 {
                     PartRootElementMap.Add(method.GetParameters()[0].ParameterType, rootType);
                 }
@@ -400,7 +399,6 @@ namespace DocumentFormat.OpenXml.Tests
 
                 OpenXmlPart newPart = BuildPart(pair, destPackage);
                 ReflectPart(pair.OpenXmlPart, newPart, srcPackage, destPackage);
-
             }
             Log.Comment("Reflected {0} sucessfully!", srcPackage);
         }
@@ -673,6 +671,7 @@ namespace DocumentFormat.OpenXml.Tests
             Predicate<ParameterInfo> matchReturn = null;
             return GetMethodInfo(hostType, prefix, matchMethod, matchParams, matchReturn);
         }
+
         public MethodInfo SetAttributes(Type hostType)
         {
             var prefix = "SetAttributes";
@@ -683,6 +682,7 @@ namespace DocumentFormat.OpenXml.Tests
             Predicate<ParameterInfo> matchReturn = null;
             return GetMethodInfo(hostType, prefix, matchMethod, matchParams, matchReturn);
         }
+
         public MethodInfo ClearAllAttributes(Type hostType)
         {
             var prefix = "ClearAllAttributes";
@@ -1016,7 +1016,7 @@ namespace DocumentFormat.OpenXml.Tests
         public virtual IList<OpenXmlAttribute> ExtendedAttributes { get; }
         public OpenXmlElement Parent { get; internal set; }
         public abstract bool HasChildren { get; }
-        
+
         public virtual OpenXmlElement FirstChild { get; }
         public virtual OpenXmlElement LastChild { get; }
         public virtual OpenXmlElement NextSibling { get; internal set; }
@@ -1104,7 +1104,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        /// Retrieve built-in OpenXmlAttributes of the pass-in type of OpenXmlElement 
+        /// Retrieve built-in OpenXmlAttributes of the pass-in type of OpenXmlElement
         /// </summary>
         /// <param name="hostType">Type of OpenXmlElement or derived classes that has properties with SchemaAttrAttribute</param>
         /// <returns>IEnumerable<OpenXmlAttribute> for fixed attributes of pass-in type of OpenXmlElement</returns>
@@ -1172,5 +1172,4 @@ namespace DocumentFormat.OpenXml.Tests
 
         #endregion Reflection Helpers
     }
-
 }

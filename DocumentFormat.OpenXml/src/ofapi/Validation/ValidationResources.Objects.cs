@@ -1,4 +1,7 @@
-﻿using System.Diagnostics;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 
@@ -17,7 +20,7 @@ namespace DocumentFormat.OpenXml.Validation
                 case FileFormatVersions.Office2013:
                     return GetEmbeddedResource("O15SchemaConstraintDatas");
                 default:
-                    Debug.Assert(fileFormat == FileFormatVersions.Office2007 || fileFormat == FileFormatVersions.Office2010 || fileFormat == FileFormatVersions.Office2013);
+                    Debug.Assert(fileFormat.Any());
                     return GetEmbeddedResource("O12SchemaConstraintDatas");
             }
         }

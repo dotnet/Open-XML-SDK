@@ -1,85 +1,65 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Packaging;
-using Xunit;
-using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Wordprocessing;
-using System.Linq;
 using System.IO;
+using System.Linq;
+using Xunit;
+
+using static DocumentFormat.OpenXml.Tests.TestAssets;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    
-    
     /// <summary>
     ///This is a test class for OpenXmlPartTest and is intended
     ///to contain all OpenXmlPartTest Unit Tests
     ///</summary>
-    
     public class OpenXmlPartTest
     {
-
-
-        private TestContext testContextInstance;
-
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-
         /// <summary>
         ///A test for RootElement
         ///</summary>
         [Fact]
         public void RootElementTest()
         {
-            using (var stream = new System.IO.MemoryStream(TestFileStreams.complex0docx, false))
+            using (var stream = GetStream(TestFiles.complex0docx))
+            using (var testDocument = WordprocessingDocument.Open(stream, false))
             {
-                using (WordprocessingDocument testDocument = WordprocessingDocument.Open(stream, false))
-                {
-                    OpenXmlPart target = testDocument.MainDocumentPart;
-                    OpenXmlPartRootElement actual;
-                    actual = target.RootElement;
-                    Assert.IsType(typeof(Document), actual);
-                    Assert.Same(testDocument.MainDocumentPart.Document, actual);
+                OpenXmlPart target = testDocument.MainDocumentPart;
+                OpenXmlPartRootElement actual;
+                actual = target.RootElement;
+                Assert.IsType<Document>(actual);
+                Assert.Same(testDocument.MainDocumentPart.Document, actual);
 
+                target = testDocument.MainDocumentPart.WordprocessingCommentsPart;
+                actual = target.RootElement;
+                Assert.IsType<Comments>(actual);
+                Assert.Same(testDocument.MainDocumentPart.WordprocessingCommentsPart.Comments, actual);
 
-                    target = testDocument.MainDocumentPart.WordprocessingCommentsPart;
-                    actual = target.RootElement;
-                    Assert.IsType(typeof(Comments), actual);
-                    Assert.Same(testDocument.MainDocumentPart.WordprocessingCommentsPart.Comments, actual);
-
-                    target = testDocument.MainDocumentPart.ImageParts.First();
-                    actual = target.RootElement;
-                    Assert.Null(actual);
-                }
+                target = testDocument.MainDocumentPart.ImageParts.First();
+                actual = target.RootElement;
+                Assert.Null(actual);
             }
+        }
 
-            using (System.IO.Stream stream = new System.IO.MemoryStream())
+        [Fact]
+        public void RootElementTest2()
+        {
+            using (var stream = new MemoryStream())
+            using (var testDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
             {
-                using (var testDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
-                {
-                    var mainPart = testDocument.AddMainDocumentPart();
-                    Assert.Null(mainPart.Document);
+                var mainPart = testDocument.AddMainDocumentPart();
+                Assert.Null(mainPart.Document);
 
-                    using (var partStream = mainPart.GetStream(FileMode.OpenOrCreate, FileAccess.Write))
-                    using (var textWriter = new StreamWriter(partStream))
-                    {
-                        textWriter.WriteLine(" ");
-                    }
-                    Assert.Null(mainPart.Document);
+                using (var partStream = mainPart.GetStream(FileMode.OpenOrCreate, FileAccess.Write))
+                using (var textWriter = new StreamWriter(partStream))
+                {
+                    textWriter.WriteLine(" ");
                 }
+
+                Assert.Null(mainPart.Document);
             }
         }
 
@@ -89,32 +69,34 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void HyperlinkRelationshipTest()
         {
-            using (var stream = new System.IO.MemoryStream(TestFileStreams.May_12_04, false))
+            using (var stream = GetStream(TestFiles.May_12_04))
+            using (var testDocument = WordprocessingDocument.Open(stream, false))
             {
-                using (WordprocessingDocument testDocument = WordprocessingDocument.Open(stream, false))
-                {
-                    OpenXmlValidator validator = new OpenXmlValidator();
-                    var errors = validator.Validate(testDocument);
-                    Assert.Equal(0, errors.Count());
+                var validator = new OpenXmlValidator();
+                var errors = validator.Validate(testDocument);
+                Assert.Empty(errors);
 
-                    var mainPart = testDocument.MainDocumentPart;
+                var mainPart = testDocument.MainDocumentPart;
 
-                    Assert.Equal(0, mainPart.ExternalRelationships.Count());
-                    Assert.Equal(71, mainPart.HyperlinkRelationships.Count());
+                Assert.Empty(mainPart.ExternalRelationships);
+                Assert.Equal(71, mainPart.HyperlinkRelationships.Count());
 
-                    var rid15 = mainPart.GetReferenceRelationship("rId15");
-                    Assert.Equal("rId15", rid15.Id);
-                    Assert.Equal(new System.Uri("#_THIS_WEEK_IN", System.UriKind.Relative), rid15.Uri);
-                    Assert.False(rid15.IsExternal);
+                var rid15 = mainPart.GetReferenceRelationship("rId15");
+                Assert.Equal("rId15", rid15.Id);
+                Assert.Equal(new System.Uri("#_THIS_WEEK_IN", System.UriKind.Relative), rid15.Uri);
+                Assert.False(rid15.IsExternal);
 
-                    var rid18 = mainPart.GetReferenceRelationship("rId18");
-                    Assert.Equal("rId18", rid18.Id);
-                    Assert.Equal(new System.Uri("http://www.iaswresearch.org/"), rid18.Uri);
-                    Assert.True(rid18.IsExternal);
-                }
+                var rid18 = mainPart.GetReferenceRelationship("rId18");
+                Assert.Equal("rId18", rid18.Id);
+                Assert.Equal(new System.Uri("http://www.iaswresearch.org/"), rid18.Uri);
+                Assert.True(rid18.IsExternal);
             }
+        }
 
-            using (System.IO.Stream stream = new System.IO.MemoryStream())
+        [Fact]
+        public void HyperlinkRelationshipTest2()
+        {
+            using (var stream = new MemoryStream())
             {
                 using (var testDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
                 {
@@ -132,7 +114,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.Equal(HyperlinkRelationship.RelationshipTypeConst, newRel.RelationshipType);
 
                     mainPart.DeleteReferenceRelationship(ridnew);
-                    Assert.Equal(0, mainPart.HyperlinkRelationships.Count());
+                    Assert.Empty(mainPart.HyperlinkRelationships);
 
                     newUri = new System.Uri("http://microsoft.com", System.UriKind.Absolute);
                     ridnew = mainPart.AddHyperlinkRelationship(newUri, true, ridnew.Id);
@@ -141,48 +123,43 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.Equal(ridnew.Id, newRel.Id);
                     Assert.Equal(newUri, newRel.TargetUri);
                     Assert.Equal(HyperlinkRelationship.RelationshipTypeConst, newRel.RelationshipType);
-
                 }
 
                 // Test the OpenXmlPartContainer.AddSubPartFromOtherPackage().
                 // The method should import all hyperlink relationships.
-                stream.Seek(0, System.IO.SeekOrigin.Begin);
+                stream.Seek(0, SeekOrigin.Begin);
                 using (var testDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
+                using (var sourcestream = GetStream(TestFiles.May_12_04))
+                using (var sourceDocument = WordprocessingDocument.Open(sourcestream, false))
                 {
-                    using (var sourcestream = new System.IO.MemoryStream(TestFileStreams.May_12_04, false))
+                    var parts = new System.Collections.Generic.Dictionary<OpenXmlPart, bool>();
+                    sourceDocument.MainDocumentPart.FindAllReachableParts(parts);
+                    var partCounts = parts.Count;
+
+                    var hyperlinksBefore = sourceDocument.MainDocumentPart.HyperlinkRelationships.ToArray();
+                    var externalRelsBefore = sourceDocument.MainDocumentPart.ExternalRelationships.ToArray();
+
+                    testDocument.AddPart(sourceDocument.MainDocumentPart);
+                    parts.Clear();
+                    testDocument.MainDocumentPart.FindAllReachableParts(parts);
+
+                    // all parts under the main document part should be imported.
+                    Assert.Equal(partCounts, parts.Count);
+
+                    var hyperlinksAfter = testDocument.MainDocumentPart.HyperlinkRelationships.ToArray();
+                    var externalRelsAfter = testDocument.MainDocumentPart.ExternalRelationships.ToArray();
+
+                    // all hyperlink relationships should be imported.
+                    Assert.Equal(hyperlinksBefore.Length, hyperlinksAfter.Length);
+                    for (int i = 0; i < hyperlinksBefore.Length; i++)
                     {
-                        using (WordprocessingDocument sourceDocument = WordprocessingDocument.Open(sourcestream, false))
-                        {
-                            var parts = new System.Collections.Generic.Dictionary<OpenXmlPart, bool>();
-                            sourceDocument.MainDocumentPart.FindAllReachableParts(parts);
-                            var partCounts = parts.Count;
-
-                            var hyperlinksBefore = sourceDocument.MainDocumentPart.HyperlinkRelationships.ToArray();
-                            var externalRelsBefore = sourceDocument.MainDocumentPart.ExternalRelationships.ToArray();
-
-                            testDocument.AddPart(sourceDocument.MainDocumentPart);
-                            parts.Clear();
-                            testDocument.MainDocumentPart.FindAllReachableParts(parts);
-
-                            // all parts under the main document part should be imported.
-                            Assert.Equal(partCounts, parts.Count);
-
-                            var hyperlinksAfter = testDocument.MainDocumentPart.HyperlinkRelationships.ToArray();
-                            var externalRelsAfter = testDocument.MainDocumentPart.ExternalRelationships.ToArray();
-
-                            // all hyperlink relationships should be imported.
-                            Assert.Equal(hyperlinksBefore.Length, hyperlinksAfter.Length);
-                            for (int i = 0; i < hyperlinksBefore.Length; i++)
-                            {
-                                Assert.Equal(hyperlinksBefore[i].Id, hyperlinksAfter[i].Id);
-                                Assert.Equal(hyperlinksBefore[i].IsExternal, hyperlinksAfter[i].IsExternal);
-                                Assert.Equal(hyperlinksBefore[i].Uri, hyperlinksAfter[i].Uri);
-                            }
-
-                            // all external relationships should be improted.
-                            Assert.Equal(externalRelsBefore.Length, externalRelsAfter.Length);
-                        }
+                        Assert.Equal(hyperlinksBefore[i].Id, hyperlinksAfter[i].Id);
+                        Assert.Equal(hyperlinksBefore[i].IsExternal, hyperlinksAfter[i].IsExternal);
+                        Assert.Equal(hyperlinksBefore[i].Uri, hyperlinksAfter[i].Uri);
                     }
+
+                    // all external relationships should be improted.
+                    Assert.Equal(externalRelsBefore.Length, externalRelsAfter.Length);
                 }
             }
         }
@@ -211,7 +188,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var rId = mainDocPart.GetIdOfPart(mainDocPart.WordprocessingCommentsPart);
                     Assert.Equal("rId3", rId);
                     var rId1Part = mainDocPart.GetPartById("rId1");
-                    Assert.IsType(typeof(HeaderPart), rId1Part);
+                    Assert.IsType<HeaderPart>(rId1Part);
                     Assert.Same(headerPart, rId1Part);
                 }
 
@@ -225,7 +202,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var rId = mainDocPart.GetIdOfPart(mainDocPart.WordprocessingCommentsPart);
                     Assert.Equal("rId3", rId);
                     var headerPart = mainDocPart.GetPartById("rId1");
-                    Assert.IsType(typeof(HeaderPart), headerPart);
+                    Assert.IsType<HeaderPart>(headerPart);
                     Assert.Same(mainDocPart.HeaderParts.First(), headerPart);
                 }
             }
@@ -249,7 +226,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                     var extendedPart = doc.AddExtendedPart("http://temp", "text/xml", ".xml", "tempId");
 
-                    // can add parts 
+                    // can add parts
                     OpenXmlPart subPart = extendedPart.AddPart(doc.MainDocumentPart);
                     Assert.Same(subPart, doc.MainDocumentPart);
 

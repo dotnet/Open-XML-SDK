@@ -1,0 +1,92 @@
+<Project>
+  <Choose>
+    <When Condition="$(IsTestProject)">
+      <PropertyGroup >
+        <TestArchitecture Condition="'$(TestArchitecture)' == ''">x64</TestArchitecture>
+        <_TestTargetName Condition="'$(TargetFrameworks)' == ''">InnerTest</_TestTargetName>
+        <_TestTargetName Condition="'$(TargetFrameworks)' != ''">OuterTest</_TestTargetName>
+
+        <TestLogger Condition=" '$(TestLogger)' == '' ">trx</TestLogger>
+      </PropertyGroup>
+
+      <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp1.0' ">
+        <TestExe>dotnet.exe</TestExe>
+        <TestArgs>vstest /Framework:FrameworkCore10</TestArgs>
+      </PropertyGroup>
+
+      <PropertyGroup Condition=" '$(TargetFramework)' == 'net46' OR '$(TargetFramework)' == 'net452' ">
+        <TestExe>vstest.console.exe</TestExe>
+        <TestArgs>/Framework:Framework45</TestArgs>
+      </PropertyGroup>
+
+      <ItemGroup>
+        <PackageReference Include="OpenCover" Version="4.6.519" Condition="$(EnableCodeCoverage)" />
+      </ItemGroup>
+    </When>
+  </Choose>
+
+  <!-- An empty target so that we can run /t:test at the solution level and skip all non-tests -->
+  <Target Name="Test">
+    <Message Text="No tests available as this is not a test project. Please mark test projects with IsTestProject=true to enable test run." />
+  </Target>
+
+  <Target Name="Test" DependsOnTargets="$(_TestTargetName)" Condition="$(IsTestProject)" />
+
+  <Target Name="InnerTest" Condition="$(IsTestProject)">
+    <PropertyGroup>
+      <_TestLogPath>$(OutputPath)\test_log.txt</_TestLogPath>
+      <TestArgs>$(TestArgs) /Logger:$(TestLogger) $(TargetPath) /Platform:$(TestArchitecture)</TestArgs>
+      <TestCommand>$(TestExe) $(TestArgs)</TestCommand>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="$(EnableCodeCoverage)">
+      <CoverageOutput>$(OutputPath)\coverage.xml</CoverageOutput>
+      <OpenCoverExe>$(NuGetPackageRoot)\OpenCover\4.6.519\tools\OpenCover.Console.exe</OpenCoverExe>
+      <InstrumentationStyle Condition=" '$(TargetFramework)' == 'netcoreapp1.0' ">-oldStyle</InstrumentationStyle>
+      <TestCommand>"$(OpenCoverExe)" -register:user -target:"$(TestExe)" $(InstrumentationStyle) -targetargs:"$(TestArgs)" -threshold:1 -output:"$(CoverageOutput)" -filter:"+[DocumentFormat.OpenXml]*"</TestCommand>
+    </PropertyGroup>
+
+    <Error Message="Could not find OpenCover" Condition="!Exists($(OpenCoverExe)) AND $(EnableCodeCoverage)" />
+
+    <Delete Files="$(_TestLogPath)" />
+    <MakeDir Directories="$(ArtifactsTestResultsDir)"/>
+
+    <Exec Command='$(TestCommand) > $(_TestLogPath)'
+          LogStandardErrorAsError="true"
+          WorkingDirectory="$(OutputPath)"
+          IgnoreExitCode="true">
+
+      <Output TaskParameter="ExitCode" PropertyName="ExitCode" />
+    </Exec>
+
+    <Message Text="Test succeeded: $(MSBuildProjectName) [$(TargetFramework)|%(_TestArchitectureItems.Identity)]" Condition="'$(ExitCode)' == '0'" />
+    <Error Text="Test failed with exit code: $(ExitCode); log: $(_TestLogPath)" Condition="'$(ExitCode)' != '0'" />
+
+  </Target>
+
+  <Target Name="UploadCodeCoverageReport" AfterTargets="InnerTest" Condition="$(EnableCodeCoverage)">
+    <PropertyGroup>
+      <CodeCov>codecov</CodeCov>
+      <CodeCovTokenParam Condition=" '$(CodeCovToken)' != '' ">-t $(CodeCovToken)</CodeCovTokenParam>
+    </PropertyGroup>
+
+    <Exec Command='"$(CodeCov)" -f "$(CoverageOutput)" $(CodeCovTokenParam) --required --name $(TargetFramework)'
+          LogStandardErrorAsError="true"
+          WorkingDirectory="$(OutputPath)"
+          IgnoreExitCode="true">
+      <Output TaskParameter="ExitCode" PropertyName="ExitCode" />
+    </Exec>
+
+    <Message Text="Coverage file uploaded: $(MSBuildProjectName) [$(TargetFramework)|%(_TestArchitectureItems.Identity)]" Condition="'$(ExitCode)' == '0'" />
+    <Error Text="Coverage file upload failed with exit code: $(ExitCode)" Condition="'$(ExitCode)' != '0'" />
+  </Target>
+
+  <Target Name="OuterTest" DependsOnTargets="_SetTestInnerTarget;DispatchToInnerBuilds" Condition="$(IsTestProject)"/>
+
+  <Target Name="_SetTestInnerTarget" Returns="@(InnerOutput)" Condition="$(IsTestProject)">
+    <PropertyGroup Condition="'$(InnerTargets)' == ''">
+      <InnerTargets>InnerTest</InnerTargets>
+    </PropertyGroup>
+  </Target>
+
+</Project>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+
+    <!-- Because of the size of the project, to facilitate  quick development, by default only single
+         frameworks will be build. This is customizable with the following possible values:
+
+         - DevFramework: will only build for .NET 4.6
+         - DevCore: Will only build for .NET Core
+         - All: Will build for all platforms -->
+    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">DevCore</ProjectLoadStyle>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)\rules.ruleset</CodeAnalysisRuleSet>
+
+    <!-- Signing -->
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)DocumentFormat.OpenXml.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <OutputFullPath>$(MSBuildThisFileDirectory)</OutputFullPath>
+    <OutputDrop Condition=" '$(OutputDrop)' == '' ">$(OutputFullPath)bin\$(Configuration)\</OutputDrop>
+    <OutputPath>$(OutputDrop)\$(MSBuildProjectName)\</OutputPath>
+    <BaseIntermediateOutputPath>$(OutputFullPath)obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <IsTestProject Condition=" '$(IsTestProject)' == '' ">false</IsTestProject>
+    <EnableCodeCoverage Condition=" '$(EnableCodeCoverage)' == '' ">false</EnableCodeCoverage>
+    <DebugType Condition="$(EnableCodeCoverage)">Full</DebugType>
+  </PropertyGroup>
+</Project>

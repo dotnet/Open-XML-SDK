@@ -1,31 +1,40 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Spreadsheet;
+using LogUtil;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+
+using X15 = DocumentFormat.OpenXml.Office2013.Excel;
 
 namespace DocumentFormat.OpenXml.Tests.Pivot
 {
-    using DocumentFormat.OpenXml.Packaging;
-    using DocumentFormat.OpenXml.Spreadsheet;
-    using X15 = DocumentFormat.OpenXml.Office2013.Excel;
-    using LogUtil;
-
     public class ConnectionTestEntities
     {
         private string ConnectionString { get; set; }
+
         private string DBCommandText { get; set; }
+
         private string ConnectionExtUri { get; set; }
 
         private uint ConnectionId { get; set; }
+
         private string ConnectionOdcFile { get; set; }
+
         private string ConnectionName { get; set; }
+
         private uint ConnectionType { get; set; }
+
         private byte ConnectionRefreshedVersion { get; set; }
+
         private byte ConnectionMinRefreshedVersion { get; set; }
+
         private bool ConnectionBackground { get; set; }
 
         private string X15ConnectionId { get; set; }
+
         private bool X15ConnectionAutoDelete { get; set; }
 
         public ConnectionTestEntities(string filePath)
@@ -146,7 +155,6 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
                 {
                     if (connection.Id == 1)
                         hasConnection = true;
-                    
                 }
                 log.Verify(hasConnection == false, "Connection is not delete.");
             }

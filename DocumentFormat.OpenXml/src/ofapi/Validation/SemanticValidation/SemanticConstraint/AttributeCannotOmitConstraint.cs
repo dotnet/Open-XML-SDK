@@ -1,11 +1,7 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Diagnostics;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Validation;
-using System.Xml;
 
 namespace DocumentFormat.OpenXml.Internal.SemanticValidation
 {
@@ -26,13 +22,13 @@ namespace DocumentFormat.OpenXml.Internal.SemanticValidation
                 return null;
             }
 
-            return new ValidationErrorInfo() 
-            { 
-                Id = "Sem_MissRequiredAttribute", 
-                ErrorType = ValidationErrorType.Schema, 
+            return new ValidationErrorInfo()
+            {
+                Id = "Sem_MissRequiredAttribute",
+                ErrorType = ValidationErrorType.Schema,
                 Node = context.Element,
-                Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sch_MissRequiredAttribute, 
-                                            GetAttributeQualifiedName(context.Element, _attribute)) 
+                Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sch_MissRequiredAttribute,
+                                            GetAttributeQualifiedName(context.Element, _attribute))
             };
         }
     }

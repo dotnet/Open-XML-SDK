@@ -1,140 +1,124 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Xunit;
-using System.IO;
-using DocumentFormat.OpenXml;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
-using w = DocumentFormat.OpenXml.Wordprocessing;
-using wp = DocumentFormat.OpenXml.Drawing.Wordprocessing;
+using OxTest;
+using System;
+using System.IO;
+using System.Linq;
+using Xunit;
+
+using static DocumentFormat.OpenXml.Tests.TestAssets;
+
 using a = DocumentFormat.OpenXml.Drawing;
 using pic = DocumentFormat.OpenXml.Drawing.Pictures;
+using w = DocumentFormat.OpenXml.Wordprocessing;
+using wp = DocumentFormat.OpenXml.Drawing.Wordprocessing;
 using x = DocumentFormat.OpenXml.Spreadsheet;
-using OxTest;
 
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
     /// Summary description for OpenXmlPackageTest
     /// </summary>
-    
     public class OpenXmlPackageTest
     {
-        ///<summary>
-        ///Constructor.
-        ///</summary>
-        public OpenXmlPackageTest()
-        {
-        }
-
-        private TestContext testContextInstance;
-
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-
-        ///<summary>
-        ///AutoSaveTestDocx.
-        ///</summary>
         [Fact]
-        public void AutoSaveTestDocx()
+        public void AutoSaveTestDocxNoWrite()
         {
-            #region Prepare
-            // The content of parts changes should be saved when the package is disposed
-            string testFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
-            // copy test file
-            PrepareTestFile(testFile, TestFileStreams.complex0docx);
-            #endregion
-
-            #region No change
-            // open the file in readonly mode, nothing should be saved on disposing
-            FileInfo fileInfo0 = new FileInfo(testFile);
-            using (var document = WordprocessingDocument.Open(testFile, false))
+            byte[] GetBytes(Stream input)
             {
-                document.MainDocumentPart.Document.Body.Append(new Paragraph());
-            }
+                input.Position = 0;
 
-            FileInfo fileInfo1 = new FileInfo(testFile);
-            Assert.Equal(fileInfo0.Length, fileInfo1.Length);
-            #endregion
-
-            #region Change main doucment & style parts
-            string originalFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
-            File.Copy(testFile, originalFile); // backup file
-            // HACK : Open and close the file with SDK to normalize the file
-            // since the SDK will change contents when closing the package.
-            using (var doc = WordprocessingDocument.Open(originalFile, true))
-            {
-                // do nothing here
-            }
-
-            // open the file in readWrite mode, and then changes should be saved
-            using (var document = WordprocessingDocument.Open(testFile, true))
-            {
-                var firstText = document.MainDocumentPart.Document.Descendants<Text>().First();
-                // change text of the first run
-                firstText.Text = "Changed";
-
-                var stylePart = document.MainDocumentPart.GetPartsOfType<StyleDefinitionsPart>().First();
-                var heading1Style = stylePart.Styles.Descendants<Style>().Where(style => style.StyleId == "Heading1").Single();
-                // change color to be black
-                heading1Style.Descendants<Color>().First().Val = "000000";
-            }
-
-            // check the changes. other parts should be the same
-            using (var document = WordprocessingDocument.Open(testFile, false))
-            {
-                var firstText = document.MainDocumentPart.Document.Descendants<Text>().First();
-                Assert.Equal("Changed", firstText.Text);
-                var stylePart = document.MainDocumentPart.GetPartsOfType<StyleDefinitionsPart>().First();
-                var heading1Style = stylePart.Styles.Descendants<Style>().Where(s => s.StyleId == "Heading1").Single();
-                Assert.Equal("000000", heading1Style.Descendants<Color>().First().Val.Value);
-            }
-
-            using (var orginalDoc = WordprocessingDocument.Open(originalFile, false))
-            using (var changedDoc = WordprocessingDocument.Open(testFile, false))
-            {
-                OpenXmlPackagePartIterator origianalDocIterator = new OpenXmlPackagePartIterator(orginalDoc);
-                OpenXmlPackagePartIterator changedDocIterator = new OpenXmlPackagePartIterator(changedDoc);
-                var changedDocEnumerator = changedDocIterator.GetEnumerator();
-                foreach (var originalPart in origianalDocIterator)
+                using (var ms = new MemoryStream())
                 {
-                    Assert.True(changedDocEnumerator.MoveNext());
-                    if (!(originalPart is MainDocumentPart)
-                        && !(originalPart is StyleDefinitionsPart))
-                    {
-                        Assert.Equal(originalPart.GetType(), changedDocEnumerator.Current.GetType());
-                        //Assert.Equal(originalPart.GetStream().Length,
-                        //    changedDocEnumerator.Current.GetStream().Length,
-                        //    changedDocEnumerator.Current.Uri + "||" + changedDocEnumerator.Current.Uri);
-                        Assert.Equal(originalPart.GetStream().Length,
-                            changedDocEnumerator.Current.GetStream().Length);
-                    }
+                    input.CopyTo(ms);
+                    input.Position = 0;
+
+                    return ms.ToArray();
                 }
             }
 
-            #endregion
+            using (var stream = GetStream(TestFiles.complex0docx))
+            {
+                var dataBefore = GetBytes(stream);
 
-            #region Exit
-            // clean temp files
-            File.Delete(testFile);
-            File.Delete(originalFile);
-            #endregion
+                // open the file in readonly mode, nothing should be saved on disposing
+                using (var document = WordprocessingDocument.Open(stream, false))
+                {
+                    document.MainDocumentPart.Document.Body.Append(new Paragraph());
+                }
+
+                Assert.Equal(dataBefore, GetBytes(stream));
+            }
+        }
+
+        [Fact]
+        public void AutoSaveTestDocx()
+        {
+            // Open and close the file with SDK to normalize the file
+            // since the SDK will change contents when closing the package.
+            Stream NormalizeDocument(Stream input)
+            {
+                using (var doc = WordprocessingDocument.Open(input, true))
+                {
+                }
+
+                return input;
+            }
+
+            using (var stream = GetStream(TestFiles.complex0docx, true))
+            {
+                NormalizeDocument(stream);
+
+                // open the file in readWrite mode, and then changes should be saved
+                using (var document = WordprocessingDocument.Open(stream, true))
+                {
+                    var firstText = document.MainDocumentPart.Document.Descendants<Text>().First();
+                    // change text of the first run
+                    firstText.Text = "Changed";
+
+                    var stylePart = document.MainDocumentPart.GetPartsOfType<StyleDefinitionsPart>().First();
+                    var heading1Style = stylePart.Styles.Descendants<Style>().Where(style => style.StyleId == "Heading1").Single();
+                    // change color to be black
+                    heading1Style.Descendants<Color>().First().Val = "000000";
+                }
+
+                // check the changes. other parts should be the same
+                using (var document = WordprocessingDocument.Open(stream, false))
+                {
+                    var firstText = document.MainDocumentPart.Document.Descendants<Text>().First();
+                    Assert.Equal("Changed", firstText.Text);
+                    var stylePart = document.MainDocumentPart.GetPartsOfType<StyleDefinitionsPart>().First();
+                    var heading1Style = stylePart.Styles.Descendants<Style>().Where(s => s.StyleId == "Heading1").Single();
+                    Assert.Equal("000000", heading1Style.Descendants<Color>().First().Val.Value);
+                }
+
+                using (var originalStream = GetStream(TestFiles.complex0docx))
+                using (var orginalDoc = WordprocessingDocument.Open(originalStream, false))
+                using (var changedDoc = WordprocessingDocument.Open(stream, false))
+                {
+                    var origianalDocIterator = new OpenXmlPackagePartIterator(orginalDoc);
+                    var changedDocIterator = new OpenXmlPackagePartIterator(changedDoc);
+                    var changedDocEnumerator = changedDocIterator.GetEnumerator();
+
+                    foreach (var originalPart in origianalDocIterator)
+                    {
+                        Assert.True(changedDocEnumerator.MoveNext());
+                        if (!(originalPart is MainDocumentPart)
+                            && !(originalPart is StyleDefinitionsPart))
+                        {
+                            Assert.Equal(originalPart.GetType(), changedDocEnumerator.Current.GetType());
+                            //Assert.Equal(originalPart.GetStream().Length,
+                            //    changedDocEnumerator.Current.GetStream().Length,
+                            //    changedDocEnumerator.Current.Uri + "||" + changedDocEnumerator.Current.Uri);
+                            Assert.Equal(originalPart.GetStream().Length,
+                                changedDocEnumerator.Current.GetStream().Length);
+                        }
+                    }
+                }
+            }
         }
 
         ///<summary>
@@ -155,7 +139,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var document = WordprocessingDocument.Create(file, DocumentFormat.OpenXml.WordprocessingDocumentType.Document))
             {
                 document.AddMainDocumentPart();
-                document.MainDocumentPart.Document = 
+                document.MainDocumentPart.Document =
                     new Document(
                         new Body(
                             new Paragraph(
@@ -175,43 +159,48 @@ namespace DocumentFormat.OpenXml.Tests
                                     new NoProof()),
                                 new w.Drawing(
                                     new wp.Inline(
-                                        new wp.Extent(){ Cx = 2145665L, Cy = 2177415L },
-                                        new wp.EffectExtent(){ LeftEdge = 19050L, TopEdge = 0L, RightEdge = 0L, BottomEdge = 0L },
-                                        new wp.DocProperties(){ Id = (UInt32Value)1U, Name = "Picture 1", Description = "C:\\Program Files (x86)\\Microsoft Office\\MEDIA\\CAGCAT10\\j0149481.wmf" },
+                                        new wp.Extent() { Cx = 2145665L, Cy = 2177415L },
+                                        new wp.EffectExtent() { LeftEdge = 19050L, TopEdge = 0L, RightEdge = 0L, BottomEdge = 0L },
+                                        new wp.DocProperties() { Id = (UInt32Value)1U, Name = "Picture 1", Description = "C:\\Program Files (x86)\\Microsoft Office\\MEDIA\\CAGCAT10\\j0149481.wmf" },
                                         new wp.NonVisualGraphicFrameDrawingProperties(
-                                            new a.GraphicFrameLocks(){ NoChangeAspect = true }),
+                                            new a.GraphicFrameLocks() { NoChangeAspect = true }),
                                         new a.Graphic(
                                             new a.GraphicData(
                                                 new pic.Picture(
                                                     new pic.NonVisualPictureProperties(
-                                                        new pic.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "Picture 1", Description = "wmf" },
+                                                        new pic.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = "Picture 1", Description = "wmf" },
                                                         new pic.NonVisualPictureDrawingProperties(
-                                                            new a.PictureLocks(){ NoChangeAspect = true, NoChangeArrowheads = true })),
+                                                            new a.PictureLocks() { NoChangeAspect = true, NoChangeArrowheads = true })),
                                                     new pic.BlipFill(
-                                                        new a.Blip(){ Embed = "rId6", CompressionState = a.BlipCompressionValues.Print },
+                                                        new a.Blip() { Embed = "rId6", CompressionState = a.BlipCompressionValues.Print },
                                                         new a.SourceRectangle(),
                                                         new a.Stretch(
                                                             new a.FillRectangle())),
                                                     new pic.ShapeProperties(
                                                         new a.Transform2D(
-                                                            new a.Offset(){ X = 0L, Y = 0L },
-                                                            new a.Extents(){ Cx = 2145665L, Cy = 2177415L }),
+                                                            new a.Offset() { X = 0L, Y = 0L },
+                                                            new a.Extents() { Cx = 2145665L, Cy = 2177415L }),
                                                         new a.PresetGeometry(
                                                             new a.AdjustValueList()
-                                                        ){ Preset = a.ShapeTypeValues.Rectangle },
+                                                        )
+                                                        { Preset = a.ShapeTypeValues.Rectangle },
                                                         new a.NoFill(),
                                                         new a.Outline(
                                                             new a.NoFill(),
-                                                            new a.Miter(){ Limit = 800000 },
+                                                            new a.Miter() { Limit = 800000 },
                                                             new a.HeadEnd(),
                                                             new a.TailEnd()
-                                                        ){ Width = 9525 }
-                                                    ){ BlackWhiteMode = a.BlackWhiteModeValues.Auto })
-                                            ){ Uri = "http://schemas.openxmlformats.org/drawingml/2006/picture" })
-                                    ){ DistanceFromTop = (UInt32Value)0U, DistanceFromBottom = (UInt32Value)0U, DistanceFromLeft = (UInt32Value)0U, DistanceFromRight = (UInt32Value)0U }))
+                                                        )
+                                                        { Width = 9525 }
+                                                    )
+                                                    { BlackWhiteMode = a.BlackWhiteModeValues.Auto })
+                                            )
+                                            { Uri = "http://schemas.openxmlformats.org/drawingml/2006/picture" })
+                                    )
+                                    { DistanceFromTop = (UInt32Value)0U, DistanceFromBottom = (UInt32Value)0U, DistanceFromLeft = (UInt32Value)0U, DistanceFromRight = (UInt32Value)0U }))
                              ));
             }
-            
+
             // validate created
             using (var document = WordprocessingDocument.Open(file, false))
             {
@@ -230,242 +219,288 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void AutoSaveTestPptx()
         {
-            string testFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
-            PrepareTestFile(testFile, TestFileStreams.autosave);
             // Change something in the master part.
-            int textCount = 0;
-            using (var doc = PresentationDocument.Open(testFile, true))
+            var textCount = 0;
+
+            using (var stream = GetStream(TestFiles.autosave, true))
             {
-                var slide1 = doc.PresentationPart.GetPartById("rId2"); // Get part slide1.xml
-                var slideLayout1 = slide1.GetPartById("rId1"); // Get part slideLayout1.xml
-                var slideMaster1 = slideLayout1.GetPartById("rId1"); // Get slideMaster1.xml
-                Assert.Equal(typeof(SlideMasterPart), slideMaster1.GetType());
-                // Change a text "5/7/2009" to be "5/9/2009"
-                var texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/7/2009");
-                foreach (var text in texts)
+                using (var doc = PresentationDocument.Open(stream, true))
                 {
-                    text.Text = "5/9/2009";
-                    textCount++;
+                    var slide1 = doc.PresentationPart.GetPartById("rId2"); // Get part slide1.xml
+                    var slideLayout1 = slide1.GetPartById("rId1"); // Get part slideLayout1.xml
+                    var slideMaster1 = slideLayout1.GetPartById("rId1"); // Get slideMaster1.xml
+                    Assert.Equal(typeof(SlideMasterPart), slideMaster1.GetType());
+                    // Change a text "5/7/2009" to be "5/9/2009"
+                    var texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/7/2009");
+                    foreach (var text in texts)
+                    {
+                        text.Text = "5/9/2009";
+                        textCount++;
+                    }
+                }
+
+                Assert.True(textCount > 0);
+
+                // Validate
+                using (var doc = PresentationDocument.Open(stream, false))
+                {
+                    var slideMaster1 = doc.PresentationPart.GetPartById("rId1"); // Get slideMaster1.xml in anther way
+                    var texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/9/2009");
+                    Assert.Equal(textCount, texts.Count());
                 }
             }
-            Assert.True(textCount > 0);
-            // Validate
-            using (var doc = PresentationDocument.Open(testFile, false))
-            {
-                var slideMaster1 = doc.PresentationPart.GetPartById("rId1"); // Get slideMaster1.xml in anther way
-                var texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/9/2009");
-                Assert.Equal(textCount, texts.Count());
-            }
-
-            File.Delete(testFile);
         }
 
         /// <summary>
         /// A test for AutoSave set on open
         /// </summary>
         [Fact]
-        public void AutoSaveOpenTest()
+        public void AutoSaveOpenTestWord()
         {
-            #region WordprocesingDocument.Open test
-            string testDocxFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
-            PrepareTestFile(testDocxFile, TestFileStreams.complex0docx);
-            OpenSettings s = new OpenSettings();
-            s.AutoSave = false;
-            using (var doc = WordprocessingDocument.Open(testDocxFile, true, s))
+            var s = new OpenSettings
             {
-                // do something, and changes should not be saved.
-                var firstText = doc.MainDocumentPart.Document.Descendants<Text>().First();
-                firstText.Text = "Changed";
-            }
+                AutoSave = false
+            };
 
-            s.AutoSave = true;
-            using (var doc = WordprocessingDocument.Open(testDocxFile, true, s))
+            using (var stream = GetStream(TestFiles.complex0docx, true))
             {
-                // check first.
-                var firstText = doc.MainDocumentPart.Document.Descendants<Text>().First();
-                Assert.NotEqual("Changed", firstText.Text);
-                // do changes, and changes shoud be saved.
-                firstText.Text = "Changed";
-            }
-            using (var docxStream = new FileStream(testDocxFile, FileMode.Open, FileAccess.ReadWrite))
-            using (var doc = WordprocessingDocument.Open(docxStream, true))
-            {
-                var firstText = doc.MainDocumentPart.Document.Descendants<Text>().First();
-                Assert.Equal("Changed", firstText.Text);
-
-                firstText.Text = "Changed2";
-            }
-            using (var docxPackage = System.IO.Packaging.Package.Open(testDocxFile))
-            using (var doc = WordprocessingDocument.Open(docxPackage, s))
-            {
-                var firstText = doc.MainDocumentPart.Document.Descendants<Text>().First();
-                Assert.Equal("Changed2", firstText.Text);
-
-                firstText.Text = "Changed3";
-            }
-            using (var doc = WordprocessingDocument.Open(testDocxFile, false))
-            {
-                // check
-                var firstText = doc.MainDocumentPart.Document.Descendants<Text>().First();
-                Assert.Equal("Changed3", firstText.Text);
-            }
-            File.Delete(testDocxFile);
-            #endregion
-
-            #region PresentationDocument.Open test
-            string testPptxFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
-            PrepareTestFile(testPptxFile, TestFileStreams.autosave);
-            s.AutoSave = false;
-            using (var doc = PresentationDocument.Open(testPptxFile, true, s))
-            {
-                // do something, and changes should not be saved.
-                var slideMaster1 = doc.PresentationPart.GetPartById("rId1"); // Get slideMaster1.xml
-                var texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/7/2009");
-                foreach (var text in texts)
+                using (var doc = WordprocessingDocument.Open(stream, true, s))
                 {
-                    text.Text = "5/9/2009";
-                }
-            }
-            s.AutoSave = true;
-            using (var doc = PresentationDocument.Open(testPptxFile, true, s))
-            {
-                var slideMaster1 = doc.PresentationPart.GetPartById("rId1"); // Get slideMaster1.xml
-                // check first.
-                var texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/9/2009");
-                Assert.True(texts.Count() == 0);
-                // change and save.
-                texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/7/2009");
-                foreach (var text in texts)
-                {
-                    text.Text = "5/9/2009";
-                }
-            }
-            using (var pptxStream = new FileStream(testPptxFile, FileMode.Open, FileAccess.ReadWrite))
-            using (var doc = PresentationDocument.Open(pptxStream, true))
-            {
-                var slideMaster1 = doc.PresentationPart.GetPartById("rId1"); // Get slideMaster1.xml
-                // check first.
-                var texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/9/2009");
-                Assert.True(texts.Count() > 0);
-                // change and save.
-                foreach (var text in texts)
-                {
-                    text.Text = "5/10/2009";
-                }
-            }
-            using (var pptxPackage = System.IO.Packaging.Package.Open(testPptxFile))
-            using (var doc = PresentationDocument.Open(pptxPackage, s))
-            {
-                var slideMaster1 = doc.PresentationPart.GetPartById("rId1"); // Get slideMaster1.xml
-                // check first.
-                var texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/10/2009");
-                Assert.True(texts.Count() > 0);
-                // change and save.
-                foreach (var text in texts)
-                {
-                    text.Text = "5/11/2009";
-                }
-            }
-            using (var doc = PresentationDocument.Open(testPptxFile, false))
-            {
-                var slideMaster1 = doc.PresentationPart.GetPartById("rId1"); // Get slideMaster1.xml
-                // check first.
-                var texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/11/2009");
-                Assert.True(texts.Count() > 0);
-            }
-            File.Delete(testPptxFile);
-            #endregion
-
-            #region SpreadsheetDocument.Open test
-            string testXlsxFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
-            PrepareTestFile(testXlsxFile, TestFileStreams.basicspreadsheet);
-            s.AutoSave = false;
-            using (var doc = SpreadsheetDocument.Open(testXlsxFile, true, s))
-            {
-                // do changes, and they should not be saved.
-                var sharedStringsPart = doc.WorkbookPart.GetPartById("rId7");
-                var fonts = sharedStringsPart.RootElement.Descendants<x.RunFont>().Where(e => e.Val == "宋体");
-                foreach (var font in fonts)
-                {
-                    font.Val = "微软雅黑";
+                    // do something, and changes should not be saved.
+                    var firstText = doc.MainDocumentPart.Document.Descendants<Text>().First();
+                    firstText.Text = "Changed";
                 }
 
-            }
-            s.AutoSave = true;
-            using (var doc = SpreadsheetDocument.Open(testXlsxFile, true, s))
-            {
-                // Check first
-                var sharedStringsPart = doc.WorkbookPart.GetPartById("rId7");
-                var fonts = sharedStringsPart.RootElement.Descendants<x.RunFont>().Where(e => e.Val == "微软雅黑");
-                Assert.True(fonts.Count() == 0);
-                // do changes, and they should be saved.
-                fonts = sharedStringsPart.RootElement.Descendants<x.RunFont>().Where(e => e.Val == "宋体");
-                foreach (var font in fonts)
+                s.AutoSave = true;
+                stream.Position = 0;
+
+                using (var doc = WordprocessingDocument.Open(stream, true, s))
                 {
-                    font.Val = "微软雅黑";
+                    // check first.
+                    var firstText = doc.MainDocumentPart.Document.Descendants<Text>().First();
+                    Assert.NotEqual("Changed", firstText.Text);
+                    // do changes, and changes shoud be saved.
+                    firstText.Text = "Changed";
+                }
+
+                stream.Position = 0;
+
+                using (var doc = WordprocessingDocument.Open(stream, true))
+                {
+                    var firstText = doc.MainDocumentPart.Document.Descendants<Text>().First();
+                    Assert.Equal("Changed", firstText.Text);
+
+                    firstText.Text = "Changed2";
+                }
+
+                stream.Position = 0;
+
+                using (var docxPackage = System.IO.Packaging.Package.Open(stream, FileMode.OpenOrCreate, FileAccess.ReadWrite))
+                using (var doc = WordprocessingDocument.Open(docxPackage, s))
+                {
+                    var firstText = doc.MainDocumentPart.Document.Descendants<Text>().First();
+                    Assert.Equal("Changed2", firstText.Text);
+
+                    firstText.Text = "Changed3";
+                }
+
+                stream.Position = 0;
+
+                using (var doc = WordprocessingDocument.Open(stream, false))
+                {
+                    // check
+                    var firstText = doc.MainDocumentPart.Document.Descendants<Text>().First();
+                    Assert.Equal("Changed3", firstText.Text);
                 }
             }
-            using (var xlsxStream = new FileStream(testXlsxFile, FileMode.Open, FileAccess.ReadWrite))
-            using (var doc = SpreadsheetDocument.Open(xlsxStream, true))
+        }
+
+        [Fact]
+        public void AutoSaveOpenTestPowerPoint()
+        {
+            var s = new OpenSettings
             {
-                var sharedStringsPart = doc.WorkbookPart.GetPartById("rId7");
-                var fonts = sharedStringsPart.RootElement.Descendants<x.RunFont>().Where(e => e.Val == "微软雅黑");
-                Assert.True(fonts.Count() > 0);
-                foreach(var font in fonts)
+                AutoSave = false
+            };
+
+            using (var stream = GetStream(TestFiles.autosave, true))
+            {
+                using (var doc = PresentationDocument.Open(stream, true, s))
                 {
-                    font.Val = "仿宋";
+                    // do something, and changes should not be saved.
+                    var slideMaster1 = doc.PresentationPart.GetPartById("rId1"); // Get slideMaster1.xml
+                    var texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/7/2009");
+                    foreach (var text in texts)
+                    {
+                        text.Text = "5/9/2009";
+                    }
+                }
+
+                s.AutoSave = true;
+                stream.Position = 0;
+
+                using (var doc = PresentationDocument.Open(stream, true, s))
+                {
+                    var slideMaster1 = doc.PresentationPart.GetPartById("rId1"); // Get slideMaster1.xml
+                                                                                 // check first.
+                    var texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/9/2009");
+                    Assert.True(texts.Count() == 0);
+                    // change and save.
+                    texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/7/2009");
+                    foreach (var text in texts)
+                    {
+                        text.Text = "5/9/2009";
+                    }
+                }
+
+                stream.Position = 0;
+
+                using (var doc = PresentationDocument.Open(stream, true))
+                {
+                    var slideMaster1 = doc.PresentationPart.GetPartById("rId1"); // Get slideMaster1.xml
+                                                                                 // check first.
+                    var texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/9/2009");
+                    Assert.True(texts.Count() > 0);
+                    // change and save.
+                    foreach (var text in texts)
+                    {
+                        text.Text = "5/10/2009";
+                    }
+                }
+
+                stream.Position = 0;
+
+                using (var pptxPackage = System.IO.Packaging.Package.Open(stream, FileMode.OpenOrCreate, FileAccess.ReadWrite))
+                using (var doc = PresentationDocument.Open(pptxPackage, s))
+                {
+                    var slideMaster1 = doc.PresentationPart.GetPartById("rId1"); // Get slideMaster1.xml
+                                                                                 // check first.
+                    var texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/10/2009");
+                    Assert.True(texts.Count() > 0);
+                    // change and save.
+                    foreach (var text in texts)
+                    {
+                        text.Text = "5/11/2009";
+                    }
+                }
+
+                stream.Position = 0;
+
+                using (var doc = PresentationDocument.Open(stream, false))
+                {
+                    var slideMaster1 = doc.PresentationPart.GetPartById("rId1"); // Get slideMaster1.xml
+                                                                                 // check first.
+                    var texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/11/2009");
+                    Assert.True(texts.Count() > 0);
                 }
             }
-            using (var xlsxPackage = System.IO.Packaging.Package.Open(testXlsxFile))
-            using (var doc = SpreadsheetDocument.Open(xlsxPackage, s))
+        }
+
+        [Fact]
+        public void AutoSaveOpenTestExcel()
+        {
+            var s = new OpenSettings
             {
-                var sharedStringsPart = doc.WorkbookPart.GetPartById("rId7");
-                var fonts = sharedStringsPart.RootElement.Descendants<x.RunFont>().Where(e => e.Val == "仿宋");
-                Assert.True(fonts.Count() > 0);
-                foreach (var font in fonts)
+                AutoSave = false
+            };
+
+            using (var stream = GetStream(TestFiles.basicspreadsheet, true))
+            {
+                using (var doc = SpreadsheetDocument.Open(stream, true, s))
                 {
-                    font.Val = "楷体";
+                    // do changes, and they should not be saved.
+                    var sharedStringsPart = doc.WorkbookPart.GetPartById("rId7");
+                    var fonts = sharedStringsPart.RootElement.Descendants<x.RunFont>().Where(e => e.Val == "宋体");
+                    foreach (var font in fonts)
+                    {
+                        font.Val = "微软雅黑";
+                    }
+                }
+
+                s.AutoSave = true;
+                stream.Position = 0;
+
+                using (var doc = SpreadsheetDocument.Open(stream, true, s))
+                {
+                    // Check first
+                    var sharedStringsPart = doc.WorkbookPart.GetPartById("rId7");
+                    var fonts = sharedStringsPart.RootElement.Descendants<x.RunFont>().Where(e => e.Val == "微软雅黑");
+                    Assert.True(fonts.Count() == 0);
+                    // do changes, and they should be saved.
+                    fonts = sharedStringsPart.RootElement.Descendants<x.RunFont>().Where(e => e.Val == "宋体");
+                    foreach (var font in fonts)
+                    {
+                        font.Val = "微软雅黑";
+                    }
+                }
+
+                stream.Position = 0;
+
+                using (var doc = SpreadsheetDocument.Open(stream, true))
+                {
+                    var sharedStringsPart = doc.WorkbookPart.GetPartById("rId7");
+                    var fonts = sharedStringsPart.RootElement.Descendants<x.RunFont>().Where(e => e.Val == "微软雅黑");
+                    Assert.True(fonts.Count() > 0);
+                    foreach (var font in fonts)
+                    {
+                        font.Val = "仿宋";
+                    }
+                }
+
+                stream.Position = 0;
+
+                using (var xlsxPackage = System.IO.Packaging.Package.Open(stream, FileMode.OpenOrCreate, FileAccess.ReadWrite))
+                using (var doc = SpreadsheetDocument.Open(xlsxPackage, s))
+                {
+                    var sharedStringsPart = doc.WorkbookPart.GetPartById("rId7");
+                    var fonts = sharedStringsPart.RootElement.Descendants<x.RunFont>().Where(e => e.Val == "仿宋");
+                    Assert.True(fonts.Count() > 0);
+                    foreach (var font in fonts)
+                    {
+                        font.Val = "楷体";
+                    }
+                }
+
+                stream.Position = 0;
+
+                using (var doc = SpreadsheetDocument.Open(stream, false))
+                {
+                    var sharedStringsPart = doc.WorkbookPart.GetPartById("rId7");
+                    var fonts = sharedStringsPart.RootElement.Descendants<x.RunFont>().Where(e => e.Val == "楷体");
+                    Assert.True(fonts.Count() > 0);
                 }
             }
-            using (var doc = SpreadsheetDocument.Open(testXlsxFile, false))
-            {
-                var sharedStringsPart = doc.WorkbookPart.GetPartById("rId7");
-                var fonts = sharedStringsPart.RootElement.Descendants<x.RunFont>().Where(e => e.Val == "楷体");
-                Assert.True(fonts.Count() > 0);
-            }
-            File.Delete(testXlsxFile);
-            #endregion
         }
 
         ///<summary>
         ///OpenXmlPackagePartIteraterTest.
         ///</summary>
         [Fact]
-        public void OpenXmlPackagePartIteraterTest()
+        public void OpenXmlPackagePartIteraterTestWord()
         {
-            // Test with WordprocessingDocument
-            using (var stream = new MemoryStream(TestFileStreams.complex0docx))
+            using (var stream = GetStream(TestFiles.complex0docx))
+            using (var document = WordprocessingDocument.Open(stream, false))
             {
-                using (var document = WordprocessingDocument.Open(stream, false))
-                {
-                    OpenXmlPackagePartIterator iterator = new OpenXmlPackagePartIterator(document);
-                    Assert.Equal(31, iterator.Count());
-                    // Make sure it works well for multi calls
-                    Assert.Equal(31, iterator.Count());
-                }
-            }
-        
+                var iterator = new OpenXmlPackagePartIterator(document);
 
-            // Test with PresentationDocument
-            using (var stream = new MemoryStream(TestFileStreams.o09_Performance_typical_pptx))
+                Assert.Equal(31, iterator.Count());
+                // Make sure it works well for multi calls
+                Assert.Equal(31, iterator.Count());
+            }
+        }
+
+        [Fact]
+        public void OpenXmlPackagePartIteraterTestPowerPoint()
+        {
+            using (var stream = GetStream(TestFiles.o09_Performance_typical_pptx))
+            using (var document = PresentationDocument.Open(stream, false))
             {
-                using (var document = PresentationDocument.Open(stream, false))
-                {
-                    OpenXmlPackagePartIterator iterator = new OpenXmlPackagePartIterator(document);
-                    Assert.Equal(65, iterator.Count());
-                    // There is one audio part.
-                    Assert.Equal(1, document.DataParts.Count());
-                }
+                var iterator = new OpenXmlPackagePartIterator(document);
+
+                Assert.Equal(65, iterator.Count());
+
+                // There is one audio part.
+                Assert.Single(document.DataParts);
             }
         }
 
@@ -475,10 +510,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CreateRelationshipToPartTest()
         {
-            //string testFile = "AddRelationshipToPart.pptx";
-            string testFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
-            PrepareTestFile(testFile, TestFileStreams.autosave);
-            using (var doc = PresentationDocument.Open(testFile, true))
+            using (var stream = GetStream(TestFiles.autosave, true))
+            using (var doc = PresentationDocument.Open(stream, true))
             {
                 var slide1 = doc.PresentationPart.GetPartById("rId2");
                 var slide2 = doc.PresentationPart.GetPartById("rId3");
@@ -487,20 +520,9 @@ namespace DocumentFormat.OpenXml.Tests
 
                 // add slideLayout2 to slide1
                 slide1.DeletePart(slide1.GetPartById("rId1"));
-                // try to get exception
-                try
-                {
-                    slide1.CreateRelationshipToPart(new SlideLayoutPart());
-                    Assert.True(false); // Assert.Fail("Appropriate exception not thrown.");
-                }
-                catch (InvalidOperationException)
-                {
-                    // right
-                }
-                catch
-                {
-                    Assert.True(false); // Assert.Fail("Threw wrong exception.");
-                }
+
+                Assert.Throws<InvalidOperationException>(() => slide1.CreateRelationshipToPart(new SlideLayoutPart()));
+
                 var id = slide1.CreateRelationshipToPart(slideLayout2);
                 var part12 = slide1.GetPartById(id);
                 Assert.NotNull(part12);
@@ -509,27 +531,14 @@ namespace DocumentFormat.OpenXml.Tests
                 // add slideLayout1 to slide2
                 slide2.DeletePart(slideLayout2);
                 // try to get exception
-                try
-                {
-                    slide2.CreateRelationshipToPart(new SlideLayoutPart());
-                    Assert.True(false); // Assert.Fail("Appropriate exception not thrown.");
-                }
-                catch (InvalidOperationException)
-                {
-                    // right
-                }
-                catch
-                {
-                    Assert.True(false); // Assert.Fail("Threw wrong exception.");
-                } 
+                Assert.Throws<InvalidOperationException>(() => slide2.CreateRelationshipToPart(new SlideLayoutPart()));
+
                 var id2 = slide2.CreateRelationshipToPart(slideLayout1, "rId1001");
                 Assert.Equal("rId1001", id2);
                 var part21 = slide2.GetPartById(id2);
                 Assert.NotNull(part21);
                 Assert.Equal(slideLayout1, part21);
             }
-
-            File.Delete(testFile);
         }
 
         ///<summary>
@@ -538,38 +547,30 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ChangeDocumentTypeInternalTest()
         {
-            string testFile = "ChangeDocumentTypeInternalTest.dotx";
-            PrepareTestFile(testFile, TestFileStreams.May_12_04);
-
-            try
+            using (var stream = GetStream(TestFiles.May_12_04, true))
+            using (var doc = WordprocessingDocument.Open(stream, true))
             {
-                using (var doc = WordprocessingDocument.Open(testFile, true))
+                Assert.Equal(WordprocessingDocumentType.Document, doc.DocumentType);
+                var hyperlinksBefore = doc.MainDocumentPart.HyperlinkRelationships.ToArray();
+                var externalRelsBefore = doc.MainDocumentPart.ExternalRelationships.ToArray();
+
+                doc.ChangeDocumentType(WordprocessingDocumentType.Template);
+                Assert.Equal(WordprocessingDocumentType.Template, doc.DocumentType);
+
+                var hyperlinksAfter = doc.MainDocumentPart.HyperlinkRelationships.ToArray();
+                var externalRelsAfter = doc.MainDocumentPart.ExternalRelationships.ToArray();
+
+                // all hyperlink relationships should be keeped.
+                Assert.Equal(hyperlinksBefore.Length, hyperlinksAfter.Length);
+                for (int i = 0; i < hyperlinksBefore.Length; i++)
                 {
-                    Assert.Equal(WordprocessingDocumentType.Document, doc.DocumentType);
-                    var hyperlinksBefore = doc.MainDocumentPart.HyperlinkRelationships.ToArray();
-                    var externalRelsBefore = doc.MainDocumentPart.ExternalRelationships.ToArray();
-
-                    doc.ChangeDocumentType(WordprocessingDocumentType.Template);
-                    Assert.Equal(WordprocessingDocumentType.Template, doc.DocumentType);
-
-                    var hyperlinksAfter = doc.MainDocumentPart.HyperlinkRelationships.ToArray();
-                    var externalRelsAfter = doc.MainDocumentPart.ExternalRelationships.ToArray();
-
-                    // all hyperlink relationships should be keeped.
-                    Assert.Equal(hyperlinksBefore.Length, hyperlinksAfter.Length);
-                    for (int i = 0; i < hyperlinksBefore.Length; i++)
-                    {
-                        Assert.Equal(hyperlinksBefore[i].Id, hyperlinksAfter[i].Id);
-                        Assert.Equal(hyperlinksBefore[i].IsExternal, hyperlinksAfter[i].IsExternal);
-                        Assert.Equal(hyperlinksBefore[i].Uri, hyperlinksAfter[i].Uri);
-                    }
-                    // all external relationships should be keeped.
-                    Assert.Equal(externalRelsBefore.Length, externalRelsAfter.Length);
+                    Assert.Equal(hyperlinksBefore[i].Id, hyperlinksAfter[i].Id);
+                    Assert.Equal(hyperlinksBefore[i].IsExternal, hyperlinksAfter[i].IsExternal);
+                    Assert.Equal(hyperlinksBefore[i].Uri, hyperlinksAfter[i].Uri);
                 }
-            }
-            finally
-            {
-                File.Delete(testFile);
+
+                // all external relationships should be keeped.
+                Assert.Equal(externalRelsBefore.Length, externalRelsAfter.Length);
             }
         }
 
@@ -582,39 +583,35 @@ namespace DocumentFormat.OpenXml.Tests
         public void PackageValidateTest()
         {
             using (var stream = new MemoryStream())
+            using (var doc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
             {
-                using (var doc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
+                doc.AddMainDocumentPart();
+                var document = doc.MainDocumentPart.Document = new Document();
+                document.Save();
+                doc.MainDocumentPart.AddNewPart<StyleDefinitionsPart>();
+                var styles = doc.MainDocumentPart.StyleDefinitionsPart.Styles = new Styles();
+                styles.Save();
+                // should no exception
+                doc.Validate(null);
+
+                // add new O14 part
+                doc.MainDocumentPart.AddNewPart<StylesWithEffectsPart>();
+                Assert.IsType<StylesWithEffectsPart>(doc.MainDocumentPart.StylesWithEffectsPart);
+                // should no exception
+                doc.Validate(null);
+
+                // use default DefaultValidationEventHandler( ) which throw an exception
+                OpenXmlPackageValidationSettings actualValidationSettings;
+                actualValidationSettings = new OpenXmlPackageValidationSettings();
+                actualValidationSettings.EventHandler += (sender, e) =>
                 {
-                    doc.AddMainDocumentPart();
-                    var document = doc.MainDocumentPart.Document = new Document();
-                    document.Save();
-                    doc.MainDocumentPart.AddNewPart<StyleDefinitionsPart>();
-                    var styles = doc.MainDocumentPart.StyleDefinitionsPart.Styles = new Styles();
-                    styles.Save();
-                    // should no exception
-                    doc.Validate(null);
+                    var exception = new OpenXmlPackageException(ExceptionMessages.ValidationException);
+                    exception.Data.Add("OpenXmlPackageValidationEventArgs", e);
+                    throw exception;
+                };
 
-                    // add new O14 part
-                    doc.MainDocumentPart.AddNewPart<StylesWithEffectsPart>();
-                    Assert.IsType(typeof(StylesWithEffectsPart), doc.MainDocumentPart.StylesWithEffectsPart);
-                    // should no exception
-                    doc.Validate(null);
-
-                    // use default DefaultValidationEventHandler( ) which throw an exception
-                    OpenXmlPackageValidationSettings actualValidationSettings;
-                    actualValidationSettings = new OpenXmlPackageValidationSettings();
-                    actualValidationSettings.EventHandler += new EventHandler<OpenXmlPackageValidationEventArgs>((
-                                                    sender, e) =>
-                                                     {
-                                                        OpenXmlPackageException exception = new OpenXmlPackageException(ExceptionMessages.ValidationException);
-                                                        exception.Data.Add("OpenXmlPackageValidationEventArgs", e);
-                                                        throw exception;
-                                                    });
-
-                    // should no exception
-                    doc.Validate(actualValidationSettings, FileFormatVersions.Office2010);
-
-                }
+                // should no exception
+                doc.Validate(actualValidationSettings, FileFormatVersions.Office2010);
             }
         }
 
@@ -653,7 +650,6 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Null(doc.MainDocumentPart.Document);
             }
             File.Delete(testFile);
-            
         }
 
         ///<summary>
@@ -662,17 +658,15 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void LoadPackageWithMediaReferenceTest()
         {
-            using (Stream stream = new MemoryStream(TestFileStreams.mediareference.Length))            
+            using (var stream = GetStream(TestFiles.mediareference, true))
             {
-                stream.Write(TestFileStreams.mediareference, 0, TestFileStreams.mediareference.Length);
-
-                using (PresentationDocument testDocument = PresentationDocument.Open(stream, true))
+                using (var testDocument = PresentationDocument.Open(stream, true))
                 {
-                    Assert.Equal(1, testDocument.DataParts.Count());
+                    Assert.Single(testDocument.DataParts);
 
                     var slidePart1 = testDocument.PresentationPart.SlideParts.First();
-                    Assert.Equal(1, slidePart1.DataPartReferenceRelationships.Count());
-                    Assert.IsType(typeof(MediaReferenceRelationship), slidePart1.DataPartReferenceRelationships.First());
+                    Assert.Single(slidePart1.DataPartReferenceRelationships);
+                    Assert.IsType<MediaReferenceRelationship>(slidePart1.DataPartReferenceRelationships.First());
                     var mediaReference = slidePart1.DataPartReferenceRelationships.First() as MediaReferenceRelationship;
                     Assert.Same(slidePart1, mediaReference.Container);
 
@@ -682,7 +676,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.Same(slidePart2, slidePart2.DataPartReferenceRelationships.Last().Container);
 
                     var dataPart = testDocument.DataParts.First();
-                    Assert.IsType(typeof(MediaDataPart), dataPart);
+                    Assert.IsType<MediaDataPart>(dataPart);
                     Assert.Same(testDocument, dataPart.OpenXmlPackage);
                     Assert.NotNull(dataPart.PackagePart);
                     Assert.Same(testDocument.Package.GetPart(dataPart.Uri), dataPart.PackagePart);
@@ -697,36 +691,35 @@ namespace DocumentFormat.OpenXml.Tests
 
                     // delete the old reference
                     slidePart1.DeleteReferenceRelationship(mediaReference);
-                    Assert.Equal(1, slidePart1.DataPartReferenceRelationships.Count());
+                    Assert.Single(slidePart1.DataPartReferenceRelationships);
                     Assert.Null(mediaReference.Container);
 
                     // delete one reference from slide2
                     DataPartReferenceRelationship dataPartReference = slidePart2.DataPartReferenceRelationships.First();
                     slidePart2.DeleteReferenceRelationship(dataPartReference.Id);
-                    Assert.Equal(1, slidePart2.DataPartReferenceRelationships.Count());
+                    Assert.Single(slidePart2.DataPartReferenceRelationships);
                     Assert.Null(mediaReference.Container);
-
                 }
 
                 stream.Flush();
                 stream.Seek(0, SeekOrigin.Begin);
 
-                using (PresentationDocument testDocument = PresentationDocument.Open(stream, true))
+                using (var testDocument = PresentationDocument.Open(stream, true))
                 {
-                    Assert.Equal(1, testDocument.DataParts.Count());
+                    Assert.Single(testDocument.DataParts);
 
                     var slidePart1 = testDocument.PresentationPart.SlideParts.First();
-                    Assert.Equal(1, slidePart1.DataPartReferenceRelationships.Count());
-                    Assert.IsType(typeof(AudioReferenceRelationship), slidePart1.DataPartReferenceRelationships.First());
+                    Assert.Single(slidePart1.DataPartReferenceRelationships);
+                    Assert.IsType<AudioReferenceRelationship>(slidePart1.DataPartReferenceRelationships.First());
                     var audioReference = slidePart1.DataPartReferenceRelationships.First() as AudioReferenceRelationship;
                     Assert.Same(slidePart1, audioReference.Container);
 
                     var slidePart2 = testDocument.PresentationPart.SlideParts.ElementAt(1);
-                    Assert.Equal(1, slidePart2.DataPartReferenceRelationships.Count());
+                    Assert.Single(slidePart2.DataPartReferenceRelationships);
                     Assert.Same(slidePart2, slidePart2.DataPartReferenceRelationships.First().Container);
 
                     var dataPart = testDocument.DataParts.First();
-                    Assert.IsType(typeof(MediaDataPart), dataPart);
+                    Assert.IsType<MediaDataPart>(dataPart);
                     Assert.Same(testDocument, dataPart.OpenXmlPackage);
                     Assert.NotNull(dataPart.PackagePart);
                     Assert.Same(testDocument.Package.GetPart(dataPart.Uri), dataPart.PackagePart);
@@ -739,10 +732,10 @@ namespace DocumentFormat.OpenXml.Tests
 
                     // dataPart is still there
                     dataPart = testDocument.DataParts.First();
-                    Assert.IsType(typeof(MediaDataPart), dataPart);
+                    Assert.IsType<MediaDataPart>(dataPart);
                     Assert.Same(testDocument, dataPart.OpenXmlPackage);
                     Assert.NotNull(dataPart.PackagePart);
-                    Assert.Equal(0, dataPart.GetDataPartReferenceRelationships().Count());
+                    Assert.Empty(dataPart.GetDataPartReferenceRelationships());
                 }
 
                 stream.Flush();
@@ -751,7 +744,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (PresentationDocument testDocument = PresentationDocument.Open(stream, false))
                 {
                     // there should be no data part any more
-                    Assert.Equal(0, testDocument.DataParts.Count());
+                    Assert.Empty(testDocument.DataParts);
                 }
             }
         }
@@ -769,15 +762,16 @@ namespace DocumentFormat.OpenXml.Tests
                     doc.AddPresentationPart();
                     var mediaDataPart = doc.CreateMediaDataPart("audio/wav", ".wav");
 
-                    Assert.True(mediaDataPart.Uri.OriginalString.EndsWith(".wav"));
+                    Assert.EndsWith(".wav", mediaDataPart.Uri.OriginalString);
 
                     var aviDataPart = doc.CreateMediaDataPart(MediaDataPartType.Avi);
 
-                    Assert.True(aviDataPart.Uri.OriginalString.EndsWith(".avi"));
+                    Assert.EndsWith(".avi", aviDataPart.Uri.OriginalString);
                 }
             }
         }
 
+        // TODO: Remove test copy
         private void PrepareTestFile(string testFile, byte[] source)
         {
             if (File.Exists(testFile))
@@ -788,169 +782,84 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-
         /// <summary>
-        /// A test for opening Strict files as read-write(editable)/read-only
+        /// A test for opening Strict Word files as read-write(editable)/read-only
         /// </summary>
-        [Fact]
-        public void StrictFileOpenTest()
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void StrictFileOpenTestWord(bool isEditable)
         {
-            string testDocxFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
-            string testPptxFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
-            string testXlsxFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
-
-            #region WordprocesingDocument.StrictFileOpen test
-            PrepareTestFile(testDocxFile, TestFileStreams.AnnotationRef);
-            try
+            using (var stream = GetStream(TestFiles.AnnotationRef, isEditable))
+            using (var doc = WordprocessingDocument.Open(stream, isEditable))
             {
-                // Open as read-only
-                using (var doc = WordprocessingDocument.Open(testDocxFile, false))
-                {
-                    // Should open without exception.
+                // Should open without exception.
 
-                    // Referencing doc.MainDocumentPart.RootElement triggers to load the MainDocumentPart which underneath
-                    // calls methods in XmlConvertingReader with the strictTranslation flag enabled.
-                    Assert.NotNull(doc.MainDocumentPart.RootElement);
-                }
+                // Referencing doc.MainDocumentPart.RootElement triggers to load the MainDocumentPart which underneath
+                // calls methods in XmlConvertingReader with the strictTranslation flag enabled.
+                Assert.NotNull(doc.MainDocumentPart.RootElement);
             }
-            catch
-            {
-                Assert.True(false); // Assert.Fail("Should not throw exception.");
-            }
-
-            try
-            {
-                // Open as editable
-                using (var doc = WordprocessingDocument.Open(testDocxFile, true))
-                {
-                    // Should open without exception.
-
-                    // Referencing doc.MainDocumentPart.RootElement triggers to load the MainDocumentPart which underneath
-                    // calls methods in XmlConvertingReader with the strictTranslation flag enabled.
-                    Assert.NotNull(doc.MainDocumentPart.RootElement);
-                }
-            }
-            catch
-            {
-                Assert.True(false); // Assert.Fail("Should not throw exception.");
-            }
-            File.Delete(testDocxFile);
-            #endregion
-
-            #region PresentationDocument.StrictFileOpen test
-            PrepareTestFile(testPptxFile, TestFileStreams.Algn_tab_TabAlignment);
-            try
-            {
-                // Open as read-only
-                using (var doc = PresentationDocument.Open(testPptxFile, false))
-                {
-                    // Should open without exception.
-
-                    // Calling doc.PresentationPart.RootElement triggers to load the PresentationPart which underneath
-                    // calls methods in XmlConvertingReader with the strictTranslation flag enabled.
-                    Assert.NotNull(doc.PresentationPart.RootElement);
-                }
-            }
-            catch
-            {
-                Assert.True(false); // Assert.True(false); // Assert.Fail("Should not throw exception.");
-            }
-
-            try
-            {
-                // Open as editable
-                using (var doc = PresentationDocument.Open(testPptxFile, true))
-                {
-                    // Should open without exception.
-
-                    // Calling doc.PresentationPart.RootElement triggers to load the PresentationPart which underneath
-                    // calls methods in XmlConvertingReader with the strictTranslation flag enabled.
-                    Assert.NotNull(doc.PresentationPart.RootElement);
-                }
-            }
-            catch
-            {
-                Assert.True(false); // Assert.Fail("Should not throw exception.");
-            }
-            File.Delete(testPptxFile);
-            #endregion
-
-            #region SpreadsheetDocument.StrictFileOpen test
-            PrepareTestFile(testXlsxFile, TestFileStreams.Comments);
-            try
-            {
-                // Open as read-only
-                using (var doc = SpreadsheetDocument.Open(testXlsxFile, false))
-                {
-                    // Should open without exception.
-
-                    // Referencing doc.WorkbookPart.RootElement triggers to load the WorkbookPart which underneath
-                    // calls methods in XmlConvertingReader with the strictTranslation flag enabled.
-                    Assert.NotNull(doc.WorkbookPart.RootElement);
-                }
-            }
-            catch
-            {
-                Assert.True(false); // Assert.Fail("Should not throw exception.");
-            }
-
-            try
-            {
-                // Open as editable
-                using (var doc = SpreadsheetDocument.Open(testXlsxFile, true))
-                {
-                    // Should open without exception.
-
-                    // Referencing doc.WorkbookPart.RootElement triggers to load the WorkbookPart which underneath
-                    // calls methods in XmlConvertingReader with the strictTranslation flag enabled.
-                    Assert.NotNull(doc.WorkbookPart.RootElement);
-                }
-            }
-            catch
-            {
-                Assert.True(false); // Assert.Fail("Should not throw exception.");
-            }
-            File.Delete(testXlsxFile);
-            #endregion
         }
 
+        /// <summary>
+        /// A test for opening Strict PowerPoint files as read-write(editable)/read-only
+        /// </summary>
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void StrictFileOpenTestPowerpoint(bool isEditable)
+        {
+            using (var stream = GetStream(TestFiles.Algn_tab_TabAlignment, isEditable))
+            using (var doc = PresentationDocument.Open(stream, isEditable))
+            {
+                // Should open without exception.
+
+                // Calling doc.PresentationPart.RootElement triggers to load the PresentationPart which underneath
+                // calls methods in XmlConvertingReader with the strictTranslation flag enabled.
+                Assert.NotNull(doc.PresentationPart.RootElement);
+            }
+        }
+
+        /// <summary>
+        /// A test for opening Strict PowerPoint files as read-write(editable)/read-only
+        /// </summary>
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void StrictFileOpenTestExcelReadOnly(bool isEditable)
+        {
+            using (var stream = GetStream(TestFiles.Comments, isEditable))
+            using (var doc = SpreadsheetDocument.Open(stream, isEditable))
+            {
+                // Should open without exception.
+
+                // Referencing doc.WorkbookPart.RootElement triggers to load the WorkbookPart which underneath
+                // calls methods in XmlConvertingReader with the strictTranslation flag enabled.
+                Assert.NotNull(doc.WorkbookPart.RootElement);
+            }
+        }
 
         /// <summary>
         /// A test for opening O15 files
+        /// Check if WebExtension in the test file is accessible.
+        /// If WebExtension is not integrated in the SDK, we can't even compile this unit test project...
         /// </summary>
         [Fact]
         public void O15FileOpenTest()
         {
-            //todo string testXlsxFile = "Youtube.xlsx";
-            string testXlsxFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
-
-            OpenSettings settings2012 = new OpenSettings()
+            var settings2012 = new OpenSettings()
             {
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
             };
 
-            #region SpreadsheetDocument.O15FileOpen test
-            PrepareTestFile(testXlsxFile, TestFileStreams.Youtube);
-            try
+            using (var stream = GetStream(TestFiles.Youtube))
+            using (var doc = SpreadsheetDocument.Open(stream, false, settings2012))
             {
-                // Well, if WebExtension is not integrated in the SDK, we can't even compile this unit test project...
+                var worksheetPart = doc.WorkbookPart.WorksheetParts.First();
+                var webExtensionPart = worksheetPart.DrawingsPart.WebExtensionParts.First();
 
-                // Check if WebExtension in the test file is accessible.
-                using (var doc = SpreadsheetDocument.Open(testXlsxFile, false, settings2012))
-                {
-                    var worksheetPart = doc.WorkbookPart.WorksheetParts.First();
-                    WebExtensionPart webExtensionPart = worksheetPart.DrawingsPart.WebExtensionParts.First();
-
-                    Assert.NotNull(webExtensionPart);
-                }
+                Assert.NotNull(webExtensionPart);
             }
-            catch
-            {
-                Assert.True(false); // Assert.Fail("Should not throw exception.");
-            }
-
-            File.Delete(testXlsxFile);
-            #endregion
         }
     }
 }

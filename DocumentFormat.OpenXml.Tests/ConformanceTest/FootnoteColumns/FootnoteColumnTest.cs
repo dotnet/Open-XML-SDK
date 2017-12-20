@@ -1,13 +1,15 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Tests.FootnoteColumnsClass;
+using Xunit;
+using Xunit.Abstractions;
+
+using W15 = DocumentFormat.OpenXml.Office2013.Word;
+
 namespace DocumentFormat.OpenXml.Tests.FootnoteColumns
 {
-    using DocumentFormat.OpenXml.Packaging;
-    using Xunit;
-    using DocumentFormat.OpenXml.Tests;
-    using DocumentFormat.OpenXml.Tests.FootnoteColumnsClass;
-
-    using W15 = DocumentFormat.OpenXml.Office2013.Word;
-
     /// <summary>
     /// Test for Footnote Column
     /// </summary>
@@ -17,14 +19,17 @@ namespace DocumentFormat.OpenXml.Tests.FootnoteColumns
         private const int OriginalValue = 4;
         private const int ModifiedValue = 99;
 
-        #region Test Methods
+        public FootnoteColumnsTest(ITestOutputHelper output)
+            : base(output)
+        {
+        }
+
         /// <summary>
         /// Document Read/Write Test for FootnoteColumns
         /// </summary>
         [Fact]
         public void FootnoteColumnsReadWriteTest()
         {
-            this.MyTestInitialize(TestContext.GetCurrentMethod());
             this.SimpleReadWriteTest(
                 (e) =>
                 {
@@ -43,6 +48,5 @@ namespace DocumentFormat.OpenXml.Tests.FootnoteColumns
                         "Verified the updated attribute");
                 });
         }
-        #endregion
     }
 }

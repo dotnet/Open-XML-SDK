@@ -1,4 +1,5 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -18,35 +19,20 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
     {
         private readonly Dictionary<OpenXmlTypeId, SchemaTypeData> _schemaTypeDatas = new Dictionary<ushort, SchemaTypeData>();
 
-        [Include]
         protected SdbDataHead SdbDataHead { get; set; }
 
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        [Include]
         protected IReadOnlyList<SdbClassIdToSchemaTypeIndex> SdbClassIdMap { get; set; }
 
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        [Include]
         protected IReadOnlyList<SdbSchemaType> SdbSchemaTypes { get; set; }
 
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        [Include]
         protected IReadOnlyList<SdbParticleConstraint> SdbParticles { get; set; }
 
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        [Include]
         protected IReadOnlyList<SdbParticleChildrenIndex> SdbParticleIndexs { get; set; }
 
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        [Include]
         protected IReadOnlyList<SdbAttributeConstraint> SdbAttributes { get; set; }
 
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        [Include]
         protected SimpleTypeRestrictions SimpleTypeRestrictions { get; set; }
 
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        [Include]
         protected ParticleConstraint[] EmptyChildrenParticles = new ParticleConstraint[0];
 
         /// <summary>
@@ -54,13 +40,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// </summary>
         public static SdbSchemaDatas GetOffice2007SchemaDatas()
         {
-#if FEATURE_BINARYFORMATTER
-            var data = new BinarySdbSchemaDatas(FileFormatVersions.Office2007);
-#else
-            var data = new Office2007Schema();
-#endif
-            data.Initialize();
-            return data;
+            return new BinarySdbSchemaDatas(FileFormatVersions.Office2007);
         }
 
         /// <summary>
@@ -68,13 +48,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// </summary>
         public static SdbSchemaDatas GetOffice2010SchemaDatas()
         {
-#if FEATURE_BINARYFORMATTER
-            var data = new BinarySdbSchemaDatas(FileFormatVersions.Office2010);
-#else
-            var data = new Office2010Schema();
-#endif
-            data.Initialize();
-            return data;
+            return new BinarySdbSchemaDatas(FileFormatVersions.Office2010);
         }
 
         /// <summary>
@@ -82,13 +56,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         /// </summary>
         public static SdbSchemaDatas GetOffice2013SchemaDatas()
         {
-#if FEATURE_BINARYFORMATTER
-            var data = new BinarySdbSchemaDatas(FileFormatVersions.Office2013);
-#else
-            var data = new Office2013Schema();
-#endif
-            data.Initialize();
-            return data;
+            return new BinarySdbSchemaDatas(FileFormatVersions.Office2013);
         }
 
         /// <summary>
@@ -221,7 +189,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                     // then load the simple type constraint for this attribute
                     var simpleTypeIndex = sdbAttributeData.SimpleTypeIndex;
                     var simpleTypeConstraint = this.SimpleTypeRestrictions[simpleTypeIndex];
-                    attributeConstraints[i] = new AttributeConstraint(sdbAttributeData.AttributeUse, simpleTypeConstraint, (FileFormatVersions)(sdbAttributeData.FileFormatVersion));
+                    attributeConstraints[i] = new AttributeConstraint(sdbAttributeData.AttributeUse, simpleTypeConstraint, (FileFormatVersions) sdbAttributeData.FileFormatVersion);
                 }
                 return attributeConstraints;
             }

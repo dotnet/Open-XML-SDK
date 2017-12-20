@@ -1,48 +1,26 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Xunit;
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Wordprocessing;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 using DocumentFormat.OpenXml.Packaging;
-using excel = DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.Wordprocessing;
+using System;
+using System.Linq;
 using System.Reflection;
-using OxTest;
+using Xunit;
+
+using static DocumentFormat.OpenXml.Tests.TestAssets;
 
 namespace DocumentFormat.OpenXml.Tests
 {
     public class M4Conformance
     {
         ///<summary>
-        ///Constructor.
-        ///</summary>
-        public M4Conformance()
-        {
-        }
-
-        private TestContext testContextInstance;
-
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-
-        ///<summary>
         ///O14OnlyElesInO12.
         ///</summary>
         [Fact]
         public void O14OnlyElesInO12()
         {
-            //"w:start" element is newly added 
+            //"w:start" element is newly added
             //its class is StartBorder
             //its parent is TableCellBorder
             //its parent should have corresponding attring
@@ -108,23 +86,23 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void LoadExt()
         {
-            string file = System.IO.Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
-            CopyFileStream(TestFileStreams.excel14, file);
-
-            using (SpreadsheetDocument doc = SpreadsheetDocument.Open(file, false))
+            using (var stream = GetStream(TestFiles.excel14))
+            using (var doc = SpreadsheetDocument.Open(stream, false))
             {
                 var ele14 = doc.WorkbookPart.RootElement.LastChild.First().First();
                 Assert.True(ele14 is DocumentFormat.OpenXml.Office2010.Excel.WorkbookProperties);
             }
+        }
 
-            CopyFileStream(TestFileStreams.extlst, file);
-
-            using (SpreadsheetDocument doc = SpreadsheetDocument.Open(file, false))
+        [Fact]
+        public void LoadExt2()
+        {
+            using (var stream = GetStream(TestFiles.extlst))
+            using (var doc = SpreadsheetDocument.Open(stream, false))
             {
                 var ele14 = doc.WorkbookPart.GetPartById("rId1").GetPartById("rId2").GetPartById("rId1").RootElement.LastChild.FirstChild.FirstChild;
                 Assert.True(ele14 is DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions);
             }
-
         }
 
         private void CopyFileStream(byte[] srcBuffer, string fileName)

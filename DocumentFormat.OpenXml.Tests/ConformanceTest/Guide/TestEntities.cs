@@ -1,17 +1,17 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Presentation;
+using LogUtil;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+
+using A = DocumentFormat.OpenXml.Drawing;
+using P15 = DocumentFormat.OpenXml.Office2013.PowerPoint;
 
 namespace DocumentFormat.OpenXml.Tests.GuideTest
 {
-    using DocumentFormat.OpenXml.Packaging;
-    using DocumentFormat.OpenXml.Presentation;
-    using P15 = DocumentFormat.OpenXml.Office2013.PowerPoint;
-    using A = DocumentFormat.OpenXml.Drawing;
-    using LogUtil;
-
     public class TestEntities
     {
         #region Setting values
@@ -35,16 +35,15 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         private readonly uint Id4 = 4;
         #endregion
 
-        #region Property
         /// <summary>
         /// URI attribute value of PresentationExtension.(Parent of P15.SlideGuideList elemenet)
         /// </summary>
         private string SldExtUri { get; set; }
+
         /// <summary>
         /// URI attribute value of PresentationExtension.(Parent of P15.NotesGuideList elemenet)
         /// </summary>
         private string NotesExtUri { get; set; }
-        #endregion
 
         /// <summary>
         /// Constructor
@@ -155,7 +154,6 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                 log.Verify(extendedGuide2.Orientation == this.directionValues2, "An incorrect value, Orientation value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id);
                 A.RgbColorModelHex rgbColorModelHex2 = extendedGuide2.Descendants<A.RgbColorModelHex>().First();
                 log.Verify(rgbColorModelHex2.Val.Value == this.Color2, "An incorrect value, RgbColorModelHex value. Guide Id=[{0}].", extendedGuide1.Id);
-
 
                 //Verify NotesGuideList
                 PresentationExtension PresentationExtension2 = package.PresentationPart.RootElement.Descendants<PresentationExtension>().Where(e => e.Uri == this.NotesExtUri).Single();

@@ -1,16 +1,17 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation;
 using System.IO;
 using System.IO.Packaging;
 using System.Linq;
-using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Validation;
 using Xunit;
-using P = DocumentFormat.OpenXml.Presentation;
+
+using static DocumentFormat.OpenXml.Tests.TestAssets;
+
 using D = DocumentFormat.OpenXml.Drawing;
-using A = DocumentFormat.OpenXml.Drawing;
-using PIC = DocumentFormat.OpenXml.Drawing.Pictures;
-using OxTest;
+using P = DocumentFormat.OpenXml.Presentation;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -19,95 +20,97 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void P007_PptxCreation_Package_Settings()
         {
-            var fiSource = new FileInfo(Path.Combine(TestUtil.TestFilesDir, "Presentation.pptx"));
-            var fiCopy = new FileInfo(Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx"));
-            File.Copy(fiSource.FullName, fiCopy.FullName);
-            using (Package package = Package.Open(fiCopy.FullName, FileMode.Open, FileAccess.ReadWrite))
+            using (var stream = GetStream(TestFiles.Presentation))
+            using (var package = Package.Open(stream))
             {
-                OpenSettings openSettings = new OpenSettings();
-                openSettings.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013);
-                using (PresentationDocument doc = PresentationDocument.Open(package, openSettings))
+                var openSettings = new OpenSettings
                 {
-                    OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
+                };
+
+                using (var doc = PresentationDocument.Open(package, openSettings))
+                {
+                    var v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
+
                     Assert.Equal(94, errs.Count());
                 }
             }
-            if (TestUtil.DeleteTempFiles)
-                fiCopy.Delete();
         }
 
         [Fact]
         public void P006_PresentationDocument_Open()
         {
-            var fiSource = new FileInfo(Path.Combine(TestUtil.TestFilesDir, "Presentation.pptx"));
-            var fiCopy = new FileInfo(Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx"));
-            File.Copy(fiSource.FullName, fiCopy.FullName);
-            OpenSettings openSettings = new OpenSettings();
-            openSettings.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013);
-            using (PresentationDocument doc = PresentationDocument.Open(fiCopy.FullName, true, openSettings))
+            var openSettings = new OpenSettings
             {
-                OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
+            };
+
+            using (var stream = GetStream(TestFiles.Presentation))
+            using (var doc = PresentationDocument.Open(stream, false, openSettings))
+            {
+                var v = new OpenXmlValidator(FileFormatVersions.Office2013);
                 var errs = v.Validate(doc);
+
                 Assert.Equal(94, errs.Count());
             }
-            if (TestUtil.DeleteTempFiles)
-                fiCopy.Delete();
         }
 
         [Fact]
         public void P005_PptxCreation_Package_Settings()
         {
-            var fiSource = new FileInfo(Path.Combine(TestUtil.TestFilesDir, "Presentation.pptx"));
-            var fiCopy = new FileInfo(Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx"));
-            File.Copy(fiSource.FullName, fiCopy.FullName);
-            using (Package package = Package.Open(fiCopy.FullName, FileMode.Open, FileAccess.ReadWrite))
+            using (var stream = GetStream(TestFiles.Presentation))
+            using (var package = Package.Open(stream))
             {
-                OpenSettings openSettings = new OpenSettings();
-                openSettings.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013);
-                using (PresentationDocument doc = PresentationDocument.Open(package, openSettings))
+                var openSettings = new OpenSettings
                 {
-                    OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
+                };
+
+                using (var doc = PresentationDocument.Open(package, openSettings))
+                {
+                    var v = new OpenXmlValidator(FileFormatVersions.Office2013);
                     var errs = v.Validate(doc);
+
                     Assert.Equal(94, errs.Count());
                 }
             }
-            if (TestUtil.DeleteTempFiles)
-                fiCopy.Delete();
         }
 
         [Fact]
         public void P004_SpreadsheetDocument_Open()
         {
-            var fiSource = new FileInfo(Path.Combine(TestUtil.TestFilesDir, "Presentation.pptx"));
-            var fiCopy = new FileInfo(Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx"));
-            File.Copy(fiSource.FullName, fiCopy.FullName);
-            OpenSettings openSettings = new OpenSettings();
-            openSettings.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013);
-            using (PresentationDocument doc = PresentationDocument.Open(fiCopy.FullName, true, openSettings))
+            var openSettings = new OpenSettings
             {
-                OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
+            };
+
+            using (var stream = GetStream(TestFiles.Presentation))
+            using (var doc = PresentationDocument.Open(stream, false))
+            {
+                var v = new OpenXmlValidator(FileFormatVersions.Office2013);
                 var errs = v.Validate(doc);
+
                 Assert.Equal(94, errs.Count());
             }
-            if (TestUtil.DeleteTempFiles)
-                fiCopy.Delete();
         }
 
         [Fact]
         public void P003_PptxCreation_Stream()
         {
-            using (MemoryStream ms = new MemoryStream())
-            using (PresentationDocument doc = PresentationDocument.Create(ms, PresentationDocumentType.Presentation))
+            using (var ms = new MemoryStream())
+            using (var doc = PresentationDocument.Create(ms, PresentationDocumentType.Presentation))
             {
                 CreatePresentation(doc);
-                OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
+
+                var v = new OpenXmlValidator(FileFormatVersions.Office2013);
                 var errs = v.Validate(doc);
-                Assert.Equal(0, errs.Count());
+
+                Assert.Empty(errs);
             }
         }
 
-        public static void CreatePresentation(PresentationDocument presentationDoc)
+        private static void CreatePresentation(PresentationDocument presentationDoc)
         {
             PresentationPart presentationPart = presentationDoc.AddPresentationPart();
             presentationPart.Presentation = new P.Presentation();
@@ -128,7 +131,6 @@ namespace DocumentFormat.OpenXml.Tests
             SlideLayoutPart slideLayoutPart1;
             SlideMasterPart slideMasterPart1;
             ThemePart themePart1;
-
 
             slidePart1 = CreateSlidePart(presentationPart);
             slideLayoutPart1 = CreateSlideLayoutPart(slidePart1);
@@ -236,7 +238,8 @@ namespace DocumentFormat.OpenXml.Tests
               new D.Accent5Color(new D.RgbColorModelHex() { Val = "4BACC6" }),
               new D.Accent6Color(new D.RgbColorModelHex() { Val = "F79646" }),
               new D.Hyperlink(new D.RgbColorModelHex() { Val = "0000FF" }),
-              new D.FollowedHyperlinkColor(new D.RgbColorModelHex() { Val = "800080" })) { Name = "Office" },
+              new D.FollowedHyperlinkColor(new D.RgbColorModelHex() { Val = "800080" }))
+            { Name = "Office" },
               new D.FontScheme(
               new D.MajorFont(
               new D.LatinFont() { Typeface = "Calibri" },
@@ -245,18 +248,25 @@ namespace DocumentFormat.OpenXml.Tests
               new D.MinorFont(
               new D.LatinFont() { Typeface = "Calibri" },
               new D.EastAsianFont() { Typeface = "" },
-              new D.ComplexScriptFont() { Typeface = "" })) { Name = "Office" },
+              new D.ComplexScriptFont() { Typeface = "" }))
+              { Name = "Office" },
               new D.FormatScheme(
               new D.FillStyleList(
               new D.SolidFill(new D.SchemeColor() { Val = D.SchemeColorValues.PhColor }),
               new D.GradientFill(
                 new D.GradientStopList(
                 new D.GradientStop(new D.SchemeColor(new D.Tint() { Val = 50000 },
-                  new D.SaturationModulation() { Val = 300000 }) { Val = D.SchemeColorValues.PhColor }) { Position = 0 },
+                  new D.SaturationModulation() { Val = 300000 })
+                { Val = D.SchemeColorValues.PhColor })
+                { Position = 0 },
                 new D.GradientStop(new D.SchemeColor(new D.Tint() { Val = 37000 },
-                 new D.SaturationModulation() { Val = 300000 }) { Val = D.SchemeColorValues.PhColor }) { Position = 35000 },
+                 new D.SaturationModulation() { Val = 300000 })
+                { Val = D.SchemeColorValues.PhColor })
+                { Position = 35000 },
                 new D.GradientStop(new D.SchemeColor(new D.Tint() { Val = 15000 },
-                 new D.SaturationModulation() { Val = 350000 }) { Val = D.SchemeColorValues.PhColor }) { Position = 100000 }
+                 new D.SaturationModulation() { Val = 350000 })
+                { Val = D.SchemeColorValues.PhColor })
+                { Position = 100000 }
                 ),
                 new D.LinearGradientFill() { Angle = 16200000, Scaled = true }),
               new D.NoFill(),
@@ -267,7 +277,8 @@ namespace DocumentFormat.OpenXml.Tests
                 new D.SolidFill(
                 new D.SchemeColor(
                   new D.Shade() { Val = 95000 },
-                  new D.SaturationModulation() { Val = 105000 }) { Val = D.SchemeColorValues.PhColor }),
+                  new D.SaturationModulation() { Val = 105000 })
+                { Val = D.SchemeColorValues.PhColor }),
                 new D.PresetDash() { Val = D.PresetLineDashValues.Solid })
               {
                   Width = 9525,
@@ -279,7 +290,8 @@ namespace DocumentFormat.OpenXml.Tests
                 new D.SolidFill(
                 new D.SchemeColor(
                   new D.Shade() { Val = 95000 },
-                  new D.SaturationModulation() { Val = 105000 }) { Val = D.SchemeColorValues.PhColor }),
+                  new D.SaturationModulation() { Val = 105000 })
+                { Val = D.SchemeColorValues.PhColor }),
                 new D.PresetDash() { Val = D.PresetLineDashValues.Solid })
               {
                   Width = 9525,
@@ -291,7 +303,8 @@ namespace DocumentFormat.OpenXml.Tests
                 new D.SolidFill(
                 new D.SchemeColor(
                   new D.Shade() { Val = 95000 },
-                  new D.SaturationModulation() { Val = 105000 }) { Val = D.SchemeColorValues.PhColor }),
+                  new D.SaturationModulation() { Val = 105000 })
+                { Val = D.SchemeColorValues.PhColor }),
                 new D.PresetDash() { Val = D.PresetLineDashValues.Solid })
               {
                   Width = 9525,
@@ -304,40 +317,57 @@ namespace DocumentFormat.OpenXml.Tests
                 new D.EffectList(
                 new D.OuterShadow(
                   new D.RgbColorModelHex(
-                  new D.Alpha() { Val = 38000 }) { Val = "000000" }) { BlurRadius = 40000L, Distance = 20000L, Direction = 5400000, RotateWithShape = false })),
+                  new D.Alpha() { Val = 38000 })
+                  { Val = "000000" })
+                { BlurRadius = 40000L, Distance = 20000L, Direction = 5400000, RotateWithShape = false })),
               new D.EffectStyle(
                 new D.EffectList(
                 new D.OuterShadow(
                   new D.RgbColorModelHex(
-                  new D.Alpha() { Val = 38000 }) { Val = "000000" }) { BlurRadius = 40000L, Distance = 20000L, Direction = 5400000, RotateWithShape = false })),
+                  new D.Alpha() { Val = 38000 })
+                  { Val = "000000" })
+                { BlurRadius = 40000L, Distance = 20000L, Direction = 5400000, RotateWithShape = false })),
               new D.EffectStyle(
                 new D.EffectList(
                 new D.OuterShadow(
                   new D.RgbColorModelHex(
-                  new D.Alpha() { Val = 38000 }) { Val = "000000" }) { BlurRadius = 40000L, Distance = 20000L, Direction = 5400000, RotateWithShape = false }))),
+                  new D.Alpha() { Val = 38000 })
+                  { Val = "000000" })
+                { BlurRadius = 40000L, Distance = 20000L, Direction = 5400000, RotateWithShape = false }))),
               new D.BackgroundFillStyleList(
               new D.SolidFill(new D.SchemeColor() { Val = D.SchemeColorValues.PhColor }),
               new D.GradientFill(
                 new D.GradientStopList(
                 new D.GradientStop(
                   new D.SchemeColor(new D.Tint() { Val = 50000 },
-                    new D.SaturationModulation() { Val = 300000 }) { Val = D.SchemeColorValues.PhColor }) { Position = 0 },
+                    new D.SaturationModulation() { Val = 300000 })
+                  { Val = D.SchemeColorValues.PhColor })
+                { Position = 0 },
                 new D.GradientStop(
                   new D.SchemeColor(new D.Tint() { Val = 50000 },
-                    new D.SaturationModulation() { Val = 300000 }) { Val = D.SchemeColorValues.PhColor }) { Position = 0 },
+                    new D.SaturationModulation() { Val = 300000 })
+                  { Val = D.SchemeColorValues.PhColor })
+                { Position = 0 },
                 new D.GradientStop(
                   new D.SchemeColor(new D.Tint() { Val = 50000 },
-                    new D.SaturationModulation() { Val = 300000 }) { Val = D.SchemeColorValues.PhColor }) { Position = 0 }),
+                    new D.SaturationModulation() { Val = 300000 })
+                  { Val = D.SchemeColorValues.PhColor })
+                { Position = 0 }),
                 new D.LinearGradientFill() { Angle = 16200000, Scaled = true }),
               new D.GradientFill(
                 new D.GradientStopList(
                 new D.GradientStop(
                   new D.SchemeColor(new D.Tint() { Val = 50000 },
-                    new D.SaturationModulation() { Val = 300000 }) { Val = D.SchemeColorValues.PhColor }) { Position = 0 },
+                    new D.SaturationModulation() { Val = 300000 })
+                  { Val = D.SchemeColorValues.PhColor })
+                { Position = 0 },
                 new D.GradientStop(
                   new D.SchemeColor(new D.Tint() { Val = 50000 },
-                    new D.SaturationModulation() { Val = 300000 }) { Val = D.SchemeColorValues.PhColor }) { Position = 0 }),
-                new D.LinearGradientFill() { Angle = 16200000, Scaled = true }))) { Name = "Office" });
+                    new D.SaturationModulation() { Val = 300000 })
+                  { Val = D.SchemeColorValues.PhColor })
+                { Position = 0 }),
+                new D.LinearGradientFill() { Angle = 16200000, Scaled = true })))
+              { Name = "Office" });
 
             theme1.Append(themeElements1);
             theme1.Append(new D.ObjectDefaults());
@@ -345,65 +375,61 @@ namespace DocumentFormat.OpenXml.Tests
 
             themePart1.Theme = theme1;
             return themePart1;
-
         }
 
         [Fact]
         public void P002_Pptx_DeleteAdd_CoreExtendedProperties()
         {
-            var docName = "Presentation.pptx";
-            var ba = File.ReadAllBytes(Path.Combine(TestUtil.TestFilesDir, docName));
-            using (MemoryStream ms = new MemoryStream())
+            using (var stream = GetStream(TestFiles.Presentation, true))
+            using (var doc = PresentationDocument.Open(stream, true))
             {
-                ms.Write(ba, 0, ba.Length);
-                using (PresentationDocument doc = PresentationDocument.Open(ms, true))
+                var corePart = doc.CoreFilePropertiesPart;
+                var appPart = doc.ExtendedFilePropertiesPart;
+                var custFilePropsPart = doc.CustomFilePropertiesPart;
+                var thumbNailPart = doc.ThumbnailPart;
+
+                doc.DeletePart(corePart);
+                doc.DeletePart(appPart);
+
+                if (thumbNailPart != null)
                 {
-                    var corePart = doc.CoreFilePropertiesPart;
-                    var appPart = doc.ExtendedFilePropertiesPart;
-                    var custFilePropsPart = doc.CustomFilePropertiesPart;
-                    var thumbNailPart = doc.ThumbnailPart;
-                    doc.DeletePart(corePart);
-                    doc.DeletePart(appPart);
-                    if (thumbNailPart != null)
-                        doc.DeletePart(thumbNailPart);
-                    doc.AddCoreFilePropertiesPart();
-                    doc.AddExtendedFilePropertiesPart();
-                    doc.AddCustomFilePropertiesPart();
-                    doc.AddDigitalSignatureOriginPart();
-                    doc.AddExtendedPart("relType", "contentType/xml", ".xml");
-                    var tnPart = doc.AddThumbnailPart(ThumbnailPartType.Jpeg);
-                    doc.DeletePart(tnPart);
-                    tnPart = doc.AddThumbnailPart("image/jpg");
-                    OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                    var errs = v.Validate(doc);
-                    Assert.Equal(94, errs.Count());
+                    doc.DeletePart(thumbNailPart);
                 }
+
+                doc.AddCoreFilePropertiesPart();
+                doc.AddExtendedFilePropertiesPart();
+                doc.AddCustomFilePropertiesPart();
+                doc.AddDigitalSignatureOriginPart();
+                doc.AddExtendedPart("relType", "contentType/xml", ".xml");
+
+                var tnPart = doc.AddThumbnailPart(ThumbnailPartType.Jpeg);
+                doc.DeletePart(tnPart);
+                tnPart = doc.AddThumbnailPart("image/jpg");
+
+                var v = new OpenXmlValidator(FileFormatVersions.Office2013);
+                var errs = v.Validate(doc);
+
+                Assert.Equal(94, errs.Count());
             }
         }
 
-        [Fact]
-        public void P001_PptxValidation()
+        [Theory]
+        [InlineData(TestFiles.Presentation, 282)]
+        public void PptxValidation(string path, int expectedErrorCount)
         {
-            var docName = "Presentation.pptx";
-            PptxValidationHelper(docName, 282);
-        }
-
-        private static void PptxValidationHelper(string docName, int expectedErrorCount)
-        {
-            var ba = File.ReadAllBytes(Path.Combine(TestUtil.TestFilesDir, docName));
-            using (MemoryStream ms = new MemoryStream())
+            using (var stream = GetStream(path))
+            using (var doc = PresentationDocument.Open(stream, false))
             {
-                ms.Write(ba, 0, ba.Length);
-                using (PresentationDocument doc = PresentationDocument.Open(ms, true))
-                {
-                    OpenXmlValidator validator = new OpenXmlValidator(FileFormatVersions.Office2007);
-                    int cnt = validator.Validate(doc).Count();
-                    validator = new OpenXmlValidator(FileFormatVersions.Office2010);
-                    cnt += validator.Validate(doc).Count();
-                    validator = new OpenXmlValidator(FileFormatVersions.Office2013);
-                    cnt += validator.Validate(doc).Count();
-                    Assert.Equal(expectedErrorCount, cnt);
-                }
+                var validator = new OpenXmlValidator(FileFormatVersions.Office2007);
+                var cnt = validator.Validate(doc).Count();
+
+                validator = new OpenXmlValidator(FileFormatVersions.Office2010);
+                cnt += validator.Validate(doc).Count();
+
+                validator = new OpenXmlValidator(FileFormatVersions.Office2013);
+                cnt += validator.Validate(doc).Count();
+
+                Assert.Equal(expectedErrorCount, cnt);
             }
         }
     }

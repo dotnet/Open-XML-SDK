@@ -1,8 +1,5 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -11,7 +8,6 @@ namespace DocumentFormat.OpenXml.Tests
         /// <summary>
         /// ="List of possible elements expected:"
         /// </summary>
-        internal static readonly string Fmt_ListOfPossibleElements = "List of possible elements expected:";	
-
+        internal static readonly string Fmt_ListOfPossibleElements = "List of possible elements expected:";
     }
 }
