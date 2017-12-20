@@ -117,20 +117,4 @@ namespace DocumentFormat.OpenXml.Validation
             return this.Element.GetNextChildMc(child, this.McContext, this.FileFormat);
         }
     }
-
-    /// <summary>
-    /// Event args for validation error event.
-    /// </summary>
-    internal class ValidationErrorEventArgs : EventArgs
-    {
-        internal ValidationErrorEventArgs(ValidationErrorInfo validatoinError)
-        {
-            this.ValidationErrorInfo = validatoinError;
-        }
-
-        /// <summary>
-        /// The validation error.
-        /// </summary>
-        internal ValidationErrorInfo ValidationErrorInfo { get; set; }
-    }
 }

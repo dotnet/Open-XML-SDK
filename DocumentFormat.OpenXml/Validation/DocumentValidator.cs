@@ -12,19 +12,6 @@ using System.Globalization;
 namespace DocumentFormat.OpenXml.Validation
 {
     /// <summary>
-    /// Implement this interface when the operation is cancelable
-    /// </summary>
-    internal interface ICancelable
-    {
-        /// <summary>
-        /// On cancel event.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="eventArgs"></param>
-        void OnCancel(object sender, EventArgs eventArgs);
-    }
-
-    /// <summary>
     /// DocumentValidator - defines a base class for document validator.
     /// </summary>
     internal abstract class DocumentValidator
