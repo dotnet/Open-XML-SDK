@@ -829,7 +829,7 @@ namespace DocumentFormat.OpenXml
 
         internal ElementAction GetElementAction(OpenXmlElement element, FileFormatVersions format)
         {
-            if (format == (FileFormatVersions.Office2010 | FileFormatVersions.Office2007) || format == (FileFormatVersions.Office2010 | FileFormatVersions.Office2007 | FileFormatVersions.Office2013))
+            if (format == (FileFormatVersions.Office2010 | FileFormatVersions.Office2007) || format.All())
             {
                 return ElementAction.Normal;
             }
