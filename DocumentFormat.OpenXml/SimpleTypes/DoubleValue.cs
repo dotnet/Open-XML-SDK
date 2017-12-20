@@ -166,5 +166,4 @@ namespace DocumentFormat.OpenXml
             return new DoubleValue(this);
         }
     }
-    #endregion
 }

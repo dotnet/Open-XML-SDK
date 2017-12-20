@@ -30,5 +30,4 @@ namespace DocumentFormat.OpenXml
             private set;
         }
     }
-    #endregion
 }

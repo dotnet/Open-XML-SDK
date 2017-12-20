@@ -139,5 +139,4 @@ namespace DocumentFormat.OpenXml
             return xmlAttribute.Value;
         }
     }
-    #endregion
 }

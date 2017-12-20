@@ -167,5 +167,4 @@ namespace DocumentFormat.OpenXml
             return new ByteValue(this);
         }
     }
-    #endregion
 }

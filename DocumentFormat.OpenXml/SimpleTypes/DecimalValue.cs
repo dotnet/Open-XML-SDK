@@ -168,5 +168,4 @@ namespace DocumentFormat.OpenXml
             return new DecimalValue(this);
         }
     }
-    #endregion
 }

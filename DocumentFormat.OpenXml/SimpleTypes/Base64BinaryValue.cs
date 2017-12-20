@@ -116,5 +116,4 @@ namespace DocumentFormat.OpenXml
             return new Base64BinaryValue(this);
         }
     }
-    #endregion
 }

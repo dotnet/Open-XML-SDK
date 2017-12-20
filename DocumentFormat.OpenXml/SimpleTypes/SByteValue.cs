@@ -159,5 +159,4 @@ namespace DocumentFormat.OpenXml
             return new SByteValue(this);
         }
     }
-    #endregion
 }

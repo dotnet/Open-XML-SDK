@@ -109,5 +109,4 @@ namespace DocumentFormat.OpenXml
             return new HexBinaryValue(this);
         }
     }
-    #endregion
 }

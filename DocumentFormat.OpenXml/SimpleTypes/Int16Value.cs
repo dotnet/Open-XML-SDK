@@ -157,5 +157,4 @@ namespace DocumentFormat.OpenXml
             return new Int16Value(this);
         }
     }
-    #endregion
 }

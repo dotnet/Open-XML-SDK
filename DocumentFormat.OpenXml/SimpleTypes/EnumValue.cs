@@ -358,5 +358,4 @@ namespace DocumentFormat.OpenXml
             }
         }
     }
-    #endregion
 }

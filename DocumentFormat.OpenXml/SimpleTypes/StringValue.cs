@@ -111,5 +111,4 @@ namespace DocumentFormat.OpenXml
             return new StringValue(this);
         }
     }
-    #endregion
 }

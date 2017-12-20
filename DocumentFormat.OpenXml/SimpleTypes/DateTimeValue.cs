@@ -190,5 +190,4 @@ namespace DocumentFormat.OpenXml
             return new DateTimeValue(this);
         }
     }
-    #endregion
 }

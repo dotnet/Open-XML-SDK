@@ -150,5 +150,4 @@ namespace DocumentFormat.OpenXml
             return new BooleanValue(this);
         }
     }
-    #endregion
 }

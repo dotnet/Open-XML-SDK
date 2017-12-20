@@ -231,5 +231,4 @@ namespace DocumentFormat.OpenXml
 
         #endregion
     }
-    #endregion
 }

@@ -156,5 +156,4 @@ namespace DocumentFormat.OpenXml
             return new UInt32Value(this);
         }
     }
-    #endregion
 }

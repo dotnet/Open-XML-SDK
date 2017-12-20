@@ -177,5 +177,4 @@ namespace DocumentFormat.OpenXml
             return new SingleValue(this);
         }
     }
-    #endregion
 }
