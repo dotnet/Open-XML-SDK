@@ -7,17 +7,6 @@ using System.Collections.Generic;
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
-    /// Open XML document type.
-    /// </summary>
-    internal enum OpenXmlDocumentType
-    {
-        Invalid,
-        Wordprocessing,
-        Spreadsheet,
-        Presentation,
-    }
-
-    /// <summary>
     /// Detector for Open XML document.
     /// </summary>
     internal static class DocumentTypeDetector
