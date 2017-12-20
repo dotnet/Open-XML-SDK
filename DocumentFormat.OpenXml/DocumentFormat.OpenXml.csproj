@@ -112,7 +112,7 @@
 
   <!-- Include the constraint data that are stored in bin files -->
   <ItemGroup>
-    <EmbeddedResource Include="src\GeneratedCode\*.bin" />
+    <EmbeddedResource Include="GeneratedCode\*.bin" />
   </ItemGroup>
 
   <ItemGroup>

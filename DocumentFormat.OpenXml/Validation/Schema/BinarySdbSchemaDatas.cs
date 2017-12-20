@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
         {
             Stream GetEmbeddedResource(string name)
             {
-                return typeof(ValidationResources).GetTypeInfo().Assembly.GetManifestResourceStream($"DocumentFormat.OpenXml.src.GeneratedCode.{name}.bin");
+                return typeof(ValidationResources).GetTypeInfo().Assembly.GetManifestResourceStream($"DocumentFormat.OpenXml.GeneratedCode.{name}.bin");
             }
 
             switch (fileFormat)
