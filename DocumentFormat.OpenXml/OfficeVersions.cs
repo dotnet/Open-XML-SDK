@@ -21,6 +21,20 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
+        /// Determines if the supplied version is valid for all versions
+        /// </summary>
+        /// <param name="version">The version to check</param>
+        /// <returns>True if the version is all of the known versions, otherwise false</returns>
+        public static bool All(this FileFormatVersions version)
+        {
+            var all = FileFormatVersions.Office2007
+                | FileFormatVersions.Office2010
+                | FileFormatVersions.Office2013;
+
+            return version == all;
+        }
+
+        /// <summary>
         /// Combines values for the given version and all versions that come after it
         /// </summary>
         /// <param name="version">Version to which all other versions are added</param>
