@@ -7,6 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Reflection;
 
 using SdbIndex = System.UInt16;
 
@@ -23,9 +24,30 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             this.SdbDataHead = new SdbDataHead();
             this._fileFormat = fileFormat;
 
-            using (var schema = ValidationResources.GetSchemaStream(this._fileFormat))
+            using (var schema = GetSchemaStream(fileFormat))
             {
                 this.Load(schema);
+            }
+        }
+
+        private static Stream GetSchemaStream(FileFormatVersions fileFormat)
+        {
+            Stream GetEmbeddedResource(string name)
+            {
+                return typeof(ValidationResources).GetTypeInfo().Assembly.GetManifestResourceStream($"DocumentFormat.OpenXml.src.GeneratedCode.{name}.bin");
+            }
+
+            switch (fileFormat)
+            {
+                case FileFormatVersions.Office2007:
+                    return GetEmbeddedResource("O12SchemaConstraintDatas");
+                case FileFormatVersions.Office2010:
+                    return GetEmbeddedResource("O14SchemaConstraintDatas");
+                case FileFormatVersions.Office2013:
+                    return GetEmbeddedResource("O15SchemaConstraintDatas");
+                default:
+                    Debug.Assert(fileFormat.Any());
+                    return GetEmbeddedResource("O12SchemaConstraintDatas");
             }
         }
 
