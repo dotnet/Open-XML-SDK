@@ -6,7 +6,7 @@ using System;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
 
-namespace DocumentFormat.OpenXml.Internal.SemanticValidation
+namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     /// <summary>
     /// 1.2 Attribute value should follow specified regex

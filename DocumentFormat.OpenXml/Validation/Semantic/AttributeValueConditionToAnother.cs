@@ -3,7 +3,7 @@
 
 using DocumentFormat.OpenXml.Validation;
 
-namespace DocumentFormat.OpenXml.Internal.SemanticValidation
+namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     /// <summary>
     /// 1.19 attribute should be of some value if another attribute is of some value

@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Validation;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DocumentFormat.OpenXml.Internal.SemanticValidation
+namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     internal delegate void CallBackMethod();
 

@@ -4,7 +4,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 {
     /// <summary>
     /// SByte (xsd:bye) based value restriction.

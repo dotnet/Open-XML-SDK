@@ -4,7 +4,7 @@
 using DocumentFormat.OpenXml.Validation;
 using System.Diagnostics;
 
-namespace DocumentFormat.OpenXml.Internal.SemanticValidation
+namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     /// <summary>
     /// 1.3 Attribute value is a number, it must (or must not) in range of min to max.

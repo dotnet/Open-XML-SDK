@@ -5,7 +5,7 @@ using System;
 using System.IO;
 using System.Text;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema
 {
     // TODO: consider a hash verify for the data
     // System.Security.Cryptography.MD5CryptoServiceProvider for MD5 hash

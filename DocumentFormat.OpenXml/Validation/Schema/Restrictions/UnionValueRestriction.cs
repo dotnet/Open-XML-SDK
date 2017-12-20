@@ -4,7 +4,7 @@
 using System.Diagnostics;
 using System.Runtime.Serialization;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 {
     /// <summary>
     /// Class for all union simple types.

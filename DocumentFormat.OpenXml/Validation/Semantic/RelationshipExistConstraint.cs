@@ -3,7 +3,7 @@
 
 using DocumentFormat.OpenXml.Validation;
 
-namespace DocumentFormat.OpenXml.Internal.SemanticValidation
+namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     internal class RelationshipExistConstraint : SemanticConstraint
     {

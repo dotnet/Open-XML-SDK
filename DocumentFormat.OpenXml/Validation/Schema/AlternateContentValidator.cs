@@ -3,7 +3,7 @@
 
 using DocumentFormat.OpenXml.Validation;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
     /// Validator for MarkupCompatibility feature - AlternateContent.

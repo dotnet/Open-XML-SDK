@@ -10,7 +10,7 @@ using System.Globalization;
 using System.Linq;
 using System.Xml;
 
-namespace DocumentFormat.OpenXml.Internal.SemanticValidation
+namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     /// <summary>
     /// OpenXML API will implement a class for each semantic constraint category.

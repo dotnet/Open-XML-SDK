@@ -4,7 +4,7 @@
 using DocumentFormat.OpenXml.Validation;
 using System.Diagnostics;
 
-namespace DocumentFormat.OpenXml.Internal.SemanticValidation
+namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     /// <summary>
     /// One attribute value must no bigger than another's.

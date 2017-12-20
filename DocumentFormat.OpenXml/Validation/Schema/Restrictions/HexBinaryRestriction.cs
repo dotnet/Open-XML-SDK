@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Validation;
 using System.Runtime.Serialization;
 using System.Text.RegularExpressions;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 {
     /// <summary>
     /// Hex binary (xsd:hexBinary) based simple type constraint.

@@ -3,7 +3,7 @@
 
 using System.Diagnostics;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
     /// Particle constraint for sequence, choice, all, and group.
@@ -56,7 +56,7 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             {
                 if (this._particleValidator == null)
                 {
-                    this._particleValidator = SchemaValidation.ParticleValidator.CreateParticleValidator(this);
+                    this._particleValidator = Schema.ParticleValidator.CreateParticleValidator(this);
                 }
                 return this._particleValidator;
             }

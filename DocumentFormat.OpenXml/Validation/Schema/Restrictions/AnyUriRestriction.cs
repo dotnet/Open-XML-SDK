@@ -5,7 +5,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.Serialization;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 {
     /// <summary>
     /// AnyURI (xsd:anyURI) based simple type constraint.

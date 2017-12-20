@@ -3,7 +3,7 @@
 
 using System;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 {
     /// <summary>
     /// Schema simple type restrictin facets.

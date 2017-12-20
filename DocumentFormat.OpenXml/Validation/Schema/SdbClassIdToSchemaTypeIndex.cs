@@ -9,7 +9,7 @@ using System.Diagnostics;
 
 using SdbIndex = System.UInt16;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
     /// Map OpenXmlElement class ID to schema type in schema.

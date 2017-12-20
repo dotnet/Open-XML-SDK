@@ -5,9 +5,10 @@
 // Please do NOT change the code manually.
 // </auto-generated>
 
+using DocumentFormat.OpenXml.Validation.Schema.Restrictions;
 using System.Diagnostics;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema
 {
     internal static class O14UnionHelper
     {

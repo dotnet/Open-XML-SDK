@@ -4,7 +4,7 @@
 using DocumentFormat.OpenXml.Validation;
 using System.Diagnostics;
 
-namespace DocumentFormat.OpenXml.Internal.SemanticValidation
+namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     /// <summary>
     /// 1.4/1.10 Attribute value must (or must not) in specified value set.

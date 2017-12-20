@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Validation;
 using System.Runtime.Serialization;
 using System.Xml;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 {
     /// <summary>
     /// ID (xsd:ID) based simple type constraint.

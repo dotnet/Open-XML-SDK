@@ -2,10 +2,11 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Validation;
+using DocumentFormat.OpenXml.Validation.Schema.Restrictions;
 using System.Diagnostics;
 using System.Globalization;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
     /// Validate an OpenXmlElement based on the schema.

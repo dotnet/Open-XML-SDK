@@ -6,7 +6,7 @@ using DocumentFormat.OpenXml.Validation;
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace DocumentFormat.OpenXml.Internal.SemanticValidation
+namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     /// <summary>
     /// 3.1 Class for package-level constraint "referenced element must exist".
