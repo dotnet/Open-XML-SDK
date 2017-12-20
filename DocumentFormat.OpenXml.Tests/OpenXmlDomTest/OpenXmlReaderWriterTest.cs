@@ -418,18 +418,21 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void TestWriteStartElement(ConstrWriter writerConstr, WriteStartEle write, object writeSource, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations)
         {
-            string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", "") + ".docx");
-            using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
+            using (var ms = new MemoryStream())
             {
-                MainDocumentPart part = newDoc.AddMainDocumentPart();
-                using (Stream stream = part.GetStream())
-                using (OpenXmlWriter writer = OpenXmlWriter.Create(stream))
+                using (WordprocessingDocument newDoc = WordprocessingDocument.Create(ms, WordprocessingDocumentType.Document))
                 {
-                    write(writer, writeSource, attributes, namespaceDeclarations);
+                    MainDocumentPart part = newDoc.AddMainDocumentPart();
+
+                    using (Stream stream = part.GetStream())
+                    using (OpenXmlWriter writer = OpenXmlWriter.Create(stream))
+                    {
+                        write(writer, writeSource, attributes, namespaceDeclarations);
+                    }
                 }
+
                 VerifyStartElement(part, writeSource, attributes, namespaceDeclarations);
             }
-            File.Delete(file);
         }
 
         private IEnumerable<OpenXmlAttribute> GetTestAttributes()
