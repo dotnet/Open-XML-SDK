@@ -58,7 +58,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
             var settings = new DataContractSerializerSettings
             {
                 PreserveObjectReferences = true,
-                DataContractResolver = CustomDataContractResolver.Instance
             };
 
             return new DataContractSerializer(typeof(SimpleTypeRestrictions), settings);
@@ -71,25 +70,6 @@ namespace DocumentFormat.OpenXml.Internal.SchemaValidation
                 true,
                 null);
 #endif
-        }
-
-        private class CustomDataContractResolver : DataContractResolver
-        {
-            private CustomDataContractResolver()
-            {
-            }
-
-            public static DataContractResolver Instance { get; } = new CustomDataContractResolver();
-
-            public override Type ResolveName(string typeName, string typeNamespace, Type declaredType, DataContractResolver knownTypeResolver)
-            {
-                throw new NotImplementedException();
-            }
-
-            public override bool TryResolveType(Type type, Type declaredType, DataContractResolver knownTypeResolver, out XmlDictionaryString typeName, out XmlDictionaryString typeNamespace)
-            {
-                throw new NotImplementedException();
-            }
         }
 
         internal void Serialize(Stream stream)
