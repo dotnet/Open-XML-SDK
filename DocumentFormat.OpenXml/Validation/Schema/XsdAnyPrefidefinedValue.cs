@@ -9,7 +9,7 @@ using System.Diagnostics;
 
 using SdbIndex = System.UInt16;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema
 {
     internal static class XsdAnyPrefidefinedValue
     {

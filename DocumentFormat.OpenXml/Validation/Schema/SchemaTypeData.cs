@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
     /// The schema type constraint for an OpenXmlElement.

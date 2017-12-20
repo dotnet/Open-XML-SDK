@@ -4,7 +4,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
     /// UInt16 ( xsd:unsignedShort ) based value restriction.

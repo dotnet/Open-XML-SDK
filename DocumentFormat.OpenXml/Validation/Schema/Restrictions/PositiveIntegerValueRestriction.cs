@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Validation;
 using System;
 using System.Runtime.Serialization;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
     /// PositiveInteger (xsd:positiveInteger, ) based value restriction.

@@ -3,7 +3,7 @@
 
 using System.Diagnostics;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
     /// Constraint on xml attribute

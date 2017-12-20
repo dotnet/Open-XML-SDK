@@ -3,7 +3,7 @@
 
 using System;
 
-namespace DocumentFormat.OpenXml.Internal.SemanticValidation
+namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     [Flags]
     internal enum SemanticValidationLevel

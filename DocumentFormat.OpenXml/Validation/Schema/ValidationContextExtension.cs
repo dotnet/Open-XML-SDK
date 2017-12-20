@@ -4,7 +4,7 @@
 using DocumentFormat.OpenXml.Validation;
 using System.Globalization;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema
 {
     internal static class ValidationContextExtension
     {

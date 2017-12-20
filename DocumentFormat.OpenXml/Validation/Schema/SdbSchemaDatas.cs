@@ -7,7 +7,7 @@ using System.Diagnostics;
 using OpenXmlTypeId = System.UInt16;
 using SdbIndex = System.UInt16;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
     /// Defines SdbSchemaDatas class.

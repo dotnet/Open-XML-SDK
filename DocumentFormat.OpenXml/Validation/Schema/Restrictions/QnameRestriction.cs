@@ -6,7 +6,7 @@ using System;
 using System.Runtime.Serialization;
 using System.Xml;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
     /// QName (xsd:QName) based simple type constraint.

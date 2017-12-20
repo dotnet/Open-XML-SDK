@@ -4,7 +4,7 @@
 using DocumentFormat.OpenXml.Validation;
 using System.Diagnostics;
 
-namespace DocumentFormat.OpenXml.Internal.SemanticValidation
+namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     /// <summary>
     /// 1.12 Attribute value length must be in specified range.

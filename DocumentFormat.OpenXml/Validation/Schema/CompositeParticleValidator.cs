@@ -4,7 +4,7 @@
 using DocumentFormat.OpenXml.Validation;
 using System.Diagnostics;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
     /// Base class for composite particle - sequence, choice, all, group. Defines some common functions.

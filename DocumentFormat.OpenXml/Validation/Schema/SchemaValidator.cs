@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Validation;
 using System;
 using System.Diagnostics;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
     /// Schema validator.

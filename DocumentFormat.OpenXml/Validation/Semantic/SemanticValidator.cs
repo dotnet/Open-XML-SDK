@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Validation;
 using System;
 using System.Diagnostics;
 
-namespace DocumentFormat.OpenXml.Internal.SemanticValidation
+namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     internal class SemanticValidator : ICancelable
     {

@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DocumentFormat.OpenXml.Internal.SemanticValidation
+namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     internal class RootAttributeUniqueConstraint : SemanticConstraint
     {

@@ -11,7 +11,7 @@ using System.Reflection;
 
 using SdbIndex = System.UInt16;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema
 {
     internal class BinarySdbSchemaDatas : SdbSchemaDatas
     {

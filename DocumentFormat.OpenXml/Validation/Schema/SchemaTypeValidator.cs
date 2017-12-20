@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Validation;
 using System.Diagnostics;
 using System.Globalization;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
     /// Validate an OpenXmlElement based on the schema.

@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Runtime.Serialization;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
     /// Base class for simple type constraint.

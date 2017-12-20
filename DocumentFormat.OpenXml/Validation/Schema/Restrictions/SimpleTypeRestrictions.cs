@@ -7,7 +7,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Xml;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
     /// Holds all simple type constraints in array.

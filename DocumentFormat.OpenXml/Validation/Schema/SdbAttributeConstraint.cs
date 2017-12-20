@@ -9,7 +9,7 @@ using System;
 
 using SdbIndex = System.UInt16;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
     /// Attribute constraint data.

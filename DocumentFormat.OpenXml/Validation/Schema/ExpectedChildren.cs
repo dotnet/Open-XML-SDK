@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Text;
 
-namespace DocumentFormat.OpenXml.Internal.SchemaValidation
+namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
     /// Hold expected children for error reporting.
