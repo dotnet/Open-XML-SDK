@@ -3,22 +3,7 @@ Open-XML-SDK
 
 [![NuGet](https://img.shields.io/nuget/v/DocumentFormat.OpenXml.svg)]()
 [![Downloads](https://img.shields.io/nuget/dt/DocumentFormat.OpenXml.svg)]()
-
-Builds
-
-| Branch     | Status |
-|------------|--------|
-| master     | ![master](https://img.shields.io/appveyor/ci/openxmlsdk/Open-XML-SDK/master.svg) |
-| vNext      | ![vNext](https://img.shields.io/appveyor/ci/openxmlsdk/Open-XML-SDK/vNext.svg) |
-| Office2016 | ![codecov](https://img.shields.io/appveyor/ci/openxmlsdk/Open-XML-SDKt/Office2016.svg) |
-
-Code Coverage:
-
-| Branch     | Status |
-|------------|--------|
-| master     | [![codecov](https://codecov.io/gh/OfficeDev/Open-XML-SDK/branch/master/graph/badge.svg)](https://codecov.io/gh/OfficeDev/Open-XML-SDK) |
-| vNext      | [![codecov](https://codecov.io/gh/OfficeDev/Open-XML-SDK/branch/vNext/graph/badge.svg)](https://codecov.io/gh/OfficeDev/Open-XML-SDK) |
-| Office2016 | [![codecov](https://codecov.io/gh/OfficeDev/Open-XML-SDK/branch/Office2016/graph/badge.svg)](https://codecov.io/gh/OfficeDev/Open-XML-SDK) |
+[![master](https://img.shields.io/appveyor/ci/openxmlsdk/Open-XML-SDK/master.svg)]()
 
 The Open XML SDK provides tools for working with Office Word, Excel, and PowerPoint documents. It supports scenarios such as:
 
