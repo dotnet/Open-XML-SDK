@@ -419,16 +419,14 @@ namespace DocumentFormat.OpenXml.Tests
         private void TestWriteStartElement(ConstrWriter writerConstr, WriteStartEle write, object writeSource, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations)
         {
             using (var ms = new MemoryStream())
+            using (WordprocessingDocument newDoc = WordprocessingDocument.Create(ms, WordprocessingDocumentType.Document))
             {
-                using (WordprocessingDocument newDoc = WordprocessingDocument.Create(ms, WordprocessingDocumentType.Document))
-                {
-                    MainDocumentPart part = newDoc.AddMainDocumentPart();
+                MainDocumentPart part = newDoc.AddMainDocumentPart();
 
-                    using (Stream stream = part.GetStream())
-                    using (OpenXmlWriter writer = OpenXmlWriter.Create(stream))
-                    {
-                        write(writer, writeSource, attributes, namespaceDeclarations);
-                    }
+                using (Stream stream = part.GetStream())
+                using (OpenXmlWriter writer = OpenXmlWriter.Create(stream))
+                {
+                    write(writer, writeSource, attributes, namespaceDeclarations);
                 }
 
                 VerifyStartElement(part, writeSource, attributes, namespaceDeclarations);
