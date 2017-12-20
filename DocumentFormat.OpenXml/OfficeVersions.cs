@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml
                     return FileFormatVersions.Office2007
                          | FileFormatVersions.Office2010
                          | FileFormatVersions.Office2013
-                         | FileFormatVersions.Office2016; 
+                         | FileFormatVersions.Office2016;
                 case FileFormatVersions.Office2010:
                     return FileFormatVersions.Office2010
                          | FileFormatVersions.Office2013

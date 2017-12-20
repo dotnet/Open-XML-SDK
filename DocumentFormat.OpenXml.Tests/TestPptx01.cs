@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (var doc = PresentationDocument.Open(package, openSettings))
                 {
                     var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-            
+
                     Assert.Empty(v.Validate(doc));
                 }
             }
@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var doc = PresentationDocument.Open(stream, false, openSettings))
             {
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-            
+
                 Assert.Empty(v.Validate(doc));
             }
         }
@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (var doc = PresentationDocument.Open(package, openSettings))
                 {
                     var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-            
+
                     Assert.Empty(v.Validate(doc));
                 }
             }
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var doc = PresentationDocument.Open(stream, false))
             {
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-            
+
                 Assert.Empty(v.Validate(doc));
             }
         }
@@ -403,7 +403,7 @@ namespace DocumentFormat.OpenXml.Tests
                 tnPart = doc.AddThumbnailPart("image/jpg");
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-            
+
                 Assert.Empty(v.Validate(doc));
             }
         }
