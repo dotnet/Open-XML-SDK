@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
 {
 /// <summary>
 /// <para>Defines the BackgroundProperties Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a15:backgroundPr.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -53,7 +53,7 @@ public partial class BackgroundProperties : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -166,7 +166,7 @@ if( 0 == namespaceId && "targetScreenSize" == name)
 }
 /// <summary>
 /// <para>Defines the NonVisualGroupProperties Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a15:nonVisualGroupProps.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -207,7 +207,7 @@ public partial class NonVisualGroupProperties : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -278,7 +278,7 @@ public partial class NonVisualGroupProperties : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the ObjectProperties Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a15:objectPr.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -319,7 +319,7 @@ public partial class ObjectProperties : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -418,7 +418,7 @@ if( 0 == namespaceId && "linkType" == name)
 }
 /// <summary>
 /// <para>Defines the SignatureLine Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a15:signatureLine.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -459,7 +459,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}

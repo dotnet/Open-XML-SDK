@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
 {
 /// <summary>
 /// <para>Defines the ControlCloneRegular Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:control.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -52,7 +52,7 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -473,7 +473,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the ButtonRegular Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:button.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -514,7 +514,7 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -991,7 +991,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the CheckBox Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:checkBox.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1032,7 +1032,7 @@ public partial class CheckBox : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1425,7 +1425,7 @@ if( 0 == namespaceId && "getKeytip" == name)
 }
 /// <summary>
 /// <para>Defines the GalleryRegular Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:gallery.</para>
 /// </summary>
 /// <remarks>
@@ -1436,8 +1436,8 @@ if( 0 == namespaceId && "getKeytip" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(Item),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(Item),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class GalleryRegular : OpenXmlCompositeElement
@@ -1475,7 +1475,7 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2255,7 +2255,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the ToggleButtonRegular Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:toggleButton.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -2296,7 +2296,7 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2787,7 +2787,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the MenuSeparator Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:menuSeparator.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -2828,7 +2828,7 @@ public partial class MenuSeparator : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3011,7 +3011,7 @@ if( 0 == namespaceId && "getTitle" == name)
 }
 /// <summary>
 /// <para>Defines the SplitButtonRegular Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:splitButton.</para>
 /// </summary>
 /// <remarks>
@@ -3023,9 +3023,9 @@ if( 0 == namespaceId && "getTitle" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(VisibleButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(VisibleToggleButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuRegular),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(VisibleButton),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(VisibleToggleButton),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(MenuRegular),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class SplitButtonRegular : OpenXmlCompositeElement
@@ -3063,7 +3063,7 @@ public partial class SplitButtonRegular : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3384,7 +3384,7 @@ if( 0 == namespaceId && "getShowLabel" == name)
 }
 /// <summary>
 /// <para>Defines the MenuRegular Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:menu.</para>
 /// </summary>
 /// <remarks>
@@ -3402,15 +3402,15 @@ if( 0 == namespaceId && "getShowLabel" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ControlCloneRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(CheckBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(GalleryRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ToggleButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuSeparator),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(SplitButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DynamicMenuRegular),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ControlCloneRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(CheckBox),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(GalleryRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ToggleButtonRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(MenuSeparator),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(SplitButtonRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(MenuRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(DynamicMenuRegular),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class MenuRegular : OpenXmlCompositeElement
@@ -3448,7 +3448,7 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3983,7 +3983,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the DynamicMenuRegular Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:dynamicMenu.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -4024,7 +4024,7 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4515,7 +4515,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the SplitButtonWithTitle Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:splitButton.</para>
 /// </summary>
 /// <remarks>
@@ -4527,9 +4527,9 @@ if( 0 == namespaceId && "getShowImage" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(VisibleButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(VisibleToggleButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuWithTitle),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(VisibleButton),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(VisibleToggleButton),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(MenuWithTitle),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class SplitButtonWithTitle : OpenXmlCompositeElement
@@ -4567,7 +4567,7 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4888,7 +4888,7 @@ if( 0 == namespaceId && "getShowLabel" == name)
 }
 /// <summary>
 /// <para>Defines the MenuWithTitle Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:menu.</para>
 /// </summary>
 /// <remarks>
@@ -4906,15 +4906,15 @@ if( 0 == namespaceId && "getShowLabel" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ControlCloneRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(CheckBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(GalleryRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ToggleButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuSeparator),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(SplitButtonWithTitle),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuWithTitle),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DynamicMenuRegular),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ControlCloneRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(CheckBox),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(GalleryRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ToggleButtonRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(MenuSeparator),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(SplitButtonWithTitle),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(MenuWithTitle),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(DynamicMenuRegular),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class MenuWithTitle : OpenXmlCompositeElement
@@ -4952,7 +4952,7 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5487,7 +5487,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the MenuSeparatorNoTitle Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:menuSeparator.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -5528,7 +5528,7 @@ public partial class MenuSeparatorNoTitle : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5683,7 +5683,7 @@ if( 0 == namespaceId && "insertBeforeQ" == name)
 }
 /// <summary>
 /// <para>Defines the ControlClone Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:control.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -5724,7 +5724,7 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6201,7 +6201,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the LabelControl Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:labelControl.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -6242,7 +6242,7 @@ public partial class LabelControl : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6579,7 +6579,7 @@ if( 0 == namespaceId && "getShowLabel" == name)
 }
 /// <summary>
 /// <para>Defines the Button Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:button.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -6620,7 +6620,7 @@ public partial class Button : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -7125,7 +7125,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the ToggleButton Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:toggleButton.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -7166,7 +7166,7 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -7685,7 +7685,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the EditBox Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:editBox.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -7726,7 +7726,7 @@ public partial class EditBox : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -8217,7 +8217,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the ComboBox Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:comboBox.</para>
 /// </summary>
 /// <remarks>
@@ -8227,7 +8227,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(Item),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(Item),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ComboBox : OpenXmlCompositeElement
@@ -8265,7 +8265,7 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -8902,7 +8902,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the DropDownRegular Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:dropDown.</para>
 /// </summary>
 /// <remarks>
@@ -8913,8 +8913,8 @@ if( 0 == namespaceId && "getShowImage" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(Item),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(Item),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DropDownRegular : OpenXmlCompositeElement
@@ -8952,7 +8952,7 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -9592,7 +9592,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the Gallery Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:gallery.</para>
 /// </summary>
 /// <remarks>
@@ -9603,8 +9603,8 @@ if( 0 == namespaceId && "getShowImage" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(Item),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(Item),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Gallery : OpenXmlCompositeElement
@@ -9642,7 +9642,7 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -10450,7 +10450,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the Menu Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:menu.</para>
 /// </summary>
 /// <remarks>
@@ -10468,15 +10468,15 @@ if( 0 == namespaceId && "getShowImage" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ControlCloneRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(CheckBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(GalleryRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ToggleButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuSeparator),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(SplitButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DynamicMenuRegular),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ControlCloneRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(CheckBox),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(GalleryRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ToggleButtonRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(MenuSeparator),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(SplitButtonRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(MenuRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(DynamicMenuRegular),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Menu : OpenXmlCompositeElement
@@ -10514,7 +10514,7 @@ public partial class Menu : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -11077,7 +11077,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the DynamicMenu Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:dynamicMenu.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -11118,7 +11118,7 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -11637,7 +11637,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the SplitButton Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:splitButton.</para>
 /// </summary>
 /// <remarks>
@@ -11649,9 +11649,9 @@ if( 0 == namespaceId && "getShowImage" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(VisibleButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(VisibleToggleButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuRegular),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(VisibleButton),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(VisibleToggleButton),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(MenuRegular),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class SplitButton : OpenXmlCompositeElement
@@ -11689,7 +11689,7 @@ public partial class SplitButton : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -12038,7 +12038,7 @@ if( 0 == namespaceId && "getShowLabel" == name)
 }
 /// <summary>
 /// <para>Defines the Box Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:box.</para>
 /// </summary>
 /// <remarks>
@@ -12061,20 +12061,20 @@ if( 0 == namespaceId && "getShowLabel" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ControlClone),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(LabelControl),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Button),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ToggleButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(CheckBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(EditBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ComboBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DropDownRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Gallery),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Menu),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DynamicMenu),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(SplitButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Box),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ButtonGroup),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ControlClone),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(LabelControl),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(Button),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ToggleButton),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(CheckBox),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(EditBox),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ComboBox),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(DropDownRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(Gallery),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(Menu),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(DynamicMenu),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(SplitButton),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(Box),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ButtonGroup),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Box : OpenXmlCompositeElement
@@ -12112,7 +12112,7 @@ public partial class Box : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -12382,7 +12382,7 @@ if( 0 == namespaceId && "boxStyle" == name)
 }
 /// <summary>
 /// <para>Defines the ButtonGroup Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:buttonGroup.</para>
 /// </summary>
 /// <remarks>
@@ -12399,14 +12399,14 @@ if( 0 == namespaceId && "boxStyle" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ControlCloneRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ToggleButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(GalleryRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DynamicMenuRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(SplitButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Separator),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ControlCloneRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ToggleButtonRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(GalleryRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(MenuRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(DynamicMenuRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(SplitButtonRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(Separator),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ButtonGroup : OpenXmlCompositeElement
@@ -12444,7 +12444,7 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -12682,7 +12682,7 @@ if( 0 == namespaceId && "insertBeforeQ" == name)
 }
 /// <summary>
 /// <para>Defines the BackstageMenuButton Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:button.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -12723,7 +12723,7 @@ public partial class BackstageMenuButton : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -13032,7 +13032,7 @@ if( 0 == namespaceId && "getImage" == name)
 }
 /// <summary>
 /// <para>Defines the BackstageMenuCheckBox Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:checkBox.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -13073,7 +13073,7 @@ public partial class BackstageMenuCheckBox : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -13340,7 +13340,7 @@ if( 0 == namespaceId && "getKeytip" == name)
 }
 /// <summary>
 /// <para>Defines the BackstageSubMenu Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:menu.</para>
 /// </summary>
 /// <remarks>
@@ -13350,7 +13350,7 @@ if( 0 == namespaceId && "getKeytip" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(BackstageMenuGroup),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BackstageMenuGroup),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class BackstageSubMenu : OpenXmlCompositeElement
@@ -13388,7 +13388,7 @@ public partial class BackstageSubMenu : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -13703,7 +13703,7 @@ if( 0 == namespaceId && "getKeytip" == name)
 }
 /// <summary>
 /// <para>Defines the BackstageMenuToggleButton Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:toggleButton.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -13744,7 +13744,7 @@ public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -14053,7 +14053,7 @@ if( 0 == namespaceId && "getKeytip" == name)
 }
 /// <summary>
 /// <para>Defines the BackstageGroupButton Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:button.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -14094,7 +14094,7 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -14459,7 +14459,7 @@ if( 0 == namespaceId && "getImage" == name)
 }
 /// <summary>
 /// <para>Defines the BackstageCheckBox Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:checkBox.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -14500,7 +14500,7 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -14837,7 +14837,7 @@ if( 0 == namespaceId && "getKeytip" == name)
 }
 /// <summary>
 /// <para>Defines the BackstageEditBox Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:editBox.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -14878,7 +14878,7 @@ public partial class BackstageEditBox : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -15173,7 +15173,7 @@ if( 0 == namespaceId && "sizeString" == name)
 }
 /// <summary>
 /// <para>Defines the BackstageDropDown Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:dropDown.</para>
 /// </summary>
 /// <remarks>
@@ -15183,7 +15183,7 @@ if( 0 == namespaceId && "sizeString" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ItemBackstageItem),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ItemBackstageItem),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class BackstageDropDown : OpenXmlCompositeElement
@@ -15221,7 +15221,7 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -15634,7 +15634,7 @@ if( 0 == namespaceId && "getItemID" == name)
 }
 /// <summary>
 /// <para>Defines the RadioGroup Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:radioGroup.</para>
 /// </summary>
 /// <remarks>
@@ -15644,7 +15644,7 @@ if( 0 == namespaceId && "getItemID" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(RadioButtonBackstageItem),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(RadioButtonBackstageItem),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class RadioGroup : OpenXmlCompositeElement
@@ -15682,7 +15682,7 @@ public partial class RadioGroup : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -16025,7 +16025,7 @@ if( 0 == namespaceId && "getItemID" == name)
 }
 /// <summary>
 /// <para>Defines the BackstageComboBox Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:comboBox.</para>
 /// </summary>
 /// <remarks>
@@ -16035,7 +16035,7 @@ if( 0 == namespaceId && "getItemID" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ItemBackstageItem),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ItemBackstageItem),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class BackstageComboBox : OpenXmlCompositeElement
@@ -16073,7 +16073,7 @@ public partial class BackstageComboBox : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -16430,7 +16430,7 @@ if( 0 == namespaceId && "getItemID" == name)
 }
 /// <summary>
 /// <para>Defines the Hyperlink Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:hyperlink.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -16471,7 +16471,7 @@ public partial class Hyperlink : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -16850,7 +16850,7 @@ if( 0 == namespaceId && "getTarget" == name)
 }
 /// <summary>
 /// <para>Defines the BackstageLabelControl Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:labelControl.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -16891,7 +16891,7 @@ public partial class BackstageLabelControl : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -17116,7 +17116,7 @@ if( 0 == namespaceId && "noWrap" == name)
 }
 /// <summary>
 /// <para>Defines the GroupBox Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:groupBox.</para>
 /// </summary>
 /// <remarks>
@@ -17136,17 +17136,17 @@ if( 0 == namespaceId && "noWrap" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(BackstageGroupButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageCheckBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageEditBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageDropDown),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(RadioGroup),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageComboBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Hyperlink),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageLabelControl),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(GroupBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(LayoutContainer),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ImageControl),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BackstageGroupButton),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(BackstageCheckBox),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(BackstageEditBox),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(BackstageDropDown),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(RadioGroup),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(BackstageComboBox),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(Hyperlink),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(BackstageLabelControl),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(GroupBox),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(LayoutContainer),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ImageControl),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class GroupBox : OpenXmlCompositeElement
@@ -17184,7 +17184,7 @@ public partial class GroupBox : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -17389,7 +17389,7 @@ if( 0 == namespaceId && "getLabel" == name)
 }
 /// <summary>
 /// <para>Defines the LayoutContainer Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:layoutContainer.</para>
 /// </summary>
 /// <remarks>
@@ -17409,17 +17409,17 @@ if( 0 == namespaceId && "getLabel" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(BackstageGroupButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageCheckBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageEditBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageDropDown),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(RadioGroup),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageComboBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Hyperlink),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageLabelControl),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(GroupBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(LayoutContainer),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ImageControl),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BackstageGroupButton),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(BackstageCheckBox),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(BackstageEditBox),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(BackstageDropDown),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(RadioGroup),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(BackstageComboBox),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(Hyperlink),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(BackstageLabelControl),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(GroupBox),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(LayoutContainer),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ImageControl),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class LayoutContainer : OpenXmlCompositeElement
@@ -17457,7 +17457,7 @@ public partial class LayoutContainer : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -17662,7 +17662,7 @@ if( 0 == namespaceId && "layoutChildren" == name)
 }
 /// <summary>
 /// <para>Defines the ImageControl Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:imageControl.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -17703,7 +17703,7 @@ public partial class ImageControl : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -17928,7 +17928,7 @@ if( 0 == namespaceId && "getAltText" == name)
 }
 /// <summary>
 /// <para>Defines the BackstageGroup Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:group.</para>
 /// </summary>
 /// <remarks>
@@ -17940,9 +17940,9 @@ if( 0 == namespaceId && "getAltText" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(PrimaryItem),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(TopItemsGroupControls),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BottomItemsGroupControls),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(PrimaryItem),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(TopItemsGroupControls),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(BottomItemsGroupControls),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class BackstageGroup : OpenXmlCompositeElement
@@ -17980,7 +17980,7 @@ public partial class BackstageGroup : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -18329,7 +18329,7 @@ if( 0 == namespaceId && "getShowLabel" == name)
 }
 /// <summary>
 /// <para>Defines the TaskGroup Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:taskGroup.</para>
 /// </summary>
 /// <remarks>
@@ -18339,7 +18339,7 @@ if( 0 == namespaceId && "getShowLabel" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(TaskGroupCategory),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(TaskGroupCategory),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class TaskGroup : OpenXmlCompositeElement
@@ -18377,7 +18377,7 @@ public partial class TaskGroup : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -18706,7 +18706,7 @@ if( 0 == namespaceId && "allowedTaskSizes" == name)
 }
 /// <summary>
 /// <para>Defines the MenuRoot Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:menu.</para>
 /// </summary>
 /// <remarks>
@@ -18724,15 +18724,15 @@ if( 0 == namespaceId && "allowedTaskSizes" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ControlCloneRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(CheckBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(GalleryRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ToggleButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuSeparator),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(SplitButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DynamicMenuRegular),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ControlCloneRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(CheckBox),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(GalleryRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ToggleButtonRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(MenuSeparator),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(SplitButtonRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(MenuRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(DynamicMenuRegular),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class MenuRoot : OpenXmlCompositeElement
@@ -18770,7 +18770,7 @@ public partial class MenuRoot : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -18939,10 +18939,10 @@ if( 0 == namespaceId && "itemSize" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(Commands),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Ribbon),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Backstage),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ContextMenus),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(Commands),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(Ribbon),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(Backstage),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ContextMenus),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class CustomUI : OpenXmlPartRootElement
@@ -18980,7 +18980,7 @@ public partial class CustomUI : OpenXmlPartRootElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -19242,7 +19242,7 @@ if( 0 == namespaceId && "loadImage" == name)
 }
 /// <summary>
 /// <para>Defines the Item Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:item.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -19283,7 +19283,7 @@ public partial class Item : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -19424,7 +19424,7 @@ if( 0 == namespaceId && "supertip" == name)
 }
 /// <summary>
 /// <para>Defines the VisibleButton Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:button.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -19465,7 +19465,7 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -19914,7 +19914,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the VisibleToggleButton Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:toggleButton.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -19955,7 +19955,7 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -20418,7 +20418,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the Separator Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:separator.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -20459,7 +20459,7 @@ public partial class Separator : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -20642,7 +20642,7 @@ if( 0 == namespaceId && "insertBeforeQ" == name)
 }
 /// <summary>
 /// <para>Defines the DialogBoxLauncher Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:dialogBoxLauncher.</para>
 /// </summary>
 /// <remarks>
@@ -20652,7 +20652,7 @@ if( 0 == namespaceId && "insertBeforeQ" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DialogBoxLauncher : OpenXmlCompositeElement
@@ -20690,7 +20690,7 @@ public partial class DialogBoxLauncher : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -20798,7 +20798,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the Group Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:group.</para>
 /// </summary>
 /// <remarks>
@@ -20823,22 +20823,22 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ControlClone),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(LabelControl),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Button),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ToggleButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(CheckBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(EditBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ComboBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DropDownRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Gallery),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Menu),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DynamicMenu),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(SplitButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Box),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ButtonGroup),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Separator),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DialogBoxLauncher),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ControlClone),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(LabelControl),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(Button),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ToggleButton),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(CheckBox),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(EditBox),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ComboBox),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(DropDownRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(Gallery),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(Menu),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(DynamicMenu),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(SplitButton),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(Box),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ButtonGroup),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(Separator),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(DialogBoxLauncher),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Group : OpenXmlCompositeElement
@@ -20876,7 +20876,7 @@ public partial class Group : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -21334,7 +21334,7 @@ if( 0 == namespaceId && "centerVertically" == name)
 }
 /// <summary>
 /// <para>Defines the ControlCloneQat Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:control.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -21375,7 +21375,7 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -21852,7 +21852,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the SharedControlsQatItems Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:sharedControls.</para>
 /// </summary>
 /// <remarks>
@@ -21901,7 +21901,7 @@ public partial class SharedControlsQatItems : QatItemsType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -21953,7 +21953,7 @@ public partial class SharedControlsQatItems : QatItemsType
 }
 /// <summary>
 /// <para>Defines the DocumentControlsQatItems Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:documentControls.</para>
 /// </summary>
 /// <remarks>
@@ -22002,7 +22002,7 @@ public partial class DocumentControlsQatItems : QatItemsType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -22064,9 +22064,9 @@ public partial class DocumentControlsQatItems : QatItemsType
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ControlCloneQat),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Separator),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ControlCloneQat),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(Separator),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class QatItemsType : OpenXmlCompositeElement
 {
@@ -22126,7 +22126,7 @@ if( 57 == namespaceId && "separator" == name)
 }
 /// <summary>
 /// <para>Defines the Tab Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:tab.</para>
 /// </summary>
 /// <remarks>
@@ -22136,7 +22136,7 @@ if( 57 == namespaceId && "separator" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(Group),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(Group),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Tab : OpenXmlCompositeElement
@@ -22174,7 +22174,7 @@ public partial class Tab : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -22461,7 +22461,7 @@ if( 0 == namespaceId && "getKeytip" == name)
 }
 /// <summary>
 /// <para>Defines the TabSet Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:tabSet.</para>
 /// </summary>
 /// <remarks>
@@ -22471,7 +22471,7 @@ if( 0 == namespaceId && "getKeytip" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(Tab),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(Tab),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class TabSet : OpenXmlCompositeElement
@@ -22509,7 +22509,7 @@ public partial class TabSet : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -22642,7 +22642,7 @@ if( 0 == namespaceId && "getVisible" == name)
 }
 /// <summary>
 /// <para>Defines the Command Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:command.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -22683,7 +22683,7 @@ public partial class Command : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -22796,7 +22796,7 @@ if( 0 == namespaceId && "idMso" == name)
 }
 /// <summary>
 /// <para>Defines the QuickAccessToolbar Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:qat.</para>
 /// </summary>
 /// <remarks>
@@ -22807,8 +22807,8 @@ if( 0 == namespaceId && "idMso" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(SharedControlsQatItems),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DocumentControlsQatItems),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(SharedControlsQatItems),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(DocumentControlsQatItems),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class QuickAccessToolbar : OpenXmlCompositeElement
@@ -22846,7 +22846,7 @@ public partial class QuickAccessToolbar : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -22975,7 +22975,7 @@ if( 57 == namespaceId && "documentControls" == name)
 }
 /// <summary>
 /// <para>Defines the Tabs Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:tabs.</para>
 /// </summary>
 /// <remarks>
@@ -22985,7 +22985,7 @@ if( 57 == namespaceId && "documentControls" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(Tab),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(Tab),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Tabs : OpenXmlCompositeElement
@@ -23023,7 +23023,7 @@ public partial class Tabs : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -23093,7 +23093,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the ContextualTabs Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:contextualTabs.</para>
 /// </summary>
 /// <remarks>
@@ -23103,7 +23103,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(TabSet),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(TabSet),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ContextualTabs : OpenXmlCompositeElement
@@ -23141,7 +23141,7 @@ public partial class ContextualTabs : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -23211,7 +23211,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the ContextMenu Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:contextMenu.</para>
 /// </summary>
 /// <remarks>
@@ -23229,15 +23229,15 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ControlCloneRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(CheckBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(GalleryRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ToggleButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(SplitButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DynamicMenuRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuSeparatorNoTitle),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ControlCloneRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(CheckBox),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(GalleryRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ToggleButtonRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(SplitButtonRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(MenuRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(DynamicMenuRegular),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(MenuSeparatorNoTitle),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ContextMenu : OpenXmlCompositeElement
@@ -23275,7 +23275,7 @@ public partial class ContextMenu : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -23404,7 +23404,7 @@ if( 57 == namespaceId && "menuSeparator" == name)
 }
 /// <summary>
 /// <para>Defines the ItemBackstageItem Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:item.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -23445,7 +23445,7 @@ public partial class ItemBackstageItem : BackstageItemType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -23472,7 +23472,7 @@ public partial class ItemBackstageItem : BackstageItemType
 }
 /// <summary>
 /// <para>Defines the RadioButtonBackstageItem Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:radioButton.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -23513,7 +23513,7 @@ public partial class RadioButtonBackstageItem : BackstageItemType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -23624,7 +23624,7 @@ if( 0 == namespaceId && "getLabel" == name)
 }
 /// <summary>
 /// <para>Defines the BackstageRegularButton Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:button.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -23665,7 +23665,7 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -24002,7 +24002,7 @@ if( 0 == namespaceId && "getImage" == name)
 }
 /// <summary>
 /// <para>Defines the BackstagePrimaryMenu Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:menu.</para>
 /// </summary>
 /// <remarks>
@@ -24012,7 +24012,7 @@ if( 0 == namespaceId && "getImage" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(BackstageMenuGroup),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BackstageMenuGroup),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
@@ -24050,7 +24050,7 @@ public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -24393,7 +24393,7 @@ if( 0 == namespaceId && "getKeytip" == name)
 }
 /// <summary>
 /// <para>Defines the BackstageMenuGroup Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:menuGroup.</para>
 /// </summary>
 /// <remarks>
@@ -24406,10 +24406,10 @@ if( 0 == namespaceId && "getKeytip" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(BackstageMenuButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageMenuCheckBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageSubMenu),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageMenuToggleButton),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BackstageMenuButton),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(BackstageMenuCheckBox),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(BackstageSubMenu),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(BackstageMenuToggleButton),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class BackstageMenuGroup : OpenXmlCompositeElement
@@ -24447,7 +24447,7 @@ public partial class BackstageMenuGroup : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -24631,7 +24631,7 @@ if( 0 == namespaceId && "itemSize" == name)
 }
 /// <summary>
 /// <para>Defines the PrimaryItem Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:primaryItem.</para>
 /// </summary>
 /// <remarks>
@@ -24642,8 +24642,8 @@ if( 0 == namespaceId && "itemSize" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(BackstageRegularButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstagePrimaryMenu),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BackstageRegularButton),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(BackstagePrimaryMenu),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PrimaryItem : OpenXmlCompositeElement
@@ -24681,7 +24681,7 @@ public partial class PrimaryItem : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -24810,7 +24810,7 @@ if( 57 == namespaceId && "menu" == name)
 }
 /// <summary>
 /// <para>Defines the TopItemsGroupControls Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:topItems.</para>
 /// </summary>
 /// <remarks>
@@ -24867,7 +24867,7 @@ public partial class TopItemsGroupControls : GroupControlsType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -24919,7 +24919,7 @@ public partial class TopItemsGroupControls : GroupControlsType
 }
 /// <summary>
 /// <para>Defines the BottomItemsGroupControls Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:bottomItems.</para>
 /// </summary>
 /// <remarks>
@@ -24976,7 +24976,7 @@ public partial class BottomItemsGroupControls : GroupControlsType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -25046,17 +25046,17 @@ public partial class BottomItemsGroupControls : GroupControlsType
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(BackstageGroupButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageCheckBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageEditBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageDropDown),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(RadioGroup),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageComboBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Hyperlink),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageLabelControl),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(GroupBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(LayoutContainer),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ImageControl),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BackstageGroupButton),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(BackstageCheckBox),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(BackstageEditBox),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(BackstageDropDown),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(RadioGroup),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(BackstageComboBox),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(Hyperlink),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(BackstageLabelControl),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(GroupBox),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(LayoutContainer),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ImageControl),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class GroupControlsType : OpenXmlCompositeElement
 {
@@ -25140,7 +25140,7 @@ if( 57 == namespaceId && "imageControl" == name)
 }
 /// <summary>
 /// <para>Defines the TaskGroupCategory Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:category.</para>
 /// </summary>
 /// <remarks>
@@ -25150,7 +25150,7 @@ if( 57 == namespaceId && "imageControl" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(TaskGroupTask),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(TaskGroupTask),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class TaskGroupCategory : OpenXmlCompositeElement
@@ -25188,7 +25188,7 @@ public partial class TaskGroupCategory : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -25447,7 +25447,7 @@ if( 0 == namespaceId && "getLabel" == name)
 }
 /// <summary>
 /// <para>Defines the TaskGroupTask Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:task.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -25488,7 +25488,7 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -25867,7 +25867,7 @@ if( 0 == namespaceId && "getKeytip" == name)
 }
 /// <summary>
 /// <para>Defines the TaskFormGroupCategory Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:category.</para>
 /// </summary>
 /// <remarks>
@@ -25877,7 +25877,7 @@ if( 0 == namespaceId && "getKeytip" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(TaskFormGroupTask),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(TaskFormGroupTask),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class TaskFormGroupCategory : OpenXmlCompositeElement
@@ -25915,7 +25915,7 @@ public partial class TaskFormGroupCategory : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -26174,7 +26174,7 @@ if( 0 == namespaceId && "getLabel" == name)
 }
 /// <summary>
 /// <para>Defines the TaskFormGroupTask Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:task.</para>
 /// </summary>
 /// <remarks>
@@ -26184,7 +26184,7 @@ if( 0 == namespaceId && "getLabel" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(BackstageGroup),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BackstageGroup),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class TaskFormGroupTask : OpenXmlCompositeElement
@@ -26222,7 +26222,7 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -26607,7 +26607,7 @@ if( 0 == namespaceId && "getKeytip" == name)
 }
 /// <summary>
 /// <para>Defines the TaskFormGroup Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:taskFormGroup.</para>
 /// </summary>
 /// <remarks>
@@ -26617,7 +26617,7 @@ if( 0 == namespaceId && "getKeytip" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(TaskFormGroupCategory),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(TaskFormGroupCategory),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class TaskFormGroup : OpenXmlCompositeElement
@@ -26655,7 +26655,7 @@ public partial class TaskFormGroup : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -26928,7 +26928,7 @@ if( 0 == namespaceId && "allowedTaskSizes" == name)
 }
 /// <summary>
 /// <para>Defines the BackstageGroups Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:firstColumn.</para>
 /// </summary>
 /// <remarks>
@@ -26940,9 +26940,9 @@ if( 0 == namespaceId && "allowedTaskSizes" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(TaskFormGroup),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageGroup),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(TaskGroup),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(TaskFormGroup),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(BackstageGroup),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(TaskGroup),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class BackstageGroups : OpenXmlCompositeElement
@@ -26980,7 +26980,7 @@ public partial class BackstageGroups : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -27056,7 +27056,7 @@ if( 57 == namespaceId && "taskGroup" == name)
 }
 /// <summary>
 /// <para>Defines the SimpleGroups Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:secondColumn.</para>
 /// </summary>
 /// <remarks>
@@ -27067,8 +27067,8 @@ if( 57 == namespaceId && "taskGroup" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(BackstageGroup),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(TaskGroup),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BackstageGroup),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(TaskGroup),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class SimpleGroups : OpenXmlCompositeElement
@@ -27106,7 +27106,7 @@ public partial class SimpleGroups : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -27179,7 +27179,7 @@ if( 57 == namespaceId && "taskGroup" == name)
 }
 /// <summary>
 /// <para>Defines the BackstageTab Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:tab.</para>
 /// </summary>
 /// <remarks>
@@ -27190,8 +27190,8 @@ if( 57 == namespaceId && "taskGroup" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(BackstageGroups),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(SimpleGroups),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BackstageGroups),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(SimpleGroups),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class BackstageTab : OpenXmlCompositeElement
@@ -27229,7 +27229,7 @@ public partial class BackstageTab : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -27701,7 +27701,7 @@ if( 0 == namespaceId && "secondColumnMaxWidth" == name)
 }
 /// <summary>
 /// <para>Defines the BackstageFastCommandButton Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:button.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -27742,7 +27742,7 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -28093,7 +28093,7 @@ if( 0 == namespaceId && "getImage" == name)
 }
 /// <summary>
 /// <para>Defines the Commands Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:commands.</para>
 /// </summary>
 /// <remarks>
@@ -28103,7 +28103,7 @@ if( 0 == namespaceId && "getImage" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(Command),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(Command),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Commands : OpenXmlCompositeElement
@@ -28141,7 +28141,7 @@ public partial class Commands : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -28211,7 +28211,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the Ribbon Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:ribbon.</para>
 /// </summary>
 /// <remarks>
@@ -28223,9 +28223,9 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(QuickAccessToolbar),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Tabs),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ContextualTabs),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(QuickAccessToolbar),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(Tabs),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ContextualTabs),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Ribbon : OpenXmlCompositeElement
@@ -28263,7 +28263,7 @@ public partial class Ribbon : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -28448,7 +28448,7 @@ if( 57 == namespaceId && "contextualTabs" == name)
 }
 /// <summary>
 /// <para>Defines the Backstage Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:backstage.</para>
 /// </summary>
 /// <remarks>
@@ -28459,8 +28459,8 @@ if( 57 == namespaceId && "contextualTabs" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(BackstageTab),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageFastCommandButton),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BackstageTab),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(BackstageFastCommandButton),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Backstage : OpenXmlCompositeElement
@@ -28498,7 +28498,7 @@ public partial class Backstage : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -28620,7 +28620,7 @@ if( 0 == namespaceId && "onHide" == name)
 }
 /// <summary>
 /// <para>Defines the ContextMenus Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:contextMenus.</para>
 /// </summary>
 /// <remarks>
@@ -28630,7 +28630,7 @@ if( 0 == namespaceId && "onHide" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ContextMenu),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ContextMenu),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ContextMenus : OpenXmlCompositeElement
@@ -28668,7 +28668,7 @@ public partial class ContextMenus : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}

@@ -37,7 +37,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     [ChildElementInfo(typeof(GraphicFrame))]
     [ChildElementInfo(typeof(ConnectionShape))]
     [ChildElementInfo(typeof(Picture))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)14)]
     [ChildElementInfo(typeof(ClientData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class TwoCellAnchor : OpenXmlCompositeElement
@@ -75,7 +75,7 @@ public partial class TwoCellAnchor : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -284,7 +284,7 @@ if( 18 == namespaceId && "clientData" == name)
     [ChildElementInfo(typeof(GraphicFrame))]
     [ChildElementInfo(typeof(ConnectionShape))]
     [ChildElementInfo(typeof(Picture))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)14)]
     [ChildElementInfo(typeof(ClientData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class OneCellAnchor : OpenXmlCompositeElement
@@ -322,7 +322,7 @@ public partial class OneCellAnchor : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -496,7 +496,7 @@ if( 18 == namespaceId && "clientData" == name)
     [ChildElementInfo(typeof(GraphicFrame))]
     [ChildElementInfo(typeof(ConnectionShape))]
     [ChildElementInfo(typeof(Picture))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)14)]
     [ChildElementInfo(typeof(ClientData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class AbsoluteAnchor : OpenXmlCompositeElement
@@ -534,7 +534,7 @@ public partial class AbsoluteAnchor : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -736,7 +736,7 @@ public partial class Shape : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1007,7 +1007,7 @@ if( 0 == namespaceId && "fPublished" == name)
     [ChildElementInfo(typeof(GraphicFrame))]
     [ChildElementInfo(typeof(ConnectionShape))]
     [ChildElementInfo(typeof(Picture))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class GroupShape : OpenXmlCompositeElement
 {
@@ -1044,7 +1044,7 @@ public partial class GroupShape : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1241,7 +1241,7 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1490,7 +1490,7 @@ public partial class ConnectionShape : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1741,7 +1741,7 @@ public partial class Picture : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1961,7 +1961,7 @@ if( 0 == namespaceId && "fPublished" == name)
 }
 /// <summary>
 /// <para>Defines the ContentPart Class.</para>
-///<para>This class is only available in Office2010.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xdr:contentPart.</para>
 /// </summary>
 /// <remarks>
@@ -1974,10 +1974,10 @@ if( 0 == namespaceId && "fPublished" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ContentPart : OpenXmlCompositeElement
@@ -2015,7 +2015,7 @@ public partial class ContentPart : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((2 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2287,7 +2287,7 @@ public partial class WorksheetDrawing : OpenXmlPartRootElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2453,7 +2453,7 @@ public partial class NonVisualShapeProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2656,7 +2656,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2893,7 +2893,7 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3114,7 +3114,7 @@ public partial class TextBody : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3294,7 +3294,7 @@ public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElemen
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3471,7 +3471,7 @@ public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3652,7 +3652,7 @@ public partial class BlipFill : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3870,7 +3870,7 @@ public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4047,7 +4047,7 @@ public partial class Transform : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4278,7 +4278,7 @@ public partial class ColumnId : OpenXmlLeafTextElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4367,7 +4367,7 @@ public partial class ColumnOffset : OpenXmlLeafTextElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4447,7 +4447,7 @@ public partial class RowOffset : OpenXmlLeafTextElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4527,7 +4527,7 @@ public partial class RowId : OpenXmlLeafTextElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4625,7 +4625,7 @@ public partial class FromMarker : MarkerType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4725,7 +4725,7 @@ public partial class ToMarker : MarkerType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4985,7 +4985,7 @@ public partial class ClientData : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5109,7 +5109,7 @@ public partial class Extent : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5233,7 +5233,7 @@ public partial class Position : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5368,7 +5368,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5657,7 +5657,7 @@ public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5873,7 +5873,7 @@ public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlComposite
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6092,7 +6092,7 @@ public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6304,7 +6304,7 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6481,7 +6481,7 @@ public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElem
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6658,7 +6658,7 @@ public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6853,7 +6853,7 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}

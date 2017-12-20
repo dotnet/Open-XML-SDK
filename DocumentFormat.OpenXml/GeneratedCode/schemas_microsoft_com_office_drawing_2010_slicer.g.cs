@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
 {
 /// <summary>
 /// <para>Defines the Slicer Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is sle:slicer.</para>
 /// </summary>
 /// <remarks>
@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Slicer : OpenXmlCompositeElement
@@ -61,7 +61,7 @@ public partial class Slicer : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -204,7 +204,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the OfficeArtExtensionList Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is sle:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -252,7 +252,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}

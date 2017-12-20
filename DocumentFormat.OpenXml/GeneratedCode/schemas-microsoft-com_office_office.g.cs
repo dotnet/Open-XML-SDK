@@ -78,7 +78,7 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -615,7 +615,7 @@ public partial class ShapeLayout : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -841,7 +841,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1127,7 +1127,7 @@ public partial class Ink : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1258,7 +1258,7 @@ public partial class Diagram : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1568,7 +1568,7 @@ public partial class Skew : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1750,7 +1750,7 @@ public partial class Extrusion : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2282,7 +2282,7 @@ public partial class Callout : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2576,7 +2576,7 @@ public partial class Lock : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2853,7 +2853,7 @@ public partial class OleObject : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3163,7 +3163,7 @@ public partial class Complex : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3275,7 +3275,7 @@ public partial class LeftStroke : StrokeChildType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3341,7 +3341,7 @@ public partial class TopStroke : StrokeChildType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3407,7 +3407,7 @@ public partial class RightStroke : StrokeChildType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3473,7 +3473,7 @@ public partial class BottomStroke : StrokeChildType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3539,7 +3539,7 @@ public partial class ColumnStroke : StrokeChildType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4035,7 +4035,7 @@ public partial class ClipPath : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4147,7 +4147,7 @@ public partial class FillExtendedProperties : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4273,7 +4273,7 @@ public partial class ShapeIdMap : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4406,7 +4406,7 @@ public partial class RegroupTable : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4559,7 +4559,7 @@ public partial class Rules : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4705,7 +4705,7 @@ public partial class Entry : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4836,7 +4836,7 @@ public partial class Rule : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5029,7 +5029,7 @@ public partial class RelationTable : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5175,7 +5175,7 @@ public partial class Relation : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5329,7 +5329,7 @@ public partial class LinkType : OpenXmlLeafTextElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5418,7 +5418,7 @@ public partial class LockedField : OpenXmlLeafTextElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5507,7 +5507,7 @@ public partial class FieldCodes : OpenXmlLeafTextElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5596,7 +5596,7 @@ public partial class Proxy : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5748,7 +5748,7 @@ public partial class ColorMostRecentlyUsed : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5874,7 +5874,7 @@ public partial class ColorMenu : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}

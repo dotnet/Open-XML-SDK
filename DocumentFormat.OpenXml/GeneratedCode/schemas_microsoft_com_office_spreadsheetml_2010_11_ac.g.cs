@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Office2013.ExcelAc
 {
 /// <summary>
 /// <para>Defines the AbsolutePath Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15ac:absPath.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -53,7 +53,7 @@ public partial class AbsolutePath : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}

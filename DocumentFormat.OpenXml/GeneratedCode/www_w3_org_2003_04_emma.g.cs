@@ -51,7 +51,7 @@ public partial class DerivedFrom : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -180,7 +180,7 @@ public partial class Info : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -330,7 +330,7 @@ public partial class Lattice : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -523,7 +523,7 @@ public partial class Literal : OpenXmlLeafTextElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -627,7 +627,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1200,7 +1200,7 @@ public partial class OneOf : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1760,7 +1760,7 @@ public partial class Group : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2307,7 +2307,7 @@ public partial class Sequence : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2839,7 +2839,7 @@ public partial class GroupInfo : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2993,7 +2993,7 @@ public partial class Derivation : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3111,7 +3111,7 @@ public partial class Grammar : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3240,7 +3240,7 @@ public partial class Model : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3402,7 +3402,7 @@ public partial class EndPointInfo : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3551,7 +3551,7 @@ public partial class EndPoint : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3859,7 +3859,7 @@ public partial class Node : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4042,7 +4042,7 @@ public partial class Arc : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4383,7 +4383,7 @@ public partial class Emma : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}

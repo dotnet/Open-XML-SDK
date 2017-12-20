@@ -50,7 +50,7 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -510,7 +510,7 @@ public partial class UnsizedButton : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1026,7 +1026,7 @@ public partial class CheckBox : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1467,7 +1467,7 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2272,7 +2272,7 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2802,7 +2802,7 @@ public partial class MenuSeparator : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3021,7 +3021,7 @@ public partial class UnsizedSplitButton : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3404,7 +3404,7 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3978,7 +3978,7 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4519,7 +4519,7 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4902,7 +4902,7 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5476,7 +5476,7 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5992,7 +5992,7 @@ public partial class TextLabel : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6368,7 +6368,7 @@ public partial class Button : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6912,7 +6912,7 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -7470,7 +7470,7 @@ public partial class EditBox : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -8007,7 +8007,7 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -8692,7 +8692,7 @@ public partial class DropDown : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -9380,7 +9380,7 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -10236,7 +10236,7 @@ public partial class Menu : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -10838,7 +10838,7 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -11407,7 +11407,7 @@ public partial class SplitButton : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -11828,7 +11828,7 @@ public partial class Box : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -12142,7 +12142,7 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -12425,7 +12425,7 @@ public partial class MenuRoot : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -12630,7 +12630,7 @@ public partial class CustomUI : OpenXmlPartRootElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -12847,7 +12847,7 @@ public partial class Item : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -13027,7 +13027,7 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -13515,7 +13515,7 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -14017,7 +14017,7 @@ public partial class VerticalSeparator : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -14232,7 +14232,7 @@ public partial class DialogBoxLauncher : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -14416,7 +14416,7 @@ public partial class Group : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -14885,7 +14885,7 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -15409,7 +15409,7 @@ public partial class SharedQatControls : QatItemsType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -15508,7 +15508,7 @@ public partial class DocumentSpecificQuickAccessToolbarControls : QatItemsType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -15678,7 +15678,7 @@ public partial class Tab : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -16011,7 +16011,7 @@ public partial class ContextualTabSet : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -16183,7 +16183,7 @@ public partial class RepurposedCommand : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -16358,7 +16358,7 @@ public partial class OfficeMenu : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -16500,7 +16500,7 @@ public partial class QuickAccessToolbar : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -16675,7 +16675,7 @@ public partial class Tabs : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -16791,7 +16791,7 @@ public partial class ContextualTabSets : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -16907,7 +16907,7 @@ public partial class RepurposedCommands : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -17029,7 +17029,7 @@ public partial class Ribbon : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}

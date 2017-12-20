@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
 {
 /// <summary>
 /// <para>Defines the ThemeFamily Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is thm15:themeFamily.</para>
 /// </summary>
 /// <remarks>
@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ThemeFamily : OpenXmlCompositeElement
@@ -60,7 +60,7 @@ public partial class ThemeFamily : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -231,7 +231,7 @@ if( 0 == namespaceId && "vid" == name)
 }
 /// <summary>
 /// <para>Defines the OfficeArtExtensionList Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is thm15:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -279,7 +279,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -349,7 +349,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the ThemeVariant Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is thm15:themeVariant.</para>
 /// </summary>
 /// <remarks>
@@ -359,7 +359,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ThemeVariant : OpenXmlCompositeElement
@@ -397,7 +397,7 @@ public partial class ThemeVariant : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -598,7 +598,7 @@ if( 19 == namespaceId && "id" == name)
 }
 /// <summary>
 /// <para>Defines the ThemeVariantList Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is thm15:themeVariantLst.</para>
 /// </summary>
 /// <remarks>
@@ -608,7 +608,7 @@ if( 19 == namespaceId && "id" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ThemeVariant),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(ThemeVariant),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ThemeVariantList : OpenXmlCompositeElement
@@ -646,7 +646,7 @@ public partial class ThemeVariantList : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}

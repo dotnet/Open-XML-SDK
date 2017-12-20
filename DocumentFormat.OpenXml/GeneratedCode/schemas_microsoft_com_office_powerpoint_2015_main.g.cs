@@ -6,18 +6,21 @@ using System.IO.Packaging;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
+using DocumentFormat.OpenXml.Presentation;
 
-namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
+namespace DocumentFormat.OpenXml.Office2016.Presentation
 {
 /// <summary>
-/// <para>Legacy Drawing Object.</para>
-/// <para> When the object is serialized out as xml, its qualified name is comp:legacyDrawing.</para>
+/// <para>Defines the DesignElement Class.</para>
+///<para>This class is only available in Office 2016.</para>
+/// <para> When the object is serialized out as xml, its qualified name is p16:designElem.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
-public partial class LegacyDrawing : OpenXmlLeafElement
+[OfficeAvailability(FileFormatVersions.Office2016)]
+public partial class DesignElement : OpenXmlLeafElement
 {
-    private const string tagName = "legacyDrawing";
+    private const string tagName = "designElem";
     /// <summary>
     /// Gets the local name of the element.
     /// </summary>
@@ -26,13 +29,13 @@ public partial class LegacyDrawing : OpenXmlLeafElement
         get { return tagName; }
     }
     
-    private const byte tagNsId = 13;
+    private const byte tagNsId = 78;
     internal override byte NamespaceId
     {
         get { return tagNsId; }
     }
     
-    internal const int ElementTypeIdConst = 10681;
+    internal const int ElementTypeIdConst = 13444;
     
     /// <summary>
     /// Gets the type ID of the element.
@@ -50,7 +53,7 @@ public partial class LegacyDrawing : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((15 & (int)version) > 0)
+		if((8 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -58,7 +61,7 @@ public partial class LegacyDrawing : OpenXmlLeafElement
     }
     
 
-    private static string[] attributeTagNames = { "spid" };
+    private static string[] attributeTagNames = { "val" };
     private static byte[] attributeNamespaceIds = { 0 };
     
     internal override string[] AttributeTagNames {
@@ -76,21 +79,21 @@ public partial class LegacyDrawing : OpenXmlLeafElement
 
     
         /// <summary>
-    /// <para> Shape ID.</para>
-    /// <para>Represents the following attribute in the schema: spid </para>
+    /// <para> val.</para>
+    /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "spid")]
-    public StringValue ShapeId
+    [SchemaAttr(0, "val")]
+    public BooleanValue Val
     {
-        get { return (StringValue)Attributes[0]; }
+        get { return (BooleanValue)Attributes[0]; }
         set { Attributes[0] = value; }
     }
     
 
     /// <summary>
-    /// Initializes a new instance of the LegacyDrawing class.
+    /// Initializes a new instance of the DesignElement class.
     /// </summary>
-    public LegacyDrawing():base(){}
+    public DesignElement():base(){}
     
       
      
@@ -99,8 +102,8 @@ public partial class LegacyDrawing : OpenXmlLeafElement
     
     internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
 {
-    if( 0 == namespaceId && "spid" == name)
-    return new StringValue();
+    if( 0 == namespaceId && "val" == name)
+    return new BooleanValue();
     
 
     
@@ -114,7 +117,7 @@ public partial class LegacyDrawing : OpenXmlLeafElement
     /// <returns>Returns the cloned node. </returns>
     public override OpenXmlElement CloneNode(bool deep)
     {
-        return CloneImp<LegacyDrawing>(deep);
+        return CloneImp<DesignElement>(deep);
     }
 
    

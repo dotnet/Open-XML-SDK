@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ConnectionShape))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Picture))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart),(FileFormatVersions)14)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrame))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupShape))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList))]
@@ -75,7 +75,7 @@ public partial class LockedCanvas : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((7 & (int)version) > 0)
+		if((15 & (int)version) > 0)
 		{
 			return true;
 		}

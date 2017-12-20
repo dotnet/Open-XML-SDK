@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
 {
 /// <summary>
 /// <para>Defines the WordprocessingCanvas Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wpc:wpc.</para>
 /// </summary>
 /// <remarks>
@@ -33,14 +33,14 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(BackgroundFormatting),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(WholeFormatting),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BackgroundFormatting),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(WholeFormatting),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape),(FileFormatVersions)14)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Pictures.Picture))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.ContentPart),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.WordprocessingGroup),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(GraphicFrameType),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.ContentPart),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.WordprocessingGroup),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(GraphicFrameType),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class WordprocessingCanvas : OpenXmlCompositeElement
@@ -78,7 +78,7 @@ public partial class WordprocessingCanvas : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -225,7 +225,7 @@ if( 59 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the BackgroundFormatting Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wpc:bg.</para>
 /// </summary>
 /// <remarks>
@@ -287,7 +287,7 @@ public partial class BackgroundFormatting : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -378,7 +378,7 @@ if( 10 == namespaceId && "effectDag" == name)
 }
 /// <summary>
 /// <para>Defines the WholeFormatting Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wpc:whole.</para>
 /// </summary>
 /// <remarks>
@@ -430,7 +430,7 @@ public partial class WholeFormatting : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -544,7 +544,7 @@ if( 10 == namespaceId && "effectDag" == name)
 }
 /// <summary>
 /// <para>Defines the GraphicFrameType Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wpc:graphicFrame.</para>
 /// </summary>
 /// <remarks>
@@ -558,11 +558,11 @@ if( 10 == namespaceId && "effectDag" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D),(FileFormatVersions)14)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Graphic))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class GraphicFrameType : OpenXmlCompositeElement
@@ -600,7 +600,7 @@ public partial class GraphicFrameType : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -792,7 +792,7 @@ if( 60 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the OfficeArtExtensionList Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wpc:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -840,7 +840,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}

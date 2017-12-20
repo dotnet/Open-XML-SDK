@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
 {
 /// <summary>
 /// <para>Defines the Color Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:color.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -53,7 +53,7 @@ public partial class Color : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -174,7 +174,7 @@ if( 23 == namespaceId && "themeShade" == name)
 }
 /// <summary>
 /// <para>Defines the DataBinding Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:dataBinding.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -215,7 +215,7 @@ public partial class DataBinding : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -320,7 +320,7 @@ if( 23 == namespaceId && "storeItemID" == name)
 }
 /// <summary>
 /// <para>Defines the Appearance Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:appearance.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -361,7 +361,7 @@ public partial class Appearance : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -443,7 +443,7 @@ public partial class Appearance : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(CommentEx),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(CommentEx),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class CommentsEx : OpenXmlPartRootElement
@@ -481,7 +481,7 @@ public partial class CommentsEx : OpenXmlPartRootElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -602,7 +602,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(Person),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(Person),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class People : OpenXmlPartRootElement
@@ -640,7 +640,7 @@ public partial class People : OpenXmlPartRootElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -752,7 +752,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the SdtRepeatedSection Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:repeatingSection.</para>
 /// </summary>
 /// <remarks>
@@ -763,8 +763,8 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(SectionTitle),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(DoNotAllowInsertDeleteSection),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(SectionTitle),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(DoNotAllowInsertDeleteSection),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class SdtRepeatedSection : OpenXmlCompositeElement
@@ -802,7 +802,7 @@ public partial class SdtRepeatedSection : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -931,7 +931,7 @@ if( 69 == namespaceId && "doNotAllowInsertDeleteSection" == name)
 }
 /// <summary>
 /// <para>Defines the SdtRepeatedSectionItem Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:repeatingSectionItem.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -972,7 +972,7 @@ public partial class SdtRepeatedSectionItem : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1008,7 +1008,7 @@ public partial class SdtRepeatedSectionItem : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the ChartTrackingRefBased Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:chartTrackingRefBased.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1049,7 +1049,7 @@ public partial class ChartTrackingRefBased : OnOffType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1076,7 +1076,7 @@ public partial class ChartTrackingRefBased : OnOffType
 }
 /// <summary>
 /// <para>Defines the DefaultCollapsed Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:collapsed.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1117,7 +1117,7 @@ public partial class DefaultCollapsed : OnOffType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1144,7 +1144,7 @@ public partial class DefaultCollapsed : OnOffType
 }
 /// <summary>
 /// <para>Defines the WebExtensionLinked Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:webExtensionLinked.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1185,7 +1185,7 @@ public partial class WebExtensionLinked : OnOffType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1212,7 +1212,7 @@ public partial class WebExtensionLinked : OnOffType
 }
 /// <summary>
 /// <para>Defines the WebExtensionCreated Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:webExtensionCreated.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1253,7 +1253,7 @@ public partial class WebExtensionCreated : OnOffType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1280,7 +1280,7 @@ public partial class WebExtensionCreated : OnOffType
 }
 /// <summary>
 /// <para>Defines the DoNotAllowInsertDeleteSection Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:doNotAllowInsertDeleteSection.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1321,7 +1321,7 @@ public partial class DoNotAllowInsertDeleteSection : OnOffType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1406,7 +1406,7 @@ public abstract partial class OnOffType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the PersistentDocumentId Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:docId.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1447,7 +1447,7 @@ public partial class PersistentDocumentId : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1520,7 +1520,7 @@ public partial class PersistentDocumentId : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the FootnoteColumns Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:footnoteColumns.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1561,7 +1561,7 @@ public partial class FootnoteColumns : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1634,7 +1634,7 @@ public partial class FootnoteColumns : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the CommentEx Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:commentEx.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1675,7 +1675,7 @@ public partial class CommentEx : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1780,7 +1780,7 @@ if( 69 == namespaceId && "done" == name)
 }
 /// <summary>
 /// <para>Defines the Person Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:person.</para>
 /// </summary>
 /// <remarks>
@@ -1790,7 +1790,7 @@ if( 69 == namespaceId && "done" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(PresenceInfo),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(PresenceInfo),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Person : OpenXmlCompositeElement
@@ -1828,7 +1828,7 @@ public partial class Person : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1989,7 +1989,7 @@ if( 69 == namespaceId && "contact" == name)
 }
 /// <summary>
 /// <para>Defines the PresenceInfo Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:presenceInfo.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -2030,7 +2030,7 @@ public partial class PresenceInfo : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2119,7 +2119,7 @@ if( 69 == namespaceId && "userId" == name)
 }
 /// <summary>
 /// <para>Defines the SectionTitle Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:sectionTitle.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -2160,7 +2160,7 @@ public partial class SectionTitle : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}

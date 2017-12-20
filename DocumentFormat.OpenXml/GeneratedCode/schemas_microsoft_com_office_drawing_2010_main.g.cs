@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
 {
 /// <summary>
 /// <para>Defines the CameraTool Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:cameraTool.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -53,7 +53,7 @@ public partial class CameraTool : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -138,7 +138,7 @@ if( 0 == namespaceId && "spid" == name)
 }
 /// <summary>
 /// <para>Defines the CompatExtension Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:compatExt.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -179,7 +179,7 @@ public partial class CompatExtension : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -250,7 +250,7 @@ public partial class CompatExtension : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the IsCanvas Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:isCanvas.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -291,7 +291,7 @@ public partial class IsCanvas : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -362,7 +362,7 @@ public partial class IsCanvas : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the GvmlContentPart Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:contentPart.</para>
 /// </summary>
 /// <remarks>
@@ -374,9 +374,9 @@ public partial class IsCanvas : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(NonVisualContentPartProperties),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Transform2D),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(NonVisualContentPartProperties),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(Transform2D),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class GvmlContentPart : OpenXmlCompositeElement
@@ -414,7 +414,7 @@ public partial class GvmlContentPart : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -615,7 +615,7 @@ if( 19 == namespaceId && "id" == name)
 }
 /// <summary>
 /// <para>Defines the ShadowObscured Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:shadowObscured.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -656,7 +656,7 @@ public partial class ShadowObscured : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -727,7 +727,7 @@ public partial class ShadowObscured : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the HiddenFillProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:hiddenFill.</para>
 /// </summary>
 /// <remarks>
@@ -785,7 +785,7 @@ public partial class HiddenFillProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -998,7 +998,7 @@ if( 10 == namespaceId && "grpFill" == name)
 }
 /// <summary>
 /// <para>Defines the HiddenLineProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:hiddenLine.</para>
 /// </summary>
 /// <remarks>
@@ -1068,7 +1068,7 @@ public partial class HiddenLineProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1248,7 +1248,7 @@ if( 0 == namespaceId && "algn" == name)
 }
 /// <summary>
 /// <para>Defines the HiddenEffectsProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:hiddenEffects.</para>
 /// </summary>
 /// <remarks>
@@ -1298,7 +1298,7 @@ public partial class HiddenEffectsProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1427,7 +1427,7 @@ if( 10 == namespaceId && "effectDag" == name)
 }
 /// <summary>
 /// <para>Defines the HiddenScene3D Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:hiddenScene3d.</para>
 /// </summary>
 /// <remarks>
@@ -1481,7 +1481,7 @@ public partial class HiddenScene3D : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1652,7 +1652,7 @@ if( 10 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the HiddenShape3D Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:hiddenSp3d.</para>
 /// </summary>
 /// <remarks>
@@ -1708,7 +1708,7 @@ public partial class HiddenShape3D : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1977,7 +1977,7 @@ if( 0 == namespaceId && "prstMaterial" == name)
 }
 /// <summary>
 /// <para>Defines the ImageProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:imgProps.</para>
 /// </summary>
 /// <remarks>
@@ -1987,7 +1987,7 @@ if( 0 == namespaceId && "prstMaterial" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ImageLayer),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ImageLayer),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ImageProperties : OpenXmlCompositeElement
@@ -2025,7 +2025,7 @@ public partial class ImageProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2133,7 +2133,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the UseLocalDpi Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:useLocalDpi.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -2174,7 +2174,7 @@ public partial class UseLocalDpi : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2245,7 +2245,7 @@ public partial class UseLocalDpi : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the TextMath Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:m.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -2286,7 +2286,7 @@ public partial class TextMath : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2322,7 +2322,7 @@ public partial class TextMath : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the OfficeArtExtensionList Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -2370,7 +2370,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2440,7 +2440,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the ContentPartLocks Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:cpLocks.</para>
 /// </summary>
 /// <remarks>
@@ -2450,7 +2450,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ContentPartLocks : OpenXmlCompositeElement
@@ -2488,7 +2488,7 @@ public partial class ContentPartLocks : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2757,7 +2757,7 @@ if( 0 == namespaceId && "noChangeShapeType" == name)
 }
 /// <summary>
 /// <para>Defines the ForegroundMark Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:foregroundMark.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -2798,7 +2798,7 @@ public partial class ForegroundMark : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2911,7 +2911,7 @@ if( 0 == namespaceId && "y2" == name)
 }
 /// <summary>
 /// <para>Defines the BackgroundMark Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:backgroundMark.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -2952,7 +2952,7 @@ public partial class BackgroundMark : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3065,7 +3065,7 @@ if( 0 == namespaceId && "y2" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticBlur Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticBlur.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -3106,7 +3106,7 @@ public partial class ArtisticBlur : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3177,7 +3177,7 @@ public partial class ArtisticBlur : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the ArtisticCement Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticCement.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -3218,7 +3218,7 @@ public partial class ArtisticCement : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3303,7 +3303,7 @@ if( 0 == namespaceId && "crackSpacing" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticChalkSketch Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticChalkSketch.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -3344,7 +3344,7 @@ public partial class ArtisticChalkSketch : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3429,7 +3429,7 @@ if( 0 == namespaceId && "pressure" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticCrisscrossEtching Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticCrisscrossEtching.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -3470,7 +3470,7 @@ public partial class ArtisticCrisscrossEtching : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3555,7 +3555,7 @@ if( 0 == namespaceId && "pressure" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticCutout Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticCutout.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -3596,7 +3596,7 @@ public partial class ArtisticCutout : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3681,7 +3681,7 @@ if( 0 == namespaceId && "numberOfShades" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticFilmGrain Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticFilmGrain.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -3722,7 +3722,7 @@ public partial class ArtisticFilmGrain : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3807,7 +3807,7 @@ if( 0 == namespaceId && "grainSize" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticGlass Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticGlass.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -3848,7 +3848,7 @@ public partial class ArtisticGlass : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -3933,7 +3933,7 @@ if( 0 == namespaceId && "scaling" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticGlowDiffused Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticGlowDiffused.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -3974,7 +3974,7 @@ public partial class ArtisticGlowDiffused : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4059,7 +4059,7 @@ if( 0 == namespaceId && "intensity" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticGlowEdges Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticGlowEdges.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -4100,7 +4100,7 @@ public partial class ArtisticGlowEdges : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4185,7 +4185,7 @@ if( 0 == namespaceId && "smoothness" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticLightScreen Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticLightScreen.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -4226,7 +4226,7 @@ public partial class ArtisticLightScreen : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4311,7 +4311,7 @@ if( 0 == namespaceId && "gridSize" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticLineDrawing Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticLineDrawing.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -4352,7 +4352,7 @@ public partial class ArtisticLineDrawing : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4437,7 +4437,7 @@ if( 0 == namespaceId && "pencilSize" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticMarker Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticMarker.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -4478,7 +4478,7 @@ public partial class ArtisticMarker : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4563,7 +4563,7 @@ if( 0 == namespaceId && "size" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticMosaicBubbles Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticMosiaicBubbles.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -4604,7 +4604,7 @@ public partial class ArtisticMosaicBubbles : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4689,7 +4689,7 @@ if( 0 == namespaceId && "pressure" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticPaintStrokes Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticPaintStrokes.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -4730,7 +4730,7 @@ public partial class ArtisticPaintStrokes : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4815,7 +4815,7 @@ if( 0 == namespaceId && "intensity" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticPaintBrush Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticPaintBrush.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -4856,7 +4856,7 @@ public partial class ArtisticPaintBrush : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -4941,7 +4941,7 @@ if( 0 == namespaceId && "brushSize" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticPastelsSmooth Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticPastelsSmooth.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -4982,7 +4982,7 @@ public partial class ArtisticPastelsSmooth : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5067,7 +5067,7 @@ if( 0 == namespaceId && "scaling" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticPencilGrayscale Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticPencilGrayscale.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -5108,7 +5108,7 @@ public partial class ArtisticPencilGrayscale : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5193,7 +5193,7 @@ if( 0 == namespaceId && "pencilSize" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticPencilSketch Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticPencilSketch.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -5234,7 +5234,7 @@ public partial class ArtisticPencilSketch : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5319,7 +5319,7 @@ if( 0 == namespaceId && "pressure" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticPhotocopy Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticPhotocopy.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -5360,7 +5360,7 @@ public partial class ArtisticPhotocopy : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5445,7 +5445,7 @@ if( 0 == namespaceId && "detail" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticPlasticWrap Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticPlasticWrap.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -5486,7 +5486,7 @@ public partial class ArtisticPlasticWrap : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5571,7 +5571,7 @@ if( 0 == namespaceId && "smoothness" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticTexturizer Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticTexturizer.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -5612,7 +5612,7 @@ public partial class ArtisticTexturizer : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5697,7 +5697,7 @@ if( 0 == namespaceId && "scaling" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticWatercolorSponge Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticWatercolorSponge.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -5738,7 +5738,7 @@ public partial class ArtisticWatercolorSponge : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -5823,7 +5823,7 @@ if( 0 == namespaceId && "brushSize" == name)
 }
 /// <summary>
 /// <para>Defines the BackgroundRemoval Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:backgroundRemoval.</para>
 /// </summary>
 /// <remarks>
@@ -5834,8 +5834,8 @@ if( 0 == namespaceId && "brushSize" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ForegroundMark),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackgroundMark),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ForegroundMark),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(BackgroundMark),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class BackgroundRemoval : OpenXmlCompositeElement
@@ -5873,7 +5873,7 @@ public partial class BackgroundRemoval : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6023,7 +6023,7 @@ if( 0 == namespaceId && "r" == name)
 }
 /// <summary>
 /// <para>Defines the BrightnessContrast Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:brightnessContrast.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -6064,7 +6064,7 @@ public partial class BrightnessContrast : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6149,7 +6149,7 @@ if( 0 == namespaceId && "contrast" == name)
 }
 /// <summary>
 /// <para>Defines the ColorTemperature Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:colorTemperature.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -6190,7 +6190,7 @@ public partial class ColorTemperature : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6261,7 +6261,7 @@ public partial class ColorTemperature : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the Saturation Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:saturation.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -6302,7 +6302,7 @@ public partial class Saturation : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6373,7 +6373,7 @@ public partial class Saturation : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the SharpenSoften Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:sharpenSoften.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -6414,7 +6414,7 @@ public partial class SharpenSoften : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -6485,7 +6485,7 @@ public partial class SharpenSoften : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the ImageEffect Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:imgEffect.</para>
 /// </summary>
 /// <remarks>
@@ -6521,33 +6521,33 @@ public partial class SharpenSoften : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ArtisticBlur),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ArtisticCement),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ArtisticChalkSketch),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ArtisticCrisscrossEtching),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ArtisticCutout),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ArtisticFilmGrain),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ArtisticGlass),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ArtisticGlowDiffused),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ArtisticGlowEdges),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ArtisticLightScreen),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ArtisticLineDrawing),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ArtisticMarker),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ArtisticMosaicBubbles),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ArtisticPaintStrokes),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ArtisticPaintBrush),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ArtisticPastelsSmooth),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ArtisticPencilGrayscale),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ArtisticPencilSketch),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ArtisticPhotocopy),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ArtisticPlasticWrap),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ArtisticTexturizer),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ArtisticWatercolorSponge),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackgroundRemoval),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BrightnessContrast),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ColorTemperature),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Saturation),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(SharpenSoften),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ArtisticBlur),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ArtisticCement),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ArtisticChalkSketch),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ArtisticCrisscrossEtching),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ArtisticCutout),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ArtisticFilmGrain),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ArtisticGlass),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ArtisticGlowDiffused),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ArtisticGlowEdges),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ArtisticLightScreen),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ArtisticLineDrawing),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ArtisticMarker),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ArtisticMosaicBubbles),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ArtisticPaintStrokes),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ArtisticPaintBrush),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ArtisticPastelsSmooth),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ArtisticPencilGrayscale),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ArtisticPencilSketch),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ArtisticPhotocopy),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ArtisticPlasticWrap),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ArtisticTexturizer),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ArtisticWatercolorSponge),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(BackgroundRemoval),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(BrightnessContrast),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ColorTemperature),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(Saturation),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(SharpenSoften),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ImageEffect : OpenXmlCompositeElement
@@ -6585,7 +6585,7 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -7274,7 +7274,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
 }
 /// <summary>
 /// <para>Defines the ImageLayer Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:imgLayer.</para>
 /// </summary>
 /// <remarks>
@@ -7284,7 +7284,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ImageEffect),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ImageEffect),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ImageLayer : OpenXmlCompositeElement
@@ -7322,7 +7322,7 @@ public partial class ImageLayer : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -7429,7 +7429,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the NonVisualDrawingProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:cNvPr.</para>
 /// </summary>
 /// <remarks>
@@ -7481,7 +7481,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -7722,7 +7722,7 @@ if( 0 == namespaceId && "title" == name)
 }
 /// <summary>
 /// <para>Defines the NonVisualInkContentPartProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:cNvContentPartPr.</para>
 /// </summary>
 /// <remarks>
@@ -7733,8 +7733,8 @@ if( 0 == namespaceId && "title" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ContentPartLocks),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ContentPartLocks),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
@@ -7772,7 +7772,7 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -7936,7 +7936,7 @@ if( 48 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the NonVisualContentPartProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:nvContentPartPr.</para>
 /// </summary>
 /// <remarks>
@@ -7947,8 +7947,8 @@ if( 48 == namespaceId && "extLst" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(NonVisualDrawingProperties),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(NonVisualInkContentPartProperties),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(NonVisualDrawingProperties),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(NonVisualInkContentPartProperties),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
@@ -7986,7 +7986,7 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -8115,7 +8115,7 @@ if( 48 == namespaceId && "cNvContentPartPr" == name)
 }
 /// <summary>
 /// <para>Defines the Transform2D Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:xfrm.</para>
 /// </summary>
 /// <remarks>
@@ -8165,7 +8165,7 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}

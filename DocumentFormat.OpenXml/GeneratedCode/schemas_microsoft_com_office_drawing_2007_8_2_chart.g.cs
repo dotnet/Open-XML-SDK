@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
 {
 /// <summary>
 /// <para>Defines the PivotOptions Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:pivotOptions.</para>
 /// </summary>
 /// <remarks>
@@ -28,11 +28,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DropZoneFilter),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DropZoneCategories),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DropZoneData),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DropZoneSeries),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DropZonesVisible),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(DropZoneFilter),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(DropZoneCategories),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(DropZoneData),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(DropZoneSeries),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(DropZonesVisible),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PivotOptions : OpenXmlCompositeElement
@@ -70,7 +70,7 @@ public partial class PivotOptions : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -262,7 +262,7 @@ if( 46 == namespaceId && "dropZonesVisible" == name)
 }
 /// <summary>
 /// <para>Defines the SketchOptions Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:sketchOptions.</para>
 /// </summary>
 /// <remarks>
@@ -273,8 +273,8 @@ if( 46 == namespaceId && "dropZonesVisible" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(InSketchMode),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ShowSketchButton),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(InSketchMode),(FileFormatVersions)14)]
+    [ChildElementInfo(typeof(ShowSketchButton),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class SketchOptions : OpenXmlCompositeElement
@@ -312,7 +312,7 @@ public partial class SketchOptions : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -441,7 +441,7 @@ if( 46 == namespaceId && "showSketchBtn" == name)
 }
 /// <summary>
 /// <para>Defines the InvertSolidFillFormat Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:invertSolidFillFmt.</para>
 /// </summary>
 /// <remarks>
@@ -451,7 +451,7 @@ if( 46 == namespaceId && "showSketchBtn" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ShapeProperties),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ShapeProperties),(FileFormatVersions)14)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class InvertSolidFillFormat : OpenXmlCompositeElement
@@ -489,7 +489,7 @@ public partial class InvertSolidFillFormat : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -597,7 +597,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the Style Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:style.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -638,7 +638,7 @@ public partial class Style : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -709,7 +709,7 @@ public partial class Style : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the ShapeProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:spPr.</para>
 /// </summary>
 /// <remarks>
@@ -785,7 +785,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -970,7 +970,7 @@ if( 10 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the DropZoneFilter Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:dropZoneFilter.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1011,7 +1011,7 @@ public partial class DropZoneFilter : BooleanFalseType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1038,7 +1038,7 @@ public partial class DropZoneFilter : BooleanFalseType
 }
 /// <summary>
 /// <para>Defines the DropZoneCategories Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:dropZoneCategories.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1079,7 +1079,7 @@ public partial class DropZoneCategories : BooleanFalseType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1106,7 +1106,7 @@ public partial class DropZoneCategories : BooleanFalseType
 }
 /// <summary>
 /// <para>Defines the DropZoneData Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:dropZoneData.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1147,7 +1147,7 @@ public partial class DropZoneData : BooleanFalseType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1174,7 +1174,7 @@ public partial class DropZoneData : BooleanFalseType
 }
 /// <summary>
 /// <para>Defines the DropZoneSeries Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:dropZoneSeries.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1215,7 +1215,7 @@ public partial class DropZoneSeries : BooleanFalseType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1242,7 +1242,7 @@ public partial class DropZoneSeries : BooleanFalseType
 }
 /// <summary>
 /// <para>Defines the DropZonesVisible Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:dropZonesVisible.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1283,7 +1283,7 @@ public partial class DropZonesVisible : BooleanFalseType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1310,7 +1310,7 @@ public partial class DropZonesVisible : BooleanFalseType
 }
 /// <summary>
 /// <para>Defines the InSketchMode Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:inSketchMode.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1351,7 +1351,7 @@ public partial class InSketchMode : BooleanFalseType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1434,7 +1434,7 @@ public abstract partial class BooleanFalseType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the ShowSketchButton Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:showSketchBtn.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1475,7 +1475,7 @@ public partial class ShowSketchButton : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}

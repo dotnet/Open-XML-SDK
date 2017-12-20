@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
 {
 /// <summary>
 /// <para>Defines the ShapeStyle Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is pic14:style.</para>
 /// </summary>
 /// <remarks>
@@ -66,7 +66,7 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -237,7 +237,7 @@ if( 10 == namespaceId && "fontRef" == name)
 }
 /// <summary>
 /// <para>Defines the OfficeArtExtensionList Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+///<para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is pic14:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -285,7 +285,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((6 & (int)version) > 0)
+		if((14 & (int)version) > 0)
 		{
 			return true;
 		}

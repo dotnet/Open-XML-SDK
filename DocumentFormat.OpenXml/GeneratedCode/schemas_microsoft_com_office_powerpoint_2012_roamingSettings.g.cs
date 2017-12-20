@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
 {
 /// <summary>
 /// <para>Defines the Key Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is pRoam:key.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -51,7 +51,7 @@ public partial class Key : OpenXmlLeafTextElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -92,7 +92,7 @@ public partial class Key : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Defines the Value Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is pRoam:value.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -133,7 +133,7 @@ public partial class Value : OpenXmlLeafTextElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -174,7 +174,7 @@ public partial class Value : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Defines the RoamingProperty Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is pRoam:props.</para>
 /// </summary>
 /// <remarks>
@@ -185,8 +185,8 @@ public partial class Value : OpenXmlLeafTextElement
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(Key),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(Value),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(Key),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(Value),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class RoamingProperty : OpenXmlCompositeElement
@@ -224,7 +224,7 @@ public partial class RoamingProperty : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}

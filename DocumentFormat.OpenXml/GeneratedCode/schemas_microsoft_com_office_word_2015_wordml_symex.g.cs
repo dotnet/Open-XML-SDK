@@ -5,19 +5,21 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Drawing;
+using DocumentFormat.OpenXml.Wordprocessing;
 
-namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
+namespace DocumentFormat.OpenXml.Office2016.Word.Symex
 {
 /// <summary>
-/// <para>Legacy Drawing Object.</para>
-/// <para> When the object is serialized out as xml, its qualified name is comp:legacyDrawing.</para>
+/// <para>Defines the SymEx Class.</para>
+///<para>This class is only available in Office 2016.</para>
+/// <para> When the object is serialized out as xml, its qualified name is w16se:symEx.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
-public partial class LegacyDrawing : OpenXmlLeafElement
+[OfficeAvailability(FileFormatVersions.Office2016)]
+public partial class SymEx : OpenXmlLeafElement
 {
-    private const string tagName = "legacyDrawing";
+    private const string tagName = "symEx";
     /// <summary>
     /// Gets the local name of the element.
     /// </summary>
@@ -26,13 +28,13 @@ public partial class LegacyDrawing : OpenXmlLeafElement
         get { return tagName; }
     }
     
-    private const byte tagNsId = 13;
+    private const byte tagNsId = 86;
     internal override byte NamespaceId
     {
         get { return tagNsId; }
     }
     
-    internal const int ElementTypeIdConst = 10681;
+    internal const int ElementTypeIdConst = 13592;
     
     /// <summary>
     /// Gets the type ID of the element.
@@ -50,7 +52,7 @@ public partial class LegacyDrawing : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((15 & (int)version) > 0)
+		if((8 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -58,8 +60,8 @@ public partial class LegacyDrawing : OpenXmlLeafElement
     }
     
 
-    private static string[] attributeTagNames = { "spid" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    private static string[] attributeTagNames = { "font","char" };
+    private static byte[] attributeNamespaceIds = { 86,86 };
     
     internal override string[] AttributeTagNames {
         get{
@@ -76,21 +78,36 @@ public partial class LegacyDrawing : OpenXmlLeafElement
 
     
         /// <summary>
-    /// <para> Shape ID.</para>
-    /// <para>Represents the following attribute in the schema: spid </para>
+    /// <para> font.</para>
+    /// <para>Represents the following attribute in the schema: w16se:font </para>
     /// </summary>
-    [SchemaAttr(0, "spid")]
-    public StringValue ShapeId
+///<remark> xmlns:w16se=http://schemas.microsoft.com/office/word/2015/wordml/symex
+///</remark>
+    [SchemaAttr(86, "font")]
+    public StringValue Font
     {
         get { return (StringValue)Attributes[0]; }
         set { Attributes[0] = value; }
     }
     
+    /// <summary>
+    /// <para> char.</para>
+    /// <para>Represents the following attribute in the schema: w16se:char </para>
+    /// </summary>
+///<remark> xmlns:w16se=http://schemas.microsoft.com/office/word/2015/wordml/symex
+///</remark>
+    [SchemaAttr(86, "char")]
+    public HexBinaryValue Char
+    {
+        get { return (HexBinaryValue)Attributes[1]; }
+        set { Attributes[1] = value; }
+    }
+    
 
     /// <summary>
-    /// Initializes a new instance of the LegacyDrawing class.
+    /// Initializes a new instance of the SymEx class.
     /// </summary>
-    public LegacyDrawing():base(){}
+    public SymEx():base(){}
     
       
      
@@ -99,8 +116,11 @@ public partial class LegacyDrawing : OpenXmlLeafElement
     
     internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
 {
-    if( 0 == namespaceId && "spid" == name)
+    if( 86 == namespaceId && "font" == name)
     return new StringValue();
+    
+if( 86 == namespaceId && "char" == name)
+    return new HexBinaryValue();
     
 
     
@@ -114,7 +134,7 @@ public partial class LegacyDrawing : OpenXmlLeafElement
     /// <returns>Returns the cloned node. </returns>
     public override OpenXmlElement CloneNode(bool deep)
     {
-        return CloneImp<LegacyDrawing>(deep);
+        return CloneImp<SymEx>(deep);
     }
 
    

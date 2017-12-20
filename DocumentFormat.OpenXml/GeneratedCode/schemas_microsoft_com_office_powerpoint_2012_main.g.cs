@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
 {
 /// <summary>
 /// <para>Defines the PresetTransition Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p15:prstTrans.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -53,7 +53,7 @@ public partial class PresetTransition : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -152,7 +152,7 @@ if( 0 == namespaceId && "invY" == name)
 }
 /// <summary>
 /// <para>Defines the PresenceInfo Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p15:presenceInfo.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -193,7 +193,7 @@ public partial class PresenceInfo : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -278,7 +278,7 @@ if( 0 == namespaceId && "providerId" == name)
 }
 /// <summary>
 /// <para>Defines the ThreadingInfo Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p15:threadingInfo.</para>
 /// </summary>
 /// <remarks>
@@ -288,7 +288,7 @@ if( 0 == namespaceId && "providerId" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ParentCommentIdentifier),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(ParentCommentIdentifier),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ThreadingInfo : OpenXmlCompositeElement
@@ -326,7 +326,7 @@ public partial class ThreadingInfo : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -469,7 +469,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the SlideGuideList Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p15:sldGuideLst.</para>
 /// </summary>
 /// <remarks>
@@ -517,7 +517,7 @@ public partial class SlideGuideList : ExtendedGuideList
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -569,7 +569,7 @@ public partial class SlideGuideList : ExtendedGuideList
 }
 /// <summary>
 /// <para>Defines the NotesGuideList Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p15:notesGuideLst.</para>
 /// </summary>
 /// <remarks>
@@ -617,7 +617,7 @@ public partial class NotesGuideList : ExtendedGuideList
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -678,8 +678,8 @@ public partial class NotesGuideList : ExtendedGuideList
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ExtendedGuide),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(ExtensionList),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(ExtendedGuide),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(ExtensionList),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class ExtendedGuideList : OpenXmlCompositeElement
 {
@@ -736,7 +736,7 @@ if( 68 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the ChartTrackingReferenceBased Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p15:chartTrackingRefBased.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -777,7 +777,7 @@ public partial class ChartTrackingReferenceBased : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -848,7 +848,7 @@ public partial class ChartTrackingReferenceBased : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the ParentCommentIdentifier Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p15:parentCm.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -889,7 +889,7 @@ public partial class ParentCommentIdentifier : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -974,7 +974,7 @@ if( 0 == namespaceId && "idx" == name)
 }
 /// <summary>
 /// <para>Defines the ColorType Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p15:clr.</para>
 /// </summary>
 /// <remarks>
@@ -1032,7 +1032,7 @@ public partial class ColorType : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1245,7 +1245,7 @@ if( 10 == namespaceId && "prstClr" == name)
 }
 /// <summary>
 /// <para>Defines the ExtensionList Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p15:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -1293,7 +1293,7 @@ public partial class ExtensionList : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -1363,7 +1363,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the ExtendedGuide Class.</para>
-///<para>This class is only available in Office2013.</para>
+///<para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p15:guide.</para>
 /// </summary>
 /// <remarks>
@@ -1374,8 +1374,8 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ColorType),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(ExtensionList),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(ColorType),(FileFormatVersions)12)]
+    [ChildElementInfo(typeof(ExtensionList),(FileFormatVersions)12)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ExtendedGuide : OpenXmlCompositeElement
@@ -1413,7 +1413,7 @@ public partial class ExtendedGuide : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((4 & (int)version) > 0)
+		if((12 & (int)version) > 0)
 		{
 			return true;
 		}
