@@ -4,7 +4,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace DocumentFormat.OpenXml.Validation.Schema
+namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 {
     /// <summary>
     /// Double (xsd:double) based value restriction.

@@ -4,7 +4,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace DocumentFormat.OpenXml.Validation.Schema
+namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 {
     /// <summary>
     /// UInt32 (xsd:unsignedInt) based value restriction.

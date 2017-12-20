@@ -56,7 +56,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 if (this._particleValidator == null)
                 {
-                    this._particleValidator = SchemaValidation.ParticleValidator.CreateParticleValidator(this);
+                    this._particleValidator = Schema.ParticleValidator.CreateParticleValidator(this);
                 }
                 return this._particleValidator;
             }

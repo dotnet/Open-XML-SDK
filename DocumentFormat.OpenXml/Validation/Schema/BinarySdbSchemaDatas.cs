@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Validation;
+using DocumentFormat.OpenXml.Validation.Schema.Restrictions;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -106,7 +107,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             // simple type constraints
             dataStream.Seek(this.SdbDataHead.SimpleTypeDataOffset, SeekOrigin.Begin);
-            this.SimpleTypeRestrictions = SimpleTypeRestrictions.Deserialize(dataStream, this._fileFormat);
+            this.SimpleTypeRestrictions = Restrictions.SimpleTypeRestrictions.Deserialize(dataStream, this._fileFormat);
 
 #if DEBUG
             Assert(this.SdbDataHead.SimpleTypeCount == this.SimpleTypeRestrictions.SimpleTypeCount);

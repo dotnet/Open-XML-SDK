@@ -3,7 +3,7 @@
 
 using System.Runtime.Serialization;
 
-namespace DocumentFormat.OpenXml.Validation.Schema
+namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 {
     /// <summary>
     /// Class for attributes that have different simple type in Office2007 and Office2010.

@@ -5,6 +5,7 @@
 // Please do NOT change the code manually.
 // </auto-generated>
 
+using DocumentFormat.OpenXml.Validation.Schema.Restrictions;
 using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation.Schema

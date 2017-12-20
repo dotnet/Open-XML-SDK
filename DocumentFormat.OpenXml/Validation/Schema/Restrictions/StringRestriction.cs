@@ -4,7 +4,7 @@
 using System.Runtime.Serialization;
 using System.Text.RegularExpressions;
 
-namespace DocumentFormat.OpenXml.Validation.Schema
+namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 {
     /// <summary>
     /// Base class for string (xsd:string) based simple type constraints.

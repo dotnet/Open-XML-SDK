@@ -5,7 +5,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.Serialization;
 
-namespace DocumentFormat.OpenXml.Validation.Schema
+namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 {
     /// <summary>
     /// Boolean (xsd:boolean) based simple type constraint.

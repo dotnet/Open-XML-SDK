@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Validation;
 using System;
 using System.Runtime.Serialization;
 
-namespace DocumentFormat.OpenXml.Validation.Schema
+namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 {
     /// <summary>
     /// Integer (xsd:integer) based value restriction.
