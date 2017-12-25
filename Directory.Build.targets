@@ -7,7 +7,11 @@
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta004">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
-    
+
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.6.0-beta2">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+
     <!-- GitVersionTask is not compiled against .NET Core, so importing the targets will
          result in a failure because it will try to resolve Microsoft.Build.Utilities v4.0 -->
     <PackageReference Include="GitVersionTask" Version="4.0.0-beta0012" Condition=" '$(MSBuildRuntimeType)' != 'Core' ">
@@ -17,5 +21,5 @@
   </ItemGroup>
 
   <Import Project="$(MSBuildThisFileDirectory)\Tests.targets" />
-  
+
 </Project>
