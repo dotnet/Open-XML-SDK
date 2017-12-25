@@ -141,7 +141,7 @@ namespace DocumentFormat.OpenXml
             {
                 if (!ValidOuterXml(outerXml, this.NamespaceUri, this.LocalName))
                 {
-                    throw new ArgumentException(ExceptionMessages.InvalidOuterXml, "outerXml");
+                    throw new ArgumentException(ExceptionMessages.InvalidOuterXml, nameof(outerXml));
                 }
 
                 this.RawOuterXml = outerXml;
@@ -638,7 +638,7 @@ namespace DocumentFormat.OpenXml
 
             if (localName == string.Empty)
             {
-                throw new ArgumentOutOfRangeException("localName", ExceptionMessages.StringIsEmpty);
+                throw new ArgumentOutOfRangeException(nameof(localName), ExceptionMessages.StringIsEmpty);
             }
 
             if (this.HasAttributes)
@@ -764,7 +764,7 @@ namespace DocumentFormat.OpenXml
         {
             if (String.IsNullOrEmpty(openXmlAttribute.LocalName))
             {
-                throw new ArgumentOutOfRangeException("openXmlAttribute", ExceptionMessages.LocalNameIsNull);
+                throw new ArgumentOutOfRangeException(nameof(openXmlAttribute), ExceptionMessages.LocalNameIsNull);
             }
 
             if (openXmlAttribute.Prefix == OpenXmlElementContext.xmlnsPrefix)
@@ -829,7 +829,7 @@ namespace DocumentFormat.OpenXml
 
             if (localName == string.Empty)
             {
-                throw new ArgumentOutOfRangeException("localName", ExceptionMessages.StringIsEmpty);
+                throw new ArgumentOutOfRangeException(nameof(localName), ExceptionMessages.StringIsEmpty);
             }
 
             if (this.HasAttributes)

@@ -51,7 +51,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 string message = String.Format(System.Globalization.CultureInfo.CurrentUICulture,
                                                     ExceptionMessages.FileFormatNotSupported,
                                                     fileFormat);
-                throw new ArgumentOutOfRangeException("fileFormat", message);
+                throw new ArgumentOutOfRangeException(nameof(fileFormat), message);
             }
 
             this._schemaTypeValidator = new SchemaTypeValidator(this._sdbSchemaDatas);

@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Tests
         public static XName GetXName(this OpenXmlAttribute attribute)
         {
             if (null == attribute)
-                throw new ArgumentNullException("attribute");
+                throw new ArgumentNullException(nameof(attribute));
 
             return XName.Get(attribute.LocalName, attribute.NamespaceUri);
         }
@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             if (null == attribute)
             {
-                throw new ArgumentNullException("attribute");
+                throw new ArgumentNullException(nameof(attribute));
             }
 
             if (string.IsNullOrEmpty(attribute.Prefix))
