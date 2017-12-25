@@ -444,7 +444,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 // Load source part into source root element
                 var loader = rootType.GetMethod("Load", new Type[] { srcPartType });
-                var ctor = rootType.GetConstructor(new Type[] { });
+                var ctor = rootType.GetConstructor(Cached.Array<Type>());
                 OpenXmlElement srcRoot = ctor.Invoke(null) as OpenXmlElement;
                 loader.Invoke(srcRoot, new Object[] { srcPart });
 

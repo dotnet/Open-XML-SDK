@@ -703,14 +703,9 @@ namespace DocumentFormat.OpenXml.Tests
             var unknown2 = unknown1.AppendChild(new OpenXmlUnknownElement("tmp:node2", "http://temp"));
             var miscNode = p.AppendChild(new OpenXmlMiscNode(System.Xml.XmlNodeType.Comment, "<!-- comment -->"));
 
-            var emptyListSingleton = EmptyElementList.EmptyElementListSingleton;
-            var emptyEnumeratorSingleton = EmptyEnumerator<OpenXmlElement>.EmptyEnumeratorSingleton;
-
-            Assert.NotSame(emptyListSingleton, p.ChildElements);
             Assert.Equal(4, p.ChildElements.Count);
 
             var enumerator = p.ChildElements.GetEnumerator();
-            Assert.NotSame(emptyEnumeratorSingleton, enumerator);
             Assert.True(enumerator.MoveNext());
             Assert.Same(pPr, enumerator.Current);
 
@@ -721,60 +716,47 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.False(enumerator.MoveNext()); // the end
 
             // pPr, empty children
-            Assert.Same(emptyListSingleton, pPr.ChildElements);
-            Assert.Equal(0, pPr.ChildElements.Count);
+            Assert.Empty(pPr.ChildElements);
+            Assert.Same(OpenXmlElementList.Empty, pPr.ChildElements);
             enumerator = pPr.ChildElements.GetEnumerator();
-            Assert.Same(emptyEnumeratorSingleton, enumerator);
             Assert.False(enumerator.MoveNext());
 
             // r, two child
-            Assert.NotSame(emptyListSingleton, r.ChildElements);
             Assert.Equal(2, r.ChildElements.Count);
             enumerator = r.ChildElements.GetEnumerator();
-            Assert.NotSame(emptyEnumeratorSingleton, enumerator);
             Assert.True(enumerator.MoveNext());
             Assert.Same(rPr, enumerator.Current);
 
             // rPr, one child
-            Assert.NotSame(emptyListSingleton, rPr.ChildElements);
             Assert.Equal(1, rPr.ChildElements.Count);
             enumerator = rPr.ChildElements.GetEnumerator();
-            Assert.NotSame(emptyEnumeratorSingleton, enumerator);
             Assert.True(enumerator.MoveNext());
 
             // b, leaf element
-            Assert.Same(emptyListSingleton, b.ChildElements);
             Assert.Equal(0, b.ChildElements.Count);
             enumerator = b.ChildElements.GetEnumerator();
-            Assert.Same(emptyEnumeratorSingleton, enumerator);
             Assert.False(enumerator.MoveNext());
 
             // t, leaf text element
-            Assert.Same(emptyListSingleton, t.ChildElements);
             Assert.Equal(0, t.ChildElements.Count);
             enumerator = t.ChildElements.GetEnumerator();
-            Assert.Same(emptyEnumeratorSingleton, enumerator);
             Assert.False(enumerator.MoveNext());
 
             // unknown1, one child
-            Assert.NotSame(emptyListSingleton, unknown1.ChildElements);
             Assert.Equal(1, unknown1.ChildElements.Count);
             enumerator = unknown1.ChildElements.GetEnumerator();
-            Assert.NotSame(emptyEnumeratorSingleton, enumerator);
             Assert.True(enumerator.MoveNext());
 
             // unknown2, empty children
-            Assert.Same(emptyListSingleton, unknown2.ChildElements);
+            Assert.Same(OpenXmlElementList.Empty, unknown2.ChildElements);
             Assert.Equal(0, unknown2.ChildElements.Count);
             enumerator = unknown2.ChildElements.GetEnumerator();
-            Assert.Same(emptyEnumeratorSingleton, enumerator);
             Assert.False(enumerator.MoveNext());
 
             // miscNode
-            Assert.Same(emptyListSingleton, miscNode.ChildElements);
+            Assert.Same(OpenXmlElementList.Empty, miscNode.ChildElements);
             Assert.Equal(0, miscNode.ChildElements.Count);
             enumerator = miscNode.ChildElements.GetEnumerator();
-            Assert.Same(emptyEnumeratorSingleton, enumerator);
             Assert.False(enumerator.MoveNext());
         }
 

@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Linq;
 
 namespace DocumentFormat.OpenXml
 {
@@ -115,7 +116,7 @@ namespace DocumentFormat.OpenXml
                 }
                 else
                 {
-                    return EmptyEnumerable<KeyValuePair<string, string>>.EmptyEnumerableSingleton;
+                    return Enumerable.Empty<KeyValuePair<string, string>>();
                 }
             }
         }
