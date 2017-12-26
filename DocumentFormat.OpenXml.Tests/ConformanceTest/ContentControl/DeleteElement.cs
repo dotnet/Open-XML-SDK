@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
     /// <summary>
     /// Delete all of the std element
     /// </summary>
-    public class DeleteElement
+    public static class DeleteElement
     {
         /// <summary>
         /// Delete all of the std element

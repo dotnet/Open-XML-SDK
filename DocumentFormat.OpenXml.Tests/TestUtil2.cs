@@ -7,7 +7,7 @@ using System.Reflection;
 
 namespace OxTest
 {
-    public class TestUtil
+    public static class TestUtil
     {
         public static string RootFolder => Path.GetDirectoryName(typeof(TestUtil).GetTypeInfo().Assembly.Location);
 
