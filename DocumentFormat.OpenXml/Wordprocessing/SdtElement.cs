@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         }
 
         /// <summary>
-        /// Gets/Sets the SdtProperties.
+        /// Gets or sets the SdtProperties.
         /// </summary>
         public SdtProperties SdtProperties
         {
@@ -51,7 +51,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         }
 
         /// <summary>
-        /// Gets/Sets the SdtEndCharProperties.
+        /// Gets or sets the SdtEndCharProperties.
         /// </summary>
         public SdtEndCharProperties SdtEndCharProperties
         {

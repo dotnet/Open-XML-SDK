@@ -36,10 +36,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         }
 
         /// <summary>
-        /// <para>Custom XML Markup Namespace. </para>
-        /// <para>Represents the attribte in schema: w:uri.</para>
+        /// Gets or sets the custom XML Markup Namespace.
         /// </summary>
         /// <remark>
+        /// Represents the attribte in schema: w:uri.
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main.
         /// </remark>
         [SchemaAttr(23, "uri")]
@@ -50,10 +50,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         }
 
         /// <summary>
-        /// <para>Element name. </para>
-        /// <para>Represents the attribte in schema: w:element.</para>
+        /// Gets or sets the element name.
         /// </summary>
         /// <remark>
+        /// Represents the attribte in schema: w:element.
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main.
         /// </remark>
         [SchemaAttr(23, "element")]
@@ -75,8 +75,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         }
 
         /// <summary>
-        /// <para>CustomXmlProperties.</para>
-        /// <para>Represents the element tag in schema: w:customXmlPr.</para>
+        /// Gets or sets the CustomXmlProperties which represents the element tag in schema: w:customXmlPr.
         /// </summary>
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main.

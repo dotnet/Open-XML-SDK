@@ -47,9 +47,6 @@ namespace DocumentFormat.OpenXml.Validation
 
         #region private properties
 
-        /// <summary>
-        /// Schema validator
-        /// </summary>
         private SchemaValidator SchemaValidator
         {
             get

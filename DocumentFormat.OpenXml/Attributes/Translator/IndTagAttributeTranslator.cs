@@ -19,19 +19,13 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
             formatter = null;
         }
 
-        /// <summary>
-        /// Set the index to specify the attribte name to translate.
-        /// </summary>
-        /// <returns>The index</returns>
+        /// <inheritdoc/>
         protected override int SetIndex()
         {
             return this.GetIndexByAttributeName();
         }
 
-        /// <summary>
-        /// Get the attribute value.
-        /// </summary>
-        /// <returns>The attribute value</returns>
+        /// <inheritdoc/>
         internal override string Value
         {
             get { return this.strAttrValue; }

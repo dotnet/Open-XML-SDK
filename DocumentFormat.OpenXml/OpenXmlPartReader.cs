@@ -193,9 +193,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Gets the type of the corresponding strong typed class of the current element.
-        /// </summary>
+        /// <inheritdoc/>
         public override Type ElementType
         {
             get
@@ -208,18 +206,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        ///// <summary>
-        ///// When overridden in a derived class, gets a value indicating whether the current node is an empty element (for example, <MyElement/>).
-        ///// </summary>
-        //public override bool IsEmptyElement
-        //{
-        //    get { return this._xmlReader.IsEmptyElement; }
-        //}
-
-        /// <summary>
-        /// Gets a value that indicates whether the current node is a miscellaneous XML node (non element).
-        /// </summary>
-        /// <remarks>IsStartElement and IsEndElement will be false when IsMiscNode==true.</remarks>
+        /// <inheritdoc/>
         public override bool IsMiscNode
         {
             get
@@ -240,10 +227,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Gets a value that indicates whether the current node is an element start.
-        /// </summary>
-        /// <remarks>IsStartElement and IsEndElement will be false when IsMiscNode==true.</remarks>
+        /// <inheritdoc/>
         public override bool IsStartElement
         {
             get
@@ -263,10 +247,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Gets a value that indicates whether the current node is an element end.
-        /// </summary>
-        /// <remarks>IsStartElement and IsEndElement will be false when IsMiscNode==true.</remarks>
+        /// <inheritdoc/>
         public override bool IsEndElement
         {
             get
@@ -287,9 +268,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Gets the depth of the current node in the XML document. The depth of the root element is 0.
-        /// </summary>
+        /// <inheritdoc/>
         public override int Depth
         {
             get
@@ -303,9 +282,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Gets a value that indicates whether the reader is positioned at the end of the stream.
-        /// </summary>
+        /// <inheritdoc/>
         public override bool EOF
         {
             get
@@ -317,9 +294,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Gets the local name of the current node.
-        /// </summary>
+        /// <inheritdoc/>
         public override string LocalName
         {
             get
@@ -331,9 +306,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Gets the namespace URI (as defined in the W3C Namespace specification) of the node on which the reader is positioned.
-        /// </summary>
+        /// <inheritdoc/>
         public override string NamespaceUri
         {
             get
@@ -345,14 +318,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        ///// <summary>
-        ///// When overridden in a derived class, gets the qualified name of the current node.
-        ///// </summary>
-        //public virtual string Name { get; }
-
-        /// <summary>
-        /// Gets the namespace prefix associated with the current node.
-        /// </summary>
+        /// <inheritdoc/>
         public override string Prefix
         {
             get
@@ -364,10 +330,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Moves to read the next element.
-        /// </summary>
-        /// <returns>Returns true if the next element was read successfully; false if there are no more elements to read. </returns>
+        /// <inheritdoc/>
         public override bool Read()
         {
             ThrowIfObjectDisposed();
@@ -385,11 +348,7 @@ namespace DocumentFormat.OpenXml
             return result;
         }
 
-        /// <summary>
-        /// Moves to read the first child element.
-        /// </summary>
-        /// <returns>Returns true if the first child element was read successfully; false if there are no child elements to read. </returns>
-        /// <remarks>This method can only be called on element start. At the current node, the reader will move to the end tag if there is no child element.</remarks>
+        /// <inheritdoc/>
         public override bool ReadFirstChild()
         {
             ThrowIfObjectDisposed();
@@ -407,11 +366,7 @@ namespace DocumentFormat.OpenXml
             return result;
         }
 
-        /// <summary>
-        /// Moves to read the next sibling element.
-        /// </summary>
-        /// <returns>Returns true if the next sibling element was read successfully; false if there are no more sibling elements to read. </returns>
-        /// <remarks>At the current node, the reader will move to the end tag of the parent if there are no more sibling elements.</remarks>
+        /// <inheritdoc/>
         public override bool ReadNextSibling()
         {
             ThrowIfObjectDisposed();
@@ -429,9 +384,7 @@ namespace DocumentFormat.OpenXml
             return result;
         }
 
-        /// <summary>
-        /// Skips the child elements of the current node.
-        /// </summary>
+        /// <inheritdoc/>
         public override void Skip()
         {
             ThrowIfObjectDisposed();
@@ -643,12 +596,7 @@ namespace DocumentFormat.OpenXml
 
         #endregion
 
-        /// <summary>
-        /// Loads the element at the current cursor.
-        /// </summary>
-        /// <returns>The OpenXmlElement object.</returns>
-        /// <exception cref="InvalidOperationException">Thrown when the current element is element end.</exception>
-        /// <remarks>The new current element is the end of the element after LoadCurrentElement().</remarks>
+        /// <inheritdoc/>
         public override OpenXmlElement LoadCurrentElement()
         {
             ThrowIfObjectDisposed();
@@ -701,40 +649,7 @@ namespace DocumentFormat.OpenXml
             return null;
         }
 
-        ///// <summary>
-        ///// Create an empty element of the element at current cursor.
-        ///// </summary>
-        ///// <returns>An empty ( no children, no attributes ) OpenXmlElement.</returns>
-        //public override OpenXmlElement CreateElement()
-        //{
-        //    switch (this._elementState)
-        //    {
-        //        case ElementState.LeafStart:
-        //        case ElementState.Start:
-        //        case ElementState.MiscNode:
-        //            {
-        //                OpenXmlElement element = this._elementStack.Peek();
-        //                OpenXmlElement newElement = element.CloneNode(false);
-        //                newElement.ClearAllAttributes();
-        //                return newElement;
-        //            }
-
-        //        case ElementState.LoadEnd:
-        //        case ElementState.End:
-        //        case ElementState.LeafEnd:
-        //        case ElementState.Null:
-        //        case ElementState.EOF:
-        //        default:
-        //            throw new InvalidOperationException();
-        //    }
-        //}
-
-        /// <summary>
-        /// Gets the text of the element if the element is an OpenXmlLeafTextElement. Returns String.Empty for other elements.
-        /// </summary>
-        /// <returns>
-        /// The text of the element if the element is an OpenXmlLeafTextElement. Returns String.Empty for other elements.
-        /// </returns>
+        /// <inheritdoc/>
         public override string GetText()
         {
             ThrowIfObjectDisposed();
@@ -752,9 +667,7 @@ namespace DocumentFormat.OpenXml
             return String.Empty;
         }
 
-        /// <summary>
-        /// Closes the reader.
-        /// </summary>
+        /// <inheritdoc/>
         public override void Close()
         {
             ThrowIfObjectDisposed();

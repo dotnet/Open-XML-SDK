@@ -37,8 +37,8 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// DON'T use this property. Only for OpenXmlSimpleType.cs internal use.
-        /// The internal raw text value.
+        /// Gets or sets the internal raw text value.
+        /// DO NOT use this property. Only for OpenXmlSimpleType.cs internal use.
         /// </summary>
         protected string TextValue
         {
@@ -70,7 +70,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets a value that indicates whether the underneath text value is a valid value.
+        /// Gets a value indicating whether the underneath text value is a valid value.
         /// </summary>
         public virtual bool HasValue
         {

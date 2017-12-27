@@ -65,13 +65,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <summary>
-        /// The type ID of the OpenXmlElement class for this schema type.
+        /// Gets the type ID of the OpenXmlElement class for this schema type.
         /// </summary>
-        internal int OpenXmlTypeId
-        {
-            get;
-            private set;
-        }
+        internal int OpenXmlTypeId { get; private set; }
 
         /// <summary>
         /// Gets or sets the particle constraint of this schema type.
@@ -80,11 +76,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// Valid for complex types which are composite types - aka. has children particles.
         /// Otherwise, it should be null.
         /// </remarks>
-        internal ParticleConstraint ParticleConstraint
-        {
-            get;
-            private set;
-        }
+        internal ParticleConstraint ParticleConstraint { get; private set; }
 
         /// <summary>
         /// Gets or sets the simple type constraint when this type is simple content.
@@ -93,11 +85,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// The simple type constraint if it is a simple content complex type or a simple type.
         /// null for complex types which are composite types - aka. has children particles.
         /// </remarks>
-        internal SimpleTypeRestriction SimpleTypeConstraint
-        {
-            get;
-            private set;
-        }
+        internal SimpleTypeRestriction SimpleTypeConstraint { get; private set; }
 
         /// <summary>
         /// Gets or sets the constraints for all the attributes of this type.
@@ -107,11 +95,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// The attributes value are saved in a fixed array in the OpenXmlElement class.
         /// So the attribute constraint in this array has same order (has a 1:1 map relation to the fixed array in the class).
         /// </remarks>
-        internal IList<AttributeConstraint> AttributeConstraints
-        {
-            get;
-            private set;
-        }
+        internal IList<AttributeConstraint> AttributeConstraints { get; private set; }
 
         internal bool HasAttributeConstraints
         {
@@ -134,25 +118,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <summary>
-        /// Returns true if the schema type is a schema type which contains particles.
+        /// Gets a value indicating whether the schema type is a schema type which contains particles.
         /// </summary>
-        internal bool IsCompositeType
-        {
-            get
-            {
-                return this.ParticleConstraint != null;
-            }
-        }
+        internal bool IsCompositeType => this.ParticleConstraint != null;
 
         /// <summary>
-        /// Returns true if the schema type contains simple content only.
+        /// Gets a value indicating whether the schema type contains simple content only.
         /// </summary>
-        internal bool IsSimpleContent
-        {
-            get
-            {
-                return this.SimpleTypeConstraint != null;
-            }
-        }
+        internal bool IsSimpleContent => this.SimpleTypeConstraint != null;
     }
  }

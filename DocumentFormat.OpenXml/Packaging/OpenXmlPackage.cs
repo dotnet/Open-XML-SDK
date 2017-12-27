@@ -349,22 +349,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <remarks>
         /// This property allows you to mitigate denial of service attacks where the attacker submits a package with an extremely large Open XML part. By limiting the size of a part, you can detect the attack and recover reliably.
         /// </remarks>
-        public long MaxCharactersInPart
-        {
-            get;
-            internal set;
-        }
+        public long MaxCharactersInPart { get; internal set; }
 
         /// <summary>
-        /// Enumerates all the <see cref="DataPart"/> parts in the document package.
+        /// Gets all the <see cref="DataPart"/> parts in the document package.
         /// </summary>
-        public IEnumerable<DataPart> DataParts
-        {
-            get
-            {
-                return this._dataPartList;
-            }
-        }
+        public IEnumerable<DataPart> DataParts => this._dataPartList;
 
         #endregion
 
@@ -755,15 +745,9 @@ namespace DocumentFormat.OpenXml.Packaging
 
         #region Auto-Save functions
         /// <summary>
-        /// Gets a flag that indicates whether the parts should be saved when disposed.
+        /// Gets a value indicating whether the parts should be saved when disposed.
         /// </summary>
-        public bool AutoSave
-        {
-            get
-            {
-                return OpenSettings.AutoSave;
-            }
-        }
+        public bool AutoSave => OpenSettings.AutoSave;
 
         private void SavePartContents(bool save)
         {

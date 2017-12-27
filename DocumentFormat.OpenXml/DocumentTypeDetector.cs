@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml
         private static Dictionary<string, OpenXmlDocumentType> _mainPartContentTypes;
 
         /// <summary>
-        /// All known content types for main part in Open XML document.
+        /// Gets all known content types for main part in Open XML document.
         /// </summary>
         internal static Dictionary<string, OpenXmlDocumentType> MainPartContentTypes
         {

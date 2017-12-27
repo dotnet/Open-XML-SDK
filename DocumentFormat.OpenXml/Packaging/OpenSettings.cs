@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Packaging
         private MarkupCompatibilityProcessSettings _mcSettings;
 
         /// <summary>
-        /// Gets or sets a value that indicates whether or not to auto save document modifications.
+        /// Gets or sets a value indicating whether to auto save document modifications.
         /// The default value is true.
         /// </summary>
         public bool AutoSave

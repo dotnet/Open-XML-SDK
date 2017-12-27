@@ -43,9 +43,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Gets or sets the inner XML text.
-        /// </summary>
+        /// <inheritdoc/>
         public override string InnerText
         {
             get
@@ -86,19 +84,14 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
+        /// <inheritdoc/>
         internal override void Parse()
         {
             float value = XmlConvert.ToSingle(this.TextValue);
             this.InnerValue = value;
         }
 
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        /// <returns></returns>
+        /// <inheritdoc/>
         internal override bool TryParse()
         {
             this.InnerValue = null;

@@ -19,29 +19,17 @@ namespace DocumentFormat.OpenXml.Validation
         /// <summary>
         /// Gets the schema validator for schema validation.
         /// </summary>
-        internal SchemaValidator SchemaValidator
-        {
-            get;
-            private set;
-        }
+        internal SchemaValidator SchemaValidator { get; private set; }
 
         /// <summary>
         /// Gets the semantic validator for semantic validation.
         /// </summary>
-        internal SemanticValidator SemanticValidator
-        {
-            get;
-            private set;
-        }
+        internal SemanticValidator SemanticValidator { get; private set; }
 
         /// <summary>
-        /// The validation settings.
+        /// Gets the validation settings.
         /// </summary>
-        protected ValidationSettings ValidationSettings
-        {
-            get;
-            private set;
-        }
+        protected ValidationSettings ValidationSettings { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of the DocumentValidator.
@@ -165,7 +153,7 @@ namespace DocumentFormat.OpenXml.Validation
         protected ValidationContext ValidationContext { get; set; }
 
         /// <summary>
-        /// Gets or set the validtion result.
+        /// Gets or sets or set the validtion result.
         /// </summary>
         protected ValidationResult ValidationResult { get; set; }
 
@@ -175,7 +163,7 @@ namespace DocumentFormat.OpenXml.Validation
         protected abstract OpenXmlPackage TargetDocument { get; set; }
 
         /// <summary>
-        /// Returns all the parts needs to be validated.
+        /// Gets all the parts needs to be validated.
         /// </summary>
         protected abstract IEnumerable<OpenXmlPart> PartsToBeValidated { get; }
 

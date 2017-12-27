@@ -132,7 +132,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// The type ID of the element.
+        /// Gets the type ID of the element.
         /// </summary>
         internal override int ElementTypeId
         {

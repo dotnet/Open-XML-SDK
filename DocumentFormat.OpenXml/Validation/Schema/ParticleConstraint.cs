@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <summary>
-        /// Gets the type of the particle.
+        /// Gets or sets the type of the particle.
         /// </summary>
         internal virtual ParticleType ParticleType
         {
@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         internal int MaxOccurs { get; set; }
 
         /// <summary>
-        /// Gets whether the maxOccurs="unbounded".
+        /// Gets a value indicating whether the maxOccurs is unbounded.
         /// </summary>
         internal bool UnboundedMaxOccurs
         {
@@ -53,7 +53,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <summary>
-        /// Return true if maxOccurs="unbounded" or maxOccurs > 1
+        /// Gets a value indicating whether maxOccurs is unbounded or maxOccurs > 1
         /// </summary>
         internal bool CanOccursMoreThanOne
         {
@@ -83,7 +83,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <summary>
-        /// Gets the children particles.
+        /// Gets or sets the children particles.
         /// </summary>
         /// <remarks>
         /// be null if the ParticleType == ParticleType.Element || ParticleType=ParticleType.Any

@@ -65,16 +65,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// The XmlNameTable to be used by internal XmlReader
-        /// </summary>
-        private XmlNameTable XmlNameTable
-        {
-            get { return _xmlNameTable; }
-            // set { _xmlNameTable = value; }
-        }
-
-        /// <summary>
-        /// The XmlReaderSettings to be used by internal XmlReader
+        /// Gets or sets the XmlReaderSettings to be used by internal XmlReader
         /// </summary>
         internal XmlReaderSettings XmlReaderSettings
         {
@@ -83,7 +74,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Load mode
+        /// Gets or sets load mode
         /// </summary>
         internal OpenXmlLoadMode LoadMode
         {
@@ -92,7 +83,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Layers to be full populated, only effective when LoadMode==Lazy.
+        /// Gets or sets layers to be full populated, only effective when LoadMode==Lazy.
         /// Start from 0 (populate only the children layer).
         /// </summary>
         internal int LazySteps
@@ -112,18 +103,6 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        //public XmlNamespaceManager XmlNamespaceManager
-        //{
-        //    get { return _xmlNamespaceManager; }
-        //    // set { _xmlNamespaceManager = value; }
-        //}
-
-        //public XmlParserContext XmlParserContext
-        //{
-        //    get { return _xmlParserContext; }
-        //    //set { _xmlParserContext = value; }
-        //}
-
         /// <summary>
         /// Initializes a new instance of the OpenXmlElementContext class.
         /// </summary>
@@ -134,17 +113,6 @@ namespace DocumentFormat.OpenXml
             MCContext = new MCContext();
             Init();
         }
-
-        ///// <summary>
-        ///// OpenXmlElementContext constructor
-        ///// </summary>
-        //public OpenXmlElementContext(OpenXmlPart ownerPart)
-        //{
-        //    this._ownerPart = ownerPart;
-        //    // this._xmlParserContext = new XmlParserContext(
-        //    this._xmlNameTable = new NameTable();
-        //    Init();
-        //}
 
         internal static XmlReaderSettings CreateDefaultXmlReaderSettings()
         {
@@ -195,12 +163,13 @@ namespace DocumentFormat.OpenXml
             this._xmlNameTable.Add(xmlnsUri);
 
             // init XmlReaderSettings
-            this.XmlReaderSettings = new XmlReaderSettings();
-            this.XmlReaderSettings.NameTable = this.XmlNameTable;
-
             // O15:#3024890, Set IgnoreWhitespace to false for the SDK to handle the whitespace node type. We have to do this because
             // PPT does not use the preserve attribute (xml:space="preserve") for non-ignorable whitespaces. (See the bug for details.)
-            this.XmlReaderSettings.IgnoreWhitespace = false;
+            XmlReaderSettings = new XmlReaderSettings
+            {
+                NameTable = _xmlNameTable,
+                IgnoreWhitespace = false
+            };
         }
 
         #region Event mechanism

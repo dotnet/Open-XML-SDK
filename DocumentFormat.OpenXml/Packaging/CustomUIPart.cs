@@ -13,9 +13,7 @@ namespace DocumentFormat.OpenXml.Packaging
         [System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)]
         private DocumentFormat.OpenXml.Office.CustomUI.CustomUI _rootEle;
 
-        /// <summary>
-        /// Only for OpenXmlPart derived classes.
-        /// </summary>
+        /// <inheritdoc/>
         internal override OpenXmlPartRootElement _rootElement
         {
             get
@@ -29,9 +27,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        /// <summary>
-        /// Gets the root element of this part. The DOM tree will be loaded on demand.
-        /// </summary>
+        /// <inheritdoc/>
         internal override OpenXmlPartRootElement PartRootElement
         {
             get
@@ -41,9 +37,9 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Gets/Sets the root element of this part.
+        /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office.CustomUI.CustomUI CustomUI
+        public Office.CustomUI.CustomUI CustomUI
         {
             get
             {

@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         public SimpleTypeRestriction TargetRestriction { get; set; }
 
         /// <summary>
-        /// An ID for this type.
+        /// Gets or sets an ID for this type.
         /// </summary>
         [DataMember]
         public int AttributeId { get; set; }

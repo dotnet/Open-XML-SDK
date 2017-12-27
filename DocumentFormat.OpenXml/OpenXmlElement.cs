@@ -152,7 +152,7 @@ namespace DocumentFormat.OpenXml
         #region internal properties
 
         /// <summary>
-        /// Gets the next element in the linked list.
+        /// Gets or sets the next element in the linked list.
         /// </summary>
         internal OpenXmlElement next
         {
@@ -160,14 +160,8 @@ namespace DocumentFormat.OpenXml
             set { this._next = value; }
         }
 
-        //internal bool XmlParsed
-        //{
-        //    get { return _xmlParsed; }
-        //    set { _xmlParsed = value; }
-        //}
-
         /// <summary>
-        /// Returns true if the inner raw xml is parsed.
+        /// Gets a value indicating whether the inner raw xml is parsed.
         /// </summary>
         internal bool XmlParsed
         {
@@ -175,7 +169,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets the raw OuterXml.
+        /// Gets or sets the raw OuterXml.
         /// </summary>
         internal string RawOuterXml
         {
@@ -330,7 +324,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets a boolean value that indicates whether the current element has any attributes.
+        /// Gets a value indicating whether the current element has any attributes.
         /// </summary>
         public bool HasAttributes
         {
@@ -379,12 +373,9 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets a value that indicates whether the current element has any child elements.
+        /// Gets a value indicating whether the current element has any child elements.
         /// </summary>
-        public abstract bool HasChildren
-        {
-            get;
-        }
+        public abstract bool HasChildren { get; }
 
         /// <summary>
         /// Gets all the child nodes of the current element.
@@ -487,7 +478,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets the concatenated values of the node and all of its children.
+        /// Gets or sets the concatenated values of the node and all of its children.
         /// </summary>
         public virtual string InnerText
         {
@@ -2705,7 +2696,7 @@ namespace DocumentFormat.OpenXml
 
         #region MC Staffs
         /// <summary>
-        /// Sets the markup compatibility attributes. Returns null if no markup compatibility attributes are defined for the current element.
+        /// Gets or sets the markup compatibility attributes. Returns null if no markup compatibility attributes are defined for the current element.
         /// </summary>
         public MarkupCompatibilityAttributes MCAttributes
         {

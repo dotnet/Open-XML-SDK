@@ -50,7 +50,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets the base64Binary string value.
+        /// Gets or sets the Base64 binary string value.
         /// </summary>
         public string Value
         {

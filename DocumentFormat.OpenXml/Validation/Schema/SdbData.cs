@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         #region abstract methods
 
         /// <summary>
-        /// The size in bytes of this data structure.
+        /// Gets the size in bytes of this data structure.
         /// </summary>
         public abstract int DataSize { get; }
 
