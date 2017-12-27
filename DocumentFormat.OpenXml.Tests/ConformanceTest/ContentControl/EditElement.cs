@@ -11,7 +11,7 @@ using W15 = DocumentFormat.OpenXml.Office2013.Word;
 
 namespace DocumentFormat.OpenXml.Tests.ContentControl
 {
-    public class EditElement
+    public static class EditElement
     {
         public static void EditContentControlElements(string filePath, VerifiableLog log)
         {
