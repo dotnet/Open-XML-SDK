@@ -148,7 +148,7 @@ namespace DocumentFormat.OpenXml.Tests
         public static OpenXmlPackage CreatePackageOn(OpenXmlPackage srcPackage, string destDocument)
         {
             if (null == srcPackage)
-                throw new ArgumentNullException("srcPackage");
+                throw new ArgumentNullException(nameof(srcPackage));
 
             OpenXmlPackage destPackage = null;
             if (srcPackage is WordprocessingDocument)
@@ -388,7 +388,7 @@ namespace DocumentFormat.OpenXml.Tests
         internal void ReflectPackage(OpenXmlPackage srcPackage, OpenXmlPackage destPackage)
         {
             if (null == srcPackage)
-                throw new ArgumentNullException("srcPackage");
+                throw new ArgumentNullException(nameof(srcPackage));
             if (null == destPackage)
                 throw new ArgumentNullException("destPackate");
 

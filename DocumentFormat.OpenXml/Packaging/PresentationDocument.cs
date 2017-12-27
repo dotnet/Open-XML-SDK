@@ -260,7 +260,7 @@ namespace DocumentFormat.OpenXml.Packaging
             // Check extensions as the template must have a valid Word Open XML extension.
             string extension = Path.GetExtension(path);
             if (extension != ".pptx" && extension != ".pptm" && extension != ".potx" && extension != ".potm")
-                throw new ArgumentException("Illegal template file: " + path, "path");
+                throw new ArgumentException("Illegal template file: " + path, nameof(path));
 
             using (PresentationDocument template = PresentationDocument.Open(path, false))
             {

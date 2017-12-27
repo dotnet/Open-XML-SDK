@@ -161,7 +161,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (contentType == string.Empty)
             {
-                throw new ArgumentException(ExceptionMessages.StringArgumentEmptyException, "contentType");
+                throw new ArgumentException(ExceptionMessages.StringArgumentEmptyException, nameof(contentType));
             }
 
             newPart.CreateInternal(this.InternalOpenXmlPackage, this.ThisOpenXmlPart, contentType, null);

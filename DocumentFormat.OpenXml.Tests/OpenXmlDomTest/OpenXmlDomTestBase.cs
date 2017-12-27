@@ -58,7 +58,7 @@ namespace DocumentFormat.OpenXml.Tests
             // Log.Comment("get the current element position path");
             if (element == null)
             {
-                throw new ArgumentNullException("element");
+                throw new ArgumentNullException(nameof(element));
             }
 
             StringBuilder path = new StringBuilder();
@@ -105,9 +105,9 @@ namespace DocumentFormat.OpenXml.Tests
         private static XElement GetXmlElement(String path, OpenXmlPart part)
         {
             if (part == null)
-                throw new ArgumentNullException("part");
+                throw new ArgumentNullException(nameof(part));
             if (String.IsNullOrEmpty(path))
-                throw new ArgumentNullException("path");
+                throw new ArgumentNullException(nameof(path));
 
             XElement element = null;
             using (var stream = part.GetStream())
@@ -171,7 +171,7 @@ namespace DocumentFormat.OpenXml.Tests
         internal XElement ToXElement(OpenXmlElement element)
         {
             if (element == null)
-                throw new ArgumentNullException("element");
+                throw new ArgumentNullException(nameof(element));
             return XElement.Load(new StringReader(element.OuterXml));
         }
 
@@ -1087,7 +1087,7 @@ namespace DocumentFormat.OpenXml.Tests
         internal OpenXmlElement RemoveOperation(OpenXmlElement target, int childPosition)
         {
             if (target == null)
-                throw new ArgumentNullException("target");
+                throw new ArgumentNullException(nameof(target));
 
             if (childPosition >= target.ChildElements.Count)
                 throw new IndexOutOfRangeException("targetPosition is out of range.");
@@ -2598,7 +2598,7 @@ namespace DocumentFormat.OpenXml.Tests
         internal void VerifyNoChildren(XElement targetElement)
         {
             if (targetElement == null)
-                throw new ArgumentNullException("targetElement");
+                throw new ArgumentNullException(nameof(targetElement));
 
             Log.Comment("check if the current element has no children");
             Log.VerifyFalse(targetElement.HasElements, "Not all children are removed");
@@ -2719,7 +2719,7 @@ namespace DocumentFormat.OpenXml.Tests
             if (resultElement == null || originalElement == null)
                 throw new ArgumentNullException("resultElement|originalElement");
             if (childrenPosition == null)
-                throw new ArgumentNullException("childrenPosition");
+                throw new ArgumentNullException(nameof(childrenPosition));
 
             if (childrenPosition.Min() < 0 || childrenPosition.Max() >= originalElement.Elements().Count())
                 throw new IndexOutOfRangeException("Child position is out of range");

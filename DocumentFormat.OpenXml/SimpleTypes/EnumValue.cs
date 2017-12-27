@@ -56,7 +56,7 @@ namespace DocumentFormat.OpenXml
             // bug O14 #253976
             if (!Enum.IsDefined(typeof(T), value))
             {
-                throw new ArgumentOutOfRangeException("value", ExceptionMessages.InvalidEnumValue);
+                throw new ArgumentOutOfRangeException(nameof(value), ExceptionMessages.InvalidEnumValue);
             }
             this.Value = value;
         }
@@ -124,7 +124,7 @@ namespace DocumentFormat.OpenXml
                 // bug O14 #253976
                 if (! Enum.IsDefined(typeof(T), value))
                 {
-                    throw new ArgumentOutOfRangeException("value", ExceptionMessages.InvalidEnumValue);
+                    throw new ArgumentOutOfRangeException(nameof(value), ExceptionMessages.InvalidEnumValue);
                 }
                 this._enumValue = value;
                 this.TextValue = null;
