@@ -763,7 +763,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (partRootElement.OpenXmlPart != null)
             {
-                throw new ArgumentException(ExceptionMessages.PartRootAlreadyHasAssociation, "partRootElement");
+                throw new ArgumentException(ExceptionMessages.PartRootAlreadyHasAssociation, nameof(partRootElement));
             }
 
             partRootElement.OpenXmlPart = this;

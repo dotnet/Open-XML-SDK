@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using System;
 using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml
@@ -16,6 +17,8 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlElementList()
         {
         }
+
+        internal static OpenXmlElementList Empty { get; } = new EmptyElementList();
 
         /// <summary>
         /// Gets the OpenXmlElement element at the specified index.
@@ -57,11 +60,12 @@ namespace DocumentFormat.OpenXml
         {
             foreach (OpenXmlElement item in this)
             {
-                if (item is T)
+                if (item is T element)
                 {
-                    return (T)item;
+                    return element;
                 }
             }
+
             return null;
         }
 
@@ -79,23 +83,27 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        #region IEnumerable<OpenXmlElement> Members
-
         /// <summary>
         /// Gets an enumerator that iterates through the collection.
         /// </summary>
         /// <returns>An IEnumerator object that can be used to iterate through the collection. </returns>
         public abstract IEnumerator<OpenXmlElement> GetEnumerator();
 
-        #endregion
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() => GetEnumerator();
 
-        #region IEnumerable Members
-
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        private sealed class EmptyElementList : OpenXmlElementList
         {
-            return GetEnumerator();
-        }
+            public override OpenXmlElement GetItem(int index)
+            {
+                throw new ArgumentOutOfRangeException(nameof(index));
+            }
 
-        #endregion
+            public override int Count => 0;
+
+            public override IEnumerator<OpenXmlElement> GetEnumerator()
+            {
+                yield break;
+            }
+        }
     }
 }

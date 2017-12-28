@@ -281,8 +281,11 @@ namespace DocumentFormat.OpenXml.Packaging
 
             // Check extensions as the template must have a valid Word Open XML extension.
             string extension = Path.GetExtension(path);
+
             if (extension != ".docx" && extension != ".docm" && extension != ".dotx" && extension != ".dotm")
-                throw new ArgumentException("Illegal template file: " + path, "path");
+            {
+                throw new ArgumentException($"Illegal template file: {path}", nameof(path));
+            }
 
             using (WordprocessingDocument template = WordprocessingDocument.Open(path, false))
             {

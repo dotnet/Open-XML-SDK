@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Xml;
 using System.Xml.Linq;
@@ -141,7 +142,7 @@ namespace DocumentFormat.OpenXml
             {
                 if (!ValidOuterXml(outerXml, this.NamespaceUri, this.LocalName))
                 {
-                    throw new ArgumentException(ExceptionMessages.InvalidOuterXml, "outerXml");
+                    throw new ArgumentException(ExceptionMessages.InvalidOuterXml, nameof(outerXml));
                 }
 
                 this.RawOuterXml = outerXml;
@@ -373,7 +374,7 @@ namespace DocumentFormat.OpenXml
                     return this.ExtendedAttributesField;
                 }
                 else
-                    return EmptyEnumerable<OpenXmlAttribute>.EmptyEnumerableSingleton;
+                    return Enumerable.Empty<OpenXmlAttribute>();
             }
         }
 
@@ -392,15 +393,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (this.HasChildren)
-                {
-                    return new OpenXmlChildElements(this);
-                }
-                else
-                {
-                    // Use a singleton EmptyElementList when there is no children to avoid uncessory object.
-                    return EmptyElementList.EmptyElementListSingleton;
-                }
+                return this.HasChildren ? new OpenXmlChildElements(this) : OpenXmlElementList.Empty;
             }
         }
 
@@ -465,7 +458,7 @@ namespace DocumentFormat.OpenXml
                 MakeSureParsed();
                 if (NamespaceDeclField == null)
                 {
-                    return EmptyEnumerable<KeyValuePair<string, string>>.EmptyEnumerableSingleton;
+                    return Enumerable.Empty<KeyValuePair<string, string>>();
                 }
                 return NamespaceDeclField;
             }
@@ -638,7 +631,7 @@ namespace DocumentFormat.OpenXml
 
             if (localName == string.Empty)
             {
-                throw new ArgumentOutOfRangeException("localName", ExceptionMessages.StringIsEmpty);
+                throw new ArgumentOutOfRangeException(nameof(localName), ExceptionMessages.StringIsEmpty);
             }
 
             if (this.HasAttributes)
@@ -764,7 +757,7 @@ namespace DocumentFormat.OpenXml
         {
             if (String.IsNullOrEmpty(openXmlAttribute.LocalName))
             {
-                throw new ArgumentOutOfRangeException("openXmlAttribute", ExceptionMessages.LocalNameIsNull);
+                throw new ArgumentOutOfRangeException(nameof(openXmlAttribute), ExceptionMessages.LocalNameIsNull);
             }
 
             if (openXmlAttribute.Prefix == OpenXmlElementContext.xmlnsPrefix)
@@ -829,7 +822,7 @@ namespace DocumentFormat.OpenXml
 
             if (localName == string.Empty)
             {
-                throw new ArgumentOutOfRangeException("localName", ExceptionMessages.StringIsEmpty);
+                throw new ArgumentOutOfRangeException(nameof(localName), ExceptionMessages.StringIsEmpty);
             }
 
             if (this.HasAttributes)

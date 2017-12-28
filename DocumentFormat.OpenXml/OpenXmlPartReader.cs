@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Xml;
 
 namespace DocumentFormat.OpenXml
@@ -16,9 +17,6 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class OpenXmlPartReader : OpenXmlReader
     {
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private static ReadOnlyCollection<OpenXmlAttribute> _emptyReadOnlyList;
-
         private OpenXmlElementContext _elementContext;
         private XmlReader _xmlReader;
         private IList<OpenXmlAttribute> _attributeList;
@@ -27,7 +25,7 @@ namespace DocumentFormat.OpenXml
         private ElementState _elementState;
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private string _encoding ;
+        private string _encoding;
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private bool? _standalone;
@@ -42,7 +40,7 @@ namespace DocumentFormat.OpenXml
         }
 
         private OpenXmlPartReader(bool readMiscNodes)
-            : base ( readMiscNodes )
+            : base(readMiscNodes)
         {
             this._attributeList = new List<OpenXmlAttribute>();
             this._nsDecls = new List<KeyValuePair<string, string>>();
@@ -150,7 +148,8 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public override ReadOnlyCollection<OpenXmlAttribute> Attributes
         {
-            get {
+            get
+            {
                 ThrowIfObjectDisposed();
                 ThrowIfNull();
                 ThrowIfEof();
@@ -164,11 +163,7 @@ namespace DocumentFormat.OpenXml
                 }
                 else
                 {
-                    if (_emptyReadOnlyList == null)
-                    {
-                        _emptyReadOnlyList = new ReadOnlyCollection<OpenXmlAttribute>(new List<OpenXmlAttribute>());
-                    }
-                    return _emptyReadOnlyList;
+                    return Cached.ReadOnlyCollection<OpenXmlAttribute>();
                 }
             }
         }
@@ -193,7 +188,7 @@ namespace DocumentFormat.OpenXml
                 }
                 else
                 {
-                    return EmptyEnumerable<KeyValuePair<string, string>>.EmptyEnumerableSingleton;
+                    return Enumerable.Empty<KeyValuePair<string, string>>();
                 }
             }
         }
@@ -283,7 +278,7 @@ namespace DocumentFormat.OpenXml
                 if (!this.IsMiscNode)
                 {
                     if (this._elementState == ElementState.End || this._elementState == ElementState.LeafEnd
-                        || this._elementState == ElementState.LoadEnd )
+                        || this._elementState == ElementState.LoadEnd)
                     {
                         return true;
                     }
@@ -378,7 +373,7 @@ namespace DocumentFormat.OpenXml
             ThrowIfObjectDisposed();
             bool result = MoveToNextElement();
 
-            if (result && ! ReadMiscNodes)
+            if (result && !ReadMiscNodes)
             {
                 // skip miscellaneous node
                 while (result && this.IsMiscNode)
@@ -400,7 +395,7 @@ namespace DocumentFormat.OpenXml
             ThrowIfObjectDisposed();
             bool result = MoveToFirstChild();
 
-            if (result && ! ReadMiscNodes)
+            if (result && !ReadMiscNodes)
             {
                 // skip miscellaneous node
                 while (result && this.IsMiscNode)
@@ -452,7 +447,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-#region private methods
+        #region private methods
 
         /// <summary>
         /// Moves to next element
@@ -646,7 +641,7 @@ namespace DocumentFormat.OpenXml
             return;
         }
 
-#endregion
+        #endregion
 
         /// <summary>
         /// Loads the element at the current cursor.
@@ -772,7 +767,7 @@ namespace DocumentFormat.OpenXml
 #endif
         }
 
-#region private methods
+        #region private methods
 
         private void Init(Stream partStream, bool closeInput)
         {
@@ -789,9 +784,9 @@ namespace DocumentFormat.OpenXml
 
             this._xmlReader.Read();
 
-            if ( this._xmlReader.NodeType == XmlNodeType.XmlDeclaration)
+            if (this._xmlReader.NodeType == XmlNodeType.XmlDeclaration)
             {
-                 this._encoding = this._xmlReader["encoding"]; // get the "encoding" attribute
+                this._encoding = this._xmlReader["encoding"]; // get the "encoding" attribute
 
                 //if (!String.IsNullOrEmpty(encoding))
                 //{
@@ -912,17 +907,17 @@ namespace DocumentFormat.OpenXml
             switch (this._xmlReader.NodeType)
             {
                 case XmlNodeType.EndElement:
-//#if DEBUG
-//                    {
-//                        OpenXmlElement top = this._elementStack.Pop();
+                    //#if DEBUG
+                    //                    {
+                    //                        OpenXmlElement top = this._elementStack.Pop();
 
-//                        element = this.CreateElement();
+                    //                        element = this.CreateElement();
 
-//                        this._elementStack.Push(top);
+                    //                        this._elementStack.Push(top);
 
-//                        Debug.Assert(element.GetType() == this._elementStack.Peek().GetType());
-//                    }
-//#endif
+                    //                        Debug.Assert(element.GetType() == this._elementStack.Peek().GetType());
+                    //                    }
+                    //#endif
                     this._elementState = ElementState.End;
                     break;
 
@@ -936,7 +931,7 @@ namespace DocumentFormat.OpenXml
                         this._elementState = ElementState.LeafStart;
                         element.Load(this._xmlReader, OpenXmlLoadMode.Full);
                     }
-                    else if (element is OpenXmlLeafElement  || element is OpenXmlLeafTextElement )
+                    else if (element is OpenXmlLeafElement || element is OpenXmlLeafTextElement)
                     {
                         this._elementState = ElementState.LeafStart;
                         element.Load(this._xmlReader, OpenXmlLoadMode.Full);
@@ -976,20 +971,20 @@ namespace DocumentFormat.OpenXml
             // TODO: find a better solution
             if (element is AlternateContentChoice || element is AlternateContentFallback)
             {
-                if ( this._elementStack.Count > 2 )
+                if (this._elementStack.Count > 2)
                 {
-                    OpenXmlElement topElement = this._elementStack.Pop( );
-                    OpenXmlElement acElement = this._elementStack.Pop( );
+                    OpenXmlElement topElement = this._elementStack.Pop();
+                    OpenXmlElement acElement = this._elementStack.Pop();
 
-                    OpenXmlElement parentsParent = this._elementStack.Peek( ).CloneNode(false);
+                    OpenXmlElement parentsParent = this._elementStack.Peek().CloneNode(false);
 
-                    this._elementStack.Push( acElement );
-                    this._elementStack.Push( topElement );
+                    this._elementStack.Push(acElement);
+                    this._elementStack.Push(topElement);
 
-                    element = topElement.CloneNode( false );
-                    acElement = new AlternateContent( );
-                    acElement.AppendChild( element );
-                    parentsParent.AppendChild( acElement );
+                    element = topElement.CloneNode(false);
+                    acElement = new AlternateContent();
+                    acElement.AppendChild(element);
+                    parentsParent.AppendChild(acElement);
                 }
             }
 
@@ -1012,7 +1007,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-#endregion
+        #endregion
 
     }
 }

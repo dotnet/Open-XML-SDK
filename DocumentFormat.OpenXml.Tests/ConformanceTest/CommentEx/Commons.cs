@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
     /// <summary>
     /// Comment and CommentEx, Get support class.
     /// </summary>
-    public class Commons
+    public static class Commons
     {
         /// <summary>
         /// Comment object, Get support mothod.

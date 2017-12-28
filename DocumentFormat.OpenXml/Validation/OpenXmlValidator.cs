@@ -376,19 +376,19 @@ namespace DocumentFormat.OpenXml.Validation
 
             if (openXmlElement is OpenXmlUnknownElement)
             {
-                throw new ArgumentOutOfRangeException("openXmlElement", ExceptionMessages.CannotValidateUnknownElement);
+                throw new ArgumentOutOfRangeException(nameof(openXmlElement), ExceptionMessages.CannotValidateUnknownElement);
             }
 
             if (openXmlElement is OpenXmlMiscNode)
             {
-                throw new ArgumentOutOfRangeException("openXmlElement", ExceptionMessages.CannotValidateMiscNode);
+                throw new ArgumentOutOfRangeException(nameof(openXmlElement), ExceptionMessages.CannotValidateMiscNode);
             }
 
             if (openXmlElement is AlternateContent ||
                 openXmlElement is AlternateContentChoice ||
                 openXmlElement is AlternateContentFallback)
             {
-                throw new ArgumentOutOfRangeException("openXmlElement", ExceptionMessages.CannotValidateAcbElement);
+                throw new ArgumentOutOfRangeException(nameof(openXmlElement), ExceptionMessages.CannotValidateAcbElement);
             }
 
             if (!openXmlElement.IsInVersion(this.FileFormat))
