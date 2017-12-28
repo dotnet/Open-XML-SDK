@@ -15,6 +15,24 @@ The Open XML SDK provides tools for working with Office Word, Excel, and PowerPo
 - Updating cached data and embedded spreadsheets for charts in Word/PowerPoint.
 - Document modification, such as adding, updating, and removing content and metadata.
 
+Table of Contents
+-----------------
+
+- [The Release Package on Nuget.org](#the-release-package-on-nugetorg)
+  - [The Latest Builds](#the-latest-builds)
+  - [Where to get the NuGet packages of the latest builds](#where-to-get-the-nuget-packages-of-the-latest-builds)
+  - [Support platforms](#support-platforms)
+  - [WindowsBase or System.IO.Packaging](#windowsbase-or-systemiopackaging)
+  - [How to install the NuGet package](#how-to-install-the-nuget-package)
+- [If You Have Problems](#if-you-have-problems)
+- [Known Issues](#known-issues)
+- [Change Log](#change-log)
+- [Documentation](#documentation)
+- [Build Instructions](#build-instructions)
+- [To build the Open XML SDK](#to-build-the-open-xml-sdk)
+- [Related tools](#related-tools)
+- [Code of Conduct](#code-of-conduct)
+
 The Release Package on Nuget.org
 --------------------------------
 
