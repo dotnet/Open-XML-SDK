@@ -11,7 +11,7 @@
     <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevCore' ">netstandard1.3</TargetFrameworks>
     <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevFramework' ">net46</TargetFrameworks>
     <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'All' ">netstandard1.3;net35;net40;net46</TargetFrameworks>
-    
+
     <NoWarn>$(NoWarn);3003</NoWarn>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
@@ -29,6 +29,7 @@
     constants are used to conditionally compile features:
 
     FEATURE_ABSTRACT_XML_CLOSE       : XmlWriter.Close is defined as abstract
+    FEATURE_ARRAY_EMPTY              : Array.Empty exists
     FEATURE_CLOSE                    : Stream.Close is available in the platform
     FEATURE_DCS_SETTINGS             : DataContractSerializer settings class exists
     FEATURE_SERIALIZATION            : Serialization using ISerializable is in the platform
@@ -68,7 +69,7 @@
 
     <When Condition=" '$(TargetFramework)' == 'net46' ">
       <PropertyGroup>
-        <DefineConstants>$(DefineConstants);FEATURE_DCS_SETTINGS;FEATURE_CLOSE;FEATURE_SERIALIZATION;FEATURE_SYSTEMEXCEPTION;FEATURE_XML_QUOTECHAR;FEATURE_XML_SCHEMA;FEATURE_XML_VERIFYTOKEN</DefineConstants>
+        <DefineConstants>$(DefineConstants);FEATURE_ARRAY_EMPTY;FEATURE_DCS_SETTINGS;FEATURE_CLOSE;FEATURE_SERIALIZATION;FEATURE_SYSTEMEXCEPTION;FEATURE_XML_QUOTECHAR;FEATURE_XML_SCHEMA;FEATURE_XML_VERIFYTOKEN</DefineConstants>
       </PropertyGroup>
 
       <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
@@ -85,7 +86,7 @@
 
     <When Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
       <PropertyGroup>
-        <DefineConstants> $(DefineConstants);FEATURE_DCS_SETTINGS</DefineConstants>
+        <DefineConstants> $(DefineConstants);FEATURE_DCS_SETTINGS;FEATURE_ARRAY_EMPTY</DefineConstants>
       </PropertyGroup>
 
       <ItemGroup>

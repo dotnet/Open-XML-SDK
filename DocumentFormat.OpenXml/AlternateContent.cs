@@ -109,8 +109,8 @@ namespace DocumentFormat.OpenXml
             get { return MarkupCompatibilityNamespaceId; }
         }
 
-        private static string[] attributeTagNames = { };
-        private static byte[] attributeNamespaceIds = { };
+        private static string[] attributeTagNames = Cached.Array<string>();
+        private static byte[] attributeNamespaceIds = Cached.Array<byte>();
 
         internal override string[] AttributeTagNames
         {
