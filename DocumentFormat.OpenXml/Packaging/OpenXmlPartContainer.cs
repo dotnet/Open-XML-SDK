@@ -626,7 +626,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (idPartPair.Key == newRelationshipId)
                 {
-                    throw new ArgumentException(ExceptionMessages.RelationshipIdConflict, "newRelationshipId");
+                    throw new ArgumentException(ExceptionMessages.RelationshipIdConflict, nameof(newRelationshipId));
                 }
 
                 if (idPartPair.Value == part)
@@ -1337,7 +1337,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (id == string.Empty)
                 {
-                    throw new ArgumentException(ExceptionMessages.StringArgumentEmptyException, "id");
+                    throw new ArgumentException(ExceptionMessages.StringArgumentEmptyException, nameof(id));
                 }
 
                 try
@@ -1346,18 +1346,18 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
                 catch (XmlException)
                 {
-                    throw new ArgumentException(ExceptionMessages.InvalidXmlIDStringException, "id");
+                    throw new ArgumentException(ExceptionMessages.InvalidXmlIDStringException, nameof(id));
                 }
 
                 if (this.ChildrenParts.ContainsKey(id))
                 {
-                    throw new ArgumentException(ExceptionMessages.RelationshipIdConflict, "id");
+                    throw new ArgumentException(ExceptionMessages.RelationshipIdConflict, nameof(id));
                 }
             }
 
             if (contentType == string.Empty)
             {
-                throw new ArgumentException(ExceptionMessages.StringArgumentEmptyException, "contentType");
+                throw new ArgumentException(ExceptionMessages.StringArgumentEmptyException, nameof(contentType));
             }
 
             // use reflection to create the instance. As the default contructor of part is not "public"
@@ -1372,7 +1372,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 // should we throw? or just ignore?
                 // throw new OpenXmlPackageException(ExceptionMessages.ErrorContentType);
-                throw new ArgumentOutOfRangeException("contentType", ExceptionMessages.ErrorContentType);
+                throw new ArgumentOutOfRangeException(nameof(contentType), ExceptionMessages.ErrorContentType);
             }
 
             if (contentType == null)
