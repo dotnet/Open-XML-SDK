@@ -128,8 +128,10 @@ Known Issues
   **Note:** Once `System.IO.Packaging` on .NET Core has feature parity with `WindowsBase` (i.e. streaming support), we can investigate using the new .NET Core on .NET Framework.
 
 Change Log
+-----------
 
 **Version 2.8.0**: December 28, 2017
+
 - Added default runtime directive for better .NET Native support
 - Fixed exceptions thrown when errors are encountered while opening packages to be consistent across platforms
 - Fixed issue on Mono platforms using System.IO.Packaging NuGet package (Xamarin, etc) when creating a document
