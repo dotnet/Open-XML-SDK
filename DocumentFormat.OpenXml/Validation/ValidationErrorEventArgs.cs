@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Validation
         }
 
         /// <summary>
-        /// The validation error.
+        /// Gets or sets the validation error.
         /// </summary>
         internal ValidationErrorInfo ValidationErrorInfo { get; set; }
     }

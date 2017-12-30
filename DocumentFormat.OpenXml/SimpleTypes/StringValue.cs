@@ -44,7 +44,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets the string value.
+        /// Gets or sets the string value.
         /// </summary>
         public string Value
         {

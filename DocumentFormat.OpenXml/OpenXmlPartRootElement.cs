@@ -231,14 +231,10 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Get / set the part that is associated with the DOM tree.
+        /// Gets or sets the part that is associated with the DOM tree.
         /// It returns null when the DOM tree is not associated with a part.
         /// </summary>
-        internal OpenXmlPart OpenXmlPart
-        {
-            get;
-            set;
-        }
+        internal OpenXmlPart OpenXmlPart { get; set; }
 
         /// <summary>
         /// Saves the data in the DOM tree back to the part. This method can
@@ -362,11 +358,8 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// If this property is true, then the Save method will try write all namespace declation on the root element.
+        /// Gets a value indicating whether the Save method will try write all namespace declation on the root element.
         /// </summary>
-        internal virtual bool WriteAllNamespaceOnRoot
-        {
-            get { return true; }
-        }
+        internal virtual bool WriteAllNamespaceOnRoot => true;
     }
 }

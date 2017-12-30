@@ -100,7 +100,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// When overridden in a derived class, gets the qualified name of the attribute.
+        /// Gets the qualified name of the attribute.
         /// </summary>
         public XmlQualifiedName XmlQualifiedName
         {

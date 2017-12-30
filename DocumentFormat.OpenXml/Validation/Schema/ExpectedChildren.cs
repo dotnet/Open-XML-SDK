@@ -95,7 +95,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <summary>
-        /// Returns the count of required children elements.
+        /// Gets the count of required children elements.
         /// </summary>
         internal int Count
         {

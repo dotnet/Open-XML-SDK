@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Validation
         }
 
         /// <summary>
-        /// The target file format.
+        /// Gets or sets the target file format.
         /// </summary>
         internal FileFormatVersions FileFormat { get; set; }
 
@@ -40,10 +40,6 @@ namespace DocumentFormat.OpenXml.Validation
         /// Gets or sets the maximum number of errors the OpenXmlValidator will return.
         /// Default is 1000.  A zero (0) value means no limitation.
         /// </summary>
-        internal int MaxNumberOfErrors
-        {
-            get;
-            set;
-        }
+        internal int MaxNumberOfErrors { get; set; }
    }
 }

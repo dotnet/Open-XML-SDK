@@ -193,28 +193,19 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// The internal path to be used for the part name.
+        /// Gets the internal path to be used for the part name.
         /// </summary>
-        internal virtual string TargetPath
-        {
-            get { return DefaultTargetPart; }
-        }
+        internal virtual string TargetPath => DefaultTargetPart;
 
         /// <summary>
-        /// The file base name to be used for the part name in the package.
+        /// Gets the file base name to be used for the part name in the package.
         /// </summary>
-        internal virtual string TargetName
-        {
-            get { return DefaultTargetName; }
-        }
+        internal virtual string TargetName => DefaultTargetName;
 
         /// <summary>
-        /// The file extension to be used for the part in the package.
+        /// Gets the file extension to be used for the part in the package.
         /// </summary>
-        internal virtual string TargetFileExtension
-        {
-            get { return DefaultTargetExt; }
-        }
+        internal virtual string TargetFileExtension => DefaultTargetExt;
 
         internal void Load(OpenXmlPackage openXmlPackage, PackagePart packagePart)
         {

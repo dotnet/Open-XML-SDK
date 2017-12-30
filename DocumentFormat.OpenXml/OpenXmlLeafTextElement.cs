@@ -51,19 +51,13 @@ namespace DocumentFormat.OpenXml
             return null;
         }
 
-        /// <summary>
-        /// Gets a value that indicates whether the current element has any child
-        ///  elements.
-        /// </summary>
+        /// <inheritdoc/>
         public override bool HasChildren
         {
             get { return false; }
         }
 
-        /// <summary>
-        /// Gets or sets the concatenated values of the element and all of its
-        ///  child elements.
-        /// </summary>
+        /// <inheritdoc/>
         public override string InnerText
         {
             get
@@ -87,10 +81,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Gets or sets the markup that only represents child elements of the
-        ///  current element.
-        /// </summary>
+        /// <inheritdoc/>
         public override string InnerXml
         {
             get
@@ -139,10 +130,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Saves all the child elements of the current element to the specified XmlWriter.
-        /// </summary>
-        /// <param name="w">The XmlWriter to which to save the elements. </param>
+        /// <inheritdoc/>
         internal override void WriteContentTo(XmlWriter w)
         {
             // Write the loaded inner xml if there are any
@@ -157,19 +145,12 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Removes all child elements of the current element.
-        /// </summary>
+        /// <inheritdoc/>
         public override void RemoveAllChildren()
         {
             this.RawInnerText = null;
         }
 
-        //internal override void Load(XmlReader xmlReader)
-        //{
-        //    LoadAttributes(xmlReader);
-        //    this.Text = xmlReader.ReadElementString();
-        //}
         internal override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode)
         {
             LoadAttributes(xmlReader);

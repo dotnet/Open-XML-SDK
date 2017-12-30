@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Gets the message string of the event.
+        /// Gets or sets the message string of the event.
         /// </summary>
         public string Message
         {
@@ -75,19 +75,11 @@ namespace DocumentFormat.OpenXml.Packaging
             internal set { _parentPart = value; }
         }
 
-        internal string MessageId
-        {
-            get;
-            set;
-        }
+        internal string MessageId { get; set; }
 
         /// <summary>
-        /// The DataPartReferenceRelationship that caused the event.
+        /// Gets or sets the DataPartReferenceRelationship that caused the event.
         /// </summary>
-        internal DataPartReferenceRelationship DataPartReferenceRelationship
-        {
-            get;
-            set;
-        }
+        internal DataPartReferenceRelationship DataPartReferenceRelationship { get; set; }
     }
 }

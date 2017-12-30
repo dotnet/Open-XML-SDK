@@ -100,7 +100,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets a value that indicates whether the OpenXmlReader will read or skip all miscellaneous nodes.
+        /// Gets a value indicating whether the OpenXmlReader will read or skip all miscellaneous nodes.
         /// </summary>
         public bool ReadMiscNodes
         {
@@ -140,7 +140,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets a value that indicates whether the current node has any attributes.
+        /// Gets a value indicating whether the current node has any attributes.
         /// </summary>
         public virtual bool HasAttributes
         {
@@ -154,10 +154,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets the list of attributes of the current element.
         /// </summary>
-        public abstract ReadOnlyCollection<OpenXmlAttribute> Attributes
-        {
-            get;
-        }
+        public abstract ReadOnlyCollection<OpenXmlAttribute> Attributes { get; }
 
         /// <summary>
         /// Gets the namespace declarations of the current element.
@@ -167,76 +164,46 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets the type of the corresponding strongly typed class of the current element.
         /// </summary>
-        public abstract Type ElementType
-        {
-            get;
-        }
-
-        ///// <summary>
-        ///// When overridden in a derived class, gets a value indicating whether the current node is an empty element (for example, <MyElement/>).
-        ///// </summary>
-        //public abstract bool IsEmptyElement { get; }
+        public abstract Type ElementType { get; }
 
         /// <summary>
-        /// When overridden in a derived class, gets a value that indicates whether the current node is a miscellaneous XML node (non element).
+        /// Gets a value indicating whether the current node is a miscellaneous XML node (non element).
         /// </summary>
-        /// <remarks>IsStartElement and IsEndElement will be false when IsMiscNode==true.</remarks>
-        public abstract bool IsMiscNode
-        {
-            get;
-        }
+        /// <remarks><see cref="IsStartElement"/> and <see cref="IsEndElement"/> will be false when <see cref="IsMiscNode"/> is true.</remarks>
+        public abstract bool IsMiscNode { get; }
 
         /// <summary>
-        /// When overridden in a derived class, gets a value that indicates whether the current node is an element start.
+        /// Gets a value indicating whether the current node is an element start.
         /// </summary>
-        /// <remarks>IsStartElement and IsEndElement will be false when IsMiscNode==true.</remarks>
-        public abstract bool IsStartElement
-        {
-            get;
-        }
+        public abstract bool IsStartElement { get; }
 
         /// <summary>
-        /// When overridden in a derived class, gets a value that indicates whether the current node is an element end.
+        /// Gets a value indicating whether the current node is an element end.
         /// </summary>
-        /// <remarks>IsStartElement and IsEndElement will be false when IsMiscNode==true.</remarks>
-        public abstract bool IsEndElement
-        {
-            get;
-        }
+        public abstract bool IsEndElement { get; }
 
         /// <summary>
         /// Gets the depth of the current node in the XML document. The depth of the root element is 0.
         /// </summary>
-        public abstract int Depth
-        {
-            get;
-        }
+        public abstract int Depth { get; }
 
         /// <summary>
-        /// When overridden in a derived class, gets a value that indicates whether the reader is positioned at the end of the stream.
+        /// Gets a value indicating whether the reader is positioned at the end of the stream.
         /// </summary>
-        public abstract bool EOF
-        {
-            get;
-        }
+        public abstract bool EOF { get; }
 
         /// <summary>
-        /// When overridden in a derived class, gets the local name of the current node.
+        /// Gets the local name of the current node.
         /// </summary>
         public abstract string LocalName { get; }
 
         /// <summary>
-        /// When overridden in a derived class, gets the namespace URI (as defined in the W3C Namespace specification) of the node on which the reader is positioned.
+        /// Gets the namespace URI (as defined in the W3C Namespace specification) of the node on which the reader is positioned.
         /// </summary>
         public abstract string NamespaceUri { get; }
 
-        ///// <summary>
-        ///// When overridden in a derived class, gets the qualified name of the current node.
-        ///// </summary>
-        //public virtual string Name { get; }
-
         /// <summary>
-        /// When overridden in a derived class, gets the namespace prefix associated with the current node.
+        /// Gets the namespace prefix associated with the current node.
         /// </summary>
         public abstract string Prefix { get; }
 

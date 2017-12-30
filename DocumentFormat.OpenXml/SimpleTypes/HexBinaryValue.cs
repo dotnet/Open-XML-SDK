@@ -44,7 +44,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets the hexBinary string value.
+        /// Gets or sets the hex binary value
         /// </summary>
         public string Value
         {

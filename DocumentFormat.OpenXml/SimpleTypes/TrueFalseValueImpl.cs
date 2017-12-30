@@ -36,9 +36,7 @@ namespace DocumentFormat.OpenXml
             this._getDefaultTextValueMethod = getDefaultTextMethod;
         }
 
-        /// <summary>
-        /// Gets and sets the inner XML text.
-        /// </summary>
+        /// <inheritdoc/>
         public override string InnerText
         {
             get
@@ -59,9 +57,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Gets a value that indicates whether the underneath text value is a valid value.
-        /// </summary>
+        /// <inheritdoc/>
         public override bool HasValue
         {
             get
@@ -81,10 +77,12 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Gets and sets the boolean value of the <see cref="TrueFalseValueImpl"/> type.
-        /// </summary>
+#pragma warning disable SA1623 // Property summary documentation should match accessors
+                              /// <summary>
+                              /// Gets or sets the boolean value
+                              /// </summary>
         public bool Value
+#pragma warning restore SA1623 // Property summary documentation should match accessors
         {
             get
             {

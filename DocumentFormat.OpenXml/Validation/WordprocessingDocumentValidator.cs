@@ -42,9 +42,7 @@ namespace DocumentFormat.OpenXml.Validation
             }
         }
 
-        /// <summary>
-        /// Returns all the parts needs to be validated.
-        /// </summary>
+        /// <inheritdoc/>
         protected override IEnumerable<OpenXmlPart> PartsToBeValidated
         {
             get
