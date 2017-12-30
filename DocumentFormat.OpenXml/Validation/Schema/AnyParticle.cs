@@ -28,18 +28,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             _particleValidator = new AnyParticleValidator(this);
         }
 
-        /// <summary>
-        /// Gets the type of the particle.
-        /// </summary>
+        /// <inheritdoc/>
         internal override ParticleType ParticleType
         {
             get { return ParticleType.Any; }
             set { Debug.Assert(value == ParticleType.Any); }
         }
 
-        /// <summary>
-        /// This field is actually the value of the xsd:any.
-        /// </summary>
+        /// <inheritdoc/>
         internal override int ElementId
         {
             set
@@ -54,65 +50,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <summary>
-        /// The value of the xsd:any@namespace.
+        /// Gets the value of the xsd:any@namespace.
         /// </summary>
-        internal ushort NamespaceValue
-        {
-            get { return this._xsdAnyValue; }
-        }
+        internal ushort NamespaceValue => this._xsdAnyValue;
 
-        /// <summary>
-        /// Gets a ParticleValidator for this particle constraint.
-        /// </summary>
-        internal override IParticleValidator ParticleValidator
-        {
-            get { return this._particleValidator; }
-        }
+        /// <inheritdoc/>
+        internal override IParticleValidator ParticleValidator => this._particleValidator;
     }
-
-#if false
-    /// <summary>
-    /// Particle constraint data for particle which type is ParticleType.All
-    /// </summary>
-    internal class AllParticle : CompositeParticle
-    {
-        internal AllParticle() : base()
-        {
-        }
-    }
-
-    /// <summary>
-    /// Particle constraint data for particle which type is ParticleType.Choice
-    /// </summary>
-    internal class ChoiceParticle : CompositeParticle
-    {
-        internal ChoiceParticle()
-            : base()
-        {
-        }
-    }
-
-    /// <summary>
-    /// Particle constraint data for particle which type is ParticleType.Sequence
-    /// </summary>
-    internal class SequenceParticle : CompositeParticle
-    {
-        internal SequenceParticle()
-            : base()
-        {
-        }
-    }
-
-    /// <summary>
-    /// Particle constraint data for particle which type is ParticleType.Group
-    /// </summary>
-    internal class GroupParticle : CompositeParticle
-    {
-        internal GroupParticle()
-            : base()
-        {
-        }
-    }
-#endif
-
 }

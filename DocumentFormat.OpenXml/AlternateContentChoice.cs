@@ -108,10 +108,9 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// <para>Gets or sets a whitespace-delimited list of namespace prefixes that identify the
+        /// Gets or sets a whitespace-delimited list of namespace prefixes that identify the
         /// namespaces a markup consumer needs in order to understand and select that
-        /// Choice and process the content.</para>
-        /// <para> Represents the attribute in a schema. </para>
+        /// Choice and process the content.
         /// </summary>
         public StringValue Requires
         {
@@ -155,7 +154,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// The type ID of the element.
+        /// Gets the type ID of the element.
         /// </summary>
         internal override int ElementTypeId
         {

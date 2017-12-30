@@ -173,7 +173,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #region methods to operate ExternalRelationship
 
         /// <summary>
-        /// Enumerates all external relationships.
+        /// Gets all external relationships.
         /// Hyperlink relationships are not included, use HyperlinkRelationship property to enumerate hyperlink relationships.
         /// </summary>
         public IEnumerable<ExternalRelationship> ExternalRelationships
@@ -351,7 +351,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #region methods to operate HyperlinkRelationship
 
         /// <summary>
-        /// Enumerates all hyperlink relationships.
+        /// Gets all hyperlink relationships.
         /// </summary>
         public IEnumerable<HyperlinkRelationship> HyperlinkRelationships
         {
@@ -422,7 +422,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #region methods to operate DataPartReferenceRelationship
 
         /// <summary>
-        /// Enumerates all <see cref="DataPartReferenceRelationship"/> relationships.
+        /// Gets all <see cref="DataPartReferenceRelationship"/> relationships.
         /// </summary>
         public IEnumerable<DataPartReferenceRelationship> DataPartReferenceRelationships
         {
@@ -525,7 +525,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #region methods to operate parts
 
         /// <summary>
-        /// Enumerates all parts which are relationship targets of this part.
+        /// Gets all parts which are relationship targets of this part.
         /// </summary>
         public IEnumerable<IdPartPair> Parts
         {
@@ -2254,7 +2254,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #region abstract / virtual internal methods to be implemented by derived classes.
 
         /// <summary>
-        /// Internal OpenXmlPackage instance
+        /// Gets the internal OpenXmlPackage instance
         /// </summary>
         abstract internal OpenXmlPackage InternalOpenXmlPackage { get; }
 

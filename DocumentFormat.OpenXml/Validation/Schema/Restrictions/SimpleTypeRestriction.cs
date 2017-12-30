@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     internal abstract class SimpleTypeRestriction
     {
         /// <summary>
-        /// The FileFormat version of this restriction.
+        /// Gets or sets the FileFormat version of this restriction.
         /// </summary>
         internal FileFormatVersions FileFormat { get; set; }
 
@@ -31,12 +31,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         public virtual string ClrTypeName => throw new NotImplementedException();
 
         /// <summary>
-        /// Gets if this simple type is an enum
+        /// Gets a value indicating whether this simple type is an enum
         /// </summary>
         public virtual bool IsEnum => false;
 
         /// <summary>
-        /// Gets if this simple type is a list
+        /// Gets a value indicating whether this simple type is a list
         /// </summary>
         public virtual bool IsList => false;
 

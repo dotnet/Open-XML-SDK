@@ -93,7 +93,7 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
         abstract protected int SetIndex();
 
         /// <summary>
-        /// Get the Index
+        /// Gets the Index
         /// </summary>
         /// <returns>The index</returns>
         internal virtual int Index
@@ -110,7 +110,7 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
         }
 
         /// <summary>
-        /// Get the LocalName
+        /// Gets the LocalName
         /// </summary>
         /// <returns>The LocalName</returns>
         internal virtual string LocalName
@@ -119,7 +119,7 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
         }
 
         /// <summary>
-        /// Get the Value
+        /// Gets the Value
         /// </summary>
         /// <returns>The value</returns>
         internal virtual string Value
@@ -128,7 +128,7 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
         }
 
         /// <summary>
-        /// Get the Trait.
+        /// Gets the Trait.
         /// </summary>
         /// <returns>The Trait</returns>
         internal virtual long Trait
@@ -137,7 +137,7 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
         }
 
         /// <summary>
-        /// Get the formatter.
+        /// Gets the formatter.
         /// </summary>
         internal virtual AttributeFormatter Formatter
         {

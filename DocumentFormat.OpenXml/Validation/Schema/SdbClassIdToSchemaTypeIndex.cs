@@ -25,12 +25,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         public const SdbIndex InvalidSchemaTypeIndex = SdbIndex.MaxValue;
 
         /// <summary>
-        /// Class ID - Element Type ID.
+        /// Gets or sets class ID (Element Type ID).
         /// </summary>
         public SdbIndex ClassId { get; set; }
 
         /// <summary>
-        /// The index of the schema type in the SdbSchemaType data array.
+        /// Gets or sets the index of the schema type in the SdbSchemaType data array.
         /// </summary>
         public SdbIndex SchemaTypeIndex { get; set; }
 
@@ -64,25 +64,16 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <summary>
-        /// The size in bytes of this data structure.
+        /// Gets the size in bytes of this data structure.
         /// </summary>
-        public static int TypeSize
-        {
-            get
-            {
-                return sizeof(SdbIndex) * 2;
-            }
-        }
+        public static int TypeSize => sizeof(SdbIndex) * 2;
 
         #region Override SdbData Members
 
         /// <summary>
-        /// The size in bytes of this data structure.
+        /// Gets the size in bytes of this data structure.
         /// </summary>
-        public override int DataSize
-        {
-            get { return TypeSize; }
-        }
+        public override int DataSize => TypeSize;
 
         /// <summary>
         /// Serialize the data into byte data.

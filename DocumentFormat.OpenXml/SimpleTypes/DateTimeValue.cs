@@ -68,9 +68,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Gets or sets the inner XML text.
-        /// </summary>
+        /// <inheritdoc/>
         public override string InnerText
         {
             get

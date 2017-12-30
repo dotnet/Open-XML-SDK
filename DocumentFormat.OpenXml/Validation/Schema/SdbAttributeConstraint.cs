@@ -17,17 +17,17 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     internal class SdbAttributeConstraint : SdbData
     {
         /// <summary>
-        /// The xsd:use value.
+        /// Gets or sets the xsd:use value.
         /// </summary>
         public XsdAttributeUse AttributeUse { get; set; }
 
         /// <summary>
-        /// The index of the simple data in the SdbSimpleTypeRestriction data array.
+        /// Gets or sets the index of the simple data in the SdbSimpleTypeRestriction data array.
         /// </summary>
         public SdbIndex SimpleTypeIndex { get; set; }
 
         /// <summary>
-        /// In which file format version this attribute is allowed.
+        /// Gets or sets in which file format version this attribute is allowed.
         /// </summary>
         public byte FileFormatVersion { get; set; }
 
@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <summary>
-        /// The size in bytes of this data structure.
+        /// Gets the size in bytes of this data structure.
         /// </summary>
         public static int TypeSize
         {
@@ -57,12 +57,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         #region Override SdbData Members
 
         /// <summary>
-        /// The size in bytes of this data structure.
+        /// Gets the size in bytes of this data structure.
         /// </summary>
-        public override int DataSize
-        {
-            get { return TypeSize; }
-        }
+        public override int DataSize => TypeSize;
 
         /// <summary>
         /// Serialize the data into byte data.

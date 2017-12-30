@@ -134,71 +134,24 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// When overridden in a derived class, gets the local name of the node.
-        /// </summary>
-        public override string LocalName
-        {
-            get { return this._tagName; }
-        }
+        /// <inheritdoc/>
+        public override string LocalName => this._tagName;
 
-        /// <summary>
-        /// Gets the namespace URI of the current node.
-        /// </summary>
-        public override string NamespaceUri
-        {
-            get
-            {
-                return this._namespaceUri;
-            }
-        }
+        /// <inheritdoc/>
+        public override string NamespaceUri => this._namespaceUri;
 
-        /// <summary>
-        /// Gets or sets the prefix of the current node.
-        /// </summary>
-        public override string Prefix
-        {
-            get
-            {
-                return this._prefix;
-            }
-        }
+        /// <inheritdoc/>
+        public override string Prefix => this._prefix;
 
-        /// <summary>
-        /// When overridden in a derived class, gets the qualified name of the node.
-        /// </summary>
-        public override XmlQualifiedName XmlQualifiedName
-        {
-            get
-            {
-                return new XmlQualifiedName(this._tagName, this._namespaceUri);
-            }
-        }
+        /// <inheritdoc/>
+        public override XmlQualifiedName XmlQualifiedName => new XmlQualifiedName(this._tagName, this._namespaceUri);
 
-        //internal override int AttributeTotal
-        //{
-        //    get { return this._attributeTotal; }
-        //}
+        internal override byte NamespaceId => throw new InvalidOperationException();
 
-        internal override byte NamespaceId
-        {
-            get
-            {
-                throw new InvalidOperationException();
-            }
-        }
+        /// <inheritdoc/>
+        internal override int ElementTypeId => ReservedElementTypeIds.OpenXmlUnknownElementId;
 
-        /// <summary>
-        /// The type ID of the element.
-        /// </summary>
-        internal override int ElementTypeId
-        {
-            get { return ReservedElementTypeIds.OpenXmlUnknownElementId; }
-        }
-
-        /// <summary>
-        /// Gets or sets the concatenated values of the node and all of its children.
-        /// </summary>
+        /// <inheritdoc/>
         public override string InnerText
         {
             get
@@ -212,10 +165,6 @@ namespace DocumentFormat.OpenXml
                     return this._text;
                 }
             }
-            //set
-            //{
-            //    throw new InvalidOperationException();
-            //}
         }
 
         /// <summary>
@@ -231,19 +180,16 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// When overridden in a derived class, creates a duplicate of the node.
-        /// </summary>
-        /// <param name="deep">
-        /// Specify true to recursively clone the subtree under the specified
-        /// node; false to clone only the node itself.
-        /// </param>
-        /// <returns>The cloned node. </returns>
+        /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep)
         {
-            OpenXmlUnknownElement element = new OpenXmlUnknownElement(this._prefix, this._tagName, this._namespaceUri);
-            element._text = this.Text;
+            OpenXmlUnknownElement element = new OpenXmlUnknownElement(this._prefix, this._tagName, this._namespaceUri)
+            {
+                _text = this.Text
+            };
+
             element.CopyAttributes(this);
+
             if(deep)
             {
                 element.CopyChilden(this, deep);
@@ -252,10 +198,7 @@ namespace DocumentFormat.OpenXml
             return element;
         }
 
-        /// <summary>
-        /// Saves all the children of the node to the specified XmlWriter.
-        /// </summary>
-        /// <param name="w">The XmlWriter to which you want to save. </param>
+        /// <inheritdoc/>
         internal override void WriteContentTo(XmlWriter w)
         {
             if (this.HasChildren)
@@ -271,10 +214,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Saves the current node to the specified XmlWriter.
-        /// </summary>
-        /// <param name="xmlWriter">The XmlWriter at which to save.</param>
+        /// <inheritdoc/>
         public override void WriteTo(XmlWriter xmlWriter)
         {
             if (xmlWriter == null)
@@ -295,6 +235,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
+        /// <inheritdoc/>
         internal override void LazyLoad(XmlReader xmlReader)
         {
             this._tagName = xmlReader.LocalName;
@@ -304,6 +245,7 @@ namespace DocumentFormat.OpenXml
             this.RawOuterXml = xmlReader.ReadOuterXml();
         }
 
+        /// <inheritdoc/>
         internal override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode)
         {
             if (String.IsNullOrEmpty(this._tagName))
@@ -345,12 +287,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Whether this element is available in a specific version of Office Application.
-        /// For OpenXmlUnknownElement, always return false, no matter what the version is.
-        /// </summary>
-        /// <param name="version">The Office file format version.</param>
-        /// <returns>Returns true if the element is defined in the specified version.</returns>
+        /// <inheritdoc/>
         internal override bool IsInVersion(FileFormatVersions version)
         {
             return false;

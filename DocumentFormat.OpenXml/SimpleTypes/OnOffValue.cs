@@ -56,9 +56,7 @@ namespace DocumentFormat.OpenXml
                 GetDefaultTextValue);
         }
 
-        /// <summary>
-        /// Gets a value that indicates whether the underneath text value is a valid value.
-        /// </summary>
+        /// <inheritdoc/>
         public override bool HasValue
         {
             get
@@ -67,10 +65,12 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Gets or sets the value.
-        /// </summary>
+#pragma warning disable SA1623 // Property summary documentation should match accessor
+                              /// <summary>
+                              /// Gets or sets the value.
+                              /// </summary>
         public bool Value
+#pragma warning restore SA1623 // Property summary documentation should match accessors
         {
             get
             {
@@ -83,9 +83,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Gets or sets the inner XML text.
-        /// </summary>
+        /// <inheritdoc/>
         public override string InnerText
         {
             get

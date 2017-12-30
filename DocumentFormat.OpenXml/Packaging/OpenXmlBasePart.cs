@@ -290,7 +290,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #region public properties
 
         /// <summary>
-        /// Represents a part that is in the OpenXmlPackage container.
+        /// Gets a part that is in the OpenXmlPackage container.
         /// </summary>
         public OpenXmlPackage OpenXmlPackage
         {
@@ -302,7 +302,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Represents the internal part path in the package.
+        /// Gets the internal part path in the package.
         /// </summary>
         public Uri Uri
         {
@@ -314,11 +314,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 return this._uri;
             }
-            //internal set
-            //{
-            //    ThrowIfObjectDisposed();
-            //    this._uri = value;
-            //}
         }
 
         #endregion
@@ -407,7 +402,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #region public virtual methods / properties
 
         /// <summary>
-        /// Represents the content type (MIME type) of the content data in the part.
+        /// Gets the content type (MIME type) of the content data in the part.
         /// </summary>
         public virtual string ContentType
         {
@@ -419,7 +414,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// The relationship type of the part.
+        /// Gets the relationship type of the part.
         /// </summary>
         public abstract string RelationshipType { get; }
 
@@ -510,7 +505,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #region internal properties
 
         /// <summary>
-        /// The internal metro PackagePart element.
+        /// Gets the internal metro PackagePart element.
         /// </summary>
         internal PackagePart PackagePart
         {
@@ -519,7 +514,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 ThrowIfObjectDisposed();
                 return this._metroPart;
             }
-            // set { this._metroPart = value; }
         }
 
         ///// <summary>
@@ -554,7 +548,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #region internal virtual methods / properties
 
         /// <summary>
-        /// Indicates whether the ContentType for the current part is fixed.
+        /// Gets a value indicating whether the ContentType for the current part is fixed.
         /// </summary>
         internal virtual bool IsContentTypeFixed
         {
@@ -658,15 +652,9 @@ namespace DocumentFormat.OpenXml.Packaging
         #region internal methods
 
         /// <summary>
-        /// Returns true when the root element is loaded from the part or it has been set.
+        /// Gets a value indicating whether the root element is loaded from the part or it has been set.
         /// </summary>
-        internal bool IsRootElementLoaded
-        {
-            get
-            {
-                return this._rootElement != null;
-            }
-        }
+        internal bool IsRootElementLoaded => this._rootElement != null;
 
         /// <summary>
         /// Sets the PartRootElement to null.

@@ -14,12 +14,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     public static class InstanceCounter
     {
         /// <summary>
-        /// Count of ParticleMatchInfo instance.
+        /// Gets or sets count of ParticleMatchInfo instance.
         /// </summary>
         public static long ParticleMatchInfo { get; set; }
 
         /// <summary>
-        /// Count of ExpectedChildren instance.
+        /// Gets or sets count of ExpectedChildren instance.
         /// </summary>
         public static long ExpectedChildren { get; set; }
     }

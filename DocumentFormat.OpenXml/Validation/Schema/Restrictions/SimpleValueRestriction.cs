@@ -31,25 +31,25 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         public override string ClrTypeName => typeof(T).Name;
 
         /// <summary>
-        /// Gets the minInclusive facets.
+        /// Gets or sets the minInclusive facets.
         /// </summary>
         [DataMember]
         public T MinInclusive { get; set; }
 
         /// <summary>
-        /// Gets the maxInclusive facets.
+        /// Gets or sets the maxInclusive facets.
         /// </summary>
         [DataMember]
         public T MaxInclusive { get; set; }
 
         /// <summary>
-        /// Gets the minExclusive facets.
+        /// Gets or sets the minExclusive facets.
         /// </summary>
         [DataMember]
         public T MinExclusive { get; set; }
 
         /// <summary>
-        /// Gets the maxExclusive facets.
+        /// Gets or sets the maxExclusive facets.
         /// </summary>
         [DataMember]
         public T MaxExclusive { get; set; }

@@ -14,9 +14,7 @@ namespace DocumentFormat.OpenXml.Packaging
         [System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)]
         private DocumentFormat.OpenXml.OpenXmlPartRootElement _rootEle;
 
-        /// <summary>
-        /// Only for OpenXmlPart derived classes.
-        /// </summary>
+        /// <inheritdoc/>
         internal override OpenXmlPartRootElement _rootElement
         {
             get
@@ -30,9 +28,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        /// <summary>
-        /// Gets the root element of this part. The DOM tree will be loaded on demand.
-        /// </summary>
+        /// <inheritdoc/>
         internal override OpenXmlPartRootElement PartRootElement
         {
             get
@@ -49,10 +45,10 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Gets/Sets the part's root element when the part's content type is MailMergeRecipientDataPartType.OpenXmlMailMergeRecipientData.
+        /// Gets or sets the part's root element when the part's content type is MailMergeRecipientDataPartType.OpenXmlMailMergeRecipientData.
         /// Setting this property will throw InvalidOperationException if the MailMergeRecipients property is not null.
         /// </summary>
-        public DocumentFormat.OpenXml.Wordprocessing.Recipients Recipients
+        public Wordprocessing.Recipients Recipients
         {
             get
             {
@@ -75,10 +71,10 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Gets/Sets the part's root element when the part's content type is MailMergeRecipientDataPartType.MsWordMailMergeRecipientData.
+        /// Gets or sets the part's root element when the part's content type is MailMergeRecipientDataPartType.MsWordMailMergeRecipientData.
         /// Setting this property will throw InvalidOperationException if the Recipients property is not null.
         /// </summary>
-        public DocumentFormat.OpenXml.Office.Word.MailMergeRecipients MailMergeRecipients
+        public MailMergeRecipients MailMergeRecipients
         {
             get
             {

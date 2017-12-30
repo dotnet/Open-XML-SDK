@@ -46,9 +46,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Gets or sets the inner XML text.
-        /// </summary>
+        /// <inheritdoc/>
         public override string InnerText
         {
             get
@@ -62,18 +60,13 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
+        /// <inheritdoc/>
         internal override void Parse()
         {
             this.InnerValue = XmlConvert.ToBoolean(this.TextValue);
         }
 
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        /// <returns></returns>
+        /// <inheritdoc/>
         internal override bool TryParse()
         {
             Boolean value;

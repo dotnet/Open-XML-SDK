@@ -78,9 +78,7 @@ namespace DocumentFormat.OpenXml
             this._enumValue = source._enumValue;
         }
 
-        /// <summary>
-        /// Gets a value that indicates whether the underneath text value is a valid value.
-        /// </summary>
+        /// <inheritdoc/>
         public override bool HasValue
         {
             get
@@ -131,9 +129,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Gets or sets the inner XML text.
-        /// </summary>
+        /// <inheritdoc/>
         public override string InnerText
         {
             get
