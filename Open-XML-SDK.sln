@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.27130.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormat.OpenXml", "DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj", "{16941A4A-F8DE-4C8D-BA2B-3C0774848D4B}"
 EndProject
@@ -20,6 +20,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Tests.targets = Tests.targets
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{4F7A107E-3ED7-4698-B51A-DAF9520E225C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OfficeSchemaProcessor", "tools\OfficeSchemaProcessor\OfficeSchemaProcessor.csproj", "{80FD61F3-89C1-4A3C-868F-BBB2C29209F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,9 +38,16 @@ Global
 		{B92240AF-6E87-4428-9C5A-371178A04E5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B92240AF-6E87-4428-9C5A-371178A04E5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B92240AF-6E87-4428-9C5A-371178A04E5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80FD61F3-89C1-4A3C-868F-BBB2C29209F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80FD61F3-89C1-4A3C-868F-BBB2C29209F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80FD61F3-89C1-4A3C-868F-BBB2C29209F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80FD61F3-89C1-4A3C-868F-BBB2C29209F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{80FD61F3-89C1-4A3C-868F-BBB2C29209F3} = {4F7A107E-3ED7-4698-B51A-DAF9520E225C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6F476383-E917-43D1-A1E5-9A61A47DA3F5}
