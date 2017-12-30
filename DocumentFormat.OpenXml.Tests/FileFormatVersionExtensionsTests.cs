@@ -2,8 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
@@ -31,7 +29,7 @@ namespace DocumentFormat.OpenXml.Tests
         [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010, false)]
         [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2013, false)]
         [InlineData(FileFormatVersions.Office2010 | FileFormatVersions.Office2013, false)]
-        [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010 | FileFormatVersions.None, true)]
+        [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010 | FileFormatVersions.Office2013, true)]
         [Theory]
         public void CheckAll(FileFormatVersions version, bool expected)
         {
@@ -45,7 +43,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Theory]
         public void AndLaterExceptions(FileFormatVersions version)
         {
-            Assert.Throws<ArgumentOutOfRangeException>(() => version.AndLater());
+            Assert.Throws<ArgumentOutOfRangeException>(nameof(version), () => version.AndLater());
         }
 
         [InlineData(FileFormatVersions.Office2007, FileFormatVersions.Office2007, true)]
@@ -70,8 +68,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Theory]
         public void AtLeastExceptions(FileFormatVersions version)
         {
-            Assert.Throws<ArgumentOutOfRangeException>(() => version.AtLeast(FileFormatVersions.Office2007));
-            Assert.Throws<ArgumentOutOfRangeException>(() => FileFormatVersions.Office2007.AtLeast(version));
+            Assert.Throws<ArgumentOutOfRangeException>(nameof(version), () => version.AtLeast(FileFormatVersions.Office2007));
+            Assert.Throws<ArgumentOutOfRangeException>("minimum", () => FileFormatVersions.Office2007.AtLeast(version));
         }
     }
 }
