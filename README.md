@@ -130,7 +130,7 @@ Known Issues
 Change Log
 -----------
 
-**Version 2.8.1** : January 3, 2018
+**Version 2.8.1**: January 3, 2018
 
 - Corrected package license file reference.
 - Added Office icon to Nuget package properties.
