@@ -57,17 +57,16 @@ namespace DocumentFormat.OpenXml
             this.InnerText = source.InnerText;
         }
 
+        private protected virtual bool ShouldParse(string value) => !string.IsNullOrEmpty(value);
+
         /// <inheritdoc/>
         public override bool HasValue
         {
             get
             {
-                if (!this._value.HasValue)
+                if (!this._value.HasValue && ShouldParse(TextValue))
                 {
-                    if (!String.IsNullOrEmpty(this.TextValue))
-                    {
-                        TryParse();
-                    }
+                    TryParse();
                 }
 
                 return this._value.HasValue;
@@ -81,18 +80,12 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (!this._value.HasValue)
+                if (!this._value.HasValue && ShouldParse(InnerText))
                 {
-                    if (!String.IsNullOrEmpty(this.TextValue))
-                    {
-                        Parse();
-                    }
+                    Parse();
                 }
-                else
-                {
-                    // TODO: check that the .TextValue is same as .InnerValue in debug verion.
-                }
-                return  this._value.Value;
+
+                return this._value.Value;
             }
 
             set
