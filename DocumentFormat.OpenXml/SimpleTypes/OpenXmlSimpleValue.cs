@@ -11,18 +11,10 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     /// <typeparam name="T">The type of the value.</typeparam>
     [DebuggerDisplay("{InnerText}")]
-    public abstract class OpenXmlSimpleValue<T>
-        : OpenXmlSimpleType
+    public abstract class OpenXmlSimpleValue<T> : OpenXmlSimpleType
         where T : struct
     {
-        //can not use System.Nullable<T> _value;
-        private T? _value;
-
-        internal T? InnerValue
-        {
-            get { return this._value; }
-            set { this._value = value; }
-        }
+        private protected T? InnerValue { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlSimpleValue class.
@@ -64,13 +56,29 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (!this._value.HasValue && ShouldParse(TextValue))
+                if (!this.InnerValue.HasValue && ShouldParse(TextValue))
                 {
                     TryParse();
                 }
 
-                return this._value.HasValue;
+                return this.InnerValue.HasValue;
             }
+        }
+
+        /// <summary>
+        /// Convert the text to meaningful value.
+        /// </summary>
+        internal virtual void Parse()
+        {
+        }
+
+        /// <summary>
+        /// Convert the text to meaningful value.
+        /// </summary>
+        /// <returns></returns>
+        internal virtual bool TryParse()
+        {
+            return true;
         }
 
         /// <summary>
@@ -80,17 +88,17 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (!this._value.HasValue && ShouldParse(InnerText))
+                if (!this.InnerValue.HasValue && ShouldParse(InnerText))
                 {
                     Parse();
                 }
 
-                return this._value.Value;
+                return this.InnerValue.Value;
             }
 
             set
             {
-                this._value = value;
+                this.InnerValue = value;
                 this.TextValue = null;
             }
         }
@@ -108,7 +116,7 @@ namespace DocumentFormat.OpenXml
                 // do not check whether format is ok.
 
                 this.TextValue = value;
-                this._value = null;
+                this.InnerValue = null;
             }
         }
 
