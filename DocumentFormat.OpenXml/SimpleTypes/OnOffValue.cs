@@ -150,7 +150,7 @@ namespace DocumentFormat.OpenXml
             return boolValue ? "true" : "false";
         }
 
-        internal override OpenXmlSimpleType CloneImp()
+        private protected override OpenXmlSimpleType CloneImpl()
         {
             return new OnOffValue(this);
         }

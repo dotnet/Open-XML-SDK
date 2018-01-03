@@ -201,7 +201,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        internal override OpenXmlSimpleType CloneImp()
+        private protected override OpenXmlSimpleType CloneImpl()
         {
             return new ListValue<T>(this);
         }
