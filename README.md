@@ -130,6 +130,13 @@ Known Issues
 Change Log
 -----------
 
+**Version 2.8.1** : January 3, 2018
+
+- Corrected package license file reference.
+- Added Office icon to Nuget package properties.
+
+   ![Office icon](https://github.com/OfficeDev/Open-XML-SDK/blob/master/Icon.png?raw=true) 
+
 **Version 2.8.0**: December 28, 2017
 
 - Added default runtime directive for better .NET Native support.
@@ -165,7 +172,7 @@ Change Log
 Documentation
 -------------
 
-The functionality of the specific classes in Open XML SDK Version 2.8.0 is similar to version 2.5, therefore the [Open XML SDK 2.5 for Office](http://msdn.microsoft.com/en-us/library/office/bb448854.aspx) documentation available on MSDN is still accurate.
+The functionality of the specific classes in this version of the Open XML SDK is similar to version 2.5, therefore the [Open XML SDK 2.5 for Office](http://msdn.microsoft.com/en-us/library/office/bb448854.aspx) documentation available on MSDN is still accurate.
 
 In addition to open sourcing of the SDK, Microsoft has opened up the conceptual documentation for public review / contributions.  A copy of the documentation is  available for you to edit and review [in GitHub](https://github.com/OfficeDev/office-content).
 
