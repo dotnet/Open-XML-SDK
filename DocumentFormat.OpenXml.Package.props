@@ -17,6 +17,10 @@
     <PackageTags>openxml office</PackageTags>
     <PackageReleaseNotes><![CDATA[
 
+Version 2.8.1 : January 3, 2018
+- Corrected package license file reference.
+- Added Office icon for Nuget package.
+
 Version 2.8.0 : December 28, 2017
 - Added default runtime directive for better .NET Native support
 - Fixed exceptions thrown when errors are encountered while opening packages to be consistent across platforms
