@@ -62,10 +62,6 @@ namespace DocumentFormat.OpenXml
         public DateTimeValue(DateTimeValue source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
         }
 
         private protected override string GetText(DateTime input) => XmlConvert.ToString(input, XmlDateTimeSerializationMode.RoundtripKind);

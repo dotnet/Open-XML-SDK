@@ -37,10 +37,6 @@ namespace DocumentFormat.OpenXml
         public Int64Value(Int64Value source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
         }
 
         private protected override string GetText(long input) => XmlConvert.ToString(input);

@@ -41,10 +41,6 @@ namespace DocumentFormat.OpenXml
         public ByteValue(ByteValue source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
         }
 
         private protected override string GetText(byte input) => XmlConvert.ToString(input);

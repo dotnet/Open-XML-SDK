@@ -38,10 +38,6 @@ namespace DocumentFormat.OpenXml
         public UInt64Value(UInt64Value source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
         }
 
         private protected override string GetText(ulong input) => XmlConvert.ToString(input);

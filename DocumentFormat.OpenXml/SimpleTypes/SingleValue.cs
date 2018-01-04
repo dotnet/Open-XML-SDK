@@ -37,10 +37,6 @@ namespace DocumentFormat.OpenXml
         public SingleValue(SingleValue source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
         }
 
         private protected override string GetText(float input) => XmlConvert.ToString(input);

@@ -71,10 +71,6 @@ namespace DocumentFormat.OpenXml
         public EnumValue(EnumValue<T> source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
             this._enumValue = source._enumValue;
         }
 

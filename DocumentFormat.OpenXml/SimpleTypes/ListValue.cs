@@ -58,10 +58,6 @@ namespace DocumentFormat.OpenXml
         public ListValue(ListValue<T> source)
             : this(source.Items)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
         }
 
         /// <inheritdoc/>

@@ -41,11 +41,6 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlSimpleValue(OpenXmlSimpleValue<T> source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
-
             this.InnerText = source.InnerText;
         }
 

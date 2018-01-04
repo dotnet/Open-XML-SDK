@@ -41,10 +41,6 @@ namespace DocumentFormat.OpenXml
         public DecimalValue(DecimalValue source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
         }
 
         private protected override string GetText(Decimal input) => XmlConvert.ToString(input);

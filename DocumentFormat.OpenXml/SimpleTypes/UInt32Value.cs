@@ -38,10 +38,6 @@ namespace DocumentFormat.OpenXml
         public UInt32Value(UInt32Value source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
         }
 
         private protected override string GetText(uint input) => XmlConvert.ToString(input);

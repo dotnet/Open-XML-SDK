@@ -40,10 +40,6 @@ namespace DocumentFormat.OpenXml
         public BooleanValue(BooleanValue source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
         }
 
         private protected override string GetText(bool input) => input ? "1" : "0";

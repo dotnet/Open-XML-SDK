@@ -38,10 +38,6 @@ namespace DocumentFormat.OpenXml
         public SByteValue(SByteValue source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
         }
 
         private protected override string GetText(sbyte input) => XmlConvert.ToString(input);

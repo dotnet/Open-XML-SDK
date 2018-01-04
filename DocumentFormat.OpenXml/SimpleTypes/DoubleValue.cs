@@ -41,10 +41,6 @@ namespace DocumentFormat.OpenXml
         public DoubleValue(DoubleValue source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
         }
 
         private protected override string GetText(double input) => XmlConvert.ToString(input);

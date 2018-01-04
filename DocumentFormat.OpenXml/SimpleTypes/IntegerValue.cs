@@ -44,10 +44,6 @@ namespace DocumentFormat.OpenXml
         public IntegerValue(IntegerValue source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
         }
 
         private protected override string GetText(long input) => XmlConvert.ToString(input);

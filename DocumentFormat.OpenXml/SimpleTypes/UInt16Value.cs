@@ -38,10 +38,6 @@ namespace DocumentFormat.OpenXml
         public UInt16Value(UInt16Value source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
         }
 
         private protected override string GetText(ushort input) => XmlConvert.ToString(input);
