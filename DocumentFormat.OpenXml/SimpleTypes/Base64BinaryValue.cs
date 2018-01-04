@@ -111,9 +111,6 @@ namespace DocumentFormat.OpenXml
             return xmlAttribute.Value;
         }
 
-        private protected override OpenXmlSimpleType CloneImpl()
-        {
-            return new Base64BinaryValue(this);
-        }
+        private protected override OpenXmlSimpleType CloneImpl() => new Base64BinaryValue(this);
     }
 }

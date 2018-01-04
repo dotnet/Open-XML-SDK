@@ -137,9 +137,6 @@ namespace DocumentFormat.OpenXml
         /// Not implemented by <see cref="TrueFalseValueImpl"/>.
         /// </summary>
         /// <returns></returns>
-        private protected override OpenXmlSimpleType CloneImpl()
-        {
-            throw new NotImplementedException();
-        }
+        private protected override OpenXmlSimpleType CloneImpl() => throw new NotImplementedException();
     }
 }

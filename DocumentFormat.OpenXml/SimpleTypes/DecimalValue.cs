@@ -161,9 +161,6 @@ namespace DocumentFormat.OpenXml
             return xmlAttribute.Value;
         }
 
-        private protected override OpenXmlSimpleType CloneImpl()
-        {
-            return new DecimalValue(this);
-        }
+        private protected override OpenXmlSimpleType CloneImpl() => new DecimalValue(this);
     }
 }

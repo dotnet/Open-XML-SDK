@@ -150,10 +150,7 @@ namespace DocumentFormat.OpenXml
             return boolValue ? "true" : "false";
         }
 
-        private protected override OpenXmlSimpleType CloneImpl()
-        {
-            return new OnOffValue(this);
-        }
+        private protected override OpenXmlSimpleType CloneImpl() => new OnOffValue(this);
 
         /// <summary>
         /// Implicitly converts the specified OnOffValue object to a <see cref="Boolean"/> value.

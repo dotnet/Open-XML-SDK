@@ -189,10 +189,7 @@ namespace DocumentFormat.OpenXml
             return value.InnerText;
         }
 
-        private protected override OpenXmlSimpleType CloneImpl()
-        {
-            return new EnumValue<T>(this);
-        }
+        private protected override OpenXmlSimpleType CloneImpl() => new EnumValue<T>(this);
 
         /// <summary>
         /// Convert the text to meaningful value.

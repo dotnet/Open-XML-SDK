@@ -104,9 +104,6 @@ namespace DocumentFormat.OpenXml
             return xmlAttribute.Value;
         }
 
-        private protected override OpenXmlSimpleType CloneImpl()
-        {
-            return new HexBinaryValue(this);
-        }
+        private protected override OpenXmlSimpleType CloneImpl() => new HexBinaryValue(this);
     }
 }

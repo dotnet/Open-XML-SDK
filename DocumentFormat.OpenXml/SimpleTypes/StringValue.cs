@@ -106,9 +106,6 @@ namespace DocumentFormat.OpenXml
             return xmlAttribute.Value;
         }
 
-        private protected override OpenXmlSimpleType CloneImpl()
-        {
-            return new StringValue(this);
-        }
+        private protected override OpenXmlSimpleType CloneImpl() => new StringValue(this);
     }
 }

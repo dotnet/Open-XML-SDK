@@ -149,9 +149,6 @@ namespace DocumentFormat.OpenXml
             return xmlAttribute.Value;
         }
 
-        private protected override OpenXmlSimpleType CloneImpl()
-        {
-            return new UInt64Value(this);
-        }
+        private protected override OpenXmlSimpleType CloneImpl() => new UInt64Value(this);
     }
 }

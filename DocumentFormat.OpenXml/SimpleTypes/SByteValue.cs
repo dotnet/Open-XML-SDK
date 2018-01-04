@@ -147,9 +147,6 @@ namespace DocumentFormat.OpenXml
             return xmlAttribute.Value;
         }
 
-        private protected override OpenXmlSimpleType CloneImpl()
-        {
-            return new SByteValue(this);
-        }
+        private protected override OpenXmlSimpleType CloneImpl() => new SByteValue(this);
     }
 }

@@ -140,10 +140,7 @@ namespace DocumentFormat.OpenXml
             return xmlAttribute.Value;
         }
 
-        private protected override OpenXmlSimpleType CloneImpl()
-        {
-            return new TrueFalseValue(this);
-        }
+        private protected override OpenXmlSimpleType CloneImpl() => new TrueFalseValue(this);
 
         /// <summary>
         /// Gets the real boolean value of the text value.

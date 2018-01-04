@@ -183,9 +183,6 @@ namespace DocumentFormat.OpenXml
             return xmlAttribute.Value;
         }
 
-        private protected override OpenXmlSimpleType CloneImpl()
-        {
-            return new DateTimeValue(this);
-        }
+        private protected override OpenXmlSimpleType CloneImpl() => new DateTimeValue(this);
     }
 }

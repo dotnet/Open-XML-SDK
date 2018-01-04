@@ -201,10 +201,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        private protected override OpenXmlSimpleType CloneImpl()
-        {
-            return new ListValue<T>(this);
-        }
+        private protected override OpenXmlSimpleType CloneImpl() => new ListValue<T>(this);
 
         private void CollectionChanged(Object sender, NotifyCollectionChangedEventArgs e)
         {
