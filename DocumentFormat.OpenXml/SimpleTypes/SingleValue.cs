@@ -43,46 +43,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <inheritdoc/>
-        public override string InnerText
-        {
-            get
-            {
-                if (this.TextValue == null && this.InnerValue.HasValue)
-                {
-                    // this.TextValue = this._value.ToString();
-                    this.TextValue = XmlConvert.ToString(this.InnerValue.Value);
-                }
-                else
-                {
-#if DEBUG
-                    if (this.InnerValue.HasValue && this.TextValue != null)
-                    {
-                        if (Single.IsPositiveInfinity(this.InnerValue.Value))
-                        {
-                            Debug.Assert(this.TextValue == "INF" || this.TextValue == "Infinity");
-                        }
-                        else if (Single.IsNegativeInfinity(this.InnerValue.Value))
-                        {
-                            Debug.Assert(this.TextValue == "-INF" || this.TextValue == "-Infinity");
-                        }
-                        else
-                        {
-                            Debug.Assert(this.TextValue == XmlConvert.ToString(this.InnerValue.Value) ||
-                                // special case: signed number like text is "+5", value is 5
-                                 this.TextValue != null && this.TextValue == "+" + XmlConvert.ToString(this.InnerValue.Value));
-                        }
-                    }
-                    else
-                    {
-                        Debug.Assert(this.TextValue == null && !this.InnerValue.HasValue ||
-                                     this.TextValue != null && !this.InnerValue.HasValue);
-                    }
-#endif
-                }
-                return this.TextValue;
-            }
-        }
+        private protected override string GetText(float input) => XmlConvert.ToString(input);
 
         private protected override float Parse(string input) => XmlConvert.ToSingle(input);
 

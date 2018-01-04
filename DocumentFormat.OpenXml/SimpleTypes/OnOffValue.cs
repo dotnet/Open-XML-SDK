@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="boolValue">The boolean value.</param>
         /// <returns>"1" for True, "0" for False.</returns>
-        private protected override string GetDefaultTextValue(Boolean boolValue)
+        private protected override string GetText(Boolean boolValue)
         {
             // TODO : Defines the default text values.
             return boolValue ? "true" : "false";

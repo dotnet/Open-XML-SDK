@@ -46,19 +46,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <inheritdoc/>
-        public override string InnerText
-        {
-            get
-            {
-                if (this.TextValue == null && this.InnerValue.HasValue)
-                {
-                    // Word use "1", "0"
-                    this.TextValue = this.InnerValue.Value ? "1" : "0";
-                }
-                return this.TextValue;
-            }
-        }
+        private protected override string GetText(bool input) => input ? "1" : "0";
 
         private protected override bool Parse(string input) => XmlConvert.ToBoolean(input);
 

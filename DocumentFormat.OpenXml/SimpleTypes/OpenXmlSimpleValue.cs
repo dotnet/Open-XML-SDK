@@ -65,6 +65,8 @@ namespace DocumentFormat.OpenXml
             }
         }
 
+        private protected abstract string GetText(T input);
+
         /// <summary>
         /// Convert the text to meaningful value.
         /// </summary>
@@ -114,13 +116,16 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                throw new NotImplementedException();
+                if (this.TextValue == null && this.InnerValue.HasValue)
+                {
+                    this.TextValue = GetText(this.InnerValue.Value);
+                }
+
+                return this.TextValue;
             }
 
             set
             {
-                // do not check whether format is ok.
-
                 this.TextValue = value;
                 this.InnerValue = null;
             }

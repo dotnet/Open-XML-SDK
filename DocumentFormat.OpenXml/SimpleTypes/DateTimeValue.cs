@@ -68,27 +68,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <inheritdoc/>
-        public override string InnerText
-        {
-            get
-            {
-                if (this.TextValue == null && this.InnerValue.HasValue)
-                {
-                    // this.TextValue = this._value.ToString();
-                    this.TextValue = XmlConvert.ToString(this.InnerValue.Value, XmlDateTimeSerializationMode.RoundtripKind);
-                }
-                else
-                {
-                    bool assertTest = this.TextValue == null && !this.InnerValue.HasValue ||
-                                 this.TextValue != null && !this.InnerValue.HasValue ||
-                                 this.TextValue != null && this.InnerValue == XmlConvert.ToDateTime(this.TextValue, System.Xml.XmlDateTimeSerializationMode.RoundtripKind);
-                    if (!assertTest)
-                        Debug.Assert(false);
-                }
-                return this.TextValue;
-            }
-        }
+        private protected override string GetText(DateTime input) => XmlConvert.ToString(input, XmlDateTimeSerializationMode.RoundtripKind);
 
         /// <summary>
         /// Convert the text to meaningful value.

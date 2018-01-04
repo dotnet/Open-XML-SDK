@@ -44,25 +44,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <inheritdoc/>
-        public override string InnerText
-        {
-            get
-            {
-                if (this.TextValue == null && this.InnerValue.HasValue)
-                {
-                    // this.TextValue = this._value.ToString();
-                    this.TextValue = XmlConvert.ToString(this.InnerValue.Value);
-                }
-                else
-                {
-                    Debug.Assert(this.TextValue == null && !this.InnerValue.HasValue ||
-                                 this.TextValue != null && !this.InnerValue.HasValue ||
-                                 this.TextValue != null && this.TextValue == this.InnerValue.ToString());
-                }
-                return this.TextValue;
-            }
-        }
+        private protected override string GetText(uint input) => XmlConvert.ToString(input);
 
         private protected override uint Parse(string input) => XmlConvert.ToUInt32(input);
 
