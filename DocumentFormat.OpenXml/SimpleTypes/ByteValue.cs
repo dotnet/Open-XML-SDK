@@ -160,9 +160,6 @@ namespace DocumentFormat.OpenXml
             return xmlAttribute.Value;
         }
 
-        internal override OpenXmlSimpleType CloneImp()
-        {
-            return new ByteValue(this);
-        }
+        private protected override OpenXmlSimpleType CloneImpl() => new ByteValue(this);
     }
 }
