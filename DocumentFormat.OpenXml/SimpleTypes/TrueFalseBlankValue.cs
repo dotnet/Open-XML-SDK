@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml
     /// Represents the datatype for attributes that have enum values that are Boolean values that represent 't' or 'f', or 'true' or 'false'.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class TrueFalseBlankValue : TrueFalseValueBase
+    public class TrueFalseBlankValue : OpenXmlSimpleValue<bool>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TrueFalseBlankValue"/> class.
@@ -88,6 +88,8 @@ namespace DocumentFormat.OpenXml
         }
 
         private protected override OpenXmlSimpleType CloneImpl() => new TrueFalseBlankValue(this);
+
+        private protected override bool ShouldParse(string value) => value != null;
 
         /// <summary>
         /// Gets the real boolean value of the text value.
