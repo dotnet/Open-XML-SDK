@@ -49,6 +49,6 @@ Version 2.6.0 : June 29, 2015
 ]]></PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/OfficeDev/Open-XML-SDK</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/OfficeDev/Open-XML-SDK/blob/master/LICENSE</PackageLicenseUrl>
-    <PackageIconUrl>https://github.com/OfficeDev/Open-XML-SDK/blob/master/Icon.png</PackageIconUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/OfficeDev/Open-XML-SDK/master/Icon.png</PackageIconUrl>
   </PropertyGroup>
 </Project>
