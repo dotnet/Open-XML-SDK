@@ -1,4 +1,4 @@
-Open-XML-SDK
+Open XML SDK
 ============
 
 [![NuGet](https://img.shields.io/nuget/v/DocumentFormat.OpenXml.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml)
