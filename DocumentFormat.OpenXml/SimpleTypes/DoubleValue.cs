@@ -67,38 +67,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        internal override void Parse()
-        {
-            this.InnerValue = XmlConvert.ToDouble(this.TextValue);
-        }
-
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        /// <returns></returns>
-        internal override bool TryParse()
-        {
-            Double value;
-            this.InnerValue = null;
-
-            try
-            {
-                value = XmlConvert.ToDouble(this.TextValue);
-                this.InnerValue = value;
-                return true;
-            }
-            catch (FormatException)
-            {
-                return false;
-            }
-            catch (OverflowException)
-            {
-                return false;
-            }
-        }
+        private protected override double Parse(string input) => XmlConvert.ToDouble(input);
 
         /// <summary>
         /// Implicitly converts the specified value to a Double value.

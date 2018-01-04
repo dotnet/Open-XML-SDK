@@ -83,33 +83,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <inheritdoc/>
-        internal override void Parse()
-        {
-            this.InnerValue = XmlConvert.ToInt32(this.TextValue);
-        }
-
-        /// <inheritdoc/>
-        internal override bool TryParse()
-        {
-            Int32 value;
-            this.InnerValue = null;
-
-            try
-            {
-                value = XmlConvert.ToInt32(this.TextValue);
-                this.InnerValue = value;
-                return true;
-            }
-            catch (FormatException)
-            {
-                return false;
-            }
-            catch (OverflowException)
-            {
-                return false;
-            }
-        }
+        private protected override Int32 Parse(string input) => XmlConvert.ToInt32(input);
 
         /// <summary>
         /// Implicitly converts the specified value to an Int32 value.

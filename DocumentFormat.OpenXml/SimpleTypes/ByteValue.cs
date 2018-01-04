@@ -67,38 +67,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        internal override void Parse()
-        {
-            this.InnerValue = XmlConvert.ToByte(this.TextValue);
-        }
-
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        /// <returns></returns>
-        internal override bool TryParse()
-        {
-            Byte value;
-            this.InnerValue = null;
-
-            try
-            {
-                value = XmlConvert.ToByte(this.TextValue);
-                this.InnerValue = value;
-                return true;
-            }
-            catch (FormatException)
-            {
-                return false;
-            }
-            catch (OverflowException)
-            {
-                return false;
-            }
-        }
+        private protected override byte Parse(string input) => XmlConvert.ToByte(this.TextValue);
 
         /// <summary>
         /// Implicitly converts the specified value to a Byte value.

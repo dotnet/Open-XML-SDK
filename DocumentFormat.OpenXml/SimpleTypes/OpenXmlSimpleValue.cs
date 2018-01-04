@@ -56,9 +56,9 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (!this.InnerValue.HasValue && ShouldParse(TextValue))
+                if (!this.InnerValue.HasValue && ShouldParse(TextValue) && TryParse(TextValue, out var parsed))
                 {
-                    TryParse();
+                    InnerValue = parsed;
                 }
 
                 return this.InnerValue.HasValue;
@@ -68,17 +68,23 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Convert the text to meaningful value.
         /// </summary>
-        internal virtual void Parse()
-        {
-        }
+        private protected abstract T Parse(string input);
 
         /// <summary>
-        /// Convert the text to meaningful value.
+        /// Convert the text to meaningful value with no exceptions
         /// </summary>
-        /// <returns></returns>
-        internal virtual bool TryParse()
+        private protected virtual bool TryParse(string input, out T value)
         {
-            return true;
+            try
+            {
+                value = Parse(input);
+                return true;
+            }
+            catch (Exception)
+            {
+                value = default;
+                return false;
+            }
         }
 
         /// <summary>
@@ -90,7 +96,7 @@ namespace DocumentFormat.OpenXml
             {
                 if (!this.InnerValue.HasValue && ShouldParse(InnerText))
                 {
-                    Parse();
+                    InnerValue = Parse(InnerText);
                 }
 
                 return this.InnerValue.Value;

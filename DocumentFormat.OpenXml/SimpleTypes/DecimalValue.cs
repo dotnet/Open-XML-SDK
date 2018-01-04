@@ -69,38 +69,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        internal override void Parse()
-        {
-            this.InnerValue = XmlConvert.ToDecimal(this.TextValue);
-        }
-
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        /// <returns></returns>
-        internal override bool TryParse()
-        {
-            Decimal value;
-            this.InnerValue = null;
-
-            try
-            {
-                value = XmlConvert.ToDecimal(this.TextValue);
-                this.InnerValue = value;
-                return true;
-            }
-            catch (FormatException)
-            {
-                return false;
-            }
-            catch (OverflowException)
-            {
-                return false;
-            }
-        }
+        private protected override Decimal Parse(string input) => XmlConvert.ToDecimal(input);
 
         /// <summary>
         /// Implicitly converts the specified value to a Decimal value.

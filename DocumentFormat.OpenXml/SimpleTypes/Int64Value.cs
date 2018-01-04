@@ -65,33 +65,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <inheritdoc/>
-        internal override void Parse()
-        {
-            this.InnerValue = XmlConvert.ToInt64(this.TextValue);
-        }
-
-        /// <inheritdoc/>
-        internal override bool TryParse()
-        {
-            Int64 value;
-            this.InnerValue = null;
-
-            try
-            {
-                value = XmlConvert.ToInt64(this.TextValue);
-                this.InnerValue = value;
-                return true;
-            }
-            catch (FormatException)
-            {
-                return false;
-            }
-            catch (OverflowException)
-            {
-                return false;
-            }
-        }
+        private protected override Int64 Parse(string input) => XmlConvert.ToInt64(input);
 
         /// <summary>
         /// Implicitly converts the specified Int64Value to an Int64 value.

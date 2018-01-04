@@ -66,33 +66,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <inheritdoc/>
-        internal override void Parse()
-        {
-            this.InnerValue = XmlConvert.ToSByte(this.TextValue);
-        }
-
-        /// <inheritdoc/>
-        internal override bool TryParse()
-        {
-            SByte value;
-            this.InnerValue = null;
-
-            try
-            {
-                value = XmlConvert.ToSByte(this.TextValue);
-                this.InnerValue = value;
-                return true;
-            }
-            catch (FormatException)
-            {
-                return false;
-            }
-            catch (OverflowException)
-            {
-                return false;
-            }
-        }
+        private protected override sbyte Parse(string input) => XmlConvert.ToSByte(input);
 
         /// <summary>
         /// Implicitly converts the specified SByteValue to an SByte value.

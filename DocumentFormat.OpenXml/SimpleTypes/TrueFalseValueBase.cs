@@ -45,29 +45,8 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        private protected abstract bool GetBooleanValue(string input);
-
         private protected abstract string GetDefaultTextValue(bool input);
 
         private protected override bool ShouldParse(string value) => value != null;
-
-        internal override void Parse()
-        {
-            InnerValue = GetBooleanValue(this.TextValue);
-        }
-
-        internal override bool TryParse()
-        {
-            try
-            {
-                InnerValue = GetBooleanValue(this.TextValue);
-                return true;
-            }
-            catch (FormatException)
-            {
-                InnerValue = null;
-                return false;
-            }
-        }
     }
 }

@@ -42,7 +42,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="textValue">The text value which could be 'true', 'false', 'on', 'off', '0', or '1'.</param>
         /// <returns>True for 'true', 'on', '0', or '1'.</returns>
-        private protected override bool GetBooleanValue(string textValue)
+        private protected override bool Parse(string textValue)
         {
             if (textValue != null)
             {

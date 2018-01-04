@@ -65,33 +65,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <inheritdoc/>
-        internal override void Parse()
-        {
-            this.InnerValue = XmlConvert.ToInt16(this.TextValue);
-        }
-
-        /// <inheritdoc/>
-        internal override bool TryParse()
-        {
-            Int16 value;
-            this.InnerValue = null;
-
-            try
-            {
-                value = XmlConvert.ToInt16(this.TextValue);
-                this.InnerValue = value;
-                return true;
-            }
-            catch (FormatException)
-            {
-                return false;
-            }
-            catch (OverflowException)
-            {
-                return false;
-            }
-        }
+        private protected override short Parse(string input) => XmlConvert.ToInt16(input);
 
         /// <summary>
         /// Implicitly converts the specified value to an Int16 value.

@@ -93,35 +93,11 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Convert the text to meaningful value.
         /// </summary>
-        internal override void Parse()
+        private protected override DateTime Parse(string input)
         {
             // in System.IO.Packaging.PartBasedPackageProperties.GetDateData()
             // the code is: System.Xml.XmlConvert.ToDateTime(this.TextValue, this.DateTimeFormats);
-            this.InnerValue = System.Xml.XmlConvert.ToDateTime( this.TextValue, System.Xml.XmlDateTimeSerializationMode.Utc);
-        }
-
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        /// <returns></returns>
-        internal override bool TryParse()
-        {
-            DateTime value;
-            this.InnerValue = null;
-
-            try
-            {
-                // in System.IO.Packaging.PartBasedPackageProperties.GetDateData()
-                // the code is: System.Xml.XmlConvert.ToDateTime(this.TextValue, this.DateTimeFormats);
-                value = System.Xml.XmlConvert.ToDateTime(this.TextValue, System.Xml.XmlDateTimeSerializationMode.Utc);
-                this.InnerValue = value;
-                return true;
-            }
-            catch (FormatException)
-            {
-                // can not convert
-                return false;
-            }
+            return XmlConvert.ToDateTime(this.TextValue, XmlDateTimeSerializationMode.Utc);
         }
 
         /// <summary>

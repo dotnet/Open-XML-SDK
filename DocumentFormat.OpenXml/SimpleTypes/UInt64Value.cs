@@ -64,38 +64,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        internal override void Parse()
-        {
-            this.InnerValue = XmlConvert.ToUInt64(this.TextValue);
-        }
-
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        /// <returns></returns>
-        internal override bool TryParse()
-        {
-            UInt64 value;
-            this.InnerValue = null;
-
-            try
-            {
-                value = XmlConvert.ToUInt64(this.TextValue);
-                this.InnerValue = value;
-                return true;
-            }
-            catch (FormatException)
-            {
-                return false;
-            }
-            catch (OverflowException)
-            {
-                return false;
-            }
-        }
+        private protected override ulong Parse(string input) => XmlConvert.ToUInt64(input);
 
         /// <summary>
         /// Implicitly converts the specified UInt64Value object to a UInt64 value.

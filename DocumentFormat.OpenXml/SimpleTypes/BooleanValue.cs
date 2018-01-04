@@ -60,29 +60,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <inheritdoc/>
-        internal override void Parse()
-        {
-            this.InnerValue = XmlConvert.ToBoolean(this.TextValue);
-        }
-
-        /// <inheritdoc/>
-        internal override bool TryParse()
-        {
-            Boolean value;
-            this.InnerValue = null;
-
-            try
-            {
-                value = XmlConvert.ToBoolean(this.TextValue);
-                this.InnerValue = value;
-                return true;
-            }
-            catch (FormatException)
-            {
-                return false;
-            }
-        }
+        private protected override bool Parse(string input) => XmlConvert.ToBoolean(input);
 
         /// <summary>
         /// Implicitly converts the specified value to a Boolean value.

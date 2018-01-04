@@ -64,33 +64,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <inheritdoc/>
-        internal override void Parse()
-        {
-            this.InnerValue = XmlConvert.ToUInt16(this.TextValue);
-        }
-
-        /// <inheritdoc/>
-        internal override bool TryParse()
-        {
-            UInt16 value;
-            this.InnerValue = null;
-
-            try
-            {
-                value = XmlConvert.ToUInt16(this.TextValue);
-                this.InnerValue = value;
-                return true;
-            }
-            catch (FormatException)
-            {
-                return false;
-            }
-            catch (OverflowException)
-            {
-                return false;
-            }
-        }
+        private protected override ushort Parse(string input) => XmlConvert.ToUInt16(input);
 
         /// <summary>
         /// Implicitly converts the specified UInt16Value object to a UInt16 value.

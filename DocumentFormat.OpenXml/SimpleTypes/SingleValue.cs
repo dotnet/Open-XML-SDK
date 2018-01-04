@@ -84,32 +84,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <inheritdoc/>
-        internal override void Parse()
-        {
-            float value = XmlConvert.ToSingle(this.TextValue);
-            this.InnerValue = value;
-        }
-
-        /// <inheritdoc/>
-        internal override bool TryParse()
-        {
-            this.InnerValue = null;
-
-            try
-            {
-                Parse();
-                return true;
-            }
-            catch (FormatException)
-            {
-                return false;
-            }
-            catch (OverflowException)
-            {
-                return false;
-            }
-        }
+        private protected override float Parse(string input) => XmlConvert.ToSingle(input);
 
         /// <summary>
         /// Implicitly converts the specified SingleValue object to a Single value.
