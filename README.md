@@ -133,11 +133,7 @@ Change Log
 
 **Version 2.8.1**: January 3, 2018
 
-
 - Corrected package license file reference.
-- Added Office icon to Nuget package properties.
-
-   ![Office icon](https://github.com/OfficeDev/Open-XML-SDK/blob/master/Icon.png?raw=true) 
 
 **Version 2.8.0**: December 28, 2017
 
