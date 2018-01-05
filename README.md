@@ -19,35 +19,28 @@ The Open XML SDK provides tools for working with Office Word, Excel, and PowerPo
 Table of Contents
 -----------------
 
-- [The Release Package on Nuget.org](#the-release-package-on-nugetorg)
-  - [The Latest Builds](#the-latest-builds)
-  - [Where to get the NuGet packages of the latest builds](#where-to-get-the-nuget-packages-of-the-latest-builds)
-  - [Support platforms](#support-platforms)
+- [Releases](#releases)
+  - [Supported platforms](#supported-platforms)
   - [WindowsBase or System.IO.Packaging](#windowsbase-or-systemiopackaging)
   - [How to install the NuGet package](#how-to-install-the-nuget-package)
 - [If You Have Problems](#if-you-have-problems)
 - [Known Issues](#known-issues)
-- [Change Log](#change-log)
 - [Documentation](#documentation)
 - [Build Instructions](#build-instructions)
 - [To build the Open XML SDK](#to-build-the-open-xml-sdk)
 - [Related tools](#related-tools)
 - [Code of Conduct](#code-of-conduct)
 
-The Release Package on Nuget.org
+Releases
 --------------------------------
 
 The official release NuGet packages for Open XML SDK are [available on Nuget.org](https://www.nuget.org/packages/DocumentFormat.OpenXml).
 
-The Latest Builds
------------------
+The NuGet package for the latest builds of the Open XML SDK is available as a custom feed on MyGet. You can trust this package source, since the custom feed is locked and only this project feeds into the source. Stable releases here will be mirrored onto NuGet and will be identical.
 
-Where to get the NuGet packages of the latest builds
------------------------------------------------------
+For latests changes, please see the [changelog](CHANGELOG.md)
 
-The NuGet package for the latest builds of the Open XML SDK is available as a custom feed on MyGet. You can trust this package source, since the custom feed is locked and only this project feeds into the source.
-
-Support platforms
+Supported platforms
 -----------------
 
 This library supports many platforms. There are builds for .NET 3.5, .NET 4.0, .NET 4.6, and .NET Standard 1.3. The following platforms are currently supported:
@@ -127,45 +120,6 @@ Known Issues
 - Out of the box, the library will not compile on .NET Native. [Issue 181](https://github.com/OfficeDev/Open-XML-SDK/issues/181) is open to track this.
 
   **Note:** Once `System.IO.Packaging` on .NET Core has feature parity with `WindowsBase` (i.e. streaming support), we can investigate using the new .NET Core on .NET Framework.
-
-Change Log
------------
-
-**Version 2.8.1**: January 3, 2018
-
-- Corrected package license file reference.
-
-**Version 2.8.0**: December 28, 2017
-
-- Added default runtime directive for better .NET Native support.
-- Fixed exceptions thrown when errors are encountered while opening packages to be consistent across platforms.
-- Fixed issue on Mono platforms using System.IO.Packaging NuGet package (Xamarin, etc) when creating a document.
-- Fixed manual saving of a package when autosave is false.
-- Fixed schema constraint data and standardized serialization across platforms.
-- Upgraded to `System.IO.Packaging` version 4.4.0 which fixes some consistency with .NET Framework in opening packages.
-
-**Version 2.7.2**: June 6, 2017
-
-- Fixed issue where assembly version wasn't set in assembly.
-- Added support for .NET 3.5 and .NET 4.0.
-
-**Version 2.7.1**: January 31, 2017
-
-- Fixed crash when validation is invoked on .NET Framework with strong-naming enforced.
-
-**Version 2.7.0**: January 24, 2017
-
-- Added support for .NET Standard 1.3.
-- Moved to using System.IO.Packaging from dotnet/corefx for .NET Standard 1.3 and WindowsBase for .NET 4.5.
-- Cleaned up project build system to use .NET CLI.
-
-**Version 2.6.1**: January 15, 2016
-
-- Added hundreds of XUnit tests. There are now a total of 1333 tests. They take about 20 minutes to run, so be patient.
-
-**Version 2.6.0**: June 29, 2015
-
-- The big feature in 2.6 is the inclusion of a replacement for `System.IO.Packaging`, which has a serious bug that causes it (albeit rarely and in specific circumstances) to throw exceptions (`ObjectDisposedException` and `NullReferenceException`). You can find out more about this bug and whether it affects you in [the blog post that announces the release of the new `System.IO.Packaging`](http://openxmldeveloper.org/blog/b/openxmldeveloper/archive/2015/06/29/announcing-the-release-of-a-new-system-io-packaging-implementation.aspx).
 
 Documentation
 -------------
