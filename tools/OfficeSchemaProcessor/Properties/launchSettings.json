@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "OfficeSchemaProcessor": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\temp\\package.xsd\""
+    }
+  }
+}
