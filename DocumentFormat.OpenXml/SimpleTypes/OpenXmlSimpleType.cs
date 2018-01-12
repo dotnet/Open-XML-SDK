@@ -105,8 +105,6 @@ namespace DocumentFormat.OpenXml
             return InnerText;
         }
 
-        #region ICloneable Members
-
         /// <summary>
         /// Creates a duplicate of the current value.
         /// </summary>
@@ -114,14 +112,9 @@ namespace DocumentFormat.OpenXml
         /// This method is a deep copy clone.
         /// </remarks>
         /// <returns>The cloned value.</returns>
-        public object Clone()
-        {
-            return CloneImp();
-        }
+        public object Clone() => CloneImpl();
 
-        internal abstract OpenXmlSimpleType CloneImp();
-
-        #endregion
+        private protected abstract OpenXmlSimpleType CloneImpl();
 
         /// <summary>
         /// Implicitly converts a specified attribute value to a String value.

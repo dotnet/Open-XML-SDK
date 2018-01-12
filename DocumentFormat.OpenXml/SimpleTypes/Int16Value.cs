@@ -58,7 +58,7 @@ namespace DocumentFormat.OpenXml
                     Debug.Assert(this.TextValue == null && !this.InnerValue.HasValue ||
                                  this.TextValue != null && !this.InnerValue.HasValue ||
                                  this.TextValue != null && this.TextValue == this.InnerValue.ToString() ||
-                                // special case: signed number like text is "+5", value is 5
+                                 // special case: signed number like text is "+5", value is 5
                                  this.TextValue != null && this.TextValue == "+" + this.InnerValue.ToString());
                 }
                 return this.TextValue;
@@ -145,9 +145,6 @@ namespace DocumentFormat.OpenXml
             return xmlAttribute.Value;
         }
 
-        internal override OpenXmlSimpleType CloneImp()
-        {
-            return new Int16Value(this);
-        }
+        private protected override OpenXmlSimpleType CloneImpl() => new Int16Value(this);
     }
 }
