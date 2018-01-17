@@ -156,7 +156,10 @@ namespace DocumentFormat.OpenXml.Tests
                 WorkbookPart workbookPart = spreadsheet.AddWorkbookPart();
                 workbookPart.Workbook = new Workbook();
 
+                spreadsheet.Save();
+
                 string opc = spreadsheet.ToFlatOpcString();
+                
             }
         }
 
@@ -300,6 +303,8 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 PresentationPart presentationPart = presentation.AddPresentationPart();
                 presentationPart.Presentation = new Presentation.Presentation();
+
+                presentation.Save();
 
                 string opc = presentation.ToFlatOpcString();
             }
@@ -445,6 +450,8 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 MainDocumentPart mainDocumentPart = document.AddMainDocumentPart();
                 mainDocumentPart.Document = new Document();
+
+                document.Save();
 
                 string opc = document.ToFlatOpcString();
             }
