@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Default runtime directive for better .NET Native support.
 
 ### Changed
+- Fixed part saving to be encoded with UTF8 but no byte order mark. This caused some renderers to not be able to open the generated document.
 - Fixed exceptions thrown when errors are encountered while opening packages to be consistent across platforms.
 - Fixed issue on Mono platforms using System.IO.Packaging NuGet package (Xamarin, etc) when creating a document.
 - Fixed manual saving of a package when autosave is false.

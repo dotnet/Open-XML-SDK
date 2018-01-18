@@ -11,6 +11,8 @@ if($nupkg.Count -ne 1)
     throw  "Should only find 1 nupkg"
 }
 
+Write-Host "Found package: $nupkg"
+
 # See if we have the ClientSecret available
 if(![string]::IsNullOrEmpty($env:SignClientSecret)){
     Write-Host "Submitting $nupkg for signing"
@@ -21,5 +23,3 @@ if(![string]::IsNullOrEmpty($env:SignClientSecret)){
 } else {
     Write-Host "Client Secret not found, not signing package $nupkg"
 }
-
-appveyor PushArtifact $nupkg
