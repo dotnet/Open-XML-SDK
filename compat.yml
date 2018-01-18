@@ -1,0 +1,6 @@
+original:
+    feed: "https://api.nuget.org/v3/index.json"
+    id: "DocumentFormat.OpenXml"
+    version: "2.8.1"
+updated:
+    feed: "https://ci.appveyor.com/nuget/open-xml-sdk"
