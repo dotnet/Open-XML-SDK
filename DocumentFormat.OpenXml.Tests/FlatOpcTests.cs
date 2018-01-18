@@ -159,7 +159,6 @@ namespace DocumentFormat.OpenXml.Tests
                 spreadsheet.Save();
 
                 string opc = spreadsheet.ToFlatOpcString();
-                
             }
         }
 
