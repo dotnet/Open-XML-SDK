@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml
     /// Defines an OnOffValue datatype for attributes that have enum values that are Boolean values that represent: 'true' or 'false', 'on' or 'off', or '0' or '1'.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class OnOffValue : OpenXmlSimpleValue<bool>
+    public class OnOffValue : TrueFalseValueBase
     {
         /// <summary>
         /// Initializes a new instance of <see cref="OnOffValue"/> class.
@@ -78,8 +78,6 @@ namespace DocumentFormat.OpenXml
 
             return false;
         }
-
-        private protected override bool ShouldParse(string value) => value != null;
 
         /// <summary>
         /// Gets the default text value.
