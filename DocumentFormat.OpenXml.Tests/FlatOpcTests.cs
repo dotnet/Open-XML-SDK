@@ -153,12 +153,19 @@ namespace DocumentFormat.OpenXml.Tests
             using (MemoryStream stream = new MemoryStream())
             using (SpreadsheetDocument spreadsheet = SpreadsheetDocument.Create(stream, SpreadsheetDocumentType.Workbook))
             {
-                WorkbookPart workbookPart = spreadsheet.AddWorkbookPart();
-                workbookPart.Workbook = new Workbook();
+                try
+                {
+                    WorkbookPart workbookPart = spreadsheet.AddWorkbookPart();
+                    workbookPart.Workbook = new Workbook();
 
-                spreadsheet.Save();
+                    spreadsheet.Save();
 
-                string opc = spreadsheet.ToFlatOpcString();
+                    string opc = spreadsheet.ToFlatOpcString();
+                }
+                catch (System.Exception e)
+                {
+                    Assert.True(false, e.Message);
+                }
             }
         }
 
@@ -300,12 +307,19 @@ namespace DocumentFormat.OpenXml.Tests
             using (MemoryStream stream = new MemoryStream())
             using (PresentationDocument presentation = PresentationDocument.Create(stream, PresentationDocumentType.Presentation))
             {
-                PresentationPart presentationPart = presentation.AddPresentationPart();
-                presentationPart.Presentation = new Presentation.Presentation();
+                try
+                {
+                    PresentationPart presentationPart = presentation.AddPresentationPart();
+                    presentationPart.Presentation = new Presentation.Presentation();
 
-                presentation.Save();
+                    presentation.Save();
 
-                string opc = presentation.ToFlatOpcString();
+                    string opc = presentation.ToFlatOpcString();
+                }
+                catch (System.Exception e)
+                {
+                    Assert.True(false, e.Message);
+                }
             }
         }
 
@@ -447,12 +461,19 @@ namespace DocumentFormat.OpenXml.Tests
             using (MemoryStream stream = new MemoryStream())
             using (WordprocessingDocument document = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
             {
-                MainDocumentPart mainDocumentPart = document.AddMainDocumentPart();
-                mainDocumentPart.Document = new Document();
+                try
+                {
+                    MainDocumentPart mainDocumentPart = document.AddMainDocumentPart();
+                    mainDocumentPart.Document = new Document();
 
-                document.Save();
+                    document.Save();
 
-                string opc = document.ToFlatOpcString();
+                    string opc = document.ToFlatOpcString();
+                }
+                catch (System.Exception e)
+                {
+                    Assert.True(false, e.Message);
+                }
             }
         }
     }
