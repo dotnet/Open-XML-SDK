@@ -2,10 +2,12 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Diagnostics;
+using System.Linq;
 using System.Text;
 
 namespace DocumentFormat.OpenXml
@@ -14,7 +16,7 @@ namespace DocumentFormat.OpenXml
     /// Represents the list value attributes (xsd:list).
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class ListValue<T> : OpenXmlSimpleType
+    public class ListValue<T> : OpenXmlSimpleType, IEnumerable<T>
         where T : OpenXmlSimpleType, new()
     {
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
@@ -26,7 +28,7 @@ namespace DocumentFormat.OpenXml
         /// Initializes a new instance of the ListValue class.
         /// </summary>
         public ListValue()
-            : base( )
+            : base()
         {
         }
 
@@ -42,10 +44,10 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(list));
             }
 
-            this._list =  new ObservableCollection<T>();
+            this._list = new ObservableCollection<T>();
             this._list.CollectionChanged += this.CollectionChanged;
 
-            foreach (T item in list)
+            foreach (var item in list)
             {
                 this._list.Add(item.Clone() as T);
             }
@@ -95,7 +97,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if ( this._list == null )
+                if (this._list == null)
                 {
                     if (!String.IsNullOrEmpty(this.TextValue))
                     {
@@ -109,13 +111,8 @@ namespace DocumentFormat.OpenXml
                 }
 
                 Debug.Assert(this._list != null);
-                return  this._list;
+                return this._list;
             }
-            //set
-            //{
-            //    this._list = value;
-            //    this.TextValue = null;
-            //}
         }
 
         /// <summary>
@@ -131,10 +128,12 @@ namespace DocumentFormat.OpenXml
                 // split the string by white-space characters as the delimiters.
                 string[] items = this.TextValue.Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
 
-                foreach (string item in items)
+                foreach (var item in items)
                 {
-                    T itemValue = new T();
-                    itemValue.InnerText = item;
+                    var itemValue = new T
+                    {
+                        InnerText = item
+                    };
                     this._list.Add(itemValue);
                 }
             }
@@ -146,17 +145,19 @@ namespace DocumentFormat.OpenXml
         /// <returns></returns>
         internal override bool TryParse()
         {
-            if ( ! String.IsNullOrEmpty( this.TextValue ) )
+            if (!String.IsNullOrEmpty(this.TextValue))
             {
                 // split the string by white-space characters as the delimiters.
                 string[] items = this.TextValue.Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
 
                 var list = new ObservableCollection<T>();
 
-                foreach (string item in items)
+                foreach (var item in items)
                 {
-                    T itemValue = new T();
-                    itemValue.InnerText = item;
+                    var itemValue = new T
+                    {
+                        InnerText = item
+                    };
                     list.Add(itemValue);
                 }
 
@@ -209,20 +210,9 @@ namespace DocumentFormat.OpenXml
             this.TextValue = null;
         }
 
-        #region internal methods to be used by validation
+        /// <inheritdoc/>
+        public IEnumerator<T> GetEnumerator() => Items.GetEnumerator();
 
-        /// <summary>
-        /// Only the ListValue will overrid this method.
-        /// </summary>
-        /// <returns>Returns items in list.</returns>
-        internal override IEnumerable<OpenXmlSimpleType> GetListItems()
-        {
-            foreach (var item in this.Items)
-            {
-                yield return item;
-            }
-        }
-
-        #endregion
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }
