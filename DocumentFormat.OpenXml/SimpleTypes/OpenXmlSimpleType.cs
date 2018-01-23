@@ -115,17 +115,6 @@ namespace DocumentFormat.OpenXml
             return xmlAttribute.InnerText;
         }
 
-        #region internal methods to be used by validation
-
-        /// <summary>
-        /// When overridden in the derived ListValue class, this method returns items in the list.
-        /// </summary>
-        /// <returns>Returns items in the list.</returns>
-        internal virtual IEnumerable<OpenXmlSimpleType> GetListItems()
-        {
-            throw new NotImplementedException();
-        }
-
         /// <summary>
         /// Test whether the value is allowed in the specified file format version. Only for EnumValue.
         /// </summary>
@@ -138,7 +127,5 @@ namespace DocumentFormat.OpenXml
         {
             throw new NotImplementedException();
         }
-
-        #endregion
     }
 }
