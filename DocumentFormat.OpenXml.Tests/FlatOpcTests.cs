@@ -153,16 +153,16 @@ namespace DocumentFormat.OpenXml.Tests
             using (MemoryStream stream = new MemoryStream())
             using (PresentationDocument presentation = PresentationDocument.Create(stream, PresentationDocumentType.Presentation))
             {
-                    PresentationPart presentationPart = presentation.AddPresentationPart();
-                    presentationPart.Presentation = new Presentation.Presentation();
+                PresentationPart presentationPart = presentation.AddPresentationPart();
+                presentationPart.Presentation = new Presentation.Presentation();
 
-                    presentation.Save();
+                presentation.Save();
 
-                    string opc = presentation.ToFlatOpcString();
-                    using (var dest = PresentationDocument.FromFlatOpcString(opc))
-                    {
-                        PackageAssert.Equal(presentation, dest);
-                    }
+                string opc = presentation.ToFlatOpcString();
+                using (var dest = PresentationDocument.FromFlatOpcString(opc))
+                {
+                    PackageAssert.Equal(presentation, dest);
+                }
             }
         }
 
@@ -304,16 +304,16 @@ namespace DocumentFormat.OpenXml.Tests
             using (MemoryStream stream = new MemoryStream())
             using (SpreadsheetDocument spreadsheet = SpreadsheetDocument.Create(stream, SpreadsheetDocumentType.Workbook))
             {
-                    WorkbookPart workbookPart = spreadsheet.AddWorkbookPart();
-                    workbookPart.Workbook = new Workbook();
+                WorkbookPart workbookPart = spreadsheet.AddWorkbookPart();
+                workbookPart.Workbook = new Workbook();
 
-                    spreadsheet.Save();
+                spreadsheet.Save();
 
-                    string opc = spreadsheet.ToFlatOpcString();
-                    using (var dest = SpreadsheetDocument.FromFlatOpcString(opc))
-                    {
-                        PackageAssert.Equal(spreadsheet, dest);
-                    }
+                string opc = spreadsheet.ToFlatOpcString();
+                using (var dest = SpreadsheetDocument.FromFlatOpcString(opc))
+                {
+                    PackageAssert.Equal(spreadsheet, dest);
+                }
             }
         }
 
@@ -455,16 +455,16 @@ namespace DocumentFormat.OpenXml.Tests
             using (MemoryStream stream = new MemoryStream())
             using (WordprocessingDocument document = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
             {
-                    MainDocumentPart mainDocumentPart = document.AddMainDocumentPart();
-                    mainDocumentPart.Document = new Document();
+                MainDocumentPart mainDocumentPart = document.AddMainDocumentPart();
+                mainDocumentPart.Document = new Document();
 
-                    document.Save();
+                document.Save();
 
-                    string opc = document.ToFlatOpcString();
-                    using (var dest = WordprocessingDocument.FromFlatOpcString(opc))
-                    {
-                        PackageAssert.Equal(document, dest);
-                    }
+                string opc = document.ToFlatOpcString();
+                using (var dest = WordprocessingDocument.FromFlatOpcString(opc))
+                {
+                    PackageAssert.Equal(document, dest);
+                }
             }
         }
     }
