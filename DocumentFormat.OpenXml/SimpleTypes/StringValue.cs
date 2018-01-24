@@ -37,10 +37,6 @@ namespace DocumentFormat.OpenXml
         public StringValue(StringValue source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
         }
 
         /// <summary>

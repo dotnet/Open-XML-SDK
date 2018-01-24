@@ -43,10 +43,6 @@ namespace DocumentFormat.OpenXml
         public Base64BinaryValue(Base64BinaryValue source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
         }
 
         /// <summary>
