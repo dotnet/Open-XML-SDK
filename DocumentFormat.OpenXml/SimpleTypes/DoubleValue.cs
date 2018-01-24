@@ -41,64 +41,11 @@ namespace DocumentFormat.OpenXml
         public DoubleValue(DoubleValue source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
         }
 
-        /// <inheritdoc/>
-        public override string InnerText
-        {
-            get
-            {
-                if (this.TextValue == null && this.InnerValue.HasValue)
-                {
-                    // this.TextValue = this._value.ToString();
-                    this.TextValue = XmlConvert.ToString(this.InnerValue.Value);
-                }
-                else
-                {
-                    Debug.Assert(this.TextValue == null && !this.InnerValue.HasValue ||
-                                 this.TextValue != null && !this.InnerValue.HasValue ||
-                                 this.TextValue != null && this.InnerValue.Value.Equals(XmlConvert.ToDouble(this.TextValue))); // Use Double.Equals() to handle NaN.
-                }
-                return this.TextValue;
-            }
-        }
+        private protected override string GetText(double input) => XmlConvert.ToString(input);
 
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        internal override void Parse()
-        {
-            this.InnerValue = XmlConvert.ToDouble(this.TextValue);
-        }
-
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        /// <returns></returns>
-        internal override bool TryParse()
-        {
-            Double value;
-            this.InnerValue = null;
-
-            try
-            {
-                value = XmlConvert.ToDouble(this.TextValue);
-                this.InnerValue = value;
-                return true;
-            }
-            catch (FormatException)
-            {
-                return false;
-            }
-            catch (OverflowException)
-            {
-                return false;
-            }
-        }
+        private protected override double Parse(string input) => XmlConvert.ToDouble(input);
 
         /// <summary>
         /// Implicitly converts the specified value to a Double value.

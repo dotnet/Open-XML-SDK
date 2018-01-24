@@ -37,61 +37,11 @@ namespace DocumentFormat.OpenXml
         public Int64Value(Int64Value source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
         }
 
-        /// <inheritdoc/>
-        public override string InnerText
-        {
-            get
-            {
-                if (this.TextValue == null && this.InnerValue.HasValue)
-                {
-                    // this.TextValue = this._value.ToString();
-                    this.TextValue = XmlConvert.ToString(this.InnerValue.Value);
-                }
-                else
-                {
-                    Debug.Assert(this.TextValue == null && !this.InnerValue.HasValue ||
-                                 this.TextValue != null && !this.InnerValue.HasValue ||
-                                 this.TextValue != null && this.TextValue == this.InnerValue.ToString() ||
-                                // special case: signed number like text is "+5", value is 5
-                                 this.TextValue != null && this.TextValue == "+" + this.InnerValue.ToString());
-                }
-                return this.TextValue;
-            }
-        }
+        private protected override string GetText(long input) => XmlConvert.ToString(input);
 
-        /// <inheritdoc/>
-        internal override void Parse()
-        {
-            this.InnerValue = XmlConvert.ToInt64(this.TextValue);
-        }
-
-        /// <inheritdoc/>
-        internal override bool TryParse()
-        {
-            Int64 value;
-            this.InnerValue = null;
-
-            try
-            {
-                value = XmlConvert.ToInt64(this.TextValue);
-                this.InnerValue = value;
-                return true;
-            }
-            catch (FormatException)
-            {
-                return false;
-            }
-            catch (OverflowException)
-            {
-                return false;
-            }
-        }
+        private protected override Int64 Parse(string input) => XmlConvert.ToInt64(input);
 
         /// <summary>
         /// Implicitly converts the specified Int64Value to an Int64 value.

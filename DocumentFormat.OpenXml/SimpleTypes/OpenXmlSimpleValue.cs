@@ -11,18 +11,10 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     /// <typeparam name="T">The type of the value.</typeparam>
     [DebuggerDisplay("{InnerText}")]
-    public abstract class OpenXmlSimpleValue<T>
-        : OpenXmlSimpleType
+    public abstract class OpenXmlSimpleValue<T> : OpenXmlSimpleType
         where T : struct
     {
-        //can not use System.Nullable<T> _value;
-        private T? _value;
-
-        internal T? InnerValue
-        {
-            get { return this._value; }
-            set { this._value = value; }
-        }
+        private protected T? InnerValue { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlSimpleValue class.
@@ -49,28 +41,46 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlSimpleValue(OpenXmlSimpleValue<T> source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
-
             this.InnerText = source.InnerText;
         }
+
+        private protected virtual bool ShouldParse(string value) => !string.IsNullOrEmpty(value);
 
         /// <inheritdoc/>
         public override bool HasValue
         {
             get
             {
-                if (!this._value.HasValue)
+                if (!this.InnerValue.HasValue && ShouldParse(TextValue) && TryParse(TextValue, out var parsed))
                 {
-                    if (!String.IsNullOrEmpty(this.TextValue))
-                    {
-                        TryParse();
-                    }
+                    InnerValue = parsed;
                 }
 
-                return this._value.HasValue;
+                return this.InnerValue.HasValue;
+            }
+        }
+
+        private protected abstract string GetText(T input);
+
+        /// <summary>
+        /// Convert the text to meaningful value.
+        /// </summary>
+        private protected abstract T Parse(string input);
+
+        /// <summary>
+        /// Convert the text to meaningful value with no exceptions
+        /// </summary>
+        private protected virtual bool TryParse(string input, out T value)
+        {
+            try
+            {
+                value = Parse(input);
+                return true;
+            }
+            catch (Exception)
+            {
+                value = default;
+                return false;
             }
         }
 
@@ -81,23 +91,17 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (!this._value.HasValue)
+                if (!this.InnerValue.HasValue && ShouldParse(InnerText))
                 {
-                    if (!String.IsNullOrEmpty(this.TextValue))
-                    {
-                        Parse();
-                    }
+                    InnerValue = Parse(InnerText);
                 }
-                else
-                {
-                    // TODO: check that the .TextValue is same as .InnerValue in debug verion.
-                }
-                return  this._value.Value;
+
+                return this.InnerValue.Value;
             }
 
             set
             {
-                this._value = value;
+                this.InnerValue = value;
                 this.TextValue = null;
             }
         }
@@ -107,15 +111,18 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                throw new NotImplementedException();
+                if (this.TextValue == null && this.InnerValue.HasValue)
+                {
+                    this.TextValue = GetText(this.InnerValue.Value);
+                }
+
+                return this.TextValue;
             }
 
             set
             {
-                // do not check whether format is ok.
-
                 this.TextValue = value;
-                this._value = null;
+                this.InnerValue = null;
             }
         }
 

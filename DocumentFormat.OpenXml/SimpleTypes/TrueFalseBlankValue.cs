@@ -10,27 +10,23 @@ namespace DocumentFormat.OpenXml
     /// Represents the datatype for attributes that have enum values that are Boolean values that represent 't' or 'f', or 'true' or 'false'.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class TrueFalseBlankValue : OpenXmlSimpleType
+    public class TrueFalseBlankValue : OpenXmlSimpleValue<bool>
     {
-        private TrueFalseValueImpl _impl;
-
         /// <summary>
         /// Initializes a new instance of the <see cref="TrueFalseBlankValue"/> class.
         /// </summary>
         public TrueFalseBlankValue()
             : base()
         {
-            Initialize();
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="TrueFalseBlankValue"/> class using the supplied Boolean value.
         /// </summary>
-        /// <param name="value">The <see cref="Boolean"/> value.</param>
-        public TrueFalseBlankValue(Boolean value)
+        /// <param name="value">The <see cref="bool"/> value.</param>
+        public TrueFalseBlankValue(bool value)
+            : base(value)
         {
-            Initialize();
-            this.Value = value;
         }
 
         /// <summary>
@@ -40,54 +36,6 @@ namespace DocumentFormat.OpenXml
         public TrueFalseBlankValue(TrueFalseBlankValue source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
-            Initialize();
-            _impl.InnerText = source.InnerText;
-        }
-
-        private void Initialize()
-        {
-            _impl = new TrueFalseValueImpl(
-                GetBooleanValue,
-                GetDefaultTextValue);
-        }
-
-        /// <inheritdoc/>
-        public override bool HasValue => _impl.HasValue;
-
-#pragma warning disable SA1623 // Property summary documentation should match accessors
-                              /// <summary>
-                              /// Gets or sets the value.
-                              /// </summary>
-        public bool Value
-#pragma warning restore SA1623 // Property summary documentation should match accessors
-        {
-            get
-            {
-                return _impl.Value;
-            }
-
-            set
-            {
-                _impl.Value = value;
-            }
-        }
-
-        /// <inheritdoc/>
-        public override string InnerText
-        {
-            get
-            {
-                return _impl.InnerText;
-            }
-
-            set
-            {
-                _impl.InnerText = value;
-            }
         }
 
         /// <summary>
@@ -141,12 +89,14 @@ namespace DocumentFormat.OpenXml
 
         private protected override OpenXmlSimpleType CloneImpl() => new TrueFalseBlankValue(this);
 
+        private protected override bool ShouldParse(string value) => value != null;
+
         /// <summary>
         /// Gets the real boolean value of the text value.
         /// </summary>
         /// <param name="textValue">The text value which could be 't', 'f', 'true', 'false', ''.</param>
         /// <returns>True on text value is 't', 'true'; False on text value is 'f', 'false', '' </returns>
-        private bool GetBooleanValue(string textValue)
+        private protected override bool Parse(string textValue)
         {
             if (textValue != null)
             {
@@ -185,7 +135,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="boolValue">The boolean value.</param>
         /// <returns>"t" for True, "f" for false.</returns>
-        private string GetDefaultTextValue(bool boolValue)
+        private protected override string GetText(bool boolValue)
         {
             // TODO : Define the defaul text value.
             return boolValue ? "true" : "false";

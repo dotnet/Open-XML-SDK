@@ -71,10 +71,6 @@ namespace DocumentFormat.OpenXml
         public EnumValue(EnumValue<T> source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
             this._enumValue = source._enumValue;
         }
 
@@ -194,7 +190,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Convert the text to meaningful value.
         /// </summary>
-        internal override void Parse()
+        internal void Parse()
         {
             this._enumValue = GetEnumValue(this.TextValue);
         }
@@ -203,7 +199,7 @@ namespace DocumentFormat.OpenXml
         /// Convert the text to meaningful value.
         /// </summary>
         /// <returns></returns>
-        internal override bool TryParse()
+        internal bool TryParse()
         {
             T value;
             this._enumValue = null;

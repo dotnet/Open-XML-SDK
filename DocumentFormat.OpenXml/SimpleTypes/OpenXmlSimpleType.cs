@@ -54,22 +54,6 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        internal virtual void Parse()
-        {
-        }
-
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        /// <returns></returns>
-        internal virtual bool TryParse()
-        {
-            return true;
-        }
-
-        /// <summary>
         /// Gets a value indicating whether the underneath text value is a valid value.
         /// </summary>
         public virtual bool HasValue
@@ -131,17 +115,6 @@ namespace DocumentFormat.OpenXml
             return xmlAttribute.InnerText;
         }
 
-        #region internal methods to be used by validation
-
-        /// <summary>
-        /// When overridden in the derived ListValue class, this method returns items in the list.
-        /// </summary>
-        /// <returns>Returns items in the list.</returns>
-        internal virtual IEnumerable<OpenXmlSimpleType> GetListItems()
-        {
-            throw new NotImplementedException();
-        }
-
         /// <summary>
         /// Test whether the value is allowed in the specified file format version. Only for EnumValue.
         /// </summary>
@@ -154,7 +127,5 @@ namespace DocumentFormat.OpenXml
         {
             throw new NotImplementedException();
         }
-
-        #endregion
     }
 }
