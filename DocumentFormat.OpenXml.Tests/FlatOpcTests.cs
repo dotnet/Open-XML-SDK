@@ -153,8 +153,6 @@ namespace DocumentFormat.OpenXml.Tests
             using (MemoryStream stream = new MemoryStream())
             using (PresentationDocument presentation = PresentationDocument.Create(stream, PresentationDocumentType.Presentation))
             {
-                try
-                {
                     PresentationPart presentationPart = presentation.AddPresentationPart();
                     presentationPart.Presentation = new Presentation.Presentation();
 
@@ -165,11 +163,6 @@ namespace DocumentFormat.OpenXml.Tests
                     {
                         PackageAssert.Equal(presentation, dest);
                     }
-                }
-                catch (System.Exception e)
-                {
-                    Assert.True(false, e.Message);
-                }
             }
         }
 
@@ -311,8 +304,6 @@ namespace DocumentFormat.OpenXml.Tests
             using (MemoryStream stream = new MemoryStream())
             using (SpreadsheetDocument spreadsheet = SpreadsheetDocument.Create(stream, SpreadsheetDocumentType.Workbook))
             {
-                try
-                {
                     WorkbookPart workbookPart = spreadsheet.AddWorkbookPart();
                     workbookPart.Workbook = new Workbook();
 
@@ -323,11 +314,6 @@ namespace DocumentFormat.OpenXml.Tests
                     {
                         PackageAssert.Equal(spreadsheet, dest);
                     }
-                }
-                catch (System.Exception e)
-                {
-                    Assert.True(false, e.Message);
-                }
             }
         }
 
@@ -469,8 +455,6 @@ namespace DocumentFormat.OpenXml.Tests
             using (MemoryStream stream = new MemoryStream())
             using (WordprocessingDocument document = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
             {
-                try
-                {
                     MainDocumentPart mainDocumentPart = document.AddMainDocumentPart();
                     mainDocumentPart.Document = new Document();
 
@@ -481,11 +465,6 @@ namespace DocumentFormat.OpenXml.Tests
                     {
                         PackageAssert.Equal(document, dest);
                     }
-                }
-                catch (System.Exception e)
-                {
-                    Assert.True(false, e.Message);
-                }
             }
         }
     }
