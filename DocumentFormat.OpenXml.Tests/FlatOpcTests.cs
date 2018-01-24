@@ -148,19 +148,23 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Fact(Skip = "#380")]
-        public void CanCreateFlatOpcSpreadsheetDocumentsDynamically()
+        public void CanCreateFlatOpcPresentationDocumentsDynamically()
         {
             using (MemoryStream stream = new MemoryStream())
-            using (SpreadsheetDocument spreadsheet = SpreadsheetDocument.Create(stream, SpreadsheetDocumentType.Workbook))
+            using (PresentationDocument presentation = PresentationDocument.Create(stream, PresentationDocumentType.Presentation))
             {
                 try
                 {
-                    WorkbookPart workbookPart = spreadsheet.AddWorkbookPart();
-                    workbookPart.Workbook = new Workbook();
+                    PresentationPart presentationPart = presentation.AddPresentationPart();
+                    presentationPart.Presentation = new Presentation.Presentation();
 
-                    spreadsheet.Save();
+                    presentation.Save();
 
-                    string opc = spreadsheet.ToFlatOpcString();
+                    string opc = presentation.ToFlatOpcString();
+                    using (var dest = PresentationDocument.FromFlatOpcString(opc))
+                    {
+                        PackageAssert.Equal(presentation, dest);
+                    }
                 }
                 catch (System.Exception e)
                 {
@@ -302,19 +306,23 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Fact(Skip = "#380")]
-        public void CanCreateFlatOpcPresentationDocumentsDynamically()
+        public void CanCreateFlatOpcSpreadsheetDocumentsDynamically()
         {
             using (MemoryStream stream = new MemoryStream())
-            using (PresentationDocument presentation = PresentationDocument.Create(stream, PresentationDocumentType.Presentation))
+            using (SpreadsheetDocument spreadsheet = SpreadsheetDocument.Create(stream, SpreadsheetDocumentType.Workbook))
             {
                 try
                 {
-                    PresentationPart presentationPart = presentation.AddPresentationPart();
-                    presentationPart.Presentation = new Presentation.Presentation();
+                    WorkbookPart workbookPart = spreadsheet.AddWorkbookPart();
+                    workbookPart.Workbook = new Workbook();
 
-                    presentation.Save();
+                    spreadsheet.Save();
 
-                    string opc = presentation.ToFlatOpcString();
+                    string opc = spreadsheet.ToFlatOpcString();
+                    using (var dest = SpreadsheetDocument.FromFlatOpcString(opc))
+                    {
+                        PackageAssert.Equal(spreadsheet, dest);
+                    }
                 }
                 catch (System.Exception e)
                 {
@@ -469,6 +477,10 @@ namespace DocumentFormat.OpenXml.Tests
                     document.Save();
 
                     string opc = document.ToFlatOpcString();
+                    using (var dest = WordprocessingDocument.FromFlatOpcString(opc))
+                    {
+                        PackageAssert.Equal(document, dest);
+                    }
                 }
                 catch (System.Exception e)
                 {
