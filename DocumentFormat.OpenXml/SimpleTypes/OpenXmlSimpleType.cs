@@ -54,22 +54,6 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        internal virtual void Parse()
-        {
-        }
-
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        /// <returns></returns>
-        internal virtual bool TryParse()
-        {
-            return true;
-        }
-
-        /// <summary>
         /// Gets a value indicating whether the underneath text value is a valid value.
         /// </summary>
         public virtual bool HasValue

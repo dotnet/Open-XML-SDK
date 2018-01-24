@@ -37,79 +37,11 @@ namespace DocumentFormat.OpenXml
         public Int32Value(Int32Value source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
         }
 
-        /// <inheritdoc/>
-        public override string InnerText
-        {
-            get
-            {
-                if (this.TextValue == null && this.InnerValue.HasValue)
-                {
-                    // this.TextValue = this._value.ToString();
-                    this.TextValue = XmlConvert.ToString(this.InnerValue.Value);
-                }
-                else
-                {
-                    //Debug.Assert(this.TextValue == null && !this.InnerValue.HasValue ||
-                    //             this.TextValue != null && !this.InnerValue.HasValue ||
-                    //             this.TextValue != null && this.TextValue == this.InnerValue.ToString() ||
-                    //    // special case: signed number like text is "+5", value is 5
-                    //             this.TextValue != null && this.TextValue == "+" + this.InnerValue.ToString());
-                    bool assertVal = this.TextValue == null && !this.InnerValue.HasValue ||
-                                 this.TextValue != null && !this.InnerValue.HasValue ||
-                                 this.TextValue != null && this.TextValue == this.InnerValue.ToString() ||
-								 // special case: signed number like text is "+5", value is 5
-                                 this.TextValue != null && this.TextValue == "+" + this.InnerValue.ToString();
-                    if (assertVal)
-                        return this.TextValue;
-                    // special case: number formatted like "00000", value is 0
-                    // at this point, we know that this.TextValue != null
-                    int iTextValue;
-                    if (!int.TryParse(this.TextValue, out iTextValue))
-                        throw new FormatException("Inner text formatting error");
-                    int iValue;
-                    if (!int.TryParse(this.InnerValue.ToString(), out iValue))
-                        throw new FormatException("Inner text formatting error");
-                    if (iTextValue == iValue)
-                        return this.TextValue;
-        			throw new FormatException("Inner text formatting error");
-                }
-                return this.TextValue;
-            }
-        }
+        private protected override string GetText(int input) => XmlConvert.ToString(input);
 
-        /// <inheritdoc/>
-        internal override void Parse()
-        {
-            this.InnerValue = XmlConvert.ToInt32(this.TextValue);
-        }
-
-        /// <inheritdoc/>
-        internal override bool TryParse()
-        {
-            Int32 value;
-            this.InnerValue = null;
-
-            try
-            {
-                value = XmlConvert.ToInt32(this.TextValue);
-                this.InnerValue = value;
-                return true;
-            }
-            catch (FormatException)
-            {
-                return false;
-            }
-            catch (OverflowException)
-            {
-                return false;
-            }
-        }
+        private protected override Int32 Parse(string input) => XmlConvert.ToInt32(input);
 
         /// <summary>
         /// Implicitly converts the specified value to an Int32 value.

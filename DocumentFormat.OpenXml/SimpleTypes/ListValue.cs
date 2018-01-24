@@ -60,10 +60,6 @@ namespace DocumentFormat.OpenXml
         public ListValue(ListValue<T> source)
             : this(source.Items)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
         }
 
         /// <inheritdoc/>
@@ -118,7 +114,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Convert the text to meaningful value.
         /// </summary>
-        internal override void Parse()
+        private void Parse()
         {
             this._list = new ObservableCollection<T>();
             this._list.CollectionChanged += this.CollectionChanged;
@@ -143,7 +139,7 @@ namespace DocumentFormat.OpenXml
         /// Convert the text to meaningful value.
         /// </summary>
         /// <returns></returns>
-        internal override bool TryParse()
+        private bool TryParse()
         {
             if (!String.IsNullOrEmpty(this.TextValue))
             {
