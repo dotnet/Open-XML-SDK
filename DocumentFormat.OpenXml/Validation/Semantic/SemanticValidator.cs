@@ -9,8 +9,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     internal class SemanticValidator : ICancelable
     {
-        //Current used registry
-        private SemanticConstraintRegistry _curReg;
+        private readonly SemanticConstraintRegistry _curReg;
         private bool _stopValidating;
 
         public FileFormatVersions FileFormat { get; private set; }

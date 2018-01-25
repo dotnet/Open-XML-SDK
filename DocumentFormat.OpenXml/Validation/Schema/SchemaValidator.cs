@@ -12,11 +12,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     internal class SchemaValidator : ICancelable
     {
-        private SdbSchemaDatas _sdbSchemaDatas;
-        private SchemaTypeValidator _schemaTypeValidator;
-#if DEBUG
-        private FileFormatVersions _fileFormat;
-#endif
+        private readonly SdbSchemaDatas _sdbSchemaDatas;
+        private readonly SchemaTypeValidator _schemaTypeValidator;
         private bool _stopValidating;
 
         /// <summary>
@@ -55,9 +52,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
 
             this._schemaTypeValidator = new SchemaTypeValidator(this._sdbSchemaDatas);
-#if DEBUG
-            this._fileFormat = fileFormat;
-#endif
         }
 
         /// <summary>
