@@ -15,8 +15,6 @@ namespace DocumentFormat.OpenXml.Validation
     /// </summary>
     public class OpenXmlValidator
     {
-        #region data fields
-
         private ValidationSettings _settings;
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
@@ -35,27 +33,23 @@ namespace DocumentFormat.OpenXml.Validation
         private SemanticValidator _fullSemanticValidator;
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private SpreadsheetDocumentValidator _spreadsheetDocumentValidator;
+        private DocumentValidator _spreadsheetDocumentValidator;
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private WordprocessingDocumentValidator _wordprocessingDocumentValidator;
+        private DocumentValidator _wordprocessingDocumentValidator;
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private PresentationDocumentValidator _presentationDocumentValidator;
-
-        #endregion
-
-        #region private properties
+        private DocumentValidator _presentationDocumentValidator;
 
         private SchemaValidator SchemaValidator
         {
             get
             {
-                if (this._schemaValidator == null)
+                if (_schemaValidator == null)
                 {
-                    this._schemaValidator = new SchemaValidator(this._settings.FileFormat);
+                    _schemaValidator = new SchemaValidator(_settings.FileFormat);
                 }
-                return this._schemaValidator;
+                return _schemaValidator;
             }
         }
 
@@ -63,9 +57,9 @@ namespace DocumentFormat.OpenXml.Validation
         {
             get
             {
-                if (this._docSmenaticValidator == null)
+                if (_docSmenaticValidator == null)
                 {
-                    this._docSmenaticValidator = new SemanticValidator(this._settings.FileFormat, ApplicationType.Word);
+                    _docSmenaticValidator = new SemanticValidator(_settings.FileFormat, ApplicationType.Word);
                 }
 
                 return _docSmenaticValidator;
@@ -76,9 +70,9 @@ namespace DocumentFormat.OpenXml.Validation
         {
             get
             {
-                if (this._xlsSemanticValidator == null)
+                if (_xlsSemanticValidator == null)
                 {
-                    this._xlsSemanticValidator = new SemanticValidator(this._settings.FileFormat, ApplicationType.Excel);
+                    _xlsSemanticValidator = new SemanticValidator(_settings.FileFormat, ApplicationType.Excel);
                 }
 
                 return _xlsSemanticValidator;
@@ -89,9 +83,9 @@ namespace DocumentFormat.OpenXml.Validation
         {
             get
             {
-                if (this._pptSemanticValidator == null)
+                if (_pptSemanticValidator == null)
                 {
-                    this._pptSemanticValidator = new SemanticValidator(this._settings.FileFormat, ApplicationType.PowerPoint);
+                    _pptSemanticValidator = new SemanticValidator(_settings.FileFormat, ApplicationType.PowerPoint);
                 }
 
                 return _pptSemanticValidator;
@@ -102,63 +96,50 @@ namespace DocumentFormat.OpenXml.Validation
         {
             get
             {
-                if (this._fullSemanticValidator == null)
+                if (_fullSemanticValidator == null)
                 {
-                    this._fullSemanticValidator = new SemanticValidator(this._settings.FileFormat, ApplicationType.All);
+                    _fullSemanticValidator = new SemanticValidator(_settings.FileFormat, ApplicationType.All);
                 }
 
                 return _fullSemanticValidator;
             }
         }
 
-        /// <summary>
-        /// Gets the SpreadsheetDocumentValidator.
-        /// </summary>
-        private SpreadsheetDocumentValidator SpreadsheetDocumentValidator
+        private DocumentValidator SpreadsheetDocumentValidator
         {
             get
             {
-                if (this._spreadsheetDocumentValidator == null)
+                if (_spreadsheetDocumentValidator == null)
                 {
-                    this._spreadsheetDocumentValidator = new SpreadsheetDocumentValidator(this._settings, this.SchemaValidator, this.XlsSemanticValidator);
+                    _spreadsheetDocumentValidator = new DocumentValidator(_settings, SchemaValidator, XlsSemanticValidator);
                 }
-                return this._spreadsheetDocumentValidator;
+                return _spreadsheetDocumentValidator;
             }
         }
 
-        /// <summary>
-        /// Gets the WordprocessingDocumentValidator.
-        /// </summary>
-        private WordprocessingDocumentValidator WordprocessingDocumentValidator
+        private DocumentValidator WordprocessingDocumentValidator
         {
             get
             {
-                if (this._wordprocessingDocumentValidator == null)
+                if (_wordprocessingDocumentValidator == null)
                 {
-                    this._wordprocessingDocumentValidator = new WordprocessingDocumentValidator(this._settings, this.SchemaValidator, this.DocSmenaticValidator);
+                    _wordprocessingDocumentValidator = new DocumentValidator(_settings, SchemaValidator, DocSmenaticValidator);
                 }
-                return this._wordprocessingDocumentValidator;
+                return _wordprocessingDocumentValidator;
             }
         }
 
-        /// <summary>
-        /// Gets the PresentationDocumentValidator.
-        /// </summary>
-        private PresentationDocumentValidator PresentationDocumentValidator
+        private DocumentValidator PresentationDocumentValidator
         {
             get
             {
-                if (this._presentationDocumentValidator == null)
+                if (_presentationDocumentValidator == null)
                 {
-                    this._presentationDocumentValidator = new PresentationDocumentValidator(this._settings, this.SchemaValidator, this.PptSemanticValidator);
+                    _presentationDocumentValidator = new DocumentValidator(_settings, SchemaValidator, PptSemanticValidator);
                 }
-                return this._presentationDocumentValidator;
+                return _presentationDocumentValidator;
             }
         }
-
-        #endregion
-
-        #region public constructors
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlValidator.
@@ -182,20 +163,13 @@ namespace DocumentFormat.OpenXml.Validation
         public OpenXmlValidator(FileFormatVersions fileFormat)
         {
             fileFormat.ThrowExceptionIfFileFormatNotSupported(nameof(fileFormat));
-            this._settings = new ValidationSettings(fileFormat);
+            _settings = new ValidationSettings(fileFormat);
         }
-
-        #endregion
-
-        #region public properties
 
         /// <summary>
         /// Gets the target file format to be validated against.
         /// </summary>
-        public FileFormatVersions FileFormat
-        {
-            get { return this._settings.FileFormat; }
-        }
+        public FileFormatVersions FileFormat => _settings.FileFormat;
 
         /// <summary>
         /// Gets or sets the maximum number of errors the OpenXmlValidator will return.
@@ -204,7 +178,7 @@ namespace DocumentFormat.OpenXml.Validation
         /// <exception cref="ArgumentOutOfRangeException">Throw when the value set is less than zero.</exception>
         public int MaxNumberOfErrors
         {
-            get { return this._settings.MaxNumberOfErrors; }
+            get { return _settings.MaxNumberOfErrors; }
 
             set
             {
@@ -213,13 +187,9 @@ namespace DocumentFormat.OpenXml.Validation
                     throw new ArgumentOutOfRangeException(nameof(value));
                 }
 
-                this._settings.MaxNumberOfErrors = value;
+                _settings.MaxNumberOfErrors = value;
             }
         }
-
-        #endregion
-
-        #region public methods
 
         /// <summary>
         /// Validates the specified document.
@@ -235,39 +205,16 @@ namespace DocumentFormat.OpenXml.Validation
             }
 
             if (openXmlPackage.OpenSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess &&
-                openXmlPackage.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != this.FileFormat)
+                openXmlPackage.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormat)
             {
                 string exceptionMessage = string.Format(System.Globalization.CultureInfo.CurrentUICulture,
                     ExceptionMessages.DocumentFileFormatVersionMismatch,
-                    openXmlPackage.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions, this.FileFormat);
+                    openXmlPackage.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions, FileFormat);
 
                 throw new InvalidOperationException(exceptionMessage);
             }
 
-            // Do NOT use "yield return" in this method, as "yield return" are deferred executed.
-            // Otherwise, the null check is not performed when the method is called, but rather, when the returned enumerator is moved for the first time.
-            // That means that the exception isn't thrown until possibly far, far away from the actual site of the error, which is potentially confusing.
-
-            ValidationResult validationResult = null;
-            switch (DocumentTypeDetector.GetDocumentType(openXmlPackage))
-            {
-                case OpenXmlDocumentType.Spreadsheet:
-                    validationResult = this.SpreadsheetDocumentValidator.Validate(openXmlPackage as SpreadsheetDocument);
-                    break;
-
-                case OpenXmlDocumentType.Wordprocessing:
-                    validationResult = this.WordprocessingDocumentValidator.Validate(openXmlPackage as WordprocessingDocument);
-                    break;
-
-                case OpenXmlDocumentType.Presentation:
-                    validationResult = this.PresentationDocumentValidator.Validate(openXmlPackage as PresentationDocument);
-                    break;
-
-                default:
-                    throw new System.IO.InvalidDataException(ExceptionMessages.UnknownPackage);
-            }
-
-            return this.YieldResult(validationResult);
+            return ValidateCore(openXmlPackage);
         }
 
         /// <summary>
@@ -286,16 +233,16 @@ namespace DocumentFormat.OpenXml.Validation
 
             var openXmlPackage = openXmlPart.OpenXmlPackage;
             if (openXmlPackage.OpenSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess &&
-                openXmlPackage.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != this.FileFormat)
+                openXmlPackage.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormat)
             {
                 string exceptionMessage = string.Format(System.Globalization.CultureInfo.CurrentUICulture,
                     ExceptionMessages.DocumentFileFormatVersionMismatch,
-                    openXmlPackage.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions, this.FileFormat);
+                    openXmlPackage.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions, FileFormat);
 
                 throw new InvalidOperationException(exceptionMessage);
             }
 
-            if (!openXmlPart.IsInVersion(this.FileFormat))
+            if (!openXmlPart.IsInVersion(FileFormat))
             {
                 if (openXmlPart is ExtendedPart)
                 {
@@ -303,57 +250,37 @@ namespace DocumentFormat.OpenXml.Validation
                 }
                 else
                 {
-                    string strMessage;
-
                     // All Office 2007 and 2010 parts are allowed in Office 2013.
-
-                    switch (this.FileFormat)
+                    switch (FileFormat)
                     {
                         case FileFormatVersions.Office2007:
-                            strMessage = ExceptionMessages.PartIsNotInOffice2007;
-                            break;
-
+                            throw new InvalidOperationException(ExceptionMessages.PartIsNotInOffice2007);
                         case FileFormatVersions.Office2010:
-                            strMessage = ExceptionMessages.PartIsNotInOffice2010;
-                            break;
-
+                            throw new InvalidOperationException(ExceptionMessages.PartIsNotInOffice2010);
                         case FileFormatVersions.Office2013: // Falls through...
                         default:
-                            strMessage = ExceptionMessages.PartIsNotInOffice2013;
-                            break;
+                            throw new InvalidOperationException(ExceptionMessages.PartIsNotInOffice2013);
                     }
-
-                    throw new InvalidOperationException(strMessage);
                 }
             }
 
-            // Do NOT use "yield return" in this method, as "yield return" are deferred executed.
-            // Otherwise, the null check is not performed when the method is called, but rather, when the returned enumerator is moved for the first time.
-            // That means that the exception isn't thrown until possibly far, far away from the actual site of the error, which is potentially confusing.
+            return ValidateCore(openXmlPart);
+        }
 
-            OpenXmlPackage package = openXmlPart.OpenXmlPackage;
-            Debug.Assert(package != null);
+        private IEnumerable<ValidationErrorInfo> ValidateCore(OpenXmlPart part)
+        {
+            var validator = GetValidator(part.OpenXmlPackage);
+            var result = validator.Validate(part);
 
-            ValidationResult validationResult = null;
-            switch (DocumentTypeDetector.GetDocumentType(package))
-            {
-                case OpenXmlDocumentType.Spreadsheet:
-                    validationResult = this.SpreadsheetDocumentValidator.Validate(openXmlPart);
-                    break;
+            return YieldResult(result);
+        }
 
-                case OpenXmlDocumentType.Wordprocessing:
-                    validationResult = this.WordprocessingDocumentValidator.Validate(openXmlPart);
-                    break;
+        private IEnumerable<ValidationErrorInfo> ValidateCore(OpenXmlPackage package)
+        {
+            var validator = GetValidator(package);
+            var result = validator.Validate(package);
 
-                case OpenXmlDocumentType.Presentation:
-                    validationResult = this.PresentationDocumentValidator.Validate(openXmlPart);
-                    break;
-
-                default:
-                    throw new System.IO.InvalidDataException(ExceptionMessages.UnknownPackage);
-            }
-
-            return this.YieldResult(validationResult);
+            return YieldResult(result);
         }
 
         /// <summary>
@@ -388,9 +315,9 @@ namespace DocumentFormat.OpenXml.Validation
                 throw new ArgumentOutOfRangeException(nameof(openXmlElement), ExceptionMessages.CannotValidateAcbElement);
             }
 
-            if (!openXmlElement.IsInVersion(this.FileFormat))
+            if (!openXmlElement.IsInVersion(FileFormat))
             {
-                switch (this.FileFormat)
+                switch (FileFormat)
                 {
                     case FileFormatVersions.Office2007:
                         throw new InvalidOperationException(ExceptionMessages.ElementIsNotInOffice2007);
@@ -408,71 +335,44 @@ namespace DocumentFormat.OpenXml.Validation
 
             var validationResult = new ValidationResult();
             validationResult.Valid = true;
-            validationResult.MaxNumberOfErrors = this._settings.MaxNumberOfErrors;
-            validationResult.MaxNumberOfErrorsEventHandler += this.SchemaValidator.OnCancel;
+            validationResult.MaxNumberOfErrors = _settings.MaxNumberOfErrors;
+            validationResult.MaxNumberOfErrorsEventHandler += SchemaValidator.OnCancel;
             var validationContext = new ValidationContext();
             // this.ValidationContext.Settings = new ValidationSettings(this.FileFormat, this.SchemaOnly);
-            validationContext.FileFormat = this.FileFormat;
+            validationContext.FileFormat = FileFormat;
             validationContext.ValidationErrorEventHandler += validationResult.OnValidationError;
             validationContext.Element = openXmlElement;
             // Do NOT use "yield return" in this method, as "yield return" are deferred executed.
             // Otherwise, the null check is not performed when the method is called, but rather, when the returned enumerator is moved for the first time.
             // That means that the exception isn't thrown until possibly far, far away from the actual site of the error, which is potentially confusing.
 
-            this.SchemaValidator.Validate(validationContext);
+            SchemaValidator.Validate(validationContext);
 
             validationContext.Element = openXmlElement;
-            this.FullSemanticValidator.Validate(validationContext);
+            FullSemanticValidator.Validate(validationContext);
 
-            return this.YieldResult(validationResult);
+            return YieldResult(validationResult);
         }
 
-        #endregion
+        private DocumentValidator GetValidator(OpenXmlPackage package)
+        {
+            if (package is SpreadsheetDocument)
+            {
+                return SpreadsheetDocumentValidator;
+            }
+            else if (package is WordprocessingDocument wordprocessing)
+            {
+                return WordprocessingDocumentValidator;
+            }
+            else if (package is PresentationDocument presentation)
+            {
+                return PresentationDocumentValidator;
+            }
 
-        #region private methods
+            throw new System.IO.InvalidDataException(ExceptionMessages.UnknownPackage);
+        }
 
-        ///// <summary>
-        ///// Validate the specified document.
-        ///// </summary>
-        ///// <param name="stream">The document stream.</param>
-        ///// <returns>A set of validation erros.</returns>
-        //private IEnumerable<ValidationErrorInfo> ValidateCore(Stream stream)
-        //{
-        //    yield break;
-        //}
-
-        ///// <summary>
-        ///// Validate the specified document.
-        ///// </summary>
-        ///// <param name="openXmlPackage">The target OpenXmlPackage.</param>
-        ///// <returns>A set of validation erros.</returns>
-        //private IEnumerable<ValidationErrorInfo> ValidateCore(OpenXmlPackage openXmlPackage)
-        //{
-        //    yield break;
-        //}
-
-        ///// <summary>
-        ///// Validate the specified content in the OpenXmlPart.
-        ///// </summary>
-        ///// <param name="OpenXmlPart">The target OpenXmlPart.</param>
-        ///// <returns>A set of validation erros.</returns>
-        //private IEnumerable<ValidationErrorInfo> ValidateCore(OpenXmlPart openXmlPart)
-        //{
-        //    yield break;
-        //}
-
-        ///// <summary>
-        ///// Validate the specified element.
-        ///// </summary>
-        ///// <param name="openXmlElement">The target OpenXmlElement.</param>
-        ///// <returns>A set of validation erros.</returns>
-        //private IEnumerable<ValidationErrorInfo> ValidateCore(OpenXmlElement openXmlElement)
-        //{
-        //    var validationResult = this.SchemaValidator.Validate(openXmlElement);
-        //    return this.YieldResult(validationResult);
-        //}
-
-        private IEnumerable<ValidationErrorInfo> YieldResult(ValidationResult validationResult)
+        private static IEnumerable<ValidationErrorInfo> YieldResult(ValidationResult validationResult)
         {
             if (validationResult != null && validationResult.Valid == false)
             {
@@ -482,7 +382,5 @@ namespace DocumentFormat.OpenXml.Validation
                 }
             }
         }
-
-        #endregion
     }
 }

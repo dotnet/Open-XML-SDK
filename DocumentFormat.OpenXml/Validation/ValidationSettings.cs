@@ -13,33 +13,24 @@ namespace DocumentFormat.OpenXml.Validation
         /// <summary>
         /// Initializes a new instance of the ValidationSettings.
         /// </summary>
-        internal ValidationSettings()
-        {
-            this.FileFormat = FileFormatVersions.Office2007;
-            this.MaxNumberOfErrors = _defaultMaxNumberOfErrorsReturned;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ValidationSettings.
-        /// </summary>
         /// <param name="fileFormat">The target file format.</param>
-        internal ValidationSettings(FileFormatVersions fileFormat)
+        public ValidationSettings(FileFormatVersions fileFormat)
         {
             fileFormat.ThrowExceptionIfFileFormatNotSupported(nameof(fileFormat));
-            this.FileFormat = fileFormat;
 
-            this.MaxNumberOfErrors = _defaultMaxNumberOfErrorsReturned;
+            FileFormat = fileFormat;
+            MaxNumberOfErrors = _defaultMaxNumberOfErrorsReturned;
         }
 
         /// <summary>
-        /// Gets or sets the target file format.
+        /// Gets the target file format.
         /// </summary>
-        internal FileFormatVersions FileFormat { get; set; }
+        public FileFormatVersions FileFormat { get; }
 
         /// <summary>
         /// Gets or sets the maximum number of errors the OpenXmlValidator will return.
         /// Default is 1000.  A zero (0) value means no limitation.
         /// </summary>
-        internal int MaxNumberOfErrors { get; set; }
+        public int MaxNumberOfErrors { get; set; }
    }
 }
