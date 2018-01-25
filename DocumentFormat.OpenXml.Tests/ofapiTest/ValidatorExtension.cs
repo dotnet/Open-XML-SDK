@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Validation.Schema;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Tests
@@ -18,25 +19,23 @@ namespace DocumentFormat.OpenXml.Tests
         /// <remarks>
         /// Only schema validating.
         /// </remarks>
-        internal static ValidationResult Validate(this SchemaValidator schemaValidator, OpenXmlElement openxmlElement)
+        public static List<ValidationErrorInfo> Validate(this SchemaValidator schemaValidator, OpenXmlElement openxmlElement)
         {
             Debug.Assert(openxmlElement != null);
-
-            var validationResult = new ValidationResult();
 
             Debug.Assert(!(openxmlElement is OpenXmlUnknownElement || openxmlElement is OpenXmlMiscNode));
 
             // Can not just validate AlternateContent / Choice / Fallback
             Debug.Assert(!(openxmlElement is AlternateContentChoice || openxmlElement is AlternateContentFallback));
 
-            var validationContext = new ValidationContext();
-            validationContext.ValidationErrorEventHandler += validationResult.OnValidationError;
-
-            validationContext.Element = openxmlElement;
+            var validationContext = new ValidationContext
+            {
+                Element = openxmlElement
+            };
 
             schemaValidator.Validate(validationContext);
 
-            return validationResult;
+            return validationContext.Errors;
         }
     }
 }

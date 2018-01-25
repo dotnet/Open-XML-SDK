@@ -1,20 +1,17 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
-using System;
 using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
-    internal class SemanticValidator : ICancelable
+    internal class SemanticValidator
     {
         private readonly SemanticConstraintRegistry _curReg;
-        private bool _stopValidating;
 
-        public FileFormatVersions FileFormat { get; private set; }
+        public FileFormatVersions FileFormat { get; }
 
-        public ApplicationType AppType { get; private set; }
+        public ApplicationType AppType { get; }
 
         public SemanticValidator(FileFormatVersions format, ApplicationType app)
         {
@@ -29,9 +26,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             Debug.Assert(validationContext != null);
             Debug.Assert(validationContext.Element != null);
 
-            this._stopValidating = false;
-
-            ValidationTraverser.ValidatingTraverse(validationContext, this.ValidateElement, OnContextValidationFinished, this.StopSignal);
+            ValidationTraverser.ValidatingTraverse(validationContext, ValidateElement, OnContextValidationFinished);
         }
 
         public void ClearConstraintState(SemanticValidationLevel level)
@@ -50,28 +45,9 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 foreach (var error in _curReg.CheckConstraints(context))
                 {
-                    context.EmitError(error);
+                    context.AddError(error);
                 }
             }
         }
-
-        private bool StopSignal(ValidationContext validationContext)
-        {
-            return this._stopValidating;
-        }
-
-        #region ICancelable Members
-
-        /// <summary>
-        /// On cancel event.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="eventArgs"></param>
-        public void OnCancel(object sender, EventArgs eventArgs)
-        {
-            this._stopValidating = true;
-        }
-
-        #endregion
     }
 }

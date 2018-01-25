@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
 using System.Collections.Generic;
 using System.Diagnostics;
 
@@ -44,7 +43,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         {
                             // error, the prefix is not defined.
                             errorInfo = validationContext.ComposeMcValidationError(element, "MC_InvalidIgnorableAttribute", element.MCAttributes.Ignorable);
-                            validationContext.EmitError(errorInfo);
+                            validationContext.AddError(errorInfo);
                         }
                         else
                         {
@@ -62,7 +61,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     {
                         // must have Ignorable on same element.
                         errorInfo = validationContext.ComposeMcValidationError(element, "MC_InvalidPreserveAttributesAttribute", element.MCAttributes.PreserveAttributes);
-                        validationContext.EmitError(errorInfo);
+                        validationContext.AddError(errorInfo);
                     }
                     else
                     {
@@ -70,7 +69,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         if (!string.IsNullOrEmpty(errorQName))
                         {
                             errorInfo = validationContext.ComposeMcValidationError(element, "MC_InvalidPreserveAttributesAttribute", element.MCAttributes.PreserveAttributes);
-                            validationContext.EmitError(errorInfo);
+                            validationContext.AddError(errorInfo);
                         }
                     }
                 }
@@ -84,7 +83,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     {
                         // must have Ignorable on same element.
                         errorInfo = validationContext.ComposeMcValidationError(element, "MC_InvalidPreserveElementsAttribute", element.MCAttributes.PreserveElements);
-                        validationContext.EmitError(errorInfo);
+                        validationContext.AddError(errorInfo);
                     }
                     else
                     {
@@ -92,7 +91,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         if (!string.IsNullOrEmpty(errorQName))
                         {
                             errorInfo = validationContext.ComposeMcValidationError(element, "MC_InvalidPreserveElementsAttribute", element.MCAttributes.PreserveElements);
-                            validationContext.EmitError(errorInfo);
+                            validationContext.AddError(errorInfo);
                         }
                     }
                 }
@@ -106,7 +105,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     {
                         // must have Ignorable on same element.
                         errorInfo = validationContext.ComposeMcValidationError(element, "MC_InvalidProcessContentAttribute", element.MCAttributes.ProcessContent);
-                        validationContext.EmitError(errorInfo);
+                        validationContext.AddError(errorInfo);
                     }
                     else
                     {
@@ -114,7 +113,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         if (!string.IsNullOrEmpty(errorQName))
                         {
                             errorInfo = validationContext.ComposeMcValidationError(element, "MC_InvalidProcessContentAttribute", element.MCAttributes.ProcessContent);
-                            validationContext.EmitError(errorInfo);
+                            validationContext.AddError(errorInfo);
                         }
                     }
 
@@ -125,7 +124,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         {
                             // report error.
                             errorInfo = validationContext.ComposeMcValidationError(element, "MC_InvalidXmlAttributeWithProcessContent");
-                            validationContext.EmitError(errorInfo);
+                            validationContext.AddError(errorInfo);
                         }
                     }
                 }
@@ -145,7 +144,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         {
                             // report error, the prefix is not defined.
                             errorInfo = validationContext.ComposeMcValidationError(element, "MC_InvalidMustUnderstandAttribute", element.MCAttributes.MustUnderstand);
-                            validationContext.EmitError(errorInfo);
+                            validationContext.AddError(errorInfo);
                         }
                     }
                 }

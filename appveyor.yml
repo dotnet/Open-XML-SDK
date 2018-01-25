@@ -29,6 +29,7 @@ artifacts:
   - path: 'bin\**\*.nupkg'
 
 on_finish:
+  - ps: Start-Sleep -Seconds 10
   - cmd: compat-agent.exe -config compat.yml -version %GitVersion_NuGetVersionV2%
 
 deploy:

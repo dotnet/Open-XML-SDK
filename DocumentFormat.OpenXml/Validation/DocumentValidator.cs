@@ -38,15 +38,14 @@ namespace DocumentFormat.OpenXml.Validation
         /// </summary>
         /// <param name="document">The document to be validated.</param>
         /// <returns>Return results in ValidationResult.</returns>
-        public ValidationResult Validate(OpenXmlPackage document)
+        public List<ValidationErrorInfo> Validate(OpenXmlPackage document)
         {
-            var result = CreateValidationResult();
-            var context = CreateValidationContext(result);
+            var context = CreateValidationContext();
 
             context.Package = document;
 
             // integrate the package validation.
-            ValidatePackageStructure(document, result);
+            ValidatePackageStructure(document, context);
 
             foreach (var part in PartsToBeValidated(document))
             {
@@ -54,10 +53,10 @@ namespace DocumentFormat.OpenXml.Validation
                 // that means validate the children firt, then validate the parent
                 // the validation engine call bookkeep information
 
-                ValidatePart(part, context, result);
+                ValidatePart(part, context);
             }
 
-            return result;
+            return context.Errors;
         }
 
         /// <summary>
@@ -65,17 +64,16 @@ namespace DocumentFormat.OpenXml.Validation
         /// </summary>
         /// <param name="part">The OpenXmlPart to be validated.</param>
         /// <returns></returns>
-        public ValidationResult Validate(OpenXmlPart part)
+        public List<ValidationErrorInfo> Validate(OpenXmlPart part)
         {
-            var result = CreateValidationResult();
-            var context = CreateValidationContext(result);
+            var context = CreateValidationContext();
 
-            ValidatePart(part, context, result);
+            ValidatePart(part, context);
 
-            return result;
+            return context.Errors;
         }
 
-        private void ValidatePart(OpenXmlPart part, ValidationContext context, ValidationResult result)
+        private void ValidatePart(OpenXmlPart part, ValidationContext context)
         {
             // if the part is not defined in the specified version, then do not validate the content.
             if (!part.IsInVersion(_validationSettings.FileFormat))
@@ -97,7 +95,7 @@ namespace DocumentFormat.OpenXml.Validation
                 context.Part = part;
                 context.Element = part.PartRootElement;
 
-                var lastErrorCount = result.Errors.Count;
+                var lastErrorCount = context.Errors.Count;
 
                 if (part.PartRootElement != null)
                 {
@@ -108,7 +106,7 @@ namespace DocumentFormat.OpenXml.Validation
                     _semanticValidator.Validate(context);
                 }
 
-                if (!partRootElementLoaded && result.Errors.Count == lastErrorCount)
+                if (!partRootElementLoaded && context.Errors.Count == lastErrorCount)
                 {
                     // No new errors in this part. Release the DOM to GC memary.
                     part.SetPartRootElementToNull();
@@ -125,36 +123,21 @@ namespace DocumentFormat.OpenXml.Validation
                     Description = string.Format(CultureInfo.CurrentUICulture, ValidationResources.ExceptionError, e.Message)
                 };
 
-                result.AddError(errorInfo);
+                context.AddError(errorInfo);
             }
         }
 
-        private ValidationContext CreateValidationContext(ValidationResult result)
+        private ValidationContext CreateValidationContext()
         {
             var context = new ValidationContext
             {
-                FileFormat = _validationSettings.FileFormat
+                FileFormat = _validationSettings.FileFormat,
+                MaxNumberOfErrors = _validationSettings.MaxNumberOfErrors
             };
-
-            context.ValidationErrorEventHandler += result.OnValidationError;
 
             _semanticValidator.ClearConstraintState(SemanticValidationLevel.PackageOnly);
 
             return context;
-        }
-
-        private ValidationResult CreateValidationResult()
-        {
-            var result = new ValidationResult
-            {
-                Valid = true,
-                MaxNumberOfErrors = _validationSettings.MaxNumberOfErrors
-            };
-
-            result.MaxNumberOfErrorsEventHandler += _schemaValidator.OnCancel;
-            result.MaxNumberOfErrorsEventHandler += _semanticValidator.OnCancel;
-
-            return result;
         }
 
         private OpenXmlPart GetMainPart(OpenXmlPackage package)
@@ -205,7 +188,7 @@ namespace DocumentFormat.OpenXml.Validation
             }
         }
 
-        private void ValidatePackageStructure(OpenXmlPackage document, ValidationResult result)
+        private void ValidatePackageStructure(OpenXmlPackage document, ValidationContext context)
         {
             var documentName = document.GetType().Name;
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -273,7 +256,7 @@ namespace DocumentFormat.OpenXml.Validation
                 }
                 errorInfo.RelatedPart = e.SubPart;
 
-                result.AddError(errorInfo);
+                context.AddError(errorInfo);
             }
         }
 
