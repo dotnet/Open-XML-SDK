@@ -620,7 +620,7 @@ namespace DocumentFormat.OpenXml
                 namespaceUri = string.Empty;
             }
 
-            if (localName == string.Empty)
+            if (localName.Length == 0)
             {
                 throw new ArgumentOutOfRangeException(nameof(localName), ExceptionMessages.StringIsEmpty);
             }
@@ -811,7 +811,7 @@ namespace DocumentFormat.OpenXml
                 namespaceUri = string.Empty;
             }
 
-            if (localName == string.Empty)
+            if (localName.Length == 0)
             {
                 throw new ArgumentOutOfRangeException(nameof(localName), ExceptionMessages.StringIsEmpty);
             }
@@ -1741,7 +1741,7 @@ namespace DocumentFormat.OpenXml
                         value = translator.Value;
 
                         // if value == "", we skip to store this attribute.
-                        if (value == "")
+                        if (value.Length == 0)
                         {
                             return true;
                         }

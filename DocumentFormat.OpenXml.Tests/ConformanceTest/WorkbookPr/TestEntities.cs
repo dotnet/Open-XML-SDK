@@ -6,6 +6,7 @@ using DocumentFormat.OpenXml.Spreadsheet;
 using LogUtil;
 using System;
 using System.Linq;
+using Xunit;
 
 using X15 = DocumentFormat.OpenXml.Office2013.Excel;
 using X15ac = DocumentFormat.OpenXml.Office2013.ExcelAc;
@@ -73,8 +74,8 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
                 log.Verify(workbookProperties.ChartTrackingReferenceBase.Value == false, "UnChanged in the ChartTrackingReferenceBase attribute value on workbookPr element.");
 
                 X15ac.AbsolutePath absolutePath = package.WorkbookPart.Workbook.AbsolutePath;
-                log.Verify(absolutePath != null, "Unable to obtain the X15ac.AbsolutePath.");
-                log.Verify(absolutePath.Url == "", "X15ac.AbsolutePath uri value is not change.");
+                Assert.NotNull(absolutePath);
+                Assert.Equal(string.Empty, absolutePath.Url);
             }
         }
 
