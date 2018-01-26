@@ -15,30 +15,10 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Copyright>Copyright 2017 (c) Microsoft Corporation. All rights reserved.</Copyright>
     <PackageTags>openxml office</PackageTags>
-    <PackageReleaseNotes><![CDATA[
-Version 2.7.3 : *In development*
-- Manual saving was fixed when autosave is false
-- Fixed issue on Mono platforms using System.IO.Packaging NuGet package (Xamarin, etc) when creating a document
-
-Version 2.7.2 : June 7, 2017
-- Fixed assembly version information for strong naming.
-- Added support for .NET 3.5 and .NET 4.0
-
-Version 2.7.1 : January 31, 2017
-- Fixed crash when validation is invoked on .NET Framework with strong-naming enforced
-
-Version 2.7.0 : January 24, 2017
-- Added support for .NET Standard 1.3
-- Moved to using System.IO.Packaging from dotnet/corefx for .NET Standard 1.3 and WindowsBase for .NET 4.5
-- Cleaned up project build system to use .NET CLI
-
-Version 2.6.1 : January 15, 2016
-- Added hundreds of XUnit tests. There are now a total of 1333 tests. They take about 20 minutes to run, so be patient.
-
-Version 2.6.0 : June 29, 2015
-- The big feature in 2.6 is the inclusion of a replacement for System.IO.Packaging, which has a serious bug that causes it (albeit rarely and in specific circumstances) to throw exceptions (ObjectDisposedException and NullReferenceException). You can find out more about this bug and whether it affects you in [the blog post that announces the release of the new System.IO.Packaging] (http://openxmldeveloper.org/blog/b/openxmldeveloper/archive/2015/06/29/announcing-the-release-of-a-new-system-io-packaging-implementation.aspx).
-]]></PackageReleaseNotes>
+    <ChangelogFile>$(MSBuildThisFileDirectory)\CHANGELOG.md</ChangelogFile>
+    <PackageReleaseNotes>$([System.IO.File]::ReadAllText($(ChangelogFile)))</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/OfficeDev/Open-XML-SDK</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/OfficeDev/Open-XML-SDK/blob/master/LICENSE.txt</PackageLicenseUrl>
+    <PackageLicenseUrl>https://github.com/OfficeDev/Open-XML-SDK/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/OfficeDev/Open-XML-SDK/master/icon.png</PackageIconUrl>
   </PropertyGroup>
 </Project>

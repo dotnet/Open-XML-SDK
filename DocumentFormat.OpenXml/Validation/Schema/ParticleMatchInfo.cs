@@ -36,22 +36,22 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <summary>
-        /// Particle match result.
+        /// Gets or sets particle match result.
         /// </summary>
         internal ParticleMatch Match { get; set; }
 
         /// <summary>
-        /// The start element to be matched by a particle rule.
+        /// Gets the start element to be matched by a particle rule.
         /// </summary>
         internal OpenXmlElement StartElement { get; private set; }
 
         /// <summary>
-        /// The last element matched by the particle match.
+        /// Gets or sets the last element matched by the particle match.
         /// </summary>
         internal OpenXmlElement LastMatchedElement { get; set; }
 
         /// <summary>
-        /// On Partial match, return the errors.
+        /// Gets or sets message on match error
         /// </summary>
         /// <remarks>
         /// TODO: how can this be decopled from the validator?
@@ -59,7 +59,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         internal string ErrorMessage { get; set; }
 
         /// <summary>
-        /// The element type ids of expected children.
+        /// Gets the element type ids of expected children.
         /// Fill this field on partial match.
         /// </summary>
         /// <remarks>
@@ -109,17 +109,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 this.ExpectedChildren.Add(expectedChildren);
             }
         }
-
-        ///// <summary>
-        ///// Returns a flag which indicate whether the ExpectedChildren is empty.
-        ///// </summary>
-        //internal bool HasExpectedChildren
-        //{
-        //    get
-        //    {
-        //        return this.ExpectedChildren != null && this.ExpectedChildren.Count > 0;
-        //    }
-        //}
 
         internal void Reset(OpenXmlElement startElement)
         {

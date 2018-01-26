@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
 using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
@@ -23,39 +22,27 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
         }
 
-        /// <summary>
-        /// Gets the type of the particle.
-        /// </summary>
+        /// <inheritdoc/>
         internal override ParticleType ParticleType
         {
             get { return ParticleType.Element; }
             set { Debug.Assert(value == ParticleType.Element); }
         }
 
-        /// <summary>
-        /// Gets or sets the type ID of the OpenXmlElement if the ParticleType == ParticleType.Element.
-        /// </summary>
+        /// <inheritdoc/>
         internal override int ElementId
         {
             get { return this._elementId; }
             set { this._elementId = value; }
         }
 
-        /// <summary>
-        /// Gets a ParticleValidator for this particle constraint.
-        /// </summary>
+        /// <inheritdoc/>
         internal override IParticleValidator ParticleValidator
         {
             get { return this; }
         }
 
-        #region IParticleValidator Members
-
-        /// <summary>
-        /// Try match this element once.
-        /// </summary>
-        /// <param name="particleMatchInfo"></param>
-        /// <param name="validationContext"></param>
+        /// <inheritdoc/>
         public void TryMatchOnce(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
         {
             Debug.Assert(particleMatchInfo != null);
@@ -73,11 +60,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             return;
         }
 
-        /// <summary>
-        /// Try match this element.
-        /// </summary>
-        /// <param name="particleMatchInfo"></param>
-        /// <param name="validationContext"></param>
+        /// <inheritdoc/>
         public void TryMatch(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
         {
             Debug.Assert(particleMatchInfo != null);
@@ -128,11 +111,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             return;
         }
 
-        /// <summary>
-        /// Get the required elements - elements which minOccurs > 0.
-        /// </summary>
-        /// <param name="result"></param>
-        /// <returns>True if there are required elements in this particle.</returns>
+        /// <inheritdoc/>
         public bool GetRequiredElements(ExpectedChildren result)
         {
             if (this.MinOccurs > 0)
@@ -146,10 +125,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             return false;
         }
 
-        /// <summary>
-        /// Get the required elements - elements which minOccurs > 0.
-        /// </summary>
-        /// <returns>Required elements in this particle.</returns>
+        /// <inheritdoc/>
         public ExpectedChildren GetRequiredElements()
         {
             ExpectedChildren requiredElements = new ExpectedChildren();
@@ -162,21 +138,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             return requiredElements;
         }
 
-        /// <summary>
-        /// Get the expected elements - elements which minOccurs >= 0.
-        /// </summary>
-        /// <param name="result"></param>
-        /// <returns>True if there are expected elements in this particle.</returns>
+        /// <inheritdoc/>
         public bool GetExpectedElements(ExpectedChildren result)
         {
             result.Add(this.ElementId);
             return true;
         }
 
-        /// <summary>
-        /// Get the expected elements - elements which minOccurs >= 0.
-        /// </summary>
-        /// <returns>Expected elements in this particle.</returns>
+        /// <inheritdoc/>
         public ExpectedChildren GetExpectedElements()
         {
             ExpectedChildren expectedElements = new ExpectedChildren();
@@ -185,53 +154,5 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             return expectedElements;
         }
-
-        #endregion
     }
-
-#if false
-    /// <summary>
-    /// Particle constraint data for particle which type is ParticleType.All
-    /// </summary>
-    internal class AllParticle : CompositeParticle
-    {
-        internal AllParticle() : base()
-        {
-        }
-    }
-
-    /// <summary>
-    /// Particle constraint data for particle which type is ParticleType.Choice
-    /// </summary>
-    internal class ChoiceParticle : CompositeParticle
-    {
-        internal ChoiceParticle()
-            : base()
-        {
-        }
-    }
-
-    /// <summary>
-    /// Particle constraint data for particle which type is ParticleType.Sequence
-    /// </summary>
-    internal class SequenceParticle : CompositeParticle
-    {
-        internal SequenceParticle()
-            : base()
-        {
-        }
-    }
-
-    /// <summary>
-    /// Particle constraint data for particle which type is ParticleType.Group
-    /// </summary>
-    internal class GroupParticle : CompositeParticle
-    {
-        internal GroupParticle()
-            : base()
-        {
-        }
-    }
-#endif
-
 }

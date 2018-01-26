@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         private ParticleMatchInfo _childMatchInfo = new ParticleMatchInfo();
 
         /// <summary>
-        /// The constraint to be validated.
+        /// Gets the constraint to be validated.
         /// </summary>
         protected ParticleConstraint ParticleConstraint { get { return this._particleConstraint; } }
 

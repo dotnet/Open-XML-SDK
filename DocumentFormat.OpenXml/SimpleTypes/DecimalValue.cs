@@ -41,68 +41,11 @@ namespace DocumentFormat.OpenXml
         public DecimalValue(DecimalValue source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
         }
 
-        /// <summary>
-        /// The inner XML text.
-        /// </summary>
-        public override string InnerText
-        {
-            get
-            {
-                if (this.TextValue == null && this.InnerValue.HasValue)
-                {
-                    // this.TextValue = this._value.ToString();
-                    this.TextValue = XmlConvert.ToString(this.InnerValue.Value);
-                }
-                else
-                {
-                    Debug.Assert(this.TextValue == null && !this.InnerValue.HasValue ||
-                                 this.TextValue != null && !this.InnerValue.HasValue ||
-                                 this.TextValue != null && this.TextValue == this.InnerValue.ToString() ||
-                                // special case: signed number like text is "+5", value is 5
-                                 this.TextValue != null && this.TextValue == "+" + this.InnerValue.ToString());
-                }
-                return this.TextValue;
-            }
-        }
+        private protected override string GetText(Decimal input) => XmlConvert.ToString(input);
 
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        internal override void Parse()
-        {
-            this.InnerValue = XmlConvert.ToDecimal(this.TextValue);
-        }
-
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        /// <returns></returns>
-        internal override bool TryParse()
-        {
-            Decimal value;
-            this.InnerValue = null;
-
-            try
-            {
-                value = XmlConvert.ToDecimal(this.TextValue);
-                this.InnerValue = value;
-                return true;
-            }
-            catch (FormatException)
-            {
-                return false;
-            }
-            catch (OverflowException)
-            {
-                return false;
-            }
-        }
+        private protected override Decimal Parse(string input) => XmlConvert.ToDecimal(input);
 
         /// <summary>
         /// Implicitly converts the specified value to a Decimal value.
@@ -163,9 +106,6 @@ namespace DocumentFormat.OpenXml
             return xmlAttribute.Value;
         }
 
-        internal override OpenXmlSimpleType CloneImp()
-        {
-            return new DecimalValue(this);
-        }
+        private protected override OpenXmlSimpleType CloneImpl() => new DecimalValue(this);
     }
 }

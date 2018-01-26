@@ -258,8 +258,11 @@ namespace DocumentFormat.OpenXml.Packaging
 
             // Check extensions as the template must have a valid Word Open XML extension.
             string extension = Path.GetExtension(path);
+
             if (extension != ".xlsx" && extension != ".xlsm" && extension != ".xltx" && extension != ".xltm")
-                throw new ArgumentException("Illegal template file: " + path, "path");
+            {
+                throw new ArgumentException($"Illegal template file: {path}", nameof(path));
+            }
 
             using (SpreadsheetDocument template = SpreadsheetDocument.Open(path, false))
             {

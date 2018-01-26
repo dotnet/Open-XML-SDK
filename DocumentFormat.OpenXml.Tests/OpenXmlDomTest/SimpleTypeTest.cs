@@ -364,9 +364,9 @@ namespace DocumentFormat.OpenXml.Tests
             where T1 : OpenXmlSimpleType, new()
         {
             if (items == null)
-                throw new ArgumentNullException("items");
+                throw new ArgumentNullException(nameof(items));
             if (listB == null)
-                throw new ArgumentNullException("listB");
+                throw new ArgumentNullException(nameof(listB));
             return items.Select(i => i.ToString()).SequenceEqual(listB.Select(t => t.ToString()));
         }
 
@@ -972,7 +972,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
             else
             {
-                throw new ArgumentException("input is not an OnOffValue or a TrueFalseBlankValue!!!", "oxObj");
+                throw new ArgumentException("input is not an OnOffValue or a TrueFalseBlankValue!!!", nameof(oxObj));
             }
 
             string stringValue = oxObj.InnerText;

@@ -23,39 +23,39 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         public const ushort UnboundedMaxOccurs = 0;
 
         /// <summary>
-        /// The particle type of this particle.
+        /// Gets or sets the particle type of this particle.
         /// </summary>
         public ParticleType ParticleType { get; set; }
 
         /// <summary>
-        /// When this is an element, save the element type ID (class ID).
+        /// Gets or sets the element type ID (class ID).
         /// </summary>
         public SdbIndex ElementTypeId { get; set; }
 
         /// <summary>
-        /// The xsd:minOccurs value of this particle.
+        /// Gets or sets the xsd:minOccurs value of this particle.
         /// Just use ushort at now. throw exceptions if thera are numbers > ushort.MaxValue.
         /// </summary>
         public ushort MinOccurs { get; set; }
 
         /// <summary>
-        /// The xsd:maxOccurs value of this particle.
+        /// Gets or sets the xsd:maxOccurs value of this particle.
         /// ushort is not enough.
         /// </summary>
         public int MaxOccurs { get; set; }
 
         /// <summary>
-        /// Count of children particles.
+        /// Gets or sets count of children particles.
         /// </summary>
         public SdbIndex ChildrenCount { get; set; }
 
         /// <summary>
-        /// The index of the first child particle index in the SdbParticleChildrenIndex data array.
+        /// Gets or sets the index of the first child particle index in the SdbParticleChildrenIndex data array.
         /// </summary>
         public SdbIndex ChildrenStartIndex { get; set; }
 
         /// <summary>
-        /// Returns the namespace ID defiend in "xsd:any" when the particle type is ParticleType.Any or ParticleType.AnyWithUri
+        /// Gets the namespace ID defiend in "xsd:any" when the particle type is ParticleType.Any or ParticleType.AnyWithUri
         /// </summary>
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         public SdbIndex XsdAnyNamespaceId
@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <summary>
-        /// The size in bytes of this data structure.
+        /// Gets the size in bytes of this data structure.
         /// </summary>
         public static int TypeSize
         {
@@ -86,20 +86,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
         }
 
-        #region Override SdbData Members
+        /// <inheritdoc/>
+        public override int DataSize => TypeSize;
 
-        /// <summary>
-        /// The size in bytes of this data structure.
-        /// </summary>
-        public override int DataSize
-        {
-            get { return TypeSize; }
-        }
-
-        /// <summary>
-        /// Serialize the data into byte data.
-        /// </summary>
-        /// <returns>Byte data.</returns>
+        /// <inheritdoc/>
         public override byte[] GetBytes()
         {
             // !!!!Caution: keep the order of the following code lines!!!!
@@ -111,11 +101,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 this.ChildrenStartIndex.Bytes());
         }
 
-        /// <summary>
-        /// Deserialize the data from byte data.
-        /// </summary>
-        /// <param name="value">The byte data.</param>
-        /// <param name="startIndex">The offset the data begins at.</param>
+        /// <inheritdoc/>
         public override void LoadFromBytes(byte[] value, int startIndex)
         {
             // !!!!Caution: keep the order of the following code lines!!!!
@@ -126,7 +112,5 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             this.ChildrenCount = LoadSdbIndex(value, ref startIndex);
             this.ChildrenStartIndex = LoadSdbIndex(value, ref startIndex);
         }
-
-        #endregion
     }
 }

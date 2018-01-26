@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
     /// <summary>
     /// To check whether a document has been changed correctly
     /// </summary>
-    public class VerifyElement
+    public static class VerifyElement
     {
         /// <summary>
         /// To check whether a document has been changed correctly

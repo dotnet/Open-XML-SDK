@@ -56,7 +56,7 @@ namespace DocumentFormat.OpenXml
             // bug O14 #253976
             if (!Enum.IsDefined(typeof(T), value))
             {
-                throw new ArgumentOutOfRangeException("value", ExceptionMessages.InvalidEnumValue);
+                throw new ArgumentOutOfRangeException(nameof(value), ExceptionMessages.InvalidEnumValue);
             }
             this.Value = value;
         }
@@ -71,16 +71,10 @@ namespace DocumentFormat.OpenXml
         public EnumValue(EnumValue<T> source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
             this._enumValue = source._enumValue;
         }
 
-        /// <summary>
-        /// Gets a value that indicates whether the underneath text value is a valid value.
-        /// </summary>
+        /// <inheritdoc/>
         public override bool HasValue
         {
             get
@@ -124,16 +118,14 @@ namespace DocumentFormat.OpenXml
                 // bug O14 #253976
                 if (! Enum.IsDefined(typeof(T), value))
                 {
-                    throw new ArgumentOutOfRangeException("value", ExceptionMessages.InvalidEnumValue);
+                    throw new ArgumentOutOfRangeException(nameof(value), ExceptionMessages.InvalidEnumValue);
                 }
                 this._enumValue = value;
                 this.TextValue = null;
             }
         }
 
-        /// <summary>
-        /// Gets or sets the inner XML text.
-        /// </summary>
+        /// <inheritdoc/>
         public override string InnerText
         {
             get
@@ -193,15 +185,12 @@ namespace DocumentFormat.OpenXml
             return value.InnerText;
         }
 
-        internal override OpenXmlSimpleType CloneImp()
-        {
-            return new EnumValue<T>(this);
-        }
+        private protected override OpenXmlSimpleType CloneImpl() => new EnumValue<T>(this);
 
         /// <summary>
         /// Convert the text to meaningful value.
         /// </summary>
-        internal override void Parse()
+        internal void Parse()
         {
             this._enumValue = GetEnumValue(this.TextValue);
         }
@@ -210,7 +199,7 @@ namespace DocumentFormat.OpenXml
         /// Convert the text to meaningful value.
         /// </summary>
         /// <returns></returns>
-        internal override bool TryParse()
+        internal bool TryParse()
         {
             T value;
             this._enumValue = null;

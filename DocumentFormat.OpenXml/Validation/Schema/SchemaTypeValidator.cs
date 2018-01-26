@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     internal class SchemaTypeValidator
     {
-        private SdbSchemaDatas _sdbSchemaDatas;
+        private readonly SdbSchemaDatas _sdbSchemaDatas;
 
         /// <summary>
         /// Initializes a new instance of the SchemaTypeValidator.
@@ -208,8 +208,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             string subMessage;
 
             // special case, the type is different in Office2007 and Office2010.
-            var redirectRestriction = simpleTypeConstraint as RedirectedRestriction;
-            if (redirectRestriction != null)
+            if (simpleTypeConstraint is RedirectedRestriction redirectRestriction)
             {
                 var targetValue = redirectRestriction.ConvertValue(value);
                 ValidateValue(validationContext, redirectRestriction.TargetRestriction, targetValue, qname, isAttribute);

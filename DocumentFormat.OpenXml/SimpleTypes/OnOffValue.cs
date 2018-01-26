@@ -10,28 +10,22 @@ namespace DocumentFormat.OpenXml
     /// Defines an OnOffValue datatype for attributes that have enum values that are Boolean values that represent: 'true' or 'false', 'on' or 'off', or '0' or '1'.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class OnOffValue : OpenXmlSimpleType
+    public class OnOffValue : OpenXmlSimpleValue<bool>
     {
-        private TrueFalseValueImpl _impl;
-
         /// <summary>
         /// Initializes a new instance of <see cref="OnOffValue"/> class.
         /// </summary>
         public OnOffValue()
-            : base()
         {
-            Initialize();
         }
 
         /// <summary>
         /// Initializes a new instance of <see cref="OnOffValue"/> class using the supplied Boolean value.
         /// </summary>
-        /// <param name="value">The <see cref="Boolean"/> value.</param>
-        public OnOffValue(Boolean value)
-            : base()
+        /// <param name="value">The <see cref="bool"/> value.</param>
+        public OnOffValue(bool value)
+            : base(value)
         {
-            Initialize();
-            this.Value = value;
         }
 
         /// <summary>
@@ -41,62 +35,6 @@ namespace DocumentFormat.OpenXml
         public OnOffValue(OnOffValue source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
-            Initialize();
-            _impl.InnerText = source.InnerText;
-        }
-
-        private void Initialize()
-        {
-            _impl = new TrueFalseValueImpl(
-                GetBooleanValue,
-                GetDefaultTextValue);
-        }
-
-        /// <summary>
-        /// Gets a value that indicates whether the underneath text value is a valid value.
-        /// </summary>
-        public override bool HasValue
-        {
-            get
-            {
-                return _impl.HasValue;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the value.
-        /// </summary>
-        public bool Value
-        {
-            get
-            {
-                return _impl.Value;
-            }
-
-            set
-            {
-                _impl.Value = value;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the inner XML text.
-        /// </summary>
-        public override string InnerText
-        {
-            get
-            {
-                return _impl.InnerText;
-            }
-
-            set
-            {
-                _impl.InnerText = value;
-            }
         }
 
         /// <summary>
@@ -104,7 +42,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="textValue">The text value which could be 'true', 'false', 'on', 'off', '0', or '1'.</param>
         /// <returns>True for 'true', 'on', '0', or '1'.</returns>
-        private bool GetBooleanValue(string textValue)
+        private protected override bool Parse(string textValue)
         {
             if (textValue != null)
             {
@@ -141,21 +79,20 @@ namespace DocumentFormat.OpenXml
             return false;
         }
 
+        private protected override bool ShouldParse(string value) => value != null;
+
         /// <summary>
         /// Gets the default text value.
         /// </summary>
         /// <param name="boolValue">The boolean value.</param>
         /// <returns>"1" for True, "0" for False.</returns>
-        private string GetDefaultTextValue(Boolean boolValue)
+        private protected override string GetText(Boolean boolValue)
         {
             // TODO : Defines the default text values.
             return boolValue ? "true" : "false";
         }
 
-        internal override OpenXmlSimpleType CloneImp()
-        {
-            return new OnOffValue(this);
-        }
+        private protected override OpenXmlSimpleType CloneImpl() => new OnOffValue(this);
 
         /// <summary>
         /// Implicitly converts the specified OnOffValue object to a <see cref="Boolean"/> value.

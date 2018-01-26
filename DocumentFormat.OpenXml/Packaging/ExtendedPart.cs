@@ -36,9 +36,7 @@ namespace DocumentFormat.OpenXml.Packaging
             this._relationshipType = relationshipType;
         }
 
-        /// <summary>
-        /// The relationship type of the part.
-        /// </summary>
+        /// <inheritdoc/>
         public override string RelationshipType
         {
             get
@@ -47,9 +45,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        /// <summary>
-        /// The file extension to be used for the part in the package.
-        /// </summary>
+        /// <inheritdoc/>
         internal override string TargetFileExtension
         {
             get
@@ -58,17 +54,13 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        /// <summary>
-        /// The internal path to be used for the part name.
-        /// </summary>
+        /// <inheritdoc/>
         internal override string TargetPath
         {
             get { return "udata"; }
         }
 
-        /// <summary>
-        /// The file base name to be used for the part name in the package
-        /// </summary>
+        /// <inheritdoc/>
         internal override string TargetName
         {
             get { return "data"; }
@@ -161,7 +153,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (contentType == string.Empty)
             {
-                throw new ArgumentException(ExceptionMessages.StringArgumentEmptyException, "contentType");
+                throw new ArgumentException(ExceptionMessages.StringArgumentEmptyException, nameof(contentType));
             }
 
             newPart.CreateInternal(this.InternalOpenXmlPackage, this.ThisOpenXmlPart, contentType, null);

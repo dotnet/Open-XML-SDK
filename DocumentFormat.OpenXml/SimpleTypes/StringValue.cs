@@ -37,14 +37,10 @@ namespace DocumentFormat.OpenXml
         public StringValue(StringValue source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
         }
 
         /// <summary>
-        /// Gets the string value.
+        /// Gets or sets the string value.
         /// </summary>
         public string Value
         {
@@ -106,9 +102,6 @@ namespace DocumentFormat.OpenXml
             return xmlAttribute.Value;
         }
 
-        internal override OpenXmlSimpleType CloneImp()
-        {
-            return new StringValue(this);
-        }
+        private protected override OpenXmlSimpleType CloneImpl() => new StringValue(this);
     }
 }

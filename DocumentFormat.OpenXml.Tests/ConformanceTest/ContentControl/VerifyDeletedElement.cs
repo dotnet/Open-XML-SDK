@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
     /// <summary>
     /// Verify that the sdt element has been deleted
     /// </summary>
-    public class VerifyDeletedElement
+    public static class VerifyDeletedElement
     {
         /// <summary>
         /// Verify that the sdt element has been deleted

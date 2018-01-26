@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
         }
 
         /// <summary>
-        /// Get the attribute value.
+        /// Gets the attribute value.
         /// </summary>
         /// <returns>The attribute value</returns>
         internal override string Value

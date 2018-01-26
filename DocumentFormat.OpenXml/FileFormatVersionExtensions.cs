@@ -2,11 +2,10 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
-using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml
 {
-    internal static class OfficeVersions
+    internal static class FileFormatVersionExtensions
     {
         /// <summary>
         /// Determines whether the supplied version is within the known set of versions
@@ -60,9 +59,34 @@ namespace DocumentFormat.OpenXml
                 case FileFormatVersions.Office2016:
                     return FileFormatVersions.Office2016;
                 default:
-                    Debug.Assert(false, "This should only be called with a single version");
-                    return version;
+                    throw new ArgumentOutOfRangeException(nameof(version));
             }
+        }
+
+        /// <summary>
+        /// Check if a given version is at least a specified version
+        /// </summary>
+        /// <param name="version">Version to check</param>
+        /// <param name="minimum">Minimum version expected</param>
+        /// <returns>True if supplied version is at least of the specified version, otherwise false</returns>
+        public static bool AtLeast(this FileFormatVersions version, FileFormatVersions minimum)
+        {
+            int MapToInteger(FileFormatVersions v, string name)
+            {
+                switch (v)
+                {
+                    case FileFormatVersions.Office2007:
+                        return 1;
+                    case FileFormatVersions.Office2010:
+                        return 2;
+                    case FileFormatVersions.Office2013:
+                        return 3;
+                    default:
+                        throw new ArgumentOutOfRangeException(name);
+                }
+            }
+
+            return MapToInteger(version, nameof(version)) >= MapToInteger(minimum, nameof(minimum));
         }
 
         /// <summary>

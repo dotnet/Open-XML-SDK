@@ -29,27 +29,21 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
         }
 
-        /// <summary>
-        /// Gets the type of the particle.
-        /// </summary>
+        /// <inheritdoc/>
         internal override ParticleType ParticleType
         {
             get { return this._particleType; }
             set { this._particleType = value; }
         }
 
-        /// <summary>
-        /// Gets the children particles.
-        /// </summary>
+        /// <inheritdoc/>
         internal override ParticleConstraint[] ChildrenParticles
         {
             get { return this._childrenParticles; }
             set { this._childrenParticles = value; }
         }
 
-        /// <summary>
-        /// Gets a ParticleValidator for this particle constraint.
-        /// </summary>
+        /// <inheritdoc/>
         internal override IParticleValidator ParticleValidator
         {
             get
@@ -71,50 +65,4 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         //    throw new NotImplementedException();
         //}
     }
-
-#if false
-    /// <summary>
-    /// Particle constraint data for particle which type is ParticleType.All
-    /// </summary>
-    internal class AllParticle : CompositeParticle
-    {
-        internal AllParticle() : base()
-        {
-        }
-    }
-
-    /// <summary>
-    /// Particle constraint data for particle which type is ParticleType.Choice
-    /// </summary>
-    internal class ChoiceParticle : CompositeParticle
-    {
-        internal ChoiceParticle()
-            : base()
-        {
-        }
-    }
-
-    /// <summary>
-    /// Particle constraint data for particle which type is ParticleType.Sequence
-    /// </summary>
-    internal class SequenceParticle : CompositeParticle
-    {
-        internal SequenceParticle()
-            : base()
-        {
-        }
-    }
-
-    /// <summary>
-    /// Particle constraint data for particle which type is ParticleType.Group
-    /// </summary>
-    internal class GroupParticle : CompositeParticle
-    {
-        internal GroupParticle()
-            : base()
-        {
-        }
-    }
-#endif
-
 }

@@ -148,7 +148,7 @@ namespace DocumentFormat.OpenXml.Tests
         public static OpenXmlPackage CreatePackageOn(OpenXmlPackage srcPackage, string destDocument)
         {
             if (null == srcPackage)
-                throw new ArgumentNullException("srcPackage");
+                throw new ArgumentNullException(nameof(srcPackage));
 
             OpenXmlPackage destPackage = null;
             if (srcPackage is WordprocessingDocument)
@@ -388,7 +388,7 @@ namespace DocumentFormat.OpenXml.Tests
         internal void ReflectPackage(OpenXmlPackage srcPackage, OpenXmlPackage destPackage)
         {
             if (null == srcPackage)
-                throw new ArgumentNullException("srcPackage");
+                throw new ArgumentNullException(nameof(srcPackage));
             if (null == destPackage)
                 throw new ArgumentNullException("destPackate");
 
@@ -444,7 +444,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 // Load source part into source root element
                 var loader = rootType.GetMethod("Load", new Type[] { srcPartType });
-                var ctor = rootType.GetConstructor(new Type[] { });
+                var ctor = rootType.GetConstructor(Cached.Array<Type>());
                 OpenXmlElement srcRoot = ctor.Invoke(null) as OpenXmlElement;
                 loader.Invoke(srcRoot, new Object[] { srcPart });
 

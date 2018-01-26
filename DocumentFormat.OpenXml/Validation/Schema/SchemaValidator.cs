@@ -12,11 +12,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     internal class SchemaValidator : ICancelable
     {
-        private SdbSchemaDatas _sdbSchemaDatas;
-        private SchemaTypeValidator _schemaTypeValidator;
-#if DEBUG
-        private FileFormatVersions _fileFormat;
-#endif
+        private readonly SdbSchemaDatas _sdbSchemaDatas;
+        private readonly SchemaTypeValidator _schemaTypeValidator;
         private bool _stopValidating;
 
         /// <summary>
@@ -55,13 +52,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 string message = String.Format(System.Globalization.CultureInfo.CurrentUICulture,
                                                     ExceptionMessages.FileFormatNotSupported,
                                                     fileFormat);
-                throw new ArgumentOutOfRangeException("fileFormat", message);
+                throw new ArgumentOutOfRangeException(nameof(fileFormat), message);
             }
 
             this._schemaTypeValidator = new SchemaTypeValidator(this._sdbSchemaDatas);
-#if DEBUG
-            this._fileFormat = fileFormat;
-#endif
         }
 
         /// <summary>

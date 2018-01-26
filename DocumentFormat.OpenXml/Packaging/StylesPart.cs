@@ -11,11 +11,9 @@ namespace DocumentFormat.OpenXml.Packaging
     public abstract partial class StylesPart : OpenXmlPart
     {
         [System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)]
-        private DocumentFormat.OpenXml.Wordprocessing.Styles _rootEle;
+        private Wordprocessing.Styles _rootEle;
 
-        /// <summary>
-        /// Only for OpenXmlPart derived classes.
-        /// </summary>
+        /// <inheritdoc/>
         internal override OpenXmlPartRootElement _rootElement
         {
             get
@@ -41,9 +39,9 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Gets/Sets the root element of this part.
+        /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Wordprocessing.Styles Styles
+        public Wordprocessing.Styles Styles
         {
             get
             {

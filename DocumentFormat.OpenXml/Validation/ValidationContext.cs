@@ -28,51 +28,32 @@ namespace DocumentFormat.OpenXml.Validation
         }
 
         /// <summary>
-        /// Target file format.
+        /// Gets or sets target file format.
         /// </summary>
         internal FileFormatVersions FileFormat { get; set; }
 
-        //internal MCMode McMode
-        //{
-        //    get
-        //    {
-        //        switch (this.FileFormat)
-        //        {
-        //            case FileFormat.Office2007:
-        //                return MCMode.Office2007;
-
-        //            case FileFormat.Office2010:
-        //                return MCMode.Office2010;
-
-        //            default:
-        //                Debug.Assert(false);
-        //                return MCMode.Office2007;
-        //        }
-        //    }
-        //}
-
         /// <summary>
-        /// The target OpenXmlPackage.
+        /// Gets or sets the target OpenXmlPackage.
         /// </summary>
         internal OpenXmlPackage Package { get; set; }
 
         /// <summary>
-        /// The target OpenXmlPart
+        /// Gets or sets the target OpenXmlPart
         /// </summary>
         internal OpenXmlPart Part { get; set; }
 
         /// <summary>
-        /// The target element.
+        /// Gets or sets the target element.
         /// </summary>
         internal OpenXmlElement Element { get; set; }
 
         /// <summary>
-        /// Used to track MC context.
+        /// Gets or sets used to track MC context.
         /// </summary>
         internal MCContext McContext { get; set; }
 
         /// <summary>
-        /// Collect ExpectedChildren or not.
+        /// Gets or sets a value indicating whether collect ExpectedChildren or not.
         /// </summary>
         internal bool CollectExpectedChildren { get; set; }
 

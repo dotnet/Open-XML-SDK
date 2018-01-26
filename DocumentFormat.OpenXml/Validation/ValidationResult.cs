@@ -21,12 +21,12 @@ namespace DocumentFormat.OpenXml.Validation
         }
 
         /// <summary>
-        /// Gets a value indicating whether the validation is canceled.
+        /// Gets or sets a value indicating whether the validation is canceled.
         /// </summary>
         internal bool Canceled { get; set; }
 
         /// <summary>
-        /// Gets a value indicating whether the validation returns ok.
+        /// Gets or sets a value indicating whether the validation returns ok.
         /// </summary>
         internal bool Valid { get; set; }
 

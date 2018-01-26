@@ -40,56 +40,11 @@ namespace DocumentFormat.OpenXml
         public BooleanValue(BooleanValue source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
         }
 
-        /// <summary>
-        /// Gets or sets the inner XML text.
-        /// </summary>
-        public override string InnerText
-        {
-            get
-            {
-                if (this.TextValue == null && this.InnerValue.HasValue)
-                {
-                    // Word use "1", "0"
-                    this.TextValue = this.InnerValue.Value ? "1" : "0";
-                }
-                return this.TextValue;
-            }
-        }
+        private protected override string GetText(bool input) => input ? "1" : "0";
 
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        internal override void Parse()
-        {
-            this.InnerValue = XmlConvert.ToBoolean(this.TextValue);
-        }
-
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        /// <returns></returns>
-        internal override bool TryParse()
-        {
-            Boolean value;
-            this.InnerValue = null;
-
-            try
-            {
-                value = XmlConvert.ToBoolean(this.TextValue);
-                this.InnerValue = value;
-                return true;
-            }
-            catch (FormatException)
-            {
-                return false;
-            }
-        }
+        private protected override bool Parse(string input) => XmlConvert.ToBoolean(input);
 
         /// <summary>
         /// Implicitly converts the specified value to a Boolean value.
@@ -145,9 +100,6 @@ namespace DocumentFormat.OpenXml
             return xmlAttribute.Value;
         }
 
-        internal override OpenXmlSimpleType CloneImp()
-        {
-            return new BooleanValue(this);
-        }
+        private protected override OpenXmlSimpleType CloneImpl() => new BooleanValue(this);
     }
 }

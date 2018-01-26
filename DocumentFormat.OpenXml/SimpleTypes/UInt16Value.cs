@@ -38,66 +38,11 @@ namespace DocumentFormat.OpenXml
         public UInt16Value(UInt16Value source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
         }
 
-        /// <summary>
-        /// Gets or sets the inner XML text.
-        /// </summary>
-        public override string InnerText
-        {
-            get
-            {
-                if (this.TextValue == null && this.InnerValue.HasValue)
-                {
-                    // this.TextValue = this._value.ToString();
-                    this.TextValue = XmlConvert.ToString(this.InnerValue.Value);
-                }
-                else
-                {
-                    Debug.Assert(this.TextValue == null && !this.InnerValue.HasValue ||
-                                 this.TextValue != null && !this.InnerValue.HasValue ||
-                                 this.TextValue != null && this.TextValue == this.InnerValue.ToString());
-                }
-                return this.TextValue;
-            }
-        }
+        private protected override string GetText(ushort input) => XmlConvert.ToString(input);
 
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        internal override void Parse()
-        {
-            this.InnerValue = XmlConvert.ToUInt16(this.TextValue);
-        }
-
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        /// <returns></returns>
-        internal override bool TryParse()
-        {
-            UInt16 value;
-            this.InnerValue = null;
-
-            try
-            {
-                value = XmlConvert.ToUInt16(this.TextValue);
-                this.InnerValue = value;
-                return true;
-            }
-            catch (FormatException)
-            {
-                return false;
-            }
-            catch (OverflowException)
-            {
-                return false;
-            }
-        }
+        private protected override ushort Parse(string input) => XmlConvert.ToUInt16(input);
 
         /// <summary>
         /// Implicitly converts the specified UInt16Value object to a UInt16 value.
@@ -151,9 +96,6 @@ namespace DocumentFormat.OpenXml
             return xmlAttribute.Value;
         }
 
-        internal override OpenXmlSimpleType CloneImp()
-        {
-            return new UInt16Value(this);
-        }
+        private protected override OpenXmlSimpleType CloneImpl() => new UInt16Value(this);
     }
 }

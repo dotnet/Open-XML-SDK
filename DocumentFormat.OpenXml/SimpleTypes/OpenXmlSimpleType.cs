@@ -37,8 +37,8 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// DON'T use this property. Only for OpenXmlSimpleType.cs internal use.
-        /// The internal raw text value.
+        /// Gets or sets the internal raw text value.
+        /// DO NOT use this property. Only for OpenXmlSimpleType.cs internal use.
         /// </summary>
         protected string TextValue
         {
@@ -54,23 +54,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        internal virtual void Parse()
-        {
-        }
-
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        /// <returns></returns>
-        internal virtual bool TryParse()
-        {
-            return true;
-        }
-
-        /// <summary>
-        /// Gets a value that indicates whether the underneath text value is a valid value.
+        /// Gets a value indicating whether the underneath text value is a valid value.
         /// </summary>
         public virtual bool HasValue
         {
@@ -105,8 +89,6 @@ namespace DocumentFormat.OpenXml
             return InnerText;
         }
 
-        #region ICloneable Members
-
         /// <summary>
         /// Creates a duplicate of the current value.
         /// </summary>
@@ -114,14 +96,9 @@ namespace DocumentFormat.OpenXml
         /// This method is a deep copy clone.
         /// </remarks>
         /// <returns>The cloned value.</returns>
-        public object Clone()
-        {
-            return CloneImp();
-        }
+        public object Clone() => CloneImpl();
 
-        internal abstract OpenXmlSimpleType CloneImp();
-
-        #endregion
+        private protected abstract OpenXmlSimpleType CloneImpl();
 
         /// <summary>
         /// Implicitly converts a specified attribute value to a String value.
@@ -138,17 +115,6 @@ namespace DocumentFormat.OpenXml
             return xmlAttribute.InnerText;
         }
 
-        #region internal methods to be used by validation
-
-        /// <summary>
-        /// When overridden in the derived ListValue class, this method returns items in the list.
-        /// </summary>
-        /// <returns>Returns items in the list.</returns>
-        internal virtual IEnumerable<OpenXmlSimpleType> GetListItems()
-        {
-            throw new NotImplementedException();
-        }
-
         /// <summary>
         /// Test whether the value is allowed in the specified file format version. Only for EnumValue.
         /// </summary>
@@ -161,7 +127,5 @@ namespace DocumentFormat.OpenXml
         {
             throw new NotImplementedException();
         }
-
-        #endregion
     }
 }

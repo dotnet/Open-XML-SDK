@@ -20,28 +20,13 @@ namespace DocumentFormat.OpenXml.Packaging
         {
         }
 
-        /// <summary>
-        /// The internal path to be used for the part name.
-        /// </summary>
-        internal override string TargetPath
-        {
-            get { return DefaultTargetPart; }
-        }
+        /// <inheritdoc/>
+        internal override string TargetPath => DefaultTargetPart;
 
-        /// <summary>
-        /// The file base name to be used for the part name in the package
-        /// </summary>
-        internal override string TargetName
-        {
-            get { return DefaultTargetName; }
-        }
+        /// <inheritdoc/>
+        internal override string TargetName => DefaultTargetName;
 
-        /// <summary>
-        /// The file extension to be used for the part in the package.
-        /// </summary>
-        internal override string TargetFileExtension
-        {
-            get { return DefaultTargetExt; }
-        }
+        /// <inheritdoc/>
+        internal override string TargetFileExtension => DefaultTargetExt;
     }
 }

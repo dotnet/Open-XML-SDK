@@ -13,25 +13,25 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         // TODO: the ParticleIndex and SimpleTypeIndex can share one field.
 
         /// <summary>
-        /// The index of the particle in the SdbParticleConstraint data array.
+        /// Gets or sets the index of the particle in the SdbParticleConstraint data array.
         /// Will be "SdbData.InvalidId" if the schema type is NOT composite type.
         /// </summary>
         /// <remarks>This field can be eliminated.</remarks>
         public SdbIndex ParticleIndex { get; set; }
 
         /// <summary>
-        /// The index of the simple data in the SdbSimpleTypeRestriction data array.
+        /// Gets or sets the index of the simple data in the SdbSimpleTypeRestriction data array.
         /// Will be "SdbData.InvalidId" if the schema type is NOT simple content only.
         /// </summary>
         public SdbIndex SimpleTypeIndex { get; set; }
 
         /// <summary>
-        /// The count of attributes.
+        /// Gets or sets the count of attributes.
         /// </summary>
         public SdbIndex AttributesCount { get; set; }
 
         /// <summary>
-        /// The index of the first attribute data in the SdbAttributeConstraint data array.
+        /// Gets or sets the index of the first attribute data in the SdbAttributeConstraint data array.
         /// </summary>
         public SdbIndex StartIndexOfAttributes { get; set; }
 
@@ -58,43 +58,24 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <summary>
-        /// Returns true if the schema type is a schema type which contains particles.
+        /// Gets a value indicating whether the schema type is a schema type which contains particles.
         /// </summary>
-        public bool IsCompositeType
-        {
-            get { return this.ParticleIndex != SdbData.InvalidId; }
-        }
+        public bool IsCompositeType => this.ParticleIndex != SdbData.InvalidId;
 
         /// <summary>
-        /// Returns true if the schema type contains simple content only.
+        /// Gets a value indicating whether the schema type contains simple content only.
         /// </summary>
-        public bool IsSimpleContent
-        {
-            get { return this.SimpleTypeIndex != SdbData.InvalidId; }
-        }
+        public bool IsSimpleContent => this.SimpleTypeIndex != SdbData.InvalidId;
 
         /// <summary>
-        /// The size in bytes of this data structure
+        /// Gets the size in bytes of this data structure
         /// </summary>
-        public static int TypeSize
-        {
-            get { return sizeof(SdbIndex) * 4; }
-        }
+        public static int TypeSize => sizeof(SdbIndex) * 4;
 
-        #region Override SdbData Members
+        /// <inheritdoc/>
+        public override int DataSize => TypeSize;
 
-        /// <summary>
-        /// The size in bytes of this data structure
-        /// </summary>
-        public override int DataSize
-        {
-            get { return TypeSize; }
-        }
-
-        /// <summary>
-        /// Serialize the data into byte data.
-        /// </summary>
-        /// <returns>Byte data.</returns>
+        /// <inheritdoc/>
         public override byte[] GetBytes()
         {
             // !!!!Caution: keep the order of the following code lines!!!!
@@ -104,11 +85,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                                 this.StartIndexOfAttributes.Bytes());
         }
 
-        /// <summary>
-        /// Deserialize the data from byte data.
-        /// </summary>
-        /// <param name="value">The byte data.</param>
-        /// <param name="startIndex">The offset the data begins at.</param>
+        /// <inheritdoc/>
         public override void LoadFromBytes(byte[] value, int startIndex)
         {
             // !!!!Caution: keep the order of the following code lines!!!!
@@ -117,7 +94,5 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             this.AttributesCount = LoadSdbIndex(value, ref startIndex);
             this.StartIndexOfAttributes = LoadSdbIndex(value, ref startIndex);
         }
-
-        #endregion
     }
 }

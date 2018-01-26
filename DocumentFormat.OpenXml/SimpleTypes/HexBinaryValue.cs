@@ -37,14 +37,10 @@ namespace DocumentFormat.OpenXml
         public HexBinaryValue(HexBinaryValue source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
         }
 
         /// <summary>
-        /// Gets the hexBinary string value.
+        /// Gets or sets the hex binary value
         /// </summary>
         public string Value
         {
@@ -104,9 +100,6 @@ namespace DocumentFormat.OpenXml
             return xmlAttribute.Value;
         }
 
-        internal override OpenXmlSimpleType CloneImp()
-        {
-            return new HexBinaryValue(this);
-        }
+        private protected override OpenXmlSimpleType CloneImpl() => new HexBinaryValue(this);
     }
 }

@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     internal class AttributeConstraint
     {
-        internal AttributeConstraint(XsdAttributeUse xsdAttributeUse, SimpleTypeRestriction simpleTypeConstraint)
+        public AttributeConstraint(XsdAttributeUse xsdAttributeUse, SimpleTypeRestriction simpleTypeConstraint)
         {
             Debug.Assert(simpleTypeConstraint != null);
 
@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             this.SimpleTypeConstraint = simpleTypeConstraint;
         }
 
-        internal AttributeConstraint(XsdAttributeUse xsdAttributeUse, SimpleTypeRestriction simpleTypeConstraint, FileFormatVersions supportedVersion)
+        public AttributeConstraint(XsdAttributeUse xsdAttributeUse, SimpleTypeRestriction simpleTypeConstraint, FileFormatVersions supportedVersion)
         {
             Debug.Assert(simpleTypeConstraint != null);
 
@@ -29,33 +29,18 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <summary>
-        /// The "use" attribute on xsd:attribute [ use = (optional | prohibited | required): optional ]
+        /// Gets the "use" attribute on xsd:attribute [ use = (optional | prohibited | required): optional ]
         /// </summary>
-        internal XsdAttributeUse XsdAttributeUse
-        {
-            get;
-            private set;
-        }
-
-        // the name of the attribute will be gotten from the CodeGen info.
-        // public string PropertyName { get; set; } // the Property name of the xsd:attribute.
+        public XsdAttributeUse XsdAttributeUse { get; }
 
         /// <summary>
-        /// The simple type constraint for this attribute.
+        /// Gets the simple type constraint for this attribute.
         /// </summary>
-        internal SimpleTypeRestriction SimpleTypeConstraint
-        {
-            get;
-            private set;
-        }
+        public SimpleTypeRestriction SimpleTypeConstraint { get; }
 
         /// <summary>
-        /// In which file format version this attribute is allowed.
+        /// Gets in which file format version this attribute is allowed.
         /// </summary>
-        internal FileFormatVersions SupportedVersion
-        {
-            get;
-            private set;
-        }
+        public FileFormatVersions SupportedVersion { get; }
     }
 }

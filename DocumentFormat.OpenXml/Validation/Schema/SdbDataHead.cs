@@ -32,12 +32,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         public int DataVersion { get; set; }
 
         /// <summary>
-        /// size in byte of the schema constraint datas, exclude the DataHead.
+        /// Gets or sets size in byte of the schema constraint datas, exclude the DataHead.
         /// </summary>
         public int DataByteCount { get; set; }
 
         /// <summary>
-        /// The first class ID.
+        /// Gets or sets the first class ID.
         /// </summary>
         public int StartClassId { get; set; }
 
