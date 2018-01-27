@@ -1378,13 +1378,13 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 InitPart(part, contentType ?? part.ContentType, id);
             }
-            catch (ArgumentOutOfRangeException)
+            catch (ArgumentOutOfRangeException e)
             {
-                throw new OpenXmlPackageException(ExceptionMessages.AddedPartIsNotAllowed);
+                throw new OpenXmlPackageException(e, ExceptionMessages.AddedPartIsNotAllowed);
             }
-            catch (InvalidOperationException)
+            catch (InvalidOperationException e)
             {
-                throw new OpenXmlPackageException(ExceptionMessages.OnlyOnePartAllowed);
+                throw new OpenXmlPackageException(e, ExceptionMessages.OnlyOnePartAllowed);
             }
 
             return part;
