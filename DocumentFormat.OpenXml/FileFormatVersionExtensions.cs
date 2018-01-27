@@ -81,6 +81,8 @@ namespace DocumentFormat.OpenXml
                         return 2;
                     case FileFormatVersions.Office2013:
                         return 3;
+                    case FileFormatVersions.Office2016:
+                        return 4;
                     default:
                         throw new ArgumentOutOfRangeException(name);
                 }
