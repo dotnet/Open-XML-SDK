@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml
         public OpenXmlMiscNode(XmlNodeType nodeType, string outerXml)
             : this(nodeType)
         {
-            if ( String.IsNullOrEmpty( outerXml ) )
+            if (String.IsNullOrEmpty(outerXml))
             {
                 throw new ArgumentNullException(nameof(outerXml));
             }
@@ -94,7 +94,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Specifies the type of XML node.
+        /// Gets the type of XML node.
         /// </summary>
         public XmlNodeType XmlNodeType
         {
@@ -102,14 +102,13 @@ namespace DocumentFormat.OpenXml
             internal set { _nodeType = value; }
         }
 
-        /// <summary>
-        /// The type ID of the element.
-        /// </summary>
+        /// <inheritdoc/>
         internal override int ElementTypeId
         {
             get { return ReservedElementTypeIds.OpenXmlMiscNodeId; }
         }
 
+        /// <inheritdoc/>
         internal override byte NamespaceId
         {
             get
@@ -118,18 +117,13 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Gets a value that indicates whether the current element has any child
-        /// elements.
-        /// </summary>
+        /// <inheritdoc/>
         public override bool HasChildren
         {
             get { return false; }
         }
 
-        /// <summary>
-        /// When overridden in a derived class, gets the local name of the node.
-        /// </summary>
+        /// <inheritdoc/>
         public override string LocalName
         {
             get
@@ -200,9 +194,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Gets the namespace URI of the current node.
-        /// </summary>
+        /// <inheritdoc/>
         public override string NamespaceUri
         {
             get
@@ -211,9 +203,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Gets or sets the namespace prefix of the current node.
-        /// </summary>
+        /// <inheritdoc/>
         public override string Prefix
         {
             get
@@ -222,9 +212,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// When overridden in a derived class, gets the qualified name of the node.
-        /// </summary>
+        /// <inheritdoc/>
         public override XmlQualifiedName XmlQualifiedName
         {
             get
@@ -233,10 +221,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Gets or sets the markup that represents only the child nodes of the
-        /// current node.
-        /// </summary>
+        /// <inheritdoc/>
         public override string InnerXml
         {
             get
@@ -250,45 +235,27 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// When overridden in a derived class, creates a duplicate of the node.
-        /// </summary>
-        /// <param name="deep">
-        /// Specify true to recursively clone the subtree under the specified
-        /// node; false to clone only the node itself.
-        /// </param>
-        /// <returns>The cloned node. </returns>
+        /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep)
         {
-            OpenXmlMiscNode element = new OpenXmlMiscNode(this.XmlNodeType);
-
-            element.OuterXml = this.OuterXml;
-
-            return element;
+            return new OpenXmlMiscNode(this.XmlNodeType)
+            {
+                OuterXml = this.OuterXml
+            };
         }
 
-        /// <summary>
-        /// Removes all child elements.
-        /// </summary>
+        /// <inheritdoc/>
         public override void RemoveAllChildren()
         {
         }
 
-        /// <summary>
-        /// Saves all the children of the node to the specified XmlWriter.
-        /// </summary>
-        /// <param name="w">The XmlWriter to which you want to save. </param>
+        /// <inheritdoc/>
         internal override void WriteContentTo(XmlWriter w)
         {
             throw new NotImplementedException(ExceptionMessages.NonImplemented);
         }
 
-        /// <summary>
-        /// Saves the current node to the specified XmlWriter.
-        /// </summary>
-        /// <param name="xmlWriter">
-        /// The XmlWriter at which to save the current node.
-        /// </param>
+        /// <inheritdoc/>
         public override void WriteTo(XmlWriter xmlWriter)
         {
             if (xmlWriter == null)
@@ -300,18 +267,20 @@ namespace DocumentFormat.OpenXml
             xmlWriter.WriteRaw(this.RawOuterXml);
         }
 
+        /// <inheritdoc/>
         internal override void LazyLoad(XmlReader xmlReader)
         {
             this.Populate(xmlReader, OpenXmlLoadMode.Full);
         }
 
+        /// <inheritdoc/>
         internal override void ParseXml()
         {
             // do nothing
         }
 
         /// <summary>
-        /// Holds the XmlReader.Value on loading.
+        /// Gets the XmlReader.Value on loading.
         /// </summary>
         internal string Value
         {
@@ -408,17 +377,13 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Do nothing for MiscNode.
-        /// Override this method because the MC loading algorithm try to call this method in parent's Populate.
-        /// While the OpenXmlElement.LoadAttributes() will cause the reader be moved which should not.
-        /// </summary>
-        /// <param name="xmlReader"></param>
+        /// <inheritdoc/>
         internal override void LoadAttributes(XmlReader xmlReader)
         {
             return;
         }
 
+        /// <inheritdoc/>
         internal override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode)
         {
             this.LoadOuterXml(xmlReader);
@@ -427,14 +392,10 @@ namespace DocumentFormat.OpenXml
             // this.RawOuterXml = xmlReader.ReadOuterXml();
         }
 
-        /// <summary>
-        /// Whether this element is available in a specific version of Office Application.
-        /// For OpenXmlMiscNode, always return true, no matter what the version is.
-        /// </summary>
-        /// <param name="version">The Office file format version.</param>
-        /// <returns>Returns true if the element is defined in the specified version.</returns>
+        /// <inheritdoc/>
         internal override bool IsInVersion(FileFormatVersions version)
         {
+            // For OpenXmlMiscNode, always return true, no matter what the version is.
             return true;
         }
 

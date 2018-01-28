@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using System;
 using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml
@@ -75,8 +76,8 @@ namespace DocumentFormat.OpenXml
             get { return AlternateContent.MarkupCompatibilityNamespaceId; }
         }
 
-        private static string[] attributeTagNames = { };
-        private static byte[] attributeNamespaceIds = { };
+        private static string[] attributeTagNames = Cached.Array<string>();
+        private static byte[] attributeNamespaceIds = Cached.Array<byte>();
 
         internal override string[] AttributeTagNames
         {
@@ -131,7 +132,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// The type ID of the element.
+        /// Gets the type ID of the element.
         /// </summary>
         internal override int ElementTypeId
         {

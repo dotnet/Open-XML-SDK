@@ -13,13 +13,9 @@ namespace DocumentFormat.OpenXml
     public abstract class OpenXmlLeafElement : OpenXmlElement
     {
         /// <summary>
-        /// Represents a shadow element to hold child elements if there are any.
+        /// Gets or sets represents a shadow element to hold child elements if there are any.
         /// </summary>
-        internal OpenXmlElement ShadowElement
-        {
-            get;
-            set;
-        }
+        internal OpenXmlElement ShadowElement { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlLeafElement class.
@@ -29,19 +25,10 @@ namespace DocumentFormat.OpenXml
         {
         }
 
-        /// <summary>
-        /// Gets a value that indicates whether the current element has any child
-        ///  elements.
-        /// </summary>
-        public override bool HasChildren
-        {
-            get { return false; }
-        }
+        /// <inheritdoc/>
+        public override bool HasChildren => false;
 
-        /// <summary>
-        /// Gets or sets the markup that only represents child elements of the current
-        ///  element.
-        /// </summary>
+        /// <inheritdoc/>
         public override string InnerXml
         {
             get
@@ -67,10 +54,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Saves all child elements of the current element to the specified XmlWriter.
-        /// </summary>
-        /// <param name="w">The XmlWriter to which to save the child elements. </param>
+        /// <inheritdoc/>
         internal override void WriteContentTo(XmlWriter w)
         {
             // Write the loaded inner xml if there are any
@@ -80,9 +64,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Removes all child elements of the current element.
-        /// </summary>
+        /// <inheritdoc/>
         public override void RemoveAllChildren()
         {
             // nothing to remove

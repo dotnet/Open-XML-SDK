@@ -1291,7 +1291,7 @@ public partial class LockText : OpenXmlLeafTextElement
 
 }
 /// <summary>
-/// <para>Far East Alignment Toggle.</para>
+/// <para>East Asia Alignment Toggle.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:JustLastX.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]

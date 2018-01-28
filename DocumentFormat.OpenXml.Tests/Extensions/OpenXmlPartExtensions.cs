@@ -80,7 +80,7 @@ namespace DocumentFormat.OpenXml.Tests
         public static IEnumerable<OpenXmlPart> DescendantParts(this OpenXmlPartContainer root)
         {
             if (null == root)
-                throw new ArgumentNullException("root");
+                throw new ArgumentNullException(nameof(root));
 
             var parts = new List<OpenXmlPart>();
             var uriList = new List<string>();
@@ -123,7 +123,7 @@ namespace DocumentFormat.OpenXml.Tests
         public static bool IsReflectable(this OpenXmlPart part)
         {
             if (null == part)
-                throw new ArgumentNullException("part");
+                throw new ArgumentNullException(nameof(part));
 
             if (part.IsBibliographyPart() || part.IsAdditionalCharacteristicsPart() || part.IsInkPart())
             {
@@ -145,7 +145,7 @@ namespace DocumentFormat.OpenXml.Tests
         public static OpenXmlPartRootElement RootElement(this OpenXmlPart part)
         {
             if (null == part)
-                throw new ArgumentNullException("part");
+                throw new ArgumentNullException(nameof(part));
 
             if (part is CustomXmlPart)
             {

@@ -58,47 +58,27 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the owner <see cref="OpenXmlPartContainer"/> that holds the <see cref="ReferenceRelationship"/>.
         /// </summary>
-        public OpenXmlPartContainer Container
-        {
-            get;
-            internal set;
-        }
+        public OpenXmlPartContainer Container { get; internal set; }
 
         /// <summary>
         /// Gets the relationship type.
         /// </summary>
-        public virtual string RelationshipType
-        {
-            get;
-            private set;
-        }
+        public virtual string RelationshipType { get; private set; }
 
         /// <summary>
-        /// Gets a value that indicates whether the target of the relationship is Internal or External to the <see cref="OpenXmlPackage"/>.
+        /// Gets a value indicating whether the target of the relationship is Internal or External to the <see cref="OpenXmlPackage"/>.
         /// </summary>
-        public virtual bool IsExternal
-        {
-            get;
-            private set;
-        }
+        public virtual bool IsExternal { get; private set; }
 
         /// <summary>
         /// Gets the relationship ID.
         /// </summary>
-        public virtual string Id
-        {
-            get;
-            private set;
-        }
+        public virtual string Id { get; private set; }
 
         /// <summary>
         /// Gets the target URI of the relationship.
         /// </summary>
-        public virtual Uri Uri
-        {
-            get;
-            private set;
-        }
+        public virtual Uri Uri { get; private set; }
 
         /// <summary>
         /// Initializes this instance of the ReferenceRelationship.

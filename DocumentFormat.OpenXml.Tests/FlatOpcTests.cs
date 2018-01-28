@@ -2,6 +2,8 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.Wordprocessing;
 using System.IO;
 using System.IO.Packaging;
 using Xunit;
@@ -145,6 +147,25 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
+        [Fact(Skip = "#380")]
+        public void CanCreateFlatOpcPresentationDocumentsDynamically()
+        {
+            using (MemoryStream stream = new MemoryStream())
+            using (PresentationDocument presentation = PresentationDocument.Create(stream, PresentationDocumentType.Presentation))
+            {
+                PresentationPart presentationPart = presentation.AddPresentationPart();
+                presentationPart.Presentation = new Presentation.Presentation();
+
+                presentation.Save();
+
+                string opc = presentation.ToFlatOpcString();
+                using (var dest = PresentationDocument.FromFlatOpcString(opc))
+                {
+                    PackageAssert.Equal(presentation, dest);
+                }
+            }
+        }
+
         [Fact]
         public void CanCreateFlatOpcSpreadsheetDocuments1()
         {
@@ -277,6 +298,25 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
+        [Fact(Skip = "#380")]
+        public void CanCreateFlatOpcSpreadsheetDocumentsDynamically()
+        {
+            using (MemoryStream stream = new MemoryStream())
+            using (SpreadsheetDocument spreadsheet = SpreadsheetDocument.Create(stream, SpreadsheetDocumentType.Workbook))
+            {
+                WorkbookPart workbookPart = spreadsheet.AddWorkbookPart();
+                workbookPart.Workbook = new Workbook();
+
+                spreadsheet.Save();
+
+                string opc = spreadsheet.ToFlatOpcString();
+                using (var dest = SpreadsheetDocument.FromFlatOpcString(opc))
+                {
+                    PackageAssert.Equal(spreadsheet, dest);
+                }
+            }
+        }
+
         [Fact]
         public void CanCreateFlatOpcWordprocessingDocuments1()
         {
@@ -405,6 +445,25 @@ namespace DocumentFormat.OpenXml.Tests
                 using (var dest = WordprocessingDocument.FromFlatOpcString(flatOpcString, package))
                 {
                     PackageAssert.Equal(source, dest);
+                }
+            }
+        }
+
+        [Fact(Skip = "#380")]
+        public void CanCreateFlatOpcWordprocessingDocumentsDynamically()
+        {
+            using (MemoryStream stream = new MemoryStream())
+            using (WordprocessingDocument document = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
+            {
+                MainDocumentPart mainDocumentPart = document.AddMainDocumentPart();
+                mainDocumentPart.Document = new Document();
+
+                document.Save();
+
+                string opc = document.ToFlatOpcString();
+                using (var dest = WordprocessingDocument.FromFlatOpcString(opc))
+                {
+                    PackageAssert.Equal(document, dest);
                 }
             }
         }

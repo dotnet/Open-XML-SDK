@@ -30,10 +30,7 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
             return this.GetIndexByAttributeName();
         }
 
-        /// <summary>
-        /// Get the attribute value.
-        /// </summary>
-        /// <returns>The attribute value</returns>
+        /// <inheritdoc/>
         internal override string Value
         {
             get { return this.strAttrValue; }

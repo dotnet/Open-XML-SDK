@@ -95,23 +95,22 @@ namespace DocumentFormat.OpenXml
             get { return tagName; }
         }
 
-        /// <summary>
-        /// Gets a value that represents the local name of the
-        /// AlternateContent element.
-        /// </summary>
+        /// <inheritdoc/>
         public override string LocalName
         {
             get { return tagName; }
         }
 
+        /// <inheritdoc/>
         internal override byte NamespaceId
         {
             get { return MarkupCompatibilityNamespaceId; }
         }
 
-        private static string[] attributeTagNames = { };
-        private static byte[] attributeNamespaceIds = { };
+        private static string[] attributeTagNames = Cached.Array<string>();
+        private static byte[] attributeNamespaceIds = Cached.Array<byte>();
 
+        /// <inheritdoc/>
         internal override string[] AttributeTagNames
         {
             get
@@ -120,6 +119,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
+        /// <inheritdoc/>
         internal override byte[] AttributeNamespaceIds
         {
             get
@@ -128,6 +128,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
+        /// <inheritdoc/>
         internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         {
             if (MarkupCompatibilityNamespaceId == namespaceId && AlternateContentChoice.TagName == name)
@@ -151,6 +152,7 @@ namespace DocumentFormat.OpenXml
             this.AppendChild(child);
             return child;
         }
+
         /// <summary>
         /// Appends a new child of type T:DocumentFormat.OpenXml.AlternateContentFallback
         ///  to the current element.
@@ -164,41 +166,25 @@ namespace DocumentFormat.OpenXml
             return child;
         }
 
+        /// <inheritdoc/>
         internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
         {
             return null;
         }
 
-        /// <returns>The cloned node. </returns>
-        /// <summary>
-        /// When a node is overridden in a derived class,
-        /// CloneNode creates a duplicate of the node.
-        /// </summary>
-        /// <param name="deep">
-        /// True to recursively clone the subtree under
-        /// the specified node; False to clone only the node
-        /// itself.
-        /// </param>
+        /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep)
         {
             return CloneImp<AlternateContent>(deep);
         }
 
-        /// <summary>
-        /// The type ID of the element.
-        /// </summary>
+        /// <inheritdoc/>
         internal override int ElementTypeId
         {
             get { return ReservedElementTypeIds.AlternateContentId; }
         }
 
-        /// <summary>
-        /// Indicates whether this element is available in a specific version of an Office Application.
-        /// Always returns true since AlternateContent is allowed
-        /// in every version.
-        /// </summary>
-        /// <param name="version">The Office file format version.</param>
-        /// <returns>Returns true if the element is defined in the specified version.</returns>
+        /// <inheritdoc/>
         internal override bool IsInVersion(FileFormatVersions version)
         {
             return true;

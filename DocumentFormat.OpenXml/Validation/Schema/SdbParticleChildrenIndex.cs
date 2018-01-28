@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     internal class SdbParticleChildrenIndex : SdbData
     {
         /// <summary>
-        /// The index of the particle in the SdbParticleConstraint data array.
+        /// Gets or sets the index of the particle in the SdbParticleConstraint data array.
         /// </summary>
         public SdbIndex ParticleIndex { get; set; }
 
@@ -44,22 +44,16 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <summary>
-        /// The size in bytes of this data structure.
+        /// Gets the size in bytes of this data structure.
         /// </summary>
-        public static int TypeSize
-        {
-            get { return sizeof(SdbIndex); }
-        }
+        public static int TypeSize => sizeof(SdbIndex);
 
         #region Override SdbData Members
 
         /// <summary>
-        /// The size in bytes of this data structure.
+        /// Gets the size in bytes of this data structure.
         /// </summary>
-        public override int DataSize
-        {
-            get { return TypeSize; }
-        }
+        public override int DataSize => TypeSize;
 
         /// <summary>
         /// Serialize the data into byte data.

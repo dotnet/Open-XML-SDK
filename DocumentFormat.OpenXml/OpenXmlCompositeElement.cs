@@ -128,9 +128,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Gets a value that indicates whether the current element has any child elements.
-        /// </summary>
+        /// <inheritdoc/>
         public override bool HasChildren
         {
             get
@@ -139,9 +137,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Gets or sets the concatenated values of the current node and all of its children.
-        /// </summary>
+        /// <inheritdoc/>
         public override string InnerText
         {
             get
@@ -155,15 +151,9 @@ namespace DocumentFormat.OpenXml
 
                 return innerText.ToString();
             }
-            //set
-            //{
-            //    throw new InvalidOperationException();
-            //}
         }
 
-        /// <summary>
-        /// Gets or sets the markup that represents only the child nodes of the current node.
-        /// </summary>
+        /// <inheritdoc/>
         public override string InnerXml
         {
             set

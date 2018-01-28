@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         protected SimpleTypeRestrictions SimpleTypeRestrictions { get; set; }
 
-        protected ParticleConstraint[] EmptyChildrenParticles = new ParticleConstraint[0];
+        protected ParticleConstraint[] EmptyChildrenParticles = Cached.Array<ParticleConstraint>();
 
         /// <summary>
         /// Return an instance of SchemaConstraintDatabase which will load Office2007 schemas.

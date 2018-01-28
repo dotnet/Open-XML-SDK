@@ -43,14 +43,10 @@ namespace DocumentFormat.OpenXml
         public Base64BinaryValue(Base64BinaryValue source)
             : base(source)
         {
-            if (source == null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
         }
 
         /// <summary>
-        /// Gets the base64Binary string value.
+        /// Gets or sets the Base64 binary string value.
         /// </summary>
         public string Value
         {
@@ -111,9 +107,6 @@ namespace DocumentFormat.OpenXml
             return xmlAttribute.Value;
         }
 
-        internal override OpenXmlSimpleType CloneImp()
-        {
-            return new Base64BinaryValue(this);
-        }
+        private protected override OpenXmlSimpleType CloneImpl() => new Base64BinaryValue(this);
     }
 }
