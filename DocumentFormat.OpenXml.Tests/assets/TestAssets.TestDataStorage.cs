@@ -218,6 +218,35 @@ namespace DocumentFormat.OpenXml.Tests
 
             public static class V2FxTestFiles
             {
+                public static class AsSources
+                {
+                    public static class Presentation
+                    {
+                        public const string Text_withExtrusion_200charsAnimationFlyInallatoncepptx = "TestDataStorage.v2FxTestFiles.asSources.presentation.Text_withExtrusion_200chars+Animation (Fly In, all at once).pptx";
+                        public const string Text_withExtrusion_200charsAnimationFlyInbyletterpptx = "TestDataStorage.v2FxTestFiles.asSources.presentation.Text_withExtrusion_200chars+Animation (Fly In, by letter).pptx";
+                        public const string Text_withExtrusion_200charspptx = "TestDataStorage.v2FxTestFiles.asSources.presentation.Text_withExtrusion_200chars.pptx";
+                        public const string Text_withShadow_100charsAnimationFlyInallatoncepptx = "TestDataStorage.v2FxTestFiles.asSources.presentation.Text_withShadow_100chars+Animation (Fly In, all at once).pptx";
+                        public const string Text_withShadow_100charsAnimationFlyInbyletterpptx = "TestDataStorage.v2FxTestFiles.asSources.presentation.Text_withShadow_100chars+Animation (Fly In, by letter).pptx";
+                        public const string Text_withShadow_100charspptx = "TestDataStorage.v2FxTestFiles.asSources.presentation.Text_withShadow_100chars.pptx";
+                        public const string Text_withShadow_200charsAnimationFlyInallatoncepptx = "TestDataStorage.v2FxTestFiles.asSources.presentation.Text_withShadow_200chars+Animation (Fly In, all at once).pptx";
+                        public const string Text_withShadow_200charspptx = "TestDataStorage.v2FxTestFiles.asSources.presentation.Text_withShadow_200chars.pptx";
+                    }
+
+                    public static class Spreadsheet
+                    {
+                        public const string SharedWorkbook = "TestDataStorage.v2FxTestFiles.asSources.spreadsheet.SharedWorkbook.xlsx";
+                        public const string SheetViewsFSB = "TestDataStorage.v2FxTestFiles.asSources.spreadsheet.SheetViewsFSB.xlsx";
+                        public const string SST = "TestDataStorage.v2FxTestFiles.asSources.spreadsheet.SST.xlsx";
+                        public const string Styles = "TestDataStorage.v2FxTestFiles.asSources.spreadsheet.Styles.xlsx";
+                        public const string Table = "TestDataStorage.v2FxTestFiles.asSources.spreadsheet.table.xlsx";
+                    }
+
+                    public static class Wordprocessing
+                    {
+                        public const string complex1NOR = "TestDataStorage.v2FxTestFiles.asSources.wordprocessing.complex1.NOR.docx";
+                    }
+                }
+
                 public static class Bvt
                 {
                     public const string complex2005_12rtm = "TestDataStorage.v2FxTestFiles.bvt.complex2005_12rtm.docx";
