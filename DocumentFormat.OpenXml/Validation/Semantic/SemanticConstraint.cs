@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Validation;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -21,33 +20,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     {
         public readonly SemanticValidationLevel SemanticValidationLevel;
 
-#if DEBUG
-        private string _constraintId;
-#endif
-
-        internal string ConstratintId
-        {
-            get
-            {
-                string result = string.Empty;
-#if DEBUG
-                result = _constraintId;
-#endif
-                return result;
-            }
-
-            set
-            {
-#if DEBUG
-                _constraintId = value;
-#endif
-            }
-        }
-
-        public virtual SemanticValidationLevel StateScope
-        {
-            get { return SemanticValidationLevel; }
-        }
+        public virtual SemanticValidationLevel StateScope => SemanticValidationLevel;
 
         /// <summary>
         /// Constructor
@@ -110,8 +83,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         private static bool CompareBooleanValue(bool value1, string value2)
         {
-            bool parsedValue;
-            if (bool.TryParse(value2, out parsedValue))
+            if (bool.TryParse(value2, out bool parsedValue))
             {
                 return value1 == parsedValue;
             }
@@ -123,8 +95,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         protected static bool AttributeValueEquals(OpenXmlSimpleType type, string value, bool ignoreCase)
         {
-            HexBinaryValue hexValue = type as HexBinaryValue;
-            if (hexValue != null)
+            if (type is HexBinaryValue hexValue)
             {
                 if (!hexValue.HasValue)
                 {
@@ -134,8 +105,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return Convert.ToInt64(hexValue.Value, 16) == Convert.ToInt64(value, 16);
             }
 
-            BooleanValue boolValue = type as BooleanValue;
-            if (boolValue != null)
+            if (type is BooleanValue boolValue)
             {
                 if (!boolValue.HasValue)
                 {
@@ -148,8 +118,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 }
             }
 
-            OnOffValue onOffValue = type as OnOffValue;
-            if(onOffValue != null)
+            if (type is OnOffValue onOffValue)
             {
                 if (!onOffValue.HasValue)
                 {
@@ -162,8 +131,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 }
             }
 
-            TrueFalseValue trueFalseValue = type as TrueFalseValue;
-            if(trueFalseValue != null)
+            if (type is TrueFalseValue trueFalseValue)
             {
                 if (!trueFalseValue.HasValue)
                 {
@@ -176,8 +144,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 }
             }
 
-            TrueFalseBlankValue trueFalseBlankValue = type as TrueFalseBlankValue;
-            if (trueFalseBlankValue != null)
+            if (type is TrueFalseBlankValue trueFalseBlankValue)
             {
                 if (!trueFalseBlankValue.HasValue)
                 {
@@ -202,11 +169,9 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         protected static bool GetAttrNumVal(OpenXmlSimpleType attributeValue, out double value)
         {
-            HexBinaryValue hexBinaryValue = attributeValue as HexBinaryValue;
-            if (hexBinaryValue != null)
+            if (attributeValue is HexBinaryValue hexBinaryValue)
             {
-                long val;
-                bool result = long.TryParse(hexBinaryValue.Value, NumberStyles.HexNumber, CultureInfo.InvariantCulture, out val);
+                bool result = long.TryParse(hexBinaryValue.Value, NumberStyles.HexNumber, CultureInfo.InvariantCulture, out long val);
                 value = val;
                 return result;
             }

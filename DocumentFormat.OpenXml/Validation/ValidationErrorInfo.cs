@@ -21,14 +21,6 @@ namespace DocumentFormat.OpenXml.Validation
 
 #if DEBUG
         /// <summary>
-        /// Gets the semantic constraint ID in internal tool.
-        /// </summary>
-        /// <remarks>
-        /// This is for debug only.
-        /// </remarks>
-        public string SemanticConstraintId { get; internal set; }
-
-        /// <summary>
         /// Gets the XML qualified name for the attribute.
         /// Returns null if the error is not for attribute.
         /// </summary>
@@ -46,7 +38,9 @@ namespace DocumentFormat.OpenXml.Validation
         /// <param name="attributeQualifiedName"></param>
         /// <param name="validationErrorCategory"></param>
         [Conditional("DEBUG")]
+#pragma warning disable CA1822 // Mark members as static
         public void SetDebugField(string attributeQualifiedName, string validationErrorCategory)
+#pragma warning restore CA1822 // Mark members as static
         {
 #if DEBUG
             this.AttributeQualifiedName = attributeQualifiedName;
@@ -90,7 +84,7 @@ namespace DocumentFormat.OpenXml.Validation
             internal set
             {
                 this._element = value;
-                this.Path = XmlPath.GetXPath( value );
+                this.Path = XmlPath.GetXPath(value);
                 if (this.Part == null)
                 {
                     this.Part = this._element.GetPart();

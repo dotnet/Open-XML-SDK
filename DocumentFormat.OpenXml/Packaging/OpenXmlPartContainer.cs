@@ -1335,7 +1335,7 @@ namespace DocumentFormat.OpenXml.Packaging
             //validate id
             if (id != null)
             {
-                if (id == string.Empty)
+                if (id.Length == 0)
                 {
                     throw new ArgumentException(ExceptionMessages.StringArgumentEmptyException, nameof(id));
                 }
@@ -1355,34 +1355,28 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
             }
 
-            if (contentType == string.Empty)
+            // If ContentType is null, we handle it later. An empty string, however, is not allowed
+            if (contentType?.Length == 0)
             {
                 throw new ArgumentException(ExceptionMessages.StringArgumentEmptyException, nameof(contentType));
             }
 
             // use reflection to create the instance. As the default contructor of part is not "public"
-            T part = PartActivator.CreateInstance<T>();
+            var part = PartActivator.CreateInstance<T>();
 
             if (part is ExtendedPart)
             {
-                throw new ArgumentOutOfRangeException("T", ExceptionMessages.ExtendedPartNotAllowed);
+                throw new ArgumentOutOfRangeException(nameof(T), ExceptionMessages.ExtendedPartNotAllowed);
             }
 
-            if (contentType != null && part.IsContentTypeFixed && part.ContentType != contentType)
+            if (contentType != null && part.IsContentTypeFixed && !string.Equals(contentType, part.ContentType, StringComparison.Ordinal))
             {
-                // should we throw? or just ignore?
-                // throw new OpenXmlPackageException(ExceptionMessages.ErrorContentType);
                 throw new ArgumentOutOfRangeException(nameof(contentType), ExceptionMessages.ErrorContentType);
-            }
-
-            if (contentType == null)
-            {
-                contentType = part.ContentType;
             }
 
             try
             {
-                InitPart(part, contentType, id);
+                InitPart(part, contentType ?? part.ContentType, id);
             }
             catch (ArgumentOutOfRangeException)
             {
@@ -1423,14 +1417,12 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(contentType));
             }
 
-            if (contentType == string.Empty)
+            if (contentType.Length == 0)
             {
                 throw new ArgumentException(ExceptionMessages.StringArgumentEmptyException);
             }
 
-            PartConstraintRule partConstraintRule;
-
-            if (GetPartConstraint().TryGetValue(newPart.RelationshipType, out partConstraintRule))
+            if (GetPartConstraint().TryGetValue(newPart.RelationshipType, out var partConstraintRule))
             {
                 if (!partConstraintRule.MaxOccursGreatThanOne)
                 {
