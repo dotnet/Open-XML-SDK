@@ -8,7 +8,7 @@
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
 
-    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.6.0-beta2">
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.6.0">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
 

@@ -17,7 +17,7 @@ using static DocumentFormat.OpenXml.Tests.TestAssets;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    public class OpenXmlValidatorTestFixture : IDisposable
+    public sealed class OpenXmlValidatorTestFixture : IDisposable
     {
         public OpenXmlValidatorTestFixture()
         {
