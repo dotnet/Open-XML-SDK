@@ -890,7 +890,7 @@ namespace DocumentFormat.OpenXml.Tests
             else
             {
                 string Text = reader.GetText();
-                Log.VerifyTrue(Text == String.Empty, "exptected: Empty <> actual: {0}", Text);
+                Assert.Equal(String.Empty, Text);
             }
         }
 

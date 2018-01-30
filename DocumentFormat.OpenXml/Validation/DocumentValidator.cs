@@ -157,7 +157,7 @@ namespace DocumentFormat.OpenXml.Validation
             return result;
         }
 
-        private OpenXmlPart GetMainPart(OpenXmlPackage package)
+        private static OpenXmlPart GetMainPart(OpenXmlPackage package)
         {
             if (null == package)
             {
