@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -119,13 +118,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 {
                     if ((constraint.SemanticValidationLevel & level) == level)
                     {
-                        ValidationErrorInfo err = constraint.Validate(context);
+                        var err = constraint.Validate(context);
 
                         if (err != null)
                         {
-#if DEBUG
-                            err.SemanticConstraintId = constraint.ConstratintId;
-#endif
                             yield return err;
                         }
                     }
