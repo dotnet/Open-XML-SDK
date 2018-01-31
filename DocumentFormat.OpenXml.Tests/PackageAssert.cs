@@ -18,6 +18,21 @@ namespace DocumentFormat.OpenXml.Tests
         /// <param name="second">The second OpenXmlPackage</param>
         public static void Equal(OpenXmlPackage first, OpenXmlPackage second)
         {
+            Validate(first, second);
+        }
+
+        /// <summary>
+        /// Asserts that two OpenXmlPackage instances do not have the same content.
+        /// </summary>
+        /// <param name="first">The first OpenXmlPackage</param>
+        /// <param name="second">The second OpenXmlPackage</param>
+        public static void NotEqual(OpenXmlPackage first, OpenXmlPackage second)
+        {
+            Assert.Throws<Xunit.Sdk.EqualException>(() => Validate(first, second));
+        }
+
+        private static void Validate(OpenXmlPackage first, OpenXmlPackage second)
+        {
             bool IsXml(OpenXmlPart part) => part.ContentType.EndsWith("xml", StringComparison.OrdinalIgnoreCase);
 
             byte[] GetBytes(Stream stream)
@@ -34,18 +49,18 @@ namespace DocumentFormat.OpenXml.Tests
 
             var combined = first.GetAllParts().Zip(second.GetAllParts(), (f, s) => (f, s));
 
-            foreach (var item in combined)
+            foreach (var (f, s) in combined)
             {
-                Assert.Equal(item.f.GetType(), item.s.GetType());
+                Assert.Equal(f.GetType(), s.GetType());
 
-                if (IsXml(item.f))
+                if (IsXml(f))
                 {
-                    Assert.Equal(item.f.GetXmlString(), item.s.GetXmlString());
+                    Assert.Equal(f.GetXmlString(), s.GetXmlString());
                 }
                 else
                 {
-                    using (var firstStream = item.f.GetStream())
-                    using (var secondStream = item.s.GetStream())
+                    using (var firstStream = f.GetStream())
+                    using (var secondStream = s.GetStream())
                     {
                         Assert.Equal(GetBytes(firstStream), GetBytes(secondStream));
                     }

@@ -34,8 +34,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                     using (var dest = WordprocessingDocument.Open(file.Path, false))
                     {
-                        // We want the documents to be different.
-                        Assert.Throws<Xunit.Sdk.EqualException>(() => PackageAssert.Equal(source, dest));
+                        PackageAssert.NotEqual(source, dest);
                     }
                 }
             }
