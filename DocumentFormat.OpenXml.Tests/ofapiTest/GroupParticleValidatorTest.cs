@@ -29,8 +29,6 @@ namespace DocumentFormat.OpenXml.Tests
         private void TestSimpleGroup(SdbSchemaDatas sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
-            ValidationResult actual = new ValidationResult();
-            validationContext.ValidationErrorEventHandler += actual.OnValidationError;
             OpenXmlElement errorChild;
 
             Header header = new Header();
@@ -83,77 +81,75 @@ namespace DocumentFormat.OpenXml.Tests
             // ***** good case ******
             // empty is ok
             target.Validate(validationContext);
-            Assert.True(actual.Valid);
+            Assert.True(validationContext.Valid);
 
             // Paragraph is ok
             header.Append(new Paragraph());
             target.Validate(validationContext);
-            Assert.True(actual.Valid);
+            Assert.True(validationContext.Valid);
 
             // Table is ok
             header.Append(new Table());
             target.Validate(validationContext);
-            Assert.True(actual.Valid);
+            Assert.True(validationContext.Valid);
 
             // more Paragraph is ok
             header.Append(new Paragraph());
             target.Validate(validationContext);
-            Assert.True(actual.Valid);
+            Assert.True(validationContext.Valid);
 
             // Sdt is ok
             header.Append(new SdtBlock());
             target.Validate(validationContext);
-            Assert.True(actual.Valid);
+            Assert.True(validationContext.Valid);
 
             // altChunk is ok
             header.Append(new AltChunk());
             target.Validate(validationContext);
-            Assert.True(actual.Valid);
+            Assert.True(validationContext.Valid);
 
             // altChunk is ok
             header.Append(new AltChunk());
             target.Validate(validationContext);
-            Assert.True(actual.Valid);
+            Assert.True(validationContext.Valid);
 
             // more Paragraph is ok
             header.Append(new Paragraph());
             target.Validate(validationContext);
-            Assert.True(actual.Valid);
+            Assert.True(validationContext.Valid);
 
             // ***** error case ******
             //first is invalid
             errorChild = header.PrependChild(new Run());
             target.Validate(validationContext);
-            Assert.False(actual.Valid);
-            Assert.Single(actual.Errors);
-            Assert.Same(expected, actual.Errors[0].Node);
-            Assert.Same(errorChild, actual.Errors[0].RelatedNode);
-            Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
-            Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.Contains(":altChunk", actual.Errors[0].Description);
-            Assert.Contains(":tbl", actual.Errors[0].Description);
+            Assert.False(validationContext.Valid);
+            Assert.Single(validationContext.Errors);
+            Assert.Same(expected, validationContext.Errors[0].Node);
+            Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
+            Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
+            Assert.Equal("Sch_InvalidElementContentExpectingComplex", validationContext.Errors[0].Id);
+            Assert.Contains(":altChunk", validationContext.Errors[0].Description);
+            Assert.Contains(":tbl", validationContext.Errors[0].Description);
             header.RemoveChild(errorChild);
 
-            actual.Clear();
+            validationContext.Clear();
             //last is invalid
             errorChild = header.AppendChild(new Run());
             target.Validate(validationContext);
-            Assert.False(actual.Valid);
-            Assert.Single(actual.Errors);
-            Assert.Same(expected, actual.Errors[0].Node);
-            Assert.Same(errorChild, actual.Errors[0].RelatedNode);
-            Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
-            Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.Contains(":altChunk", actual.Errors[0].Description);
-            Assert.Contains(":tbl", actual.Errors[0].Description);
+            Assert.False(validationContext.Valid);
+            Assert.Single(validationContext.Errors);
+            Assert.Same(expected, validationContext.Errors[0].Node);
+            Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
+            Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
+            Assert.Equal("Sch_InvalidElementContentExpectingComplex", validationContext.Errors[0].Id);
+            Assert.Contains(":altChunk", validationContext.Errors[0].Description);
+            Assert.Contains(":tbl", validationContext.Errors[0].Description);
             header.RemoveChild(errorChild);
         }
 
         private void TestSimpleGroup2(SdbSchemaDatas sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
-            ValidationResult actual = new ValidationResult();
-            validationContext.ValidationErrorEventHandler += actual.OnValidationError;
             OpenXmlElement errorChild;
 
             SectionProperties sectPr = new SectionProperties();
@@ -205,64 +201,64 @@ namespace DocumentFormat.OpenXml.Tests
             // ***** good case ******
             // empty is ok
             target.Validate(validationContext);
-            Assert.True(actual.Valid);
+            Assert.True(validationContext.Valid);
 
             // headerReference is ok
             sectPr.Append(new HeaderReference());
             target.Validate(validationContext);
-            Assert.True(actual.Valid);
+            Assert.True(validationContext.Valid);
 
             // headerReference and footerReference
             sectPr.Append(new FooterReference());
             target.Validate(validationContext);
-            Assert.True(actual.Valid);
+            Assert.True(validationContext.Valid);
 
             // footerReference
             sectPr.RemoveChild(sectPr.FirstChild);
             target.Validate(validationContext);
-            Assert.True(actual.Valid);
+            Assert.True(validationContext.Valid);
 
             // 3 group <= 6, ok
             sectPr.Append(new HeaderReference(), new HeaderReference());
             target.Validate(validationContext);
-            Assert.True(actual.Valid);
+            Assert.True(validationContext.Valid);
 
             // 5 group <= 6, ok
             sectPr.Append(new HeaderReference(), new HeaderReference());
             target.Validate(validationContext);
-            Assert.True(actual.Valid);
+            Assert.True(validationContext.Valid);
 
             // 6 group <= 6, ok
             sectPr.Append(new HeaderReference());
             target.Validate(validationContext);
-            Assert.True(actual.Valid);
+            Assert.True(validationContext.Valid);
 
             // no EG_SectPrContents is ok
             sectPr.RemoveAllChildren();
             sectPr.Append(new HeaderReference(), new FooterReference(), new SectionPropertiesChange());
-            Assert.True(actual.Valid);
+            Assert.True(validationContext.Valid);
 
             // test EG_SectPrContents
             sectPr.RemoveAllChildren();
             sectPr.Append(new HeaderReference(), new FooterReference(), new SectionType());
-            Assert.True(actual.Valid);
+            Assert.True(validationContext.Valid);
 
             //
             sectPr.AppendChild(new PaperSource());
-            Assert.True(actual.Valid);
+            Assert.True(validationContext.Valid);
 
             sectPr.AppendChild(new TitlePage());
-            Assert.True(actual.Valid);
+            Assert.True(validationContext.Valid);
 
             sectPr.AppendChild(new PrinterSettingsReference());
-            Assert.True(actual.Valid);
+            Assert.True(validationContext.Valid);
 
             sectPr.AppendChild(new SectionPropertiesChange());
-            Assert.True(actual.Valid);
+            Assert.True(validationContext.Valid);
 
             sectPr.RemoveAllChildren();
             sectPr.Append(new SectionPropertiesChange());
-            Assert.True(actual.Valid);
+            Assert.True(validationContext.Valid);
 
             // ***** error case ******
 
@@ -271,97 +267,97 @@ namespace DocumentFormat.OpenXml.Tests
             sectPr.Append(new HeaderReference(), new HeaderReference(), new FooterReference(), new FooterReference(), new HeaderReference(), new HeaderReference());
             errorChild = sectPr.AppendChild(new HeaderReference());
             target.Validate(validationContext);
-            Assert.False(actual.Valid);
-            Assert.Single(actual.Errors);
-            Assert.Same(expected, actual.Errors[0].Node);
-            Assert.Same(errorChild, actual.Errors[0].RelatedNode);
-            Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
-            Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, actual.Errors[0].Description);
+            Assert.False(validationContext.Valid);
+            Assert.Single(validationContext.Errors);
+            Assert.Same(expected, validationContext.Errors[0].Node);
+            Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
+            Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
+            Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", validationContext.Errors[0].Id);
+            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
             sectPr.RemoveChild(errorChild);
 
-            actual.Clear();
+            validationContext.Clear();
             //first is invalid
             errorChild = sectPr.PrependChild(new Paragraph());
             target.Validate(validationContext);
-            Assert.False(actual.Valid);
-            Assert.Single(actual.Errors);
-            Assert.Same(expected, actual.Errors[0].Node);
-            Assert.Same(errorChild, actual.Errors[0].RelatedNode);
-            Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
-            Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.Contains(":headerReference", actual.Errors[0].Description);
-            Assert.Contains(":footerReference", actual.Errors[0].Description);
-            Assert.DoesNotContain(":footnotePr", actual.Errors[0].Description);
-            Assert.DoesNotContain(":sectPrChange", actual.Errors[0].Description);
+            Assert.False(validationContext.Valid);
+            Assert.Single(validationContext.Errors);
+            Assert.Same(expected, validationContext.Errors[0].Node);
+            Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
+            Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
+            Assert.Equal("Sch_InvalidElementContentExpectingComplex", validationContext.Errors[0].Id);
+            Assert.Contains(":headerReference", validationContext.Errors[0].Description);
+            Assert.Contains(":footerReference", validationContext.Errors[0].Description);
+            Assert.DoesNotContain(":footnotePr", validationContext.Errors[0].Description);
+            Assert.DoesNotContain(":sectPrChange", validationContext.Errors[0].Description);
             sectPr.RemoveChild(errorChild);
 
-            actual.Clear();
+            validationContext.Clear();
             //invalid child in middle
             errorChild = sectPr.InsertBefore(new Paragraph(), sectPr.LastChild);
             target.Validate(validationContext);
-            Assert.False(actual.Valid);
-            Assert.Single(actual.Errors);
-            Assert.Same(expected, actual.Errors[0].Node);
-            Assert.Same(errorChild, actual.Errors[0].RelatedNode);
-            Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
-            Assert.Equal("Sch_InvalidElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, actual.Errors[0].Description);
+            Assert.False(validationContext.Valid);
+            Assert.Single(validationContext.Errors);
+            Assert.Same(expected, validationContext.Errors[0].Node);
+            Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
+            Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
+            Assert.Equal("Sch_InvalidElementContentExpectingComplex", validationContext.Errors[0].Id);
+            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
             sectPr.RemoveChild(errorChild);
 
-            actual.Clear();
+            validationContext.Clear();
             // order wrong
             errorChild = sectPr.FirstChild;
             sectPr.PrependChild(new SectionType());
             target.Validate(validationContext);
-            Assert.False(actual.Valid);
-            Assert.Single(actual.Errors);
-            Assert.Same(expected, actual.Errors[0].Node);
-            Assert.Same(errorChild, actual.Errors[0].RelatedNode);
-            Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
-            Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, actual.Errors[0].Description);
+            Assert.False(validationContext.Valid);
+            Assert.Single(validationContext.Errors);
+            Assert.Same(expected, validationContext.Errors[0].Node);
+            Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
+            Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
+            Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", validationContext.Errors[0].Id);
+            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
 
-            actual.Clear();
+            validationContext.Clear();
             // dup error
             sectPr.RemoveAllChildren();
             sectPr.Append(new HeaderReference(), new PaperSource());
             errorChild = sectPr.AppendChild( new PaperSource());
             target.Validate(validationContext);
-            Assert.False(actual.Valid);
-            Assert.Single(actual.Errors);
-            Assert.Same(expected, actual.Errors[0].Node);
-            Assert.Same(errorChild, actual.Errors[0].RelatedNode);
-            Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
-            Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, actual.Errors[0].Description);
+            Assert.False(validationContext.Valid);
+            Assert.Single(validationContext.Errors);
+            Assert.Same(expected, validationContext.Errors[0].Node);
+            Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
+            Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
+            Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", validationContext.Errors[0].Id);
+            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
             sectPr.RemoveChild(errorChild);
 
-            actual.Clear();
+            validationContext.Clear();
             // out of order error
             errorChild = sectPr.AppendChild(new SectionType());
             target.Validate(validationContext);
-            Assert.False(actual.Valid);
-            Assert.Single(actual.Errors);
-            Assert.Same(expected, actual.Errors[0].Node);
-            Assert.Same(errorChild, actual.Errors[0].RelatedNode);
-            Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
-            Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, actual.Errors[0].Description);
+            Assert.False(validationContext.Valid);
+            Assert.Single(validationContext.Errors);
+            Assert.Same(expected, validationContext.Errors[0].Node);
+            Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
+            Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
+            Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", validationContext.Errors[0].Id);
+            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
             sectPr.RemoveChild(errorChild);
 
-            actual.Clear();
+            validationContext.Clear();
             // out of order error
             sectPr.AppendChild(new SectionPropertiesChange());
             errorChild = sectPr.AppendChild(new SectionType());
             target.Validate(validationContext);
-            Assert.False(actual.Valid);
-            Assert.Single(actual.Errors);
-            Assert.Same(expected, actual.Errors[0].Node);
-            Assert.Same(errorChild, actual.Errors[0].RelatedNode);
-            Assert.Equal(ValidationErrorType.Schema, actual.Errors[0].ErrorType);
-            Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", actual.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, actual.Errors[0].Description);
+            Assert.False(validationContext.Valid);
+            Assert.Single(validationContext.Errors);
+            Assert.Same(expected, validationContext.Errors[0].Node);
+            Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
+            Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
+            Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", validationContext.Errors[0].Id);
+            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
         }
     }
 }

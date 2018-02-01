@@ -3,7 +3,7 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
-using System;
+using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Validation
 {
@@ -12,25 +12,28 @@ namespace DocumentFormat.OpenXml.Validation
     /// </summary>
     internal class ValidationContext
     {
-        /// <summary>
-        /// Event handler to be called on validation errors rised.
-        /// </summary>
-        internal event EventHandler<ValidationErrorEventArgs> ValidationErrorEventHandler;
+        private readonly List<ValidationErrorInfo> _errors;
 
-        /// <summary>
-        /// Initializes a new instance of the ValidationContext.
-        /// Default file format target is FileFormat.Office2007.
-        /// </summary>
-        internal ValidationContext()
+        public ValidationContext()
         {
-            this.McContext = new MCContext(false);
-            this.FileFormat = FileFormatVersions.Office2007;
+            _errors = new List<ValidationErrorInfo>();
+
+            McContext = new MCContext(false);
+            FileFormat = FileFormatVersions.Office2007;
         }
+
+        public List<ValidationErrorInfo> Errors => _errors;
 
         /// <summary>
         /// Gets or sets target file format.
         /// </summary>
-        internal FileFormatVersions FileFormat { get; set; }
+        public FileFormatVersions FileFormat { get; set; }
+
+        public bool Valid => _errors.Count == 0;
+
+        public bool IsCancelled => MaxNumberOfErrors > 0 && Errors.Count >= MaxNumberOfErrors;
+
+        public void Clear() => _errors.Clear();
 
         /// <summary>
         /// Gets or sets the target OpenXmlPackage.
@@ -58,34 +61,12 @@ namespace DocumentFormat.OpenXml.Validation
         internal bool CollectExpectedChildren { get; set; }
 
         /// <summary>
-        /// Used by validator to emit errors.
-        /// </summary>
-        /// <param name="error">The validation error.</param>
-        internal void EmitError(ValidationErrorInfo error)
-        {
-            OnValidationError(new ValidationErrorEventArgs(error));
-        }
-
-        /// <summary>
-        /// Call event handler to process the error.
-        /// </summary>
-        /// <param name="errorEventArgs">The event argument which contains the error info.</param>
-        protected virtual void OnValidationError(ValidationErrorEventArgs errorEventArgs)
-        {
-            var handler = this.ValidationErrorEventHandler;
-            if (handler != null)
-            {
-                handler(this, errorEventArgs);
-            }
-        }
-
-        /// <summary>
         /// Get the first child of this.Element according to the MC Mode.
         /// </summary>
         /// <returns>The first child in the MC mode.</returns>
         internal OpenXmlElement GetFirstChildMc()
         {
-            return this.Element.GetFirstChildMc(this.McContext, this.FileFormat);
+            return Element.GetFirstChildMc(McContext, FileFormat);
         }
 
         /// <summary>
@@ -95,7 +76,21 @@ namespace DocumentFormat.OpenXml.Validation
         /// <returns>The next child after the specified child in the MC mode.</returns>
         internal OpenXmlElement GetNextChildMc(OpenXmlElement child)
         {
-            return this.Element.GetNextChildMc(child, this.McContext, this.FileFormat);
+            return Element.GetNextChildMc(child, McContext, FileFormat);
+        }
+
+        /// <summary>
+        /// Gets or sets the maximum number of errors. A zero (0) value means no limitation.
+        /// When the errors >= MaxNumberOfErrors, errors will not be recorded, and MaxNumberOfErrorsEvent will be fired.
+        /// </summary>
+        public int MaxNumberOfErrors { get; set; }
+
+        public void AddError(ValidationErrorInfo error)
+        {
+            if (error != null && !IsCancelled)
+            {
+                _errors.Add(error);
+            }
         }
     }
 }

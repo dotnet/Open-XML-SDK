@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
 using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
@@ -68,7 +67,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     if ( requiredElements.Count > 0 )
                     {
                         errorInfo = validationContext.ComposeSchemaValidationError(element, null, "Sch_IncompleteContentExpectingComplex", GetExpectedChildrenMessage(element, requiredElements));
-                        validationContext.EmitError(errorInfo);
+                        validationContext.AddError(errorInfo);
                     }
                     return;
                 }
@@ -286,7 +285,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     {
                         // missing child
                         errorInfo = validationContext.ComposeSchemaValidationError(element, null, "Sch_IncompleteContentExpectingComplex", GetExpectedChildrenMessage(element, particleMatchInfo.ExpectedChildren));
-                        validationContext.EmitError(errorInfo);
+                        validationContext.AddError(errorInfo);
 
                         return;
                     }
@@ -327,7 +326,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     errorInfo = validationContext.ComposeSchemaValidationError(element, child, "Sch_InvalidElementContentWrongType", child.XmlQualifiedName.ToString(), child.GetType().Name);
                 }
             }
-            validationContext.EmitError(errorInfo);
+            validationContext.AddError(errorInfo);
         }
     }
 

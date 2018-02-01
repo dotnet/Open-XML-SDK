@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
 using System.Collections.Generic;
 using System.Diagnostics;
 
@@ -76,11 +75,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 this._childrenParticles[childParticle.ElementId] = false;
             }
 
-            bool visited;
-
             while (next != null)
             {
-                if (this._childrenParticles.TryGetValue(next.ElementTypeId, out visited))
+                if (this._childrenParticles.TryGetValue(next.ElementTypeId, out bool visited))
                 {
                     if (visited)
                     {
@@ -172,7 +169,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 case ParticleMatch.Nomatch:
                     expectedChildren = GetExpectedChildrenMessage(validationContext.Element, this.GetExpectedElements());
                     errorInfo = validationContext.ComposeSchemaValidationError(element, child, "Sch_InvalidElementContentExpectingComplex", child.XmlQualifiedName.ToString(), expectedChildren);
-                    validationContext.EmitError(errorInfo);
+                    validationContext.AddError(errorInfo);
                     break;
 
                 case ParticleMatch.Partial:
@@ -181,13 +178,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     {
                         // more than one occurs of a child.
                         errorInfo = validationContext.ComposeSchemaValidationError(element, child, "Sch_AllElement", child.XmlQualifiedName.ToString());
-                        validationContext.EmitError(errorInfo);
+                        validationContext.AddError(errorInfo);
                     }
                     else
                     {
                         expectedChildren = GetExpectedChildrenMessage(validationContext.Element, particleMatchInfo.ExpectedChildren);
                         errorInfo = validationContext.ComposeSchemaValidationError(element, child, "Sch_InvalidElementContentExpectingComplex", child.XmlQualifiedName.ToString(), expectedChildren);
-                        validationContext.EmitError(errorInfo);
+                        validationContext.AddError(errorInfo);
                     }
                     break;
             }
