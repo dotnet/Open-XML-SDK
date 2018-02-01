@@ -10,32 +10,21 @@ namespace DocumentFormat.OpenXml.Validation
         internal delegate void ValidationAction(ValidationContext validationContext);
 
         /// <summary>
-        /// Returns true to stop the traverse.
-        /// </summary>
-        /// <param name="validationContext"></param>
-        /// <returns></returns>
-        internal delegate bool GetStopSignal(ValidationContext validationContext);
-
-        /// <summary>
         /// Enumerate all the descendants elements of this element and do validating.
         /// Preorder traversering.
         /// </summary>
         /// <param name="validationContext"></param>
         /// <param name="validateAction">The delegate method to do the validating.</param>
         /// <param name="finishAction">The delegate method to be called when the traverse finished.</param>
-        /// <param name="getStopSignal">The delegate method which will fire stop signal.</param>
-        internal static void ValidatingTraverse(ValidationContext validationContext, ValidationAction validateAction, ValidationAction finishAction, GetStopSignal getStopSignal)
+        internal static void ValidatingTraverse(ValidationContext validationContext, ValidationAction validateAction, ValidationAction finishAction)
         {
             Debug.Assert(validationContext != null);
             Debug.Assert(validationContext.McContext != null);
             Debug.Assert(validateAction != null);
 
-            if (getStopSignal != null)
+            if (validationContext.IsCancelled)
             {
-                if (getStopSignal(validationContext))
-                {
-                    return;
-                }
+                return;
             }
 
             OpenXmlElement element = validationContext.Element;
@@ -68,7 +57,7 @@ namespace DocumentFormat.OpenXml.Validation
                 foreach (OpenXmlElement child in element.ChildElements)
                 {
                     validationContext.Element = child;
-                    ValidatingTraverse(validationContext, validateAction, finishAction, getStopSignal);
+                    ValidatingTraverse(validationContext, validateAction, finishAction);
                 }
             }
             else if (element.ElementTypeId == ReservedElementTypeIds.OpenXmlUnknownElementId ||
@@ -82,7 +71,7 @@ namespace DocumentFormat.OpenXml.Validation
                     foreach (OpenXmlElement child in element.ChildElements)
                     {
                         validationContext.Element = child;
-                        ValidatingTraverse(validationContext, validateAction, finishAction, getStopSignal);
+                        ValidatingTraverse(validationContext, validateAction, finishAction);
                     }
                 }
             }
@@ -100,7 +89,7 @@ namespace DocumentFormat.OpenXml.Validation
                     foreach (var child in selectedContent.ChildElements)
                     {
                         validationContext.Element = child;
-                        ValidatingTraverse(validationContext, validateAction, finishAction, getStopSignal);
+                        ValidatingTraverse(validationContext, validateAction, finishAction);
                     }
                 }
             }

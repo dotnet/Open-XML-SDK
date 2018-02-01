@@ -51,8 +51,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            int index;
-            if (!int.TryParse(attributeValue, out index))
+            if (!int.TryParse(attributeValue, out var index))
             {
                 return null; //if attribute is not int, schema validation will cover this error.
             }
@@ -97,20 +96,22 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 _relatedPart = part;
 
-                ValidationContext validationContext = new ValidationContext();
-                validationContext.FileFormat = context.FileFormat;
-                validationContext.Package = context.Package;
-                validationContext.Part = part;
-                validationContext.Element = part.RootElement;
+                var validationContext = new ValidationContext
+                {
+                    FileFormat = context.FileFormat,
+                    Package = context.Package,
+                    Part = part,
+                    Element = part.RootElement
+                };
 
                 if (_refElementParent == -1)
                 {
                     _startCollect = true;
-                    ValidationTraverser.ValidatingTraverse(validationContext, this.ElementTraverseStart, null, null);
+                    ValidationTraverser.ValidatingTraverse(validationContext, this.ElementTraverseStart, null);
                 }
                 else
                 {
-                    ValidationTraverser.ValidatingTraverse(validationContext, this.ElementTraverseStart, this.ElementTraverseEnd, null);
+                    ValidationTraverser.ValidatingTraverse(validationContext, this.ElementTraverseStart, this.ElementTraverseEnd);
                 }
             }
 

@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
-
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
@@ -31,7 +29,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 // Rule: An AlternateContent element shall contain one or more Choice child elements
                 errorInfo = validationContext.ComposeMcValidationError(acElement, "Sch_IncompleteContentExpectingComplex", ValidationResources.MC_ShallContainChoice);
-                validationContext.EmitError(errorInfo);
+                validationContext.AddError(errorInfo);
             }
 
             OpenXmlElement child;
@@ -44,7 +42,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 {
                     // Rule: An AlternateContent element shall not be the child of an AlternateContent element.
                     errorInfo = validationContext.ComposeMcValidationError(acElement, "Sch_InvalidElementContentExpectingComplex", child.XmlQualifiedName.ToString(), ValidationResources.MC_ShallNotContainAlternateContent);
-                    validationContext.EmitError(errorInfo);
+                    validationContext.AddError(errorInfo);
                 }
                 else
                 {
@@ -62,7 +60,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                             {
                                 // Rule: An AlternateContent element shall contain one or more Choice child elements
                                 errorInfo = validationContext.ComposeMcValidationError(acElement, "Sch_IncompleteContentExpectingComplex", ValidationResources.MC_ShallContainChoice);
-                                validationContext.EmitError(errorInfo);
+                                validationContext.AddError(errorInfo);
 
                                 if (child is AlternateContentFallback)
                                 {
@@ -89,14 +87,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                             else
                             {
                                 errorInfo = validationContext.ComposeMcValidationError(acElement, "Sch_InvalidElementContentExpectingComplex", child.XmlQualifiedName.ToString(), ValidationResources.MC_ShallContainChoice);
-                                validationContext.EmitError(errorInfo);
+                                validationContext.AddError(errorInfo);
                             }
                             break;
 
                         case 2:
                             // Already one Fallback. Can not have more than one Fallback
                             errorInfo = validationContext.ComposeMcValidationError(acElement, "Sch_InvalidElementContentExpectingComplex", child.XmlQualifiedName.ToString(), ValidationResources.MC_ShallContainChoice);
-                            validationContext.EmitError(errorInfo);
+                            validationContext.AddError(errorInfo);
                             break;
                     }
                 }
@@ -125,7 +123,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     {
                         // error on any unprefixed attributes
                         errorInfo = validationContext.ComposeMcValidationError(acElement, ValidationResources.MC_ErrorOnUnprefixedAttributeName, exAttribute.XmlQualifiedName.ToString());
-                        validationContext.EmitError(errorInfo);
+                        validationContext.AddError(errorInfo);
                     }
 
                     // Markup consumers shall generate an error if they encounter the xml:lang or xml:space attributes on an AlternateContent element.
@@ -135,7 +133,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     {
                         // report error.
                         errorInfo = validationContext.ComposeMcValidationError(acElement, "MC_InvalidXmlAttribute", acElement.LocalName);
-                        validationContext.EmitError(errorInfo);
+                        validationContext.AddError(errorInfo);
                     }
                 }
             }
@@ -143,15 +141,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             // validate MC attribues (Ignorable, PreserveElements, etc.) of this element.
             CompatibilityRuleAttributesValidator.ValidateMcAttributes(validationContext);
 
-            AlternateContentChoice choice = acElement as AlternateContentChoice;
-            if (choice != null)
+            if (acElement is AlternateContentChoice choice)
             {
                 // All Choice elements shall have a Requires attribute whose value contains a whitespace-delimited list of namespace prefixes
                 if (choice.Requires == null)
                 {
                     // report error
                     errorInfo = validationContext.ComposeMcValidationError(acElement, "MC_MissedRequiresAttribute");
-                    validationContext.EmitError(errorInfo);
+                    validationContext.AddError(errorInfo);
                 }
                 else
                 {
@@ -164,7 +161,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         {
                             // report error, the prefix is not defined.
                             errorInfo = validationContext.ComposeMcValidationError(choice, "MC_InvalidRequiresAttribute", choice.Requires);
-                            validationContext.EmitError(errorInfo);
+                            validationContext.AddError(errorInfo);
                         }
                     }
                 }

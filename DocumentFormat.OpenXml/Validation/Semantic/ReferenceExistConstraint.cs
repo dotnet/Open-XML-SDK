@@ -86,14 +86,15 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
                 if (part != null)
                 {
-                    ValidationContext partContext = new ValidationContext();
+                    var partContext = new ValidationContext
+                    {
+                        FileFormat = context.FileFormat,
+                        Package = context.Package,
+                        Part = part,
+                        Element = part.RootElement
+                    };
 
-                    partContext.FileFormat = context.FileFormat;
-                    partContext.Package = context.Package;
-                    partContext.Part = part;
-                    partContext.Element = part.RootElement;
-
-                    ValidationTraverser.ValidatingTraverse(partContext, this.ElementTraverse, null, null);
+                    ValidationTraverser.ValidatingTraverse(partContext, this.ElementTraverse, null);
                 }
             }
 

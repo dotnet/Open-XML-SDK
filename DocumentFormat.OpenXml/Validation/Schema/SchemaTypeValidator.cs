@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Validation.Schema.Restrictions;
 using System.Diagnostics;
 using System.Globalization;
@@ -124,7 +123,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                                 // error: miss required attribute
                                 errorInfo = validationContext.ComposeSchemaValidationError(element, null, "Sch_MissRequiredAttribute", attributeQname);
                                 errorInfo.SetDebugField(attributeQname, "Sch_MissRequiredAttribute");
-                                validationContext.EmitError(errorInfo);
+                                validationContext.AddError(errorInfo);
                             }
                             break;
 
@@ -162,7 +161,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                             string attributeQname = element.GetFixedAttributeQname(i).ToString(); ;
                             errorInfo = validationContext.ComposeSchemaValidationError(element, null, "Sch_UndeclaredAttribute", attributeQname);
                             errorInfo.SetDebugField(attributeQname, "Sch_UndeclaredAttribute");
-                            validationContext.EmitError(errorInfo);
+                            validationContext.AddError(errorInfo);
                         }
                     }
                 }
@@ -186,7 +185,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     string attributeQname = extendedAttribute.XmlQualifiedName.ToString();
                     errorInfo = validationContext.ComposeSchemaValidationError(element, null, "Sch_UndeclaredAttribute", attributeQname);
                     errorInfo.SetDebugField(attributeQname, "Sch_UndeclaredAttribute");
-                    validationContext.EmitError(errorInfo);
+                    validationContext.AddError(errorInfo);
                 }
             }
         }
@@ -261,7 +260,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, subMessage);
                     errorInfo.SetDebugField(isAttribute? qname : null, "Sch_StringIsNotValidValue");
                 }
-                validationContext.EmitError(errorInfo);
+                validationContext.AddError(errorInfo);
             }
             else
             {
@@ -343,7 +342,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                             subMessage = string.Format(CultureInfo.CurrentUICulture, ValidationResources.Sch_MinInclusiveConstraintFailed, simpleTypeConstraint.GetRestrictionValue(RestrictionField.MinInclusive));
                             errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, subMessage);
                             errorInfo.SetDebugField(isAttribute? qname : null, "Sch_MinInclusiveConstraintFailed");
-                            validationContext.EmitError(errorInfo);
+                            validationContext.AddError(errorInfo);
                         }
 
                         if ((errorRestriction & RestrictionField.MinExclusive) == RestrictionField.MinExclusive)
@@ -351,7 +350,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                             subMessage = string.Format(CultureInfo.CurrentUICulture, ValidationResources.Sch_MinExclusiveConstraintFailed, simpleTypeConstraint.GetRestrictionValue(RestrictionField.MinExclusive));
                             errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, subMessage);
                             errorInfo.SetDebugField(isAttribute? qname : null, "Sch_MinExclusiveConstraintFailed");
-                            validationContext.EmitError(errorInfo);
+                            validationContext.AddError(errorInfo);
                         }
 
                         if ((errorRestriction & RestrictionField.MaxInclusive) == RestrictionField.MaxInclusive)
@@ -359,7 +358,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                             subMessage = string.Format(CultureInfo.CurrentUICulture, ValidationResources.Sch_MaxInclusiveConstraintFailed, simpleTypeConstraint.GetRestrictionValue(RestrictionField.MaxInclusive));
                             errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, subMessage);
                             errorInfo.SetDebugField(isAttribute? qname : null, "Sch_MaxInclusiveConstraintFailed");
-                            validationContext.EmitError(errorInfo);
+                            validationContext.AddError(errorInfo);
                         }
 
                         if ((errorRestriction & RestrictionField.MaxExclusive) == RestrictionField.MaxExclusive)
@@ -367,7 +366,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                             subMessage = string.Format(CultureInfo.CurrentUICulture, ValidationResources.Sch_MaxExclusiveConstraintFailed, simpleTypeConstraint.GetRestrictionValue(RestrictionField.MaxExclusive));
                             errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, subMessage);
                             errorInfo.SetDebugField(isAttribute? qname : null, "Sch_MaxExclusiveConstraintFailed");
-                            validationContext.EmitError(errorInfo);
+                            validationContext.AddError(errorInfo);
                         }
                         if ((errorRestriction & RestrictionField.Length) == RestrictionField.Length)
                         {
@@ -376,14 +375,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                             {
                                 errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, isAttribute ? ValidationResources.Sch_EmptyAttributeValue : ValidationResources.Sch_EmptyElementValue);
                                 errorInfo.SetDebugField(isAttribute? qname : null, isAttribute ? "Sch_EmptyAttributeValue" : "Sch_EmptyElementValue");
-                                validationContext.EmitError(errorInfo);
+                                validationContext.AddError(errorInfo);
                             }
                             else
                             {
                                 subMessage = string.Format(CultureInfo.CurrentUICulture, ValidationResources.Sch_LengthConstraintFailed, simpleTypeConstraint.XsdType.GetXsdDataTypeName(), simpleTypeConstraint.GetRestrictionValue(RestrictionField.Length));
                                 errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, subMessage);
                                 errorInfo.SetDebugField(isAttribute? qname : null, "Sch_LengthConstraintFailed");
-                                validationContext.EmitError(errorInfo);
+                                validationContext.AddError(errorInfo);
                             }
                         }
 
@@ -394,14 +393,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                             {
                                 errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, isAttribute ? ValidationResources.Sch_EmptyAttributeValue : ValidationResources.Sch_EmptyElementValue);
                                 errorInfo.SetDebugField(isAttribute? qname : null, isAttribute ? "Sch_EmptyAttributeValue" : "Sch_EmptyElementValue");
-                                validationContext.EmitError(errorInfo);
+                                validationContext.AddError(errorInfo);
                             }
                             else
                             {
                                 subMessage = string.Format(CultureInfo.CurrentUICulture, ValidationResources.Sch_MinLengthConstraintFailed, simpleTypeConstraint.XsdType.GetXsdDataTypeName(), simpleTypeConstraint.GetRestrictionValue(RestrictionField.MinLength));
                                 errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, subMessage);
                                 errorInfo.SetDebugField(isAttribute? qname : null, "Sch_MinLengthConstraintFailed");
-                                validationContext.EmitError(errorInfo);
+                                validationContext.AddError(errorInfo);
                             }
                         }
 
@@ -411,7 +410,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                             subMessage = string.Format(CultureInfo.CurrentUICulture, ValidationResources.Sch_MaxLengthConstraintFailed, simpleTypeConstraint.XsdType.GetXsdDataTypeName(), simpleTypeConstraint.GetRestrictionValue(RestrictionField.MaxLength));
                             errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, subMessage);
                             errorInfo.SetDebugField(isAttribute? qname : null, "Sch_MaxLengthConstraintFailed");
-                            validationContext.EmitError(errorInfo);
+                            validationContext.AddError(errorInfo);
                         }
 
                         if ((errorRestriction & RestrictionField.Pattern) == RestrictionField.Pattern)
@@ -420,7 +419,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                             subMessage = string.Format(CultureInfo.CurrentUICulture, ValidationResources.Sch_PatternConstraintFailed, simpleTypeConstraint.GetRestrictionValue(RestrictionField.Pattern));
                             errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, subMessage);
                             errorInfo.SetDebugField(isAttribute? qname : null, "Sch_PatternConstraintFailed");
-                            validationContext.EmitError(errorInfo);
+                            validationContext.AddError(errorInfo);
                         }
                     }
                 }
@@ -444,7 +443,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         if (!(child is OpenXmlMiscNode))
                         {
                             errorInfo = validationContext.ComposeSchemaValidationError(leafElement, null, "Sch_InvalidChildinLeafElement", leafElement.XmlQualifiedName.ToString());
-                            validationContext.EmitError(errorInfo);
+                            validationContext.AddError(errorInfo);
                             return; // just return one error is enough.
                         }
                     }
@@ -467,7 +466,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     if (!(child is OpenXmlMiscNode))
                     {
                         errorInfo = validationContext.ComposeSchemaValidationError(element, null, "Sch_InvalidChildinLeafElement", element.XmlQualifiedName.ToString());
-                        validationContext.EmitError(errorInfo);
+                        validationContext.AddError(errorInfo);
                         return; // just return one error is enough.
                     }
                 }

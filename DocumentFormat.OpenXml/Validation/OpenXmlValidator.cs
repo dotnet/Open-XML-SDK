@@ -270,17 +270,15 @@ namespace DocumentFormat.OpenXml.Validation
         private IEnumerable<ValidationErrorInfo> ValidateCore(OpenXmlPart part)
         {
             var validator = GetValidator(part.OpenXmlPackage);
-            var result = validator.Validate(part);
 
-            return YieldResult(result);
+            return validator.Validate(part);
         }
 
         private IEnumerable<ValidationErrorInfo> ValidateCore(OpenXmlPackage package)
         {
             var validator = GetValidator(package);
-            var result = validator.Validate(package);
 
-            return YieldResult(result);
+            return validator.Validate(package);
         }
 
         /// <summary>
@@ -332,26 +330,19 @@ namespace DocumentFormat.OpenXml.Validation
 
             // TODO: if the FileFormat is Office2007, and the element is only in Office2010 and O15.
             // then this method should throw exceptions.
-
-            var validationResult = new ValidationResult();
-            validationResult.Valid = true;
-            validationResult.MaxNumberOfErrors = _settings.MaxNumberOfErrors;
-            validationResult.MaxNumberOfErrorsEventHandler += SchemaValidator.OnCancel;
-            var validationContext = new ValidationContext();
-            // this.ValidationContext.Settings = new ValidationSettings(this.FileFormat, this.SchemaOnly);
-            validationContext.FileFormat = FileFormat;
-            validationContext.ValidationErrorEventHandler += validationResult.OnValidationError;
-            validationContext.Element = openXmlElement;
-            // Do NOT use "yield return" in this method, as "yield return" are deferred executed.
-            // Otherwise, the null check is not performed when the method is called, but rather, when the returned enumerator is moved for the first time.
-            // That means that the exception isn't thrown until possibly far, far away from the actual site of the error, which is potentially confusing.
+            var validationContext = new ValidationContext
+            {
+                FileFormat = FileFormat,
+                MaxNumberOfErrors = _settings.MaxNumberOfErrors,
+                Element = openXmlElement
+            };
 
             SchemaValidator.Validate(validationContext);
 
             validationContext.Element = openXmlElement;
             FullSemanticValidator.Validate(validationContext);
 
-            return YieldResult(validationResult);
+            return validationContext.Errors;
         }
 
         private DocumentValidator GetValidator(OpenXmlPackage package)
@@ -370,17 +361,6 @@ namespace DocumentFormat.OpenXml.Validation
             }
 
             throw new System.IO.InvalidDataException(ExceptionMessages.UnknownPackage);
-        }
-
-        private static IEnumerable<ValidationErrorInfo> YieldResult(ValidationResult validationResult)
-        {
-            if (validationResult != null && validationResult.Valid == false)
-            {
-                foreach (var error in validationResult.Errors)
-                {
-                    yield return error;
-                }
-            }
         }
     }
 }

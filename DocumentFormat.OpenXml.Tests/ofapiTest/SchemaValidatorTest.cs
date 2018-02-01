@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Wordprocessing;
 using Xunit;
@@ -24,19 +23,19 @@ namespace DocumentFormat.OpenXml.Tests
             "<w:rPr><w:strike /><w:vanish><!-- comments is ok --></w:vanish><w:webHidden><w:invalidChild /></w:webHidden></w:rPr>" +
             "<w:t>Run Text.</w:t><w:t><!-- comments is ok -->Text 2</w:t><w:t>Text 3.<invalidElement /></w:t></w:r>";
 
-            SchemaValidator target = new SchemaValidator();
+            var target = new SchemaValidator();
             var openxmlElement = new Run(runOuterXml);
-            ValidationResult result = target.Validate(openxmlElement);
-            Assert.False(result.Valid);
-            Assert.Equal(2, result.Errors.Count);
+            var result = target.Validate(openxmlElement);
 
-            Assert.Same(openxmlElement.GetFirstChild<RunProperties>().WebHidden, result.Errors[0].Node);
-            Assert.Equal("Sch_InvalidChildinLeafElement", result.Errors[0].Id);
-            Assert.Equal("The element 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:webHidden' is a leaf element and cannot contain children.", result.Errors[0].Description);
+            Assert.Equal(2, result.Count);
 
-            Assert.Same(openxmlElement.LastChild, result.Errors[1].Node);
-            Assert.Equal("Sch_InvalidChildinLeafElement", result.Errors[1].Id);
-            Assert.Equal("The element 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:t' is a leaf element and cannot contain children.", result.Errors[1].Description);
+            Assert.Same(openxmlElement.GetFirstChild<RunProperties>().WebHidden, result[0].Node);
+            Assert.Equal("Sch_InvalidChildinLeafElement", result[0].Id);
+            Assert.Equal("The element 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:webHidden' is a leaf element and cannot contain children.", result[0].Description);
+
+            Assert.Same(openxmlElement.LastChild, result[1].Node);
+            Assert.Equal("Sch_InvalidChildinLeafElement", result[1].Id);
+            Assert.Equal("The element 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:t' is a leaf element and cannot contain children.", result[1].Description);
         }
     }
 }
