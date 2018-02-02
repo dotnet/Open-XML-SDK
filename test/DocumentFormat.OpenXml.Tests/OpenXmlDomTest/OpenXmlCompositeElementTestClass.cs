@@ -4,7 +4,7 @@
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System;
-using System.IO;
+using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 using Xunit.Abstractions;
@@ -18,27 +18,58 @@ namespace DocumentFormat.OpenXml.Tests
         {
         }
 
+        public static IEnumerable<object[]> GetPowerPointDocuments()
+        {
+            yield return new object[] { TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charspptx };
+            yield return new object[] { TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx };
+            yield return new object[] { TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInbyletterpptx };
+            yield return new object[] { TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withShadow_100charsAnimationFlyInallatoncepptx };
+            yield return new object[] { TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withShadow_100charsAnimationFlyInbyletterpptx };
+            yield return new object[] { TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withShadow_100charspptx };
+            yield return new object[] { TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withShadow_200charsAnimationFlyInallatoncepptx };
+            yield return new object[] { TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withShadow_200charspptx };
+        }
+
+        public static IEnumerable<object[]> GetSpreadsheetDocuments()
+        {
+            yield return new object[] { TestAssets.TestDataStorage.V2FxTestFiles.Spreadsheet.Smallset.SharedWorkbook };
+            yield return new object[] { TestAssets.TestDataStorage.V2FxTestFiles.Spreadsheet.Smallset.SheetData };
+            yield return new object[] { TestAssets.TestDataStorage.V2FxTestFiles.Spreadsheet.Smallset.SheetViewsFSB };
+            yield return new object[] { TestAssets.TestDataStorage.V2FxTestFiles.Spreadsheet.Smallset.SST };
+            yield return new object[] { TestAssets.TestDataStorage.V2FxTestFiles.Spreadsheet.Smallset.Styles };
+            yield return new object[] { TestAssets.TestDataStorage.V2FxTestFiles.Spreadsheet.Smallset.table };
+        }
+
+        public static IEnumerable<object[]> GetWordprocessingDocuments()
+        {
+            yield return new object[] { TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd };
+            yield return new object[] { TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AutoSpaceDE };
+            yield return new object[] { TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.empty };
+            yield return new object[] { TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.Para };
+            yield return new object[] { TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.ParagraphDoc };
+            yield return new object[] { TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.ParagraphAlignment };
+            yield return new object[] { TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.ParagraphLineSpace };
+            yield return new object[] { TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.ParagraphSpaceInLine };
+            yield return new object[] { TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.SectionBreak };
+            yield return new object[] { TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.Temp };
+        }
+
         #region Elements
 
-        [Fact]
-        public void DummyObjectForEmptyChildElementsTest()
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd)]
+        [Theory]
+        public void DummyObjectForEmptyChildElementsTest(string path)
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            var testfile = testfiles.FirstOrDefault();
+            using (var file = TestAssets.OpenFile(path, false))
+            using (var package = file.Open(false))
             {
-                Log.Comment("Opening package {0}...", testfile.FullName);
-                var package = testfile.OpenPackage(false);
-                Log.Comment("Find target part...");
                 var part = package.DescendantParts().Where(p => p.IsReflectable()).FirstOrDefault();
-                Log.Comment("Loading DOM...");
                 var dom = part.RootElement;
                 var e1 = dom.Descendants().Where(d => !d.HasChildren).PickSecond();
-                Log.VerifyNotNull(e1.ChildElements, "Element {0} has no ChildElements but ChildElements property is not NULL.");
+                Assert.NotNull(e1.ChildElements);
                 var e2 = dom.Descendants().Where(d => !d.HasChildren).PickFirst(d => d != e1);
-                Log.VerifyNotNull(e2.ChildElements, "Element {0} has no ChildElements but ChildElements property is not NULL.");
-                Log.VerifyTrue(e1.ChildElements == e2.ChildElements, "ChildElements property of two different element are NOT equal to same dummy.");
+                Assert.NotNull(e2.ChildElements);
+                Assert.Equal(e1.ChildElements, e2.ChildElements);
             }
         }
 
@@ -46,221 +77,201 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Append Collection
 
-        [Fact]
-        public void AppendArrayPPTTest()
+        [Theory]
+        [MemberData(nameof(GetPowerPointDocuments))]
+        public void AppendArrayPPTTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "presentation")
-                .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charspptx, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
                 AppendCollectionOnFile(testfile, getSlidePart, getSlideTextBody, source, getSlidePart, getSlideTextBody, AppendCollectionType.Array);
+            }
         }
 
-        [Fact]
-        public void AppendArrayXSLTest()
+        [Theory]
+        [MemberData(nameof(GetSpreadsheetDocuments))]
+        public void AppendArrayXSLTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
-                .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
-                .Where(f => f.IsSpreadsheetFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Spreadsheet.SharedWorkbook, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
                 AppendCollectionOnFile(testfile, getFirstSheetPart, getSheetData, source, getFirstSheetPart, getSheetData, AppendCollectionType.Array);
+            }
         }
 
-        [Fact]
-        public void AppendIEnumerableTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void AppendIEnumerableTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
-                .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
                 AppendCollectionOnFile(testfile, getMainPart, getBody, source, getMainPart, getAnyComposite, AppendCollectionType.IEnumerable);
+            }
         }
 
-        [Fact]
-        public void AppendIEnumerablePPTTest()
+        [Theory]
+        [MemberData(nameof(GetPowerPointDocuments))]
+        public void AppendIEnumerablePPTTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "presentation")
-                .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charspptx, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
                 AppendCollectionOnFile(testfile, getSlidePart, getSlideTextBody, source, getSlidePart, getAnyComposite, AppendCollectionType.IEnumerable);
+            }
         }
 
-        [Fact]
-        public void AppendIEnumerableXSLTest()
+        [Theory]
+        [MemberData(nameof(GetSpreadsheetDocuments))]
+        public void AppendIEnumerableXSLTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
-                .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
-                .Where(f => f.IsSpreadsheetFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Spreadsheet.SharedWorkbook, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
                 AppendCollectionOnFile(testfile, getFirstSheetPart, getSheetData, source, getFirstSheetPart, getSheetData, AppendCollectionType.IEnumerable);
+            }
         }
 
         #endregion Append Collection
 
         #region Pend Operations
 
-        [Fact]
-        public void AppendChildTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void AppendChildTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
-                .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
                 PendTestOnFile(testfile, getMainPart, getBody, source, getMainPart, getBody, PendType.Append);
+            }
         }
 
-        [Fact]
-        public void AppendChildPPTTest()
+        [Theory]
+        [MemberData(nameof(GetPowerPointDocuments))]
+        public void AppendChildPPTTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "presentation")
-                .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charspptx, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
                 PendTestOnFile(testfile, getSlidePart, getSlideTextBody, source, getSlidePart, getSlideTextBody, PendType.Append);
+            }
         }
 
-        [Fact]
-        public void AppendChildXSLTest()
+        [Theory]
+        [MemberData(nameof(GetSpreadsheetDocuments))]
+        public void AppendChildXSLTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
-                .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
-                .Where(f => f.IsSpreadsheetFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Spreadsheet.SharedWorkbook, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
                 PendTestOnFile(testfile, getFirstSheetPart, getSheetData, source, getFirstSheetPart, getSheetData, PendType.Append);
+            }
         }
 
-        [Fact]
-        public void PreppendChildTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void PreppendChildTest(string testPath)
         {
-			FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
-                .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
                 PendTestOnFile(testfile, getMainPart, getBody, source, getMainPart, getBody, PendType.Prepend);
+            }
         }
 
-        [Fact]
-        public void PreppendChildPPTTest()
+        [Theory]
+        [MemberData(nameof(GetPowerPointDocuments))]
+        public void PreppendChildPPTTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "presentation")
-                .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charspptx, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
                 PendTestOnFile(testfile, getSlidePart, getSlideTextBody, source, getSlidePart, getSlideTextBody, PendType.Prepend);
+            }
         }
 
-        [Fact]
-        public void PreppendChildXSLTest()
+        [Theory]
+        [MemberData(nameof(GetSpreadsheetDocuments))]
+        public void PreppendChildXSLTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
-                .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
-                 .Where(f => f.IsSpreadsheetFile());
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Spreadsheet.SharedWorkbook, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
                 PendTestOnFile(testfile, getFirstSheetPart, getSheetData, source, getFirstSheetPart, getSheetData, PendType.Prepend);
+            }
         }
 
         #endregion Pend Operations
 
         #region Insert Before/After
 
-        [Fact]
-        public void InsertBeforeTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void InsertBeforeTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
-                .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 InsertTestOnFile(testfile, getMainPart, getBody, source, getMainPart, getTextParagraph, getFirstChild, InsertType.Before);
                 InsertTestOnFile(testfile, getMainPart, getBody, source, getMainPart, getTextParagraph, getLastChild, InsertType.Before);
             }
         }
 
-        [Fact]
-        public void InsertBeforePPTTest()
+        [Theory]
+        [MemberData(nameof(GetPowerPointDocuments))]
+        public void InsertBeforePPTTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "presentation")
-                .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charspptx, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 InsertTestOnFile(testfile, getSlidePart, getSlideTextBody, source, getSlidePart, getSlideTextParagraph, getFirstChild, InsertType.Before);
                 InsertTestOnFile(testfile, getSlidePart, getSlideTextBody, source, getSlidePart, getSlideTextParagraph, getLastChild, InsertType.Before);
             }
         }
 
-        [Fact]
-        public void InsertBeforeXSLTest()
+        [Theory]
+        [MemberData(nameof(GetSpreadsheetDocuments))]
+        public void InsertBeforeXSLTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
-                .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
-                .Where(f => f.IsSpreadsheetFile());
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Spreadsheet.SharedWorkbook, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 InsertTestOnFile(testfile, getLastSheetPart, getSheetData, source, getLastSheetPart, getSheetDataRow, getFirstChild, InsertType.Before);
                 InsertTestOnFile(testfile, getLastSheetPart, getSheetData, source, getLastSheetPart, getSheetDataRow, getLastChild, InsertType.Before);
             }
         }
 
-        [Fact]
-        public void InsertAfterTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void InsertAfterTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
-                .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 InsertTestOnFile(testfile, getMainPart, getBody, source, getMainPart, getTextParagraph, getLastChild, InsertType.After);
                 InsertTestOnFile(testfile, getMainPart, getBody, source, getMainPart, getTextParagraph, getFirstChild, InsertType.After);
             }
         }
 
-        [Fact]
-        public void InsertAfterPPTTest()
+        [Theory]
+        [MemberData(nameof(GetPowerPointDocuments))]
+        public void InsertAfterPPTTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "presentation")
-                .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charspptx, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 InsertTestOnFile(testfile, getSlidePart, getSlideTextBody, source, getSlidePart, getSlideTextParagraph, getFirstChild, InsertType.After);
                 InsertTestOnFile(testfile, getSlidePart, getSlideTextBody, source, getSlidePart, getSlideTextParagraph, getLastChild, InsertType.After);
             }
         }
 
-        [Fact]
-        public void InsertAfterXSLTest()
+        [Theory]
+        [MemberData(nameof(GetSpreadsheetDocuments))]
+        public void InsertAfterXSLTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
-                .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
-                .Where(f => f.IsSpreadsheetFile());
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Spreadsheet.SharedWorkbook, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 InsertTestOnFile(testfile, getLastSheetPart, getSheetData, source, getLastSheetPart, getSheetDataRow, getFirstChild, InsertType.After);
                 InsertTestOnFile(testfile, getLastSheetPart, getSheetData, source, getLastSheetPart, getSheetDataRow, getLastChild, InsertType.After);
@@ -271,28 +282,23 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region InsertAt
 
-        [Fact]
-        public void InsertAtTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void InsertAtTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
-                .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 InsertAtOnFile(testfile, getMainPart, getBody, source, getMainPart, getTextParagraph, InsertAtPosition.AnyValid);
             }
         }
 
-        [Fact]
-        public void InsertAtPPTTest()
+        [Theory]
+        [MemberData(nameof(GetPowerPointDocuments))]
+        public void InsertAtPPTTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "presentation")
-                .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charspptx, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 InsertAtOnFile(testfile, getSlidePart, getSlideTextBody, source, getSlidePart, getSlideTextParagraph, InsertAtPosition.AnyValid);
                 InsertAtOnFile(testfile, getSlidePart, getSlideTextBody, source, getSlidePart, getSlideTextParagraph, InsertAtPosition.AsFirst);
@@ -302,14 +308,12 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        [Fact]
-        public void InsertAtXSLTest()
+        [Theory]
+        [MemberData(nameof(GetSpreadsheetDocuments))]
+        public void InsertAtXSLTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
-                .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
-                .Where(f => f.IsSpreadsheetFile());
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Spreadsheet.SharedWorkbook, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 InsertAtOnFile(testfile, getFirstSheetPart, getSheetData, source, getLastSheetPart, getSheetDataRow, InsertAtPosition.AnyValid);
                 InsertAtOnFile(testfile, getFirstSheetPart, getSheetData, source, getLastSheetPart, getSheetDataRow, InsertAtPosition.AsFirst);
@@ -323,42 +327,36 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Insert Before/After Self
 
-        [Fact]
-        public void InsertRelativeTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void InsertRelativeTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
-                .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 InsertRelativeOnFile(testfile, getMainPart, getBody, source, getMainPart, getTextParagraph, InsertRel.AfterSelf);
                 InsertRelativeOnFile(testfile, getMainPart, getBody, source, getMainPart, getTextParagraph, InsertRel.BeforeSelf);
             }
         }
 
-        [Fact]
-        public void InsertRelativePPTTest()
+        [Theory]
+        [MemberData(nameof(GetPowerPointDocuments))]
+        public void InsertRelativePPTTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "presentation")
-                .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charspptx, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 InsertRelativeOnFile(testfile, getSlidePart, getSlideTextBody, source, getSlidePart, getSlideTextParagraph, InsertRel.AfterSelf);
                 InsertRelativeOnFile(testfile, getSlidePart, getSlideTextBody, source, getSlidePart, getSlideTextParagraph, InsertRel.BeforeSelf);
             }
         }
 
-        [Fact]
-        public void InsertRelativeXSLTest()
+        [Theory]
+        [MemberData(nameof(GetSpreadsheetDocuments))]
+        public void InsertRelativeXSLTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
-                .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
-                .Where(f => f.IsSpreadsheetFile());
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Spreadsheet.SharedWorkbook, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 InsertRelativeOnFile(testfile, getFirstSheetPart, getSheetData, source, getLastSheetPart, getSheetDataRow, InsertRel.AfterSelf);
                 InsertRelativeOnFile(testfile, getFirstSheetPart, getSheetData, source, getLastSheetPart, getSheetDataRow, InsertRel.BeforeSelf);
@@ -369,26 +367,24 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region RemoveAllChildren
 
-        [Fact]
-        public void RemoveAllChildrenTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void RemoveAllChildrenTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 RemoveAllChildrenOnFile(testfile, getMainPart, getElementWithoutChildren);
                 RemoveAllChildrenOnFile(testfile, getMainPart, getElementWithChildren);
             }
         }
 
-        [Fact]
-        public void RemoveAllChildrenPPTTest()
+        [Theory]
+        [MemberData(nameof(GetPowerPointDocuments))]
+        public void RemoveAllChildrenPPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-                .Where(f => f.IsPresentationFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charspptx, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 RemoveAllChildrenOnFile(testfile, getSlidePart, getElementWithChildren);
                 RemoveAllChildrenOnFile(testfile, getSlidePart, getElementWithoutChildren);
@@ -396,13 +392,12 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        [Fact]
-        public void RemoveAllChildrenXSLTest()
+        [Theory]
+        [MemberData(nameof(GetSpreadsheetDocuments))]
+        public void RemoveAllChildrenXSLTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
-                .Where(f => f.IsSpreadsheetFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Spreadsheet.SharedWorkbook, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 RemoveAllChildrenOnFile(testfile, getLastSheetPart, getElementWithChildren);
                 RemoveAllChildrenOnFile(testfile, getLastSheetPart, getElementWithoutChildren);
@@ -410,39 +405,35 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        [Fact]
-        public void RemoveAllTypedChildrenTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void RemoveAllTypedChildrenTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 RemoveAllTypedChildrenOnFile(testfile, getMainPart, getAnyWithLeafAndCompositeChild, typeof(OpenXmlCompositeElement));
             }
         }
 
-        [Fact]
-        public void RemoveAllTypedChildrenPPTTest()
+        [Theory]
+        [MemberData(nameof(GetPowerPointDocuments))]
+        public void RemoveAllTypedChildrenPPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-                .Where(f => f.IsPresentationFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charspptx, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 RemoveAllTypedChildrenOnFile(testfile, getSlidePart, getAnyWithLeafAndCompositeChild, typeof(OpenXmlCompositeElement));
                 RemoveAllTypedChildrenOnFile(testfile, getSlidePart, getAnyWithLeafAndCompositeChild, typeof(OpenXmlLeafElement));
             }
         }
 
-        [Fact]
-        //cannot getAnyWithLeafAndCompositeElement
-        public void RemoveAllTypedChildrenXSLTest()
+        [Theory]
+        [MemberData(nameof(GetSpreadsheetDocuments))]
+        public void RemoveAllTypedChildrenXSLTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
-                .Where(f => f.IsSpreadsheetFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Spreadsheet.SharedWorkbook, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 RemoveAllTypedChildrenOnFile(testfile, getLastSheetPart, getAnyWithCompositeChild, typeof(OpenXmlCompositeElement));
                 RemoveAllTypedChildrenOnFile(testfile, getLastSheetPart, getAnyWithLeafChild, typeof(OpenXmlLeafElement));
@@ -453,25 +444,23 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region RemoveChild
 
-        [Fact]
-        public void RemoveChildTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void RemoveChildTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 RemoveChildOnFile(testfile, getMainPart, getElementWithChildren, getAnyChild);
             }
         }
 
-        [Fact]
-        public void RemoveChildPPTTest()
+        [Theory]
+        [MemberData(nameof(GetPowerPointDocuments))]
+        public void RemoveChildPPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-                .Where(f => f.IsPresentationFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charspptx, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 RemoveChildOnFile(testfile, getSlidePart, getSlideTextBody, getFirstChild);
                 RemoveChildOnFile(testfile, getSlidePart, getSlideTextBody, getAnyChild);
@@ -479,40 +468,39 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        [Fact]
-        public void RemoveChildXSLTest()
+        [Theory]
+        [MemberData(nameof(GetSpreadsheetDocuments))]
+        public void RemoveChildXSLTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
-                .Where(f => f.IsSpreadsheetFile());
-
-            var testfile = testfiles.FirstOrDefault();
-            RemoveChildOnFile(testfile, getLastSheetPart, getSheetData, getAnyChild);
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Spreadsheet.SharedWorkbook, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                RemoveChildOnFile(testfile, getLastSheetPart, getSheetData, getAnyChild);
+            }
         }
 
         #endregion RemoveChild
 
         #region Remove
 
-        [Fact]
-        public void RemoveTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void RemoveTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 RemoveOnFile(testfile, getMainPart, getAnyLeaf);
                 RemoveOnFile(testfile, getMainPart, getAnyComposite);
             }
         }
 
-        [Fact]
-        public void RemovePPTTest()
+        [Theory]
+        [MemberData(nameof(GetPowerPointDocuments))]
+        public void RemovePPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-                .Where(f => f.IsPresentationFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charspptx, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 RemoveOnFile(testfile, getSlidePart, getSlideTextBody);
                 RemoveOnFile(testfile, getSlidePart, getAnyLeaf);
@@ -520,13 +508,12 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        [Fact]
-        public void RemoveXSLTest()
+        [Theory]
+        [MemberData(nameof(GetSpreadsheetDocuments))]
+        public void RemoveXSLTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
-                .Where(f => f.IsSpreadsheetFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Spreadsheet.SharedWorkbook, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 RemoveOnFile(testfile, getLastSheetPart, getSheetData);
                 RemoveOnFile(testfile, getLastSheetPart, getAnyLeaf);
@@ -538,29 +525,23 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region ReplaceChild<T>(OpenXmlElement, T)
 
-        [Fact]
-        public void ReplaceChildTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void ReplaceChildTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
-                .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 ReplaceChildOnFile(testfile, getMainPart, getBody, getAnyChild, source, getMainPart, getAnyChild, typeof(OpenXmlElement));
             }
         }
 
-        [Fact]
-        public void ReplaceChildPPTTest()
+        [Theory]
+        [MemberData(nameof(GetPowerPointDocuments))]
+        public void ReplaceChildPPTTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "presentation")
-                .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-                .Where(f => f.IsPresentationFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charspptx, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 ReplaceChildOnFile(testfile, getSlidePart, getSlideTextBody, getAnyChild, source, getSlidePart, getAnyChild, typeof(OpenXmlElement));
                 ReplaceChildOnFile(testfile, getSlidePart, getAnyWithLeafAndCompositeChild, getAnyCompositeChild, source, getSlidePart, getAnyChild, typeof(OpenXmlCompositeElement));
@@ -568,15 +549,12 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        [Fact]
-        public void ReplaceChildXSLTest()
+        [Theory]
+        [MemberData(nameof(GetSpreadsheetDocuments))]
+        public void ReplaceChildXSLTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
-                .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
-                .Where(f => f.IsSpreadsheetFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Spreadsheet.SharedWorkbook, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 ReplaceChildOnFile(testfile, getLastSheetPart, getSheetData, getAnyChild, source, getLastSheetPart, getAnyChild, typeof(OpenXmlElement));
             }
@@ -653,59 +631,52 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region GetAttribute(string localName, string namespaceUri)
 
-        [Fact]
-        public void DummyIEnumerableForExtendedAttributesTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void DummyIEnumerableForExtendedAttributesTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
-                .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            using (var package = testfile.Open(false))
+            {
+                var part = package.DescendantParts().Where(p => p.IsReflectable()).FirstOrDefault();
+                var dom = part.RootElement;
+                var e1 = dom.Descendants().Where(d => d.ExtendedAttributes.Count() == 0).PickSecond();
 
-            var testfile = testfiles.FirstOrDefault();
-            Log.Comment("Opening package {0}...", testfile.FullName);
-            var package = testfile.OpenPackage(false);
-            Log.Comment("Find target part...");
-            var part = package.DescendantParts().Where(p => p.IsReflectable()).FirstOrDefault();
-            Log.Comment("Loading DOM...");
-            var dom = part.RootElement;
-            var e1 = dom.Descendants().Where(d => d.ExtendedAttributes.Count() == 0).PickSecond();
-            Log.VerifyNotNull(e1.ExtendedAttributes, "Element {0} has no ExtenedAttributes but ExtendedAttributes property is not NULL.");
-            var e2 = dom.Descendants().Where(d => d.ExtendedAttributes.Count() == 0).PickFirst(d => d != e1);
-            Log.VerifyNotNull(e2.ExtendedAttributes, "Element {0} has no ExtenedAttributes but ExtendedAttributes property is not NULL.");
-            Log.VerifyTrue(e1.ExtendedAttributes == e2.ExtendedAttributes, "ExtendedAttributes property of two different element are NOT equal to same dummy.");
+                Assert.NotNull(e1.ExtendedAttributes);
+
+                var e2 = dom.Descendants().Where(d => d.ExtendedAttributes.Count() == 0).PickFirst(d => d != e1);
+
+                Assert.NotNull(e2.ExtendedAttributes);
+                Assert.Equal(e1.ExtendedAttributes, e2.ExtendedAttributes);
+            }
         }
 
-        [Fact]
-        public void GetAttributeTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void GetAttributeTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 GetAttributeOnFile(testfile, getMainPart, getElementWithAttributes);
             }
         }
 
-        [Fact]
-        public void GetAttributePPTTest()
+        [Theory]
+        [MemberData(nameof(GetPowerPointDocuments))]
+        public void GetAttributePPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-                .Where(f => f.IsPresentationFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 GetAttributeOnFile(testfile, getSlidePart, getElementWithAttributes);
             }
         }
 
-        [Fact]
-        public void GetAttributeXSLTest()
+        [Theory]
+        [MemberData(nameof(GetSpreadsheetDocuments))]
+        public void GetAttributeXSLTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
-                .Where(f => f.IsSpreadsheetFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 GetAttributeOnFile(testfile, getLastSheetPart, getElementWithAttributes);
             }
@@ -715,40 +686,33 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region GetAttributes
 
-        // GetAttributes()
-        [Fact]
-        public void GetAttributesTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void GetAttributesTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 GetAttributesOnFile(testfile, getMainPart, getElementWithoutAttributes);
                 GetAttributesOnFile(testfile, getMainPart, getElementWithAttributes);
             }
         }
 
-        [Fact]
-        public void GetAttributesPPTTest()
+        [Theory]
+        [MemberData(nameof(GetPowerPointDocuments))]
+        public void GetAttributesPPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-                .Where(f => f.IsPresentationFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 GetAttributesOnFile(testfile, getSlidePart, getElementWithoutAttributes);
                 GetAttributesOnFile(testfile, getSlidePart, getElementWithFixedAttributeOnly);
             }
         }
 
-        [Fact]
-        public void GetAttributesXSLTest()
+        [Theory]
+        [MemberData(nameof(GetSpreadsheetDocuments))]
+        public void GetAttributesXSLTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
-                .Where(f => f.IsSpreadsheetFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 GetAttributesOnFile(testfile, getLastSheetPart, getElementWithoutAttributes);
                 GetAttributesOnFile(testfile, getLastSheetPart, getElementWithFixedAttributeOnly);
@@ -759,87 +723,69 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region SetAttribute(OpenXmlAttribute)
 
-        [Fact]
-        public void SetAttributeTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void SetAttributeTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
-                .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 SetAttributeOnFile(testfile, getMainPart, getTextParagraph, source, getMainPart, getElementWithFixedAttributeOnly, getExistingAttribute);
             }
         }
 
-        [Fact]
-        public void SetAttributePPTTest()
+        [Theory]
+        [MemberData(nameof(GetPowerPointDocuments))]
+        public void SetAttributePPTTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "presentation")
-                .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charspptx, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 SetAttributeOnFile(testfile, getSlidePart, getSlideTextParagraph, source, getSlidePart, getElementWithFixedAttributeOnly, getExistingAttribute);
             }
         }
 
-        [Fact]
-        public void SetAttributeXSLTest()
+        [Theory]
+        [MemberData(nameof(GetSpreadsheetDocuments))]
+        public void SetAttributeXSLTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
-                .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
-                .Where(f => f.IsSpreadsheetFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Spreadsheet.SharedWorkbook, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 SetAttributeOnFile(testfile, getLastSheetPart, getSheetData, source, getLastSheetPart, getElementWithFixedAttributeOnly, getExistingAttribute);
             }
         }
 
-        [Fact]
-        public void SetAttributesTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void SetAttributesTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
-                .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 SetAttributesOnFile(testfile, getMainPart, getAnyElement, source, getMainPart, getElementWithoutAttributes);
                 SetAttributesOnFile(testfile, getMainPart, getAnyElement, source, getMainPart, getElementWithAttributes);
             }
         }
 
-        [Fact]
-        public void SetAttributesPPTTest()
+        [Theory]
+        [MemberData(nameof(GetPowerPointDocuments))]
+        public void SetAttributesPPTTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources","presentation")
-                .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charspptx, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 SetAttributesOnFile(testfile, getSlidePart, getAnyComposite, source, getSlidePart, getElementWithoutAttributes);
                 SetAttributesOnFile(testfile, getSlidePart, getAnyComposite, source, getSlidePart, getElementWithFixedAttributeOnly);
             }
         }
 
-        [Fact]
-        public void SetAttributesXSLTest()
+        [Theory]
+        [MemberData(nameof(GetSpreadsheetDocuments))]
+        public void SetAttributesXSLTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
-                .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
-                .Where(f => f.IsSpreadsheetFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Spreadsheet.SharedWorkbook, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 SetAttributesOnFile(testfile, getLastSheetPart, getAnyComposite, source, getLastSheetPart, getElementWithoutAttributes);
                 SetAttributesOnFile(testfile, getLastSheetPart, getAnyComposite, source, getLastSheetPart, getElementWithFixedAttributeOnly);
@@ -850,13 +796,11 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region RemoveAttribute(localName, namespaceUri)
 
-        [Fact]
-        public void RemoveAttributeTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void RemoveAttributeTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 RemoveAttributeOnFile(testfile, getMainPart, getElementWithoutAttributes, getFixedAttribute);
                 RemoveAttributeOnFile(testfile, getMainPart, getElementWithAttributes, getExistingAttribute);
@@ -865,25 +809,21 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        [Fact]
-        public void RemoveAttributePPTTest()
+        [Theory]
+        [MemberData(nameof(GetPowerPointDocuments))]
+        public void RemoveAttributePPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 RemoveAttributeOnFile(testfile, getSlidePart, getElementWithFixedAttributeOnly, getExistingFixedAttribute);
             }
         }
 
-        [Fact]
-        public void RemoveAttributeXSLTest()
+        [Theory]
+        [MemberData(nameof(GetSpreadsheetDocuments))]
+        public void RemoveAttributeXSLTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
-                .Where(f => f.IsSpreadsheetFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 RemoveAttributeOnFile(testfile, getLastSheetPart, getElementWithFixedAttributeOnly, getExistingFixedAttribute);
             }
@@ -893,39 +833,33 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region ClearAllAttributes
 
-        [Fact]
-        public void ClearAllAttributesTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void ClearAllAttributesTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 ClearAllAttributesOnFile(testfile, getMainPart, getElementWithoutAttributes);
                 ClearAllAttributesOnFile(testfile, getMainPart, getElementWithAttributes);
             }
         }
 
-        [Fact]
-        public void ClearAllAttributesPPTTest()
+        [Theory]
+        [MemberData(nameof(GetPowerPointDocuments))]
+        public void ClearAllAttributesPPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 ClearAllAttributesOnFile(testfile, getSlidePart, getElementWithoutAttributes);
                 ClearAllAttributesOnFile(testfile, getSlidePart, getElementWithFixedAttributeOnly);
             }
         }
 
-        [Fact]
-        public void ClearAllAttributesXSLTest()
+        [Theory]
+        [MemberData(nameof(GetSpreadsheetDocuments))]
+        public void ClearAllAttributesXSLTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
-                .Where(f => f.IsSpreadsheetFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 ClearAllAttributesOnFile(testfile, getLastSheetPart, getElementWithoutAttributes);
                 ClearAllAttributesOnFile(testfile, getLastSheetPart, getElementWithFixedAttributeOnly);
@@ -935,15 +869,13 @@ namespace DocumentFormat.OpenXml.Tests
         #endregion ClearAllAttributes
 
         #region AddNamespaceDeclaration
-        [Fact]
-        public void AddNamespaceDeclarationTest()
-        {
-            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
-                .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
 
-            foreach (var testfile in testfiles)
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void AddNamespaceDeclarationTest(string testPath)
+        {
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 AddNamespaceDeclarationOnFile(testfile, getMainPart, getElementWithNamespaceDeclarations, source, getAnyOpenXmlPart, getElementWithNamespaceDeclarations, getExistingNamespaceDeclaration);
                 AddNamespaceDeclarationOnFile(testfile, getMainPart, getElementWithoutNamespaceDeclarations, source, getAnyOpenXmlPart, getElementWithNamespaceDeclarations, getExistingNamespaceDeclaration);
@@ -952,13 +884,12 @@ namespace DocumentFormat.OpenXml.Tests
         #endregion AddNamespaceDeclaration
 
         #region NamespaceDeclarations
-        [Fact]
-        public void NamespaceDeclarationsTest()
-        {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
 
-            foreach (var testfile in testfiles)
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void NamespaceDeclarationsTest(string testPath)
+        {
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 NamespaceDeclarationsOnFile(testfile, getAnyOpenXmlPart, getElementWithNamespaceDeclarations);
                 NamespaceDeclarationsOnFile(testfile, getAnyOpenXmlPart, getElementWithoutNamespaceDeclarations);
@@ -967,13 +898,11 @@ namespace DocumentFormat.OpenXml.Tests
         #endregion NamespaceDeclarations
 
         #region RemoveNamespaceDeclaration
-        [Fact]
-        public void RemoveNamespaceDeclarationTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void RemoveNamespaceDeclarationTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 RemoveNamespaceDeclarationOnFile(testfile, getAnyOpenXmlPart, getElementWithNamespaceDeclarations, getExistingNamespaceDeclaration);
                 RemoveNamespaceDeclarationOnFile(testfile, getAnyOpenXmlPart, getElementWithNamespaceDeclarations, getNonExistingNamespaceDeclaration);
@@ -984,13 +913,11 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region OuterXml
 
-        [Fact]
-        public void GetOuterXmlTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void GetOuterXmlTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 GetOuterXmlOnFile(testfile, getMainPart, getElementWithoutAttributes);
                 GetOuterXmlOnFile(testfile, getMainPart, getElementWithoutChildren);
@@ -999,13 +926,11 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        [Fact]
-        public void GetOuterXmlPPTTest()
+        [Theory]
+        [MemberData(nameof(GetPowerPointDocuments))]
+        public void GetOuterXmlPPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 GetOuterXmlOnFile(testfile, getSlidePart, getElementWithoutAttributes);
                 GetOuterXmlOnFile(testfile, getSlidePart, getElementWithoutChildren);
@@ -1014,13 +939,11 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        [Fact]
-        public void GetOuterXmlXSLTest()
+        [Theory]
+        [MemberData(nameof(GetSpreadsheetDocuments))]
+        public void GetOuterXmlXSLTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
-                .Where(f => f.IsSpreadsheetFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 GetOuterXmlOnFile(testfile, getLastSheetPart, getElementWithoutAttributes);
                 GetOuterXmlOnFile(testfile, getLastSheetPart, getElementWithoutChildren);
@@ -1033,13 +956,11 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Clone
 
-        [Fact]
-        public void CloneTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void CloneTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 CloneOnFile(testfile, getMainPart, getElementWithoutChildren);
                 CloneOnFile(testfile, getMainPart, getElementWithoutAttributes);
@@ -1048,13 +969,11 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        [Fact]
-        public void ClonePPTTest()
+        [Theory]
+        [MemberData(nameof(GetPowerPointDocuments))]
+        public void ClonePPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 CloneOnFile(testfile, getSlidePart, getElementWithoutChildren);
                 CloneOnFile(testfile, getSlidePart, getElementWithoutAttributes);
@@ -1063,13 +982,11 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        [Fact]
-        public void CloneXSLTest()
+        [Theory]
+        [MemberData(nameof(GetSpreadsheetDocuments))]
+        public void CloneXSLTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
-                .Where(f => f.IsSpreadsheetFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 CloneOnFile(testfile, getLastSheetPart, getElementWithoutChildren);
                 CloneOnFile(testfile, getLastSheetPart, getElementWithoutAttributes);
@@ -1078,12 +995,11 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        [Fact]
-        public void CloneNodeFalseTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.empty)]
+        public void CloneNodeFalseTest(string testPath)
         {
-            var testfiles = CopyTestFiles(System.IO.Path.Combine(@"wordprocessing", "paragraph"), true, "empty.docx", f => f.IsWordprocessingFile(), 1);
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 CloneNodeFalseOnFile(testfile, getMainPart, getElementWithoutAttributes);
                 CloneNodeFalseOnFile(testfile, getMainPart, getElementWithAttributesOnly);
@@ -1092,13 +1008,11 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        [Fact]
-        public void CloneNodeFalsePPTTest()
+        [Theory]
+        [MemberData(nameof(GetPowerPointDocuments))]
+        public void CloneNodeFalsePPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 CloneNodeFalseOnFile(testfile, getSlidePart, getElementWithoutAttributes);
                 CloneNodeFalseOnFile(testfile, getSlidePart, getElementWithAttributesOnly);
@@ -1107,13 +1021,11 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        [Fact]
-        public void CloneNodeFalseXSLTest()
+        [Theory]
+        [MemberData(nameof(GetSpreadsheetDocuments))]
+        public void CloneNodeFalseXSLTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
-                .Where(f => f.IsSpreadsheetFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 CloneNodeFalseOnFile(testfile, getLastSheetPart, getElementWithoutAttributes);
                 CloneNodeFalseOnFile(testfile, getLastSheetPart, getElementWithAttributesOnly);
@@ -1126,54 +1038,45 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region InnerXml
 
-        [Fact]
-        public void GetInnerXmlTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void GetInnerXmlTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 GetInnerXmlOnFile(testfile, getMainPart, getAnyLeaf);
                 GetInnerXmlOnFile(testfile, getMainPart, getAnyComposite);
             }
         }
 
-        [Fact]
-        public void GetInnerXmlPPTTest()
+        [Theory]
+        [MemberData(nameof(GetPowerPointDocuments))]
+        public void GetInnerXmlPPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 GetInnerXmlOnFile(testfile, getSlidePart, getAnyLeaf);
                 GetInnerXmlOnFile(testfile, getSlidePart, getAnyComposite);
             }
         }
 
-        [Fact]
-        public void GetInnerXmlXSLTest()
+        [Theory]
+        [MemberData(nameof(GetSpreadsheetDocuments))]
+        public void GetInnerXmlXSLTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
-                .Where(f => f.IsSpreadsheetFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 GetInnerXmlOnFile(testfile, getLastSheetPart, getAnyLeaf);
                 GetInnerXmlOnFile(testfile, getLastSheetPart, getAnyComposite);
             }
         }
 
-        [Fact]
-        public void SetInnerXmlPPTTest()
+        [Theory]
+        [MemberData(nameof(GetPowerPointDocuments))]
+        public void SetInnerXmlPPTTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "presentation")
-                .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charspptx, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 SetInnerXmlOnFile(testfile, getSlidePart, getElementWithoutChildren, source, getSlidePart, getElementWithAttributesOnly);
                 SetInnerXmlOnFile(testfile, getSlidePart, getElementWithoutChildren, source, getSlidePart, getElementWithChildren);
@@ -1182,15 +1085,12 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        [Fact]
-        public void SetInnerXmlXSLTest()
+        [Theory]
+        [MemberData(nameof(GetSpreadsheetDocuments))]
+        public void SetInnerXmlXSLTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "spreadsheet")
-                .Where(f => f.IsSpreadsheetFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
-                .Where(f => f.IsSpreadsheetFile());
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Spreadsheet.SharedWorkbook, false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 SetInnerXmlOnFile(testfile, getLastSheetPart, getElementWithoutChildren, source, getLastSheetPart, getElementWithAttributesOnly);
                 SetInnerXmlOnFile(testfile, getLastSheetPart, getElementWithoutChildren, source, getLastSheetPart, getElementWithChildren);
@@ -1203,13 +1103,11 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region WriteTo
 
-        [Fact]
-        public void WriteToTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void WriteToTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 WriteToOnFile(testfile, getMainPart, getElementWithoutAttributes);
                 WriteToOnFile(testfile, getMainPart, getElementWithoutChildren);
@@ -1218,13 +1116,11 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        [Fact]
-        public void WriteToPPTTest()
+        [Theory]
+        [MemberData(nameof(GetPowerPointDocuments))]
+        public void WriteToPPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 WriteToOnFile(testfile, getSlidePart, getSlideTextBody);
                 WriteToOnFile(testfile, getSlidePart, getElementWithoutChildren);
@@ -1233,13 +1129,11 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        [Fact]
-        public void WriteToXSLTest()
+        [Theory]
+        [MemberData(nameof(GetSpreadsheetDocuments))]
+        public void WriteToXSLTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
-                .Where(f => f.IsSpreadsheetFile());
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
                 WriteToOnFile(testfile, getLastSheetPart, getSheetData);
                 WriteToOnFile(testfile, getLastSheetPart, getElementWithoutChildren);
@@ -1252,335 +1146,299 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Events
 
-        //Events in CTP1
-        //public event EventHandler<ElementEventArgs> ElementInserted;
-        //public event EventHandler<ElementEventArgs> ElementInserting;
-        //public event EventHandler<ElementEventArgs> ElementRemoved;
-        //public event EventHandler<ElementEventArgs> ElementRemoving;
-
-        [Fact]
-        public void EventAppendChildTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd)]
+        public void EventAppendChildTest(string sourcePath, string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
-                .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validInsertEventHandler);
-            GetTargetElement getBodyNoEvent = e => getBody(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            PendTestOnFile(testfile, getMainPart, getBody4Event, source, getMainPart, getBodyNoEvent, PendType.Append);
-        }
-
-        [Fact]
-        public void EventPreppendChildTest()
-        {
-            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
-                .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validInsertEventHandler);
-            GetTargetElement getBodyNoEvent = e => getBody(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            PendTestOnFile(testfile, getMainPart, getBody4Event, source, getMainPart, getBodyNoEvent, PendType.Prepend);
-        }
-
-        [Fact]
-        public void EventAppendArrayTest()
-        {
-            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
-                .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validInsertEventHandler);
-            GetTargetElement getBodyNoEvent = e => getBody(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getTextParagraphNoEvent = e => getTextParagraph(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            AppendCollectionOnFile(testfile, getMainPart, getBody4Event, source, getMainPart, getTextParagraphNoEvent, AppendCollectionType.Array);
-        }
-
-        [Fact]
-        public void EventAppendIEnumerableTest()
-        {
-            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
-                .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validInsertEventHandler);
-            GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            AppendCollectionOnFile(testfile, getMainPart, getBody4Event, source, getMainPart, getAnyCompositeNoEvent, AppendCollectionType.IEnumerable);
-        }
-
-        [Fact]
-        public void EventInsertBeforeTest()
-        {
-            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
-                .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validInsertEventHandler);
-            GetTargetElement getTextParagraphNoEvent = e => getTextParagraph(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
+            using (var source = TestAssets.OpenFile(sourcePath, true))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
+                GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validInsertEventHandler);
+                GetTargetElement getBodyNoEvent = e => getBody(e).SetEventHandler(invalidEventHandler);
+
+                PendTestOnFile(testfile, getMainPart, getBody4Event, source, getMainPart, getBodyNoEvent, PendType.Append);
+            }
+        }
+
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd)]
+        public void EventPreppendChildTest(string sourcePath, string testPath)
+        {
+            using (var source = TestAssets.OpenFile(sourcePath, true))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validInsertEventHandler);
+                GetTargetElement getBodyNoEvent = e => getBody(e).SetEventHandler(invalidEventHandler);
+
+                PendTestOnFile(testfile, getMainPart, getBody4Event, source, getMainPart, getBodyNoEvent, PendType.Prepend);
+            }
+        }
+
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd)]
+        public void EventAppendArrayTest(string sourcePath, string testPath)
+        {
+            using (var source = TestAssets.OpenFile(sourcePath, true))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validInsertEventHandler);
+                GetTargetElement getBodyNoEvent = e => getBody(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getTextParagraphNoEvent = e => getTextParagraph(e).SetEventHandler(invalidEventHandler);
+
+                AppendCollectionOnFile(testfile, getMainPart, getBody4Event, source, getMainPart, getTextParagraphNoEvent, AppendCollectionType.Array);
+            }
+        }
+
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd)]
+        public void EventAppendIEnumerableTest(string sourcePath, string testPath)
+        {
+            using (var source = TestAssets.OpenFile(sourcePath, true))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validInsertEventHandler);
+                GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
+
+                AppendCollectionOnFile(testfile, getMainPart, getBody4Event, source, getMainPart, getAnyCompositeNoEvent, AppendCollectionType.IEnumerable);
+            }
+        }
+
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd)]
+        public void EventInsertBeforeTest(string sourcePath, string testPath)
+        {
+            using (var source = TestAssets.OpenFile(sourcePath, true))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validInsertEventHandler);
+                GetTargetElement getTextParagraphNoEvent = e => getTextParagraph(e).SetEventHandler(invalidEventHandler);
+
                 InsertTestOnFile(testfile, getMainPart, getBody4Event, source, getMainPart, getTextParagraphNoEvent, getFirstChild, InsertType.Before);
                 InsertTestOnFile(testfile, getMainPart, getBody4Event, source, getMainPart, getTextParagraphNoEvent, getLastChild, InsertType.Before);
             }
         }
 
-        [Fact]
-        public void EventInsertAfterTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd)]
+        public void EventInsertAfterTest(string sourcePath, string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
-                .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validInsertEventHandler);
-            GetTargetElement getTextParagraphNoEvent = e => getTextParagraph(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
+            using (var source = TestAssets.OpenFile(sourcePath, true))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
+                GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validInsertEventHandler);
+                GetTargetElement getTextParagraphNoEvent = e => getTextParagraph(e).SetEventHandler(invalidEventHandler);
+
                 InsertTestOnFile(testfile, getMainPart, getBody4Event, source, getMainPart, getTextParagraphNoEvent, getLastChild, InsertType.After);
                 InsertTestOnFile(testfile, getMainPart, getBody4Event, source, getMainPart, getTextParagraphNoEvent, getFirstChild, InsertType.After);
             }
         }
 
-        [Fact]
-        public void EventInsertAtTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd)]
+        public void EventInsertAtTest(string sourcePath, string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
-                .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validInsertEventHandler);
-            GetTargetElement getTextParagraphNoEvent = e => getTextParagraph(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
+            using (var source = TestAssets.OpenFile(sourcePath, true))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
+                GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validInsertEventHandler);
+                GetTargetElement getTextParagraphNoEvent = e => getTextParagraph(e).SetEventHandler(invalidEventHandler);
+
                 InsertAtOnFile(testfile, getMainPart, getBody4Event, source, getMainPart, getTextParagraphNoEvent, InsertAtPosition.AnyValid);
             }
         }
 
-        [Fact]
-        public void EventInsertRelativeTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd)]
+        public void EventInsertRelativeTest(string sourcePath, string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
-                .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validInsertEventHandler);
-            GetTargetElement getTextParagraphNoEvent = e => getTextParagraph(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
+            using (var source = TestAssets.OpenFile(sourcePath, true))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
+                GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validInsertEventHandler);
+                GetTargetElement getTextParagraphNoEvent = e => getTextParagraph(e).SetEventHandler(invalidEventHandler);
+
                 InsertRelativeOnFile(testfile, getMainPart, getBody4Event, source, getMainPart, getTextParagraphNoEvent, InsertRel.AfterSelf);
                 InsertRelativeOnFile(testfile, getMainPart, getBody4Event, source, getMainPart, getTextParagraphNoEvent, InsertRel.BeforeSelf);
             }
         }
 
-        [Fact]
-        public void EventRemoveAllChildrenTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd)]
+        public void EventRemoveAllChildrenTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validRemoveEventHandler);
-            GetTargetElement getElementWithoutChildren4Event = e => getElementWithoutChildren(e).SetEventHandler(validRemoveEventHandler);
-            GetTargetElement getElementWithChildren4Event = e => getElementWithChildren(e).SetEventHandler(validRemoveEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
+                GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validRemoveEventHandler);
+                GetTargetElement getElementWithoutChildren4Event = e => getElementWithoutChildren(e).SetEventHandler(validRemoveEventHandler);
+                GetTargetElement getElementWithChildren4Event = e => getElementWithChildren(e).SetEventHandler(validRemoveEventHandler);
+
                 RemoveAllChildrenOnFile(testfile, getMainPart, getElementWithChildren4Event);
             }
         }
 
-        [Fact]
-        public void EventRemoveAllTypedChildrenTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd)]
+        public void EventRemoveAllTypedChildrenTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            GetTargetElement getAnyWithLeafAndCompositeElement4Event = e => getAnyWithLeafAndCompositeChild(e).SetEventHandler(validRemoveEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
+                GetTargetElement getAnyWithLeafAndCompositeElement4Event = e => getAnyWithLeafAndCompositeChild(e).SetEventHandler(validRemoveEventHandler);
+
                 RemoveAllTypedChildrenOnFile(testfile, getMainPart, getAnyWithLeafAndCompositeElement4Event, typeof(OpenXmlCompositeElement));
                 RemoveAllTypedChildrenOnFile(testfile, getMainPart, getAnyWithLeafAndCompositeElement4Event, typeof(OpenXmlLeafElement));
             }
         }
 
-        [Fact]
-        public void EventRemoveChildTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd)]
+        public void EventRemoveChildTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validRemoveEventHandler);
-            GetTargetElement getAnyChild4Event = e => getAnyChild(e).SetEventHandler(validRemoveEventHandler);
-            GetTargetElement getAnyLeaf4Event = e => getAnyLeaf(e).SetEventHandler(validRemoveEventHandler);
-            GetTargetElement getAnyComposite4Event = e => getAnyComposite(e).SetEventHandler(validRemoveEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            RemoveChildOnFile(testfile, getMainPart, getBody4Event, getAnyChild);
-        }
-
-        [Fact]
-        public void EventRemoveTest()
-        {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validRemoveEventHandler);
-            GetTargetElement getAnyChild4Event = e => getAnyChild(e).SetEventHandler(validRemoveEventHandler);
-            GetTargetElement getAnyLeaf4Event = e => getAnyLeaf(e).SetEventHandler(validRemoveEventHandler);
-            GetTargetElement getAnyComposite4Event = e => getAnyComposite(e).SetEventHandler(validRemoveEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            RemoveOnFile(testfile, getAnyOpenXmlPart, getAnyChild4Event);
-            RemoveOnFile(testfile, getAnyOpenXmlPart, getAnyLeaf4Event);
-            RemoveOnFile(testfile, getAnyOpenXmlPart, getAnyComposite4Event);
-        }
-
-        [Fact]
-        public void EventReplaceChildTest()
-        {
-            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
-                .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validReplaceEventHandler);
-            GetTargetElement getAnyChild4Event = e => getAnyChild(e).SetEventHandler(validReplaceEventHandler);
-            GetTargetElement getAnyLeafChild4Event = e => getAnyLeafChild(e).SetEventHandler(validReplaceEventHandler);
-            GetTargetElement getAnyCompositeChild4Event = e => getAnyCompositeChild(e).SetEventHandler(validReplaceEventHandler);
-            GetTargetElement getAnyWithLeafAndCompositeElement4Event = e => getAnyWithLeafAndCompositeChild(e).SetEventHandler(validReplaceEventHandler);
-            GetTargetElement getBodyNoEvent = e => getBody(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getAnyChildNoEvent = e => getAnyChild(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getAnyLeafChildNoEvent = e => getAnyLeafChild(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getAnyCompositeChildNoEvent = e => getAnyCompositeChild(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getAnyWithLeafAndCompositeElementNoEvent = e => getAnyWithLeafAndCompositeChild(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            ReplaceChildOnFile(testfile, getMainPart, getBody, getAnyChild4Event, source, getMainPart, getAnyChildNoEvent, typeof(OpenXmlElement));
-        }
-
-        [Fact]
-        public void EventGetAttributeTest()
-        {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            GetTargetElement getElementWithAttributesNoEvent = e => getElementWithAttributes(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            GetAttributeOnFile(testfile, getMainPart, getElementWithAttributesNoEvent);
-        }
-
-        [Fact]
-        public void EventGetAttributesTest()
-        {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithAttributesNoEvent = e => getElementWithAttributes(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithFixedAttributeOnlyNoEvent = e => getElementWithFixedAttributeOnly(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithExtendedAttributeOnlyNoEvent = e => getElementWithExtendedAttributeOnly(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithMixedAttributeNoEvent = e => getElementWithMixedAttribute(e).SetEventHandler(invalidEventHandler);
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
+                GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validRemoveEventHandler);
+                GetTargetElement getAnyChild4Event = e => getAnyChild(e).SetEventHandler(validRemoveEventHandler);
+                GetTargetElement getAnyLeaf4Event = e => getAnyLeaf(e).SetEventHandler(validRemoveEventHandler);
+                GetTargetElement getAnyComposite4Event = e => getAnyComposite(e).SetEventHandler(validRemoveEventHandler);
+
+                RemoveChildOnFile(testfile, getMainPart, getBody4Event, getAnyChild);
+            }
+        }
+
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd)]
+        public void EventRemoveTest(string testPath)
+        {
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validRemoveEventHandler);
+                GetTargetElement getAnyChild4Event = e => getAnyChild(e).SetEventHandler(validRemoveEventHandler);
+                GetTargetElement getAnyLeaf4Event = e => getAnyLeaf(e).SetEventHandler(validRemoveEventHandler);
+                GetTargetElement getAnyComposite4Event = e => getAnyComposite(e).SetEventHandler(validRemoveEventHandler);
+
+                RemoveOnFile(testfile, getAnyOpenXmlPart, getAnyChild4Event);
+                RemoveOnFile(testfile, getAnyOpenXmlPart, getAnyLeaf4Event);
+                RemoveOnFile(testfile, getAnyOpenXmlPart, getAnyComposite4Event);
+            }
+        }
+
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd)]
+        public void EventReplaceChildTest(string sourcePath, string testPath)
+        {
+            using (var source = TestAssets.OpenFile(sourcePath, true))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getBody4Event = e => getBody(e).SetEventHandler(validReplaceEventHandler);
+                GetTargetElement getAnyChild4Event = e => getAnyChild(e).SetEventHandler(validReplaceEventHandler);
+                GetTargetElement getAnyLeafChild4Event = e => getAnyLeafChild(e).SetEventHandler(validReplaceEventHandler);
+                GetTargetElement getAnyCompositeChild4Event = e => getAnyCompositeChild(e).SetEventHandler(validReplaceEventHandler);
+                GetTargetElement getAnyWithLeafAndCompositeElement4Event = e => getAnyWithLeafAndCompositeChild(e).SetEventHandler(validReplaceEventHandler);
+                GetTargetElement getBodyNoEvent = e => getBody(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getAnyChildNoEvent = e => getAnyChild(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getAnyLeafChildNoEvent = e => getAnyLeafChild(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getAnyCompositeChildNoEvent = e => getAnyCompositeChild(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getAnyWithLeafAndCompositeElementNoEvent = e => getAnyWithLeafAndCompositeChild(e).SetEventHandler(invalidEventHandler);
+
+                ReplaceChildOnFile(testfile, getMainPart, getBody, getAnyChild4Event, source, getMainPart, getAnyChildNoEvent, typeof(OpenXmlElement));
+            }
+        }
+
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd)]
+        public void EventGetAttributeTest(string testPath)
+        {
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getElementWithAttributesNoEvent = e => getElementWithAttributes(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
+
+                GetAttributeOnFile(testfile, getMainPart, getElementWithAttributesNoEvent);
+            }
+        }
+
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void EventGetAttributesTest(string testPath)
+        {
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithAttributesNoEvent = e => getElementWithAttributes(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithFixedAttributeOnlyNoEvent = e => getElementWithFixedAttributeOnly(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithExtendedAttributeOnlyNoEvent = e => getElementWithExtendedAttributeOnly(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithMixedAttributeNoEvent = e => getElementWithMixedAttribute(e).SetEventHandler(invalidEventHandler);
+
                 GetAttributesOnFile(testfile, getMainPart, getElementWithoutAttributesNoEvent);
                 GetAttributesOnFile(testfile, getMainPart, getElementWithAttributesNoEvent);
             }
         }
 
-        [Fact]
-        public void EventSetAttributeTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void EventSetAttributeTest(string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
-                .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithAttributesNoEvent = e => getElementWithAttributes(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithFixedAttributeOnlyNoEvent = e => getElementWithFixedAttributeOnly(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithExtendedAttributeOnlyNoEvent = e => getElementWithExtendedAttributeOnly(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithMixedAttributeNoEvent = e => getElementWithMixedAttribute(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            SetAttributeOnFile(testfile, getMainPart, getAnyCompositeNoEvent, source, getMainPart, getElementWithAttributesNoEvent, getExistingAttribute);
-        }
-
-        [Fact]
-        public void EventSetAttributesTest()
-        {
-            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
-                .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithFixedAttributeOnlyNoEvent = e => getElementWithFixedAttributeOnly(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithExtendedAttributeOnlyNoEvent = e => getElementWithExtendedAttributeOnly(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithMixedAttributeNoEvent = e => getElementWithMixedAttribute(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            SetAttributesOnFile(testfile, getMainPart, getAnyCompositeNoEvent, source, getMainPart, getElementWithoutAttributesNoEvent);
-            SetAttributesOnFile(testfile, getMainPart, getAnyCompositeNoEvent, source, getMainPart, getElementWithFixedAttributeOnlyNoEvent);
-            SetAttributesOnFile(testfile, getMainPart, getAnyCompositeNoEvent, source, getMainPart, getElementWithMixedAttributeNoEvent);
-        }
-
-        //public void RemoveAttribute(string localName, string namespaceUri)
-        [Fact]
-        public void EventRemoveAttributeTest()
-        {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithAttributesNoEvent = e => getElementWithAttributes(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithFixedAttributeOnlyNoEvent = e => getElementWithFixedAttributeOnly(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithExtendedAttributeOnlyNoEvent = e => getElementWithExtendedAttributeOnly(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithMixedAttributeNoEvent = e => getElementWithMixedAttribute(e).SetEventHandler(invalidEventHandler);
-
-            foreach (var testfile in testfiles)
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd, true))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
+                GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithAttributesNoEvent = e => getElementWithAttributes(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithFixedAttributeOnlyNoEvent = e => getElementWithFixedAttributeOnly(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithExtendedAttributeOnlyNoEvent = e => getElementWithExtendedAttributeOnly(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithMixedAttributeNoEvent = e => getElementWithMixedAttribute(e).SetEventHandler(invalidEventHandler);
+
+                SetAttributeOnFile(testfile, getMainPart, getAnyCompositeNoEvent, source, getMainPart, getElementWithAttributesNoEvent, getExistingAttribute);
+            }
+        }
+
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void EventSetAttributesTest(string testPath)
+        {
+            using (var source = TestAssets.OpenFile(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd, true))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithFixedAttributeOnlyNoEvent = e => getElementWithFixedAttributeOnly(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithExtendedAttributeOnlyNoEvent = e => getElementWithExtendedAttributeOnly(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithMixedAttributeNoEvent = e => getElementWithMixedAttribute(e).SetEventHandler(invalidEventHandler);
+
+                SetAttributesOnFile(testfile, getMainPart, getAnyCompositeNoEvent, source, getMainPart, getElementWithoutAttributesNoEvent);
+                SetAttributesOnFile(testfile, getMainPart, getAnyCompositeNoEvent, source, getMainPart, getElementWithFixedAttributeOnlyNoEvent);
+                SetAttributesOnFile(testfile, getMainPart, getAnyCompositeNoEvent, source, getMainPart, getElementWithMixedAttributeNoEvent);
+            }
+        }
+
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void EventRemoveAttributeTest(string testPath)
+        {
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithAttributesNoEvent = e => getElementWithAttributes(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithFixedAttributeOnlyNoEvent = e => getElementWithFixedAttributeOnly(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithExtendedAttributeOnlyNoEvent = e => getElementWithExtendedAttributeOnly(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithMixedAttributeNoEvent = e => getElementWithMixedAttribute(e).SetEventHandler(invalidEventHandler);
+
                 RemoveAttributeOnFile(testfile, getAnyOpenXmlPart, getElementWithAttributesNoEvent, getExistingAttribute);
             }
         }
 
-        [Fact]
-        public void EventClearAllAttributesTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void EventClearAllAttributesTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithFixedAttributeOnlyNoEvent = e => getElementWithFixedAttributeOnly(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithExtendedAttributeOnlyNoEvent = e => getElementWithExtendedAttributeOnly(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithMixedAttributeNoEvent = e => getElementWithMixedAttribute(e).SetEventHandler(invalidEventHandler);
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(testPath, true))
             {
+                GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithFixedAttributeOnlyNoEvent = e => getElementWithFixedAttributeOnly(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithExtendedAttributeOnlyNoEvent = e => getElementWithExtendedAttributeOnly(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithMixedAttributeNoEvent = e => getElementWithMixedAttribute(e).SetEventHandler(invalidEventHandler);
+
                 ClearAllAttributesOnFile(testfile, getMainPart, getElementWithoutAttributesNoEvent);
                 ClearAllAttributesOnFile(testfile, getMainPart, getElementWithFixedAttributeOnlyNoEvent);
                 ClearAllAttributesOnFile(testfile, getMainPart, getElementWithExtendedAttributeOnlyNoEvent);
@@ -1588,551 +1446,538 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        [Fact]
-        public void EventGetOuterXmlTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void EventGetOuterXmlTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithoutChildrenNoEvent = e => getElementWithoutChildren(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithChildrenNoEvent = e => getElementWithChildren(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithAttributesAndChildrenNoEvent = e => getElementWithAttributesAndChildren(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithoutChildrenNoEvent = e => getElementWithoutChildren(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithChildrenNoEvent = e => getElementWithChildren(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithAttributesAndChildrenNoEvent = e => getElementWithAttributesAndChildren(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            GetOuterXmlOnFile(testfile, getMainPart, getElementWithoutAttributesNoEvent);
-            GetOuterXmlOnFile(testfile, getMainPart, getElementWithoutChildrenNoEvent);
-            GetOuterXmlOnFile(testfile, getMainPart, getElementWithChildrenNoEvent);
-            GetOuterXmlOnFile(testfile, getMainPart, getElementWithAttributesAndChildrenNoEvent);
+                GetOuterXmlOnFile(testfile, getMainPart, getElementWithoutAttributesNoEvent);
+                GetOuterXmlOnFile(testfile, getMainPart, getElementWithoutChildrenNoEvent);
+                GetOuterXmlOnFile(testfile, getMainPart, getElementWithChildrenNoEvent);
+                GetOuterXmlOnFile(testfile, getMainPart, getElementWithAttributesAndChildrenNoEvent);
+            }
         }
 
-        [Fact]
-        public void EventCloneTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void EventCloneTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithoutChildrenNoEvent = e => getElementWithoutChildren(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithChildrenNoEvent = e => getElementWithChildren(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithAttributesAndChildrenNoEvent = e => getElementWithAttributesAndChildren(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithoutChildrenNoEvent = e => getElementWithoutChildren(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithChildrenNoEvent = e => getElementWithChildren(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithAttributesAndChildrenNoEvent = e => getElementWithAttributesAndChildren(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            CloneOnFile(testfile, getMainPart, getElementWithoutChildrenNoEvent);
-            CloneOnFile(testfile, getMainPart, getElementWithoutAttributesNoEvent);
-            CloneOnFile(testfile, getMainPart, getElementWithChildrenNoEvent);
-            CloneOnFile(testfile, getMainPart, getElementWithAttributesAndChildrenNoEvent);
+                CloneOnFile(testfile, getMainPart, getElementWithoutChildrenNoEvent);
+                CloneOnFile(testfile, getMainPart, getElementWithoutAttributesNoEvent);
+                CloneOnFile(testfile, getMainPart, getElementWithChildrenNoEvent);
+                CloneOnFile(testfile, getMainPart, getElementWithAttributesAndChildrenNoEvent);
+            }
         }
 
-        [Fact]
-        public void EventCloneNodeFalseTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void EventCloneNodeFalseTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithoutChildrenNoEvent = e => getElementWithoutChildren(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithAttributesOnlyNoEvent = e => getElementWithAttributesOnly(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithAttributesAndChildrenNoEvent = e => getElementWithAttributesAndChildren(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithoutChildrenNoEvent = e => getElementWithoutChildren(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithAttributesOnlyNoEvent = e => getElementWithAttributesOnly(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithAttributesAndChildrenNoEvent = e => getElementWithAttributesAndChildren(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            CloneNodeFalseOnFile(testfile, getMainPart, getElementWithoutAttributesNoEvent);
-            CloneNodeFalseOnFile(testfile, getMainPart, getElementWithAttributesOnlyNoEvent);
-            CloneNodeFalseOnFile(testfile, getMainPart, getElementWithoutChildrenNoEvent);
-            CloneNodeFalseOnFile(testfile, getMainPart, getElementWithAttributesAndChildrenNoEvent);
+                CloneNodeFalseOnFile(testfile, getMainPart, getElementWithoutAttributesNoEvent);
+                CloneNodeFalseOnFile(testfile, getMainPart, getElementWithAttributesOnlyNoEvent);
+                CloneNodeFalseOnFile(testfile, getMainPart, getElementWithoutChildrenNoEvent);
+                CloneNodeFalseOnFile(testfile, getMainPart, getElementWithAttributesAndChildrenNoEvent);
+            }
         }
 
-        [Fact]
-        public void EventGetInnerXmlTest()
+        [Theory]
+        [MemberData(nameof(GetWordprocessingDocuments))]
+        public void EventGetInnerXmlTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getAnyLeafNoEvent = e => getAnyLeaf(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithoutChildrenNoEvent = e => getElementWithoutChildren(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithAttributesOnlyNoEvent = e => getElementWithAttributesOnly(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithAttributesAndChildrenNoEvent = e => getElementWithAttributesAndChildren(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getAnyLeafNoEvent = e => getAnyLeaf(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithoutChildrenNoEvent = e => getElementWithoutChildren(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithAttributesOnlyNoEvent = e => getElementWithAttributesOnly(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithAttributesAndChildrenNoEvent = e => getElementWithAttributesAndChildren(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            GetInnerXmlOnFile(testfile, getMainPart, getAnyLeafNoEvent);
-            GetInnerXmlOnFile(testfile, getMainPart, getAnyCompositeNoEvent);
+                GetInnerXmlOnFile(testfile, getMainPart, getAnyLeafNoEvent);
+                GetInnerXmlOnFile(testfile, getMainPart, getAnyCompositeNoEvent);
+            }
         }
 
-        [Fact]
-        public void EventSetInnerXmlTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd)]
+        public void EventSetInnerXmlTest(string sourcePath, string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
-                .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
+            using (var source = TestAssets.OpenFile(sourcePath, true))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getElementWithoutChildren4Event = e => getElementWithoutChildren(e).SetEventHandler(validReplaceEventHandler);
+                GetTargetElement getElementWithChildren4Event = e => getElementWithChildren(e).SetEventHandler(validReplaceEventHandler);
+                GetTargetElement getElementWithAttributesAndChildren4Event = e => getElementWithAttributesAndChildren(e).SetEventHandler(validReplaceEventHandler);
 
-            GetTargetElement getElementWithoutChildren4Event = e => getElementWithoutChildren(e).SetEventHandler(validReplaceEventHandler);
-            GetTargetElement getElementWithChildren4Event = e => getElementWithChildren(e).SetEventHandler(validReplaceEventHandler);
-            GetTargetElement getElementWithAttributesAndChildren4Event = e => getElementWithAttributesAndChildren(e).SetEventHandler(validReplaceEventHandler);
+                GetTargetElement getElementWithAttributesOnlyNoEvent = e => getElementWithAttributesOnly(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithChildrenNoEvent = e => getElementWithChildren(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithAttributesAndChildrenNoEvent = e => getElementWithAttributesAndChildren(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getElementWithAttributesOnlyNoEvent = e => getElementWithAttributesOnly(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithChildrenNoEvent = e => getElementWithChildren(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithAttributesAndChildrenNoEvent = e => getElementWithAttributesAndChildren(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            SetInnerXmlOnFile(testfile, getMainPart, getElementWithAttributesAndChildren4Event, source, getMainPart, getElementWithAttributesAndChildrenNoEvent);
+                SetInnerXmlOnFile(testfile, getMainPart, getElementWithAttributesAndChildren4Event, source, getMainPart, getElementWithAttributesAndChildrenNoEvent);
+            }
         }
 
-        [Fact]
-        public void EventWriteToTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd)]
+        public void EventWriteToTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getBodyNoEvent = e => getBody(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithoutChildrenNoEvent = e => getElementWithoutChildren(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithChildrenNoEvent = e => getElementWithChildren(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithAttributesAndChildrenNoEvent = e => getElementWithAttributesAndChildren(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getBodyNoEvent = e => getBody(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithoutChildrenNoEvent = e => getElementWithoutChildren(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithChildrenNoEvent = e => getElementWithChildren(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithAttributesAndChildrenNoEvent = e => getElementWithAttributesAndChildren(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            WriteToOnFile(testfile, getMainPart, getElementWithoutChildrenNoEvent);
-            WriteToOnFile(testfile, getMainPart, getElementWithChildrenNoEvent);
-            WriteToOnFile(testfile, getMainPart, getElementWithAttributesAndChildrenNoEvent);
+                WriteToOnFile(testfile, getMainPart, getElementWithoutChildrenNoEvent);
+                WriteToOnFile(testfile, getMainPart, getElementWithChildrenNoEvent);
+                WriteToOnFile(testfile, getMainPart, getElementWithAttributesAndChildrenNoEvent);
+            }
         }
 
         #endregion Events
 
         #region PPT Events
 
-        [Fact]
-        public void EventAppendChildPPTTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charsAnimationFlyInallatoncepptx, TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        public void EventAppendChildPPTTest(string sourcePath, string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "presentation")
-                .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
+            using (var source = TestAssets.OpenFile(sourcePath, true))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validInsertEventHandler);
+                GetTargetElement getSlideTextBodyNoEvent = e => getSlideTextBody(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validInsertEventHandler);
-            GetTargetElement getSlideTextBodyNoEvent = e => getSlideTextBody(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            PendTestOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextBodyNoEvent, PendType.Append);
+                PendTestOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextBodyNoEvent, PendType.Append);
+            }
         }
 
-        [Fact]
-        public void EventPreppendChildPPTTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charsAnimationFlyInallatoncepptx, TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        public void EventPreppendChildPPTTest(string sourcePath, string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "presentation")
-                .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
+            using (var source = TestAssets.OpenFile(sourcePath, true))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validInsertEventHandler);
+                GetTargetElement getSlideTextBodyNoEvent = e => getSlideTextBody(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validInsertEventHandler);
-            GetTargetElement getSlideTextBodyNoEvent = e => getSlideTextBody(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            PendTestOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextBodyNoEvent, PendType.Prepend);
+                PendTestOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextBodyNoEvent, PendType.Prepend);
+            }
         }
 
-        [Fact]
-        public void EventAppendArrayPPTTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charsAnimationFlyInallatoncepptx, TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        public void EventAppendArrayPPTTest(string sourcePath, string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "presentation")
-                .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
+            using (var source = TestAssets.OpenFile(sourcePath, true))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validInsertEventHandler);
+                GetTargetElement getSlideTextBodyNoEvent = e => getSlideTextBody(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getSlideTextParagraphNoEvent = e => getSlideTextParagraph(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validInsertEventHandler);
-            GetTargetElement getSlideTextBodyNoEvent = e => getSlideTextBody(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getSlideTextParagraphNoEvent = e => getSlideTextParagraph(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            AppendCollectionOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextParagraphNoEvent, AppendCollectionType.Array);
+                AppendCollectionOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextParagraphNoEvent, AppendCollectionType.Array);
+            }
         }
 
-        [Fact]
-        public void EventAppendIEnumerablePPTTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charsAnimationFlyInallatoncepptx, TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        public void EventAppendIEnumerablePPTTest(string sourcePath, string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "presentation")
-                .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
+            using (var source = TestAssets.OpenFile(sourcePath, true))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validInsertEventHandler);
+                GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validInsertEventHandler);
-            GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            AppendCollectionOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getAnyCompositeNoEvent, AppendCollectionType.IEnumerable);
+                AppendCollectionOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getAnyCompositeNoEvent, AppendCollectionType.IEnumerable);
+            }
         }
 
-        [Fact]
-        public void EventInsertBeforePPTTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charsAnimationFlyInallatoncepptx, TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        public void EventInsertBeforePPTTest(string sourcePath, string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "presentation")
-                .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
+            using (var source = TestAssets.OpenFile(sourcePath, true))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validInsertEventHandler);
+                GetTargetElement getSlideTextParagraphNoEvent = e => getSlideTextParagraph(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validInsertEventHandler);
-            GetTargetElement getSlideTextParagraphNoEvent = e => getSlideTextParagraph(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            InsertTestOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextParagraphNoEvent, getFirstChild, InsertType.Before);
-            InsertTestOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextParagraphNoEvent, getLastChild, InsertType.Before);
+                InsertTestOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextParagraphNoEvent, getFirstChild, InsertType.Before);
+                InsertTestOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextParagraphNoEvent, getLastChild, InsertType.Before);
+            }
         }
 
-        [Fact]
-        public void EventInsertAfterPPTTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charsAnimationFlyInallatoncepptx, TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        public void EventInsertAfterPPTTest(string sourcePath, string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "presentation")
-                .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
+            using (var source = TestAssets.OpenFile(sourcePath, true))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validInsertEventHandler);
+                GetTargetElement getSlideTextParagraphNoEvent = e => getSlideTextParagraph(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validInsertEventHandler);
-            GetTargetElement getSlideTextParagraphNoEvent = e => getSlideTextParagraph(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            InsertTestOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextParagraphNoEvent, getLastChild, InsertType.After);
-            InsertTestOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextParagraphNoEvent, getFirstChild, InsertType.After);
+                InsertTestOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextParagraphNoEvent, getLastChild, InsertType.After);
+                InsertTestOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextParagraphNoEvent, getFirstChild, InsertType.After);
+            }
         }
 
-        [Fact]
-        public void EventInsertAtPPTTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charsAnimationFlyInallatoncepptx, TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        public void EventInsertAtPPTTest(string sourcePath, string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "presentation")
-                .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
+            using (var source = TestAssets.OpenFile(sourcePath, true))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validInsertEventHandler);
+                GetTargetElement getSlideTextParagraphNoEvent = e => getSlideTextParagraph(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validInsertEventHandler);
-            GetTargetElement getSlideTextParagraphNoEvent = e => getSlideTextParagraph(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            InsertAtOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextParagraphNoEvent, InsertAtPosition.AnyValid);
-            InsertAtOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextParagraphNoEvent, InsertAtPosition.AsFirst);
-            InsertAtOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextParagraphNoEvent, InsertAtPosition.NextToFirst);
-            InsertAtOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextParagraphNoEvent, InsertAtPosition.NextToLast);
-            InsertAtOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextParagraphNoEvent, InsertAtPosition.AsLast);
+                InsertAtOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextParagraphNoEvent, InsertAtPosition.AnyValid);
+                InsertAtOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextParagraphNoEvent, InsertAtPosition.AsFirst);
+                InsertAtOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextParagraphNoEvent, InsertAtPosition.NextToFirst);
+                InsertAtOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextParagraphNoEvent, InsertAtPosition.NextToLast);
+                InsertAtOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextParagraphNoEvent, InsertAtPosition.AsLast);
+            }
         }
 
-        [Fact]
-        public void EventInertRelativePPTTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charsAnimationFlyInallatoncepptx, TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        public void EventInertRelativePPTTest(string sourcePath, string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "presentation")
-                .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
+            using (var source = TestAssets.OpenFile(sourcePath, true))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validInsertEventHandler);
+                GetTargetElement getSlideTextParagraphNoEvent = e => getSlideTextParagraph(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validInsertEventHandler);
-            GetTargetElement getSlideTextParagraphNoEvent = e => getSlideTextParagraph(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            InsertRelativeOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextParagraphNoEvent, InsertRel.AfterSelf);
-            InsertRelativeOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextParagraphNoEvent, InsertRel.BeforeSelf);
+                InsertRelativeOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextParagraphNoEvent, InsertRel.AfterSelf);
+                InsertRelativeOnFile(testfile, getSlidePart, getSlideTextBody4Event, source, getSlidePart, getSlideTextParagraphNoEvent, InsertRel.BeforeSelf);
+            }
         }
 
-        [Fact]
-        public void EventRemoveAllChildrenPPTTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        public void EventRemoveAllChildrenPPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validRemoveEventHandler);
+                GetTargetElement getElementWithoutChildren4Event = e => getElementWithoutChildren(e).SetEventHandler(validRemoveEventHandler);
+                GetTargetElement getElementWithChildren4Event = e => getElementWithChildren(e).SetEventHandler(validRemoveEventHandler);
 
-            GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validRemoveEventHandler);
-            GetTargetElement getElementWithoutChildren4Event = e => getElementWithoutChildren(e).SetEventHandler(validRemoveEventHandler);
-            GetTargetElement getElementWithChildren4Event = e => getElementWithChildren(e).SetEventHandler(validRemoveEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            RemoveAllChildrenOnFile(testfile, getSlidePart, getElementWithChildren4Event);
-            RemoveAllChildrenOnFile(testfile, getSlidePart, getElementWithoutChildren4Event);
+                RemoveAllChildrenOnFile(testfile, getSlidePart, getElementWithChildren4Event);
+                RemoveAllChildrenOnFile(testfile, getSlidePart, getElementWithoutChildren4Event);
+            }
         }
 
-        [Fact]
-        public void EventRemoveAllTypedChildrenPPTTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        public void EventRemoveAllTypedChildrenPPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getAnyWithLeafAndCompositeElement4Event = e => getAnyWithLeafAndCompositeChild(e).SetEventHandler(validRemoveEventHandler);
 
-            GetTargetElement getAnyWithLeafAndCompositeElement4Event = e => getAnyWithLeafAndCompositeChild(e).SetEventHandler(validRemoveEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            RemoveAllTypedChildrenOnFile(testfile, getSlidePart, getAnyWithLeafAndCompositeElement4Event, typeof(OpenXmlCompositeElement));
-            RemoveAllTypedChildrenOnFile(testfile, getSlidePart, getAnyWithLeafAndCompositeElement4Event, typeof(OpenXmlLeafElement));
+                RemoveAllTypedChildrenOnFile(testfile, getSlidePart, getAnyWithLeafAndCompositeElement4Event, typeof(OpenXmlCompositeElement));
+                RemoveAllTypedChildrenOnFile(testfile, getSlidePart, getAnyWithLeafAndCompositeElement4Event, typeof(OpenXmlLeafElement));
+            }
         }
 
-        [Fact]
-        public void EventRemoveChildPPTTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        public void EventRemoveChildPPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validRemoveEventHandler);
+                GetTargetElement getAnyChild4Event = e => getAnyChild(e).SetEventHandler(validRemoveEventHandler);
+                GetTargetElement getAnyLeaf4Event = e => getAnyLeaf(e).SetEventHandler(validRemoveEventHandler);
+                GetTargetElement getAnyComposite4Event = e => getAnyComposite(e).SetEventHandler(validRemoveEventHandler);
 
-            GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validRemoveEventHandler);
-            GetTargetElement getAnyChild4Event = e => getAnyChild(e).SetEventHandler(validRemoveEventHandler);
-            GetTargetElement getAnyLeaf4Event = e => getAnyLeaf(e).SetEventHandler(validRemoveEventHandler);
-            GetTargetElement getAnyComposite4Event = e => getAnyComposite(e).SetEventHandler(validRemoveEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            RemoveChildOnFile(testfile, getSlidePart, getSlideTextBody4Event, getFirstChild);
-            RemoveChildOnFile(testfile, getSlidePart, getSlideTextBody4Event, getAnyChild);
-            RemoveChildOnFile(testfile, getSlidePart, getSlideTextBody4Event, getLastChild);
+                RemoveChildOnFile(testfile, getSlidePart, getSlideTextBody4Event, getFirstChild);
+                RemoveChildOnFile(testfile, getSlidePart, getSlideTextBody4Event, getAnyChild);
+                RemoveChildOnFile(testfile, getSlidePart, getSlideTextBody4Event, getLastChild);
+            }
         }
 
-        [Fact]
-        public void EventRemovePPTTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        public void EventRemovePPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validRemoveEventHandler);
+                GetTargetElement getAnyChild4Event = e => getAnyChild(e).SetEventHandler(validRemoveEventHandler);
+                GetTargetElement getAnyLeaf4Event = e => getAnyLeaf(e).SetEventHandler(validRemoveEventHandler);
+                GetTargetElement getAnyComposite4Event = e => getAnyComposite(e).SetEventHandler(validRemoveEventHandler);
 
-            GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validRemoveEventHandler);
-            GetTargetElement getAnyChild4Event = e => getAnyChild(e).SetEventHandler(validRemoveEventHandler);
-            GetTargetElement getAnyLeaf4Event = e => getAnyLeaf(e).SetEventHandler(validRemoveEventHandler);
-            GetTargetElement getAnyComposite4Event = e => getAnyComposite(e).SetEventHandler(validRemoveEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            RemoveOnFile(testfile, getSlidePart, getSlideTextBody4Event);
-            RemoveOnFile(testfile, getSlidePart, getAnyChild4Event);
-            RemoveOnFile(testfile, getSlidePart, getAnyLeaf4Event);
-            RemoveOnFile(testfile, getSlidePart, getAnyComposite4Event);
+                RemoveOnFile(testfile, getSlidePart, getSlideTextBody4Event);
+                RemoveOnFile(testfile, getSlidePart, getAnyChild4Event);
+                RemoveOnFile(testfile, getSlidePart, getAnyLeaf4Event);
+                RemoveOnFile(testfile, getSlidePart, getAnyComposite4Event);
+            }
         }
 
-        [Fact]
-        public void EventReplaceChildPPTTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charsAnimationFlyInallatoncepptx, TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        public void EventReplaceChildPPTTest(string sourcePath, string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "presentation")
-                .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
+            using (var source = TestAssets.OpenFile(sourcePath, true))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validReplaceEventHandler);
+                GetTargetElement getAnyChild4Event = e => getAnyChild(e).SetEventHandler(validReplaceEventHandler);
+                GetTargetElement getAnyLeafChild4Event = e => getAnyLeafChild(e).SetEventHandler(validReplaceEventHandler);
+                GetTargetElement getAnyCompositeChild4Event = e => getAnyCompositeChild(e).SetEventHandler(validReplaceEventHandler);
+                GetTargetElement getAnyWithLeafAndCompositeElement4Event = e => getAnyWithLeafAndCompositeChild(e).SetEventHandler(validReplaceEventHandler);
+                GetTargetElement getSlideTextBodyNoEvent = e => getSlideTextBody(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getAnyChildNoEvent = e => getAnyChild(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getAnyLeafChildNoEvent = e => getAnyLeafChild(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getAnyCompositeChildNoEvent = e => getAnyCompositeChild(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getAnyWithLeafAndCompositeElementNoEvent = e => getAnyWithLeafAndCompositeChild(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getSlideTextBody4Event = e => getSlideTextBody(e).SetEventHandler(validReplaceEventHandler);
-            GetTargetElement getAnyChild4Event = e => getAnyChild(e).SetEventHandler(validReplaceEventHandler);
-            GetTargetElement getAnyLeafChild4Event = e => getAnyLeafChild(e).SetEventHandler(validReplaceEventHandler);
-            GetTargetElement getAnyCompositeChild4Event = e => getAnyCompositeChild(e).SetEventHandler(validReplaceEventHandler);
-            GetTargetElement getAnyWithLeafAndCompositeElement4Event = e => getAnyWithLeafAndCompositeChild(e).SetEventHandler(validReplaceEventHandler);
-            GetTargetElement getSlideTextBodyNoEvent = e => getSlideTextBody(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getAnyChildNoEvent = e => getAnyChild(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getAnyLeafChildNoEvent = e => getAnyLeafChild(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getAnyCompositeChildNoEvent = e => getAnyCompositeChild(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getAnyWithLeafAndCompositeElementNoEvent = e => getAnyWithLeafAndCompositeChild(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            ReplaceChildOnFile(testfile, getSlidePart, getSlideTextBody, getAnyChild4Event, source, getSlidePart, getAnyChildNoEvent, typeof(OpenXmlElement));
-            ReplaceChildOnFile(testfile, getSlidePart, getAnyWithLeafAndCompositeChild, getAnyCompositeChild4Event, source, getSlidePart, getAnyChildNoEvent, typeof(OpenXmlCompositeElement));
-            ReplaceChildOnFile(testfile, getSlidePart, getAnyWithLeafAndCompositeChild, getAnyLeafChild4Event, source, getSlidePart, getAnyChildNoEvent, typeof(OpenXmlLeafElement));
+                ReplaceChildOnFile(testfile, getSlidePart, getSlideTextBody, getAnyChild4Event, source, getSlidePart, getAnyChildNoEvent, typeof(OpenXmlElement));
+                ReplaceChildOnFile(testfile, getSlidePart, getAnyWithLeafAndCompositeChild, getAnyCompositeChild4Event, source, getSlidePart, getAnyChildNoEvent, typeof(OpenXmlCompositeElement));
+                ReplaceChildOnFile(testfile, getSlidePart, getAnyWithLeafAndCompositeChild, getAnyLeafChild4Event, source, getSlidePart, getAnyChildNoEvent, typeof(OpenXmlLeafElement));
+            }
         }
 
-        [Fact]
-        public void EventGetAttributePPTTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        public void EventGetAttributePPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-                .Where(f => f.IsPresentationFile());
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getElementWithAttributesNoEvent = e => getElementWithAttributes(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getElementWithAttributesNoEvent = e => getElementWithAttributes(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            GetAttributeOnFile(testfile, getSlidePart, getElementWithAttributesNoEvent);
+                GetAttributeOnFile(testfile, getSlidePart, getElementWithAttributesNoEvent);
+            }
         }
 
-        [Fact]
-        public void EventGetAttributesPPTTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        public void EventGetAttributesPPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-                .Where(f => f.IsPresentationFile());
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithFixedAttributeOnlyNoEvent = e => getElementWithFixedAttributeOnly(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithExtendedAttributeOnlyNoEvent = e => getElementWithExtendedAttributeOnly(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithMixedAttributeNoEvent = e => getElementWithMixedAttribute(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithFixedAttributeOnlyNoEvent = e => getElementWithFixedAttributeOnly(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithExtendedAttributeOnlyNoEvent = e => getElementWithExtendedAttributeOnly(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithMixedAttributeNoEvent = e => getElementWithMixedAttribute(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            GetAttributesOnFile(testfile, getSlidePart, getElementWithFixedAttributeOnly);
+                GetAttributesOnFile(testfile, getSlidePart, getElementWithFixedAttributeOnly);
+            }
         }
 
-        [Fact]
-        public void EventSetAttributePPTTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charsAnimationFlyInallatoncepptx, TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        public void EventSetAttributePPTTest(string sourcePath, string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "presentation")
-                .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
+            using (var source = TestAssets.OpenFile(sourcePath, true))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithAttributesNoEvent = e => getElementWithAttributes(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithFixedAttributeOnlyNoEvent = e => getElementWithFixedAttributeOnly(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithExtendedAttributeOnlyNoEvent = e => getElementWithExtendedAttributeOnly(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithMixedAttributeNoEvent = e => getElementWithMixedAttribute(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getSlideTextParagraphNoEvent = e => getSlideTextParagraph(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithAttributesNoEvent = e => getElementWithAttributes(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithFixedAttributeOnlyNoEvent = e => getElementWithFixedAttributeOnly(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithExtendedAttributeOnlyNoEvent = e => getElementWithExtendedAttributeOnly(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithMixedAttributeNoEvent = e => getElementWithMixedAttribute(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getSlideTextParagraphNoEvent = e => getSlideTextParagraph(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            SetAttributeOnFile(testfile, getSlidePart, getAnyCompositeNoEvent, source, getSlidePart, getElementWithAttributesNoEvent, getExistingAttribute);
-            SetAttributeOnFile(testfile, getSlidePart, getSlideTextParagraphNoEvent, source, getSlidePart, getElementWithFixedAttributeOnlyNoEvent, getExistingAttribute);
+                SetAttributeOnFile(testfile, getSlidePart, getAnyCompositeNoEvent, source, getSlidePart, getElementWithAttributesNoEvent, getExistingAttribute);
+                SetAttributeOnFile(testfile, getSlidePart, getSlideTextParagraphNoEvent, source, getSlidePart, getElementWithFixedAttributeOnlyNoEvent, getExistingAttribute);
+            }
         }
 
-        [Fact]
-        public void EventSetAttributesPPTTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charsAnimationFlyInallatoncepptx, TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        public void EventSetAttributesPPTTest(string sourcePath, string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "presentation")
-                .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
+            using (var source = TestAssets.OpenFile(sourcePath, true))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithFixedAttributeOnlyNoEvent = e => getElementWithFixedAttributeOnly(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithExtendedAttributeOnlyNoEvent = e => getElementWithExtendedAttributeOnly(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithMixedAttributeNoEvent = e => getElementWithMixedAttribute(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithFixedAttributeOnlyNoEvent = e => getElementWithFixedAttributeOnly(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithExtendedAttributeOnlyNoEvent = e => getElementWithExtendedAttributeOnly(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithMixedAttributeNoEvent = e => getElementWithMixedAttribute(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            SetAttributesOnFile(testfile, getSlidePart, getAnyCompositeNoEvent, source, getMainPart, getElementWithoutAttributesNoEvent);
-            SetAttributesOnFile(testfile, getSlidePart, getAnyCompositeNoEvent, source, getMainPart, getElementWithFixedAttributeOnlyNoEvent);
+                SetAttributesOnFile(testfile, getSlidePart, getAnyCompositeNoEvent, source, getMainPart, getElementWithoutAttributesNoEvent);
+                SetAttributesOnFile(testfile, getSlidePart, getAnyCompositeNoEvent, source, getMainPart, getElementWithFixedAttributeOnlyNoEvent);
+            }
         }
 
-        [Fact]
-        public void EventRemoveAttributePPTTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        public void EventRemoveAttributePPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-                .Where(f => f.IsPresentationFile());
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithFixedAttributeOnlyNoEvent = e => getElementWithFixedAttributeOnly(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithExtendedAttributeOnlyNoEvent = e => getElementWithExtendedAttributeOnly(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithMixedAttributeNoEvent = e => getElementWithMixedAttribute(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithFixedAttributeOnlyNoEvent = e => getElementWithFixedAttributeOnly(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithExtendedAttributeOnlyNoEvent = e => getElementWithExtendedAttributeOnly(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithMixedAttributeNoEvent = e => getElementWithMixedAttribute(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            RemoveAttributeOnFile(testfile, getSlidePart, getElementWithFixedAttributeOnly, getExistingFixedAttribute);
+                RemoveAttributeOnFile(testfile, getSlidePart, getElementWithFixedAttributeOnly, getExistingFixedAttribute);
+            }
         }
 
-        [Fact]
-        public void EventClearAllAttributesPPTTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        public void EventClearAllAttributesPPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-                .Where(f => f.IsPresentationFile());
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithFixedAttributeOnlyNoEvent = e => getElementWithFixedAttributeOnly(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithExtendedAttributeOnlyNoEvent = e => getElementWithExtendedAttributeOnly(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithMixedAttributeNoEvent = e => getElementWithMixedAttribute(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithFixedAttributeOnlyNoEvent = e => getElementWithFixedAttributeOnly(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithExtendedAttributeOnlyNoEvent = e => getElementWithExtendedAttributeOnly(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithMixedAttributeNoEvent = e => getElementWithMixedAttribute(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            ClearAllAttributesOnFile(testfile, getSlidePart, getElementWithoutAttributesNoEvent);
-            ClearAllAttributesOnFile(testfile, getSlidePart, getElementWithFixedAttributeOnlyNoEvent);
+                ClearAllAttributesOnFile(testfile, getSlidePart, getElementWithoutAttributesNoEvent);
+                ClearAllAttributesOnFile(testfile, getSlidePart, getElementWithFixedAttributeOnlyNoEvent);
+            }
         }
 
-        [Fact]
-        public void EventGetOuterXmlPPTTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        public void EventGetOuterXmlPPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-                .Where(f => f.IsPresentationFile());
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithoutChildrenNoEvent = e => getElementWithoutChildren(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithChildrenNoEvent = e => getElementWithChildren(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithAttributesAndChildrenNoEvent = e => getElementWithAttributesAndChildren(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithoutChildrenNoEvent = e => getElementWithoutChildren(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithChildrenNoEvent = e => getElementWithChildren(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithAttributesAndChildrenNoEvent = e => getElementWithAttributesAndChildren(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            GetOuterXmlOnFile(testfile, getSlidePart, getElementWithoutAttributesNoEvent);
-            GetOuterXmlOnFile(testfile, getSlidePart, getElementWithoutChildrenNoEvent);
-            GetOuterXmlOnFile(testfile, getSlidePart, getElementWithChildrenNoEvent);
-            GetOuterXmlOnFile(testfile, getSlidePart, getElementWithAttributesAndChildrenNoEvent);
+                GetOuterXmlOnFile(testfile, getSlidePart, getElementWithoutAttributesNoEvent);
+                GetOuterXmlOnFile(testfile, getSlidePart, getElementWithoutChildrenNoEvent);
+                GetOuterXmlOnFile(testfile, getSlidePart, getElementWithChildrenNoEvent);
+                GetOuterXmlOnFile(testfile, getSlidePart, getElementWithAttributesAndChildrenNoEvent);
+            }
         }
 
-        [Fact]
-        public void EventClonePPTTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        public void EventClonePPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-                .Where(f => f.IsPresentationFile());
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithoutChildrenNoEvent = e => getElementWithoutChildren(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithChildrenNoEvent = e => getElementWithChildren(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithAttributesAndChildrenNoEvent = e => getElementWithAttributesAndChildren(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithoutChildrenNoEvent = e => getElementWithoutChildren(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithChildrenNoEvent = e => getElementWithChildren(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithAttributesAndChildrenNoEvent = e => getElementWithAttributesAndChildren(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            CloneOnFile(testfile, getSlidePart, getElementWithoutChildrenNoEvent);
-            CloneOnFile(testfile, getSlidePart, getElementWithoutAttributesNoEvent);
-            CloneOnFile(testfile, getSlidePart, getElementWithChildrenNoEvent);
-            CloneOnFile(testfile, getSlidePart, getElementWithAttributesAndChildrenNoEvent);
+                CloneOnFile(testfile, getSlidePart, getElementWithoutChildrenNoEvent);
+                CloneOnFile(testfile, getSlidePart, getElementWithoutAttributesNoEvent);
+                CloneOnFile(testfile, getSlidePart, getElementWithChildrenNoEvent);
+                CloneOnFile(testfile, getSlidePart, getElementWithAttributesAndChildrenNoEvent);
+            }
         }
 
-        [Fact]
-        public void EventCloneNodeFalsePPTTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        public void EventCloneNodeFalsePPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-                .Where(f => f.IsPresentationFile());
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithoutChildrenNoEvent = e => getElementWithoutChildren(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithAttributesOnlyNoEvent = e => getElementWithAttributesOnly(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithAttributesAndChildrenNoEvent = e => getElementWithAttributesAndChildren(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithoutAttributesNoEvent = e => getElementWithoutAttributes(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithoutChildrenNoEvent = e => getElementWithoutChildren(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithAttributesOnlyNoEvent = e => getElementWithAttributesOnly(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithAttributesAndChildrenNoEvent = e => getElementWithAttributesAndChildren(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            CloneNodeFalseOnFile(testfile, getSlidePart, getElementWithoutAttributesNoEvent);
-            CloneNodeFalseOnFile(testfile, getSlidePart, getElementWithAttributesOnlyNoEvent);
-            CloneNodeFalseOnFile(testfile, getSlidePart, getElementWithoutChildrenNoEvent);
-            CloneNodeFalseOnFile(testfile, getSlidePart, getElementWithAttributesAndChildrenNoEvent);
+                CloneNodeFalseOnFile(testfile, getSlidePart, getElementWithoutAttributesNoEvent);
+                CloneNodeFalseOnFile(testfile, getSlidePart, getElementWithAttributesOnlyNoEvent);
+                CloneNodeFalseOnFile(testfile, getSlidePart, getElementWithoutChildrenNoEvent);
+                CloneNodeFalseOnFile(testfile, getSlidePart, getElementWithAttributesAndChildrenNoEvent);
+            }
         }
 
-        [Fact]
-        public void EventGetInnerXmlPPTTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        public void EventGetInnerXmlPPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-                .Where(f => f.IsPresentationFile());
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getAnyLeafNoEvent = e => getAnyLeaf(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithoutChildrenNoEvent = e => getElementWithoutChildren(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithAttributesOnlyNoEvent = e => getElementWithAttributesOnly(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithAttributesAndChildrenNoEvent = e => getElementWithAttributesAndChildren(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getAnyLeafNoEvent = e => getAnyLeaf(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getAnyCompositeNoEvent = e => getAnyComposite(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithoutChildrenNoEvent = e => getElementWithoutChildren(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithAttributesOnlyNoEvent = e => getElementWithAttributesOnly(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithAttributesAndChildrenNoEvent = e => getElementWithAttributesAndChildren(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            GetInnerXmlOnFile(testfile, getSlidePart, getAnyLeaf);
-            GetInnerXmlOnFile(testfile, getSlidePart, getAnyComposite);
+                GetInnerXmlOnFile(testfile, getSlidePart, getAnyLeaf);
+                GetInnerXmlOnFile(testfile, getSlidePart, getAnyComposite);
+            }
         }
 
-        [Fact]
-        public void EventSetInnerXmlPPTTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charsAnimationFlyInallatoncepptx, TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        public void EventSetInnerXmlPPTTest(string sourcePath, string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "presentation")
-                .Where(f => f.IsPresentationFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-                .Where(f => f.IsPresentationFile());
+            using (var source = TestAssets.OpenFile(sourcePath, true))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getElementWithoutChildren4Event = e => getElementWithoutChildren(e).SetEventHandler(validReplaceEventHandler);
+                GetTargetElement getElementWithChildren4Event = e => getElementWithChildren(e).SetEventHandler(validReplaceEventHandler);
+                GetTargetElement getElementWithAttributesAndChildren4Event = e => getElementWithAttributesAndChildren(e).SetEventHandler(validReplaceEventHandler);
 
-            GetTargetElement getElementWithoutChildren4Event = e => getElementWithoutChildren(e).SetEventHandler(validReplaceEventHandler);
-            GetTargetElement getElementWithChildren4Event = e => getElementWithChildren(e).SetEventHandler(validReplaceEventHandler);
-            GetTargetElement getElementWithAttributesAndChildren4Event = e => getElementWithAttributesAndChildren(e).SetEventHandler(validReplaceEventHandler);
+                GetTargetElement getElementWithAttributesOnlyNoEvent = e => getElementWithAttributesOnly(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithChildrenNoEvent = e => getElementWithChildren(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithAttributesAndChildrenNoEvent = e => getElementWithAttributesAndChildren(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getElementWithAttributesOnlyNoEvent = e => getElementWithAttributesOnly(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithChildrenNoEvent = e => getElementWithChildren(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithAttributesAndChildrenNoEvent = e => getElementWithAttributesAndChildren(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            SetInnerXmlOnFile(testfile, getSlidePart, getElementWithoutChildren4Event, source, getSlidePart, getElementWithAttributesOnlyNoEvent);
-            SetInnerXmlOnFile(testfile, getSlidePart, getElementWithoutChildren4Event, source, getSlidePart, getElementWithChildrenNoEvent);
-            SetInnerXmlOnFile(testfile, getSlidePart, getElementWithChildren4Event, source, getSlidePart, getElementWithAttributesAndChildrenNoEvent);
-            SetInnerXmlOnFile(testfile, getSlidePart, getElementWithAttributesAndChildren4Event, source, getSlidePart, getElementWithAttributesAndChildrenNoEvent);
+                SetInnerXmlOnFile(testfile, getSlidePart, getElementWithoutChildren4Event, source, getSlidePart, getElementWithAttributesOnlyNoEvent);
+                SetInnerXmlOnFile(testfile, getSlidePart, getElementWithoutChildren4Event, source, getSlidePart, getElementWithChildrenNoEvent);
+                SetInnerXmlOnFile(testfile, getSlidePart, getElementWithChildren4Event, source, getSlidePart, getElementWithAttributesAndChildrenNoEvent);
+                SetInnerXmlOnFile(testfile, getSlidePart, getElementWithAttributesAndChildren4Event, source, getSlidePart, getElementWithAttributesAndChildrenNoEvent);
+            }
         }
 
-        [Fact]
-        public void EventWriteToPPTTest()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        public void EventWriteToPPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-                .Where(f => f.IsPresentationFile());
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            {
+                GetTargetElement getSlideTextBodyNoEvent = e => getSlideTextBody(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithoutChildrenNoEvent = e => getElementWithoutChildren(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithChildrenNoEvent = e => getElementWithChildren(e).SetEventHandler(invalidEventHandler);
+                GetTargetElement getElementWithAttributesAndChildrenNoEvent = e => getElementWithAttributesAndChildren(e).SetEventHandler(invalidEventHandler);
 
-            GetTargetElement getSlideTextBodyNoEvent = e => getSlideTextBody(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithoutChildrenNoEvent = e => getElementWithoutChildren(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithChildrenNoEvent = e => getElementWithChildren(e).SetEventHandler(invalidEventHandler);
-            GetTargetElement getElementWithAttributesAndChildrenNoEvent = e => getElementWithAttributesAndChildren(e).SetEventHandler(invalidEventHandler);
-
-            var testfile = testfiles.FirstOrDefault();
-            WriteToOnFile(testfile, getSlidePart, getSlideTextBodyNoEvent);
-            WriteToOnFile(testfile, getSlidePart, getElementWithoutChildrenNoEvent);
-            WriteToOnFile(testfile, getSlidePart, getElementWithChildrenNoEvent);
-            WriteToOnFile(testfile, getSlidePart, getElementWithAttributesAndChildrenNoEvent);
+                WriteToOnFile(testfile, getSlidePart, getSlideTextBodyNoEvent);
+                WriteToOnFile(testfile, getSlidePart, getElementWithoutChildrenNoEvent);
+                WriteToOnFile(testfile, getSlidePart, getElementWithChildrenNoEvent);
+                WriteToOnFile(testfile, getSlidePart, getElementWithAttributesAndChildrenNoEvent);
+            }
         }
 
         #endregion PPT Events
@@ -2147,78 +1992,60 @@ namespace DocumentFormat.OpenXml.Tests
         // RemoveAnnotations(Type)
         // RemoveAnnotations<T>()
 
-        [Fact]
-        public void AnnotationTest()
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd)]
+        [Theory]
+        public void AnnotationTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            var testfile = testfiles.FirstOrDefault();
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            using (OpenXmlPackage target = testfile.Open(true))
             {
-                Log.BeginGroup(testfile.Name);
+                Log.Comment("Loading target MainPart...");
+                OpenXmlPart hostPart = target.MainPart();
 
-                using (OpenXmlPackage target = testfile.OpenPackage(true))
-                {
-                    Log.Comment("Loading target MainPart...");
-                    OpenXmlPart hostPart = target.MainPart();
-
-                    if (!hostPart.IsReflectable())
-                        Log.Warning("Current hostPart is NOT reflectable.");
-                    AnnotationType(hostPart, getBody);
-                    AnnotationT(hostPart, getBody);
-                    AnnotationArray(hostPart, getBody);
-                    AnnotationCollection(hostPart, getBody);
-                }
+                if (!hostPart.IsReflectable())
+                    Log.Warning("Current hostPart is NOT reflectable.");
+                AnnotationType(hostPart, getBody);
+                AnnotationT(hostPart, getBody);
+                AnnotationArray(hostPart, getBody);
+                AnnotationCollection(hostPart, getBody);
             }
         }
 
-        [Fact]
-        public void AnnotationPPTTest()
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        [Theory]
+        public void AnnotationPPTTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"presentation", "smallset")
-               .Where(f => f.IsPresentationFile());
-
-            var testfile = testfiles.FirstOrDefault();
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            using (OpenXmlPackage target = testfile.Open(true))
             {
-                Log.BeginGroup(testfile.Name);
+                Log.Comment("Loading target MainPart...");
+                OpenXmlPart hostPart = getSlidePart(target);
 
-                using (OpenXmlPackage target = testfile.OpenPackage(true))
-                {
-                    Log.Comment("Loading target MainPart...");
-                    OpenXmlPart hostPart = getSlidePart(target);
-
-                    if (!hostPart.IsReflectable())
-                        Log.Warning("Current hostPart is NOT reflectable.");
-                    AnnotationType(hostPart, getSlideTextBody);
-                    AnnotationT(hostPart, getSlideTextBody);
-                    AnnotationArray(hostPart, getSlideTextBody);
-                    AnnotationCollection(hostPart, getSlideTextBody);
-                }
+                if (!hostPart.IsReflectable())
+                    Log.Warning("Current hostPart is NOT reflectable.");
+                AnnotationType(hostPart, getSlideTextBody);
+                AnnotationT(hostPart, getSlideTextBody);
+                AnnotationArray(hostPart, getSlideTextBody);
+                AnnotationCollection(hostPart, getSlideTextBody);
             }
         }
 
-        [Fact]
-        public void AnnotationXSLTest()
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Spreadsheet.Smallset.SharedWorkbook)]
+        [Theory]
+        public void AnnotationXSLTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"spreadsheet", "smallset")
-              .Where(f => f.IsSpreadsheetFile());
-
-            var testfile = testfiles.FirstOrDefault();
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            using (OpenXmlPackage target = testfile.Open(true))
             {
-                Log.BeginGroup(testfile.Name);
+                Log.Comment("Loading target MainPart...");
+                OpenXmlPart hostPart = getLastSheetPart(target);
 
-                using (OpenXmlPackage target = testfile.OpenPackage(true))
-                {
-                    Log.Comment("Loading target MainPart...");
-                    OpenXmlPart hostPart = getLastSheetPart(target);
-
-                    if (!hostPart.IsReflectable())
-                        Log.Warning("Current hostPart is NOT reflectable.");
-                    AnnotationType(hostPart, getSheetData);
-                    AnnotationT(hostPart, getSheetData);
-                    AnnotationArray(hostPart, getSheetData);
-                    AnnotationCollection(hostPart, getSheetData);
-                }
+                if (!hostPart.IsReflectable())
+                    Log.Warning("Current hostPart is NOT reflectable.");
+                AnnotationType(hostPart, getSheetData);
+                AnnotationT(hostPart, getSheetData);
+                AnnotationArray(hostPart, getSheetData);
+                AnnotationCollection(hostPart, getSheetData);
             }
         }
 
@@ -2226,121 +2053,88 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region InvalidOperations
 
-        [Fact]
-        public void AppendArrayWithElementsOnTree()
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd, TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR)]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx, TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Presentation.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Spreadsheet.Smallset.SharedWorkbook, TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Spreadsheet.SharedWorkbook)]
+        [Theory]
+        public void AppendArrayWithElementsOnTree(string sourcePath, string testPath)
         {
-            CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile())
-               .FirstOrDefault().OpenPackage(true).MainPart().RootElement()
-               .InvalidOperation<InvalidOperationException>(Log, e =>
-               {
-                   getFirstChild(e).AppendChild<OpenXmlElement>(
-                       GetTestFiles(@"asSources", "wordprocessing")
-                       .Where(f => f.IsWordprocessingFile()).FirstOrDefault()
-                       .OpenPackage(false).MainPart().RootElement().Elements().FirstOrDefault());
-               });
-        }
-
-        [Fact]
-        public void AppentArryWithElementsOnTreePPT()
-        {
-            CopyTestFiles(@"presentation", "smallset")
-                .Where(f => f.IsPresentationFile())
-                .FirstOrDefault().OpenPackage(true).MainPart().RootElement()
-                .InvalidOperation<InvalidOperationException>(Log, e =>
+            Assert.Throws<InvalidOperationException>(() =>
+            {
+                using (var sourcefile = TestAssets.OpenFile(sourcePath, true))
+                using (var sourcePackage = sourcefile.Open(true))
+                using (var testfile = TestAssets.OpenFile(testPath, false))
+                using (var testPackage = testfile.Open(false))
                 {
-                    getFirstChild(e).AppendChild<OpenXmlElement>(
-                        GetTestFiles(@"asSources", "presentation")
-                        .Where(f => f.IsPresentationFile()).FirstOrDefault()
-                        .OpenPackage(false).MainPart().RootElement().Elements().FirstOrDefault());
-                });
-        }
+                    var root = sourcePackage.MainPart().RootElement();
 
-        [Fact]
-        public void AppentArryWithElementsOnTreeXSLT()
-        {
-            CopyTestFiles(@"spreadsheet", "smallset")
-                .Where(f => f.IsSpreadsheetFile())
-                .FirstOrDefault().OpenPackage(true).MainPart().RootElement()
-                .InvalidOperation<InvalidOperationException>(Log, e =>
-                {
-                    getFirstChild(e).AppendChild<OpenXmlElement>(
-                        GetTestFiles(@"asSources", "spreadsheet")
-                        .Where(f => f.IsSpreadsheetFile()).FirstOrDefault()
-                        .OpenPackage(false).MainPart().RootElement().Elements().FirstOrDefault());
-                });
+                    getFirstChild(root).AppendChild(testPackage.MainPart().RootElement().Elements().FirstOrDefault());
+
+                    root.PartRootElement().Save();
+                }
+            });
         }
 
         #endregion InvalidOperations
 
         #region Bug Regression
 
-        [Fact]
-        public void Bug242463_SetRootXmlTest()
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.AsSources.Wordprocessing.complex1NOR, TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd)]
+        [Theory]
+        public void Bug242463_SetRootXmlTest(string sourcePath, string testPath)
         {
-            FileInfo source = GetTestFiles(@"asSources", "wordprocessing")
-                .Where(f => f.IsWordprocessingFile()).FirstOrDefault();
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            using (var testpackage = testfiles.FirstOrDefault().OpenPackage(true))
+            using (var sourcefile = TestAssets.OpenFile(sourcePath, false))
+            using (var sourcePackage = sourcefile.Open(false))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            using (var testpackage = testfile.Open(true))
             {
-                testpackage.MainPart().RootElement()
-                    .ValidOperation(Log,
-                    root =>
-                    {
-                        root = new Document(source.OpenPackage(false).MainPart().RootElement().OuterXml);
-                        (root as Document).Save(testpackage.MainPart() as MainDocumentPart);
-                    });
+                var root = testpackage.MainPart().RootElement();
+                var root2 = new Document(sourcePackage.MainPart().RootElement().OuterXml);
+                (root2 as Document).Save(testpackage.MainPart() as MainDocumentPart);
             }
         }
 
-        [Fact]
-        public void Bug247894_LoadDocumentTest()
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd)]
+        [Theory]
+        public void Bug247894_LoadDocumentTest(string testPath)
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph")
-               .Where(f => f.IsWordprocessingFile());
-
-            using (var testpackage = testfiles.FirstOrDefault().OpenPackage(true))
+            using (var testfile = TestAssets.OpenFile(testPath, true))
+            using (var testpackage = testfile.Open(true))
             {
-                testpackage.MainPart().RootElement()
-                    .ValidOperation(Log,
-                    root =>
-                    {
-                        var document = root as Document;
-                    });
+                var root = testpackage.MainPart().RootElement();
+                var document = Assert.IsType<Document>(root);
+
+                document.GetPartRootElement().Save();
             }
         }
 
-        [Fact]
-        public void Bug242602_UnknownElement_Text()
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.ForTestCase.Bug242602_SDT_unknown)]
+        [Theory]
+        public void Bug242602_UnknownElement_Text(string path)
         {
-            var testfiles = CopyTestFiles(@"ForTestCase", true, "*.docx", f => f.IsOpenXmlFile() && f.Name.EndsWith(@"Bug242602_SDT - unknown.docx"));
-
-            foreach (var testfile in testfiles)
+            using (var testfile = TestAssets.OpenFile(path, false))
+            using (var testpackage = testfile.Open(false))
             {
-                Log.BeginGroup(testfile.FullName);
+                var unknowns = testpackage.DescendantParts()
+                    .Where(p => p.IsReflectable())
+                    .SelectMany(p => p.RootElement().Descendants<OpenXmlUnknownElement>())
+                    .ToList();
 
-                using (var testpackage = testfile.OpenPackage(true))
+                Assert.NotEmpty(unknowns);
+
+                foreach (var unknown in unknowns)
                 {
-                    var unknowns = testpackage.DescendantParts()
-                        .Where(p => p.IsReflectable())
-                        .SelectMany(p => p.RootElement().Descendants<OpenXmlUnknownElement>());
-                    foreach (var unknown in unknowns)
-                    {
-                        Log.Comment("UnknownElement: {0} - Text: {1}@{2}.", unknown.GetType().Name, unknown.Text, unknown.Path());
-                    }
+                    Assert.NotNull(unknown);
                 }
-                Log.Pass("Text of UnknownElement has been implemented and executed without errors.");
             }
         }
 
-        [Fact]
-        public void Bug201775_lockedCanvas()
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.ForTestCase.Bug201775_testfile)]
+        [Theory]
+        public void Bug201775_lockedCanvas(string path)
         {
-            var testfile = CopyTestFiles(@"ForTestCase", true, "Bug201775_testfile.docx", f => f.IsOpenXmlFile()).FirstOrDefault();
-
-            using (var package = testfile.OpenPackage(false))
+            using (var testfile = TestAssets.OpenFile(path, false))
+            using (var package = testfile.Open(false))
             {
                 var doc = (package as WordprocessingDocument).MainDocumentPart.Document;
                 // DocumentFormat.OpenXml.Drawing.LockedCanvas
@@ -2385,57 +2179,58 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        [Fact]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.BugRegression._680607HelloO14)]
+        [Theory]
         // [Description("Office14: 680607")]
-        public void Bug680607_SaveOutWord14Beta2File()
+        public void Bug680607_SaveOutWord14Beta2File(string path)
         {
-            var testfile = CopyTestFiles("bugregression", true, "680607.HelloO14.docx", f => f.IsWordprocessingFile())
-                .FirstOrDefault();
-
-            using (var Package = testfile.OpenPackage(true))
+            using (var testfile = TestAssets.OpenFile(path, true))
             {
-                //<w:fonts xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                //xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
-                //xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
-                //xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" mc:Ignorable="w14">
-                //   ....
-                //</w:fonts>
+                using (var Package = testfile.Open(true))
+                {
+                    //<w:fonts xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    //xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                    //xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+                    //xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" mc:Ignorable="w14">
+                    //   ....
+                    //</w:fonts>
 
-                var fontTablePart = (Package as WordprocessingDocument).MainDocumentPart.GetPartsOfType<FontTablePart>().First();
-                var fonts = fontTablePart.Fonts;
-                // check if mc:Ignorable="w14" and if there're attribute named xmlns:w14
-                var ignorable = fonts.GetAttributes().Where(a => a.LocalName == "Ignorable" && a.Value == "w14").FirstOrDefault();
-                if (ignorable == default(OpenXmlAttribute))
-                    Log.Fail("No mc:Ignorable attribute with value {0} exists", "w14");
-                else
-                    Log.Pass("mc:Ignorable attribute with value {0} exists", "w14");
+                    var fontTablePart = (Package as WordprocessingDocument).MainDocumentPart.GetPartsOfType<FontTablePart>().First();
+                    var fonts = fontTablePart.Fonts;
+                    // check if mc:Ignorable="w14" and if there're attribute named xmlns:w14
+                    var ignorable = fonts.GetAttributes().Where(a => a.LocalName == "Ignorable" && a.Value == "w14").FirstOrDefault();
+                    if (ignorable == default(OpenXmlAttribute))
+                        Log.Fail("No mc:Ignorable attribute with value {0} exists", "w14");
+                    else
+                        Log.Pass("mc:Ignorable attribute with value {0} exists", "w14");
 
-                var w14ns = fonts.OuterXml.Contains(@"xmlns:w14=""http://schemas.microsoft.com/office/word/2010/wordml");
-                if (!w14ns)
-                    Log.Fail("No w14 namespace declaration found.");
-                else
-                    Log.Pass("w14 namespace declaration found on fonts element.");
-            }
+                    var w14ns = fonts.OuterXml.Contains(@"xmlns:w14=""http://schemas.microsoft.com/office/word/2010/wordml");
+                    if (!w14ns)
+                        Log.Fail("No w14 namespace declaration found.");
+                    else
+                        Log.Pass("w14 namespace declaration found on fonts element.");
+                }
 
-            using (var Package = testfile.OpenPackage(false))
-            {
-                //<w:fonts mc:Ignorable="w14" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
-                //   ....
-                //</w>
-                var fontTablePart = (Package as WordprocessingDocument).MainDocumentPart.GetPartsOfType<FontTablePart>().First();
-                var fonts = fontTablePart.Fonts;
-                // check if mc:Ignorable="w14" and if there're attribute named xmlns:w14
-                var ignorable = fonts.GetAttributes().Where(a => a.LocalName == "Ignorable" && a.Value == "w14").FirstOrDefault();
-                if (ignorable == default(OpenXmlAttribute))
-                    Log.Fail("No mc:Ignorable attribute with value {0} exists", "w14");
-                else
-                    Log.Pass("mc:Ignorable attribute with value {0} exists", "w14");
+                using (var Package = testfile.Open(false))
+                {
+                    //<w:fonts mc:Ignorable="w14" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+                    //   ....
+                    //</w>
+                    var fontTablePart = (Package as WordprocessingDocument).MainDocumentPart.GetPartsOfType<FontTablePart>().First();
+                    var fonts = fontTablePart.Fonts;
+                    // check if mc:Ignorable="w14" and if there're attribute named xmlns:w14
+                    var ignorable = fonts.GetAttributes().Where(a => a.LocalName == "Ignorable" && a.Value == "w14").FirstOrDefault();
+                    if (ignorable == default(OpenXmlAttribute))
+                        Log.Fail("No mc:Ignorable attribute with value {0} exists", "w14");
+                    else
+                        Log.Pass("mc:Ignorable attribute with value {0} exists", "w14");
 
-                var w14ns = fonts.OuterXml.Contains(@"xmlns:w14=""http://schemas.microsoft.com/office/word/2010/wordml");
-                if (!w14ns)
-                    Log.Fail("No w14 namespace declaration found.");
-                else
-                    Log.Pass("w14 namespace declaration found on fonts element.");
+                    var w14ns = fonts.OuterXml.Contains(@"xmlns:w14=""http://schemas.microsoft.com/office/word/2010/wordml");
+                    if (!w14ns)
+                        Log.Fail("No w14 namespace declaration found.");
+                    else
+                        Log.Pass("w14 namespace declaration found on fonts element.");
+                }
             }
         }
 
