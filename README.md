@@ -117,7 +117,6 @@ Known Issues
 - On Mono platforms that use the `System.IO.Package` NuGet package (i.e. Xamarin), opening some documents will fail due to an [issue](https://github.com/dotnet/corefx/issues/24822) in `System.IO.Packaging`. For now, you must manually set the environment variable as described in [UriKind.RelativeOrAbsolute workaround](http://www.mono-project.com/docs/faq/known-issues/urikind-relativeorabsolute/).
 - On .NET Core, zip packages do not have a way to stream data. Thus, the working set can explode in certain situations. This is a [known issue](https://github.com/dotnet/corefx/issues/24457).
 - On .NET Framework, an `IsolatedStorageException` may be thrown under certain circumstances. This generally occurs when manipulating a large document in an environment with an AppDomain that does not have enough evidence.
-- Out of the box, the library will not compile on .NET Native. [Issue 181](https://github.com/OfficeDev/Open-XML-SDK/issues/181) is open to track this.
 
   **Note:** Once `System.IO.Packaging` on .NET Core has feature parity with `WindowsBase` (i.e. streaming support), we can investigate using the new .NET Core on .NET Framework.
 
