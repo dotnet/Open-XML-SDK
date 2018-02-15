@@ -6,7 +6,6 @@ using DocumentFormat.OpenXml.Presentation;
 using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System;
-using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 using Xunit;
@@ -260,137 +259,118 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        #region Word Document Traversing ...
-
-        [Fact]
-
-        public void TraverseWordDocument()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd)]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AutoSpaceDE)]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.empty)]
+        public void TraverseWordDocument(string path)
         {
             //description = " Case ID: 75567, 75568, 75505, 75506, 76083, 76084";
-            foreach (var testfile in CopyTestFiles(Path.Combine(@"wordprocessing", "paragraph"), false, 3))
+            using (var file = TestAssets.GetStream(path))
+            using (var doc = WordprocessingDocument.Open(file, false))
             {
-                Log.BeginGroup(testfile.Name);
+                Log.Comment("<<<<<<<<<<<<< Traverse MainDocumentPart >>>>>>>>>>>>");
 
-                Log.Comment("open test file {0} for traversing", testfile);
-                using (WordprocessingDocument doc = WordprocessingDocument.Open(testfile.FullName, false))
-                {
-                    Log.Comment("<<<<<<<<<<<<< Traverse MainDocumentPart >>>>>>>>>>>>");
+                Log.Comment("<<<<<<<<<<<< Traverse Down >>>>>>>>>>>>>>");
+                Log.Comment("      <<<<<< traversing Body >>>>>>");
+                Body body = doc.MainDocumentPart.Document.GetFirstChild<Body>();
+                TestTraverseDown<Paragraph>(doc.MainDocumentPart, body);
 
-                    Log.Comment("<<<<<<<<<<<< Traverse Down >>>>>>>>>>>>>>");
-                    Log.Comment("      <<<<<< traversing Body >>>>>>");
-                    Body body = doc.MainDocumentPart.Document.GetFirstChild<Body>();
-                    TestTraverseDown<Paragraph>(doc.MainDocumentPart, body);
+                Log.Comment("      <<<<<< traversing Paragraph >>>>>>");
+                TestTraverseDown<DocumentFormat.OpenXml.Wordprocessing.Run>(doc.MainDocumentPart, body.GetFirstChild<Paragraph>());
 
-                    Log.Comment("      <<<<<< traversing Paragraph >>>>>>");
-                    TestTraverseDown<DocumentFormat.OpenXml.Wordprocessing.Run>(doc.MainDocumentPart, body.GetFirstChild<Paragraph>());
+                Log.Comment("<<<<<<<<<<<< Traverse Up >>>>>>>>>>>>>>");
+                TestTraverseUp<Paragraph>(doc.MainDocumentPart, body.LastChild);
 
-                    Log.Comment("<<<<<<<<<<<< Traverse Up >>>>>>>>>>>>>>");
-                    TestTraverseUp<Paragraph>(doc.MainDocumentPart, body.LastChild);
+                Log.Comment("<<<<<<<<<<<< Traverse Sibling >>>>>>>>>>>");
+                TestTraverseSibling<Paragraph>(doc.MainDocumentPart, body.FirstChild);
 
-                    Log.Comment("<<<<<<<<<<<< Traverse Sibling >>>>>>>>>>>");
-                    TestTraverseSibling<Paragraph>(doc.MainDocumentPart, body.FirstChild);
+                Log.Comment("<<<<<<<<<<<<< Traverse Non-MainDocumentPart >>>>>>>>>>>>");
 
-                    Log.Comment("<<<<<<<<<<<<< Traverse Non-MainDocumentPart >>>>>>>>>>>>");
+                Log.Comment("<<<<<<<<<<<< Traverse Down >>>>>>>>>>>>>>");
+                TestTraverseDown<Style>(doc.MainDocumentPart.StyleDefinitionsPart, doc.MainDocumentPart.StyleDefinitionsPart.Styles);
 
-                    Log.Comment("<<<<<<<<<<<< Traverse Down >>>>>>>>>>>>>>");
-                    TestTraverseDown<Style>(doc.MainDocumentPart.StyleDefinitionsPart, doc.MainDocumentPart.StyleDefinitionsPart.Styles);
+                Log.Comment("<<<<<<<<<<<< Traverse Up >>>>>>>>>>>>>>");
+                TestTraverseUp<Style>(doc.MainDocumentPart.StyleDefinitionsPart, doc.MainDocumentPart.StyleDefinitionsPart.Styles.LastChild);
 
-                    Log.Comment("<<<<<<<<<<<< Traverse Up >>>>>>>>>>>>>>");
-                    TestTraverseUp<Style>(doc.MainDocumentPart.StyleDefinitionsPart, doc.MainDocumentPart.StyleDefinitionsPart.Styles.LastChild);
-
-                    Log.Comment("<<<<<<<<<<<< Traverse Sibling >>>>>>>>>>>");
-                    TestTraverseSibling<Style>(doc.MainDocumentPart.StyleDefinitionsPart, doc.MainDocumentPart.StyleDefinitionsPart.Styles.FirstChild);
-                }
+                Log.Comment("<<<<<<<<<<<< Traverse Sibling >>>>>>>>>>>");
+                TestTraverseSibling<Style>(doc.MainDocumentPart.StyleDefinitionsPart, doc.MainDocumentPart.StyleDefinitionsPart.Styles.FirstChild);
             }
         }
 
-        #endregion
-
-        #region SpreadSheet Document Traversing ...
-
-        [Fact]
-
-        public void TraverseSpreadSheetDocument()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Spreadsheet.Smallset.SharedWorkbook)]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Spreadsheet.Smallset.SheetData)]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Spreadsheet.Smallset.SheetViewsFSB)]
+        public void TraverseSpreadSheetDocument(string path)
         {
-            foreach (var testfile in CopyTestFiles(Path.Combine(@"spreadsheet", "smallset"), false, 3))
+            using (var file = TestAssets.GetStream(path))
+            using (var excel = SpreadsheetDocument.Open(file, false))
             {
-                Log.BeginGroup(testfile.Name);
-                Log.Comment("open test file {0} for traversing", testfile);
-                using (SpreadsheetDocument excel = SpreadsheetDocument.Open(testfile.FullName, false))
-                {
-                    Log.Comment("<<<<<<<<<<<<< Traverse WorkBookPart >>>>>>>>>>>>");
-                    Log.Comment("   <<<<<<< Traverse Down >>>>>>>>");
-                    Log.Comment(" <<<<<< traversing WorkBook >>>>>>");
-                    TestTraverseDown<Sheets>(excel.WorkbookPart, excel.WorkbookPart.Workbook);
+                Log.Comment("<<<<<<<<<<<<< Traverse WorkBookPart >>>>>>>>>>>>");
+                Log.Comment("   <<<<<<< Traverse Down >>>>>>>>");
+                Log.Comment(" <<<<<< traversing WorkBook >>>>>>");
+                TestTraverseDown<Sheets>(excel.WorkbookPart, excel.WorkbookPart.Workbook);
 
-                    Log.Comment(" <<<<<< traversing Sheets >>>>>>");
-                    TestTraverseDown<Sheet>(excel.WorkbookPart, excel.WorkbookPart.Workbook.GetFirstChild<Sheets>());
+                Log.Comment(" <<<<<< traversing Sheets >>>>>>");
+                TestTraverseDown<Sheet>(excel.WorkbookPart, excel.WorkbookPart.Workbook.GetFirstChild<Sheets>());
 
-                    Log.Comment("   <<<<<<< Traverse Up >>>>>>>>> ");
-                    TestTraverseUp<Sheets>(excel.WorkbookPart, excel.WorkbookPart.Workbook.LastChild);
+                Log.Comment("   <<<<<<< Traverse Up >>>>>>>>> ");
+                TestTraverseUp<Sheets>(excel.WorkbookPart, excel.WorkbookPart.Workbook.LastChild);
 
-                    Log.Comment("  <<<<<< Traverse Sibling  >>>>>>");
-                    TestTraverseSibling<Sheets>(excel.WorkbookPart, excel.WorkbookPart.Workbook.FirstChild);
+                Log.Comment("  <<<<<< Traverse Sibling  >>>>>>");
+                TestTraverseSibling<Sheets>(excel.WorkbookPart, excel.WorkbookPart.Workbook.FirstChild);
 
-                    Log.Comment("<<<<<<<<<<<<< Traverse Non-WorkBookPart >>>>>>>>>>>>");
-                    Log.Comment("   <<<<<<< Traverse Down >>>>>>>>");
-                    Log.Comment(" <<<<<< traversing WorkSheet >>>>>>");
-                    TestTraverseDown<SheetData>(excel.WorkbookPart.WorksheetParts.First(), excel.WorkbookPart.WorksheetParts.First().Worksheet);
+                Log.Comment("<<<<<<<<<<<<< Traverse Non-WorkBookPart >>>>>>>>>>>>");
+                Log.Comment("   <<<<<<< Traverse Down >>>>>>>>");
+                Log.Comment(" <<<<<< traversing WorkSheet >>>>>>");
+                TestTraverseDown<SheetData>(excel.WorkbookPart.WorksheetParts.First(), excel.WorkbookPart.WorksheetParts.First().Worksheet);
 
-                    Log.Comment(" <<<<<< traversing SheetData >>>>>>");
-                    TestTraverseDown<Row>(excel.WorkbookPart.WorksheetParts.First(), excel.WorkbookPart.WorksheetParts.First().Worksheet.GetFirstChild<SheetData>());
+                Log.Comment(" <<<<<< traversing SheetData >>>>>>");
+                TestTraverseDown<Row>(excel.WorkbookPart.WorksheetParts.First(), excel.WorkbookPart.WorksheetParts.First().Worksheet.GetFirstChild<SheetData>());
 
-                    Log.Comment("   <<<<<<< Traverse Up >>>>>>>>> ");
-                    TestTraverseUp<SheetData>(excel.WorkbookPart.WorksheetParts.First(), excel.WorkbookPart.WorksheetParts.First().Worksheet.LastChild);
+                Log.Comment("   <<<<<<< Traverse Up >>>>>>>>> ");
+                TestTraverseUp<SheetData>(excel.WorkbookPart.WorksheetParts.First(), excel.WorkbookPart.WorksheetParts.First().Worksheet.LastChild);
 
-                    Log.Comment("  <<<<<< Traverse Sibling  >>>>>>");
-                    TestTraverseSibling<Sheets>(excel.WorkbookPart.WorksheetParts.First(), excel.WorkbookPart.WorksheetParts.First().Worksheet.FirstChild);
-                }
+                Log.Comment("  <<<<<< Traverse Sibling  >>>>>>");
+                TestTraverseSibling<Sheets>(excel.WorkbookPart.WorksheetParts.First(), excel.WorkbookPart.WorksheetParts.First().Worksheet.FirstChild);
             }
         }
 
-        #endregion
-
-        #region PPT Document Traversing ...
-
-        [Fact]
-
-        public void TraversePPTDocument()
+        [Theory]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInbyletterpptx)]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charspptx)]
+        public void TraversePPTDocument(string path)
         {
-            foreach (var testfile in CopyTestFiles(Path.Combine(@"presentation", "smallset"), false, 3))
+            using (var file = TestAssets.GetStream(path))
+            using (var ppt = PresentationDocument.Open(file, false))
             {
-                Log.BeginGroup(testfile.Name);
-                Log.Comment("open test file {0} for traversing", testfile);
-                using (PresentationDocument ppt = PresentationDocument.Open(testfile.FullName, false))
-                {
-                    Log.Comment("<<<<<<<<<<<<< Traverse PresentationPart >>>>>>>>>>>>");
-                    Log.Comment("   <<<<<<< Traverse Down >>>>>>>>");
-                    Log.Comment(" <<<<<< traversing Presentation >>>>>>");
-                    TestTraverseDown<SlideIdList>(ppt.PresentationPart, ppt.PresentationPart.Presentation);
+                Log.Comment("<<<<<<<<<<<<< Traverse PresentationPart >>>>>>>>>>>>");
+                Log.Comment("   <<<<<<< Traverse Down >>>>>>>>");
+                Log.Comment(" <<<<<< traversing Presentation >>>>>>");
+                TestTraverseDown<SlideIdList>(ppt.PresentationPart, ppt.PresentationPart.Presentation);
 
-                    Log.Comment(" <<<<<< traversing SlideIdList >>>>>>");
-                    TestTraverseDown<SlideId>(ppt.PresentationPart, ppt.PresentationPart.Presentation.GetFirstChild<SlideIdList>());
+                Log.Comment(" <<<<<< traversing SlideIdList >>>>>>");
+                TestTraverseDown<SlideId>(ppt.PresentationPart, ppt.PresentationPart.Presentation.GetFirstChild<SlideIdList>());
 
-                    Log.Comment("   <<<<<<< Traverse Up >>>>>>>>> ");
-                    TestTraverseUp<SlideIdList>(ppt.PresentationPart, ppt.PresentationPart.Presentation.LastChild);
+                Log.Comment("   <<<<<<< Traverse Up >>>>>>>>> ");
+                TestTraverseUp<SlideIdList>(ppt.PresentationPart, ppt.PresentationPart.Presentation.LastChild);
 
-                    Log.Comment("  <<<<<< Traverse Sibling  >>>>>>");
-                    TestTraverseSibling<SlideIdList>(ppt.PresentationPart, ppt.PresentationPart.Presentation.FirstChild);
+                Log.Comment("  <<<<<< Traverse Sibling  >>>>>>");
+                TestTraverseSibling<SlideIdList>(ppt.PresentationPart, ppt.PresentationPart.Presentation.FirstChild);
 
-                    Log.Comment("<<<<<<<<<<<<< Traverse Non-PresentationPart >>>>>>>>>>>>");
-                    Log.Comment("   <<<<<<< Traverse Down >>>>>>>>");
-                    Log.Comment(" <<<<<< traversing Slide  >>>>>>");
-                    TestTraverseDown<CommonSlideData>(ppt.PresentationPart.SlideParts.First(), ppt.PresentationPart.SlideParts.First().Slide);
+                Log.Comment("<<<<<<<<<<<<< Traverse Non-PresentationPart >>>>>>>>>>>>");
+                Log.Comment("   <<<<<<< Traverse Down >>>>>>>>");
+                Log.Comment(" <<<<<< traversing Slide  >>>>>>");
+                TestTraverseDown<CommonSlideData>(ppt.PresentationPart.SlideParts.First(), ppt.PresentationPart.SlideParts.First().Slide);
 
-                    Log.Comment("   <<<<<<< Traverse Up >>>>>>>>> ");
-                    TestTraverseUp<CommonSlideData>(ppt.PresentationPart.SlideParts.First(), ppt.PresentationPart.SlideParts.First().Slide.LastChild);
+                Log.Comment("   <<<<<<< Traverse Up >>>>>>>>> ");
+                TestTraverseUp<CommonSlideData>(ppt.PresentationPart.SlideParts.First(), ppt.PresentationPart.SlideParts.First().Slide.LastChild);
 
-                    Log.Comment("  <<<<<< Traverse Sibling  >>>>>>");
-                    TestTraverseSibling<CommonSlideData>(ppt.PresentationPart.SlideParts.First(), ppt.PresentationPart.SlideParts.First().Slide.FirstChild);
-                }
+                Log.Comment("  <<<<<< Traverse Sibling  >>>>>>");
+                TestTraverseSibling<CommonSlideData>(ppt.PresentationPart.SlideParts.First(), ppt.PresentationPart.SlideParts.First().Slide.FirstChild);
             }
         }
-
-        #endregion
     }
 }
