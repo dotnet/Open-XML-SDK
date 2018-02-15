@@ -14,6 +14,7 @@ using System.Reflection;
 using System.Text;
 using System.Xml;
 using System.Xml.Linq;
+using Xunit;
 using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests
@@ -29,8 +30,6 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         #region Delegation ...
-
-        internal delegate FileInfo GetTargetFile(string folder, string filePattern);
 
         internal delegate OpenXmlPart GetTargetPart(OpenXmlPackage package);
 
@@ -161,18 +160,6 @@ namespace DocumentFormat.OpenXml.Tests
             String path = GetElementPath(element);
 
             return GetXmlElement(path, part);
-        }
-
-        /// <summary>
-        /// Convert an OpenXmlElement to an XElement using its OuterXml
-        /// </summary>
-        /// <param name="element">the element need to be converted</param>
-        /// <returns>the converted XElement</returns>
-        internal XElement ToXElement(OpenXmlElement element)
-        {
-            if (element == null)
-                throw new ArgumentNullException(nameof(element));
-            return XElement.Load(new StringReader(element.OuterXml));
         }
 
         #endregion
@@ -390,21 +377,18 @@ namespace DocumentFormat.OpenXml.Tests
 
         internal enum AppendCollectionType { IEnumerable, Array };
 
-        internal void AppendCollectionOnFile(FileInfo testfile, GetTargetPart getHostPart, GetTargetElement getHostElement,
-            FileInfo sourceFile, GetTargetPart getSrcPart, GetTargetElement getImportee, AppendCollectionType operationType)
+        internal void AppendCollectionOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHostElement,
+            IFile sourceFile, GetTargetPart getSrcPart, GetTargetElement getImportee, AppendCollectionType operationType)
         {
-            Log.BeginGroup(testfile.Name);
-
-            using (OpenXmlPackage target = testfile.OpenPackage(true))
-            using (OpenXmlPackage source = sourceFile.OpenPackage(false))
+            using (var target = testfile.Open(true))
+            using (var source = sourceFile.Open(false))
             {
-                Log.Comment("Loading target Part...");
-                OpenXmlPart hostPart = getHostPart(target);
-                Log.Comment("Loading source Part...");
-                OpenXmlPart srcHostPart = getSrcPart(source);
+                var hostPart = getHostPart(target);
+                var srcHostPart = getSrcPart(source);
 
                 if (!hostPart.IsReflectable() || !srcHostPart.IsReflectable())
                     Log.Warning("Either hostPart or srcHostPart is NOT reflectable.");
+
                 AppendCollection(hostPart, getHostElement, srcHostPart, getImportee, operationType);
             }
         }
@@ -480,21 +464,20 @@ namespace DocumentFormat.OpenXml.Tests
 
         internal enum PendType { Append, Prepend };
 
-        internal void PendTestOnFile(FileInfo testFile, GetTargetPart getHostPart, GetTargetElement getHostElement,
-            FileInfo sourceFile, GetTargetPart getSourcePart, GetTargetElement getSourceHost, PendType pendType)
+        private protected void PendTestOnFile(IFile testFile, GetTargetPart getHostPart, GetTargetElement getHostElement,
+            IFile sourceFile, GetTargetPart getSourcePart, GetTargetElement getSourceHost, PendType pendType)
         {
-            Log.BeginGroup(testFile.Name);
-
-            using (OpenXmlPackage target = testFile.OpenPackage(true))
-            using (OpenXmlPackage source = sourceFile.OpenPackage(false))
+            using (var target = testFile.Open(true))
+            using (var source = sourceFile.Open(false))
             {
-                Log.Comment("Loading target Part...");
-                OpenXmlPart hostPart = getHostPart(target);
-                Log.Comment("Loading source Part...");
-                OpenXmlPart srcHostPart = getSourcePart(source);
+                var hostPart = getHostPart(target);
+                var srcHostPart = getSourcePart(source);
 
                 if (!hostPart.IsReflectable() || !srcHostPart.IsReflectable())
-                    Log.Warning("Either hostPart or srcHostPart is NOT reflectable.");
+                {
+                    Assert.True(false, "Either hostPart or srcHostPart is NOT reflectable.");
+                }
+
                 PendTestBody(hostPart, getHostElement, srcHostPart, getSourceHost, pendType);
             }
         }
@@ -594,21 +577,19 @@ namespace DocumentFormat.OpenXml.Tests
 
         internal enum InsertType { Before, After };
 
-        internal void InsertTestOnFile(FileInfo testfile, GetTargetPart getHostPart, GetTargetElement getHostElement,
-            FileInfo sourceFile, GetTargetPart getSourcePart, GetTargetElement getSourceHost, GetTargetElement getRef, InsertType insertType)
+        private protected void InsertTestOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHostElement,
+                IFile sourceFile, GetTargetPart getSourcePart, GetTargetElement getSourceHost, GetTargetElement getRef, InsertType insertType)
         {
-            Log.BeginGroup(testfile.Name);
-
-            using (OpenXmlPackage target = testfile.OpenPackage(true))
-            using (OpenXmlPackage source = sourceFile.OpenPackage(false))
+            using (var target = testfile.Open(true))
+            using (var source = sourceFile.Open(false))
             {
-                Log.Comment("Loading target Part...");
-                OpenXmlPart hostPart = getHostPart(target);
-                Log.Comment("Loading source Part...");
-                OpenXmlPart srcHostPart = getSourcePart(source);
+                var hostPart = getHostPart(target);
+                var srcHostPart = getSourcePart(source);
 
                 if (!hostPart.IsReflectable() || !srcHostPart.IsReflectable())
+                {
                     Log.Warning("Either hostPart or srcHostPart is NOT reflectable.");
+                }
 
                 InsertTest(hostPart, getHostElement, srcHostPart, getSourceHost, getRef, InsertType.Before);
             }
@@ -724,21 +705,19 @@ namespace DocumentFormat.OpenXml.Tests
 
         internal enum InsertAtPosition { AsFirst, NextToFirst, AnyValid, NextToLast, AsLast };
 
-        internal void InsertAtOnFile(FileInfo testfile, GetTargetPart getHostPart, GetTargetElement getHost,
-            FileInfo sourceFile, GetTargetPart getSrcPart, GetTargetElement getImportee, InsertAtPosition posType)
+        private protected void InsertAtOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost,
+                 IFile sourceFile, GetTargetPart getSrcPart, GetTargetElement getImportee, InsertAtPosition posType)
         {
-            Log.BeginGroup(testfile.Name);
-
-            using (OpenXmlPackage target = testfile.OpenPackage(true))
-            using (OpenXmlPackage source = sourceFile.OpenPackage(false))
+            using (var target = testfile.Open(true))
+            using (var source = sourceFile.Open(false))
             {
-                Log.Comment("Loading target Part...");
-                OpenXmlPart hostPart = getHostPart(target);
-                Log.Comment("Loading source Part...");
-                OpenXmlPart srcHostPart = getSrcPart(source);
+                var hostPart = getHostPart(target);
+                var srcHostPart = getSrcPart(source);
 
                 if (!hostPart.IsReflectable() || !srcHostPart.IsReflectable())
+                {
                     Log.Warning("Either hostPart or srcHostPart is NOT reflectable.");
+                }
 
                 InsertAt(hostPart, getHost, srcHostPart, getImportee, posType);
             }
@@ -821,21 +800,19 @@ namespace DocumentFormat.OpenXml.Tests
 
         internal enum InsertRel { BeforeSelf, AfterSelf };
 
-        internal void InsertRelativeOnFile(FileInfo testfile, GetTargetPart getHostPart, GetTargetElement getHost,
-            FileInfo sourceFile, GetTargetPart getSrcPart, GetTargetElement getImportee, InsertRel posType)
+        private protected void InsertRelativeOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost,
+            IFile sourceFile, GetTargetPart getSrcPart, GetTargetElement getImportee, InsertRel posType)
         {
-            Log.BeginGroup(testfile.Name);
-
-            using (OpenXmlPackage target = testfile.OpenPackage(true))
-            using (OpenXmlPackage source = sourceFile.OpenPackage(false))
+            using (var target = testfile.Open(true))
+            using (var source = sourceFile.Open(false))
             {
-                Log.Comment("Loading target Part...");
-                OpenXmlPart hostPart = getHostPart(target);
-                Log.Comment("Loading source Part...");
-                OpenXmlPart srcHostPart = getSrcPart(source);
+                var hostPart = getHostPart(target);
+                var srcHostPart = getSrcPart(source);
 
                 if (!hostPart.IsReflectable() || !srcHostPart.IsReflectable())
+                {
                     Log.Warning("Either hostPart or srcHostPart is NOT reflectable.");
+                }
 
                 InsertRelative(hostPart, getHost, srcHostPart, getImportee, posType);
             }
@@ -907,13 +884,10 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region RemoveAllChildren
 
-        internal void RemoveAllChildrenOnFile(FileInfo testfile, GetTargetPart getHostPart, GetTargetElement getHost)
+        private protected void RemoveAllChildrenOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost)
         {
-            Log.BeginGroup(testfile.Name);
-
-            using (OpenXmlPackage target = testfile.OpenPackage(true))
+            using (OpenXmlPackage target = testfile.Open(true))
             {
-                Log.Comment("Loading target part...");
                 OpenXmlPart hostPart = getHostPart(target);
                 RemoveAllChildren(hostPart, getHost);
             }
@@ -950,12 +924,10 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        internal void RemoveAllTypedChildrenOnFile(FileInfo testfile, GetTargetPart getHostPart, GetTargetElement getHost, Type deleteType)
+        private protected void RemoveAllTypedChildrenOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost, Type deleteType)
         {
-            Log.BeginGroup(testfile.Name);
-            using (OpenXmlPackage target = testfile.OpenPackage(true))
+            using (OpenXmlPackage target = testfile.Open(true))
             {
-                Log.Comment("Loading target part...");
                 OpenXmlPart hostPart = getHostPart(target);
 
                 RemoveAllTypedChildren(hostPart, getHost, deleteType);
@@ -1021,13 +993,10 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region RemoveChild
 
-        internal void RemoveChildOnFile(FileInfo testfile, GetTargetPart getHostPart, GetTargetElement getHost, GetTargetElement getDelete)
+        private protected void RemoveChildOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost, GetTargetElement getDelete)
         {
-            Log.BeginGroup(testfile.Name);
-
-            using (OpenXmlPackage target = testfile.OpenPackage(true))
+            using (OpenXmlPackage target = testfile.Open(true))
             {
-                Log.Comment("Loading target part...");
                 OpenXmlPart hostPart = getHostPart(target);
                 RemoveChild(hostPart, getHost, getDelete);
             }
@@ -1078,38 +1047,14 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        /// <summary>
-        /// perform remove operation
-        /// </summary>
-        /// <param name="target">the target element that will perform the remove operation</param>
-        /// <param name="targetPosition">the child position that need to be removed</param>
-        /// <returns>the removed element</returns>
-        internal OpenXmlElement RemoveOperation(OpenXmlElement target, int childPosition)
-        {
-            if (target == null)
-                throw new ArgumentNullException(nameof(target));
-
-            if (childPosition >= target.ChildElements.Count)
-                throw new IndexOutOfRangeException("targetPosition is out of range.");
-
-            Log.Comment("retrieve the child at position {0}", childPosition);
-            OpenXmlElement child2Remove = target.ChildElements.ElementAt(childPosition);
-
-            Log.Comment("remove the child at position {0}", childPosition);
-            return target.RemoveChild<OpenXmlElement>(child2Remove);
-        }
-
         #endregion RemoveChild
 
         #region Remove
 
-        internal void RemoveOnFile(FileInfo testfile, GetTargetPart getHostPart, GetTargetElement getTarget)
+        private protected void RemoveOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getTarget)
         {
-            Log.BeginGroup(testfile.Name);
-
-            using (OpenXmlPackage target = testfile.OpenPackage(true))
+            using (OpenXmlPackage target = testfile.Open(true))
             {
-                Log.Comment("Loading target part...");
                 OpenXmlPart hostPart = getHostPart(target);
 
                 Remove(hostPart, getTarget);
@@ -1164,21 +1109,19 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region ReplaceChild<T>(OpenXmlElement, T)
 
-        internal void ReplaceChildOnFile(FileInfo testfile, GetTargetPart getHostPart, GetTargetElement getHost, GetTargetElement getTarget,
-            FileInfo sourceFile, GetTargetPart getSrcPart, GetTargetElement getReplace, Type replaceType)
+        private protected void ReplaceChildOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost, GetTargetElement getTarget,
+            IFile sourceFile, GetTargetPart getSrcPart, GetTargetElement getReplace, Type replaceType)
         {
-            Log.BeginGroup(testfile.Name);
-
-            using (OpenXmlPackage target = testfile.OpenPackage(true))
-            using (OpenXmlPackage source = sourceFile.OpenPackage(false))
+            using (OpenXmlPackage target = testfile.Open(true))
+            using (OpenXmlPackage source = sourceFile.Open(false))
             {
-                Log.Comment("Loading target Part...");
                 OpenXmlPart hostPart = getHostPart(target);
-                Log.Comment("Loading source Part...");
                 OpenXmlPart srcHostPart = getSrcPart(source);
 
                 if (!hostPart.IsReflectable() || !srcHostPart.IsReflectable())
+                {
                     Log.Warning("Either hostPart or srcHostPart is NOT reflectable.");
+                }
 
                 ReplaceChild(hostPart, getHost, getTarget, srcHostPart, getReplace, replaceType);
             }
@@ -1312,7 +1255,7 @@ namespace DocumentFormat.OpenXml.Tests
         internal GetTargetNamespaceDeclaration getNonExistingNamespaceDeclaration =
             e => e.Ancestors()
                 .SelectMany(a => a.NamespaceDeclarations)
-                .FirstOrDefault(an => ! e.NamespaceDeclarations.Select(en => en.Key).Contains(an.Key));
+                .FirstOrDefault(an => !e.NamespaceDeclarations.Select(en => en.Key).Contains(an.Key));
 
         internal GetTargetNamespaceDeclaration getExistingNamespaceDeclaration =
             e => e.NamespaceDeclarations.PickSecond();
@@ -1321,17 +1264,17 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region GetAttribute(string localName, string namespaceUri)
 
-        internal void GetAttributeOnFile(FileInfo testfile, GetTargetPart getHostPart, GetTargetElement getHost)
+        private protected void GetAttributeOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost)
         {
-            Log.BeginGroup(testfile.Name);
-
-            using (OpenXmlPackage target = testfile.OpenPackage(true))
+            using (OpenXmlPackage target = testfile.Open(true))
             {
-                Log.Comment("Loading target Part...");
                 OpenXmlPart hostPart = getHostPart(target);
 
                 if (!hostPart.IsReflectable())
+                {
                     Log.Warning("Either hostPart is NOT reflectable.");
+                }
+
                 GetAttribute(hostPart, getHost);
             }
         }
@@ -1369,16 +1312,17 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region GetAttributes
 
-        internal void GetAttributesOnFile(FileInfo testfile, GetTargetPart getHostPart, GetTargetElement getHost)
+        private protected void GetAttributesOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost)
         {
-            Log.BeginGroup(testfile.Name);
-            using (OpenXmlPackage target = testfile.OpenPackage(true))
+            using (OpenXmlPackage target = testfile.Open(true))
             {
-                Log.Comment("Loading target Part...");
                 OpenXmlPart hostPart = getHostPart(target);
 
                 if (!hostPart.IsReflectable())
+                {
                     Log.Warning("Either hostPart is NOT reflectable.");
+                }
+
                 GetAttributes(hostPart, getHost);
             }
         }
@@ -1422,20 +1366,19 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region SetAttribute(OpenXmlAttribute)
 
-        internal void SetAttributeOnFile(FileInfo testfile, GetTargetPart getHostPart, GetTargetElement getHost,
-            FileInfo sourceFile, GetTargetPart getSrcPart, GetTargetElement getImportee, GetTargetAttribute getAttribute)
+        private protected void SetAttributeOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost,
+            IFile sourceFile, GetTargetPart getSrcPart, GetTargetElement getImportee, GetTargetAttribute getAttribute)
         {
-            Log.BeginGroup(testfile.Name);
-            using (OpenXmlPackage target = testfile.OpenPackage(true))
-            using (OpenXmlPackage source = sourceFile.OpenPackage(false))
+            using (OpenXmlPackage target = testfile.Open(true))
+            using (OpenXmlPackage source = sourceFile.Open(false))
             {
-                Log.Comment("Loading target Part...");
                 OpenXmlPart hostPart = getHostPart(target);
-                Log.Comment("Loading source Part...");
                 OpenXmlPart srcHostPart = getSrcPart(source);
 
                 if (!hostPart.IsReflectable() || !srcHostPart.IsReflectable())
+                {
                     Log.Warning("Either hostPart or srcHostPart is NOT reflectable.");
+                }
 
                 SetAttribute(hostPart, getHost, srcHostPart, getImportee, getAttribute);
             }
@@ -1494,20 +1437,19 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        internal void SetAttributesOnFile(FileInfo testfile, GetTargetPart getHostPart, GetTargetElement getHost,
-            FileInfo sourceFile, GetTargetPart getSrcPart, GetTargetElement getImportee)
+        private protected void SetAttributesOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost,
+            IFile sourceFile, GetTargetPart getSrcPart, GetTargetElement getImportee)
         {
-            Log.BeginGroup(testfile.Name);
-            using (OpenXmlPackage target = testfile.OpenPackage(true))
-            using (OpenXmlPackage source = sourceFile.OpenPackage(false))
+            using (OpenXmlPackage target = testfile.Open(true))
+            using (OpenXmlPackage source = sourceFile.Open(false))
             {
-                Log.Comment("Loading target Part...");
                 OpenXmlPart hostPart = getHostPart(target);
-                Log.Comment("Loading source Part...");
                 OpenXmlPart srcHostPart = getSrcPart(source);
 
                 if (!hostPart.IsReflectable() || !srcHostPart.IsReflectable())
+                {
                     Log.Warning("Either hostPart or srcHostPart is NOT reflectable.");
+                }
 
                 SetAttributes(hostPart, getHost, srcHostPart, getImportee);
             }
@@ -1572,16 +1514,17 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region RemoveAttribute(localName, namespaceUri)
 
-        internal void RemoveAttributeOnFile(FileInfo testfile, GetTargetPart getHostPart, GetTargetElement getHost, GetTargetAttribute getRemoveAttribute)
+        private protected void RemoveAttributeOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost, GetTargetAttribute getRemoveAttribute)
         {
-            Log.BeginGroup(testfile.Name);
-            using (OpenXmlPackage target = testfile.OpenPackage(true))
+            using (OpenXmlPackage target = testfile.Open(true))
             {
-                Log.Comment("Loading target Part...");
                 OpenXmlPart hostPart = getHostPart(target);
 
                 if (!hostPart.IsReflectable())
+                {
                     Log.Warning("Either hostPart is NOT reflectable.");
+                }
+
                 RemoveAttribute(hostPart, getHost, getRemoveAttribute);
             }
         }
@@ -1642,16 +1585,17 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region ClearAllAttributes
 
-        internal void ClearAllAttributesOnFile(FileInfo testfile, GetTargetPart getHostPart, GetTargetElement getHost)
+        private protected void ClearAllAttributesOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost)
         {
-            Log.BeginGroup(testfile.Name);
-            using (OpenXmlPackage target = testfile.OpenPackage(true))
+            using (OpenXmlPackage target = testfile.Open(true))
             {
-                Log.Comment("Loading target Part...");
                 OpenXmlPart hostPart = getHostPart(target);
 
                 if (!hostPart.IsReflectable())
+                {
                     Log.Warning("Either hostPart is NOT reflectable.");
+                }
+
                 ClearAllAttributes(hostPart, getHost);
             }
         }
@@ -1698,20 +1642,19 @@ namespace DocumentFormat.OpenXml.Tests
         #endregion ClearAllAttributes
 
         #region AddNamespaceDeclaration
-        internal void AddNamespaceDeclarationOnFile(FileInfo testfile, GetTargetPart getHostPart, GetTargetElement getHost,
-            FileInfo sourceFile, GetTargetPart getSrcPart, GetTargetElement getImportee, GetTargetNamespaceDeclaration getNamespaceDeclaration)
+        private protected void AddNamespaceDeclarationOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost,
+            IFile sourceFile, GetTargetPart getSrcPart, GetTargetElement getImportee, GetTargetNamespaceDeclaration getNamespaceDeclaration)
         {
-            Log.BeginGroup(testfile.Name);
-            using (OpenXmlPackage target = testfile.OpenPackage(true))
-            using (OpenXmlPackage source = sourceFile.OpenPackage(false))
+            using (OpenXmlPackage target = testfile.Open(true))
+            using (OpenXmlPackage source = sourceFile.Open(false))
             {
-                Log.Comment("Loading target Part...");
                 OpenXmlPart hostPart = getHostPart(target);
-                Log.Comment("Loading source Part...");
                 OpenXmlPart srcHostPart = getSrcPart(source);
 
                 if (!hostPart.IsReflectable() || !srcHostPart.IsReflectable())
+                {
                     Log.Warning("Either hostPart or srcHostPart is NOT reflectable.");
+                }
 
                 AddNamespaceDeclaration(hostPart, getHost, srcHostPart, getImportee, getNamespaceDeclaration);
             }
@@ -1786,17 +1729,17 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region RemoveNamespaceDeclaration
 
-        internal void RemoveNamespaceDeclarationOnFile(FileInfo testfile, GetTargetPart getHostPart, GetTargetElement getHost, GetTargetNamespaceDeclaration getRemoveNS)
+        private protected void RemoveNamespaceDeclarationOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost, GetTargetNamespaceDeclaration getRemoveNS)
         {
-            Log.BeginGroup(testfile.Name);
-
-            using (OpenXmlPackage target = testfile.OpenPackage(true))
+            using (OpenXmlPackage target = testfile.Open(true))
             {
-                Log.Comment("Loading target Part...");
                 OpenXmlPart hostPart = getHostPart(target);
 
                 if (!hostPart.IsReflectable())
+                {
                     Log.Warning("Either hostPart is NOT reflectable.");
+                }
+
                 RemoveNamespaceDeclaration(hostPart, getHost, getRemoveNS);
             }
         }
@@ -1859,17 +1802,17 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region NamespaceDeclarations
 
-        internal void NamespaceDeclarationsOnFile(FileInfo testfile, GetTargetPart getHostPart, GetTargetElement getHost)
+        private protected void NamespaceDeclarationsOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost)
         {
-            Log.BeginGroup(testfile.Name);
-
-            using (OpenXmlPackage target = testfile.OpenPackage(true))
+            using (OpenXmlPackage target = testfile.Open(true))
             {
-                Log.Comment("Loading target Part...");
                 OpenXmlPart hostPart = getHostPart(target);
 
                 if (!hostPart.IsReflectable())
+                {
                     Log.Warning("Either hostPart is NOT reflectable.");
+                }
+
                 NamespaceDeclarations(hostPart, getHost);
             }
         }
@@ -1919,16 +1862,17 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region OuterXml
 
-        internal void GetOuterXmlOnFile(FileInfo testfile, GetTargetPart getHostPart, GetTargetElement getHost)
+        private protected void GetOuterXmlOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost)
         {
-            Log.BeginGroup(testfile.Name);
-            using (OpenXmlPackage target = testfile.OpenPackage(true))
+            using (OpenXmlPackage target = testfile.Open(true))
             {
-                Log.Comment("Loading target Part...");
                 OpenXmlPart hostPart = getHostPart(target);
 
                 if (!hostPart.IsReflectable())
+                {
                     Log.Warning("Current HostPart is NOT reflectable.");
+                }
+
                 GetOuterXml(hostPart, getHost);
             }
         }
@@ -1964,16 +1908,17 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Clone
 
-        internal void CloneOnFile(FileInfo testfile, GetTargetPart getHostPart, GetTargetElement getHost)
+        private protected void CloneOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost)
         {
-            Log.BeginGroup(testfile.Name);
-            using (OpenXmlPackage target = testfile.OpenPackage(true))
+            using (OpenXmlPackage target = testfile.Open(true))
             {
-                Log.Comment("Loading target Part...");
                 OpenXmlPart hostPart = getHostPart(target);
 
                 if (!hostPart.IsReflectable())
+                {
                     Log.Warning("Current hostPart is NOT reflectable.");
+                }
+
                 Clone(hostPart, getHost);
             }
         }
@@ -2010,16 +1955,17 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        internal void CloneNodeFalseOnFile(FileInfo testfile, GetTargetPart getHostPart, GetTargetElement getHost)
+        private protected void CloneNodeFalseOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost)
         {
-            Log.BeginGroup(testfile.Name);
-            using (OpenXmlPackage target = testfile.OpenPackage(true))
+            using (OpenXmlPackage target = testfile.Open(true))
             {
-                Log.Comment("Loading target Part...");
                 OpenXmlPart hostPart = getHostPart(target);
 
                 if (!hostPart.IsReflectable())
+                {
                     Log.Warning("Current hostPart is NOT reflectable.");
+                }
+
                 CloneNodeFalse(hostPart, getHost);
             }
         }
@@ -2066,16 +2012,17 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region InnerXml
 
-        internal void GetInnerXmlOnFile(FileInfo testfile, GetTargetPart getHostPart, GetTargetElement getHost)
+        private protected void GetInnerXmlOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost)
         {
-            Log.BeginGroup(testfile.Name);
-            using (OpenXmlPackage target = testfile.OpenPackage(true))
+            using (OpenXmlPackage target = testfile.Open(true))
             {
-                Log.Comment("Loading target Part...");
                 OpenXmlPart hostPart = getHostPart(target);
 
                 if (!hostPart.IsReflectable())
+                {
                     Log.Warning("Current hostPart is NOT reflectable.");
+                }
+
                 GetInnerXml(hostPart, getHost);
             }
         }
@@ -2109,20 +2056,20 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        internal void SetInnerXmlOnFile(FileInfo testfile, GetTargetPart getHostPart, GetTargetElement getHost,
-            FileInfo sourceFile, GetTargetPart getSrcPart, GetTargetElement getImportee)
+        private protected void SetInnerXmlOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost,
+            IFile sourceFile, GetTargetPart getSrcPart, GetTargetElement getImportee)
         {
-            Log.BeginGroup(testfile.Name);
-            using (OpenXmlPackage target = testfile.OpenPackage(true))
-            using (OpenXmlPackage source = sourceFile.OpenPackage(false))
+            using (OpenXmlPackage target = testfile.Open(true))
+            using (OpenXmlPackage source = sourceFile.Open(false))
             {
-                Log.Comment("Loading target Part...");
                 OpenXmlPart hostPart = getHostPart(target);
-                Log.Comment("Loading source Part...");
                 OpenXmlPart srcHostPart = getSrcPart(source);
 
                 if (!hostPart.IsReflectable() || !srcHostPart.IsReflectable())
+                {
                     Log.Warning("Either hostPart or srcHostPart is NOT reflectable.");
+                }
+
                 SetInnerXml(hostPart, getHost, srcHostPart, getImportee);
             }
         }
@@ -2199,16 +2146,17 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region WriteTo
 
-        internal void WriteToOnFile(FileInfo testfile, GetTargetPart getHostPart, GetTargetElement getHost)
+        private protected void WriteToOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost)
         {
-            Log.BeginGroup(testfile.Name);
-            using (OpenXmlPackage target = testfile.OpenPackage(true))
+            using (OpenXmlPackage target = testfile.Open(true))
             {
-                Log.Comment("Loading target Part...");
                 OpenXmlPart hostPart = getHostPart(target);
 
                 if (!hostPart.IsReflectable())
+                {
                     Log.Warning("Either hostPart is NOT reflectable.");
+                }
+
                 WriteTo(hostPart, getHost);
             }
         }
@@ -2742,56 +2690,5 @@ namespace DocumentFormat.OpenXml.Tests
         }
         #endregion
 
-    }
-}
-
-/// <summary>
-/// XElement Extension Class
-/// </summary>
-internal static class XElementExtension
-{
-    /// <summary>
-    /// extension method to compare two XElements contains the same structures, ignoring Namespace declaration
-    /// </summary>
-    /// <param name="A">the base XElement</param>
-    /// <param name="B">the target XElement</param>
-    /// <returns>TRUE, if two elements are the same. FALSE, if they are not the same</returns>
-    internal static bool Compare(this XElement A, XElement B)
-    {
-        //Verify NameSpace
-        if (A.Name.Namespace != B.Name.Namespace || A.Name.LocalName != B.Name.LocalName)
-            return false;
-
-        //Verify Values
-        if (A.Value != B.Value)
-            return false;
-
-        //verify attributes
-        if (B.Attributes().Count(x => x.IsNamespaceDeclaration == false) != A.Attributes().Count(x => x.IsNamespaceDeclaration == false))
-            return false;
-
-        foreach (XAttribute attr in A.Attributes().Where(x => x.IsNamespaceDeclaration == false))
-        {
-            if (B.Attribute(attr.Name) == null || B.Attribute(attr.Name).Value != attr.Value)
-                return false;
-        }
-
-        //verify Child Elements
-        if (A.HasElements != B.HasElements)
-            return false;
-
-        if (A.HasElements)
-        {
-            if (A.Elements().Count() != B.Elements().Count())
-                return false;
-
-            for (int i = 0; i < A.Elements().Count(); i++)
-            {
-                if (!A.Elements().ElementAt(i).Compare(B.Elements().ElementAt(i)))
-                    return false;
-            }
-        }
-
-        return true;
     }
 }

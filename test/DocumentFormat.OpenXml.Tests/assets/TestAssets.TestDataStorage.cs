@@ -218,6 +218,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             public static class V2FxTestFiles
             {
+                public static class BugRegression
+                {
+                    public const string _680607HelloO14 = "TestDataStorage.v2FxTestFiles.bugregression.680607.HelloO14.docx";
+                }
+
+                public static class ForTestCase
+                {
+                    public const string Bug201775_testfile= "TestDataStorage.v2FxTestFiles.ForTestCase.Bug201775_testfile.docx";
+                    public const string Bug242602_SDT_unknown = "TestDataStorage.v2FxTestFiles.ForTestCase.Bug242602_SDT - unknown.docx";
+                }
+
                 public static class AsSources
                 {
                     public static class Presentation
@@ -258,6 +269,18 @@ namespace DocumentFormat.OpenXml.Tests
 
                 public static class Presentation
                 {
+                    public static class smallset
+                    {
+                        public const string Text_withExtrusion_200charsAnimationFlyInallatoncepptx = "TestDataStorage.v2FxTestFiles.presentation.smallset.Text_withExtrusion_200chars+Animation (Fly In, all at once).pptx";
+                        public const string Text_withExtrusion_200charsAnimationFlyInbyletterpptx = "TestDataStorage.v2FxTestFiles.presentation.smallset.Text_withExtrusion_200chars+Animation (Fly In, by letter).pptx";
+                        public const string Text_withExtrusion_200charspptx = "TestDataStorage.v2FxTestFiles.presentation.smallset.Text_withExtrusion_200chars.pptx";
+                        public const string Text_withShadow_100charsAnimationFlyInallatoncepptx = "TestDataStorage.v2FxTestFiles.presentation.smallset.Text_withShadow_100chars+Animation (Fly In, all at once).pptx";
+                        public const string Text_withShadow_100charsAnimationFlyInbyletterpptx = "TestDataStorage.v2FxTestFiles.presentation.smallset.Text_withShadow_100chars+Animation (Fly In, by letter).pptx";
+                        public const string Text_withShadow_100charspptx = "TestDataStorage.v2FxTestFiles.presentation.smallset.Text_withShadow_100chars.pptx";
+                        public const string Text_withShadow_200charsAnimationFlyInallatoncepptx = "TestDataStorage.v2FxTestFiles.presentation.smallset.Text_withShadow_200chars+Animation (Fly In, all at once).pptx";
+                        public const string Text_withShadow_200charspptx = "TestDataStorage.v2FxTestFiles.presentation.smallset.Text_withShadow_200chars.pptx";
+                    }
+
                     public const string AllSlidesConverterSc = "TestDataStorage.v2FxTestFiles.presentation.AllSlidesConverterSC.pptx";
                     public const string AllSlidesConverterTc = "TestDataStorage.v2FxTestFiles.presentation.AllSlidesConverterTC.pptx";
                     public const string AutoShapes_2D_Default_styles = "TestDataStorage.v2FxTestFiles.presentation.AutoShapes_2D (Default Styles).pptx";
@@ -278,6 +301,36 @@ namespace DocumentFormat.OpenXml.Tests
                     public const string Chart_3D_Animation_Box_In_One_Object = "TestDataStorage.v2FxTestFiles.presentation.Chart_3D (Column)+Animation (Box In, as one object).pptx";
                     public const string Chart_3D_Animation_Box_Out_One_Object = "TestDataStorage.v2FxTestFiles.presentation.Chart_3D (Column)+Animation (Box Out, as one object).pptx";
                     public const string Chart_3D_Animation_Fly_In_One_Object = "TestDataStorage.v2FxTestFiles.presentation.Chart_3D (Column)+Animation (Fly In, as one object).pptx";
+                }
+
+                public static class Spreadsheet
+                {
+                    public static class Smallset
+                    {
+                        public const string SharedWorkbook = "TestDataStorage.v2FxTestFiles.spreadsheet.smallset.SharedWorkbook.xlsx";
+                        public const string SheetData = "TestDataStorage.v2FxTestFiles.spreadsheet.smallset.SheetData.xlsx";
+                        public const string SheetViewsFSB = "TestDataStorage.v2FxTestFiles.spreadsheet.smallset.SheetViewsFSB.xlsx";
+                        public const string SST = "TestDataStorage.v2FxTestFiles.spreadsheet.smallset.SST.xlsx";
+                        public const string Styles = "TestDataStorage.v2FxTestFiles.spreadsheet.smallset.Styles.xlsx";
+                        public const string table = "TestDataStorage.v2FxTestFiles.spreadsheet.smallset.table.xlsx";
+                    }
+                }
+
+                public static class Wordprocessing
+                {
+                    public static class Paragraph
+                    {
+                        public const string AdjustRightInd = "TestDataStorage.v2FxTestFiles.wordprocessing.paragraph.AdjustRightInd.docx";
+                        public const string AutoSpaceDE = "TestDataStorage.v2FxTestFiles.wordprocessing.paragraph.AutoSpaceDE.docx";
+                        public const string empty = "TestDataStorage.v2FxTestFiles.wordprocessing.paragraph.empty.docx";
+                        public const string Para = "TestDataStorage.v2FxTestFiles.wordprocessing.paragraph.Para.docx";
+                        public const string ParagraphDoc = "TestDataStorage.v2FxTestFiles.wordprocessing.paragraph.Paragraph.docx";
+                        public const string ParagraphAlignment = "TestDataStorage.v2FxTestFiles.wordprocessing.paragraph.paragraph-alignment.docx";
+                        public const string ParagraphLineSpace = "TestDataStorage.v2FxTestFiles.wordprocessing.paragraph.paragraph-line space.docx";
+                        public const string ParagraphSpaceInLine = "TestDataStorage.v2FxTestFiles.wordprocessing.paragraph.paragraph-space in ps.docx";
+                        public const string SectionBreak = "TestDataStorage.v2FxTestFiles.wordprocessing.paragraph.sectionBreak.docx";
+                        public const string Temp = "TestDataStorage.v2FxTestFiles.wordprocessing.paragraph.temp.docx";
+                    }
                 }
             }
         }
