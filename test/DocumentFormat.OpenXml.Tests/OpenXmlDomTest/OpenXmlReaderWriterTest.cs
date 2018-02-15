@@ -21,7 +21,6 @@ namespace DocumentFormat.OpenXml.Tests
     /// <summary>
     /// Summary description for OpenXmlReaderWriterTest
     /// </summary>
-
     public class OpenXmlReaderWriterTest : OpenXmlDomTestBase
     {
         public OpenXmlReaderWriterTest(ITestOutputHelper output)
@@ -668,7 +667,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Test Standalone");
             if (!String.IsNullOrEmpty(standalone) && reader.StandaloneXml.HasValue == true)
             {
-                Log.VerifyTrue(standalone.Equals( reader.StandaloneXml.Value ? "yes" : "no", StringComparison.OrdinalIgnoreCase), "expect: {0}  actual: {1}", standalone, reader.StandaloneXml);
+                Log.VerifyTrue(standalone.Equals(reader.StandaloneXml.Value ? "yes" : "no", StringComparison.OrdinalIgnoreCase), "expect: {0}  actual: {1}", standalone, reader.StandaloneXml);
             }
             else if (String.IsNullOrEmpty(standalone) && reader.StandaloneXml.HasValue == false)
                 Log.Pass(" PASS! expect: NULL == actual: NULL");
@@ -1212,57 +1211,42 @@ namespace DocumentFormat.OpenXml.Tests
             }
             return result;
         }
-#endregion
+        #endregion
 
         [Fact]
         public void bug247883()
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph").Where(fi => fi.IsWordprocessingFile());
-            var testfile0 = testfiles.ElementAtOrDefault(0);
-            var testfile1 = testfiles.ElementAtOrDefault(1);
-            using (WordprocessingDocument word0 = WordprocessingDocument.Open(testfile0.FullName, true))
-            using (WordprocessingDocument word1 = WordprocessingDocument.Open(testfile1.FullName, true))
+            using (var stream0 = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd, true))
+            using (var stream1 = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AutoSpaceDE, true))
+            using (var word0 = WordprocessingDocument.Open(stream0, true))
+            using (var word1 = WordprocessingDocument.Open(stream1, true))
             {
-                Document doc = word0.MainDocumentPart.Document;
+                var doc = word0.MainDocumentPart.Document;
                 doc.Load(word1.MainDocumentPart);
                 doc.Save();
-                Log.Pass("Test executed without any exception.");
             }
         }
 
         [Fact]
-        public void bug251677()
+        public void ReadMiscNode()
         {
             Body body = new Body(new Paragraph(new ParagraphProperties(), new Run(new Text("test"))));
-            body.PrependChild(new OpenXmlMiscNode(System.Xml.XmlNodeType.Comment, "<!-- start body -->"));
+            body.PrependChild(new OpenXmlMiscNode(XmlNodeType.Comment, "<!-- start body -->"));
 
-            OpenXmlReader reader = OpenXmlReader.Create(body, true); // read misc nodes
-            bool moved = reader.Read();
-            moved = reader.Read();
-            Log.VerifyTrue(reader.IsMiscNode, "reader.IsMiscNode");
-            reader.Close();
+            using (var reader = OpenXmlReader.Create(body, true))
+            {
+                Assert.True(reader.Read());
+                Assert.True(reader.Read());
+                Assert.True(reader.IsMiscNode);
+            }
         }
 
         [Fact]
-        public void bug251835_ReaderDispose()
+        public void ObjectDisposedThrowsOnReaderDispose()
         {
-            var testfiles = CopyTestFiles(@"wordprocessing", "paragraph").Where(fi => fi.IsWordprocessingFile());
-            var testfile = testfiles.FirstOrDefault();
-            try
-            {
-                using (WordprocessingDocument doc = WordprocessingDocument.Open(testfile.FullName, false))
-                {
-                    OpenXmlReader partreader = OpenXmlReader.Create(doc.MainDocumentPart, false);
-                    partreader.Read();
-                    partreader.Dispose();
-                    bool re = partreader.ReadMiscNodes;
-                    string localname = partreader.LocalName;
-                }
-            }
-            catch (Exception e)
-            {
-                Log.VerifyTrue(e is ObjectDisposedException, "e is ObjectDisposedException");
-            }
+            var partreader = OpenXmlReader.Create(new Document(), false);
+            partreader.Dispose();
+            Assert.Throws<ObjectDisposedException>(() => partreader.ReadMiscNodes);
         }
 
         [Fact]
