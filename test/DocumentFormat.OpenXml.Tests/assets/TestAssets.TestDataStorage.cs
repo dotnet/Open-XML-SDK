@@ -221,12 +221,15 @@ namespace DocumentFormat.OpenXml.Tests
                 public static class BugRegression
                 {
                     public const string _680607HelloO14 = "TestDataStorage.v2FxTestFiles.bugregression.680607.HelloO14.docx";
+                    public const string _537826vmlpart = "TestDataStorage.v2FxTestFiles.bugregression.537826.vmlpart.xlsx";
                 }
 
                 public static class ForTestCase
                 {
-                    public const string Bug201775_testfile= "TestDataStorage.v2FxTestFiles.ForTestCase.Bug201775_testfile.docx";
+                    public const string Bug201775_testfile = "TestDataStorage.v2FxTestFiles.ForTestCase.Bug201775_testfile.docx";
                     public const string Bug242602_SDT_unknown = "TestDataStorage.v2FxTestFiles.ForTestCase.Bug242602_SDT - unknown.docx";
+                    public const string Bug539654_529755 = "TestDataStorage.v2FxTestFiles.ForTestCase.Bug539654_529755.xlsm";
+                    public const string Bug571679_Brownbag = "TestDataStorage.v2FxTestFiles.ForTestCase.Bug571679_Brownbag.pptx";
                 }
 
                 public static class AsSources

@@ -3,13 +3,13 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation;
-using OxTest;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using Xunit;
 using Xunit.Abstractions;
+
+using static DocumentFormat.OpenXml.Tests.TestAssets;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -26,28 +26,19 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void TestAutosaveAfterSettingNullRootElement()
         {
-            var testfiles = CopyTestFiles(@"bvt");
-            var testfile = testfiles.FirstOrDefault(f => f.IsWordprocessingFile());
-
-            using (var pkg = testfile.OpenPackage(true /*writable*/, true /*auto-save*/))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
             {
-                WordprocessingDocument doc = pkg as WordprocessingDocument;
-                Assert.NotNull(doc.MainDocumentPart);
-                Assert.NotNull(doc.MainDocumentPart.Document);
-                try
+                using (var doc = WordprocessingDocument.Open(stream, true))
                 {
-                    doc.MainDocumentPart.Document = null;
+                    Assert.NotNull(doc.MainDocumentPart);
+                    Assert.NotNull(doc.MainDocumentPart.Document);
+                    Assert.Throws<ArgumentNullException>(() => doc.MainDocumentPart.Document = null);
                 }
-                catch (ArgumentNullException ex)
-                {
-                    Log.Pass("Caught expected exception.\n{0}", ex.ToString());
-                }
-            }
 
-            using (var pkg = testfile.OpenPackage(false))
-            {
-                WordprocessingDocument doc = pkg as WordprocessingDocument;
-                Assert.NotNull(doc.MainDocumentPart.Document);
+                using (var doc = WordprocessingDocument.Open(stream, true))
+                {
+                    Assert.NotNull(doc.MainDocumentPart.Document);
+                }
             }
         }
 
@@ -55,19 +46,18 @@ namespace DocumentFormat.OpenXml.Tests
         // [Description("O14:537826")]
         public void TestRootElementOfVmlDrawingPartIsLoadedAsUnknown()
         {
-            var file = CopyTestFiles(@"bugregression", true, "537826.vmlpart.xlsx", f => f.IsSpreadsheetFile())
-                .FirstOrDefault();
-
-            using (var vmldoc = SpreadsheetDocument.Open(file.FullName, false))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.BugRegression._537826vmlpart))
+            using (var vmldoc = SpreadsheetDocument.Open(stream, false))
             {
                 var vmlDrawingPart = vmldoc.WorkbookPart.GetPartById("rId1").GetPartById("rId1");
-                Assert.True(vmlDrawingPart is VmlDrawingPart);
-                Assert.True(((VmlDrawingPart)vmlDrawingPart).RootElement == null);
-                using (OpenXmlReader reader = OpenXmlReader.Create(vmlDrawingPart))
+                var vmlPart = Assert.IsType<VmlDrawingPart>(vmlDrawingPart);
+
+                Assert.Null(vmlPart.RootElement);
+
+                using (var reader = OpenXmlReader.Create(vmlDrawingPart))
                 {
-                    reader.Read();
-                    var elem = reader.LoadCurrentElement();
-                    Log.VerifyTrue(elem is OpenXmlUnknownElement, "elem is OpenXmlUnknownElement");
+                    Assert.True(reader.Read());
+                    Assert.IsType<OpenXmlUnknownElement>(reader.LoadCurrentElement());
                 }
             }
         }
@@ -183,151 +173,95 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ExceptionForDuplicatedNsDeclarionWhenClosePackage()
         {
-            var file = CopyTestFiles(@"ForTestCase", true, "Bug571679_Brownbag.pptx", f => f.IsPresentationFile())
-                .FirstOrDefault();
-
-            Log.Comment("Opening file that contains duplicated namespace declarations...");
-            Log.Comment("Part that contains duplciated namespace declarations /ppt/diagrams/data3.xml.");
-
-            var result = file.CopyTo(Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx"));
-            using (var package = result.OpenPackage(true, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.ForTestCase.Bug571679_Brownbag, true))
+            using (var package = PresentationDocument.Open(stream, true))
             {
+                Log.Comment("Opening file that contains duplicated namespace declarations...");
+                Log.Comment("Part that contains duplciated namespace declarations /ppt/diagrams/data3.xml.");
+
                 foreach (var part in package.DescendantParts().Where(p => p.IsReflectable()))
                 {
-                    OpenXmlPartRootElement dom = part.RootElement;
+                    Assert.NotNull(part.RootElement);
                 }
             }
-            Log.Pass("No exception thrown out during loading and saving this file.");
         }
 
-        [Fact]
-        public void MaxNumberOfErrorsTest()
+        [Theory]
+        [InlineData(0, 3)]
+        [InlineData(1, 1)]
+        [InlineData(2, 2)]
+        [InlineData(3, 3)]
+        [InlineData(1000, 3)]
+        public void MaxNumberOfErrorsTest(int maxErrorCount, int expectedErrorCount)
         {
-            var file = CopyTestFiles(@"ForTestCase", true, "Bug539654_529755.xlsm", f => f.IsSpreadsheetFile())
-                .FirstOrDefault();
-            using (var package = file.OpenPackage(false))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.ForTestCase.Bug539654_529755))
+            using (var package = SpreadsheetDocument.Open(stream, false))
             {
-                var validator = new OpenXmlValidator(FileFormatVersions.Office2007);
-                validator.MaxNumberOfErrors = 0;
+                var validator = new OpenXmlValidator(FileFormatVersions.Office2007)
+                {
+                    MaxNumberOfErrors = maxErrorCount
+                };
+
                 var errors = validator.Validate(package);
-                Log.VerifyValue(errors.Count(), 3, "Validation error count");
 
-                validator.MaxNumberOfErrors = 1;
-                errors = validator.Validate(package);
-                Log.VerifyValue(errors.Count(), 1, "Validation error count");
-
-                validator.MaxNumberOfErrors = 2;
-                errors = validator.Validate(package);
-                Log.VerifyValue(errors.Count(), 2, "Validation error count");
-
-                validator.MaxNumberOfErrors = 3;
-                errors = validator.Validate(package);
-                Log.VerifyValue(errors.Count(), 3, "Validation error count");
-
-                validator.MaxNumberOfErrors = 10000;
-                errors = validator.Validate(package);
-                Log.VerifyValue(errors.Count(), 3, "Validation error count");
+                Assert.Equal(expectedErrorCount, errors.Count());
             }
         }
 
         [Fact]
         public void ChangeRelationshipId()
         {
-            var testfiles = CopyTestFiles(@"bvt");
-            var testfile = testfiles.FirstOrDefault().GetCopy();
-            using (var package = testfile.OpenPackage(true, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var package = WordprocessingDocument.Open(stream, true))
             {
                 var container = package.DescendantParts().PickFirst(pc => pc.Parts.Count() > 1);
                 var target = container.Parts.PickSecond();
                 var part = target.OpenXmlPart;
-                try
-                {
-                    var oldId = container.GetIdOfPart(part);
-                    var retId = container.ChangeIdOfPart(part, null);
-                }
-                catch (ArgumentNullException ex)
-                {
-                    Log.Pass("Expected {0} caught when changing Id of Part {1} with Id null.", ex.GetType().FullName, part.Uri);
-                }
-                try
-                {
-                    var oldId = container.GetIdOfPart(part);
-                    var retId = container.ChangeIdOfPart(null, "newId");
-                }
-                catch (ArgumentNullException ex)
-                {
-                    Log.Pass("Expected {0} caught when changing Id of Part {1} with Part null.", ex.GetType().FullName, part.Uri);
-                }
-                try
-                {
-                    var nonSubPart = container;
-                    var retId = container.ChangeIdOfPart(nonSubPart, "newId");
-                }
-                catch (ArgumentOutOfRangeException ex)
-                {
-                    Log.Pass("Expected {0} caught when changing Id of Part {1} with Non-SubPart.", ex.GetType().FullName, part.Uri);
-                }
-                try
-                {
-                    var oldId = container.GetIdOfPart(part);
-                    var retId = container.ChangeIdOfPart(part, string.Empty);
-                }
-                catch (System.ArgumentException ex)
-                {
-                    Log.Pass("Expected {0} caught when changing Id of Part {1} with string.Empty.", ex.GetType().FullName, part.Uri);
-                }
 
-                try
-                {
-                    var oldId = container.GetIdOfPart(part);
-                    var retId = container.ChangeIdOfPart(part, oldId);
-                }
-                catch (System.ArgumentException ex)
-                {
-                    Log.Pass("Expected {0} caught when changing Id of Part {1} with old value.", ex.GetType().FullName, part.Uri);
-                }
+                Assert.NotNull(container.GetIdOfPart(part));
+                Assert.Throws<ArgumentNullException>(() => container.ChangeIdOfPart(part, null));
 
-                try
-                {
-                    var oldId = container.GetIdOfPart(part);
-                    var newId = "newId1";
-                    var retId = container.ChangeIdOfPart(part, newId);
-                }
-                catch (Exception ex)
-                {
-                    Log.Fail("Exception {0} caught when changing Id of Part {1}: {2}", ex.GetType().FullName, part.Uri, ex.ToString());
-                }
+                Assert.NotNull(container.GetIdOfPart(part));
+                Assert.Throws<ArgumentNullException>(() => container.ChangeIdOfPart(null, "newId"));
 
-                try
-                {
-                    var oldId = container.GetIdOfPart(part);
-                    var dupId = container.Parts.Where(p => p.RelationshipId != oldId).Select(p => p.RelationshipId).FirstOrDefault();
-                    var retId = container.ChangeIdOfPart(part, dupId);
-                }
-                catch (System.ArgumentException ex)
-                {
-                    Log.Pass("Expected {0} caught when changing Id of Part {1} with duplicated value.", ex.GetType().FullName, part.Uri);
-                }
+                // Change Id of Part } with Non-SubPart.
+                Assert.Throws<ArgumentOutOfRangeException>(() => container.ChangeIdOfPart(container, "newId"));
+
+                // TODO: Should throw ArgumentException and not ArgumentNullException
+                //Assert.Throws<ArgumentException>(() => container.ChangeIdOfPart(part, string.Empty));
+                Assert.Throws<ArgumentNullException>(() => container.ChangeIdOfPart(part, string.Empty));
+
+                var oldId1 = container.GetIdOfPart(part);
+                Assert.NotNull(oldId1);
+                Assert.Throws<ArgumentException>(() => container.ChangeIdOfPart(part, oldId1));
+
+                var newId1 = "newId1";
+                Assert.Equal(oldId1, container.ChangeIdOfPart(part, newId1));
+
+                var oldId2 = container.GetIdOfPart(part);
+                Assert.Equal(newId1, oldId2);
+
+                var dupId = container.Parts.Where(p => p.RelationshipId != oldId2).Select(p => p.RelationshipId).FirstOrDefault();
+                Assert.Throws<ArgumentException>(() => container.ChangeIdOfPart(part, dupId));
             }
         }
 
         [Fact]
         public void LoadCurrentElementTest()
         {
-            var testfiles = CopyTestFiles(@"bvt");
-            var testfile = testfiles.FirstOrDefault().GetCopy();
-            using (var package = testfile.OpenPackage(true, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var package = WordprocessingDocument.Open(stream, true))
             {
                 var part = package.DescendantParts().PickFirst(p => p.IsReflectable());
+
                 using (OpenXmlReader reader = OpenXmlReader.Create(part as OpenXmlPart))
                 {
                     if (reader.Read())
                     {
-                        var rootElement = reader.LoadCurrentElement(); // This line made the exception thrown.
+                        Assert.NotNull(reader.LoadCurrentElement());
                     }
                 }
             }
-            Log.Pass("No exception thrown out for OpenXmlReader.LoadCurrentElement().");
         }
 
         [Fact]
@@ -356,22 +290,21 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("OuterXml of Paragraph:\n{0}", para.OuterXml);
         }
 
-        [Fact]
-        public void NamespaceDeclarationForNewUnknownElement()
+        [InlineData(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm)]
+        [InlineData(TestDataStorage.V2FxTestFiles.Bvt.O12Typical)]
+        [InlineData(TestDataStorage.V2FxTestFiles.Bvt.PerformanceEng)]
+        [Theory]
+        public void NamespaceDeclarationForNewUnknownElement(string path)
         {
-            var testfiles = CopyTestFiles(@"bvt")
-                .Where(fi => fi.IsOpenXmlFile());
-
-            System.Uri partUri;
+            Uri partUri;
             string hostPath;
             var prefix = "uns";
             var localname = "unknownEle";
             var namespaceUri = @"http://test.openxmlsdk.microsoft.com/unknownns1";
-            foreach (FileInfo testfile in testfiles)
-            {
-                Log.BeginGroup(testfile.Name);
 
-                using (var package = testfile.OpenPackage(true, true))
+            using (var testfile = OpenFile(path, true))
+            {
+                using (var package = testfile.Open(true))
                 {
                     var part = package.DescendantParts().Where(p => p.IsReflectable()).FirstOrDefault();
                     partUri = part.Uri;
@@ -381,14 +314,16 @@ namespace DocumentFormat.OpenXml.Tests
 
                     var unknown = new OpenXmlUnknownElement(prefix, localname, namespaceUri);
                     unknown = host.AppendChild(unknown);
-                    KeyValuePair<string, string> ns = unknown.NamespaceDeclarations.Where(kvp => kvp.Key == prefix && kvp.Value == namespaceUri).FirstOrDefault();
+                    var ns = unknown.NamespaceDeclarations.Where(kvp => kvp.Key == prefix && kvp.Value == namespaceUri).FirstOrDefault();
+
                     if (ns.Key == null)
                         ns = new KeyValuePair<string, string>(unknown.Prefix, unknown.NamespaceUri);
 
-                    Log.VerifyTrue(ns.Key == prefix && ns.Value == namespaceUri, "NO namespace declarations matches found.");
+                    Assert.Equal(prefix, ns.Key);
+                    Assert.Equal(namespaceUri, ns.Value);
                 }
 
-                using (var package = testfile.OpenPackage(false, false))
+                using (var package = testfile.Open(false))
                 {
                     var part = package.DescendantParts().Where(p => p.IsReflectable() && p.Uri == partUri).FirstOrDefault();
                     var dom = part.RootElement;
@@ -396,7 +331,9 @@ namespace DocumentFormat.OpenXml.Tests
 
                     var unknown = host.LastChild;
                     var ns = unknown.NamespaceDeclarations.Where(kvp => kvp.Key == prefix && kvp.Value == namespaceUri);
-                    Log.VerifyTrue(ns.FirstOrDefault().Key == prefix && ns.FirstOrDefault().Value == namespaceUri, "NO namespace declarations matches found.");
+
+                    Assert.Equal(prefix, ns.FirstOrDefault().Key);
+                    Assert.Equal(namespaceUri, ns.FirstOrDefault().Value);
                 }
             }
         }
