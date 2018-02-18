@@ -150,10 +150,9 @@ namespace DocumentFormat.OpenXml.Tests
         {
             Assert.Equal(expected.Count, actual.Count);
 
-            foreach (var entry in expected.Zip(actual, Tuple.Create))
+            foreach (var key in expected.Keys)
             {
-                Assert.Equal(entry.Item1.Key, entry.Item2.Key, StringComparer.Ordinal);
-                Assert.Equal(entry.Item1.Value, entry.Item2.Value);
+                Assert.Equal(expected[key], actual[key]);
             }
         }
     }
