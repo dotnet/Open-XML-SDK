@@ -5,8 +5,9 @@
     <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevCore' ">netcoreapp1.0</TargetFrameworks>
     <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevFramework' ">net46</TargetFrameworks>
     <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'All' ">net452;net46;netcoreapp1.0</TargetFrameworks>
-    
-    <AssemblyName>DocumentFormat.OpenXml.Tests</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <IsTestProject>true</IsTestProject>
     <NoWarn>$(NoWarn);CA1822</NoWarn>
   </PropertyGroup>
