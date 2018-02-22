@@ -8,8 +8,8 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents the custom attribute for fields in a generated enum.
     /// </summary>
-    [AttributeUsage(AttributeTargets.Field, Inherited=false, AllowMultiple=false)]
-    public sealed class EnumStringAttribute : System.Attribute
+    [AttributeUsage(AttributeTargets.Field, Inherited = false, AllowMultiple = false)]
+    public sealed class EnumStringAttribute : Attribute
     {
         /// <summary>
         /// Initializes a new instance of the EnumStringAttribute class using
@@ -18,16 +18,12 @@ namespace DocumentFormat.OpenXml
         /// <param name="value">The text string.</param>
         public EnumStringAttribute(string value)
         {
-            this.Value = value;
+            Value = value;
         }
 
         /// <summary>
         /// Gets the text string in the custom attribute.
         /// </summary>
-        public string Value
-        {
-            get;
-            private set;
-        }
+        public string Value { get; }
     }
 }

@@ -46,6 +46,10 @@ namespace DocumentFormat.OpenXml
 
         private protected virtual bool ShouldParse(string value) => !string.IsNullOrEmpty(value);
 
+        private protected virtual void ValidateSet(T value)
+        {
+        }
+
         /// <inheritdoc/>
         public override bool HasValue
         {
@@ -101,6 +105,8 @@ namespace DocumentFormat.OpenXml
 
             set
             {
+                ValidateSet(value);
+
                 this.InnerValue = value;
                 this.TextValue = null;
             }
