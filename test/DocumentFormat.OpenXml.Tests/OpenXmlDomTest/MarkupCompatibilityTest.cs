@@ -2156,7 +2156,6 @@ namespace DocumentFormat.OpenXml.Tests
                     host.AddNamespaceDeclaration(unknownAttribute1.Prefix, unknownAttribute1.NamespaceUri);
                 }
 
-
                 using (var package = WordprocessingDocument.Open(stream, true))
                 {
                     ValidateMarkupCompatibility(package, FileFormatVersions.Office2007, 1);
