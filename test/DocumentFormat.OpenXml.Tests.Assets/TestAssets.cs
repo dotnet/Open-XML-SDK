@@ -9,7 +9,7 @@ using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    internal static partial class TestAssets
+    public static partial class TestAssets
     {
         /// <summary>
         /// Open a file in memory for a test stream
@@ -48,7 +48,7 @@ namespace DocumentFormat.OpenXml.Tests
         public static Stream GetStream(string name)
         {
             var assembly = typeof(TestFiles).GetTypeInfo().Assembly;
-            var stream = assembly.GetManifestResourceStream($"DocumentFormat.OpenXml.Tests.assets.{name}");
+            var stream = assembly.GetManifestResourceStream($"DocumentFormat.OpenXml.Tests.Assets.assets.{name}");
             var names = assembly.GetManifestResourceNames().OrderBy(t => t).ToList();
 
             Assert.NotNull(stream);
