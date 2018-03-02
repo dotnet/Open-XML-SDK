@@ -98,7 +98,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (_, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyExtendedAttribute(target, unknownAttribute11);
+                    VerifyExtendedAttribute(target, unknownAttribute11);
                 }
             }
         }
@@ -143,7 +143,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (_, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyExtendedAttribute(target, unknownAttribute11);
+                    VerifyExtendedAttribute(target, unknownAttribute11);
                 }
             }
         }
@@ -221,7 +221,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (_, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyUnknownElement(target.LastChild, unknownElement11);
+                    VerifyUnknownElement(target.LastChild, unknownElement11);
                 }
             }
         }
@@ -266,7 +266,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (_, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyUnknownElement(target.LastChild, unknownElement11);
+                    VerifyUnknownElement(target.LastChild, unknownElement11);
                 }
             }
         }
@@ -339,8 +339,8 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (host, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyMcAttribute(host, "Ignorable", unknownAttribute11.Prefix);
-                    verifyExtendedAttribute(target, unknownAttribute11);
+                    VerifyMcAttribute(host, "Ignorable", unknownAttribute11.Prefix);
+                    VerifyExtendedAttribute(target, unknownAttribute11);
                 }
             }
         }
@@ -388,7 +388,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (_, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyNoExtendedAttribute(target, unknownAttribute11);
+                    VerifyNoExtendedAttribute(target, unknownAttribute11);
                 }
             }
         }
@@ -451,8 +451,8 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var host = LocateElements(package, uriPart, hostPath);
 
-                    verifyMcAttribute(host, "Ignorable", known.Prefix);
-                    verifyKnownAttribute(host, known);
+                    VerifyMcAttribute(host, "Ignorable", known.Prefix);
+                    VerifyKnownAttribute(host, known);
                 }
             }
         }
@@ -490,7 +490,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var host = LocateElements(package, partUri, hostPath);
 
-                    verifyKnownAttribute(host, known);
+                    VerifyKnownAttribute(host, known);
                 }
             }
         }
@@ -557,8 +557,8 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (host, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyMcAttribute(host, "Ignorable", unknownElement11.Prefix);
-                    verifyUnknownElement(target.LastChild, unknownElement11);
+                    VerifyMcAttribute(host, "Ignorable", unknownElement11.Prefix);
+                    VerifyUnknownElement(target.LastChild, unknownElement11);
                 }
             }
         }
@@ -606,7 +606,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (_, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyUnknownElement(target.LastChild, unknownElement11);
+                    VerifyUnknownElement(target.LastChild, unknownElement11);
                 }
             }
         }
@@ -672,8 +672,8 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (host, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyMcAttribute(host, "Ignorable", known.Prefix);
-                    verifyKnownElement(target.FirstChild, known);
+                    VerifyMcAttribute(host, "Ignorable", known.Prefix);
+                    VerifyKnownElement(target.FirstChild, known);
                 }
             }
         }
@@ -714,7 +714,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (_, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyKnownElement(target.FirstChild, known);
+                    VerifyKnownElement(target.FirstChild, known);
                 }
             }
         }
@@ -770,7 +770,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var host = LocateElements(package, partUri, hostPath);
 
-                    verifyMcAttribute(host, "Ignorable", "\x20\x9\xA\xD");
+                    VerifyMcAttribute(host, "Ignorable", "\x20\x9\xA\xD");
                 }
             }
         }
@@ -829,7 +829,7 @@ namespace DocumentFormat.OpenXml.Tests
                             .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !d.ChildElements.Any(c => c is OpenXmlUnknownElement));
 
                         var children = new List<OpenXmlElement>();
-                        wrapChildrenWithElement(target, unknownElement11, children);
+                        WrapChildrenWithElement(target, unknownElement11, children);
 
                         host.SetIgnorable(unknownElement11.Prefix);
                         host.AddNamespaceDeclaration(unknownElement11.Prefix, unknownElement11.NamespaceUri);
@@ -850,10 +850,10 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (host, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyMcAttribute(host, "Ignorable", unknownElement11.Prefix);
-                    verifyMcAttribute(host, "ProcessContent", unknownElement11.GetFullName());
-                    verifyUnknownElement(target.LastChild, unknownElement11);
-                    verifyUnknownChildren(target.LastChild, expected);
+                    VerifyMcAttribute(host, "Ignorable", unknownElement11.Prefix);
+                    VerifyMcAttribute(host, "ProcessContent", unknownElement11.GetFullName());
+                    VerifyUnknownElement(target.LastChild, unknownElement11);
+                    VerifyUnknownChildren(target.LastChild, expected);
                 }
             }
         }
@@ -882,7 +882,7 @@ namespace DocumentFormat.OpenXml.Tests
                             .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !d.ChildElements.Any(c => c is OpenXmlUnknownElement));
 
                         var children = new List<OpenXmlElement>();
-                        wrapChildrenWithElement(target, unknownElement11, children);
+                        WrapChildrenWithElement(target, unknownElement11, children);
 
                         host.SetIgnorable(unknownElement11.Prefix);
                         host.AddNamespaceDeclaration(unknownElement11.Prefix, unknownElement11.NamespaceUri);
@@ -903,8 +903,8 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (_, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyNoUnkownChild(target, unknownElement11.GetFullName());
-                    verifyKnownChildren(target, expected);
+                    VerifyNoUnkownChild(target, unknownElement11.GetFullName());
+                    VerifyKnownChildren(target, expected);
                 }
             }
         }
@@ -927,7 +927,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var unknownElement11 = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
 
                 var children = new List<OpenXmlElement>();
-                wrapChildrenWithElement(target, unknownElement11, children);
+                WrapChildrenWithElement(target, unknownElement11, children);
 
                 host.SetIgnorable(unknownElement11.Prefix);
                 host.AddNamespaceDeclaration(unknownElement11.Prefix, unknownElement11.NamespaceUri);
@@ -961,7 +961,7 @@ namespace DocumentFormat.OpenXml.Tests
                             .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !d.ChildElements.Any(c => c is OpenXmlUnknownElement));
 
                         var children = new List<OpenXmlElement>();
-                        wrapChildrenWithElement(target, unknownElement11, children);
+                        WrapChildrenWithElement(target, unknownElement11, children);
 
                         host.SetIgnorable(unknownElement11.Prefix);
                         host.AddNamespaceDeclaration(unknownElement11.Prefix, unknownElement11.NamespaceUri);
@@ -982,10 +982,10 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (host, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyMcAttribute(host, "Ignorable", unknownElement11.Prefix);
-                    verifyMcAttribute(host, "ProcessContent", "*");
-                    verifyUnknownElement(target.LastChild, unknownElement11);
-                    verifyUnknownChildren(target.LastChild, expected);
+                    VerifyMcAttribute(host, "Ignorable", unknownElement11.Prefix);
+                    VerifyMcAttribute(host, "ProcessContent", "*");
+                    VerifyUnknownElement(target.LastChild, unknownElement11);
+                    VerifyUnknownChildren(target.LastChild, expected);
                 }
             }
         }
@@ -1014,7 +1014,7 @@ namespace DocumentFormat.OpenXml.Tests
                             .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !d.ChildElements.Any(c => c is OpenXmlUnknownElement));
 
                         var children = new List<OpenXmlElement>();
-                        wrapChildrenWithElement(target, unknownElement11, children);
+                        WrapChildrenWithElement(target, unknownElement11, children);
 
                         host.SetProcessContent(unknownElement11.GetFullName());
                         host.AddNamespaceDeclaration(unknownElement11.Prefix, unknownElement11.NamespaceUri);
@@ -1034,10 +1034,10 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (host, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyNoMcAttribute(host, "Ignorable", unknownElement11.Prefix);
-                    verifyMcAttribute(host, "ProcessContent", unknownElement11.GetFullName());
-                    verifyUnknownElement(target.LastChild, unknownElement11);
-                    verifyUnknownChildren(target.LastChild, expected);
+                    VerifyNoMcAttribute(host, "Ignorable", unknownElement11.Prefix);
+                    VerifyMcAttribute(host, "ProcessContent", unknownElement11.GetFullName());
+                    VerifyUnknownElement(target.LastChild, unknownElement11);
+                    VerifyUnknownChildren(target.LastChild, expected);
                 }
             }
         }
@@ -1066,7 +1066,7 @@ namespace DocumentFormat.OpenXml.Tests
                             .PickFirst(d => d is OpenXmlCompositeElement);
 
                         var children = new List<OpenXmlElement>();
-                        wrapChildrenWithElement(target, unknownElement11, children);
+                        WrapChildrenWithElement(target, unknownElement11, children);
 
                         host.SetProcessContent(unknownElement11.GetFullName());
                         host.AddNamespaceDeclaration(unknownElement11.Prefix, unknownElement11.NamespaceUri);
@@ -1086,9 +1086,9 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (host, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyNoMcAttribute(host, "ProcessContent", unknownElement11.GetFullName());
-                    verifyUnknownElement(target.LastChild, unknownElement11);
-                    verifyUnknownChildren(target.LastChild, expected);
+                    VerifyNoMcAttribute(host, "ProcessContent", unknownElement11.GetFullName());
+                    VerifyUnknownElement(target.LastChild, unknownElement11);
+                    VerifyUnknownChildren(target.LastChild, expected);
                 }
             }
         }
@@ -1112,7 +1112,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var unknownElement11 = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
 
                     var children = new List<OpenXmlElement>();
-                    wrapChildrenWithElement(target, unknownElement11, children);
+                    WrapChildrenWithElement(target, unknownElement11, children);
 
                     host.SetProcessContent(unknownElement11.GetFullName());
                     host.AddNamespaceDeclaration(unknownElement11.Prefix, unknownElement11.NamespaceUri);
@@ -1161,9 +1161,9 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (host, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyMcAttribute(host, "Ignorable", known.Prefix);
-                    verifyMcAttribute(host, "ProcessContent", known.GetFullName());
-                    verifyKnownElement(target.FirstChild, known);
+                    VerifyMcAttribute(host, "Ignorable", known.Prefix);
+                    VerifyMcAttribute(host, "ProcessContent", known.GetFullName());
+                    VerifyKnownElement(target.FirstChild, known);
                 }
             }
         }
@@ -1200,7 +1200,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (_, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyKnownElement(target.FirstChild, expected);
+                    VerifyKnownElement(target.FirstChild, expected);
                 }
             }
         }
@@ -1252,7 +1252,7 @@ namespace DocumentFormat.OpenXml.Tests
                             .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !d.ChildElements.Any(c => c is OpenXmlUnknownElement));
 
                         var children = new List<OpenXmlElement>();
-                        wrapChildrenWithElement(target, unknownElement11, children);
+                        WrapChildrenWithElement(target, unknownElement11, children);
 
                         host.SetIgnorable(unknownElement11.Prefix);
                         host.AddNamespaceDeclaration(unknownElement11.Prefix, unknownElement11.NamespaceUri);
@@ -1274,11 +1274,11 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (host, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyMcAttribute(host, "Ignorable", unknownElement11.Prefix);
-                    verifyMcAttribute(host, "ProcessContent", unknownElement11.GetFullName());
-                    verifyAttribute(host, xmlSpace);
-                    verifyUnknownElement(target.LastChild, unknownElement11);
-                    verifyUnknownChildren(target.LastChild, expected);
+                    VerifyMcAttribute(host, "Ignorable", unknownElement11.Prefix);
+                    VerifyMcAttribute(host, "ProcessContent", unknownElement11.GetFullName());
+                    VerifyAttribute(host, xmlSpace);
+                    VerifyUnknownElement(target.LastChild, unknownElement11);
+                    VerifyUnknownChildren(target.LastChild, expected);
                 }
             }
         }
@@ -1308,7 +1308,7 @@ namespace DocumentFormat.OpenXml.Tests
                             .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && !d.ChildElements.Any(c => c is OpenXmlUnknownElement));
 
                         var children = new List<OpenXmlElement>();
-                        wrapChildrenWithElement(target, unknownElement11, children);
+                        WrapChildrenWithElement(target, unknownElement11, children);
 
                         host.SetIgnorable(unknownElement11.Prefix);
                         host.AddNamespaceDeclaration(unknownElement11.Prefix, unknownElement11.NamespaceUri);
@@ -1330,11 +1330,11 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (host, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyMcAttribute(host, "Ignorable", unknownElement11.Prefix);
-                    verifyMcAttribute(host, "ProcessContent", unknownElement11.GetFullName());
-                    verifyAttribute(host, xmlLang);
-                    verifyUnknownElement(target.LastChild, unknownElement11);
-                    verifyUnknownChildren(target.LastChild, expected);
+                    VerifyMcAttribute(host, "Ignorable", unknownElement11.Prefix);
+                    VerifyMcAttribute(host, "ProcessContent", unknownElement11.GetFullName());
+                    VerifyAttribute(host, xmlLang);
+                    VerifyUnknownElement(target.LastChild, unknownElement11);
+                    VerifyUnknownChildren(target.LastChild, expected);
                 }
             }
         }
@@ -1359,7 +1359,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var xmlLang = new OpenXmlAttribute("xml", "lang", xmlNS, "en-US");
 
                     var children = new List<OpenXmlElement>();
-                    wrapChildrenWithElement(target, unknownElement, children);
+                    WrapChildrenWithElement(target, unknownElement, children);
 
                     host.SetIgnorable(unknownElement.Prefix);
                     host.AddNamespaceDeclaration(unknownElement.Prefix, unknownElement.NamespaceUri);
@@ -1431,12 +1431,12 @@ namespace DocumentFormat.OpenXml.Tests
                 using (var package = WordprocessingDocument.Open(stream, false, openSettings))
                 {
                     var (host, target) = LocateElements(package, partUri, hostPath, targetPath);
-                    verifyMcAttribute(host, "Ignorable", unknownElement11.Prefix);
-                    verifyMcAttribute(host, "PreserveElements", unknownElement11.GetFullName());
-                    verifyMcAttribute(host, "PreserveAttributes", unknownAttribute11.GetFullName());
+                    VerifyMcAttribute(host, "Ignorable", unknownElement11.Prefix);
+                    VerifyMcAttribute(host, "PreserveElements", unknownElement11.GetFullName());
+                    VerifyMcAttribute(host, "PreserveAttributes", unknownAttribute11.GetFullName());
 
-                    verifyUnknownElement(target.LastChild, unknownElement11);
-                    verifyKnownChildren(target, expected);
+                    VerifyUnknownElement(target.LastChild, unknownElement11);
+                    VerifyKnownChildren(target, expected);
                 }
             }
         }
@@ -1498,11 +1498,11 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (_, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyUnknownElement(target.LastChild, element);
-                    verifyAttribute(target.LastChild, unknownAttribute1);
-                    verifyAttribute(target.LastChild, unprefixedAttribute);
-                    verifyNoAttribute(target.LastChild, unknownAttribute2);
-                    verifyKnownChildren(target, expectedChildren);
+                    VerifyUnknownElement(target.LastChild, element);
+                    VerifyAttribute(target.LastChild, unknownAttribute1);
+                    VerifyAttribute(target.LastChild, unprefixedAttribute);
+                    VerifyNoAttribute(target.LastChild, unknownAttribute2);
+                    VerifyKnownChildren(target, expectedChildren);
                 }
             }
         }
@@ -1603,13 +1603,13 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (host, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyMcAttribute(host, "Ignorable", unknownElement11.Prefix);
-                    verifyMcAttribute(host, "PreserveElements", unknownElement11.GetFullName());
-                    verifyMcAttribute(host, "PreserveAttributes", unknownAttribute11.GetFullName());
+                    VerifyMcAttribute(host, "Ignorable", unknownElement11.Prefix);
+                    VerifyMcAttribute(host, "PreserveElements", unknownElement11.GetFullName());
+                    VerifyMcAttribute(host, "PreserveAttributes", unknownAttribute11.GetFullName());
 
-                    verifyUnknownElement(target.LastChild, unknownElement11);
-                    verifyKnownChildren(target, expected);
-                    verifyUnknownElement(target.FirstChild.LastChild, unknownElement12);
+                    VerifyUnknownElement(target.LastChild, unknownElement11);
+                    VerifyKnownChildren(target, expected);
+                    VerifyUnknownElement(target.FirstChild.LastChild, unknownElement12);
                 }
             }
         }
@@ -1676,11 +1676,11 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (_, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyUnknownElement(target.LastChild, originalUnknownElement);
-                    verifyAttribute(target.LastChild, unknownAttribute11);
-                    verifyAttribute(target.LastChild, unprefixedAttribute);
-                    verifyNoAttribute(target.LastChild, unknownAttribute12);
-                    verifyKnownChildren(target, expected);
+                    VerifyUnknownElement(target.LastChild, originalUnknownElement);
+                    VerifyAttribute(target.LastChild, unknownAttribute11);
+                    VerifyAttribute(target.LastChild, unprefixedAttribute);
+                    VerifyNoAttribute(target.LastChild, unknownAttribute12);
+                    VerifyKnownChildren(target, expected);
                 }
             }
         }
@@ -1777,12 +1777,12 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (host, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyMcAttribute(host, "Ignorable", unknownElement11.Prefix);
-                    verifyMcAttribute(host, "PreserveElements", "*");
-                    verifyMcAttribute(host, "PreserveAttributes", "*");
+                    VerifyMcAttribute(host, "Ignorable", unknownElement11.Prefix);
+                    VerifyMcAttribute(host, "PreserveElements", "*");
+                    VerifyMcAttribute(host, "PreserveAttributes", "*");
 
-                    verifyUnknownElement(target.LastChild, unknownElement11);
-                    verifyKnownChildren(target, expected);
+                    VerifyUnknownElement(target.LastChild, unknownElement11);
+                    VerifyKnownChildren(target, expected);
                 }
             }
         }
@@ -1840,11 +1840,11 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (host, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyUnknownElement(target.LastChild, expectedElement);
-                    verifyAttribute(target.LastChild, unknownAttribute11);
-                    verifyAttribute(target.LastChild, unprefixedAttribute);
-                    verifyNoAttribute(target.LastChild, unknownAttribute12);
-                    verifyKnownChildren(target, expected);
+                    VerifyUnknownElement(target.LastChild, expectedElement);
+                    VerifyAttribute(target.LastChild, unknownAttribute11);
+                    VerifyAttribute(target.LastChild, unprefixedAttribute);
+                    VerifyNoAttribute(target.LastChild, unknownAttribute12);
+                    VerifyKnownChildren(target, expected);
                 }
             }
         }
@@ -1937,11 +1937,11 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (host, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyMcAttribute(host, "PreserveElements", unknownElement11.GetFullName());
-                    verifyMcAttribute(host, "PreserveAttributes", unknownAttribute11.GetFullName());
+                    VerifyMcAttribute(host, "PreserveElements", unknownElement11.GetFullName());
+                    VerifyMcAttribute(host, "PreserveAttributes", unknownAttribute11.GetFullName());
 
-                    verifyUnknownElement(target.LastChild, unknownElement11);
-                    verifyKnownChildren(target, expected);
+                    VerifyUnknownElement(target.LastChild, unknownElement11);
+                    VerifyKnownChildren(target, expected);
                 }
             }
         }
@@ -2062,10 +2062,10 @@ namespace DocumentFormat.OpenXml.Tests
                 unknownElement.SetAttribute(unprefixedAttribute);
 
                 var expectedElement = unknownElement.CloneNode(true);
-                verifyMcAttribute(host, "PreserveAttributes", unknownAttribute.GetFullName());
+                VerifyMcAttribute(host, "PreserveAttributes", unknownAttribute.GetFullName());
 
-                verifyUnknownElement(target.LastChild, expectedElement);
-                verifyKnownChildren(target, children);
+                VerifyUnknownElement(target.LastChild, expectedElement);
+                VerifyKnownChildren(target, children);
             }
         }
 
@@ -2117,11 +2117,11 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (host, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyNoMcAttribute(host, "PreserveElements", unknownElement11.GetFullName());
-                    verifyMcAttribute(host, "PreserveAttributes", unknownAttribute11.GetFullName());
+                    VerifyNoMcAttribute(host, "PreserveElements", unknownElement11.GetFullName());
+                    VerifyMcAttribute(host, "PreserveAttributes", unknownAttribute11.GetFullName());
 
-                    verifyUnknownElement(target.LastChild, unknownElement11);
-                    verifyKnownChildren(target, expected);
+                    VerifyUnknownElement(target.LastChild, unknownElement11);
+                    VerifyKnownChildren(target, expected);
                 }
             }
         }
@@ -2212,11 +2212,11 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var (host, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyMcAttribute(host, "Ignorable", unknownElement11.Prefix);
-                    verifyMcAttribute(host, "PreserveAttributes", unknownAttribute11.GetFullName());
+                    VerifyMcAttribute(host, "Ignorable", unknownElement11.Prefix);
+                    VerifyMcAttribute(host, "PreserveAttributes", unknownAttribute11.GetFullName());
 
-                    verifyUnknownElement(target.LastChild, unknownElement11);
-                    verifyKnownChildren(target, expected);
+                    VerifyUnknownElement(target.LastChild, unknownElement11);
+                    VerifyKnownChildren(target, expected);
                 }
             }
         }
@@ -2330,9 +2330,9 @@ namespace DocumentFormat.OpenXml.Tests
 
                         var children = new List<OpenXmlElement>();
 
-                        wrapChildrenWithElement(target, unknownElement11, children);
+                        WrapChildrenWithElement(target, unknownElement11, children);
 
-                        var muhost = chooseElementBetween(target, host.Path(), target.Path());
+                        var muhost = ChooseElementBetween(target, host.Path(), target.Path());
                         muhost.SetMustUnderstand(unknownElement11.Prefix);
 
                         host.SetIgnorable(unknownElement11.Prefix);
@@ -2354,9 +2354,9 @@ namespace DocumentFormat.OpenXml.Tests
                     var (host, muhost) = LocateElements(package, partUri, hostPath, muhostPath);
                     var (_, target) = LocateElements(package, partUri, hostPath, targetPath);
 
-                    verifyMcAttribute(host, "Ignorable", unknownElement11.Prefix);
-                    verifyMcAttribute(muhost, "MustUnderstand", unknownElement11.Prefix);
-                    verifyUnknownElement(target.LastChild, unknownElement11);
+                    VerifyMcAttribute(host, "Ignorable", unknownElement11.Prefix);
+                    VerifyMcAttribute(muhost, "MustUnderstand", unknownElement11.Prefix);
+                    VerifyUnknownElement(target.LastChild, unknownElement11);
                 }
             }
         }
@@ -2381,9 +2381,9 @@ namespace DocumentFormat.OpenXml.Tests
 
                         var children = new List<OpenXmlElement>();
 
-                        wrapChildrenWithElement(target, unknownElement11, children);
+                        WrapChildrenWithElement(target, unknownElement11, children);
 
-                        var muhost = chooseElementBetween(target, host.Path(), target.Path());
+                        var muhost = ChooseElementBetween(target, host.Path(), target.Path());
                         muhost.SetMustUnderstand(unknownElement11.Prefix);
 
                         host.SetIgnorable(unknownElement11.Prefix);
@@ -2435,9 +2435,9 @@ namespace DocumentFormat.OpenXml.Tests
                         host.AddNamespaceDeclaration(unknownElement11.Prefix, unknownElement11.NamespaceUri);
 
                         var children = new List<OpenXmlElement>();
-                        wrapChildrenWithElement(target, unknownElement11, children);
+                        WrapChildrenWithElement(target, unknownElement11, children);
 
-                        var muhost = chooseElementBetween(target, host.Path(), target.Path());
+                        var muhost = ChooseElementBetween(target, host.Path(), target.Path());
                         Log.Comment("Setting @MustUnderstand with value: {0} on {1}", unknownElement11.Prefix, muhost.Path());
                         muhost.SetMustUnderstand(unknownElement11.Prefix);
 
@@ -2474,9 +2474,9 @@ namespace DocumentFormat.OpenXml.Tests
 
                         var children = new List<OpenXmlElement>();
 
-                        wrapChildrenWithElement(target, unknownElement11, children);
+                        WrapChildrenWithElement(target, unknownElement11, children);
 
-                        var muhost = chooseElementBetween(target, host.Path(), target.Path());
+                        var muhost = ChooseElementBetween(target, host.Path(), target.Path());
 
                         muhost.SetMustUnderstand(unknownElement11.Prefix);
                         muhost.AddNamespaceDeclaration(unknownElement11.Prefix, unknownElement11.NamespaceUri);
@@ -2497,8 +2497,8 @@ namespace DocumentFormat.OpenXml.Tests
                     var (_, target) = LocateElements(package, partUri, hostPath, targetPath);
                     var (_, muhost) = LocateElements(package, partUri, hostPath, muhostPath);
 
-                    verifyMcAttribute(muhost, "MustUnderstand", unknownElement11.Prefix);
-                    verifyUnknownElement(target.LastChild, unknownElement11);
+                    VerifyMcAttribute(muhost, "MustUnderstand", unknownElement11.Prefix);
+                    VerifyUnknownElement(target.LastChild, unknownElement11);
                 }
             }
         }
@@ -2523,9 +2523,9 @@ namespace DocumentFormat.OpenXml.Tests
 
                         var children = new List<OpenXmlElement>();
 
-                        wrapChildrenWithElement(target, unknownElement11, children);
+                        WrapChildrenWithElement(target, unknownElement11, children);
 
-                        var muhost = chooseElementBetween(target, host.Path(), target.Path());
+                        var muhost = ChooseElementBetween(target, host.Path(), target.Path());
                         muhost.SetMustUnderstand(unknownElement11.Prefix);
                         muhost.AddNamespaceDeclaration(unknownElement11.Prefix, unknownElement11.NamespaceUri);
 
@@ -2573,9 +2573,9 @@ namespace DocumentFormat.OpenXml.Tests
                     var children = new List<OpenXmlElement>();
                     var expectedElement = target.CloneNode(true);
 
-                    wrapChildrenWithElement(target, unknownElement11, children);
+                    WrapChildrenWithElement(target, unknownElement11, children);
 
-                    var muhost = chooseElementBetween(target, host.Path(), target.Path());
+                    var muhost = ChooseElementBetween(target, host.Path(), target.Path());
                     muhost.SetMustUnderstand(unknownElement11.Prefix);
                     muhost.AddNamespaceDeclaration(unknownElement11.Prefix, unknownElement11.NamespaceUri);
 
@@ -2624,8 +2624,8 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var host = LocateElements(package, partUri, hostPath);
 
-                    verifyKnownElement(host.LastChild, abc);
-                    verifyKnownChildren(host, expected);
+                    VerifyKnownElement(host.LastChild, abc);
+                    VerifyKnownChildren(host, expected);
                 }
             }
         }
@@ -2663,7 +2663,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var host = LocateElements(package, partUri, hostPath);
 
-                    verifyKnownChildren(host, expected);
+                    VerifyKnownChildren(host, expected);
                 }
             }
         }
@@ -2725,8 +2725,8 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var host = LocateElements(package, partUri, hostPath);
 
-                    verifyKnownElement(host.LastChild, acb);
-                    verifyKnownChildren(host.LastChild.LastChild, expected);
+                    VerifyKnownElement(host.LastChild, acb);
+                    VerifyKnownChildren(host.LastChild.LastChild, expected);
                 }
             }
         }
@@ -2764,7 +2764,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var host = LocateElements(package, partUri, hostPath);
 
-                    verifyKnownChildren(host, expected);
+                    VerifyKnownChildren(host, expected);
                 }
             }
         }
@@ -2826,7 +2826,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var host = LocateElements(package, partUri, hostPath);
 
-                    verifyKnownElement(host.LastChild, expected);
+                    VerifyKnownElement(host.LastChild, expected);
                 }
             }
         }
@@ -2864,7 +2864,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var host = LocateElements(package, partUri, hostPath);
 
-                    verifyKnownElement(host, expected);
+                    VerifyKnownElement(host, expected);
                 }
             }
         }
@@ -2926,7 +2926,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var host = LocateElements(package, partUri, hostPath);
 
-                    verifyKnownElement(host.LastChild, expected);
+                    VerifyKnownElement(host.LastChild, expected);
                 }
             }
         }
@@ -2964,7 +2964,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var host = LocateElements(package, partUri, hostPath);
 
-                    verifyKnownChildren(host, expected);
+                    VerifyKnownChildren(host, expected);
                 }
             }
         }
@@ -3026,7 +3026,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var host = LocateElements(package, partUri, hostPath);
 
-                    verifyKnownElement(host.LastChild, expected);
+                    VerifyKnownElement(host.LastChild, expected);
                 }
             }
         }
@@ -3064,7 +3064,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var host = LocateElements(package, result.part, result.host);
 
-                    verifyKnownElement(host.FirstChild, result.expected);
+                    VerifyKnownElement(host.FirstChild, result.expected);
                 }
             }
         }
@@ -3126,7 +3126,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var host = LocateElements(package, partUri, hostPath);
 
-                    verifyKnownElement(host.FirstChild, expected);
+                    VerifyKnownElement(host.FirstChild, expected);
                 }
             }
         }
@@ -3164,8 +3164,8 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var host = LocateElements(package, partUri, hostPath);
 
-                    Assert.ThrowsAny<Exception>(() => verifyKnownElement(host, expected));
-                    verifyKnownChildren(host, children);
+                    Assert.ThrowsAny<Exception>(() => VerifyKnownElement(host, expected));
+                    VerifyKnownChildren(host, children);
                 }
             }
         }
@@ -3217,7 +3217,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var host = LocateElements(package, partUri, hostPath);
 
-                    verifyKnownElement(host.FirstChild, expected);
+                    VerifyKnownElement(host.FirstChild, expected);
                 }
             }
         }
@@ -3255,7 +3255,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var host = LocateElements(package, partUri, hostPath);
 
-                    verifyKnownElement(host, expected);
+                    VerifyKnownElement(host, expected);
                 }
             }
         }
@@ -3320,7 +3320,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var host = LocateElements(package, partUri, hostPath);
 
-                    verifyKnownElement(host.LastChild, expected);
+                    VerifyKnownElement(host.LastChild, expected);
                 }
             }
         }
@@ -3370,7 +3370,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                     Assert.Single(host.ChildElements);
 
-                    verifyKnownElement(host.LastChild, expected);
+                    VerifyKnownElement(host.LastChild, expected);
                 }
             }
         }
@@ -3458,7 +3458,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var host = LocateElements(package, partUri, hostPath);
 
-                    verifyKnownElement(host.LastChild, expected);
+                    VerifyKnownElement(host.LastChild, expected);
                 }
             }
         }
@@ -3506,7 +3506,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var host = LocateElements(package, partUri, hostPath);
 
-                    verifyKnownElement(host.FirstChild, expected);
+                    VerifyKnownElement(host.FirstChild, expected);
                 }
             }
         }
@@ -3588,7 +3588,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var host = LocateElements(package, partUri, hostPath);
 
-                    verifyKnownElement(host.LastChild, expected);
+                    VerifyKnownElement(host.LastChild, expected);
                 }
             }
         }
@@ -3638,7 +3638,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var host = LocateElements(package, partUri, hostPath);
 
-                    verifyKnownElement(host.FirstChild, expected);
+                    VerifyKnownElement(host.FirstChild, expected);
                 }
             }
         }
@@ -3884,7 +3884,7 @@ namespace DocumentFormat.OpenXml.Tests
             return (host, target);
         }
 
-        private OpenXmlElement chooseElementBetween(OpenXmlElement target, string startPath, string endPath)
+        private OpenXmlElement ChooseElementBetween(OpenXmlElement target, string startPath, string endPath)
         {
             OpenXmlElement pchost = null;
             if (startPath == endPath)
@@ -3894,7 +3894,7 @@ namespace DocumentFormat.OpenXml.Tests
             return pchost;
         }
 
-        private void wrapChildrenWithElement(OpenXmlElement host, OpenXmlElement wrapper, List<OpenXmlElement> children)
+        private void WrapChildrenWithElement(OpenXmlElement host, OpenXmlElement wrapper, List<OpenXmlElement> children)
         {
             Log.Comment("Moving child elements from {0} to {1}...", host.Path(), wrapper.Path());
             foreach (var d in host.ChildElements)
@@ -3929,7 +3929,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Verify Methods
 
-        private void verifyMcAttribute(OpenXmlElement host, string mcName, string expectedValue)
+        private void VerifyMcAttribute(OpenXmlElement host, string mcName, string expectedValue)
         {
             Log.Comment("Verifying {0} attribute is set correctly.", mcName);
             var hasAttribute = host.GetAttributes().Where(a => a.LocalName == mcName && a.Value == expectedValue).FirstOrDefault() != default(OpenXmlAttribute);
@@ -3939,7 +3939,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Fail("{0} does NOT exist or is set wrong value.", mcName);
         }
 
-        private void verifyNoMcAttribute(OpenXmlElement host, string mcName, string expectedValue)
+        private void VerifyNoMcAttribute(OpenXmlElement host, string mcName, string expectedValue)
         {
             Log.Comment("Verifing {0} attribute is filtered out...", mcName);
             var hasAttribute = host.GetAttributes().Where(a => a.LocalName == "Ignorable" && a.Value == expectedValue).FirstOrDefault() != default(OpenXmlAttribute);
@@ -3949,7 +3949,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Pass("{0} attribute does NOT exist on host element:{1}", mcName, host.Path());
         }
 
-        private void verifyAttribute(OpenXmlElement host, OpenXmlAttribute expectedAttribute)
+        private void VerifyAttribute(OpenXmlElement host, OpenXmlAttribute expectedAttribute)
         {
             var verified = host
                 .GetAttributes()
@@ -3959,7 +3959,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(verified != default(OpenXmlAttribute));
         }
 
-        private void verifyNoAttribute(OpenXmlElement host, OpenXmlAttribute expectedAttribute)
+        private void VerifyNoAttribute(OpenXmlElement host, OpenXmlAttribute expectedAttribute)
         {
             Log.Comment("Verifying attribute {0} does NOT exist....", expectedAttribute.GetFullName());
             var exist = host.GetAttributes().Any(a => a == expectedAttribute);
@@ -3969,7 +3969,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Pass("Verified attribute {0} NOT exist with value {1}.", expectedAttribute.GetFullName(), expectedAttribute.Value);
         }
 
-        private void verifyExtendedAttribute(OpenXmlElement host, OpenXmlAttribute expectedAttribute)
+        private void VerifyExtendedAttribute(OpenXmlElement host, OpenXmlAttribute expectedAttribute)
         {
             Log.Comment("Verifying unknown attribute is loaded as extended...");
             if (host.ExtendedAttributes.Any(ea => ea == expectedAttribute))
@@ -3978,7 +3978,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Fail("Attribute {0} from unknown ns is NOT loaded as Extended attribute.", expectedAttribute.GetFullName());
         }
 
-        private void verifyNoExtendedAttribute(OpenXmlElement host, OpenXmlAttribute expectedAttribute)
+        private void VerifyNoExtendedAttribute(OpenXmlElement host, OpenXmlAttribute expectedAttribute)
         {
             Log.Comment("Verifying unknown attribute is ignored...");
             var verified = !host.ExtendedAttributes.Any(ea => ea == expectedAttribute);
@@ -3988,7 +3988,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Fail("Attribute {0} from unkown ns is loaded as Extended attribute.", expectedAttribute.GetFullName());
         }
 
-        private void verifyKnownAttribute(OpenXmlElement host, OpenXmlAttribute expectedAttribute)
+        private void VerifyKnownAttribute(OpenXmlElement host, OpenXmlAttribute expectedAttribute)
         {
             Log.Comment("Verifying known attribute is loaded as built-in attribute...");
             var verified = (host.GetAttributes().First() == expectedAttribute) && host.ExtendedAttributes.All(ea => ea != expectedAttribute);
@@ -3998,13 +3998,13 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Fail("Attribute {0} from known ns is NOT loaded as built-in attribute.", expectedAttribute.GetFullName());
         }
 
-        private void verifyUnknownElement(OpenXmlElement host, OpenXmlElement expectedElement)
+        private void VerifyUnknownElement(OpenXmlElement host, OpenXmlElement expectedElement)
         {
             Assert.IsType<OpenXmlUnknownElement>(host);
             Assert.True(host.ToXElement().Compare(expectedElement.ToXElement()));
         }
 
-        private void verifyNoUnknownElement(OpenXmlElement host, OpenXmlElement expectedElement)
+        private void VerifyNoUnknownElement(OpenXmlElement host, OpenXmlElement expectedElement)
         {
             Log.Comment("Verifying unknown element is ignored...");
             var unknown = (host is OpenXmlUnknownElement) && host.ToXElement().Compare(expectedElement.ToXElement());
@@ -4014,7 +4014,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Pass("Element {0} from unknown ns is NOT loaded as OpenXmlUnknownElement.", expectedElement.GetFullName());
         }
 
-        private void verifyKnownElement(OpenXmlElement host, OpenXmlElement expectedElement)
+        private void VerifyKnownElement(OpenXmlElement host, OpenXmlElement expectedElement)
         {
             Log.Comment("Verifying known element is loaded as strongly typed...");
             var known = !(host is OpenXmlUnknownElement) && host.ToXElement().Compare(expectedElement.ToXElement());
@@ -4024,7 +4024,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Fail("Element {0} from known ns is NOT loaded as strongly typed.", expectedElement.GetFullName());
         }
 
-        private void verifyUnknownChildren(OpenXmlElement host, List<OpenXmlElement> children)
+        private void VerifyUnknownChildren(OpenXmlElement host, List<OpenXmlElement> children)
         {
             if (host is OpenXmlUnknownElement)
                 Log.Warning("Host element {0} IS OpenXmlUnknownElement.", host.GetFullName());
@@ -4037,7 +4037,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Log.Pass("Verified element {0} under unkown element is loaded as OpenXmlUnknownElement.", host.ChildElements[i].GetFullName());
         }
 
-        private void verifyKnownChildren(OpenXmlElement parent, List<OpenXmlElement> children)
+        private void VerifyKnownChildren(OpenXmlElement parent, List<OpenXmlElement> children)
         {
             Log.Comment("Verifying each child element is loaded as strongly typed element...");
             for (int i = 0; i < children.Count; i++)
@@ -4047,7 +4047,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Log.Fail("Child elements {0} is NOT loaded as strongly typed or changed.", parent.ChildElements[i].GetFullName());
         }
 
-        private void verifyNoUnkownChild(OpenXmlElement host, string qualified)
+        private void VerifyNoUnkownChild(OpenXmlElement host, string qualified)
         {
             Log.Comment("Verifying NO unknown child element exist...");
             var hasUnknown = host.ChildElements.Any(c => (c is OpenXmlUnknownElement) && (c.GetFullName() == qualified));
