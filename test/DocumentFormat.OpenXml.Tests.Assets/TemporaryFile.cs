@@ -5,7 +5,7 @@ using System.IO;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    internal sealed class TemporaryFile : IFile
+    public sealed class TemporaryFile : IFile
     {
         private TemporaryFile(string path)
         {
