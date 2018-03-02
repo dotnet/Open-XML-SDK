@@ -1380,11 +1380,11 @@ namespace DocumentFormat.OpenXml.Packaging
             }
             catch (ArgumentOutOfRangeException e)
             {
-                throw new OpenXmlPackageException(e, ExceptionMessages.AddedPartIsNotAllowed);
+                throw new OpenXmlPackageException(ExceptionMessages.AddedPartIsNotAllowed, e);
             }
             catch (InvalidOperationException e)
             {
-                throw new OpenXmlPackageException(e, ExceptionMessages.OnlyOnePartAllowed);
+                throw new OpenXmlPackageException(ExceptionMessages.OnlyOnePartAllowed, e);
             }
 
             return part;
