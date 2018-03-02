@@ -15,9 +15,6 @@
   <ItemGroup>
     <EmbeddedResource Include="assets\TestFiles\**\*.*" />
     <EmbeddedResource Include="assets\TestDataStorage\**\*.*" />
-    <Content Include="assets\TestDataStorage\**\*.*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
 
   <ItemGroup>
