@@ -534,50 +534,45 @@ namespace DocumentFormat.OpenXml.Packaging
         [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
         public void Validate(OpenXmlPackageValidationSettings validationSettings)
         {
-            this.ThrowIfObjectDisposed();
+            ThrowIfObjectDisposed();
 
-            OpenXmlPackageValidationSettings actualValidationSettings;
+            void DefaultValidationEventHandler(Object sender, OpenXmlPackageValidationEventArgs e)
+            {
+                var exception = new OpenXmlPackageException(ExceptionMessages.ValidationException);
 
-            if (validationSettings != null && validationSettings.GetEventHandler() != null)
-            {
-                actualValidationSettings = validationSettings;
-            }
-            else
-            {
-                // use default DefaultValidationEventHandler( ) which throw an exception
-                actualValidationSettings = new OpenXmlPackageValidationSettings();
-                actualValidationSettings.EventHandler += new EventHandler<OpenXmlPackageValidationEventArgs>(DefaultValidationEventHandler);
+                exception.Data.Add("OpenXmlPackageValidationEventArgs", e);
+
+                throw exception;
             }
 
-            // TODO: what's expected behavior?
-            actualValidationSettings.FileFormat = FileFormatVersions.Office2007;
+            OpenXmlPackageValidationSettings ValidateSettings(OpenXmlPackageValidationSettings settings)
+            {
+                if (settings.GetEventHandler() == null)
+                {
+                    // use default DefaultValidationEventHandler( ) which throw an exception
+                    settings.EventHandler += DefaultValidationEventHandler;
+                }
 
-            // for cycle defense
-            Dictionary<OpenXmlPart, bool> processedParts = new Dictionary<OpenXmlPart, bool>();
+                if (!settings.FileFormat.Any())
+                {
+                    settings.FileFormat = FileFormatVersions.Office2007;
+                }
 
-            ValidateInternal(actualValidationSettings, processedParts);
+                return settings;
+            }
+
+            new Validation.PackageValidator(this).Validate(ValidateSettings(validationSettings ?? new OpenXmlPackageValidationSettings()));
         }
 
-#pragma warning disable 0618 // CS0618: A class member was marked with the Obsolete attribute, such that a warning will be issued when the class member is referenced.
-
-        /// <summary>
-        /// Validates the package. This method does not validate the XML content in each part.
-        /// </summary>
-        /// <param name="validationSettings">The OpenXmlPackageValidationSettings for validation events.</param>
-        /// <param name="fileFormatVersion">The target file format version.</param>
-        /// <remarks>If validationSettings is null or no EventHandler is set, the default behavior is to throw an OpenXmlPackageException on the validation error. </remarks>
-        internal void Validate(OpenXmlPackageValidationSettings validationSettings, FileFormatVersions fileFormatVersion)
+        [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
+        internal void Validate(OpenXmlPackageValidationSettings validationSettings, FileFormatVersions fileFormatVersions)
         {
-            this.ThrowIfObjectDisposed();
             Debug.Assert(validationSettings != null);
-            Debug.Assert(fileFormatVersion.Any());
+            Debug.Assert(fileFormatVersions.Any());
 
-            validationSettings.FileFormat = fileFormatVersion;
+            validationSettings.FileFormat = fileFormatVersions;
 
-            // for cycle defense
-            Dictionary<OpenXmlPart, bool> processedParts = new Dictionary<OpenXmlPart, bool>();
-
-            ValidateInternal(validationSettings, processedParts);
+            Validate(validationSettings);
         }
 
         #endregion
@@ -1036,9 +1031,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(contentType));
             }
 
-            PartConstraintRule partConstraintRule;
-
-            if (GetPartConstraint().TryGetValue(relationshipType, out partConstraintRule))
+            if (GetPartConstraint().TryGetValue(relationshipType, out var partConstraintRule))
             {
                 if (!partConstraintRule.MaxOccursGreatThanOne)
                 {
@@ -1117,16 +1110,6 @@ namespace DocumentFormat.OpenXml.Packaging
         internal PackagePart CreateMetroPart(Uri partUri, string contentType)
         {
             return this.Package.CreatePart(partUri, contentType, this.CompressionOption);
-        }
-
-        // default package validation event handler
-        private static void DefaultValidationEventHandler(Object sender, OpenXmlPackageValidationEventArgs e)
-        {
-            OpenXmlPackageException exception = new OpenXmlPackageException(ExceptionMessages.ValidationException);
-
-            exception.Data.Add("OpenXmlPackageValidationEventArgs", e);
-
-            throw exception;
         }
 
         #endregion

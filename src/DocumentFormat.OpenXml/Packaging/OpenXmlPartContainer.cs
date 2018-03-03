@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.Globalization;
 using System.IO;
 using System.IO.Packaging;
 using System.Linq;
@@ -1303,7 +1302,7 @@ namespace DocumentFormat.OpenXml.Packaging
             ThrowIfObjectDisposed();
 
             // use reflection to create the instance. As the default contructor of part is not "public"
-            T part = PartActivator.CreateInstance<T>();
+            var part = PartActivator.CreateInstance<T>();
 
             try
             {
@@ -2026,9 +2025,7 @@ namespace DocumentFormat.OpenXml.Packaging
                             Uri sourceUri = sourcePart == null ? new Uri("/", UriKind.Relative) : sourcePart.Uri;
                             Uri uriTarget = PackUriHelper.ResolvePartUri(sourceUri, relationship.TargetUri);
 
-                            OpenXmlPart child;
-
-                            if (loadedParts.TryGetValue(uriTarget, out child))
+                            if (loadedParts.TryGetValue(uriTarget, out var child))
                             {
                                 // shared part, already loaded
 
@@ -2071,172 +2068,6 @@ namespace DocumentFormat.OpenXml.Packaging
                     {
                         this.ReferenceRelationshipList.AddLast(new ExternalRelationship(relationship.TargetUri, relationship.RelationshipType, relationship.Id) { Container = this });
                     }
-                }
-            }
-        }
-
-#pragma warning disable 0618 // CS0618: A class member was marked with the Obsolete attribute, such that a warning will be issued when the class member is referenced.
-
-        /// <summary>
-        /// Validates the package ( do not validate the xml content in each part ).
-        /// </summary>
-        /// <param name="validationSettings">OpenXmlPackageValidationSettings for validation events.</param>
-        /// <param name="processedParts">Parts already processed.</param>
-        internal void ValidateInternal(OpenXmlPackageValidationSettings validationSettings, Dictionary<OpenXmlPart, bool> processedParts)
-        {
-            EventHandler<OpenXmlPackageValidationEventArgs> valEventHandler = validationSettings.GetEventHandler();
-
-            Debug.Assert(valEventHandler != null);
-
-            this.ValidateDataPartReferenceRelationships(validationSettings);
-
-            // count all parts of same type
-            Dictionary<string, int> partOccurs = new Dictionary<string, int>();
-
-            foreach (OpenXmlPart part in this.ChildrenParts.Values)
-            {
-                int occurs = 0;
-                partOccurs.TryGetValue(part.RelationshipType, out occurs);
-
-                partOccurs[part.RelationshipType] = occurs + 1;
-
-                if (!(this is ExtendedPart) &&
-                    !this.GetPartConstraint().Keys.Contains(part.RelationshipType) &&
-                    part.IsInVersion(validationSettings.FileFormat))
-                {
-                    OpenXmlPackageValidationEventArgs eventArgs = new OpenXmlPackageValidationEventArgs();
-                    eventArgs.MessageId = "PartIsNotAllowed";
-                    eventArgs.PartClassName = part.RelationshipType;
-                    eventArgs.Part = this.ThisOpenXmlPart;
-                    eventArgs.SubPart = part;
-
-                    valEventHandler(this, eventArgs);
-                }
-
-                // if the part is not defined in this version, then should not report error, just treat it as ExtendedPart.
-            }
-
-            foreach (KeyValuePair<string, PartConstraintRule> constraintRulePair in this.GetPartConstraint())
-            {
-                string relatinshipType = constraintRulePair.Key;
-                PartConstraintRule constraintRule = constraintRulePair.Value;
-
-                // validate the required parts
-                if (constraintRule.MinOccursIsNonZero
-                    // only check rules apply to the specified version.
-                    && constraintRule.FileFormat.Includes(validationSettings.FileFormat))
-                {
-                    // must have one
-                    if (null == this.GetSubPart(relatinshipType))
-                    {
-                        OpenXmlPackageValidationEventArgs eventArgs = new OpenXmlPackageValidationEventArgs();
-                        eventArgs.MessageId = "RequiredPartDoNotExist";
-                        eventArgs.PartClassName = constraintRule.PartClassName;
-                        eventArgs.Part = this.ThisOpenXmlPart;
-
-                        valEventHandler(this, eventArgs);
-                    }
-                }
-
-                // check for parts MaxOccursGreatThanOne=false, but do have multiple instance
-                if (!constraintRule.MaxOccursGreatThanOne
-                    // only check rules apply to the specified version.
-                    && constraintRule.FileFormat.Includes(validationSettings.FileFormat))
-                {
-                    int occurs = 0;
-                    if (partOccurs.TryGetValue(relatinshipType, out occurs))
-                    {
-                        if (occurs > 1)
-                        {
-                            OpenXmlPackageValidationEventArgs eventArgs = new OpenXmlPackageValidationEventArgs();
-                            eventArgs.MessageId = "OnlyOnePartAllowed";
-                            eventArgs.PartClassName = constraintRule.PartClassName;
-                            eventArgs.Part = this.ThisOpenXmlPart;
-#if DEBUG
-                            eventArgs.SubPart = this.GetSubPart(relatinshipType);
-#endif
-                            valEventHandler(this, eventArgs);
-                        }
-                    }
-                }
-            }
-
-            foreach (OpenXmlPart part in this.ChildrenParts.Values)
-            {
-                if (!processedParts.ContainsKey(part))
-                {
-                    if (!(part is ExtendedPart))//&& ! (part is ExtensionPart))
-                    {
-                        PartConstraintRule rule = null;
-
-                        if (this.GetPartConstraint().TryGetValue(part.RelationshipType, out rule))
-                        {
-                            if (rule.FileFormat.Includes(validationSettings.FileFormat))
-                            {
-                                // validate content type
-                                if (rule.PartContentType != null && part.ContentType != rule.PartContentType)
-                                {
-                                    OpenXmlPackageValidationEventArgs eventArgs = new OpenXmlPackageValidationEventArgs();
-                                    string message = String.Format(CultureInfo.CurrentUICulture,
-                                                                        ExceptionMessages.InvalidContentTypePart,
-                                                                        rule.PartContentType);
-                                    eventArgs.Message = message;
-                                    eventArgs.MessageId = "InvalidContentTypePart";
-                                    eventArgs.SubPart = part;
-                                    eventArgs.Part = this.ThisOpenXmlPart;
-
-                                    valEventHandler(this, eventArgs);
-                                }
-                            }
-                            else
-                            {
-                                // if the part is not defined in this version, then should not report error, just treat it as ExtendedPart.
-                            }
-                        }
-                    }
-                    else
-                    {
-#if DEBUG
-                        // check the relationship type
-                        if (part.RelationshipType.StartsWith(@"http://schemas.openxmlformats.org", StringComparison.OrdinalIgnoreCase))
-                        {
-                            OpenXmlPackageValidationEventArgs eventArgs = new OpenXmlPackageValidationEventArgs();
-                            eventArgs.MessageId = "ExtendedPartIsOpenXmlPart";
-                            eventArgs.SubPart = part;
-                            eventArgs.Part = this.ThisOpenXmlPart;
-
-                            valEventHandler(this, eventArgs);
-                        }
-#endif
-                    }
-                    processedParts.Add(part, true);
-
-                    part.ValidateInternal(validationSettings, processedParts);
-                }
-            }
-        }
-
-        internal void ValidateDataPartReferenceRelationships(OpenXmlPackageValidationSettings validationSettings)
-        {
-            EventHandler<OpenXmlPackageValidationEventArgs> valEventHandler = validationSettings.GetEventHandler();
-            Debug.Assert(valEventHandler != null);
-
-            // At current, only meida / audio / video reference. There are all [0, unbounded].
-            // So just check whether the reference is allowed.
-
-            foreach (var dataPartReference in this.DataPartReferenceRelationships)
-            {
-                PartConstraintRule constraintRule;
-                if (!this.GetDataPartReferenceConstraint().TryGetValue(dataPartReference.RelationshipType, out constraintRule))
-                {
-                    OpenXmlPackageValidationEventArgs eventArgs = new OpenXmlPackageValidationEventArgs();
-                    eventArgs.MessageId = "DataPartReferenceIsNotAllowed";
-                    eventArgs.PartClassName = dataPartReference.RelationshipType;
-                    eventArgs.Part = this.ThisOpenXmlPart;
-                    eventArgs.SubPart = null;
-                    eventArgs.DataPartReferenceRelationship = dataPartReference;
-
-                    valEventHandler(this, eventArgs);
                 }
             }
         }
