@@ -13,17 +13,22 @@ namespace DocumentFormat.OpenXml.Packaging
     public sealed class OpenXmlPackageValidationEventArgs : EventArgs
     {
         private string _message;
-        private string _partClassName;
 
         [NonSerialized]
-        private OpenXmlPart _childPart;
+        private object _sender;
 
         [NonSerialized]
-        private OpenXmlPart _parentPart;
+        private OpenXmlPart _subPart;
 
-        internal OpenXmlPackageValidationEventArgs()
+        [NonSerialized]
+        private OpenXmlPart _part;
+
+        internal OpenXmlPackageValidationEventArgs(object sender)
         {
+            _sender = sender;
         }
+
+        internal object Sender => _sender;
 
         /// <summary>
         /// Gets or sets the message string of the event.
@@ -32,38 +37,34 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get
             {
-                if (this._message == null && this.MessageId != null)
+                if (_message == null && MessageId != null)
                 {
-                    return ExceptionMessages.ResourceManager.GetString(this.MessageId);
+                    return ExceptionMessages.ResourceManager.GetString(MessageId);
                 }
                 else
                 {
-                    return this._message;
+                    return _message;
                 }
             }
 
             set
             {
-                this._message = value;
+                _message = value;
             }
         }
 
         /// <summary>
         /// Gets the class name of the part.
         /// </summary>
-        public string PartClassName
-        {
-            get { return _partClassName; }
-            internal set { _partClassName = value; }
-        }
+        public string PartClassName { get; internal set; }
 
         /// <summary>
         /// Gets the part that caused the event.
         /// </summary>
         public OpenXmlPart SubPart
         {
-            get { return _childPart; }
-            internal set { _childPart = value; }
+            get { return _subPart; }
+            internal set { _subPart = value; }
         }
 
         /// <summary>
@@ -71,8 +72,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public OpenXmlPart Part
         {
-            get { return _parentPart; }
-            internal set { _parentPart = value; }
+            get { return _part; }
+            internal set { _part = value; }
         }
 
         internal string MessageId { get; set; }

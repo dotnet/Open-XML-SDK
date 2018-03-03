@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
+using System.Linq;
 
 namespace DocumentFormat.OpenXml.Validation
 {
@@ -83,7 +84,7 @@ namespace DocumentFormat.OpenXml.Validation
 
             /*******************
              * DOM traversal is not performance bottleneck.
-             * Is this the good way that we separate the schema validtion and the semantics validation?
+             * Is this the good way that we separate the schema validation and the semantics validation?
              *******************/
 
             try
@@ -108,7 +109,7 @@ namespace DocumentFormat.OpenXml.Validation
 
                 if (!partRootElementLoaded && context.Errors.Count == lastErrorCount)
                 {
-                    // No new errors in this part. Release the DOM to GC memary.
+                    // No new errors in this part. Release the DOM to GC memory.
                     part.SetPartRootElementToNull();
                 }
             }
@@ -191,73 +192,68 @@ namespace DocumentFormat.OpenXml.Validation
         private void ValidatePackageStructure(OpenXmlPackage document, ValidationContext context)
         {
             var documentName = document.GetType().Name;
-#pragma warning disable CS0618 // Type or member is obsolete
-            var packageValidationSettings = new OpenXmlPackageValidationSettings();
-#pragma warning restore CS0618 // Type or member is obsolete
 
-            packageValidationSettings.EventHandler += OnPackageValidationError;
-
-            document.Validate(packageValidationSettings, _validationSettings.FileFormat);
-
-#pragma warning disable CS0618 // Type or member is obsolete
-            void OnPackageValidationError(Object sender, OpenXmlPackageValidationEventArgs e)
-#pragma warning restore CS0618 // Type or member is obsolete
-            {
-                var errorInfo = new ValidationErrorInfo
+            var errors = new PackageValidator(document).Validate(context.FileFormat)
+                .Select(e =>
                 {
-                    ErrorType = ValidationErrorType.Package,
-                    Id = "Pkg_" + e.MessageId
-                };
+                    var errorInfo = new ValidationErrorInfo
+                    {
+                        ErrorType = ValidationErrorType.Package,
+                        Id = "Pkg_" + e.MessageId
+                    };
 
-                string name;
+                    string name;
 
-                switch (errorInfo.Id)
-                {
-                    case "Pkg_PartIsNotAllowed":
-                        Debug.Assert(e.SubPart != null);
-                        name = e.Part != null ? GetPartNameAndUri(e.Part) : documentName;
-                        errorInfo.Description = String.Format(CultureInfo.CurrentUICulture, ValidationResources.Pkg_PartIsNotAllowed, name, GetPartNameAndUri(e.SubPart));
-                        break;
+                    switch (errorInfo.Id)
+                    {
+                        case "Pkg_PartIsNotAllowed":
+                            Debug.Assert(e.SubPart != null);
+                            name = e.Part != null ? GetPartNameAndUri(e.Part) : documentName;
+                            errorInfo.Description = String.Format(CultureInfo.CurrentUICulture, ValidationResources.Pkg_PartIsNotAllowed, name, GetPartNameAndUri(e.SubPart));
+                            break;
 
-                    case "Pkg_RequiredPartDoNotExist":
-                        errorInfo.Description = string.Format(CultureInfo.CurrentUICulture, ValidationResources.Pkg_RequiredPartDoNotExist, e.PartClassName);
-                        break;
+                        case "Pkg_RequiredPartDoNotExist":
+                            errorInfo.Description = string.Format(CultureInfo.CurrentUICulture, ValidationResources.Pkg_RequiredPartDoNotExist, e.PartClassName);
+                            break;
 
-                    case "Pkg_OnlyOnePartAllowed":
-                        name = e.Part != null ? GetPartNameAndUri(e.Part) : documentName;
-                        errorInfo.Description = String.Format(CultureInfo.CurrentUICulture, ValidationResources.Pkg_OnlyOnePartAllowed, name, e.PartClassName);
+                        case "Pkg_OnlyOnePartAllowed":
+                            name = e.Part != null ? GetPartNameAndUri(e.Part) : documentName;
+                            errorInfo.Description = String.Format(CultureInfo.CurrentUICulture, ValidationResources.Pkg_OnlyOnePartAllowed, name, e.PartClassName);
 #if DEBUG
-                        Debug.Assert(e.SubPart != null);
-                        errorInfo.RelatedPart = e.SubPart;
+                            Debug.Assert(e.SubPart != null);
+                            errorInfo.RelatedPart = e.SubPart;
 #endif
-                        break;
+                            break;
 
-                    case "Pkg_ExtendedPartIsOpenXmlPart":
-                        Debug.Assert(e.SubPart != null);
-                        errorInfo.Description = string.Format(CultureInfo.CurrentUICulture, ValidationResources.Pkg_ExtendedPartIsOpenXmlPart, GetPartUri(e.SubPart));
-                        break;
+                        case "Pkg_ExtendedPartIsOpenXmlPart":
+                            Debug.Assert(e.SubPart != null);
+                            errorInfo.Description = string.Format(CultureInfo.CurrentUICulture, ValidationResources.Pkg_ExtendedPartIsOpenXmlPart, GetPartUri(e.SubPart));
+                            break;
 
-                    case "Pkg_DataPartReferenceIsNotAllowed":
-                        Debug.Assert(e.DataPartReferenceRelationship != null);
-                        name = e.Part != null ? GetPartNameAndUri(e.Part) : documentName;
-                        errorInfo.Description = String.Format(CultureInfo.CurrentUICulture, ValidationResources.Pkg_PartIsNotAllowed, name, e.DataPartReferenceRelationship.Uri);
-                        break;
+                        case "Pkg_DataPartReferenceIsNotAllowed":
+                            Debug.Assert(e.DataPartReferenceRelationship != null);
+                            name = e.Part != null ? GetPartNameAndUri(e.Part) : documentName;
+                            errorInfo.Description = String.Format(CultureInfo.CurrentUICulture, ValidationResources.Pkg_PartIsNotAllowed, name, e.DataPartReferenceRelationship.Uri);
+                            break;
 
-                    case "Pkg_InvalidContentTypePart":  // won't get this error.
-                    default:
-                        Debug.Assert(false, "Invalid package validation event.");
-                        break;
-                }
+                        case "Pkg_InvalidContentTypePart":  // won't get this error.
+                        default:
+                            Debug.Assert(false, "Invalid package validation event.");
+                            break;
+                    }
 
-                if (e.Part != null)
-                {
-                    errorInfo.Part = e.Part;
-                    errorInfo.Path = new XmlPath(e.Part);
-                }
-                errorInfo.RelatedPart = e.SubPart;
+                    if (e.Part != null)
+                    {
+                        errorInfo.Part = e.Part;
+                        errorInfo.Path = new XmlPath(e.Part);
+                    }
 
-                context.AddError(errorInfo);
-            }
+                    errorInfo.RelatedPart = e.SubPart;
+
+                    return errorInfo;
+                });
+
+            context.Errors.AddRange(errors);
         }
 
         private static string GetPartNameAndUri(OpenXmlPart part)

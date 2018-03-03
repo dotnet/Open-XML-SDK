@@ -12,13 +12,6 @@ namespace DocumentFormat.OpenXml.Validation
     [DebuggerDisplay("Description={Description}")]
     public class ValidationErrorInfo
     {
-        /// <summary>
-        /// Initializes a new instance of the ValidationErrorInfo.
-        /// </summary>
-        public ValidationErrorInfo()
-        {
-        }
-
 #if DEBUG
         /// <summary>
         /// Gets the XML qualified name for the attribute.
