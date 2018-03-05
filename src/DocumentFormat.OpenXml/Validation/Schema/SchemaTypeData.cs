@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 AttributeConstraints = new ReadOnlyCollection<AttributeConstraint>(attributeConstraints);
             }
 #else
-            this.AttributeConstraints = attributeConstraints;
+            AttributeConstraints = attributeConstraints;
 #endif
         }
 
