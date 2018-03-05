@@ -674,7 +674,7 @@ namespace DocumentFormat.OpenXml
             _elementState = ElementState.EOF;
             _elementStack.Clear();
 #if FEATURE_CLOSE
-            this._xmlReader.Close();
+            _xmlReader.Close();
 #else
             _xmlReader.Dispose();
 #endif

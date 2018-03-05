@@ -441,13 +441,13 @@ namespace DocumentFormat.OpenXml.Packaging
 #else
                 DtdProcessing = DtdProcessing.Prohibit, // set to prohibit explicitly for security fix
 #endif
-                MaxCharactersInDocument = this.MaxCharactersInPart
+                MaxCharactersInDocument = MaxCharactersInPart
             };
             XmlReader xmlReader = null;
 
             // XML validator object
 
-            using (Stream partStream = this.GetStream())
+            using (Stream partStream = GetStream())
             {
                 //xmlReaderSettings.Schemas.Add(null, schemaFile);
                 xmlReaderSettings.Schemas = schemas;
@@ -484,7 +484,7 @@ namespace DocumentFormat.OpenXml.Packaging
             XmlSchemaSet schemas = new XmlSchemaSet();
             schemas.Add(null, schemaFile);
 
-            this.ValidateXml(schemas, validationEventHandler);
+            ValidateXml(schemas, validationEventHandler);
         }
 #endif
 

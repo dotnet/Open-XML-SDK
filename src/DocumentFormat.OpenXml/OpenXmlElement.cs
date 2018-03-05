@@ -2033,7 +2033,7 @@ namespace DocumentFormat.OpenXml
             if (OpenXmlElementContext != null)
             {
 #if FEATURE_XML_PROHIBIT_DTD
-                this.OpenXmlElementContext.XmlReaderSettings.ProhibitDtd = true; // set true explicitly for security fix
+                OpenXmlElementContext.XmlReaderSettings.ProhibitDtd = true; // set true explicitly for security fix
 #else
                 OpenXmlElementContext.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set to prohibit explicitly for security fix
 #endif
@@ -2055,7 +2055,7 @@ namespace DocumentFormat.OpenXml
             if (OpenXmlElementContext != null)
             {
 #if FEATURE_XML_PROHIBIT_DTD
-                this.OpenXmlElementContext.XmlReaderSettings.ProhibitDtd = true; // set true explicitly for security fix
+                OpenXmlElementContext.XmlReaderSettings.ProhibitDtd = true; // set true explicitly for security fix
 #else
                 OpenXmlElementContext.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set to prohibit explicitly for security fix
 #endif

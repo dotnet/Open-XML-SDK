@@ -24,13 +24,9 @@ namespace DocumentFormat.OpenXml
         /// <returns></returns>
         internal XmlConvertingReader(XmlReader baseReader, bool strictTranslation)
         {
-            if (baseReader == null)
-            {
-                throw new ArgumentNullException(nameof(baseReader));
-            }
+            BaseReader = baseReader ?? throw new ArgumentNullException(nameof(baseReader));
 
             _strictTranslation = strictTranslation;
-            BaseReader = baseReader;
         }
 
         /// <summary>
@@ -42,7 +38,7 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         public override void Close()
         {
-            this.BaseReader.Close();
+            BaseReader.Close();
         }
 #endif
 
@@ -50,9 +46,9 @@ namespace DocumentFormat.OpenXml
         protected override void Dispose(bool disposing)
         {
 #if FEATURE_CLOSE
-            if (this.ReadState != ReadState.Closed)
+            if (ReadState != ReadState.Closed)
             {
-                this.Close();
+                Close();
             }
 #endif
 
@@ -340,7 +336,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this.BaseReader.QuoteChar;
+                return BaseReader.QuoteChar;
             }
         }
 #endif

@@ -350,7 +350,7 @@ namespace DocumentFormat.OpenXml
                 // the end tag of the root element
                 // this._xmlWriter.WriteEndElement();
 
-                this._xmlWriter.Close();
+                _xmlWriter.Close();
 #else
                 _xmlWriter.Dispose();
 #endif
