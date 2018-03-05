@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         internal ParticleMatchInfo()
         {
-            this.Match = ParticleMatch.Nomatch;
+            Match = ParticleMatch.Nomatch;
 
             IncressInstanceCount();
         }
@@ -29,8 +29,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="startElement"></param>
         internal ParticleMatchInfo(OpenXmlElement startElement)
         {
-            this.Match = ParticleMatch.Nomatch;
-            this.StartElement = startElement;
+            Match = ParticleMatch.Nomatch;
+            StartElement = startElement;
 
             IncressInstanceCount();
         }
@@ -73,13 +73,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         internal void InitExpectedChildren()
         {
-            if (this.ExpectedChildren == null)
+            if (ExpectedChildren == null)
             {
-                this.ExpectedChildren = new ExpectedChildren();
+                ExpectedChildren = new ExpectedChildren();
             }
             else
             {
-                this.ExpectedChildren.Clear();
+                ExpectedChildren.Clear();
             }
         }
 
@@ -93,32 +93,32 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             if (expectedChildren == null || expectedChildren.Count == 0)
             {
-                if (this.ExpectedChildren != null)
+                if (ExpectedChildren != null)
                 {
-                    this.ExpectedChildren.Clear();
+                    ExpectedChildren.Clear();
                 }
                 // else, both are null, just return, nothing to do.
             }
             else
             {
-                if (this.ExpectedChildren == null)
+                if (ExpectedChildren == null)
                 {
-                    this.ExpectedChildren = new ExpectedChildren();
+                    ExpectedChildren = new ExpectedChildren();
                 }
-                this.ExpectedChildren.Clear();
-                this.ExpectedChildren.Add(expectedChildren);
+                ExpectedChildren.Clear();
+                ExpectedChildren.Add(expectedChildren);
             }
         }
 
         internal void Reset(OpenXmlElement startElement)
         {
-            this.StartElement = startElement;
-            this.Match = ParticleMatch.Nomatch;
-            this.LastMatchedElement = null;
-            this.ErrorMessage = null;
-            if (this.ExpectedChildren != null)
+            StartElement = startElement;
+            Match = ParticleMatch.Nomatch;
+            LastMatchedElement = null;
+            ErrorMessage = null;
+            if (ExpectedChildren != null)
             {
-                this.ExpectedChildren.Clear();
+                ExpectedChildren.Clear();
             }
         }
     }

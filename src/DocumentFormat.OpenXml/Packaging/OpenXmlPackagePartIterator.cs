@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public OpenXmlPackagePartIterator(OpenXmlPackage package)
         {
             Debug.Assert(package != null);
-            this._package = package;
+            _package = package;
         }
 
         #endregion

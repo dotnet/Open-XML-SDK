@@ -74,16 +74,16 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
             switch (restrictionField)
             {
                 case RestrictionField.Pattern:
-                    return this.Pattern;
+                    return Pattern;
 
                 case RestrictionField.Length:
-                    return this.Length.ToString(CultureInfo.CurrentUICulture);
+                    return Length.ToString(CultureInfo.CurrentUICulture);
 
                 case RestrictionField.MinLength:
-                    return this.MinLength.ToString(CultureInfo.CurrentUICulture);
+                    return MinLength.ToString(CultureInfo.CurrentUICulture);
 
                 case RestrictionField.MaxLength:
-                    return this.MaxLength.ToString(CultureInfo.CurrentUICulture);
+                    return MaxLength.ToString(CultureInfo.CurrentUICulture);
 
                 default:
                     Debug.Assert(false);
@@ -116,65 +116,65 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         {
             RestrictionField resultFlag = RestrictionField.None;
 
-            if ((this.RestrictionField & RestrictionField.Pattern) == RestrictionField.Pattern)
+            if ((RestrictionField & RestrictionField.Pattern) == RestrictionField.Pattern)
             {
-                if (!this.IsPatternValid(attributeValue))
+                if (!IsPatternValid(attributeValue))
                 {
                     resultFlag |= RestrictionField.Pattern;
                 }
             }
 
-            if ((this.RestrictionField & RestrictionField.Length) == RestrictionField.Length)
+            if ((RestrictionField & RestrictionField.Length) == RestrictionField.Length)
             {
-                if (!this.IsLengthValid(attributeValue))
+                if (!IsLengthValid(attributeValue))
                 {
                     resultFlag |= RestrictionField.Length;
                 }
             }
 
-            if ((this.RestrictionField & RestrictionField.MinLength) == RestrictionField.MinLength)
+            if ((RestrictionField & RestrictionField.MinLength) == RestrictionField.MinLength)
             {
-                if (!this.IsMinLengthValid(attributeValue))
+                if (!IsMinLengthValid(attributeValue))
                 {
                     resultFlag |= RestrictionField.MinLength;
                 }
             }
 
-            if ((this.RestrictionField & RestrictionField.MaxLength) == RestrictionField.MaxLength)
+            if ((RestrictionField & RestrictionField.MaxLength) == RestrictionField.MaxLength)
             {
-                if (!this.IsMaxLengthValid(attributeValue))
+                if (!IsMaxLengthValid(attributeValue))
                 {
                     resultFlag |= RestrictionField.MaxLength;
                 }
             }
 
-            if ((this.RestrictionField & RestrictionField.MinInclusive) == RestrictionField.MinInclusive)
+            if ((RestrictionField & RestrictionField.MinInclusive) == RestrictionField.MinInclusive)
             {
-                if (!this.IsMinInclusiveValid(attributeValue))
+                if (!IsMinInclusiveValid(attributeValue))
                 {
                     resultFlag |= RestrictionField.MinInclusive;
                 }
             }
 
-            if ((this.RestrictionField & RestrictionField.MinExclusive) == RestrictionField.MinExclusive)
+            if ((RestrictionField & RestrictionField.MinExclusive) == RestrictionField.MinExclusive)
             {
-                if (!this.IsMinExclusiveValid(attributeValue))
+                if (!IsMinExclusiveValid(attributeValue))
                 {
                     resultFlag |= RestrictionField.MinExclusive;
                 }
             }
 
-            if ((this.RestrictionField & RestrictionField.MaxInclusive) == RestrictionField.MaxInclusive)
+            if ((RestrictionField & RestrictionField.MaxInclusive) == RestrictionField.MaxInclusive)
             {
-                if (!this.IsMaxInclusiveValid(attributeValue))
+                if (!IsMaxInclusiveValid(attributeValue))
                 {
                     resultFlag |= RestrictionField.MaxInclusive;
                 }
             }
 
-            if ((this.RestrictionField & RestrictionField.MaxExclusive) == RestrictionField.MaxExclusive)
+            if ((RestrictionField & RestrictionField.MaxExclusive) == RestrictionField.MaxExclusive)
             {
-                if (!this.IsMaxExclusiveValid(attributeValue))
+                if (!IsMaxExclusiveValid(attributeValue))
                 {
                     resultFlag |= RestrictionField.MaxExclusive;
                 }

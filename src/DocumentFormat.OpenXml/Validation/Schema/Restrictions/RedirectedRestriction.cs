@@ -26,11 +26,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         public override XsdType XsdType => XsdType.Redirected;
 
         /// <inheritdoc />
-        public override string ClrTypeName => this.TargetRestriction.ClrTypeName;
+        public override string ClrTypeName => TargetRestriction.ClrTypeName;
 
         public OpenXmlSimpleType ConvertValue(OpenXmlSimpleType value)
         {
-            var targetValue = UnionHelper.CreateTargetValueObject(this, this.FileFormat);
+            var targetValue = UnionHelper.CreateTargetValueObject(this, FileFormat);
 
             targetValue.InnerText = value.InnerText;
 

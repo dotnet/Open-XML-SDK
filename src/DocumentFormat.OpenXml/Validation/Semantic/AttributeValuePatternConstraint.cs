@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            Regex regex = new Regex(this._pattern);
+            Regex regex = new Regex(_pattern);
             if (regex.IsMatch(attributeValue.InnerText))
             {
                 return null;

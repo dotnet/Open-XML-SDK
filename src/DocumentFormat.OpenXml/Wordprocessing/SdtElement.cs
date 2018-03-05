@@ -46,7 +46,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
 
             set
             {
-                this.SetElement(0, value);
+                SetElement(0, value);
             }
         }
 
@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
 
             set
             {
-                this.SetElement(1, value);
+                SetElement(1, value);
             }
         }
     }

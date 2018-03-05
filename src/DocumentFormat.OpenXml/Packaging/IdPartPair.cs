@@ -16,8 +16,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public string RelationshipId
         {
-            get { return this._id; }
-            set { this._id = value; }
+            get { return _id; }
+            set { _id = value; }
         }
 
         /// <summary>
@@ -25,8 +25,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public OpenXmlPart OpenXmlPart
         {
-            get { return this._part; }
-            set { this._part = value; }
+            get { return _part; }
+            set { _part = value; }
         }
 
         /// <summary>
@@ -36,8 +36,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="part">The OpenXmlPart.</param>
         public IdPartPair(string id, OpenXmlPart part)
         {
-            this.RelationshipId = id;
-            this.OpenXmlPart = part;
+            RelationshipId = id;
+            OpenXmlPart = part;
         }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 return false;
             }
 
-            return this._id.Equals(value._id) && (this._part == value._part);
+            return _id.Equals(value._id) && (_part == value._part);
         }
     }
 }

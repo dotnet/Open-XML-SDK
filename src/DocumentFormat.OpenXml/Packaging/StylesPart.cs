@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get
             {
-                return this.Styles;
+                return Styles;
             }
         }
 

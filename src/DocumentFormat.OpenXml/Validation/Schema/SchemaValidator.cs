@@ -31,15 +31,15 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             if (fileFormat == FileFormatVersions.Office2007)
             {
-                this._sdbSchemaDatas = SdbSchemaDatas.GetOffice2007SchemaDatas();
+                _sdbSchemaDatas = SdbSchemaDatas.GetOffice2007SchemaDatas();
             }
             else if(fileFormat == FileFormatVersions.Office2010)
             {
-                this._sdbSchemaDatas = SdbSchemaDatas.GetOffice2010SchemaDatas();
+                _sdbSchemaDatas = SdbSchemaDatas.GetOffice2010SchemaDatas();
             }
             else if (fileFormat == FileFormatVersions.Office2013)
             {
-                this._sdbSchemaDatas = SdbSchemaDatas.GetOffice2013SchemaDatas();
+                _sdbSchemaDatas = SdbSchemaDatas.GetOffice2013SchemaDatas();
             }
             else
             {
@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 throw new ArgumentOutOfRangeException(nameof(fileFormat), message);
             }
 
-            this._schemaTypeValidator = new SchemaTypeValidator(this._sdbSchemaDatas);
+            _schemaTypeValidator = new SchemaTypeValidator(_sdbSchemaDatas);
         }
 
         /// <summary>
@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             // Debug.Assert(!(openxmlElement is AlternateContent))
             Debug.Assert(!(openxmlElement is AlternateContentChoice || openxmlElement is AlternateContentFallback));
 
-            ValidationTraverser.ValidatingTraverse(validationContext, this.ValidateElement, null);
+            ValidationTraverser.ValidatingTraverse(validationContext, ValidateElement, null);
 
             // validationContext.Element = openxmlElement;
 
@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </remarks>
         private void ValidateElement(ValidationContext validationContext)
         {
-            this._schemaTypeValidator.Validate(validationContext);
+            _schemaTypeValidator.Validate(validationContext);
         }
     }
 }

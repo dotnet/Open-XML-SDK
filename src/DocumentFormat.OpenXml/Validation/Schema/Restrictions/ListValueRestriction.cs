@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         public override XsdType XsdType => XsdType.List;
 
         /// <inheritdoc />
-        public override string ClrTypeName => this.ListItemType.ClrTypeName;
+        public override string ClrTypeName => ListItemType.ClrTypeName;
 
         /// <inheritdoc />
         public override bool IsList => true;
@@ -31,8 +31,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
             {
                 foreach (var itemValue in value)
                 {
-                    if (!this.ListItemType.ValidateValueType(itemValue) ||
-                        this.ListItemType.Validate(itemValue) != RestrictionField.None)
+                    if (!ListItemType.ValidateValueType(itemValue) ||
+                        ListItemType.Validate(itemValue) != RestrictionField.None)
                     {
                         return false;
                     }

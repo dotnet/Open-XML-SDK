@@ -88,17 +88,17 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         internal int LazySteps
         {
-            get { return this._lazySteps; }
+            get { return _lazySteps; }
 
             set
             {
                 if (value < 0)
                 {
-                    this._lazySteps = 0;
+                    _lazySteps = 0;
                 }
                 else
                 {
-                    this._lazySteps = value;
+                    _lazySteps = value;
                 }
             }
         }
@@ -109,7 +109,7 @@ namespace DocumentFormat.OpenXml
         public OpenXmlElementContext()
         {
             // this._xmlParserContext = new XmlParserContext(
-            this._xmlNameTable = new NameTable();
+            _xmlNameTable = new NameTable();
             MCContext = new MCContext();
             Init();
         }
@@ -149,7 +149,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>Returns true if nsUri equals @"http://www.w3.org/2000/xmlns/".</returns>
         internal bool IsXmlnsUri(string nsUri)
         {
-            return this._xmlNameTable.Get(nsUri) == xmlnsUri;
+            return _xmlNameTable.Get(nsUri) == xmlnsUri;
         }
 
         private void Init()
@@ -157,10 +157,10 @@ namespace DocumentFormat.OpenXml
             // load predifined namespace to nametable
             for (int i = 1; i < NamespaceIdMap.Count; i++)
             {
-                this._xmlNameTable.Add(NamespaceIdMap.GetNamespaceUri( (byte)i ));
+                _xmlNameTable.Add(NamespaceIdMap.GetNamespaceUri( (byte)i ));
             }
 
-            this._xmlNameTable.Add(xmlnsUri);
+            _xmlNameTable.Add(xmlnsUri);
 
             // init XmlReaderSettings
             // O15:#3024890, Set IgnoreWhitespace to false for the SDK to handle the whitespace node type. We have to do this because
@@ -181,9 +181,9 @@ namespace DocumentFormat.OpenXml
         /// <param name="parent">The parent element.</param>
         internal void ElementInsertingEvent(OpenXmlElement element, OpenXmlElement parent)
         {
-            if (this._onElementInserting != null)
+            if (_onElementInserting != null)
             {
-                this._onElementInserting(this, new ElementEventArgs(element, parent));
+                _onElementInserting(this, new ElementEventArgs(element, parent));
             }
         }
 
@@ -194,9 +194,9 @@ namespace DocumentFormat.OpenXml
         /// <param name="parent">The parent element.</param>
         internal void ElementInsertedEvent(OpenXmlElement element, OpenXmlElement parent)
         {
-            if (this._onElementInserted != null)
+            if (_onElementInserted != null)
             {
-                this._onElementInserted(this, new ElementEventArgs(element, parent));
+                _onElementInserted(this, new ElementEventArgs(element, parent));
             }
         }
 
@@ -207,9 +207,9 @@ namespace DocumentFormat.OpenXml
         /// <param name="parent">The parent element.</param>
         internal void ElementRemovingEvent(OpenXmlElement element, OpenXmlElement parent)
         {
-            if (this._onElementRemoving != null)
+            if (_onElementRemoving != null)
             {
-                this._onElementRemoving(this, new ElementEventArgs(element, parent));
+                _onElementRemoving(this, new ElementEventArgs(element, parent));
             }
         }
 
@@ -220,9 +220,9 @@ namespace DocumentFormat.OpenXml
         /// <param name="parent">The parent element.</param>
         internal void ElementRemovedEvent(OpenXmlElement element, OpenXmlElement parent)
         {
-            if (this._onElementRemoved != null)
+            if (_onElementRemoved != null)
             {
-                this._onElementRemoved(this, new ElementEventArgs(element, parent));
+                _onElementRemoved(this, new ElementEventArgs(element, parent));
             }
         }
 
@@ -233,12 +233,12 @@ namespace DocumentFormat.OpenXml
         {
             add
             {
-                this._onElementInserting = (EventHandler<ElementEventArgs>)Delegate.Combine(this._onElementInserting, value);
+                _onElementInserting = (EventHandler<ElementEventArgs>)Delegate.Combine(_onElementInserting, value);
             }
 
             remove
             {
-                this._onElementInserting = (EventHandler<ElementEventArgs>)Delegate.Remove(this._onElementInserting, value);
+                _onElementInserting = (EventHandler<ElementEventArgs>)Delegate.Remove(_onElementInserting, value);
             }
         }
 
@@ -249,12 +249,12 @@ namespace DocumentFormat.OpenXml
         {
             add
             {
-                this._onElementInserted = (EventHandler<ElementEventArgs>)Delegate.Combine(this._onElementInserted, value);
+                _onElementInserted = (EventHandler<ElementEventArgs>)Delegate.Combine(_onElementInserted, value);
             }
 
             remove
             {
-                this._onElementInserted = (EventHandler<ElementEventArgs>)Delegate.Remove(this._onElementInserted, value);
+                _onElementInserted = (EventHandler<ElementEventArgs>)Delegate.Remove(_onElementInserted, value);
             }
         }
 
@@ -265,12 +265,12 @@ namespace DocumentFormat.OpenXml
         {
             add
             {
-                this._onElementRemoving = (EventHandler<ElementEventArgs>)Delegate.Combine(this._onElementRemoving, value);
+                _onElementRemoving = (EventHandler<ElementEventArgs>)Delegate.Combine(_onElementRemoving, value);
             }
 
             remove
             {
-                this._onElementRemoving = (EventHandler<ElementEventArgs>)Delegate.Remove(this._onElementRemoving, value);
+                _onElementRemoving = (EventHandler<ElementEventArgs>)Delegate.Remove(_onElementRemoving, value);
             }
         }
 
@@ -281,12 +281,12 @@ namespace DocumentFormat.OpenXml
         {
             add
             {
-                this._onElementRemoved = (EventHandler<ElementEventArgs>)Delegate.Combine(this._onElementRemoved, value);
+                _onElementRemoved = (EventHandler<ElementEventArgs>)Delegate.Combine(_onElementRemoved, value);
             }
 
             remove
             {
-                this._onElementRemoved = (EventHandler<ElementEventArgs>)Delegate.Remove(this._onElementRemoved, value);
+                _onElementRemoved = (EventHandler<ElementEventArgs>)Delegate.Remove(_onElementRemoved, value);
             }
         }
 

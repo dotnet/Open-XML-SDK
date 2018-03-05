@@ -41,11 +41,11 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         {
             get
             {
-                if (this.currentResultFolder == null)
+                if (currentResultFolder == null)
                 {
-                    this.currentResultFolder = CreateResultFolder();
+                    currentResultFolder = CreateResultFolder();
                 }
-                return this.currentResultFolder;
+                return currentResultFolder;
             }
         }
 
@@ -70,16 +70,16 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
 
         public string GetTestFilePath(string filename)
         {
-            string testFileFolder = Path.Combine(ResultPath, this.TestClassName + "_files");
+            string testFileFolder = Path.Combine(ResultPath, TestClassName + "_files");
             string testFilePath = Path.Combine(testFileFolder, filename);
 
             if (Directory.Exists(testFileFolder) == false)
             {
-                this.Log.Comment("Create a test file folder : {0}", testFileFolder);
+                Log.Comment("Create a test file folder : {0}", testFileFolder);
                 Directory.CreateDirectory(testFileFolder);
             }
 
-            this.Log.Comment("Test file path: {0}", testFilePath);
+            Log.Comment("Test file path: {0}", testFilePath);
 
             return testFilePath;
         }
@@ -120,7 +120,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         private string CreateResultFolder()
         {
             // Caculate result folder path
-            var resultFolder = this.TestClassName;
+            var resultFolder = TestClassName;
             string outputPath = Path.Combine(ResultPath, resultFolder);
 
             CreateResultFolder(outputPath);

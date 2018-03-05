@@ -30,9 +30,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         /// <inheritdoc />
         public override bool IsPatternValid(OpenXmlSimpleType attributeValue)
         {
-            if ((this.RestrictionField & RestrictionField.Pattern) == RestrictionField.Pattern)
+            if ((RestrictionField & RestrictionField.Pattern) == RestrictionField.Pattern)
             {
-                string pattern = @"\A(" + this.Pattern + @")\z";
+                string pattern = @"\A(" + Pattern + @")\z";
                 return Regex.IsMatch(attributeValue.InnerText, pattern, RegexOptions.CultureInvariant);
             }
             return true;
@@ -59,9 +59,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         /// <inheritdoc />
         public override bool IsLengthValid(OpenXmlSimpleType attributeValue)
         {
-            if ((this.RestrictionField & RestrictionField.Length) == RestrictionField.Length)
+            if ((RestrictionField & RestrictionField.Length) == RestrictionField.Length)
             {
-                if (GetValueLength(attributeValue) != this.Length)
+                if (GetValueLength(attributeValue) != Length)
                 {
                     return false;
                 }
@@ -72,9 +72,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         /// <inheritdoc />
         public override bool IsMinLengthValid(OpenXmlSimpleType attributeValue)
         {
-            if ((this.RestrictionField & RestrictionField.MinLength) == RestrictionField.MinLength)
+            if ((RestrictionField & RestrictionField.MinLength) == RestrictionField.MinLength)
             {
-                if (GetValueLength(attributeValue) < this.MinLength)
+                if (GetValueLength(attributeValue) < MinLength)
                 {
                     return false;
                 }
@@ -85,9 +85,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         /// <inheritdoc />
         public override bool IsMaxLengthValid(OpenXmlSimpleType attributeValue)
         {
-            if ((this.RestrictionField & RestrictionField.MaxLength) == RestrictionField.MaxLength)
+            if ((RestrictionField & RestrictionField.MaxLength) == RestrictionField.MaxLength)
             {
-                if (GetValueLength(attributeValue) > this.MaxLength)
+                if (GetValueLength(attributeValue) > MaxLength)
                 {
                     return false;
                 }

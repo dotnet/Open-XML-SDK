@@ -119,28 +119,28 @@ namespace DocumentFormat.OpenXml.Packaging
             get
             {
                 ThrowIfObjectDisposed();
-                return this._documentType;
+                return _documentType;
             }
 
             private set
             {
                 ThrowIfObjectDisposed();
-                this._documentType = value;
+                _documentType = value;
             }
         }
 
         private void UpdateDocumentTypeFromContentType()
         {
-            if (this.MainPartContentType == null)
+            if (MainPartContentType == null)
             {
                 throw new InvalidOperationException();
             }
 
             foreach (KeyValuePair<PresentationDocumentType, string> types in MainPartContentTypes)
             {
-                if (types.Value == this.MainPartContentType)
+                if (types.Value == MainPartContentType)
                 {
-                    this.DocumentType = types.Key;
+                    DocumentType = types.Key;
                 }
             }
         }
@@ -424,23 +424,23 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (newType == this.DocumentType)
+            if (newType == DocumentType)
             {
                 // same type, just return
                 return;
             }
 
-            if (this.FileOpenAccess == FileAccess.Read)
+            if (FileOpenAccess == FileAccess.Read)
             {
                 throw new IOException(ExceptionMessages.PackageAccessModeIsReadonly);
             }
 
-            PresentationDocumentType oldType = this.DocumentType;
+            PresentationDocumentType oldType = DocumentType;
 
-            this.DocumentType = newType;
-            this.MainPartContentType = MainPartContentTypes[newType];
+            DocumentType = newType;
+            MainPartContentType = MainPartContentTypes[newType];
 
-            if (this.PresentationPart == null)
+            if (PresentationPart == null)
             {
                 return;
             }
@@ -453,8 +453,8 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (e.Message == ExceptionMessages.CannotChangeDocumentType)
                 {
-                    this.DocumentType = oldType;
-                    this.MainPartContentType = MainPartContentTypes[oldType];
+                    DocumentType = oldType;
+                    MainPartContentType = MainPartContentTypes[oldType];
                 }
                 throw;
             }
@@ -467,7 +467,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>An instance of OpenXmlPart.</returns>
         internal sealed override OpenXmlPart CreatePartCore(string relationshipType)
         {
-            this.ThrowIfObjectDisposed();
+            ThrowIfObjectDisposed();
 
             if (relationshipType == null)
             {
@@ -515,7 +515,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public PresentationPart AddPresentationPart()
         {
             PresentationPart childPart = new PresentationPart();
-            this.InitPart(childPart, this.MainPartContentType);
+            InitPart(childPart, MainPartContentType);
             return childPart;
         }
 
@@ -526,7 +526,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public CoreFilePropertiesPart AddCoreFilePropertiesPart()
         {
             CoreFilePropertiesPart childPart = new CoreFilePropertiesPart();
-            this.InitPart(childPart, CoreFilePropertiesPart.ContentTypeConstant);
+            InitPart(childPart, CoreFilePropertiesPart.ContentTypeConstant);
             return childPart;
         }
 
@@ -537,7 +537,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public ExtendedFilePropertiesPart AddExtendedFilePropertiesPart()
         {
             ExtendedFilePropertiesPart childPart = new ExtendedFilePropertiesPart();
-            this.InitPart(childPart, ExtendedFilePropertiesPart.ContentTypeConstant);
+            InitPart(childPart, ExtendedFilePropertiesPart.ContentTypeConstant);
             return childPart;
         }
 
@@ -548,7 +548,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public CustomFilePropertiesPart AddCustomFilePropertiesPart()
         {
             CustomFilePropertiesPart childPart = new CustomFilePropertiesPart();
-            this.InitPart(childPart, CustomFilePropertiesPart.ContentTypeConstant);
+            InitPart(childPart, CustomFilePropertiesPart.ContentTypeConstant);
             return childPart;
         }
 
@@ -559,7 +559,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public DigitalSignatureOriginPart AddDigitalSignatureOriginPart()
         {
             DigitalSignatureOriginPart childPart = new DigitalSignatureOriginPart();
-            this.InitPart(childPart, DigitalSignatureOriginPart.ContentTypeConstant);
+            InitPart(childPart, DigitalSignatureOriginPart.ContentTypeConstant);
             return childPart;
         }
 
@@ -571,7 +571,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public ThumbnailPart AddThumbnailPart(string contentType)
         {
             ThumbnailPart childPart = new ThumbnailPart();
-            this.InitPart(childPart, contentType);
+            InitPart(childPart, contentType);
             return childPart;
         }
         /// <summary>
@@ -606,7 +606,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(contentType));
             }
 
-            if (typeof(PresentationPart).GetTypeInfo().IsAssignableFrom(typeof(T).GetTypeInfo()) && contentType != PresentationDocument.MainPartContentTypes[this._documentType])
+            if (typeof(PresentationPart).GetTypeInfo().IsAssignableFrom(typeof(T).GetTypeInfo()) && contentType != PresentationDocument.MainPartContentTypes[_documentType])
             {
                 throw new OpenXmlPackageException(ExceptionMessages.ErrorContentType);
             }
@@ -621,7 +621,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public QuickAccessToolbarCustomizationsPart AddQuickAccessToolbarCustomizationsPart()
         {
             QuickAccessToolbarCustomizationsPart childPart = new QuickAccessToolbarCustomizationsPart();
-            this.InitPart(childPart, QuickAccessToolbarCustomizationsPart.ContentTypeConstant);
+            InitPart(childPart, QuickAccessToolbarCustomizationsPart.ContentTypeConstant);
             return childPart;
         }
 
@@ -632,7 +632,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public RibbonExtensibilityPart AddRibbonExtensibilityPart()
         {
             RibbonExtensibilityPart childPart = new RibbonExtensibilityPart();
-            this.InitPart(childPart, RibbonExtensibilityPart.ContentTypeConstant);
+            InitPart(childPart, RibbonExtensibilityPart.ContentTypeConstant);
             return childPart;
         }
 
@@ -643,7 +643,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public RibbonAndBackstageCustomizationsPart AddRibbonAndBackstageCustomizationsPart()
         {
             RibbonAndBackstageCustomizationsPart childPart = new RibbonAndBackstageCustomizationsPart();
-            this.InitPart(childPart, RibbonAndBackstageCustomizationsPart.ContentTypeConstant);
+            InitPart(childPart, RibbonAndBackstageCustomizationsPart.ContentTypeConstant);
             return childPart;
         }
 
@@ -654,7 +654,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public WebExTaskpanesPart AddWebExTaskpanesPart()
         {
             WebExTaskpanesPart childPart = new WebExTaskpanesPart();
-            this.InitPart(childPart, WebExTaskpanesPart.ContentTypeConstant);
+            InitPart(childPart, WebExTaskpanesPart.ContentTypeConstant);
             return childPart;
         }
 
@@ -697,7 +697,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get
             {
-                return this.GetSubPartOfType<ThumbnailPart>();
+                return GetSubPartOfType<ThumbnailPart>();
             }
         }
 

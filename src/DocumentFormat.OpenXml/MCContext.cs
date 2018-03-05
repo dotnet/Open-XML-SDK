@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml
         internal MCContext(bool exceptionOnError)
             : this()
         {
-            this._noExceptionOnError = !exceptionOnError;
+            _noExceptionOnError = !exceptionOnError;
         }
 
         internal LookupNamespace LookupNamespaceDelegate { get; set; }
@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="lookupNamespaceDelegate"></param>
         internal void PushMCAttributes2(MarkupCompatibilityAttributes attr, LookupNamespace lookupNamespaceDelegate)
         {
-            this.LookupNamespaceDelegate = lookupNamespaceDelegate;
+            LookupNamespaceDelegate = lookupNamespaceDelegate;
 
             _pushedIgnor.Push(PushIgnorable(attr));
             _pushedPC.Push(PushProcessContent(attr));
@@ -304,7 +304,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>True to stop parsing; False to continue.</returns>
         private bool OnMcContextError(string value)
         {
-            if (this._noExceptionOnError)
+            if (_noExceptionOnError)
             {
                 return false;
             }
@@ -434,7 +434,7 @@ namespace DocumentFormat.OpenXml
                     string ns = choice.LookupNamespace(req);
                     if (ns == null)
                     {
-                        if (this._noExceptionOnError)
+                        if (_noExceptionOnError)
                         {
                             chooce = false;
                             break;

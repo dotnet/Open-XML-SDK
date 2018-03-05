@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get
             {
-                return this.CustomUI;
+                return CustomUI;
             }
         }
 

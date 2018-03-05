@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes. The default value is false.</param>
         protected OpenXmlReader(bool readMiscNodes)
         {
-            this._readMiscNodes = readMiscNodes;
+            _readMiscNodes = readMiscNodes;
         }
 
         /// <summary>
@@ -107,7 +107,7 @@ namespace DocumentFormat.OpenXml
             get
             {
                 ThrowIfObjectDisposed();
-                return this._readMiscNodes;
+                return _readMiscNodes;
             }
         }
 
@@ -147,7 +147,7 @@ namespace DocumentFormat.OpenXml
             get
             {
                 ThrowIfObjectDisposed();
-                return this.Attributes.Count > 0;
+                return Attributes.Count > 0;
             }
         }
 
@@ -260,7 +260,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         protected virtual void ThrowIfObjectDisposed()
         {
-            if (this._disposed)
+            if (_disposed)
             {
                 throw new ObjectDisposedException(base.GetType().Name);
             }
@@ -272,13 +272,13 @@ namespace DocumentFormat.OpenXml
         /// <param name="disposing">Specify true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
         protected virtual void Dispose(bool disposing)
         {
-            if (!this._disposed)
+            if (!_disposed)
             {
                 if (disposing)
                 {
-                    this.Close();
+                    Close();
                 }
-                this._disposed = true;
+                _disposed = true;
             }
         }
 
@@ -291,7 +291,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public void Dispose()
         {
-            this.Dispose(true);
+            Dispose(true);
             GC.SuppressFinalize(this);
         }
 

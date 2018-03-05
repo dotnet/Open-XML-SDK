@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Packaging
             get
             {
                 ThrowIfObjectDisposed();
-                return this.PartDictionary;
+                return PartDictionary;
             }
         }
 
@@ -51,13 +51,13 @@ namespace DocumentFormat.OpenXml.Packaging
             get
             {
                 ThrowIfObjectDisposed();
-                return this._childrenPartsDictionary;
+                return _childrenPartsDictionary;
             }
 
             set
             {
                 ThrowIfObjectDisposed();
-                this._childrenPartsDictionary = value;
+                _childrenPartsDictionary = value;
             }
         }
 
@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Packaging
             get
             {
                 ThrowIfObjectDisposed();
-                return this._referenceRelationships;
+                return _referenceRelationships;
             }
         }
 
@@ -99,10 +99,10 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new InvalidOperationException(ExceptionMessages.ReferenceRelationshipIsNotReferenced);
             }
 
-            if (this.ReferenceRelationshipList.Contains(referenceRelationship))
+            if (ReferenceRelationshipList.Contains(referenceRelationship))
             {
-                this.ReferenceRelationshipList.Remove(referenceRelationship);
-                this.DeleteRelationship(referenceRelationship.Id);
+                ReferenceRelationshipList.Remove(referenceRelationship);
+                DeleteRelationship(referenceRelationship.Id);
                 referenceRelationship.Container = null;
             }
             else
@@ -126,12 +126,12 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(id));
             }
 
-            foreach (var referenceRelationship in this.ReferenceRelationshipList)
+            foreach (var referenceRelationship in ReferenceRelationshipList)
             {
                 if (referenceRelationship.Id == id)
                 {
-                    this.ReferenceRelationshipList.Remove(referenceRelationship);
-                    this.DeleteRelationship(referenceRelationship.Id);
+                    ReferenceRelationshipList.Remove(referenceRelationship);
+                    DeleteRelationship(referenceRelationship.Id);
                     referenceRelationship.Container = null;
                     return;
                 }
@@ -156,7 +156,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(id));
             }
 
-            foreach (var referenceRelatinship in this.ReferenceRelationshipList)
+            foreach (var referenceRelatinship in ReferenceRelationshipList)
             {
                 if (referenceRelatinship.Id == id)
                 {
@@ -180,7 +180,7 @@ namespace DocumentFormat.OpenXml.Packaging
             get
             {
                 ThrowIfObjectDisposed();
-                return this.ReferenceRelationshipList.OfType<ExternalRelationship>();
+                return ReferenceRelationshipList.OfType<ExternalRelationship>();
             }
         }
 
@@ -211,11 +211,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new InvalidOperationException(ExceptionMessages.UseAddHyperlinkRelationship);
             }
 
-            PackageRelationship relationship = this.CreateRelationship(externalUri, TargetMode.External, relationshipType);
+            PackageRelationship relationship = CreateRelationship(externalUri, TargetMode.External, relationshipType);
 
             ExternalRelationship externalRel = new ExternalRelationship(relationship.TargetUri, relationship.RelationshipType, relationship.Id);
             externalRel.Container = this;
-            this.ReferenceRelationshipList.AddLast(externalRel);
+            ReferenceRelationshipList.AddLast(externalRel);
             return externalRel;
         }
 
@@ -253,11 +253,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new InvalidOperationException(ExceptionMessages.UseAddHyperlinkRelationship);
             }
 
-            PackageRelationship relationship = this.CreateRelationship(externalUri, TargetMode.External, relationshipType, id);
+            PackageRelationship relationship = CreateRelationship(externalUri, TargetMode.External, relationshipType, id);
 
             ExternalRelationship externalRel = new ExternalRelationship(relationship.TargetUri, relationship.RelationshipType, relationship.Id);
             externalRel.Container = this;
-            this.ReferenceRelationshipList.AddLast(externalRel);
+            ReferenceRelationshipList.AddLast(externalRel);
             return externalRel;
         }
 
@@ -281,10 +281,10 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new InvalidOperationException(ExceptionMessages.ExternalRelationshipIsNotReferenced);
             }
 
-            if (this.ReferenceRelationshipList.Contains(externalRelationship))
+            if (ReferenceRelationshipList.Contains(externalRelationship))
             {
-                this.ReferenceRelationshipList.Remove(externalRelationship);
-                this.DeleteRelationship(externalRelationship.Id);
+                ReferenceRelationshipList.Remove(externalRelationship);
+                DeleteRelationship(externalRelationship.Id);
                 externalRelationship.Container = null;
             }
             else
@@ -306,12 +306,12 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(id));
             }
 
-            foreach (var externalRelationship in this.ReferenceRelationshipList.OfType<ExternalRelationship>())
+            foreach (var externalRelationship in ReferenceRelationshipList.OfType<ExternalRelationship>())
             {
                 if (externalRelationship.Id == id)
                 {
-                    this.ReferenceRelationshipList.Remove(externalRelationship);
-                    this.DeleteRelationship(externalRelationship.Id);
+                    ReferenceRelationshipList.Remove(externalRelationship);
+                    DeleteRelationship(externalRelationship.Id);
                     externalRelationship.Container = null;
                     return;
                 }
@@ -334,7 +334,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(id));
             }
 
-            foreach (var externalRelationship in this.ReferenceRelationshipList.OfType<ExternalRelationship>())
+            foreach (var externalRelationship in ReferenceRelationshipList.OfType<ExternalRelationship>())
             {
                 if (externalRelationship.Id == id)
                 {
@@ -357,7 +357,7 @@ namespace DocumentFormat.OpenXml.Packaging
             get
             {
                 ThrowIfObjectDisposed();
-                return this.ReferenceRelationshipList.OfType<HyperlinkRelationship>();
+                return ReferenceRelationshipList.OfType<HyperlinkRelationship>();
             }
         }
 
@@ -378,11 +378,11 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             TargetMode targetMode = isExternal ? TargetMode.External : TargetMode.Internal;
-            PackageRelationship relationship = this.CreateRelationship(hyperlinkUri, targetMode, HyperlinkRelationship.RelationshipTypeConst);
+            PackageRelationship relationship = CreateRelationship(hyperlinkUri, targetMode, HyperlinkRelationship.RelationshipTypeConst);
 
             HyperlinkRelationship hyperlinkRel = new HyperlinkRelationship(relationship.TargetUri, isExternal, relationship.Id);
             hyperlinkRel.Container = this;
-            this.ReferenceRelationshipList.AddLast(hyperlinkRel);
+            ReferenceRelationshipList.AddLast(hyperlinkRel);
             return hyperlinkRel;
         }
 
@@ -408,11 +408,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(id));
             }
 
-            PackageRelationship relationship = this.CreateRelationship(hyperlinkUri, TargetMode.External, HyperlinkRelationship.RelationshipTypeConst, id);
+            PackageRelationship relationship = CreateRelationship(hyperlinkUri, TargetMode.External, HyperlinkRelationship.RelationshipTypeConst, id);
 
             HyperlinkRelationship hyperlinkRel = new HyperlinkRelationship(relationship.TargetUri, isExternal, relationship.Id);
             hyperlinkRel.Container = this;
-            this.ReferenceRelationshipList.AddLast(hyperlinkRel);
+            ReferenceRelationshipList.AddLast(hyperlinkRel);
             return hyperlinkRel;
         }
 
@@ -429,7 +429,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 ThrowIfObjectDisposed();
 
-                return this.ReferenceRelationshipList.OfType<DataPartReferenceRelationship>();
+                return ReferenceRelationshipList.OfType<DataPartReferenceRelationship>();
             }
         }
 
@@ -449,17 +449,17 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(mediaDataPart));
             }
 
-            if (mediaDataPart.OpenXmlPackage != this.InternalOpenXmlPackage)
+            if (mediaDataPart.OpenXmlPackage != InternalOpenXmlPackage)
             {
                 throw new InvalidOperationException(ExceptionMessages.ForeignMediaDataPart);
             }
 
             T dataPartReferenceRelationship = PartActivator.CreateInstance<T>();
 
-            PackageRelationship relationship = this.CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, dataPartReferenceRelationship.RelationshipType);
+            PackageRelationship relationship = CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, dataPartReferenceRelationship.RelationshipType);
 
             dataPartReferenceRelationship.Initialize(this, mediaDataPart, dataPartReferenceRelationship.RelationshipType, relationship.Id);
-            this.ReferenceRelationshipList.AddLast(dataPartReferenceRelationship);
+            ReferenceRelationshipList.AddLast(dataPartReferenceRelationship);
             return dataPartReferenceRelationship;
         }
 
@@ -486,17 +486,17 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(id));
             }
 
-            if (mediaDataPart.OpenXmlPackage != this.InternalOpenXmlPackage)
+            if (mediaDataPart.OpenXmlPackage != InternalOpenXmlPackage)
             {
                 throw new InvalidOperationException(ExceptionMessages.ForeignMediaDataPart);
             }
 
             T dataPartReferenceRelationship = PartActivator.CreateInstance<T>();
 
-            PackageRelationship relationship = this.CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, dataPartReferenceRelationship.RelationshipType, id);
+            PackageRelationship relationship = CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, dataPartReferenceRelationship.RelationshipType, id);
 
             dataPartReferenceRelationship.Initialize(this, mediaDataPart, dataPartReferenceRelationship.RelationshipType, relationship.Id);
-            this.ReferenceRelationshipList.AddLast(dataPartReferenceRelationship);
+            ReferenceRelationshipList.AddLast(dataPartReferenceRelationship);
             return dataPartReferenceRelationship;
         }
 
@@ -514,8 +514,8 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             var mediaDataPart = dataPartReferenceRelationship.DataPart;
-            this.CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, dataPartReferenceRelationship.RelationshipType, dataPartReferenceRelationship.Id);
-            this.ReferenceRelationshipList.AddLast(dataPartReferenceRelationship);
+            CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, dataPartReferenceRelationship.RelationshipType, dataPartReferenceRelationship.Id);
+            ReferenceRelationshipList.AddLast(dataPartReferenceRelationship);
             return dataPartReferenceRelationship;
         }
 
@@ -532,7 +532,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 ThrowIfObjectDisposed();
 
-                foreach (KeyValuePair<string, OpenXmlPart> item in this.PartDictionary)
+                foreach (KeyValuePair<string, OpenXmlPart> item in PartDictionary)
                 {
                     yield return new IdPartPair(item.Key, item.Value);
                 }
@@ -556,7 +556,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             OpenXmlPart part = null;
 
-            if (this.PartDictionary.TryGetValue(id, out part))
+            if (PartDictionary.TryGetValue(id, out part))
             {
                 return part;
             }
@@ -583,9 +583,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(part));
             }
 
-            if (this.PartDictionary.ContainsValue(part))
+            if (PartDictionary.ContainsValue(part))
             {
-                foreach (KeyValuePair<string, OpenXmlPart> idPartPair in this.PartDictionary)
+                foreach (KeyValuePair<string, OpenXmlPart> idPartPair in PartDictionary)
                 {
                     if (part == idPartPair.Value)
                     {
@@ -621,7 +621,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             string oldId = null;
-            foreach (var idPartPair in this.ChildrenParts)
+            foreach (var idPartPair in ChildrenParts)
             {
                 if (idPartPair.Key == newRelationshipId)
                 {
@@ -650,11 +650,11 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             // Add a new relationship, and then remove the old relationship
-            this.CreateRelationship(part.Uri, TargetMode.Internal, part.RelationshipType, newRelationshipId);
-            this.ChildrenParts.Add(newRelationshipId, part);
+            CreateRelationship(part.Uri, TargetMode.Internal, part.RelationshipType, newRelationshipId);
+            ChildrenParts.Add(newRelationshipId, part);
 
-            this.DeleteRelationship(oldId);
-            this.ChildrenParts.Remove(oldId);
+            DeleteRelationship(oldId);
+            ChildrenParts.Remove(oldId);
 
             return oldId;
         }
@@ -715,7 +715,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             OpenXmlPart addedPart = AddPart<OpenXmlPart>(targetPart);
-            string relationshipId = this.GetIdOfPart(addedPart);
+            string relationshipId = GetIdOfPart(addedPart);
             Debug.Assert(!string.IsNullOrEmpty(relationshipId));
             return relationshipId;
         }
@@ -746,7 +746,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 #if DEBUG
             OpenXmlPart addedPart = AddPart<OpenXmlPart>(targetPart, id);
-            Debug.Assert(this.GetIdOfPart(addedPart) == id);
+            Debug.Assert(GetIdOfPart(addedPart) == id);
 #else
             AddPart<OpenXmlPart>(targetPart, id);
 #endif
@@ -761,7 +761,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">When the part is not allowed to be referenced by this part.</exception>
         public T AddNewPart<T>() where T : OpenXmlPart, IFixedContentTypePart
         {
-            return this.AddNewPartInternal<T>();
+            return AddNewPartInternal<T>();
         }
 
         /// <summary>
@@ -773,7 +773,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">When the part is not allowed to be referenced by this part.</exception>
         public T AddNewPart<T>(string id) where T : OpenXmlPart, IFixedContentTypePart
         {
-            return this.AddNewPartInternal<T>(null, id);
+            return AddNewPartInternal<T>(null, id);
         }
 
         /// <summary>
@@ -794,7 +794,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(contentType));
             }
 
-            return this.AddNewPartInternal<T>(contentType, id);
+            return AddNewPartInternal<T>(contentType, id);
         }
 
         /// <summary>
@@ -838,12 +838,12 @@ namespace DocumentFormat.OpenXml.Packaging
 
             ExtendedPart child = new ExtendedPart(relationshipType);
 
-            child.CreateInternal(this.InternalOpenXmlPackage, this.ThisOpenXmlPart, contentType, targetExt);
+            child.CreateInternal(InternalOpenXmlPackage, ThisOpenXmlPart, contentType, targetExt);
 
             // add it
-            string relationshipId = this.AttachChild(child, rId);
+            string relationshipId = AttachChild(child, rId);
 
-            this.ChildrenParts.Add(relationshipId, child);
+            ChildrenParts.Add(relationshipId, child);
 
             return child;
         }
@@ -856,7 +856,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "id" is null reference.</exception>
         public bool DeletePart(string id)
         {
-            this.ThrowIfObjectDisposed();
+            ThrowIfObjectDisposed();
 
             if (id == null)
             {
@@ -874,7 +874,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="InvalidOperationException">Thrown when the part is not referenced by this part.</exception>
         public bool DeletePart(OpenXmlPart part)
         {
-            this.ThrowIfObjectDisposed();
+            ThrowIfObjectDisposed();
 
             //if (part == null)
             //{
@@ -885,15 +885,15 @@ namespace DocumentFormat.OpenXml.Packaging
                 return false;
             }
 
-            if (part.OpenXmlPackage != this.InternalOpenXmlPackage ||
-                !this.PartDictionary.ContainsValue(part))
+            if (part.OpenXmlPackage != InternalOpenXmlPackage ||
+                !PartDictionary.ContainsValue(part))
             {
                 throw new InvalidOperationException(ExceptionMessages.ForeignOpenXmlPart);
             }
 
-            string relationshipId = this.GetIdOfPart(part);
+            string relationshipId = GetIdOfPart(part);
 
-            return this.DeletePart(relationshipId);
+            return DeletePart(relationshipId);
         }
 
         /// <summary>
@@ -914,7 +914,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             foreach (OpenXmlPart part in partsToBeDeleted)
             {
-                string relationshipId = this.GetIdOfPart(part);
+                string relationshipId = GetIdOfPart(part);
                 relationshipIds.Add(relationshipId);
             }
 
@@ -935,7 +935,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             int partsCount = 0;
 
-            foreach (KeyValuePair<string, OpenXmlPart> idPartPair in this.ChildrenParts)
+            foreach (KeyValuePair<string, OpenXmlPart> idPartPair in ChildrenParts)
             {
                 if (idPartPair.Value is T)
                 {
@@ -960,16 +960,16 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(nameof(annotation));
             }
-            if (this._annotations == null)
+            if (_annotations == null)
             {
-                this._annotations = (annotation is object[]) ? new object[] { annotation } : annotation;
+                _annotations = (annotation is object[]) ? new object[] { annotation } : annotation;
             }
             else
             {
-                object[] annotations = this._annotations as object[];
+                object[] annotations = _annotations as object[];
                 if (annotations == null)
                 {
-                    this._annotations = new object[] { this._annotations, annotation };
+                    _annotations = new object[] { _annotations, annotation };
                 }
                 else
                 {
@@ -981,7 +981,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     if (index == annotations.Length)
                     {
                         Array.Resize<object>(ref annotations, index * 2);
-                        this._annotations = annotations;
+                        _annotations = annotations;
                     }
                     annotations[index] = annotation;
                 }
@@ -995,13 +995,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>The first annotation object of the specified type.</returns>
         public T Annotation<T>() where T : class
         {
-            if (this._annotations != null)
+            if (_annotations != null)
             {
-                object[] annotations = this._annotations as object[];
+                object[] annotations = _annotations as object[];
 
                 if (annotations == null)
                 {
-                    return this._annotations as T;
+                    return _annotations as T;
                 }
 
                 for (int i = 0; i < annotations.Length; i++)
@@ -1036,14 +1036,14 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(type));
             }
 
-            if (this._annotations != null)
+            if (_annotations != null)
             {
-                object[] annotations = this._annotations as object[];
+                object[] annotations = _annotations as object[];
                 if (annotations == null)
                 {
-                    if (type.GetTypeInfo().IsAssignableFrom(this._annotations.GetType().GetTypeInfo()))
+                    if (type.GetTypeInfo().IsAssignableFrom(_annotations.GetType().GetTypeInfo()))
                     {
-                        return this._annotations;
+                        return _annotations;
                     }
                 }
                 else
@@ -1073,14 +1073,14 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>An IEnumerable(T) of object that contains the annotations for this PartContainer.</returns>
         public IEnumerable<T> Annotations<T>() where T : class
         {
-            if (this._annotations != null)
+            if (_annotations != null)
             {
-                object[] annotations = this._annotations as object[];
+                object[] annotations = _annotations as object[];
                 if (annotations == null)
                 {
-                    if (this._annotations is T)
+                    if (_annotations is T)
                     {
-                        yield return (T)this._annotations;
+                        yield return (T)_annotations;
                     }
                 }
                 else
@@ -1113,14 +1113,14 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(type));
             }
 
-            if (this._annotations != null)
+            if (_annotations != null)
             {
-                object[] annotations = this._annotations as object[];
+                object[] annotations = _annotations as object[];
                 if (annotations == null)
                 {
-                    if (type.GetTypeInfo().IsAssignableFrom(this._annotations.GetType().GetTypeInfo()))
+                    if (type.GetTypeInfo().IsAssignableFrom(_annotations.GetType().GetTypeInfo()))
                     {
-                        yield return this._annotations;
+                        yield return _annotations;
                     }
                 }
                 else
@@ -1147,14 +1147,14 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <typeparam name="T">The Type of the annotations to remove.</typeparam>
         public void RemoveAnnotations<T>() where T : class
         {
-            if (this._annotations != null)
+            if (_annotations != null)
             {
-                object[] annotations = this._annotations as object[];
+                object[] annotations = _annotations as object[];
                 if (annotations == null)
                 {
-                    if (this._annotations is T)
+                    if (_annotations is T)
                     {
-                        this._annotations = null;
+                        _annotations = null;
                     }
                 }
                 else
@@ -1183,7 +1183,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     }
                     else
                     {
-                        this._annotations = null;
+                        _annotations = null;
                     }
                 }
             }
@@ -1199,14 +1199,14 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(nameof(type));
             }
-            if (this._annotations != null)
+            if (_annotations != null)
             {
-                object[] annotations = this._annotations as object[];
+                object[] annotations = _annotations as object[];
                 if (annotations == null)
                 {
-                    if (type.GetTypeInfo().IsAssignableFrom(this._annotations.GetType().GetTypeInfo()))
+                    if (type.GetTypeInfo().IsAssignableFrom(_annotations.GetType().GetTypeInfo()))
                     {
-                        this._annotations = null;
+                        _annotations = null;
                     }
                 }
                 else
@@ -1235,7 +1235,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     }
                     else
                     {
-                        this._annotations = null;
+                        _annotations = null;
                     }
                 }
             }
@@ -1256,7 +1256,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            foreach (OpenXmlPart part in this.PartDictionary.Values)
+            foreach (OpenXmlPart part in PartDictionary.Values)
             {
                 if (part is T)
                 {
@@ -1348,7 +1348,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     throw new ArgumentException(ExceptionMessages.InvalidXmlIDStringException, nameof(id));
                 }
 
-                if (this.ChildrenParts.ContainsKey(id))
+                if (ChildrenParts.ContainsKey(id))
                 {
                     throw new ArgumentException(ExceptionMessages.RelationshipIdConflict, nameof(id));
                 }
@@ -1425,7 +1425,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (!partConstraintRule.MaxOccursGreatThanOne)
                 {
-                    if (this.GetSubPartOfType<T>() != null)
+                    if (GetSubPartOfType<T>() != null)
                     {
                         // already have one, can not add new one.
                         throw new OpenXmlPackageException(ExceptionMessages.OnlyOnePartAllowed);
@@ -1438,11 +1438,11 @@ namespace DocumentFormat.OpenXml.Packaging
                     throw new ArgumentOutOfRangeException(nameof(newPart));
                 }
 
-                newPart.CreateInternal(this.InternalOpenXmlPackage, this.ThisOpenXmlPart, contentType, null);
+                newPart.CreateInternal(InternalOpenXmlPackage, ThisOpenXmlPart, contentType, null);
 
-                string relationshipId = this.AttachChild(newPart, id);
+                string relationshipId = AttachChild(newPart, id);
 
-                this.ChildrenParts.Add(relationshipId, newPart);
+                ChildrenParts.Add(relationshipId, newPart);
 
                 return;
             }
@@ -1474,18 +1474,18 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">Thrown when one instance of same type part already exists and multiple instance of that type is not allowed.</exception>
         internal virtual OpenXmlPart AddPartFrom(OpenXmlPart subPart, string rId)
         {
-            this.ThrowIfObjectDisposed();
+            ThrowIfObjectDisposed();
 
             if (subPart == null)
             {
                 throw new ArgumentNullException(nameof(subPart));
             }
 
-            if (subPart.OpenXmlPackage == this.InternalOpenXmlPackage)
+            if (subPart.OpenXmlPackage == InternalOpenXmlPackage)
             {
-                if (this.IsChildPart(subPart))
+                if (IsChildPart(subPart))
                 {
-                    if (rId != null && rId != this.GetIdOfPart(subPart))
+                    if (rId != null && rId != GetIdOfPart(subPart))
                     {
                         // Do NOT allow one sub part is referenced more than once.
                         throw new InvalidOperationException(ExceptionMessages.PartExistsWithDifferentRelationshipId);
@@ -1529,7 +1529,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     // Bug #19351
                     // return SetSubPart(subPart, rId);
-                    OpenXmlPart child = this.GetSubPart(subPart.RelationshipType);
+                    OpenXmlPart child = GetSubPart(subPart.RelationshipType);
 
                     if (child != null)
                     {
@@ -1565,7 +1565,7 @@ namespace DocumentFormat.OpenXml.Packaging
             //    this.DeletePart(child);
             //}
 
-            return this.AddSubPart(part, rId);
+            return AddSubPart(part, rId);
         }
 
         /// <summary>
@@ -1582,18 +1582,18 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             // check if part is shared
-            if (part.OpenXmlPackage == this.InternalOpenXmlPackage)
+            if (part.OpenXmlPackage == InternalOpenXmlPackage)
             {
                 // it is a part shared in the same package
-                string relationshipId = this.AttachChild(part, rId);
+                string relationshipId = AttachChild(part, rId);
 
-                this.ChildrenParts.Add(relationshipId, part);
+                ChildrenParts.Add(relationshipId, part);
 
                 return part;
             }
             else
             {
-                return this.AddSubPartFromOtherPackage(part, false, rId);
+                return AddSubPartFromOtherPackage(part, false, rId);
             }
         }
 
@@ -1604,7 +1604,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             Dictionary<OpenXmlPart, OpenXmlPart> partDictionary = new Dictionary<OpenXmlPart, OpenXmlPart>();
             Dictionary<DataPart, DataPart> dataPartsDictionary = new Dictionary<DataPart, DataPart>();
-            return this.AddSubPartFromOtherPackage(part, partDictionary, dataPartsDictionary, keepIdAndUri, rId);
+            return AddSubPartFromOtherPackage(part, partDictionary, dataPartsDictionary, keepIdAndUri, rId);
         }
 
         // Add part which is from other package to this package
@@ -1629,9 +1629,9 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 string relationshipId;
 
-                relationshipId = this.AttachChild(child, rId);
+                relationshipId = AttachChild(child, rId);
 
-                this.ChildrenParts.Add(relationshipId, child);
+                ChildrenParts.Add(relationshipId, child);
 
                 return child;
             }
@@ -1643,7 +1643,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 child = CreateOpenXmlPart(part.RelationshipType);
 
                 // try to keep the same name
-                child.CreateInternal2(this.InternalOpenXmlPackage, this.ThisOpenXmlPart, part.ContentType, part.Uri);
+                child.CreateInternal2(InternalOpenXmlPackage, ThisOpenXmlPart, part.ContentType, part.Uri);
 
                 //if (keepIdAndUri)
                 //{
@@ -1660,9 +1660,9 @@ namespace DocumentFormat.OpenXml.Packaging
                     child.FeedData(stream);
                 }
 
-                string relationshipId = this.AttachChild(child, rId);
+                string relationshipId = AttachChild(child, rId);
 
-                this.ChildrenParts.Add(relationshipId, child);
+                ChildrenParts.Add(relationshipId, child);
 
                 // add to processed node list
                 partDictionary.Add(part, child);
@@ -1703,7 +1703,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                         MediaDataPart newDataPart = new MediaDataPart();
 
-                        newDataPart.CreateInternal2(this.InternalOpenXmlPackage, dataPart.ContentType, dataPart.Uri);
+                        newDataPart.CreateInternal2(InternalOpenXmlPackage, dataPart.ContentType, dataPart.Uri);
 
                         // copy the stream
                         using (Stream stream = dataPart.GetStream())
@@ -1711,7 +1711,7 @@ namespace DocumentFormat.OpenXml.Packaging
                             newDataPart.FeedData(stream);
                         }
 
-                        this.InternalOpenXmlPackage.AddDataPartToList(newDataPart);
+                        InternalOpenXmlPackage.AddDataPartToList(newDataPart);
 
                         dataPartsDictionary[dataPart] = newDataPart;
                     }
@@ -1724,7 +1724,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     Debug.Assert(newDataPart != null);
 
                     DataPartReferenceRelationship newDataPartReference = DataPartReferenceRelationship.CreateDataPartReferenceRelationship(this, newDataPart, dataPartReferenceRelationship.RelationshipType, dataPartReferenceRelationship.Id);
-                    this.ReferenceRelationshipList.AddLast(newDataPartReference);
+                    ReferenceRelationshipList.AddLast(newDataPartReference);
                 }
 
                 return child;
@@ -1751,12 +1751,12 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (rId == null)
             {
-                PackageRelationship relationship = this.CreateRelationship(part.Uri, TargetMode.Internal, part.RelationshipType);
+                PackageRelationship relationship = CreateRelationship(part.Uri, TargetMode.Internal, part.RelationshipType);
                 return relationship.Id;
             }
             else
             {
-                PackageRelationship relationship = this.CreateRelationship(part.Uri, TargetMode.Internal, part.RelationshipType, rId);
+                PackageRelationship relationship = CreateRelationship(part.Uri, TargetMode.Internal, part.RelationshipType, rId);
                 return relationship.Id;
             }
         }
@@ -1782,10 +1782,10 @@ namespace DocumentFormat.OpenXml.Packaging
             child.FindAllReachableParts(processedParts);
 
             // remove from the collection
-            this.ChildrenParts.Remove(id);
+            ChildrenParts.Remove(id);
 
             // find all live parts
-            this.InternalOpenXmlPackage.FindAllReachableParts(liveParts);
+            InternalOpenXmlPackage.FindAllReachableParts(liveParts);
 
             Dictionary<OpenXmlPart, bool> toBeDeletedParts = new Dictionary<OpenXmlPart, bool>();
 
@@ -1802,7 +1802,7 @@ namespace DocumentFormat.OpenXml.Packaging
             if (toBeDeletedParts.Count == 0)
             {
                 // the child part is shared by other part, just delete the relationship
-                this.DeleteRelationship(id);
+                DeleteRelationship(id);
             }
             else
             {
@@ -1810,7 +1810,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 child.DeleteAllParts(processedParts, toBeDeletedParts);
 
-                this.DeleteRelationship(id);
+                DeleteRelationship(id);
 
                 bool partRemoved;
 
@@ -1836,7 +1836,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             List<string> relationshipIds = new List<string>();
 
-            foreach (KeyValuePair<string, OpenXmlPart> idPartPair in this.ChildrenParts)
+            foreach (KeyValuePair<string, OpenXmlPart> idPartPair in ChildrenParts)
             {
                 if (idPartPair.Value is T)
                 {
@@ -1855,12 +1855,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         internal void DeletePartsRecursivelyOfTypeBase<T>() where T : OpenXmlPart
         {
-            this.ThrowIfObjectDisposed();
+            ThrowIfObjectDisposed();
 
             DeletePartsOfType<T>();
 
             // remove recursively
-            foreach (OpenXmlPart child in this.ChildrenParts.Values)
+            foreach (OpenXmlPart child in ChildrenParts.Values)
             {
                 child.DeletePartsRecursivelyOfTypeBase<T>();
             }
@@ -1873,11 +1873,11 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (this.PartDictionary.Count > 0)
+            if (PartDictionary.Count > 0)
             {
                 Collection<OpenXmlPart> subPartsShouldBeDeleted = new Collection<OpenXmlPart>();
 
-                foreach (KeyValuePair<string, OpenXmlPart> idPartPair in this.ChildrenParts)
+                foreach (KeyValuePair<string, OpenXmlPart> idPartPair in ChildrenParts)
                 {
                     bool isDeleted;
 
@@ -1900,7 +1900,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     // TODO: is this necessary? Will Package.DeletePart also delete it's .rels?
                     DeleteRelationship(idPartPair.Key);
                 }
-                this.ChildrenParts.Clear();
+                ChildrenParts.Clear();
 
                 foreach (OpenXmlPart child in subPartsShouldBeDeleted)
                 {
@@ -1927,7 +1927,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             // there should be only one part of this type
-            foreach (OpenXmlPart part in this.PartDictionary.Values)
+            foreach (OpenXmlPart part in PartDictionary.Values)
             {
                 if (part.RelationshipType == relationshipType)
                 {
@@ -1958,12 +1958,12 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(part));
             }
 
-            if (part.OpenXmlPackage != this.InternalOpenXmlPackage)
+            if (part.OpenXmlPackage != InternalOpenXmlPackage)
             {
                 throw new ArgumentOutOfRangeException(nameof(part));
             }
 
-            return this.PartDictionary.ContainsValue(part);
+            return PartDictionary.ContainsValue(part);
         }
 
         /// <summary>
@@ -1982,13 +1982,13 @@ namespace DocumentFormat.OpenXml.Packaging
 
             OpenXmlPart part = null;
 
-            if (this.GetPartConstraint().ContainsKey(relationshipType))
+            if (GetPartConstraint().ContainsKey(relationshipType))
             {
                 part = CreatePartCore(relationshipType);
             }
             else
             {
-                part = GlobalPartFactory.CreateOpenXmlPart(this.InternalOpenXmlPackage, relationshipType);
+                part = GlobalPartFactory.CreateOpenXmlPart(InternalOpenXmlPackage, relationshipType);
             }
 
             return part;
@@ -2010,7 +2010,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 if (relationship.RelationshipType == HyperlinkRelationship.RelationshipTypeConst)
                 {
                     // Fix bug #517956 - both internal and external hyperlinks should be loaded as HyperlinkRelationship.
-                    this.ReferenceRelationshipList.AddLast(new HyperlinkRelationship(relationship.TargetUri, relationship.TargetMode == TargetMode.External ? true : false, relationship.Id) { Container = this });
+                    ReferenceRelationshipList.AddLast(new HyperlinkRelationship(relationship.TargetUri, relationship.TargetMode == TargetMode.External ? true : false, relationship.Id) { Container = this });
                 }
                 else
                 {
@@ -2034,7 +2034,7 @@ namespace DocumentFormat.OpenXml.Packaging
                                 {
                                     throw new OpenXmlPackageException(ExceptionMessages.SamePartWithDifferentRelationshipType);
                                 }
-                                this.ChildrenParts.Add(relationship.Id, child);
+                                ChildrenParts.Add(relationship.Id, child);
                             }
                             else if (DataPartReferenceRelationship.IsDataPartReferenceRelationship(relationship.RelationshipType))
                             {
@@ -2049,7 +2049,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                                 // Already loaded data part. Create reference relationship.
                                 var referenceRelationship = DataPartReferenceRelationship.CreateDataPartReferenceRelationship(this, dataPart, relationship.RelationshipType, relationship.Id);
-                                this.ReferenceRelationshipList.AddLast(referenceRelationship);
+                                ReferenceRelationshipList.AddLast(referenceRelationship);
                             }
                             else
                             {
@@ -2060,13 +2060,13 @@ namespace DocumentFormat.OpenXml.Packaging
 
                                 child.Load(openXmlPackage, sourcePart, uriTarget, relationship.Id, loadedParts);
 
-                                this.ChildrenParts.Add(relationship.Id, child);
+                                ChildrenParts.Add(relationship.Id, child);
                             }
                         }
                     }
                     else
                     {
-                        this.ReferenceRelationshipList.AddLast(new ExternalRelationship(relationship.TargetUri, relationship.RelationshipType, relationship.Id) { Container = this });
+                        ReferenceRelationshipList.AddLast(new ExternalRelationship(relationship.TargetUri, relationship.RelationshipType, relationship.Id) { Container = this });
                     }
                 }
             }
@@ -2128,9 +2128,9 @@ namespace DocumentFormat.OpenXml.Packaging
         // Checks if the target part is in the same OpenXmlPackage as this part.
         private bool IsInSamePackage(OpenXmlPart targetPart)
         {
-            return this.InternalOpenXmlPackage != null &&
+            return InternalOpenXmlPackage != null &&
                 targetPart.OpenXmlPackage != null &&
-                targetPart.OpenXmlPackage == this.InternalOpenXmlPackage;
+                targetPart.OpenXmlPackage == InternalOpenXmlPackage;
         }
     }
 }
