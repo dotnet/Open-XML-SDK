@@ -151,7 +151,7 @@ namespace DocumentFormat.OpenXml
         {
             if (_disposed)
             {
-                throw new ObjectDisposedException(base.GetType().Name);
+                throw new ObjectDisposedException(GetType().Name);
             }
         }
 

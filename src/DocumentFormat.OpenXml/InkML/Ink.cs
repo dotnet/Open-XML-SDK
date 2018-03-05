@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.InkML
         /// <param name="openXmlPart">The part to be saved to.</param>
         public void Save(CustomXmlPart openXmlPart)
         {
-            base.SaveToPart(openXmlPart);
+            SaveToPart(openXmlPart);
         }
     }
 }
