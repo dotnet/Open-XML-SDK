@@ -739,7 +739,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private void SavePartContents(bool save)
         {
-            OpenXmlPackagePartIterator iterator;
             bool isAnyPartChanged;
 
             if (FileOpenAccess == FileAccess.Read)
@@ -754,12 +753,11 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             // Traversal the whole package and save changed contents.
-            iterator = new OpenXmlPackagePartIterator(this);
             isAnyPartChanged = false;
 
             // If a part is in the state of 'loaded', something in the part should've been changed.
             // When all the part is not loaded yet, we can skip saving all parts' contents and updating Package relationship types.
-            foreach (var part in iterator)
+            foreach (var part in this.GetAllParts())
             {
                 if (part.IsRootElementLoaded)
                 {
@@ -771,7 +769,7 @@ namespace DocumentFormat.OpenXml.Packaging
             // We update parts and relationship types only when any one of the parts was changed (i.e. loaded).
             if (isAnyPartChanged)
             {
-                foreach (var part in iterator)
+                foreach (var part in this.GetAllParts())
                 {
                     TrySavePartContent(part);
                 }
@@ -1146,8 +1144,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
 
                 // for each part in the package, check the DataPartReferenceRelationships.
-                OpenXmlPackagePartIterator partIterator = new OpenXmlPackagePartIterator(this);
-                foreach (var openXmlPart in partIterator)
+                foreach (var openXmlPart in this.GetAllParts())
                 {
                     foreach (var dataPartReferenceRelationship in openXmlPart.DataPartReferenceRelationships)
                     {

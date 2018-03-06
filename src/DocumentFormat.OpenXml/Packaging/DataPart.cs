@@ -78,7 +78,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            // first, see if there are any reference in package leve.
+            // First, see if there are any reference in package level.
             foreach (var dataPartReferenceRelationship in OpenXmlPackage.DataPartReferenceRelationships)
             {
                 if (dataPartReferenceRelationship.DataPart == this)
@@ -87,9 +87,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
             }
 
-            // for each part in the package, check the DataPartReferenceRelationships.
-            OpenXmlPackagePartIterator partIterator = new OpenXmlPackagePartIterator(OpenXmlPackage);
-            foreach (var openXmlPart in partIterator)
+            // For each part in the package, check the DataPartReferenceRelationships.
+            foreach (var openXmlPart in OpenXmlPackage.GetAllParts())
             {
                 foreach (var dataPartReferenceRelationship in openXmlPart.DataPartReferenceRelationships)
                 {
@@ -99,8 +98,6 @@ namespace DocumentFormat.OpenXml.Packaging
                     }
                 }
             }
-
-            yield break;
         }
 
         /// <summary>
