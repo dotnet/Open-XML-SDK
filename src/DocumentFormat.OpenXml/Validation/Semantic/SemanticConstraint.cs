@@ -61,10 +61,9 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             }
             else if (parts[0] == "..")
             {
-                IEnumerable<OpenXmlPart> iterator = new OpenXmlPackagePartIterator(context.Package);
-
-                IEnumerable<OpenXmlPart> refParts = iterator.Where(p => p.Parts.Select(r => r.OpenXmlPart.PackagePart.Uri)
-                                                            .Contains(context.Part.PackagePart.Uri));
+                var refParts = context.Package
+                    .GetAllParts()
+                    .Where(p => p.Parts.Any(r => r.OpenXmlPart.PackagePart.Uri == context.Part.PackagePart.Uri));
 
                 Debug.Assert(refParts.Count() == 1);
 
