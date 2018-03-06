@@ -74,29 +74,29 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             byte[] headbytes = new byte[HeadSize];
 
             // !!!!Caution: keep the order of the following code lines!!!!
-            var data = this.GetBytes(this.Signature,
-                          this.DataVersion.Bytes(),
-                          this.DataByteCount.Bytes(),
+            var data = GetBytes(Signature,
+                          DataVersion.Bytes(),
+                          DataByteCount.Bytes(),
 
-                          this.StartClassId.Bytes(),
+                          StartClassId.Bytes(),
 
-                          this.ClassIdsCount.Bytes(),
-                          this.ClassIdsDataOffset.Bytes(),
+                          ClassIdsCount.Bytes(),
+                          ClassIdsDataOffset.Bytes(),
 
-                          this.SchemaTypeCount.Bytes(),
-                          this.SchemaTypeDataOffset.Bytes(),
+                          SchemaTypeCount.Bytes(),
+                          SchemaTypeDataOffset.Bytes(),
 
-                          this.ParticleCount.Bytes(),
-                          this.ParticleDataOffset.Bytes(),
+                          ParticleCount.Bytes(),
+                          ParticleDataOffset.Bytes(),
 
-                          this.ParticleChildrenIndexCount.Bytes(),
-                          this.ParticleChildrenIndexDataOffset.Bytes(),
+                          ParticleChildrenIndexCount.Bytes(),
+                          ParticleChildrenIndexDataOffset.Bytes(),
 
-                          this.AttributeCount.Bytes(),
-                          this.AttributeDataOffset.Bytes(),
+                          AttributeCount.Bytes(),
+                          AttributeDataOffset.Bytes(),
 
-                          this.SimpleTypeCount.Bytes(),
-                          this.SimpleTypeDataOffset.Bytes());
+                          SimpleTypeCount.Bytes(),
+                          SimpleTypeDataOffset.Bytes());
 
             data.CopyTo(headbytes, 0);
 
@@ -110,13 +110,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="startIndex">The offset the data begins at.</param>
         public override void LoadFromBytes(byte[] value, int startIndex)
         {
-            this.Signature = new byte[SignatureSize];
-            Array.Copy(value, startIndex, this.Signature, 0, SignatureSize);
+            Signature = new byte[SignatureSize];
+            Array.Copy(value, startIndex, Signature, 0, SignatureSize);
             startIndex += SignatureSize;
 
             for (int i = 0; i < SignatureSize; i++)
             {
-                if (this.Signature[i] != SignatureConst[i])
+                if (Signature[i] != SignatureConst[i])
                 {
                     // TODO: change to resource string
                     throw new InvalidDataException("Invalide schema constraint data.");
@@ -124,34 +124,34 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
 
             // !!!!Caution: keep the order of the following code lines!!!!
-            this.DataVersion = SdbData.LoadInt(value, ref startIndex);
-            this.DataByteCount = SdbData.LoadInt(value, ref startIndex);
+            DataVersion = SdbData.LoadInt(value, ref startIndex);
+            DataByteCount = SdbData.LoadInt(value, ref startIndex);
 
-            if (this.DataVersion != LatestDataVersion)
+            if (DataVersion != LatestDataVersion)
             {
                 // TODO: change to resource string
                 throw new InvalidDataException("Invalide schema constraint data.");
             }
 
-            this.StartClassId = SdbData.LoadInt(value, ref startIndex);
+            StartClassId = SdbData.LoadInt(value, ref startIndex);
 
-            this.ClassIdsCount = SdbData.LoadInt(value, ref startIndex);
-            this.ClassIdsDataOffset = SdbData.LoadInt(value, ref startIndex);
+            ClassIdsCount = SdbData.LoadInt(value, ref startIndex);
+            ClassIdsDataOffset = SdbData.LoadInt(value, ref startIndex);
 
-            this.SchemaTypeCount = SdbData.LoadInt(value, ref startIndex);
-            this.SchemaTypeDataOffset = SdbData.LoadInt(value, ref startIndex);
+            SchemaTypeCount = SdbData.LoadInt(value, ref startIndex);
+            SchemaTypeDataOffset = SdbData.LoadInt(value, ref startIndex);
 
-            this.ParticleCount = SdbData.LoadInt(value, ref startIndex);
-            this.ParticleDataOffset = SdbData.LoadInt(value, ref startIndex);
+            ParticleCount = SdbData.LoadInt(value, ref startIndex);
+            ParticleDataOffset = SdbData.LoadInt(value, ref startIndex);
 
-            this.ParticleChildrenIndexCount = SdbData.LoadInt(value, ref startIndex);
-            this.ParticleChildrenIndexDataOffset = SdbData.LoadInt(value, ref startIndex);
+            ParticleChildrenIndexCount = SdbData.LoadInt(value, ref startIndex);
+            ParticleChildrenIndexDataOffset = SdbData.LoadInt(value, ref startIndex);
 
-            this.AttributeCount = SdbData.LoadInt(value, ref startIndex);
-            this.AttributeDataOffset = SdbData.LoadInt(value, ref startIndex);
+            AttributeCount = SdbData.LoadInt(value, ref startIndex);
+            AttributeDataOffset = SdbData.LoadInt(value, ref startIndex);
 
-            this.SimpleTypeCount = SdbData.LoadInt(value, ref startIndex);
-            this.SimpleTypeDataOffset = SdbData.LoadInt(value, ref startIndex);
+            SimpleTypeCount = SdbData.LoadInt(value, ref startIndex);
+            SimpleTypeDataOffset = SdbData.LoadInt(value, ref startIndex);
         }
 
         public override int DataSize

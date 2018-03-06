@@ -30,10 +30,10 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             Debug.Assert(packageRelationship != null);
 
-            this.RelationshipType = packageRelationship.RelationshipType;
-            this.Uri = packageRelationship.TargetUri;
-            this.IsExternal = packageRelationship.TargetMode == TargetMode.External;
-            this.Id = packageRelationship.Id;
+            RelationshipType = packageRelationship.RelationshipType;
+            Uri = packageRelationship.TargetUri;
+            IsExternal = packageRelationship.TargetMode == TargetMode.External;
+            Id = packageRelationship.Id;
         }
 
         /// <summary>
@@ -49,10 +49,10 @@ namespace DocumentFormat.OpenXml.Packaging
             Debug.Assert(!string.IsNullOrEmpty(relationshipType));
             Debug.Assert(!string.IsNullOrEmpty(id));
 
-            this.RelationshipType = relationshipType;
-            this.Uri = targetUri;
-            this.Id = id;
-            this.IsExternal = isExternal;
+            RelationshipType = relationshipType;
+            Uri = targetUri;
+            Id = id;
+            IsExternal = isExternal;
         }
 
         /// <summary>
@@ -93,10 +93,10 @@ namespace DocumentFormat.OpenXml.Packaging
             Debug.Assert(!string.IsNullOrEmpty(relationshipType));
             Debug.Assert(!string.IsNullOrEmpty(id));
 
-            this.RelationshipType = relationshipType;
-            this.Uri = targetUri;
-            this.Id = id;
-            this.IsExternal = isExternal;
+            RelationshipType = relationshipType;
+            Uri = targetUri;
+            Id = id;
+            IsExternal = isExternal;
         }
     }
 }

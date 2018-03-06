@@ -32,15 +32,15 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransition
         [Fact]
         public void PresetTransitionReadWriteTest()
         {
-            this.SimpleReadWriteTest(
+            SimpleReadWriteTest(
                 (e) =>
                 {
-                    this.Log.VerifyValue(
+                    Log.VerifyValue(
                         e.Preset.Value, OriginalPresetTransition,
                         "Verified 'Preset' attribute of <P15:prstTrans>");
-                    this.Log.VerifyValue(e.InvX.Value, true,
+                    Log.VerifyValue(e.InvX.Value, true,
                         "Verified 'InvX' attribute of <P15:prstTrans>");
-                    this.Log.VerifyNull(e.InvY, "Verified 'InvY' attribute of <P15:prstTrans>");
+                    Log.VerifyNull(e.InvY, "Verified 'InvY' attribute of <P15:prstTrans>");
                 },
                 (e) =>
                 {
@@ -50,12 +50,12 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransition
                 },
                 (e) =>
                 {
-                    this.Log.VerifyValue(
+                    Log.VerifyValue(
                         e.Preset.Value, ModifiedPresetTransition,
                         "Verified the updated attribute");
-                    this.Log.VerifyValue(e.InvX.Value, false,
+                    Log.VerifyValue(e.InvX.Value, false,
                         "Verified 'InvX' attribute of <P15:prstTrans>");
-                    this.Log.VerifyValue(e.InvY.Value, true,
+                    Log.VerifyValue(e.InvY.Value, true,
                         "Verified 'InvY' attribute of <P15:prstTrans>");
                 });
         }

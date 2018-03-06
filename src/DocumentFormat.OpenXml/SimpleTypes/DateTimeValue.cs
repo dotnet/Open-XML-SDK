@@ -73,7 +73,7 @@ namespace DocumentFormat.OpenXml
         {
             // in System.IO.Packaging.PartBasedPackageProperties.GetDateData()
             // the code is: System.Xml.XmlConvert.ToDateTime(this.TextValue, this.DateTimeFormats);
-            return XmlConvert.ToDateTime(this.TextValue, XmlDateTimeSerializationMode.Utc);
+            return XmlConvert.ToDateTime(TextValue, XmlDateTimeSerializationMode.Utc);
         }
 
         /// <summary>

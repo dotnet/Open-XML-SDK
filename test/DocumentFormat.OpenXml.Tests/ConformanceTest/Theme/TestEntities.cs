@@ -22,9 +22,9 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, true))
             {
-                package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value = this.ThemeId2;
+                package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value = ThemeId2;
 
-                log.Pass("Edit theme id attribute. Set value is \"{0}\"", this.ThemeId2);
+                log.Pass("Edit theme id attribute. Set value is \"{0}\"", ThemeId2);
             }
         }
 
@@ -37,7 +37,7 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, false))
             {
-                log.Verify(package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value == this.ThemeId2,
+                log.Verify(package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value == ThemeId2,
                     "UnChanged in the id attribute value on theme element. ID value=[{0}]", package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value);
             }
         }
@@ -80,7 +80,7 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, true))
             {
-                package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId = this.ThemeId1;
+                package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId = ThemeId1;
 
                 log.Pass("Add theme id attribute.");
             }
@@ -95,7 +95,7 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, false))
             {
-                log.Verify(package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value == this.ThemeId1,
+                log.Verify(package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value == ThemeId1,
                     "UnChanged in the id attribute value on theme element. ID value=[{0}]", package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value);
             }
         }

@@ -50,7 +50,7 @@ namespace DocumentFormat.OpenXml
 
             foreach (OpenXmlElement child in childrenElements)
             {
-                this.AppendChild(child);
+                AppendChild(child);
             }
         }
 
@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml
 
             foreach (OpenXmlElement child in childrenElements)
             {
-                this.AppendChild(child);
+                AppendChild(child);
             }
         }
 
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml
 
             foreach (OpenXmlElement child in childrenElements)
             {
-                this.AppendChild(child);
+                AppendChild(child);
             }
         }
 
@@ -102,9 +102,9 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                this.MakeSureParsed();
+                MakeSureParsed();
 
-                OpenXmlElement lastChild = this._lastChild;
+                OpenXmlElement lastChild = _lastChild;
 
                 if (lastChild != null)
                 {
@@ -122,9 +122,9 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                this.MakeSureParsed();
+                MakeSureParsed();
 
-                return this._lastChild;
+                return _lastChild;
             }
         }
 
@@ -133,7 +133,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this.LastChild != null;
+                return LastChild != null;
             }
         }
 
@@ -144,7 +144,7 @@ namespace DocumentFormat.OpenXml
             {
                 StringBuilder innerText = new StringBuilder();
 
-                foreach (OpenXmlElement child in this.ChildElements)
+                foreach (OpenXmlElement child in ChildElements)
                 {
                     innerText.Append(child.InnerText);
                 }
@@ -159,7 +159,7 @@ namespace DocumentFormat.OpenXml
             set
             {
                 // first, clear all children
-                this.RemoveAllChildren();
+                RemoveAllChildren();
 
                 if ( ! String.IsNullOrEmpty(value))
                 {
@@ -170,13 +170,13 @@ namespace DocumentFormat.OpenXml
                     {
                         using (XmlWriter writer2 = new XmlDOMTextWriter(w))
                         {
-                            writer2.WriteStartElement(this.Prefix, this.LocalName, this.NamespaceUri);
+                            writer2.WriteStartElement(Prefix, LocalName, NamespaceUri);
                             writer2.WriteRaw(value);
                             writer2.WriteEndElement();
                         }
 
                         // create a temp element to parse the xml.
-                        OpenXmlElement newElement = this.CloneNode(false);
+                        OpenXmlElement newElement = CloneNode(false);
                         newElement.OuterXml = w.ToString();
 
                         OpenXmlElement child = newElement.FirstChild;
@@ -189,7 +189,7 @@ namespace DocumentFormat.OpenXml
 
                             child = newElement.RemoveChild(child);
 
-                            this.AppendChild(child);
+                            AppendChild(child);
 
                             child = next;
                         }
@@ -221,27 +221,27 @@ namespace DocumentFormat.OpenXml
                 throw new InvalidOperationException(ExceptionMessages.ElementIsPartOfTree);
             }
 
-            this.ElementInsertingEvent(newChild);
+            ElementInsertingEvent(newChild);
 
-            OpenXmlElement prevNode = this.LastChild;
+            OpenXmlElement prevNode = LastChild;
             OpenXmlElement nextNode = newChild;
 
             if (prevNode == null)
             {
                 nextNode.next = nextNode;
-                this._lastChild = nextNode;
+                _lastChild = nextNode;
             }
             else
             {
                 nextNode.next = prevNode.next;
                 prevNode.next = nextNode;
-                this._lastChild = nextNode;
+                _lastChild = nextNode;
             }
 
             newChild.Parent = this;
             // SetOwner(newChild);
 
-            this.ElementInsertedEvent(newChild);
+            ElementInsertedEvent(newChild);
 
             return newChild;
         }
@@ -268,7 +268,7 @@ namespace DocumentFormat.OpenXml
 
             if (refChild == null)
             {
-                return this.PrependChild(newChild);
+                return PrependChild(newChild);
             }
 
             if (refChild.Parent != this)
@@ -276,7 +276,7 @@ namespace DocumentFormat.OpenXml
                 throw new InvalidOperationException();
             }
 
-            this.ElementInsertingEvent(newChild);
+            ElementInsertingEvent(newChild);
 
             OpenXmlElement nextNode = newChild;
             OpenXmlElement prevNode = refChild;
@@ -284,11 +284,11 @@ namespace DocumentFormat.OpenXml
             Debug.Assert(nextNode != null);
             Debug.Assert(prevNode != null);
 
-            if (prevNode == this._lastChild)
+            if (prevNode == _lastChild)
             {
                 nextNode.next = prevNode.next;
                 prevNode.next = nextNode;
-                this._lastChild = nextNode;
+                _lastChild = nextNode;
             }
             else
             {
@@ -300,7 +300,7 @@ namespace DocumentFormat.OpenXml
             newChild.Parent = this;
             // SetOwner(newChild);
 
-            this.ElementInsertedEvent(newChild);
+            ElementInsertedEvent(newChild);
 
             return newChild;
         }
@@ -327,7 +327,7 @@ namespace DocumentFormat.OpenXml
 
             if (refChild == null)
             {
-                return this.AppendChild(newChild);
+                return AppendChild(newChild);
             }
 
             if (refChild != null && refChild.Parent != this)
@@ -335,7 +335,7 @@ namespace DocumentFormat.OpenXml
                 throw new InvalidOperationException();
             }
 
-            this.ElementInsertingEvent(newChild);
+            ElementInsertingEvent(newChild);
 
             OpenXmlElement prevNode = newChild;
             OpenXmlElement nextNode = refChild;
@@ -343,10 +343,10 @@ namespace DocumentFormat.OpenXml
             Debug.Assert(nextNode != null);
             Debug.Assert(prevNode != null);
 
-            if (nextNode == this.FirstChild)
+            if (nextNode == FirstChild)
             {
                 prevNode.next = nextNode;
-                this._lastChild.next = prevNode;
+                _lastChild.next = prevNode;
             }
             else
             {
@@ -358,7 +358,7 @@ namespace DocumentFormat.OpenXml
             newChild.Parent = this;
             // SetOwner(newChild);
 
-            this.ElementInsertedEvent(newChild);
+            ElementInsertedEvent(newChild);
 
             return newChild;
         }
@@ -384,22 +384,22 @@ namespace DocumentFormat.OpenXml
                 throw new InvalidOperationException(ExceptionMessages.ElementIsPartOfTree);
             }
 
-            if (index < 0 || index > this.ChildElements.Count)
+            if (index < 0 || index > ChildElements.Count)
             {
                 throw new ArgumentOutOfRangeException(nameof(index));
             }
             else if ( index == 0 )
             {
-                return this.PrependChild(newChild);
+                return PrependChild(newChild);
             }
-            else if ( index == this.ChildElements.Count )
+            else if ( index == ChildElements.Count )
             {
-                return this.AppendChild(newChild);
+                return AppendChild(newChild);
             }
             else
             {
-                OpenXmlElement refChild = this.ChildElements[index];
-                return this.InsertBefore(newChild, refChild);
+                OpenXmlElement refChild = ChildElements[index];
+                return InsertBefore(newChild, refChild);
             }
         }
 
@@ -422,7 +422,7 @@ namespace DocumentFormat.OpenXml
                 throw new InvalidOperationException(ExceptionMessages.ElementIsPartOfTree);
             }
 
-            return this.InsertBefore(newChild, this.FirstChild);
+            return InsertBefore(newChild, FirstChild);
         }
 
         /// <summary>
@@ -445,15 +445,15 @@ namespace DocumentFormat.OpenXml
             }
 
             T removedElement = oldChild;
-            OpenXmlElement last = this._lastChild;
+            OpenXmlElement last = _lastChild;
 
-            this.ElementRemovingEvent(removedElement);
+            ElementRemovingEvent(removedElement);
 
-            if (removedElement == this.FirstChild)
+            if (removedElement == FirstChild)
             {
-                if (removedElement == this._lastChild)
+                if (removedElement == _lastChild)
                 {
-                    this._lastChild = null;
+                    _lastChild = null;
                 }
                 else
                 {
@@ -461,12 +461,12 @@ namespace DocumentFormat.OpenXml
                     last.next = nextNode;
                 }
             }
-            else if (removedElement == this._lastChild)
+            else if (removedElement == _lastChild)
             {
                 OpenXmlElement prevNode = removedElement.PreviousSibling();
                 OpenXmlElement next = removedElement.next;
                 prevNode.next = next;
-                this._lastChild = prevNode;
+                _lastChild = prevNode;
             }
             else
             {
@@ -485,7 +485,7 @@ namespace DocumentFormat.OpenXml
             removedElement.Parent = null;
             //removedElement.Owner = null;
 
-            this.ElementRemovedEvent(removedElement);
+            ElementRemovedEvent(removedElement);
 
             return removedElement;
         }
@@ -495,17 +495,17 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public override void RemoveAllChildren()
         {
-            OpenXmlElement element = this.FirstChild;
+            OpenXmlElement element = FirstChild;
             while (element != null)
             {
                 OpenXmlElement next = element.NextSibling();
 
-                this.RemoveChild(element);
+                RemoveChild(element);
 
                 element = next;
             }
 
-            Debug.Assert(this._lastChild == null);
+            Debug.Assert(_lastChild == null);
         }
 
         /// <summary>
@@ -539,8 +539,8 @@ namespace DocumentFormat.OpenXml
             }
 
             OpenXmlElement refChild = oldChild.NextSibling();
-            this.RemoveChild(oldChild);
-            this.InsertBefore(newChild, refChild);
+            RemoveChild(oldChild);
+            InsertBefore(newChild, refChild);
             return oldChild;
         }
 
@@ -552,9 +552,9 @@ namespace DocumentFormat.OpenXml
         /// <param name="w">The XmlWriter at which to save the child nodes. </param>
         internal override void WriteContentTo(XmlWriter w)
         {
-            if (this.HasChildren)
+            if (HasChildren)
             {
-                foreach (OpenXmlElement childElement in this.ChildElements)
+                foreach (OpenXmlElement childElement in ChildElements)
                 {
                     childElement.WriteTo(w);
                 }
@@ -569,9 +569,9 @@ namespace DocumentFormat.OpenXml
         /// <param name="element">The OpenXmlElement element to insert.</param>
         internal void ElementInsertingEvent(OpenXmlElement element)
         {
-            if (this.OpenXmlElementContext != null)
+            if (OpenXmlElementContext != null)
             {
-                this.OpenXmlElementContext.ElementInsertingEvent(element, this);
+                OpenXmlElementContext.ElementInsertingEvent(element, this);
             }
         }
 
@@ -581,9 +581,9 @@ namespace DocumentFormat.OpenXml
         /// <param name="element">The OpenXmlElement element to insert.</param>
         internal void ElementInsertedEvent(OpenXmlElement element)
         {
-            if (this.OpenXmlElementContext != null)
+            if (OpenXmlElementContext != null)
             {
-                this.OpenXmlElementContext.ElementInsertedEvent(element, this);
+                OpenXmlElementContext.ElementInsertedEvent(element, this);
             }
         }
 
@@ -593,9 +593,9 @@ namespace DocumentFormat.OpenXml
         /// <param name="element">The OpenXmlElement element to remove.</param>
         internal void ElementRemovingEvent(OpenXmlElement element)
         {
-            if (this.OpenXmlElementContext != null)
+            if (OpenXmlElementContext != null)
             {
-                this.OpenXmlElementContext.ElementRemovingEvent(element, this);
+                OpenXmlElementContext.ElementRemovingEvent(element, this);
             }
         }
 
@@ -605,9 +605,9 @@ namespace DocumentFormat.OpenXml
         /// <param name="element">The OpenXmlElement element to be removed.</param>
         internal void ElementRemovedEvent(OpenXmlElement element)
         {
-            if (this.OpenXmlElementContext != null)
+            if (OpenXmlElementContext != null)
             {
-                this.OpenXmlElementContext.ElementRemovedEvent(element, this);
+                OpenXmlElementContext.ElementRemovedEvent(element, this);
             }
         }
 
@@ -638,12 +638,12 @@ namespace DocumentFormat.OpenXml
                     }
                     else if (xmlReader.NodeType == XmlNodeType.EndElement)
                     {
-                        Debug.Assert(xmlReader.LocalName.Equals(this.LocalName));
+                        Debug.Assert(xmlReader.LocalName.Equals(LocalName));
                         xmlReader.Skip(); // move to next node
                         break;
                     }
 
-                    OpenXmlElement element = this.ElementFactory(xmlReader);
+                    OpenXmlElement element = ElementFactory(xmlReader);
 
                     // set parent before Load( ) call. AlternateContentChoice need parent info on loading.
                     element.Parent = this;
@@ -658,7 +658,7 @@ namespace DocumentFormat.OpenXml
                     if (!(element is OpenXmlMiscNode))
                     {
                         // push MC context based on the context of the child element to be loaded
-                        mcContextPushed = this.PushMcContext(xmlReader);
+                        mcContextPushed = PushMcContext(xmlReader);
                     }
 
                     //Process the element according to the MC behavior
@@ -672,7 +672,7 @@ namespace DocumentFormat.OpenXml
 
                     if (mcContextPushed)
                     {
-                        this.PopMcContext();
+                        PopMcContext();
                     }
 
                     if (isACB && element.OpenXmlElementContext != null)
@@ -703,7 +703,7 @@ namespace DocumentFormat.OpenXml
                                     //if node is an UnknowElement, we should try to see whether the parent element can load the node as strong typed element
                                     if (node is OpenXmlUnknownElement)
                                     {
-                                        newnode = this.ElementFactory(node.Prefix, node.LocalName, node.NamespaceUri);
+                                        newnode = ElementFactory(node.Prefix, node.LocalName, node.NamespaceUri);
                                         if (!(newnode is OpenXmlUnknownElement))
                                         {
                                             //the following method will load teh element in MCMode.Full
@@ -756,7 +756,7 @@ namespace DocumentFormat.OpenXml
             }
 
             // set raw outer xml to empty to indicate that it is pased
-            this.RawOuterXml = string.Empty;
+            RawOuterXml = string.Empty;
         }
 
         private static void RemoveUnnecessaryExtAttr(OpenXmlElement node, OpenXmlElement newnode)
@@ -793,9 +793,9 @@ namespace DocumentFormat.OpenXml
 
         private int GetSequenceNumber( OpenXmlElement child )
         {
-            for (int i = 0; i < this.ElementNamespaceIds.Length; i++)
+            for (int i = 0; i < ElementNamespaceIds.Length; i++)
             {
-                if (this.ElementNamespaceIds[i] == child.NamespaceId && Object.Equals(this.ElementTagNames[i], child.LocalName))
+                if (ElementNamespaceIds[i] == child.NamespaceId && Object.Equals(ElementTagNames[i], child.LocalName))
                 {
                     return i;
                 }
@@ -816,18 +816,18 @@ namespace DocumentFormat.OpenXml
         internal T GetElement<T>(int sequenceNumber) where T : OpenXmlElement
         {
             T theChild;
-            switch (this.OpenXmlCompositeType)
+            switch (OpenXmlCompositeType)
             {
                 case OpenXmlCompositeType.Other:
                     throw new InvalidOperationException();
 
                 case OpenXmlCompositeType.OneAll:
-                    foreach (OpenXmlElement child in this.ChildElements)
+                    foreach (OpenXmlElement child in ChildElements)
                     {
                         // skip unknown element and MiscNode
                         if (OpenXmlElement.IsKnownElement(child))
                         {
-                            int childSequenceNumber = this.GetSequenceNumber(child);
+                            int childSequenceNumber = GetSequenceNumber(child);
                             if (childSequenceNumber == sequenceNumber)
                             {
                                 theChild = child as T;
@@ -848,7 +848,7 @@ namespace DocumentFormat.OpenXml
 
                 case OpenXmlCompositeType.OneChoice:
                     {
-                        OpenXmlElement child = this.FirstChild;
+                        OpenXmlElement child = FirstChild;
 
                         // skip unknown element and MiscNode
                         while (child != null && !OpenXmlElement.IsKnownElement(child))
@@ -861,7 +861,7 @@ namespace DocumentFormat.OpenXml
                         {
                             Debug.Assert(OpenXmlElement.IsKnownElement(child));
 
-                            int childSequenceNumber = this.GetSequenceNumber(child);
+                            int childSequenceNumber = GetSequenceNumber(child);
                             if (childSequenceNumber == sequenceNumber)
                             {
                                 theChild = child as T;
@@ -882,13 +882,13 @@ namespace DocumentFormat.OpenXml
 
                 case OpenXmlCompositeType.OneSequence:
                     {
-                        OpenXmlElement child = this.FirstChild;
+                        OpenXmlElement child = FirstChild;
 
                         while (child != null)
                         {
                             if (OpenXmlElement.IsKnownElement(child))
                             {
-                                int childSequenceNumber = this.GetSequenceNumber(child);
+                                int childSequenceNumber = GetSequenceNumber(child);
 
                                 if (childSequenceNumber == sequenceNumber)
                                 {
@@ -932,22 +932,22 @@ namespace DocumentFormat.OpenXml
 
         internal void SetElement<T>(int sequenceNumber, T newChild) where T : OpenXmlElement
         {
-            switch (this.OpenXmlCompositeType)
+            switch (OpenXmlCompositeType)
             {
                 case OpenXmlCompositeType.Other:
                     throw new InvalidOperationException();
 
                 case OpenXmlCompositeType.OneAll:
                     {
-                        T child = this.GetElement<T>(sequenceNumber);
+                        T child = GetElement<T>(sequenceNumber);
                         if (child != null)
                         {
                             // remove the old one
-                            this.RemoveChild(child);
+                            RemoveChild(child);
                         }
                         if (newChild != null)
                         {
-                            this.AppendChild(newChild);
+                            AppendChild(newChild);
                         }
                     }
 
@@ -960,7 +960,7 @@ namespace DocumentFormat.OpenXml
 
                 case OpenXmlCompositeType.OneChoice:
                     {
-                        OpenXmlElement child = this.FirstChild;
+                        OpenXmlElement child = FirstChild;
                         OpenXmlElement previousChild = null;
 
                         // skip unknown element and MiscNode
@@ -978,7 +978,7 @@ namespace DocumentFormat.OpenXml
                             // remove all exist elements
                             if (OpenXmlElement.IsKnownElement(child))
                             {
-                                this.RemoveChild(child);
+                                RemoveChild(child);
                             }
 
                             child = next;
@@ -986,7 +986,7 @@ namespace DocumentFormat.OpenXml
 
                         if (newChild != null)
                         {
-                            this.InsertAfter(newChild, previousChild);
+                            InsertAfter(newChild, previousChild);
                         }
                     }
 
@@ -999,14 +999,14 @@ namespace DocumentFormat.OpenXml
 
                 case OpenXmlCompositeType.OneSequence:
                     {
-                        OpenXmlElement child = this.FirstChild;
+                        OpenXmlElement child = FirstChild;
                         OpenXmlElement prev = null;
 
                         while (child != null)
                         {
                             if (OpenXmlElement.IsKnownElement(child))
                             {
-                                int childSequenceNumber = this.GetSequenceNumber(child);
+                                int childSequenceNumber = GetSequenceNumber(child);
 
                                 if (childSequenceNumber == sequenceNumber)
                                 {
@@ -1015,7 +1015,7 @@ namespace DocumentFormat.OpenXml
                                     {
                                         // insert the new element after the previous.
                                         prev = child.PreviousSibling();
-                                        this.RemoveChild(child);
+                                        RemoveChild(child);
                                         break;
                                     }
                                     else
@@ -1043,7 +1043,7 @@ namespace DocumentFormat.OpenXml
 
                         if (newChild != null)
                         {
-                            this.InsertAfter(newChild, prev);
+                            InsertAfter(newChild, prev);
                         }
                     }
 
@@ -1067,16 +1067,16 @@ namespace DocumentFormat.OpenXml
         private void AddANode(OpenXmlElement node)
         {
             node.Parent = this;
-            if (this._lastChild == null)
+            if (_lastChild == null)
             {
                 node.next = node;
-                this._lastChild = node;
+                _lastChild = node;
             }
             else
             {
-                node.next = this._lastChild.next;
-                this._lastChild.next = node;
-                this._lastChild = node;
+                node.next = _lastChild.next;
+                _lastChild.next = node;
+                _lastChild = node;
             }
         }
 

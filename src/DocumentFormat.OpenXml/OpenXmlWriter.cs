@@ -149,9 +149,9 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         protected virtual void ThrowIfObjectDisposed()
         {
-            if (this._disposed)
+            if (_disposed)
             {
-                throw new ObjectDisposedException(base.GetType().Name);
+                throw new ObjectDisposedException(GetType().Name);
             }
         }
 
@@ -161,13 +161,13 @@ namespace DocumentFormat.OpenXml
         /// <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
         protected virtual void Dispose(bool disposing)
         {
-            if (!this._disposed)
+            if (!_disposed)
             {
                 if (disposing)
                 {
-                    this.Close();
+                    Close();
                 }
-                this._disposed = true;
+                _disposed = true;
             }
         }
 
@@ -180,7 +180,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public void Dispose()
         {
-            this.Dispose(true);
+            Dispose(true);
             GC.SuppressFinalize(this);
         }
 

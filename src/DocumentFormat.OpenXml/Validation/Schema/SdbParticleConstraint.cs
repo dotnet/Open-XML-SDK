@@ -63,10 +63,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             get
             {
                 // Valid only when the particle is "xsd:any".
-                Debug.Assert(this.ParticleType == ParticleType.Any || this.ParticleType == ParticleType.AnyWithUri);
+                Debug.Assert(ParticleType == ParticleType.Any || ParticleType == ParticleType.AnyWithUri);
 
                 // The ID data saved in the .ElementTypeId field.
-                return this.ElementTypeId;
+                return ElementTypeId;
             }
         }
 
@@ -93,24 +93,24 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         public override byte[] GetBytes()
         {
             // !!!!Caution: keep the order of the following code lines!!!!
-            return this.GetBytes(this.ParticleType.Bytes(),
-                this.ElementTypeId.Bytes(),
-                this.MinOccurs.Bytes(),
-                this.MaxOccurs.Bytes(),
-                this.ChildrenCount.Bytes(),
-                this.ChildrenStartIndex.Bytes());
+            return GetBytes(ParticleType.Bytes(),
+                ElementTypeId.Bytes(),
+                MinOccurs.Bytes(),
+                MaxOccurs.Bytes(),
+                ChildrenCount.Bytes(),
+                ChildrenStartIndex.Bytes());
         }
 
         /// <inheritdoc/>
         public override void LoadFromBytes(byte[] value, int startIndex)
         {
             // !!!!Caution: keep the order of the following code lines!!!!
-            this.ParticleType = (ParticleType)LoadByte(value, ref startIndex);
-            this.ElementTypeId = LoadSdbIndex(value, ref startIndex);
-            this.MinOccurs = LoadUInt16(value, ref startIndex);
-            this.MaxOccurs = LoadInt(value, ref startIndex);
-            this.ChildrenCount = LoadSdbIndex(value, ref startIndex);
-            this.ChildrenStartIndex = LoadSdbIndex(value, ref startIndex);
+            ParticleType = (ParticleType)LoadByte(value, ref startIndex);
+            ElementTypeId = LoadSdbIndex(value, ref startIndex);
+            MinOccurs = LoadUInt16(value, ref startIndex);
+            MaxOccurs = LoadInt(value, ref startIndex);
+            ChildrenCount = LoadSdbIndex(value, ref startIndex);
+            ChildrenStartIndex = LoadSdbIndex(value, ref startIndex);
         }
     }
 }

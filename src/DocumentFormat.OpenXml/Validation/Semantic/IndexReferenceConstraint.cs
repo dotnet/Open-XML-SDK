@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Id = "Sem_MissingIndexedElement",
                 ErrorType = ValidationErrorType.Semantic,
                 Node = context.Element,
-                RelatedPart = this._relatedPart,
+                RelatedPart = _relatedPart,
                 RelatedNode = null,
                 Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_MissingIndexedElement,
                                             _refElementName,context.Element.LocalName,
@@ -83,9 +83,9 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         private int GetRefElementCount(ValidationContext context)
         {
-            if (this._refElementCount != -1)
+            if (_refElementCount != -1)
             {
-                return this._refElementCount;
+                return _refElementCount;
             }
 
             _refElementCount = 0;
@@ -107,15 +107,15 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 if (_refElementParent == -1)
                 {
                     _startCollect = true;
-                    ValidationTraverser.ValidatingTraverse(validationContext, this.ElementTraverseStart, null);
+                    ValidationTraverser.ValidatingTraverse(validationContext, ElementTraverseStart, null);
                 }
                 else
                 {
-                    ValidationTraverser.ValidatingTraverse(validationContext, this.ElementTraverseStart, this.ElementTraverseEnd);
+                    ValidationTraverser.ValidatingTraverse(validationContext, ElementTraverseStart, ElementTraverseEnd);
                 }
             }
 
-            return this._refElementCount;
+            return _refElementCount;
         }
 
         //On element traverse start.

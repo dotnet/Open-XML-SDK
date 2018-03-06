@@ -25,9 +25,9 @@ namespace DocumentFormat.OpenXml
         internal protected OpenXmlUnknownElement()
             : base()
         {
-            this._tagName = string.Empty;
-            this._prefix = string.Empty;
-            this._namespaceUri = string.Empty;
+            _tagName = string.Empty;
+            _prefix = string.Empty;
+            _namespaceUri = string.Empty;
         }
 
         //protected OpenXmlUnknownElement(string innerXml)
@@ -50,7 +50,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(name));
             }
 
-            OpenXmlElement.SplitName(name, out this._prefix, out this._tagName);
+            OpenXmlElement.SplitName(name, out _prefix, out _tagName);
         }
 
         /// <summary>
@@ -67,9 +67,9 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(qualifiedName));
             }
 
-            OpenXmlElement.SplitName(qualifiedName, out this._prefix, out this._tagName);
+            OpenXmlElement.SplitName(qualifiedName, out _prefix, out _tagName);
 
-            this._namespaceUri = namespaceUri;
+            _namespaceUri = namespaceUri;
         }
 
         /// <summary>
@@ -97,9 +97,9 @@ namespace DocumentFormat.OpenXml
                 namespaceUri = string.Empty;
             }
 
-            this._prefix = prefix;
-            this._namespaceUri = namespaceUri;
-            this._tagName = localName;
+            _prefix = prefix;
+            _namespaceUri = namespaceUri;
+            _tagName = localName;
         }
 
         /// <summary>
@@ -135,16 +135,16 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc/>
-        public override string LocalName => this._tagName;
+        public override string LocalName => _tagName;
 
         /// <inheritdoc/>
-        public override string NamespaceUri => this._namespaceUri;
+        public override string NamespaceUri => _namespaceUri;
 
         /// <inheritdoc/>
-        public override string Prefix => this._prefix;
+        public override string Prefix => _prefix;
 
         /// <inheritdoc/>
-        public override XmlQualifiedName XmlQualifiedName => new XmlQualifiedName(this._tagName, this._namespaceUri);
+        public override XmlQualifiedName XmlQualifiedName => new XmlQualifiedName(_tagName, _namespaceUri);
 
         internal override byte NamespaceId => throw new InvalidOperationException();
 
@@ -156,13 +156,13 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (this.HasChildren)
+                if (HasChildren)
                 {
                     return base.InnerText;
                 }
                 else
                 {
-                    return this._text;
+                    return _text;
                 }
             }
         }
@@ -176,16 +176,16 @@ namespace DocumentFormat.OpenXml
             get
             {
                 MakeSureParsed();
-                return this._text;
+                return _text;
             }
         }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep)
         {
-            OpenXmlUnknownElement element = new OpenXmlUnknownElement(this._prefix, this._tagName, this._namespaceUri)
+            OpenXmlUnknownElement element = new OpenXmlUnknownElement(_prefix, _tagName, _namespaceUri)
             {
-                _text = this.Text
+                _text = Text
             };
 
             element.CopyAttributes(this);
@@ -201,13 +201,13 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         internal override void WriteContentTo(XmlWriter w)
         {
-            if (this.HasChildren)
+            if (HasChildren)
             {
                 base.WriteContentTo(w);
             }
-            else if (this.Text != null)
+            else if (Text != null)
             {
-                w.WriteString(this.Text);
+                w.WriteString(Text);
             }
             else
             {
@@ -222,52 +222,52 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(xmlWriter));
             }
 
-            if (this.XmlParsed)
+            if (XmlParsed)
             {
-                xmlWriter.WriteStartElement(this.Prefix, this.LocalName, this.NamespaceUri);
-                this.WriteAttributesTo(xmlWriter);
-                this.WriteContentTo(xmlWriter);
+                xmlWriter.WriteStartElement(Prefix, LocalName, NamespaceUri);
+                WriteAttributesTo(xmlWriter);
+                WriteContentTo(xmlWriter);
                 xmlWriter.WriteEndElement();
             }
             else
             {
-                xmlWriter.WriteRaw(this.RawOuterXml);
+                xmlWriter.WriteRaw(RawOuterXml);
             }
         }
 
         /// <inheritdoc/>
         internal override void LazyLoad(XmlReader xmlReader)
         {
-            this._tagName = xmlReader.LocalName;
-            this._prefix = xmlReader.Prefix;
-            this._namespaceUri = xmlReader.NamespaceURI;
+            _tagName = xmlReader.LocalName;
+            _prefix = xmlReader.Prefix;
+            _namespaceUri = xmlReader.NamespaceURI;
 
-            this.RawOuterXml = xmlReader.ReadOuterXml();
+            RawOuterXml = xmlReader.ReadOuterXml();
         }
 
         /// <inheritdoc/>
         internal override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode)
         {
-            if (String.IsNullOrEmpty(this._tagName))
+            if (String.IsNullOrEmpty(_tagName))
             {
-                this._tagName = xmlReader.LocalName;
-                this._prefix = xmlReader.Prefix;
-                this._namespaceUri = xmlReader.NamespaceURI;
+                _tagName = xmlReader.LocalName;
+                _prefix = xmlReader.Prefix;
+                _namespaceUri = xmlReader.NamespaceURI;
             }
             else
             {
-                Debug.Assert(String.Equals(this._tagName, xmlReader.LocalName));
-                Debug.Assert(String.Equals(this._prefix, xmlReader.Prefix));
-                Debug.Assert(String.Equals(this._namespaceUri, xmlReader.NamespaceURI));
+                Debug.Assert(String.Equals(_tagName, xmlReader.LocalName));
+                Debug.Assert(String.Equals(_prefix, xmlReader.Prefix));
+                Debug.Assert(String.Equals(_namespaceUri, xmlReader.NamespaceURI));
             }
 
             // load children elements
             base.Populate(xmlReader, loadMode);
 
-            if (this.FirstChild != null && this.FirstChild.NextSibling() == null)
+            if (FirstChild != null && FirstChild.NextSibling() == null)
             {
                 // only one child
-                OpenXmlMiscNode miscNode = this.FirstChild as OpenXmlMiscNode;
+                OpenXmlMiscNode miscNode = FirstChild as OpenXmlMiscNode;
                 if (miscNode != null)
                 {
                     switch (miscNode.XmlNodeType)
@@ -275,8 +275,8 @@ namespace DocumentFormat.OpenXml
                         case XmlNodeType.Text:
                         case XmlNodeType.CDATA:
                         case XmlNodeType.SignificantWhitespace:
-                            this._text = miscNode.OuterXml; // is this OK?
-                            this.RemoveChild(miscNode);
+                            _text = miscNode.OuterXml; // is this OK?
+                            RemoveChild(miscNode);
                             break;
 
                         case XmlNodeType.Whitespace: // O15:#3024890, OpenXmlUnknownElement ignores the Whitespace NodeType.

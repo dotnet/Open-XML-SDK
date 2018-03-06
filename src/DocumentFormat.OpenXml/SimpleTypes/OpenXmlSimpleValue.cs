@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlSimpleValue(T value)
             : base()
         {
-            this.Value = value;
+            Value = value;
         }
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlSimpleValue(OpenXmlSimpleValue<T> source)
             : base(source)
         {
-            this.InnerText = source.InnerText;
+            InnerText = source.InnerText;
         }
 
         private protected virtual bool ShouldParse(string value) => !string.IsNullOrEmpty(value);
@@ -55,12 +55,12 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (!this.InnerValue.HasValue && ShouldParse(TextValue) && TryParse(TextValue, out var parsed))
+                if (!InnerValue.HasValue && ShouldParse(TextValue) && TryParse(TextValue, out var parsed))
                 {
                     InnerValue = parsed;
                 }
 
-                return this.InnerValue.HasValue;
+                return InnerValue.HasValue;
             }
         }
 
@@ -95,20 +95,20 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (!this.InnerValue.HasValue && ShouldParse(InnerText))
+                if (!InnerValue.HasValue && ShouldParse(InnerText))
                 {
                     InnerValue = Parse(InnerText);
                 }
 
-                return this.InnerValue.Value;
+                return InnerValue.Value;
             }
 
             set
             {
                 ValidateSet(value);
 
-                this.InnerValue = value;
-                this.TextValue = null;
+                InnerValue = value;
+                TextValue = null;
             }
         }
 
@@ -117,18 +117,18 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (this.TextValue == null && this.InnerValue.HasValue)
+                if (TextValue == null && InnerValue.HasValue)
                 {
-                    this.TextValue = GetText(this.InnerValue.Value);
+                    TextValue = GetText(InnerValue.Value);
                 }
 
-                return this.TextValue;
+                return TextValue;
             }
 
             set
             {
-                this.TextValue = value;
-                this.InnerValue = null;
+                TextValue = value;
+                InnerValue = null;
             }
         }
 

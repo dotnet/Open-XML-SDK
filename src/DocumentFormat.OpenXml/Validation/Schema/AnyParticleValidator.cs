@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         internal virtual ParticleConstraint ParticleConstraint
         {
-            get { return this._particleConstraint; }
+            get { return _particleConstraint; }
         }
 
         protected AnyParticleValidator()
@@ -36,7 +36,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             Debug.Assert(particleConstraint != null);
             Debug.Assert(particleConstraint.ParticleType == ParticleType.Any);
 
-            this._particleConstraint = particleConstraint;
+            _particleConstraint = particleConstraint;
         }
 
         #region IParticleValidator Members
@@ -54,7 +54,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             var element = particleMatchInfo.StartElement;
 
-            switch (this._particleConstraint.NamespaceValue)
+            switch (_particleConstraint.NamespaceValue)
             {
                 case XsdAnyPrefidefinedValue.Any:
                     // Elements from any namespace can be present.
@@ -119,9 +119,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             Debug.Assert(particleMatchInfo.StartElement != null);
             Debug.Assert(!(particleMatchInfo.StartElement is OpenXmlMiscNode));
 
-            if (this.ParticleConstraint.MaxOccurs == 1)
+            if (ParticleConstraint.MaxOccurs == 1)
             {
-                this.TryMatchOnce(particleMatchInfo, validationContext);
+                TryMatchOnce(particleMatchInfo, validationContext);
             }
             else
             {
@@ -131,10 +131,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 int matchCount = 0;
                 var next = particleMatchInfo.StartElement;
 
-                while (next != null && this.ParticleConstraint.MaxOccursGreaterThan(matchCount))
+                while (next != null && ParticleConstraint.MaxOccursGreaterThan(matchCount))
                 {
                     nextParticleMatchInfo = new ParticleMatchInfo(next);
-                    this.TryMatchOnce(nextParticleMatchInfo, validationContext);
+                    TryMatchOnce(nextParticleMatchInfo, validationContext);
 
                     if (nextParticleMatchInfo.Match == ParticleMatch.Nomatch)
                     {
@@ -157,7 +157,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 {
                     particleMatchInfo.Match = ParticleMatch.Nomatch;
                 }
-                else if (matchCount >= this.ParticleConstraint.MinOccurs)
+                else if (matchCount >= ParticleConstraint.MinOccurs)
                 {
                     // matched ok
                     particleMatchInfo.Match = ParticleMatch.Matched;
@@ -179,11 +179,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <returns>True if there are required elements in this particle.</returns>
         public virtual bool GetRequiredElements(ExpectedChildren result)
         {
-            if (this.ParticleConstraint.MinOccurs > 0)
+            if (ParticleConstraint.MinOccurs > 0)
             {
                 if (result != null)
                 {
-                    result.Add(XsdAnyPrefidefinedValue.GetNamespaceString(this._particleConstraint.NamespaceValue));
+                    result.Add(XsdAnyPrefidefinedValue.GetNamespaceString(_particleConstraint.NamespaceValue));
                 }
 
                 return true;
@@ -199,7 +199,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             ExpectedChildren requiredElements = new ExpectedChildren();
 
-            this.GetRequiredElements(requiredElements);
+            GetRequiredElements(requiredElements);
 
             return requiredElements;
         }
@@ -213,7 +213,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             if (result != null)
             {
-                result.Add(XsdAnyPrefidefinedValue.GetNamespaceString(this._particleConstraint.NamespaceValue));
+                result.Add(XsdAnyPrefidefinedValue.GetNamespaceString(_particleConstraint.NamespaceValue));
             }
 
             return true;
@@ -227,7 +227,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             ExpectedChildren expectedElements = new ExpectedChildren();
 
-            this.GetExpectedElements(expectedElements);
+            GetExpectedElements(expectedElements);
 
             return expectedElements;
         }

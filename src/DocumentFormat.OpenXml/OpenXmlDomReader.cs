@@ -24,15 +24,15 @@ namespace DocumentFormat.OpenXml
         private OpenXmlDomReader()
             : base()
         {
-            this._elementStack = new Stack<OpenXmlElement>();
-            this._elementState = ElementState.Null;
+            _elementStack = new Stack<OpenXmlElement>();
+            _elementState = ElementState.Null;
         }
 
         private OpenXmlDomReader(bool readMiscNodes)
             : base(readMiscNodes)
         {
-            this._elementStack = new Stack<OpenXmlElement>();
-            this._elementState = ElementState.Null;
+            _elementStack = new Stack<OpenXmlElement>();
+            _elementState = ElementState.Null;
         }
 
         /// <summary>
@@ -46,7 +46,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(openXmlElement));
             }
 
-            this.Init(openXmlElement);
+            Init(openXmlElement);
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(openXmlElement));
             }
 
-            this.Init(openXmlElement);
+            Init(openXmlElement);
         }
 
         /// <summary>
@@ -76,11 +76,11 @@ namespace DocumentFormat.OpenXml
                 ThrowIfNull();
                 ThrowIfEof();
 
-                if (this._elementState == ElementState.Start)
+                if (_elementState == ElementState.Start)
                 {
-                    Debug.Assert(this._elementStack.Count > 0);
+                    Debug.Assert(_elementStack.Count > 0);
 
-                    OpenXmlElement element = this._elementStack.Peek();
+                    OpenXmlElement element = _elementStack.Peek();
 
                     return new ReadOnlyCollection<OpenXmlAttribute>(element.GetAttributes());
                 }
@@ -106,11 +106,11 @@ namespace DocumentFormat.OpenXml
                 ThrowIfNull();
                 ThrowIfEof();
 
-                if (this._elementState == ElementState.Start)
+                if (_elementState == ElementState.Start)
                 {
-                    Debug.Assert(this._elementStack.Count > 0);
+                    Debug.Assert(_elementStack.Count > 0);
 
-                    OpenXmlElement element = this._elementStack.Peek();
+                    OpenXmlElement element = _elementStack.Peek();
 
                     return element.NamespaceDeclarations;
                 }
@@ -131,7 +131,7 @@ namespace DocumentFormat.OpenXml
                 ThrowIfObjectDisposed();
                 ThrowIfNull();
                 ThrowIfEof();
-                return this._elementStack.Peek().GetType();
+                return _elementStack.Peek().GetType();
             }
         }
 
@@ -144,9 +144,9 @@ namespace DocumentFormat.OpenXml
                 ThrowIfNull();
                 ThrowIfEof();
 
-                if (this._elementState == ElementState.MiscNode)
+                if (_elementState == ElementState.MiscNode)
                 {
-                    Debug.Assert(this.ElementType == typeof(OpenXmlMiscNode));
+                    Debug.Assert(ElementType == typeof(OpenXmlMiscNode));
                     return true;
                 }
 
@@ -165,7 +165,7 @@ namespace DocumentFormat.OpenXml
 
                 if (!IsMiscNode)
                 {
-                    if (this._elementState == ElementState.Start || this._elementState == ElementState.LeafStart)
+                    if (_elementState == ElementState.Start || _elementState == ElementState.LeafStart)
                     {
                         return true;
                     }
@@ -185,7 +185,7 @@ namespace DocumentFormat.OpenXml
 
                 if (!IsMiscNode)
                 {
-                    if (this._elementState == ElementState.End)
+                    if (_elementState == ElementState.End)
                     {
                         return true;
                     }
@@ -203,8 +203,8 @@ namespace DocumentFormat.OpenXml
                 ThrowIfNull();
                 ThrowIfEof();
 
-                Debug.Assert(this._elementStack.Count > 0);
-                return this._elementStack.Count - 1;  // depth of root element is 0
+                Debug.Assert(_elementStack.Count > 0);
+                return _elementStack.Count - 1;  // depth of root element is 0
             }
         }
 
@@ -216,7 +216,7 @@ namespace DocumentFormat.OpenXml
                 ThrowIfObjectDisposed();
                 //Debug.Assert(this._elementStack.Count == 0);
 
-                return this._elementState == ElementState.EOF;
+                return _elementState == ElementState.EOF;
             }
         }
 
@@ -228,7 +228,7 @@ namespace DocumentFormat.OpenXml
                 ThrowIfObjectDisposed();
                 ThrowIfNull();
                 ThrowIfEof();
-                return this._elementStack.Peek().LocalName;
+                return _elementStack.Peek().LocalName;
             }
         }
 
@@ -240,7 +240,7 @@ namespace DocumentFormat.OpenXml
                 ThrowIfObjectDisposed();
                 ThrowIfNull();
                 ThrowIfEof();
-                return this._elementStack.Peek().NamespaceUri;
+                return _elementStack.Peek().NamespaceUri;
             }
         }
 
@@ -252,7 +252,7 @@ namespace DocumentFormat.OpenXml
                 ThrowIfObjectDisposed();
                 ThrowIfNull();
                 ThrowIfEof();
-                return this._elementStack.Peek().Prefix;
+                return _elementStack.Peek().Prefix;
             }
         }
 
@@ -265,7 +265,7 @@ namespace DocumentFormat.OpenXml
             if (result && !ReadMiscNodes)
             {
                 // skip miscellaneous node
-                while (result && this.IsMiscNode)
+                while (result && IsMiscNode)
                 {
                     result = MoveToNextElement();
                 }
@@ -283,7 +283,7 @@ namespace DocumentFormat.OpenXml
             if (result && !ReadMiscNodes)
             {
                 // skip miscellaneous node
-                while (result && this.IsMiscNode)
+                while (result && IsMiscNode)
                 {
                     result = MoveToNextSibling();
                 }
@@ -301,7 +301,7 @@ namespace DocumentFormat.OpenXml
             if (result && !ReadMiscNodes)
             {
                 // skip miscellaneous node
-                while (result && this.IsMiscNode)
+                while (result && IsMiscNode)
                 {
                     result = MoveToNextSibling();
                 }
@@ -314,14 +314,14 @@ namespace DocumentFormat.OpenXml
         public override void Skip()
         {
             ThrowIfObjectDisposed();
-            this.InnerSkip();
+            InnerSkip();
 
-            if (!this.EOF && !ReadMiscNodes)
+            if (!EOF && !ReadMiscNodes)
             {
                 // skip miscellaneous node
-                while (!this.EOF && this.IsMiscNode)
+                while (!EOF && IsMiscNode)
                 {
-                    this.InnerSkip();
+                    InnerSkip();
                 }
             }
         }
@@ -334,37 +334,37 @@ namespace DocumentFormat.OpenXml
         /// <returns>true if the next element was read successfully; false if there are no more elements to read. </returns>
         private bool MoveToNextElement()
         {
-            if (this._elementState == ElementState.Null)
+            if (_elementState == ElementState.Null)
             {
-                return this.ReadRoot();
+                return ReadRoot();
             }
 
             OpenXmlElement element;
 
-            switch (this._elementState)
+            switch (_elementState)
             {
                 case ElementState.EOF:
                     return false;
 
                 case ElementState.Start:
                     {
-                        element = this._elementStack.Peek();
+                        element = _elementStack.Peek();
                         if (element.HasChildren)
                         {
-                            this._elementStack.Push(element.FirstChild);
+                            _elementStack.Push(element.FirstChild);
                             if (element.FirstChild is OpenXmlMiscNode)
                             {
-                                this._elementState = ElementState.MiscNode;
+                                _elementState = ElementState.MiscNode;
                             }
                             else
                             {
-                                this._elementState = ElementState.Start;
+                                _elementState = ElementState.Start;
                             }
                         }
                         else
                         {
                             // at start state
-                            this._elementState = ElementState.End;
+                            _elementState = ElementState.End;
                         }
                     }
                     break;
@@ -373,43 +373,43 @@ namespace DocumentFormat.OpenXml
                 case ElementState.MiscNode:
                     {
                         // at end state, find next element
-                        element = this._elementStack.Pop();
+                        element = _elementStack.Pop();
 
-                        if (this._elementStack.Count > 0)
+                        if (_elementStack.Count > 0)
                         {
                             element = element.NextSibling();
                             if (element != null)
                             {
-                                this._elementStack.Push(element);
+                                _elementStack.Push(element);
 
                                 if (element is OpenXmlMiscNode)
                                 {
-                                    this._elementState = ElementState.MiscNode;
+                                    _elementState = ElementState.MiscNode;
                                 }
                                 else
                                 {
-                                    this._elementState = ElementState.Start;
+                                    _elementState = ElementState.Start;
                                 }
                             }
                             else
                             {
-                                this._elementState = ElementState.End;
+                                _elementState = ElementState.End;
                             }
                         }
                         else
                         {
-                            Debug.Assert(element == this._rootElement);
+                            Debug.Assert(element == _rootElement);
                             // no more elements
-                            this._elementState = ElementState.EOF;
+                            _elementState = ElementState.EOF;
                             return false;
                         }
                     }
                     break;
 
                 default:
-                    Debug.Assert(this._elementState == ElementState.Start ||
-                        this._elementState == ElementState.End ||
-                        this._elementState == ElementState.EOF);
+                    Debug.Assert(_elementState == ElementState.Start ||
+                        _elementState == ElementState.End ||
+                        _elementState == ElementState.EOF);
                     return false;
             }
             return true;
@@ -424,28 +424,28 @@ namespace DocumentFormat.OpenXml
         {
             ThrowIfNull();
 
-            if (this._elementState != ElementState.Start)
+            if (_elementState != ElementState.Start)
             {
                 return false;
             }
 
-            OpenXmlElement element = this._elementStack.Peek();
+            OpenXmlElement element = _elementStack.Peek();
             if (element.HasChildren)
             {
-                this._elementStack.Push(element.FirstChild);
+                _elementStack.Push(element.FirstChild);
                 if (element.FirstChild is OpenXmlMiscNode)
                 {
-                    this._elementState = ElementState.MiscNode;
+                    _elementState = ElementState.MiscNode;
                 }
                 else
                 {
-                    this._elementState = ElementState.Start;
+                    _elementState = ElementState.Start;
                 }
                 return true;
             }
             else
             {
-                this._elementState = ElementState.End;
+                _elementState = ElementState.End;
                 return false;
             }
         }
@@ -457,53 +457,53 @@ namespace DocumentFormat.OpenXml
         /// <remarks>Current will move to the end tag of the parent if no more sibling element.</remarks>
         private bool MoveToNextSibling()
         {
-            if (this._elementState == ElementState.EOF)
+            if (_elementState == ElementState.EOF)
             {
                 return false;
             }
 
             ThrowIfNull();
 
-            if (this._elementStack.Count == 0)
+            if (_elementStack.Count == 0)
             {
-                this._elementState = ElementState.EOF;
+                _elementState = ElementState.EOF;
                 return false;
             }
 
-            OpenXmlElement element = this._elementStack.Pop();
+            OpenXmlElement element = _elementStack.Pop();
 
             // Fix bug #253890, case: the element used to constructor this DOM reader is not root element ( aka. it has parents and siblings. )
             // the stack is empty means we should move to EOF.
-            if (this._elementStack.Count == 0)
+            if (_elementStack.Count == 0)
             {
-                this._elementState = ElementState.EOF;
+                _elementState = ElementState.EOF;
                 return false;
             }
 
             element = element.NextSibling();
             if (element != null)
             {
-                this._elementStack.Push(element);
+                _elementStack.Push(element);
                 if (element is OpenXmlMiscNode)
                 {
-                    this._elementState = ElementState.MiscNode;
+                    _elementState = ElementState.MiscNode;
                 }
                 else
                 {
-                    this._elementState = ElementState.Start;
+                    _elementState = ElementState.Start;
                 }
                 return true;
             }
             else
             {
-                if (this._elementStack.Count > 0)
+                if (_elementStack.Count > 0)
                 {
-                    this._elementState = ElementState.End;
+                    _elementState = ElementState.End;
                 }
                 else
                 {
                     // no more element, EOF
-                    this._elementState = ElementState.EOF;
+                    _elementState = ElementState.EOF;
                 }
                 return false;
             }
@@ -514,7 +514,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         private void InnerSkip()
         {
-            switch (this._elementState)
+            switch (_elementState)
             {
                 case ElementState.Null:
                     ThrowIfNull();
@@ -525,17 +525,17 @@ namespace DocumentFormat.OpenXml
 
                 case ElementState.End:
                 case ElementState.MiscNode:
-                    this.MoveToNextElement();
+                    MoveToNextElement();
                     return;
 
                 case ElementState.Start:
-                   this.MoveToNextSibling();
+                    MoveToNextSibling();
                    return;
 
                 default:
-                    Debug.Assert(this._elementState == ElementState.Start ||
-                        this._elementState == ElementState.End ||
-                        this._elementState == ElementState.EOF);
+                    Debug.Assert(_elementState == ElementState.Start ||
+                        _elementState == ElementState.End ||
+                        _elementState == ElementState.EOF);
                     return;
             }
         }
@@ -551,21 +551,21 @@ namespace DocumentFormat.OpenXml
             ThrowIfNull();
             ThrowIfEof();
 
-            if (this._elementState == ElementState.Start)
+            if (_elementState == ElementState.Start)
             {
-                OpenXmlElement element = this._elementStack.Peek();
+                OpenXmlElement element = _elementStack.Peek();
 
-                this._elementState = ElementState.End;
+                _elementState = ElementState.End;
 
                 return element;
             }
-            else if (this._elementState == ElementState.MiscNode)
+            else if (_elementState == ElementState.MiscNode)
             {
-                Debug.Assert(this.ReadMiscNodes);
+                Debug.Assert(ReadMiscNodes);
 
-                OpenXmlElement element = this._elementStack.Peek();
+                OpenXmlElement element = _elementStack.Peek();
 
-                this.Skip();
+                Skip();
 
                 return element;
             }
@@ -579,9 +579,9 @@ namespace DocumentFormat.OpenXml
         public override string GetText()
         {
             ThrowIfObjectDisposed();
-            if (this._elementState == ElementState.Start)
+            if (_elementState == ElementState.Start)
             {
-                OpenXmlElement element = this._elementStack.Peek();
+                OpenXmlElement element = _elementStack.Peek();
 
                 OpenXmlLeafTextElement textElement = element as OpenXmlLeafTextElement;
 
@@ -597,36 +597,36 @@ namespace DocumentFormat.OpenXml
         public override void Close()
         {
             ThrowIfObjectDisposed();
-            this._elementState = ElementState.EOF;
-            this._elementStack.Clear();
-            this._rootElement = null;
+            _elementState = ElementState.EOF;
+            _elementStack.Clear();
+            _rootElement = null;
         }
 
 #region private methods
 
         private void Init(OpenXmlElement openXmlElement)
         {
-            this._rootElement = openXmlElement;
-            this._elementState = ElementState.Null;
+            _rootElement = openXmlElement;
+            _elementState = ElementState.Null;
         }
 
         private bool ReadRoot()
         {
-            this._elementStack.Push(this._rootElement);
-            if (this._rootElement is OpenXmlMiscNode)
+            _elementStack.Push(_rootElement);
+            if (_rootElement is OpenXmlMiscNode)
             {
-                this._elementState = ElementState.MiscNode;
+                _elementState = ElementState.MiscNode;
             }
             else
             {
-                this._elementState = ElementState.Start;
+                _elementState = ElementState.Start;
             }
             return true;
         }
 
         private void ThrowIfNull()
         {
-            if (this._elementState == ElementState.Null)
+            if (_elementState == ElementState.Null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ReaderInNullState);
             }
@@ -634,7 +634,7 @@ namespace DocumentFormat.OpenXml
 
         private void ThrowIfEof()
         {
-            if ( this._elementState == ElementState.EOF || this._elementStack.Count <= 0)
+            if (_elementState == ElementState.EOF || _elementStack.Count <= 0)
             {
                 throw new InvalidOperationException(ExceptionMessages.ReaderInEofState);
             }

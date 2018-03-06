@@ -25,11 +25,11 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
         public SlicerTest(ITestOutputHelper output)
             : base(output)
         {
-            string createFilePath = this.GetTestFilePath(this.generateDocumentFilePath);
+            string createFilePath = GetTestFilePath(generateDocumentFilePath);
             GeneratedDocument generatedDocument = new GeneratedDocument();
             generatedDocument.CreatePackage(createFilePath);
 
-            this.Log.Pass("Create Word file. File path=[{0}]", createFilePath);
+            Log.Pass("Create Word file. File path=[{0}]", createFilePath);
         }
 
         /// <summary>
@@ -38,14 +38,14 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
         [Fact]
         public void Slicer01EditElement()
         {
-            string originalFilepath = this.GetTestFilePath(this.generateDocumentFilePath);
-            string editFilePath = this.GetTestFilePath(this.editeDocumentFilePath);
+            string originalFilepath = GetTestFilePath(generateDocumentFilePath);
+            string editFilePath = GetTestFilePath(editeDocumentFilePath);
 
             System.IO.File.Copy(originalFilepath, editFilePath, true);
 
             TestEntities testEntities = new TestEntities();
-            testEntities.EditElements(editFilePath, this.Log);
-            testEntities.VerifyElements(editFilePath, this.Log);
+            testEntities.EditElements(editFilePath, Log);
+            testEntities.VerifyElements(editFilePath, Log);
         }
     }
 }

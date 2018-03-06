@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         protected void Build()
         {
-            foreach (PackageRelationship relationship in this.BasePackageRelationshipCollection)
+            foreach (PackageRelationship relationship in BasePackageRelationshipCollection)
             {
                 bool found;
                 string transitionalNamespace;
@@ -38,22 +38,22 @@ namespace DocumentFormat.OpenXml.Packaging
                 if (found)
                 {
                     relationshipProperty.RelationshipType = transitionalNamespace;
-                    this.StrictTranslation = true;
+                    StrictTranslation = true;
                 }
 
-                this.Add(relationshipProperty);
+                Add(relationshipProperty);
             }
         }
 
         internal void UpdateRelationshipTypesInPackage()
         {
             // Update the relationshipTypes when editable.
-            if (this.GetPackage().FileOpenAccess != FileAccess.Read)
+            if (GetPackage().FileOpenAccess != FileAccess.Read)
             {
-                for (int index = 0; index < this.Count; index++)
+                for (int index = 0; index < Count; index++)
                 {
                     RelationshipProperty relationshipProperty = this[index];
-                    this.ReplaceRelationship(relationshipProperty.TargetUri, relationshipProperty.TargetMode, relationshipProperty.RelationshipType, relationshipProperty.Id);
+                    ReplaceRelationship(relationshipProperty.TargetUri, relationshipProperty.TargetMode, relationshipProperty.RelationshipType, relationshipProperty.Id);
                 }
             }
         }

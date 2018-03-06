@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml
         public HexBinaryValue(string hexBinary)
             : base()
         {
-            this.TextValue = hexBinary;
+            TextValue = hexBinary;
         }
 
         /// <summary>
@@ -44,8 +44,8 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public string Value
         {
-            get { return this.TextValue; }
-            set { this.TextValue = value; }
+            get { return TextValue; }
+            set { TextValue = value; }
         }
 
         /// <summary>

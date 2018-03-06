@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         internal override ParticleConstraint ParticleConstraint
         {
-            get { return this._nsAnyParticleConstraint; }
+            get { return _nsAnyParticleConstraint; }
         }
         /// <summary>
         /// Initializes a new instance of the AnyParticleValidator.
@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             Debug.Assert(particleConstraint != null);
             Debug.Assert(particleConstraint.ParticleType == ParticleType.AnyWithUri);
 
-            this._nsAnyParticleConstraint = particleConstraint;
+            _nsAnyParticleConstraint = particleConstraint;
         }
 
         /// <summary>
@@ -46,7 +46,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             var element = particleMatchInfo.StartElement;
 
-            if (element.NamespaceUri == NamespaceIdMap.GetNamespaceUri(this._nsAnyParticleConstraint.NamespaceId))
+            if (element.NamespaceUri == NamespaceIdMap.GetNamespaceUri(_nsAnyParticleConstraint.NamespaceId))
             {
                 particleMatchInfo.Match = ParticleMatch.Matched;
                 particleMatchInfo.LastMatchedElement = element;
@@ -65,11 +65,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <returns>True if there are required elements in this particle.</returns>
         public override bool GetRequiredElements(ExpectedChildren result)
         {
-            if (this.ParticleConstraint.MinOccurs > 0)
+            if (ParticleConstraint.MinOccurs > 0)
             {
                 if (result != null)
                 {
-                    result.Add(NamespaceIdMap.GetNamespaceUri(this._nsAnyParticleConstraint.NamespaceId));
+                    result.Add(NamespaceIdMap.GetNamespaceUri(_nsAnyParticleConstraint.NamespaceId));
                 }
 
                 return true;
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             if (result != null)
             {
-                result.Add(NamespaceIdMap.GetNamespaceUri(this._nsAnyParticleConstraint.NamespaceId));
+                result.Add(NamespaceIdMap.GetNamespaceUri(_nsAnyParticleConstraint.NamespaceId));
             }
 
             return true;

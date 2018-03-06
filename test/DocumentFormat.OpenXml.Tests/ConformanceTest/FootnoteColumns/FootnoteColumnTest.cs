@@ -30,10 +30,10 @@ namespace DocumentFormat.OpenXml.Tests.FootnoteColumns
         [Fact]
         public void FootnoteColumnsReadWriteTest()
         {
-            this.SimpleReadWriteTest(
+            SimpleReadWriteTest(
                 (e) =>
                 {
-                    this.Log.VerifyValue(
+                    Log.VerifyValue(
                         e.Val.Value, OriginalValue,
                         "Verified 'Val' attribute of <W15:footnoteColumns>");
                 },
@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Tests.FootnoteColumns
                 },
                 (e) =>
                 {
-                    this.Log.VerifyValue(
+                    Log.VerifyValue(
                         e.Val.Value, ModifiedValue,
                         "Verified the updated attribute");
                 });

@@ -72,19 +72,19 @@ namespace DocumentFormat.OpenXml.Packaging
         private bool IsReservedUri(Uri uri)
         {
             string uriString = uri.OriginalString.ToUpperInvariant();
-            return this._reservedUri.ContainsKey(uriString);
+            return _reservedUri.ContainsKey(uriString);
         }
 
         internal void AddToReserveUri(Uri partUri)
         {
             string uriString = partUri.OriginalString.ToUpperInvariant();
-            this._reservedUri.Add(uriString, 0);
+            _reservedUri.Add(uriString, 0);
         }
 
         internal void ReserveUri(string contentType, Uri partUri)
         {
             GetNextSequenceNumber(contentType);
-            this.AddToReserveUri(PackUriHelper.GetNormalizedPartUri(partUri));
+            AddToReserveUri(PackUriHelper.GetNormalizedPartUri(partUri));
         }
 
         internal Uri GetUniquePartUri(string contentType, Uri parentUri, string targetPath, string targetName, string targetExt)
@@ -93,15 +93,15 @@ namespace DocumentFormat.OpenXml.Packaging
 
             do
             {
-                string sequenceNumber = this.GetNextSequenceNumber(contentType);
+                string sequenceNumber = GetNextSequenceNumber(contentType);
                 string path = Path.Combine(targetPath, targetName + sequenceNumber + targetExt);
 
                 Uri uri = new Uri(path, UriHelper.RelativeOrAbsolute);
                 partUri = PackUriHelper.ResolvePartUri(parentUri, uri);
                 // partUri = PackUriHelper.GetNormalizedPartUri(PackUriHelper.CreatePartUri(uri));
-            } while (this.IsReservedUri(partUri));
+            } while (IsReservedUri(partUri));
 
-            this.AddToReserveUri(partUri);
+            AddToReserveUri(partUri);
 
             // do not need to add to the _existedNames
             return partUri;
@@ -113,7 +113,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             partUri = PackUriHelper.ResolvePartUri(parentUri, targetUri);
 
-            if (this.IsReservedUri(partUri))
+            if (IsReservedUri(partUri))
             {
                 // already have one, create new
                 string targetPath = ".";
@@ -125,7 +125,7 @@ namespace DocumentFormat.OpenXml.Packaging
             else
             {
                 // not used, can use it.
-                this.AddToReserveUri(partUri);
+                AddToReserveUri(partUri);
             }
 
             return partUri;
@@ -133,15 +133,15 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private string GetNextSequenceNumber(string contentType)
         {
-            if (this._sequenceNumbers.ContainsKey(contentType))
+            if (_sequenceNumbers.ContainsKey(contentType))
             {
-                this._sequenceNumbers[contentType] += 1;
+                _sequenceNumbers[contentType] += 1;
                 // use the default read-only NumberFormatInfo that is culture-independent (invariant).
-                return this._sequenceNumbers[contentType].ToString(NumberFormatInfo.InvariantInfo);
+                return _sequenceNumbers[contentType].ToString(NumberFormatInfo.InvariantInfo);
             }
             else
             {
-                this._sequenceNumbers.Add(contentType, 1);
+                _sequenceNumbers.Add(contentType, 1);
 
                 //Certain contentTypes need to be numbered starting with 1.
                 return _numberedContentTypes.Contains(contentType) ? "1" : "";

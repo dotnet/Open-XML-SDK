@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Validation
     {
         internal ValidationErrorEventArgs(ValidationErrorInfo validatoinError)
         {
-            this.ValidationErrorInfo = validatoinError;
+            ValidationErrorInfo = validatoinError;
         }
 
         /// <summary>

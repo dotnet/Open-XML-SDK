@@ -32,15 +32,15 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <inheritdoc/>
         internal override ParticleType ParticleType
         {
-            get { return this._particleType; }
-            set { this._particleType = value; }
+            get { return _particleType; }
+            set { _particleType = value; }
         }
 
         /// <inheritdoc/>
         internal override ParticleConstraint[] ChildrenParticles
         {
-            get { return this._childrenParticles; }
-            set { this._childrenParticles = value; }
+            get { return _childrenParticles; }
+            set { _childrenParticles = value; }
         }
 
         /// <inheritdoc/>
@@ -48,11 +48,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             get
             {
-                if (this._particleValidator == null)
+                if (_particleValidator == null)
                 {
-                    this._particleValidator = Schema.ParticleValidator.CreateParticleValidator(this);
+                    _particleValidator = Schema.ParticleValidator.CreateParticleValidator(this);
                 }
-                return this._particleValidator;
+                return _particleValidator;
             }
         }
 

@@ -29,9 +29,9 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
 
         internal TagAttributeTranslator()
         {
-            this.indexOfAttr = (int)State.NotInitialized;
-            this.strAttrName = null;
-            this.strAttrValue = null;
+            indexOfAttr = (int)State.NotInitialized;
+            strAttrName = null;
+            strAttrValue = null;
         }
 
         /// <summary>
@@ -41,9 +41,9 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
         /// <param name="strValue"></param>
         internal void SetLocalNameAndValue(string strLocalName, string strValue)
         {
-            this.indexOfAttr = (int)State.NotInitialized;
-            this.strAttrName = strLocalName;
-            this.strAttrValue = strValue;
+            indexOfAttr = (int)State.NotInitialized;
+            strAttrName = strLocalName;
+            strAttrValue = strValue;
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
 
             for (int count = 0; count < arrayOfOrigAttrNames.Length; count++)
             {
-                if (arrayOfOrigAttrNames[count] == this.strAttrName)
+                if (arrayOfOrigAttrNames[count] == strAttrName)
                 {
                     index = count;
                     break;
@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
 
             for (int count = 0; count < arrayOfOrigAttrValues.Length; count++)
             {
-                if (arrayOfOrigAttrValues[count] == this.strAttrValue)
+                if (arrayOfOrigAttrValues[count] == strAttrValue)
                 {
                     index = count;
                     break;
@@ -100,12 +100,12 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
         {
             get
             {
-                if (this.indexOfAttr == (int)State.NotInitialized)
+                if (indexOfAttr == (int)State.NotInitialized)
                 {
-                    this.indexOfAttr = this.SetIndex();
+                    indexOfAttr = SetIndex();
                 }
 
-                return this.indexOfAttr;
+                return indexOfAttr;
             }
         }
 
@@ -115,7 +115,7 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
         /// <returns>The LocalName</returns>
         internal virtual string LocalName
         {
-            get { return (this.Index == (int)State.NotInitialized) ? this.strAttrName : this.arrayOfNewAttrNames[this.Index]; }
+            get { return (Index == (int)State.NotInitialized) ? strAttrName : arrayOfNewAttrNames[Index]; }
         }
 
         /// <summary>
@@ -124,7 +124,7 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
         /// <returns>The value</returns>
         internal virtual string Value
         {
-            get { return (this.Index == (int)State.NotInitialized) ? this.strAttrValue : this.arrayOfNewAttrValues[this.Index]; }
+            get { return (Index == (int)State.NotInitialized) ? strAttrValue : arrayOfNewAttrValues[Index]; }
         }
 
         /// <summary>
@@ -133,7 +133,7 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
         /// <returns>The Trait</returns>
         internal virtual long Trait
         {
-            get { return (this.Index == (int)State.NotInitialized) ? 0 : this.arrayOfAttrTraits[this.Index]; }
+            get { return (Index == (int)State.NotInitialized) ? 0 : arrayOfAttrTraits[Index]; }
         }
 
         /// <summary>
@@ -141,7 +141,7 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
         /// </summary>
         internal virtual AttributeFormatter Formatter
         {
-            get { return this.formatter; }
+            get { return formatter; }
         }
     }
 }

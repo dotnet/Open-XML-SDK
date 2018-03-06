@@ -68,14 +68,14 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             if (_minInclusive)
             {
-                if (!(this._minValue <= value))
+                if (!(_minValue <= value))
                 {
                     subMsg = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sch_MinInclusiveConstraintFailed, minValueString);
                 }
             }
             else
             {
-                if (!(this._minValue < value))
+                if (!(_minValue < value))
                 {
                     subMsg = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sch_MinExclusiveConstraintFailed, minValueString);
                 }
@@ -83,14 +83,14 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             if (_maxInclusive)
             {
-                if (!(value <= this._maxValue))
+                if (!(value <= _maxValue))
                 {
                     subMsg = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sch_MaxInclusiveConstraintFailed, maxValueString);
                 }
             }
             else
             {
-                if (!(value < this._maxValue))
+                if (!(value < _maxValue))
                 {
                     subMsg = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sch_MaxExclusiveConstraintFailed, maxValueString);
                 }

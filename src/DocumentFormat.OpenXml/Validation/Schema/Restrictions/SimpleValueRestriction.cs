@@ -23,8 +23,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 
         public SimpleValueRestriction()
         {
-            this.MinInclusive = this.MinValue;
-            this.MaxInclusive = this.MaxValue;
+            MinInclusive = MinValue;
+            MaxInclusive = MaxValue;
         }
 
         /// <inheritdoc />
@@ -60,16 +60,16 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
             switch (restrictionField)
             {
                 case RestrictionField.MinExclusive:
-                    return this.MinExclusive.ToString();
+                    return MinExclusive.ToString();
 
                 case RestrictionField.MaxExclusive:
-                    return this.MaxExclusive.ToString();
+                    return MaxExclusive.ToString();
 
                 case RestrictionField.MinInclusive:
-                    return this.MinInclusive.ToString();
+                    return MinInclusive.ToString();
 
                 case RestrictionField.MaxInclusive:
-                    return this.MaxInclusive.ToString();
+                    return MaxInclusive.ToString();
 
                 default:
                     return base.GetRestrictionValue(restrictionField);
@@ -98,10 +98,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         {
             Debug.Assert(attributeValue is ST);
             ST simpleValue = (ST)attributeValue;
-            if ((this.RestrictionField & RestrictionField.MinInclusive) == RestrictionField.MinInclusive)
+            if ((RestrictionField & RestrictionField.MinInclusive) == RestrictionField.MinInclusive)
             {
                 // true if this.MinInclusive <= simpleValue.Value
-                if (this.MinInclusive.CompareTo(simpleValue.Value) > 0)
+                if (MinInclusive.CompareTo(simpleValue.Value) > 0)
                 {
                     return false;
                 }
@@ -114,10 +114,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         {
             Debug.Assert(attributeValue is ST);
             ST simpleValue = (ST)attributeValue;
-            if ((this.RestrictionField & RestrictionField.MinExclusive) == RestrictionField.MinExclusive)
+            if ((RestrictionField & RestrictionField.MinExclusive) == RestrictionField.MinExclusive)
             {
                 // true if this.MinExclusive < simpleValue.Value
-                if (this.MinExclusive.CompareTo(simpleValue.Value) >= 0)
+                if (MinExclusive.CompareTo(simpleValue.Value) >= 0)
                 {
                     return false;
                 }
@@ -130,10 +130,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         {
             Debug.Assert(attributeValue is ST);
             ST simpleValue = (ST)attributeValue;
-            if ((this.RestrictionField & RestrictionField.MaxInclusive) == RestrictionField.MaxInclusive)
+            if ((RestrictionField & RestrictionField.MaxInclusive) == RestrictionField.MaxInclusive)
             {
                 // true if this.MaxInclusive >= simpleValue.Value
-                if (this.MaxInclusive.CompareTo(simpleValue.Value) < 0)
+                if (MaxInclusive.CompareTo(simpleValue.Value) < 0)
                 {
                     return false;
                 }
@@ -146,10 +146,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         {
             Debug.Assert(attributeValue is ST);
             ST simpleValue = (ST)attributeValue;
-            if ((this.RestrictionField & RestrictionField.MaxExclusive) == RestrictionField.MaxExclusive)
+            if ((RestrictionField & RestrictionField.MaxExclusive) == RestrictionField.MaxExclusive)
             {
                 // true if this.MaxExclusive > simpleValue.Value
-                if (this.MaxExclusive.CompareTo(simpleValue.Value) <= 0)
+                if (MaxExclusive.CompareTo(simpleValue.Value) <= 0)
                 {
                     return false;
                 }
@@ -164,8 +164,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
             {
                 ST stValue = (ST)attributeValue;
 
-                if (stValue.Value.CompareTo(this.MinValue) < 0 ||
-                    stValue.Value.CompareTo(this.MaxValue) > 0)
+                if (stValue.Value.CompareTo(MinValue) < 0 ||
+                    stValue.Value.CompareTo(MaxValue) > 0)
                 {
                     return false;
                 }
@@ -179,39 +179,39 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 #if DEBUG
         public override void Verify()
         {
-            Debug.Assert(this.IsEnum == false);
-            Debug.Assert(this.IsList == false);
-            Debug.Assert(this.Pattern == null);
+            Debug.Assert(IsEnum == false);
+            Debug.Assert(IsList == false);
+            Debug.Assert(Pattern == null);
 
-            this.VerifyMinMax();
+            VerifyMinMax();
         }
 
         private void VerifyMinMax()
         {
-            if ((this.RestrictionField & RestrictionField.MinExclusive) == RestrictionField.MinExclusive)
+            if ((RestrictionField & RestrictionField.MinExclusive) == RestrictionField.MinExclusive)
             {
-                Debug.Assert(this.MinExclusive.CompareTo(this.MinValue) >= 0);
+                Debug.Assert(MinExclusive.CompareTo(MinValue) >= 0);
             }
-            if ((this.RestrictionField & RestrictionField.MaxExclusive) == RestrictionField.MaxExclusive)
+            if ((RestrictionField & RestrictionField.MaxExclusive) == RestrictionField.MaxExclusive)
             {
-                Debug.Assert(this.MaxExclusive.CompareTo(this.MaxValue) <= 0);
+                Debug.Assert(MaxExclusive.CompareTo(MaxValue) <= 0);
             }
-            if ((this.RestrictionField & RestrictionField.MinMaxExclusive) == RestrictionField.MinMaxExclusive)
+            if ((RestrictionField & RestrictionField.MinMaxExclusive) == RestrictionField.MinMaxExclusive)
             {
-                Debug.Assert(this.MinExclusive.CompareTo(this.MaxExclusive) < 0);
+                Debug.Assert(MinExclusive.CompareTo(MaxExclusive) < 0);
             }
 
-            if ((this.RestrictionField & RestrictionField.MinInclusive) == RestrictionField.MinInclusive)
+            if ((RestrictionField & RestrictionField.MinInclusive) == RestrictionField.MinInclusive)
             {
-                Debug.Assert(this.MinInclusive.CompareTo(this.MinValue) >= 0);
+                Debug.Assert(MinInclusive.CompareTo(MinValue) >= 0);
             }
-            if ((this.RestrictionField & RestrictionField.MaxInclusive) == RestrictionField.MaxInclusive)
+            if ((RestrictionField & RestrictionField.MaxInclusive) == RestrictionField.MaxInclusive)
             {
-                Debug.Assert(this.MaxInclusive.CompareTo(this.MaxValue) <= 0);
+                Debug.Assert(MaxInclusive.CompareTo(MaxValue) <= 0);
             }
-            if ((this.RestrictionField & RestrictionField.MinMaxInclusive) == RestrictionField.MinMaxInclusive)
+            if ((RestrictionField & RestrictionField.MinMaxInclusive) == RestrictionField.MinMaxInclusive)
             {
-                Debug.Assert(this.MinInclusive.CompareTo(this.MaxInclusive) <= 0);
+                Debug.Assert(MinInclusive.CompareTo(MaxInclusive) <= 0);
             }
         }
 #endif

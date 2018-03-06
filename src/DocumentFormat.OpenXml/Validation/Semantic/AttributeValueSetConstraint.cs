@@ -46,7 +46,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 }
             }
 
-            if (!this._isValidValueSet ^ valueSetContains)
+            if (!_isValidValueSet ^ valueSetContains)
             {
                 return null;
             }

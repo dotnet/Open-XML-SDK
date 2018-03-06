@@ -15,17 +15,17 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             Debug.Assert(simpleTypeConstraint != null);
 
-            this.XsdAttributeUse = xsdAttributeUse;
-            this.SimpleTypeConstraint = simpleTypeConstraint;
+            XsdAttributeUse = xsdAttributeUse;
+            SimpleTypeConstraint = simpleTypeConstraint;
         }
 
         public AttributeConstraint(XsdAttributeUse xsdAttributeUse, SimpleTypeRestriction simpleTypeConstraint, FileFormatVersions supportedVersion)
         {
             Debug.Assert(simpleTypeConstraint != null);
 
-            this.XsdAttributeUse = xsdAttributeUse;
-            this.SimpleTypeConstraint = simpleTypeConstraint;
-            this.SupportedVersion = supportedVersion;
+            XsdAttributeUse = xsdAttributeUse;
+            SimpleTypeConstraint = simpleTypeConstraint;
+            SupportedVersion = supportedVersion;
         }
 
         /// <summary>

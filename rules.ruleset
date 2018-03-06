@@ -31,8 +31,9 @@
     <Rule Id="SA1026" Action="None" />
     <Rule Id="SA1027" Action="None" />
     <Rule Id="SA1028" Action="Warning" />
-    <Rule Id="SA1100" Action="None" />
+    <Rule Id="SA1100" Action="Warning" />
     <Rule Id="SA1101" Action="None" />
+    <Rule Id="SX1101" Action="Warning" />
     <Rule Id="SA1102" Action="None" />
     <Rule Id="SA1103" Action="None" />
     <Rule Id="SA1104" Action="None" />

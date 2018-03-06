@@ -35,8 +35,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            bool attribute1Exist = context.Element.GetAttributeValueEx(this._attribute1LocalName, this._attribute1Namespace) != null;
-            bool attribute2Exist = context.Element.GetAttributeValueEx(this._attribute2LocalName, this._attribute2Namespace) != null;
+            bool attribute1Exist = context.Element.GetAttributeValueEx(_attribute1LocalName, _attribute1Namespace) != null;
+            bool attribute2Exist = context.Element.GetAttributeValueEx(_attribute2LocalName, _attribute2Namespace) != null;
 
             //if (attribute1Exist)
             //{

@@ -48,8 +48,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="schemaTypeIndex"></param>
         public SdbClassIdToSchemaTypeIndex(SdbIndex classId, SdbIndex schemaTypeIndex)
         {
-            this.ClassId = classId;
-            this.SchemaTypeIndex = schemaTypeIndex;
+            ClassId = classId;
+            SchemaTypeIndex = schemaTypeIndex;
         }
 
         /// <summary>
@@ -82,8 +82,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         public override byte[] GetBytes()
         {
             // !!!!Caution: keep the order of the following code lines!!!!
-            return this.GetBytes(this.ClassId.Bytes(),
-                                 this.SchemaTypeIndex.Bytes());
+            return GetBytes(ClassId.Bytes(),
+                                 SchemaTypeIndex.Bytes());
         }
 
         /// <summary>
@@ -94,8 +94,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         public override void LoadFromBytes(byte[] value, int startIndex)
         {
             // !!!!Caution: keep the order of the following code lines!!!!
-            this.ClassId = LoadSdbIndex(value, ref startIndex);
-            this.SchemaTypeIndex = LoadSdbIndex(value, ref startIndex);
+            ClassId = LoadSdbIndex(value, ref startIndex);
+            SchemaTypeIndex = LoadSdbIndex(value, ref startIndex);
         }
 
         #endregion

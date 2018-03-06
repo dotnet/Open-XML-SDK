@@ -100,7 +100,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             ExpectedChildren requiredElements = new ExpectedChildren();
 
-            this.GetRequiredElements(requiredElements);
+            GetRequiredElements(requiredElements);
 
             return requiredElements;
         }
@@ -123,7 +123,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             ExpectedChildren expectedElements = new ExpectedChildren();
 
-            this.GetExpectedElements(expectedElements);
+            GetExpectedElements(expectedElements);
 
             return expectedElements;
         }

@@ -25,8 +25,8 @@ namespace DocumentFormat.OpenXml
         /// </param>
         public ElementEventArgs(OpenXmlElement element, OpenXmlElement parentElement)
         {
-            this._element = element;
-            this._parentElement = parentElement;
+            _element = element;
+            _parentElement = parentElement;
         }
 
         /// <summary>
@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public OpenXmlElement Element
         {
-            get { return this._element; }
+            get { return _element; }
         }
 
         /// <summary>
@@ -42,7 +42,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public OpenXmlElement ParentElement
         {
-            get { return this._parentElement; }
+            get { return _parentElement; }
         }
     }
 }

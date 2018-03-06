@@ -25,12 +25,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         public SdbParticleChildrenIndex()
         {
-            this.ParticleIndex = SdbData.InvalidId;
+            ParticleIndex = SdbData.InvalidId;
         }
 
         public SdbParticleChildrenIndex(SdbIndex index)
         {
-            this.ParticleIndex = index;
+            ParticleIndex = index;
         }
 
         public SdbParticleChildrenIndex(int index)
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 throw new ArgumentOutOfRangeException(nameof(index));
             }
 
-            this.ParticleIndex = (SdbIndex)index;
+            ParticleIndex = (SdbIndex)index;
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <returns>Byte data.</returns>
         public override byte[] GetBytes()
         {
-            return this.ParticleIndex.Bytes();
+            return ParticleIndex.Bytes();
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="startIndex">The offset the data begins at.</param>
         public override void LoadFromBytes(byte[] value, int startIndex)
         {
-            this.ParticleIndex = LoadSdbIndex(value, ref startIndex);
+            ParticleIndex = LoadSdbIndex(value, ref startIndex);
         }
 
         #endregion

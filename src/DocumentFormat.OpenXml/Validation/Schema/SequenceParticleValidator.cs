@@ -46,11 +46,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             ParticleConstraint childConstraint;
             int constraintIndex = 0;
-            int constraintTotal = this.ParticleConstraint.ChildrenParticles.Length;
+            int constraintTotal = ParticleConstraint.ChildrenParticles.Length;
 
             while (constraintIndex < constraintTotal && next != null)
             {
-                childConstraint = this.ParticleConstraint.ChildrenParticles[constraintIndex];
+                childConstraint = ParticleConstraint.ChildrenParticles[constraintIndex];
 
                 // Use Reset() instead of new() to avoid heavy memory alloction and GC.
                 _childMatchInfo.Reset(next);
@@ -136,7 +136,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 for (; constraintIndex < constraintTotal; constraintIndex++)
                 {
-                    if (this.ParticleConstraint.ChildrenParticles[constraintIndex].ParticleValidator.GetRequiredElements(null))
+                    if (ParticleConstraint.ChildrenParticles[constraintIndex].ParticleValidator.GetRequiredElements(null))
                     {
                         if (validationContext.CollectExpectedChildren)
                         {
@@ -144,7 +144,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                             {
                                 particleMatchInfo.InitExpectedChildren();
                             }
-                            this.ParticleConstraint.ChildrenParticles[constraintIndex].ParticleValidator.GetRequiredElements(particleMatchInfo.ExpectedChildren);
+                            ParticleConstraint.ChildrenParticles[constraintIndex].ParticleValidator.GetRequiredElements(particleMatchInfo.ExpectedChildren);
                         }
                         particleMatchInfo.Match = ParticleMatch.Partial;
                         return;
@@ -167,9 +167,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             bool requiredElements = false;
 
-            if (this.ParticleConstraint.MinOccurs > 0)
+            if (ParticleConstraint.MinOccurs > 0)
             {
-                foreach (var constraint in this.ParticleConstraint.ChildrenParticles)
+                foreach (var constraint in ParticleConstraint.ChildrenParticles)
                 {
                     if (constraint.ParticleValidator.GetRequiredElements(result))
                     {
@@ -188,10 +188,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <returns>True if there are expected elements in this particle.</returns>
         public override bool GetExpectedElements(ExpectedChildren result)
         {
-            if (this.ParticleConstraint.ChildrenParticles.Length > 0)
+            if (ParticleConstraint.ChildrenParticles.Length > 0)
             {
                 // sequence, return only the first child.
-                this.ParticleConstraint.ChildrenParticles[0].ParticleValidator.GetExpectedElements(result);
+                ParticleConstraint.ChildrenParticles[0].ParticleValidator.GetExpectedElements(result);
 
                 return true;
             }
