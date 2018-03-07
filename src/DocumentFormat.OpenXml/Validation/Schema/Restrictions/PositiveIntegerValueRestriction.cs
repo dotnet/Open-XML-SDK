@@ -24,8 +24,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 
         public PositiveIntegerValueRestriction()
         {
-            this.RestrictionField = RestrictionField.MinInclusive;
-            this.MinInclusive = 1;
+            RestrictionField = RestrictionField.MinInclusive;
+            MinInclusive = 1;
         }
 
         /// <inheritdoc />

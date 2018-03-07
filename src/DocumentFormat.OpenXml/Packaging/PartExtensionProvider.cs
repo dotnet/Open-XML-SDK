@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="partExtension">Part Extension (".xml") to be used for the part with the specified content type.</param>
         public void AddPartExtension(string contentType, string partExtension)
         {
-            base.Add(contentType, partExtension);
+            Add(contentType, partExtension);
         }
 
         /// <summary>
@@ -87,16 +87,15 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(partExtension));
             }
 
-            string existedPartExtension = null;
-            if ( base.TryGetValue( contentType, out existedPartExtension ) )
+            if (TryGetValue(contentType, out string existedPartExtension))
             {
-                if ( existedPartExtension == partExtension )
+                if (existedPartExtension == partExtension)
                 {
                     return;
                 }
             }
 
-            base.Add(contentType, partExtension);
+            Add(contentType, partExtension);
         }
     }
 }

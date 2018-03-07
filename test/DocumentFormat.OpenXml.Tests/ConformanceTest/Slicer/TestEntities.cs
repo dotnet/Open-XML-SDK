@@ -28,9 +28,9 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(filePath, true))
             {
                 //Getting of SlicerCacheParts.
-                SlicerCachePart slicerCachePart1 = GetSlicerCachePart(package.WorkbookPart, this.Slicer1);
-                SlicerCachePart slicerCachePart2 = GetSlicerCachePart(package.WorkbookPart, this.Slicer2);
-                SlicerCachePart slicerCachePart3 = GetSlicerCachePart(package.WorkbookPart, this.Slicer3);
+                SlicerCachePart slicerCachePart1 = GetSlicerCachePart(package.WorkbookPart, Slicer1);
+                SlicerCachePart slicerCachePart2 = GetSlicerCachePart(package.WorkbookPart, Slicer2);
+                SlicerCachePart slicerCachePart3 = GetSlicerCachePart(package.WorkbookPart, Slicer3);
 
                 X15.TableSlicerCache tableSlicerCache1 = slicerCachePart1.RootElement.Descendants<X15.TableSlicerCache>().Single();
                 X15.TableSlicerCache tableSlicerCache2 = slicerCachePart2.RootElement.Descendants<X15.TableSlicerCache>().Single();
@@ -122,9 +122,9 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(filePath, false))
             {
                 //Getting of SlicerCacheParts.
-                SlicerCachePart slicerCachePart1 = GetSlicerCachePart(package.WorkbookPart, this.Slicer1);
-                SlicerCachePart slicerCachePart2 = GetSlicerCachePart(package.WorkbookPart, this.Slicer2);
-                SlicerCachePart slicerCachePart3 = GetSlicerCachePart(package.WorkbookPart, this.Slicer3);
+                SlicerCachePart slicerCachePart1 = GetSlicerCachePart(package.WorkbookPart, Slicer1);
+                SlicerCachePart slicerCachePart2 = GetSlicerCachePart(package.WorkbookPart, Slicer2);
+                SlicerCachePart slicerCachePart3 = GetSlicerCachePart(package.WorkbookPart, Slicer3);
 
                 X15.TableSlicerCache tableSlicerCache1 = slicerCachePart1.RootElement.Descendants<X15.TableSlicerCache>().Single();
                 X15.TableSlicerCache tableSlicerCache2 = slicerCachePart2.RootElement.Descendants<X15.TableSlicerCache>().Single();

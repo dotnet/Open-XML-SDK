@@ -28,13 +28,13 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
         public PivotTest(ITestOutputHelper output)
             : base(output)
         {
-            string createFilePath = this.GetTestFilePath(this.generatedOldbConnectionDocumentFile);
+            string createFilePath = GetTestFilePath(generatedOldbConnectionDocumentFile);
             ConnectionGeneratedDocument connectionGeneratedDocument = new ConnectionGeneratedDocument();
             connectionGeneratedDocument.CreatePackage(createFilePath);
 
-            this.Log.Pass("Create Word file. File path=[{0}]", createFilePath);
+            Log.Pass("Create Word file. File path=[{0}]", createFilePath);
 
-            this.connectionTestEntities = new ConnectionTestEntities(createFilePath);
+            connectionTestEntities = new ConnectionTestEntities(createFilePath);
         }
 
         /// <summary>
@@ -43,13 +43,13 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
         [Fact]
         public void PivotConnection01EditElement()
         {
-            string originalFilepath = this.GetTestFilePath(this.generatedOldbConnectionDocumentFile);
-            string editFilePath = this.GetTestFilePath(this.editedOldbConnectionDocumentFile);
+            string originalFilepath = GetTestFilePath(generatedOldbConnectionDocumentFile);
+            string editFilePath = GetTestFilePath(editedOldbConnectionDocumentFile);
 
             System.IO.File.Copy(originalFilepath, editFilePath, true);
 
-            this.connectionTestEntities.EditElement(editFilePath, this.Log);
-            this.connectionTestEntities.VerifyElement(editFilePath, this.Log);
+            connectionTestEntities.EditElement(editFilePath, Log);
+            connectionTestEntities.VerifyElement(editFilePath, Log);
         }
 
         /// <summary>
@@ -58,19 +58,19 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
         [Fact]
         public void PivotConnection03DeleteAddElement()
         {
-            string originalFilepath = this.GetTestFilePath(this.generatedOldbConnectionDocumentFile);
-            string deleteFilePath = this.GetTestFilePath(this.deletedOldbConnectionDocumentFile);
-            string addFilePath = this.GetTestFilePath(this.addedOldbConnectionDocumentFile);
+            string originalFilepath = GetTestFilePath(generatedOldbConnectionDocumentFile);
+            string deleteFilePath = GetTestFilePath(deletedOldbConnectionDocumentFile);
+            string addFilePath = GetTestFilePath(addedOldbConnectionDocumentFile);
 
             System.IO.File.Copy(originalFilepath, deleteFilePath, true);
 
-            this.connectionTestEntities.DeleteElement(deleteFilePath, this.Log);
-            this.connectionTestEntities.VerifyDeletedElement(deleteFilePath, this.Log);
+            connectionTestEntities.DeleteElement(deleteFilePath, Log);
+            connectionTestEntities.VerifyDeletedElement(deleteFilePath, Log);
 
             System.IO.File.Copy(deleteFilePath, addFilePath, true);
 
-            this.connectionTestEntities.AddElement(addFilePath, this.Log);
-            this.connectionTestEntities.VerifyAddedElement(addFilePath, this.Log);
+            connectionTestEntities.AddElement(addFilePath, Log);
+            connectionTestEntities.VerifyAddedElement(addFilePath, Log);
         }
     }
 }

@@ -44,12 +44,12 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(list));
             }
 
-            this._list = new ObservableCollection<T>();
-            this._list.CollectionChanged += this.CollectionChanged;
+            _list = new ObservableCollection<T>();
+            _list.CollectionChanged += CollectionChanged;
 
             foreach (var item in list)
             {
-                this._list.Add(item.Clone() as T);
+                _list.Add(item.Clone() as T);
             }
         }
 
@@ -67,21 +67,21 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (this._list == null)
+                if (_list == null)
                 {
-                    if (!String.IsNullOrEmpty(this.TextValue))
+                    if (!String.IsNullOrEmpty(TextValue))
                     {
                         TryParse();
                     }
                 }
 
-                if (this._list == null)
+                if (_list == null)
                 {
                     return false;
                 }
                 else
                 {
-                    return this._list.Count > 0;
+                    return _list.Count > 0;
                 }
             }
         }
@@ -93,21 +93,21 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (this._list == null)
+                if (_list == null)
                 {
-                    if (!String.IsNullOrEmpty(this.TextValue))
+                    if (!String.IsNullOrEmpty(TextValue))
                     {
                         Parse();
                     }
                     else
                     {
-                        this._list = new ObservableCollection<T>();
-                        this._list.CollectionChanged += this.CollectionChanged;
+                        _list = new ObservableCollection<T>();
+                        _list.CollectionChanged += CollectionChanged;
                     }
                 }
 
-                Debug.Assert(this._list != null);
-                return this._list;
+                Debug.Assert(_list != null);
+                return _list;
             }
         }
 
@@ -116,13 +116,13 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         private void Parse()
         {
-            this._list = new ObservableCollection<T>();
-            this._list.CollectionChanged += this.CollectionChanged;
+            _list = new ObservableCollection<T>();
+            _list.CollectionChanged += CollectionChanged;
 
-            if (!String.IsNullOrEmpty(this.TextValue))
+            if (!String.IsNullOrEmpty(TextValue))
             {
                 // split the string by white-space characters as the delimiters.
-                string[] items = this.TextValue.Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
+                string[] items = TextValue.Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
 
                 foreach (var item in items)
                 {
@@ -130,7 +130,7 @@ namespace DocumentFormat.OpenXml
                     {
                         InnerText = item
                     };
-                    this._list.Add(itemValue);
+                    _list.Add(itemValue);
                 }
             }
         }
@@ -141,10 +141,10 @@ namespace DocumentFormat.OpenXml
         /// <returns></returns>
         private bool TryParse()
         {
-            if (!String.IsNullOrEmpty(this.TextValue))
+            if (!String.IsNullOrEmpty(TextValue))
             {
                 // split the string by white-space characters as the delimiters.
-                string[] items = this.TextValue.Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
+                string[] items = TextValue.Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
 
                 var list = new ObservableCollection<T>();
 
@@ -157,8 +157,8 @@ namespace DocumentFormat.OpenXml
                     list.Add(itemValue);
                 }
 
-                this._list = list;
-                this._list.CollectionChanged += this.CollectionChanged;
+                _list = list;
+                _list.CollectionChanged += CollectionChanged;
                 return true;
             }
 
@@ -172,12 +172,12 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (this.TextValue == null && this._list != null)
+                if (TextValue == null && _list != null)
                 {
                     StringBuilder textString = new StringBuilder();
                     string separator = String.Empty;
 
-                    foreach (T value in this._list)
+                    foreach (T value in _list)
                     {
                         if (value != null)
                         {
@@ -186,15 +186,15 @@ namespace DocumentFormat.OpenXml
                             separator = _listSeparator;
                         }
                     }
-                    this.TextValue = textString.ToString();
+                    TextValue = textString.ToString();
                 }
-                return this.TextValue;
+                return TextValue;
             }
 
             set
             {
-                this.TextValue = value;
-                this._list = null;
+                TextValue = value;
+                _list = null;
             }
         }
 
@@ -203,7 +203,7 @@ namespace DocumentFormat.OpenXml
         private void CollectionChanged(Object sender, NotifyCollectionChangedEventArgs e)
         {
             // clear the TextValue when the collection is changed.
-            this.TextValue = null;
+            TextValue = null;
         }
 
         /// <inheritdoc/>

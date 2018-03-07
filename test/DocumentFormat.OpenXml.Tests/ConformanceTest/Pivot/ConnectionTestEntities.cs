@@ -46,13 +46,13 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
                 {
                     if (connection.Id == 1)
                     {
-                        this.ConnectionId = connection.Id;
-                        this.ConnectionOdcFile = connection.ConnectionFile;
-                        this.ConnectionName = connection.Name;
-                        this.ConnectionType = connection.Type;
-                        this.ConnectionRefreshedVersion = connection.RefreshedVersion;
-                        this.ConnectionMinRefreshedVersion = connection.MinRefreshableVersion;
-                        this.ConnectionBackground = connection.Background;
+                        ConnectionId = connection.Id;
+                        ConnectionOdcFile = connection.ConnectionFile;
+                        ConnectionName = connection.Name;
+                        ConnectionType = connection.Type;
+                        ConnectionRefreshedVersion = connection.RefreshedVersion;
+                        ConnectionMinRefreshedVersion = connection.MinRefreshableVersion;
+                        ConnectionBackground = connection.Background;
                     }
                 }
 
@@ -60,16 +60,16 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
                 if (x15connection == null)
                     throw new Exception("Unable to obtain the X15.Connection.");
 
-                this.X15ConnectionId = x15connection.Id;
-                this.X15ConnectionAutoDelete = x15connection.AutoDelete;
+                X15ConnectionId = x15connection.Id;
+                X15ConnectionAutoDelete = x15connection.AutoDelete;
 
                 ConnectionExtension connectionExtension = new ConnectionExtension(x15connection.Parent.OuterXml);
-                this.ConnectionExtUri = connectionExtension.Uri;
+                ConnectionExtUri = connectionExtension.Uri;
 
                 X15.OleDbPrpoperties oleDbPrpoperties = x15connection.OleDbPrpoperties;
-                this.ConnectionString = oleDbPrpoperties.Connection;
+                ConnectionString = oleDbPrpoperties.Connection;
                 X15.DbCommand dbCommand = oleDbPrpoperties.DbCommand;
-                this.DBCommandText = dbCommand.Text;
+                DBCommandText = dbCommand.Text;
             }
         }
 
@@ -102,11 +102,11 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
                 X15.Connection connection = connectionsPart.Connections.Descendants<X15.Connection>().First();
 
                 X15.OleDbPrpoperties oleDbPrpoperties = connection.OleDbPrpoperties;
-                oleDbPrpoperties.Connection = this.ConnectionString;
+                oleDbPrpoperties.Connection = ConnectionString;
                 log.Pass("Edited the OleDbPrpoperties connection");
 
                 X15.DbCommand dbCommand = oleDbPrpoperties.DbCommand;
-                dbCommand.Text = this.DBCommandText;
+                dbCommand.Text = DBCommandText;
                 log.Pass("Edited the DbCommand.");
             }
         }
@@ -119,10 +119,10 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
                 X15.Connection connection = connectionsPart.Connections.Descendants<X15.Connection>().First();
 
                 X15.OleDbPrpoperties oleDbPrpoperties = connection.OleDbPrpoperties;
-                log.Verify(oleDbPrpoperties.Connection == this.ConnectionString, "OleDbPrpoperties Connection value is not change.");
+                log.Verify(oleDbPrpoperties.Connection == ConnectionString, "OleDbPrpoperties Connection value is not change.");
 
                 X15.DbCommand dbCommand = oleDbPrpoperties.DbCommand;
-                log.Verify(this.DBCommandText == dbCommand.Text, "DBCommandText value is not change.");
+                log.Verify(DBCommandText == dbCommand.Text, "DBCommandText value is not change.");
             }
         }
 
@@ -167,12 +167,12 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
                 ConnectionsPart connectionsPart = package.WorkbookPart.ConnectionsPart;
                 int connectionNum = connectionsPart.Connections.Descendants<X15.Connection>().Count();
 
-                X15.Connection x15connection = new X15.Connection() { Id = this.X15ConnectionId, AutoDelete = this.X15ConnectionAutoDelete };
-                x15connection.OleDbPrpoperties = new X15.OleDbPrpoperties() { Connection = this.ConnectionString };
-                x15connection.OleDbPrpoperties.DbCommand = new X15.DbCommand() { Text = this.DBCommandText };
+                X15.Connection x15connection = new X15.Connection() { Id = X15ConnectionId, AutoDelete = X15ConnectionAutoDelete };
+                x15connection.OleDbPrpoperties = new X15.OleDbPrpoperties() { Connection = ConnectionString };
+                x15connection.OleDbPrpoperties.DbCommand = new X15.DbCommand() { Text = DBCommandText };
 
-                ConnectionExtension connectionExtension = new ConnectionExtension() { Uri = this.ConnectionExtUri };
-                Connection connection = new Connection() { Id = this.ConnectionId, ConnectionFile = this.ConnectionOdcFile, Name = this.ConnectionName, Type = this.ConnectionType, RefreshedVersion = this.ConnectionRefreshedVersion, MinRefreshableVersion = this.ConnectionMinRefreshedVersion, Background = this.ConnectionBackground };
+                ConnectionExtension connectionExtension = new ConnectionExtension() { Uri = ConnectionExtUri };
+                Connection connection = new Connection() { Id = ConnectionId, ConnectionFile = ConnectionOdcFile, Name = ConnectionName, Type = ConnectionType, RefreshedVersion = ConnectionRefreshedVersion, MinRefreshableVersion = ConnectionMinRefreshedVersion, Background = ConnectionBackground };
                 ConnectionExtensionList connectionExtensionList = new ConnectionExtensionList();
 
                 connectionExtension.AppendChild<X15.Connection>(x15connection);
@@ -204,10 +204,10 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
                 }
 
                 log.Verify(connection.OleDbPrpoperties != null, "Missing X15.OleDbPrpoperties element.");
-                log.Verify(connection.OleDbPrpoperties.Connection == this.ConnectionString, "OleDbPrpoperties Connection value is not change.");
+                log.Verify(connection.OleDbPrpoperties.Connection == ConnectionString, "OleDbPrpoperties Connection value is not change.");
 
                 log.Verify(connection.OleDbPrpoperties != null, "Missing X15.DbCommand element.");
-                log.Verify(connection.OleDbPrpoperties.DbCommand.Text == this.DBCommandText, "OleDbPrpoperties Connection value is not change.");
+                log.Verify(connection.OleDbPrpoperties.DbCommand.Text == DBCommandText, "OleDbPrpoperties Connection value is not change.");
             }
         }
     }

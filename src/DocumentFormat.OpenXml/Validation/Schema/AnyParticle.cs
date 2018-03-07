@@ -45,16 +45,16 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                             value == XsdAnyPrefidefinedValue.Other ||
                             value == XsdAnyPrefidefinedValue.TargetNamespace);
 
-                this._xsdAnyValue = (ushort)value;
+                _xsdAnyValue = (ushort)value;
             }
         }
 
         /// <summary>
         /// Gets the value of the xsd:any@namespace.
         /// </summary>
-        internal ushort NamespaceValue => this._xsdAnyValue;
+        internal ushort NamespaceValue => _xsdAnyValue;
 
         /// <inheritdoc/>
-        internal override IParticleValidator ParticleValidator => this._particleValidator;
+        internal override IParticleValidator ParticleValidator => _particleValidator;
     }
 }

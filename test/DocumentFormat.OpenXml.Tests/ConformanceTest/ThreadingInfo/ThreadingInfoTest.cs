@@ -25,13 +25,13 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         public ThreadingInfoTest(ITestOutputHelper output)
             : base(output)
         {
-            string createFilePath = this.GetTestFilePath(this.generateDocumentFile);
+            string createFilePath = GetTestFilePath(generateDocumentFile);
             GeneratedDocument generatedDocument = new GeneratedDocument();
             generatedDocument.CreatePackage(createFilePath);
 
-            this.Log.Pass("Create Power Point file. File path=[{0}]", createFilePath);
+            Log.Pass("Create Power Point file. File path=[{0}]", createFilePath);
 
-            this.testEntities = new TestEntities(createFilePath);
+            testEntities = new TestEntities(createFilePath);
         }
 
         /// <summary>
@@ -40,13 +40,13 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         [Fact]
         public void ThreadingInfo01EditElement()
         {
-            string originalFilepath = this.GetTestFilePath(this.generateDocumentFile);
-            string editFilePath = this.GetTestFilePath(this.editDocumentFile);
+            string originalFilepath = GetTestFilePath(generateDocumentFile);
+            string editFilePath = GetTestFilePath(editDocumentFile);
 
             System.IO.File.Copy(originalFilepath, editFilePath, true);
 
-            this.testEntities.EditElements(editFilePath, this.Log);
-            this.testEntities.VerifyElements(editFilePath, this.Log);
+            testEntities.EditElements(editFilePath, Log);
+            testEntities.VerifyElements(editFilePath, Log);
         }
 
         /// <summary>
@@ -55,19 +55,19 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         [Fact]
         public void ThreadingInfo03DeleteAddElement()
         {
-            string originalFilepath = this.GetTestFilePath(this.generateDocumentFile);
-            string deleteFilePath = this.GetTestFilePath(this.deleteDocumentFile);
-            string addFilePath = this.GetTestFilePath(this.addDocumentFile);
+            string originalFilepath = GetTestFilePath(generateDocumentFile);
+            string deleteFilePath = GetTestFilePath(deleteDocumentFile);
+            string addFilePath = GetTestFilePath(addDocumentFile);
 
             System.IO.File.Copy(originalFilepath, deleteFilePath, true);
 
-            this.testEntities.DeleteElements(deleteFilePath, this.Log);
-            this.testEntities.VerifyDeleteElements(deleteFilePath, this.Log);
+            testEntities.DeleteElements(deleteFilePath, Log);
+            testEntities.VerifyDeleteElements(deleteFilePath, Log);
 
             System.IO.File.Copy(deleteFilePath, addFilePath, true);
 
-            this.testEntities.AddElements(addFilePath, this.Log);
-            this.testEntities.VerifyAddElements(addFilePath, this.Log);
+            testEntities.AddElements(addFilePath, Log);
+            testEntities.VerifyAddElements(addFilePath, Log);
         }
     }
 }

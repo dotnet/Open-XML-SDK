@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         public void SetXsdType(XsdType value)
         {
             Debug.Assert(value == XsdType.Boolean || value == XsdType.SpecialBoolean);
-            this._xsdType = value;
+            _xsdType = value;
         }
 
         /// <inheritdoc />
@@ -33,10 +33,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 #if DEBUG
         public override void Verify()
         {
-            Debug.Assert(this.XsdType == XsdType.Boolean || this.XsdType == XsdType.SpecialBoolean);
-            Debug.Assert(this.IsEnum == false);
-            Debug.Assert(this.IsList == false);
-            Debug.Assert(this.Pattern == null);
+            Debug.Assert(XsdType == XsdType.Boolean || XsdType == XsdType.SpecialBoolean);
+            Debug.Assert(IsEnum == false);
+            Debug.Assert(IsList == false);
+            Debug.Assert(Pattern == null);
         }
 #endif
     }

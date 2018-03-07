@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 ErrorType = ValidationErrorType.Semantic,
                 Node = context.Element,
                 Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_IncorrectRelationshipType,
-                                            actualType, GetAttributeQualifiedName(context.Element, _attribute), this._type)
+                                            actualType, GetAttributeQualifiedName(context.Element, _attribute), _type)
             };
         }
     }

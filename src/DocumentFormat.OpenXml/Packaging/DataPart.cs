@@ -48,7 +48,7 @@ namespace DocumentFormat.OpenXml.Packaging
             get
             {
                 ThrowIfObjectDisposed();
-                return this._openXmlPackage;
+                return _openXmlPackage;
             }
         }
 
@@ -61,9 +61,9 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 ThrowIfObjectDisposed();
 
-                Debug.Assert(this._uri.OriginalString.Equals(this._metroPart.Uri.OriginalString, StringComparison.OrdinalIgnoreCase));
+                Debug.Assert(_uri.OriginalString.Equals(_metroPart.Uri.OriginalString, StringComparison.OrdinalIgnoreCase));
 
-                return this._uri;
+                return _uri;
             }
         }
 
@@ -78,8 +78,8 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            // first, see if there are any reference in package leve.
-            foreach (var dataPartReferenceRelationship in this.OpenXmlPackage.DataPartReferenceRelationships)
+            // First, see if there are any reference in package level.
+            foreach (var dataPartReferenceRelationship in OpenXmlPackage.DataPartReferenceRelationships)
             {
                 if (dataPartReferenceRelationship.DataPart == this)
                 {
@@ -87,9 +87,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
             }
 
-            // for each part in the package, check the DataPartReferenceRelationships.
-            OpenXmlPackagePartIterator partIterator = new OpenXmlPackagePartIterator(this.OpenXmlPackage);
-            foreach (var openXmlPart in partIterator)
+            // For each part in the package, check the DataPartReferenceRelationships.
+            foreach (var openXmlPart in OpenXmlPackage.GetAllParts())
             {
                 foreach (var dataPartReferenceRelationship in openXmlPart.DataPartReferenceRelationships)
                 {
@@ -99,8 +98,6 @@ namespace DocumentFormat.OpenXml.Packaging
                     }
                 }
             }
-
-            yield break;
         }
 
         /// <summary>
@@ -111,7 +108,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            return this.PackagePart.GetStream();
+            return PackagePart.GetStream();
         }
 
         /// <summary>
@@ -123,7 +120,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            return this.PackagePart.GetStream(mode);
+            return PackagePart.GetStream(mode);
         }
 
         /// <summary>
@@ -136,7 +133,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            return this.PackagePart.GetStream(mode, access);
+            return PackagePart.GetStream(mode, access);
         }
 
         /// <summary>
@@ -154,7 +151,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(sourceStream));
             }
 
-            using (Stream targetStream = this.GetStream(FileMode.Create))
+            using (Stream targetStream = GetStream(FileMode.Create))
             {
                 sourceStream.CopyTo(targetStream);
             }
@@ -172,7 +169,7 @@ namespace DocumentFormat.OpenXml.Packaging
             get
             {
                 ThrowIfObjectDisposed();
-                return this.PackagePart.ContentType;
+                return PackagePart.ContentType;
             }
         }
 
@@ -188,7 +185,7 @@ namespace DocumentFormat.OpenXml.Packaging
             get
             {
                 ThrowIfObjectDisposed();
-                return this._metroPart;
+                return _metroPart;
             }
         }
 
@@ -211,11 +208,11 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             Debug.Assert(openXmlPackage.Package.GetPart(packagePart.Uri) == packagePart);
 
-            this._openXmlPackage = openXmlPackage;
-            this._metroPart = packagePart;
-            this._uri = packagePart.Uri;
+            _openXmlPackage = openXmlPackage;
+            _metroPart = packagePart;
+            _uri = packagePart.Uri;
 
-            if (this._metroPart.GetRelationships().Any())
+            if (_metroPart.GetRelationships().Any())
             {
                 // Media (Audio, Video) parts should not reference any other parts.
                 throw new OpenXmlPackageException(ExceptionMessages.MediaDataPartShouldNotReferenceOtherParts);
@@ -225,22 +222,22 @@ namespace DocumentFormat.OpenXml.Packaging
         // create a new part in this package
         internal void CreateInternal(OpenXmlPackage openXmlPackage, string contentType, string extension)
         {
-            this._openXmlPackage = openXmlPackage;
-            this._uri = NewPartUri(openXmlPackage, contentType, extension);
-            this._metroPart = this._openXmlPackage.CreateMetroPart(this._uri, contentType);
+            _openXmlPackage = openXmlPackage;
+            _uri = NewPartUri(openXmlPackage, contentType, extension);
+            _metroPart = _openXmlPackage.CreateMetroPart(_uri, contentType);
         }
 
         // create a new part in this package
         internal void CreateInternal(OpenXmlPackage openXmlPackage, MediaDataPartType mediaDataPartType)
         {
-            this._openXmlPackage = openXmlPackage;
+            _openXmlPackage = openXmlPackage;
 
             string contentType = mediaDataPartType.GetContentType();
             string targetFileExt = mediaDataPartType.GetTargetExtension();
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, targetFileExt);
 
-            this._uri = NewPartUri(openXmlPackage, contentType, null);
-            this._metroPart = this._openXmlPackage.CreateMetroPart(this._uri, contentType);
+            _uri = NewPartUri(openXmlPackage, contentType, null);
+            _metroPart = _openXmlPackage.CreateMetroPart(_uri, contentType);
         }
 
         // create a new part in this package
@@ -253,19 +250,19 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             // throw exception to catch error in our code
-            if (this._metroPart != null)
+            if (_metroPart != null)
             {
                 throw new InvalidOperationException();
             }
 
             // set the _openXmlPackage so ThrowIfObjectDisposed( ) do not throw.
-            this._openXmlPackage = openXmlPackage;
+            _openXmlPackage = openXmlPackage;
 
             Uri parentUri = new Uri("/", UriKind.Relative);
 
-            this._uri = this._openXmlPackage.GetUniquePartUri(contentType, parentUri, partUri);
+            _uri = _openXmlPackage.GetUniquePartUri(contentType, parentUri, partUri);
 
-            this._metroPart = this._openXmlPackage.CreateMetroPart(this._uri, contentType);
+            _metroPart = _openXmlPackage.CreateMetroPart(_uri, contentType);
         }
 
         internal Uri NewPartUri(OpenXmlPackage openXmlPackage, string contentType, string extension)
@@ -274,9 +271,9 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (extension == null)
             {
-                if (!this._openXmlPackage.PartExtensionProvider.TryGetValue(contentType, out targetFileExt))
+                if (!_openXmlPackage.PartExtensionProvider.TryGetValue(contentType, out targetFileExt))
                 {
-                    targetFileExt = this.TargetFileExtension;
+                    targetFileExt = TargetFileExtension;
                 }
             }
             else
@@ -284,15 +281,15 @@ namespace DocumentFormat.OpenXml.Packaging
                 targetFileExt = extension;
             }
 
-            return openXmlPackage.GetUniquePartUri(contentType, new Uri("/", UriKind.Relative), this.TargetPath, this.TargetName, targetFileExt);
+            return openXmlPackage.GetUniquePartUri(contentType, new Uri("/", UriKind.Relative), TargetPath, TargetName, targetFileExt);
         }
 
         // destroy itself (aka. dispose)
         internal void Destroy()
         {
-            this.OpenXmlPackage.Package.DeletePart(this.Uri);
+            OpenXmlPackage.Package.DeletePart(Uri);
 
-            this._openXmlPackage = null;
+            _openXmlPackage = null;
         }
 
         #endregion
@@ -304,7 +301,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         protected void ThrowIfObjectDisposed()
         {
-            if (this._openXmlPackage == null)
+            if (_openXmlPackage == null)
             {
                 throw new InvalidOperationException(ExceptionMessages.PartIsDestroyed);
             }

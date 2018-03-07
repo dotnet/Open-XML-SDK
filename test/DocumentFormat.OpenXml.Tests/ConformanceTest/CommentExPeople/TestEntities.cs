@@ -31,9 +31,9 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
                 W15.Person person = peoplePart.People.Descendants<W15.Person>().First();
                 W15.PresenceInfo presenceInfo = person.Descendants<W15.PresenceInfo>().First();
 
-                log.VerifyValue(person.Author.Value, this.verifyAuthor, "Person Author attribute is matched. Author={0}", person.Author);
-                log.VerifyValue(presenceInfo.ProviderId.Value, this.verifyProviderId, "PresenceInfo ProviderId attribute is matched. ProviderId={0}", presenceInfo.ProviderId);
-                log.VerifyValue(presenceInfo.UserId.Value, this.verifyUserId, "PresenceInfo UserId attribute is matched. UserId={0}", presenceInfo.UserId);
+                log.VerifyValue(person.Author.Value, verifyAuthor, "Person Author attribute is matched. Author={0}", person.Author);
+                log.VerifyValue(presenceInfo.ProviderId.Value, verifyProviderId, "PresenceInfo ProviderId attribute is matched. ProviderId={0}", presenceInfo.ProviderId);
+                log.VerifyValue(presenceInfo.UserId.Value, verifyUserId, "PresenceInfo UserId attribute is matched. UserId={0}", presenceInfo.UserId);
             }
         }
 
@@ -50,9 +50,9 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
                 W15.Person person = peoplePart.People.Descendants<W15.Person>().First();
                 W15.PresenceInfo presenceInfo = person.Descendants<W15.PresenceInfo>().First();
 
-                person.Author.Value = this.editAuthor;
-                presenceInfo.ProviderId.Value = this.editProviderId;
-                presenceInfo.UserId.Value = this.editUserId;
+                person.Author.Value = editAuthor;
+                presenceInfo.ProviderId.Value = editProviderId;
+                presenceInfo.UserId.Value = editUserId;
 
                 log.Pass("PresenceInfo in PeoplePart is updated");
             }
@@ -71,9 +71,9 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
                 W15.Person person = peoplePart.People.Descendants<W15.Person>().First();
                 W15.PresenceInfo presenceInfo = peoplePart.RootElement.Descendants<W15.PresenceInfo>().First();
 
-                log.VerifyValue(person.Author.Value, this.editAuthor, "Person Author attribute is matched. Author={0}", person.Author);
-                log.VerifyValue(presenceInfo.ProviderId.Value, this.editProviderId, "PresenceInfo ProviderId attribute is matched. ProviderId={0}", presenceInfo.ProviderId);
-                log.VerifyValue(presenceInfo.UserId.Value, this.editUserId, "PresenceInfo UserId attribute is matched. UserId={0}", presenceInfo.UserId);
+                log.VerifyValue(person.Author.Value, editAuthor, "Person Author attribute is matched. Author={0}", person.Author);
+                log.VerifyValue(presenceInfo.ProviderId.Value, editProviderId, "PresenceInfo ProviderId attribute is matched. ProviderId={0}", presenceInfo.ProviderId);
+                log.VerifyValue(presenceInfo.UserId.Value, editUserId, "PresenceInfo UserId attribute is matched. UserId={0}", presenceInfo.UserId);
             }
         }
     }

@@ -33,13 +33,13 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get
             {
-                if (this.Recipients != null)
+                if (Recipients != null)
                 {
-                    return this.Recipients;
+                    return Recipients;
                 }
                 else
                 {
-                    return this.MailMergeRecipients;
+                    return MailMergeRecipients;
                 }
             }
         }
@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     throw new ArgumentNullException(nameof(value));
                 }
-                if (this.MailMergeRecipients != null)
+                if (MailMergeRecipients != null)
                 {
                     throw new InvalidOperationException(string.Format(System.Globalization.CultureInfo.CurrentCulture, ExceptionMessages.PropertyMutualExclusive, "Recipients", "MailMergeRecipients"));
                 }
@@ -88,7 +88,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     throw new ArgumentNullException(nameof(value));
                 }
-                if (this.Recipients != null)
+                if (Recipients != null)
                 {
                     throw new InvalidOperationException(string.Format(System.Globalization.CultureInfo.CurrentCulture, ExceptionMessages.PropertyMutualExclusive, "MailMergeRecipients", "Recipients"));
                 }

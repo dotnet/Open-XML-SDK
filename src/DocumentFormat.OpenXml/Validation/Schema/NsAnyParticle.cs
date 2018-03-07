@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             set
             {
-                this._namespaceId = (byte)value;
+                _namespaceId = (byte)value;
             }
         }
 
@@ -49,12 +49,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         internal byte NamespaceId
         {
-            get { return this._namespaceId; }
+            get { return _namespaceId; }
         }
 
         /// <summary>
         /// Gets a ParticleValidator for this particle constraint.
         /// </summary>
-        internal override IParticleValidator ParticleValidator => this._particleValidator;
+        internal override IParticleValidator ParticleValidator => _particleValidator;
     }
 }

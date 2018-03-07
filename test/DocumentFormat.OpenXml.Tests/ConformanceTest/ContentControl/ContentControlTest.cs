@@ -26,11 +26,11 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
         public ContentControlTest(ITestOutputHelper output)
             : base(output)
         {
-            string createFilePath = this.GetTestFilePath(this.generatedDocumentFilePath);
+            string createFilePath = GetTestFilePath(generatedDocumentFilePath);
             GeneratedDocument generatedDocument = new GeneratedDocument();
             generatedDocument.CreatePackage(createFilePath);
 
-            this.Log.Pass("Create Word file. File path=[{0}]", createFilePath);
+            Log.Pass("Create Word file. File path=[{0}]", createFilePath);
         }
 
         /// <summary>
@@ -39,13 +39,13 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
         [Fact]
         public void ContentControl01EditElement()
         {
-            string originalFilepath = this.GetTestFilePath(this.generatedDocumentFilePath);
-            string editFilePath = this.GetTestFilePath(this.editedDocumentFilePath);
+            string originalFilepath = GetTestFilePath(generatedDocumentFilePath);
+            string editFilePath = GetTestFilePath(editedDocumentFilePath);
 
             System.IO.File.Copy(originalFilepath, editFilePath, true);
 
-            EditElement.EditContentControlElements(editFilePath, this.Log);
-            VerifyElement.VerifyContentControlElement(editFilePath, this.Log);
+            EditElement.EditContentControlElements(editFilePath, Log);
+            VerifyElement.VerifyContentControlElement(editFilePath, Log);
         }
 
         /// <summary>
@@ -54,14 +54,14 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
         [Fact]
         public void ContentControl03DeleteElement()
         {
-            string originalFilepath = this.GetTestFilePath(this.generatedDocumentFilePath);
-            string deleteFilePath = this.GetTestFilePath(this.deletedDocumentFilePath);
+            string originalFilepath = GetTestFilePath(generatedDocumentFilePath);
+            string deleteFilePath = GetTestFilePath(deletedDocumentFilePath);
 
             System.IO.File.Copy(originalFilepath, deleteFilePath, true);
 
             //Deleting all "sdt" elements
-            DeleteElement.DeleteContentControlElements(deleteFilePath, this.Log);
-            int sdtElementNum = VerifyDeletedElement.DeletedElementVerify(deleteFilePath, this.Log);
+            DeleteElement.DeleteContentControlElements(deleteFilePath, Log);
+            int sdtElementNum = VerifyDeletedElement.DeletedElementVerify(deleteFilePath, Log);
         }
     }
 }

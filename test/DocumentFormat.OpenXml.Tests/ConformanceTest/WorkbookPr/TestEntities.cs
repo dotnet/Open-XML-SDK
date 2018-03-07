@@ -28,13 +28,13 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
                     throw new Exception("Unable to obtain the X15.WorkbookProperties.");
 
                 WorkbookExtension workbookExtension = (WorkbookExtension)workbookProperties.Parent;
-                this.workbookPrExtUri = workbookExtension.Uri;
+                workbookPrExtUri = workbookExtension.Uri;
 
                 X15ac.AbsolutePath absolutePath = package.WorkbookPart.Workbook.AbsolutePath;
                 if (absolutePath == null)
                     throw new Exception("Unable to obtain the X15ac.AbsolutePath.");
 
-                this.AbsolutePathUri = absolutePath.Url;
+                AbsolutePathUri = absolutePath.Url;
             }
         }
 
@@ -92,7 +92,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
                 X15.WorkbookProperties workbookProperties = workbookExtensionList.Descendants<X15.WorkbookProperties>().Single();
                 workbookProperties.Remove();
 
-                WorkbookExtension workbookExtension = workbookExtensionList.Descendants<WorkbookExtension>().Where(e => e.Uri == this.workbookPrExtUri).Single();
+                WorkbookExtension workbookExtension = workbookExtensionList.Descendants<WorkbookExtension>().Where(e => e.Uri == workbookPrExtUri).Single();
                 workbookExtension.Remove();
 
                 log.Pass("Deleted workbookPr element.");
@@ -112,7 +112,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
         {
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(filePath, false, new OpenSettings() { MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013) }))
             {
-                int workbookExtensionNum = package.WorkbookPart.Workbook.Descendants<WorkbookExtension>().Where(e => e.Uri == this.workbookPrExtUri).Count();
+                int workbookExtensionNum = package.WorkbookPart.Workbook.Descendants<WorkbookExtension>().Where(e => e.Uri == workbookPrExtUri).Count();
                 log.Verify(workbookExtensionNum == 0, "WorkbookExtension element is not deleted.");
 
                 int workbookPrCount = package.WorkbookPart.Workbook.Descendants<X15.WorkbookProperties>().Count();
@@ -133,7 +133,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(filePath, true, new OpenSettings() { MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013) }))
             {
                 package.WorkbookPart.Workbook.AbsolutePath = null;
-                X15ac.AbsolutePath absolutePath = new X15ac.AbsolutePath() { Url = this.AbsolutePathUri };
+                X15ac.AbsolutePath absolutePath = new X15ac.AbsolutePath() { Url = AbsolutePathUri };
                 absolutePath.AddNamespaceDeclaration("x15ac", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/ac");
 
                 AlternateContentChoice alternateContentChoice = new AlternateContentChoice() { Requires = "x15" };
@@ -148,7 +148,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
                 log.Pass("Added AlternateContentChoice element.");
 
                 WorkbookExtensionList workbookExtensionList = package.WorkbookPart.Workbook.Descendants<WorkbookExtensionList>().Single();
-                WorkbookExtension workbookExtension = new WorkbookExtension() { Uri = this.workbookPrExtUri };
+                WorkbookExtension workbookExtension = new WorkbookExtension() { Uri = workbookPrExtUri };
                 workbookExtension.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
 
                 X15.WorkbookProperties workbookProperties = new X15.WorkbookProperties();

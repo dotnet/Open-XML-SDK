@@ -48,7 +48,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <returns></returns>
         protected byte[] GetBytes(params byte[][] fieldvalues)
         {
-            byte[] value = new byte[this.DataSize];
+            byte[] value = new byte[DataSize];
             int index = 0;
 
             foreach (var fieldvalue in fieldvalues)

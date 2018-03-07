@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Packaging
         internal protected DataPartReferenceRelationship(DataPart dataPart, string relationshipType, string id)
             : base(dataPart.Uri, false, relationshipType, id)
         {
-            this.DataPart = dataPart;
+            DataPart = dataPart;
         }
 
         /// <summary>
@@ -55,9 +55,9 @@ namespace DocumentFormat.OpenXml.Packaging
             Debug.Assert(containter != null);
             Debug.Assert(dataPart != null);
 
-            this.Initialize(dataPart.Uri, false, relationshipType, id);
-            this.Container = containter;
-            this.DataPart = dataPart;
+            Initialize(dataPart.Uri, false, relationshipType, id);
+            Container = containter;
+            DataPart = dataPart;
         }
 
         internal static bool IsDataPartReferenceRelationship(string relationshipType)

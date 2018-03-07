@@ -3,7 +3,7 @@
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    internal static partial class TestAssets
+    public static partial class TestAssets
     {
         public static class TestDataStorage
         {

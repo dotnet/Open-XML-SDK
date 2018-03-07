@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml
         internal XmlPath(OpenXmlPart part)
         {
             Debug.Assert(part != null);
-            this.PartUri = part.Uri;
+            PartUri = part.Uri;
         }
 
         private List<string> _namespacesDefinitions = new List<string>();
@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this._namespacesDefinitions;
+                return _namespacesDefinitions;
             }
         }
 

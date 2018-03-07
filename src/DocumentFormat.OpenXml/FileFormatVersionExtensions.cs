@@ -73,19 +73,32 @@ namespace DocumentFormat.OpenXml
         {
             int MapToInteger(FileFormatVersions v, string name)
             {
-                switch (v)
+                if (v == FileFormatVersions.None)
                 {
-                    case FileFormatVersions.Office2007:
-                        return 1;
-                    case FileFormatVersions.Office2010:
-                        return 2;
-                    case FileFormatVersions.Office2013:
-                        return 3;
-                    case FileFormatVersions.Office2016:
-                        return 4;
-                    default:
-                        throw new ArgumentOutOfRangeException(name);
+                    throw new ArgumentOutOfRangeException(name);
                 }
+
+                if ((FileFormatVersions.Office2007 & v) == FileFormatVersions.Office2007)
+                {
+                    return 1;
+                }
+
+                if ((FileFormatVersions.Office2010 & v) == FileFormatVersions.Office2010)
+                {
+                    return 2;
+                }
+
+                if ((FileFormatVersions.Office2013 & v) == FileFormatVersions.Office2013)
+                {
+                    return 3;
+                }
+
+                if ((FileFormatVersions.Office2016 & v) == FileFormatVersions.Office2016)
+                {
+                    return 4;
+                }
+
+                throw new ArgumentOutOfRangeException(name);
             }
 
             return MapToInteger(version, nameof(version)) >= MapToInteger(minimum, nameof(minimum));

@@ -30,9 +30,9 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(qualifiedName));
             }
 
-            this._namespaceUri = namespaceUri;
-            OpenXmlElement.SplitName(qualifiedName, out this._prefix, out this._tagName);
-            this._value = value;
+            _namespaceUri = namespaceUri;
+            OpenXmlElement.SplitName(qualifiedName, out _prefix, out _tagName);
+            _value = value;
         }
 
         /// <summary>
@@ -49,10 +49,10 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(localName));
             }
 
-            this._namespaceUri = namespaceUri;
-            this._tagName = localName;
-            this._prefix = prefix;
-            this._value = value;
+            _namespaceUri = namespaceUri;
+            _tagName = localName;
+            _prefix = prefix;
+            _value = value;
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (this._namespaceUri == null)
+                if (_namespaceUri == null)
                 {
                     return string.Empty;
                 }
@@ -106,7 +106,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return new XmlQualifiedName(this._tagName, this._namespaceUri);
+                return new XmlQualifiedName(_tagName, _namespaceUri);
             }
         }
 
@@ -117,7 +117,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return XName.Get(this._tagName, this._namespaceUri);
+                return XName.Get(_tagName, _namespaceUri);
             }
         }
 
@@ -130,10 +130,10 @@ namespace DocumentFormat.OpenXml
         /// <returns>Returns true if instances are equal; otherwise, returns false.</returns>
         public bool Equals(OpenXmlAttribute other)
         {
-            return this.LocalName == other.LocalName &&
-                    this.NamespaceUri == other.NamespaceUri &&
-                    this.Prefix == other.Prefix &&
-                    this.Value == other.Value;
+            return LocalName == other.LocalName &&
+                    NamespaceUri == other.NamespaceUri &&
+                    Prefix == other.Prefix &&
+                    Value == other.Value;
         }
 
         #endregion
@@ -188,7 +188,7 @@ namespace DocumentFormat.OpenXml
                 return false;
             }
             OpenXmlAttribute attribute = (OpenXmlAttribute)obj;
-            return this.Equals(attribute);
+            return Equals(attribute);
         }
 
         // FDG ***** DO override GetHashCode whenever you override Equals.
@@ -201,21 +201,21 @@ namespace DocumentFormat.OpenXml
         {
             int hashCode = 0;
 
-            if (this.LocalName != null)
+            if (LocalName != null)
             {
-                hashCode ^= this.LocalName.GetHashCode();
+                hashCode ^= LocalName.GetHashCode();
             }
-            if (this.NamespaceUri != null)
+            if (NamespaceUri != null)
             {
-                hashCode ^= this.NamespaceUri.GetHashCode();
+                hashCode ^= NamespaceUri.GetHashCode();
             }
-            if (this.Prefix != null)
+            if (Prefix != null)
             {
-                hashCode ^= this.Prefix.GetHashCode();
+                hashCode ^= Prefix.GetHashCode();
             }
-            if (this.Value != null)
+            if (Value != null)
             {
-                hashCode ^= this.Value.GetHashCode();
+                hashCode ^= Value.GetHashCode();
             }
 
             return hashCode;

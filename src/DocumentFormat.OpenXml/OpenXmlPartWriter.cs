@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml
             }
 
             Stream partStream = openXmlPart.GetStream(FileMode.Create);
-            this.Init(partStream, /*closeOutput*/true, encoding);
+            Init(partStream, /*closeOutput*/true, encoding);
         }
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(encoding));
             }
 
-            this.Init(partStream, /*closeOutput*/false, encoding);
+            Init(partStream, /*closeOutput*/false, encoding);
         }
 
         #region public OpenXmlWriter methods
@@ -101,9 +101,9 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public override void WriteStartDocument()
         {
-            this.ThrowIfObjectDisposed();
+            ThrowIfObjectDisposed();
 
-            this._xmlWriter.WriteStartDocument();
+            _xmlWriter.WriteStartDocument();
         }
 
         /// <summary>
@@ -112,9 +112,9 @@ namespace DocumentFormat.OpenXml
         /// <param name="standalone">If true, it writes "standalone=yes"; if false, it writes "standalone=no". </param>
         public override void WriteStartDocument(bool standalone)
         {
-            this.ThrowIfObjectDisposed();
+            ThrowIfObjectDisposed();
 
-            this._xmlWriter.WriteStartDocument(standalone);
+            _xmlWriter.WriteStartDocument(standalone);
         }
 
         /// <summary>
@@ -160,15 +160,15 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentOutOfRangeException(nameof(elementReader));
             }
 
-            this.ThrowIfObjectDisposed();
+            ThrowIfObjectDisposed();
 
-            this._xmlWriter.WriteStartElement(elementReader.Prefix, elementReader.LocalName, elementReader.NamespaceUri);
+            _xmlWriter.WriteStartElement(elementReader.Prefix, elementReader.LocalName, elementReader.NamespaceUri);
 
             if (namespaceDeclarations != null)
             {
                 foreach (var item in namespaceDeclarations)
                 {
-                    this._xmlWriter.WriteAttributeString(OpenXmlElementContext.xmlnsPrefix, item.Key, OpenXmlElementContext.xmlnsUri, item.Value);
+                    _xmlWriter.WriteAttributeString(OpenXmlElementContext.xmlnsPrefix, item.Key, OpenXmlElementContext.xmlnsUri, item.Value);
                 }
             }
 
@@ -177,17 +177,17 @@ namespace DocumentFormat.OpenXml
                 // write attributes
                 foreach (OpenXmlAttribute attribute in attributes)
                 {
-                    this._xmlWriter.WriteAttributeString(attribute.Prefix, attribute.LocalName, attribute.NamespaceUri, attribute.Value);
+                    _xmlWriter.WriteAttributeString(attribute.Prefix, attribute.LocalName, attribute.NamespaceUri, attribute.Value);
                 }
             }
 
             if (IsOpenXmlLeafTextElement(elementReader.ElementType))
             {
-                this._isLeafTextElementStart = true;
+                _isLeafTextElementStart = true;
             }
             else
             {
-                this._isLeafTextElementStart = false;
+                _isLeafTextElementStart = false;
             }
         }
 
@@ -207,26 +207,26 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentOutOfRangeException(nameof(elementObject));
             }
 
-            this.ThrowIfObjectDisposed();
+            ThrowIfObjectDisposed();
 
-            this._xmlWriter.WriteStartElement(elementObject.Prefix, elementObject.LocalName, elementObject.NamespaceUri);
+            _xmlWriter.WriteStartElement(elementObject.Prefix, elementObject.LocalName, elementObject.NamespaceUri);
 
             if (elementObject.HasAttributes)
             {
                 // write attributes
                 foreach (OpenXmlAttribute attribute in elementObject.GetAttributes())
                 {
-                    this._xmlWriter.WriteAttributeString(attribute.Prefix, attribute.LocalName, attribute.NamespaceUri, attribute.Value);
+                    _xmlWriter.WriteAttributeString(attribute.Prefix, attribute.LocalName, attribute.NamespaceUri, attribute.Value);
                 }
             }
 
             if (IsOpenXmlLeafTextElement(elementObject))
             {
-                this._isLeafTextElementStart = true;
+                _isLeafTextElementStart = true;
             }
             else
             {
-                this._isLeafTextElementStart = false;
+                _isLeafTextElementStart = false;
             }
         }
 
@@ -258,15 +258,15 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentOutOfRangeException(nameof(elementObject));
             }
 
-            this.ThrowIfObjectDisposed();
+            ThrowIfObjectDisposed();
 
-            this._xmlWriter.WriteStartElement(elementObject.Prefix, elementObject.LocalName, elementObject.NamespaceUri);
+            _xmlWriter.WriteStartElement(elementObject.Prefix, elementObject.LocalName, elementObject.NamespaceUri);
 
             if (namespaceDeclarations != null)
             {
                 foreach (var item in namespaceDeclarations)
                 {
-                    this._xmlWriter.WriteAttributeString(OpenXmlElementContext.xmlnsPrefix, item.Key, OpenXmlElementContext.xmlnsUri, item.Value);
+                    _xmlWriter.WriteAttributeString(OpenXmlElementContext.xmlnsPrefix, item.Key, OpenXmlElementContext.xmlnsUri, item.Value);
                 }
             }
 
@@ -275,17 +275,17 @@ namespace DocumentFormat.OpenXml
                 // write attributes
                 foreach (OpenXmlAttribute attribute in attributes)
                 {
-                    this._xmlWriter.WriteAttributeString(attribute.Prefix, attribute.LocalName, attribute.NamespaceUri, attribute.Value);
+                    _xmlWriter.WriteAttributeString(attribute.Prefix, attribute.LocalName, attribute.NamespaceUri, attribute.Value);
                 }
             }
 
             if (IsOpenXmlLeafTextElement(elementObject))
             {
-                this._isLeafTextElementStart = true;
+                _isLeafTextElementStart = true;
             }
             else
             {
-                this._isLeafTextElementStart = false;
+                _isLeafTextElementStart = false;
             }
         }
 
@@ -294,11 +294,11 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public override void WriteEndElement()
         {
-            this.ThrowIfObjectDisposed();
+            ThrowIfObjectDisposed();
 
-            this._xmlWriter.WriteEndElement();
+            _xmlWriter.WriteEndElement();
 
-            this._isLeafTextElementStart = false;
+            _isLeafTextElementStart = false;
         }
 
         /// <summary>
@@ -307,11 +307,11 @@ namespace DocumentFormat.OpenXml
         /// <param name="text">The text to be writtern. </param>
         public override void WriteString(string text)
         {
-            this.ThrowIfObjectDisposed();
+            ThrowIfObjectDisposed();
 
-            if (this._isLeafTextElementStart)
+            if (_isLeafTextElementStart)
             {
-                this._xmlWriter.WriteString(text);
+                _xmlWriter.WriteString(text);
             }
             else
             {
@@ -332,11 +332,11 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(elementObject));
             }
 
-            this.ThrowIfObjectDisposed();
+            ThrowIfObjectDisposed();
 
-            elementObject.WriteTo(this._xmlWriter);
+            elementObject.WriteTo(_xmlWriter);
 
-            this._isLeafTextElementStart = false;
+            _isLeafTextElementStart = false;
         }
 
         /// <summary>
@@ -344,19 +344,19 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public override void Close()
         {
-            if (this._xmlWriter != null)
+            if (_xmlWriter != null)
             {
 #if FEATURE_CLOSE
                 // the end tag of the root element
                 // this._xmlWriter.WriteEndElement();
 
-                this._xmlWriter.Close();
+                _xmlWriter.Close();
 #else
-                this._xmlWriter.Dispose();
+                _xmlWriter.Dispose();
 #endif
             }
 
-            this._isLeafTextElementStart = false;
+            _isLeafTextElementStart = false;
         }
 
         #endregion
@@ -371,7 +371,7 @@ namespace DocumentFormat.OpenXml
                 Encoding = encoding
             };
 
-            this._xmlWriter = XmlWriter.Create(partStream, settings);
+            _xmlWriter = XmlWriter.Create(partStream, settings);
         }
 
         private static bool IsOpenXmlLeafTextElement(Type elementType)

@@ -32,8 +32,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <inheritdoc/>
         internal override int ElementId
         {
-            get { return this._elementId; }
-            set { this._elementId = value; }
+            get { return _elementId; }
+            set { _elementId = value; }
         }
 
         /// <inheritdoc/>
@@ -48,7 +48,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             Debug.Assert(particleMatchInfo != null);
             Debug.Assert(particleMatchInfo.StartElement != null);
 
-            if (particleMatchInfo.StartElement.ElementTypeId == this.ElementId)
+            if (particleMatchInfo.StartElement.ElementTypeId == ElementId)
             {
                 particleMatchInfo.Match = ParticleMatch.Matched;
                 particleMatchInfo.LastMatchedElement = particleMatchInfo.StartElement;
@@ -66,11 +66,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             Debug.Assert(particleMatchInfo != null);
             Debug.Assert(particleMatchInfo.StartElement != null);
 
-            if (this.ElementId != particleMatchInfo.StartElement.ElementTypeId)
+            if (ElementId != particleMatchInfo.StartElement.ElementTypeId)
             {
                 particleMatchInfo.Match = ParticleMatch.Nomatch;
             }
-            else if (this.MaxOccurs == 1)
+            else if (MaxOccurs == 1)
             {
                 // matched element once.
                 particleMatchInfo.Match = ParticleMatch.Matched;
@@ -83,15 +83,15 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 int count = 0;
 
                 while (element != null &&
-                    this.MaxOccursGreaterThan(count) &&
-                    element.ElementTypeId == this.ElementId)
+                    MaxOccursGreaterThan(count) &&
+                    element.ElementTypeId == ElementId)
                 {
                     count++;
                     particleMatchInfo.LastMatchedElement = element;
                     element = validationContext.GetNextChildMc(element);
                 }
 
-                if (count >= this.MinOccurs)
+                if (count >= MinOccurs)
                 {
                     particleMatchInfo.Match = ParticleMatch.Matched;
                 }
@@ -104,7 +104,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         {
                             particleMatchInfo.InitExpectedChildren();
                         }
-                        particleMatchInfo.ExpectedChildren.Add(this.ElementId);
+                        particleMatchInfo.ExpectedChildren.Add(ElementId);
                     }
                 }
             }
@@ -114,11 +114,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <inheritdoc/>
         public bool GetRequiredElements(ExpectedChildren result)
         {
-            if (this.MinOccurs > 0)
+            if (MinOccurs > 0)
             {
                 if (result != null)
                 {
-                    result.Add(this.ElementId);
+                    result.Add(ElementId);
                 }
                 return true;
             }
@@ -130,9 +130,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             ExpectedChildren requiredElements = new ExpectedChildren();
 
-            if (this.MinOccurs > 0)
+            if (MinOccurs > 0)
             {
-                requiredElements.Add(this.ElementId);
+                requiredElements.Add(ElementId);
             }
 
             return requiredElements;
@@ -141,7 +141,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <inheritdoc/>
         public bool GetExpectedElements(ExpectedChildren result)
         {
-            result.Add(this.ElementId);
+            result.Add(ElementId);
             return true;
         }
 
@@ -150,7 +150,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             ExpectedChildren expectedElements = new ExpectedChildren();
 
-            expectedElements.Add(this.ElementId);
+            expectedElements.Add(ElementId);
 
             return expectedElements;
         }

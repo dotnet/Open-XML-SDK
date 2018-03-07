@@ -22,12 +22,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             Debug.Assert(fileFormat.Any());
 
-            this.SdbDataHead = new SdbDataHead();
-            this._fileFormat = fileFormat;
+            SdbDataHead = new SdbDataHead();
+            _fileFormat = fileFormat;
 
             using (var schema = GetSchemaStream(fileFormat))
             {
-                this.Load(schema);
+                Load(schema);
             }
         }
 
@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             byte[] headBytes = new byte[SdbDataHead.HeadSize];
 
             dataStream.Read(headBytes, 0, SdbDataHead.HeadSize);
-            this.SdbDataHead.LoadFromBytes(headBytes, 0);
+            SdbDataHead.LoadFromBytes(headBytes, 0);
 
 #if DEBUG
             CheckDataHead((int)dataStream.Length);
@@ -78,41 +78,41 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             int count;
 
             // class ID map
-            count = this.SdbDataHead.ClassIdsCount * SdbClassIdToSchemaTypeIndex.TypeSize;
+            count = SdbDataHead.ClassIdsCount * SdbClassIdToSchemaTypeIndex.TypeSize;
             dataBytes = new byte[count];
             dataStream.Read(dataBytes, 0, count);
-            this.SdbClassIdMap = new SdbDataArray<SdbClassIdToSchemaTypeIndex>(dataBytes, SdbDataHead.ClassIdsCount);
+            SdbClassIdMap = new SdbDataArray<SdbClassIdToSchemaTypeIndex>(dataBytes, SdbDataHead.ClassIdsCount);
 
             // schema types
-            count = this.SdbDataHead.SchemaTypeCount * SdbSchemaType.TypeSize;
+            count = SdbDataHead.SchemaTypeCount * SdbSchemaType.TypeSize;
             dataBytes = new byte[count];
             dataStream.Read(dataBytes, 0, count);
-            this.SdbSchemaTypes = new SdbDataArray<SdbSchemaType>(dataBytes, SdbDataHead.SchemaTypeCount);
+            SdbSchemaTypes = new SdbDataArray<SdbSchemaType>(dataBytes, SdbDataHead.SchemaTypeCount);
 
             // particle constraints
-            count = this.SdbDataHead.ParticleCount * SdbParticleConstraint.TypeSize;
+            count = SdbDataHead.ParticleCount * SdbParticleConstraint.TypeSize;
             dataBytes = new byte[count];
             dataStream.Read(dataBytes, 0, count);
-            this.SdbParticles = new SdbDataArray<SdbParticleConstraint>(dataBytes, SdbDataHead.ParticleCount);
+            SdbParticles = new SdbDataArray<SdbParticleConstraint>(dataBytes, SdbDataHead.ParticleCount);
 
             // particle children index
-            count = this.SdbDataHead.ParticleChildrenIndexCount * SdbParticleChildrenIndex.TypeSize;
+            count = SdbDataHead.ParticleChildrenIndexCount * SdbParticleChildrenIndex.TypeSize;
             dataBytes = new byte[count];
             dataStream.Read(dataBytes, 0, count);
-            this.SdbParticleIndexs = new SdbDataArray<SdbParticleChildrenIndex>(dataBytes, SdbDataHead.ParticleChildrenIndexCount);
+            SdbParticleIndexs = new SdbDataArray<SdbParticleChildrenIndex>(dataBytes, SdbDataHead.ParticleChildrenIndexCount);
 
             // attribute constraints
-            count = this.SdbDataHead.AttributeCount * SdbAttributeConstraint.TypeSize;
+            count = SdbDataHead.AttributeCount * SdbAttributeConstraint.TypeSize;
             dataBytes = new byte[count];
             dataStream.Read(dataBytes, 0, count);
-            this.SdbAttributes = new SdbDataArray<SdbAttributeConstraint>(dataBytes, SdbDataHead.AttributeCount);
+            SdbAttributes = new SdbDataArray<SdbAttributeConstraint>(dataBytes, SdbDataHead.AttributeCount);
 
             // simple type constraints
-            dataStream.Seek(this.SdbDataHead.SimpleTypeDataOffset, SeekOrigin.Begin);
-            this.SimpleTypeRestrictions = Restrictions.SimpleTypeRestrictions.Deserialize(dataStream, this._fileFormat);
+            dataStream.Seek(SdbDataHead.SimpleTypeDataOffset, SeekOrigin.Begin);
+            SimpleTypeRestrictions = Restrictions.SimpleTypeRestrictions.Deserialize(dataStream, _fileFormat);
 
 #if DEBUG
-            Assert(this.SdbDataHead.SimpleTypeCount == this.SimpleTypeRestrictions.SimpleTypeCount);
+            Assert(SdbDataHead.SimpleTypeCount == SimpleTypeRestrictions.SimpleTypeCount);
 
             CheckData();
 #endif
@@ -126,7 +126,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         private SdbClassIdToSchemaTypeIndex GetClassIdData(SdbIndex classId)
         {
             int index = SdbClassIdToSchemaTypeIndex.ArrayIndexFromClassId(classId);
-            return this.SdbClassIdMap[index];
+            return SdbClassIdMap[index];
         }
 
 #if DEBUG
@@ -136,7 +136,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="streamLength">The length of the data.</param>
         private void CheckDataHead(int streamLength)
         {
-            var dataHead = this.SdbDataHead;
+            var dataHead = SdbDataHead;
 
             Assert(dataHead.StartClassId == 10001);
 
@@ -178,7 +178,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             SdbClassIdToSchemaTypeIndex classIdData;
 
             // check all datas in debug build
-            for (var classId = SdbClassIdToSchemaTypeIndex.StartClassId; classId < SdbClassIdToSchemaTypeIndex.StartClassId + this.SdbDataHead.ClassIdsCount - 1; classId++)
+            for (var classId = SdbClassIdToSchemaTypeIndex.StartClassId; classId < SdbClassIdToSchemaTypeIndex.StartClassId + SdbDataHead.ClassIdsCount - 1; classId++)
             {
                 classIdData = GetClassIdData(classId);
                 Debug.Assert(classIdData.ClassId == classId);
@@ -192,11 +192,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             if (schemaTypeIndex == ushort.MaxValue)
                 return;
 
-            var schemaType = this.SdbSchemaTypes[schemaTypeIndex];
+            var schemaType = SdbSchemaTypes[schemaTypeIndex];
             SdbParticleConstraint particle;
             if (schemaType.IsCompositeType)
             {
-                particle = this.SdbParticles[schemaType.ParticleIndex];
+                particle = SdbParticles[schemaType.ParticleIndex];
                 Debug.Assert(particle.ParticleType != ParticleType.Element &&
                             particle.ParticleType != ParticleType.Invalid &&
                             particle.ParticleType != ParticleType.Any &&
@@ -216,21 +216,21 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             // check attributes
             for (int i = 0; i < schemaType.AttributesCount; i++)
             {
-                var attribute = this.SdbAttributes[schemaType.StartIndexOfAttributes + i];
+                var attribute = SdbAttributes[schemaType.StartIndexOfAttributes + i];
                 CheckSimpleType(attribute.SimpleTypeIndex);
             }
         }
 
         private void CheckParticle(int particleIndex)
         {
-            var particle = this.SdbParticles[particleIndex];
+            var particle = SdbParticles[particleIndex];
             switch (particle.ParticleType)
             {
                 case ParticleType.Element:
                     Debug.Assert(particle.ChildrenCount == 0);
                     // element type ID must be a valid ID in the class ID map.
                     Debug.Assert(particle.ElementTypeId >= SdbClassIdToSchemaTypeIndex.StartClassId);
-                    Debug.Assert(particle.ElementTypeId < SdbClassIdToSchemaTypeIndex.StartClassId + this.SdbDataHead.ClassIdsCount);
+                    Debug.Assert(particle.ElementTypeId < SdbClassIdToSchemaTypeIndex.StartClassId + SdbDataHead.ClassIdsCount);
                     break;
 
                 case ParticleType.All:
@@ -240,7 +240,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     Debug.Assert(particle.ChildrenCount >= 0); // CT_Ink has an empty <xsd:sequence></xsd:sequence>
                     for (int i = 0; i < particle.ChildrenCount; i++)
                     {
-                        var childIndex = this.SdbParticleIndexs[particle.ChildrenStartIndex + i];
+                        var childIndex = SdbParticleIndexs[particle.ChildrenStartIndex + i];
                         CheckParticle(childIndex.ParticleIndex);
                     }
                     break;
@@ -260,7 +260,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         private void CheckSimpleType(int index)
         {
-            var simpleType = this.SimpleTypeRestrictions.SimpleTypes[index];
+            var simpleType = SimpleTypeRestrictions.SimpleTypes[index];
 
             if (simpleType.IsEnum)
             {
@@ -491,7 +491,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 Debug.Assert(sdbDataBytes != null);
                 Debug.Assert(sdbDataBytes.Length > 0);
 
-                this._sdbDataBytes = sdbDataBytes;
+                _sdbDataBytes = sdbDataBytes;
 
                 Count = count;
             }
@@ -511,9 +511,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                     T sdbData = new T();
 
-                    Debug.Assert(index < this._sdbDataBytes.Length / sdbData.DataSize);
+                    Debug.Assert(index < _sdbDataBytes.Length / sdbData.DataSize);
 
-                    sdbData.LoadFromBytes(this._sdbDataBytes, index * sdbData.DataSize);
+                    sdbData.LoadFromBytes(_sdbDataBytes, index * sdbData.DataSize);
 
                     return sdbData;
                 }

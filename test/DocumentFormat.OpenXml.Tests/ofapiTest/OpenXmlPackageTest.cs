@@ -96,25 +96,19 @@ namespace DocumentFormat.OpenXml.Tests
                 }
 
                 using (var originalStream = GetStream(TestFiles.complex0docx))
-                using (var orginalDoc = WordprocessingDocument.Open(originalStream, false))
+                using (var originalDoc = WordprocessingDocument.Open(originalStream, false))
                 using (var changedDoc = WordprocessingDocument.Open(stream, false))
                 {
-                    var origianalDocIterator = new OpenXmlPackagePartIterator(orginalDoc);
-                    var changedDocIterator = new OpenXmlPackagePartIterator(changedDoc);
+                    var changedDocIterator = changedDoc.GetAllParts();
                     var changedDocEnumerator = changedDocIterator.GetEnumerator();
 
-                    foreach (var originalPart in origianalDocIterator)
+                    foreach (var originalPart in originalDoc.GetAllParts())
                     {
                         Assert.True(changedDocEnumerator.MoveNext());
-                        if (!(originalPart is MainDocumentPart)
-                            && !(originalPart is StyleDefinitionsPart))
+                        if (!(originalPart is MainDocumentPart) && !(originalPart is StyleDefinitionsPart))
                         {
                             Assert.Equal(originalPart.GetType(), changedDocEnumerator.Current.GetType());
-                            //Assert.Equal(originalPart.GetStream().Length,
-                            //    changedDocEnumerator.Current.GetStream().Length,
-                            //    changedDocEnumerator.Current.Uri + "||" + changedDocEnumerator.Current.Uri);
-                            Assert.Equal(originalPart.GetStream().Length,
-                                changedDocEnumerator.Current.GetStream().Length);
+                            Assert.Equal(originalPart.GetStream().Length, changedDocEnumerator.Current.GetStream().Length);
                         }
                     }
                 }
@@ -476,28 +470,26 @@ namespace DocumentFormat.OpenXml.Tests
         ///OpenXmlPackagePartIteraterTest.
         ///</summary>
         [Fact]
-        public void OpenXmlPackagePartIteraterTestWord()
+        public void OpenXmlPackageGetAllPartsTestWord()
         {
             using (var stream = GetStream(TestFiles.complex0docx))
             using (var document = WordprocessingDocument.Open(stream, false))
             {
-                var iterator = new OpenXmlPackagePartIterator(document);
+                var parts = document.GetAllParts();
 
-                Assert.Equal(31, iterator.Count());
+                Assert.Equal(31, parts.Count());
                 // Make sure it works well for multi calls
-                Assert.Equal(31, iterator.Count());
+                Assert.Equal(31, parts.Count());
             }
         }
 
         [Fact]
-        public void OpenXmlPackagePartIteraterTestPowerPoint()
+        public void OpenXmlPackageGetAllPartsTestPowerPoint()
         {
             using (var stream = GetStream(TestFiles.o09_Performance_typical_pptx))
             using (var document = PresentationDocument.Open(stream, false))
             {
-                var iterator = new OpenXmlPackagePartIterator(document);
-
-                Assert.Equal(65, iterator.Count());
+                Assert.Equal(65, document.GetAllParts().Count());
 
                 // There is one audio part.
                 Assert.Single(document.DataParts);
