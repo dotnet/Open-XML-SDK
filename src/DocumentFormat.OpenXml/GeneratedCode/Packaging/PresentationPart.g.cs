@@ -273,59 +273,59 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml",
-                        new PartConstraintRule(nameof(CustomXmlPart), null, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<CustomXmlPart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font",
-                        new PartConstraintRule(nameof(FontPart), null, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<FontPart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/presProps",
-                        new PartConstraintRule(nameof(PresentationPropertiesPart), PresentationPropertiesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<PresentationPropertiesPart>(false, false)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableStyles",
-                        new PartConstraintRule(nameof(TableStylesPart), TableStylesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<TableStylesPart>(false, false)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme",
-                        new PartConstraintRule(nameof(ThemePart), ThemePart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<ThemePart>(false, false)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/viewProps",
-                        new PartConstraintRule(nameof(ViewPropertiesPart), ViewPropertiesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<ViewPropertiesPart>(false, false)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster",
-                        new PartConstraintRule(nameof(NotesMasterPart), NotesMasterPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<NotesMasterPart>(false, false)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide",
-                        new PartConstraintRule(nameof(SlidePart), SlidePart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<SlidePart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster",
-                        new PartConstraintRule(nameof(SlideMasterPart), SlideMasterPart.ContentTypeConstant, true, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<SlideMasterPart>(true, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags",
-                        new PartConstraintRule(nameof(UserDefinedTagsPart), UserDefinedTagsPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<UserDefinedTagsPart>(false, false)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/commentAuthors",
-                        new PartConstraintRule(nameof(CommentAuthorsPart), CommentAuthorsPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<CommentAuthorsPart>(false, false)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/handoutMaster",
-                        new PartConstraintRule(nameof(HandoutMasterPart), HandoutMasterPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<HandoutMasterPart>(false, false)
                     },
                     {
                         "http://schemas.microsoft.com/office/2006/relationships/legacyDocTextInfo",
-                        new PartConstraintRule(nameof(LegacyDiagramTextInfoPart), LegacyDiagramTextInfoPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<LegacyDiagramTextInfoPart>(false, false)
                     },
                     {
                         "http://schemas.microsoft.com/office/2006/relationships/vbaProject",
-                        new PartConstraintRule(nameof(VbaProjectPart), VbaProjectPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<VbaProjectPart>(false, false)
                     }
                 };
             }

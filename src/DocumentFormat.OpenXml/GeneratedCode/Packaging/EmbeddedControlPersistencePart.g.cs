@@ -133,7 +133,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     {
                         "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary",
-                        new PartConstraintRule(nameof(EmbeddedControlPersistenceBinaryDataPart), null, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<EmbeddedControlPersistenceBinaryDataPart>(false, true)
                     }
                 };
             }

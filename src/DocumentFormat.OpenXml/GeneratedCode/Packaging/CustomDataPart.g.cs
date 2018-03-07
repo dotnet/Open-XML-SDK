@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the CustomDataPart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2010)]
+    [ContentType("application/binary")]
     public partial class CustomDataPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/binary";

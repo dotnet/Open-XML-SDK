@@ -2,22 +2,46 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
-    internal sealed class PartConstraintRule
+    internal struct PartConstraintRule
     {
+        private readonly TypeConstraintInfo _info;
+
+        private PartConstraintRule(
+            TypeConstraintInfo info,
+            bool minOccursIsNonZero,
+            bool maxOccursGreatThanOne)
+        {
+            _info = info;
+
+            MinOccursIsNonZero = minOccursIsNonZero;
+            MaxOccursGreatThanOne = maxOccursGreatThanOne;
+        }
+
+        public static PartConstraintRule Create<T>(bool minOccursIsNonZero, bool maxOccursGreatThanOne)
+        {
+            return new PartConstraintRule(CachedRule<T>.Instance, minOccursIsNonZero, maxOccursGreatThanOne);
+        }
+
+        private static class CachedRule<T>
+        {
+            public static TypeConstraintInfo Instance { get; } = new TypeConstraintInfo(typeof(T));
+        }
+
         /// <summary>
         /// Gets the class name for the relationship type.
         /// </summary>
-        public string PartClassName { get; }
+        public string PartClassName => _info.PartClassName;
 
         /// <summary>
         /// Gets the content type of the part. Some types with fixed content types have
         /// same relationship type but different content type.
         /// </summary>
         /// <remarks>This value is null for non-fixed content type.</remarks>
-        public string PartContentType { get; }
+        public string PartContentType => _info.PartContentType;
 
         /// <summary>
         /// Gets a value indicating whether the min occurs > 0, (i.e. is required).
@@ -32,63 +56,22 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the file format version information.
         /// </summary>
-        public FileFormatVersions FileFormat { get; }
+        public FileFormatVersions FileFormat => _info.Availability;
 
-        /// <summary>
-        /// Initialize an instance of <see cref="PartConstraintRule"/>
-        /// </summary>
-        /// <param name="partClassName">The class name of the part.</param>
-        /// <param name="partContentType">The content type of the part.</param>
-        /// <param name="minOccursIsNonZero">The MinOccursIsNonZero data.</param>
-        /// <param name="maxOccursGreatThanOne">The MaxOccursGreatThanOne data.</param>
-        /// <param name="fileFormat">The file format version information.</param>
-        public PartConstraintRule(
-            string partClassName,
-            string partContentType,
-            bool minOccursIsNonZero,
-            bool maxOccursGreatThanOne,
-            FileFormatVersions fileFormat)
+        private class TypeConstraintInfo
         {
-            PartClassName = partClassName;
-            PartContentType = partContentType;
-            MinOccursIsNonZero = minOccursIsNonZero;
-            MaxOccursGreatThanOne = maxOccursGreatThanOne;
-            FileFormat = fileFormat;
-        }
-
-        public override bool Equals(object obj)
-        {
-            if (ReferenceEquals(this, obj))
+            public TypeConstraintInfo(Type type)
             {
-                return true;
+                PartClassName = type.Name;
+                PartContentType = type.GetTypeInfo().GetCustomAttribute<ContentTypeAttribute>()?.ContentType;
+                Availability = type.GetTypeInfo().GetCustomAttribute<OfficeAvailabilityAttribute>()?.OfficeVersion ?? FileFormatVersions.Office2007.AndLater();
             }
 
-            if (obj is PartConstraintRule other)
-            {
-                return string.Equals(PartClassName, other.PartClassName, StringComparison.Ordinal)
-                    && string.Equals(PartContentType, other.PartContentType, StringComparison.Ordinal)
-                    && MinOccursIsNonZero == other.MinOccursIsNonZero
-                    && MaxOccursGreatThanOne == other.MaxOccursGreatThanOne
-                    && FileFormat == other.FileFormat;
-            }
+            public string PartClassName { get; }
 
-            return false;
-        }
+            public string PartContentType { get; }
 
-        public override int GetHashCode()
-        {
-            const int HashMultiplier = 31;
-
-            unchecked
-            {
-                int hash = 17;
-                hash = hash * HashMultiplier + StringComparer.Ordinal.GetHashCode(PartClassName);
-                hash = hash * HashMultiplier + StringComparer.Ordinal.GetHashCode(PartContentType);
-                hash = hash * HashMultiplier + MinOccursIsNonZero.GetHashCode();
-                hash = hash * HashMultiplier + MaxOccursGreatThanOne.GetHashCode();
-                hash = hash * HashMultiplier + FileFormat.GetHashCode();
-                return hash;
-            }
+            public FileFormatVersions Availability { get; }
         }
     }
 }

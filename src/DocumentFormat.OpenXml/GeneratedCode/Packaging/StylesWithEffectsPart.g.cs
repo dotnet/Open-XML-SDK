@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the StylesWithEffectsPart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2010)]
+    [ContentType("application/vnd.ms-word.stylesWithEffects+xml")]
     public partial class StylesWithEffectsPart : StylesPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-word.stylesWithEffects+xml";

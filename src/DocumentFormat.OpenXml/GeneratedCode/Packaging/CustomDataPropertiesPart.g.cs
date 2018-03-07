@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the CustomDataPropertiesPart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2010)]
+    [ContentType("application/vnd.ms-excel.customDataProperties+xml")]
     public partial class CustomDataPropertiesPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.customDataProperties+xml";
@@ -82,7 +83,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     {
                         "http://schemas.microsoft.com/office/2007/relationships/customData",
-                        new PartConstraintRule(nameof(CustomDataPart), CustomDataPart.ContentTypeConstant, false, false, FileFormatVersions.Office2010.AndLater())
+                        PartConstraintRule.Create<CustomDataPart>(false, false)
                     }
                 };
             }

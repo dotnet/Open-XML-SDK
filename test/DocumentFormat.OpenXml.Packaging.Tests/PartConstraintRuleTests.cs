@@ -93,7 +93,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void ExportData()
         {
             var result = GetParts()
-                .Select(t => new ConstraintData
+                .Select(t => new
                 {
                     Name = GetName(t.GetType()),
                     DataParts = t.GetDataPartReferenceConstraint(),
@@ -139,7 +139,17 @@ namespace DocumentFormat.OpenXml.Tests
             }
         });
 
-        private struct ConstraintData
+        private void AssertDictionary(IDictionary<string, PartConstraintRule2> expected, IDictionary<string, PartConstraintRule> actual)
+        {
+            Assert.Equal(expected.Count, actual.Count);
+
+            foreach (var key in expected.Keys)
+            {
+                Assert.Equal(expected[key], actual[key]);
+            }
+        }
+
+        private class ConstraintData
         {
             public string Name { get; set; }
 
@@ -155,18 +165,63 @@ namespace DocumentFormat.OpenXml.Tests
 
             public string TargetPath { get; set; }
 
-            public IDictionary<string, PartConstraintRule> DataParts { get; set; }
+            public IDictionary<string, PartConstraintRule2> DataParts { get; set; }
 
-            public IDictionary<string, PartConstraintRule> Parts { get; set; }
+            public IDictionary<string, PartConstraintRule2> Parts { get; set; }
         }
 
-        private void AssertDictionary(IDictionary<string, PartConstraintRule> expected, IDictionary<string, PartConstraintRule> actual)
+        private class PartConstraintRule2
         {
-            Assert.Equal(expected.Count, actual.Count);
+            public string PartClassName { get; set; }
 
-            foreach (var key in expected.Keys)
+            public string PartContentType { get; set; }
+
+            public bool MinOccursIsNonZero { get; set; }
+
+            public bool MaxOccursGreatThanOne { get; set; }
+
+            public FileFormatVersions FileFormat { get; set; }
+
+            public static implicit operator PartConstraintRule2(PartConstraintRule rule)
             {
-                Assert.Equal(expected[key], actual[key]);
+                return new PartConstraintRule2
+                {
+                    FileFormat = rule.FileFormat,
+                    MaxOccursGreatThanOne = rule.MaxOccursGreatThanOne,
+                    MinOccursIsNonZero = rule.MinOccursIsNonZero,
+                    PartClassName = rule.PartClassName,
+                    PartContentType = rule.PartContentType
+                };
+            }
+
+            public override bool Equals(object obj)
+            {
+                if (obj is PartConstraintRule other)
+                {
+                    return string.Equals(PartClassName, other.PartClassName, StringComparison.Ordinal)
+                        && string.Equals(PartContentType, other.PartContentType, StringComparison.Ordinal)
+                        && MinOccursIsNonZero == other.MinOccursIsNonZero
+                        && MaxOccursGreatThanOne == other.MaxOccursGreatThanOne
+                        && FileFormat == other.FileFormat;
+                }
+
+                return false;
+            }
+
+            public override int GetHashCode()
+            {
+                const int HashMultiplier = 31;
+
+                unchecked
+                {
+                    int hash = 17;
+                    hash = hash * HashMultiplier + StringComparer.Ordinal.GetHashCode(PartClassName);
+                    hash = hash * HashMultiplier + StringComparer.Ordinal.GetHashCode(PartContentType);
+                    hash = hash * HashMultiplier + MinOccursIsNonZero.GetHashCode();
+                    hash = hash * HashMultiplier + MaxOccursGreatThanOne.GetHashCode();
+                    hash = hash * HashMultiplier + FileFormat.GetHashCode();
+                    return hash;
+                }
             }
         }
     }

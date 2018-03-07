@@ -78,7 +78,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXmlProps",
-                        new PartConstraintRule(nameof(CustomXmlPropertiesPart), CustomXmlPropertiesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<CustomXmlPropertiesPart>(false, false)
                     }
                 };
             }

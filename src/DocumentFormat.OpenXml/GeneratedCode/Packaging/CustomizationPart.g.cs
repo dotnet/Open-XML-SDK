@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the CustomizationPart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2007)]
+    [ContentType("application/vnd.ms-word.keyMapCustomizations+xml")]
     public partial class CustomizationPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-word.keyMapCustomizations+xml";
@@ -82,7 +83,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     {
                         "http://schemas.microsoft.com/office/2006/relationships/attachedToolbars",
-                        new PartConstraintRule(nameof(WordAttachedToolbarsPart), WordAttachedToolbarsPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<WordAttachedToolbarsPart>(false, false)
                     }
                 };
             }
