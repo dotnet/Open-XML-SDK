@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the SlideCommentsPart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2007)]
+    [ContentType("application/vnd.openxmlformats-officedocument.presentationml.comments+xml")]
     public partial class SlideCommentsPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.presentationml.comments+xml";

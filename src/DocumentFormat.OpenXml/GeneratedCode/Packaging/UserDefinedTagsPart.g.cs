@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the UserDefinedTagsPart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2007)]
+    [ContentType("application/vnd.openxmlformats-officedocument.presentationml.tags+xml")]
     public partial class UserDefinedTagsPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.presentationml.tags+xml";

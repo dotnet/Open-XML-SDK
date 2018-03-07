@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the WorkbookRevisionHeaderPart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2007)]
+    [ContentType("application/vnd.openxmlformats-officedocument.spreadsheetml.revisionHeaders+xml")]
     public partial class WorkbookRevisionHeaderPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.revisionHeaders+xml";
@@ -82,7 +83,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/revisionLog",
-                        new PartConstraintRule(nameof(WorkbookRevisionLogPart), WorkbookRevisionLogPart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<WorkbookRevisionLogPart>(false, true)
                     }
                 };
             }

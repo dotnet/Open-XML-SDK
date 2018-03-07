@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the DrawingsPart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2007)]
+    [ContentType("application/vnd.openxmlformats-officedocument.drawing+xml")]
     public partial class DrawingsPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.drawing+xml";
@@ -242,39 +243,39 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
-                        new PartConstraintRule(nameof(ChartPart), ChartPart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<ChartPart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors",
-                        new PartConstraintRule(nameof(DiagramColorsPart), DiagramColorsPart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<DiagramColorsPart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData",
-                        new PartConstraintRule(nameof(DiagramDataPart), DiagramDataPart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<DiagramDataPart>(false, true)
                     },
                     {
                         "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing",
-                        new PartConstraintRule(nameof(DiagramPersistLayoutPart), DiagramPersistLayoutPart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<DiagramPersistLayoutPart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout",
-                        new PartConstraintRule(nameof(DiagramLayoutDefinitionPart), DiagramLayoutDefinitionPart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<DiagramLayoutDefinitionPart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle",
-                        new PartConstraintRule(nameof(DiagramStylePart), DiagramStylePart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<DiagramStylePart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-                        new PartConstraintRule(nameof(ImagePart), null, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<ImagePart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml",
-                        new PartConstraintRule(nameof(CustomXmlPart), null, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<CustomXmlPart>(false, true)
                     },
                     {
                         "http://schemas.microsoft.com/office/2011/relationships/webextension",
-                        new PartConstraintRule(nameof(WebExtensionPart), WebExtensionPart.ContentTypeConstant, false, true, FileFormatVersions.Office2013.AndLater())
+                        PartConstraintRule.Create<WebExtensionPart>(false, true)
                     }
                 };
             }

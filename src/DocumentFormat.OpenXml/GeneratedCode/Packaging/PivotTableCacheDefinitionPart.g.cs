@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the PivotTableCacheDefinitionPart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2007)]
+    [ContentType("application/vnd.openxmlformats-officedocument.spreadsheetml.pivotCacheDefinition+xml")]
     public partial class PivotTableCacheDefinitionPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.pivotCacheDefinition+xml";
@@ -82,7 +83,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheRecords",
-                        new PartConstraintRule(nameof(PivotTableCacheRecordsPart), PivotTableCacheRecordsPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<PivotTableCacheRecordsPart>(false, false)
                     }
                 };
             }

@@ -343,99 +343,99 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml",
-                        new PartConstraintRule(nameof(CustomXmlPart), null, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<CustomXmlPart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/calcChain",
-                        new PartConstraintRule(nameof(CalculationChainPart), CalculationChainPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<CalculationChainPart>(false, false)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/sheetMetadata",
-                        new PartConstraintRule(nameof(CellMetadataPart), CellMetadataPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<CellMetadataPart>(false, false)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/connections",
-                        new PartConstraintRule(nameof(ConnectionsPart), ConnectionsPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<ConnectionsPart>(false, false)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/xmlMaps",
-                        new PartConstraintRule(nameof(CustomXmlMappingsPart), CustomXmlMappingsPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<CustomXmlMappingsPart>(false, false)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/sharedStrings",
-                        new PartConstraintRule(nameof(SharedStringTablePart), SharedStringTablePart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<SharedStringTablePart>(false, false)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/revisionHeaders",
-                        new PartConstraintRule(nameof(WorkbookRevisionHeaderPart), WorkbookRevisionHeaderPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<WorkbookRevisionHeaderPart>(false, false)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/usernames",
-                        new PartConstraintRule(nameof(WorkbookUserDataPart), WorkbookUserDataPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<WorkbookUserDataPart>(false, false)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles",
-                        new PartConstraintRule(nameof(WorkbookStylesPart), WorkbookStylesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<WorkbookStylesPart>(false, false)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme",
-                        new PartConstraintRule(nameof(ThemePart), ThemePart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<ThemePart>(false, false)
                     },
                     {
                         "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail",
-                        new PartConstraintRule(nameof(ThumbnailPart), null, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<ThumbnailPart>(false, false)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/volatileDependencies",
-                        new PartConstraintRule(nameof(VolatileDependenciesPart), VolatileDependenciesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<VolatileDependenciesPart>(false, false)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartsheet",
-                        new PartConstraintRule(nameof(ChartsheetPart), ChartsheetPart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<ChartsheetPart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/dialogsheet",
-                        new PartConstraintRule(nameof(DialogsheetPart), DialogsheetPart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<DialogsheetPart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/externalLink",
-                        new PartConstraintRule(nameof(ExternalWorkbookPart), ExternalWorkbookPart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<ExternalWorkbookPart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheDefinition",
-                        new PartConstraintRule(nameof(PivotTableCacheDefinitionPart), PivotTableCacheDefinitionPart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<PivotTableCacheDefinitionPart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet",
-                        new PartConstraintRule(nameof(WorksheetPart), WorksheetPart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<WorksheetPart>(false, true)
                     },
                     {
                         "http://schemas.microsoft.com/office/2006/relationships/attachedToolbars",
-                        new PartConstraintRule(nameof(ExcelAttachedToolbarsPart), ExcelAttachedToolbarsPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<ExcelAttachedToolbarsPart>(false, false)
                     },
                     {
                         "http://schemas.microsoft.com/office/2006/relationships/vbaProject",
-                        new PartConstraintRule(nameof(VbaProjectPart), VbaProjectPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<VbaProjectPart>(false, false)
                     },
                     {
                         "http://schemas.microsoft.com/office/2006/relationships/xlMacrosheet",
-                        new PartConstraintRule(nameof(MacroSheetPart), MacroSheetPart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<MacroSheetPart>(false, true)
                     },
                     {
                         "http://schemas.microsoft.com/office/2006/relationships/xlIntlMacrosheet",
-                        new PartConstraintRule(nameof(InternationalMacroSheetPart), InternationalMacroSheetPart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<InternationalMacroSheetPart>(false, true)
                     },
                     {
                         "http://schemas.microsoft.com/office/2007/relationships/customDataProps",
-                        new PartConstraintRule(nameof(CustomDataPropertiesPart), CustomDataPropertiesPart.ContentTypeConstant, false, true, FileFormatVersions.Office2010.AndLater())
+                        PartConstraintRule.Create<CustomDataPropertiesPart>(false, true)
                     },
                     {
                         "http://schemas.microsoft.com/office/2007/relationships/slicerCache",
-                        new PartConstraintRule(nameof(SlicerCachePart), SlicerCachePart.ContentTypeConstant, false, true, FileFormatVersions.Office2010.AndLater())
+                        PartConstraintRule.Create<SlicerCachePart>(false, true)
                     },
                     {
                         "http://schemas.microsoft.com/office/2011/relationships/timelineCache",
-                        new PartConstraintRule(nameof(TimeLineCachePart), TimeLineCachePart.ContentTypeConstant, false, true, FileFormatVersions.Office2013.AndLater())
+                        PartConstraintRule.Create<TimeLineCachePart>(false, true)
                     }
                 };
             }

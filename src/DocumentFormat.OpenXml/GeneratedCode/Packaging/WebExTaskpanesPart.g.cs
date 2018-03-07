@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the WebExTaskpanesPart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2013)]
+    [ContentType("application/vnd.ms-office.webextensiontaskpanes+xml")]
     public partial class WebExTaskpanesPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.webextensiontaskpanes+xml";
@@ -91,7 +92,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     {
                         "http://schemas.microsoft.com/office/2011/relationships/webextension",
-                        new PartConstraintRule(nameof(WebExtensionPart), WebExtensionPart.ContentTypeConstant, false, true, FileFormatVersions.Office2013.AndLater())
+                        PartConstraintRule.Create<WebExtensionPart>(false, true)
                     }
                 };
             }

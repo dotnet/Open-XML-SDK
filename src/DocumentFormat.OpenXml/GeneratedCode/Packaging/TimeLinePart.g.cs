@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the TimeLinePart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2013)]
+    [ContentType("application/vnd.ms-excel.timeline+xml")]
     public partial class TimeLinePart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.timeline+xml";

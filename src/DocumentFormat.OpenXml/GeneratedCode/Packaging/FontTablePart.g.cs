@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the FontTablePart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2007)]
+    [ContentType("application/vnd.openxmlformats-officedocument.wordprocessingml.fontTable+xml")]
     public partial class FontTablePart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.fontTable+xml";
@@ -134,7 +135,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font",
-                        new PartConstraintRule(nameof(FontPart), null, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<FontPart>(false, true)
                     }
                 };
             }

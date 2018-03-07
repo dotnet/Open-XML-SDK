@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the DocumentSettingsPart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2007)]
+    [ContentType("application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml")]
     public partial class DocumentSettingsPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml";
@@ -193,11 +194,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/recipientData",
-                        new PartConstraintRule(nameof(MailMergeRecipientDataPart), null, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<MailMergeRecipientDataPart>(false, false)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-                        new PartConstraintRule(nameof(ImagePart), null, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<ImagePart>(false, true)
                     }
                 };
             }

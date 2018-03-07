@@ -25,19 +25,21 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (_partConstraint == null)
             {
-                Dictionary<string, PartConstraintRule> tempData = new Dictionary<string, PartConstraintRule>();
-                tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument", new PartConstraintRule("MainDocumentPart", null, true, false, FileFormatVersions.Office2007.AndLater()));
-                tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties", new PartConstraintRule("CoreFilePropertiesPart", CoreFilePropertiesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
-                tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties", new PartConstraintRule("ExtendedFilePropertiesPart", ExtendedFilePropertiesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
-                tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties", new PartConstraintRule("CustomFilePropertiesPart", CustomFilePropertiesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
-                tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail", new PartConstraintRule("ThumbnailPart", null, false, false, FileFormatVersions.Office2007.AndLater()));
-                tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin", new PartConstraintRule("DigitalSignatureOriginPart", DigitalSignatureOriginPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
-                tempData.Add("http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization", new PartConstraintRule("QuickAccessToolbarCustomizationsPart", QuickAccessToolbarCustomizationsPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
-                tempData.Add("http://schemas.microsoft.com/office/2006/relationships/ui/extensibility", new PartConstraintRule("RibbonExtensibilityPart", RibbonExtensibilityPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
-                tempData.Add("http://schemas.microsoft.com/office/2007/relationships/ui/extensibility", new PartConstraintRule("RibbonAndBackstageCustomizationsPart", RibbonAndBackstageCustomizationsPart.ContentTypeConstant, false, false, FileFormatVersions.Office2010.AndLater()));
-                tempData.Add("http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes", new PartConstraintRule("WebExTaskpanesPart", WebExTaskpanesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2013.AndLater()));
-                _partConstraint = tempData;
+                _partConstraint = new Dictionary<string, PartConstraintRule>(StringComparer.Ordinal)
+                {
+                    { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument", PartConstraintRule.Create<MainDocumentPart>(true, false) },
+                    { "http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties", PartConstraintRule.Create<CoreFilePropertiesPart>(false, false) },
+                    { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties", PartConstraintRule.Create<ExtendedFilePropertiesPart>(false, false) },
+                    { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties", PartConstraintRule.Create<CustomFilePropertiesPart>(false, false) },
+                    { "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail", PartConstraintRule.Create<ThumbnailPart>(false, false) },
+                    { "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin", PartConstraintRule.Create<DigitalSignatureOriginPart>(false, false) },
+                    { "http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization", PartConstraintRule.Create<QuickAccessToolbarCustomizationsPart>(false, false) },
+                    { "http://schemas.microsoft.com/office/2006/relationships/ui/extensibility", PartConstraintRule.Create<RibbonExtensibilityPart>(false, false) },
+                    { "http://schemas.microsoft.com/office/2007/relationships/ui/extensibility", PartConstraintRule.Create<RibbonAndBackstageCustomizationsPart>(false, false) },
+                    { "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes", PartConstraintRule.Create<WebExTaskpanesPart>(false, false) }
+                };
             }
+
             return _partConstraint;
         }
 

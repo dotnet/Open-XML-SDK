@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the WorksheetPart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2007)]
+    [ContentType("application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml")]
     public partial class WorksheetPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml";
@@ -433,75 +434,75 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings",
-                        new PartConstraintRule(nameof(SpreadsheetPrinterSettingsPart), SpreadsheetPrinterSettingsPart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<SpreadsheetPrinterSettingsPart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing",
-                        new PartConstraintRule(nameof(DrawingsPart), DrawingsPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<DrawingsPart>(false, false)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing",
-                        new PartConstraintRule(nameof(VmlDrawingPart), VmlDrawingPart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<VmlDrawingPart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments",
-                        new PartConstraintRule(nameof(WorksheetCommentsPart), WorksheetCommentsPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<WorksheetCommentsPart>(false, false)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotTable",
-                        new PartConstraintRule(nameof(PivotTablePart), PivotTablePart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<PivotTablePart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableSingleCells",
-                        new PartConstraintRule(nameof(SingleCellTablePart), SingleCellTablePart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<SingleCellTablePart>(false, false)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/table",
-                        new PartConstraintRule(nameof(TableDefinitionPart), TableDefinitionPart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<TableDefinitionPart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control",
-                        new PartConstraintRule(nameof(EmbeddedControlPersistencePart), null, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<EmbeddedControlPersistencePart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/ctrlProp",
-                        new PartConstraintRule(nameof(ControlPropertiesPart), ControlPropertiesPart.ContentTypeConstant, false, true, FileFormatVersions.Office2010.AndLater())
+                        PartConstraintRule.Create<ControlPropertiesPart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-                        new PartConstraintRule(nameof(EmbeddedObjectPart), null, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<EmbeddedObjectPart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-                        new PartConstraintRule(nameof(EmbeddedPackagePart), null, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<EmbeddedPackagePart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-                        new PartConstraintRule(nameof(ImagePart), null, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<ImagePart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customProperty",
-                        new PartConstraintRule(nameof(CustomPropertyPart), null, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<CustomPropertyPart>(false, true)
                     },
                     {
                         "http://schemas.microsoft.com/office/2006/relationships/wsSortMap",
-                        new PartConstraintRule(nameof(WorksheetSortMapPart), WorksheetSortMapPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<WorksheetSortMapPart>(false, false)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/queryTable",
-                        new PartConstraintRule(nameof(QueryTablePart), QueryTablePart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<QueryTablePart>(false, true)
                     },
                     {
                         "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary",
-                        new PartConstraintRule(nameof(EmbeddedControlPersistenceBinaryDataPart), null, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<EmbeddedControlPersistenceBinaryDataPart>(false, true)
                     },
                     {
                         "http://schemas.microsoft.com/office/2007/relationships/slicer",
-                        new PartConstraintRule(nameof(SlicersPart), SlicersPart.ContentTypeConstant, false, true, FileFormatVersions.Office2010.AndLater())
+                        PartConstraintRule.Create<SlicersPart>(false, true)
                     },
                     {
                         "http://schemas.microsoft.com/office/2011/relationships/timeline",
-                        new PartConstraintRule(nameof(TimeLinePart), TimeLinePart.ContentTypeConstant, false, true, FileFormatVersions.Office2013.AndLater())
+                        PartConstraintRule.Create<TimeLinePart>(false, true)
                     }
                 };
             }

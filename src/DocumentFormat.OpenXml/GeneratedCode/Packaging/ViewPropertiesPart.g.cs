@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the ViewPropertiesPart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2007)]
+    [ContentType("application/vnd.openxmlformats-officedocument.presentationml.viewProps+xml")]
     public partial class ViewPropertiesPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.presentationml.viewProps+xml";
@@ -82,7 +83,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide",
-                        new PartConstraintRule(nameof(SlidePart), SlidePart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<SlidePart>(false, true)
                     }
                 };
             }

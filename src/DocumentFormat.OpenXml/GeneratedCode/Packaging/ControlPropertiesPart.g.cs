@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the ControlPropertiesPart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2010)]
+    [ContentType("application/vnd.ms-excel.controlproperties+xml")]
     public partial class ControlPropertiesPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.controlproperties+xml";

@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the ChartColorStylePart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2013)]
+    [ContentType("application/vnd.ms-office.chartcolorstyle+xml")]
     public partial class ChartColorStylePart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.chartcolorstyle+xml";

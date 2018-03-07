@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the QuickAccessToolbarCustomizationsPart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2007)]
+    [ContentType("application/xml")]
     public partial class QuickAccessToolbarCustomizationsPart : CustomUIPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/xml";

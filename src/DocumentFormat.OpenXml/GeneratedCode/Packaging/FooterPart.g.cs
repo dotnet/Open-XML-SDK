@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the FooterPart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2007)]
+    [ContentType("application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml")]
     public partial class FooterPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml";
@@ -340,7 +341,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/video",
-                        new PartConstraintRule(nameof(VideoReferenceRelationship), null, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<VideoReferenceRelationship>(false, true)
                     }
                 };
             }
@@ -357,47 +358,47 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk",
-                        new PartConstraintRule(nameof(AlternativeFormatImportPart), null, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<AlternativeFormatImportPart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
-                        new PartConstraintRule(nameof(ChartPart), ChartPart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<ChartPart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors",
-                        new PartConstraintRule(nameof(DiagramColorsPart), DiagramColorsPart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<DiagramColorsPart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData",
-                        new PartConstraintRule(nameof(DiagramDataPart), DiagramDataPart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<DiagramDataPart>(false, true)
                     },
                     {
                         "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing",
-                        new PartConstraintRule(nameof(DiagramPersistLayoutPart), DiagramPersistLayoutPart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<DiagramPersistLayoutPart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout",
-                        new PartConstraintRule(nameof(DiagramLayoutDefinitionPart), DiagramLayoutDefinitionPart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<DiagramLayoutDefinitionPart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle",
-                        new PartConstraintRule(nameof(DiagramStylePart), DiagramStylePart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<DiagramStylePart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control",
-                        new PartConstraintRule(nameof(EmbeddedControlPersistencePart), null, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<EmbeddedControlPersistencePart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-                        new PartConstraintRule(nameof(EmbeddedObjectPart), null, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<EmbeddedObjectPart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-                        new PartConstraintRule(nameof(EmbeddedPackagePart), null, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<EmbeddedPackagePart>(false, true)
                     },
                     {
                         "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-                        new PartConstraintRule(nameof(ImagePart), null, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<ImagePart>(false, true)
                     }
                 };
             }

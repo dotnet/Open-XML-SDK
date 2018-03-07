@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the SlicersPart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2010)]
+    [ContentType("application/vnd.ms-excel.slicer+xml")]
     public partial class SlicersPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.slicer+xml";

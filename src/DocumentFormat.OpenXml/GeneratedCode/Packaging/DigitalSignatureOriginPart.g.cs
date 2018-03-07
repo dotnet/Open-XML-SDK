@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the DigitalSignatureOriginPart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2007)]
+    [ContentType("application/vnd.openxmlformats-package.digital-signature-origin")]
     public partial class DigitalSignatureOriginPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-package.digital-signature-origin";
@@ -85,7 +86,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     {
                         "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/signature",
-                        new PartConstraintRule(nameof(XmlSignaturePart), XmlSignaturePart.ContentTypeConstant, false, true, FileFormatVersions.Office2007.AndLater())
+                        PartConstraintRule.Create<XmlSignaturePart>(false, true)
                     }
                 };
             }
