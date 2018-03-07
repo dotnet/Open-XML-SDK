@@ -1110,14 +1110,14 @@
         "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtended+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
-        "FileFormat": 7
+        "FileFormat": 4
       },
       "http://schemas.microsoft.com/office/2011/relationships/people": {
         "PartClassName": "WordprocessingPeoplePart",
         "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.people+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
-        "FileFormat": 7
+        "FileFormat": 4
       },
       "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk": {
         "PartClassName": "AlternativeFormatImportPart",
@@ -1756,14 +1756,14 @@
         "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtended+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
-        "FileFormat": 7
+        "FileFormat": 4
       },
       "http://schemas.microsoft.com/office/2011/relationships/people": {
         "PartClassName": "WordprocessingPeoplePart",
         "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.people+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
-        "FileFormat": 7
+        "FileFormat": 4
       },
       "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk": {
         "PartClassName": "AlternativeFormatImportPart",
@@ -2447,7 +2447,7 @@
         "PartContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
-        "FileFormat": 7
+        "FileFormat": 6
       }
     },
     "Parts": {
@@ -2600,7 +2600,7 @@
         "PartContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
-        "FileFormat": 7
+        "FileFormat": 6
       }
     },
     "Parts": {
@@ -2753,7 +2753,7 @@
         "PartContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
-        "FileFormat": 7
+        "FileFormat": 6
       }
     },
     "Parts": {
@@ -3163,7 +3163,7 @@
         "PartContentType": "application/vnd.ms-office.webextension+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
-        "FileFormat": 7
+        "FileFormat": 4
       }
     }
   },

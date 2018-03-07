@@ -78,7 +78,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Theory]
         public void ValidateValid(OpenXmlPart part)
         {
-            var availability = part.GetType().GetCustomAttribute<OfficeAvailabilityAttribute>()?.OfficeVersion ?? FileFormatVersions.Office2007;
+            var availability = part.GetType().GetCustomAttribute<OfficeAvailabilityAttribute>().OfficeVersion; 
             var versions = Enum.GetValues(typeof(FileFormatVersions))
                 .Cast<FileFormatVersions>()
                 .Where(v => v != FileFormatVersions.None);
@@ -89,10 +89,8 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-#pragma warning disable xUnit1013 // Public method should be marked as test
         [Fact]
         public void ExportData()
-#pragma warning restore xUnit1013 // Public method should be marked as test
         {
             var result = GetParts()
                 .Select(t => new ConstraintData
