@@ -10,13 +10,12 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the WebExTaskpanesPart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2013)]
-    [ContentType("application/vnd.ms-office.webextensiontaskpanes+xml")]
+    [ContentType(ContentTypeConstant)]
     public partial class WebExTaskpanesPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.webextensiontaskpanes+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes";
-        private static Dictionary<string, PartConstraintRule> _dataPartReferenceConstraint;
-        private static Dictionary<string, PartConstraintRule> _partConstraint;
+        private static PartConstraintCollection _partConstraints;
 
         /// <summary>
         /// Creates an instance of the WebExTaskpanesPart OpenXmlType
@@ -30,6 +29,26 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         internal sealed override bool IsContentTypeFixed => true;
+
+        /// <inheritdoc/>
+        internal sealed override PartConstraintCollection PartConstraints
+        {
+            get
+            {
+                if (_partConstraints is null)
+                {
+                    _partConstraints = new PartConstraintCollection
+                    {
+                        {
+                            "http://schemas.microsoft.com/office/2011/relationships/webextension",
+                            PartConstraintRule.Create<WebExtensionPart>(false, true)
+                        }
+                    };
+                }
+
+                return _partConstraints;
+            }
+        }
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
@@ -70,34 +89,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             throw new ArgumentOutOfRangeException(nameof(relationshipType));
-        }
-
-        /// <inheritdoc/>
-        internal sealed override IDictionary<string, PartConstraintRule> GetDataPartReferenceConstraint()
-        {
-            if (_dataPartReferenceConstraint is null)
-            {
-                _dataPartReferenceConstraint = new Dictionary<string, PartConstraintRule>(StringComparer.Ordinal) { };
-            }
-
-            return _dataPartReferenceConstraint;
-        }
-
-        /// <inheritdoc/>
-        internal sealed override IDictionary<string, PartConstraintRule> GetPartConstraint()
-        {
-            if (_partConstraint is null)
-            {
-                _partConstraint = new Dictionary<string, PartConstraintRule>(StringComparer.Ordinal)
-                {
-                    {
-                        "http://schemas.microsoft.com/office/2011/relationships/webextension",
-                        PartConstraintRule.Create<WebExtensionPart>(false, true)
-                    }
-                };
-            }
-
-            return _partConstraint;
         }
 
         internal override bool IsInVersion(FileFormatVersions version)

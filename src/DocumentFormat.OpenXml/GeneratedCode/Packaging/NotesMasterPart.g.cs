@@ -10,13 +10,13 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the NotesMasterPart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2007)]
-    [ContentType("application/vnd.openxmlformats-officedocument.presentationml.notesMaster+xml")]
+    [ContentType(ContentTypeConstant)]
     public partial class NotesMasterPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.presentationml.notesMaster+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster";
-        private static Dictionary<string, PartConstraintRule> _dataPartReferenceConstraint;
-        private static Dictionary<string, PartConstraintRule> _partConstraint;
+        private static PartConstraintCollection _dataPartConstraints;
+        private static PartConstraintCollection _partConstraints;
 
         /// <summary>
         /// Creates an instance of the NotesMasterPart OpenXmlType
@@ -37,6 +37,30 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the CustomXmlParts of the NotesMasterPart
         /// </summary>
         public IEnumerable<CustomXmlPart> CustomXmlParts => GetPartsOfType<CustomXmlPart>();
+
+        /// <inheritdoc/>
+        internal sealed override PartConstraintCollection DataPartReferenceConstraints
+        {
+            get
+            {
+                if (_dataPartConstraints is null)
+                {
+                    _dataPartConstraints = new PartConstraintCollection
+                    {
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/audio",
+                            PartConstraintRule.Create<AudioReferenceRelationship>(false, true)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/video",
+                            PartConstraintRule.Create<VideoReferenceRelationship>(false, true)
+                        }
+                    };
+                }
+
+                return _dataPartConstraints;
+            }
+        }
 
         /// <summary>
         /// Gets the DiagramColorsParts of the NotesMasterPart
@@ -85,6 +109,82 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         internal sealed override bool IsContentTypeFixed => true;
+
+        /// <inheritdoc/>
+        internal sealed override PartConstraintCollection PartConstraints
+        {
+            get
+            {
+                if (_partConstraints is null)
+                {
+                    _partConstraints = new PartConstraintCollection
+                    {
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml",
+                            PartConstraintRule.Create<CustomXmlPart>(false, true)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
+                            PartConstraintRule.Create<ChartPart>(false, true)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors",
+                            PartConstraintRule.Create<DiagramColorsPart>(false, true)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData",
+                            PartConstraintRule.Create<DiagramDataPart>(false, true)
+                        },
+                        {
+                            "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing",
+                            PartConstraintRule.Create<DiagramPersistLayoutPart>(false, true)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout",
+                            PartConstraintRule.Create<DiagramLayoutDefinitionPart>(false, true)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle",
+                            PartConstraintRule.Create<DiagramStylePart>(false, true)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
+                            PartConstraintRule.Create<EmbeddedObjectPart>(false, true)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
+                            PartConstraintRule.Create<EmbeddedPackagePart>(false, true)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+                            PartConstraintRule.Create<ImagePart>(false, true)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing",
+                            PartConstraintRule.Create<VmlDrawingPart>(false, true)
+                        },
+                        {
+                            "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary",
+                            PartConstraintRule.Create<EmbeddedControlPersistenceBinaryDataPart>(false, true)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme",
+                            PartConstraintRule.Create<ThemePart>(false, false)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags",
+                            PartConstraintRule.Create<UserDefinedTagsPart>(false, true)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide",
+                            PartConstraintRule.Create<SlidePart>(false, false)
+                        }
+                    };
+                }
+
+                return _partConstraints;
+            }
+        }
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
@@ -377,100 +477,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             throw new ArgumentOutOfRangeException(nameof(relationshipType));
-        }
-
-        /// <inheritdoc/>
-        internal sealed override IDictionary<string, PartConstraintRule> GetDataPartReferenceConstraint()
-        {
-            if (_dataPartReferenceConstraint is null)
-            {
-                _dataPartReferenceConstraint = new Dictionary<string, PartConstraintRule>(StringComparer.Ordinal)
-                {
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/audio",
-                        PartConstraintRule.Create<AudioReferenceRelationship>(false, true)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/video",
-                        PartConstraintRule.Create<VideoReferenceRelationship>(false, true)
-                    }
-                };
-            }
-
-            return _dataPartReferenceConstraint;
-        }
-
-        /// <inheritdoc/>
-        internal sealed override IDictionary<string, PartConstraintRule> GetPartConstraint()
-        {
-            if (_partConstraint is null)
-            {
-                _partConstraint = new Dictionary<string, PartConstraintRule>(StringComparer.Ordinal)
-                {
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml",
-                        PartConstraintRule.Create<CustomXmlPart>(false, true)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
-                        PartConstraintRule.Create<ChartPart>(false, true)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors",
-                        PartConstraintRule.Create<DiagramColorsPart>(false, true)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData",
-                        PartConstraintRule.Create<DiagramDataPart>(false, true)
-                    },
-                    {
-                        "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing",
-                        PartConstraintRule.Create<DiagramPersistLayoutPart>(false, true)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout",
-                        PartConstraintRule.Create<DiagramLayoutDefinitionPart>(false, true)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle",
-                        PartConstraintRule.Create<DiagramStylePart>(false, true)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-                        PartConstraintRule.Create<EmbeddedObjectPart>(false, true)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-                        PartConstraintRule.Create<EmbeddedPackagePart>(false, true)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-                        PartConstraintRule.Create<ImagePart>(false, true)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing",
-                        PartConstraintRule.Create<VmlDrawingPart>(false, true)
-                    },
-                    {
-                        "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary",
-                        PartConstraintRule.Create<EmbeddedControlPersistenceBinaryDataPart>(false, true)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme",
-                        PartConstraintRule.Create<ThemePart>(false, false)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags",
-                        PartConstraintRule.Create<UserDefinedTagsPart>(false, true)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide",
-                        PartConstraintRule.Create<SlidePart>(false, false)
-                    }
-                };
-            }
-
-            return _partConstraint;
         }
     }
 }

@@ -56,8 +56,18 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var data = GetConstraintData(part);
 
-            Assert.Same(part.GetPartConstraint(), part.GetPartConstraint());
-            Assert.Same(part.GetDataPartReferenceConstraint(), part.GetDataPartReferenceConstraint());
+            Assert.Same(part.PartConstraints, part.PartConstraints);
+            Assert.Same(part.DataPartReferenceConstraints, part.DataPartReferenceConstraints);
+
+            if (!part.PartConstraints.Any())
+            {
+                Assert.Same(PartConstraintCollection.Instance, part.PartConstraints);
+            }
+
+            if (!part.DataPartReferenceConstraints.Any())
+            {
+                Assert.Same(PartConstraintCollection.Instance, part.DataPartReferenceConstraints);
+            }
 
             Assert.Equal(data.IsContentTypeFixed, part.IsContentTypeFixed);
             Assert.Equal(data.RelationshipType, part.RelationshipType);
@@ -70,8 +80,8 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Equal(data.ContentType, part.ContentType);
             }
 
-            AssertDictionary(data.DataParts, part.GetDataPartReferenceConstraint());
-            AssertDictionary(data.Parts, part.GetPartConstraint());
+            AssertDictionary(data.DataParts, part.DataPartReferenceConstraints);
+            AssertDictionary(data.Parts, part.PartConstraints);
         }
 
         [MemberData(nameof(GetOpenXmlParts))]
@@ -96,8 +106,8 @@ namespace DocumentFormat.OpenXml.Tests
                 .Select(t => new
                 {
                     Name = GetName(t.GetType()),
-                    DataParts = t.GetDataPartReferenceConstraint(),
-                    Parts = t.GetPartConstraint(),
+                    DataParts = t.DataPartReferenceConstraints,
+                    Parts = t.PartConstraints,
                     ContentType = t.IsContentTypeFixed ? t.ContentType : null,
                     IsContentTypeFixed = t.IsContentTypeFixed,
                     RelationshipType = t.RelationshipType,
@@ -139,7 +149,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
         });
 
-        private void AssertDictionary(IDictionary<string, PartConstraintRule2> expected, IDictionary<string, PartConstraintRule> actual)
+        private void AssertDictionary(IDictionary<string, PartConstraintRule2> expected, IReadOnlyDictionary<string, PartConstraintRule> actual)
         {
             Assert.Equal(expected.Count, actual.Count);
 

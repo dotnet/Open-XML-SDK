@@ -10,13 +10,12 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the VmlDrawingPart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2007)]
-    [ContentType("application/vnd.openxmlformats-officedocument.vmlDrawing")]
+    [ContentType(ContentTypeConstant)]
     public partial class VmlDrawingPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.vmlDrawing";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing";
-        private static Dictionary<string, PartConstraintRule> _dataPartReferenceConstraint;
-        private static Dictionary<string, PartConstraintRule> _partConstraint;
+        private static PartConstraintCollection _partConstraints;
 
         /// <summary>
         /// Creates an instance of the VmlDrawingPart OpenXmlType
@@ -40,6 +39,30 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the LegacyDiagramTextParts of the VmlDrawingPart
         /// </summary>
         public IEnumerable<LegacyDiagramTextPart> LegacyDiagramTextParts => GetPartsOfType<LegacyDiagramTextPart>();
+
+        /// <inheritdoc/>
+        internal sealed override PartConstraintCollection PartConstraints
+        {
+            get
+            {
+                if (_partConstraints is null)
+                {
+                    _partConstraints = new PartConstraintCollection
+                    {
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+                            PartConstraintRule.Create<ImagePart>(false, true)
+                        },
+                        {
+                            "http://schemas.microsoft.com/office/2006/relationships/legacyDiagramText",
+                            PartConstraintRule.Create<LegacyDiagramTextPart>(false, true)
+                        }
+                    };
+                }
+
+                return _partConstraints;
+            }
+        }
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
@@ -123,38 +146,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             throw new ArgumentOutOfRangeException(nameof(relationshipType));
-        }
-
-        /// <inheritdoc/>
-        internal sealed override IDictionary<string, PartConstraintRule> GetDataPartReferenceConstraint()
-        {
-            if (_dataPartReferenceConstraint is null)
-            {
-                _dataPartReferenceConstraint = new Dictionary<string, PartConstraintRule>(StringComparer.Ordinal) { };
-            }
-
-            return _dataPartReferenceConstraint;
-        }
-
-        /// <inheritdoc/>
-        internal sealed override IDictionary<string, PartConstraintRule> GetPartConstraint()
-        {
-            if (_partConstraint is null)
-            {
-                _partConstraint = new Dictionary<string, PartConstraintRule>(StringComparer.Ordinal)
-                {
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-                        PartConstraintRule.Create<ImagePart>(false, true)
-                    },
-                    {
-                        "http://schemas.microsoft.com/office/2006/relationships/legacyDiagramText",
-                        PartConstraintRule.Create<LegacyDiagramTextPart>(false, true)
-                    }
-                };
-            }
-
-            return _partConstraint;
         }
     }
 }

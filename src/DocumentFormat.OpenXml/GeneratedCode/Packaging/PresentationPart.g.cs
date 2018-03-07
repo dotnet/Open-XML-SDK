@@ -13,8 +13,7 @@ namespace DocumentFormat.OpenXml.Packaging
     public partial class PresentationPart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
-        private static Dictionary<string, PartConstraintRule> _dataPartReferenceConstraint;
-        private static Dictionary<string, PartConstraintRule> _partConstraint;
+        private static PartConstraintCollection _partConstraints;
 
         /// <summary>
         /// Creates an instance of the PresentationPart OpenXmlType
@@ -55,6 +54,78 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the NotesMasterPart of the PresentationPart
         /// </summary>
         public NotesMasterPart NotesMasterPart => GetSubPartOfType<NotesMasterPart>();
+
+        /// <inheritdoc/>
+        internal sealed override PartConstraintCollection PartConstraints
+        {
+            get
+            {
+                if (_partConstraints is null)
+                {
+                    _partConstraints = new PartConstraintCollection
+                    {
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml",
+                            PartConstraintRule.Create<CustomXmlPart>(false, true)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font",
+                            PartConstraintRule.Create<FontPart>(false, true)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/presProps",
+                            PartConstraintRule.Create<PresentationPropertiesPart>(false, false)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableStyles",
+                            PartConstraintRule.Create<TableStylesPart>(false, false)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme",
+                            PartConstraintRule.Create<ThemePart>(false, false)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/viewProps",
+                            PartConstraintRule.Create<ViewPropertiesPart>(false, false)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster",
+                            PartConstraintRule.Create<NotesMasterPart>(false, false)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide",
+                            PartConstraintRule.Create<SlidePart>(false, true)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster",
+                            PartConstraintRule.Create<SlideMasterPart>(true, true)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags",
+                            PartConstraintRule.Create<UserDefinedTagsPart>(false, false)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/commentAuthors",
+                            PartConstraintRule.Create<CommentAuthorsPart>(false, false)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/handoutMaster",
+                            PartConstraintRule.Create<HandoutMasterPart>(false, false)
+                        },
+                        {
+                            "http://schemas.microsoft.com/office/2006/relationships/legacyDocTextInfo",
+                            PartConstraintRule.Create<LegacyDiagramTextInfoPart>(false, false)
+                        },
+                        {
+                            "http://schemas.microsoft.com/office/2006/relationships/vbaProject",
+                            PartConstraintRule.Create<VbaProjectPart>(false, false)
+                        }
+                    };
+                }
+
+                return _partConstraints;
+            }
+        }
 
         /// <summary>
         /// Gets the PresentationPropertiesPart of the PresentationPart
@@ -251,86 +322,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             throw new ArgumentOutOfRangeException(nameof(relationshipType));
-        }
-
-        /// <inheritdoc/>
-        internal sealed override IDictionary<string, PartConstraintRule> GetDataPartReferenceConstraint()
-        {
-            if (_dataPartReferenceConstraint is null)
-            {
-                _dataPartReferenceConstraint = new Dictionary<string, PartConstraintRule>(StringComparer.Ordinal) { };
-            }
-
-            return _dataPartReferenceConstraint;
-        }
-
-        /// <inheritdoc/>
-        internal sealed override IDictionary<string, PartConstraintRule> GetPartConstraint()
-        {
-            if (_partConstraint is null)
-            {
-                _partConstraint = new Dictionary<string, PartConstraintRule>(StringComparer.Ordinal)
-                {
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml",
-                        PartConstraintRule.Create<CustomXmlPart>(false, true)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font",
-                        PartConstraintRule.Create<FontPart>(false, true)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/presProps",
-                        PartConstraintRule.Create<PresentationPropertiesPart>(false, false)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableStyles",
-                        PartConstraintRule.Create<TableStylesPart>(false, false)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme",
-                        PartConstraintRule.Create<ThemePart>(false, false)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/viewProps",
-                        PartConstraintRule.Create<ViewPropertiesPart>(false, false)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster",
-                        PartConstraintRule.Create<NotesMasterPart>(false, false)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide",
-                        PartConstraintRule.Create<SlidePart>(false, true)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster",
-                        PartConstraintRule.Create<SlideMasterPart>(true, true)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags",
-                        PartConstraintRule.Create<UserDefinedTagsPart>(false, false)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/commentAuthors",
-                        PartConstraintRule.Create<CommentAuthorsPart>(false, false)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/handoutMaster",
-                        PartConstraintRule.Create<HandoutMasterPart>(false, false)
-                    },
-                    {
-                        "http://schemas.microsoft.com/office/2006/relationships/legacyDocTextInfo",
-                        PartConstraintRule.Create<LegacyDiagramTextInfoPart>(false, false)
-                    },
-                    {
-                        "http://schemas.microsoft.com/office/2006/relationships/vbaProject",
-                        PartConstraintRule.Create<VbaProjectPart>(false, false)
-                    }
-                };
-            }
-
-            return _partConstraint;
         }
     }
 }

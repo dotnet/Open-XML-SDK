@@ -14,48 +14,35 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public partial class SpreadsheetDocument : OpenXmlPackage
     {
-        private static Dictionary<string, PartConstraintRule> _partConstraint;
-        private static Dictionary<string, PartConstraintRule> _dataPartReferenceConstraint;
+        private static PartConstraintCollection _partConstraints;
 
         /// <summary>
         /// Gets part constraint data.
         /// </summary>
         /// <returns>The constraint data of the part.</returns>
-        internal sealed override IDictionary<string, PartConstraintRule> GetPartConstraint()
+        internal sealed override PartConstraintCollection PartConstraints
         {
-            if (_partConstraint == null)
+            get
             {
-                _partConstraint = new Dictionary<string, PartConstraintRule>(StringComparer.Ordinal)
+                if (_partConstraints == null)
                 {
-                    { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument", PartConstraintRule.Create<WorkbookPart>(true, false) },
-                    { "http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties", PartConstraintRule.Create<CoreFilePropertiesPart>(false, false) },
-                    { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties", PartConstraintRule.Create<ExtendedFilePropertiesPart>(false, false) },
-                    { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties", PartConstraintRule.Create<CustomFilePropertiesPart>(false, false) },
-                    { "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail", PartConstraintRule.Create<ThumbnailPart>(false, false) },
-                    { "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin", PartConstraintRule.Create<DigitalSignatureOriginPart>(false, false) },
-                    { "http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization", PartConstraintRule.Create<QuickAccessToolbarCustomizationsPart>(false, false) },
-                    { "http://schemas.microsoft.com/office/2006/relationships/ui/extensibility", PartConstraintRule.Create<RibbonExtensibilityPart>(false, false) },
-                    { "http://schemas.microsoft.com/office/2007/relationships/ui/extensibility", PartConstraintRule.Create<RibbonAndBackstageCustomizationsPart>(false, false) },
-                    { "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes", PartConstraintRule.Create<WebExTaskpanesPart>(false, false) }
-                };
+                    _partConstraints = new PartConstraintCollection
+                    {
+                        { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument", PartConstraintRule.Create<WorkbookPart>(true, false) },
+                        { "http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties", PartConstraintRule.Create<CoreFilePropertiesPart>(false, false) },
+                        { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties", PartConstraintRule.Create<ExtendedFilePropertiesPart>(false, false) },
+                        { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties", PartConstraintRule.Create<CustomFilePropertiesPart>(false, false) },
+                        { "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail", PartConstraintRule.Create<ThumbnailPart>(false, false) },
+                        { "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin", PartConstraintRule.Create<DigitalSignatureOriginPart>(false, false) },
+                        { "http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization", PartConstraintRule.Create<QuickAccessToolbarCustomizationsPart>(false, false) },
+                        { "http://schemas.microsoft.com/office/2006/relationships/ui/extensibility", PartConstraintRule.Create<RibbonExtensibilityPart>(false, false) },
+                        { "http://schemas.microsoft.com/office/2007/relationships/ui/extensibility", PartConstraintRule.Create<RibbonAndBackstageCustomizationsPart>(false, false) },
+                        { "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes", PartConstraintRule.Create<WebExTaskpanesPart>(false, false) }
+                    };
+                }
+
+                return _partConstraints;
             }
-
-            return _partConstraint;
-        }
-
-        /// <summary>
-        /// Gets the constraint rule of DataPartReferenceRelationship.
-        /// </summary>
-        /// <returns>The constraint data of the part.</returns>
-        internal sealed override IDictionary<string, PartConstraintRule> GetDataPartReferenceConstraint()
-        {
-            if (_dataPartReferenceConstraint == null)
-            {
-                Dictionary<string, PartConstraintRule> tempData = new Dictionary<string, PartConstraintRule>();
-
-                _dataPartReferenceConstraint = tempData;
-            }
-            return _dataPartReferenceConstraint;
         }
 
         /// <summary>
