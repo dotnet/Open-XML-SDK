@@ -1421,7 +1421,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.StringArgumentEmptyException);
             }
 
-            if (GetPartConstraint().TryGetValue(newPart.RelationshipType, out var partConstraintRule))
+            if (PartConstraints.TryGetValue(newPart.RelationshipType, out var partConstraintRule))
             {
                 if (!partConstraintRule.MaxOccursGreatThanOne)
                 {
@@ -1499,9 +1499,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
             }
 
-            PartConstraintRule partConstraintRule;
-
-            if (!GetPartConstraint().TryGetValue(subPart.RelationshipType, out partConstraintRule))
+            if (!PartConstraints.TryGetValue(subPart.RelationshipType, out var partConstraintRule))
             {
                 if (subPart is ExtendedPart) // || subPart is ExtensionPart)
                 {
@@ -1622,8 +1620,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
             }
 
-            OpenXmlPart child;
-            if (partDictionary.TryGetValue(part, out child))
+            if (partDictionary.TryGetValue(part, out var child))
             {
                 // already processed
 
@@ -1812,9 +1809,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 DeleteRelationship(id);
 
-                bool partRemoved;
-
-                if (toBeDeletedParts.TryGetValue(child, out partRemoved))
+                if (toBeDeletedParts.TryGetValue(child, out bool partRemoved))
                 {
                     if (!partRemoved)
                     {
@@ -1982,7 +1977,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             OpenXmlPart part = null;
 
-            if (GetPartConstraint().ContainsKey(relationshipType))
+            if (PartConstraints.ContainsRelationship(relationshipType))
             {
                 part = CreatePartCore(relationshipType);
             }
@@ -2084,16 +2079,16 @@ namespace DocumentFormat.OpenXml.Packaging
         abstract internal OpenXmlPart ThisOpenXmlPart { get; }
 
         /// <summary>
-        /// Get the constraint rule
+        /// Gets the constraint rule
         /// </summary>
         /// <returns>The constraint rule.</returns>
-        abstract internal IDictionary<string, PartConstraintRule> GetPartConstraint();
+        internal virtual PartConstraintCollection PartConstraints => PartConstraintCollection.Instance;
 
         /// <summary>
-        /// Get the constraint rule of DataPartReferenceRelationship.
+        /// Gets the constraint rule of DataPartReferenceRelationship.
         /// </summary>
         /// <returns>The constraint rule.</returns>
-        abstract internal IDictionary<string, PartConstraintRule> GetDataPartReferenceConstraint();
+        internal virtual PartConstraintCollection DataPartReferenceConstraints => PartConstraintCollection.Instance;
 
         /// <summary>
         /// Test whether the object is already disposed.

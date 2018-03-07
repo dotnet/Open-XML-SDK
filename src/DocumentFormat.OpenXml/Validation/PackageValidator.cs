@@ -92,7 +92,7 @@ namespace DocumentFormat.OpenXml.Validation
                 }
 
                 if (!(container is ExtendedPart) &&
-                    !container.GetPartConstraint().Keys.Contains(part.RelationshipType) &&
+                    !container.PartConstraints.ContainsRelationship(part.RelationshipType) &&
                     part.IsInVersion(version))
                 {
                     yield return new OpenXmlPackageValidationEventArgs(container)
@@ -107,7 +107,7 @@ namespace DocumentFormat.OpenXml.Validation
                 // if the part is not defined in this version, then should not report error, just treat it as ExtendedPart.
             }
 
-            foreach (var constraintRulePair in container.GetPartConstraint())
+            foreach (var constraintRulePair in container.PartConstraints)
             {
                 var relatinshipType = constraintRulePair.Key;
                 var constraintRule = constraintRulePair.Value;
@@ -158,7 +158,7 @@ namespace DocumentFormat.OpenXml.Validation
                 {
                     if (!(part is ExtendedPart))
                     {
-                        if (container.GetPartConstraint().TryGetValue(part.RelationshipType, out var rule))
+                        if (container.PartConstraints.TryGetValue(part.RelationshipType, out var rule))
                         {
                             if (rule.FileFormat.Includes(version))
                             {
@@ -212,7 +212,7 @@ namespace DocumentFormat.OpenXml.Validation
             // So just check whether the reference is allowed.
             foreach (var dataPartReference in container.DataPartReferenceRelationships)
             {
-                if (!container.GetDataPartReferenceConstraint().TryGetValue(dataPartReference.RelationshipType, out var constraintRule))
+                if (!container.DataPartReferenceConstraints.TryGetValue(dataPartReference.RelationshipType, out var constraintRule))
                 {
                     yield return new OpenXmlPackageValidationEventArgs(container)
                     {

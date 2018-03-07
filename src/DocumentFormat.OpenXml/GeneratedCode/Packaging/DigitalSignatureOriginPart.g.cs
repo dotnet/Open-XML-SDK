@@ -10,13 +10,12 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the DigitalSignatureOriginPart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2007)]
-    [ContentType("application/vnd.openxmlformats-package.digital-signature-origin")]
+    [ContentType(ContentTypeConstant)]
     public partial class DigitalSignatureOriginPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-package.digital-signature-origin";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin";
-        private static Dictionary<string, PartConstraintRule> _dataPartReferenceConstraint;
-        private static Dictionary<string, PartConstraintRule> _partConstraint;
+        private static PartConstraintCollection _partConstraints;
 
         /// <summary>
         /// Creates an instance of the DigitalSignatureOriginPart OpenXmlType
@@ -30,6 +29,26 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         internal sealed override bool IsContentTypeFixed => true;
+
+        /// <inheritdoc/>
+        internal sealed override PartConstraintCollection PartConstraints
+        {
+            get
+            {
+                if (_partConstraints is null)
+                {
+                    _partConstraints = new PartConstraintCollection
+                    {
+                        {
+                            "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/signature",
+                            PartConstraintRule.Create<XmlSignaturePart>(false, true)
+                        }
+                    };
+                }
+
+                return _partConstraints;
+            }
+        }
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
@@ -64,34 +83,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             throw new ArgumentOutOfRangeException(nameof(relationshipType));
-        }
-
-        /// <inheritdoc/>
-        internal sealed override IDictionary<string, PartConstraintRule> GetDataPartReferenceConstraint()
-        {
-            if (_dataPartReferenceConstraint is null)
-            {
-                _dataPartReferenceConstraint = new Dictionary<string, PartConstraintRule>(StringComparer.Ordinal) { };
-            }
-
-            return _dataPartReferenceConstraint;
-        }
-
-        /// <inheritdoc/>
-        internal sealed override IDictionary<string, PartConstraintRule> GetPartConstraint()
-        {
-            if (_partConstraint is null)
-            {
-                _partConstraint = new Dictionary<string, PartConstraintRule>(StringComparer.Ordinal)
-                {
-                    {
-                        "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/signature",
-                        PartConstraintRule.Create<XmlSignaturePart>(false, true)
-                    }
-                };
-            }
-
-            return _partConstraint;
         }
     }
 }

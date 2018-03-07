@@ -15,9 +15,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private string _relationshipType;
 
-        private static Dictionary<string, PartConstraintRule> _partConstraints = new Dictionary<string, PartConstraintRule>();
-        private static Dictionary<string, PartConstraintRule> _dataPartReferenceConstraint = new Dictionary<string,PartConstraintRule>();
-
         /// <summary>
         /// Default constructor.
         /// </summary>
@@ -31,7 +28,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="relationshipType"></param>
         internal protected ExtendedPart(string relationshipType)
-            : base( )
+            : base()
         {
             _relationshipType = relationshipType;
         }
@@ -72,18 +69,6 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 return false;
             }
-        }
-
-        internal sealed override IDictionary<string, PartConstraintRule> GetPartConstraint()
-        {
-            ThrowIfObjectDisposed();
-            return _partConstraints;
-        }
-
-        internal sealed override IDictionary<string, PartConstraintRule> GetDataPartReferenceConstraint()
-        {
-            ThrowIfObjectDisposed();
-            return _dataPartReferenceConstraint;
         }
 
         /// <summary>

@@ -10,13 +10,12 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the WorksheetPart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2007)]
-    [ContentType("application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml")]
+    [ContentType(ContentTypeConstant)]
     public partial class WorksheetPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet";
-        private static Dictionary<string, PartConstraintRule> _dataPartReferenceConstraint;
-        private static Dictionary<string, PartConstraintRule> _partConstraint;
+        private static PartConstraintCollection _partConstraints;
 
         /// <summary>
         /// Creates an instance of the WorksheetPart OpenXmlType
@@ -70,6 +69,94 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         internal sealed override bool IsContentTypeFixed => true;
+
+        /// <inheritdoc/>
+        internal sealed override PartConstraintCollection PartConstraints
+        {
+            get
+            {
+                if (_partConstraints is null)
+                {
+                    _partConstraints = new PartConstraintCollection
+                    {
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings",
+                            PartConstraintRule.Create<SpreadsheetPrinterSettingsPart>(false, true)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing",
+                            PartConstraintRule.Create<DrawingsPart>(false, false)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing",
+                            PartConstraintRule.Create<VmlDrawingPart>(false, true)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments",
+                            PartConstraintRule.Create<WorksheetCommentsPart>(false, false)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotTable",
+                            PartConstraintRule.Create<PivotTablePart>(false, true)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableSingleCells",
+                            PartConstraintRule.Create<SingleCellTablePart>(false, false)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/table",
+                            PartConstraintRule.Create<TableDefinitionPart>(false, true)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control",
+                            PartConstraintRule.Create<EmbeddedControlPersistencePart>(false, true)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/ctrlProp",
+                            PartConstraintRule.Create<ControlPropertiesPart>(false, true)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
+                            PartConstraintRule.Create<EmbeddedObjectPart>(false, true)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
+                            PartConstraintRule.Create<EmbeddedPackagePart>(false, true)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+                            PartConstraintRule.Create<ImagePart>(false, true)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customProperty",
+                            PartConstraintRule.Create<CustomPropertyPart>(false, true)
+                        },
+                        {
+                            "http://schemas.microsoft.com/office/2006/relationships/wsSortMap",
+                            PartConstraintRule.Create<WorksheetSortMapPart>(false, false)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/queryTable",
+                            PartConstraintRule.Create<QueryTablePart>(false, true)
+                        },
+                        {
+                            "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary",
+                            PartConstraintRule.Create<EmbeddedControlPersistenceBinaryDataPart>(false, true)
+                        },
+                        {
+                            "http://schemas.microsoft.com/office/2007/relationships/slicer",
+                            PartConstraintRule.Create<SlicersPart>(false, true)
+                        },
+                        {
+                            "http://schemas.microsoft.com/office/2011/relationships/timeline",
+                            PartConstraintRule.Create<TimeLinePart>(false, true)
+                        }
+                    };
+                }
+
+                return _partConstraints;
+            }
+        }
 
         /// <summary>
         /// Gets the PivotTableParts of the WorksheetPart
@@ -412,102 +499,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             throw new ArgumentOutOfRangeException(nameof(relationshipType));
-        }
-
-        /// <inheritdoc/>
-        internal sealed override IDictionary<string, PartConstraintRule> GetDataPartReferenceConstraint()
-        {
-            if (_dataPartReferenceConstraint is null)
-            {
-                _dataPartReferenceConstraint = new Dictionary<string, PartConstraintRule>(StringComparer.Ordinal) { };
-            }
-
-            return _dataPartReferenceConstraint;
-        }
-
-        /// <inheritdoc/>
-        internal sealed override IDictionary<string, PartConstraintRule> GetPartConstraint()
-        {
-            if (_partConstraint is null)
-            {
-                _partConstraint = new Dictionary<string, PartConstraintRule>(StringComparer.Ordinal)
-                {
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings",
-                        PartConstraintRule.Create<SpreadsheetPrinterSettingsPart>(false, true)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing",
-                        PartConstraintRule.Create<DrawingsPart>(false, false)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing",
-                        PartConstraintRule.Create<VmlDrawingPart>(false, true)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments",
-                        PartConstraintRule.Create<WorksheetCommentsPart>(false, false)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotTable",
-                        PartConstraintRule.Create<PivotTablePart>(false, true)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableSingleCells",
-                        PartConstraintRule.Create<SingleCellTablePart>(false, false)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/table",
-                        PartConstraintRule.Create<TableDefinitionPart>(false, true)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control",
-                        PartConstraintRule.Create<EmbeddedControlPersistencePart>(false, true)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/ctrlProp",
-                        PartConstraintRule.Create<ControlPropertiesPart>(false, true)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-                        PartConstraintRule.Create<EmbeddedObjectPart>(false, true)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-                        PartConstraintRule.Create<EmbeddedPackagePart>(false, true)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-                        PartConstraintRule.Create<ImagePart>(false, true)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customProperty",
-                        PartConstraintRule.Create<CustomPropertyPart>(false, true)
-                    },
-                    {
-                        "http://schemas.microsoft.com/office/2006/relationships/wsSortMap",
-                        PartConstraintRule.Create<WorksheetSortMapPart>(false, false)
-                    },
-                    {
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/queryTable",
-                        PartConstraintRule.Create<QueryTablePart>(false, true)
-                    },
-                    {
-                        "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary",
-                        PartConstraintRule.Create<EmbeddedControlPersistenceBinaryDataPart>(false, true)
-                    },
-                    {
-                        "http://schemas.microsoft.com/office/2007/relationships/slicer",
-                        PartConstraintRule.Create<SlicersPart>(false, true)
-                    },
-                    {
-                        "http://schemas.microsoft.com/office/2011/relationships/timeline",
-                        PartConstraintRule.Create<TimeLinePart>(false, true)
-                    }
-                };
-            }
-
-            return _partConstraint;
         }
     }
 }

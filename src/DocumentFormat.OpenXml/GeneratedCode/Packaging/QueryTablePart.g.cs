@@ -10,13 +10,11 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the QueryTablePart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2007)]
-    [ContentType("application/vnd.openxmlformats-officedocument.spreadsheetml.queryTable+xml")]
+    [ContentType(ContentTypeConstant)]
     public partial class QueryTablePart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.queryTable+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/queryTable";
-        private static Dictionary<string, PartConstraintRule> _dataPartReferenceConstraint;
-        private static Dictionary<string, PartConstraintRule> _partConstraint;
 
         /// <summary>
         /// Creates an instance of the QueryTablePart OpenXmlType
@@ -39,27 +37,5 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         internal sealed override string TargetPath => "../queryTables";
-
-        /// <inheritdoc/>
-        internal sealed override IDictionary<string, PartConstraintRule> GetDataPartReferenceConstraint()
-        {
-            if (_dataPartReferenceConstraint is null)
-            {
-                _dataPartReferenceConstraint = new Dictionary<string, PartConstraintRule>(StringComparer.Ordinal) { };
-            }
-
-            return _dataPartReferenceConstraint;
-        }
-
-        /// <inheritdoc/>
-        internal sealed override IDictionary<string, PartConstraintRule> GetPartConstraint()
-        {
-            if (_partConstraint is null)
-            {
-                _partConstraint = new Dictionary<string, PartConstraintRule>(StringComparer.Ordinal) { };
-            }
-
-            return _partConstraint;
-        }
     }
 }
