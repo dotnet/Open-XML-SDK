@@ -1,6 +1,5 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
-
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
@@ -37,7 +36,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     [ChildElementInfo(typeof(GraphicFrame))]
     [ChildElementInfo(typeof(ConnectionShape))]
     [ChildElementInfo(typeof(Picture))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(ClientData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class TwoCellAnchor : OpenXmlCompositeElement
@@ -284,7 +283,7 @@ if( 18 == namespaceId && "clientData" == name)
     [ChildElementInfo(typeof(GraphicFrame))]
     [ChildElementInfo(typeof(ConnectionShape))]
     [ChildElementInfo(typeof(Picture))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(ClientData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class OneCellAnchor : OpenXmlCompositeElement
@@ -496,7 +495,7 @@ if( 18 == namespaceId && "clientData" == name)
     [ChildElementInfo(typeof(GraphicFrame))]
     [ChildElementInfo(typeof(ConnectionShape))]
     [ChildElementInfo(typeof(Picture))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(ClientData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class AbsoluteAnchor : OpenXmlCompositeElement
@@ -1007,7 +1006,7 @@ if( 0 == namespaceId && "fPublished" == name)
     [ChildElementInfo(typeof(GraphicFrame))]
     [ChildElementInfo(typeof(ConnectionShape))]
     [ChildElementInfo(typeof(Picture))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class GroupShape : OpenXmlCompositeElement
 {
@@ -1961,7 +1960,7 @@ if( 0 == namespaceId && "fPublished" == name)
 }
 /// <summary>
 /// <para>Defines the ContentPart Class.</para>
-///<para>This class is only available in Office2010.</para>
+///<para>This class is available in Office2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xdr:contentPart.</para>
 /// </summary>
 /// <remarks>
@@ -2015,7 +2014,7 @@ public partial class ContentPart : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((2 & (int)version) > 0)
+		if((6 & (int)version) > 0)
 		{
 			return true;
 		}

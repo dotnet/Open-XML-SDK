@@ -1,6 +1,5 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
-
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
@@ -72,7 +71,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Picture))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.OleObjects))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class Macrosheet : OpenXmlPartRootElement
@@ -611,7 +610,7 @@ if( 32 == namespaceId && "colSortMap" == name)
 }
 /// <summary>
 /// <para>Defines the ReferenceSequence Class.</para>
-///<para>This class is only available in Office2010.</para>
+///<para>This class is available in Office2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xne:sqref.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -652,7 +651,7 @@ public partial class ReferenceSequence : OpenXmlLeafTextElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((2 & (int)version) > 0)
+		if((6 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -702,7 +701,7 @@ public partial class ReferenceSequence : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Defines the Formula Class.</para>
-///<para>This class is only available in Office2010.</para>
+///<para>This class is available in Office2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xne:f.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -743,7 +742,7 @@ public partial class Formula : OpenXmlLeafTextElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((2 & (int)version) > 0)
+		if((6 & (int)version) > 0)
 		{
 			return true;
 		}

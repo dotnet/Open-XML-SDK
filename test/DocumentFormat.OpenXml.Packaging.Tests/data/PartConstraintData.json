@@ -244,7 +244,7 @@
         "PartContentType": "application/binary",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
-        "FileFormat": 2
+        "FileFormat": 6
       }
     }
   },
@@ -1061,7 +1061,7 @@
         "PartContentType": "application/vnd.ms-word.stylesWithEffects+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
-        "FileFormat": 2
+        "FileFormat": 6
       },
       "http://schemas.openxmlformats.org/officeDocument/2006/relationships/webSettings": {
         "PartClassName": "WebSettingsPart",
@@ -1707,7 +1707,7 @@
         "PartContentType": "application/vnd.ms-word.stylesWithEffects+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
-        "FileFormat": 2
+        "FileFormat": 6
       },
       "http://schemas.openxmlformats.org/officeDocument/2006/relationships/webSettings": {
         "PartClassName": "WebSettingsPart",
@@ -3586,14 +3586,14 @@
         "PartContentType": "application/vnd.ms-excel.customDataProperties+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
-        "FileFormat": 2
+        "FileFormat": 6
       },
       "http://schemas.microsoft.com/office/2007/relationships/slicerCache": {
         "PartClassName": "SlicerCachePart",
         "PartContentType": "application/vnd.ms-excel.slicerCache+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
-        "FileFormat": 2
+        "FileFormat": 6
       },
       "http://schemas.microsoft.com/office/2011/relationships/timelineCache": {
         "PartClassName": "TimeLineCachePart",
@@ -3738,7 +3738,7 @@
         "PartContentType": "application/vnd.ms-excel.controlproperties+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
-        "FileFormat": 2
+        "FileFormat": 6
       },
       "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject": {
         "PartClassName": "EmbeddedObjectPart",
@@ -3794,7 +3794,7 @@
         "PartContentType": "application/vnd.ms-excel.slicer+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
-        "FileFormat": 2
+        "FileFormat": 6
       },
       "http://schemas.microsoft.com/office/2011/relationships/timeline": {
         "PartClassName": "TimeLinePart",

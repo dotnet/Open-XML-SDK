@@ -1,6 +1,5 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
-
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
@@ -3909,8 +3908,8 @@ if( 0 == namespaceId && "conformance" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(HtmlPublishProperties),(FileFormatVersions)1)]
-    [ChildElementInfo(typeof(WebProperties),(FileFormatVersions)1)]
+    [ChildElementInfo(typeof(HtmlPublishProperties))]
+    [ChildElementInfo(typeof(WebProperties))]
     [ChildElementInfo(typeof(PrintingProperties))]
     [ChildElementInfo(typeof(ShowProperties))]
     [ChildElementInfo(typeof(ColorMostRecentlyUsed))]
@@ -4083,13 +4082,12 @@ if( 24 == namespaceId && "extLst" == name)
     }
     
         /// <summary>
-    /// <para> HTML Publishing Properties, this property is only available in Office2007.</para>
+    /// <para> HTML Publishing Properties.</para>
     /// <para> Represents the following element tag in the schema: p:htmlPubPr </para>
     /// </summary>
     /// <remark>
     /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
     /// </remark>
-[OfficeAvailability(FileFormatVersions.Office2007)]
     public HtmlPublishProperties HtmlPublishProperties
     {
         get 
@@ -4102,13 +4100,12 @@ if( 24 == namespaceId && "extLst" == name)
         }
     }
     /// <summary>
-    /// <para> Web Properties, this property is only available in Office2007.</para>
+    /// <para> Web Properties.</para>
     /// <para> Represents the following element tag in the schema: p:webPr </para>
     /// </summary>
     /// <remark>
     /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
     /// </remark>
-[OfficeAvailability(FileFormatVersions.Office2007)]
     public WebProperties WebProperties
     {
         get 
@@ -7034,7 +7031,7 @@ if( 0 == namespaceId && "showComments" == name)
 }
 /// <summary>
 /// <para>Defines the ContentPart Class.</para>
-///<para>This class is only available in Office2010.</para>
+///<para>This class is available in Office2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p:contentPart.</para>
 /// </summary>
 /// <remarks>
@@ -7086,7 +7083,7 @@ public partial class ContentPart : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((2 & (int)version) > 0)
+		if((6 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -17758,12 +17755,12 @@ public partial class ToColor : Color3Type
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HslColor),(FileFormatVersions)2)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HslColor),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class Color3Type : OpenXmlCompositeElement
 {
@@ -17814,13 +17811,12 @@ if( 10 == namespaceId && "prstClr" == name)
     }
     
         /// <summary>
-    /// <para> RGB Color Model - Percentage Variant, this property is only available in Office2010.</para>
+    /// <para> RGB Color Model - Percentage Variant.</para>
     /// <para> Represents the following element tag in the schema: a:scrgbClr </para>
     /// </summary>
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage RgbColorModelPercentage
     {
         get 
@@ -17851,13 +17847,12 @@ if( 10 == namespaceId && "prstClr" == name)
         }
     }
     /// <summary>
-    /// <para> Hue, Saturation, Luminance Color Model, this property is only available in Office2010.</para>
+    /// <para> Hue, Saturation, Luminance Color Model.</para>
     /// <para> Represents the following element tag in the schema: a:hslClr </para>
     /// </summary>
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     public DocumentFormat.OpenXml.Drawing.HslColor HslColor
     {
         get 
@@ -17870,13 +17865,12 @@ if( 10 == namespaceId && "prstClr" == name)
         }
     }
     /// <summary>
-    /// <para> System Color, this property is only available in Office2010.</para>
+    /// <para> System Color.</para>
     /// <para> Represents the following element tag in the schema: a:sysClr </para>
     /// </summary>
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     public DocumentFormat.OpenXml.Drawing.SystemColor SystemColor
     {
         get 
@@ -17907,13 +17901,12 @@ if( 10 == namespaceId && "prstClr" == name)
         }
     }
     /// <summary>
-    /// <para> Preset Color, this property is only available in Office2010.</para>
+    /// <para> Preset Color.</para>
     /// <para> Represents the following element tag in the schema: a:prstClr </para>
     /// </summary>
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     public DocumentFormat.OpenXml.Drawing.PresetColor PresetColor
     {
         get 
@@ -28968,8 +28961,8 @@ if( 0 == namespaceId && "cy" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.LaserTraceList),(FileFormatVersions)2)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ShowEventRecordList),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.LaserTraceList),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ShowEventRecordList),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class SlideExtension : OpenXmlCompositeElement
 {
@@ -29123,7 +29116,7 @@ if( 49 == namespaceId && "showEvtLst" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.CreationId),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.CreationId),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class CommonSlideDataExtension : OpenXmlCompositeElement
 {
@@ -29276,9 +29269,9 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.BrowseMode),(FileFormatVersions)2)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.LaserColor),(FileFormatVersions)2)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ShowMediaControls),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.BrowseMode),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.LaserColor),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ShowMediaControls),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class ShowPropertiesExtension : OpenXmlCompositeElement
 {
@@ -30217,12 +30210,11 @@ public partial class Transition : OpenXmlCompositeElement
     }
     
     /// <summary>
-    /// <para> dur, this property is only available in Office2010.</para>
+    /// <para> dur.</para>
     /// <para>Represents the following attribute in the schema: p14:dur </para>
     /// </summary>
 ///<remark> xmlns:p14=http://schemas.microsoft.com/office/powerpoint/2010/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(49, "dur")]
     public StringValue Duration
     {
@@ -31217,7 +31209,7 @@ public partial class GroupShape : GroupShapeType
     [ChildElementInfo(typeof(GraphicFrame))]
     [ChildElementInfo(typeof(ConnectionShape))]
     [ChildElementInfo(typeof(Picture))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(ExtensionListWithModification))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class GroupShapeType : OpenXmlCompositeElement
@@ -34733,8 +34725,8 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.Media),(FileFormatVersions)2)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ModificationId),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.Media),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ModificationId),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class ApplicationNonVisualDrawingPropertiesExtension : OpenXmlCompositeElement
 {
@@ -37603,10 +37595,9 @@ public partial class ModificationVerifier : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> algorithmName, this property is only available in Office2010.</para>
+    /// <para> algorithmName.</para>
     /// <para>Represents the following attribute in the schema: algorithmName </para>
     /// </summary>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(0, "algorithmName")]
     public StringValue AlgorithmName
     {
@@ -37615,10 +37606,9 @@ public partial class ModificationVerifier : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> hashValue, this property is only available in Office2010.</para>
+    /// <para> hashValue.</para>
     /// <para>Represents the following attribute in the schema: hashValue </para>
     /// </summary>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(0, "hashValue")]
     public Base64BinaryValue HashValue
     {
@@ -37627,10 +37617,9 @@ public partial class ModificationVerifier : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> saltValue, this property is only available in Office2010.</para>
+    /// <para> saltValue.</para>
     /// <para>Represents the following attribute in the schema: saltValue </para>
     /// </summary>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(0, "saltValue")]
     public Base64BinaryValue SaltValue
     {
@@ -37639,10 +37628,9 @@ public partial class ModificationVerifier : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> spinValue, this property is only available in Office2010.</para>
+    /// <para> spinValue.</para>
     /// <para>Represents the following attribute in the schema: spinValue </para>
     /// </summary>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(0, "spinValue")]
     public UInt32Value SpinValue
     {
@@ -37858,8 +37846,8 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionProperties),(FileFormatVersions)2)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionList),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionProperties),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionList),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList),(FileFormatVersions)4)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.NotesGuideList),(FileFormatVersions)4)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
@@ -38012,7 +38000,6 @@ if( 68 == namespaceId && "notesGuideLst" == name)
 }
 /// <summary>
 /// <para>HTML Publishing Properties.</para>
-///<para>This class is only available in Office2007.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p:htmlPubPr.</para>
 /// </summary>
 /// <remarks>
@@ -38030,7 +38017,6 @@ if( 68 == namespaceId && "notesGuideLst" == name)
     [ChildElementInfo(typeof(CustomShowReference))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
-[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HtmlPublishProperties : OpenXmlCompositeElement
 {
     private const string tagName = "htmlPubPr";
@@ -38066,7 +38052,7 @@ public partial class HtmlPublishProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((1 & (int)version) > 0)
+		if((7 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -38210,7 +38196,6 @@ if( 19 == namespaceId && "id" == name)
 }
 /// <summary>
 /// <para>Web Properties.</para>
-///<para>This class is only available in Office2007.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p:webPr.</para>
 /// </summary>
 /// <remarks>
@@ -38222,7 +38207,6 @@ if( 19 == namespaceId && "id" == name)
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
-[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WebProperties : OpenXmlCompositeElement
 {
     private const string tagName = "webPr";
@@ -38258,7 +38242,7 @@ public partial class WebProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((1 & (int)version) > 0)
+		if((7 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -39255,10 +39239,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.DiscardImageEditData),(FileFormatVersions)2)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.DefaultImageDpi),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.DiscardImageEditData),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.DefaultImageDpi),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.TextMath),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ChartTrackingReferenceBased),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ChartTrackingReferenceBased),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class PresentationPropertiesExtension : OpenXmlCompositeElement
 {
@@ -44425,10 +44409,8 @@ OnStopAudio,
 ///<summary>
 ///onMediaBookmark.
 ///<para>When the item is serialized out as xml, its value is "onMediaBookmark".</para>
-///<para>This item is only available in Office2010.</para>
 ///</summary>
 [EnumString("onMediaBookmark")]
-[OfficeAvailability(FileFormatVersions.Office2010)]
 OnMediaBookmark,
  
 }
