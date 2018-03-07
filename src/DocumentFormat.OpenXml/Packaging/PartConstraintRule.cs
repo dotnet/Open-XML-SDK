@@ -62,11 +62,9 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             public TypeConstraintInfo(Type type)
             {
-                var availability = type.GetTypeInfo().GetCustomAttribute<OfficeAvailabilityAttribute>()?.OfficeVersion ?? FileFormatVersions.Office2007;
-
                 PartClassName = type.Name;
                 PartContentType = type.GetTypeInfo().GetCustomAttribute<ContentTypeAttribute>()?.ContentType;
-                Availability = availability.AndLater();
+                Availability = type.GetTypeInfo().GetCustomAttribute<OfficeAvailabilityAttribute>()?.OfficeVersion ?? FileFormatVersions.Office2007;
             }
 
             public string PartClassName { get; }

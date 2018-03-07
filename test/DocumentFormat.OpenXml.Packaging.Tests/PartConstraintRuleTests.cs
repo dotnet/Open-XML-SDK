@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -106,18 +107,18 @@ namespace DocumentFormat.OpenXml.Tests
                 .Select(t => new
                 {
                     Name = GetName(t.GetType()),
-                    DataParts = t.DataPartReferenceConstraints,
-                    Parts = t.PartConstraints,
                     ContentType = t.IsContentTypeFixed ? t.ContentType : null,
                     IsContentTypeFixed = t.IsContentTypeFixed,
                     RelationshipType = t.RelationshipType,
                     TargetFileExtension = t.TargetFileExtension,
                     TargetName = t.TargetName,
-                    TargetPath = t.TargetPath
+                    TargetPath = t.TargetPath,
+                    DataParts = t.DataPartReferenceConstraints,
+                    Parts = t.PartConstraints,
                 })
                 .OrderBy(d => d.Name, StringComparer.Ordinal);
 
-            var data = JsonConvert.SerializeObject(result, Formatting.Indented);
+            var data = JsonConvert.SerializeObject(result, Formatting.Indented, new StringEnumConverter());
             _output.WriteLine(data);
         }
 
@@ -144,7 +145,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var stream = typeof(PartConstraintRuleTests).Assembly.GetManifestResourceStream("DocumentFormat.OpenXml.Packaging.Tests.data.PartConstraintData.json"))
             using (var reader = new StreamReader(stream))
             {
-                return JsonConvert.DeserializeObject<ConstraintData[]>(reader.ReadToEnd())
+                return JsonConvert.DeserializeObject<ConstraintData[]>(reader.ReadToEnd(), new StringEnumConverter())
                     .ToDictionary(t => t.Name, StringComparer.Ordinal);
             }
         });
