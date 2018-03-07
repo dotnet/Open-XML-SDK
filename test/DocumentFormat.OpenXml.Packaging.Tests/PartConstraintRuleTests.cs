@@ -149,6 +149,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
+#pragma warning disable CA1812
         private class ConstraintData
         {
             public string Name { get; set; }
@@ -169,6 +170,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             public IDictionary<string, PartConstraintRule2> Parts { get; set; }
         }
+#pragma warning restore CA1712
 
         private class PartConstraintRule2
         {
