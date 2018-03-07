@@ -15,9 +15,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private string _relationshipType;
 
-        private static Dictionary<string, PartConstraintRule> _partConstraints = new Dictionary<string, PartConstraintRule>();
-        private static Dictionary<string, PartConstraintRule> _dataPartReferenceConstraint = new Dictionary<string,PartConstraintRule>();
-
         /// <summary>
         /// Default constructor.
         /// </summary>
@@ -31,9 +28,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="relationshipType"></param>
         internal protected ExtendedPart(string relationshipType)
-            : base( )
+            : base()
         {
-            this._relationshipType = relationshipType;
+            _relationshipType = relationshipType;
         }
 
         /// <inheritdoc/>
@@ -41,7 +38,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get
             {
-                return this._relationshipType;
+                return _relationshipType;
             }
         }
 
@@ -74,18 +71,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        internal sealed override IDictionary<string, PartConstraintRule> GetPartConstraint()
-        {
-            ThrowIfObjectDisposed();
-            return _partConstraints;
-        }
-
-        internal sealed override IDictionary<string, PartConstraintRule> GetDataPartReferenceConstraint()
-        {
-            ThrowIfObjectDisposed();
-            return _dataPartReferenceConstraint;
-        }
-
         /// <summary>
         /// Whether this part is available in a specific version of Office Application.
         /// </summary>
@@ -107,18 +92,18 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">Thrown when one instance of same type part already exists and multiple instance of that type is not allowed.</exception>
         internal override OpenXmlPart AddPartFrom(OpenXmlPart subPart, string rId)
         {
-            this.ThrowIfObjectDisposed();
+            ThrowIfObjectDisposed();
 
             if (subPart == null)
             {
                 throw new ArgumentNullException(nameof(subPart));
             }
 
-            if (subPart.OpenXmlPackage == this.InternalOpenXmlPackage)
+            if (subPart.OpenXmlPackage == InternalOpenXmlPackage)
             {
-                if (this.IsChildPart(subPart))
+                if (IsChildPart(subPart))
                 {
-                    if (rId != null && rId != this.GetIdOfPart(subPart))
+                    if (rId != null && rId != GetIdOfPart(subPart))
                     {
                         // Do NOT allow one sub part is referenced more than once.
                         throw new InvalidOperationException(ExceptionMessages.PartExistsWithDifferentRelationshipId);
@@ -156,11 +141,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.StringArgumentEmptyException, nameof(contentType));
             }
 
-            newPart.CreateInternal(this.InternalOpenXmlPackage, this.ThisOpenXmlPart, contentType, null);
+            newPart.CreateInternal(InternalOpenXmlPackage, ThisOpenXmlPart, contentType, null);
 
-            string relationshipId = this.AttachChild(newPart, id);
+            string relationshipId = AttachChild(newPart, id);
 
-            this.ChildrenParts.Add(relationshipId, newPart);
+            ChildrenParts.Add(relationshipId, newPart);
 
             return;
         }

@@ -149,7 +149,7 @@ namespace DocumentFormat.OpenXml
         public AlternateContentChoice AppendNewAlternateContentChoice()
         {
             AlternateContentChoice child = new AlternateContentChoice();
-            this.AppendChild(child);
+            AppendChild(child);
             return child;
         }
 
@@ -162,7 +162,7 @@ namespace DocumentFormat.OpenXml
         public AlternateContentFallback AppendNewAlternateContentFallback()
         {
             AlternateContentFallback child = new AlternateContentFallback();
-            this.AppendChild(child);
+            AppendChild(child);
             return child;
         }
 

@@ -36,11 +36,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         internal void Add(int elementTypeId)
         {
             // No lock, not safe for multi-thread
-            if ( this._elementTypeIds == null )
+            if (_elementTypeIds == null )
             {
-                this._elementTypeIds = new List<int>();
+                _elementTypeIds = new List<int>();
             }
-            this._elementTypeIds.Add(elementTypeId);
+            _elementTypeIds.Add(elementTypeId);
         }
 
         /// <summary>
@@ -50,11 +50,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         internal void Add(string namesapceForXsdany)
         {
             // No lock, not safe for multi-thread
-            if (this._xsdanyNamespaces == null)
+            if (_xsdanyNamespaces == null)
             {
-                this._xsdanyNamespaces = new List<string>();
+                _xsdanyNamespaces = new List<string>();
             }
-            this._xsdanyNamespaces.Add(namesapceForXsdany);
+            _xsdanyNamespaces.Add(namesapceForXsdany);
         }
 
         /// <summary>
@@ -67,14 +67,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 expectedChildren._elementTypeIds.Count > 0)
             {
                 // No lock, not safe for multi-thread
-                if (this._elementTypeIds == null)
+                if (_elementTypeIds == null)
                 {
-                    this._elementTypeIds = new List<int>();
+                    _elementTypeIds = new List<int>();
                 }
 
                 foreach (var id in expectedChildren._elementTypeIds)
                 {
-                    this._elementTypeIds.Add(id);
+                    _elementTypeIds.Add(id);
                 }
             }
 
@@ -82,14 +82,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 expectedChildren._xsdanyNamespaces.Count > 0)
             {
                 // No lock, not safe for multi-thread
-                if (this._xsdanyNamespaces == null)
+                if (_xsdanyNamespaces == null)
                 {
-                    this._xsdanyNamespaces = new List<string>();
+                    _xsdanyNamespaces = new List<string>();
                 }
 
                 foreach (var ns in expectedChildren._xsdanyNamespaces)
                 {
-                    this._xsdanyNamespaces.Add(ns);
+                    _xsdanyNamespaces.Add(ns);
                 }
             }
         }
@@ -102,13 +102,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             get
             {
                 int count = 0;
-                if (this._elementTypeIds != null)
+                if (_elementTypeIds != null)
                 {
-                    count = this._elementTypeIds.Count;
+                    count = _elementTypeIds.Count;
                 }
-                if (this._xsdanyNamespaces != null)
+                if (_xsdanyNamespaces != null)
                 {
-                    count += this._xsdanyNamespaces.Count;
+                    count += _xsdanyNamespaces.Count;
                 }
                 return count;
             }
@@ -123,18 +123,18 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             Debug.Assert(parent != null);
 
-            if (this._elementTypeIds != null || this._xsdanyNamespaces != null)
+            if (_elementTypeIds != null || _xsdanyNamespaces != null)
             {
-                Debug.Assert(this._elementTypeIds != null && this._elementTypeIds.Count > 0 ||
-                             this._xsdanyNamespaces != null && this._xsdanyNamespaces.Count > 0);
+                Debug.Assert(_elementTypeIds != null && _elementTypeIds.Count > 0 ||
+                             _xsdanyNamespaces != null && _xsdanyNamespaces.Count > 0);
 
                 string expectedChildren = null;
                 StringBuilder childrenNames = new StringBuilder();
                 string separator = string.Empty;
 
-                if (this._elementTypeIds != null)
+                if (_elementTypeIds != null)
                 {
-                    foreach (var childElement in parent.CreateChildrenElementsByIds(this._elementTypeIds))
+                    foreach (var childElement in parent.CreateChildrenElementsByIds(_elementTypeIds))
                     {
                         childrenNames.Append(separator);
                         // <namespace:localname>, use InvariantCulture
@@ -144,9 +144,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     }
                 }
 
-                if (this._xsdanyNamespaces != null)
+                if (_xsdanyNamespaces != null)
                 {
-                    foreach (var namespaceForXsdany in this._xsdanyNamespaces)
+                    foreach (var namespaceForXsdany in _xsdanyNamespaces)
                     {
                         childrenNames.Append(separator);
                         childrenNames.Append(string.Format(CultureInfo.CurrentUICulture, ValidationResources.Fmt_AnyElementInNamespace, namespaceForXsdany));
@@ -163,14 +163,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         internal void Clear()
         {
-            if (this._elementTypeIds != null)
+            if (_elementTypeIds != null)
             {
-                this._elementTypeIds.Clear();
+                _elementTypeIds.Clear();
             }
 
-            if (this._xsdanyNamespaces != null)
+            if (_xsdanyNamespaces != null)
             {
-                this._xsdanyNamespaces.Clear();
+                _xsdanyNamespaces.Clear();
             }
         }
     }

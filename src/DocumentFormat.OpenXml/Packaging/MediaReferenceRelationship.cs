@@ -8,6 +8,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Represents an internal media reference relationship to a MediaDataPart element.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2010)]
     public class MediaReferenceRelationship : DataPartReferenceRelationship
     {
         /// <summary>

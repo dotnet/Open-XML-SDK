@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="sdbSchemaDatas"></param>
         internal SchemaTypeValidator(SdbSchemaDatas sdbSchemaDatas)
         {
-            this._sdbSchemaDatas = sdbSchemaDatas;
+            _sdbSchemaDatas = sdbSchemaDatas;
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             // validte Inorable, ProcessContent, etc. compatibility-rule attributes
             CompatibilityRuleAttributesValidator.ValidateMcAttributes(validationContext);
 
-            SchemaTypeData schemaTypeData = this._sdbSchemaDatas.GetSchemaTypeData(theElement);
+            SchemaTypeData schemaTypeData = _sdbSchemaDatas.GetSchemaTypeData(theElement);
 
             ValidateAttributes(validationContext, schemaTypeData);
 

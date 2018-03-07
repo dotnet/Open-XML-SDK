@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml
         public Base64BinaryValue(string base64Binary)
             : base()
         {
-            this.TextValue = base64Binary;
+            TextValue = base64Binary;
         }
 
         /// <summary>
@@ -50,8 +50,8 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public string Value
         {
-            get { return this.TextValue; }
-            set { this.TextValue = value; }
+            get { return TextValue; }
+            set { TextValue = value; }
         }
 
         /// <summary>

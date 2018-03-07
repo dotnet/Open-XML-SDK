@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
         /// <returns>The index</returns>
         protected override int SetIndex()
         {
-            return this.GetIndexByAttributeName();
+            return GetIndexByAttributeName();
         }
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
         /// <returns>The attribute value</returns>
         internal override string Value
         {
-            get { return this.strAttrValue; }
+            get { return strAttrValue; }
         }
     }
 }

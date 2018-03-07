@@ -33,9 +33,9 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (this.ShadowElement != null)
+                if (ShadowElement != null)
                 {
-                    return this.ShadowElement.InnerXml;
+                    return ShadowElement.InnerXml;
                 }
                 return string.Empty;
             }
@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml
                 // only accept null or empty string.
                 if (string.IsNullOrEmpty(value))
                 {
-                    this.ShadowElement = null;
+                    ShadowElement = null;
                 }
                 else
                 {
@@ -58,9 +58,9 @@ namespace DocumentFormat.OpenXml
         internal override void WriteContentTo(XmlWriter w)
         {
             // Write the loaded inner xml if there are any
-            if (this.ShadowElement != null)
+            if (ShadowElement != null)
             {
-                this.ShadowElement.WriteContentTo(w);
+                ShadowElement.WriteContentTo(w);
             }
         }
 
@@ -84,8 +84,8 @@ namespace DocumentFormat.OpenXml
                 Debug.Assert(xmlReader.IsStartElement());
 
                 // load inner xml into LoadedInnerXml if there are any.
-                this.ShadowElement = new OpenXmlUnknownElement(this.Prefix, this.LocalName, this.NamespaceUri);
-                this.ShadowElement.InnerXml = xmlReader.ReadInnerXml();
+                ShadowElement = new OpenXmlUnknownElement(Prefix, LocalName, NamespaceUri);
+                ShadowElement.InnerXml = xmlReader.ReadInnerXml();
             }
             else
             {
@@ -93,7 +93,7 @@ namespace DocumentFormat.OpenXml
             }
 
             // set raw outer xml to empty to indicate that it is parsed
-            this.RawOuterXml = string.Empty;
+            RawOuterXml = string.Empty;
         }
     }
 }

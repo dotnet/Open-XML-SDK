@@ -2,9 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Reflection;
 
 namespace DocumentFormat.OpenXml
 {
@@ -13,28 +11,9 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     /// <typeparam name="T">Every enum value must be an enum with the EnumStringValueAttribute object.</typeparam>
     [DebuggerDisplay("{InnerText}")]
-    public class EnumValue<T> : OpenXmlSimpleType
+    public class EnumValue<T> : OpenXmlSimpleValue<T>
         where T : struct
     {
-        private T? _enumValue;
-
-        //********************************************************************************************
-        // Performance profile for OpenXmlValidator shows that parsing string into Enum tooks 50% overall time.
-        // The reason is that each time we use reflection to get all the strings for the enum.
-        // So the performance is bad, especially for enums with many items like BorderValues.
-        //
-        // Build a look up dictionary on fly if the enum is parsed for more than Threshold times.
-        // This look up table will hooked on the type as static data.
-        //********************************************************************************************
-
-        // TODO: how do we know what the threashold should be???
-        private const int Threshold = 11;
-        private static int parseCount;
-        private static Dictionary<string, T> stringToValueLookupTable;
-        private static Dictionary<T, FileFormatVersions> fileFormatInformations;
-        private static bool fileFormatInformationLoaded;
-        private static object lockroot = new object();
-
         /// <summary>
         /// Initializes a new instance of the EnumValue class.
         /// </summary>
@@ -51,14 +30,8 @@ namespace DocumentFormat.OpenXml
         /// The value of type T.
         /// </param>
         public EnumValue(T value)
-            : base()
+            : base(value)
         {
-            // bug O14 #253976
-            if (!Enum.IsDefined(typeof(T), value))
-            {
-                throw new ArgumentOutOfRangeException(nameof(value), ExceptionMessages.InvalidEnumValue);
-            }
-            this.Value = value;
         }
 
         /// <summary>
@@ -71,77 +44,6 @@ namespace DocumentFormat.OpenXml
         public EnumValue(EnumValue<T> source)
             : base(source)
         {
-            this._enumValue = source._enumValue;
-        }
-
-        /// <inheritdoc/>
-        public override bool HasValue
-        {
-            get
-            {
-                if (!this._enumValue.HasValue)
-                {
-                    if (this.TextValue != null)
-                    {
-                        TryParse();
-                    }
-                }
-
-                return this._enumValue.HasValue;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the value of the enum.
-        /// </summary>
-        public T Value
-        {
-            get
-            {
-                if (!this._enumValue.HasValue)
-                {
-                    if (!String.IsNullOrEmpty(this.TextValue))
-                    {
-                        Parse();
-                    }
-                }
-                else
-                {
-                    Debug.Assert( this.TextValue == null ||
-                                  this.TextValue == ToString(this._enumValue.Value));
-                }
-                return this._enumValue.Value;
-            }
-
-            set
-            {
-                // bug O14 #253976
-                if (! Enum.IsDefined(typeof(T), value))
-                {
-                    throw new ArgumentOutOfRangeException(nameof(value), ExceptionMessages.InvalidEnumValue);
-                }
-                this._enumValue = value;
-                this.TextValue = null;
-            }
-        }
-
-        /// <inheritdoc/>
-        public override string InnerText
-        {
-            get
-            {
-                if (this.TextValue == null && this._enumValue.HasValue)
-                {
-                    this.TextValue = ToString(this._enumValue.Value);
-                }
-                return this.TextValue;
-            }
-
-            set
-            {
-                this.TextValue = value;
-                this._enumValue = null;
-            }
         }
 
         /// <summary>
@@ -187,164 +89,38 @@ namespace DocumentFormat.OpenXml
 
         private protected override OpenXmlSimpleType CloneImpl() => new EnumValue<T>(this);
 
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        internal void Parse()
+        /// <inheritdoc />
+        internal override bool IsInVersion(FileFormatVersions fileFormat)
         {
-            this._enumValue = GetEnumValue(this.TextValue);
+            Debug.Assert(HasValue);
+
+            var supportedVersion = EnumStringLookup<T>.GetVersion(Value);
+
+            return supportedVersion.Includes(fileFormat);
         }
 
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        /// <returns></returns>
-        internal bool TryParse()
-        {
-            T value;
-            this._enumValue = null;
-            if ( TryGetEnumValue(this.TextValue, out value))
-            {
-                this._enumValue = value;
-                return true;
-            }
-            return false;
-        }
+        private protected override bool ShouldParse(string value) => value != null;
 
-        internal static string ToString(T enumVal)
+        private protected override void ValidateSet(T value)
         {
-            FieldInfo fi = enumVal.GetType().GetTypeInfo().GetDeclaredField(enumVal.ToString());
-            EnumStringAttribute stringAttr = fi.GetCustomAttribute<EnumStringAttribute>();
-
-            if (stringAttr != null)
+            if (!EnumStringLookup<T>.IsDefined(value))
             {
-                return stringAttr.Value;
-            }
-            else
-            {
-                return string.Empty;
+                throw new ArgumentOutOfRangeException(nameof(value), ExceptionMessages.InvalidEnumValue);
             }
         }
 
-        internal static bool TryGetEnumValue(string stringVal, out T result)
+        private protected override string GetText(T input) => EnumStringLookup<T>.ToString(input);
+
+        private protected override bool TryParse(string input, out T value) => EnumStringLookup<T>.TryParse(input, out value);
+
+        private protected override T Parse(string input)
         {
-            if (parseCount > Threshold)
+            if (EnumStringLookup<T>.TryParse(input, out var value))
             {
-                if (stringToValueLookupTable == null)
-                {
-                    // build a look up table to improve performance.
-                    Dictionary<string, T> lookupTable = new Dictionary<string, T>();
-
-                    Array values = Enum.GetValues(typeof(T));
-                    foreach (T enumVal in values)
-                    {
-                        FieldInfo fi = enumVal.GetType().GetTypeInfo().GetDeclaredField(enumVal.ToString());
-                        EnumStringAttribute stringAttr = fi.GetCustomAttribute<EnumStringAttribute>();
-
-                        lookupTable.Add(stringAttr.Value, enumVal);
-                    }
-
-                    stringToValueLookupTable = lookupTable;
-                }
-
-                Debug.Assert(stringToValueLookupTable != null && stringToValueLookupTable.Count > 0);
-                return stringToValueLookupTable.TryGetValue( stringVal,out result);
-            }
-            else
-            {
-                parseCount++;
-
-                Array values = Enum.GetValues(typeof(T));
-
-                foreach (T enumVal in values)
-                {
-                    FieldInfo fi = enumVal.GetType().GetTypeInfo().GetDeclaredField(enumVal.ToString());
-                    EnumStringAttribute stringAttr = fi.GetCustomAttribute<EnumStringAttribute>();
-
-                    if (stringAttr != null && stringAttr.Value == stringVal)
-                    {
-                        result = enumVal;
-                        return true;
-                    }
-                }
-
-                result = new T();
-                return false;
-            }
-        }
-
-        internal static T GetEnumValue(string stringVal)
-        {
-            T result;
-
-            if (TryGetEnumValue(stringVal, out result))
-            {
-                return result;
+                return value;
             }
 
             throw new FormatException(ExceptionMessages.TextIsInvalidEnumValue);
-        }
-
-        /// <summary>
-        /// Test whether the value is allowed in the specified file format version.
-        /// </summary>
-        /// <param name="fileFormat">The file format version.</param>
-        /// <returns>True if the value is defined in the specified file format version.</returns>
-        /// <remarks>
-        /// Method to support enum validation in schema validation.
-        /// </remarks>
-        internal override bool IsInVersion(FileFormatVersions fileFormat)
-        {
-            Debug.Assert( this.HasValue);
-
-            if (!fileFormatInformationLoaded && fileFormatInformations == null)
-            {
-                Dictionary<T, FileFormatVersions> lookupTable = null;
-
-                Array values = Enum.GetValues(typeof(T));
-
-                foreach (T enumVal in values)
-                {
-                    FieldInfo fi = this.Value.GetType().GetTypeInfo().GetDeclaredField(enumVal.ToString());
-                    OfficeAvailabilityAttribute versionAttr = fi.GetCustomAttribute<OfficeAvailabilityAttribute>();
-
-                    if (versionAttr != null)
-                    {
-                        if (lookupTable == null)
-                        {
-                            lookupTable = new Dictionary<T, FileFormatVersions>();
-                        }
-                        lookupTable.Add(enumVal, versionAttr.OfficeVersion);
-                    }
-                }
-
-                lock (lockroot)
-                {
-                    fileFormatInformations = lookupTable;
-                    fileFormatInformationLoaded = true;
-                }
-            }
-
-            Debug.Assert(fileFormatInformationLoaded);
-            if (fileFormatInformations != null)
-            {
-                FileFormatVersions supportedVersion;
-
-                if (fileFormatInformations.TryGetValue(this.Value, out supportedVersion))
-                {
-                    return supportedVersion.Includes(fileFormat);
-                }
-                else
-                {
-                    // If the OfficeAvailabilityAttribute is not set, then it means the value item exist in both versions.
-                    return true;
-                }
-            }
-            else
-            {
-                // all items are allowed in both Office2007 and Office2010.
-                return true;
-            }
         }
     }
 }

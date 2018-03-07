@@ -54,17 +54,20 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [InlineData(FileFormatVersions.Office2007, FileFormatVersions.Office2007, true)]
+        [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010, FileFormatVersions.Office2007, true)]
         [InlineData(FileFormatVersions.Office2010, FileFormatVersions.Office2007, true)]
         [InlineData(FileFormatVersions.Office2013, FileFormatVersions.Office2007, true)]
         [InlineData(FileFormatVersions.Office2016, FileFormatVersions.Office2007, true)]
         [InlineData(FileFormatVersions.Office2007, FileFormatVersions.Office2010, false)]
         [InlineData(FileFormatVersions.Office2010, FileFormatVersions.Office2010, true)]
+        [InlineData(FileFormatVersions.Office2010 | FileFormatVersions.Office2013, FileFormatVersions.Office2010, true)]
         [InlineData(FileFormatVersions.Office2013, FileFormatVersions.Office2010, true)]
         [InlineData(FileFormatVersions.Office2016, FileFormatVersions.Office2010, true)]
         [InlineData(FileFormatVersions.Office2007, FileFormatVersions.Office2013, false)]
         [InlineData(FileFormatVersions.Office2010, FileFormatVersions.Office2013, false)]
         [InlineData(FileFormatVersions.Office2013, FileFormatVersions.Office2013, true)]
         [InlineData(FileFormatVersions.Office2016, FileFormatVersions.Office2013, true)]
+        [InlineData(FileFormatVersions.Office2013 | FileFormatVersions.Office2016, FileFormatVersions.Office2013, true)]
         [InlineData(FileFormatVersions.Office2007, FileFormatVersions.Office2016, false)]
         [InlineData(FileFormatVersions.Office2010, FileFormatVersions.Office2016, false)]
         [InlineData(FileFormatVersions.Office2013, FileFormatVersions.Office2016, false)]
@@ -76,10 +79,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [InlineData(FileFormatVersions.None)]
-        [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010)]
-        [InlineData(FileFormatVersions.Office2010 | FileFormatVersions.Office2013)]
-        [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010 | FileFormatVersions.Office2013)]
-        [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010 | FileFormatVersions.Office2013 | FileFormatVersions.Office2016)]
+        [InlineData((FileFormatVersions)(2 << 6))]
         [Theory]
         public void AtLeastExceptions(FileFormatVersions version)
         {

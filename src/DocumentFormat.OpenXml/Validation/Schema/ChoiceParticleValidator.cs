@@ -46,11 +46,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             ParticleConstraint childConstraint;
             int constraintIndex = 0;
-            int constraintTotal = this.ParticleConstraint.ChildrenParticles.Length;
+            int constraintTotal = ParticleConstraint.ChildrenParticles.Length;
 
             while (constraintIndex < constraintTotal && next != null)
             {
-                childConstraint = this.ParticleConstraint.ChildrenParticles[constraintIndex];
+                childConstraint = ParticleConstraint.ChildrenParticles[constraintIndex];
 
                 // Use Reset() instead of new() to avoid heavy memory alloction and GC.
                 _childMatchInfo.Reset(next);
@@ -101,9 +101,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             // if there are any child elements that minOccurs = 0, then there is no requried children.
 
-            if (this.ParticleConstraint.MinOccurs > 0)
+            if (ParticleConstraint.MinOccurs > 0)
             {
-                foreach (var constraint in this.ParticleConstraint.ChildrenParticles)
+                foreach (var constraint in ParticleConstraint.ChildrenParticles)
                 {
                     if (!constraint.ParticleValidator.GetRequiredElements(requiredChoiceChildren))
                     {

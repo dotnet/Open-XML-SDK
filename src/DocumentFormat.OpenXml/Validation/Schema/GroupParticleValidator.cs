@@ -49,9 +49,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             Debug.Assert(!(particleMatchInfo.StartElement is OpenXmlMiscNode));
 
             // group only contains xsd:all, xsd:choice or xsd:sequence
-            Debug.Assert(this.ParticleConstraint.ChildrenParticles.Length == 1);
+            Debug.Assert(ParticleConstraint.ChildrenParticles.Length == 1);
 
-            var childParticle = this.ParticleConstraint.ChildrenParticles[0];
+            var childParticle = ParticleConstraint.ChildrenParticles[0];
 
             Debug.Assert(childParticle.ParticleType == ParticleType.All ||
                         childParticle.ParticleType == ParticleType.Choice ||

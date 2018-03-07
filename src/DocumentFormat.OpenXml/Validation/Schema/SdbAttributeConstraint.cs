@@ -37,9 +37,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         public SdbAttributeConstraint(XsdAttributeUse xsdAttributeUse, SdbIndex simpleTypeIndex, byte fileFormatVersion)
         {
-            this.AttributeUse = xsdAttributeUse;
-            this.SimpleTypeIndex = simpleTypeIndex;
-            this.FileFormatVersion = fileFormatVersion;
+            AttributeUse = xsdAttributeUse;
+            SimpleTypeIndex = simpleTypeIndex;
+            FileFormatVersion = fileFormatVersion;
         }
 
         /// <summary>
@@ -67,9 +67,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <returns>Byte data.</returns>
         public override byte[] GetBytes()
         {
-            return this.GetBytes(this.AttributeUse.Bytes(),
-                                this.SimpleTypeIndex.Bytes(),
-                                this.FileFormatVersion.Bytes());
+            return GetBytes(AttributeUse.Bytes(),
+                                SimpleTypeIndex.Bytes(),
+                                FileFormatVersion.Bytes());
         }
 
         /// <summary>
@@ -79,9 +79,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="startIndex">The offset the data begins at.</param>
         public override void LoadFromBytes(byte[] value, int startIndex)
         {
-            this.AttributeUse = (XsdAttributeUse)LoadByte(value, ref startIndex);
-            this.SimpleTypeIndex = LoadSdbIndex(value, ref startIndex);
-            this.FileFormatVersion = LoadByte(value, ref startIndex);
+            AttributeUse = (XsdAttributeUse)LoadByte(value, ref startIndex);
+            SimpleTypeIndex = LoadSdbIndex(value, ref startIndex);
+            FileFormatVersion = LoadByte(value, ref startIndex);
         }
 
         #endregion

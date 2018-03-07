@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         internal bool UnboundedMaxOccurs
         {
-            get { return this.MaxOccurs == 0; }
+            get { return MaxOccurs == 0; }
         }
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         internal bool CanOccursMoreThanOne
         {
-            get { return this.UnboundedMaxOccurs || this.MaxOccurs > 1; }
+            get { return UnboundedMaxOccurs || MaxOccurs > 1; }
         }
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <returns>Returns true if maxOccurs="unbounded" or this.MaxOccurs>count.</returns>
         internal bool MaxOccursGreaterThan(int count)
         {
-            return this.UnboundedMaxOccurs || this.MaxOccurs > count;
+            return UnboundedMaxOccurs || MaxOccurs > count;
         }
 
         /// <summary>
@@ -110,9 +110,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             bool isSimple = true;
 
-            if (this.ChildrenParticles != null)
+            if (ChildrenParticles != null)
             {
-                foreach (var constraint in this.ChildrenParticles)
+                foreach (var constraint in ChildrenParticles)
                 {
                     if (constraint.ParticleType == ParticleType.All ||
                         constraint.ParticleType == ParticleType.Choice ||

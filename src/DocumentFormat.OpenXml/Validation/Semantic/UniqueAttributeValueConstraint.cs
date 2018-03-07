@@ -85,7 +85,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 {
                     _stateStack.Push(_values);
                 }
-                _reg.AddCallBackMethod(context.Element, this.AdjustState);
+                _reg.AddCallBackMethod(context.Element, AdjustState);
                 _values = new List<string>();
             }
         }

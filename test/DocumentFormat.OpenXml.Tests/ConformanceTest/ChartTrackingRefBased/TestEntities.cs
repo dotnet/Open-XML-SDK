@@ -32,9 +32,9 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
                 //Get Extension Uri value
                 P15.ChartTrackingReferenceBased chartTrackingReferenceBased = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<P15.ChartTrackingReferenceBased>().Single();
                 PresentationPropertiesExtension presentationPropertiesExtension = (PresentationPropertiesExtension)chartTrackingReferenceBased.Parent;
-                this.ChartTrackingReferenceBasedExtUri = presentationPropertiesExtension.Uri;
+                ChartTrackingReferenceBasedExtUri = presentationPropertiesExtension.Uri;
 
-                if (string.IsNullOrEmpty(this.ChartTrackingReferenceBasedExtUri))
+                if (string.IsNullOrEmpty(ChartTrackingReferenceBasedExtUri))
                     throw new Exception("Uri attribute value in Extension element is not set.");
             }
         }
@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, true))
             {
-                PresentationPropertiesExtension presentationPropertiesExtension = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<PresentationPropertiesExtension>().Where(e => e.Uri == this.ChartTrackingReferenceBasedExtUri).Single();
+                PresentationPropertiesExtension presentationPropertiesExtension = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<PresentationPropertiesExtension>().Where(e => e.Uri == ChartTrackingReferenceBasedExtUri).Single();
                 P15.ChartTrackingReferenceBased chartTrackingReferenceBased = presentationPropertiesExtension.Descendants<P15.ChartTrackingReferenceBased>().Single();
 
                 chartTrackingReferenceBased.Remove();
@@ -98,7 +98,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, false))
             {
-                int chartTrackingReferenceBasedExtCount = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<PresentationPropertiesExtension>().Where(e => e.Uri == this.ChartTrackingReferenceBasedExtUri).Count();
+                int chartTrackingReferenceBasedExtCount = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<PresentationPropertiesExtension>().Where(e => e.Uri == ChartTrackingReferenceBasedExtUri).Count();
                 log.Verify(chartTrackingReferenceBasedExtCount == 0, "ChartTrackingReferenceBased extension element is not deleted.");
 
                 int chartTrackingReferenceBasedCount = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<P15.ChartTrackingReferenceBased>().Count();
@@ -115,7 +115,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, true))
             {
-                PresentationPropertiesExtension presentationPropertiesExtension = new PresentationPropertiesExtension() { Uri = this.ChartTrackingReferenceBasedExtUri };
+                PresentationPropertiesExtension presentationPropertiesExtension = new PresentationPropertiesExtension() { Uri = ChartTrackingReferenceBasedExtUri };
                 P15.ChartTrackingReferenceBased chartTrackingReferenceBased = new P15.ChartTrackingReferenceBased();
                 chartTrackingReferenceBased.Val = true;
 
@@ -135,7 +135,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         {
             using (PresentationDocument package = PresentationDocument.Open(filePath, false))
             {
-                int chartTrackingReferenceBasedExtCount = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<PresentationPropertiesExtension>().Where(e => e.Uri == this.ChartTrackingReferenceBasedExtUri).Count();
+                int chartTrackingReferenceBasedExtCount = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<PresentationPropertiesExtension>().Where(e => e.Uri == ChartTrackingReferenceBasedExtUri).Count();
 
                 log.Verify(chartTrackingReferenceBasedExtCount == 1, "chartTrackingReferenceBased extension element is not added.");
 

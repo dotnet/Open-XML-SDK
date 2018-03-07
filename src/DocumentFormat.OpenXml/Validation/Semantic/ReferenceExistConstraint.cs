@@ -61,7 +61,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Id = "Sem_MissingReferenceElement",
                 ErrorType = ValidationErrorType.Semantic,
                 Node = context.Element,
-                RelatedPart = this._relatedPart,
+                RelatedPart = _relatedPart,
                 RelatedNode = null,
                 Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture,
                                             ValidationResources.Sem_MissingReferenceElement, _elementName, context.Element.LocalName,
@@ -82,7 +82,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
                 OpenXmlPart part = GetReferencedPart(context, _partPath);
 
-                this._relatedPart = part;
+                _relatedPart = part;
 
                 if (part != null)
                 {
@@ -94,7 +94,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                         Element = part.RootElement
                     };
 
-                    ValidationTraverser.ValidatingTraverse(partContext, this.ElementTraverse, null);
+                    ValidationTraverser.ValidatingTraverse(partContext, ElementTraverse, null);
                 }
             }
 

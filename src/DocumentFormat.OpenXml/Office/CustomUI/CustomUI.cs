@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <param name="openXmlPart">The part to be saved to.</param>
         public void Save(CustomUIPart openXmlPart)
         {
-            base.SaveToPart(openXmlPart);
+            SaveToPart(openXmlPart);
         }
 
         /// <summary>

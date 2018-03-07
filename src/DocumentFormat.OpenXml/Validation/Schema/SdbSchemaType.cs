@@ -51,21 +51,21 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="startAttribute"></param>
         public SdbSchemaType(SdbIndex particleIndex, SdbIndex simpleTypeIndex, SdbIndex attributeCount, SdbIndex startAttribute)
         {
-            this.ParticleIndex = particleIndex;
-            this.SimpleTypeIndex = simpleTypeIndex;
-            this.AttributesCount = attributeCount;
-            this.StartIndexOfAttributes = startAttribute;
+            ParticleIndex = particleIndex;
+            SimpleTypeIndex = simpleTypeIndex;
+            AttributesCount = attributeCount;
+            StartIndexOfAttributes = startAttribute;
         }
 
         /// <summary>
         /// Gets a value indicating whether the schema type is a schema type which contains particles.
         /// </summary>
-        public bool IsCompositeType => this.ParticleIndex != SdbData.InvalidId;
+        public bool IsCompositeType => ParticleIndex != SdbData.InvalidId;
 
         /// <summary>
         /// Gets a value indicating whether the schema type contains simple content only.
         /// </summary>
-        public bool IsSimpleContent => this.SimpleTypeIndex != SdbData.InvalidId;
+        public bool IsSimpleContent => SimpleTypeIndex != SdbData.InvalidId;
 
         /// <summary>
         /// Gets the size in bytes of this data structure
@@ -79,20 +79,20 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         public override byte[] GetBytes()
         {
             // !!!!Caution: keep the order of the following code lines!!!!
-            return this.GetBytes(this.ParticleIndex.Bytes(),
-                                this.SimpleTypeIndex.Bytes(),
-                                this.AttributesCount.Bytes(),
-                                this.StartIndexOfAttributes.Bytes());
+            return GetBytes(ParticleIndex.Bytes(),
+                                SimpleTypeIndex.Bytes(),
+                                AttributesCount.Bytes(),
+                                StartIndexOfAttributes.Bytes());
         }
 
         /// <inheritdoc/>
         public override void LoadFromBytes(byte[] value, int startIndex)
         {
             // !!!!Caution: keep the order of the following code lines!!!!
-            this.ParticleIndex = LoadSdbIndex(value, ref startIndex);
-            this.SimpleTypeIndex = LoadSdbIndex(value, ref startIndex);
-            this.AttributesCount = LoadSdbIndex(value, ref startIndex);
-            this.StartIndexOfAttributes = LoadSdbIndex(value, ref startIndex);
+            ParticleIndex = LoadSdbIndex(value, ref startIndex);
+            SimpleTypeIndex = LoadSdbIndex(value, ref startIndex);
+            AttributesCount = LoadSdbIndex(value, ref startIndex);
+            StartIndexOfAttributes = LoadSdbIndex(value, ref startIndex);
         }
     }
 }

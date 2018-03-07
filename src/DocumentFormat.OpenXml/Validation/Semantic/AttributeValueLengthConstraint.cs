@@ -41,11 +41,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             string subMsg = null;
 
-            if (attributeValue.Length < this._minLength)
+            if (attributeValue.Length < _minLength)
             {
                 subMsg = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_MinLengthConstraintFailed, _minLength);
             }
-            else if (attributeValue.Length > this._maxLength)
+            else if (attributeValue.Length > _maxLength)
             {
                 subMsg = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_MaxLengthConstraintFailed, _maxLength);
             }

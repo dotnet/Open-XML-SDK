@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <param name="openXmlPart">The part to be saved to.</param>
         public void Save(MailMergeRecipientDataPart openXmlPart)
         {
-            base.SaveToPart(openXmlPart);
+            SaveToPart(openXmlPart);
         }
     }
 }

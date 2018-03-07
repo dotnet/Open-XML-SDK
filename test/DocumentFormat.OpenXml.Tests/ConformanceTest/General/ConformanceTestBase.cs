@@ -43,12 +43,12 @@ namespace DocumentFormat.OpenXml.Tests
 
         protected string BaseFileName
         {
-            get { return this.baseFileName + this.PackageExtension; }
+            get { return baseFileName + PackageExtension; }
         }
 
         protected string ModifiedFileName
         {
-            get { return this.editedFileName + this.PackageExtension; }
+            get { return editedFileName + PackageExtension; }
         }
         #endregion
 
@@ -59,7 +59,7 @@ namespace DocumentFormat.OpenXml.Tests
             : base(output)
         {
             // Creates the test document
-            this.CreatePackage(this.GetTestFilePath(this.BaseFileName));
+            CreatePackage(GetTestFilePath(BaseFileName));
         }
 
         #region Preset Tests
@@ -67,25 +67,25 @@ namespace DocumentFormat.OpenXml.Tests
 
         protected void SimpleReadWriteTest(ElementHandler preTest, ElementHandler update, ElementHandler postTest)
         {
-            string originalFilePath = this.GetTestFilePath(this.BaseFileName);
-            string modifiedFilePath = this.GetTestFilePath(this.ModifiedFileName);
+            string originalFilePath = GetTestFilePath(BaseFileName);
+            string modifiedFilePath = GetTestFilePath(ModifiedFileName);
 
             System.IO.File.Copy(originalFilePath, modifiedFilePath, true);
-            this.Log.Comment("File copy [{0}] to [{1}]", originalFilePath, modifiedFilePath);
+            Log.Comment("File copy [{0}] to [{1}]", originalFilePath, modifiedFilePath);
 
-            using (var package = this.OpenDocument(modifiedFilePath, true))
+            using (var package = OpenDocument(modifiedFilePath, true))
             {
-                var elements = this.GetElements(package);
+                var elements = GetElements(package);
 
                 preTest(elements.First<TElement>());
                 update(elements.First<TElement>());
             }
 
-            this.Log.Pass("Updated the element on [{0}].", modifiedFilePath);
+            Log.Pass("Updated the element on [{0}].", modifiedFilePath);
 
-            using (var package = this.OpenDocument(modifiedFilePath, false))
+            using (var package = OpenDocument(modifiedFilePath, false))
             {
-                var elements = this.GetElements(package);
+                var elements = GetElements(package);
 
                 postTest(elements.First<TElement>());
             }
@@ -104,7 +104,7 @@ namespace DocumentFormat.OpenXml.Tests
             var createPackageMethod = reflectedCode.GetMethod("CreatePackage");
             createPackageMethod.Invoke(documentGenerator, new object[] { path });
 
-            this.Log.Pass("Document generated. path=[{0}]", path);
+            Log.Pass("Document generated. path=[{0}]", path);
         }
 
         /// <summary>
@@ -139,7 +139,7 @@ namespace DocumentFormat.OpenXml.Tests
                 package = SpreadsheetDocument.Open(path, enableEdit, settings);
             }
 
-            this.Log.Pass("Opened test document {0}", path);
+            Log.Pass("Opened test document {0}", path);
 
             return package;
         }
@@ -179,7 +179,7 @@ namespace DocumentFormat.OpenXml.Tests
                 }
             }
 
-            this.Log.VerifyTrue(
+            Log.VerifyTrue(
                 elements.Count > 0,
                 string.Format(
                     "Elements [{0}] are detected in [{1}]",

@@ -26,11 +26,11 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         public ThemeTest(ITestOutputHelper output)
             : base(output)
         {
-            string createFilePath = this.GetTestFilePath(this.generateDocumentFilePath);
+            string createFilePath = GetTestFilePath(generateDocumentFilePath);
             GeneratedDocument generatedDocument = new GeneratedDocument();
             generatedDocument.CreatePackage(createFilePath);
 
-            this.Log.Pass("Create Power Point file. File path=[{0}]", createFilePath);
+            Log.Pass("Create Power Point file. File path=[{0}]", createFilePath);
         }
 
         /// <summary>
@@ -39,8 +39,8 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         [Fact]
         public void Theme01EditAttribute()
         {
-            string originalFilepath = this.GetTestFilePath(this.generateDocumentFilePath);
-            string editFilePath = this.GetTestFilePath(this.editDocumentFilePath);
+            string originalFilepath = GetTestFilePath(generateDocumentFilePath);
+            string editFilePath = GetTestFilePath(editDocumentFilePath);
 
             System.IO.File.Copy(originalFilepath, editFilePath, true);
 
@@ -52,8 +52,8 @@ namespace DocumentFormat.OpenXml.Tests.Theme
             }
 
             TestEntities testEntities = new TestEntities();
-            testEntities.EditAttribute(editFilePath, this.Log);
-            testEntities.VerifyAttribute(editFilePath, this.Log);
+            testEntities.EditAttribute(editFilePath, Log);
+            testEntities.VerifyAttribute(editFilePath, Log);
         }
 
         /// <summary>
@@ -62,24 +62,24 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         [Fact]
         public void Theme03DeleteAttribute()
         {
-            string originalFilepath = this.GetTestFilePath(this.generateDocumentFilePath);
-            string deleteFilePath = this.GetTestFilePath(this.deleteDocumentFilePath);
-            string addFilePath = this.GetTestFilePath(this.addDocumentFilePath);
+            string originalFilepath = GetTestFilePath(generateDocumentFilePath);
+            string deleteFilePath = GetTestFilePath(deleteDocumentFilePath);
+            string addFilePath = GetTestFilePath(addDocumentFilePath);
 
             System.IO.File.Copy(originalFilepath, deleteFilePath, true);
-            this.Log.Comment("File copy [{0}] to [{1}]", originalFilepath, deleteFilePath);
+            Log.Comment("File copy [{0}] to [{1}]", originalFilepath, deleteFilePath);
 
             TestEntities testEntities = new TestEntities();
-            testEntities.DeletAttribute(deleteFilePath, this.Log);
-            testEntities.VerifyDeletedAttribute(deleteFilePath, this.Log);
+            testEntities.DeletAttribute(deleteFilePath, Log);
+            testEntities.VerifyDeletedAttribute(deleteFilePath, Log);
 
             System.IO.File.Copy(deleteFilePath, addFilePath, true);
-            this.Log.Comment("File copy [{0}] to [{1}]", deleteFilePath, addFilePath);
+            Log.Comment("File copy [{0}] to [{1}]", deleteFilePath, addFilePath);
 
-            testEntities.AddAttribute(addFilePath, this.Log);
-            testEntities.VerifyAddedAttribute(addFilePath, this.Log);
+            testEntities.AddAttribute(addFilePath, Log);
+            testEntities.VerifyAddedAttribute(addFilePath, Log);
 
-            this.Log.Pass("Deleted the thm15:id attribute is complete.");
+            Log.Pass("Deleted the thm15:id attribute is complete.");
         }
     }
 }

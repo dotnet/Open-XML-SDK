@@ -149,24 +149,40 @@ namespace DocumentFormat.OpenXml.Tests
 
             if (part is CustomXmlPart)
             {
-                XmlDocument xmlDoc = new XmlDocument();
                 using (var stream = part.GetStream())
-                    xmlDoc.Load(stream);
-                if (part.IsBibliographyPart())
-                    return new Sources(xmlDoc.DocumentElement.OuterXml);
-
-                else if (part.IsInkPart())
                 {
-                    return new DocumentFormat.OpenXml.InkML.Ink(xmlDoc.DocumentElement.OuterXml);
+                    var xmlDoc = new XmlDocument();
+                    xmlDoc.Load(stream);
+
+                    if (part.IsBibliographyPart())
+                    {
+                        return new Sources(xmlDoc.DocumentElement.OuterXml);
+                    }
+                    else if (part.IsInkPart())
+                    {
+                        return new InkML.Ink(xmlDoc.DocumentElement.OuterXml);
+                    }
                 }
             }
 
             var flag = BindingFlags.Public | BindingFlags.Instance | BindingFlags.FlattenHierarchy;
-            var properties = part.GetType().GetProperties(flag)
-                .Where(p => p.PropertyType.IsSubclassOf(typeof(OpenXmlPartRootElement)));
+            var property = part.GetType().GetProperties(flag)
+                .Where(p => p.PropertyType.IsSubclassOf(typeof(OpenXmlPartRootElement)))
+                .FirstOrDefault();
 
-            return null == properties.FirstOrDefault() ?
-                null : properties.First().GetValue(part, null) as OpenXmlPartRootElement;
+            if (property == null)
+            {
+                return null;
+            }
+
+            try
+            {
+                return property.GetValue(part, null) as OpenXmlPartRootElement;
+            }
+            catch (TargetInvocationException e)
+            {
+                throw e.InnerException;
+            }
         }
 
         /// <summary>

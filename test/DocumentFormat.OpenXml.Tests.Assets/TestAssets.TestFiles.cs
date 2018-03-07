@@ -3,9 +3,9 @@
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    internal partial class TestAssets
+    public partial class TestAssets
     {
-        internal static class TestFiles
+        public static class TestFiles
         {
             public static class Templates
             {

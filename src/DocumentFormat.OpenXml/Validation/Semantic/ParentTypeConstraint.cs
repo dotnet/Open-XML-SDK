@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            if (parent.GetType() == this._parentType ^ !this._isValid) //TODO: (junzha) need to take ac-block into account.
+            if (parent.GetType() == _parentType ^ !_isValid) //TODO: (junzha) need to take ac-block into account.
             {
                 return null;
             }

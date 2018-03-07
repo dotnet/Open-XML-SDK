@@ -41,11 +41,11 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         {
             get
             {
-                if (this.currentResultFolder == null)
+                if (currentResultFolder == null)
                 {
-                    this.currentResultFolder = CreateResultFolder();
+                    currentResultFolder = CreateResultFolder();
                 }
-                return this.currentResultFolder;
+                return currentResultFolder;
             }
         }
 
@@ -70,125 +70,18 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
 
         public string GetTestFilePath(string filename)
         {
-            string testFileFolder = Path.Combine(ResultPath, this.TestClassName + "_files");
+            string testFileFolder = Path.Combine(ResultPath, TestClassName + "_files");
             string testFilePath = Path.Combine(testFileFolder, filename);
 
             if (Directory.Exists(testFileFolder) == false)
             {
-                this.Log.Comment("Create a test file folder : {0}", testFileFolder);
+                Log.Comment("Create a test file folder : {0}", testFileFolder);
                 Directory.CreateDirectory(testFileFolder);
             }
 
-            this.Log.Comment("Test file path: {0}", testFilePath);
+            Log.Comment("Test file path: {0}", testFilePath);
 
             return testFilePath;
-        }
-
-        /// <summary>
-        /// Get test files in the test file storage.
-        /// </summary>
-        /// <param name="sourceFolder">Relative path to source folder.</param>
-        /// <param name="recursive">True to search files recursively</param>
-        /// <param name="searchPattern">Search pattern of file name. Wildcard chars are allowed.</param>
-        /// <param name="pred">Filter function which limits files to be searched.</param>
-        /// <returns></returns>
-        public IEnumerable<FileInfo> GetTestFiles(string sourceFolder, string subFolder)
-        {
-            string inputPath = Path.Combine(SourcePath, sourceFolder, subFolder);
-            return new DirectoryInfo(inputPath).GetFiles("*", SearchOption.AllDirectories);
-        }
-
-        /// <summary>
-        /// Get the specified test file in the test file storage.
-        /// </summary>
-        /// <param name="sourceFile">File name you want to get.
-        /// This can be a relative path from the source folder.</param>
-        /// <returns></returns>
-        public FileInfo GetTestFileOne(string sourceFile)
-        {
-            string inputPath = Path.Combine(SourcePath, sourceFile);
-            return new FileInfo(inputPath);
-        }
-
-        /// <summary>
-        /// Copy test files to result folder.
-        /// </summary>
-        /// <param name="sourceFolder">Relative path to source folder.</param>
-        /// <param name="recursive">True to search files recursively</param>
-        /// <param name="searchPattern">Search pattern of file name. Wildcard chars are allowed.</param>
-        /// <param name="pred">Filter function which limits files to be copied.</param>
-        /// <returns></returns>
-        public IEnumerable<FileInfo> CopyTestFiles(string sourceFolder)
-        {
-            return CopyTestFiles(sourceFolder, true, "*", FileExtensions.IsOpenXmlFile);
-        }
-
-        public IEnumerable<FileInfo> CopyTestFiles(string sourceFolder, string subFolder)
-        {
-            return CopyTestFiles(Path.Combine(sourceFolder, subFolder));
-        }
-
-        /// <summary>
-        /// Copy test files to result folder.
-        /// </summary>
-        /// <param name="sourceFolder">Relative path to source folder.</param>
-        /// <param name="recursive">True to search files recursively</param>
-        /// <param name="searchPattern">Search pattern of file name. Wildcard chars are allowed.</param>
-        /// <param name="pred">Filter function which limits files to be copied.</param>
-        /// <returns></returns>
-        public IEnumerable<FileInfo> CopyTestFiles(string sourceFolder, bool recursive, int? maxFiles = null)
-        {
-            return CopyTestFiles(sourceFolder, recursive, "*", FileExtensions.IsOpenXmlFile, maxFiles);
-        }
-
-        /// <summary>
-        /// Copy test files to result folder.
-        /// </summary>
-        /// <param name="sourceFolder">Relative path to source folder.</param>
-        /// <param name="recursive">True to search files recursively</param>
-        /// <param name="searchPattern">Search pattern of file name. Wildcard chars are allowed.</param>
-        /// <param name="pred">Filter function which limits files to be copied.</param>
-        /// <returns></returns>
-        public IEnumerable<FileInfo> CopyTestFiles(string sourceFolder, bool recursive, string searchPattern, Func<FileInfo, bool> pred, int? maxFiles = null)
-        {
-            string inputPath = Path.Combine(SourcePath, sourceFolder);
-            string outputPath = this.CurrentResultFolder;
-
-            // Cd to the outputPath folder
-            Directory.SetCurrentDirectory(outputPath);
-
-            // Ensure pred is not null
-            if (pred == null) { pred = file => { return true; }; }
-
-            // Copy sourcefiles to output as testfiles
-            var inputDirItem = new DirectoryInfo(inputPath);
-            var searchOption = recursive ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly;
-            var sourcefiles = inputDirItem.GetFiles(searchPattern, searchOption).Where(pred);
-            if (maxFiles != null)
-                sourcefiles = sourcefiles.Take((int)maxFiles);
-
-            // Create return value's instance
-            var retFiles = new List<FileInfo>();
-
-            // Copy all files searched to result folder
-            foreach (var file in sourcefiles)
-            {
-                // Calculate destination file path
-                string destfile = System.IO.Path.Combine(outputPath, file.Name);
-
-                // Create target directory if not exists
-                if (!Directory.Exists(Path.GetDirectoryName(destfile)))
-                    Directory.CreateDirectory(Path.GetDirectoryName(destfile));
-
-                if (!File.Exists(destfile))
-                {
-                    // Copy the file
-                    retFiles.Add(file.CopyTo(destfile, true));
-                }
-            }
-
-            // Return list of copied files
-            return retFiles;
         }
 
         /// <summary>
@@ -227,7 +120,7 @@ namespace DocumentFormat.OpenXml.Tests.TaskLibraries
         private string CreateResultFolder()
         {
             // Caculate result folder path
-            var resultFolder = this.TestClassName;
+            var resultFolder = TestClassName;
             string outputPath = Path.Combine(ResultPath, resultFolder);
 
             CreateResultFolder(outputPath);

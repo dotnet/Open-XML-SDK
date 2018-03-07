@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Gets the constraint to be validated.
         /// </summary>
-        protected ParticleConstraint ParticleConstraint { get { return this._particleConstraint; } }
+        protected ParticleConstraint ParticleConstraint { get { return _particleConstraint; } }
 
         /// <summary>
         /// Initializes a new instance of the CompositeParticleValidator.
@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="particleConstraint"></param>
         internal CompositeParticleValidator(ParticleConstraint particleConstraint)
         {
-            this._particleConstraint = particleConstraint;
+            _particleConstraint = particleConstraint;
         }
 
         /// <summary>
@@ -55,14 +55,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             // no children
             if (child == null)
             {
-                if (this.ParticleConstraint.MinOccurs == 0)
+                if (ParticleConstraint.MinOccurs == 0)
                 {
                     // no child, ok
                     return;
                 }
                 else
                 {
-                    var requiredElements = this.GetRequiredElements();
+                    var requiredElements = GetRequiredElements();
 
                     if ( requiredElements.Count > 0 )
                     {
@@ -73,16 +73,16 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 }
             }
 
-            if (this._particleMatchInfo == null)
+            if (_particleMatchInfo == null)
             {
-                this._particleMatchInfo = new ParticleMatchInfo(child);
+                _particleMatchInfo = new ParticleMatchInfo(child);
             }
             else
             {
                 _particleMatchInfo.Reset(child);
             }
 
-            this.TryMatch(_particleMatchInfo, validationContext);
+            TryMatch(_particleMatchInfo, validationContext);
 
             switch (_particleMatchInfo.Match)
             {
@@ -127,20 +127,20 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="validationContext">The context information for validation.</param>
         public override void TryMatch(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
         {
-            if (this.ParticleConstraint.MaxOccurs == 1)
+            if (ParticleConstraint.MaxOccurs == 1)
             {
-                this.TryMatchOnce(particleMatchInfo, validationContext);
+                TryMatchOnce(particleMatchInfo, validationContext);
             }
             else
             {
                 int matchCount = 0;
                 var next = particleMatchInfo.StartElement;
 
-                while (next != null && this.ParticleConstraint.MaxOccursGreaterThan(matchCount))
+                while (next != null && ParticleConstraint.MaxOccursGreaterThan(matchCount))
                 {
                     // Use Reset() instead of new() to avoid heavy memory alloction and GC.
                     _childMatchInfo.Reset(next);
-                    this.TryMatchOnce(_childMatchInfo, validationContext);
+                    TryMatchOnce(_childMatchInfo, validationContext);
 
                     // if the _childMatchInfo.StartElement is changed, it means this method of this object is called more than once on the stack.
                     Debug.Assert(_childMatchInfo.StartElement == next);
@@ -173,17 +173,17 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     particleMatchInfo.Match = ParticleMatch.Nomatch;
                     if (validationContext.CollectExpectedChildren)
                     {
-                        particleMatchInfo.SetExpectedChildren(this.GetExpectedElements());
+                        particleMatchInfo.SetExpectedChildren(GetExpectedElements());
                     }
                 }
-                else if (matchCount >= this.ParticleConstraint.MinOccurs)
+                else if (matchCount >= ParticleConstraint.MinOccurs)
                 {
                     // matched ok
                     particleMatchInfo.Match = ParticleMatch.Matched;
                 }
                 else
                 {
-                    if (this.GetRequiredElements(particleMatchInfo.ExpectedChildren))
+                    if (GetRequiredElements(particleMatchInfo.ExpectedChildren))
                     {
                         // minOccurs failed, incomplete children.
                         particleMatchInfo.Match = ParticleMatch.Partial;
@@ -207,9 +207,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             bool requiredElements = false;
 
-            if (this._particleConstraint.MinOccurs > 0)
+            if (_particleConstraint.MinOccurs > 0)
             {
-                foreach (var constraint in this._particleConstraint.ChildrenParticles)
+                foreach (var constraint in _particleConstraint.ChildrenParticles)
                 {
                     if (constraint.ParticleValidator.GetRequiredElements(result))
                     {
@@ -227,7 +227,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <returns>True if there are expected elements in this particle.</returns>
         public override bool GetExpectedElements(ExpectedChildren result)
         {
-            foreach (var constraint in this.ParticleConstraint.ChildrenParticles)
+            foreach (var constraint in ParticleConstraint.ChildrenParticles)
             {
                 constraint.ParticleValidator.GetExpectedElements(result);
             }
@@ -251,7 +251,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 validationContext.CollectExpectedChildren = true;
                 particleMatchInfo.Reset(child);
                 particleMatchInfo.InitExpectedChildren();
-                this.TryMatch(particleMatchInfo, validationContext);
+                TryMatch(particleMatchInfo, validationContext);
                 validationContext.CollectExpectedChildren = false;
 
 #if DEBUG
@@ -276,7 +276,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             switch (particleMatchInfo.Match)
             {
                 case ParticleMatch.Nomatch:
-                    expectedChildren = GetExpectedChildrenMessage(validationContext.Element, this.GetExpectedElements());
+                    expectedChildren = GetExpectedChildrenMessage(validationContext.Element, GetExpectedElements());
                     break;
 
                 case ParticleMatch.Partial:
@@ -296,9 +296,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     break;
 
                 case ParticleMatch.Matched:
-                    if (this.ParticleConstraint.CanOccursMoreThanOne)
+                    if (ParticleConstraint.CanOccursMoreThanOne)
                     {
-                        expectedChildren = GetExpectedChildrenMessage(validationContext.Element, this.GetExpectedElements());
+                        expectedChildren = GetExpectedChildrenMessage(validationContext.Element, GetExpectedElements());
                     }
                     else
                     {

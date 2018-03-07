@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
                 P15.ThreadingInfo threadingInfo = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Single();
                 CommentExtension commentExtension = (CommentExtension)threadingInfo.Parent;
-                this.ThreadingInfoExtUri = commentExtension.Uri; ;
+                ThreadingInfoExtUri = commentExtension.Uri; ;
 
                 if (string.IsNullOrEmpty(ThreadingInfoExtUri))
                     throw new Exception("Uri attribute value in Extension element is not set.");
@@ -56,7 +56,7 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
             {
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
                 P15.ThreadingInfo threadingInfo = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Single();
-                threadingInfo.TimeZoneBias.Value = this.timeZoneBiasValue;
+                threadingInfo.TimeZoneBias.Value = timeZoneBiasValue;
 
                 log.Pass("Edited ThreadingInfo value.");
             }
@@ -74,7 +74,7 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
                 P15.ThreadingInfo threadingInfo = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Single();
 
-                log.Verify(threadingInfo.TimeZoneBias.Value == this.timeZoneBiasValue, "UnChanged in the ThreadingInfo element.");
+                log.Verify(threadingInfo.TimeZoneBias.Value == timeZoneBiasValue, "UnChanged in the ThreadingInfo element.");
             }
         }
 
@@ -88,7 +88,7 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
             using (PresentationDocument package = PresentationDocument.Open(filePath, true))
             {
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
-                CommentExtension commentExtension = comment.CommentExtensionList.Descendants<CommentExtension>().Where(e => e.Uri == this.ThreadingInfoExtUri).Single();
+                CommentExtension commentExtension = comment.CommentExtensionList.Descendants<CommentExtension>().Where(e => e.Uri == ThreadingInfoExtUri).Single();
                 P15.ThreadingInfo threadingInfo = commentExtension.Descendants<P15.ThreadingInfo>().Single();
 
                 threadingInfo.Remove();
@@ -110,7 +110,7 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
             {
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
 
-                int threadingInfoExtCount = comment.CommentExtensionList.Descendants<CommentExtension>().Where(e => e.Uri == this.ThreadingInfoExtUri).Count();
+                int threadingInfoExtCount = comment.CommentExtensionList.Descendants<CommentExtension>().Where(e => e.Uri == ThreadingInfoExtUri).Count();
                 log.Verify(threadingInfoExtCount == 0, "ThreadingInfo extension element is not deleted.");
 
                 int threadingInfoCount = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Count();
@@ -128,8 +128,8 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
             using (PresentationDocument package = PresentationDocument.Open(filePath, true))
             {
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
-                CommentExtension commentExtension = new CommentExtension() { Uri = this.ThreadingInfoExtUri };
-                P15.ThreadingInfo threadingInfo = new P15.ThreadingInfo() { TimeZoneBias = this.timeZoneBiasValue };
+                CommentExtension commentExtension = new CommentExtension() { Uri = ThreadingInfoExtUri };
+                P15.ThreadingInfo threadingInfo = new P15.ThreadingInfo() { TimeZoneBias = timeZoneBiasValue };
                 commentExtension.AppendChild<P15.ThreadingInfo>(threadingInfo);
                 comment.CommentExtensionList.AppendChild<CommentExtension>(commentExtension);
 
@@ -148,7 +148,7 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
             {
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
 
-                int threadingInfoExtCount = comment.CommentExtensionList.Descendants<CommentExtension>().Where(e => e.Uri == this.ThreadingInfoExtUri).Count();
+                int threadingInfoExtCount = comment.CommentExtensionList.Descendants<CommentExtension>().Where(e => e.Uri == ThreadingInfoExtUri).Count();
                 log.Verify(threadingInfoExtCount == 1, "ThreadingInfo element is not added.");
 
                 int threadingInfoCount = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Count();

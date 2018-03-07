@@ -24,25 +24,21 @@ namespace DocumentFormat.OpenXml
         /// <returns></returns>
         internal XmlConvertingReader(XmlReader baseReader, bool strictTranslation)
         {
-            if (baseReader == null)
-            {
-                throw new ArgumentNullException(nameof(baseReader));
-            }
+            BaseReader = baseReader ?? throw new ArgumentNullException(nameof(baseReader));
 
-            this._strictTranslation = strictTranslation;
-            this.BaseReader = baseReader;
+            _strictTranslation = strictTranslation;
         }
 
         /// <summary>
         /// Gets a value indicating whether strictTranslation is enabled.
         /// </summary>
-        internal bool StrictTranslation => this._strictTranslation;
+        internal bool StrictTranslation => _strictTranslation;
 
 #if FEATURE_CLOSE
         /// <inheritdoc/>
         public override void Close()
         {
-            this.BaseReader.Close();
+            BaseReader.Close();
         }
 #endif
 
@@ -50,99 +46,99 @@ namespace DocumentFormat.OpenXml
         protected override void Dispose(bool disposing)
         {
 #if FEATURE_CLOSE
-            if (this.ReadState != ReadState.Closed)
+            if (ReadState != ReadState.Closed)
             {
-                this.Close();
+                Close();
             }
 #endif
 
 #if !FEATURE_XML_DISPOSE_PROTECTED
-            this.BaseReader.Dispose();
+            BaseReader.Dispose();
 #endif
         }
 
         /// <inheritdoc/>
         public override bool Read()
         {
-            return this.BaseReader.Read();
+            return BaseReader.Read();
         }
 
         /// <inheritdoc/>
         public override string GetAttribute(int index)
         {
-            return this.BaseReader.GetAttribute(index);
+            return BaseReader.GetAttribute(index);
         }
 
         /// <inheritdoc/>
         public override string GetAttribute(string name)
         {
-            return this.BaseReader.GetAttribute(name);
+            return BaseReader.GetAttribute(name);
         }
 
         /// <inheritdoc/>
         public override string GetAttribute(string localName, string namespaceURI)
         {
-            return this.BaseReader.GetAttribute(localName, namespaceURI);
+            return BaseReader.GetAttribute(localName, namespaceURI);
         }
 
         /// <inheritdoc/>
         public override string LookupNamespace(string prefix)
         {
-            return this.BaseReader.LookupNamespace(prefix);
+            return BaseReader.LookupNamespace(prefix);
         }
 
         /// <inheritdoc/>
         public override void MoveToAttribute(int index)
         {
-            this.BaseReader.MoveToAttribute(index);
+            BaseReader.MoveToAttribute(index);
         }
 
         /// <inheritdoc/>
         public override bool MoveToAttribute(string name)
         {
-            return this.BaseReader.MoveToAttribute(name);
+            return BaseReader.MoveToAttribute(name);
         }
 
         /// <inheritdoc/>
         public override bool MoveToAttribute(string localName, string namespaceURI)
         {
-            return this.BaseReader.MoveToAttribute(localName, namespaceURI);
+            return BaseReader.MoveToAttribute(localName, namespaceURI);
         }
 
         /// <inheritdoc/>
         public override bool MoveToElement()
         {
-            return this.BaseReader.MoveToElement();
+            return BaseReader.MoveToElement();
         }
 
         /// <inheritdoc/>
         public override bool MoveToFirstAttribute()
         {
-            return this.BaseReader.MoveToFirstAttribute();
+            return BaseReader.MoveToFirstAttribute();
         }
 
         /// <inheritdoc/>
         public override bool MoveToNextAttribute()
         {
-            return this.BaseReader.MoveToNextAttribute();
+            return BaseReader.MoveToNextAttribute();
         }
 
         /// <inheritdoc/>
         public override bool ReadAttributeValue()
         {
-            return this.BaseReader.ReadAttributeValue();
+            return BaseReader.ReadAttributeValue();
         }
 
         /// <inheritdoc/>
         public override void ResolveEntity()
         {
-            this.BaseReader.ResolveEntity();
+            BaseReader.ResolveEntity();
         }
 
         /// <inheritdoc/>
         public override int ReadValueChunk(char[] buffer, int index, int count)
         {
-            return this.BaseReader.ReadValueChunk(buffer, index, count);
+            return BaseReader.ReadValueChunk(buffer, index, count);
         }
 
         /// <inheritdoc/>
@@ -150,7 +146,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this.BaseReader.AttributeCount;
+                return BaseReader.AttributeCount;
             }
         }
 
@@ -159,7 +155,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this.BaseReader.BaseURI;
+                return BaseReader.BaseURI;
             }
         }
 
@@ -168,7 +164,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this.BaseReader.CanReadBinaryContent;
+                return BaseReader.CanReadBinaryContent;
             }
         }
 
@@ -177,7 +173,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this.BaseReader.CanReadValueChunk;
+                return BaseReader.CanReadValueChunk;
             }
         }
 
@@ -186,7 +182,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this.BaseReader.CanResolveEntity;
+                return BaseReader.CanResolveEntity;
             }
         }
 
@@ -195,7 +191,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this.BaseReader.Depth;
+                return BaseReader.Depth;
             }
         }
 
@@ -204,7 +200,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this.BaseReader.EOF;
+                return BaseReader.EOF;
             }
         }
 
@@ -213,7 +209,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this.BaseReader.HasValue;
+                return BaseReader.HasValue;
             }
         }
 
@@ -222,7 +218,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this.BaseReader.IsDefault;
+                return BaseReader.IsDefault;
             }
         }
 
@@ -231,7 +227,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this.BaseReader.IsEmptyElement;
+                return BaseReader.IsEmptyElement;
             }
         }
 
@@ -240,7 +236,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this.BaseReader[index];
+                return BaseReader[index];
             }
         }
 
@@ -249,7 +245,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this.BaseReader[name];
+                return BaseReader[name];
             }
         }
 
@@ -258,7 +254,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this.BaseReader[name, namespaceURI];
+                return BaseReader[name, namespaceURI];
             }
         }
 
@@ -267,7 +263,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this.BaseReader.LocalName;
+                return BaseReader.LocalName;
             }
         }
 
@@ -276,7 +272,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this.BaseReader.Name;
+                return BaseReader.Name;
             }
         }
 
@@ -285,11 +281,11 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                string uri = this.BaseReader.NamespaceURI;
+                string uri = BaseReader.NamespaceURI;
                 string translatedNamespace;
                 bool found;
 
-                if (this._strictTranslation)
+                if (_strictTranslation)
                 {
                     found = NamespaceIdMap.TryGetTransitionalNamespace(uri, out translatedNamespace);
                 }
@@ -312,7 +308,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this.BaseReader.NameTable;
+                return BaseReader.NameTable;
             }
         }
 
@@ -321,7 +317,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this.BaseReader.NodeType;
+                return BaseReader.NodeType;
             }
         }
 
@@ -330,7 +326,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this.BaseReader.Prefix;
+                return BaseReader.Prefix;
             }
         }
 
@@ -340,7 +336,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this.BaseReader.QuoteChar;
+                return BaseReader.QuoteChar;
             }
         }
 #endif
@@ -350,7 +346,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this.BaseReader.ReadState;
+                return BaseReader.ReadState;
             }
         }
 
@@ -359,14 +355,14 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                string textValue = this.BaseReader.Value;
+                string textValue = BaseReader.Value;
 
-                if (this.BaseReader.NodeType == XmlNodeType.Attribute)
+                if (BaseReader.NodeType == XmlNodeType.Attribute)
                 {
                     bool found;
                     string translatedNamespace;
 
-                    if (this._strictTranslation)
+                    if (_strictTranslation)
                     {
                         found = NamespaceIdMap.TryGetTransitionalNamespace(textValue, out translatedNamespace);
                     }
@@ -390,7 +386,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this.BaseReader.XmlLang;
+                return BaseReader.XmlLang;
             }
         }
 
@@ -399,7 +395,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this.BaseReader.XmlSpace;
+                return BaseReader.XmlSpace;
             }
         }
     }

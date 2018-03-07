@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(source));
             }
 
-            this.TextValue = source.TextValue;
+            TextValue = source.TextValue;
         }
 
         /// <summary>
@@ -60,7 +60,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this._textValue != null;
+                return _textValue != null;
             }
         }
 
