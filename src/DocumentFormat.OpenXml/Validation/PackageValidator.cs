@@ -115,7 +115,7 @@ namespace DocumentFormat.OpenXml.Validation
                 // validate the required parts
                 if (constraintRule.MinOccursIsNonZero
                     // only check rules apply to the specified version.
-                    && constraintRule.FileFormat.Includes(version))
+                    && version.AtLeast(constraintRule.FileFormat))
                 {
                     // must have one
                     if (null == container.GetSubPart(relatinshipType))
@@ -132,7 +132,7 @@ namespace DocumentFormat.OpenXml.Validation
                 // check for parts MaxOccursGreatThanOne=false, but do have multiple instance
                 if (!constraintRule.MaxOccursGreatThanOne
                     // only check rules apply to the specified version.
-                    && constraintRule.FileFormat.Includes(version))
+                    && version.AtLeast(constraintRule.FileFormat))
                 {
                     if (partOccurs.TryGetValue(relatinshipType, out int occurs))
                     {
@@ -160,7 +160,7 @@ namespace DocumentFormat.OpenXml.Validation
                     {
                         if (container.PartConstraints.TryGetValue(part.RelationshipType, out var rule))
                         {
-                            if (rule.FileFormat.Includes(version))
+                            if (version.AtLeast(rule.FileFormat))
                             {
                                 // validate content type
                                 if (rule.PartContentType != null && part.ContentType != rule.PartContentType)
