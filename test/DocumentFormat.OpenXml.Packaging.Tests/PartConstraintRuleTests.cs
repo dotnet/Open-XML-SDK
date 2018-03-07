@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -71,6 +72,21 @@ namespace DocumentFormat.OpenXml.Tests
 
             AssertDictionary(data.DataParts, part.GetDataPartReferenceConstraint());
             AssertDictionary(data.Parts, part.GetPartConstraint());
+        }
+
+        [MemberData(nameof(GetOpenXmlParts))]
+        [Theory]
+        public void ValidateValid(OpenXmlPart part)
+        {
+            var availability = part.GetType().GetCustomAttribute<OfficeAvailabilityAttribute>()?.OfficeVersion ?? FileFormatVersions.Office2007;
+            var versions = Enum.GetValues(typeof(FileFormatVersions))
+                .Cast<FileFormatVersions>()
+                .Where(v => v != FileFormatVersions.None);
+
+            foreach (var version in versions)
+            {
+                Assert.Equal(version.AtLeast(availability), part.IsInVersion(version));
+            }
         }
 
 #pragma warning disable xUnit1013 // Public method should be marked as test
