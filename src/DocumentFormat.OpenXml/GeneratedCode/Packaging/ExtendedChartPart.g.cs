@@ -7,38 +7,48 @@ using System.Collections.Generic;
 namespace DocumentFormat.OpenXml.Packaging
 {
     /// <summary>
-    /// Defines the ChartDrawingPart
+    /// Defines the ExtendedChartPart
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2007)]
     [ContentType(ContentTypeConstant)]
-    public partial class ChartDrawingPart : OpenXmlPart, IFixedContentTypePart
+    public partial class ExtendedChartPart : OpenXmlPart, IFixedContentTypePart
     {
-        internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.drawingml.chartshapes+xml";
-        internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartUserShapes";
+        internal const string ContentTypeConstant = "application/vnd.ms-office.chartex+xml";
+        internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2014/relationships/chartEx";
         private static PartConstraintCollection _partConstraints;
 
         /// <summary>
-        /// Creates an instance of the ChartDrawingPart OpenXmlType
+        /// Creates an instance of the ExtendedChartPart OpenXmlType
         /// </summary>
-        internal protected ChartDrawingPart()
+        internal protected ExtendedChartPart()
         {
         }
 
         /// <summary>
-        /// Gets the ChartPart of the ChartDrawingPart
+        /// Gets the ChartColorStyleParts of the ExtendedChartPart
         /// </summary>
-        public ChartPart ChartPart => GetSubPartOfType<ChartPart>();
+        public IEnumerable<ChartColorStylePart> ChartColorStyleParts => GetPartsOfType<ChartColorStylePart>();
+
+        /// <summary>
+        /// Gets the ChartDrawingPart of the ExtendedChartPart
+        /// </summary>
+        public ChartDrawingPart ChartDrawingPart => GetSubPartOfType<ChartDrawingPart>();
+
+        /// <summary>
+        /// Gets the ChartStyleParts of the ExtendedChartPart
+        /// </summary>
+        public IEnumerable<ChartStylePart> ChartStyleParts => GetPartsOfType<ChartStylePart>();
 
         /// <inheritdoc/>
         public sealed override string ContentType => ContentTypeConstant;
 
         /// <summary>
-        /// Gets the ExtendedChartPart of the ChartDrawingPart
+        /// Gets the EmbeddedPackagePart of the ExtendedChartPart
         /// </summary>
-        public ExtendedChartPart ExtendedChartPart => GetSubPartOfType<ExtendedChartPart>();
+        public EmbeddedPackagePart EmbeddedPackagePart => GetSubPartOfType<EmbeddedPackagePart>();
 
         /// <summary>
-        /// Gets the ImageParts of the ChartDrawingPart
+        /// Gets the ImageParts of the ExtendedChartPart
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
 
@@ -55,16 +65,28 @@ namespace DocumentFormat.OpenXml.Packaging
                     _partConstraints = new PartConstraintCollection
                     {
                         {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
-                            PartConstraintRule.Create<ChartPart>(false, false)
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartUserShapes",
+                            PartConstraintRule.Create<ChartDrawingPart>(false, false)
                         },
                         {
-                            "http://schemas.microsoft.com/office/2014/relationships/chartEx",
-                            PartConstraintRule.Create<ExtendedChartPart>(false, false)
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
+                            PartConstraintRule.Create<EmbeddedPackagePart>(false, false)
                         },
                         {
                             "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
                             PartConstraintRule.Create<ImagePart>(false, true)
+                        },
+                        {
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride",
+                            PartConstraintRule.Create<ThemeOverridePart>(false, false)
+                        },
+                        {
+                            "http://schemas.microsoft.com/office/2011/relationships/chartStyle",
+                            PartConstraintRule.Create<ChartStylePart>(false, true)
+                        },
+                        {
+                            "http://schemas.microsoft.com/office/2011/relationships/chartColorStyle",
+                            PartConstraintRule.Create<ChartColorStylePart>(false, true)
                         }
                     };
                 }
@@ -77,13 +99,30 @@ namespace DocumentFormat.OpenXml.Packaging
         public sealed override string RelationshipType => RelationshipTypeConstant;
 
         /// <inheritdoc/>
-        internal sealed override string TargetName => "drawing";
+        internal sealed override string TargetName => "chart";
 
         /// <inheritdoc/>
-        internal sealed override string TargetPath => "../drawings";
+        internal sealed override string TargetPath => "extendedCharts";
 
         /// <summary>
-        /// Adds a ImagePart to the ChartDrawingPart
+        /// Gets the ThemeOverridePart of the ExtendedChartPart
+        /// </summary>
+        public ThemeOverridePart ThemeOverridePart => GetSubPartOfType<ThemeOverridePart>();
+
+        /// <summary>
+        /// Adds a EmbeddedPackagePart to the ExtendedChartPart
+        /// </summary>
+        /// <param name="contentType">The content type of the EmbeddedPackagePart</param>
+        /// <return>The newly added part</return>
+        public EmbeddedPackagePart AddEmbeddedPackagePart(string contentType)
+        {
+            var childPart = new EmbeddedPackagePart();
+            InitPart(childPart, contentType);
+            return childPart;
+        }
+
+        /// <summary>
+        /// Adds a ImagePart to the ExtendedChartPart
         /// </summary>
         /// <param name="contentType">The content type of the ImagePart</param>
         /// <return>The newly added part</return>
@@ -95,7 +134,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Adds a ImagePart to the ChartDrawingPart
+        /// Adds a ImagePart to the ExtendedChartPart
         /// </summary>
         /// <param name="contentType">The content type of the ImagePart</param>
         /// <param name="id">The relationship id</param>
@@ -108,7 +147,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Adds a ImagePart to the ChartDrawingPart
+        /// Adds a ImagePart to the ExtendedChartPart
         /// </summary>
         /// <param name="partType">The part type of the ImagePart</param>
         /// <param name="id">The relationship id</param>
@@ -122,7 +161,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Adds a ImagePart to the ChartDrawingPart
+        /// Adds a ImagePart to the ExtendedChartPart
         /// </summary>
         /// <param name="partType">The part type of the ImagePart</param>
         /// <return>The newly added part</return>
@@ -145,12 +184,18 @@ namespace DocumentFormat.OpenXml.Packaging
 
             switch (relationshipType)
             {
-                case ChartPart.RelationshipTypeConstant:
-                    return new ChartPart();
-                case ExtendedChartPart.RelationshipTypeConstant:
-                    return new ExtendedChartPart();
+                case ChartDrawingPart.RelationshipTypeConstant:
+                    return new ChartDrawingPart();
+                case EmbeddedPackagePart.RelationshipTypeConstant:
+                    return new EmbeddedPackagePart();
                 case ImagePart.RelationshipTypeConstant:
                     return new ImagePart();
+                case ThemeOverridePart.RelationshipTypeConstant:
+                    return new ThemeOverridePart();
+                case ChartStylePart.RelationshipTypeConstant:
+                    return new ChartStylePart();
+                case ChartColorStylePart.RelationshipTypeConstant:
+                    return new ChartColorStylePart();
             }
 
             throw new ArgumentOutOfRangeException(nameof(relationshipType));

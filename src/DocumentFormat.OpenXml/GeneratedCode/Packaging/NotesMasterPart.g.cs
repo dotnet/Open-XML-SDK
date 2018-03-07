@@ -103,6 +103,11 @@ namespace DocumentFormat.OpenXml.Packaging
         public IEnumerable<EmbeddedPackagePart> EmbeddedPackageParts => GetPartsOfType<EmbeddedPackagePart>();
 
         /// <summary>
+        /// Gets the ExtendedChartParts of the NotesMasterPart
+        /// </summary>
+        public IEnumerable<ExtendedChartPart> ExtendedChartParts => GetPartsOfType<ExtendedChartPart>();
+
+        /// <summary>
         /// Gets the ImageParts of the NotesMasterPart
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
@@ -126,6 +131,10 @@ namespace DocumentFormat.OpenXml.Packaging
                         {
                             "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
                             PartConstraintRule.Create<ChartPart>(false, true)
+                        },
+                        {
+                            "http://schemas.microsoft.com/office/2014/relationships/chartEx",
+                            PartConstraintRule.Create<ExtendedChartPart>(false, true)
                         },
                         {
                             "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors",
@@ -448,6 +457,8 @@ namespace DocumentFormat.OpenXml.Packaging
                     return new CustomXmlPart();
                 case ChartPart.RelationshipTypeConstant:
                     return new ChartPart();
+                case ExtendedChartPart.RelationshipTypeConstant:
+                    return new ExtendedChartPart();
                 case DiagramColorsPart.RelationshipTypeConstant:
                     return new DiagramColorsPart();
                 case DiagramDataPart.RelationshipTypeConstant:

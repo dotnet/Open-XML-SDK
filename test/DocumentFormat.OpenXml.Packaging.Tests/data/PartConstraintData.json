@@ -60,6 +60,13 @@
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
+      "http://schemas.microsoft.com/office/2014/relationships/chartEx": {
+        "PartClassName": "ExtendedChartPart",
+        "PartContentType": "application/vnd.ms-office.chartex+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": false,
+        "FileFormat": "Office2007"
+      },
       "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image": {
         "PartClassName": "ImagePart",
         "PartContentType": null,
@@ -525,6 +532,13 @@
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
+      "http://schemas.microsoft.com/office/2014/relationships/chartEx": {
+        "PartClassName": "ExtendedChartPart",
+        "PartContentType": "application/vnd.ms-office.chartex+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
       "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors": {
         "PartClassName": "DiagramColorsPart",
         "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
@@ -667,6 +681,13 @@
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
+      "http://schemas.microsoft.com/office/2014/relationships/chartEx": {
+        "PartClassName": "ExtendedChartPart",
+        "PartContentType": "application/vnd.ms-office.chartex+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
       "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors": {
         "PartClassName": "DiagramColorsPart",
         "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
@@ -742,6 +763,60 @@
     "TargetPath": ".",
     "DataParts": {},
     "Parts": {}
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Packaging.ExtendedChartPart",
+    "ContentType": "application/vnd.ms-office.chartex+xml",
+    "IsContentTypeFixed": true,
+    "RelationshipType": "http://schemas.microsoft.com/office/2014/relationships/chartEx",
+    "TargetFileExtension": ".xml",
+    "TargetName": "chart",
+    "TargetPath": "extendedCharts",
+    "DataParts": {},
+    "Parts": {
+      "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartUserShapes": {
+        "PartClassName": "ChartDrawingPart",
+        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chartshapes+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": false,
+        "FileFormat": "Office2007"
+      },
+      "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package": {
+        "PartClassName": "EmbeddedPackagePart",
+        "PartContentType": null,
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": false,
+        "FileFormat": "Office2007"
+      },
+      "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image": {
+        "PartClassName": "ImagePart",
+        "PartContentType": null,
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
+      "http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride": {
+        "PartClassName": "ThemeOverridePart",
+        "PartContentType": "application/vnd.openxmlformats-officedocument.themeOverride+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": false,
+        "FileFormat": "Office2007"
+      },
+      "http://schemas.microsoft.com/office/2011/relationships/chartStyle": {
+        "PartClassName": "ChartStylePart",
+        "PartContentType": "application/vnd.ms-office.chartstyle+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2013"
+      },
+      "http://schemas.microsoft.com/office/2011/relationships/chartColorStyle": {
+        "PartClassName": "ChartColorStylePart",
+        "PartContentType": "application/vnd.ms-office.chartcolorstyle+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2013"
+      }
+    }
   },
   {
     "Name": "DocumentFormat.OpenXml.Packaging.ExtendedFilePropertiesPart",
@@ -823,6 +898,13 @@
       "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart": {
         "PartClassName": "ChartPart",
         "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
+      "http://schemas.microsoft.com/office/2014/relationships/chartEx": {
+        "PartClassName": "ExtendedChartPart",
+        "PartContentType": "application/vnd.ms-office.chartex+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -920,6 +1002,13 @@
       "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart": {
         "PartClassName": "ChartPart",
         "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
+      "http://schemas.microsoft.com/office/2014/relationships/chartEx": {
+        "PartClassName": "ExtendedChartPart",
+        "PartContentType": "application/vnd.ms-office.chartex+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -1133,6 +1222,13 @@
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
+      "http://schemas.microsoft.com/office/2014/relationships/chartEx": {
+        "PartClassName": "ExtendedChartPart",
+        "PartContentType": "application/vnd.ms-office.chartex+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
       "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors": {
         "PartClassName": "DiagramColorsPart",
         "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
@@ -1233,6 +1329,13 @@
       "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart": {
         "PartClassName": "ChartPart",
         "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
+      "http://schemas.microsoft.com/office/2014/relationships/chartEx": {
+        "PartClassName": "ExtendedChartPart",
+        "PartContentType": "application/vnd.ms-office.chartex+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -1358,6 +1461,13 @@
       "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart": {
         "PartClassName": "ChartPart",
         "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
+      "http://schemas.microsoft.com/office/2014/relationships/chartEx": {
+        "PartClassName": "ExtendedChartPart",
+        "PartContentType": "application/vnd.ms-office.chartex+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -1779,6 +1889,13 @@
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
+      "http://schemas.microsoft.com/office/2014/relationships/chartEx": {
+        "PartClassName": "ExtendedChartPart",
+        "PartContentType": "application/vnd.ms-office.chartex+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
       "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors": {
         "PartClassName": "DiagramColorsPart",
         "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
@@ -1879,6 +1996,13 @@
       "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart": {
         "PartClassName": "ChartPart",
         "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
+      "http://schemas.microsoft.com/office/2014/relationships/chartEx": {
+        "PartClassName": "ExtendedChartPart",
+        "PartContentType": "application/vnd.ms-office.chartex+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -2011,6 +2135,13 @@
       "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart": {
         "PartClassName": "ChartPart",
         "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
+      "http://schemas.microsoft.com/office/2014/relationships/chartEx": {
+        "PartClassName": "ExtendedChartPart",
+        "PartContentType": "application/vnd.ms-office.chartex+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -2465,6 +2596,13 @@
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
+      "http://schemas.microsoft.com/office/2014/relationships/chartEx": {
+        "PartClassName": "ExtendedChartPart",
+        "PartContentType": "application/vnd.ms-office.chartex+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
       "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors": {
         "PartClassName": "DiagramColorsPart",
         "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
@@ -2618,6 +2756,13 @@
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
+      "http://schemas.microsoft.com/office/2014/relationships/chartEx": {
+        "PartClassName": "ExtendedChartPart",
+        "PartContentType": "application/vnd.ms-office.chartex+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
       "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors": {
         "PartClassName": "DiagramColorsPart",
         "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
@@ -2767,6 +2912,13 @@
       "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart": {
         "PartClassName": "ChartPart",
         "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
+      "http://schemas.microsoft.com/office/2014/relationships/chartEx": {
+        "PartClassName": "ExtendedChartPart",
+        "PartContentType": "application/vnd.ms-office.chartex+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -3240,6 +3392,13 @@
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
+      "http://schemas.microsoft.com/office/2014/relationships/chartEx": {
+        "PartClassName": "ExtendedChartPart",
+        "PartContentType": "application/vnd.ms-office.chartex+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
       "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors": {
         "PartClassName": "DiagramColorsPart",
         "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
@@ -3333,6 +3492,13 @@
       "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart": {
         "PartClassName": "ChartPart",
         "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
+      "http://schemas.microsoft.com/office/2014/relationships/chartEx": {
+        "PartClassName": "ExtendedChartPart",
+        "PartContentType": "application/vnd.ms-office.chartex+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
