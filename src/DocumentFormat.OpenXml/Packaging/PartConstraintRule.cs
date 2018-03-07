@@ -6,7 +6,7 @@ using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
-    internal struct PartConstraintRule
+    internal readonly struct PartConstraintRule
     {
         private readonly TypeConstraintInfo _info;
 
@@ -23,12 +23,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
         public static PartConstraintRule Create<T>(bool minOccursIsNonZero, bool maxOccursGreatThanOne)
         {
-            return new PartConstraintRule(CachedRule<T>.Instance, minOccursIsNonZero, maxOccursGreatThanOne);
-        }
-
-        private static class CachedRule<T>
-        {
-            public static TypeConstraintInfo Instance { get; } = new TypeConstraintInfo(typeof(T));
+            return new PartConstraintRule(CachedTypeInfo<T>.Instance, minOccursIsNonZero, maxOccursGreatThanOne);
         }
 
         /// <summary>
@@ -58,13 +53,20 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public FileFormatVersions FileFormat => _info.Availability;
 
+        private static class CachedTypeInfo<T>
+        {
+            public static TypeConstraintInfo Instance { get; } = new TypeConstraintInfo(typeof(T));
+        }
+
         private class TypeConstraintInfo
         {
             public TypeConstraintInfo(Type type)
             {
+                var availability= type.GetTypeInfo().GetCustomAttribute<OfficeAvailabilityAttribute>()?.OfficeVersion ?? FileFormatVersions.Office2007;
+
                 PartClassName = type.Name;
                 PartContentType = type.GetTypeInfo().GetCustomAttribute<ContentTypeAttribute>()?.ContentType;
-                Availability = type.GetTypeInfo().GetCustomAttribute<OfficeAvailabilityAttribute>()?.OfficeVersion ?? FileFormatVersions.Office2007.AndLater();
+                Availability = availability.AndLater();
             }
 
             public string PartClassName { get; }

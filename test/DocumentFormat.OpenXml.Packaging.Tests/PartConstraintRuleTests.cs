@@ -198,7 +198,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             public override bool Equals(object obj)
             {
-                if (obj is PartConstraintRule other)
+                if (obj is PartConstraintRule2 other)
                 {
                     return string.Equals(PartClassName, other.PartClassName, StringComparison.Ordinal)
                         && string.Equals(PartContentType, other.PartContentType, StringComparison.Ordinal)
