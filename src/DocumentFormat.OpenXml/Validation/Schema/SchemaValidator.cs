@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
             else if (fileFormat == FileFormatVersions.Office2016)
             {
-                this._sdbSchemaDatas = SdbSchemaDatas.GetOffice2016SchemaDatas();
+                _sdbSchemaDatas = SdbSchemaDatas.GetOffice2016SchemaDatas();
             }
             else
             {
