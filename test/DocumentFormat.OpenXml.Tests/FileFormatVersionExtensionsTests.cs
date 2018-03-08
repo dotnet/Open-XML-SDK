@@ -1,7 +1,10 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using NSubstitute;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
@@ -70,6 +73,57 @@ namespace DocumentFormat.OpenXml.Tests
         {
             Assert.Throws<ArgumentOutOfRangeException>(nameof(version), () => version.AtLeast(FileFormatVersions.Office2007));
             Assert.Throws<ArgumentOutOfRangeException>("minimum", () => FileFormatVersions.Office2007.AtLeast(version));
+        }
+
+        [MemberData(nameof(AllOfficeVersions))]
+        [Theory]
+        public void ValidateElementThrows(FileFormatVersions version)
+        {
+            var name = version.ToString().Substring("OFfice".Length);
+            var element = Substitute.ForPartsOf<OpenXmlElement>();
+
+            element.IsInVersion(Arg.Any<FileFormatVersions>())
+                .Returns(callInfo =>
+                {
+                    var v = callInfo.Arg<FileFormatVersions>();
+
+                    return v.AtLeast(version);
+                });
+
+            var exception = Assert.Throws<InvalidOperationException>(() => version.ThrowIfNotInVersion(element));
+
+            Assert.Contains($" {name} ", exception.Message);
+        }
+
+        [MemberData(nameof(AllOfficeVersions))]
+        [Theory]
+        public void ValidatePartThrows(FileFormatVersions version)
+        {
+            var name = version.ToString().Substring("OFfice".Length);
+            var element = Substitute.ForPartsOf<OpenXmlElement>();
+
+            element.IsInVersion(Arg.Any<FileFormatVersions>())
+                .Returns(callInfo =>
+                {
+                    var v = callInfo.Arg<FileFormatVersions>();
+
+                    return v.AtLeast(version);
+                });
+
+            var exception = Assert.Throws<InvalidOperationException>(() => version.ThrowIfNotInVersion(element));
+            Assert.Contains($" {name} ", exception.Message);
+        }
+
+        public static IEnumerable<object[]> AllOfficeVersions()
+        {
+            var values = Enum.GetValues(typeof(FileFormatVersions))
+                .Cast<FileFormatVersions>()
+                .Where(v => v != FileFormatVersions.None);
+
+            foreach (var version in values)
+            {
+                yield return new object[] { version };
+            }
         }
     }
 }

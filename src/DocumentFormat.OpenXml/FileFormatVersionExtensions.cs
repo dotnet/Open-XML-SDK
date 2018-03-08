@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml
         /// Throws if the <see cref="OpenXmlPart"/> is not supported in the given version
         /// </summary>
         /// <param name="version">Version to check</param>
-        /// <param name="element">Element to validate</param>
+        /// <param name="part">Part to validate</param>
         public static void ThrowIfNotInVersion(this FileFormatVersions version, OpenXmlPart part)
         {
             version.ThrowExceptionIfFileFormatNotSupported(nameof(version));
