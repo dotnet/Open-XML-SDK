@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Tests
             "<w:rPr><w:strike /><w:vanish><!-- comments is ok --></w:vanish><w:webHidden><w:invalidChild /></w:webHidden></w:rPr>" +
             "<w:t>Run Text.</w:t><w:t><!-- comments is ok -->Text 2</w:t><w:t>Text 3.<invalidElement /></w:t></w:r>";
 
-            var target = new SchemaValidator();
+            var target = new SchemaValidator(FileFormatVersions.Office2007);
             var openxmlElement = new Run(runOuterXml);
             var result = target.Validate(openxmlElement);
 

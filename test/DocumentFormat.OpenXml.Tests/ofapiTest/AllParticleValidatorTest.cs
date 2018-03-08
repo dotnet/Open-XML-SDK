@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void AllParticleValidateTest()
         {
-            SdbSchemaDatas sdbSchemaDatas = SdbSchemaDatas.GetOffice2007SchemaDatas();
+            SdbSchemaDatas sdbSchemaDatas = SdbSchemaDatas.GetSchemaDatas(FileFormatVersions.Office2007);
 
             TestSimpleAll(sdbSchemaDatas);
             TestSimpleAll2(sdbSchemaDatas);

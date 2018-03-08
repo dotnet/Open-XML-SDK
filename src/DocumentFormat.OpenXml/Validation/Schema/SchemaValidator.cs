@@ -15,40 +15,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         private readonly SchemaTypeValidator _schemaTypeValidator;
 
         /// <summary>
-        /// Initializes a new instance of the SchemaValidator. Default to FileFormat.Office2007.
-        /// </summary>
-        public SchemaValidator()
-            : this(FileFormatVersions.Office2007)
-        {
-        }
-
-        /// <summary>
         /// Initializes a new instance of the SchemaValidator.
         /// </summary>
         /// <param name="fileFormat">The target Open XML format.</param>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the "fileFormat" parameter is not FileFormat.Office2007, FileFormat.Office2010 or FileFormat.O15.</exception>
         public SchemaValidator(FileFormatVersions fileFormat)
         {
-            if (fileFormat == FileFormatVersions.Office2007)
-            {
-                _sdbSchemaDatas = SdbSchemaDatas.GetOffice2007SchemaDatas();
-            }
-            else if(fileFormat == FileFormatVersions.Office2010)
-            {
-                _sdbSchemaDatas = SdbSchemaDatas.GetOffice2010SchemaDatas();
-            }
-            else if (fileFormat == FileFormatVersions.Office2013)
-            {
-                _sdbSchemaDatas = SdbSchemaDatas.GetOffice2013SchemaDatas();
-            }
-            else
-            {
-                string message = String.Format(System.Globalization.CultureInfo.CurrentUICulture,
-                                                    ExceptionMessages.FileFormatNotSupported,
-                                                    fileFormat);
-                throw new ArgumentOutOfRangeException(nameof(fileFormat), message);
-            }
-
+            _sdbSchemaDatas = SdbSchemaDatas.GetSchemaDatas(fileFormat);
             _schemaTypeValidator = new SchemaTypeValidator(_sdbSchemaDatas);
         }
 

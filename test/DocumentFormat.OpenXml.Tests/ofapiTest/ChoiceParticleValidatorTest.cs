@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ChoiceParticleValidateTest()
         {
-            SdbSchemaDatas sdbSchemaDatas = SdbSchemaDatas.GetOffice2007SchemaDatas();
+            SdbSchemaDatas sdbSchemaDatas = SdbSchemaDatas.GetSchemaDatas(FileFormatVersions.Office2007);
 
             TestSimpleChoice(sdbSchemaDatas);
             TestSimpleChoice2(sdbSchemaDatas);
