@@ -1,7 +1,11 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Packaging;
+using NSubstitute;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
@@ -70,6 +74,77 @@ namespace DocumentFormat.OpenXml.Tests
         {
             Assert.Throws<ArgumentOutOfRangeException>(nameof(version), () => version.AtLeast(FileFormatVersions.Office2007));
             Assert.Throws<ArgumentOutOfRangeException>("minimum", () => FileFormatVersions.Office2007.AtLeast(version));
+        }
+
+        [MemberData(nameof(AllOfficeVersions))]
+        [Theory]
+        public void ValidateElementThrows(FileFormatVersions version)
+        {
+            var name = version.ToString().Substring("Office".Length);
+            var element = Substitute.ForPartsOf<OpenXmlElement>();
+
+            element.IsInVersion(Arg.Any<FileFormatVersions>()).Returns(false);
+
+            var exception = Assert.Throws<InvalidOperationException>(() => version.ThrowIfNotInVersion(element));
+
+            Assert.Contains($" {name} ", exception.Message);
+        }
+
+        [MemberData(nameof(AllOfficeVersions))]
+        [Theory]
+        public void ValidatePartThrows(FileFormatVersions version)
+        {
+            var name = version.ToString().Substring("Office".Length);
+            var part = Substitute.ForPartsOf<OpenXmlPart>();
+
+            part.IsInVersion(Arg.Any<FileFormatVersions>()).Returns(false);
+
+            var exception = Assert.Throws<InvalidOperationException>(() => version.ThrowIfNotInVersion(part));
+            Assert.Contains($" {name} ", exception.Message);
+        }
+
+        [InlineData(FileFormatVersions.None)]
+        [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010)]
+        [InlineData((FileFormatVersions)(2 << 10))]
+        [Theory]
+        public void ArgumentOutOfRangeWhenInvalidForPart(FileFormatVersions version)
+        {
+            const string ParamName = "version";
+
+            Assert.True(version == default || !Enum.IsDefined(typeof(FileFormatVersions), version));
+
+            var part = Substitute.ForPartsOf<OpenXmlPart>();
+            part.IsInVersion(Arg.Any<FileFormatVersions>()).Returns(true);
+
+            Assert.Throws<ArgumentOutOfRangeException>(ParamName, () => version.ThrowIfNotInVersion(part));
+        }
+
+        [InlineData(FileFormatVersions.None)]
+        [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010)]
+        [InlineData((FileFormatVersions)(2 << 10))]
+        [Theory]
+        public void ArgumentOutOfRangeWhenInvalidForElement(FileFormatVersions version)
+        {
+            const string ParamName = "version";
+
+            Assert.True(version == default || !Enum.IsDefined(typeof(FileFormatVersions), version));
+
+            var element = Substitute.ForPartsOf<OpenXmlElement>();
+            element.IsInVersion(Arg.Any<FileFormatVersions>()).Returns(true);
+
+            Assert.Throws<ArgumentOutOfRangeException>(ParamName, () => version.ThrowIfNotInVersion(element));
+        }
+
+        public static IEnumerable<object[]> AllOfficeVersions()
+        {
+            var values = Enum.GetValues(typeof(FileFormatVersions))
+                .Cast<FileFormatVersions>()
+                .Where(v => v != FileFormatVersions.None);
+
+            foreach (var version in values)
+            {
+                yield return new object[] { version };
+            }
         }
     }
 }
