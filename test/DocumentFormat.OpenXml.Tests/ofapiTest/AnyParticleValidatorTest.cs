@@ -20,10 +20,9 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void AnyParticleValidateTest()
         {
-            SdbSchemaDatas sdbSchemaDatas = SdbSchemaDatas.GetOffice2007SchemaDatas();
+            SdbSchemaDatas sdbSchemaDatas = SdbSchemaDatas.GetSchemaDatas(FileFormatVersions.Office2007);
 
             TestSimpleAny(sdbSchemaDatas);
-            // TestSimpleAny2(sdbSchemaDatas);
         }
 
         private void TestSimpleAny(SdbSchemaDatas sdbSchemaDatas)

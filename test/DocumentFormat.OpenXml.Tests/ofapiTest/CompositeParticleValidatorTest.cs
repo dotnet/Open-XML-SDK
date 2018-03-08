@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CompositeParticleValidateTest()
         {
-            SdbSchemaDatas sdbSchemaDatas = SdbSchemaDatas.GetOffice2007SchemaDatas();
+            SdbSchemaDatas sdbSchemaDatas = SdbSchemaDatas.GetSchemaDatas(FileFormatVersions.Office2007);
 
             // TODO: unit test for some types
             ValidatePpr(sdbSchemaDatas);
