@@ -11,10 +11,6 @@ namespace DocumentFormat.OpenXml
     /// TypeInfo is used in the code base as .NET Standard requires it. However, .NET 4.0 and .NET 3.5 do not have this or other
     /// convience methods introduced in .NET 4.5 that are used. This provides similar functionality.
     /// </summary>
-    /// <remarks>
-    /// Must use a different namespace than System.* or it will conflict in the .NET 4.5.2 test as InternalsVisibleTo is applied and .NET 4.5.2 has
-    /// the same extension methods
-    /// </remarks>
     internal static class TypeExtensions
     {
         public static Type GetTypeInfo(this Type type) => type;
