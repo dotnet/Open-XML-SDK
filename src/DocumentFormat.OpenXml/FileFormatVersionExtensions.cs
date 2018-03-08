@@ -1,7 +1,9 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Packaging;
 using System;
+using System.Globalization;
 
 namespace DocumentFormat.OpenXml
 {
@@ -53,6 +55,40 @@ namespace DocumentFormat.OpenXml
                     return FileFormatVersions.Office2013;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(version));
+            }
+        }
+
+        /// <summary>
+        /// Throws if the <see cref="OpenXmlPart"/> is not supported in the given version
+        /// </summary>
+        /// <param name="version">Version to check</param>
+        /// <param name="element">Element to validate</param>
+        public static void ThrowIfNotInVersion(this FileFormatVersions version, OpenXmlPart part)
+        {
+            version.ThrowExceptionIfFileFormatNotSupported(nameof(version));
+
+            if (!part.IsInVersion(version))
+            {
+                var message = string.Format(CultureInfo.CurrentCulture, ExceptionMessages.PartIsNotInOfficeVersion, version.GetOfficeYear());
+
+                throw new InvalidOperationException(message);
+            }
+        }
+
+        /// <summary>
+        /// Throws if the <see cref="OpenXmlElement"/> is not supported in the given version
+        /// </summary>
+        /// <param name="version">Version to check</param>
+        /// <param name="element">Element to validate</param>
+        public static void ThrowIfNotInVersion(this FileFormatVersions version, OpenXmlElement element)
+        {
+            version.ThrowExceptionIfFileFormatNotSupported(nameof(version));
+
+            if (!element.IsInVersion(version))
+            {
+                var message = string.Format(CultureInfo.CurrentCulture, ExceptionMessages.ElementIsNotInOfficeVersion, version.GetOfficeYear());
+
+                throw new InvalidOperationException(message);
             }
         }
 
@@ -118,6 +154,11 @@ namespace DocumentFormat.OpenXml
 
                 throw new ArgumentOutOfRangeException(parameterName, message);
             }
+        }
+
+        private static string GetOfficeYear(this FileFormatVersions version)
+        {
+            return version.ToString().Substring("Office".Length);
         }
     }
 }

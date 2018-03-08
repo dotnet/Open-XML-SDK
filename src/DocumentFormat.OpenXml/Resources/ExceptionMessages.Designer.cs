@@ -224,29 +224,11 @@ namespace DocumentFormat.OpenXml {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The validator is set to validate content based on Microsoft Office 2007 rules. The passed in element is not defined in Microsoft Office 2007..
+        ///   Looks up a localized string similar to The validator is set to validate content based on Microsoft Office {0} rules. The passed in element is not defined in Microsoft Office {0}..
         /// </summary>
-        internal static string ElementIsNotInOffice2007 {
+        internal static string ElementIsNotInOfficeVersion {
             get {
-                return ResourceManager.GetString("ElementIsNotInOffice2007", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The validator is set to validate content based on Microsoft Office 2010 rules. The passed in element is not defined in Microsoft Office 2010..
-        /// </summary>
-        internal static string ElementIsNotInOffice2010 {
-            get {
-                return ResourceManager.GetString("ElementIsNotInOffice2010", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The validator is set to validate content based on Microsoft Office 2013 rules. The passed in element is not defined in Microsoft Office 2013..
-        /// </summary>
-        internal static string ElementIsNotInOffice2013 {
-            get {
-                return ResourceManager.GetString("ElementIsNotInOffice2013", resourceCulture);
+                return ResourceManager.GetString("ElementIsNotInOfficeVersion", resourceCulture);
             }
         }
         
@@ -677,29 +659,11 @@ namespace DocumentFormat.OpenXml {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The validator is set to validate content based on Microsoft Office 2007 rules. The passed in part is not defined in Microsoft Office 2007..
+        ///   Looks up a localized string similar to The validator is set to validate content based on Microsoft Office {0} rules. The passed in part is not defined in Microsoft Office {0}..
         /// </summary>
-        internal static string PartIsNotInOffice2007 {
+        internal static string PartIsNotInOfficeVersion {
             get {
-                return ResourceManager.GetString("PartIsNotInOffice2007", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The validator is set to validate content based on Microsoft Office 2010 rules. The passed in part is not defined in Microsoft Office 2010..
-        /// </summary>
-        internal static string PartIsNotInOffice2010 {
-            get {
-                return ResourceManager.GetString("PartIsNotInOffice2010", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The validator is set to validate content based on Microsoft Office 2013 rules. The passed in part is not defined in Microsoft Office 2013..
-        /// </summary>
-        internal static string PartIsNotInOffice2013 {
-            get {
-                return ResourceManager.GetString("PartIsNotInOffice2013", resourceCulture);
+                return ResourceManager.GetString("PartIsNotInOfficeVersion", resourceCulture);
             }
         }
         
@@ -709,15 +673,6 @@ namespace DocumentFormat.OpenXml {
         internal static string PartNotInSamePackage {
             get {
                 return ResourceManager.GetString("PartNotInSamePackage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The OpenXmlPart is not a valid part in the specified FileFormat version..
-        /// </summary>
-        internal static string PartNotInVersion {
-            get {
-                return ResourceManager.GetString("PartNotInVersion", resourceCulture);
             }
         }
         
