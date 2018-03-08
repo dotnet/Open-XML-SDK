@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void LoadSdbSchemaDatasTest()
         {
-            var actual = SdbSchemaDatas.GetOffice2007SchemaDatas();
+            var actual = SdbSchemaDatas.GetSchemaDatas(FileFormatVersions.Office2007);
 
             AttributeConstraintTest(actual);
 

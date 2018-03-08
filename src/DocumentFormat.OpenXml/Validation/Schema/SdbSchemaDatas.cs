@@ -36,28 +36,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         protected ParticleConstraint[] EmptyChildrenParticles = Cached.Array<ParticleConstraint>();
 
-        /// <summary>
-        /// Return an instance of SchemaConstraintDatabase which will load Office2007 schemas.
-        /// </summary>
-        public static SdbSchemaDatas GetOffice2007SchemaDatas()
+        public static SdbSchemaDatas GetSchemaDatas(FileFormatVersions fileFormat)
         {
-            return new BinarySdbSchemaDatas(FileFormatVersions.Office2007);
-        }
-
-        /// <summary>
-        /// Return an instance of SchemaConstraintDatabase which will load Office2010 schemas.
-        /// </summary>
-        public static SdbSchemaDatas GetOffice2010SchemaDatas()
-        {
-            return new BinarySdbSchemaDatas(FileFormatVersions.Office2010);
-        }
-
-        /// <summary>
-        /// Return an instance of SchemaConstraintDatabase which will load Office2010 schemas.
-        /// </summary>
-        public static SdbSchemaDatas GetOffice2013SchemaDatas()
-        {
-            return new BinarySdbSchemaDatas(FileFormatVersions.Office2013);
+            return new BinarySdbSchemaDatas(fileFormat);
         }
 
         /// <summary>
@@ -94,9 +75,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             OpenXmlTypeId typeId = (OpenXmlTypeId)openxmlTypeId;
 
-            SchemaTypeData schemaTypeData;
-
-            if (_schemaTypeDatas.TryGetValue(typeId, out schemaTypeData))
+            if (_schemaTypeDatas.TryGetValue(typeId, out var schemaTypeData))
             {
                 Debug.Assert(openxmlTypeId == schemaTypeData.OpenXmlTypeId);
 
@@ -198,7 +177,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     // then load the simple type constraint for this attribute
                     var simpleTypeIndex = sdbAttributeData.SimpleTypeIndex;
                     var simpleTypeConstraint = SimpleTypeRestrictions[simpleTypeIndex];
-                    attributeConstraints[i] = new AttributeConstraint(sdbAttributeData.AttributeUse, simpleTypeConstraint, (FileFormatVersions) sdbAttributeData.FileFormatVersion);
+                    attributeConstraints[i] = new AttributeConstraint(sdbAttributeData.AttributeUse, simpleTypeConstraint, (FileFormatVersions)sdbAttributeData.FileFormatVersion);
                 }
                 return attributeConstraints;
             }
@@ -240,4 +219,4 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
         }
     }
- }
+}

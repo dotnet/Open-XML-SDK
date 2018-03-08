@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Validation.Schema.Restrictions;
 using System;
 using System.Collections;
@@ -25,32 +24,24 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             SdbDataHead = new SdbDataHead();
             _fileFormat = fileFormat;
 
-            using (var schema = GetSchemaStream(fileFormat))
+            var name = $"DocumentFormat.OpenXml.GeneratedCode.{fileFormat}.constraints";
+
+#if DEBUG
+            var names = typeof(ValidationResources).GetTypeInfo().Assembly.GetManifestResourceNames();
+#endif
+
+            using (var schema = typeof(ValidationResources).GetTypeInfo().Assembly.GetManifestResourceStream(name))
             {
+                if (schema == null)
+                {
+                    var message = string.Format(System.Globalization.CultureInfo.CurrentUICulture,
+                        ExceptionMessages.FileFormatNotSupported,
+                        fileFormat);
+
+                    throw new ArgumentOutOfRangeException(nameof(fileFormat), message);
+                }
+
                 Load(schema);
-            }
-        }
-
-        private static Stream GetSchemaStream(FileFormatVersions fileFormat)
-        {
-            Stream GetEmbeddedResource(string name)
-            {
-                return typeof(ValidationResources).GetTypeInfo().Assembly.GetManifestResourceStream($"DocumentFormat.OpenXml.GeneratedCode.{name}.bin");
-            }
-
-            switch (fileFormat)
-            {
-                case FileFormatVersions.Office2007:
-                    return GetEmbeddedResource("O12SchemaConstraintDatas");
-                case FileFormatVersions.Office2010:
-                    return GetEmbeddedResource("O14SchemaConstraintDatas");
-                case FileFormatVersions.Office2013:
-                    return GetEmbeddedResource("O15SchemaConstraintDatas");
-                case FileFormatVersions.Office2016:
-                    return GetEmbeddedResource("O16SchemaConstraintDatas");
-                default:
-                    Debug.Assert(fileFormat.Any());
-                    return GetEmbeddedResource("O12SchemaConstraintDatas");
             }
         }
 
@@ -509,7 +500,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 {
                     Debug.Assert(index >= 0);
 
-                    T sdbData = new T();
+                    var sdbData = new T();
 
                     Debug.Assert(index < _sdbDataBytes.Length / sdbData.DataSize);
 
