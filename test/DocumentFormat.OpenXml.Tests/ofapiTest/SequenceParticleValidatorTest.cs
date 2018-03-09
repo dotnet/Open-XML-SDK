@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void SequenceParticleValidateTest()
         {
-            SdbSchemaDatas sdbSchemaDatas = SdbSchemaDatas.GetOffice2007SchemaDatas();
+            SdbSchemaDatas sdbSchemaDatas = SdbSchemaDatas.GetSchemaDatas(FileFormatVersions.Office2007);
 
             TestSimpleSequence(sdbSchemaDatas);
             TestSimpleSequence2(sdbSchemaDatas);

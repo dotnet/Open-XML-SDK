@@ -2,8 +2,9 @@
 
   <PropertyGroup>
     <!-- TargetFrameworks can be set to various combinations as described in Directory.Build.props -->
-    <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevCore' ">netcoreapp1.0</TargetFrameworks>
-    <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevFramework' ">net46</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevCore10' ">netcoreapp1.0</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevFramework40' ">net452</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevFramework46' ">net46</TargetFrameworks>
     <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'All' ">net452;net46;netcoreapp1.0</TargetFrameworks>
   </PropertyGroup>
 
@@ -19,6 +20,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
+    <PackageReference Include="NSubstitute" Version="3.1.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
     <PackageReference Include="xunit.runner.console" Version="2.3.1" />
     <PackageReference Include="xunit" Version="2.3.1" />

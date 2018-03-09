@@ -6,10 +6,11 @@
     <!-- Because of the size of the project, to facilitate  quick development, by default only single
          frameworks will be build. This is customizable with the following possible values:
 
-         - DevFramework: will only build for .NET 4.6
-         - DevCore: Will only build for .NET Core
+         - DevFramework40: Will only build for .NET 4.0
+         - DevFramework46: Will only build for .NET 4.6
+         - DevCore10: Will only build for .NET Core 1.0
          - All: Will build for all platforms -->
-    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">DevCore</ProjectLoadStyle>
+    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">DevCore10</ProjectLoadStyle>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">

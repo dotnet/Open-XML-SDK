@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void GroupParticleValidateTest()
         {
-            SdbSchemaDatas sdbSchemaDatas = SdbSchemaDatas.GetOffice2007SchemaDatas();
+            SdbSchemaDatas sdbSchemaDatas = SdbSchemaDatas.GetSchemaDatas(FileFormatVersions.Office2007);
 
             TestSimpleGroup(sdbSchemaDatas);
             TestSimpleGroup2(sdbSchemaDatas);
