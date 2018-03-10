@@ -16,8 +16,6 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public abstract partial class OpenXmlPackage : OpenXmlPartContainer, IDisposable
     {
-        private const CompressionOption DefaultCompressionOption = CompressionOption.Normal;
-
         private readonly PartExtensionProvider _partExtensionProvider = new PartExtensionProvider();
         private readonly LinkedList<DataPart> _dataPartList = new LinkedList<DataPart>();
 
@@ -25,12 +23,6 @@ namespace DocumentFormat.OpenXml.Packaging
         private Package _package;
         private string _mainPartContentType;
         private PartUriHelper _partUriHelper = new PartUriHelper();
-
-        internal OpenSettings OpenSettings { get; set; }
-
-        internal bool StrictTranslation { get; set; } = false;
-
-        #region internal constructors
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPackage class.
@@ -234,9 +226,9 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        #endregion
+        internal OpenSettings OpenSettings { get; set; }
 
-        #region public properties
+        internal bool StrictTranslation { get; set; } = false;
 
         /// <summary>
         /// Gets the package of the document.
@@ -254,10 +246,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the FileAccess setting for the document.
         /// The current I/O access settings are: Read, Write, or ReadWrite.
         /// </summary>
-        public FileAccess FileOpenAccess
-        {
-            get { return _package.FileOpenAccess; }
-        }
+        public FileAccess FileOpenAccess => _package.FileOpenAccess;
 
         /// <summary>
         /// Gets the core package properties of the Open XML document.
@@ -270,6 +259,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 return Package.PackageProperties;
             }
         }
+
+        /// <summary>
+        /// Gets or sets the compression level for the content of the new part
+        /// </summary>
+        public CompressionOption CompressionOption { get; set; } = CompressionOption.Normal;
 
         /// <summary>
         /// Gets a PartExtensionProvider part which provides a mapping from ContentType to part extension.
@@ -295,8 +289,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets all the <see cref="DataPart"/> parts in the document package.
         /// </summary>
         public IEnumerable<DataPart> DataParts => _dataPartList;
-
-        #endregion
 
         #region public methods
 
@@ -1049,7 +1041,7 @@ namespace DocumentFormat.OpenXml.Packaging
         // create the metro part in the package with the CompressionOption
         internal PackagePart CreateMetroPart(Uri partUri, string contentType)
         {
-            return Package.CreatePart(partUri, contentType, DefaultCompressionOption);
+            return Package.CreatePart(partUri, contentType, CompressionOption);
         }
 
         #endregion
