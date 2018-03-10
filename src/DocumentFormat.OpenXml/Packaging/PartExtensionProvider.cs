@@ -11,7 +11,7 @@ using System.Runtime.Serialization;
 namespace DocumentFormat.OpenXml.Packaging
 {
     /// <summary>
-    /// Defines a provider which maintains a dictionary where the key is the content Type and the value is a part extension.
+    /// Defines a provider which maintains a dictionary where the key is the content type and the value is a part extension.
     /// </summary>
     [Serializable]
     public sealed class PartExtensionProvider : Dictionary<string, string>
