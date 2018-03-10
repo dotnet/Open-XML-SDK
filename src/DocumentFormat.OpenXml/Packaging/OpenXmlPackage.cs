@@ -16,47 +16,19 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public abstract partial class OpenXmlPackage : OpenXmlPartContainer, IDisposable
     {
-        #region private data members
+        private const CompressionOption DefaultCompressionOption = CompressionOption.Normal;
 
-        //internal object _lock = new object( );
+        private readonly PartExtensionProvider _partExtensionProvider = new PartExtensionProvider();
+        private readonly LinkedList<DataPart> _dataPartList = new LinkedList<DataPart>();
+
         private bool _disposed;
-
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private Package _metroPackage;
-
-        private FileAccess _accessMode;
-
+        private Package _package;
         private string _mainPartContentType;
-
-        // compression level for content that is stored in a PackagePart.
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private CompressionOption _compressionOption = CompressionOption.Normal;
-
         private PartUriHelper _partUriHelper = new PartUriHelper();
-
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private PartExtensionProvider _partExtensionProvider = new PartExtensionProvider();
-
-        private LinkedList<DataPart> _dataPartList = new LinkedList<DataPart>();
-
-        #endregion
 
         internal OpenSettings OpenSettings { get; set; }
 
-        private bool _strictTranslation = false;
-
-        internal bool StrictTranslation
-        {
-            get
-            {
-                return _strictTranslation;
-            }
-
-            set
-            {
-                _strictTranslation = value;
-            }
-        }
+        internal bool StrictTranslation { get; set; } = false;
 
         #region internal constructors
 
@@ -87,8 +59,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new OpenXmlPackageException(ExceptionMessages.PackageMustCanBeRead);
             }
 
-            _accessMode = package.FileOpenAccess;
-            _metroPackage = package;
+            _package = package;
 
             Load();
         }
@@ -100,13 +71,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when package is a null reference.</exception>
         internal void CreateCore(Package package)
         {
-            if (package == null)
-            {
-                throw new ArgumentNullException(nameof(package));
-            }
-
-            _accessMode = package.FileOpenAccess;
-            _metroPackage = package;
+            _package = package ?? throw new ArgumentNullException(nameof(package));
         }
 
         /// <summary>
@@ -128,21 +93,15 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new OpenXmlPackageException(ExceptionMessages.StreamAccessModeShouldRead);
             }
 
-            if (readWriteMode)
+            if (readWriteMode && !stream.CanWrite)
             {
-                _accessMode = FileAccess.ReadWrite;
-
-                if (!stream.CanWrite)
-                {
-                    throw new OpenXmlPackageException(ExceptionMessages.StreamAccessModeShouldBeWrite);
-                }
-            }
-            else
-            {
-                _accessMode = FileAccess.Read;
+                throw new OpenXmlPackageException(ExceptionMessages.StreamAccessModeShouldBeWrite);
             }
 
-            _metroPackage = Package.Open(stream, (_accessMode == FileAccess.Read) ? FileMode.Open : FileMode.OpenOrCreate, _accessMode);
+            var packageAccess = readWriteMode ? FileAccess.ReadWrite : FileAccess.Read;
+            var packageMode = readWriteMode ? FileMode.OpenOrCreate : FileMode.Open;
+
+            _package = Package.Open(stream, packageMode, packageAccess);
 
             Load();
         }
@@ -165,8 +124,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new OpenXmlPackageException(ExceptionMessages.StreamAccessModeShouldBeWrite);
             }
 
-            _accessMode = FileAccess.ReadWrite;
-            _metroPackage = Package.Open(stream, FileMode.Create, _accessMode);
+            _package = Package.Open(stream, FileMode.Create, FileAccess.ReadWrite);
         }
 
         /// <summary>
@@ -183,21 +141,16 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(path));
             }
 
-            if (readWriteMode)
-            {
-                _accessMode = FileAccess.ReadWrite;
-            }
-            else
-            {
-                _accessMode = FileAccess.Read;
-            }
-
             if (!File.Exists(path))
             {
                 throw new FileNotFoundException(ExceptionMessages.FileNotFound, path);
             }
 
-            _metroPackage = Package.Open(path, (_accessMode == FileAccess.Read) ? FileMode.Open : FileMode.OpenOrCreate, _accessMode, (_accessMode == FileAccess.Read) ? FileShare.Read : FileShare.None);
+            var packageMode = readWriteMode ? FileAccess.ReadWrite : FileAccess.Read;
+            var packageAccess = readWriteMode ? FileMode.OpenOrCreate : FileMode.Open;
+            var packageShare = readWriteMode ? FileShare.None : FileShare.Read;
+
+            _package = Package.Open(path, packageAccess, packageMode, packageShare);
 
             Load();
         }
@@ -214,8 +167,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(path));
             }
 
-            _accessMode = FileAccess.ReadWrite;
-            _metroPackage = Package.Open(path, FileMode.Create, _accessMode, FileShare.None);
+            _package = Package.Open(path, FileMode.Create, FileAccess.ReadWrite, FileShare.None);
         }
 
         /// <summary>
@@ -228,7 +180,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 Dictionary<Uri, OpenXmlPart> loadedParts = new Dictionary<Uri, OpenXmlPart>();
 
                 bool hasMainPart = false;
-                RelationshipCollection relationshipCollection = new PackageRelationshipPropertyCollection(_metroPackage);
+                RelationshipCollection relationshipCollection = new PackageRelationshipPropertyCollection(_package);
 
                 // relationCollection.StrictTranslation is true when this collection contains Transitional relationships converted from Strict.
                 StrictTranslation = relationshipCollection.StrictTranslation;
@@ -294,7 +246,7 @@ namespace DocumentFormat.OpenXml.Packaging
             get
             {
                 ThrowIfObjectDisposed();
-                return _metroPackage;
+                return _package;
             }
         }
 
@@ -304,16 +256,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public FileAccess FileOpenAccess
         {
-            get { return _metroPackage.FileOpenAccess; }
-        }
-
-        /// <summary>
-        /// Gets or sets the compression level for the content of the new part.
-        /// </summary>
-        public CompressionOption CompressionOption
-        {
-            get { return _compressionOption; }
-            set { _compressionOption = value; }
+            get { return _package.FileOpenAccess; }
         }
 
         /// <summary>
@@ -577,10 +520,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         #endregion
 
-        #region virtual methods / properties
-
-        #endregion
-
         #region internal methods
 
         /// <summary>
@@ -615,7 +554,7 @@ namespace DocumentFormat.OpenXml.Packaging
             do
             {
                 partUri = _partUriHelper.GetUniquePartUri(contentType, parentUri, targetPath, targetName, targetExt);
-            } while (_metroPackage.PartExists(partUri));
+            } while (_package.PartExists(partUri));
 
             return partUri;
         }
@@ -638,7 +577,7 @@ namespace DocumentFormat.OpenXml.Packaging
             do
             {
                 partUri = _partUriHelper.GetUniquePartUri(contentType, parentUri, targetUri);
-            } while (_metroPackage.PartExists(partUri));
+            } while (_package.PartExists(partUri));
 
             return partUri;
         }
@@ -664,23 +603,26 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="disposing">Specify true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
         protected virtual void Dispose(bool disposing)
         {
-            if (!_disposed)
+            if (_disposed)
             {
-                if (disposing)
-                {
-                    // Try to save contents of every part in the package
-                    SavePartContents(AutoSave);
-                    DeleteUnusedDataPartOnClose();
-
-                    // TODO: Close resources
-                    _metroPackage.Close();
-                    _metroPackage = null;
-                    PartDictionary = null;
-                    ReferenceRelationshipList.Clear();
-                    _partUriHelper = null;
-                }
-                _disposed = true;
+                return;
             }
+
+            if (disposing)
+            {
+                // Try to save contents of every part in the package
+                SavePartContents(AutoSave);
+                DeleteUnusedDataPartOnClose();
+
+                // TODO: Close resources
+                _package.Close();
+                _package = null;
+                PartDictionary = null;
+                ReferenceRelationshipList.Clear();
+                _partUriHelper = null;
+            }
+
+            _disposed = true;
         }
 
         /// <summary>
@@ -781,7 +723,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     // For Package: Invoking UpdateRelationshipTypesInPackage() changes the relationship types in the package.
                     // We need to new PackageRelationshipPropertyCollection to read through the package contents right here
                     // because some operation may have updated the package before we get here.
-                    relationshipCollection = new PackageRelationshipPropertyCollection(_metroPackage);
+                    relationshipCollection = new PackageRelationshipPropertyCollection(_package);
                     relationshipCollection.UpdateRelationshipTypesInPackage();
                 }
             }
@@ -1107,7 +1049,7 @@ namespace DocumentFormat.OpenXml.Packaging
         // create the metro part in the package with the CompressionOption
         internal PackagePart CreateMetroPart(Uri partUri, string contentType)
         {
-            return Package.CreatePart(partUri, contentType, CompressionOption);
+            return Package.CreatePart(partUri, contentType, DefaultCompressionOption);
         }
 
         #endregion
