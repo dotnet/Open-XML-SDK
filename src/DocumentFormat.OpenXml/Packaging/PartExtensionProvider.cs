@@ -48,7 +48,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="info">A <see cref="SerializationInfo"/> object containing the information required to serialize the PartExtensionProvider.</param>
         /// <param name="context">A <see cref="StreamingContext"/> structure containing the source and destination of the serialized stream associated with the PartExtensionProvider.</param>
-        private PartExtensionProvider(SerializationInfo info, StreamingContext context) 
+        private PartExtensionProvider(SerializationInfo info, StreamingContext context)
             : base(info, context)
         {
         }
