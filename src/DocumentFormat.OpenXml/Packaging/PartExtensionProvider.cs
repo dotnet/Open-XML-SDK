@@ -36,7 +36,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <summary>
         /// Initializes a new instance of <see cref="PartExtensionProvider"/> that is empty, has the specified initial capacity.
-        /// <see cref=""/>
         /// </summary>
         /// <param name="capacity">The initial number of elements that <see cref="PartExtensionProvider"/> can contain.</param>
         public PartExtensionProvider(int capacity)
