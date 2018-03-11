@@ -38,8 +38,6 @@ namespace DocumentFormat.OpenXml.Packaging
         {
         }
 
-        #region public properties
-
         /// <summary>
         /// Gets the OpenXmlPackage which contains the current part.
         /// </summary>
@@ -66,8 +64,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 return _uri;
             }
         }
-
-        #endregion
 
         #region public methods
 
