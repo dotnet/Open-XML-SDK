@@ -8,6 +8,11 @@ using System.Globalization;
 using System.IO;
 using System.IO.Packaging;
 
+#if FEATURE_XML_SCHEMA
+using System.Xml;
+using System.Xml.Schema;
+#endif
+
 namespace DocumentFormat.OpenXml.Packaging
 {
     /// <summary>
@@ -406,24 +411,19 @@ namespace DocumentFormat.OpenXml.Packaging
 #else
                 DtdProcessing = DtdProcessing.Prohibit, // set to prohibit explicitly for security fix
 #endif
-                MaxCharactersInDocument = MaxCharactersInPart
+                MaxCharactersInDocument = MaxCharactersInPart,
+                Schemas = schemas,
+                ValidationType = ValidationType.Schema
             };
-            XmlReader xmlReader = null;
 
-            // XML validator object
-
-            using (Stream partStream = GetStream())
+            using (var partStream = GetStream())
             {
-                //xmlReaderSettings.Schemas.Add(null, schemaFile);
-                xmlReaderSettings.Schemas = schemas;
-                xmlReaderSettings.ValidationType = ValidationType.Schema;
-                // Add validation event handler
                 if (validationEventHandler != null)
                 {
                     xmlReaderSettings.ValidationEventHandler += validationEventHandler;
                 }
 
-                using (xmlReader = XmlConvertingReaderFactory.Create(partStream, xmlReaderSettings))
+                using (var xmlReader = XmlConvertingReaderFactory.Create(partStream, xmlReaderSettings))
                 {
                     // Validate XML data
                     while (xmlReader.Read()) ;
