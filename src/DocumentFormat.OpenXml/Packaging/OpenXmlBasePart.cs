@@ -24,7 +24,10 @@ namespace DocumentFormat.OpenXml.Packaging
         private PackagePart _packagePart;
         private Uri _uri;
 
-        internal protected OpenXmlPart()
+        /// <summary>
+        /// Create an instance of <see cref="OpenXmlPart"/>
+        /// </summary>
+        protected internal OpenXmlPart()
             : base()
         {
         }
