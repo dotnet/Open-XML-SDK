@@ -9,7 +9,7 @@ public partial class ThemePart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -61,7 +61,7 @@ public partial class ThemeOverridePart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -113,7 +113,7 @@ public partial class TableStylesPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -165,7 +165,7 @@ public partial class ChartPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -217,7 +217,7 @@ public partial class ChartDrawingPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -269,7 +269,7 @@ public partial class DiagramColorsPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -321,7 +321,7 @@ public partial class DiagramDataPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -373,7 +373,7 @@ public partial class DiagramLayoutDefinitionPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -425,7 +425,7 @@ public partial class DiagramStylePart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -477,7 +477,7 @@ public partial class DrawingsPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -529,7 +529,7 @@ public partial class CustomXmlPropertiesPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -581,7 +581,7 @@ public partial class CustomFilePropertiesPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -633,7 +633,7 @@ public partial class ExtendedFilePropertiesPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -685,7 +685,7 @@ public partial class CalculationChainPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -737,7 +737,7 @@ public partial class WorksheetCommentsPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -789,7 +789,7 @@ public partial class CustomXmlMappingsPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -841,7 +841,7 @@ public partial class ConnectionsPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -893,7 +893,7 @@ public partial class PivotTableCacheDefinitionPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -945,7 +945,7 @@ public partial class PivotTableCacheRecordsPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -997,7 +997,7 @@ public partial class PivotTablePart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -1049,7 +1049,7 @@ public partial class QueryTablePart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -1101,7 +1101,7 @@ public partial class SharedStringTablePart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -1153,7 +1153,7 @@ public partial class WorkbookRevisionHeaderPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -1205,7 +1205,7 @@ public partial class WorkbookRevisionLogPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -1257,7 +1257,7 @@ public partial class WorkbookUserDataPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -1309,7 +1309,7 @@ public partial class WorksheetPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -1361,7 +1361,7 @@ public partial class ChartsheetPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -1413,7 +1413,7 @@ public partial class DialogsheetPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -1465,7 +1465,7 @@ public partial class CellMetadataPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -1517,7 +1517,7 @@ public partial class SingleCellTablePart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -1569,7 +1569,7 @@ public partial class WorkbookStylesPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -1621,7 +1621,7 @@ public partial class ExternalWorkbookPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -1673,7 +1673,7 @@ public partial class TableDefinitionPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -1725,7 +1725,7 @@ public partial class VolatileDependenciesPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -1777,7 +1777,7 @@ public partial class WorkbookPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -1829,7 +1829,7 @@ public partial class WordprocessingCommentsPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -1881,7 +1881,7 @@ public partial class FootnotesPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -1933,7 +1933,7 @@ public partial class EndnotesPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -1985,7 +1985,7 @@ public partial class HeaderPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -2037,7 +2037,7 @@ public partial class FooterPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -2089,7 +2089,7 @@ public partial class DocumentSettingsPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -2141,7 +2141,7 @@ public partial class WebSettingsPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -2193,7 +2193,7 @@ public partial class FontTablePart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -2245,7 +2245,7 @@ public partial class NumberingDefinitionsPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -2297,7 +2297,7 @@ public partial class MainDocumentPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -2349,7 +2349,7 @@ public partial class GlossaryDocumentPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -2401,7 +2401,7 @@ public partial class CommentAuthorsPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -2453,7 +2453,7 @@ public partial class SlideCommentsPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -2505,7 +2505,7 @@ public partial class PresentationPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -2557,7 +2557,7 @@ public partial class PresentationPropertiesPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -2609,7 +2609,7 @@ public partial class SlidePart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -2661,7 +2661,7 @@ public partial class SlideLayoutPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -2713,7 +2713,7 @@ public partial class SlideMasterPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -2765,7 +2765,7 @@ public partial class HandoutMasterPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -2817,7 +2817,7 @@ public partial class NotesMasterPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -2869,7 +2869,7 @@ public partial class NotesSlidePart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -2921,7 +2921,7 @@ public partial class SlideSyncDataPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -2973,7 +2973,7 @@ public partial class UserDefinedTagsPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -3025,7 +3025,7 @@ public partial class ViewPropertiesPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -3077,7 +3077,7 @@ public partial class MacroSheetPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -3129,7 +3129,7 @@ public partial class WorksheetSortMapPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -3181,7 +3181,7 @@ public partial class CustomizationPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -3233,7 +3233,7 @@ public partial class VbaDataPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -3285,7 +3285,7 @@ public partial class CustomDataPropertiesPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -3337,7 +3337,7 @@ public partial class ControlPropertiesPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -3389,7 +3389,7 @@ public partial class SlicersPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -3441,7 +3441,7 @@ public partial class SlicerCachePart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -3493,7 +3493,7 @@ public partial class DiagramPersistLayoutPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -3545,7 +3545,7 @@ public partial class RibbonAndBackstageCustomizationsPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -3597,7 +3597,7 @@ public partial class ChartColorStylePart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -3649,7 +3649,7 @@ public partial class ChartStylePart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -3701,7 +3701,7 @@ public partial class WebExtensionPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -3753,7 +3753,7 @@ public partial class WordprocessingCommentsExPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -3805,7 +3805,7 @@ public partial class WordprocessingPeoplePart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -3857,7 +3857,7 @@ public partial class WebExTaskpanesPart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -3909,7 +3909,7 @@ public partial class TimeLinePart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
@@ -3961,7 +3961,7 @@ public partial class TimeLineCachePart
 	/// <summary>
     /// Only for OpenXmlPart derived classes.
     /// </summary>
-	internal override OpenXmlPartRootElement _rootElement
+	private protected override OpenXmlPartRootElement InternalRootElement
 	{
 		get
 		{
