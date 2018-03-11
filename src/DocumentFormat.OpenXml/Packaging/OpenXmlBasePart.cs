@@ -26,10 +26,6 @@ namespace DocumentFormat.OpenXml.Packaging
         // parent part, for internal use only
         //private OpenXmlPart _ownerPart;
 
-        private string documentClassNameOfWord = "DocumentFormat.OpenXml.Packaging.WordprocessingDocument";
-        private string documentClassNameOfExcel = "DocumentFormat.OpenXml.Packaging.SpreadsheetDocument";
-        private string documentClassNameOfPPT = "DocumentFormat.OpenXml.Packaging.PresentationDocument";
-
         #endregion
 
         #region constructors
@@ -144,32 +140,20 @@ namespace DocumentFormat.OpenXml.Packaging
         // get app specific TargetPath if exists
         internal string GetTargetPath(string defaultPath)
         {
-            string targetPath = null;
+            if (TargetPathOfWord != null && _openXmlPackage is WordprocessingDocument)
+            {
+                return TargetPathOfWord;
+            }
+            else if (TargetPathOfExcel != null && _openXmlPackage is SpreadsheetDocument)
+            {
+                return TargetPathOfExcel;
+            }
+            else if (TargetPathOfPPT != null && _openXmlPackage is PresentationDocument)
+            {
+                return TargetPathOfPPT;
+            }
 
-            if (TargetPathOfWord != null || TargetPathOfExcel != null || TargetPathOfPPT != null)
-            {
-                string documentClassName = _openXmlPackage.GetType().ToString();
-                if (TargetPathOfWord != null && documentClassName == documentClassNameOfWord)
-                {
-                    targetPath = TargetPathOfWord;
-                }
-                else if (TargetPathOfExcel != null && documentClassName == documentClassNameOfExcel)
-                {
-                    targetPath = TargetPathOfExcel;
-                }
-                else if (TargetPathOfPPT != null && documentClassName == documentClassNameOfPPT)
-                {
-                    targetPath = TargetPathOfPPT;
-                }
-            }
-            if (targetPath != null)
-            {
-                return targetPath;
-            }
-            else
-            {
-                return defaultPath;
-            }
+            return defaultPath;
         }
 
         // create a new part in this package
@@ -342,7 +326,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Returns the part content data stream.
         /// </summary>
         /// <returns>The content data stream for the part. </returns>
-        public Stream GetStream( )
+        public Stream GetStream()
         {
             ThrowIfObjectDisposed();
 
@@ -358,7 +342,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            return PackagePart.GetStream( mode );
+            return PackagePart.GetStream(mode);
         }
 
         /// <summary>
@@ -687,7 +671,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             using (Stream stream = GetStream(FileMode.OpenOrCreate, FileAccess.Read))
             {
-                if ( stream.Length > 0 )
+                if (stream.Length > 0)
                 {
                     streamIsEmpty = false;
                 }
@@ -790,7 +774,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Indicates whether the object is already disposed.
         /// </summary>
-        protected sealed override void ThrowIfObjectDisposed( )
+        protected sealed override void ThrowIfObjectDisposed()
         {
             if (_openXmlPackage == null)
             {
