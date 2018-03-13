@@ -609,7 +609,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 // TODO: Close resources
                 _package.Close();
                 _package = null;
-                PartDictionary = null;
+                ChildrenParts.Clear();
                 ReferenceRelationshipList.Clear();
                 _partUriHelper = null;
             }

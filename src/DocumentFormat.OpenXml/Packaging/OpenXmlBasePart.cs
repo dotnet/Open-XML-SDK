@@ -715,7 +715,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             OpenXmlPackage.Package.DeletePart(Uri);
 
-            PartDictionary = null;
+            ChildrenParts.Clear(); 
             ReferenceRelationshipList.Clear();
             _openXmlPackage = null;
             _packagePart = null;
