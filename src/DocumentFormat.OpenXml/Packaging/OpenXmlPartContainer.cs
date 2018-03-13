@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the children parts IDictionary.
         /// </summary>
-        internal Dictionary<string, OpenXmlPart> ChildrenParts
+        internal Dictionary<string, OpenXmlPart> ChildrenRelationshipParts
         {
             get
             {
@@ -510,7 +510,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 ThrowIfObjectDisposed();
 
-                foreach (KeyValuePair<string, OpenXmlPart> item in ChildrenParts)
+                foreach (KeyValuePair<string, OpenXmlPart> item in ChildrenRelationshipParts)
                 {
                     yield return new IdPartPair(item.Key, item.Value);
                 }
@@ -534,7 +534,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             OpenXmlPart part = null;
 
-            if (ChildrenParts.TryGetValue(id, out part))
+            if (ChildrenRelationshipParts.TryGetValue(id, out part))
             {
                 return part;
             }
@@ -561,9 +561,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(part));
             }
 
-            if (ChildrenParts.ContainsValue(part))
+            if (ChildrenRelationshipParts.ContainsValue(part))
             {
-                foreach (KeyValuePair<string, OpenXmlPart> idPartPair in ChildrenParts)
+                foreach (KeyValuePair<string, OpenXmlPart> idPartPair in ChildrenRelationshipParts)
                 {
                     if (part == idPartPair.Value)
                     {
@@ -599,7 +599,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             string oldId = null;
-            foreach (var idPartPair in ChildrenParts)
+            foreach (var idPartPair in ChildrenRelationshipParts)
             {
                 if (idPartPair.Key == newRelationshipId)
                 {
@@ -629,10 +629,10 @@ namespace DocumentFormat.OpenXml.Packaging
 
             // Add a new relationship, and then remove the old relationship
             CreateRelationship(part.Uri, TargetMode.Internal, part.RelationshipType, newRelationshipId);
-            ChildrenParts.Add(newRelationshipId, part);
+            ChildrenRelationshipParts.Add(newRelationshipId, part);
 
             DeleteRelationship(oldId);
-            ChildrenParts.Remove(oldId);
+            ChildrenRelationshipParts.Remove(oldId);
 
             return oldId;
         }
@@ -821,7 +821,7 @@ namespace DocumentFormat.OpenXml.Packaging
             // add it
             string relationshipId = AttachChild(child, rId);
 
-            ChildrenParts.Add(relationshipId, child);
+            ChildrenRelationshipParts.Add(relationshipId, child);
 
             return child;
         }
@@ -864,7 +864,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             if (part.OpenXmlPackage != InternalOpenXmlPackage ||
-                !ChildrenParts.ContainsValue(part))
+                !ChildrenRelationshipParts.ContainsValue(part))
             {
                 throw new InvalidOperationException(ExceptionMessages.ForeignOpenXmlPart);
             }
@@ -1225,7 +1225,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            return ChildrenParts.Values.OfType<T>();
+            return ChildrenRelationshipParts.Values.OfType<T>();
         }
 
         /// <summary>
@@ -1311,7 +1311,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     throw new ArgumentException(ExceptionMessages.InvalidXmlIDStringException, nameof(id));
                 }
 
-                if (ChildrenParts.ContainsKey(id))
+                if (ChildrenRelationshipParts.ContainsKey(id))
                 {
                     throw new ArgumentException(ExceptionMessages.RelationshipIdConflict, nameof(id));
                 }
@@ -1405,7 +1405,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 string relationshipId = AttachChild(newPart, id);
 
-                ChildrenParts.Add(relationshipId, newPart);
+                ChildrenRelationshipParts.Add(relationshipId, newPart);
 
                 return;
             }
@@ -1548,7 +1548,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 // it is a part shared in the same package
                 string relationshipId = AttachChild(part, rId);
 
-                ChildrenParts.Add(relationshipId, part);
+                ChildrenRelationshipParts.Add(relationshipId, part);
 
                 return part;
             }
@@ -1591,7 +1591,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 relationshipId = AttachChild(child, rId);
 
-                ChildrenParts.Add(relationshipId, child);
+                ChildrenRelationshipParts.Add(relationshipId, child);
 
                 return child;
             }
@@ -1622,7 +1622,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 string relationshipId = AttachChild(child, rId);
 
-                ChildrenParts.Add(relationshipId, child);
+                ChildrenRelationshipParts.Add(relationshipId, child);
 
                 // add to processed node list
                 partDictionary.Add(part, child);
@@ -1742,7 +1742,7 @@ namespace DocumentFormat.OpenXml.Packaging
             child.FindAllReachableParts(processedParts);
 
             // remove from the collection
-            ChildrenParts.Remove(id);
+            ChildrenRelationshipParts.Remove(id);
 
             // find all live parts
             InternalOpenXmlPackage.FindAllReachableParts(liveParts);
@@ -1794,7 +1794,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             List<string> relationshipIds = new List<string>();
 
-            foreach (KeyValuePair<string, OpenXmlPart> idPartPair in ChildrenParts)
+            foreach (KeyValuePair<string, OpenXmlPart> idPartPair in ChildrenRelationshipParts)
             {
                 if (idPartPair.Value is T)
                 {
@@ -1818,7 +1818,7 @@ namespace DocumentFormat.OpenXml.Packaging
             DeletePartsOfType<T>();
 
             // remove recursively
-            foreach (OpenXmlPart child in ChildrenParts.Values)
+            foreach (OpenXmlPart child in ChildrenRelationshipParts.Values)
             {
                 child.DeletePartsRecursivelyOfTypeBase<T>();
             }
@@ -1831,11 +1831,11 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (ChildrenParts.Count > 0)
+            if (ChildrenRelationshipParts.Count > 0)
             {
                 Collection<OpenXmlPart> subPartsShouldBeDeleted = new Collection<OpenXmlPart>();
 
-                foreach (KeyValuePair<string, OpenXmlPart> idPartPair in ChildrenParts)
+                foreach (KeyValuePair<string, OpenXmlPart> idPartPair in ChildrenRelationshipParts)
                 {
                     bool isDeleted;
 
@@ -1858,7 +1858,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     // TODO: is this necessary? Will Package.DeletePart also delete it's .rels?
                     DeleteRelationship(idPartPair.Key);
                 }
-                ChildrenParts.Clear();
+                ChildrenRelationshipParts.Clear();
 
                 foreach (OpenXmlPart child in subPartsShouldBeDeleted)
                 {
@@ -1885,7 +1885,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             // there should be only one part of this type
-            foreach (OpenXmlPart part in ChildrenParts.Values)
+            foreach (OpenXmlPart part in ChildrenRelationshipParts.Values)
             {
                 if (part.RelationshipType == relationshipType)
                 {
@@ -1921,7 +1921,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentOutOfRangeException(nameof(part));
             }
 
-            return ChildrenParts.ContainsValue(part);
+            return ChildrenRelationshipParts.ContainsValue(part);
         }
 
         /// <summary>
@@ -1992,7 +1992,7 @@ namespace DocumentFormat.OpenXml.Packaging
                                 {
                                     throw new OpenXmlPackageException(ExceptionMessages.SamePartWithDifferentRelationshipType);
                                 }
-                                ChildrenParts.Add(relationship.Id, child);
+                                ChildrenRelationshipParts.Add(relationship.Id, child);
                             }
                             else if (DataPartReferenceRelationship.IsDataPartReferenceRelationship(relationship.RelationshipType))
                             {
@@ -2018,7 +2018,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                                 child.Load(openXmlPackage, sourcePart, uriTarget, relationship.Id, loadedParts);
 
-                                ChildrenParts.Add(relationship.Id, child);
+                                ChildrenRelationshipParts.Add(relationship.Id, child);
                             }
                         }
                     }
