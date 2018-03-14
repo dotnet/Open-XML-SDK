@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         }
 
         [Fact]
-        public void Guide03DeleteElement()
+        public void Guide03DeleteAddElement()
         {
             using (var stream = new MemoryStream())
             {
@@ -38,16 +38,6 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
 
                 testEntities.DeleteElement(stream, Log);
                 testEntities.VerifyDeletedElement(stream, Log);
-            }
-        }
-
-        [Fact]
-        public void Guide03AddElement()
-        {
-            using (var stream = new MemoryStream())
-            {
-                GeneratedDocument.CreatePackage(stream);
-                var testEntities = new TestEntities(stream);
 
                 testEntities.AddElement(stream, Log);
                 testEntities.VerifyAddedElemenet(stream, Log);

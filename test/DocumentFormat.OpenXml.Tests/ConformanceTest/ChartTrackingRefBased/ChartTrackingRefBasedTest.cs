@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         }
 
         [Fact]
-        public void ChartTrackingRefBasedTest03DeleteElement()
+        public void ChartTrackingRefBasedTest03DeleteAddElement()
         {
             using (var stream = new MemoryStream())
             {
@@ -39,17 +39,6 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
                 var testEntities = new TestEntities(stream);
                 testEntities.DeleteElements(stream, Log);
                 testEntities.VerifyDeleteElements(stream, Log);
-            }
-        }
-
-        [Fact]
-        public void ChartTrackingRefBasedTest03AddElement()
-        {
-            using (var stream = new MemoryStream())
-            {
-                GeneratedDocument.CreatePackage(stream);
-
-                var testEntities = new TestEntities(stream);
 
                 testEntities.AddElements(stream, Log);
                 testEntities.VerifyAddElements(stream, Log);

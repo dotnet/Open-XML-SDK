@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         }
 
         [Fact]
-        public void ThreadingInfo03DeleteElement()
+        public void ThreadingInfo03DeleteAddElement()
         {
             using (var stream = new MemoryStream())
             {
@@ -38,17 +38,7 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
                 var testEntities = new TestEntities(stream);
                 testEntities.DeleteElements(stream, Log);
                 testEntities.VerifyDeleteElements(stream, Log);
-            }
-        }
 
-        [Fact]
-        public void ThreadingInfo03AddElement()
-        {
-            using (var stream = new MemoryStream())
-            {
-                GeneratedDocument.CreatePackage(stream);
-
-                var testEntities = new TestEntities(stream);
                 testEntities.AddElements(stream, Log);
                 testEntities.VerifyAddElements(stream, Log);
             }
