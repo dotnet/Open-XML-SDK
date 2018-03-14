@@ -908,7 +908,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     // just call AttachChild( ) is OK. No need to call AddPart( ... )
                     newMainPart.AttachChild(idPartPair.Value, idPartPair.Key);
-                    newMainPart.ChildrenRelationshipParts.Add(idPartPair);
+                    newMainPart.ChildrenRelationshipParts.Add(idPartPair.Key, idPartPair.Value);
                 }
 
                 foreach (ExternalRelationship externalRel in referenceRelationships.OfType<ExternalRelationship>())
