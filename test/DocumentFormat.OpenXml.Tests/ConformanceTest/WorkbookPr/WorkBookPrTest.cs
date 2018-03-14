@@ -3,8 +3,6 @@
 
 using DocumentFormat.OpenXml.Tests.TaskLibraries;
 using DocumentFormat.OpenXml.Tests.WorkBookPrClass;
-using OxTest;
-using System;
 using System.IO;
 using Xunit;
 using Xunit.Abstractions;
@@ -13,61 +11,40 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
 {
     public class WorkBookPrTest : OpenXmlTestBase
     {
-        private readonly string generatedDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
-        private readonly string editedDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
-        private readonly string deletedDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
-        private readonly string addedDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
-        private readonly TestEntities testEntities = null;
-
-        /// <summary>
-        /// Constructor
-        /// </summary>
         public WorkBookPrTest(ITestOutputHelper output)
             : base(output)
         {
-            string createFilePath = GetTestFilePath(generatedDocumentFile);
-            GeneratedDocument generatedDocument = new GeneratedDocument();
-            generatedDocument.CreatePackage(createFilePath);
-
-            Log.Pass("Create Word file. File path=[{0}]", createFilePath);
-
-            testEntities = new TestEntities(createFilePath);
         }
 
-        /// <summary>
-        /// Element editing test for workbookPr element
-        /// </summary>
         [Fact]
         public void WorkBookPr01EditElement()
         {
-            string originalFilepath = GetTestFilePath(generatedDocumentFile);
-            string editFilePath = GetTestFilePath(editedDocumentFile);
+            using (var stream = new MemoryStream())
+            {
+                GeneratedDocument.CreatePackage(stream);
 
-            System.IO.File.Copy(originalFilepath, editFilePath, true);
+                var testEntities = new TestEntities(stream);
 
-            testEntities.EditElements(editFilePath, Log);
-            testEntities.VerifyElements(editFilePath, Log);
+                testEntities.EditElements(stream, Log);
+                testEntities.VerifyElements(stream, Log);
+            }
         }
 
-        /// <summary>
-        /// Element deleting test for workbookPr element
-        /// </summary>
         [Fact]
         public void WorkBookPr03DeleteElement()
         {
-            string originalFilepath = GetTestFilePath(generatedDocumentFile);
-            string deleteFilePath = GetTestFilePath(deletedDocumentFile);
-            string addFilePath = GetTestFilePath(addedDocumentFile);
+            using (var stream = new MemoryStream())
+            {
+                GeneratedDocument.CreatePackage(stream);
 
-            System.IO.File.Copy(originalFilepath, deleteFilePath, true);
+                var testEntities = new TestEntities(stream);
 
-            testEntities.DeleteElements(deleteFilePath, Log);
-            testEntities.VerifyDeleteElements(deleteFilePath, Log);
+                testEntities.DeleteElements(stream, Log);
+                testEntities.VerifyDeleteElements(stream, Log);
 
-            System.IO.File.Copy(deleteFilePath, addFilePath, true);
-
-            testEntities.AddElement(addFilePath, Log);
-            testEntities.VerifyAddElements(addFilePath, Log);
+                testEntities.AddElement(stream, Log);
+                testEntities.VerifyAddElements(stream, Log);
+            }
         }
     }
 }

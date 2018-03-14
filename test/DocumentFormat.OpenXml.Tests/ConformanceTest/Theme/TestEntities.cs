@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using LogUtil;
+using System.IO;
 using System.Linq;
 
 namespace DocumentFormat.OpenXml.Tests.Theme
@@ -16,11 +17,11 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         /// <summary>
         /// Editing theme id attribute
         /// </summary>
-        /// <param name="filePath">Target Excel faile path</param>
+        /// <param name="stream">Target Excel stream</param>
         /// <param name="log">Logger</param>
-        public void EditAttribute(string filePath, VerifiableLog log)
+        public void EditAttribute(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, true))
+            using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
                 package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value = ThemeId2;
 
@@ -31,11 +32,11 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         /// <summary>
         /// Verifying the theme id attribute the existence
         /// </summary>
-        /// <param name="filePath">Target Excel faile path</param>
+        /// <param name="stream">Target Excel stream</param>
         /// <param name="log">Logger</param>
-        public void VerifyAttribute(string filePath, VerifiableLog log)
+        public void VerifyAttribute(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, false))
+            using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 log.Verify(package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value == ThemeId2,
                     "UnChanged in the id attribute value on theme element. ID value=[{0}]", package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value);
@@ -45,11 +46,11 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         /// <summary>
         /// Deleting theme id attribute
         /// </summary>
-        /// <param name="filePath">Target Excel faile path</param>
+        /// <param name="stream">Target Excel stream</param>
         /// <param name="log">Logger</param>
-        public void DeletAttribute(string filePath, VerifiableLog log)
+        public void DeletAttribute(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, true))
+            using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
                 package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId = null;
 
@@ -60,11 +61,11 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         /// <summary>
         /// Verifying the theme id attribute of deleting
         /// </summary>
-        /// <param name="filePath">Target Excel file path</param>
+        /// <param name="stream">Target Excel stream</param>
         /// <param name="log">Logger</param>
-        public void VerifyDeletedAttribute(string filePath, VerifiableLog log)
+        public void VerifyDeletedAttribute(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, false))
+            using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 log.Verify(package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId == null,
                     "Theme id attribute is not deleted. ID value=[{0}]", package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId);
@@ -74,11 +75,11 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         /// <summary>
         /// Append the theme id attribute
         /// </summary>
-        /// <param name="filePath">Target excel faile path</param>
+        /// <param name="stream">Target excel stream</param>
         /// <param name="log">Logger</param>
-        public void AddAttribute(string filePath, VerifiableLog log)
+        public void AddAttribute(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, true))
+            using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
                 package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId = ThemeId1;
 
@@ -89,11 +90,11 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         /// <summary>
         /// Verifying the theme id attribute the appending
         /// </summary>
-        /// <param name="filePath">Target Excel faile path</param>
+        /// <param name="stream">Target Excel stream</param>
         /// <param name="log">Logger</param>
-        public void VerifyAddedAttribute(string filePath, VerifiableLog log)
+        public void VerifyAddedAttribute(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, false))
+            using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 log.Verify(package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value == ThemeId1,
                     "UnChanged in the id attribute value on theme element. ID value=[{0}]", package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value);

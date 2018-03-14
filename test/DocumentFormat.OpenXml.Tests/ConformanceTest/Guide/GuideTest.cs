@@ -3,8 +3,6 @@
 
 using DocumentFormat.OpenXml.Tests.GuideClass;
 using DocumentFormat.OpenXml.Tests.TaskLibraries;
-using OxTest;
-using System;
 using System.IO;
 using Xunit;
 using Xunit.Abstractions;
@@ -13,61 +11,48 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
 {
     public class GuideTest : OpenXmlTestBase
     {
-        private readonly string generateDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
-        private readonly string editDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
-        private readonly string deleteDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
-        private readonly string addDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
-        private readonly TestEntities testEntities;
-
-        /// <summary>
-        /// Constructor
-        /// </summary>
         public GuideTest(ITestOutputHelper output)
             : base(output)
         {
-            string createFilePath = GetTestFilePath(generateDocumentFile);
-            GeneratedDocument generatedDocument = new GeneratedDocument();
-            generatedDocument.CreatePackage(createFilePath);
-
-            Log.Pass("Create Power Point file. File path=[{0}]", createFilePath);
-
-            testEntities = new TestEntities(createFilePath);
         }
 
-        /// <summary>
-        /// Element editing test for PresentationExtensionList element
-        /// </summary>
         [Fact]
         public void Guide01EditElement()
         {
-            string originalFilepath = GetTestFilePath(generateDocumentFile);
-            string editFilePath = GetTestFilePath(editDocumentFile);
+            using (var stream = new MemoryStream())
+            {
+                GeneratedDocument.CreatePackage(stream);
+                var testEntities = new TestEntities(stream);
 
-            System.IO.File.Copy(originalFilepath, editFilePath, true);
-
-            testEntities.EditElement(editFilePath, Log);
-            testEntities.VerifyElement(editFilePath, Log);
+                testEntities.EditElement(stream, Log);
+                testEntities.VerifyElement(stream, Log);
+            }
         }
 
-        /// <summary>
-        /// Element deleting test for PresentationExtensionList element
-        /// </summary>
         [Fact]
-        public void Guide03DeleteAddElement()
+        public void Guide03DeleteElement()
         {
-            string originalFilepath = GetTestFilePath(generateDocumentFile);
-            string deleteFilePath = GetTestFilePath(deleteDocumentFile);
-            string addFilePath = GetTestFilePath(addDocumentFile);
+            using (var stream = new MemoryStream())
+            {
+                GeneratedDocument.CreatePackage(stream);
+                var testEntities = new TestEntities(stream);
 
-            System.IO.File.Copy(originalFilepath, deleteFilePath, true);
+                testEntities.DeleteElement(stream, Log);
+                testEntities.VerifyDeletedElement(stream, Log);
+            }
+        }
 
-            testEntities.DeleteElement(deleteFilePath, Log);
-            testEntities.VerifyDeletedElement(deleteFilePath, Log);
+        [Fact]
+        public void Guide03AddElement()
+        {
+            using (var stream = new MemoryStream())
+            {
+                GeneratedDocument.CreatePackage(stream);
+                var testEntities = new TestEntities(stream);
 
-            System.IO.File.Copy(deleteFilePath, addFilePath, true);
-
-            testEntities.AddElement(addFilePath, Log);
-            testEntities.VerifyAddedElemenet(addFilePath, Log);
+                testEntities.AddElement(stream, Log);
+                testEntities.VerifyAddedElemenet(stream, Log);
+            }
         }
     }
 }

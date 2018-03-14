@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
+using System.IO;
 
 using A = DocumentFormat.OpenXml.Drawing;
 using Ap = DocumentFormat.OpenXml.ExtendedProperties;
@@ -16,12 +17,16 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 {
     public class ConnectionGeneratedDocument
     {
-        // Creates a SpreadsheetDocument.
-        public void CreatePackage(string filePath)
+        private ConnectionGeneratedDocument()
         {
-            using(SpreadsheetDocument package = SpreadsheetDocument.Create(filePath, SpreadsheetDocumentType.Workbook))
+        }
+
+        public static void CreatePackage(Stream stream)
+        {
+            var generator = new ConnectionGeneratedDocument();
+            using (SpreadsheetDocument package = SpreadsheetDocument.Create(stream, SpreadsheetDocumentType.Workbook))
             {
-                CreateParts(package);
+                generator.CreateParts(package);
             }
         }
 
@@ -86,7 +91,7 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             Ap.HeadingPairs headingPairs1 = new Ap.HeadingPairs();
 
-            Vt.VTVector vTVector1 = new Vt.VTVector(){ BaseType = Vt.VectorBaseValues.Variant, Size = (UInt32Value)2U };
+            Vt.VTVector vTVector1 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Variant, Size = (UInt32Value)2U };
 
             Vt.Variant variant1 = new Vt.Variant();
             Vt.VTLPSTR vTLPSTR1 = new Vt.VTLPSTR();
@@ -107,7 +112,7 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             Ap.TitlesOfParts titlesOfParts1 = new Ap.TitlesOfParts();
 
-            Vt.VTVector vTVector2 = new Vt.VTVector(){ BaseType = Vt.VectorBaseValues.Lpstr, Size = (UInt32Value)1U };
+            Vt.VTVector vTVector2 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Lpstr, Size = (UInt32Value)1U };
             Vt.VTLPSTR vTLPSTR2 = new Vt.VTLPSTR();
             vTLPSTR2.Text = "Sheet1";
 
@@ -142,19 +147,19 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
         // Generates content of workbookPart1.
         private void GenerateWorkbookPart1Content(WorkbookPart workbookPart1)
         {
-            Workbook workbook1 = new Workbook(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x15" }  };
+            Workbook workbook1 = new Workbook() { MCAttributes = new MarkupCompatibilityAttributes() { Ignorable = "x15" } };
             workbook1.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             workbook1.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
             workbook1.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
-            FileVersion fileVersion1 = new FileVersion(){ ApplicationName = "xl", LastEdited = "6", LowestEdited = "6", BuildVersion = "14420" };
-            WorkbookProperties workbookProperties1 = new WorkbookProperties(){ CodeName = "ThisWorkbook", DefaultThemeVersion = (UInt32Value)153222U };
+            FileVersion fileVersion1 = new FileVersion() { ApplicationName = "xl", LastEdited = "6", LowestEdited = "6", BuildVersion = "14420" };
+            WorkbookProperties workbookProperties1 = new WorkbookProperties() { CodeName = "ThisWorkbook", DefaultThemeVersion = (UInt32Value)153222U };
 
             AlternateContent alternateContent1 = new AlternateContent();
             alternateContent1.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
 
-            AlternateContentChoice alternateContentChoice1 = new AlternateContentChoice(){ Requires = "x15" };
+            AlternateContentChoice alternateContentChoice1 = new AlternateContentChoice() { Requires = "x15" };
 
-            X15ac.AbsolutePath absolutePath1 = new X15ac.AbsolutePath(){ Url = "D:\\Users\\dito\\Desktop\\TestDocumentResaver\\OpenXmlApiConversion\\Pivot\\" };
+            X15ac.AbsolutePath absolutePath1 = new X15ac.AbsolutePath() { Url = "D:\\Users\\dito\\Desktop\\TestDocumentResaver\\OpenXmlApiConversion\\Pivot\\" };
             absolutePath1.AddNamespaceDeclaration("x15ac", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/ac");
 
             alternateContentChoice1.Append(absolutePath1);
@@ -162,36 +167,36 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             alternateContent1.Append(alternateContentChoice1);
 
             BookViews bookViews1 = new BookViews();
-            WorkbookView workbookView1 = new WorkbookView(){ XWindow = 0, YWindow = 0, WindowWidth = (UInt32Value)26940U, WindowHeight = (UInt32Value)15120U };
+            WorkbookView workbookView1 = new WorkbookView() { XWindow = 0, YWindow = 0, WindowWidth = (UInt32Value)26940U, WindowHeight = (UInt32Value)15120U };
 
             bookViews1.Append(workbookView1);
 
             Sheets sheets1 = new Sheets();
-            Sheet sheet1 = new Sheet(){ Name = "Sheet1", SheetId = (UInt32Value)1U, Id = "rId1" };
+            Sheet sheet1 = new Sheet() { Name = "Sheet1", SheetId = (UInt32Value)1U, Id = "rId1" };
 
             sheets1.Append(sheet1);
 
             DefinedNames definedNames1 = new DefinedNames();
-            DefinedName definedName1 = new DefinedName(){ Name = "Query", LocalSheetId = (UInt32Value)0U, Hidden = true };
+            DefinedName definedName1 = new DefinedName() { Name = "Query", LocalSheetId = (UInt32Value)0U, Hidden = true };
             definedName1.Text = "Sheet1!$B$2:$I$13";
 
             definedNames1.Append(definedName1);
-            CalculationProperties calculationProperties1 = new CalculationProperties(){ CalculationId = (UInt32Value)152511U };
+            CalculationProperties calculationProperties1 = new CalculationProperties() { CalculationId = (UInt32Value)152511U };
 
             PivotCaches pivotCaches1 = new PivotCaches();
-            PivotCache pivotCache1 = new PivotCache(){ CacheId = (UInt32Value)0U, Id = "rId2" };
+            PivotCache pivotCache1 = new PivotCache() { CacheId = (UInt32Value)0U, Id = "rId2" };
 
             pivotCaches1.Append(pivotCache1);
 
             WorkbookExtensionList workbookExtensionList1 = new WorkbookExtensionList();
 
-            WorkbookExtension workbookExtension1 = new WorkbookExtension(){ Uri = "{FCE2AD5D-F65C-4FA6-A056-5C36A1767C68}" };
+            WorkbookExtension workbookExtension1 = new WorkbookExtension() { Uri = "{FCE2AD5D-F65C-4FA6-A056-5C36A1767C68}" };
             workbookExtension1.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
 
             X15.DataModel dataModel1 = new X15.DataModel();
 
             X15.ModelTables modelTables1 = new X15.ModelTables();
-            X15.ModelTable modelTable1 = new X15.ModelTable(){ Id = "Query_7c41ad89-7105-4c9f-ab5a-881bd3e6a1b9", Name = "Query", Connection = "DAT105 Timestamp - Foodmart 2000 account" };
+            X15.ModelTable modelTable1 = new X15.ModelTable() { Id = "Query_7c41ad89-7105-4c9f-ab5a-881bd3e6a1b9", Name = "Query", Connection = "DAT105 Timestamp - Foodmart 2000 account" };
 
             modelTables1.Append(modelTable1);
 
@@ -199,7 +204,7 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             workbookExtension1.Append(dataModel1);
 
-            WorkbookExtension workbookExtension2 = new WorkbookExtension(){ Uri = "{69C81A23-63F3-4edf-8378-127667AE99B5}" };
+            WorkbookExtension workbookExtension2 = new WorkbookExtension() { Uri = "{69C81A23-63F3-4edf-8378-127667AE99B5}" };
 
             OpenXmlUnknownElement openXmlUnknownElement1 = OpenXmlUnknownElement.CreateOpenXmlUnknownElement("<x15:workbookPr15 chartTrackingRefBase=\"1\" xmlns:x15=\"http://schemas.microsoft.com/office/spreadsheetml/2010/11/main\" />");
 
@@ -224,70 +229,70 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
         // Generates content of themePart1.
         private void GenerateThemePart1Content(ThemePart themePart1)
         {
-            A.Theme theme1 = new A.Theme(){ Name = "Office Theme" };
+            A.Theme theme1 = new A.Theme() { Name = "Office Theme" };
             theme1.AddNamespaceDeclaration("a", "http://schemas.openxmlformats.org/drawingml/2006/main");
 
             A.ThemeElements themeElements1 = new A.ThemeElements();
 
-            A.ColorScheme colorScheme1 = new A.ColorScheme(){ Name = "Office" };
+            A.ColorScheme colorScheme1 = new A.ColorScheme() { Name = "Office" };
 
             A.Dark1Color dark1Color1 = new A.Dark1Color();
-            A.SystemColor systemColor1 = new A.SystemColor(){ Val = A.SystemColorValues.WindowText, LastColor = "000000" };
+            A.SystemColor systemColor1 = new A.SystemColor() { Val = A.SystemColorValues.WindowText, LastColor = "000000" };
 
             dark1Color1.Append(systemColor1);
 
             A.Light1Color light1Color1 = new A.Light1Color();
-            A.SystemColor systemColor2 = new A.SystemColor(){ Val = A.SystemColorValues.Window, LastColor = "FFFFFF" };
+            A.SystemColor systemColor2 = new A.SystemColor() { Val = A.SystemColorValues.Window, LastColor = "FFFFFF" };
 
             light1Color1.Append(systemColor2);
 
             A.Dark2Color dark2Color1 = new A.Dark2Color();
-            A.RgbColorModelHex rgbColorModelHex1 = new A.RgbColorModelHex(){ Val = "44546A" };
+            A.RgbColorModelHex rgbColorModelHex1 = new A.RgbColorModelHex() { Val = "44546A" };
 
             dark2Color1.Append(rgbColorModelHex1);
 
             A.Light2Color light2Color1 = new A.Light2Color();
-            A.RgbColorModelHex rgbColorModelHex2 = new A.RgbColorModelHex(){ Val = "E7E6E6" };
+            A.RgbColorModelHex rgbColorModelHex2 = new A.RgbColorModelHex() { Val = "E7E6E6" };
 
             light2Color1.Append(rgbColorModelHex2);
 
             A.Accent1Color accent1Color1 = new A.Accent1Color();
-            A.RgbColorModelHex rgbColorModelHex3 = new A.RgbColorModelHex(){ Val = "5B9BD5" };
+            A.RgbColorModelHex rgbColorModelHex3 = new A.RgbColorModelHex() { Val = "5B9BD5" };
 
             accent1Color1.Append(rgbColorModelHex3);
 
             A.Accent2Color accent2Color1 = new A.Accent2Color();
-            A.RgbColorModelHex rgbColorModelHex4 = new A.RgbColorModelHex(){ Val = "ED7D31" };
+            A.RgbColorModelHex rgbColorModelHex4 = new A.RgbColorModelHex() { Val = "ED7D31" };
 
             accent2Color1.Append(rgbColorModelHex4);
 
             A.Accent3Color accent3Color1 = new A.Accent3Color();
-            A.RgbColorModelHex rgbColorModelHex5 = new A.RgbColorModelHex(){ Val = "A5A5A5" };
+            A.RgbColorModelHex rgbColorModelHex5 = new A.RgbColorModelHex() { Val = "A5A5A5" };
 
             accent3Color1.Append(rgbColorModelHex5);
 
             A.Accent4Color accent4Color1 = new A.Accent4Color();
-            A.RgbColorModelHex rgbColorModelHex6 = new A.RgbColorModelHex(){ Val = "FFC000" };
+            A.RgbColorModelHex rgbColorModelHex6 = new A.RgbColorModelHex() { Val = "FFC000" };
 
             accent4Color1.Append(rgbColorModelHex6);
 
             A.Accent5Color accent5Color1 = new A.Accent5Color();
-            A.RgbColorModelHex rgbColorModelHex7 = new A.RgbColorModelHex(){ Val = "4472C4" };
+            A.RgbColorModelHex rgbColorModelHex7 = new A.RgbColorModelHex() { Val = "4472C4" };
 
             accent5Color1.Append(rgbColorModelHex7);
 
             A.Accent6Color accent6Color1 = new A.Accent6Color();
-            A.RgbColorModelHex rgbColorModelHex8 = new A.RgbColorModelHex(){ Val = "70AD47" };
+            A.RgbColorModelHex rgbColorModelHex8 = new A.RgbColorModelHex() { Val = "70AD47" };
 
             accent6Color1.Append(rgbColorModelHex8);
 
             A.Hyperlink hyperlink1 = new A.Hyperlink();
-            A.RgbColorModelHex rgbColorModelHex9 = new A.RgbColorModelHex(){ Val = "0563C1" };
+            A.RgbColorModelHex rgbColorModelHex9 = new A.RgbColorModelHex() { Val = "0563C1" };
 
             hyperlink1.Append(rgbColorModelHex9);
 
             A.FollowedHyperlinkColor followedHyperlinkColor1 = new A.FollowedHyperlinkColor();
-            A.RgbColorModelHex rgbColorModelHex10 = new A.RgbColorModelHex(){ Val = "954F72" };
+            A.RgbColorModelHex rgbColorModelHex10 = new A.RgbColorModelHex() { Val = "954F72" };
 
             followedHyperlinkColor1.Append(rgbColorModelHex10);
 
@@ -304,42 +309,42 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             colorScheme1.Append(hyperlink1);
             colorScheme1.Append(followedHyperlinkColor1);
 
-            A.FontScheme fontScheme1 = new A.FontScheme(){ Name = "Office" };
+            A.FontScheme fontScheme1 = new A.FontScheme() { Name = "Office" };
 
             A.MajorFont majorFont1 = new A.MajorFont();
-            A.LatinFont latinFont1 = new A.LatinFont(){ Typeface = "Calibri Light", Panose = "020F0302020204030204" };
-            A.EastAsianFont eastAsianFont1 = new A.EastAsianFont(){ Typeface = "" };
-            A.ComplexScriptFont complexScriptFont1 = new A.ComplexScriptFont(){ Typeface = "" };
-            A.SupplementalFont supplementalFont1 = new A.SupplementalFont(){ Script = "Jpan", Typeface = "ＭＳ Ｐゴシック" };
-            A.SupplementalFont supplementalFont2 = new A.SupplementalFont(){ Script = "Hang", Typeface = "맑은 고딕" };
-            A.SupplementalFont supplementalFont3 = new A.SupplementalFont(){ Script = "Hans", Typeface = "宋体" };
-            A.SupplementalFont supplementalFont4 = new A.SupplementalFont(){ Script = "Hant", Typeface = "新細明體" };
-            A.SupplementalFont supplementalFont5 = new A.SupplementalFont(){ Script = "Arab", Typeface = "Times New Roman" };
-            A.SupplementalFont supplementalFont6 = new A.SupplementalFont(){ Script = "Hebr", Typeface = "Times New Roman" };
-            A.SupplementalFont supplementalFont7 = new A.SupplementalFont(){ Script = "Thai", Typeface = "Tahoma" };
-            A.SupplementalFont supplementalFont8 = new A.SupplementalFont(){ Script = "Ethi", Typeface = "Nyala" };
-            A.SupplementalFont supplementalFont9 = new A.SupplementalFont(){ Script = "Beng", Typeface = "Vrinda" };
-            A.SupplementalFont supplementalFont10 = new A.SupplementalFont(){ Script = "Gujr", Typeface = "Shruti" };
-            A.SupplementalFont supplementalFont11 = new A.SupplementalFont(){ Script = "Khmr", Typeface = "MoolBoran" };
-            A.SupplementalFont supplementalFont12 = new A.SupplementalFont(){ Script = "Knda", Typeface = "Tunga" };
-            A.SupplementalFont supplementalFont13 = new A.SupplementalFont(){ Script = "Guru", Typeface = "Raavi" };
-            A.SupplementalFont supplementalFont14 = new A.SupplementalFont(){ Script = "Cans", Typeface = "Euphemia" };
-            A.SupplementalFont supplementalFont15 = new A.SupplementalFont(){ Script = "Cher", Typeface = "Plantagenet Cherokee" };
-            A.SupplementalFont supplementalFont16 = new A.SupplementalFont(){ Script = "Yiii", Typeface = "Microsoft Yi Baiti" };
-            A.SupplementalFont supplementalFont17 = new A.SupplementalFont(){ Script = "Tibt", Typeface = "Microsoft Himalaya" };
-            A.SupplementalFont supplementalFont18 = new A.SupplementalFont(){ Script = "Thaa", Typeface = "MV Boli" };
-            A.SupplementalFont supplementalFont19 = new A.SupplementalFont(){ Script = "Deva", Typeface = "Mangal" };
-            A.SupplementalFont supplementalFont20 = new A.SupplementalFont(){ Script = "Telu", Typeface = "Gautami" };
-            A.SupplementalFont supplementalFont21 = new A.SupplementalFont(){ Script = "Taml", Typeface = "Latha" };
-            A.SupplementalFont supplementalFont22 = new A.SupplementalFont(){ Script = "Syrc", Typeface = "Estrangelo Edessa" };
-            A.SupplementalFont supplementalFont23 = new A.SupplementalFont(){ Script = "Orya", Typeface = "Kalinga" };
-            A.SupplementalFont supplementalFont24 = new A.SupplementalFont(){ Script = "Mlym", Typeface = "Kartika" };
-            A.SupplementalFont supplementalFont25 = new A.SupplementalFont(){ Script = "Laoo", Typeface = "DokChampa" };
-            A.SupplementalFont supplementalFont26 = new A.SupplementalFont(){ Script = "Sinh", Typeface = "Iskoola Pota" };
-            A.SupplementalFont supplementalFont27 = new A.SupplementalFont(){ Script = "Mong", Typeface = "Mongolian Baiti" };
-            A.SupplementalFont supplementalFont28 = new A.SupplementalFont(){ Script = "Viet", Typeface = "Times New Roman" };
-            A.SupplementalFont supplementalFont29 = new A.SupplementalFont(){ Script = "Uigh", Typeface = "Microsoft Uighur" };
-            A.SupplementalFont supplementalFont30 = new A.SupplementalFont(){ Script = "Geor", Typeface = "Sylfaen" };
+            A.LatinFont latinFont1 = new A.LatinFont() { Typeface = "Calibri Light", Panose = "020F0302020204030204" };
+            A.EastAsianFont eastAsianFont1 = new A.EastAsianFont() { Typeface = "" };
+            A.ComplexScriptFont complexScriptFont1 = new A.ComplexScriptFont() { Typeface = "" };
+            A.SupplementalFont supplementalFont1 = new A.SupplementalFont() { Script = "Jpan", Typeface = "ＭＳ Ｐゴシック" };
+            A.SupplementalFont supplementalFont2 = new A.SupplementalFont() { Script = "Hang", Typeface = "맑은 고딕" };
+            A.SupplementalFont supplementalFont3 = new A.SupplementalFont() { Script = "Hans", Typeface = "宋体" };
+            A.SupplementalFont supplementalFont4 = new A.SupplementalFont() { Script = "Hant", Typeface = "新細明體" };
+            A.SupplementalFont supplementalFont5 = new A.SupplementalFont() { Script = "Arab", Typeface = "Times New Roman" };
+            A.SupplementalFont supplementalFont6 = new A.SupplementalFont() { Script = "Hebr", Typeface = "Times New Roman" };
+            A.SupplementalFont supplementalFont7 = new A.SupplementalFont() { Script = "Thai", Typeface = "Tahoma" };
+            A.SupplementalFont supplementalFont8 = new A.SupplementalFont() { Script = "Ethi", Typeface = "Nyala" };
+            A.SupplementalFont supplementalFont9 = new A.SupplementalFont() { Script = "Beng", Typeface = "Vrinda" };
+            A.SupplementalFont supplementalFont10 = new A.SupplementalFont() { Script = "Gujr", Typeface = "Shruti" };
+            A.SupplementalFont supplementalFont11 = new A.SupplementalFont() { Script = "Khmr", Typeface = "MoolBoran" };
+            A.SupplementalFont supplementalFont12 = new A.SupplementalFont() { Script = "Knda", Typeface = "Tunga" };
+            A.SupplementalFont supplementalFont13 = new A.SupplementalFont() { Script = "Guru", Typeface = "Raavi" };
+            A.SupplementalFont supplementalFont14 = new A.SupplementalFont() { Script = "Cans", Typeface = "Euphemia" };
+            A.SupplementalFont supplementalFont15 = new A.SupplementalFont() { Script = "Cher", Typeface = "Plantagenet Cherokee" };
+            A.SupplementalFont supplementalFont16 = new A.SupplementalFont() { Script = "Yiii", Typeface = "Microsoft Yi Baiti" };
+            A.SupplementalFont supplementalFont17 = new A.SupplementalFont() { Script = "Tibt", Typeface = "Microsoft Himalaya" };
+            A.SupplementalFont supplementalFont18 = new A.SupplementalFont() { Script = "Thaa", Typeface = "MV Boli" };
+            A.SupplementalFont supplementalFont19 = new A.SupplementalFont() { Script = "Deva", Typeface = "Mangal" };
+            A.SupplementalFont supplementalFont20 = new A.SupplementalFont() { Script = "Telu", Typeface = "Gautami" };
+            A.SupplementalFont supplementalFont21 = new A.SupplementalFont() { Script = "Taml", Typeface = "Latha" };
+            A.SupplementalFont supplementalFont22 = new A.SupplementalFont() { Script = "Syrc", Typeface = "Estrangelo Edessa" };
+            A.SupplementalFont supplementalFont23 = new A.SupplementalFont() { Script = "Orya", Typeface = "Kalinga" };
+            A.SupplementalFont supplementalFont24 = new A.SupplementalFont() { Script = "Mlym", Typeface = "Kartika" };
+            A.SupplementalFont supplementalFont25 = new A.SupplementalFont() { Script = "Laoo", Typeface = "DokChampa" };
+            A.SupplementalFont supplementalFont26 = new A.SupplementalFont() { Script = "Sinh", Typeface = "Iskoola Pota" };
+            A.SupplementalFont supplementalFont27 = new A.SupplementalFont() { Script = "Mong", Typeface = "Mongolian Baiti" };
+            A.SupplementalFont supplementalFont28 = new A.SupplementalFont() { Script = "Viet", Typeface = "Times New Roman" };
+            A.SupplementalFont supplementalFont29 = new A.SupplementalFont() { Script = "Uigh", Typeface = "Microsoft Uighur" };
+            A.SupplementalFont supplementalFont30 = new A.SupplementalFont() { Script = "Geor", Typeface = "Sylfaen" };
 
             majorFont1.Append(latinFont1);
             majorFont1.Append(eastAsianFont1);
@@ -376,39 +381,39 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             majorFont1.Append(supplementalFont30);
 
             A.MinorFont minorFont1 = new A.MinorFont();
-            A.LatinFont latinFont2 = new A.LatinFont(){ Typeface = "Calibri", Panose = "020F0502020204030204" };
-            A.EastAsianFont eastAsianFont2 = new A.EastAsianFont(){ Typeface = "" };
-            A.ComplexScriptFont complexScriptFont2 = new A.ComplexScriptFont(){ Typeface = "" };
-            A.SupplementalFont supplementalFont31 = new A.SupplementalFont(){ Script = "Jpan", Typeface = "ＭＳ Ｐゴシック" };
-            A.SupplementalFont supplementalFont32 = new A.SupplementalFont(){ Script = "Hang", Typeface = "맑은 고딕" };
-            A.SupplementalFont supplementalFont33 = new A.SupplementalFont(){ Script = "Hans", Typeface = "宋体" };
-            A.SupplementalFont supplementalFont34 = new A.SupplementalFont(){ Script = "Hant", Typeface = "新細明體" };
-            A.SupplementalFont supplementalFont35 = new A.SupplementalFont(){ Script = "Arab", Typeface = "Arial" };
-            A.SupplementalFont supplementalFont36 = new A.SupplementalFont(){ Script = "Hebr", Typeface = "Arial" };
-            A.SupplementalFont supplementalFont37 = new A.SupplementalFont(){ Script = "Thai", Typeface = "Tahoma" };
-            A.SupplementalFont supplementalFont38 = new A.SupplementalFont(){ Script = "Ethi", Typeface = "Nyala" };
-            A.SupplementalFont supplementalFont39 = new A.SupplementalFont(){ Script = "Beng", Typeface = "Vrinda" };
-            A.SupplementalFont supplementalFont40 = new A.SupplementalFont(){ Script = "Gujr", Typeface = "Shruti" };
-            A.SupplementalFont supplementalFont41 = new A.SupplementalFont(){ Script = "Khmr", Typeface = "DaunPenh" };
-            A.SupplementalFont supplementalFont42 = new A.SupplementalFont(){ Script = "Knda", Typeface = "Tunga" };
-            A.SupplementalFont supplementalFont43 = new A.SupplementalFont(){ Script = "Guru", Typeface = "Raavi" };
-            A.SupplementalFont supplementalFont44 = new A.SupplementalFont(){ Script = "Cans", Typeface = "Euphemia" };
-            A.SupplementalFont supplementalFont45 = new A.SupplementalFont(){ Script = "Cher", Typeface = "Plantagenet Cherokee" };
-            A.SupplementalFont supplementalFont46 = new A.SupplementalFont(){ Script = "Yiii", Typeface = "Microsoft Yi Baiti" };
-            A.SupplementalFont supplementalFont47 = new A.SupplementalFont(){ Script = "Tibt", Typeface = "Microsoft Himalaya" };
-            A.SupplementalFont supplementalFont48 = new A.SupplementalFont(){ Script = "Thaa", Typeface = "MV Boli" };
-            A.SupplementalFont supplementalFont49 = new A.SupplementalFont(){ Script = "Deva", Typeface = "Mangal" };
-            A.SupplementalFont supplementalFont50 = new A.SupplementalFont(){ Script = "Telu", Typeface = "Gautami" };
-            A.SupplementalFont supplementalFont51 = new A.SupplementalFont(){ Script = "Taml", Typeface = "Latha" };
-            A.SupplementalFont supplementalFont52 = new A.SupplementalFont(){ Script = "Syrc", Typeface = "Estrangelo Edessa" };
-            A.SupplementalFont supplementalFont53 = new A.SupplementalFont(){ Script = "Orya", Typeface = "Kalinga" };
-            A.SupplementalFont supplementalFont54 = new A.SupplementalFont(){ Script = "Mlym", Typeface = "Kartika" };
-            A.SupplementalFont supplementalFont55 = new A.SupplementalFont(){ Script = "Laoo", Typeface = "DokChampa" };
-            A.SupplementalFont supplementalFont56 = new A.SupplementalFont(){ Script = "Sinh", Typeface = "Iskoola Pota" };
-            A.SupplementalFont supplementalFont57 = new A.SupplementalFont(){ Script = "Mong", Typeface = "Mongolian Baiti" };
-            A.SupplementalFont supplementalFont58 = new A.SupplementalFont(){ Script = "Viet", Typeface = "Arial" };
-            A.SupplementalFont supplementalFont59 = new A.SupplementalFont(){ Script = "Uigh", Typeface = "Microsoft Uighur" };
-            A.SupplementalFont supplementalFont60 = new A.SupplementalFont(){ Script = "Geor", Typeface = "Sylfaen" };
+            A.LatinFont latinFont2 = new A.LatinFont() { Typeface = "Calibri", Panose = "020F0502020204030204" };
+            A.EastAsianFont eastAsianFont2 = new A.EastAsianFont() { Typeface = "" };
+            A.ComplexScriptFont complexScriptFont2 = new A.ComplexScriptFont() { Typeface = "" };
+            A.SupplementalFont supplementalFont31 = new A.SupplementalFont() { Script = "Jpan", Typeface = "ＭＳ Ｐゴシック" };
+            A.SupplementalFont supplementalFont32 = new A.SupplementalFont() { Script = "Hang", Typeface = "맑은 고딕" };
+            A.SupplementalFont supplementalFont33 = new A.SupplementalFont() { Script = "Hans", Typeface = "宋体" };
+            A.SupplementalFont supplementalFont34 = new A.SupplementalFont() { Script = "Hant", Typeface = "新細明體" };
+            A.SupplementalFont supplementalFont35 = new A.SupplementalFont() { Script = "Arab", Typeface = "Arial" };
+            A.SupplementalFont supplementalFont36 = new A.SupplementalFont() { Script = "Hebr", Typeface = "Arial" };
+            A.SupplementalFont supplementalFont37 = new A.SupplementalFont() { Script = "Thai", Typeface = "Tahoma" };
+            A.SupplementalFont supplementalFont38 = new A.SupplementalFont() { Script = "Ethi", Typeface = "Nyala" };
+            A.SupplementalFont supplementalFont39 = new A.SupplementalFont() { Script = "Beng", Typeface = "Vrinda" };
+            A.SupplementalFont supplementalFont40 = new A.SupplementalFont() { Script = "Gujr", Typeface = "Shruti" };
+            A.SupplementalFont supplementalFont41 = new A.SupplementalFont() { Script = "Khmr", Typeface = "DaunPenh" };
+            A.SupplementalFont supplementalFont42 = new A.SupplementalFont() { Script = "Knda", Typeface = "Tunga" };
+            A.SupplementalFont supplementalFont43 = new A.SupplementalFont() { Script = "Guru", Typeface = "Raavi" };
+            A.SupplementalFont supplementalFont44 = new A.SupplementalFont() { Script = "Cans", Typeface = "Euphemia" };
+            A.SupplementalFont supplementalFont45 = new A.SupplementalFont() { Script = "Cher", Typeface = "Plantagenet Cherokee" };
+            A.SupplementalFont supplementalFont46 = new A.SupplementalFont() { Script = "Yiii", Typeface = "Microsoft Yi Baiti" };
+            A.SupplementalFont supplementalFont47 = new A.SupplementalFont() { Script = "Tibt", Typeface = "Microsoft Himalaya" };
+            A.SupplementalFont supplementalFont48 = new A.SupplementalFont() { Script = "Thaa", Typeface = "MV Boli" };
+            A.SupplementalFont supplementalFont49 = new A.SupplementalFont() { Script = "Deva", Typeface = "Mangal" };
+            A.SupplementalFont supplementalFont50 = new A.SupplementalFont() { Script = "Telu", Typeface = "Gautami" };
+            A.SupplementalFont supplementalFont51 = new A.SupplementalFont() { Script = "Taml", Typeface = "Latha" };
+            A.SupplementalFont supplementalFont52 = new A.SupplementalFont() { Script = "Syrc", Typeface = "Estrangelo Edessa" };
+            A.SupplementalFont supplementalFont53 = new A.SupplementalFont() { Script = "Orya", Typeface = "Kalinga" };
+            A.SupplementalFont supplementalFont54 = new A.SupplementalFont() { Script = "Mlym", Typeface = "Kartika" };
+            A.SupplementalFont supplementalFont55 = new A.SupplementalFont() { Script = "Laoo", Typeface = "DokChampa" };
+            A.SupplementalFont supplementalFont56 = new A.SupplementalFont() { Script = "Sinh", Typeface = "Iskoola Pota" };
+            A.SupplementalFont supplementalFont57 = new A.SupplementalFont() { Script = "Mong", Typeface = "Mongolian Baiti" };
+            A.SupplementalFont supplementalFont58 = new A.SupplementalFont() { Script = "Viet", Typeface = "Arial" };
+            A.SupplementalFont supplementalFont59 = new A.SupplementalFont() { Script = "Uigh", Typeface = "Microsoft Uighur" };
+            A.SupplementalFont supplementalFont60 = new A.SupplementalFont() { Script = "Geor", Typeface = "Sylfaen" };
 
             minorFont1.Append(latinFont2);
             minorFont1.Append(eastAsianFont2);
@@ -447,25 +452,25 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             fontScheme1.Append(majorFont1);
             fontScheme1.Append(minorFont1);
 
-            A.FormatScheme formatScheme1 = new A.FormatScheme(){ Name = "Office" };
+            A.FormatScheme formatScheme1 = new A.FormatScheme() { Name = "Office" };
 
             A.FillStyleList fillStyleList1 = new A.FillStyleList();
 
             A.SolidFill solidFill1 = new A.SolidFill();
-            A.SchemeColor schemeColor1 = new A.SchemeColor(){ Val = A.SchemeColorValues.PhColor };
+            A.SchemeColor schemeColor1 = new A.SchemeColor() { Val = A.SchemeColorValues.PhColor };
 
             solidFill1.Append(schemeColor1);
 
-            A.GradientFill gradientFill1 = new A.GradientFill(){ RotateWithShape = true };
+            A.GradientFill gradientFill1 = new A.GradientFill() { RotateWithShape = true };
 
             A.GradientStopList gradientStopList1 = new A.GradientStopList();
 
-            A.GradientStop gradientStop1 = new A.GradientStop(){ Position = 0 };
+            A.GradientStop gradientStop1 = new A.GradientStop() { Position = 0 };
 
-            A.SchemeColor schemeColor2 = new A.SchemeColor(){ Val = A.SchemeColorValues.PhColor };
-            A.LuminanceModulation luminanceModulation1 = new A.LuminanceModulation(){ Val = 110000 };
-            A.SaturationModulation saturationModulation1 = new A.SaturationModulation(){ Val = 105000 };
-            A.Tint tint1 = new A.Tint(){ Val = 67000 };
+            A.SchemeColor schemeColor2 = new A.SchemeColor() { Val = A.SchemeColorValues.PhColor };
+            A.LuminanceModulation luminanceModulation1 = new A.LuminanceModulation() { Val = 110000 };
+            A.SaturationModulation saturationModulation1 = new A.SaturationModulation() { Val = 105000 };
+            A.Tint tint1 = new A.Tint() { Val = 67000 };
 
             schemeColor2.Append(luminanceModulation1);
             schemeColor2.Append(saturationModulation1);
@@ -473,12 +478,12 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             gradientStop1.Append(schemeColor2);
 
-            A.GradientStop gradientStop2 = new A.GradientStop(){ Position = 50000 };
+            A.GradientStop gradientStop2 = new A.GradientStop() { Position = 50000 };
 
-            A.SchemeColor schemeColor3 = new A.SchemeColor(){ Val = A.SchemeColorValues.PhColor };
-            A.LuminanceModulation luminanceModulation2 = new A.LuminanceModulation(){ Val = 105000 };
-            A.SaturationModulation saturationModulation2 = new A.SaturationModulation(){ Val = 103000 };
-            A.Tint tint2 = new A.Tint(){ Val = 73000 };
+            A.SchemeColor schemeColor3 = new A.SchemeColor() { Val = A.SchemeColorValues.PhColor };
+            A.LuminanceModulation luminanceModulation2 = new A.LuminanceModulation() { Val = 105000 };
+            A.SaturationModulation saturationModulation2 = new A.SaturationModulation() { Val = 103000 };
+            A.Tint tint2 = new A.Tint() { Val = 73000 };
 
             schemeColor3.Append(luminanceModulation2);
             schemeColor3.Append(saturationModulation2);
@@ -486,12 +491,12 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             gradientStop2.Append(schemeColor3);
 
-            A.GradientStop gradientStop3 = new A.GradientStop(){ Position = 100000 };
+            A.GradientStop gradientStop3 = new A.GradientStop() { Position = 100000 };
 
-            A.SchemeColor schemeColor4 = new A.SchemeColor(){ Val = A.SchemeColorValues.PhColor };
-            A.LuminanceModulation luminanceModulation3 = new A.LuminanceModulation(){ Val = 105000 };
-            A.SaturationModulation saturationModulation3 = new A.SaturationModulation(){ Val = 109000 };
-            A.Tint tint3 = new A.Tint(){ Val = 81000 };
+            A.SchemeColor schemeColor4 = new A.SchemeColor() { Val = A.SchemeColorValues.PhColor };
+            A.LuminanceModulation luminanceModulation3 = new A.LuminanceModulation() { Val = 105000 };
+            A.SaturationModulation saturationModulation3 = new A.SaturationModulation() { Val = 109000 };
+            A.Tint tint3 = new A.Tint() { Val = 81000 };
 
             schemeColor4.Append(luminanceModulation3);
             schemeColor4.Append(saturationModulation3);
@@ -502,21 +507,21 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             gradientStopList1.Append(gradientStop1);
             gradientStopList1.Append(gradientStop2);
             gradientStopList1.Append(gradientStop3);
-            A.LinearGradientFill linearGradientFill1 = new A.LinearGradientFill(){ Angle = 5400000, Scaled = false };
+            A.LinearGradientFill linearGradientFill1 = new A.LinearGradientFill() { Angle = 5400000, Scaled = false };
 
             gradientFill1.Append(gradientStopList1);
             gradientFill1.Append(linearGradientFill1);
 
-            A.GradientFill gradientFill2 = new A.GradientFill(){ RotateWithShape = true };
+            A.GradientFill gradientFill2 = new A.GradientFill() { RotateWithShape = true };
 
             A.GradientStopList gradientStopList2 = new A.GradientStopList();
 
-            A.GradientStop gradientStop4 = new A.GradientStop(){ Position = 0 };
+            A.GradientStop gradientStop4 = new A.GradientStop() { Position = 0 };
 
-            A.SchemeColor schemeColor5 = new A.SchemeColor(){ Val = A.SchemeColorValues.PhColor };
-            A.SaturationModulation saturationModulation4 = new A.SaturationModulation(){ Val = 103000 };
-            A.LuminanceModulation luminanceModulation4 = new A.LuminanceModulation(){ Val = 102000 };
-            A.Tint tint4 = new A.Tint(){ Val = 94000 };
+            A.SchemeColor schemeColor5 = new A.SchemeColor() { Val = A.SchemeColorValues.PhColor };
+            A.SaturationModulation saturationModulation4 = new A.SaturationModulation() { Val = 103000 };
+            A.LuminanceModulation luminanceModulation4 = new A.LuminanceModulation() { Val = 102000 };
+            A.Tint tint4 = new A.Tint() { Val = 94000 };
 
             schemeColor5.Append(saturationModulation4);
             schemeColor5.Append(luminanceModulation4);
@@ -524,12 +529,12 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             gradientStop4.Append(schemeColor5);
 
-            A.GradientStop gradientStop5 = new A.GradientStop(){ Position = 50000 };
+            A.GradientStop gradientStop5 = new A.GradientStop() { Position = 50000 };
 
-            A.SchemeColor schemeColor6 = new A.SchemeColor(){ Val = A.SchemeColorValues.PhColor };
-            A.SaturationModulation saturationModulation5 = new A.SaturationModulation(){ Val = 110000 };
-            A.LuminanceModulation luminanceModulation5 = new A.LuminanceModulation(){ Val = 100000 };
-            A.Shade shade1 = new A.Shade(){ Val = 100000 };
+            A.SchemeColor schemeColor6 = new A.SchemeColor() { Val = A.SchemeColorValues.PhColor };
+            A.SaturationModulation saturationModulation5 = new A.SaturationModulation() { Val = 110000 };
+            A.LuminanceModulation luminanceModulation5 = new A.LuminanceModulation() { Val = 100000 };
+            A.Shade shade1 = new A.Shade() { Val = 100000 };
 
             schemeColor6.Append(saturationModulation5);
             schemeColor6.Append(luminanceModulation5);
@@ -537,12 +542,12 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             gradientStop5.Append(schemeColor6);
 
-            A.GradientStop gradientStop6 = new A.GradientStop(){ Position = 100000 };
+            A.GradientStop gradientStop6 = new A.GradientStop() { Position = 100000 };
 
-            A.SchemeColor schemeColor7 = new A.SchemeColor(){ Val = A.SchemeColorValues.PhColor };
-            A.LuminanceModulation luminanceModulation6 = new A.LuminanceModulation(){ Val = 99000 };
-            A.SaturationModulation saturationModulation6 = new A.SaturationModulation(){ Val = 120000 };
-            A.Shade shade2 = new A.Shade(){ Val = 78000 };
+            A.SchemeColor schemeColor7 = new A.SchemeColor() { Val = A.SchemeColorValues.PhColor };
+            A.LuminanceModulation luminanceModulation6 = new A.LuminanceModulation() { Val = 99000 };
+            A.SaturationModulation saturationModulation6 = new A.SaturationModulation() { Val = 120000 };
+            A.Shade shade2 = new A.Shade() { Val = 78000 };
 
             schemeColor7.Append(luminanceModulation6);
             schemeColor7.Append(saturationModulation6);
@@ -553,7 +558,7 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             gradientStopList2.Append(gradientStop4);
             gradientStopList2.Append(gradientStop5);
             gradientStopList2.Append(gradientStop6);
-            A.LinearGradientFill linearGradientFill2 = new A.LinearGradientFill(){ Angle = 5400000, Scaled = false };
+            A.LinearGradientFill linearGradientFill2 = new A.LinearGradientFill() { Angle = 5400000, Scaled = false };
 
             gradientFill2.Append(gradientStopList2);
             gradientFill2.Append(linearGradientFill2);
@@ -564,40 +569,40 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             A.LineStyleList lineStyleList1 = new A.LineStyleList();
 
-            A.Outline outline1 = new A.Outline(){ Width = 6350, CapType = A.LineCapValues.Flat, CompoundLineType = A.CompoundLineValues.Single, Alignment = A.PenAlignmentValues.Center };
+            A.Outline outline1 = new A.Outline() { Width = 6350, CapType = A.LineCapValues.Flat, CompoundLineType = A.CompoundLineValues.Single, Alignment = A.PenAlignmentValues.Center };
 
             A.SolidFill solidFill2 = new A.SolidFill();
-            A.SchemeColor schemeColor8 = new A.SchemeColor(){ Val = A.SchemeColorValues.PhColor };
+            A.SchemeColor schemeColor8 = new A.SchemeColor() { Val = A.SchemeColorValues.PhColor };
 
             solidFill2.Append(schemeColor8);
-            A.PresetDash presetDash1 = new A.PresetDash(){ Val = A.PresetLineDashValues.Solid };
-            A.Miter miter1 = new A.Miter(){ Limit = 800000 };
+            A.PresetDash presetDash1 = new A.PresetDash() { Val = A.PresetLineDashValues.Solid };
+            A.Miter miter1 = new A.Miter() { Limit = 800000 };
 
             outline1.Append(solidFill2);
             outline1.Append(presetDash1);
             outline1.Append(miter1);
 
-            A.Outline outline2 = new A.Outline(){ Width = 12700, CapType = A.LineCapValues.Flat, CompoundLineType = A.CompoundLineValues.Single, Alignment = A.PenAlignmentValues.Center };
+            A.Outline outline2 = new A.Outline() { Width = 12700, CapType = A.LineCapValues.Flat, CompoundLineType = A.CompoundLineValues.Single, Alignment = A.PenAlignmentValues.Center };
 
             A.SolidFill solidFill3 = new A.SolidFill();
-            A.SchemeColor schemeColor9 = new A.SchemeColor(){ Val = A.SchemeColorValues.PhColor };
+            A.SchemeColor schemeColor9 = new A.SchemeColor() { Val = A.SchemeColorValues.PhColor };
 
             solidFill3.Append(schemeColor9);
-            A.PresetDash presetDash2 = new A.PresetDash(){ Val = A.PresetLineDashValues.Solid };
-            A.Miter miter2 = new A.Miter(){ Limit = 800000 };
+            A.PresetDash presetDash2 = new A.PresetDash() { Val = A.PresetLineDashValues.Solid };
+            A.Miter miter2 = new A.Miter() { Limit = 800000 };
 
             outline2.Append(solidFill3);
             outline2.Append(presetDash2);
             outline2.Append(miter2);
 
-            A.Outline outline3 = new A.Outline(){ Width = 19050, CapType = A.LineCapValues.Flat, CompoundLineType = A.CompoundLineValues.Single, Alignment = A.PenAlignmentValues.Center };
+            A.Outline outline3 = new A.Outline() { Width = 19050, CapType = A.LineCapValues.Flat, CompoundLineType = A.CompoundLineValues.Single, Alignment = A.PenAlignmentValues.Center };
 
             A.SolidFill solidFill4 = new A.SolidFill();
-            A.SchemeColor schemeColor10 = new A.SchemeColor(){ Val = A.SchemeColorValues.PhColor };
+            A.SchemeColor schemeColor10 = new A.SchemeColor() { Val = A.SchemeColorValues.PhColor };
 
             solidFill4.Append(schemeColor10);
-            A.PresetDash presetDash3 = new A.PresetDash(){ Val = A.PresetLineDashValues.Solid };
-            A.Miter miter3 = new A.Miter(){ Limit = 800000 };
+            A.PresetDash presetDash3 = new A.PresetDash() { Val = A.PresetLineDashValues.Solid };
+            A.Miter miter3 = new A.Miter() { Limit = 800000 };
 
             outline3.Append(solidFill4);
             outline3.Append(presetDash3);
@@ -623,10 +628,10 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             A.EffectList effectList3 = new A.EffectList();
 
-            A.OuterShadow outerShadow1 = new A.OuterShadow(){ BlurRadius = 57150L, Distance = 19050L, Direction = 5400000, Alignment = A.RectangleAlignmentValues.Center, RotateWithShape = false };
+            A.OuterShadow outerShadow1 = new A.OuterShadow() { BlurRadius = 57150L, Distance = 19050L, Direction = 5400000, Alignment = A.RectangleAlignmentValues.Center, RotateWithShape = false };
 
-            A.RgbColorModelHex rgbColorModelHex11 = new A.RgbColorModelHex(){ Val = "000000" };
-            A.Alpha alpha1 = new A.Alpha(){ Val = 63000 };
+            A.RgbColorModelHex rgbColorModelHex11 = new A.RgbColorModelHex() { Val = "000000" };
+            A.Alpha alpha1 = new A.Alpha() { Val = 63000 };
 
             rgbColorModelHex11.Append(alpha1);
 
@@ -643,32 +648,32 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             A.BackgroundFillStyleList backgroundFillStyleList1 = new A.BackgroundFillStyleList();
 
             A.SolidFill solidFill5 = new A.SolidFill();
-            A.SchemeColor schemeColor11 = new A.SchemeColor(){ Val = A.SchemeColorValues.PhColor };
+            A.SchemeColor schemeColor11 = new A.SchemeColor() { Val = A.SchemeColorValues.PhColor };
 
             solidFill5.Append(schemeColor11);
 
             A.SolidFill solidFill6 = new A.SolidFill();
 
-            A.SchemeColor schemeColor12 = new A.SchemeColor(){ Val = A.SchemeColorValues.PhColor };
-            A.Tint tint5 = new A.Tint(){ Val = 95000 };
-            A.SaturationModulation saturationModulation7 = new A.SaturationModulation(){ Val = 170000 };
+            A.SchemeColor schemeColor12 = new A.SchemeColor() { Val = A.SchemeColorValues.PhColor };
+            A.Tint tint5 = new A.Tint() { Val = 95000 };
+            A.SaturationModulation saturationModulation7 = new A.SaturationModulation() { Val = 170000 };
 
             schemeColor12.Append(tint5);
             schemeColor12.Append(saturationModulation7);
 
             solidFill6.Append(schemeColor12);
 
-            A.GradientFill gradientFill3 = new A.GradientFill(){ RotateWithShape = true };
+            A.GradientFill gradientFill3 = new A.GradientFill() { RotateWithShape = true };
 
             A.GradientStopList gradientStopList3 = new A.GradientStopList();
 
-            A.GradientStop gradientStop7 = new A.GradientStop(){ Position = 0 };
+            A.GradientStop gradientStop7 = new A.GradientStop() { Position = 0 };
 
-            A.SchemeColor schemeColor13 = new A.SchemeColor(){ Val = A.SchemeColorValues.PhColor };
-            A.Tint tint6 = new A.Tint(){ Val = 93000 };
-            A.SaturationModulation saturationModulation8 = new A.SaturationModulation(){ Val = 150000 };
-            A.Shade shade3 = new A.Shade(){ Val = 98000 };
-            A.LuminanceModulation luminanceModulation7 = new A.LuminanceModulation(){ Val = 102000 };
+            A.SchemeColor schemeColor13 = new A.SchemeColor() { Val = A.SchemeColorValues.PhColor };
+            A.Tint tint6 = new A.Tint() { Val = 93000 };
+            A.SaturationModulation saturationModulation8 = new A.SaturationModulation() { Val = 150000 };
+            A.Shade shade3 = new A.Shade() { Val = 98000 };
+            A.LuminanceModulation luminanceModulation7 = new A.LuminanceModulation() { Val = 102000 };
 
             schemeColor13.Append(tint6);
             schemeColor13.Append(saturationModulation8);
@@ -677,13 +682,13 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             gradientStop7.Append(schemeColor13);
 
-            A.GradientStop gradientStop8 = new A.GradientStop(){ Position = 50000 };
+            A.GradientStop gradientStop8 = new A.GradientStop() { Position = 50000 };
 
-            A.SchemeColor schemeColor14 = new A.SchemeColor(){ Val = A.SchemeColorValues.PhColor };
-            A.Tint tint7 = new A.Tint(){ Val = 98000 };
-            A.SaturationModulation saturationModulation9 = new A.SaturationModulation(){ Val = 130000 };
-            A.Shade shade4 = new A.Shade(){ Val = 90000 };
-            A.LuminanceModulation luminanceModulation8 = new A.LuminanceModulation(){ Val = 103000 };
+            A.SchemeColor schemeColor14 = new A.SchemeColor() { Val = A.SchemeColorValues.PhColor };
+            A.Tint tint7 = new A.Tint() { Val = 98000 };
+            A.SaturationModulation saturationModulation9 = new A.SaturationModulation() { Val = 130000 };
+            A.Shade shade4 = new A.Shade() { Val = 90000 };
+            A.LuminanceModulation luminanceModulation8 = new A.LuminanceModulation() { Val = 103000 };
 
             schemeColor14.Append(tint7);
             schemeColor14.Append(saturationModulation9);
@@ -692,11 +697,11 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             gradientStop8.Append(schemeColor14);
 
-            A.GradientStop gradientStop9 = new A.GradientStop(){ Position = 100000 };
+            A.GradientStop gradientStop9 = new A.GradientStop() { Position = 100000 };
 
-            A.SchemeColor schemeColor15 = new A.SchemeColor(){ Val = A.SchemeColorValues.PhColor };
-            A.Shade shade5 = new A.Shade(){ Val = 63000 };
-            A.SaturationModulation saturationModulation10 = new A.SaturationModulation(){ Val = 120000 };
+            A.SchemeColor schemeColor15 = new A.SchemeColor() { Val = A.SchemeColorValues.PhColor };
+            A.Shade shade5 = new A.Shade() { Val = 63000 };
+            A.SaturationModulation saturationModulation10 = new A.SaturationModulation() { Val = 120000 };
 
             schemeColor15.Append(shade5);
             schemeColor15.Append(saturationModulation10);
@@ -706,7 +711,7 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             gradientStopList3.Append(gradientStop7);
             gradientStopList3.Append(gradientStop8);
             gradientStopList3.Append(gradientStop9);
-            A.LinearGradientFill linearGradientFill3 = new A.LinearGradientFill(){ Angle = 5400000, Scaled = false };
+            A.LinearGradientFill linearGradientFill3 = new A.LinearGradientFill() { Angle = 5400000, Scaled = false };
 
             gradientFill3.Append(gradientStopList3);
             gradientFill3.Append(linearGradientFill3);
@@ -728,9 +733,9 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             A.OfficeStyleSheetExtensionList officeStyleSheetExtensionList1 = new A.OfficeStyleSheetExtensionList();
 
-            A.OfficeStyleSheetExtension officeStyleSheetExtension1 = new A.OfficeStyleSheetExtension(){ Uri = "{05A4C25C-085E-4340-85A3-A5531E510DB2}" };
+            A.OfficeStyleSheetExtension officeStyleSheetExtension1 = new A.OfficeStyleSheetExtension() { Uri = "{05A4C25C-085E-4340-85A3-A5531E510DB2}" };
 
-            Thm15.ThemeFamily themeFamily1 = new Thm15.ThemeFamily(){ Name = "Office Theme", Id = "{62F939B6-93AF-4DB8-9C6B-D6C7DFDC589F}", Vid = "{4A3C46E8-61CC-4603-A589-7422A47A8E4A}" };
+            Thm15.ThemeFamily themeFamily1 = new Thm15.ThemeFamily() { Name = "Office Theme", Id = "{62F939B6-93AF-4DB8-9C6B-D6C7DFDC589F}", Vid = "{4A3C46E8-61CC-4603-A589-7422A47A8E4A}" };
             themeFamily1.AddNamespaceDeclaration("thm15", "http://schemas.microsoft.com/office/thememl/2012/main");
 
             officeStyleSheetExtension1.Append(themeFamily1);
@@ -757,23 +762,23 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
         // Generates content of pivotTableCacheDefinitionPart1.
         private void GeneratePivotTableCacheDefinitionPart1Content(PivotTableCacheDefinitionPart pivotTableCacheDefinitionPart1)
         {
-            PivotCacheDefinition pivotCacheDefinition1 = new PivotCacheDefinition(){ SaveData = false, RefreshedBy = "Paul Berruti", RefreshedDate = 40855.575896064816D, BackgroundQuery = true, CreatedVersion = 5, RefreshedVersion = 5, MinRefreshableVersion = 3, RecordCount = (UInt32Value)0U, SupportSubquery = true, SupportAdvancedDrill = true };
+            PivotCacheDefinition pivotCacheDefinition1 = new PivotCacheDefinition() { SaveData = false, RefreshedBy = "Paul Berruti", RefreshedDate = 40855.575896064816D, BackgroundQuery = true, CreatedVersion = 5, RefreshedVersion = 5, MinRefreshableVersion = 3, RecordCount = (UInt32Value)0U, SupportSubquery = true, SupportAdvancedDrill = true };
             pivotCacheDefinition1.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
-            CacheSource cacheSource1 = new CacheSource(){ Type = SourceValues.External, ConnectionId = (UInt32Value)3U };
-            CacheFields cacheFields1 = new CacheFields(){ Count = (UInt32Value)0U };
+            CacheSource cacheSource1 = new CacheSource() { Type = SourceValues.External, ConnectionId = (UInt32Value)3U };
+            CacheFields cacheFields1 = new CacheFields() { Count = (UInt32Value)0U };
 
-            CacheHierarchies cacheHierarchies1 = new CacheHierarchies(){ Count = (UInt32Value)11U };
-            CacheHierarchy cacheHierarchy1 = new CacheHierarchy(){ UniqueName = "[Query].[account_id]", Caption = "account_id", Attribute = true, DefaultMemberUniqueName = "[Query].[account_id].[All]", AllUniqueName = "[Query].[account_id].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false };
-            CacheHierarchy cacheHierarchy2 = new CacheHierarchy(){ UniqueName = "[Query].[account_parent]", Caption = "account_parent", Attribute = true, DefaultMemberUniqueName = "[Query].[account_parent].[All]", AllUniqueName = "[Query].[account_parent].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false };
-            CacheHierarchy cacheHierarchy3 = new CacheHierarchy(){ UniqueName = "[Query].[account_description]", Caption = "account_description", Attribute = true, DefaultMemberUniqueName = "[Query].[account_description].[All]", AllUniqueName = "[Query].[account_description].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false };
-            CacheHierarchy cacheHierarchy4 = new CacheHierarchy(){ UniqueName = "[Query].[account_type]", Caption = "account_type", Attribute = true, DefaultMemberUniqueName = "[Query].[account_type].[All]", AllUniqueName = "[Query].[account_type].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false };
-            CacheHierarchy cacheHierarchy5 = new CacheHierarchy(){ UniqueName = "[Query].[account_rollup]", Caption = "account_rollup", Attribute = true, DefaultMemberUniqueName = "[Query].[account_rollup].[All]", AllUniqueName = "[Query].[account_rollup].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false };
-            CacheHierarchy cacheHierarchy6 = new CacheHierarchy(){ UniqueName = "[Query].[Custom Members]", Caption = "Custom Members", Attribute = true, DefaultMemberUniqueName = "[Query].[Custom Members].[All]", AllUniqueName = "[Query].[Custom Members].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false };
-            CacheHierarchy cacheHierarchy7 = new CacheHierarchy(){ UniqueName = "[Query].[CurrentUser]", Caption = "CurrentUser", Attribute = true, DefaultMemberUniqueName = "[Query].[CurrentUser].[All]", AllUniqueName = "[Query].[CurrentUser].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false };
-            CacheHierarchy cacheHierarchy8 = new CacheHierarchy(){ UniqueName = "[Query].[RefreshTime]", Caption = "RefreshTime", Attribute = true, DefaultMemberUniqueName = "[Query].[RefreshTime].[All]", AllUniqueName = "[Query].[RefreshTime].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false };
-            CacheHierarchy cacheHierarchy9 = new CacheHierarchy(){ UniqueName = "[Query].[RowNumber]", Caption = "RowNumber", Attribute = true, KeyAttribute = true, DefaultMemberUniqueName = "[Query].[RowNumber].[All]", AllUniqueName = "[Query].[RowNumber].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false, Hidden = true };
-            CacheHierarchy cacheHierarchy10 = new CacheHierarchy(){ UniqueName = "[Measures].[__XL_Count Query]", Caption = "__XL_Count Query", Measure = true, DisplayFolder = "", MeasureGroup = "Query", Count = (UInt32Value)0U, Hidden = true };
-            CacheHierarchy cacheHierarchy11 = new CacheHierarchy(){ UniqueName = "[Measures].[__XL_Count of Models]", Caption = "__XL_Count of Models", Measure = true, DisplayFolder = "", Count = (UInt32Value)0U, Hidden = true };
+            CacheHierarchies cacheHierarchies1 = new CacheHierarchies() { Count = (UInt32Value)11U };
+            CacheHierarchy cacheHierarchy1 = new CacheHierarchy() { UniqueName = "[Query].[account_id]", Caption = "account_id", Attribute = true, DefaultMemberUniqueName = "[Query].[account_id].[All]", AllUniqueName = "[Query].[account_id].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false };
+            CacheHierarchy cacheHierarchy2 = new CacheHierarchy() { UniqueName = "[Query].[account_parent]", Caption = "account_parent", Attribute = true, DefaultMemberUniqueName = "[Query].[account_parent].[All]", AllUniqueName = "[Query].[account_parent].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false };
+            CacheHierarchy cacheHierarchy3 = new CacheHierarchy() { UniqueName = "[Query].[account_description]", Caption = "account_description", Attribute = true, DefaultMemberUniqueName = "[Query].[account_description].[All]", AllUniqueName = "[Query].[account_description].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false };
+            CacheHierarchy cacheHierarchy4 = new CacheHierarchy() { UniqueName = "[Query].[account_type]", Caption = "account_type", Attribute = true, DefaultMemberUniqueName = "[Query].[account_type].[All]", AllUniqueName = "[Query].[account_type].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false };
+            CacheHierarchy cacheHierarchy5 = new CacheHierarchy() { UniqueName = "[Query].[account_rollup]", Caption = "account_rollup", Attribute = true, DefaultMemberUniqueName = "[Query].[account_rollup].[All]", AllUniqueName = "[Query].[account_rollup].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false };
+            CacheHierarchy cacheHierarchy6 = new CacheHierarchy() { UniqueName = "[Query].[Custom Members]", Caption = "Custom Members", Attribute = true, DefaultMemberUniqueName = "[Query].[Custom Members].[All]", AllUniqueName = "[Query].[Custom Members].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false };
+            CacheHierarchy cacheHierarchy7 = new CacheHierarchy() { UniqueName = "[Query].[CurrentUser]", Caption = "CurrentUser", Attribute = true, DefaultMemberUniqueName = "[Query].[CurrentUser].[All]", AllUniqueName = "[Query].[CurrentUser].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false };
+            CacheHierarchy cacheHierarchy8 = new CacheHierarchy() { UniqueName = "[Query].[RefreshTime]", Caption = "RefreshTime", Attribute = true, DefaultMemberUniqueName = "[Query].[RefreshTime].[All]", AllUniqueName = "[Query].[RefreshTime].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false };
+            CacheHierarchy cacheHierarchy9 = new CacheHierarchy() { UniqueName = "[Query].[RowNumber]", Caption = "RowNumber", Attribute = true, KeyAttribute = true, DefaultMemberUniqueName = "[Query].[RowNumber].[All]", AllUniqueName = "[Query].[RowNumber].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false, Hidden = true };
+            CacheHierarchy cacheHierarchy10 = new CacheHierarchy() { UniqueName = "[Measures].[__XL_Count Query]", Caption = "__XL_Count Query", Measure = true, DisplayFolder = "", MeasureGroup = "Query", Count = (UInt32Value)0U, Hidden = true };
+            CacheHierarchy cacheHierarchy11 = new CacheHierarchy() { UniqueName = "[Measures].[__XL_Count of Models]", Caption = "__XL_Count of Models", Measure = true, DisplayFolder = "", Count = (UInt32Value)0U, Hidden = true };
 
             cacheHierarchies1.Append(cacheHierarchy1);
             cacheHierarchies1.Append(cacheHierarchy2);
@@ -786,30 +791,30 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             cacheHierarchies1.Append(cacheHierarchy9);
             cacheHierarchies1.Append(cacheHierarchy10);
             cacheHierarchies1.Append(cacheHierarchy11);
-            Kpis kpis1 = new Kpis(){ Count = (UInt32Value)0U };
+            Kpis kpis1 = new Kpis() { Count = (UInt32Value)0U };
 
-            Dimensions dimensions1 = new Dimensions(){ Count = (UInt32Value)2U };
-            Dimension dimension1 = new Dimension(){ Measure = true, Name = "Measures", UniqueName = "[Measures]", Caption = "Measures" };
-            Dimension dimension2 = new Dimension(){ Name = "Query", UniqueName = "[Query]", Caption = "Query" };
+            Dimensions dimensions1 = new Dimensions() { Count = (UInt32Value)2U };
+            Dimension dimension1 = new Dimension() { Measure = true, Name = "Measures", UniqueName = "[Measures]", Caption = "Measures" };
+            Dimension dimension2 = new Dimension() { Name = "Query", UniqueName = "[Query]", Caption = "Query" };
 
             dimensions1.Append(dimension1);
             dimensions1.Append(dimension2);
 
-            MeasureGroups measureGroups1 = new MeasureGroups(){ Count = (UInt32Value)1U };
-            MeasureGroup measureGroup1 = new MeasureGroup(){ Name = "Query", Caption = "Query" };
+            MeasureGroups measureGroups1 = new MeasureGroups() { Count = (UInt32Value)1U };
+            MeasureGroup measureGroup1 = new MeasureGroup() { Name = "Query", Caption = "Query" };
 
             measureGroups1.Append(measureGroup1);
 
-            Maps maps1 = new Maps(){ Count = (UInt32Value)1U };
-            MeasureDimensionMap measureDimensionMap1 = new MeasureDimensionMap(){ MeasureGroup = (UInt32Value)0U, Dimension = (UInt32Value)1U };
+            Maps maps1 = new Maps() { Count = (UInt32Value)1U };
+            MeasureDimensionMap measureDimensionMap1 = new MeasureDimensionMap() { MeasureGroup = (UInt32Value)0U, Dimension = (UInt32Value)1U };
 
             maps1.Append(measureDimensionMap1);
 
             PivotCacheDefinitionExtensionList pivotCacheDefinitionExtensionList1 = new PivotCacheDefinitionExtensionList();
 
-            PivotCacheDefinitionExtension pivotCacheDefinitionExtension1 = new PivotCacheDefinitionExtension(){ Uri = "{725AE2AE-9491-48be-B2B4-4EB974FC3084}" };
+            PivotCacheDefinitionExtension pivotCacheDefinitionExtension1 = new PivotCacheDefinitionExtension() { Uri = "{725AE2AE-9491-48be-B2B4-4EB974FC3084}" };
             pivotCacheDefinitionExtension1.AddNamespaceDeclaration("x14", "http://schemas.microsoft.com/office/spreadsheetml/2009/9/main");
-            X14.PivotCacheDefinition pivotCacheDefinition2 = new X14.PivotCacheDefinition(){ SupportSubqueryNonVisual = true, SupportSubqueryCalcMem = true, SupportAddCalcMems = true };
+            X14.PivotCacheDefinition pivotCacheDefinition2 = new X14.PivotCacheDefinition() { SupportSubqueryNonVisual = true, SupportSubqueryCalcMem = true, SupportAddCalcMems = true };
 
             pivotCacheDefinitionExtension1.Append(pivotCacheDefinition2);
 
@@ -830,32 +835,32 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
         // Generates content of worksheetPart1.
         private void GenerateWorksheetPart1Content(WorksheetPart worksheetPart1)
         {
-            Worksheet worksheet1 = new Worksheet(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x14ac" }  };
+            Worksheet worksheet1 = new Worksheet() { MCAttributes = new MarkupCompatibilityAttributes() { Ignorable = "x14ac" } };
             worksheet1.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             worksheet1.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
             worksheet1.AddNamespaceDeclaration("x14ac", "http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac");
-            SheetProperties sheetProperties1 = new SheetProperties(){ CodeName = "Sheet1" };
-            SheetDimension sheetDimension1 = new SheetDimension(){ Reference = "B2:I41" };
+            SheetProperties sheetProperties1 = new SheetProperties() { CodeName = "Sheet1" };
+            SheetDimension sheetDimension1 = new SheetDimension() { Reference = "B2:I41" };
 
             SheetViews sheetViews1 = new SheetViews();
 
-            SheetView sheetView1 = new SheetView(){ TabSelected = true, WorkbookViewId = (UInt32Value)0U };
-            Selection selection1 = new Selection(){ ActiveCell = "G18", SequenceOfReferences = new ListValue<StringValue>() { InnerText = "G18" } };
+            SheetView sheetView1 = new SheetView() { TabSelected = true, WorkbookViewId = (UInt32Value)0U };
+            Selection selection1 = new Selection() { ActiveCell = "G18", SequenceOfReferences = new ListValue<StringValue>() { InnerText = "G18" } };
 
             sheetView1.Append(selection1);
 
             sheetViews1.Append(sheetView1);
-            SheetFormatProperties sheetFormatProperties1 = new SheetFormatProperties(){ DefaultRowHeight = 15D };
+            SheetFormatProperties sheetFormatProperties1 = new SheetFormatProperties() { DefaultRowHeight = 15D };
 
             Columns columns1 = new Columns();
-            Column column1 = new Column(){ Min = (UInt32Value)2U, Max = (UInt32Value)2U, Width = 12.85546875D, BestFit = true, CustomWidth = true };
-            Column column2 = new Column(){ Min = (UInt32Value)3U, Max = (UInt32Value)3U, Width = 17.140625D, BestFit = true, CustomWidth = true };
-            Column column3 = new Column(){ Min = (UInt32Value)4U, Max = (UInt32Value)4U, Width = 24D, BestFit = true, CustomWidth = true };
-            Column column4 = new Column(){ Min = (UInt32Value)5U, Max = (UInt32Value)5U, Width = 15.140625D, BestFit = true, CustomWidth = true };
-            Column column5 = new Column(){ Min = (UInt32Value)6U, Max = (UInt32Value)6U, Width = 16.5703125D, BestFit = true, CustomWidth = true };
-            Column column6 = new Column(){ Min = (UInt32Value)7U, Max = (UInt32Value)7U, Width = 81.140625D, BestFit = true, CustomWidth = true };
-            Column column7 = new Column(){ Min = (UInt32Value)8U, Max = (UInt32Value)8U, Width = 18.7109375D, BestFit = true, CustomWidth = true };
-            Column column8 = new Column(){ Min = (UInt32Value)9U, Max = (UInt32Value)9U, Width = 14.5703125D, BestFit = true, CustomWidth = true };
+            Column column1 = new Column() { Min = (UInt32Value)2U, Max = (UInt32Value)2U, Width = 12.85546875D, BestFit = true, CustomWidth = true };
+            Column column2 = new Column() { Min = (UInt32Value)3U, Max = (UInt32Value)3U, Width = 17.140625D, BestFit = true, CustomWidth = true };
+            Column column3 = new Column() { Min = (UInt32Value)4U, Max = (UInt32Value)4U, Width = 24D, BestFit = true, CustomWidth = true };
+            Column column4 = new Column() { Min = (UInt32Value)5U, Max = (UInt32Value)5U, Width = 15.140625D, BestFit = true, CustomWidth = true };
+            Column column5 = new Column() { Min = (UInt32Value)6U, Max = (UInt32Value)6U, Width = 16.5703125D, BestFit = true, CustomWidth = true };
+            Column column6 = new Column() { Min = (UInt32Value)7U, Max = (UInt32Value)7U, Width = 81.140625D, BestFit = true, CustomWidth = true };
+            Column column7 = new Column() { Min = (UInt32Value)8U, Max = (UInt32Value)8U, Width = 18.7109375D, BestFit = true, CustomWidth = true };
+            Column column8 = new Column() { Min = (UInt32Value)9U, Max = (UInt32Value)9U, Width = 14.5703125D, BestFit = true, CustomWidth = true };
 
             columns1.Append(column1);
             columns1.Append(column2);
@@ -868,51 +873,51 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             SheetData sheetData1 = new SheetData();
 
-            Row row1 = new Row(){ RowIndex = (UInt32Value)2U, Spans = new ListValue<StringValue>() { InnerText = "2:9" } };
+            Row row1 = new Row() { RowIndex = (UInt32Value)2U, Spans = new ListValue<StringValue>() { InnerText = "2:9" } };
 
-            Cell cell1 = new Cell(){ CellReference = "B2", DataType = CellValues.SharedString };
+            Cell cell1 = new Cell() { CellReference = "B2", DataType = CellValues.SharedString };
             CellValue cellValue1 = new CellValue();
             cellValue1.Text = "0";
 
             cell1.Append(cellValue1);
 
-            Cell cell2 = new Cell(){ CellReference = "C2", DataType = CellValues.SharedString };
+            Cell cell2 = new Cell() { CellReference = "C2", DataType = CellValues.SharedString };
             CellValue cellValue2 = new CellValue();
             cellValue2.Text = "1";
 
             cell2.Append(cellValue2);
 
-            Cell cell3 = new Cell(){ CellReference = "D2", DataType = CellValues.SharedString };
+            Cell cell3 = new Cell() { CellReference = "D2", DataType = CellValues.SharedString };
             CellValue cellValue3 = new CellValue();
             cellValue3.Text = "2";
 
             cell3.Append(cellValue3);
 
-            Cell cell4 = new Cell(){ CellReference = "E2", DataType = CellValues.SharedString };
+            Cell cell4 = new Cell() { CellReference = "E2", DataType = CellValues.SharedString };
             CellValue cellValue4 = new CellValue();
             cellValue4.Text = "3";
 
             cell4.Append(cellValue4);
 
-            Cell cell5 = new Cell(){ CellReference = "F2", DataType = CellValues.SharedString };
+            Cell cell5 = new Cell() { CellReference = "F2", DataType = CellValues.SharedString };
             CellValue cellValue5 = new CellValue();
             cellValue5.Text = "4";
 
             cell5.Append(cellValue5);
 
-            Cell cell6 = new Cell(){ CellReference = "G2", DataType = CellValues.SharedString };
+            Cell cell6 = new Cell() { CellReference = "G2", DataType = CellValues.SharedString };
             CellValue cellValue6 = new CellValue();
             cellValue6.Text = "5";
 
             cell6.Append(cellValue6);
 
-            Cell cell7 = new Cell(){ CellReference = "H2", DataType = CellValues.SharedString };
+            Cell cell7 = new Cell() { CellReference = "H2", DataType = CellValues.SharedString };
             CellValue cellValue7 = new CellValue();
             cellValue7.Text = "6";
 
             cell7.Append(cellValue7);
 
-            Cell cell8 = new Cell(){ CellReference = "I2", DataType = CellValues.SharedString };
+            Cell cell8 = new Cell() { CellReference = "I2", DataType = CellValues.SharedString };
             CellValue cellValue8 = new CellValue();
             cellValue8.Text = "7";
 
@@ -927,45 +932,45 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             row1.Append(cell7);
             row1.Append(cell8);
 
-            Row row2 = new Row(){ RowIndex = (UInt32Value)3U, Spans = new ListValue<StringValue>() { InnerText = "2:9" } };
+            Row row2 = new Row() { RowIndex = (UInt32Value)3U, Spans = new ListValue<StringValue>() { InnerText = "2:9" } };
 
-            Cell cell9 = new Cell(){ CellReference = "B3" };
+            Cell cell9 = new Cell() { CellReference = "B3" };
             CellValue cellValue9 = new CellValue();
             cellValue9.Text = "4000";
 
             cell9.Append(cellValue9);
 
-            Cell cell10 = new Cell(){ CellReference = "C3" };
+            Cell cell10 = new Cell() { CellReference = "C3" };
             CellValue cellValue10 = new CellValue();
             cellValue10.Text = "5000";
 
             cell10.Append(cellValue10);
 
-            Cell cell11 = new Cell(){ CellReference = "D3", DataType = CellValues.SharedString };
+            Cell cell11 = new Cell() { CellReference = "D3", DataType = CellValues.SharedString };
             CellValue cellValue11 = new CellValue();
             cellValue11.Text = "8";
 
             cell11.Append(cellValue11);
 
-            Cell cell12 = new Cell(){ CellReference = "E3", DataType = CellValues.SharedString };
+            Cell cell12 = new Cell() { CellReference = "E3", DataType = CellValues.SharedString };
             CellValue cellValue12 = new CellValue();
             cellValue12.Text = "9";
 
             cell12.Append(cellValue12);
 
-            Cell cell13 = new Cell(){ CellReference = "F3", DataType = CellValues.SharedString };
+            Cell cell13 = new Cell() { CellReference = "F3", DataType = CellValues.SharedString };
             CellValue cellValue13 = new CellValue();
             cellValue13.Text = "10";
 
             cell13.Append(cellValue13);
 
-            Cell cell14 = new Cell(){ CellReference = "H3", DataType = CellValues.SharedString };
+            Cell cell14 = new Cell() { CellReference = "H3", DataType = CellValues.SharedString };
             CellValue cellValue14 = new CellValue();
             cellValue14.Text = "11";
 
             cell14.Append(cellValue14);
 
-            Cell cell15 = new Cell(){ CellReference = "I3", StyleIndex = (UInt32Value)1U };
+            Cell cell15 = new Cell() { CellReference = "I3", StyleIndex = (UInt32Value)1U };
             CellValue cellValue15 = new CellValue();
             cellValue15.Text = "40855.491680594139";
 
@@ -979,39 +984,39 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             row2.Append(cell14);
             row2.Append(cell15);
 
-            Row row3 = new Row(){ RowIndex = (UInt32Value)4U, Spans = new ListValue<StringValue>() { InnerText = "2:9" } };
+            Row row3 = new Row() { RowIndex = (UInt32Value)4U, Spans = new ListValue<StringValue>() { InnerText = "2:9" } };
 
-            Cell cell16 = new Cell(){ CellReference = "B4" };
+            Cell cell16 = new Cell() { CellReference = "B4" };
             CellValue cellValue16 = new CellValue();
             cellValue16.Text = "2000";
 
             cell16.Append(cellValue16);
 
-            Cell cell17 = new Cell(){ CellReference = "D4", DataType = CellValues.SharedString };
+            Cell cell17 = new Cell() { CellReference = "D4", DataType = CellValues.SharedString };
             CellValue cellValue17 = new CellValue();
             cellValue17.Text = "12";
 
             cell17.Append(cellValue17);
 
-            Cell cell18 = new Cell(){ CellReference = "E4", DataType = CellValues.SharedString };
+            Cell cell18 = new Cell() { CellReference = "E4", DataType = CellValues.SharedString };
             CellValue cellValue18 = new CellValue();
             cellValue18.Text = "13";
 
             cell18.Append(cellValue18);
 
-            Cell cell19 = new Cell(){ CellReference = "F4", DataType = CellValues.SharedString };
+            Cell cell19 = new Cell() { CellReference = "F4", DataType = CellValues.SharedString };
             CellValue cellValue19 = new CellValue();
             cellValue19.Text = "14";
 
             cell19.Append(cellValue19);
 
-            Cell cell20 = new Cell(){ CellReference = "H4", DataType = CellValues.SharedString };
+            Cell cell20 = new Cell() { CellReference = "H4", DataType = CellValues.SharedString };
             CellValue cellValue20 = new CellValue();
             cellValue20.Text = "11";
 
             cell20.Append(cellValue20);
 
-            Cell cell21 = new Cell(){ CellReference = "I4", StyleIndex = (UInt32Value)1U };
+            Cell cell21 = new Cell() { CellReference = "I4", StyleIndex = (UInt32Value)1U };
             CellValue cellValue21 = new CellValue();
             cellValue21.Text = "40855.491680594139";
 
@@ -1024,45 +1029,45 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             row3.Append(cell20);
             row3.Append(cell21);
 
-            Row row4 = new Row(){ RowIndex = (UInt32Value)5U, Spans = new ListValue<StringValue>() { InnerText = "2:9" } };
+            Row row4 = new Row() { RowIndex = (UInt32Value)5U, Spans = new ListValue<StringValue>() { InnerText = "2:9" } };
 
-            Cell cell22 = new Cell(){ CellReference = "B5" };
+            Cell cell22 = new Cell() { CellReference = "B5" };
             CellValue cellValue22 = new CellValue();
             cellValue22.Text = "4300";
 
             cell22.Append(cellValue22);
 
-            Cell cell23 = new Cell(){ CellReference = "C5" };
+            Cell cell23 = new Cell() { CellReference = "C5" };
             CellValue cellValue23 = new CellValue();
             cellValue23.Text = "4000";
 
             cell23.Append(cellValue23);
 
-            Cell cell24 = new Cell(){ CellReference = "D5", DataType = CellValues.SharedString };
+            Cell cell24 = new Cell() { CellReference = "D5", DataType = CellValues.SharedString };
             CellValue cellValue24 = new CellValue();
             cellValue24.Text = "15";
 
             cell24.Append(cellValue24);
 
-            Cell cell25 = new Cell(){ CellReference = "E5", DataType = CellValues.SharedString };
+            Cell cell25 = new Cell() { CellReference = "E5", DataType = CellValues.SharedString };
             CellValue cellValue25 = new CellValue();
             cellValue25.Text = "9";
 
             cell25.Append(cellValue25);
 
-            Cell cell26 = new Cell(){ CellReference = "F5", DataType = CellValues.SharedString };
+            Cell cell26 = new Cell() { CellReference = "F5", DataType = CellValues.SharedString };
             CellValue cellValue26 = new CellValue();
             cellValue26.Text = "16";
 
             cell26.Append(cellValue26);
 
-            Cell cell27 = new Cell(){ CellReference = "H5", DataType = CellValues.SharedString };
+            Cell cell27 = new Cell() { CellReference = "H5", DataType = CellValues.SharedString };
             CellValue cellValue27 = new CellValue();
             cellValue27.Text = "11";
 
             cell27.Append(cellValue27);
 
-            Cell cell28 = new Cell(){ CellReference = "I5", StyleIndex = (UInt32Value)1U };
+            Cell cell28 = new Cell() { CellReference = "I5", StyleIndex = (UInt32Value)1U };
             CellValue cellValue28 = new CellValue();
             cellValue28.Text = "40855.491680594139";
 
@@ -1076,45 +1081,45 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             row4.Append(cell27);
             row4.Append(cell28);
 
-            Row row5 = new Row(){ RowIndex = (UInt32Value)6U, Spans = new ListValue<StringValue>() { InnerText = "2:9" } };
+            Row row5 = new Row() { RowIndex = (UInt32Value)6U, Spans = new ListValue<StringValue>() { InnerText = "2:9" } };
 
-            Cell cell29 = new Cell(){ CellReference = "B6" };
+            Cell cell29 = new Cell() { CellReference = "B6" };
             CellValue cellValue29 = new CellValue();
             cellValue29.Text = "3200";
 
             cell29.Append(cellValue29);
 
-            Cell cell30 = new Cell(){ CellReference = "C6" };
+            Cell cell30 = new Cell() { CellReference = "C6" };
             CellValue cellValue30 = new CellValue();
             cellValue30.Text = "3000";
 
             cell30.Append(cellValue30);
 
-            Cell cell31 = new Cell(){ CellReference = "D6", DataType = CellValues.SharedString };
+            Cell cell31 = new Cell() { CellReference = "D6", DataType = CellValues.SharedString };
             CellValue cellValue31 = new CellValue();
             cellValue31.Text = "17";
 
             cell31.Append(cellValue31);
 
-            Cell cell32 = new Cell(){ CellReference = "E6", DataType = CellValues.SharedString };
+            Cell cell32 = new Cell() { CellReference = "E6", DataType = CellValues.SharedString };
             CellValue cellValue32 = new CellValue();
             cellValue32.Text = "18";
 
             cell32.Append(cellValue32);
 
-            Cell cell33 = new Cell(){ CellReference = "F6", DataType = CellValues.SharedString };
+            Cell cell33 = new Cell() { CellReference = "F6", DataType = CellValues.SharedString };
             CellValue cellValue33 = new CellValue();
             cellValue33.Text = "10";
 
             cell33.Append(cellValue33);
 
-            Cell cell34 = new Cell(){ CellReference = "H6", DataType = CellValues.SharedString };
+            Cell cell34 = new Cell() { CellReference = "H6", DataType = CellValues.SharedString };
             CellValue cellValue34 = new CellValue();
             cellValue34.Text = "11";
 
             cell34.Append(cellValue34);
 
-            Cell cell35 = new Cell(){ CellReference = "I6", StyleIndex = (UInt32Value)1U };
+            Cell cell35 = new Cell() { CellReference = "I6", StyleIndex = (UInt32Value)1U };
             CellValue cellValue35 = new CellValue();
             cellValue35.Text = "40855.491680594139";
 
@@ -1128,45 +1133,45 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             row5.Append(cell34);
             row5.Append(cell35);
 
-            Row row6 = new Row(){ RowIndex = (UInt32Value)7U, Spans = new ListValue<StringValue>() { InnerText = "2:9" } };
+            Row row6 = new Row() { RowIndex = (UInt32Value)7U, Spans = new ListValue<StringValue>() { InnerText = "2:9" } };
 
-            Cell cell36 = new Cell(){ CellReference = "B7" };
+            Cell cell36 = new Cell() { CellReference = "B7" };
             CellValue cellValue36 = new CellValue();
             cellValue36.Text = "4100";
 
             cell36.Append(cellValue36);
 
-            Cell cell37 = new Cell(){ CellReference = "C7" };
+            Cell cell37 = new Cell() { CellReference = "C7" };
             CellValue cellValue37 = new CellValue();
             cellValue37.Text = "4000";
 
             cell37.Append(cellValue37);
 
-            Cell cell38 = new Cell(){ CellReference = "D7", DataType = CellValues.SharedString };
+            Cell cell38 = new Cell() { CellReference = "D7", DataType = CellValues.SharedString };
             CellValue cellValue38 = new CellValue();
             cellValue38.Text = "19";
 
             cell38.Append(cellValue38);
 
-            Cell cell39 = new Cell(){ CellReference = "E7", DataType = CellValues.SharedString };
+            Cell cell39 = new Cell() { CellReference = "E7", DataType = CellValues.SharedString };
             CellValue cellValue39 = new CellValue();
             cellValue39.Text = "9";
 
             cell39.Append(cellValue39);
 
-            Cell cell40 = new Cell(){ CellReference = "F7", DataType = CellValues.SharedString };
+            Cell cell40 = new Cell() { CellReference = "F7", DataType = CellValues.SharedString };
             CellValue cellValue40 = new CellValue();
             cellValue40.Text = "16";
 
             cell40.Append(cellValue40);
 
-            Cell cell41 = new Cell(){ CellReference = "H7", DataType = CellValues.SharedString };
+            Cell cell41 = new Cell() { CellReference = "H7", DataType = CellValues.SharedString };
             CellValue cellValue41 = new CellValue();
             cellValue41.Text = "11";
 
             cell41.Append(cellValue41);
 
-            Cell cell42 = new Cell(){ CellReference = "I7", StyleIndex = (UInt32Value)1U };
+            Cell cell42 = new Cell() { CellReference = "I7", StyleIndex = (UInt32Value)1U };
             CellValue cellValue42 = new CellValue();
             cellValue42.Text = "40855.491680594139";
 
@@ -1180,45 +1185,45 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             row6.Append(cell41);
             row6.Append(cell42);
 
-            Row row7 = new Row(){ RowIndex = (UInt32Value)8U, Spans = new ListValue<StringValue>() { InnerText = "2:9" } };
+            Row row7 = new Row() { RowIndex = (UInt32Value)8U, Spans = new ListValue<StringValue>() { InnerText = "2:9" } };
 
-            Cell cell43 = new Cell(){ CellReference = "B8" };
+            Cell cell43 = new Cell() { CellReference = "B8" };
             CellValue cellValue43 = new CellValue();
             cellValue43.Text = "4400";
 
             cell43.Append(cellValue43);
 
-            Cell cell44 = new Cell(){ CellReference = "C8" };
+            Cell cell44 = new Cell() { CellReference = "C8" };
             CellValue cellValue44 = new CellValue();
             cellValue44.Text = "4000";
 
             cell44.Append(cellValue44);
 
-            Cell cell45 = new Cell(){ CellReference = "D8", DataType = CellValues.SharedString };
+            Cell cell45 = new Cell() { CellReference = "D8", DataType = CellValues.SharedString };
             CellValue cellValue45 = new CellValue();
             cellValue45.Text = "20";
 
             cell45.Append(cellValue45);
 
-            Cell cell46 = new Cell(){ CellReference = "E8", DataType = CellValues.SharedString };
+            Cell cell46 = new Cell() { CellReference = "E8", DataType = CellValues.SharedString };
             CellValue cellValue46 = new CellValue();
             cellValue46.Text = "9";
 
             cell46.Append(cellValue46);
 
-            Cell cell47 = new Cell(){ CellReference = "F8", DataType = CellValues.SharedString };
+            Cell cell47 = new Cell() { CellReference = "F8", DataType = CellValues.SharedString };
             CellValue cellValue47 = new CellValue();
             cellValue47.Text = "16";
 
             cell47.Append(cellValue47);
 
-            Cell cell48 = new Cell(){ CellReference = "H8", DataType = CellValues.SharedString };
+            Cell cell48 = new Cell() { CellReference = "H8", DataType = CellValues.SharedString };
             CellValue cellValue48 = new CellValue();
             cellValue48.Text = "11";
 
             cell48.Append(cellValue48);
 
-            Cell cell49 = new Cell(){ CellReference = "I8", StyleIndex = (UInt32Value)1U };
+            Cell cell49 = new Cell() { CellReference = "I8", StyleIndex = (UInt32Value)1U };
             CellValue cellValue49 = new CellValue();
             cellValue49.Text = "40855.491680594139";
 
@@ -1232,51 +1237,51 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             row7.Append(cell48);
             row7.Append(cell49);
 
-            Row row8 = new Row(){ RowIndex = (UInt32Value)9U, Spans = new ListValue<StringValue>() { InnerText = "2:9" } };
+            Row row8 = new Row() { RowIndex = (UInt32Value)9U, Spans = new ListValue<StringValue>() { InnerText = "2:9" } };
 
-            Cell cell50 = new Cell(){ CellReference = "B9" };
+            Cell cell50 = new Cell() { CellReference = "B9" };
             CellValue cellValue50 = new CellValue();
             cellValue50.Text = "3100";
 
             cell50.Append(cellValue50);
 
-            Cell cell51 = new Cell(){ CellReference = "C9" };
+            Cell cell51 = new Cell() { CellReference = "C9" };
             CellValue cellValue51 = new CellValue();
             cellValue51.Text = "3000";
 
             cell51.Append(cellValue51);
 
-            Cell cell52 = new Cell(){ CellReference = "D9", DataType = CellValues.SharedString };
+            Cell cell52 = new Cell() { CellReference = "D9", DataType = CellValues.SharedString };
             CellValue cellValue52 = new CellValue();
             cellValue52.Text = "21";
 
             cell52.Append(cellValue52);
 
-            Cell cell53 = new Cell(){ CellReference = "E9", DataType = CellValues.SharedString };
+            Cell cell53 = new Cell() { CellReference = "E9", DataType = CellValues.SharedString };
             CellValue cellValue53 = new CellValue();
             cellValue53.Text = "18";
 
             cell53.Append(cellValue53);
 
-            Cell cell54 = new Cell(){ CellReference = "F9", DataType = CellValues.SharedString };
+            Cell cell54 = new Cell() { CellReference = "F9", DataType = CellValues.SharedString };
             CellValue cellValue54 = new CellValue();
             cellValue54.Text = "16";
 
             cell54.Append(cellValue54);
 
-            Cell cell55 = new Cell(){ CellReference = "G9", DataType = CellValues.SharedString };
+            Cell cell55 = new Cell() { CellReference = "G9", DataType = CellValues.SharedString };
             CellValue cellValue55 = new CellValue();
             cellValue55.Text = "22";
 
             cell55.Append(cellValue55);
 
-            Cell cell56 = new Cell(){ CellReference = "H9", DataType = CellValues.SharedString };
+            Cell cell56 = new Cell() { CellReference = "H9", DataType = CellValues.SharedString };
             CellValue cellValue56 = new CellValue();
             cellValue56.Text = "11";
 
             cell56.Append(cellValue56);
 
-            Cell cell57 = new Cell(){ CellReference = "I9", StyleIndex = (UInt32Value)1U };
+            Cell cell57 = new Cell() { CellReference = "I9", StyleIndex = (UInt32Value)1U };
             CellValue cellValue57 = new CellValue();
             cellValue57.Text = "40855.491680594139";
 
@@ -1291,45 +1296,45 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             row8.Append(cell56);
             row8.Append(cell57);
 
-            Row row9 = new Row(){ RowIndex = (UInt32Value)10U, Spans = new ListValue<StringValue>() { InnerText = "2:9" } };
+            Row row9 = new Row() { RowIndex = (UInt32Value)10U, Spans = new ListValue<StringValue>() { InnerText = "2:9" } };
 
-            Cell cell58 = new Cell(){ CellReference = "B10" };
+            Cell cell58 = new Cell() { CellReference = "B10" };
             CellValue cellValue58 = new CellValue();
             cellValue58.Text = "3000";
 
             cell58.Append(cellValue58);
 
-            Cell cell59 = new Cell(){ CellReference = "C10" };
+            Cell cell59 = new Cell() { CellReference = "C10" };
             CellValue cellValue59 = new CellValue();
             cellValue59.Text = "5000";
 
             cell59.Append(cellValue59);
 
-            Cell cell60 = new Cell(){ CellReference = "D10", DataType = CellValues.SharedString };
+            Cell cell60 = new Cell() { CellReference = "D10", DataType = CellValues.SharedString };
             CellValue cellValue60 = new CellValue();
             cellValue60.Text = "23";
 
             cell60.Append(cellValue60);
 
-            Cell cell61 = new Cell(){ CellReference = "E10", DataType = CellValues.SharedString };
+            Cell cell61 = new Cell() { CellReference = "E10", DataType = CellValues.SharedString };
             CellValue cellValue61 = new CellValue();
             cellValue61.Text = "18";
 
             cell61.Append(cellValue61);
 
-            Cell cell62 = new Cell(){ CellReference = "F10", DataType = CellValues.SharedString };
+            Cell cell62 = new Cell() { CellReference = "F10", DataType = CellValues.SharedString };
             CellValue cellValue62 = new CellValue();
             cellValue62.Text = "16";
 
             cell62.Append(cellValue62);
 
-            Cell cell63 = new Cell(){ CellReference = "H10", DataType = CellValues.SharedString };
+            Cell cell63 = new Cell() { CellReference = "H10", DataType = CellValues.SharedString };
             CellValue cellValue63 = new CellValue();
             cellValue63.Text = "11";
 
             cell63.Append(cellValue63);
 
-            Cell cell64 = new Cell(){ CellReference = "I10", StyleIndex = (UInt32Value)1U };
+            Cell cell64 = new Cell() { CellReference = "I10", StyleIndex = (UInt32Value)1U };
             CellValue cellValue64 = new CellValue();
             cellValue64.Text = "40855.491680594139";
 
@@ -1343,39 +1348,39 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             row9.Append(cell63);
             row9.Append(cell64);
 
-            Row row10 = new Row(){ RowIndex = (UInt32Value)11U, Spans = new ListValue<StringValue>() { InnerText = "2:9" } };
+            Row row10 = new Row() { RowIndex = (UInt32Value)11U, Spans = new ListValue<StringValue>() { InnerText = "2:9" } };
 
-            Cell cell65 = new Cell(){ CellReference = "B11" };
+            Cell cell65 = new Cell() { CellReference = "B11" };
             CellValue cellValue65 = new CellValue();
             cellValue65.Text = "5000";
 
             cell65.Append(cellValue65);
 
-            Cell cell66 = new Cell(){ CellReference = "D11", DataType = CellValues.SharedString };
+            Cell cell66 = new Cell() { CellReference = "D11", DataType = CellValues.SharedString };
             CellValue cellValue66 = new CellValue();
             cellValue66.Text = "24";
 
             cell66.Append(cellValue66);
 
-            Cell cell67 = new Cell(){ CellReference = "E11", DataType = CellValues.SharedString };
+            Cell cell67 = new Cell() { CellReference = "E11", DataType = CellValues.SharedString };
             CellValue cellValue67 = new CellValue();
             cellValue67.Text = "18";
 
             cell67.Append(cellValue67);
 
-            Cell cell68 = new Cell(){ CellReference = "F11", DataType = CellValues.SharedString };
+            Cell cell68 = new Cell() { CellReference = "F11", DataType = CellValues.SharedString };
             CellValue cellValue68 = new CellValue();
             cellValue68.Text = "16";
 
             cell68.Append(cellValue68);
 
-            Cell cell69 = new Cell(){ CellReference = "H11", DataType = CellValues.SharedString };
+            Cell cell69 = new Cell() { CellReference = "H11", DataType = CellValues.SharedString };
             CellValue cellValue69 = new CellValue();
             cellValue69.Text = "11";
 
             cell69.Append(cellValue69);
 
-            Cell cell70 = new Cell(){ CellReference = "I11", StyleIndex = (UInt32Value)1U };
+            Cell cell70 = new Cell() { CellReference = "I11", StyleIndex = (UInt32Value)1U };
             CellValue cellValue70 = new CellValue();
             cellValue70.Text = "40855.491680594139";
 
@@ -1388,45 +1393,45 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             row10.Append(cell69);
             row10.Append(cell70);
 
-            Row row11 = new Row(){ RowIndex = (UInt32Value)12U, Spans = new ListValue<StringValue>() { InnerText = "2:9" } };
+            Row row11 = new Row() { RowIndex = (UInt32Value)12U, Spans = new ListValue<StringValue>() { InnerText = "2:9" } };
 
-            Cell cell71 = new Cell(){ CellReference = "B12" };
+            Cell cell71 = new Cell() { CellReference = "B12" };
             CellValue cellValue71 = new CellValue();
             cellValue71.Text = "4200";
 
             cell71.Append(cellValue71);
 
-            Cell cell72 = new Cell(){ CellReference = "C12" };
+            Cell cell72 = new Cell() { CellReference = "C12" };
             CellValue cellValue72 = new CellValue();
             cellValue72.Text = "4000";
 
             cell72.Append(cellValue72);
 
-            Cell cell73 = new Cell(){ CellReference = "D12", DataType = CellValues.SharedString };
+            Cell cell73 = new Cell() { CellReference = "D12", DataType = CellValues.SharedString };
             CellValue cellValue73 = new CellValue();
             cellValue73.Text = "25";
 
             cell73.Append(cellValue73);
 
-            Cell cell74 = new Cell(){ CellReference = "E12", DataType = CellValues.SharedString };
+            Cell cell74 = new Cell() { CellReference = "E12", DataType = CellValues.SharedString };
             CellValue cellValue74 = new CellValue();
             cellValue74.Text = "9";
 
             cell74.Append(cellValue74);
 
-            Cell cell75 = new Cell(){ CellReference = "F12", DataType = CellValues.SharedString };
+            Cell cell75 = new Cell() { CellReference = "F12", DataType = CellValues.SharedString };
             CellValue cellValue75 = new CellValue();
             cellValue75.Text = "16";
 
             cell75.Append(cellValue75);
 
-            Cell cell76 = new Cell(){ CellReference = "H12", DataType = CellValues.SharedString };
+            Cell cell76 = new Cell() { CellReference = "H12", DataType = CellValues.SharedString };
             CellValue cellValue76 = new CellValue();
             cellValue76.Text = "11";
 
             cell76.Append(cellValue76);
 
-            Cell cell77 = new Cell(){ CellReference = "I12", StyleIndex = (UInt32Value)1U };
+            Cell cell77 = new Cell() { CellReference = "I12", StyleIndex = (UInt32Value)1U };
             CellValue cellValue77 = new CellValue();
             cellValue77.Text = "40855.491680594139";
 
@@ -1440,39 +1445,39 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             row11.Append(cell76);
             row11.Append(cell77);
 
-            Row row12 = new Row(){ RowIndex = (UInt32Value)13U, Spans = new ListValue<StringValue>() { InnerText = "2:9" } };
+            Row row12 = new Row() { RowIndex = (UInt32Value)13U, Spans = new ListValue<StringValue>() { InnerText = "2:9" } };
 
-            Cell cell78 = new Cell(){ CellReference = "B13" };
+            Cell cell78 = new Cell() { CellReference = "B13" };
             CellValue cellValue78 = new CellValue();
             cellValue78.Text = "1000";
 
             cell78.Append(cellValue78);
 
-            Cell cell79 = new Cell(){ CellReference = "D13", DataType = CellValues.SharedString };
+            Cell cell79 = new Cell() { CellReference = "D13", DataType = CellValues.SharedString };
             CellValue cellValue79 = new CellValue();
             cellValue79.Text = "26";
 
             cell79.Append(cellValue79);
 
-            Cell cell80 = new Cell(){ CellReference = "E13", DataType = CellValues.SharedString };
+            Cell cell80 = new Cell() { CellReference = "E13", DataType = CellValues.SharedString };
             CellValue cellValue80 = new CellValue();
             cellValue80.Text = "27";
 
             cell80.Append(cellValue80);
 
-            Cell cell81 = new Cell(){ CellReference = "F13", DataType = CellValues.SharedString };
+            Cell cell81 = new Cell() { CellReference = "F13", DataType = CellValues.SharedString };
             CellValue cellValue81 = new CellValue();
             cellValue81.Text = "14";
 
             cell81.Append(cellValue81);
 
-            Cell cell82 = new Cell(){ CellReference = "H13", DataType = CellValues.SharedString };
+            Cell cell82 = new Cell() { CellReference = "H13", DataType = CellValues.SharedString };
             CellValue cellValue82 = new CellValue();
             cellValue82.Text = "11";
 
             cell82.Append(cellValue82);
 
-            Cell cell83 = new Cell(){ CellReference = "I13", StyleIndex = (UInt32Value)1U };
+            Cell cell83 = new Cell() { CellReference = "I13", StyleIndex = (UInt32Value)1U };
             CellValue cellValue83 = new CellValue();
             cellValue83.Text = "40855.491680594139";
 
@@ -1485,163 +1490,163 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             row12.Append(cell82);
             row12.Append(cell83);
 
-            Row row13 = new Row(){ RowIndex = (UInt32Value)24U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
-            Cell cell84 = new Cell(){ CellReference = "C24", StyleIndex = (UInt32Value)2U };
-            Cell cell85 = new Cell(){ CellReference = "D24", StyleIndex = (UInt32Value)3U };
-            Cell cell86 = new Cell(){ CellReference = "E24", StyleIndex = (UInt32Value)4U };
+            Row row13 = new Row() { RowIndex = (UInt32Value)24U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
+            Cell cell84 = new Cell() { CellReference = "C24", StyleIndex = (UInt32Value)2U };
+            Cell cell85 = new Cell() { CellReference = "D24", StyleIndex = (UInt32Value)3U };
+            Cell cell86 = new Cell() { CellReference = "E24", StyleIndex = (UInt32Value)4U };
 
             row13.Append(cell84);
             row13.Append(cell85);
             row13.Append(cell86);
 
-            Row row14 = new Row(){ RowIndex = (UInt32Value)25U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
-            Cell cell87 = new Cell(){ CellReference = "C25", StyleIndex = (UInt32Value)5U };
-            Cell cell88 = new Cell(){ CellReference = "D25", StyleIndex = (UInt32Value)6U };
-            Cell cell89 = new Cell(){ CellReference = "E25", StyleIndex = (UInt32Value)7U };
+            Row row14 = new Row() { RowIndex = (UInt32Value)25U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
+            Cell cell87 = new Cell() { CellReference = "C25", StyleIndex = (UInt32Value)5U };
+            Cell cell88 = new Cell() { CellReference = "D25", StyleIndex = (UInt32Value)6U };
+            Cell cell89 = new Cell() { CellReference = "E25", StyleIndex = (UInt32Value)7U };
 
             row14.Append(cell87);
             row14.Append(cell88);
             row14.Append(cell89);
 
-            Row row15 = new Row(){ RowIndex = (UInt32Value)26U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
-            Cell cell90 = new Cell(){ CellReference = "C26", StyleIndex = (UInt32Value)5U };
-            Cell cell91 = new Cell(){ CellReference = "D26", StyleIndex = (UInt32Value)6U };
-            Cell cell92 = new Cell(){ CellReference = "E26", StyleIndex = (UInt32Value)7U };
+            Row row15 = new Row() { RowIndex = (UInt32Value)26U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
+            Cell cell90 = new Cell() { CellReference = "C26", StyleIndex = (UInt32Value)5U };
+            Cell cell91 = new Cell() { CellReference = "D26", StyleIndex = (UInt32Value)6U };
+            Cell cell92 = new Cell() { CellReference = "E26", StyleIndex = (UInt32Value)7U };
 
             row15.Append(cell90);
             row15.Append(cell91);
             row15.Append(cell92);
 
-            Row row16 = new Row(){ RowIndex = (UInt32Value)27U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
-            Cell cell93 = new Cell(){ CellReference = "C27", StyleIndex = (UInt32Value)5U };
-            Cell cell94 = new Cell(){ CellReference = "D27", StyleIndex = (UInt32Value)6U };
-            Cell cell95 = new Cell(){ CellReference = "E27", StyleIndex = (UInt32Value)7U };
+            Row row16 = new Row() { RowIndex = (UInt32Value)27U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
+            Cell cell93 = new Cell() { CellReference = "C27", StyleIndex = (UInt32Value)5U };
+            Cell cell94 = new Cell() { CellReference = "D27", StyleIndex = (UInt32Value)6U };
+            Cell cell95 = new Cell() { CellReference = "E27", StyleIndex = (UInt32Value)7U };
 
             row16.Append(cell93);
             row16.Append(cell94);
             row16.Append(cell95);
 
-            Row row17 = new Row(){ RowIndex = (UInt32Value)28U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
-            Cell cell96 = new Cell(){ CellReference = "C28", StyleIndex = (UInt32Value)5U };
-            Cell cell97 = new Cell(){ CellReference = "D28", StyleIndex = (UInt32Value)6U };
-            Cell cell98 = new Cell(){ CellReference = "E28", StyleIndex = (UInt32Value)7U };
+            Row row17 = new Row() { RowIndex = (UInt32Value)28U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
+            Cell cell96 = new Cell() { CellReference = "C28", StyleIndex = (UInt32Value)5U };
+            Cell cell97 = new Cell() { CellReference = "D28", StyleIndex = (UInt32Value)6U };
+            Cell cell98 = new Cell() { CellReference = "E28", StyleIndex = (UInt32Value)7U };
 
             row17.Append(cell96);
             row17.Append(cell97);
             row17.Append(cell98);
 
-            Row row18 = new Row(){ RowIndex = (UInt32Value)29U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
-            Cell cell99 = new Cell(){ CellReference = "C29", StyleIndex = (UInt32Value)5U };
-            Cell cell100 = new Cell(){ CellReference = "D29", StyleIndex = (UInt32Value)6U };
-            Cell cell101 = new Cell(){ CellReference = "E29", StyleIndex = (UInt32Value)7U };
+            Row row18 = new Row() { RowIndex = (UInt32Value)29U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
+            Cell cell99 = new Cell() { CellReference = "C29", StyleIndex = (UInt32Value)5U };
+            Cell cell100 = new Cell() { CellReference = "D29", StyleIndex = (UInt32Value)6U };
+            Cell cell101 = new Cell() { CellReference = "E29", StyleIndex = (UInt32Value)7U };
 
             row18.Append(cell99);
             row18.Append(cell100);
             row18.Append(cell101);
 
-            Row row19 = new Row(){ RowIndex = (UInt32Value)30U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
-            Cell cell102 = new Cell(){ CellReference = "C30", StyleIndex = (UInt32Value)5U };
-            Cell cell103 = new Cell(){ CellReference = "D30", StyleIndex = (UInt32Value)6U };
-            Cell cell104 = new Cell(){ CellReference = "E30", StyleIndex = (UInt32Value)7U };
+            Row row19 = new Row() { RowIndex = (UInt32Value)30U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
+            Cell cell102 = new Cell() { CellReference = "C30", StyleIndex = (UInt32Value)5U };
+            Cell cell103 = new Cell() { CellReference = "D30", StyleIndex = (UInt32Value)6U };
+            Cell cell104 = new Cell() { CellReference = "E30", StyleIndex = (UInt32Value)7U };
 
             row19.Append(cell102);
             row19.Append(cell103);
             row19.Append(cell104);
 
-            Row row20 = new Row(){ RowIndex = (UInt32Value)31U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
-            Cell cell105 = new Cell(){ CellReference = "C31", StyleIndex = (UInt32Value)5U };
-            Cell cell106 = new Cell(){ CellReference = "D31", StyleIndex = (UInt32Value)6U };
-            Cell cell107 = new Cell(){ CellReference = "E31", StyleIndex = (UInt32Value)7U };
+            Row row20 = new Row() { RowIndex = (UInt32Value)31U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
+            Cell cell105 = new Cell() { CellReference = "C31", StyleIndex = (UInt32Value)5U };
+            Cell cell106 = new Cell() { CellReference = "D31", StyleIndex = (UInt32Value)6U };
+            Cell cell107 = new Cell() { CellReference = "E31", StyleIndex = (UInt32Value)7U };
 
             row20.Append(cell105);
             row20.Append(cell106);
             row20.Append(cell107);
 
-            Row row21 = new Row(){ RowIndex = (UInt32Value)32U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
-            Cell cell108 = new Cell(){ CellReference = "C32", StyleIndex = (UInt32Value)5U };
-            Cell cell109 = new Cell(){ CellReference = "D32", StyleIndex = (UInt32Value)6U };
-            Cell cell110 = new Cell(){ CellReference = "E32", StyleIndex = (UInt32Value)7U };
+            Row row21 = new Row() { RowIndex = (UInt32Value)32U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
+            Cell cell108 = new Cell() { CellReference = "C32", StyleIndex = (UInt32Value)5U };
+            Cell cell109 = new Cell() { CellReference = "D32", StyleIndex = (UInt32Value)6U };
+            Cell cell110 = new Cell() { CellReference = "E32", StyleIndex = (UInt32Value)7U };
 
             row21.Append(cell108);
             row21.Append(cell109);
             row21.Append(cell110);
 
-            Row row22 = new Row(){ RowIndex = (UInt32Value)33U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
-            Cell cell111 = new Cell(){ CellReference = "C33", StyleIndex = (UInt32Value)5U };
-            Cell cell112 = new Cell(){ CellReference = "D33", StyleIndex = (UInt32Value)6U };
-            Cell cell113 = new Cell(){ CellReference = "E33", StyleIndex = (UInt32Value)7U };
+            Row row22 = new Row() { RowIndex = (UInt32Value)33U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
+            Cell cell111 = new Cell() { CellReference = "C33", StyleIndex = (UInt32Value)5U };
+            Cell cell112 = new Cell() { CellReference = "D33", StyleIndex = (UInt32Value)6U };
+            Cell cell113 = new Cell() { CellReference = "E33", StyleIndex = (UInt32Value)7U };
 
             row22.Append(cell111);
             row22.Append(cell112);
             row22.Append(cell113);
 
-            Row row23 = new Row(){ RowIndex = (UInt32Value)34U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
-            Cell cell114 = new Cell(){ CellReference = "C34", StyleIndex = (UInt32Value)5U };
-            Cell cell115 = new Cell(){ CellReference = "D34", StyleIndex = (UInt32Value)6U };
-            Cell cell116 = new Cell(){ CellReference = "E34", StyleIndex = (UInt32Value)7U };
+            Row row23 = new Row() { RowIndex = (UInt32Value)34U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
+            Cell cell114 = new Cell() { CellReference = "C34", StyleIndex = (UInt32Value)5U };
+            Cell cell115 = new Cell() { CellReference = "D34", StyleIndex = (UInt32Value)6U };
+            Cell cell116 = new Cell() { CellReference = "E34", StyleIndex = (UInt32Value)7U };
 
             row23.Append(cell114);
             row23.Append(cell115);
             row23.Append(cell116);
 
-            Row row24 = new Row(){ RowIndex = (UInt32Value)35U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
-            Cell cell117 = new Cell(){ CellReference = "C35", StyleIndex = (UInt32Value)5U };
-            Cell cell118 = new Cell(){ CellReference = "D35", StyleIndex = (UInt32Value)6U };
-            Cell cell119 = new Cell(){ CellReference = "E35", StyleIndex = (UInt32Value)7U };
+            Row row24 = new Row() { RowIndex = (UInt32Value)35U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
+            Cell cell117 = new Cell() { CellReference = "C35", StyleIndex = (UInt32Value)5U };
+            Cell cell118 = new Cell() { CellReference = "D35", StyleIndex = (UInt32Value)6U };
+            Cell cell119 = new Cell() { CellReference = "E35", StyleIndex = (UInt32Value)7U };
 
             row24.Append(cell117);
             row24.Append(cell118);
             row24.Append(cell119);
 
-            Row row25 = new Row(){ RowIndex = (UInt32Value)36U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
-            Cell cell120 = new Cell(){ CellReference = "C36", StyleIndex = (UInt32Value)5U };
-            Cell cell121 = new Cell(){ CellReference = "D36", StyleIndex = (UInt32Value)6U };
-            Cell cell122 = new Cell(){ CellReference = "E36", StyleIndex = (UInt32Value)7U };
+            Row row25 = new Row() { RowIndex = (UInt32Value)36U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
+            Cell cell120 = new Cell() { CellReference = "C36", StyleIndex = (UInt32Value)5U };
+            Cell cell121 = new Cell() { CellReference = "D36", StyleIndex = (UInt32Value)6U };
+            Cell cell122 = new Cell() { CellReference = "E36", StyleIndex = (UInt32Value)7U };
 
             row25.Append(cell120);
             row25.Append(cell121);
             row25.Append(cell122);
 
-            Row row26 = new Row(){ RowIndex = (UInt32Value)37U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
-            Cell cell123 = new Cell(){ CellReference = "C37", StyleIndex = (UInt32Value)5U };
-            Cell cell124 = new Cell(){ CellReference = "D37", StyleIndex = (UInt32Value)6U };
-            Cell cell125 = new Cell(){ CellReference = "E37", StyleIndex = (UInt32Value)7U };
+            Row row26 = new Row() { RowIndex = (UInt32Value)37U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
+            Cell cell123 = new Cell() { CellReference = "C37", StyleIndex = (UInt32Value)5U };
+            Cell cell124 = new Cell() { CellReference = "D37", StyleIndex = (UInt32Value)6U };
+            Cell cell125 = new Cell() { CellReference = "E37", StyleIndex = (UInt32Value)7U };
 
             row26.Append(cell123);
             row26.Append(cell124);
             row26.Append(cell125);
 
-            Row row27 = new Row(){ RowIndex = (UInt32Value)38U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
-            Cell cell126 = new Cell(){ CellReference = "C38", StyleIndex = (UInt32Value)5U };
-            Cell cell127 = new Cell(){ CellReference = "D38", StyleIndex = (UInt32Value)6U };
-            Cell cell128 = new Cell(){ CellReference = "E38", StyleIndex = (UInt32Value)7U };
+            Row row27 = new Row() { RowIndex = (UInt32Value)38U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
+            Cell cell126 = new Cell() { CellReference = "C38", StyleIndex = (UInt32Value)5U };
+            Cell cell127 = new Cell() { CellReference = "D38", StyleIndex = (UInt32Value)6U };
+            Cell cell128 = new Cell() { CellReference = "E38", StyleIndex = (UInt32Value)7U };
 
             row27.Append(cell126);
             row27.Append(cell127);
             row27.Append(cell128);
 
-            Row row28 = new Row(){ RowIndex = (UInt32Value)39U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
-            Cell cell129 = new Cell(){ CellReference = "C39", StyleIndex = (UInt32Value)5U };
-            Cell cell130 = new Cell(){ CellReference = "D39", StyleIndex = (UInt32Value)6U };
-            Cell cell131 = new Cell(){ CellReference = "E39", StyleIndex = (UInt32Value)7U };
+            Row row28 = new Row() { RowIndex = (UInt32Value)39U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
+            Cell cell129 = new Cell() { CellReference = "C39", StyleIndex = (UInt32Value)5U };
+            Cell cell130 = new Cell() { CellReference = "D39", StyleIndex = (UInt32Value)6U };
+            Cell cell131 = new Cell() { CellReference = "E39", StyleIndex = (UInt32Value)7U };
 
             row28.Append(cell129);
             row28.Append(cell130);
             row28.Append(cell131);
 
-            Row row29 = new Row(){ RowIndex = (UInt32Value)40U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
-            Cell cell132 = new Cell(){ CellReference = "C40", StyleIndex = (UInt32Value)5U };
-            Cell cell133 = new Cell(){ CellReference = "D40", StyleIndex = (UInt32Value)6U };
-            Cell cell134 = new Cell(){ CellReference = "E40", StyleIndex = (UInt32Value)7U };
+            Row row29 = new Row() { RowIndex = (UInt32Value)40U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
+            Cell cell132 = new Cell() { CellReference = "C40", StyleIndex = (UInt32Value)5U };
+            Cell cell133 = new Cell() { CellReference = "D40", StyleIndex = (UInt32Value)6U };
+            Cell cell134 = new Cell() { CellReference = "E40", StyleIndex = (UInt32Value)7U };
 
             row29.Append(cell132);
             row29.Append(cell133);
             row29.Append(cell134);
 
-            Row row30 = new Row(){ RowIndex = (UInt32Value)41U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
-            Cell cell135 = new Cell(){ CellReference = "C41", StyleIndex = (UInt32Value)8U };
-            Cell cell136 = new Cell(){ CellReference = "D41", StyleIndex = (UInt32Value)9U };
-            Cell cell137 = new Cell(){ CellReference = "E41", StyleIndex = (UInt32Value)10U };
+            Row row30 = new Row() { RowIndex = (UInt32Value)41U, Spans = new ListValue<StringValue>() { InnerText = "3:5" } };
+            Cell cell135 = new Cell() { CellReference = "C41", StyleIndex = (UInt32Value)8U };
+            Cell cell136 = new Cell() { CellReference = "D41", StyleIndex = (UInt32Value)9U };
+            Cell cell137 = new Cell() { CellReference = "E41", StyleIndex = (UInt32Value)10U };
 
             row30.Append(cell135);
             row30.Append(cell136);
@@ -1677,12 +1682,12 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             sheetData1.Append(row28);
             sheetData1.Append(row29);
             sheetData1.Append(row30);
-            PhoneticProperties phoneticProperties1 = new PhoneticProperties(){ FontId = (UInt32Value)1U };
-            PageMargins pageMargins1 = new PageMargins(){ Left = 0.7D, Right = 0.7D, Top = 0.75D, Bottom = 0.75D, Header = 0.3D, Footer = 0.3D };
-            PageSetup pageSetup1 = new PageSetup(){ PaperSize = (UInt32Value)9U, Orientation = OrientationValues.Portrait, Id = "rId2" };
+            PhoneticProperties phoneticProperties1 = new PhoneticProperties() { FontId = (UInt32Value)1U };
+            PageMargins pageMargins1 = new PageMargins() { Left = 0.7D, Right = 0.7D, Top = 0.75D, Bottom = 0.75D, Header = 0.3D, Footer = 0.3D };
+            PageSetup pageSetup1 = new PageSetup() { PaperSize = (UInt32Value)9U, Orientation = OrientationValues.Portrait, Id = "rId2" };
 
-            TableParts tableParts1 = new TableParts(){ Count = (UInt32Value)1U };
-            TablePart tablePart1 = new TablePart(){ Id = "rId3" };
+            TableParts tableParts1 = new TableParts() { Count = (UInt32Value)1U };
+            TablePart tablePart1 = new TablePart() { Id = "rId3" };
 
             tableParts1.Append(tablePart1);
 
@@ -1703,18 +1708,18 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
         // Generates content of tableDefinitionPart1.
         private void GenerateTableDefinitionPart1Content(TableDefinitionPart tableDefinitionPart1)
         {
-            Table table1 = new Table(){ Id = (UInt32Value)1U, Name = "Table_Query", DisplayName = "Table_Query", Reference = "B2:I13", TableType = TableValues.QueryTable, TotalsRowShown = false };
-            AutoFilter autoFilter1 = new AutoFilter(){ Reference = "B2:I13" };
+            Table table1 = new Table() { Id = (UInt32Value)1U, Name = "Table_Query", DisplayName = "Table_Query", Reference = "B2:I13", TableType = TableValues.QueryTable, TotalsRowShown = false };
+            AutoFilter autoFilter1 = new AutoFilter() { Reference = "B2:I13" };
 
-            TableColumns tableColumns1 = new TableColumns(){ Count = (UInt32Value)8U };
-            TableColumn tableColumn1 = new TableColumn(){ Id = (UInt32Value)1U, UniqueName = "1", Name = "account_id", QueryTableFieldId = (UInt32Value)1U };
-            TableColumn tableColumn2 = new TableColumn(){ Id = (UInt32Value)2U, UniqueName = "2", Name = "account_parent", QueryTableFieldId = (UInt32Value)2U };
-            TableColumn tableColumn3 = new TableColumn(){ Id = (UInt32Value)3U, UniqueName = "3", Name = "account_description", QueryTableFieldId = (UInt32Value)3U };
-            TableColumn tableColumn4 = new TableColumn(){ Id = (UInt32Value)4U, UniqueName = "4", Name = "account_type", QueryTableFieldId = (UInt32Value)4U };
-            TableColumn tableColumn5 = new TableColumn(){ Id = (UInt32Value)5U, UniqueName = "5", Name = "account_rollup", QueryTableFieldId = (UInt32Value)5U };
-            TableColumn tableColumn6 = new TableColumn(){ Id = (UInt32Value)6U, UniqueName = "6", Name = "Custom Members", QueryTableFieldId = (UInt32Value)6U };
-            TableColumn tableColumn7 = new TableColumn(){ Id = (UInt32Value)7U, UniqueName = "7", Name = "CurrentUser", QueryTableFieldId = (UInt32Value)7U };
-            TableColumn tableColumn8 = new TableColumn(){ Id = (UInt32Value)8U, UniqueName = "8", Name = "RefreshTime", QueryTableFieldId = (UInt32Value)8U, DataFormatId = (UInt32Value)0U };
+            TableColumns tableColumns1 = new TableColumns() { Count = (UInt32Value)8U };
+            TableColumn tableColumn1 = new TableColumn() { Id = (UInt32Value)1U, UniqueName = "1", Name = "account_id", QueryTableFieldId = (UInt32Value)1U };
+            TableColumn tableColumn2 = new TableColumn() { Id = (UInt32Value)2U, UniqueName = "2", Name = "account_parent", QueryTableFieldId = (UInt32Value)2U };
+            TableColumn tableColumn3 = new TableColumn() { Id = (UInt32Value)3U, UniqueName = "3", Name = "account_description", QueryTableFieldId = (UInt32Value)3U };
+            TableColumn tableColumn4 = new TableColumn() { Id = (UInt32Value)4U, UniqueName = "4", Name = "account_type", QueryTableFieldId = (UInt32Value)4U };
+            TableColumn tableColumn5 = new TableColumn() { Id = (UInt32Value)5U, UniqueName = "5", Name = "account_rollup", QueryTableFieldId = (UInt32Value)5U };
+            TableColumn tableColumn6 = new TableColumn() { Id = (UInt32Value)6U, UniqueName = "6", Name = "Custom Members", QueryTableFieldId = (UInt32Value)6U };
+            TableColumn tableColumn7 = new TableColumn() { Id = (UInt32Value)7U, UniqueName = "7", Name = "CurrentUser", QueryTableFieldId = (UInt32Value)7U };
+            TableColumn tableColumn8 = new TableColumn() { Id = (UInt32Value)8U, UniqueName = "8", Name = "RefreshTime", QueryTableFieldId = (UInt32Value)8U, DataFormatId = (UInt32Value)0U };
 
             tableColumns1.Append(tableColumn1);
             tableColumns1.Append(tableColumn2);
@@ -1724,7 +1729,7 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             tableColumns1.Append(tableColumn6);
             tableColumns1.Append(tableColumn7);
             tableColumns1.Append(tableColumn8);
-            TableStyleInfo tableStyleInfo1 = new TableStyleInfo(){ Name = "TableStyleMedium2", ShowFirstColumn = false, ShowLastColumn = false, ShowRowStripes = true, ShowColumnStripes = false };
+            TableStyleInfo tableStyleInfo1 = new TableStyleInfo() { Name = "TableStyleMedium2", ShowFirstColumn = false, ShowLastColumn = false, ShowRowStripes = true, ShowColumnStripes = false };
 
             table1.Append(autoFilter1);
             table1.Append(tableColumns1);
@@ -1736,19 +1741,19 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
         // Generates content of queryTablePart1.
         private void GenerateQueryTablePart1Content(QueryTablePart queryTablePart1)
         {
-            QueryTable queryTable1 = new QueryTable(){ Name = "Query", BackgroundRefresh = false, ConnectionId = (UInt32Value)2U, AutoFormatId = (UInt32Value)16U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = false };
+            QueryTable queryTable1 = new QueryTable() { Name = "Query", BackgroundRefresh = false, ConnectionId = (UInt32Value)2U, AutoFormatId = (UInt32Value)16U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = false };
 
-            QueryTableRefresh queryTableRefresh1 = new QueryTableRefresh(){ NextId = (UInt32Value)9U };
+            QueryTableRefresh queryTableRefresh1 = new QueryTableRefresh() { NextId = (UInt32Value)9U };
 
-            QueryTableFields queryTableFields1 = new QueryTableFields(){ Count = (UInt32Value)8U };
-            QueryTableField queryTableField1 = new QueryTableField(){ Id = (UInt32Value)1U, Name = "account_id", TableColumnId = (UInt32Value)1U };
-            QueryTableField queryTableField2 = new QueryTableField(){ Id = (UInt32Value)2U, Name = "account_parent", TableColumnId = (UInt32Value)2U };
-            QueryTableField queryTableField3 = new QueryTableField(){ Id = (UInt32Value)3U, Name = "account_description", TableColumnId = (UInt32Value)3U };
-            QueryTableField queryTableField4 = new QueryTableField(){ Id = (UInt32Value)4U, Name = "account_type", TableColumnId = (UInt32Value)4U };
-            QueryTableField queryTableField5 = new QueryTableField(){ Id = (UInt32Value)5U, Name = "account_rollup", TableColumnId = (UInt32Value)5U };
-            QueryTableField queryTableField6 = new QueryTableField(){ Id = (UInt32Value)6U, Name = "Custom Members", TableColumnId = (UInt32Value)6U };
-            QueryTableField queryTableField7 = new QueryTableField(){ Id = (UInt32Value)7U, Name = "CurrentUser", TableColumnId = (UInt32Value)7U };
-            QueryTableField queryTableField8 = new QueryTableField(){ Id = (UInt32Value)8U, Name = "RefreshTime", TableColumnId = (UInt32Value)8U };
+            QueryTableFields queryTableFields1 = new QueryTableFields() { Count = (UInt32Value)8U };
+            QueryTableField queryTableField1 = new QueryTableField() { Id = (UInt32Value)1U, Name = "account_id", TableColumnId = (UInt32Value)1U };
+            QueryTableField queryTableField2 = new QueryTableField() { Id = (UInt32Value)2U, Name = "account_parent", TableColumnId = (UInt32Value)2U };
+            QueryTableField queryTableField3 = new QueryTableField() { Id = (UInt32Value)3U, Name = "account_description", TableColumnId = (UInt32Value)3U };
+            QueryTableField queryTableField4 = new QueryTableField() { Id = (UInt32Value)4U, Name = "account_type", TableColumnId = (UInt32Value)4U };
+            QueryTableField queryTableField5 = new QueryTableField() { Id = (UInt32Value)5U, Name = "account_rollup", TableColumnId = (UInt32Value)5U };
+            QueryTableField queryTableField6 = new QueryTableField() { Id = (UInt32Value)6U, Name = "Custom Members", TableColumnId = (UInt32Value)6U };
+            QueryTableField queryTableField7 = new QueryTableField() { Id = (UInt32Value)7U, Name = "CurrentUser", TableColumnId = (UInt32Value)7U };
+            QueryTableField queryTableField8 = new QueryTableField() { Id = (UInt32Value)8U, Name = "RefreshTime", TableColumnId = (UInt32Value)8U };
 
             queryTableFields1.Append(queryTableField1);
             queryTableFields1.Append(queryTableField2);
@@ -1763,9 +1768,9 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             QueryTableExtensionList queryTableExtensionList1 = new QueryTableExtensionList();
 
-            QueryTableExtension queryTableExtension1 = new QueryTableExtension(){ Uri = "{883FBD77-0823-4a55-B5E3-86C4891E6966}" };
+            QueryTableExtension queryTableExtension1 = new QueryTableExtension() { Uri = "{883FBD77-0823-4a55-B5E3-86C4891E6966}" };
             queryTableExtension1.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
-            X15.QueryTable queryTable2 = new X15.QueryTable(){ SourceDataName = "DAT105 Timestamp - Foodmart 2000 account" };
+            X15.QueryTable queryTable2 = new X15.QueryTable() { SourceDataName = "DAT105 Timestamp - Foodmart 2000 account" };
 
             queryTableExtension1.Append(queryTable2);
 
@@ -1789,21 +1794,21 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
         // Generates content of pivotTablePart1.
         private void GeneratePivotTablePart1Content(PivotTablePart pivotTablePart1)
         {
-            PivotTableDefinition pivotTableDefinition1 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = (UInt32Value)0U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "Values", UpdatedVersion = 5, MinRefreshableVersion = 3, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 5, Indent = (UInt32Value)0U, Outline = true, OutlineData = true, MultipleFieldFilters = false };
-            Location location1 = new Location(){ Reference = "C24:E41", FirstHeaderRow = (UInt32Value)1U, FirstDataRow = (UInt32Value)1U, FirstDataColumn = (UInt32Value)0U };
+            PivotTableDefinition pivotTableDefinition1 = new PivotTableDefinition() { Name = "PivotTable1", CacheId = (UInt32Value)0U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "Values", UpdatedVersion = 5, MinRefreshableVersion = 3, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 5, Indent = (UInt32Value)0U, Outline = true, OutlineData = true, MultipleFieldFilters = false };
+            Location location1 = new Location() { Reference = "C24:E41", FirstHeaderRow = (UInt32Value)1U, FirstDataRow = (UInt32Value)1U, FirstDataColumn = (UInt32Value)0U };
 
-            PivotHierarchies pivotHierarchies1 = new PivotHierarchies(){ Count = (UInt32Value)11U };
-            PivotHierarchy pivotHierarchy1 = new PivotHierarchy(){ DragToData = true };
-            PivotHierarchy pivotHierarchy2 = new PivotHierarchy(){ DragToData = true };
-            PivotHierarchy pivotHierarchy3 = new PivotHierarchy(){ DragToData = true };
-            PivotHierarchy pivotHierarchy4 = new PivotHierarchy(){ DragToData = true };
-            PivotHierarchy pivotHierarchy5 = new PivotHierarchy(){ DragToData = true };
-            PivotHierarchy pivotHierarchy6 = new PivotHierarchy(){ DragToData = true };
-            PivotHierarchy pivotHierarchy7 = new PivotHierarchy(){ DragToData = true };
-            PivotHierarchy pivotHierarchy8 = new PivotHierarchy(){ DragToData = true };
-            PivotHierarchy pivotHierarchy9 = new PivotHierarchy(){ DragToData = true };
-            PivotHierarchy pivotHierarchy10 = new PivotHierarchy(){ DragToRow = false, DragToColumn = false, DragToPage = false, DragToData = true };
-            PivotHierarchy pivotHierarchy11 = new PivotHierarchy(){ DragToRow = false, DragToColumn = false, DragToPage = false, DragToData = true };
+            PivotHierarchies pivotHierarchies1 = new PivotHierarchies() { Count = (UInt32Value)11U };
+            PivotHierarchy pivotHierarchy1 = new PivotHierarchy() { DragToData = true };
+            PivotHierarchy pivotHierarchy2 = new PivotHierarchy() { DragToData = true };
+            PivotHierarchy pivotHierarchy3 = new PivotHierarchy() { DragToData = true };
+            PivotHierarchy pivotHierarchy4 = new PivotHierarchy() { DragToData = true };
+            PivotHierarchy pivotHierarchy5 = new PivotHierarchy() { DragToData = true };
+            PivotHierarchy pivotHierarchy6 = new PivotHierarchy() { DragToData = true };
+            PivotHierarchy pivotHierarchy7 = new PivotHierarchy() { DragToData = true };
+            PivotHierarchy pivotHierarchy8 = new PivotHierarchy() { DragToData = true };
+            PivotHierarchy pivotHierarchy9 = new PivotHierarchy() { DragToData = true };
+            PivotHierarchy pivotHierarchy10 = new PivotHierarchy() { DragToRow = false, DragToColumn = false, DragToPage = false, DragToData = true };
+            PivotHierarchy pivotHierarchy11 = new PivotHierarchy() { DragToRow = false, DragToColumn = false, DragToPage = false, DragToData = true };
 
             pivotHierarchies1.Append(pivotHierarchy1);
             pivotHierarchies1.Append(pivotHierarchy2);
@@ -1816,19 +1821,19 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             pivotHierarchies1.Append(pivotHierarchy9);
             pivotHierarchies1.Append(pivotHierarchy10);
             pivotHierarchies1.Append(pivotHierarchy11);
-            PivotTableStyle pivotTableStyle1 = new PivotTableStyle(){ Name = "PivotStyleLight16", ShowRowHeaders = true, ShowColumnHeaders = true, ShowRowStripes = false, ShowColumnStripes = false, ShowLastColumn = true };
+            PivotTableStyle pivotTableStyle1 = new PivotTableStyle() { Name = "PivotStyleLight16", ShowRowHeaders = true, ShowColumnHeaders = true, ShowRowStripes = false, ShowColumnStripes = false, ShowLastColumn = true };
 
             PivotTableDefinitionExtensionList pivotTableDefinitionExtensionList1 = new PivotTableDefinitionExtensionList();
 
-            PivotTableDefinitionExtension pivotTableDefinitionExtension1 = new PivotTableDefinitionExtension(){ Uri = "{962EF5D1-5CA2-4c93-8EF4-DBF5C05439D2}" };
+            PivotTableDefinitionExtension pivotTableDefinitionExtension1 = new PivotTableDefinitionExtension() { Uri = "{962EF5D1-5CA2-4c93-8EF4-DBF5C05439D2}" };
             pivotTableDefinitionExtension1.AddNamespaceDeclaration("x14", "http://schemas.microsoft.com/office/spreadsheetml/2009/9/main");
 
-            X14.PivotTableDefinition pivotTableDefinition2 = new X14.PivotTableDefinition(){ CalculatedMembersInFilters = true, HideValuesRow = true };
+            X14.PivotTableDefinition pivotTableDefinition2 = new X14.PivotTableDefinition() { CalculatedMembersInFilters = true, HideValuesRow = true };
             pivotTableDefinition2.AddNamespaceDeclaration("xm", "http://schemas.microsoft.com/office/excel/2006/main");
 
             pivotTableDefinitionExtension1.Append(pivotTableDefinition2);
 
-            PivotTableDefinitionExtension pivotTableDefinitionExtension2 = new PivotTableDefinitionExtension(){ Uri = "{E67621CE-5B39-4880-91FE-76760E9C1902}" };
+            PivotTableDefinitionExtension pivotTableDefinitionExtension2 = new PivotTableDefinitionExtension() { Uri = "{E67621CE-5B39-4880-91FE-76760E9C1902}" };
             pivotTableDefinitionExtension2.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
             X15.PivotTableUISettings pivotTableUISettings1 = new X15.PivotTableUISettings();
 
@@ -1848,7 +1853,7 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
         // Generates content of sharedStringTablePart1.
         private void GenerateSharedStringTablePart1Content(SharedStringTablePart sharedStringTablePart1)
         {
-            SharedStringTable sharedStringTable1 = new SharedStringTable(){ Count = (UInt32Value)53U, UniqueCount = (UInt32Value)28U };
+            SharedStringTable sharedStringTable1 = new SharedStringTable() { Count = (UInt32Value)53U, UniqueCount = (UInt32Value)28U };
 
             SharedStringItem sharedStringItem1 = new SharedStringItem();
             Text text1 = new Text();
@@ -2053,19 +2058,19 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
         // Generates content of workbookStylesPart1.
         private void GenerateWorkbookStylesPart1Content(WorkbookStylesPart workbookStylesPart1)
         {
-            Stylesheet stylesheet1 = new Stylesheet(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x14ac" }  };
+            Stylesheet stylesheet1 = new Stylesheet() { MCAttributes = new MarkupCompatibilityAttributes() { Ignorable = "x14ac" } };
             stylesheet1.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
             stylesheet1.AddNamespaceDeclaration("x14ac", "http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac");
 
-            Fonts fonts1 = new Fonts(){ Count = (UInt32Value)2U };
+            Fonts fonts1 = new Fonts() { Count = (UInt32Value)2U };
 
             Font font1 = new Font();
-            FontSize fontSize1 = new FontSize(){ Val = 11D };
-            Color color1 = new Color(){ Theme = (UInt32Value)1U };
-            FontName fontName1 = new FontName(){ Val = "Calibri" };
-            FontFamilyNumbering fontFamilyNumbering1 = new FontFamilyNumbering(){ Val = 2 };
-            FontCharSet fontCharSet1 = new FontCharSet(){ Val = 162 };
-            FontScheme fontScheme2 = new FontScheme(){ Val = FontSchemeValues.Minor };
+            FontSize fontSize1 = new FontSize() { Val = 11D };
+            Color color1 = new Color() { Theme = (UInt32Value)1U };
+            FontName fontName1 = new FontName() { Val = "Calibri" };
+            FontFamilyNumbering fontFamilyNumbering1 = new FontFamilyNumbering() { Val = 2 };
+            FontCharSet fontCharSet1 = new FontCharSet() { Val = 162 };
+            FontScheme fontScheme2 = new FontScheme() { Val = FontSchemeValues.Minor };
 
             font1.Append(fontSize1);
             font1.Append(color1);
@@ -2075,11 +2080,11 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             font1.Append(fontScheme2);
 
             Font font2 = new Font();
-            FontSize fontSize2 = new FontSize(){ Val = 6D };
-            FontName fontName2 = new FontName(){ Val = "Calibri" };
-            FontFamilyNumbering fontFamilyNumbering2 = new FontFamilyNumbering(){ Val = 3 };
-            FontCharSet fontCharSet2 = new FontCharSet(){ Val = 128 };
-            FontScheme fontScheme3 = new FontScheme(){ Val = FontSchemeValues.Minor };
+            FontSize fontSize2 = new FontSize() { Val = 6D };
+            FontName fontName2 = new FontName() { Val = "Calibri" };
+            FontFamilyNumbering fontFamilyNumbering2 = new FontFamilyNumbering() { Val = 3 };
+            FontCharSet fontCharSet2 = new FontCharSet() { Val = 128 };
+            FontScheme fontScheme3 = new FontScheme() { Val = FontSchemeValues.Minor };
 
             font2.Append(fontSize2);
             font2.Append(fontName2);
@@ -2090,22 +2095,22 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             fonts1.Append(font1);
             fonts1.Append(font2);
 
-            Fills fills1 = new Fills(){ Count = (UInt32Value)2U };
+            Fills fills1 = new Fills() { Count = (UInt32Value)2U };
 
             Fill fill1 = new Fill();
-            PatternFill patternFill1 = new PatternFill(){ PatternType = PatternValues.None };
+            PatternFill patternFill1 = new PatternFill() { PatternType = PatternValues.None };
 
             fill1.Append(patternFill1);
 
             Fill fill2 = new Fill();
-            PatternFill patternFill2 = new PatternFill(){ PatternType = PatternValues.Gray125 };
+            PatternFill patternFill2 = new PatternFill() { PatternType = PatternValues.Gray125 };
 
             fill2.Append(patternFill2);
 
             fills1.Append(fill1);
             fills1.Append(fill2);
 
-            Borders borders1 = new Borders(){ Count = (UInt32Value)10U };
+            Borders borders1 = new Borders() { Count = (UInt32Value)10U };
 
             Border border1 = new Border();
             LeftBorder leftBorder1 = new LeftBorder();
@@ -2122,14 +2127,14 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             Border border2 = new Border();
 
-            LeftBorder leftBorder2 = new LeftBorder(){ Style = BorderStyleValues.Thin };
-            Color color2 = new Color(){ Indexed = (UInt32Value)8U };
+            LeftBorder leftBorder2 = new LeftBorder() { Style = BorderStyleValues.Thin };
+            Color color2 = new Color() { Indexed = (UInt32Value)8U };
 
             leftBorder2.Append(color2);
             RightBorder rightBorder2 = new RightBorder();
 
-            TopBorder topBorder2 = new TopBorder(){ Style = BorderStyleValues.Thin };
-            Color color3 = new Color(){ Indexed = (UInt32Value)8U };
+            TopBorder topBorder2 = new TopBorder() { Style = BorderStyleValues.Thin };
+            Color color3 = new Color() { Indexed = (UInt32Value)8U };
 
             topBorder2.Append(color3);
             BottomBorder bottomBorder2 = new BottomBorder();
@@ -2143,14 +2148,14 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             Border border3 = new Border();
 
-            LeftBorder leftBorder3 = new LeftBorder(){ Style = BorderStyleValues.Thin };
-            Color color4 = new Color(){ Indexed = (UInt32Value)65U };
+            LeftBorder leftBorder3 = new LeftBorder() { Style = BorderStyleValues.Thin };
+            Color color4 = new Color() { Indexed = (UInt32Value)65U };
 
             leftBorder3.Append(color4);
             RightBorder rightBorder3 = new RightBorder();
 
-            TopBorder topBorder3 = new TopBorder(){ Style = BorderStyleValues.Thin };
-            Color color5 = new Color(){ Indexed = (UInt32Value)8U };
+            TopBorder topBorder3 = new TopBorder() { Style = BorderStyleValues.Thin };
+            Color color5 = new Color() { Indexed = (UInt32Value)8U };
 
             topBorder3.Append(color5);
             BottomBorder bottomBorder3 = new BottomBorder();
@@ -2164,18 +2169,18 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             Border border4 = new Border();
 
-            LeftBorder leftBorder4 = new LeftBorder(){ Style = BorderStyleValues.Thin };
-            Color color6 = new Color(){ Indexed = (UInt32Value)65U };
+            LeftBorder leftBorder4 = new LeftBorder() { Style = BorderStyleValues.Thin };
+            Color color6 = new Color() { Indexed = (UInt32Value)65U };
 
             leftBorder4.Append(color6);
 
-            RightBorder rightBorder4 = new RightBorder(){ Style = BorderStyleValues.Thin };
-            Color color7 = new Color(){ Indexed = (UInt32Value)8U };
+            RightBorder rightBorder4 = new RightBorder() { Style = BorderStyleValues.Thin };
+            Color color7 = new Color() { Indexed = (UInt32Value)8U };
 
             rightBorder4.Append(color7);
 
-            TopBorder topBorder4 = new TopBorder(){ Style = BorderStyleValues.Thin };
-            Color color8 = new Color(){ Indexed = (UInt32Value)8U };
+            TopBorder topBorder4 = new TopBorder() { Style = BorderStyleValues.Thin };
+            Color color8 = new Color() { Indexed = (UInt32Value)8U };
 
             topBorder4.Append(color8);
             BottomBorder bottomBorder4 = new BottomBorder();
@@ -2189,14 +2194,14 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             Border border5 = new Border();
 
-            LeftBorder leftBorder5 = new LeftBorder(){ Style = BorderStyleValues.Thin };
-            Color color9 = new Color(){ Indexed = (UInt32Value)8U };
+            LeftBorder leftBorder5 = new LeftBorder() { Style = BorderStyleValues.Thin };
+            Color color9 = new Color() { Indexed = (UInt32Value)8U };
 
             leftBorder5.Append(color9);
             RightBorder rightBorder5 = new RightBorder();
 
-            TopBorder topBorder5 = new TopBorder(){ Style = BorderStyleValues.Thin };
-            Color color10 = new Color(){ Indexed = (UInt32Value)65U };
+            TopBorder topBorder5 = new TopBorder() { Style = BorderStyleValues.Thin };
+            Color color10 = new Color() { Indexed = (UInt32Value)65U };
 
             topBorder5.Append(color10);
             BottomBorder bottomBorder5 = new BottomBorder();
@@ -2210,14 +2215,14 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             Border border6 = new Border();
 
-            LeftBorder leftBorder6 = new LeftBorder(){ Style = BorderStyleValues.Thin };
-            Color color11 = new Color(){ Indexed = (UInt32Value)65U };
+            LeftBorder leftBorder6 = new LeftBorder() { Style = BorderStyleValues.Thin };
+            Color color11 = new Color() { Indexed = (UInt32Value)65U };
 
             leftBorder6.Append(color11);
             RightBorder rightBorder6 = new RightBorder();
 
-            TopBorder topBorder6 = new TopBorder(){ Style = BorderStyleValues.Thin };
-            Color color12 = new Color(){ Indexed = (UInt32Value)65U };
+            TopBorder topBorder6 = new TopBorder() { Style = BorderStyleValues.Thin };
+            Color color12 = new Color() { Indexed = (UInt32Value)65U };
 
             topBorder6.Append(color12);
             BottomBorder bottomBorder6 = new BottomBorder();
@@ -2231,18 +2236,18 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             Border border7 = new Border();
 
-            LeftBorder leftBorder7 = new LeftBorder(){ Style = BorderStyleValues.Thin };
-            Color color13 = new Color(){ Indexed = (UInt32Value)65U };
+            LeftBorder leftBorder7 = new LeftBorder() { Style = BorderStyleValues.Thin };
+            Color color13 = new Color() { Indexed = (UInt32Value)65U };
 
             leftBorder7.Append(color13);
 
-            RightBorder rightBorder7 = new RightBorder(){ Style = BorderStyleValues.Thin };
-            Color color14 = new Color(){ Indexed = (UInt32Value)8U };
+            RightBorder rightBorder7 = new RightBorder() { Style = BorderStyleValues.Thin };
+            Color color14 = new Color() { Indexed = (UInt32Value)8U };
 
             rightBorder7.Append(color14);
 
-            TopBorder topBorder7 = new TopBorder(){ Style = BorderStyleValues.Thin };
-            Color color15 = new Color(){ Indexed = (UInt32Value)65U };
+            TopBorder topBorder7 = new TopBorder() { Style = BorderStyleValues.Thin };
+            Color color15 = new Color() { Indexed = (UInt32Value)65U };
 
             topBorder7.Append(color15);
             BottomBorder bottomBorder7 = new BottomBorder();
@@ -2256,19 +2261,19 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             Border border8 = new Border();
 
-            LeftBorder leftBorder8 = new LeftBorder(){ Style = BorderStyleValues.Thin };
-            Color color16 = new Color(){ Indexed = (UInt32Value)8U };
+            LeftBorder leftBorder8 = new LeftBorder() { Style = BorderStyleValues.Thin };
+            Color color16 = new Color() { Indexed = (UInt32Value)8U };
 
             leftBorder8.Append(color16);
             RightBorder rightBorder8 = new RightBorder();
 
-            TopBorder topBorder8 = new TopBorder(){ Style = BorderStyleValues.Thin };
-            Color color17 = new Color(){ Indexed = (UInt32Value)65U };
+            TopBorder topBorder8 = new TopBorder() { Style = BorderStyleValues.Thin };
+            Color color17 = new Color() { Indexed = (UInt32Value)65U };
 
             topBorder8.Append(color17);
 
-            BottomBorder bottomBorder8 = new BottomBorder(){ Style = BorderStyleValues.Thin };
-            Color color18 = new Color(){ Indexed = (UInt32Value)8U };
+            BottomBorder bottomBorder8 = new BottomBorder() { Style = BorderStyleValues.Thin };
+            Color color18 = new Color() { Indexed = (UInt32Value)8U };
 
             bottomBorder8.Append(color18);
             DiagonalBorder diagonalBorder8 = new DiagonalBorder();
@@ -2281,19 +2286,19 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             Border border9 = new Border();
 
-            LeftBorder leftBorder9 = new LeftBorder(){ Style = BorderStyleValues.Thin };
-            Color color19 = new Color(){ Indexed = (UInt32Value)65U };
+            LeftBorder leftBorder9 = new LeftBorder() { Style = BorderStyleValues.Thin };
+            Color color19 = new Color() { Indexed = (UInt32Value)65U };
 
             leftBorder9.Append(color19);
             RightBorder rightBorder9 = new RightBorder();
 
-            TopBorder topBorder9 = new TopBorder(){ Style = BorderStyleValues.Thin };
-            Color color20 = new Color(){ Indexed = (UInt32Value)65U };
+            TopBorder topBorder9 = new TopBorder() { Style = BorderStyleValues.Thin };
+            Color color20 = new Color() { Indexed = (UInt32Value)65U };
 
             topBorder9.Append(color20);
 
-            BottomBorder bottomBorder9 = new BottomBorder(){ Style = BorderStyleValues.Thin };
-            Color color21 = new Color(){ Indexed = (UInt32Value)8U };
+            BottomBorder bottomBorder9 = new BottomBorder() { Style = BorderStyleValues.Thin };
+            Color color21 = new Color() { Indexed = (UInt32Value)8U };
 
             bottomBorder9.Append(color21);
             DiagonalBorder diagonalBorder9 = new DiagonalBorder();
@@ -2306,23 +2311,23 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             Border border10 = new Border();
 
-            LeftBorder leftBorder10 = new LeftBorder(){ Style = BorderStyleValues.Thin };
-            Color color22 = new Color(){ Indexed = (UInt32Value)65U };
+            LeftBorder leftBorder10 = new LeftBorder() { Style = BorderStyleValues.Thin };
+            Color color22 = new Color() { Indexed = (UInt32Value)65U };
 
             leftBorder10.Append(color22);
 
-            RightBorder rightBorder10 = new RightBorder(){ Style = BorderStyleValues.Thin };
-            Color color23 = new Color(){ Indexed = (UInt32Value)8U };
+            RightBorder rightBorder10 = new RightBorder() { Style = BorderStyleValues.Thin };
+            Color color23 = new Color() { Indexed = (UInt32Value)8U };
 
             rightBorder10.Append(color23);
 
-            TopBorder topBorder10 = new TopBorder(){ Style = BorderStyleValues.Thin };
-            Color color24 = new Color(){ Indexed = (UInt32Value)65U };
+            TopBorder topBorder10 = new TopBorder() { Style = BorderStyleValues.Thin };
+            Color color24 = new Color() { Indexed = (UInt32Value)65U };
 
             topBorder10.Append(color24);
 
-            BottomBorder bottomBorder10 = new BottomBorder(){ Style = BorderStyleValues.Thin };
-            Color color25 = new Color(){ Indexed = (UInt32Value)8U };
+            BottomBorder bottomBorder10 = new BottomBorder() { Style = BorderStyleValues.Thin };
+            Color color25 = new Color() { Indexed = (UInt32Value)8U };
 
             bottomBorder10.Append(color25);
             DiagonalBorder diagonalBorder10 = new DiagonalBorder();
@@ -2344,23 +2349,23 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             borders1.Append(border9);
             borders1.Append(border10);
 
-            CellStyleFormats cellStyleFormats1 = new CellStyleFormats(){ Count = (UInt32Value)1U };
-            CellFormat cellFormat1 = new CellFormat(){ NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)0U };
+            CellStyleFormats cellStyleFormats1 = new CellStyleFormats() { Count = (UInt32Value)1U };
+            CellFormat cellFormat1 = new CellFormat() { NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)0U };
 
             cellStyleFormats1.Append(cellFormat1);
 
-            CellFormats cellFormats1 = new CellFormats(){ Count = (UInt32Value)11U };
-            CellFormat cellFormat2 = new CellFormat(){ NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)0U, FormatId = (UInt32Value)0U };
-            CellFormat cellFormat3 = new CellFormat(){ NumberFormatId = (UInt32Value)14U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)0U, FormatId = (UInt32Value)0U, ApplyNumberFormat = true };
-            CellFormat cellFormat4 = new CellFormat(){ NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)1U, FormatId = (UInt32Value)0U, ApplyBorder = true };
-            CellFormat cellFormat5 = new CellFormat(){ NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)2U, FormatId = (UInt32Value)0U, ApplyBorder = true };
-            CellFormat cellFormat6 = new CellFormat(){ NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)3U, FormatId = (UInt32Value)0U, ApplyBorder = true };
-            CellFormat cellFormat7 = new CellFormat(){ NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)4U, FormatId = (UInt32Value)0U, ApplyBorder = true };
-            CellFormat cellFormat8 = new CellFormat(){ NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)5U, FormatId = (UInt32Value)0U, ApplyBorder = true };
-            CellFormat cellFormat9 = new CellFormat(){ NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)6U, FormatId = (UInt32Value)0U, ApplyBorder = true };
-            CellFormat cellFormat10 = new CellFormat(){ NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)7U, FormatId = (UInt32Value)0U, ApplyBorder = true };
-            CellFormat cellFormat11 = new CellFormat(){ NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)8U, FormatId = (UInt32Value)0U, ApplyBorder = true };
-            CellFormat cellFormat12 = new CellFormat(){ NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)9U, FormatId = (UInt32Value)0U, ApplyBorder = true };
+            CellFormats cellFormats1 = new CellFormats() { Count = (UInt32Value)11U };
+            CellFormat cellFormat2 = new CellFormat() { NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)0U, FormatId = (UInt32Value)0U };
+            CellFormat cellFormat3 = new CellFormat() { NumberFormatId = (UInt32Value)14U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)0U, FormatId = (UInt32Value)0U, ApplyNumberFormat = true };
+            CellFormat cellFormat4 = new CellFormat() { NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)1U, FormatId = (UInt32Value)0U, ApplyBorder = true };
+            CellFormat cellFormat5 = new CellFormat() { NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)2U, FormatId = (UInt32Value)0U, ApplyBorder = true };
+            CellFormat cellFormat6 = new CellFormat() { NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)3U, FormatId = (UInt32Value)0U, ApplyBorder = true };
+            CellFormat cellFormat7 = new CellFormat() { NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)4U, FormatId = (UInt32Value)0U, ApplyBorder = true };
+            CellFormat cellFormat8 = new CellFormat() { NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)5U, FormatId = (UInt32Value)0U, ApplyBorder = true };
+            CellFormat cellFormat9 = new CellFormat() { NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)6U, FormatId = (UInt32Value)0U, ApplyBorder = true };
+            CellFormat cellFormat10 = new CellFormat() { NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)7U, FormatId = (UInt32Value)0U, ApplyBorder = true };
+            CellFormat cellFormat11 = new CellFormat() { NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)8U, FormatId = (UInt32Value)0U, ApplyBorder = true };
+            CellFormat cellFormat12 = new CellFormat() { NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)9U, FormatId = (UInt32Value)0U, ApplyBorder = true };
 
             cellFormats1.Append(cellFormat2);
             cellFormats1.Append(cellFormat3);
@@ -2374,32 +2379,32 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             cellFormats1.Append(cellFormat11);
             cellFormats1.Append(cellFormat12);
 
-            CellStyles cellStyles1 = new CellStyles(){ Count = (UInt32Value)1U };
-            CellStyle cellStyle1 = new CellStyle(){ Name = "Normal", FormatId = (UInt32Value)0U, BuiltinId = (UInt32Value)0U };
+            CellStyles cellStyles1 = new CellStyles() { Count = (UInt32Value)1U };
+            CellStyle cellStyle1 = new CellStyle() { Name = "Normal", FormatId = (UInt32Value)0U, BuiltinId = (UInt32Value)0U };
 
             cellStyles1.Append(cellStyle1);
 
-            DifferentialFormats differentialFormats1 = new DifferentialFormats(){ Count = (UInt32Value)1U };
+            DifferentialFormats differentialFormats1 = new DifferentialFormats() { Count = (UInt32Value)1U };
 
             DifferentialFormat differentialFormat1 = new DifferentialFormat();
-            NumberingFormat numberingFormat1 = new NumberingFormat(){ NumberFormatId = (UInt32Value)164U, FormatCode = "dd/mm/yyyy" };
+            NumberingFormat numberingFormat1 = new NumberingFormat() { NumberFormatId = (UInt32Value)164U, FormatCode = "dd/mm/yyyy" };
 
             differentialFormat1.Append(numberingFormat1);
 
             differentialFormats1.Append(differentialFormat1);
-            TableStyles tableStyles1 = new TableStyles(){ Count = (UInt32Value)0U, DefaultTableStyle = "TableStyleMedium2", DefaultPivotStyle = "PivotStyleLight16" };
+            TableStyles tableStyles1 = new TableStyles() { Count = (UInt32Value)0U, DefaultTableStyle = "TableStyleMedium2", DefaultPivotStyle = "PivotStyleLight16" };
 
             StylesheetExtensionList stylesheetExtensionList1 = new StylesheetExtensionList();
 
-            StylesheetExtension stylesheetExtension1 = new StylesheetExtension(){ Uri = "{EB79DEF2-80B8-43e5-95BD-54CBDDF9020C}" };
+            StylesheetExtension stylesheetExtension1 = new StylesheetExtension() { Uri = "{EB79DEF2-80B8-43e5-95BD-54CBDDF9020C}" };
             stylesheetExtension1.AddNamespaceDeclaration("x14", "http://schemas.microsoft.com/office/spreadsheetml/2009/9/main");
-            X14.SlicerStyles slicerStyles1 = new X14.SlicerStyles(){ DefaultSlicerStyle = "SlicerStyleLight1" };
+            X14.SlicerStyles slicerStyles1 = new X14.SlicerStyles() { DefaultSlicerStyle = "SlicerStyleLight1" };
 
             stylesheetExtension1.Append(slicerStyles1);
 
-            StylesheetExtension stylesheetExtension2 = new StylesheetExtension(){ Uri = "{9260A510-F301-46a8-8635-F512D64BE5F5}" };
+            StylesheetExtension stylesheetExtension2 = new StylesheetExtension() { Uri = "{9260A510-F301-46a8-8635-F512D64BE5F5}" };
             stylesheetExtension2.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
-            X15.TimelineStyles timelineStyles1 = new X15.TimelineStyles(){ DefaultTimelineStyle = "TimeSlicerStyleLight1" };
+            X15.TimelineStyles timelineStyles1 = new X15.TimelineStyles() { DefaultTimelineStyle = "TimeSlicerStyleLight1" };
 
             stylesheetExtension2.Append(timelineStyles1);
 
@@ -2424,17 +2429,17 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
         {
             Connections connections1 = new Connections();
 
-            Connection connection1 = new Connection(){ Id = (UInt32Value)1U, ConnectionFile = "C:\\Users\\pberruti\\Documents\\My Data Sources\\xlextdat105 Timestamps\\DAT105 Timestamp - Foodmart 2000 account.odc", Name = "DAT105 Timestamp - Foodmart 2000 account", Type = (UInt32Value)100U, RefreshedVersion = 5, MinRefreshableVersion = 5, Background = true };
+            Connection connection1 = new Connection() { Id = (UInt32Value)1U, ConnectionFile = "C:\\Users\\pberruti\\Documents\\My Data Sources\\xlextdat105 Timestamps\\DAT105 Timestamp - Foodmart 2000 account.odc", Name = "DAT105 Timestamp - Foodmart 2000 account", Type = (UInt32Value)100U, RefreshedVersion = 5, MinRefreshableVersion = 5, Background = true };
 
             ConnectionExtensionList connectionExtensionList1 = new ConnectionExtensionList();
 
-            ConnectionExtension connectionExtension1 = new ConnectionExtension(){ Uri = "{DE250136-89BD-433C-8126-D09CA5730AF9}" };
+            ConnectionExtension connectionExtension1 = new ConnectionExtension() { Uri = "{DE250136-89BD-433C-8126-D09CA5730AF9}" };
             connectionExtension1.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
 
-            X15.Connection connection2 = new X15.Connection(){ Id = "d500245d-c151-4de3-9436-83c6e82b7f22", AutoDelete = true };
+            X15.Connection connection2 = new X15.Connection() { Id = "d500245d-c151-4de3-9436-83c6e82b7f22", AutoDelete = true };
 
-            X15.OleDbPrpoperties oleDbPrpoperties1 = new X15.OleDbPrpoperties(){ Connection = "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=True;Data Source=xlextdat105;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=PB07641564SHIP;Use Encryption for Data=False;Tag with column collation when possible=False;Initial Catalog=Foodmart 2000" };
-            X15.DbCommand dbCommand1 = new X15.DbCommand(){ Text = "SELECT *, suser_name() CurrentUser, current_timestamp RefreshTime FROM \"Foodmart 2000\".\"dbo\".\"account\"" };
+            X15.OleDbPrpoperties oleDbPrpoperties1 = new X15.OleDbPrpoperties() { Connection = "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=True;Data Source=xlextdat105;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=PB07641564SHIP;Use Encryption for Data=False;Tag with column collation when possible=False;Initial Catalog=Foodmart 2000" };
+            X15.DbCommand dbCommand1 = new X15.DbCommand() { Text = "SELECT *, suser_name() CurrentUser, current_timestamp RefreshTime FROM \"Foodmart 2000\".\"dbo\".\"account\"" };
 
             oleDbPrpoperties1.Append(dbCommand1);
 
@@ -2446,14 +2451,14 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             connection1.Append(connectionExtensionList1);
 
-            Connection connection3 = new Connection(){ Id = (UInt32Value)2U, KeepAlive = true, Name = "ModelConnection_Query", Description = "Model", Type = (UInt32Value)5U, RefreshedVersion = 5, MinRefreshableVersion = 3, SaveData = true };
-            DatabaseProperties databaseProperties1 = new DatabaseProperties(){ Connection = "Data Model Connection", Command = "Query", CommandType = (UInt32Value)3U };
+            Connection connection3 = new Connection() { Id = (UInt32Value)2U, KeepAlive = true, Name = "ModelConnection_Query", Description = "Model", Type = (UInt32Value)5U, RefreshedVersion = 5, MinRefreshableVersion = 3, SaveData = true };
+            DatabaseProperties databaseProperties1 = new DatabaseProperties() { Connection = "Data Model Connection", Command = "Query", CommandType = (UInt32Value)3U };
 
             ConnectionExtensionList connectionExtensionList2 = new ConnectionExtensionList();
 
-            ConnectionExtension connectionExtension2 = new ConnectionExtension(){ Uri = "{DE250136-89BD-433C-8126-D09CA5730AF9}" };
+            ConnectionExtension connectionExtension2 = new ConnectionExtension() { Uri = "{DE250136-89BD-433C-8126-D09CA5730AF9}" };
             connectionExtension2.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
-            X15.Connection connection4 = new X15.Connection(){ Id = "", Model = true };
+            X15.Connection connection4 = new X15.Connection() { Id = "", Model = true };
 
             connectionExtension2.Append(connection4);
 
@@ -2462,15 +2467,15 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             connection3.Append(databaseProperties1);
             connection3.Append(connectionExtensionList2);
 
-            Connection connection5 = new Connection(){ Id = (UInt32Value)3U, KeepAlive = true, Name = "ThisWorkbookDataModel", Description = "Model", Type = (UInt32Value)5U, RefreshedVersion = 5, MinRefreshableVersion = 5, Background = true };
-            DatabaseProperties databaseProperties2 = new DatabaseProperties(){ Connection = "Data Model Connection", Command = "Model", CommandType = (UInt32Value)1U };
-            OlapProperties olapProperties1 = new OlapProperties(){ SendLocale = true, RowDrillCount = (UInt32Value)1000U };
+            Connection connection5 = new Connection() { Id = (UInt32Value)3U, KeepAlive = true, Name = "ThisWorkbookDataModel", Description = "Model", Type = (UInt32Value)5U, RefreshedVersion = 5, MinRefreshableVersion = 5, Background = true };
+            DatabaseProperties databaseProperties2 = new DatabaseProperties() { Connection = "Data Model Connection", Command = "Model", CommandType = (UInt32Value)1U };
+            OlapProperties olapProperties1 = new OlapProperties() { SendLocale = true, RowDrillCount = (UInt32Value)1000U };
 
             ConnectionExtensionList connectionExtensionList3 = new ConnectionExtensionList();
 
-            ConnectionExtension connectionExtension3 = new ConnectionExtension(){ Uri = "{DE250136-89BD-433C-8126-D09CA5730AF9}" };
+            ConnectionExtension connectionExtension3 = new ConnectionExtension() { Uri = "{DE250136-89BD-433C-8126-D09CA5730AF9}" };
             connectionExtension3.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
-            X15.Connection connection6 = new X15.Connection(){ Id = "", Model = true };
+            X15.Connection connection6 = new X15.Connection() { Id = "", Model = true };
 
             connectionExtension3.Append(connection6);
 

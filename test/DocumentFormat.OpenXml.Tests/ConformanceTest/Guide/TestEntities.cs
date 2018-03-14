@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Presentation;
 using LogUtil;
 using System;
+using System.IO;
 using System.Linq;
 
 using A = DocumentFormat.OpenXml.Drawing;
@@ -36,12 +37,12 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         #endregion
 
         /// <summary>
-        /// URI attribute value of PresentationExtension.(Parent of P15.SlideGuideList elemenet)
+        /// Gets or sets URI attribute value of PresentationExtension.(Parent of P15.SlideGuideList elemenet)
         /// </summary>
         private string SldExtUri { get; set; }
 
         /// <summary>
-        /// URI attribute value of PresentationExtension.(Parent of P15.NotesGuideList elemenet)
+        /// Gets or sets URI attribute value of PresentationExtension.(Parent of P15.NotesGuideList elemenet)
         /// </summary>
         private string NotesExtUri { get; set; }
 
@@ -49,10 +50,10 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// Constructor
         /// Get URI attribute value of PresentationExtension
         /// </summary>
-        /// <param name="filePath">Generated file path</param>
-        public TestEntities(string filePath)
+        /// <param name="stream">Generated stream</param>
+        public TestEntities(Stream stream)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, false))
+            using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 //Get Extension Uri value. (This element is P15.SlideGuideList parrent element.)
                 P15.SlideGuideList slideGuideList = package.PresentationPart.RootElement.Descendants<P15.SlideGuideList>().Single();
@@ -73,11 +74,11 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// <summary>
         /// Editing PresentationExtensionList element.
         /// </summary>
-        /// <param name="filePath">Tartget file path</param>
+        /// <param name="stream">Tartget stream</param>
         /// <param name="log">Logger</param>
-        public void EditElement(string filePath, VerifiableLog log)
+        public void EditElement(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, true))
+            using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
                 PresentationExtensionList presentationExtensionList = package.PresentationPart.RootElement.Descendants<PresentationExtensionList>().Single();
                 PresentationExtension PresentationExtension1 = package.PresentationPart.RootElement.Descendants<PresentationExtension>().Where(e => e.Uri == SldExtUri).Single();
@@ -128,11 +129,11 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// <summary>
         /// Verifying PresentationExtensionList element.
         /// </summary>
-        /// <param name="filePath">Tartget file path</param>
+        /// <param name="stream">Tartget stream</param>
         /// <param name="log">Logger</param>
-        public void VerifyElement(string filePath, VerifiableLog log)
+        public void VerifyElement(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, false))
+            using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 //Verify ExtendedGuideList
                 PresentationExtensionList presentationExtensionList = package.PresentationPart.RootElement.Descendants<PresentationExtensionList>().Single();
@@ -180,11 +181,11 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// <summary>
         /// Deleting PresentationExtensionList element.
         /// </summary>
-        /// <param name="filePath">Tartget file path</param>
+        /// <param name="stream">Tartget stream</param>
         /// <param name="log">Logger</param>
-        public void DeleteElement(string filePath, VerifiableLog log)
+        public void DeleteElement(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, true))
+            using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
                 //Delete RgbColorModelHex element
                 foreach (A.RgbColorModelHex rgbColorModelHex in package.PresentationPart.RootElement.Descendants<A.RgbColorModelHex>())
@@ -231,11 +232,11 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// <summary>
         /// Verifying PresentationExtensionList element.
         /// </summary>
-        /// <param name="filePath">Tartget file path</param>
+        /// <param name="stream">Tartget stream</param>
         /// <param name="log">Logger</param>
-        public void VerifyDeletedElement(string filePath, VerifiableLog log)
+        public void VerifyDeletedElement(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, false))
+            using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 log.Verify(package.PresentationPart.RootElement.Descendants<PresentationExtensionList>().Count() == 0, "Exist PresentationExtensionList element.");
 
@@ -254,11 +255,11 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// <summary>
         /// Adding PresentationExtensionList element.
         /// </summary>
-        /// <param name="filePath">Tartget file path</param>
+        /// <param name="stream">Tartget stream</param>
         /// <param name="log">Logger</param>
-        public void AddElement(string filePath, VerifiableLog log)
+        public void AddElement(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, true))
+            using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
                 //Adding Guide element
                 A.RgbColorModelHex rgbColorModelHex1 = new A.RgbColorModelHex() { Val = Color3 };
@@ -313,11 +314,11 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// <summary>
         /// Verifying PresentationExtensionList element.
         /// </summary>
-        /// <param name="filePath">Tartget file path</param>
+        /// <param name="stream">Tartget stream</param>
         /// <param name="log">Logger</param>
-        public void VerifyAddedElemenet(string filePath, VerifiableLog log)
+        public void VerifyAddedElemenet(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, false))
+            using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 PresentationExtensionList presentationExtensionList = package.PresentationPart.RootElement.Descendants<PresentationExtensionList>().Single();
                 log.Verify(package.PresentationPart.RootElement.Descendants<PresentationExtensionList>().Count() == 1, "PresentationExtensionList element not exist.");
