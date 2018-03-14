@@ -609,7 +609,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 // TODO: Close resources
                 _package.Close();
                 _package = null;
-                PartDictionary = null;
+                ChildrenRelationshipParts.Clear();
                 ReferenceRelationshipList.Clear();
                 _partUriHelper = null;
             }
@@ -859,7 +859,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 //
                 tempPart = AddExtendedPart(@"http://temp", MainPartContentType, @".xml");
 
-                foreach (KeyValuePair<string, OpenXmlPart> idPartPair in mainPart.ChildrenParts)
+                foreach (KeyValuePair<string, OpenXmlPart> idPartPair in mainPart.ChildrenRelationshipParts)
                 {
                     childParts.Add(idPartPair.Key, idPartPair.Value);
                 }
@@ -883,7 +883,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 string id = GetIdOfPart(mainPart);
 
                 // remove the old part
-                ChildrenParts.Remove(id);
+                ChildrenRelationshipParts.Remove(id);
                 DeleteRelationship(id);
                 mainPart.Destroy();
 
@@ -897,7 +897,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 // add it and get the id
                 string relationshipId = AttachChild(newMainPart, id);
 
-                ChildrenParts.Add(relationshipId, newMainPart);
+                ChildrenRelationshipParts.Add(relationshipId, newMainPart);
 
                 // copy the stream back
                 memoryStream.Position = 0;
@@ -908,7 +908,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     // just call AttachChild( ) is OK. No need to call AddPart( ... )
                     newMainPart.AttachChild(idPartPair.Value, idPartPair.Key);
-                    newMainPart.ChildrenParts.Add(idPartPair);
+                    newMainPart.ChildrenRelationshipParts.Add(idPartPair.Key, idPartPair.Value);
                 }
 
                 foreach (ExternalRelationship externalRel in referenceRelationships.OfType<ExternalRelationship>())
@@ -928,7 +928,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 // delete the temp part
                 id = GetIdOfPart(tempPart);
-                ChildrenParts.Remove(id);
+                ChildrenRelationshipParts.Remove(id);
                 DeleteRelationship(id);
                 tempPart.Destroy();
             }
@@ -981,7 +981,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 // add it and get the id
                 string relationshipId = AttachChild(child);
 
-                ChildrenParts.Add(relationshipId, child);
+                ChildrenRelationshipParts.Add(relationshipId, child);
 
                 return child;
             }
@@ -1008,7 +1008,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(reachableParts));
             }
 
-            foreach (OpenXmlPart part in ChildrenParts.Values)
+            foreach (OpenXmlPart part in ChildrenRelationshipParts.Values)
             {
                 if (!reachableParts.ContainsKey(part))
                 {

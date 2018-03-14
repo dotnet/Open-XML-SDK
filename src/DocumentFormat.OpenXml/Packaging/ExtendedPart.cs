@@ -145,7 +145,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             string relationshipId = AttachChild(newPart, id);
 
-            ChildrenParts.Add(relationshipId, newPart);
+            ChildrenRelationshipParts.Add(relationshipId, newPart);
 
             return;
         }
