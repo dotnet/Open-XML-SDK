@@ -121,7 +121,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 // add it and get the id
                 string relationshipId = AttachChild(child);
 
-                ChildrenParts.Add(relationshipId, child);
+                ChildrenRelationshipParts.Add(relationshipId, child);
 
                 return child;
             }
@@ -538,7 +538,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             reachableParts.Add(this, false);
-            foreach (OpenXmlPart part in ChildrenParts.Values)
+            foreach (OpenXmlPart part in ChildrenRelationshipParts.Values)
             {
                 if (!reachableParts.ContainsKey(part))
                 {
@@ -715,7 +715,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             OpenXmlPackage.Package.DeletePart(Uri);
 
-            PartDictionary = null;
+            ChildrenRelationshipParts.Clear();
             ReferenceRelationshipList.Clear();
             _openXmlPackage = null;
             _packagePart = null;
