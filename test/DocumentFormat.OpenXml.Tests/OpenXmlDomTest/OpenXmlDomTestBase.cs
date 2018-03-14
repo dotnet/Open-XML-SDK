@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Tests
     public class OpenXmlDomTestBase : OpenXmlTestBase
     {
         public OpenXmlDomTestBase(ITestOutputHelper output)
-            : base(output, "v2FxTestFiles")
+            : base(output)
         {
         }
 
