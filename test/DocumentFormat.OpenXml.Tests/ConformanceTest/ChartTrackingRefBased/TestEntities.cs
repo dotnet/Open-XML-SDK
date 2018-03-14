@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Presentation;
 using LogUtil;
 using System;
+using System.IO;
 using System.Linq;
 
 using P15 = DocumentFormat.OpenXml.Office2013.PowerPoint;
@@ -13,21 +14,18 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
 {
     public class TestEntities
     {
-        #region Property
         /// <summary>
-        /// URI attribute value of PresentationPropertiesExtension
+        /// Gets or sets URI attribute value of PresentationPropertiesExtension
         /// </summary>
         private string ChartTrackingReferenceBasedExtUri { get; set; }
-        #endregion
 
         /// <summary>
         /// Constructor
         /// Get URI attribute value of PresentationPropertiesExtension
         /// </summary>
-        /// <param name="filePath">Generated file path</param>
-        public TestEntities(string filePath)
+        public TestEntities(Stream stream)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, false))
+            using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 //Get Extension Uri value
                 P15.ChartTrackingReferenceBased chartTrackingReferenceBased = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<P15.ChartTrackingReferenceBased>().Single();
@@ -42,11 +40,9 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         /// <summary>
         /// Editing chartTrackingReferenceBased element
         /// </summary>
-        /// <param name="filePath">Target file path</param>
-        /// <param name="log">Logger</param>
-        public void EditElements(string filePath, VerifiableLog log)
+        public void EditElements(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, true))
+            using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
                 P15.ChartTrackingReferenceBased chartTrackingReferenceBased = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<P15.ChartTrackingReferenceBased>().Single();
                 chartTrackingReferenceBased.Val.Value = true;
@@ -58,11 +54,9 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         /// <summary>
         /// Verifying the chartTrackingReferenceBased element the existence
         /// </summary>
-        /// <param name="filePath">Target faile path</param>
-        /// <param name="log">Logger</param>
-        public void VerifyElements(string filePath, VerifiableLog log)
+        public void VerifyElements(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, false))
+            using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 P15.ChartTrackingReferenceBased chartTrackingReferenceBased = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<P15.ChartTrackingReferenceBased>().Single();
 
@@ -73,11 +67,9 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         /// <summary>
         /// Deleting chartTrackingReferenceBased element
         /// </summary>
-        /// <param name="filePath">Target faile path</param>
-        /// <param name="log">Logger</param>
-        public void DeleteElements(string filePath, VerifiableLog log)
+        public void DeleteElements(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, true))
+            using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
                 PresentationPropertiesExtension presentationPropertiesExtension = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<PresentationPropertiesExtension>().Where(e => e.Uri == ChartTrackingReferenceBasedExtUri).Single();
                 P15.ChartTrackingReferenceBased chartTrackingReferenceBased = presentationPropertiesExtension.Descendants<P15.ChartTrackingReferenceBased>().Single();
@@ -92,11 +84,9 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         /// <summary>
         /// Verifying the chartTrackingReferenceBased element the deleting
         /// </summary>
-        /// <param name="filePath">Target file path</param>
-        /// <param name="log">Logger</param>
-        public void VerifyDeleteElements(string filePath, VerifiableLog log)
+        public void VerifyDeleteElements(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, false))
+            using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 int chartTrackingReferenceBasedExtCount = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<PresentationPropertiesExtension>().Where(e => e.Uri == ChartTrackingReferenceBasedExtUri).Count();
                 log.Verify(chartTrackingReferenceBasedExtCount == 0, "ChartTrackingReferenceBased extension element is not deleted.");
@@ -109,11 +99,9 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         /// <summary>
         /// Append the chartTrackingReferenceBased element
         /// </summary>
-        /// <param name="filePath">Target file path</param>
-        /// <param name="log">Logger</param>
-        public void AddElements(string filePath, VerifiableLog log)
+        public void AddElements(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, true))
+            using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
                 PresentationPropertiesExtension presentationPropertiesExtension = new PresentationPropertiesExtension() { Uri = ChartTrackingReferenceBasedExtUri };
                 P15.ChartTrackingReferenceBased chartTrackingReferenceBased = new P15.ChartTrackingReferenceBased();
@@ -129,11 +117,9 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         /// <summary>
         /// Verifying the chartTrackingReferenceBased element the appending
         /// </summary>
-        /// <param name="filePath">Target file path</param>
-        /// <param name="log">Logger</param>
-        public void VerifyAddElements(string filePath, VerifiableLog log)
+        public void VerifyAddElements(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, false))
+            using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 int chartTrackingReferenceBasedExtCount = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<PresentationPropertiesExtension>().Where(e => e.Uri == ChartTrackingReferenceBasedExtUri).Count();
 

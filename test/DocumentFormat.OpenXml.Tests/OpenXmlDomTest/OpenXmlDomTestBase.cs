@@ -4,7 +4,6 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
-using DocumentFormat.OpenXml.Tests.TaskLibraries;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System;
 using System.Collections.Generic;
@@ -25,7 +24,7 @@ namespace DocumentFormat.OpenXml.Tests
     public class OpenXmlDomTestBase : OpenXmlTestBase
     {
         public OpenXmlDomTestBase(ITestOutputHelper output)
-            : base(output, "v2FxTestFiles")
+            : base(output)
         {
         }
 

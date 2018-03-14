@@ -6,6 +6,7 @@ using DocumentFormat.OpenXml.Presentation;
 using LogUtil;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 using P15 = DocumentFormat.OpenXml.Office2013.PowerPoint;
@@ -29,10 +30,9 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         /// Constructor
         /// Get URI attribute value of CommentExtension
         /// </summary>
-        /// <param name="filePath">Generated file path</param>
-        public TestEntities(string filePath)
+        public TestEntities(Stream stream)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, false))
+            using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 //Get Extension Uri value
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
@@ -48,11 +48,9 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         /// <summary>
         /// Editing ThreadingInfo element
         /// </summary>
-        /// <param name="filePath">Target Excel file path</param>
-        /// <param name="log">Logger</param>
-        public void EditElements(string filePath, VerifiableLog log)
+        public void EditElements(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, true))
+            using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
                 P15.ThreadingInfo threadingInfo = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Single();
@@ -65,11 +63,9 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         /// <summary>
         /// Verifying the ThreadingInfo element the existence
         /// </summary>
-        /// <param name="filePath">Target Excel faile path</param>
-        /// <param name="log">Logger</param>
-        public void VerifyElements(string filePath, VerifiableLog log)
+        public void VerifyElements(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, false))
+            using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
                 P15.ThreadingInfo threadingInfo = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Single();
@@ -81,11 +77,9 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         /// <summary>
         /// Deleting ThreadingInfo element
         /// </summary>
-        /// <param name="filePath">Target Excel faile path</param>
-        /// <param name="log">Logger</param>
-        public void DeleteElements(string filePath, VerifiableLog log)
+        public void DeleteElements(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, true))
+            using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
                 CommentExtension commentExtension = comment.CommentExtensionList.Descendants<CommentExtension>().Where(e => e.Uri == ThreadingInfoExtUri).Single();
@@ -102,11 +96,9 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         /// <summary>
         /// Verifying the ThreadingInfo element the deleting
         /// </summary>
-        /// <param name="filePath">Target Excel file path</param>
-        /// <param name="log">Logger</param>
-        public void VerifyDeleteElements(string filePath, VerifiableLog log)
+        public void VerifyDeleteElements(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, false))
+            using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
 
@@ -121,11 +113,9 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         /// <summary>
         /// Append the ThreadingInfo element
         /// </summary>
-        /// <param name="filePath">Target excel faile path</param>
-        /// <param name="log">Logger</param>
-        public void AddElements(string filePath, VerifiableLog log)
+        public void AddElements(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, true))
+            using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
                 CommentExtension commentExtension = new CommentExtension() { Uri = ThreadingInfoExtUri };
@@ -140,11 +130,9 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         /// <summary>
         /// Verifying the workbookPr element the appending
         /// </summary>
-        /// <param name="filePath">Target Excel faile path</param>
-        /// <param name="log">Logger</param>
-        public void VerifyAddElements(string filePath, VerifiableLog log)
+        public void VerifyAddElements(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, false))
+            using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
 
