@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Tests.CommentExPeopleClass;
-using DocumentFormat.OpenXml.Tests.TaskLibraries;
 using System.IO;
 using Xunit;
 using Xunit.Abstractions;

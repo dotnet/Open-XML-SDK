@@ -3,7 +3,6 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Tests.ContentControlClass;
-using DocumentFormat.OpenXml.Tests.TaskLibraries;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System.IO;
 using System.Linq;

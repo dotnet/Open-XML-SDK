@@ -2,16 +2,10 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using LogUtil;
-using OxTest;
-using System;
-using System.IO;
 using Xunit.Abstractions;
 
-namespace DocumentFormat.OpenXml.Tests.TaskLibraries
+namespace DocumentFormat.OpenXml.Tests
 {
-    /// <summary>
-    /// The OpenXmlDom test framework. It contains help methods for testing OpenXmlDom Classes
-    /// </summary>
     public class OpenXmlTestBase
     {
         protected OpenXmlTestBase(ITestOutputHelper output)
