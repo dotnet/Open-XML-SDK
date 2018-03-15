@@ -82,7 +82,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 var path = Path.Combine(targetPath, string.Concat(targetName, sequenceNumber, targetExt));
 
                 partUri = PackUriHelper.ResolvePartUri(parentUri, new Uri(path, UriHelper.RelativeOrAbsolute));
-            } while (IsReservedUri(partUri));
+            } while (_reservedUri.ContainsKey(partUri));
 
             AddToReserveUri(partUri);
 
@@ -91,27 +91,13 @@ namespace DocumentFormat.OpenXml.Packaging
 
         public Uri GetUniquePartUri(string contentType, Uri parentUri, Uri targetUri)
         {
-            var partUri = PackUriHelper.ResolvePartUri(parentUri, targetUri);
-
-            if (IsReservedUri(partUri))
-            {
-                // already have one, create new
-                const string targetPath = ".";
-                string targetName = Path.GetFileNameWithoutExtension(targetUri.OriginalString);
-                string targetExt = Path.GetExtension(targetUri.OriginalString);
-
-                return GetUniquePartUri(contentType, partUri, targetPath, targetName, targetExt);
-            }
-            else
-            {
-                // not used, can use it.
-                AddToReserveUri(partUri);
-
-                return partUri;
-            }
+            return GetUniquePartUri(
+                contentType,
+                PackUriHelper.ResolvePartUri(parentUri, targetUri),
+                ".",
+                Path.GetFileNameWithoutExtension(targetUri.OriginalString),
+                Path.GetExtension(targetUri.OriginalString));
         }
-
-        private bool IsReservedUri(Uri uri) => _reservedUri.ContainsKey(uri);
 
         private void AddToReserveUri(Uri partUri) => _reservedUri.Add(partUri, 0);
 
