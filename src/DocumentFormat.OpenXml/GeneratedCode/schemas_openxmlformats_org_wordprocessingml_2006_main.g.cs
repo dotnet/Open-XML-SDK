@@ -1,5 +1,5 @@
-﻿// Copyright (c) Microsoft Open Technologies, Inc.  All rights reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
-// This source file is machine generated.  Please do not change the code manually.
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
@@ -2593,7 +2593,7 @@ public partial class CustomXmlPlaceholder : StringType
 }
 /// <summary>
 /// <para>Defines the TableCaption Class.</para>
-///<para>This class is only available in Office2010.</para>
+///<para>This class is available in Office2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:tblCaption.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -2634,7 +2634,7 @@ public partial class TableCaption : StringType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((2 & (int)version) > 0)
+		if((6 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -2661,7 +2661,7 @@ public partial class TableCaption : StringType
 }
 /// <summary>
 /// <para>Defines the TableDescription Class.</para>
-///<para>This class is only available in Office2010.</para>
+///<para>This class is available in Office2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:tblDescription.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -2702,7 +2702,7 @@ public partial class TableDescription : StringType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((2 & (int)version) > 0)
+		if((6 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -17795,12 +17795,11 @@ public partial class Indentation : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> start, this property is only available in Office2010.</para>
+    /// <para> start.</para>
     /// <para>Represents the following attribute in the schema: w:start </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "start")]
     public StringValue Start
     {
@@ -17822,12 +17821,11 @@ public partial class Indentation : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> startChars, this property is only available in Office2010.</para>
+    /// <para> startChars.</para>
     /// <para>Represents the following attribute in the schema: w:startChars </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "startChars")]
     public Int32Value StartCharacters
     {
@@ -17849,12 +17847,11 @@ public partial class Indentation : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> end, this property is only available in Office2010.</para>
+    /// <para> end.</para>
     /// <para>Represents the following attribute in the schema: w:end </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "end")]
     public StringValue End
     {
@@ -17876,12 +17873,11 @@ public partial class Indentation : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> endChars, this property is only available in Office2010.</para>
+    /// <para> endChars.</para>
     /// <para>Represents the following attribute in the schema: w:endChars </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "endChars")]
     public Int32Value EndCharacters
     {
@@ -22413,12 +22409,11 @@ public partial class Picture : OpenXmlCompositeElement
 
     
         /// <summary>
-    /// <para> anchorId, this property is only available in Office2010.</para>
+    /// <para> anchorId.</para>
     /// <para>Represents the following attribute in the schema: w14:anchorId </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(52, "anchorId")]
     public HexBinaryValue AnchorId
     {
@@ -26478,7 +26473,7 @@ public partial class BarBorder : BorderType
 }
 /// <summary>
 /// <para>Defines the StartBorder Class.</para>
-///<para>This class is only available in Office2010.</para>
+///<para>This class is available in Office2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:start.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -26519,7 +26514,7 @@ public partial class StartBorder : BorderType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((2 & (int)version) > 0)
+		if((6 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -26546,7 +26541,7 @@ public partial class StartBorder : BorderType
 }
 /// <summary>
 /// <para>Defines the EndBorder Class.</para>
-///<para>This class is only available in Office2010.</para>
+///<para>This class is available in Office2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:end.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -26587,7 +26582,7 @@ public partial class EndBorder : BorderType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((2 & (int)version) > 0)
+		if((6 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -30154,7 +30149,7 @@ if( 23 == namespaceId && "id" == name)
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
@@ -30602,7 +30597,7 @@ if( 23 == namespaceId && "element" == name)
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
@@ -31108,7 +31103,7 @@ if( 23 == namespaceId && "dirty" == name)
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
@@ -33302,7 +33297,7 @@ public partial class MoveToRun : RunTrackChangeType
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
@@ -33328,8 +33323,8 @@ public partial class MoveToRun : RunTrackChangeType
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
     [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(BidirectionalOverride),(FileFormatVersions)2)]
-    [ChildElementInfo(typeof(BidirectionalEmbedding),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(BidirectionalOverride),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BidirectionalEmbedding),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class RunTrackChangeType : OpenXmlCompositeElement
 {
@@ -33617,7 +33612,7 @@ if( 23 == namespaceId && "id" == name)
 }
 /// <summary>
 /// <para>Defines the ContentPart Class.</para>
-///<para>This class is only available in Office2010.</para>
+///<para>This class is available in Office2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:contentPart.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -33658,7 +33653,7 @@ public partial class ContentPart : OpenXmlLeafElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((2 & (int)version) > 0)
+		if((6 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -34070,7 +34065,7 @@ if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
@@ -34693,7 +34688,7 @@ if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
@@ -34719,8 +34714,8 @@ if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
     [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(BidirectionalOverride),(FileFormatVersions)2)]
-    [ChildElementInfo(typeof(BidirectionalEmbedding),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(BidirectionalOverride),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BidirectionalEmbedding),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(SubDocumentReference))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class Paragraph : OpenXmlCompositeElement
@@ -35270,7 +35265,7 @@ if( 52 == namespaceId && "noSpellErr" == name)
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
@@ -35556,7 +35551,7 @@ if( 52 == namespaceId && "conflictDel" == name)
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
@@ -36013,7 +36008,7 @@ if( 52 == namespaceId && "textId" == name)
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
@@ -36609,7 +36604,7 @@ if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
@@ -36934,7 +36929,7 @@ if( 52 == namespaceId && "conflictDel" == name)
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
@@ -37554,7 +37549,7 @@ if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
@@ -37580,8 +37575,8 @@ if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
     [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(BidirectionalOverride),(FileFormatVersions)2)]
-    [ChildElementInfo(typeof(BidirectionalEmbedding),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(BidirectionalOverride),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BidirectionalEmbedding),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(SubDocumentReference))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class CustomXmlRun : CustomXmlElement
@@ -38017,7 +38012,7 @@ if( 23 == namespaceId && "element" == name)
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
@@ -38043,8 +38038,8 @@ if( 23 == namespaceId && "element" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
     [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(BidirectionalOverride),(FileFormatVersions)2)]
-    [ChildElementInfo(typeof(BidirectionalEmbedding),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(BidirectionalOverride),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BidirectionalEmbedding),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(SubDocumentReference))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class SimpleField : OpenXmlCompositeElement
@@ -38538,7 +38533,7 @@ if( 23 == namespaceId && "dirty" == name)
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
@@ -38564,8 +38559,8 @@ if( 23 == namespaceId && "dirty" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
     [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(BidirectionalOverride),(FileFormatVersions)2)]
-    [ChildElementInfo(typeof(BidirectionalEmbedding),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(BidirectionalOverride),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BidirectionalEmbedding),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(SubDocumentReference))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class Hyperlink : OpenXmlCompositeElement
@@ -38967,7 +38962,7 @@ if( 19 == namespaceId && "id" == name)
 }
 /// <summary>
 /// <para>Defines the BidirectionalOverride Class.</para>
-///<para>This class is only available in Office2010.</para>
+///<para>This class is available in Office2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:bdo.</para>
 /// </summary>
 /// <remarks>
@@ -39067,7 +39062,7 @@ if( 19 == namespaceId && "id" == name)
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
@@ -39093,8 +39088,8 @@ if( 19 == namespaceId && "id" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
     [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(BidirectionalOverride),(FileFormatVersions)2)]
-    [ChildElementInfo(typeof(BidirectionalEmbedding),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(BidirectionalOverride),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BidirectionalEmbedding),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(SubDocumentReference))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -39133,7 +39128,7 @@ public partial class BidirectionalOverride : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((2 & (int)version) > 0)
+		if((6 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -39417,7 +39412,7 @@ if( 23 == namespaceId && "subDoc" == name)
 }
 /// <summary>
 /// <para>Defines the BidirectionalEmbedding Class.</para>
-///<para>This class is only available in Office2010.</para>
+///<para>This class is available in Office2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:dir.</para>
 /// </summary>
 /// <remarks>
@@ -39517,7 +39512,7 @@ if( 23 == namespaceId && "subDoc" == name)
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
@@ -39543,8 +39538,8 @@ if( 23 == namespaceId && "subDoc" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
     [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(BidirectionalOverride),(FileFormatVersions)2)]
-    [ChildElementInfo(typeof(BidirectionalEmbedding),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(BidirectionalOverride),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BidirectionalEmbedding),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(SubDocumentReference))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -39583,7 +39578,7 @@ public partial class BidirectionalEmbedding : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((2 & (int)version) > 0)
+		if((6 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -40597,12 +40592,11 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> firstRow, this property is only available in Office2010.</para>
+    /// <para> firstRow.</para>
     /// <para>Represents the following attribute in the schema: w:firstRow </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "firstRow")]
     public OnOffValue FirstRow
     {
@@ -40611,12 +40605,11 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> lastRow, this property is only available in Office2010.</para>
+    /// <para> lastRow.</para>
     /// <para>Represents the following attribute in the schema: w:lastRow </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "lastRow")]
     public OnOffValue LastRow
     {
@@ -40625,12 +40618,11 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> firstColumn, this property is only available in Office2010.</para>
+    /// <para> firstColumn.</para>
     /// <para>Represents the following attribute in the schema: w:firstColumn </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "firstColumn")]
     public OnOffValue FirstColumn
     {
@@ -40639,12 +40631,11 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> lastColumn, this property is only available in Office2010.</para>
+    /// <para> lastColumn.</para>
     /// <para>Represents the following attribute in the schema: w:lastColumn </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "lastColumn")]
     public OnOffValue LastColumn
     {
@@ -40653,12 +40644,11 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> oddVBand, this property is only available in Office2010.</para>
+    /// <para> oddVBand.</para>
     /// <para>Represents the following attribute in the schema: w:oddVBand </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "oddVBand")]
     public OnOffValue OddVerticalBand
     {
@@ -40667,12 +40657,11 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> evenVBand, this property is only available in Office2010.</para>
+    /// <para> evenVBand.</para>
     /// <para>Represents the following attribute in the schema: w:evenVBand </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "evenVBand")]
     public OnOffValue EvenVerticalBand
     {
@@ -40681,12 +40670,11 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> oddHBand, this property is only available in Office2010.</para>
+    /// <para> oddHBand.</para>
     /// <para>Represents the following attribute in the schema: w:oddHBand </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "oddHBand")]
     public OnOffValue OddHorizontalBand
     {
@@ -40695,12 +40683,11 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> evenHBand, this property is only available in Office2010.</para>
+    /// <para> evenHBand.</para>
     /// <para>Represents the following attribute in the schema: w:evenHBand </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "evenHBand")]
     public OnOffValue EvenHorizontalBand
     {
@@ -40709,12 +40696,11 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> firstRowFirstColumn, this property is only available in Office2010.</para>
+    /// <para> firstRowFirstColumn.</para>
     /// <para>Represents the following attribute in the schema: w:firstRowFirstColumn </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "firstRowFirstColumn")]
     public OnOffValue FirstRowFirstColumn
     {
@@ -40723,12 +40709,11 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> firstRowLastColumn, this property is only available in Office2010.</para>
+    /// <para> firstRowLastColumn.</para>
     /// <para>Represents the following attribute in the schema: w:firstRowLastColumn </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "firstRowLastColumn")]
     public OnOffValue FirstRowLastColumn
     {
@@ -40737,12 +40722,11 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> lastRowFirstColumn, this property is only available in Office2010.</para>
+    /// <para> lastRowFirstColumn.</para>
     /// <para>Represents the following attribute in the schema: w:lastRowFirstColumn </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "lastRowFirstColumn")]
     public OnOffValue LastRowFirstColumn
     {
@@ -40751,12 +40735,11 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> lastRowLastColumn, this property is only available in Office2010.</para>
+    /// <para> lastRowLastColumn.</para>
     /// <para>Represents the following attribute in the schema: w:lastRowLastColumn </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "lastRowLastColumn")]
     public OnOffValue LastRowLastColumn
     {
@@ -41231,7 +41214,7 @@ public partial class TopMargin : TableWidthType
 }
 /// <summary>
 /// <para>Defines the StartMargin Class.</para>
-///<para>This class is only available in Office2010.</para>
+///<para>This class is available in Office2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:start.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -41272,7 +41255,7 @@ public partial class StartMargin : TableWidthType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((2 & (int)version) > 0)
+		if((6 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -41365,7 +41348,7 @@ public partial class BottomMargin : TableWidthType
 }
 /// <summary>
 /// <para>Defines the EndMargin Class.</para>
-///<para>This class is only available in Office2010.</para>
+///<para>This class is available in Office2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:end.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -41406,7 +41389,7 @@ public partial class EndMargin : TableWidthType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((2 & (int)version) > 0)
+		if((6 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -41883,10 +41866,10 @@ public partial class VerticalMerge : OpenXmlLeafElement
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     [ChildElementInfo(typeof(TopBorder))]
     [ChildElementInfo(typeof(LeftBorder))]
-    [ChildElementInfo(typeof(StartBorder),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(StartBorder),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(BottomBorder))]
     [ChildElementInfo(typeof(RightBorder))]
-    [ChildElementInfo(typeof(EndBorder),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(EndBorder),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(InsideHorizontalBorder))]
     [ChildElementInfo(typeof(InsideVerticalBorder))]
     [ChildElementInfo(typeof(TopLeftToBottomRightCellBorder))]
@@ -42064,13 +42047,12 @@ if( 23 == namespaceId && "tr2bl" == name)
         }
     }
     /// <summary>
-    /// <para> StartBorder, this property is only available in Office2010.</para>
+    /// <para> StartBorder.</para>
     /// <para> Represents the following element tag in the schema: w:start </para>
     /// </summary>
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     public StartBorder StartBorder
     {
         get 
@@ -42119,13 +42101,12 @@ if( 23 == namespaceId && "tr2bl" == name)
         }
     }
     /// <summary>
-    /// <para> EndBorder, this property is only available in Office2010.</para>
+    /// <para> EndBorder.</para>
     /// <para> Represents the following element tag in the schema: w:end </para>
     /// </summary>
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     public EndBorder EndBorder
     {
         get 
@@ -43554,10 +43535,10 @@ public abstract partial class OnOffOnlyType : OpenXmlLeafElement
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     [ChildElementInfo(typeof(TopMargin))]
     [ChildElementInfo(typeof(LeftMargin))]
-    [ChildElementInfo(typeof(StartMargin),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(StartMargin),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(BottomMargin))]
     [ChildElementInfo(typeof(RightMargin))]
-    [ChildElementInfo(typeof(EndMargin),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(EndMargin),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class TableCellMargin : OpenXmlCompositeElement
 {
@@ -43719,13 +43700,12 @@ if( 23 == namespaceId && "end" == name)
         }
     }
     /// <summary>
-    /// <para> StartMargin, this property is only available in Office2010.</para>
+    /// <para> StartMargin.</para>
     /// <para> Represents the following element tag in the schema: w:start </para>
     /// </summary>
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     public StartMargin StartMargin
     {
         get 
@@ -43774,13 +43754,12 @@ if( 23 == namespaceId && "end" == name)
         }
     }
     /// <summary>
-    /// <para> EndMargin, this property is only available in Office2010.</para>
+    /// <para> EndMargin.</para>
     /// <para> Represents the following element tag in the schema: w:end </para>
     /// </summary>
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     public EndMargin EndMargin
     {
         get 
@@ -44977,10 +44956,10 @@ if( 23 == namespaceId && "type" == name)
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     [ChildElementInfo(typeof(TopBorder))]
     [ChildElementInfo(typeof(LeftBorder))]
-    [ChildElementInfo(typeof(StartBorder),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(StartBorder),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(BottomBorder))]
     [ChildElementInfo(typeof(RightBorder))]
-    [ChildElementInfo(typeof(EndBorder),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(EndBorder),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(InsideHorizontalBorder))]
     [ChildElementInfo(typeof(InsideVerticalBorder))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
@@ -45150,13 +45129,12 @@ if( 23 == namespaceId && "insideV" == name)
         }
     }
     /// <summary>
-    /// <para> StartBorder, this property is only available in Office2010.</para>
+    /// <para> StartBorder.</para>
     /// <para> Represents the following element tag in the schema: w:start </para>
     /// </summary>
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     public StartBorder StartBorder
     {
         get 
@@ -45205,13 +45183,12 @@ if( 23 == namespaceId && "insideV" == name)
         }
     }
     /// <summary>
-    /// <para> EndBorder, this property is only available in Office2010.</para>
+    /// <para> EndBorder.</para>
     /// <para> Represents the following element tag in the schema: w:end </para>
     /// </summary>
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     public EndBorder EndBorder
     {
         get 
@@ -45404,10 +45381,10 @@ public partial class TableLayout : OpenXmlLeafElement
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     [ChildElementInfo(typeof(TopMargin))]
     [ChildElementInfo(typeof(TableCellLeftMargin))]
-    [ChildElementInfo(typeof(StartMargin),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(StartMargin),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(BottomMargin))]
     [ChildElementInfo(typeof(TableCellRightMargin))]
-    [ChildElementInfo(typeof(EndMargin),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(EndMargin),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class TableCellMarginDefault : OpenXmlCompositeElement
 {
@@ -45569,13 +45546,12 @@ if( 23 == namespaceId && "end" == name)
         }
     }
     /// <summary>
-    /// <para> StartMargin, this property is only available in Office2010.</para>
+    /// <para> StartMargin.</para>
     /// <para> Represents the following element tag in the schema: w:start </para>
     /// </summary>
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     public StartMargin StartMargin
     {
         get 
@@ -45624,13 +45600,12 @@ if( 23 == namespaceId && "end" == name)
         }
     }
     /// <summary>
-    /// <para> EndMargin, this property is only available in Office2010.</para>
+    /// <para> EndMargin.</para>
     /// <para> Represents the following element tag in the schema: w:end </para>
     /// </summary>
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     public EndMargin EndMargin
     {
         get 
@@ -46152,12 +46127,11 @@ public partial class TableLook : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> firstRow, this property is only available in Office2010.</para>
+    /// <para> firstRow.</para>
     /// <para>Represents the following attribute in the schema: w:firstRow </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "firstRow")]
     public OnOffValue FirstRow
     {
@@ -46166,12 +46140,11 @@ public partial class TableLook : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> lastRow, this property is only available in Office2010.</para>
+    /// <para> lastRow.</para>
     /// <para>Represents the following attribute in the schema: w:lastRow </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "lastRow")]
     public OnOffValue LastRow
     {
@@ -46180,12 +46153,11 @@ public partial class TableLook : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> firstColumn, this property is only available in Office2010.</para>
+    /// <para> firstColumn.</para>
     /// <para>Represents the following attribute in the schema: w:firstColumn </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "firstColumn")]
     public OnOffValue FirstColumn
     {
@@ -46194,12 +46166,11 @@ public partial class TableLook : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> lastColumn, this property is only available in Office2010.</para>
+    /// <para> lastColumn.</para>
     /// <para>Represents the following attribute in the schema: w:lastColumn </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "lastColumn")]
     public OnOffValue LastColumn
     {
@@ -46208,12 +46179,11 @@ public partial class TableLook : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> noHBand, this property is only available in Office2010.</para>
+    /// <para> noHBand.</para>
     /// <para>Represents the following attribute in the schema: w:noHBand </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "noHBand")]
     public OnOffValue NoHorizontalBand
     {
@@ -46222,12 +46192,11 @@ public partial class TableLook : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> noVBand, this property is only available in Office2010.</para>
+    /// <para> noVBand.</para>
     /// <para>Represents the following attribute in the schema: w:noVBand </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "noVBand")]
     public OnOffValue NoVerticalBand
     {
@@ -48602,7 +48571,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
@@ -49362,7 +49331,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
@@ -49690,7 +49659,7 @@ if( 52 == namespaceId && "conflictDel" == name)
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
@@ -50017,7 +49986,7 @@ if( 52 == namespaceId && "conflictDel" == name)
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
@@ -53668,8 +53637,8 @@ if( 23 == namespaceId && "jc" == name)
     [ChildElementInfo(typeof(TableLayout))]
     [ChildElementInfo(typeof(TableCellMarginDefault))]
     [ChildElementInfo(typeof(TableLook))]
-    [ChildElementInfo(typeof(TableCaption),(FileFormatVersions)2)]
-    [ChildElementInfo(typeof(TableDescription),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(TableCaption),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(TableDescription),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class PreviousTableProperties : OpenXmlCompositeElement
 {
@@ -54056,13 +54025,12 @@ if( 23 == namespaceId && "tblDescription" == name)
         }
     }
     /// <summary>
-    /// <para> TableCaption, this property is only available in Office2010.</para>
+    /// <para> TableCaption.</para>
     /// <para> Represents the following element tag in the schema: w:tblCaption </para>
     /// </summary>
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     public TableCaption TableCaption
     {
         get 
@@ -54075,13 +54043,12 @@ if( 23 == namespaceId && "tblDescription" == name)
         }
     }
     /// <summary>
-    /// <para> TableDescription, this property is only available in Office2010.</para>
+    /// <para> TableDescription.</para>
     /// <para> Represents the following element tag in the schema: w:tblDescription </para>
     /// </summary>
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     public TableDescription TableDescription
     {
         get 
@@ -61785,7 +61752,7 @@ public partial class RubyBase : RubyContentType
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
@@ -62833,7 +62800,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
@@ -63141,7 +63108,7 @@ if( 52 == namespaceId && "conflictDel" == name)
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
@@ -63166,8 +63133,8 @@ if( 52 == namespaceId && "conflictDel" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.SubSuperscript))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
     [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(BidirectionalOverride),(FileFormatVersions)2)]
-    [ChildElementInfo(typeof(BidirectionalEmbedding),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(BidirectionalOverride),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BidirectionalEmbedding),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(SubDocumentReference))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class SdtContentRun : OpenXmlCompositeElement
@@ -63549,7 +63516,7 @@ if( 23 == namespaceId && "subDoc" == name)
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
@@ -63919,7 +63886,7 @@ if( 21 == namespaceId && "r" == name)
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
@@ -64195,7 +64162,7 @@ if( 52 == namespaceId && "conflictDel" == name)
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
@@ -66162,8 +66129,8 @@ if( 23 == namespaceId && "id" == name)
     [ChildElementInfo(typeof(TableLayout))]
     [ChildElementInfo(typeof(TableCellMarginDefault))]
     [ChildElementInfo(typeof(TableLook))]
-    [ChildElementInfo(typeof(TableCaption),(FileFormatVersions)2)]
-    [ChildElementInfo(typeof(TableDescription),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(TableCaption),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(TableDescription),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(TablePropertiesChange))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class TableProperties : OpenXmlCompositeElement
@@ -66554,13 +66521,12 @@ if( 23 == namespaceId && "tblPrChange" == name)
         }
     }
     /// <summary>
-    /// <para> TableCaption, this property is only available in Office2010.</para>
+    /// <para> TableCaption.</para>
     /// <para> Represents the following element tag in the schema: w:tblCaption </para>
     /// </summary>
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     public TableCaption TableCaption
     {
         get 
@@ -66573,13 +66539,12 @@ if( 23 == namespaceId && "tblPrChange" == name)
         }
     }
     /// <summary>
-    /// <para> TableDescription, this property is only available in Office2010.</para>
+    /// <para> TableDescription.</para>
     /// <para> Represents the following element tag in the schema: w:tblDescription </para>
     /// </summary>
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     public TableDescription TableDescription
     {
         get 
@@ -66937,12 +66902,11 @@ public partial class NumberingFormat : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> format, this property is only available in Office2010.</para>
+    /// <para> format.</para>
     /// <para>Represents the following attribute in the schema: w:format </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "format")]
     public StringValue Format
     {
@@ -83760,7 +83724,7 @@ public partial class Endnote : FootnoteEndnoteType
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
@@ -86431,7 +86395,7 @@ public partial class Body : BodyType
     [ChildElementInfo(typeof(DeletedRun))]
     [ChildElementInfo(typeof(MoveFromRun))]
     [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ContentPart),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(SectionProperties))]
@@ -91169,12 +91133,11 @@ public partial class WriteProtection : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> algorithmName, this property is only available in Office2010.</para>
+    /// <para> algorithmName.</para>
     /// <para>Represents the following attribute in the schema: w:algorithmName </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "algorithmName")]
     public StringValue AlgorithmName
     {
@@ -91183,12 +91146,11 @@ public partial class WriteProtection : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> hashValue, this property is only available in Office2010.</para>
+    /// <para> hashValue.</para>
     /// <para>Represents the following attribute in the schema: w:hashValue </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "hashValue")]
     public Base64BinaryValue HashValue
     {
@@ -91197,12 +91159,11 @@ public partial class WriteProtection : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> saltValue, this property is only available in Office2010.</para>
+    /// <para> saltValue.</para>
     /// <para>Represents the following attribute in the schema: w:saltValue </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "saltValue")]
     public Base64BinaryValue SaltValue
     {
@@ -91211,12 +91172,11 @@ public partial class WriteProtection : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> spinCount, this property is only available in Office2010.</para>
+    /// <para> spinCount.</para>
     /// <para>Represents the following attribute in the schema: w:spinCount </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "spinCount")]
     public Int32Value SpinCount
     {
@@ -91945,12 +91905,11 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> allStyles, this property is only available in Office2010.</para>
+    /// <para> allStyles.</para>
     /// <para>Represents the following attribute in the schema: w:allStyles </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "allStyles")]
     public OnOffValue AllStyles
     {
@@ -91959,12 +91918,11 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> customStyles, this property is only available in Office2010.</para>
+    /// <para> customStyles.</para>
     /// <para>Represents the following attribute in the schema: w:customStyles </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "customStyles")]
     public OnOffValue CustomStyles
     {
@@ -91973,12 +91931,11 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> latentStyles, this property is only available in Office2010.</para>
+    /// <para> latentStyles.</para>
     /// <para>Represents the following attribute in the schema: w:latentStyles </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "latentStyles")]
     public OnOffValue LatentStyles
     {
@@ -91987,12 +91944,11 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> stylesInUse, this property is only available in Office2010.</para>
+    /// <para> stylesInUse.</para>
     /// <para>Represents the following attribute in the schema: w:stylesInUse </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "stylesInUse")]
     public OnOffValue StylesInUse
     {
@@ -92001,12 +91957,11 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> headingStyles, this property is only available in Office2010.</para>
+    /// <para> headingStyles.</para>
     /// <para>Represents the following attribute in the schema: w:headingStyles </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "headingStyles")]
     public OnOffValue HeadingStyles
     {
@@ -92015,12 +91970,11 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> numberingStyles, this property is only available in Office2010.</para>
+    /// <para> numberingStyles.</para>
     /// <para>Represents the following attribute in the schema: w:numberingStyles </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "numberingStyles")]
     public OnOffValue NumberingStyles
     {
@@ -92029,12 +91983,11 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> tableStyles, this property is only available in Office2010.</para>
+    /// <para> tableStyles.</para>
     /// <para>Represents the following attribute in the schema: w:tableStyles </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "tableStyles")]
     public OnOffValue TableStyles
     {
@@ -92043,12 +91996,11 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> directFormattingOnRuns, this property is only available in Office2010.</para>
+    /// <para> directFormattingOnRuns.</para>
     /// <para>Represents the following attribute in the schema: w:directFormattingOnRuns </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "directFormattingOnRuns")]
     public OnOffValue DirectFormattingOnRuns
     {
@@ -92057,12 +92009,11 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> directFormattingOnParagraphs, this property is only available in Office2010.</para>
+    /// <para> directFormattingOnParagraphs.</para>
     /// <para>Represents the following attribute in the schema: w:directFormattingOnParagraphs </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "directFormattingOnParagraphs")]
     public OnOffValue DirectFormattingOnParagraphs
     {
@@ -92071,12 +92022,11 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> directFormattingOnNumbering, this property is only available in Office2010.</para>
+    /// <para> directFormattingOnNumbering.</para>
     /// <para>Represents the following attribute in the schema: w:directFormattingOnNumbering </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "directFormattingOnNumbering")]
     public OnOffValue DirectFormattingOnNumbering
     {
@@ -92085,12 +92035,11 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> directFormattingOnTables, this property is only available in Office2010.</para>
+    /// <para> directFormattingOnTables.</para>
     /// <para>Represents the following attribute in the schema: w:directFormattingOnTables </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "directFormattingOnTables")]
     public OnOffValue DirectFormattingOnTables
     {
@@ -92099,12 +92048,11 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> clearFormatting, this property is only available in Office2010.</para>
+    /// <para> clearFormatting.</para>
     /// <para>Represents the following attribute in the schema: w:clearFormatting </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "clearFormatting")]
     public OnOffValue ClearFormatting
     {
@@ -92113,12 +92061,11 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> top3HeadingStyles, this property is only available in Office2010.</para>
+    /// <para> top3HeadingStyles.</para>
     /// <para>Represents the following attribute in the schema: w:top3HeadingStyles </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "top3HeadingStyles")]
     public OnOffValue Top3HeadingStyles
     {
@@ -92127,12 +92074,11 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> visibleStyles, this property is only available in Office2010.</para>
+    /// <para> visibleStyles.</para>
     /// <para>Represents the following attribute in the schema: w:visibleStyles </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "visibleStyles")]
     public OnOffValue VisibleStyles
     {
@@ -92141,12 +92087,11 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> alternateStyleNames, this property is only available in Office2010.</para>
+    /// <para> alternateStyleNames.</para>
     /// <para>Represents the following attribute in the schema: w:alternateStyleNames </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "alternateStyleNames")]
     public OnOffValue AlternateStyleNames
     {
@@ -93393,12 +93338,11 @@ public partial class DocumentProtection : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> algorithmName, this property is only available in Office2010.</para>
+    /// <para> algorithmName.</para>
     /// <para>Represents the following attribute in the schema: w:algorithmName </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "algorithmName")]
     public StringValue AlgorithmName
     {
@@ -93407,12 +93351,11 @@ public partial class DocumentProtection : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> hashValue, this property is only available in Office2010.</para>
+    /// <para> hashValue.</para>
     /// <para>Represents the following attribute in the schema: w:hashValue </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "hashValue")]
     public Base64BinaryValue HashValue
     {
@@ -93421,12 +93364,11 @@ public partial class DocumentProtection : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> saltValue, this property is only available in Office2010.</para>
+    /// <para> saltValue.</para>
     /// <para>Represents the following attribute in the schema: w:saltValue </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "saltValue")]
     public Base64BinaryValue SaltValue
     {
@@ -93435,12 +93377,11 @@ public partial class DocumentProtection : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> spinCount, this property is only available in Office2010.</para>
+    /// <para> spinCount.</para>
     /// <para>Represents the following attribute in the schema: w:spinCount </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(23, "spinCount")]
     public Int32Value SpinCount
     {
@@ -102638,10 +102579,8 @@ Hijri,
 ///<summary>
 ///umalqura.
 ///<para>When the item is serialized out as xml, its value is "umalqura".</para>
-///<para>This item is only available in Office2010.</para>
 ///</summary>
 [EnumString("umalqura")]
-[OfficeAvailability(FileFormatVersions.Office2010)]
 Umalqura,
 ///<summary>
 ///Hebrew.
@@ -102694,34 +102633,26 @@ GregorianTransliteratedFrench,
 ///<summary>
 ///gregorianUs.
 ///<para>When the item is serialized out as xml, its value is "gregorianUs".</para>
-///<para>This item is only available in Office2010.</para>
 ///</summary>
 [EnumString("gregorianUs")]
-[OfficeAvailability(FileFormatVersions.Office2010)]
 GregorianUs,
 ///<summary>
 ///gregorianMeFrench.
 ///<para>When the item is serialized out as xml, its value is "gregorianMeFrench".</para>
-///<para>This item is only available in Office2010.</para>
 ///</summary>
 [EnumString("gregorianMeFrench")]
-[OfficeAvailability(FileFormatVersions.Office2010)]
 GregorianMeFrench,
 ///<summary>
 ///gregorianArabic.
 ///<para>When the item is serialized out as xml, its value is "gregorianArabic".</para>
-///<para>This item is only available in Office2010.</para>
 ///</summary>
 [EnumString("gregorianArabic")]
-[OfficeAvailability(FileFormatVersions.Office2010)]
 GregorianArabic,
 ///<summary>
 ///none.
 ///<para>When the item is serialized out as xml, its value is "none".</para>
-///<para>This item is only available in Office2010.</para>
 ///</summary>
 [EnumString("none")]
-[OfficeAvailability(FileFormatVersions.Office2010)]
 None,
  
 }
@@ -103094,26 +103025,20 @@ ThaiCounting,
 ///<summary>
 ///bahtText.
 ///<para>When the item is serialized out as xml, its value is "bahtText".</para>
-///<para>This item is only available in Office2010.</para>
 ///</summary>
 [EnumString("bahtText")]
-[OfficeAvailability(FileFormatVersions.Office2010)]
 BahtText,
 ///<summary>
 ///dollarText.
 ///<para>When the item is serialized out as xml, its value is "dollarText".</para>
-///<para>This item is only available in Office2010.</para>
 ///</summary>
 [EnumString("dollarText")]
-[OfficeAvailability(FileFormatVersions.Office2010)]
 DollarText,
 ///<summary>
 ///custom.
 ///<para>When the item is serialized out as xml, its value is "custom".</para>
-///<para>This item is only available in Office2010.</para>
 ///</summary>
 [EnumString("custom")]
-[OfficeAvailability(FileFormatVersions.Office2010)]
 Custom,
  
 }
@@ -103132,10 +103057,8 @@ LefToRightTopToBottom,
 ///<summary>
 ///tb.
 ///<para>When the item is serialized out as xml, its value is "tb".</para>
-///<para>This item is only available in Office2010.</para>
 ///</summary>
 [EnumString("tb")]
-[OfficeAvailability(FileFormatVersions.Office2010)]
 LeftToRightTopToBottom2010,
 ///<summary>
 ///Top to Bottom, Right to Left.
@@ -103146,10 +103069,8 @@ TopToBottomRightToLeft,
 ///<summary>
 ///rl.
 ///<para>When the item is serialized out as xml, its value is "rl".</para>
-///<para>This item is only available in Office2010.</para>
 ///</summary>
 [EnumString("rl")]
-[OfficeAvailability(FileFormatVersions.Office2010)]
 TopToBottomRightToLeft2010,
 ///<summary>
 ///Bottom to Top, Left to Right.
@@ -103160,10 +103081,8 @@ BottomToTopLeftToRight,
 ///<summary>
 ///lr.
 ///<para>When the item is serialized out as xml, its value is "lr".</para>
-///<para>This item is only available in Office2010.</para>
 ///</summary>
 [EnumString("lr")]
-[OfficeAvailability(FileFormatVersions.Office2010)]
 BottomToTopLeftToRight2010,
 ///<summary>
 ///Left to Right, Top to Bottom Rotated.
@@ -103174,10 +103093,8 @@ LefttoRightTopToBottomRotated,
 ///<summary>
 ///tbV.
 ///<para>When the item is serialized out as xml, its value is "tbV".</para>
-///<para>This item is only available in Office2010.</para>
 ///</summary>
 [EnumString("tbV")]
-[OfficeAvailability(FileFormatVersions.Office2010)]
 LeftToRightTopToBottomRotated2010,
 ///<summary>
 ///Top to Bottom, Right to Left Rotated.
@@ -103188,10 +103105,8 @@ TopToBottomRightToLeftRotated,
 ///<summary>
 ///rlV.
 ///<para>When the item is serialized out as xml, its value is "rlV".</para>
-///<para>This item is only available in Office2010.</para>
 ///</summary>
 [EnumString("rlV")]
-[OfficeAvailability(FileFormatVersions.Office2010)]
 TopToBottomRightToLeftRotated2010,
 ///<summary>
 ///Top to Bottom, Left to Right Rotated.
@@ -103202,10 +103117,8 @@ TopToBottomLeftToRightRotated,
 ///<summary>
 ///lrV.
 ///<para>When the item is serialized out as xml, its value is "lrV".</para>
-///<para>This item is only available in Office2010.</para>
 ///</summary>
 [EnumString("lrV")]
-[OfficeAvailability(FileFormatVersions.Office2010)]
 TopToBottomLeftToRightRotated2010,
  
 }
@@ -103224,10 +103137,8 @@ TypeAny,
 ///<summary>
 ///custom.
 ///<para>When the item is serialized out as xml, its value is "custom".</para>
-///<para>This item is only available in Office2010.</para>
 ///</summary>
 [EnumString("custom")]
-[OfficeAvailability(FileFormatVersions.Office2010)]
 Custom,
  
 }
@@ -103246,10 +103157,8 @@ Hash,
 ///<summary>
 ///custom.
 ///<para>When the item is serialized out as xml, its value is "custom".</para>
-///<para>This item is only available in Office2010.</para>
 ///</summary>
 [EnumString("custom")]
-[OfficeAvailability(FileFormatVersions.Office2010)]
 Custom,
  
 }
@@ -103274,10 +103183,8 @@ RsaFull,
 ///<summary>
 ///custom.
 ///<para>When the item is serialized out as xml, its value is "custom".</para>
-///<para>This item is only available in Office2010.</para>
 ///</summary>
 [EnumString("custom")]
-[OfficeAvailability(FileFormatVersions.Office2010)]
 Custom,
  
 }
@@ -103296,10 +103203,8 @@ Left,
 ///<summary>
 ///start.
 ///<para>When the item is serialized out as xml, its value is "start".</para>
-///<para>This item is only available in Office2010.</para>
 ///</summary>
 [EnumString("start")]
-[OfficeAvailability(FileFormatVersions.Office2010)]
 Start,
 ///<summary>
 ///Align Center.
@@ -103316,10 +103221,8 @@ Right,
 ///<summary>
 ///end.
 ///<para>When the item is serialized out as xml, its value is "end".</para>
-///<para>This item is only available in Office2010.</para>
 ///</summary>
 [EnumString("end")]
-[OfficeAvailability(FileFormatVersions.Office2010)]
 End,
 ///<summary>
 ///Justified.

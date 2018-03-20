@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns></returns>
         internal EventHandler<OpenXmlPackageValidationEventArgs> GetEventHandler()
         {
-            return this.valEventHandler;
+            return valEventHandler;
         }
 
         /// <summary>
@@ -29,12 +29,12 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             add
             {
-                this.valEventHandler = (EventHandler<OpenXmlPackageValidationEventArgs>)Delegate.Combine(this.valEventHandler, value);
+                valEventHandler = (EventHandler<OpenXmlPackageValidationEventArgs>)Delegate.Combine(valEventHandler, value);
             }
 
             remove
             {
-                this.valEventHandler = (EventHandler<OpenXmlPackageValidationEventArgs>)Delegate.Remove(this.valEventHandler, value);
+                valEventHandler = (EventHandler<OpenXmlPackageValidationEventArgs>)Delegate.Remove(valEventHandler, value);
             }
         }
 

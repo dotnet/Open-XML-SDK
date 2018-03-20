@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return this.GetItem(i);
+                return GetItem(i);
             }
         }
 

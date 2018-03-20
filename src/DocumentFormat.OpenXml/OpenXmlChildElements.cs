@@ -15,14 +15,14 @@ namespace DocumentFormat.OpenXml
 
         public OpenXmlChildElements(OpenXmlElement container)
         {
-            this._container = container;
+            _container = container;
         }
 
         public override IEnumerator<OpenXmlElement> GetEnumerator()
         {
-            if (this._container.HasChildren && this._container.FirstChild != null)
+            if (_container.HasChildren && _container.FirstChild != null)
             {
-                for ( OpenXmlElement element = this._container.FirstChild;
+                for ( OpenXmlElement element = _container.FirstChild;
                       element != null;
                       element = element.NextSibling() )
                 {
@@ -37,9 +37,9 @@ namespace DocumentFormat.OpenXml
 
         public override OpenXmlElement GetItem(int index)
         {
-            if (this._container.HasChildren)
+            if (_container.HasChildren)
             {
-                for (OpenXmlElement element = this._container.FirstChild;
+                for (OpenXmlElement element = _container.FirstChild;
                           element != null;
                           element = element.NextSibling())
                 {
@@ -59,9 +59,9 @@ namespace DocumentFormat.OpenXml
             get
             {
                 int num = 0;
-                if (this._container.HasChildren)
+                if (_container.HasChildren)
                 {
-                    for (OpenXmlElement element = this._container.FirstChild;
+                    for (OpenXmlElement element = _container.FirstChild;
                               element != null;
                               element = element.NextSibling())
                     {

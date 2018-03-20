@@ -156,14 +156,8 @@
   <data name="ElementIsNotChild" xml:space="preserve">
     <value>The specified oldChild is not a child of this element.</value>
   </data>
-  <data name="ElementIsNotInOffice2007" xml:space="preserve">
-    <value>The validator is set to validate content based on Microsoft Office 2007 rules. The passed in element is not defined in Microsoft Office 2007.</value>
-  </data>
-  <data name="ElementIsNotInOffice2010" xml:space="preserve">
-    <value>The validator is set to validate content based on Microsoft Office 2010 rules. The passed in element is not defined in Microsoft Office 2010.</value>
-  </data>
-  <data name="ElementIsNotInOffice2013" xml:space="preserve">
-    <value>The validator is set to validate content based on Microsoft Office 2013 rules. The passed in element is not defined in Microsoft Office 2013.</value>
+  <data name="ElementIsNotInOfficeVersion" xml:space="preserve">
+    <value>The validator is set to validate content based on Microsoft Office {0} rules. The passed in element is not defined in Microsoft Office {0}.</value>
   </data>
   <data name="ElementIsPartOfTree" xml:space="preserve">
     <value>Cannot insert the OpenXmlElement "newChild" because it is part of a tree. </value>
@@ -291,14 +285,8 @@
   <data name="PartIsNotAllowed" xml:space="preserve">
     <value>The specified part is not allowed with this parent.</value>
   </data>
-  <data name="PartIsNotInOffice2007" xml:space="preserve">
-    <value>The validator is set to validate content based on Microsoft Office 2007 rules. The passed in part is not defined in Microsoft Office 2007.</value>
-  </data>
-  <data name="PartIsNotInOffice2010" xml:space="preserve">
-    <value>The validator is set to validate content based on Microsoft Office 2010 rules. The passed in part is not defined in Microsoft Office 2010.</value>
-  </data>
-  <data name="PartIsNotInOffice2013" xml:space="preserve">
-    <value>The validator is set to validate content based on Microsoft Office 2013 rules. The passed in part is not defined in Microsoft Office 2013.</value>
+  <data name="PartIsNotInOfficeVersion" xml:space="preserve">
+    <value>The validator is set to validate content based on Microsoft Office {0} rules. The passed in part is not defined in Microsoft Office {0}.</value>
   </data>
   <data name="PartNotInSamePackage" xml:space="preserve">
     <value>A relationship can only be created between two parts in a package.</value>
@@ -392,9 +380,6 @@
   </data>
   <data name="DuplicatedPrefix" xml:space="preserve">
     <value>The prefix "{0}" is already defined in current node.</value>
-  </data>
-  <data name="PartNotInVersion" xml:space="preserve">
-    <value>The OpenXmlPart is not a valid part in the specified FileFormat version.</value>
   </data>
   <data name="DocumentFileFormatVersionMismatch" xml:space="preserve">
     <value>You should not validate document preprocessed based on FileFormatVersions.{0} against FileFormatVersions.{1} constraints. The preprocessing file format version is set in OpenSettings. Also check the file format version setting in the OpenXmlValidator.</value>

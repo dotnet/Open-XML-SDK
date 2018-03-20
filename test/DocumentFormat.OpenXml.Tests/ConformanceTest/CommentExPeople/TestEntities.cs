@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using LogUtil;
+using System.IO;
 using System.Linq;
 
 using W15 = DocumentFormat.OpenXml.Office2013.Word;
@@ -21,38 +22,34 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
         /// <summary>
         /// Reading of People part element.
         /// </summary>
-        /// <param name="filePath">Target file path.</param>
-        /// <param name="log">Logger.</param>
-        public void ReadElements(string filePath, VerifiableLog log)
+        public void ReadElements(Stream stream, VerifiableLog log)
         {
-            using (WordprocessingDocument package = WordprocessingDocument.Open(filePath, true))
+            using (WordprocessingDocument package = WordprocessingDocument.Open(stream, true))
             {
                 WordprocessingPeoplePart peoplePart = package.MainDocumentPart.WordprocessingPeoplePart;
                 W15.Person person = peoplePart.People.Descendants<W15.Person>().First();
                 W15.PresenceInfo presenceInfo = person.Descendants<W15.PresenceInfo>().First();
 
-                log.VerifyValue(person.Author.Value, this.verifyAuthor, "Person Author attribute is matched. Author={0}", person.Author);
-                log.VerifyValue(presenceInfo.ProviderId.Value, this.verifyProviderId, "PresenceInfo ProviderId attribute is matched. ProviderId={0}", presenceInfo.ProviderId);
-                log.VerifyValue(presenceInfo.UserId.Value, this.verifyUserId, "PresenceInfo UserId attribute is matched. UserId={0}", presenceInfo.UserId);
+                log.VerifyValue(person.Author.Value, verifyAuthor, "Person Author attribute is matched. Author={0}", person.Author);
+                log.VerifyValue(presenceInfo.ProviderId.Value, verifyProviderId, "PresenceInfo ProviderId attribute is matched. ProviderId={0}", presenceInfo.ProviderId);
+                log.VerifyValue(presenceInfo.UserId.Value, verifyUserId, "PresenceInfo UserId attribute is matched. UserId={0}", presenceInfo.UserId);
             }
         }
 
         /// <summary>
         /// Editing of People part element.
         /// </summary>
-        /// <param name="filePath">Target file path.</param>
-        /// <param name="log">Logger.</param>
-        public void EditElements(string filePath, VerifiableLog log)
+        public void EditElements(Stream stream, VerifiableLog log)
         {
-            using (WordprocessingDocument package = WordprocessingDocument.Open(filePath, true))
+            using (WordprocessingDocument package = WordprocessingDocument.Open(stream, true))
             {
                 WordprocessingPeoplePart peoplePart = package.MainDocumentPart.WordprocessingPeoplePart;
                 W15.Person person = peoplePart.People.Descendants<W15.Person>().First();
                 W15.PresenceInfo presenceInfo = person.Descendants<W15.PresenceInfo>().First();
 
-                person.Author.Value = this.editAuthor;
-                presenceInfo.ProviderId.Value = this.editProviderId;
-                presenceInfo.UserId.Value = this.editUserId;
+                person.Author.Value = editAuthor;
+                presenceInfo.ProviderId.Value = editProviderId;
+                presenceInfo.UserId.Value = editUserId;
 
                 log.Pass("PresenceInfo in PeoplePart is updated");
             }
@@ -61,19 +58,17 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
         /// <summary>
         /// Verifying of People part element.
         /// </summary>
-        /// <param name="filePath">Target file path.</param>
-        /// <param name="log">Logger.</param>
-        public void VerifyElements(string filePath, VerifiableLog log)
+        public void VerifyElements(Stream stream, VerifiableLog log)
         {
-            using (WordprocessingDocument package = WordprocessingDocument.Open(filePath, false))
+            using (WordprocessingDocument package = WordprocessingDocument.Open(stream, false))
             {
                 WordprocessingPeoplePart peoplePart = package.MainDocumentPart.WordprocessingPeoplePart;
                 W15.Person person = peoplePart.People.Descendants<W15.Person>().First();
                 W15.PresenceInfo presenceInfo = peoplePart.RootElement.Descendants<W15.PresenceInfo>().First();
 
-                log.VerifyValue(person.Author.Value, this.editAuthor, "Person Author attribute is matched. Author={0}", person.Author);
-                log.VerifyValue(presenceInfo.ProviderId.Value, this.editProviderId, "PresenceInfo ProviderId attribute is matched. ProviderId={0}", presenceInfo.ProviderId);
-                log.VerifyValue(presenceInfo.UserId.Value, this.editUserId, "PresenceInfo UserId attribute is matched. UserId={0}", presenceInfo.UserId);
+                log.VerifyValue(person.Author.Value, editAuthor, "Person Author attribute is matched. Author={0}", person.Author);
+                log.VerifyValue(presenceInfo.ProviderId.Value, editProviderId, "PresenceInfo ProviderId attribute is matched. ProviderId={0}", presenceInfo.ProviderId);
+                log.VerifyValue(presenceInfo.UserId.Value, editUserId, "PresenceInfo UserId attribute is matched. UserId={0}", presenceInfo.UserId);
             }
         }
     }

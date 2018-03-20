@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
 using LogUtil;
 using System;
+using System.IO;
 using System.Linq;
 
 using X15 = DocumentFormat.OpenXml.Office2013.Excel;
@@ -37,22 +38,22 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
 
         private bool X15ConnectionAutoDelete { get; set; }
 
-        public ConnectionTestEntities(string filePath)
+        public ConnectionTestEntities(Stream stream)
         {
-            using (SpreadsheetDocument package = SpreadsheetDocument.Open(filePath, false))
+            using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, false))
             {
                 ConnectionsPart connectionsPart = package.WorkbookPart.ConnectionsPart;
                 foreach (Connection connection in connectionsPart.Connections)
                 {
                     if (connection.Id == 1)
                     {
-                        this.ConnectionId = connection.Id;
-                        this.ConnectionOdcFile = connection.ConnectionFile;
-                        this.ConnectionName = connection.Name;
-                        this.ConnectionType = connection.Type;
-                        this.ConnectionRefreshedVersion = connection.RefreshedVersion;
-                        this.ConnectionMinRefreshedVersion = connection.MinRefreshableVersion;
-                        this.ConnectionBackground = connection.Background;
+                        ConnectionId = connection.Id;
+                        ConnectionOdcFile = connection.ConnectionFile;
+                        ConnectionName = connection.Name;
+                        ConnectionType = connection.Type;
+                        ConnectionRefreshedVersion = connection.RefreshedVersion;
+                        ConnectionMinRefreshedVersion = connection.MinRefreshableVersion;
+                        ConnectionBackground = connection.Background;
                     }
                 }
 
@@ -60,22 +61,22 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
                 if (x15connection == null)
                     throw new Exception("Unable to obtain the X15.Connection.");
 
-                this.X15ConnectionId = x15connection.Id;
-                this.X15ConnectionAutoDelete = x15connection.AutoDelete;
+                X15ConnectionId = x15connection.Id;
+                X15ConnectionAutoDelete = x15connection.AutoDelete;
 
                 ConnectionExtension connectionExtension = new ConnectionExtension(x15connection.Parent.OuterXml);
-                this.ConnectionExtUri = connectionExtension.Uri;
+                ConnectionExtUri = connectionExtension.Uri;
 
                 X15.OleDbPrpoperties oleDbPrpoperties = x15connection.OleDbPrpoperties;
-                this.ConnectionString = oleDbPrpoperties.Connection;
+                ConnectionString = oleDbPrpoperties.Connection;
                 X15.DbCommand dbCommand = oleDbPrpoperties.DbCommand;
-                this.DBCommandText = dbCommand.Text;
+                DBCommandText = dbCommand.Text;
             }
         }
 
-        public void VerifyConnection(string filePath, VerifiableLog log)
+        public void VerifyConnection(Stream stream, VerifiableLog log)
         {
-            using (SpreadsheetDocument package = SpreadsheetDocument.Open(filePath, false))
+            using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, false))
             {
                 ConnectionsPart connectionsPart = package.WorkbookPart.ConnectionsPart;
                 X15.Connection connection = connectionsPart.Connections.Descendants<X15.Connection>().Where(e => e.Descendants<X15.OleDbPrpoperties>().Count() > 0).First();
@@ -94,41 +95,41 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
             }
         }
 
-        public void EditElement(string filePath, VerifiableLog log)
+        public void EditElement(Stream stream, VerifiableLog log)
         {
-            using (SpreadsheetDocument package = SpreadsheetDocument.Open(filePath, true))
+            using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, true))
             {
                 ConnectionsPart connectionsPart = package.WorkbookPart.ConnectionsPart;
                 X15.Connection connection = connectionsPart.Connections.Descendants<X15.Connection>().First();
 
                 X15.OleDbPrpoperties oleDbPrpoperties = connection.OleDbPrpoperties;
-                oleDbPrpoperties.Connection = this.ConnectionString;
+                oleDbPrpoperties.Connection = ConnectionString;
                 log.Pass("Edited the OleDbPrpoperties connection");
 
                 X15.DbCommand dbCommand = oleDbPrpoperties.DbCommand;
-                dbCommand.Text = this.DBCommandText;
+                dbCommand.Text = DBCommandText;
                 log.Pass("Edited the DbCommand.");
             }
         }
 
-        public void VerifyElement(string filePath, VerifiableLog log)
+        public void VerifyElement(Stream stream, VerifiableLog log)
         {
-            using (SpreadsheetDocument package = SpreadsheetDocument.Open(filePath, false))
+            using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, false))
             {
                 ConnectionsPart connectionsPart = package.WorkbookPart.ConnectionsPart;
                 X15.Connection connection = connectionsPart.Connections.Descendants<X15.Connection>().First();
 
                 X15.OleDbPrpoperties oleDbPrpoperties = connection.OleDbPrpoperties;
-                log.Verify(oleDbPrpoperties.Connection == this.ConnectionString, "OleDbPrpoperties Connection value is not change.");
+                log.Verify(oleDbPrpoperties.Connection == ConnectionString, "OleDbPrpoperties Connection value is not change.");
 
                 X15.DbCommand dbCommand = oleDbPrpoperties.DbCommand;
-                log.Verify(this.DBCommandText == dbCommand.Text, "DBCommandText value is not change.");
+                log.Verify(DBCommandText == dbCommand.Text, "DBCommandText value is not change.");
             }
         }
 
-        public void DeleteElement(string filePath, VerifiableLog log)
+        public void DeleteElement(Stream stream, VerifiableLog log)
         {
-            using (SpreadsheetDocument package = SpreadsheetDocument.Open(filePath, true))
+            using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, true))
             {
                 ConnectionsPart connectionsPart = package.WorkbookPart.ConnectionsPart;
                 X15.Connection connection = connectionsPart.Connections.Descendants<X15.Connection>().First();
@@ -146,9 +147,9 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
             }
         }
 
-        public void VerifyDeletedElement(string filePath, VerifiableLog log)
+        public void VerifyDeletedElement(Stream stream, VerifiableLog log)
         {
-            using (SpreadsheetDocument package = SpreadsheetDocument.Open(filePath, false))
+            using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, false))
             {
                 bool hasConnection = false;
                 foreach (Connection connection in package.WorkbookPart.ConnectionsPart.Connections)
@@ -160,19 +161,19 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
             }
         }
 
-        public void AddElement(string filePath, VerifiableLog log)
+        public void AddElement(Stream stream, VerifiableLog log)
         {
-            using (SpreadsheetDocument package = SpreadsheetDocument.Open(filePath, true))
+            using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, true))
             {
                 ConnectionsPart connectionsPart = package.WorkbookPart.ConnectionsPart;
                 int connectionNum = connectionsPart.Connections.Descendants<X15.Connection>().Count();
 
-                X15.Connection x15connection = new X15.Connection() { Id = this.X15ConnectionId, AutoDelete = this.X15ConnectionAutoDelete };
-                x15connection.OleDbPrpoperties = new X15.OleDbPrpoperties() { Connection = this.ConnectionString };
-                x15connection.OleDbPrpoperties.DbCommand = new X15.DbCommand() { Text = this.DBCommandText };
+                X15.Connection x15connection = new X15.Connection() { Id = X15ConnectionId, AutoDelete = X15ConnectionAutoDelete };
+                x15connection.OleDbPrpoperties = new X15.OleDbPrpoperties() { Connection = ConnectionString };
+                x15connection.OleDbPrpoperties.DbCommand = new X15.DbCommand() { Text = DBCommandText };
 
-                ConnectionExtension connectionExtension = new ConnectionExtension() { Uri = this.ConnectionExtUri };
-                Connection connection = new Connection() { Id = this.ConnectionId, ConnectionFile = this.ConnectionOdcFile, Name = this.ConnectionName, Type = this.ConnectionType, RefreshedVersion = this.ConnectionRefreshedVersion, MinRefreshableVersion = this.ConnectionMinRefreshedVersion, Background = this.ConnectionBackground };
+                ConnectionExtension connectionExtension = new ConnectionExtension() { Uri = ConnectionExtUri };
+                Connection connection = new Connection() { Id = ConnectionId, ConnectionFile = ConnectionOdcFile, Name = ConnectionName, Type = ConnectionType, RefreshedVersion = ConnectionRefreshedVersion, MinRefreshableVersion = ConnectionMinRefreshedVersion, Background = ConnectionBackground };
                 ConnectionExtensionList connectionExtensionList = new ConnectionExtensionList();
 
                 connectionExtension.AppendChild<X15.Connection>(x15connection);
@@ -189,9 +190,9 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
             }
         }
 
-        public void VerifyAddedElement(string filePath, VerifiableLog log)
+        public void VerifyAddedElement(Stream stream, VerifiableLog log)
         {
-            using (SpreadsheetDocument package = SpreadsheetDocument.Open(filePath, true))
+            using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, true))
             {
                 ConnectionsPart connectionsPart = package.WorkbookPart.ConnectionsPart;
 
@@ -204,10 +205,10 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
                 }
 
                 log.Verify(connection.OleDbPrpoperties != null, "Missing X15.OleDbPrpoperties element.");
-                log.Verify(connection.OleDbPrpoperties.Connection == this.ConnectionString, "OleDbPrpoperties Connection value is not change.");
+                log.Verify(connection.OleDbPrpoperties.Connection == ConnectionString, "OleDbPrpoperties Connection value is not change.");
 
                 log.Verify(connection.OleDbPrpoperties != null, "Missing X15.DbCommand element.");
-                log.Verify(connection.OleDbPrpoperties.DbCommand.Text == this.DBCommandText, "OleDbPrpoperties Connection value is not change.");
+                log.Verify(connection.OleDbPrpoperties.DbCommand.Text == DBCommandText, "OleDbPrpoperties Connection value is not change.");
             }
         }
     }

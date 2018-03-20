@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Packaging
         private Wordprocessing.Styles _rootEle;
 
         /// <inheritdoc/>
-        internal override OpenXmlPartRootElement _rootElement
+        private protected override OpenXmlPartRootElement InternalRootElement
         {
             get
             {
@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get
             {
-                return this.Styles;
+                return Styles;
             }
         }
 

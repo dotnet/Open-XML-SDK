@@ -12,13 +12,6 @@ namespace DocumentFormat.OpenXml.Validation
     [DebuggerDisplay("Description={Description}")]
     public class ValidationErrorInfo
     {
-        /// <summary>
-        /// Initializes a new instance of the ValidationErrorInfo.
-        /// </summary>
-        public ValidationErrorInfo()
-        {
-        }
-
 #if DEBUG
         /// <summary>
         /// Gets the XML qualified name for the attribute.
@@ -43,8 +36,8 @@ namespace DocumentFormat.OpenXml.Validation
 #pragma warning restore CA1822 // Mark members as static
         {
 #if DEBUG
-            this.AttributeQualifiedName = attributeQualifiedName;
-            this.ValidationErrorCategory = validationErrorCategory;
+            AttributeQualifiedName = attributeQualifiedName;
+            ValidationErrorCategory = validationErrorCategory;
 #endif
         }
 
@@ -78,20 +71,20 @@ namespace DocumentFormat.OpenXml.Validation
         {
             get
             {
-                return this._element;
+                return _element;
             }
 
             internal set
             {
-                this._element = value;
-                this.Path = XmlPath.GetXPath(value);
-                if (this.Part == null)
+                _element = value;
+                Path = XmlPath.GetXPath(value);
+                if (Part == null)
                 {
-                    this.Part = this._element.GetPart();
+                    Part = _element.GetPart();
                 }
                 else
                 {
-                    Debug.Assert(this.Part == this._element.GetPart());
+                    Debug.Assert(Part == _element.GetPart());
                 }
             }
         }

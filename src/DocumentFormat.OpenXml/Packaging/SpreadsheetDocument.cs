@@ -6,56 +6,43 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Packaging;
 using System.Reflection;
-using System.Xml.Linq;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
     /// <summary>
     /// Defines SpreadsheetDocument - an OpenXmlPackage represents a Spreadsheet document.
     /// </summary>
-    public class SpreadsheetDocument : OpenXmlPackage
+    public partial class SpreadsheetDocument : OpenXmlPackage
     {
-        private static Dictionary<string, PartConstraintRule> _partConstraint;
-        private static Dictionary<string, PartConstraintRule> _dataPartReferenceConstraint;
+        private static PartConstraintCollection _partConstraints;
 
         /// <summary>
         /// Gets part constraint data.
         /// </summary>
         /// <returns>The constraint data of the part.</returns>
-        internal sealed override IDictionary<string, PartConstraintRule> GetPartConstraint()
+        internal sealed override PartConstraintCollection PartConstraints
         {
-            if (_partConstraint == null)
+            get
             {
-                Dictionary<string, PartConstraintRule> tempData = new Dictionary<string, PartConstraintRule>();
-                tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument", new PartConstraintRule("WorkbookPart", null, true, false, FileFormatVersions.Office2007.AndLater()));
-                tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties", new PartConstraintRule("CoreFilePropertiesPart", CoreFilePropertiesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
-                tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties", new PartConstraintRule("ExtendedFilePropertiesPart", ExtendedFilePropertiesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
-                tempData.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties", new PartConstraintRule("CustomFilePropertiesPart", CustomFilePropertiesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
-                tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail", new PartConstraintRule("ThumbnailPart", null, false, false, FileFormatVersions.Office2007.AndLater()));
-                tempData.Add("http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin", new PartConstraintRule("DigitalSignatureOriginPart", DigitalSignatureOriginPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
-                tempData.Add("http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization", new PartConstraintRule("QuickAccessToolbarCustomizationsPart", QuickAccessToolbarCustomizationsPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
-                tempData.Add("http://schemas.microsoft.com/office/2006/relationships/ui/extensibility", new PartConstraintRule("RibbonExtensibilityPart", RibbonExtensibilityPart.ContentTypeConstant, false, false, FileFormatVersions.Office2007.AndLater()));
-                tempData.Add("http://schemas.microsoft.com/office/2007/relationships/ui/extensibility", new PartConstraintRule("RibbonAndBackstageCustomizationsPart", RibbonAndBackstageCustomizationsPart.ContentTypeConstant, false, false, FileFormatVersions.Office2010.AndLater()));
-                tempData.Add("http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes", new PartConstraintRule("WebExTaskpanesPart", WebExTaskpanesPart.ContentTypeConstant, false, false, FileFormatVersions.Office2013.AndLater()));
+                if (_partConstraints == null)
+                {
+                    _partConstraints = new PartConstraintCollection
+                    {
+                        { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument", PartConstraintRule.Create<WorkbookPart>(true, false) },
+                        { "http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties", PartConstraintRule.Create<CoreFilePropertiesPart>(false, false) },
+                        { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties", PartConstraintRule.Create<ExtendedFilePropertiesPart>(false, false) },
+                        { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties", PartConstraintRule.Create<CustomFilePropertiesPart>(false, false) },
+                        { "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail", PartConstraintRule.Create<ThumbnailPart>(false, false) },
+                        { "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin", PartConstraintRule.Create<DigitalSignatureOriginPart>(false, false) },
+                        { "http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization", PartConstraintRule.Create<QuickAccessToolbarCustomizationsPart>(false, false) },
+                        { "http://schemas.microsoft.com/office/2006/relationships/ui/extensibility", PartConstraintRule.Create<RibbonExtensibilityPart>(false, false) },
+                        { "http://schemas.microsoft.com/office/2007/relationships/ui/extensibility", PartConstraintRule.Create<RibbonAndBackstageCustomizationsPart>(false, false) },
+                        { "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes", PartConstraintRule.Create<WebExTaskpanesPart>(false, false) }
+                    };
+                }
 
-                _partConstraint = tempData;
+                return _partConstraints;
             }
-            return _partConstraint;
-        }
-
-        /// <summary>
-        /// Gets the constraint rule of DataPartReferenceRelationship.
-        /// </summary>
-        /// <returns>The constraint data of the part.</returns>
-        internal sealed override IDictionary<string, PartConstraintRule> GetDataPartReferenceConstraint()
-        {
-            if (_dataPartReferenceConstraint == null)
-            {
-                Dictionary<string, PartConstraintRule> tempData = new Dictionary<string, PartConstraintRule>();
-
-                _dataPartReferenceConstraint = tempData;
-            }
-            return _dataPartReferenceConstraint;
         }
 
         /// <summary>
@@ -118,28 +105,28 @@ namespace DocumentFormat.OpenXml.Packaging
             get
             {
                 ThrowIfObjectDisposed();
-                return this._documentType;
+                return _documentType;
             }
 
             private set
             {
                 ThrowIfObjectDisposed();
-                this._documentType = value;
+                _documentType = value;
             }
         }
 
         private void UpdateDocumentTypeFromContentType()
         {
-            if (this.MainPartContentType == null)
+            if (MainPartContentType == null)
             {
                 throw new InvalidOperationException();
             }
 
             foreach (KeyValuePair<SpreadsheetDocumentType, string> types in MainPartContentTypes)
             {
-                if (types.Value == this.MainPartContentType)
+                if (types.Value == MainPartContentType)
                 {
-                    this.DocumentType = types.Key;
+                    DocumentType = types.Key;
                 }
             }
         }
@@ -427,23 +414,23 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (newType == this.DocumentType)
+            if (newType == DocumentType)
             {
                 // same type, just return
                 return;
             }
 
-            if (this.FileOpenAccess == FileAccess.Read)
+            if (FileOpenAccess == FileAccess.Read)
             {
                 throw new IOException(ExceptionMessages.PackageAccessModeIsReadonly);
             }
 
-            SpreadsheetDocumentType oldType = this.DocumentType;
+            SpreadsheetDocumentType oldType = DocumentType;
 
-            this.DocumentType = newType;
-            this.MainPartContentType = MainPartContentTypes[newType];
+            DocumentType = newType;
+            MainPartContentType = MainPartContentTypes[newType];
 
-            if (this.WorkbookPart == null)
+            if (WorkbookPart == null)
             {
                 return;
             }
@@ -456,8 +443,8 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (e.Message == ExceptionMessages.CannotChangeDocumentType)
                 {
-                    this.DocumentType = oldType;
-                    this.MainPartContentType = MainPartContentTypes[oldType];
+                    DocumentType = oldType;
+                    MainPartContentType = MainPartContentTypes[oldType];
                 }
                 throw;
             }
@@ -470,7 +457,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>An instance of OpenXmlPart.</returns>
         internal sealed override OpenXmlPart CreatePartCore(string relationshipType)
         {
-            this.ThrowIfObjectDisposed();
+            ThrowIfObjectDisposed();
 
             if (relationshipType == null)
             {
@@ -529,7 +516,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(contentType));
             }
 
-            if (typeof(WorkbookPart).GetTypeInfo().IsAssignableFrom(typeof(T).GetTypeInfo()) && contentType != SpreadsheetDocument.MainPartContentTypes[this._documentType])
+            if (typeof(WorkbookPart).GetTypeInfo().IsAssignableFrom(typeof(T).GetTypeInfo()) && contentType != SpreadsheetDocument.MainPartContentTypes[_documentType])
             {
                 throw new OpenXmlPackageException(ExceptionMessages.ErrorContentType);
             }
@@ -544,7 +531,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public WorkbookPart AddWorkbookPart()
         {
             WorkbookPart childPart = new WorkbookPart();
-            this.InitPart(childPart, this.MainPartContentType);
+            InitPart(childPart, MainPartContentType);
             return childPart;
         }
 
@@ -555,7 +542,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public CoreFilePropertiesPart AddCoreFilePropertiesPart()
         {
             CoreFilePropertiesPart childPart = new CoreFilePropertiesPart();
-            this.InitPart(childPart, CoreFilePropertiesPart.ContentTypeConstant);
+            InitPart(childPart, CoreFilePropertiesPart.ContentTypeConstant);
             return childPart;
         }
 
@@ -566,7 +553,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public ExtendedFilePropertiesPart AddExtendedFilePropertiesPart()
         {
             ExtendedFilePropertiesPart childPart = new ExtendedFilePropertiesPart();
-            this.InitPart(childPart, ExtendedFilePropertiesPart.ContentTypeConstant);
+            InitPart(childPart, ExtendedFilePropertiesPart.ContentTypeConstant);
             return childPart;
         }
 
@@ -577,7 +564,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public CustomFilePropertiesPart AddCustomFilePropertiesPart()
         {
             CustomFilePropertiesPart childPart = new CustomFilePropertiesPart();
-            this.InitPart(childPart, CustomFilePropertiesPart.ContentTypeConstant);
+            InitPart(childPart, CustomFilePropertiesPart.ContentTypeConstant);
             return childPart;
         }
 
@@ -588,7 +575,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public DigitalSignatureOriginPart AddDigitalSignatureOriginPart()
         {
             DigitalSignatureOriginPart childPart = new DigitalSignatureOriginPart();
-            this.InitPart(childPart, DigitalSignatureOriginPart.ContentTypeConstant);
+            InitPart(childPart, DigitalSignatureOriginPart.ContentTypeConstant);
             return childPart;
         }
 
@@ -600,7 +587,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public ThumbnailPart AddThumbnailPart(string contentType)
         {
             ThumbnailPart childPart = new ThumbnailPart();
-            this.InitPart(childPart, contentType);
+            InitPart(childPart, contentType);
             return childPart;
         }
         /// <summary>
@@ -624,7 +611,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public QuickAccessToolbarCustomizationsPart AddQuickAccessToolbarCustomizationsPart()
         {
             QuickAccessToolbarCustomizationsPart childPart = new QuickAccessToolbarCustomizationsPart();
-            this.InitPart(childPart, QuickAccessToolbarCustomizationsPart.ContentTypeConstant);
+            InitPart(childPart, QuickAccessToolbarCustomizationsPart.ContentTypeConstant);
             return childPart;
         }
 
@@ -635,7 +622,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public RibbonExtensibilityPart AddRibbonExtensibilityPart()
         {
             RibbonExtensibilityPart childPart = new RibbonExtensibilityPart();
-            this.InitPart(childPart, RibbonExtensibilityPart.ContentTypeConstant);
+            InitPart(childPart, RibbonExtensibilityPart.ContentTypeConstant);
             return childPart;
         }
 
@@ -646,7 +633,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public RibbonAndBackstageCustomizationsPart AddRibbonAndBackstageCustomizationsPart()
         {
             RibbonAndBackstageCustomizationsPart childPart = new RibbonAndBackstageCustomizationsPart();
-            this.InitPart(childPart, RibbonAndBackstageCustomizationsPart.ContentTypeConstant);
+            InitPart(childPart, RibbonAndBackstageCustomizationsPart.ContentTypeConstant);
             return childPart;
         }
 
@@ -657,7 +644,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public WebExTaskpanesPart AddWebExTaskpanesPart()
         {
             WebExTaskpanesPart childPart = new WebExTaskpanesPart();
-            this.InitPart(childPart, WebExTaskpanesPart.ContentTypeConstant);
+            InitPart(childPart, WebExTaskpanesPart.ContentTypeConstant);
             return childPart;
         }
 
@@ -696,7 +683,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get
             {
-                return this.GetSubPartOfType<ThumbnailPart>();
+                return GetSubPartOfType<ThumbnailPart>();
             }
         }
 
@@ -812,151 +799,5 @@ namespace DocumentFormat.OpenXml.Packaging
         #endregion Package-based cloning
 
         #endregion cloning
-
-        #region Flat OPC
-
-        /// <summary>
-        /// Converts an OpenXml package in OPC format to an <see cref="XDocument"/>
-        /// in Flat OPC format.
-        /// </summary>
-        /// <returns>The OpenXml package in Flat OPC format.</returns>
-        public override XDocument ToFlatOpcDocument()
-        {
-            return ToFlatOpcDocument(null);
-        }
-
-        /// <summary>
-        /// Creates a new editable instance of SpreadsheetDocument from an <see cref="XDocument"/>
-        /// in Flat OPC format, opened on a <see cref="MemoryStream"/>.
-        /// </summary>
-        /// <param name="document">The document in Flat OPC format.</param>
-        /// <returns>A new instance of SpreadsheetDocument.</returns>
-        public static SpreadsheetDocument FromFlatOpcDocument(XDocument document)
-        {
-            return FromFlatOpcDocument(document, new MemoryStream(), true);
-        }
-
-        /// <summary>
-        /// Creates a new instance of SpreadsheetDocument from a workbook
-        /// in Flat OPC format.
-        /// </summary>
-        /// <param name="document">The workbook in Flat OPC format.</param>
-        /// <param name="stream">The stream on which the SpreadsheetDocument will be created.</param>
-        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
-        /// <returns>A new instance of SpreadsheetDocument.</returns>
-        public static SpreadsheetDocument FromFlatOpcDocument(XDocument document, Stream stream, bool isEditable)
-        {
-            if (document == null)
-                throw new ArgumentNullException(nameof(document));
-            if (stream == null)
-                throw new ArgumentNullException(nameof(stream));
-
-            return SpreadsheetDocument.Open(FromFlatOpcDocumentCore(document, stream), true);
-        }
-
-        /// <summary>
-        /// Creates a new instance of SpreadsheetDocument from a workbook
-        /// in Flat OPC format.
-        /// </summary>
-        /// <param name="document">The workbook in Flat OPC format.</param>
-        /// <param name="path">The path and file name of the target SpreadsheetDocument.</param>
-        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
-        /// <returns>A new instance of SpreadsheetDocument.</returns>
-        public static SpreadsheetDocument FromFlatOpcDocument(XDocument document, string path, bool isEditable)
-        {
-            if (document == null)
-                throw new ArgumentNullException(nameof(document));
-            if (path == null)
-                throw new ArgumentNullException(nameof(path));
-
-            return SpreadsheetDocument.Open(FromFlatOpcDocumentCore(document, path), isEditable);
-        }
-
-        /// <summary>
-        /// Creates a new instance of SpreadsheetDocument from a workbook
-        /// in Flat OPC format on the specified instance of Package.
-        /// </summary>
-        /// <param name="document">The workbook in Flat OPC format.</param>
-        /// <param name="package">The specified instance of Package.</param>
-        /// <returns>A new instance of SpreadsheetDocument.</returns>
-        public static SpreadsheetDocument FromFlatOpcDocument(XDocument document, Package package)
-        {
-            if (document == null)
-                throw new ArgumentNullException(nameof(document));
-            if (package == null)
-                throw new ArgumentNullException(nameof(package));
-
-            return SpreadsheetDocument.Open(FromFlatOpcDocumentCore(document, package));
-        }
-
-        /// <summary>
-        /// Creates a new instance of SpreadsheetDocument from a string
-        /// in Flat OPC format on a <see cref="MemoryStream"/> with expandable
-        /// capacity.
-        /// </summary>
-        /// <param name="text">The string in Flat OPC format.</param>
-        /// <returns>A new instance of SpreadsheetDocument.</returns>
-        public static SpreadsheetDocument FromFlatOpcString(string text)
-        {
-            if (text == null)
-                throw new ArgumentNullException(nameof(text));
-
-            return FromFlatOpcDocument(XDocument.Parse(text), new MemoryStream(), true);
-        }
-
-        /// <summary>
-        /// Creates a new instance of SpreadsheetDocument from a string
-        /// in Flat OPC format on a
-        /// </summary>
-        /// <param name="text">The string in Flat OPC format.</param>
-        /// <param name="stream">The <see cref="Stream"/> on which the SpreadsheetDocument will be created.</param>
-        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
-        /// <returns>A new instance of SpreadsheetDocument.</returns>
-        public static SpreadsheetDocument FromFlatOpcString(string text, Stream stream, bool isEditable)
-        {
-            if (text == null)
-                throw new ArgumentNullException(nameof(text));
-            if (stream == null)
-                throw new ArgumentNullException(nameof(stream));
-
-            return FromFlatOpcDocument(XDocument.Parse(text), stream, isEditable);
-        }
-
-        /// <summary>
-        /// Creates a new instance of SpreadsheetDocument from a string
-        /// in Flat OPC format.
-        /// </summary>
-        /// <param name="text">The string in Flat OPC format.</param>
-        /// <param name="path">The path and file name of the target SpreadsheetDocument.</param>
-        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
-        /// <returns>A new instance of SpreadsheetDocument.</returns>
-        public static SpreadsheetDocument FromFlatOpcString(string text, string path, bool isEditable)
-        {
-            if (text == null)
-                throw new ArgumentNullException(nameof(text));
-            if (path == null)
-                throw new ArgumentNullException(nameof(path));
-
-            return FromFlatOpcDocument(XDocument.Parse(text), path, isEditable);
-        }
-
-        /// <summary>
-        /// Creates a new instance of SpreadsheetDocument from a string
-        /// in Flat OPC format.
-        /// </summary>
-        /// <param name="text">The string in Flat OPC format.</param>
-        /// <param name="package">The <see cref="Package"/> of the target SpreadsheetDocument.</param>
-        /// <returns>A new instance of SpreadsheetDocument.</returns>
-        public static SpreadsheetDocument FromFlatOpcString(string text, Package package)
-        {
-            if (text == null)
-                throw new ArgumentNullException(nameof(text));
-            if (package == null)
-                throw new ArgumentNullException(nameof(package));
-
-            return FromFlatOpcDocument(XDocument.Parse(text), package);
-        }
-
-        #endregion Flat OPC
     }
 }

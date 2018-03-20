@@ -242,27 +242,7 @@ namespace DocumentFormat.OpenXml.Validation
                 throw new InvalidOperationException(exceptionMessage);
             }
 
-            if (!openXmlPart.IsInVersion(FileFormat))
-            {
-                if (openXmlPart is ExtendedPart)
-                {
-                    throw new InvalidOperationException(ExceptionMessages.PartNotInVersion);
-                }
-                else
-                {
-                    // All Office 2007 and 2010 parts are allowed in Office 2013.
-                    switch (FileFormat)
-                    {
-                        case FileFormatVersions.Office2007:
-                            throw new InvalidOperationException(ExceptionMessages.PartIsNotInOffice2007);
-                        case FileFormatVersions.Office2010:
-                            throw new InvalidOperationException(ExceptionMessages.PartIsNotInOffice2010);
-                        case FileFormatVersions.Office2013: // Falls through...
-                        default:
-                            throw new InvalidOperationException(ExceptionMessages.PartIsNotInOffice2013);
-                    }
-                }
-            }
+            FileFormat.ThrowIfNotInVersion(openXmlPart);
 
             return ValidateCore(openXmlPart);
         }
@@ -313,23 +293,8 @@ namespace DocumentFormat.OpenXml.Validation
                 throw new ArgumentOutOfRangeException(nameof(openXmlElement), ExceptionMessages.CannotValidateAcbElement);
             }
 
-            if (!openXmlElement.IsInVersion(FileFormat))
-            {
-                switch (FileFormat)
-                {
-                    case FileFormatVersions.Office2007:
-                        throw new InvalidOperationException(ExceptionMessages.ElementIsNotInOffice2007);
+            FileFormat.ThrowIfNotInVersion(openXmlElement);
 
-                    case FileFormatVersions.Office2010:
-                        throw new InvalidOperationException(ExceptionMessages.ElementIsNotInOffice2010);
-
-                    case FileFormatVersions.Office2013:
-                        throw new InvalidOperationException(ExceptionMessages.ElementIsNotInOffice2013);
-                }
-            }
-
-            // TODO: if the FileFormat is Office2007, and the element is only in Office2010 and O15.
-            // then this method should throw exceptions.
             var validationContext = new ValidationContext
             {
                 FileFormat = FileFormat,

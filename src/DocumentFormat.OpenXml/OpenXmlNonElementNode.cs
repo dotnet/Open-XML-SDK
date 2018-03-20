@@ -50,7 +50,7 @@ namespace DocumentFormat.OpenXml
                     throw new ArgumentOutOfRangeException(nameof(nodeType));
             }
 
-            this.XmlNodeType = nodeType;
+            XmlNodeType = nodeType;
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace DocumentFormat.OpenXml
                 }
             }
 
-            this.RawOuterXml = outerXml;
+            RawOuterXml = outerXml;
         }
 
         /// <summary>
@@ -129,7 +129,7 @@ namespace DocumentFormat.OpenXml
             get
             {
                 string localName = string.Empty;
-                switch (this._nodeType)
+                switch (_nodeType)
                 {
                     case XmlNodeType.CDATA:
                         localName = strCDataSectionName;
@@ -140,7 +140,7 @@ namespace DocumentFormat.OpenXml
                         break;
 
                     case XmlNodeType.ProcessingInstruction:
-                        using (StringReader stringReader = new StringReader(this.OuterXml))
+                        using (StringReader stringReader = new StringReader(OuterXml))
                         {
                             XmlReaderSettings settings = new XmlReaderSettings
                             {
@@ -238,9 +238,9 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep)
         {
-            return new OpenXmlMiscNode(this.XmlNodeType)
+            return new OpenXmlMiscNode(XmlNodeType)
             {
-                OuterXml = this.OuterXml
+                OuterXml = OuterXml
             };
         }
 
@@ -264,13 +264,13 @@ namespace DocumentFormat.OpenXml
             }
 
             // write out the raw xml
-            xmlWriter.WriteRaw(this.RawOuterXml);
+            xmlWriter.WriteRaw(RawOuterXml);
         }
 
         /// <inheritdoc/>
         internal override void LazyLoad(XmlReader xmlReader)
         {
-            this.Populate(xmlReader, OpenXmlLoadMode.Full);
+            Populate(xmlReader, OpenXmlLoadMode.Full);
         }
 
         /// <inheritdoc/>
@@ -304,7 +304,7 @@ namespace DocumentFormat.OpenXml
                 case XmlNodeType.XmlDeclaration:
                     Debug.Assert(xmlReader.NodeType != XmlNodeType.XmlDeclaration);
                     // this.RawOuterXml = String.Format("<?xml version='1.0'?>");
-                    this.Value = xmlReader.Value; // version='1.0'
+                    Value = xmlReader.Value; // version='1.0'
                     break;
 
                 case XmlNodeType.Element:
@@ -324,31 +324,31 @@ namespace DocumentFormat.OpenXml
                     break;
 
                 case XmlNodeType.Text:
-                    this.Value = xmlReader.Value;
-                    this.RawOuterXml = xmlReader.Value;
+                    Value = xmlReader.Value;
+                    RawOuterXml = xmlReader.Value;
                     break;
 
                 case XmlNodeType.CDATA:
-                    this.Value = xmlReader.Value;
-                    this.RawOuterXml = String.Format(CultureInfo.InvariantCulture, "<![CDATA[{0}]]>", xmlReader.Value);
+                    Value = xmlReader.Value;
+                    RawOuterXml = String.Format(CultureInfo.InvariantCulture, "<![CDATA[{0}]]>", xmlReader.Value);
                     break;
 
                 case XmlNodeType.SignificantWhitespace:
-                    this.Value = xmlReader.Value;
-                    this.RawOuterXml = xmlReader.Value;
+                    Value = xmlReader.Value;
+                    RawOuterXml = xmlReader.Value;
                     break;
 
                 case XmlNodeType.Whitespace:
                     break; // O15:#3024890, OpenXmlMiscNode ignores the Whitespace NodeType.
 
                 case XmlNodeType.ProcessingInstruction:
-                    this.Value = xmlReader.Value;
-                    this.RawOuterXml = String.Format(CultureInfo.InvariantCulture, "<?{0} {1}?>", xmlReader.Name, xmlReader.Value);
+                    Value = xmlReader.Value;
+                    RawOuterXml = String.Format(CultureInfo.InvariantCulture, "<?{0} {1}?>", xmlReader.Name, xmlReader.Value);
                     break;
 
                 case XmlNodeType.Comment:
-                    this.Value = xmlReader.Value;
-                    this.RawOuterXml = String.Format(CultureInfo.InvariantCulture, "<!--{0}-->", xmlReader.Value);
+                    Value = xmlReader.Value;
+                    RawOuterXml = String.Format(CultureInfo.InvariantCulture, "<!--{0}-->", xmlReader.Value);
                     break;
 
                 case XmlNodeType.Document:
@@ -362,7 +362,7 @@ namespace DocumentFormat.OpenXml
 
                 case XmlNodeType.EntityReference:
                     Debug.Assert(xmlReader.NodeType != XmlNodeType.EntityReference);
-                    this.RawOuterXml = xmlReader.Name;
+                    RawOuterXml = xmlReader.Name;
                     break;
 
                 case XmlNodeType.Entity:
@@ -386,7 +386,7 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         internal override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode)
         {
-            this.LoadOuterXml(xmlReader);
+            LoadOuterXml(xmlReader);
             xmlReader.Read();
 
             // this.RawOuterXml = xmlReader.ReadOuterXml();

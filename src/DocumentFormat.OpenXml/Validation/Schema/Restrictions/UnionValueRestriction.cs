@@ -29,10 +29,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         {
             StringValue stringValue = attributeValue.InnerText;
 
-            var memberValues = UnionHelper.CreatePossibleMembers(this, this.FileFormat);
+            var memberValues = UnionHelper.CreatePossibleMembers(this, FileFormat);
 
             int count = memberValues.Length;
-            Debug.Assert(count == this.UnionTypes.Length);
+            Debug.Assert(count == UnionTypes.Length);
 
             OpenXmlSimpleType simpleValue;
             SimpleTypeRestriction memberRestriction;
@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
             {
                 simpleValue = memberValues[i];
                 simpleValue.InnerText = stringValue;
-                memberRestriction = this.UnionTypes[i];
+                memberRestriction = UnionTypes[i];
 
                 if (memberRestriction.ValidateValueType(simpleValue))
                 {

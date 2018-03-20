@@ -36,28 +36,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         protected ParticleConstraint[] EmptyChildrenParticles = Cached.Array<ParticleConstraint>();
 
-        /// <summary>
-        /// Return an instance of SchemaConstraintDatabase which will load Office2007 schemas.
-        /// </summary>
-        public static SdbSchemaDatas GetOffice2007SchemaDatas()
+        public static SdbSchemaDatas GetSchemaDatas(FileFormatVersions fileFormat)
         {
-            return new BinarySdbSchemaDatas(FileFormatVersions.Office2007);
-        }
-
-        /// <summary>
-        /// Return an instance of SchemaConstraintDatabase which will load Office2010 schemas.
-        /// </summary>
-        public static SdbSchemaDatas GetOffice2010SchemaDatas()
-        {
-            return new BinarySdbSchemaDatas(FileFormatVersions.Office2010);
-        }
-
-        /// <summary>
-        /// Return an instance of SchemaConstraintDatabase which will load Office2010 schemas.
-        /// </summary>
-        public static SdbSchemaDatas GetOffice2013SchemaDatas()
-        {
-            return new BinarySdbSchemaDatas(FileFormatVersions.Office2013);
+            return new BinarySdbSchemaDatas(fileFormat);
         }
 
         /// <summary>
@@ -81,14 +62,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <returns>The constraint data of the schema type.</returns>
         public SchemaTypeData GetSchemaTypeData(int openxmlTypeId)
         {
-            Debug.Assert(openxmlTypeId >= this.SdbDataHead.StartClassId);
-            Debug.Assert(openxmlTypeId < this.SdbDataHead.StartClassId + this.SdbDataHead.ClassIdsCount);
+            Debug.Assert(openxmlTypeId >= SdbDataHead.StartClassId);
+            Debug.Assert(openxmlTypeId < SdbDataHead.StartClassId + SdbDataHead.ClassIdsCount);
 
             OpenXmlTypeId typeId = (OpenXmlTypeId)openxmlTypeId;
 
-            SchemaTypeData schemaTypeData;
-
-            if (this._schemaTypeDatas.TryGetValue(typeId, out schemaTypeData))
+            if (_schemaTypeDatas.TryGetValue(typeId, out var schemaTypeData))
             {
                 Debug.Assert(openxmlTypeId == schemaTypeData.OpenXmlTypeId);
 
@@ -96,9 +75,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
             else
             {
-                schemaTypeData = this.LoadSchemaTypeData(typeId);
+                schemaTypeData = LoadSchemaTypeData(typeId);
 
-                this._schemaTypeDatas.Add(typeId, schemaTypeData);
+                _schemaTypeDatas.Add(typeId, schemaTypeData);
 
                 return schemaTypeData;
             }
@@ -136,9 +115,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         private ParticleConstraint BuildParticleConstraint(SdbIndex particleIndex)
         {
             Debug.Assert(particleIndex >= 0);
-            Debug.Assert(particleIndex < this.SdbDataHead.ParticleCount);
+            Debug.Assert(particleIndex < SdbDataHead.ParticleCount);
 
-            SdbParticleConstraint sdbParticleConstraint = this.SdbParticles[particleIndex];
+            SdbParticleConstraint sdbParticleConstraint = SdbParticles[particleIndex];
             var particleConstraint = ParticleConstraint.CreateParticleConstraint(sdbParticleConstraint.ParticleType);
 
             particleConstraint.ParticleType = sdbParticleConstraint.ParticleType;
@@ -155,8 +134,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 particleConstraint.ChildrenParticles = new ParticleConstraint[sdbParticleConstraint.ChildrenCount];
                 for (SdbIndex i = 0; i < sdbParticleConstraint.ChildrenCount; i++)
                 {
-                    SdbIndex childIndex = this.SdbParticleIndexs[(SdbIndex)(sdbParticleConstraint.ChildrenStartIndex + i)].ParticleIndex;
-                    particleConstraint.ChildrenParticles[i] = this.BuildParticleConstraint(childIndex);
+                    SdbIndex childIndex = SdbParticleIndexs[(SdbIndex)(sdbParticleConstraint.ChildrenStartIndex + i)].ParticleIndex;
+                    particleConstraint.ChildrenParticles[i] = BuildParticleConstraint(childIndex);
                 }
             }
             else if (sdbParticleConstraint.ParticleType == ParticleType.All ||
@@ -186,11 +165,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 SdbIndex sdbIndex = sdbSchemaTpye.StartIndexOfAttributes;
                 for (int i = 0; i < count; i++)
                 {
-                    var sdbAttributeData = this.SdbAttributes[sdbIndex + i];
+                    var sdbAttributeData = SdbAttributes[sdbIndex + i];
                     // then load the simple type constraint for this attribute
                     var simpleTypeIndex = sdbAttributeData.SimpleTypeIndex;
-                    var simpleTypeConstraint = this.SimpleTypeRestrictions[simpleTypeIndex];
-                    attributeConstraints[i] = new AttributeConstraint(sdbAttributeData.AttributeUse, simpleTypeConstraint, (FileFormatVersions) sdbAttributeData.FileFormatVersion);
+                    var simpleTypeConstraint = SimpleTypeRestrictions[simpleTypeIndex];
+                    attributeConstraints[i] = new AttributeConstraint(sdbAttributeData.AttributeUse, simpleTypeConstraint, (FileFormatVersions)sdbAttributeData.FileFormatVersion);
                 }
                 return attributeConstraints;
             }
@@ -205,11 +184,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <returns>The SchemaTypeData object.</returns>
         private SchemaTypeData LoadSchemaTypeData(OpenXmlTypeId openxmlTypeId)
         {
-            Debug.Assert(openxmlTypeId >= this.SdbDataHead.StartClassId);
-            Debug.Assert(openxmlTypeId < this.SdbDataHead.StartClassId + this.SdbDataHead.ClassIdsCount);
+            Debug.Assert(openxmlTypeId >= SdbDataHead.StartClassId);
+            Debug.Assert(openxmlTypeId < SdbDataHead.StartClassId + SdbDataHead.ClassIdsCount);
 
-            SdbIndex index = (SdbIndex)(openxmlTypeId - this.SdbDataHead.StartClassId);
-            var sdbSchemaType = this.SdbSchemaTypes[this.SdbClassIdMap[index].SchemaTypeIndex];
+            SdbIndex index = (SdbIndex)(openxmlTypeId - SdbDataHead.StartClassId);
+            var sdbSchemaType = SdbSchemaTypes[SdbClassIdMap[index].SchemaTypeIndex];
             var attributeConstraints = BuildAttributeConstraint(sdbSchemaType);
 
             var particleConstraint = BuildParticleConstraint(sdbSchemaType);
@@ -221,7 +200,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 Debug.Assert(sdbSchemaType.SimpleTypeIndex != SdbData.InvalidId);
                 // simple content
-                var simpleTypeConstraint = this.SimpleTypeRestrictions[sdbSchemaType.SimpleTypeIndex];
+                var simpleTypeConstraint = SimpleTypeRestrictions[sdbSchemaType.SimpleTypeIndex];
                 return new SchemaTypeData(openxmlTypeId, attributeConstraints, simpleTypeConstraint);
             }
             else
@@ -232,4 +211,4 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
         }
     }
- }
+}

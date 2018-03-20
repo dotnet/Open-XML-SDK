@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
 using LogUtil;
+using System.IO;
 using System.Linq;
 
 using X14 = DocumentFormat.OpenXml.Office2010.Excel;
@@ -21,16 +22,16 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
         /// <summary>
         /// Edit Slicer element
         /// </summary>
-        /// <param name="filePath">Editing target file path</param>
+        /// <param name="stream">Editing target stream</param>
         /// <param name="log">Logger</param>
-        public void EditElements(string filePath, VerifiableLog log)
+        public void EditElements(Stream stream, VerifiableLog log)
         {
-            using (SpreadsheetDocument package = SpreadsheetDocument.Open(filePath, true))
+            using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, true))
             {
                 //Getting of SlicerCacheParts.
-                SlicerCachePart slicerCachePart1 = GetSlicerCachePart(package.WorkbookPart, this.Slicer1);
-                SlicerCachePart slicerCachePart2 = GetSlicerCachePart(package.WorkbookPart, this.Slicer2);
-                SlicerCachePart slicerCachePart3 = GetSlicerCachePart(package.WorkbookPart, this.Slicer3);
+                SlicerCachePart slicerCachePart1 = GetSlicerCachePart(package.WorkbookPart, Slicer1);
+                SlicerCachePart slicerCachePart2 = GetSlicerCachePart(package.WorkbookPart, Slicer2);
+                SlicerCachePart slicerCachePart3 = GetSlicerCachePart(package.WorkbookPart, Slicer3);
 
                 X15.TableSlicerCache tableSlicerCache1 = slicerCachePart1.RootElement.Descendants<X15.TableSlicerCache>().Single();
                 X15.TableSlicerCache tableSlicerCache2 = slicerCachePart2.RootElement.Descendants<X15.TableSlicerCache>().Single();
@@ -115,16 +116,16 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
         /// <summary>
         /// Verify the SlicerCachePart element and attribute value.
         /// </summary>
-        /// <param name="filePath">Target file path</param>
+        /// <param name="stream">Target stream</param>
         /// <param name="log">Logger</param>
-        public void VerifyElements(string filePath, VerifiableLog log)
+        public void VerifyElements(Stream stream, VerifiableLog log)
         {
-            using (SpreadsheetDocument package = SpreadsheetDocument.Open(filePath, false))
+            using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, false))
             {
                 //Getting of SlicerCacheParts.
-                SlicerCachePart slicerCachePart1 = GetSlicerCachePart(package.WorkbookPart, this.Slicer1);
-                SlicerCachePart slicerCachePart2 = GetSlicerCachePart(package.WorkbookPart, this.Slicer2);
-                SlicerCachePart slicerCachePart3 = GetSlicerCachePart(package.WorkbookPart, this.Slicer3);
+                SlicerCachePart slicerCachePart1 = GetSlicerCachePart(package.WorkbookPart, Slicer1);
+                SlicerCachePart slicerCachePart2 = GetSlicerCachePart(package.WorkbookPart, Slicer2);
+                SlicerCachePart slicerCachePart3 = GetSlicerCachePart(package.WorkbookPart, Slicer3);
 
                 X15.TableSlicerCache tableSlicerCache1 = slicerCachePart1.RootElement.Descendants<X15.TableSlicerCache>().Single();
                 X15.TableSlicerCache tableSlicerCache2 = slicerCachePart2.RootElement.Descendants<X15.TableSlicerCache>().Single();

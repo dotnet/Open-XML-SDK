@@ -3,10 +3,12 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -55,8 +57,18 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var data = GetConstraintData(part);
 
-            Assert.Same(part.GetPartConstraint(), part.GetPartConstraint());
-            Assert.Same(part.GetDataPartReferenceConstraint(), part.GetDataPartReferenceConstraint());
+            Assert.Same(part.PartConstraints, part.PartConstraints);
+            Assert.Same(part.DataPartReferenceConstraints, part.DataPartReferenceConstraints);
+
+            if (!part.PartConstraints.Any())
+            {
+                Assert.Same(PartConstraintCollection.Instance, part.PartConstraints);
+            }
+
+            if (!part.DataPartReferenceConstraints.Any())
+            {
+                Assert.Same(PartConstraintCollection.Instance, part.DataPartReferenceConstraints);
+            }
 
             Assert.Equal(data.IsContentTypeFixed, part.IsContentTypeFixed);
             Assert.Equal(data.RelationshipType, part.RelationshipType);
@@ -69,31 +81,44 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Equal(data.ContentType, part.ContentType);
             }
 
-            AssertDictionary(data.DataParts, part.GetDataPartReferenceConstraint());
-            AssertDictionary(data.Parts, part.GetPartConstraint());
+            AssertDictionary(data.DataParts, part.DataPartReferenceConstraints);
+            AssertDictionary(data.Parts, part.PartConstraints);
         }
 
-#pragma warning disable xUnit1013 // Public method should be marked as test
+        [MemberData(nameof(GetOpenXmlParts))]
+        [Theory]
+        public void ValidateValid(OpenXmlPart part)
+        {
+            var availability = part.GetType().GetCustomAttribute<OfficeAvailabilityAttribute>().OfficeVersion;
+            var versions = Enum.GetValues(typeof(FileFormatVersions))
+                .Cast<FileFormatVersions>()
+                .Where(v => v != FileFormatVersions.None);
+
+            foreach (var version in versions)
+            {
+                Assert.Equal(version.AtLeast(availability), part.IsInVersion(version));
+            }
+        }
+
         [Fact]
         public void ExportData()
-#pragma warning restore xUnit1013 // Public method should be marked as test
         {
             var result = GetParts()
-                .Select(t => new ConstraintData
+                .Select(t => new
                 {
                     Name = GetName(t.GetType()),
-                    DataParts = t.GetDataPartReferenceConstraint(),
-                    Parts = t.GetPartConstraint(),
                     ContentType = t.IsContentTypeFixed ? t.ContentType : null,
                     IsContentTypeFixed = t.IsContentTypeFixed,
                     RelationshipType = t.RelationshipType,
                     TargetFileExtension = t.TargetFileExtension,
                     TargetName = t.TargetName,
-                    TargetPath = t.TargetPath
+                    TargetPath = t.TargetPath,
+                    DataParts = t.DataPartReferenceConstraints,
+                    Parts = t.PartConstraints,
                 })
                 .OrderBy(d => d.Name, StringComparer.Ordinal);
 
-            var data = JsonConvert.SerializeObject(result, Formatting.Indented);
+            var data = JsonConvert.SerializeObject(result, Formatting.Indented, new StringEnumConverter());
             _output.WriteLine(data);
         }
 
@@ -120,12 +145,23 @@ namespace DocumentFormat.OpenXml.Tests
             using (var stream = typeof(PartConstraintRuleTests).Assembly.GetManifestResourceStream("DocumentFormat.OpenXml.Packaging.Tests.data.PartConstraintData.json"))
             using (var reader = new StreamReader(stream))
             {
-                return JsonConvert.DeserializeObject<ConstraintData[]>(reader.ReadToEnd())
+                return JsonConvert.DeserializeObject<ConstraintData[]>(reader.ReadToEnd(), new StringEnumConverter())
                     .ToDictionary(t => t.Name, StringComparer.Ordinal);
             }
         });
 
-        private struct ConstraintData
+        private void AssertDictionary(IDictionary<string, PartConstraintRule2> expected, IReadOnlyDictionary<string, PartConstraintRule> actual)
+        {
+            Assert.Equal(expected.Count, actual.Count);
+
+            foreach (var key in expected.Keys)
+            {
+                Assert.Equal(expected[key], actual[key]);
+            }
+        }
+
+#pragma warning disable CA1812
+        private class ConstraintData
         {
             public string Name { get; set; }
 
@@ -141,18 +177,64 @@ namespace DocumentFormat.OpenXml.Tests
 
             public string TargetPath { get; set; }
 
-            public IDictionary<string, PartConstraintRule> DataParts { get; set; }
+            public IDictionary<string, PartConstraintRule2> DataParts { get; set; }
 
-            public IDictionary<string, PartConstraintRule> Parts { get; set; }
+            public IDictionary<string, PartConstraintRule2> Parts { get; set; }
         }
+#pragma warning restore CA1712
 
-        private void AssertDictionary(IDictionary<string, PartConstraintRule> expected, IDictionary<string, PartConstraintRule> actual)
+        private class PartConstraintRule2
         {
-            Assert.Equal(expected.Count, actual.Count);
+            public string PartClassName { get; set; }
 
-            foreach (var key in expected.Keys)
+            public string PartContentType { get; set; }
+
+            public bool MinOccursIsNonZero { get; set; }
+
+            public bool MaxOccursGreatThanOne { get; set; }
+
+            public FileFormatVersions FileFormat { get; set; }
+
+            public static implicit operator PartConstraintRule2(PartConstraintRule rule)
             {
-                Assert.Equal(expected[key], actual[key]);
+                return new PartConstraintRule2
+                {
+                    FileFormat = rule.FileFormat,
+                    MaxOccursGreatThanOne = rule.MaxOccursGreatThanOne,
+                    MinOccursIsNonZero = rule.MinOccursIsNonZero,
+                    PartClassName = rule.PartClassName,
+                    PartContentType = rule.PartContentType
+                };
+            }
+
+            public override bool Equals(object obj)
+            {
+                if (obj is PartConstraintRule2 other)
+                {
+                    return string.Equals(PartClassName, other.PartClassName, StringComparison.Ordinal)
+                        && string.Equals(PartContentType, other.PartContentType, StringComparison.Ordinal)
+                        && MinOccursIsNonZero == other.MinOccursIsNonZero
+                        && MaxOccursGreatThanOne == other.MaxOccursGreatThanOne
+                        && FileFormat == other.FileFormat;
+                }
+
+                return false;
+            }
+
+            public override int GetHashCode()
+            {
+                const int HashMultiplier = 31;
+
+                unchecked
+                {
+                    int hash = 17;
+                    hash = hash * HashMultiplier + StringComparer.Ordinal.GetHashCode(PartClassName);
+                    hash = hash * HashMultiplier + StringComparer.Ordinal.GetHashCode(PartContentType);
+                    hash = hash * HashMultiplier + MinOccursIsNonZero.GetHashCode();
+                    hash = hash * HashMultiplier + MaxOccursGreatThanOne.GetHashCode();
+                    hash = hash * HashMultiplier + FileFormat.GetHashCode();
+                    return hash;
+                }
             }
         }
     }

@@ -1,6 +1,5 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
-
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
@@ -5353,7 +5352,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(Drawing))]
     [ChildElementInfo(typeof(LegacyDrawing))]
     [ChildElementInfo(typeof(LegacyDrawingHeaderFooter))]
-    [ChildElementInfo(typeof(DrawingHeaderFooter),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DrawingHeaderFooter),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(Picture))]
     [ChildElementInfo(typeof(WebPublishItems))]
     [ChildElementInfo(typeof(ExtensionList))]
@@ -5729,13 +5728,12 @@ if( 22 == namespaceId && "extLst" == name)
         }
     }
     /// <summary>
-    /// <para> DrawingHeaderFooter, this property is only available in Office2010.</para>
+    /// <para> DrawingHeaderFooter.</para>
     /// <para> Represents the following element tag in the schema: x:drawingHF </para>
     /// </summary>
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     public DrawingHeaderFooter DrawingHeaderFooter
     {
         get 
@@ -5853,9 +5851,9 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(Drawing))]
     [ChildElementInfo(typeof(LegacyDrawing))]
     [ChildElementInfo(typeof(LegacyDrawingHeaderFooter))]
-    [ChildElementInfo(typeof(DrawingHeaderFooter),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DrawingHeaderFooter),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(OleObjects))]
-    [ChildElementInfo(typeof(Controls),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(Controls),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class DialogSheet : OpenXmlPartRootElement
@@ -6271,13 +6269,12 @@ if( 22 == namespaceId && "extLst" == name)
         }
     }
     /// <summary>
-    /// <para> DrawingHeaderFooter, this property is only available in Office2010.</para>
+    /// <para> DrawingHeaderFooter.</para>
     /// <para> Represents the following element tag in the schema: x:drawingHF </para>
     /// </summary>
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     public DrawingHeaderFooter DrawingHeaderFooter
     {
         get 
@@ -6308,13 +6305,12 @@ if( 22 == namespaceId && "extLst" == name)
         }
     }
     /// <summary>
-    /// <para> Controls, this property is only available in Office2010.</para>
+    /// <para> Controls.</para>
     /// <para> Represents the following element tag in the schema: x:controls </para>
     /// </summary>
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     public Controls Controls
     {
         get 
@@ -9995,7 +9991,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     [ChildElementInfo(typeof(CommentText))]
-    [ChildElementInfo(typeof(CommentProperties),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(CommentProperties),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class Comment : OpenXmlCompositeElement
 {
@@ -10091,10 +10087,9 @@ public partial class Comment : OpenXmlCompositeElement
     }
     
     /// <summary>
-    /// <para> shapeId, this property is only available in Office2010.</para>
+    /// <para> shapeId.</para>
     /// <para>Represents the following attribute in the schema: shapeId </para>
     /// </summary>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(0, "shapeId")]
     public UInt32Value ShapeId
     {
@@ -10187,13 +10182,12 @@ if( 22 == namespaceId && "commentPr" == name)
         }
     }
     /// <summary>
-    /// <para> CommentProperties, this property is only available in Office2010.</para>
+    /// <para> CommentProperties.</para>
     /// <para> Represents the following element tag in the schema: x:commentPr </para>
     /// </summary>
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     public CommentProperties CommentProperties
     {
         get 
@@ -42012,7 +42006,7 @@ if( 0 == namespaceId && "numFmtId" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ControlProperties),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ControlProperties),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class Control : OpenXmlCompositeElement
 {
@@ -42173,13 +42167,12 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
     
         /// <summary>
-    /// <para> ControlProperties, this property is only available in Office2010.</para>
+    /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: x:controlPr </para>
     /// </summary>
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     public ControlProperties ControlProperties
     {
         get 
@@ -44100,7 +44093,7 @@ if( 0 == namespaceId && "topLeftCell" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(EmbeddedObjectProperties),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(EmbeddedObjectProperties),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class OleObject : OpenXmlCompositeElement
 {
@@ -44305,13 +44298,12 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
     
         /// <summary>
-    /// <para> EmbeddedObjectProperties, this property is only available in Office2010.</para>
+    /// <para> EmbeddedObjectProperties.</para>
     /// <para> Represents the following element tag in the schema: x:objectPr </para>
     /// </summary>
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     public EmbeddedObjectProperties EmbeddedObjectProperties
     {
         get 
@@ -49736,8 +49728,8 @@ if( 22 == namespaceId && "gradientFill" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(StartBorder),(FileFormatVersions)2)]
-    [ChildElementInfo(typeof(EndBorder),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(StartBorder),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(EndBorder),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(LeftBorder))]
     [ChildElementInfo(typeof(RightBorder))]
     [ChildElementInfo(typeof(TopBorder))]
@@ -49927,13 +49919,12 @@ if( 22 == namespaceId && "horizontal" == name)
     }
     
         /// <summary>
-    /// <para> StartBorder, this property is only available in Office2010.</para>
+    /// <para> StartBorder.</para>
     /// <para> Represents the following element tag in the schema: x:start </para>
     /// </summary>
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     public StartBorder StartBorder
     {
         get 
@@ -49946,13 +49937,12 @@ if( 22 == namespaceId && "horizontal" == name)
         }
     }
     /// <summary>
-    /// <para> EndBorder, this property is only available in Office2010.</para>
+    /// <para> EndBorder.</para>
     /// <para> Represents the following element tag in the schema: x:end </para>
     /// </summary>
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     public EndBorder EndBorder
     {
         get 
@@ -57865,7 +57855,7 @@ public partial class FunctionGroup : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Table),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Table),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class TableExtension : OpenXmlCompositeElement
 {
@@ -58007,7 +57997,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the ObjectAnchor Class.</para>
-///<para>This class is only available in Office2010.</para>
+///<para>This class is available in Office2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x:anchor.</para>
 /// </summary>
 /// <remarks>
@@ -58018,8 +58008,8 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(FromMarker),(FileFormatVersions)2)]
-    [ChildElementInfo(typeof(ToMarker),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(FromMarker),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ToMarker),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ObjectAnchor : OpenXmlCompositeElement
@@ -58057,7 +58047,7 @@ public partial class ObjectAnchor : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((2 & (int)version) > 0)
+		if((6 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -58249,7 +58239,7 @@ if( 0 == namespaceId && "z-order" == name)
 }
 /// <summary>
 /// <para>Defines the FromMarker Class.</para>
-///<para>This class is only available in Office2010.</para>
+///<para>This class is available in Office2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x:from.</para>
 /// </summary>
 /// <remarks>
@@ -58299,7 +58289,7 @@ public partial class FromMarker : MarkerType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((2 & (int)version) > 0)
+		if((6 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -58351,7 +58341,7 @@ public partial class FromMarker : MarkerType
 }
 /// <summary>
 /// <para>Defines the ToMarker Class.</para>
-///<para>This class is only available in Office2010.</para>
+///<para>This class is available in Office2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x:to.</para>
 /// </summary>
 /// <remarks>
@@ -58401,7 +58391,7 @@ public partial class ToMarker : MarkerType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((2 & (int)version) > 0)
+		if((6 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -58631,7 +58621,7 @@ if( 18 == namespaceId && "rowOff" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Id),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Id),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class ConditionalFormattingRuleExtension : OpenXmlCompositeElement
 {
@@ -58782,7 +58772,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotHierarchy),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotHierarchy),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class PivotHierarchyExtension : OpenXmlCompositeElement
 {
@@ -58933,7 +58923,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotField),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotField),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class PivotFieldExtension : OpenXmlCompositeElement
 {
@@ -59084,7 +59074,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.SourceConnection),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.SourceConnection),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class CacheSourceExtension : OpenXmlCompositeElement
 {
@@ -59811,7 +59801,7 @@ if( 0 == namespaceId && "preferPic" == name)
 }
 /// <summary>
 /// <para>Defines the StartBorder Class.</para>
-///<para>This class is only available in Office2010.</para>
+///<para>This class is available in Office2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x:start.</para>
 /// </summary>
 /// <remarks>
@@ -59858,7 +59848,7 @@ public partial class StartBorder : BorderPropertiesType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((2 & (int)version) > 0)
+		if((6 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -59910,7 +59900,7 @@ public partial class StartBorder : BorderPropertiesType
 }
 /// <summary>
 /// <para>Defines the EndBorder Class.</para>
-///<para>This class is only available in Office2010.</para>
+///<para>This class is available in Office2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x:end.</para>
 /// </summary>
 /// <remarks>
@@ -59957,7 +59947,7 @@ public partial class EndBorder : BorderPropertiesType
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((2 & (int)version) > 0)
+		if((6 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -60823,7 +60813,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the ControlProperties Class.</para>
-///<para>This class is only available in Office2010.</para>
+///<para>This class is available in Office2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x:controlPr.</para>
 /// </summary>
 /// <remarks>
@@ -60833,7 +60823,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ObjectAnchor),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ObjectAnchor),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ControlProperties : OpenXmlCompositeElement
@@ -60871,7 +60861,7 @@ public partial class ControlProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((2 & (int)version) > 0)
+		if((6 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -61212,7 +61202,7 @@ if( 19 == namespaceId && "id" == name)
 }
 /// <summary>
 /// <para>Defines the EmbeddedObjectProperties Class.</para>
-///<para>This class is only available in Office2010.</para>
+///<para>This class is available in Office2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x:objectPr.</para>
 /// </summary>
 /// <remarks>
@@ -61222,7 +61212,7 @@ if( 19 == namespaceId && "id" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ObjectAnchor),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ObjectAnchor),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class EmbeddedObjectProperties : OpenXmlCompositeElement
@@ -61260,7 +61250,7 @@ public partial class EmbeddedObjectProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((2 & (int)version) > 0)
+		if((6 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -65767,10 +65757,9 @@ public partial class DataConsolidate : OpenXmlCompositeElement
     }
     
     /// <summary>
-    /// <para> startLabels, this property is only available in Office2010.</para>
+    /// <para> startLabels.</para>
     /// <para>Represents the following attribute in the schema: startLabels </para>
     /// </summary>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(0, "startLabels")]
     public BooleanValue StartLabels
     {
@@ -67540,7 +67529,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the CommentProperties Class.</para>
-///<para>This class is only available in Office2010.</para>
+///<para>This class is available in Office2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x:commentPr.</para>
 /// </summary>
 /// <remarks>
@@ -67550,7 +67539,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ObjectAnchor),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(ObjectAnchor),(FileFormatVersions)6)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class CommentProperties : OpenXmlCompositeElement
@@ -67588,7 +67577,7 @@ public partial class CommentProperties : OpenXmlCompositeElement
     /// <returns>Returns true if the element is defined in the specified version.</returns>
     internal override bool IsInVersion(FileFormatVersions version)
     {
-		if((2 & (int)version) > 0)
+		if((6 & (int)version) > 0)
 		{
 			return true;
 		}
@@ -69001,10 +68990,9 @@ public partial class DynamicFilter : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> valIso, this property is only available in Office2010.</para>
+    /// <para> valIso.</para>
     /// <para>Represents the following attribute in the schema: valIso </para>
     /// </summary>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(0, "valIso")]
     public DateTimeValue ValIso
     {
@@ -69013,10 +69001,9 @@ public partial class DynamicFilter : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> maxValIso, this property is only available in Office2010.</para>
+    /// <para> maxValIso.</para>
     /// <para>Represents the following attribute in the schema: maxValIso </para>
     /// </summary>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(0, "maxValIso")]
     public DateTimeValue MaxValIso
     {
@@ -71194,7 +71181,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Connection),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Connection),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.Connection),(FileFormatVersions)4)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class ConnectionExtension : OpenXmlCompositeElement
@@ -73322,7 +73309,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotCacheDefinition),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotCacheDefinition),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotCacheDecoupled),(FileFormatVersions)4)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition),(FileFormatVersions)4)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion),(FileFormatVersions)4)]
@@ -74135,7 +74122,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.CacheField),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.CacheField),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueNames),(FileFormatVersions)4)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class CacheFieldExtension : OpenXmlCompositeElement
@@ -74709,7 +74696,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.CacheHierarchy),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.CacheHierarchy),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.CacheHierarchy),(FileFormatVersions)4)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class CacheHierarchyExtension : OpenXmlCompositeElement
@@ -74981,7 +74968,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.CalculatedMember),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.CalculatedMember),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.CalculatedMember),(FileFormatVersions)4)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class CalculatedMemberExtension : OpenXmlCompositeElement
@@ -77728,7 +77715,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotTableDefinition),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotTableDefinition),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotTableData),(FileFormatVersions)4)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotTableUISettings),(FileFormatVersions)4)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
@@ -78004,7 +77991,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.DataField),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.DataField),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.DataField),(FileFormatVersions)4)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class DataFieldExtension : OpenXmlCompositeElement
@@ -80109,12 +80096,12 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattings),(FileFormatVersions)2)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.DataValidations),(FileFormatVersions)2)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.SparklineGroups),(FileFormatVersions)2)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerList),(FileFormatVersions)2)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.ProtectedRanges),(FileFormatVersions)2)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.IgnoredErrors),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattings),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.DataValidations),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.SparklineGroups),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerList),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.ProtectedRanges),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.IgnoredErrors),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.WebExtensions),(FileFormatVersions)4)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineReferences),(FileFormatVersions)4)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
@@ -82577,10 +82564,9 @@ public partial class WorkbookProperties : OpenXmlLeafElement
     }
     
     /// <summary>
-    /// <para> dateCompatibility, this property is only available in Office2010.</para>
+    /// <para> dateCompatibility.</para>
     /// <para>Represents the following attribute in the schema: dateCompatibility </para>
     /// </summary>
-[OfficeAvailability(FileFormatVersions.Office2010)]
     [SchemaAttr(0, "dateCompatibility")]
     public BooleanValue DateCompatibility
     {
@@ -85037,11 +85023,11 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.DefinedNames),(FileFormatVersions)2)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotCaches),(FileFormatVersions)2)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerCaches),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.DefinedNames),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotCaches),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerCaches),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.SlicerCaches),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.WorkbookProperties),(FileFormatVersions)2)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.WorkbookProperties),(FileFormatVersions)6)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotCaches),(FileFormatVersions)4)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotTableReferences),(FileFormatVersions)4)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotCaches),(FileFormatVersions)4)]
@@ -89474,10 +89460,8 @@ InlineString,
 ///<summary>
 ///d.
 ///<para>When the item is serialized out as xml, its value is "d".</para>
-///<para>This item is only available in Office2010.</para>
 ///</summary>
 [EnumString("d")]
-[OfficeAvailability(FileFormatVersions.Office2010)]
 Date,
  
 }
@@ -89532,10 +89516,8 @@ TopRight,
 ///<summary>
 ///topEnd.
 ///<para>When the item is serialized out as xml, its value is "topEnd".</para>
-///<para>This item is only available in Office2010.</para>
 ///</summary>
 [EnumString("topEnd")]
-[OfficeAvailability(FileFormatVersions.Office2010)]
 TopEnd,
  
 }

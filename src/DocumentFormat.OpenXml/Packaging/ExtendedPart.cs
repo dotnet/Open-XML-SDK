@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
-using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
@@ -11,13 +10,6 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public class ExtendedPart : OpenXmlPart
     {
-        private const string DefaultTargetExt = ".dat";
-
-        private string _relationshipType;
-
-        private static Dictionary<string, PartConstraintRule> _partConstraints = new Dictionary<string, PartConstraintRule>();
-        private static Dictionary<string, PartConstraintRule> _dataPartReferenceConstraint = new Dictionary<string,PartConstraintRule>();
-
         /// <summary>
         /// Default constructor.
         /// </summary>
@@ -31,70 +23,29 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="relationshipType"></param>
         internal protected ExtendedPart(string relationshipType)
-            : base( )
+            : base()
         {
-            this._relationshipType = relationshipType;
+            RelationshipType = relationshipType;
         }
 
         /// <inheritdoc/>
-        public override string RelationshipType
-        {
-            get
-            {
-                return this._relationshipType;
-            }
-        }
+        public override string RelationshipType { get; }
 
         /// <inheritdoc/>
-        internal override string TargetFileExtension
-        {
-            get
-            {
-                return DefaultTargetExt;
-            }
-        }
+        internal override string TargetFileExtension => ".dat";
 
         /// <inheritdoc/>
-        internal override string TargetPath
-        {
-            get { return "udata"; }
-        }
+        internal override string TargetPath => "udata";
 
         /// <inheritdoc/>
-        internal override string TargetName
-        {
-            get { return "data"; }
-        }
-
-        internal sealed override bool IsContentTypeFixed
-        {
-            get
-            {
-                return false;
-            }
-        }
-
-        internal sealed override IDictionary<string, PartConstraintRule> GetPartConstraint()
-        {
-            ThrowIfObjectDisposed();
-            return _partConstraints;
-        }
-
-        internal sealed override IDictionary<string, PartConstraintRule> GetDataPartReferenceConstraint()
-        {
-            ThrowIfObjectDisposed();
-            return _dataPartReferenceConstraint;
-        }
+        internal override string TargetName => "data";
 
         /// <summary>
         /// Whether this part is available in a specific version of Office Application.
         /// </summary>
         /// <param name="version">The Office file format version.</param>
         /// <returns>Always returns false.</returns>
-        internal override bool IsInVersion(FileFormatVersions version)
-        {
-            return false;
-        }
+        internal override bool IsInVersion(FileFormatVersions version) => false;
 
         /// <summary>
         /// Adds a new part.
@@ -107,18 +58,18 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">Thrown when one instance of same type part already exists and multiple instance of that type is not allowed.</exception>
         internal override OpenXmlPart AddPartFrom(OpenXmlPart subPart, string rId)
         {
-            this.ThrowIfObjectDisposed();
+            ThrowIfObjectDisposed();
 
             if (subPart == null)
             {
                 throw new ArgumentNullException(nameof(subPart));
             }
 
-            if (subPart.OpenXmlPackage == this.InternalOpenXmlPackage)
+            if (subPart.OpenXmlPackage == InternalOpenXmlPackage)
             {
-                if (this.IsChildPart(subPart))
+                if (IsChildPart(subPart))
                 {
-                    if (rId != null && rId != this.GetIdOfPart(subPart))
+                    if (rId != null && rId != GetIdOfPart(subPart))
                     {
                         // Do NOT allow one sub part is referenced more than once.
                         throw new InvalidOperationException(ExceptionMessages.PartExistsWithDifferentRelationshipId);
@@ -156,13 +107,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.StringArgumentEmptyException, nameof(contentType));
             }
 
-            newPart.CreateInternal(this.InternalOpenXmlPackage, this.ThisOpenXmlPart, contentType, null);
+            newPart.CreateInternal(InternalOpenXmlPackage, ThisOpenXmlPart, contentType, null);
 
-            string relationshipId = this.AttachChild(newPart, id);
+            var relationshipId = AttachChild(newPart, id);
 
-            this.ChildrenParts.Add(relationshipId, newPart);
-
-            return;
+            ChildrenRelationshipParts.Add(relationshipId, newPart);
         }
     }
 }

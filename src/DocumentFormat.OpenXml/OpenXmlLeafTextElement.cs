@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlLeafTextElement(string text)
             : base()
         {
-            this._rawInnerText = text;
+            _rawInnerText = text;
         }
 
         internal string RawInnerText
@@ -63,7 +63,7 @@ namespace DocumentFormat.OpenXml
             get
             {
                 MakeSureParsed();
-                if (this.RawInnerText != null)
+                if (RawInnerText != null)
                 {
                     return _rawInnerText;
                 }
@@ -76,8 +76,8 @@ namespace DocumentFormat.OpenXml
             protected set
             {
                 MakeSureParsed();
-                this.RawInnerText = value;
-                this.ShadowElement = null; // clear the other stuffs.
+                RawInnerText = value;
+                ShadowElement = null; // clear the other stuffs.
             }
         }
 
@@ -86,9 +86,9 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (this.ShadowElement != null)
+                if (ShadowElement != null)
                 {
-                    return this.ShadowElement.InnerXml;
+                    return ShadowElement.InnerXml;
                 }
                 else
                 {
@@ -96,7 +96,7 @@ namespace DocumentFormat.OpenXml
                     {
                         using (XmlDOMTextWriter writer2 = new XmlDOMTextWriter(w))
                         {
-                            this.WriteContentTo(writer2);
+                            WriteContentTo(writer2);
                         }
                         return w.ToString();
                     }
@@ -108,7 +108,7 @@ namespace DocumentFormat.OpenXml
                 // only accept null or empty string.
                 if (string.IsNullOrEmpty(value))
                 {
-                    this.ShadowElement = null;
+                    ShadowElement = null;
                 }
                 else
                 {
@@ -122,11 +122,11 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public virtual string Text
         {
-            get { return this.InnerText; }
+            get { return InnerText; }
 
             set
             {
-                this.InnerText = value;
+                InnerText = value;
             }
         }
 
@@ -134,21 +134,21 @@ namespace DocumentFormat.OpenXml
         internal override void WriteContentTo(XmlWriter w)
         {
             // Write the loaded inner xml if there are any
-            if (this.ShadowElement != null)
+            if (ShadowElement != null)
             {
-                this.ShadowElement.WriteContentTo(w);
+                ShadowElement.WriteContentTo(w);
             }
             else
             {
                 // nothing to write
-                w.WriteString(this.Text);
+                w.WriteString(Text);
             }
         }
 
         /// <inheritdoc/>
         public override void RemoveAllChildren()
         {
-            this.RawInnerText = null;
+            RawInnerText = null;
         }
 
         internal override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode)
@@ -159,7 +159,7 @@ namespace DocumentFormat.OpenXml
             {   // only when element is not empty (not  <element />).
                 xmlReader.Read(); // read this element
 
-                this.RawInnerText = string.Empty;
+                RawInnerText = string.Empty;
 
                 int unwanted = 0;
                 int textNodePosition = -1; // the position of the text in the ShadowElement's children when there are other unexpected node.
@@ -167,7 +167,7 @@ namespace DocumentFormat.OpenXml
 
                 if (xmlReader.NodeType == XmlNodeType.EndElement)
                 {
-                    Debug.Assert(xmlReader.LocalName.Equals(this.LocalName));
+                    Debug.Assert(xmlReader.LocalName.Equals(LocalName));
                 }
                 else
                 {
@@ -175,10 +175,10 @@ namespace DocumentFormat.OpenXml
                     {
                         if (xmlReader.NodeType == XmlNodeType.EndElement)
                         {
-                            Debug.Assert(xmlReader.LocalName.Equals(this.LocalName));
+                            Debug.Assert(xmlReader.LocalName.Equals(LocalName));
                             break;
                         }
-                        else if (string.IsNullOrEmpty(this.RawInnerText) &&
+                        else if (string.IsNullOrEmpty(RawInnerText) &&
                                      (xmlReader.NodeType == XmlNodeType.Text ||
                                      xmlReader.NodeType == XmlNodeType.CDATA ||
                                      xmlReader.NodeType == XmlNodeType.SignificantWhitespace ||
@@ -191,7 +191,7 @@ namespace DocumentFormat.OpenXml
                             // only load text when no text is loaded,
                             // for case "<foo/>Text1<bar/>Text2", only load "Text1", very rare case
 
-                            this.RawInnerText = xmlReader.Value;
+                            RawInnerText = xmlReader.Value;
                             textNodePosition = unwanted;
                             textNodeType = xmlReader.NodeType;
 
@@ -203,16 +203,16 @@ namespace DocumentFormat.OpenXml
 
                             // Load unexpected children if there are any.
 
-                            OpenXmlElement child = this.ElementFactory(xmlReader);
+                            OpenXmlElement child = ElementFactory(xmlReader);
                             child.Load(xmlReader, OpenXmlLoadMode.Full);
                             unwanted++;
 
-                            if (this.ShadowElement == null)
+                            if (ShadowElement == null)
                             {
-                                this.ShadowElement = new OpenXmlUnknownElement(this.Prefix, this.LocalName, this.NamespaceUri);
+                                ShadowElement = new OpenXmlUnknownElement(Prefix, LocalName, NamespaceUri);
                             }
 
-                            this.ShadowElement.AppendChild(child);
+                            ShadowElement.AppendChild(child);
                         }
                     }
                 }
@@ -220,7 +220,7 @@ namespace DocumentFormat.OpenXml
                 if (unwanted == 0)
                 {
                     // only text node, no unwanted children
-                    Debug.Assert(this.ShadowElement == null);
+                    Debug.Assert(ShadowElement == null);
                 }
                 else if (textNodePosition > -1)
                 {
@@ -229,19 +229,19 @@ namespace DocumentFormat.OpenXml
                     switch (textNodeType)
                     {
                         case XmlNodeType.Text:
-                            textNode = OpenXmlMiscNode.CreateFromText(this.RawInnerText);
+                            textNode = OpenXmlMiscNode.CreateFromText(RawInnerText);
                             break;
 
                         case XmlNodeType.CDATA:
-                            textNode = OpenXmlMiscNode.CreateFromCdata(this.RawInnerText);
+                            textNode = OpenXmlMiscNode.CreateFromCdata(RawInnerText);
                             break;
 
                         case XmlNodeType.SignificantWhitespace:
                         case XmlNodeType.Whitespace: /* O15:#3024890 */
-                            textNode = OpenXmlMiscNode.CreateFromSignificantWhitespace(this.RawInnerText);
+                            textNode = OpenXmlMiscNode.CreateFromSignificantWhitespace(RawInnerText);
                             break;
                     }
-                    this.ShadowElement.InsertAt(textNode, textNodePosition);
+                    ShadowElement.InsertAt(textNode, textNodePosition);
                 }
                 else
                 {
@@ -252,14 +252,14 @@ namespace DocumentFormat.OpenXml
             xmlReader.Skip(); // skip the end tag
 
             // set raw outer xml to empty to indicate that it is passed
-            this.RawOuterXml = string.Empty;
+            RawOuterXml = string.Empty;
         }
 
         internal override T CloneImp<T>(bool deep)
         {
             T element = base.CloneImp<T>(deep);
             Debug.Assert(element is OpenXmlLeafTextElement);
-            (element as OpenXmlLeafTextElement).Text = this.Text;
+            (element as OpenXmlLeafTextElement).Text = Text;
             return element;
         }
     }

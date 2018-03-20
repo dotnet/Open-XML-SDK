@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Attributes.Formatter
         {
             StringBuilder strBin = new StringBuilder();
 
-            for (int count = this.length - 1; count >= 0; count--)
+            for (int count = length - 1; count >= 0; count--)
             {
                 strBin.Append((longValue & (1 << count)) > 0 ? '1' : '0');
             }

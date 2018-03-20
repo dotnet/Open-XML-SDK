@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
         /// <returns>The index</returns>
         protected override int SetIndex()
         {
-            return this.GetIndexByValue();
+            return GetIndexByValue();
         }
     }
 }

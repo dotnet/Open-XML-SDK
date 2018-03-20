@@ -6,6 +6,7 @@ using DocumentFormat.OpenXml.Presentation;
 using LogUtil;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 using P15 = DocumentFormat.OpenXml.Office2013.PowerPoint;
@@ -29,16 +30,15 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         /// Constructor
         /// Get URI attribute value of CommentExtension
         /// </summary>
-        /// <param name="filePath">Generated file path</param>
-        public TestEntities(string filePath)
+        public TestEntities(Stream stream)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, false))
+            using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 //Get Extension Uri value
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
                 P15.ThreadingInfo threadingInfo = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Single();
                 CommentExtension commentExtension = (CommentExtension)threadingInfo.Parent;
-                this.ThreadingInfoExtUri = commentExtension.Uri; ;
+                ThreadingInfoExtUri = commentExtension.Uri; ;
 
                 if (string.IsNullOrEmpty(ThreadingInfoExtUri))
                     throw new Exception("Uri attribute value in Extension element is not set.");
@@ -48,15 +48,13 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         /// <summary>
         /// Editing ThreadingInfo element
         /// </summary>
-        /// <param name="filePath">Target Excel file path</param>
-        /// <param name="log">Logger</param>
-        public void EditElements(string filePath, VerifiableLog log)
+        public void EditElements(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, true))
+            using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
                 P15.ThreadingInfo threadingInfo = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Single();
-                threadingInfo.TimeZoneBias.Value = this.timeZoneBiasValue;
+                threadingInfo.TimeZoneBias.Value = timeZoneBiasValue;
 
                 log.Pass("Edited ThreadingInfo value.");
             }
@@ -65,30 +63,26 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         /// <summary>
         /// Verifying the ThreadingInfo element the existence
         /// </summary>
-        /// <param name="filePath">Target Excel faile path</param>
-        /// <param name="log">Logger</param>
-        public void VerifyElements(string filePath, VerifiableLog log)
+        public void VerifyElements(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, false))
+            using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
                 P15.ThreadingInfo threadingInfo = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Single();
 
-                log.Verify(threadingInfo.TimeZoneBias.Value == this.timeZoneBiasValue, "UnChanged in the ThreadingInfo element.");
+                log.Verify(threadingInfo.TimeZoneBias.Value == timeZoneBiasValue, "UnChanged in the ThreadingInfo element.");
             }
         }
 
         /// <summary>
         /// Deleting ThreadingInfo element
         /// </summary>
-        /// <param name="filePath">Target Excel faile path</param>
-        /// <param name="log">Logger</param>
-        public void DeleteElements(string filePath, VerifiableLog log)
+        public void DeleteElements(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, true))
+            using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
-                CommentExtension commentExtension = comment.CommentExtensionList.Descendants<CommentExtension>().Where(e => e.Uri == this.ThreadingInfoExtUri).Single();
+                CommentExtension commentExtension = comment.CommentExtensionList.Descendants<CommentExtension>().Where(e => e.Uri == ThreadingInfoExtUri).Single();
                 P15.ThreadingInfo threadingInfo = commentExtension.Descendants<P15.ThreadingInfo>().Single();
 
                 threadingInfo.Remove();
@@ -102,15 +96,13 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         /// <summary>
         /// Verifying the ThreadingInfo element the deleting
         /// </summary>
-        /// <param name="filePath">Target Excel file path</param>
-        /// <param name="log">Logger</param>
-        public void VerifyDeleteElements(string filePath, VerifiableLog log)
+        public void VerifyDeleteElements(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, false))
+            using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
 
-                int threadingInfoExtCount = comment.CommentExtensionList.Descendants<CommentExtension>().Where(e => e.Uri == this.ThreadingInfoExtUri).Count();
+                int threadingInfoExtCount = comment.CommentExtensionList.Descendants<CommentExtension>().Where(e => e.Uri == ThreadingInfoExtUri).Count();
                 log.Verify(threadingInfoExtCount == 0, "ThreadingInfo extension element is not deleted.");
 
                 int threadingInfoCount = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Count();
@@ -121,15 +113,13 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         /// <summary>
         /// Append the ThreadingInfo element
         /// </summary>
-        /// <param name="filePath">Target excel faile path</param>
-        /// <param name="log">Logger</param>
-        public void AddElements(string filePath, VerifiableLog log)
+        public void AddElements(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, true))
+            using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
-                CommentExtension commentExtension = new CommentExtension() { Uri = this.ThreadingInfoExtUri };
-                P15.ThreadingInfo threadingInfo = new P15.ThreadingInfo() { TimeZoneBias = this.timeZoneBiasValue };
+                CommentExtension commentExtension = new CommentExtension() { Uri = ThreadingInfoExtUri };
+                P15.ThreadingInfo threadingInfo = new P15.ThreadingInfo() { TimeZoneBias = timeZoneBiasValue };
                 commentExtension.AppendChild<P15.ThreadingInfo>(threadingInfo);
                 comment.CommentExtensionList.AppendChild<CommentExtension>(commentExtension);
 
@@ -140,15 +130,13 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         /// <summary>
         /// Verifying the workbookPr element the appending
         /// </summary>
-        /// <param name="filePath">Target Excel faile path</param>
-        /// <param name="log">Logger</param>
-        public void VerifyAddElements(string filePath, VerifiableLog log)
+        public void VerifyAddElements(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, false))
+            using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
 
-                int threadingInfoExtCount = comment.CommentExtensionList.Descendants<CommentExtension>().Where(e => e.Uri == this.ThreadingInfoExtUri).Count();
+                int threadingInfoExtCount = comment.CommentExtensionList.Descendants<CommentExtension>().Where(e => e.Uri == ThreadingInfoExtUri).Count();
                 log.Verify(threadingInfoExtCount == 1, "ThreadingInfo element is not added.");
 
                 int threadingInfoCount = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Count();

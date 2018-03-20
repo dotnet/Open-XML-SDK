@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Presentation;
 using LogUtil;
 using System;
+using System.IO;
 using System.Linq;
 
 using A = DocumentFormat.OpenXml.Drawing;
@@ -36,12 +37,12 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         #endregion
 
         /// <summary>
-        /// URI attribute value of PresentationExtension.(Parent of P15.SlideGuideList elemenet)
+        /// Gets or sets URI attribute value of PresentationExtension.(Parent of P15.SlideGuideList elemenet)
         /// </summary>
         private string SldExtUri { get; set; }
 
         /// <summary>
-        /// URI attribute value of PresentationExtension.(Parent of P15.NotesGuideList elemenet)
+        /// Gets or sets URI attribute value of PresentationExtension.(Parent of P15.NotesGuideList elemenet)
         /// </summary>
         private string NotesExtUri { get; set; }
 
@@ -49,23 +50,23 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// Constructor
         /// Get URI attribute value of PresentationExtension
         /// </summary>
-        /// <param name="filePath">Generated file path</param>
-        public TestEntities(string filePath)
+        /// <param name="stream">Generated stream</param>
+        public TestEntities(Stream stream)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, false))
+            using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 //Get Extension Uri value. (This element is P15.SlideGuideList parrent element.)
                 P15.SlideGuideList slideGuideList = package.PresentationPart.RootElement.Descendants<P15.SlideGuideList>().Single();
                 PresentationExtension slideGuidePresentationExtension = (PresentationExtension)slideGuideList.Parent;
-                this.SldExtUri = slideGuidePresentationExtension.Uri;
-                if (string.IsNullOrEmpty(this.SldExtUri))
+                SldExtUri = slideGuidePresentationExtension.Uri;
+                if (string.IsNullOrEmpty(SldExtUri))
                     throw new Exception("Uri attribute value in Extension element is not set. It element of P15.SlideGuideList parent element.");
 
                 //Get Extension Uri value. (This element is P15.SlideGuideList parrent element.)
                 P15.NotesGuideList notesGuideList = package.PresentationPart.RootElement.Descendants<P15.NotesGuideList>().Single();
                 PresentationExtension notesGuidePresentationExtension = (PresentationExtension)notesGuideList.Parent;
-                this.NotesExtUri = notesGuidePresentationExtension.Uri;
-                if (string.IsNullOrEmpty(this.NotesExtUri))
+                NotesExtUri = notesGuidePresentationExtension.Uri;
+                if (string.IsNullOrEmpty(NotesExtUri))
                     throw new Exception("Uri attribute value in Extension element is not set. It element of P15.SlideGuideList parent element.");
             }
         }
@@ -73,53 +74,53 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// <summary>
         /// Editing PresentationExtensionList element.
         /// </summary>
-        /// <param name="filePath">Tartget file path</param>
+        /// <param name="stream">Tartget stream</param>
         /// <param name="log">Logger</param>
-        public void EditElement(string filePath, VerifiableLog log)
+        public void EditElement(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, true))
+            using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
                 PresentationExtensionList presentationExtensionList = package.PresentationPart.RootElement.Descendants<PresentationExtensionList>().Single();
-                PresentationExtension PresentationExtension1 = package.PresentationPart.RootElement.Descendants<PresentationExtension>().Where(e => e.Uri == this.SldExtUri).Single();
+                PresentationExtension PresentationExtension1 = package.PresentationPart.RootElement.Descendants<PresentationExtension>().Where(e => e.Uri == SldExtUri).Single();
                 P15.ExtendedGuideList extendedGuideList1 = PresentationExtension1.Descendants<P15.SlideGuideList>().Single();
 
                 //Editing Guide(1) element
-                P15.ExtendedGuide extendedGuide1 = extendedGuideList1.Descendants<P15.ExtendedGuide>().Where(e => e.Id == this.Id1).Single();
-                extendedGuide1.Position = this.position1;
-                extendedGuide1.Orientation = this.directionValues1;
+                P15.ExtendedGuide extendedGuide1 = extendedGuideList1.Descendants<P15.ExtendedGuide>().Where(e => e.Id == Id1).Single();
+                extendedGuide1.Position = position1;
+                extendedGuide1.Orientation = directionValues1;
 
                 A.RgbColorModelHex rgbColorModelHex1 = extendedGuide1.Descendants<A.RgbColorModelHex>().First();
-                rgbColorModelHex1.Val.Value = this.Color1;
+                rgbColorModelHex1.Val.Value = Color1;
 
                 //Editing Guide(2) element
-                P15.ExtendedGuide extendedGuide2 = extendedGuideList1.Descendants<P15.ExtendedGuide>().Where(e => e.Id == this.Id2).Single();
-                extendedGuide2.Position = this.position2;
-                extendedGuide2.Orientation = this.directionValues2;
+                P15.ExtendedGuide extendedGuide2 = extendedGuideList1.Descendants<P15.ExtendedGuide>().Where(e => e.Id == Id2).Single();
+                extendedGuide2.Position = position2;
+                extendedGuide2.Orientation = directionValues2;
 
                 A.RgbColorModelHex rgbColorModelHex2 = extendedGuide2.Descendants<A.RgbColorModelHex>().First();
-                rgbColorModelHex2.Val.Value = this.Color2;
+                rgbColorModelHex2.Val.Value = Color2;
 
                 log.Pass("Edited the ExtendedGuideList element.");
 
-                PresentationExtension PresentationExtension2 = package.PresentationPart.RootElement.Descendants<PresentationExtension>().Where(e => e.Uri == this.NotesExtUri).Single();
+                PresentationExtension PresentationExtension2 = package.PresentationPart.RootElement.Descendants<PresentationExtension>().Where(e => e.Uri == NotesExtUri).Single();
 
                 P15.NotesGuideList notesGuideList = PresentationExtension2.Descendants<P15.NotesGuideList>().Single();
 
                 //Editing Guide(NotesGuide_1) element
-                P15.ExtendedGuide extendedGuide3 = notesGuideList.Descendants<P15.ExtendedGuide>().Where(e => e.Id == this.Id1).Single();
-                extendedGuide3.Position = this.position3;
-                extendedGuide3.Orientation = this.directionValues2;
+                P15.ExtendedGuide extendedGuide3 = notesGuideList.Descendants<P15.ExtendedGuide>().Where(e => e.Id == Id1).Single();
+                extendedGuide3.Position = position3;
+                extendedGuide3.Orientation = directionValues2;
 
                 A.RgbColorModelHex rgbColorModelHex3 = extendedGuide3.Descendants<A.RgbColorModelHex>().First();
-                rgbColorModelHex3.Val.Value = this.Color3;
+                rgbColorModelHex3.Val.Value = Color3;
 
                 //Editing Guide(NotesGuide_2) element
-                P15.ExtendedGuide extendedGuide4 = notesGuideList.Descendants<P15.ExtendedGuide>().Where(e => e.Id == this.Id2).Single();
-                extendedGuide4.Position = this.position4;
-                extendedGuide4.Orientation = this.directionValues1;
+                P15.ExtendedGuide extendedGuide4 = notesGuideList.Descendants<P15.ExtendedGuide>().Where(e => e.Id == Id2).Single();
+                extendedGuide4.Position = position4;
+                extendedGuide4.Orientation = directionValues1;
 
                 A.RgbColorModelHex rgbColorModelHex4 = extendedGuide4.Descendants<A.RgbColorModelHex>().First();
-                rgbColorModelHex4.Val.Value = this.Color4;
+                rgbColorModelHex4.Val.Value = Color4;
 
                 log.Pass("Edited the NotesGuideList element.");
             }
@@ -128,63 +129,63 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// <summary>
         /// Verifying PresentationExtensionList element.
         /// </summary>
-        /// <param name="filePath">Tartget file path</param>
+        /// <param name="stream">Tartget stream</param>
         /// <param name="log">Logger</param>
-        public void VerifyElement(string filePath, VerifiableLog log)
+        public void VerifyElement(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, false))
+            using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 //Verify ExtendedGuideList
                 PresentationExtensionList presentationExtensionList = package.PresentationPart.RootElement.Descendants<PresentationExtensionList>().Single();
-                PresentationExtension PresentationExtension1 = package.PresentationPart.RootElement.Descendants<PresentationExtension>().Where(e => e.Uri == this.SldExtUri).Single();
+                PresentationExtension PresentationExtension1 = package.PresentationPart.RootElement.Descendants<PresentationExtension>().Where(e => e.Uri == SldExtUri).Single();
                 P15.ExtendedGuideList extendedGuideList1 = PresentationExtension1.Descendants<P15.SlideGuideList>().Single();
 
                 //Verifying Guide(1) element
-                P15.ExtendedGuide extendedGuide1 = extendedGuideList1.Descendants<P15.ExtendedGuide>().Where(e => e.Id == this.Id1).Single();
+                P15.ExtendedGuide extendedGuide1 = extendedGuideList1.Descendants<P15.ExtendedGuide>().Where(e => e.Id == Id1).Single();
 
-                log.Verify(extendedGuide1.Position == this.position1, "An incorrect value, Position value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id);
-                log.Verify(extendedGuide1.Orientation == this.directionValues1, "An incorrect value, Orientation value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id);
+                log.Verify(extendedGuide1.Position == position1, "An incorrect value, Position value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id);
+                log.Verify(extendedGuide1.Orientation == directionValues1, "An incorrect value, Orientation value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id);
                 A.RgbColorModelHex rgbColorModelHex1 = extendedGuide1.Descendants<A.RgbColorModelHex>().First();
-                log.Verify(rgbColorModelHex1.Val.Value == this.Color1, "An incorrect value, RgbColorModelHex value. Guide Id=[{0}].", extendedGuide1.Id);
+                log.Verify(rgbColorModelHex1.Val.Value == Color1, "An incorrect value, RgbColorModelHex value. Guide Id=[{0}].", extendedGuide1.Id);
 
                 //Verifying Guide(2) element
-                P15.ExtendedGuide extendedGuide2 = extendedGuideList1.Descendants<P15.ExtendedGuide>().Where(e => e.Id == this.Id2).Single();
+                P15.ExtendedGuide extendedGuide2 = extendedGuideList1.Descendants<P15.ExtendedGuide>().Where(e => e.Id == Id2).Single();
 
-                log.Verify(extendedGuide2.Position == this.position2, "An incorrect value, Position value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id);
-                log.Verify(extendedGuide2.Orientation == this.directionValues2, "An incorrect value, Orientation value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id);
+                log.Verify(extendedGuide2.Position == position2, "An incorrect value, Position value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id);
+                log.Verify(extendedGuide2.Orientation == directionValues2, "An incorrect value, Orientation value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id);
                 A.RgbColorModelHex rgbColorModelHex2 = extendedGuide2.Descendants<A.RgbColorModelHex>().First();
-                log.Verify(rgbColorModelHex2.Val.Value == this.Color2, "An incorrect value, RgbColorModelHex value. Guide Id=[{0}].", extendedGuide1.Id);
+                log.Verify(rgbColorModelHex2.Val.Value == Color2, "An incorrect value, RgbColorModelHex value. Guide Id=[{0}].", extendedGuide1.Id);
 
                 //Verify NotesGuideList
-                PresentationExtension PresentationExtension2 = package.PresentationPart.RootElement.Descendants<PresentationExtension>().Where(e => e.Uri == this.NotesExtUri).Single();
+                PresentationExtension PresentationExtension2 = package.PresentationPart.RootElement.Descendants<PresentationExtension>().Where(e => e.Uri == NotesExtUri).Single();
                 P15.NotesGuideList notesGuideList = PresentationExtension2.Descendants<P15.NotesGuideList>().Single();
 
                 //Verifying Guide(1) element
-                P15.ExtendedGuide extendedGuide3 = notesGuideList.Descendants<P15.ExtendedGuide>().Where(e => e.Id == this.Id1).Single();
+                P15.ExtendedGuide extendedGuide3 = notesGuideList.Descendants<P15.ExtendedGuide>().Where(e => e.Id == Id1).Single();
 
-                log.Verify(extendedGuide3.Position == this.position3, "An incorrect value, Position value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id);
-                log.Verify(extendedGuide3.Orientation == this.directionValues2, "An incorrect value, Orientation value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id);
+                log.Verify(extendedGuide3.Position == position3, "An incorrect value, Position value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id);
+                log.Verify(extendedGuide3.Orientation == directionValues2, "An incorrect value, Orientation value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id);
                 A.RgbColorModelHex rgbColorModelHex3 = extendedGuide3.Descendants<A.RgbColorModelHex>().First();
-                log.Verify(rgbColorModelHex3.Val.Value == this.Color3, "An incorrect value, RgbColorModelHex value. Guide Id=[{0}].", extendedGuide1.Id);
+                log.Verify(rgbColorModelHex3.Val.Value == Color3, "An incorrect value, RgbColorModelHex value. Guide Id=[{0}].", extendedGuide1.Id);
 
                 //Verifying Guide(2) element
-                P15.ExtendedGuide extendedGuide4 = notesGuideList.Descendants<P15.ExtendedGuide>().Where(e => e.Id == this.Id2).Single();
+                P15.ExtendedGuide extendedGuide4 = notesGuideList.Descendants<P15.ExtendedGuide>().Where(e => e.Id == Id2).Single();
 
-                log.Verify(extendedGuide4.Position == this.position4, "An incorrect value, Position value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id);
-                log.Verify(extendedGuide4.Orientation == this.directionValues1, "An incorrect value, Orientation value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id);
+                log.Verify(extendedGuide4.Position == position4, "An incorrect value, Position value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id);
+                log.Verify(extendedGuide4.Orientation == directionValues1, "An incorrect value, Orientation value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id);
                 A.RgbColorModelHex rgbColorModelHex4 = extendedGuide4.Descendants<A.RgbColorModelHex>().First();
-                log.Verify(rgbColorModelHex4.Val.Value == this.Color4, "An incorrect value, RgbColorModelHex value. Guide Id=[{0}].", extendedGuide1.Id);
+                log.Verify(rgbColorModelHex4.Val.Value == Color4, "An incorrect value, RgbColorModelHex value. Guide Id=[{0}].", extendedGuide1.Id);
             }
         }
 
         /// <summary>
         /// Deleting PresentationExtensionList element.
         /// </summary>
-        /// <param name="filePath">Tartget file path</param>
+        /// <param name="stream">Tartget stream</param>
         /// <param name="log">Logger</param>
-        public void DeleteElement(string filePath, VerifiableLog log)
+        public void DeleteElement(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, true))
+            using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
                 //Delete RgbColorModelHex element
                 foreach (A.RgbColorModelHex rgbColorModelHex in package.PresentationPart.RootElement.Descendants<A.RgbColorModelHex>())
@@ -231,11 +232,11 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// <summary>
         /// Verifying PresentationExtensionList element.
         /// </summary>
-        /// <param name="filePath">Tartget file path</param>
+        /// <param name="stream">Tartget stream</param>
         /// <param name="log">Logger</param>
-        public void VerifyDeletedElement(string filePath, VerifiableLog log)
+        public void VerifyDeletedElement(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, false))
+            using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 log.Verify(package.PresentationPart.RootElement.Descendants<PresentationExtensionList>().Count() == 0, "Exist PresentationExtensionList element.");
 
@@ -254,18 +255,18 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// <summary>
         /// Adding PresentationExtensionList element.
         /// </summary>
-        /// <param name="filePath">Tartget file path</param>
+        /// <param name="stream">Tartget stream</param>
         /// <param name="log">Logger</param>
-        public void AddElement(string filePath, VerifiableLog log)
+        public void AddElement(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, true))
+            using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
                 //Adding Guide element
-                A.RgbColorModelHex rgbColorModelHex1 = new A.RgbColorModelHex() { Val = this.Color3 };
+                A.RgbColorModelHex rgbColorModelHex1 = new A.RgbColorModelHex() { Val = Color3 };
                 P15.ColorType colorType1 = new P15.ColorType();
-                P15.ExtendedGuide ExtendedGuide1 = new P15.ExtendedGuide() { Id = this.Id3, Position = this.position3, Orientation = this.directionValues2 };
+                P15.ExtendedGuide ExtendedGuide1 = new P15.ExtendedGuide() { Id = Id3, Position = position3, Orientation = directionValues2 };
                 P15.SlideGuideList slideGuideList = new P15.SlideGuideList();
-                PresentationExtension presentationExtension1 = new PresentationExtension() { Uri = this.SldExtUri };
+                PresentationExtension presentationExtension1 = new PresentationExtension() { Uri = SldExtUri };
                 PresentationExtensionList presentationExtensionList = new PresentationExtensionList();
 
                 colorType1.AppendChild<A.RgbColorModelHex>(rgbColorModelHex1);
@@ -284,11 +285,11 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                 log.Pass("Added PresentationExtension element. It SlideGuideList.");
 
                 //Adding NotesGuide element
-                A.RgbColorModelHex rgbColorModelHex2 = new A.RgbColorModelHex() { Val = this.Color4 };
+                A.RgbColorModelHex rgbColorModelHex2 = new A.RgbColorModelHex() { Val = Color4 };
                 P15.ColorType colorType2 = new P15.ColorType();
-                P15.ExtendedGuide ExtendedGuide2 = new P15.ExtendedGuide() { Id = this.Id4, Position = this.position4, Orientation = this.directionValues2 };
+                P15.ExtendedGuide ExtendedGuide2 = new P15.ExtendedGuide() { Id = Id4, Position = position4, Orientation = directionValues2 };
                 P15.NotesGuideList NotesGuideList = new P15.NotesGuideList();
-                PresentationExtension presentationExtension2 = new PresentationExtension() { Uri = this.NotesExtUri };
+                PresentationExtension presentationExtension2 = new PresentationExtension() { Uri = NotesExtUri };
 
                 colorType2.AppendChild<A.RgbColorModelHex>(rgbColorModelHex2);
                 log.Pass("Added RgbColorModelHex element. It SlideGuideList.");
@@ -313,16 +314,16 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// <summary>
         /// Verifying PresentationExtensionList element.
         /// </summary>
-        /// <param name="filePath">Tartget file path</param>
+        /// <param name="stream">Tartget stream</param>
         /// <param name="log">Logger</param>
-        public void VerifyAddedElemenet(string filePath, VerifiableLog log)
+        public void VerifyAddedElemenet(Stream stream, VerifiableLog log)
         {
-            using (PresentationDocument package = PresentationDocument.Open(filePath, false))
+            using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 PresentationExtensionList presentationExtensionList = package.PresentationPart.RootElement.Descendants<PresentationExtensionList>().Single();
                 log.Verify(package.PresentationPart.RootElement.Descendants<PresentationExtensionList>().Count() == 1, "PresentationExtensionList element not exist.");
 
-                PresentationExtension PresentationExtension1 = presentationExtensionList.Descendants<PresentationExtension>().Where(e => e.Uri == this.SldExtUri).Single();
+                PresentationExtension PresentationExtension1 = presentationExtensionList.Descendants<PresentationExtension>().Where(e => e.Uri == SldExtUri).Single();
                 log.Verify(PresentationExtension1.Count() == 1, "PresentationExtension element not exist. By SlideGuide.");
 
                 log.Verify(PresentationExtension1.Descendants<P15.SlideGuideList>().Count() == 1, "SlideGuideList element not exist. By SlideGuide.");
@@ -330,7 +331,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                 log.Verify(PresentationExtension1.Descendants<P15.ColorType>().Count() == 1, "ColorType element not exist. By SlideGuide.");
                 log.Verify(PresentationExtension1.Descendants<A.RgbColorModelHex>().Count() == 1, "RgbColorModelHex element not exist. By SlideGuide.");
 
-                PresentationExtension PresentationExtension2 = presentationExtensionList.Descendants<PresentationExtension>().Where(e => e.Uri == this.NotesExtUri).Single();
+                PresentationExtension PresentationExtension2 = presentationExtensionList.Descendants<PresentationExtension>().Where(e => e.Uri == NotesExtUri).Single();
                 log.Verify(PresentationExtension2.Count() == 1, "PresentationExtension element not exist. By NotesGuide.");
 
                 log.Verify(PresentationExtension2.Descendants<P15.NotesGuideList>().Count() == 1, "SlideGuideList element not exist. By NotesGuide.");

@@ -11,12 +11,13 @@ namespace DocumentFormat.OpenXml.Packaging
 {
     internal class PartUriHelper
     {
-        private Dictionary<string, int> _sequenceNumbers = new Dictionary<string, int>(20);
-        private Dictionary<string, int> _reservedUri = new Dictionary<string, int>();
+        private readonly Dictionary<string, int> _sequenceNumbers = new Dictionary<string, int>(20, StringComparer.Ordinal);
+        private readonly Dictionary<Uri, int> _reservedUri = new Dictionary<Uri, int>();
 
-        //List of contentTypes that need to have a 1 appended to the name
-        //for the first item in the package. Section numbers in comments
-        //refer to the ISO/IEC 29500 standard.
+        /// <summary>
+        /// List of contentTypes that need to have a '1' appended to the name for the first item in the package.
+        /// Section numbers in comments refer to the ISO/IEC 29500 standard.
+        /// </summary>
         private static readonly HashSet<string> _numberedContentTypes = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
         {
             //11.3 WordprocessingML Parts
@@ -65,86 +66,58 @@ namespace DocumentFormat.OpenXml.Packaging
             "application/vnd.openxmlformats-officedocument.presentationml.printerSettings"
         };
 
-        public PartUriHelper()
-        {
-        }
-
-        private bool IsReservedUri(Uri uri)
-        {
-            string uriString = uri.OriginalString.ToUpperInvariant();
-            return this._reservedUri.ContainsKey(uriString);
-        }
-
-        internal void AddToReserveUri(Uri partUri)
-        {
-            string uriString = partUri.OriginalString.ToUpperInvariant();
-            this._reservedUri.Add(uriString, 0);
-        }
-
-        internal void ReserveUri(string contentType, Uri partUri)
+        public void ReserveUri(string contentType, Uri partUri)
         {
             GetNextSequenceNumber(contentType);
-            this.AddToReserveUri(PackUriHelper.GetNormalizedPartUri(partUri));
+            AddToReserveUri(PackUriHelper.GetNormalizedPartUri(partUri));
         }
 
-        internal Uri GetUniquePartUri(string contentType, Uri parentUri, string targetPath, string targetName, string targetExt)
+        public Uri GetUniquePartUri(string contentType, Uri parentUri, string targetPath, string targetName, string targetExt)
         {
             Uri partUri;
 
             do
             {
-                string sequenceNumber = this.GetNextSequenceNumber(contentType);
-                string path = Path.Combine(targetPath, targetName + sequenceNumber + targetExt);
+                var sequenceNumber = GetNextSequenceNumber(contentType);
+                var path = Path.Combine(targetPath, string.Concat(targetName, sequenceNumber, targetExt));
 
-                Uri uri = new Uri(path, UriHelper.RelativeOrAbsolute);
-                partUri = PackUriHelper.ResolvePartUri(parentUri, uri);
-                // partUri = PackUriHelper.GetNormalizedPartUri(PackUriHelper.CreatePartUri(uri));
-            } while (this.IsReservedUri(partUri));
+                partUri = PackUriHelper.ResolvePartUri(parentUri, new Uri(path, UriHelper.RelativeOrAbsolute));
+            } while (_reservedUri.ContainsKey(partUri));
 
-            this.AddToReserveUri(partUri);
+            AddToReserveUri(partUri);
 
-            // do not need to add to the _existedNames
             return partUri;
         }
 
-        internal Uri GetUniquePartUri(string contentType, Uri parentUri, Uri targetUri)
+        public Uri GetUniquePartUri(string contentType, Uri parentUri, Uri targetUri)
         {
-            Uri partUri;
-
-            partUri = PackUriHelper.ResolvePartUri(parentUri, targetUri);
-
-            if (this.IsReservedUri(partUri))
-            {
-                // already have one, create new
-                string targetPath = ".";
-                string targetName = Path.GetFileNameWithoutExtension(targetUri.OriginalString);
-                string targetExt = Path.GetExtension(targetUri.OriginalString);
-
-                partUri = GetUniquePartUri(contentType, partUri, targetPath, targetName, targetExt);
-            }
-            else
-            {
-                // not used, can use it.
-                this.AddToReserveUri(partUri);
-            }
-
-            return partUri;
+            return GetUniquePartUri(
+                contentType,
+                PackUriHelper.ResolvePartUri(parentUri, targetUri),
+                ".",
+                Path.GetFileNameWithoutExtension(targetUri.OriginalString),
+                Path.GetExtension(targetUri.OriginalString));
         }
+
+        private void AddToReserveUri(Uri partUri) => _reservedUri.Add(partUri, 0);
 
         private string GetNextSequenceNumber(string contentType)
         {
-            if (this._sequenceNumbers.ContainsKey(contentType))
+            if (_sequenceNumbers.TryGetValue(contentType, out var value))
             {
-                this._sequenceNumbers[contentType] += 1;
-                // use the default read-only NumberFormatInfo that is culture-independent (invariant).
-                return this._sequenceNumbers[contentType].ToString(NumberFormatInfo.InvariantInfo);
+                var count = value + 1;
+
+                _sequenceNumbers[contentType] = count;
+
+                // Use the default read-only NumberFormatInfo that is culture-independent (invariant).
+                return count.ToString(NumberFormatInfo.InvariantInfo);
             }
             else
             {
-                this._sequenceNumbers.Add(contentType, 1);
+                _sequenceNumbers.Add(contentType, 1);
 
-                //Certain contentTypes need to be numbered starting with 1.
-                return _numberedContentTypes.Contains(contentType) ? "1" : "";
+                // Certain contentTypes need to be numbered starting with 1.
+                return _numberedContentTypes.Contains(contentType) ? "1" : string.Empty;
             }
         }
     }

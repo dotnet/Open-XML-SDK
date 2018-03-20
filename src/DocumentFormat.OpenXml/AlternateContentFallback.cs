@@ -104,10 +104,10 @@ namespace DocumentFormat.OpenXml
         {
             OpenXmlElement newElement = null;
 
-            if (this.Parent != null &&
-                 this.Parent is AlternateContent)
+            if (Parent != null &&
+                 Parent is AlternateContent)
             {
-                OpenXmlElement parentsParentElemnt = this.Parent.Parent;
+                OpenXmlElement parentsParentElemnt = Parent.Parent;
                 if (parentsParentElemnt != null)
                 {
                     newElement = parentsParentElemnt.ElementFactory(namespaceId, name);

@@ -22,13 +22,13 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
         /// <inheritdoc/>
         protected override int SetIndex()
         {
-            return this.GetIndexByAttributeName();
+            return GetIndexByAttributeName();
         }
 
         /// <inheritdoc/>
         internal override string Value
         {
-            get { return this.strAttrValue; }
+            get { return strAttrValue; }
         }
     }
 }

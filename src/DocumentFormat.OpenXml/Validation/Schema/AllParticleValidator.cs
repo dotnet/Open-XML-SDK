@@ -33,10 +33,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
 #endif
 
-            this._childrenParticles = new Dictionary<int, bool>(this.ParticleConstraint.ChildrenParticles.Length);
-            foreach (var childParticle in this.ParticleConstraint.ChildrenParticles)
+            _childrenParticles = new Dictionary<int, bool>(ParticleConstraint.ChildrenParticles.Length);
+            foreach (var childParticle in ParticleConstraint.ChildrenParticles)
             {
-                this._childrenParticles.Add(childParticle.ElementId, false);
+                _childrenParticles.Add(childParticle.ElementId, false);
             }
         }
 
@@ -48,9 +48,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         public override void TryMatch(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
         {
             // maxOccurs of xsd:any can only be 1
-            Debug.Assert(this.ParticleConstraint.MaxOccurs == 1);
+            Debug.Assert(ParticleConstraint.MaxOccurs == 1);
 
-            this.TryMatchOnce(particleMatchInfo, validationContext);
+            TryMatchOnce(particleMatchInfo, validationContext);
         }
 
         /// <summary>
@@ -70,14 +70,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             particleMatchInfo.LastMatchedElement = null;
             particleMatchInfo.Match = ParticleMatch.Nomatch;
 
-            foreach (var childParticle in this.ParticleConstraint.ChildrenParticles)
+            foreach (var childParticle in ParticleConstraint.ChildrenParticles)
             {
-                this._childrenParticles[childParticle.ElementId] = false;
+                _childrenParticles[childParticle.ElementId] = false;
             }
 
             while (next != null)
             {
-                if (this._childrenParticles.TryGetValue(next.ElementTypeId, out bool visited))
+                if (_childrenParticles.TryGetValue(next.ElementTypeId, out bool visited))
                 {
                     if (visited)
                     {
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     }
                     else
                     {
-                        this._childrenParticles[next.ElementTypeId] = true;
+                        _childrenParticles[next.ElementTypeId] = true;
                     }
                 }
                 else
@@ -110,7 +110,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 Debug.Assert(next == particleMatchInfo.StartElement);
                 particleMatchInfo.Match = ParticleMatch.Nomatch;
 
-                foreach (var childParticle in this.ParticleConstraint.ChildrenParticles)
+                foreach (var childParticle in ParticleConstraint.ChildrenParticles)
                 {
                     Debug.Assert(childParticle is ElementParticle);
 
@@ -124,10 +124,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 particleMatchInfo.Match = ParticleMatch.Matched;
 
                 // check if matched
-                foreach (var childParticle in this.ParticleConstraint.ChildrenParticles)
+                foreach (var childParticle in ParticleConstraint.ChildrenParticles)
                 {
                     Debug.Assert(childParticle is ElementParticle);
-                    if (!this._childrenParticles[childParticle.ElementId] && childParticle.MinOccurs == 1)
+                    if (!_childrenParticles[childParticle.ElementId] && childParticle.MinOccurs == 1)
                     {
                         // one of the required children are missed.
                         particleMatchInfo.Match = ParticleMatch.Partial;
@@ -135,9 +135,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 }
 
                 // find expected child elements.
-                foreach (var childParticle in this.ParticleConstraint.ChildrenParticles)
+                foreach (var childParticle in ParticleConstraint.ChildrenParticles)
                 {
-                    if (!this._childrenParticles[childParticle.ElementId])
+                    if (!_childrenParticles[childParticle.ElementId])
                     {
                         particleMatchInfo.ExpectedChildren.Add(childParticle.ElementId);
                     }
@@ -167,14 +167,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             switch (particleMatchInfo.Match)
             {
                 case ParticleMatch.Nomatch:
-                    expectedChildren = GetExpectedChildrenMessage(validationContext.Element, this.GetExpectedElements());
+                    expectedChildren = GetExpectedChildrenMessage(validationContext.Element, GetExpectedElements());
                     errorInfo = validationContext.ComposeSchemaValidationError(element, child, "Sch_InvalidElementContentExpectingComplex", child.XmlQualifiedName.ToString(), expectedChildren);
                     validationContext.AddError(errorInfo);
                     break;
 
                 case ParticleMatch.Partial:
                 case ParticleMatch.Matched:
-                    if (this._childrenParticles.ContainsKey(child.ElementTypeId))
+                    if (_childrenParticles.ContainsKey(child.ElementTypeId))
                     {
                         // more than one occurs of a child.
                         errorInfo = validationContext.ComposeSchemaValidationError(element, child, "Sch_AllElement", child.XmlQualifiedName.ToString());

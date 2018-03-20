@@ -8,8 +8,9 @@
       .NET Standard target must be first to avoid a ResXFileCodeGenerator issue
       (tracked at https://github.com/dotnet/project-system/issues/1519)
     -->
-    <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevCore' ">netstandard1.3</TargetFrameworks>
-    <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevFramework' ">net46</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevCore10' ">netstandard1.3</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevFramework40' ">net40</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevFramework46' ">net46</TargetFrameworks>
     <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'All' ">netstandard1.3;net35;net40;net46</TargetFrameworks>
 
     <NoWarn>$(NoWarn);3003</NoWarn>
@@ -59,6 +60,7 @@
       <ItemGroup>
         <Compile Include="System\Collections\Generic\IReadOnlyList.cs" />
         <Compile Include="System\Collections\Generic\IReadOnlyCollection.cs" />
+        <Compile Include="System\Collections\Generic\IReadOnlyDictionary.cs" />
         <Compile Include="System\Reflection\TypeExtensions.cs" />
       </ItemGroup>
 
@@ -113,7 +115,7 @@
 
   <!-- Include the constraint data that are stored in bin files -->
   <ItemGroup>
-    <EmbeddedResource Include="GeneratedCode\*.bin" />
+    <EmbeddedResource Include="GeneratedCode\*.constraints" />
   </ItemGroup>
 
   <ItemGroup>

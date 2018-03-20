@@ -19,15 +19,15 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     {
         internal SchemaTypeData(int openxmlTypeId, AttributeConstraint[] attributeConstraints)
         {
-            this.OpenXmlTypeId = openxmlTypeId;
+            OpenXmlTypeId = openxmlTypeId;
             // Use ReadOnlyCollection<T> as the return type in debug version.
 #if DEBUG
             if (attributeConstraints != null)
             {
-                this.AttributeConstraints = new ReadOnlyCollection<AttributeConstraint>(attributeConstraints);
+                AttributeConstraints = new ReadOnlyCollection<AttributeConstraint>(attributeConstraints);
             }
 #else
-            this.AttributeConstraints = attributeConstraints;
+            AttributeConstraints = attributeConstraints;
 #endif
         }
 
@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             Debug.Assert(particleConstraint != null);
 
-            this.ParticleConstraint = particleConstraint;
+            ParticleConstraint = particleConstraint;
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             : this(openxmlTypeId, attributeConstraints)
         {
             Debug.Assert(simpleTypeConstraint != null);
-            this.SimpleTypeConstraint = simpleTypeConstraint;
+            SimpleTypeConstraint = simpleTypeConstraint;
         }
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             get
             {
-                return this.AttributeConstraints != null && this.AttributeConstraints.Count > 0;
+                return AttributeConstraints != null && AttributeConstraints.Count > 0;
             }
         }
 
@@ -109,9 +109,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             get
             {
-                if (this.AttributeConstraints != null)
+                if (AttributeConstraints != null)
                 {
-                    return this.AttributeConstraints.Count;
+                    return AttributeConstraints.Count;
                 }
                 return 0;
             }
@@ -120,11 +120,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Gets a value indicating whether the schema type is a schema type which contains particles.
         /// </summary>
-        internal bool IsCompositeType => this.ParticleConstraint != null;
+        internal bool IsCompositeType => ParticleConstraint != null;
 
         /// <summary>
         /// Gets a value indicating whether the schema type contains simple content only.
         /// </summary>
-        internal bool IsSimpleContent => this.SimpleTypeConstraint != null;
+        internal bool IsSimpleContent => SimpleTypeConstraint != null;
     }
  }

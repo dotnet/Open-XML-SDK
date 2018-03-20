@@ -15,25 +15,25 @@ namespace DocumentFormat.OpenXml.Packaging
 
         public PackagePartRelationshipPropertyCollection(PackagePart packagePart)
         {
-            this.BasePackagePart = packagePart;
-            if (this.BasePackagePart == null)
+            BasePackagePart = packagePart;
+            if (BasePackagePart == null)
             {
                 throw new ArgumentNullException(nameof(BasePackagePart));
             }
 
-            this.BasePackageRelationshipCollection = this.BasePackagePart.GetRelationships();
-            this.Build();
+            BasePackageRelationshipCollection = BasePackagePart.GetRelationships();
+            Build();
         }
 
         internal override void ReplaceRelationship(Uri targetUri, TargetMode targetMode, string strRelationshipType, string strId)
         {
-            this.BasePackagePart.DeleteRelationship(strId);
-            this.BasePackagePart.CreateRelationship(targetUri, targetMode, strRelationshipType, strId);
+            BasePackagePart.DeleteRelationship(strId);
+            BasePackagePart.CreateRelationship(targetUri, targetMode, strRelationshipType, strId);
         }
 
         internal override Package GetPackage()
         {
-            return this.BasePackagePart.Package;
+            return BasePackagePart.Package;
         }
     }
 }

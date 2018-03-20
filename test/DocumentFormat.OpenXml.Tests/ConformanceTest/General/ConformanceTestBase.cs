@@ -2,109 +2,48 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Tests.TaskLibraries;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Reflection;
 using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    public abstract class ConformanceTestBase<TReflectedCode, TPackage, TElement> : OpenXmlTestBase
+    public abstract class ConformanceTestBase<TGeneratedCode, TPackage, TElement> : OpenXmlTestBase
         where TElement : OpenXmlElement
         where TPackage : OpenXmlPackage
+        where TGeneratedCode : IGeneratedDocument, new()
     {
-        private readonly string baseFileName = "Base";
-        private readonly string editedFileName = "Edited";
-
-        #region Test Settings
-        protected string PackageExtension
-        {
-            get
-            {
-                Type type = typeof(TPackage);
-
-                if (type == typeof(WordprocessingDocument))
-                {
-                    return ".docx";
-                }
-                if (type == typeof(PresentationDocument))
-                {
-                    return ".pptx";
-                }
-                if (type == typeof(SpreadsheetDocument))
-                {
-                    return ".xlsx";
-                }
-                return ".unknown";
-            }
-        }
-
-        protected string BaseFileName
-        {
-            get { return this.baseFileName + this.PackageExtension; }
-        }
-
-        protected string ModifiedFileName
-        {
-            get { return this.editedFileName + this.PackageExtension; }
-        }
-        #endregion
-
-        /// <summary>
-        /// Default Constructor
-        /// </summary>
         public ConformanceTestBase(ITestOutputHelper output)
             : base(output)
         {
-            // Creates the test document
-            this.CreatePackage(this.GetTestFilePath(this.BaseFileName));
         }
 
-        #region Preset Tests
         protected delegate void ElementHandler(TElement element);
 
         protected void SimpleReadWriteTest(ElementHandler preTest, ElementHandler update, ElementHandler postTest)
         {
-            string originalFilePath = this.GetTestFilePath(this.BaseFileName);
-            string modifiedFilePath = this.GetTestFilePath(this.ModifiedFileName);
-
-            System.IO.File.Copy(originalFilePath, modifiedFilePath, true);
-            this.Log.Comment("File copy [{0}] to [{1}]", originalFilePath, modifiedFilePath);
-
-            using (var package = this.OpenDocument(modifiedFilePath, true))
+            using (var stream = new MemoryStream())
             {
-                var elements = this.GetElements(package);
+                var generator = new TGeneratedCode();
+                generator.CreatePackage(stream);
 
-                preTest(elements.First<TElement>());
-                update(elements.First<TElement>());
+                using (var package = OpenDocument(stream, true))
+                {
+                    var elements = GetElements(package);
+
+                    preTest(elements.First());
+                    update(elements.First());
+                }
+
+                using (var package = OpenDocument(stream, false))
+                {
+                    var elements = GetElements(package);
+
+                    postTest(elements.First());
+                }
             }
-
-            this.Log.Pass("Updated the element on [{0}].", modifiedFilePath);
-
-            using (var package = this.OpenDocument(modifiedFilePath, false))
-            {
-                var elements = this.GetElements(package);
-
-                postTest(elements.First<TElement>());
-            }
-        }
-        #endregion
-
-        #region Package Operators
-        /// <summary>
-        /// Creates test file
-        /// </summary>
-        /// <param name="createFilePath">file path to create</param>
-        protected void CreatePackage(string path)
-        {
-            Type reflectedCode = typeof(TReflectedCode);
-            object documentGenerator = Activator.CreateInstance(reflectedCode);
-            var createPackageMethod = reflectedCode.GetMethod("CreatePackage");
-            createPackageMethod.Invoke(documentGenerator, new object[] { path });
-
-            this.Log.Pass("Document generated. path=[{0}]", path);
         }
 
         /// <summary>
@@ -113,39 +52,31 @@ namespace DocumentFormat.OpenXml.Tests
         /// <param name="path">file path to open</param>
         /// <param name="enableEdit">open the file in writable mode</param>
         /// <returns>document package</returns>
-        protected OpenXmlPackage OpenDocument(string path, bool enableEdit)
+        protected OpenXmlPackage OpenDocument(Stream stream, bool enableEdit)
         {
-            OpenXmlPackage package = null;
-
             OpenSettings settings = new OpenSettings()
-                {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(
+            {
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(
                         MarkupCompatibilityProcessMode.ProcessAllParts,
                         DocumentFormat.OpenXml.FileFormatVersions.Office2013)
-                };
+            };
 
-            Type type = typeof(TPackage);
-
-            if (type == typeof(WordprocessingDocument))
+            if (typeof(TPackage) == typeof(WordprocessingDocument))
             {
-                package = WordprocessingDocument.Open(path, enableEdit, settings);
+                return WordprocessingDocument.Open(stream, enableEdit, settings);
             }
-            else if (type == typeof(PresentationDocument))
+            else if (typeof(TPackage) == typeof(PresentationDocument))
             {
-                package = PresentationDocument.Open(path, enableEdit, settings);
+                return PresentationDocument.Open(stream, enableEdit, settings);
             }
-            else if (type == typeof(SpreadsheetDocument))
+            else if (typeof(TPackage) == typeof(SpreadsheetDocument))
             {
-                package = SpreadsheetDocument.Open(path, enableEdit, settings);
+                return SpreadsheetDocument.Open(stream, enableEdit, settings);
             }
 
-            this.Log.Pass("Opened test document {0}", path);
-
-            return package;
+            throw new ArgumentOutOfRangeException(nameof(TPackage));
         }
-        #endregion
 
-        #region Element Operators
         /// <summary>
         /// Obtains elements in a documet package
         /// </summary>
@@ -179,7 +110,7 @@ namespace DocumentFormat.OpenXml.Tests
                 }
             }
 
-            this.Log.VerifyTrue(
+            Log.VerifyTrue(
                 elements.Count > 0,
                 string.Format(
                     "Elements [{0}] are detected in [{1}]",
@@ -188,6 +119,5 @@ namespace DocumentFormat.OpenXml.Tests
 
             return elements;
         }
-        #endregion
     }
 }
