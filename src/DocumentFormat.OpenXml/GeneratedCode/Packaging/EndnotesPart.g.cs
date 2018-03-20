@@ -17,6 +17,7 @@ namespace DocumentFormat.OpenXml.Packaging
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/endnotes";
         private static PartConstraintCollection _dataPartConstraints;
         private static PartConstraintCollection _partConstraints;
+        private DocumentFormat.OpenXml.Wordprocessing.Endnotes _rootElement;
 
         /// <summary>
         /// Creates an instance of the EndnotesPart OpenXmlType
@@ -99,9 +100,48 @@ namespace DocumentFormat.OpenXml.Packaging
         public IEnumerable<EmbeddedPackagePart> EmbeddedPackageParts => GetPartsOfType<EmbeddedPackagePart>();
 
         /// <summary>
+        /// Gets or sets the root element of this part.
+        /// </summary>
+        public DocumentFormat.OpenXml.Wordprocessing.Endnotes Endnotes
+        {
+            get
+            {
+                if (_rootElement is null)
+                {
+                    LoadDomTree<DocumentFormat.OpenXml.Wordprocessing.Endnotes>();
+                }
+
+                return _rootElement;
+            }
+
+            set
+            {
+                if (value is null)
+                {
+                    throw new ArgumentNullException(nameof(value));
+                }
+
+                SetDomTree(value);
+            }
+        }
+
+        /// <summary>
         /// Gets the ImageParts of the EndnotesPart
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
+
+        private protected override OpenXmlPartRootElement InternalRootElement
+        {
+            get
+            {
+                return _rootElement;
+            }
+
+            set
+            {
+                _rootElement = value as DocumentFormat.OpenXml.Wordprocessing.Endnotes;
+            }
+        }
 
         /// <inheritdoc/>
         internal sealed override bool IsContentTypeFixed => true;
@@ -165,6 +205,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 return _partConstraints;
             }
         }
+
+        internal override OpenXmlPartRootElement PartRootElement => Endnotes;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

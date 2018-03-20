@@ -17,6 +17,7 @@ namespace DocumentFormat.OpenXml.Packaging
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments";
         private static PartConstraintCollection _dataPartConstraints;
         private static PartConstraintCollection _partConstraints;
+        private DocumentFormat.OpenXml.Wordprocessing.Comments _rootElement;
 
         /// <summary>
         /// Creates an instance of the WordprocessingCommentsPart OpenXmlType
@@ -34,6 +35,32 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the ChartParts of the WordprocessingCommentsPart
         /// </summary>
         public IEnumerable<ChartPart> ChartParts => GetPartsOfType<ChartPart>();
+
+        /// <summary>
+        /// Gets or sets the root element of this part.
+        /// </summary>
+        public DocumentFormat.OpenXml.Wordprocessing.Comments Comments
+        {
+            get
+            {
+                if (_rootElement is null)
+                {
+                    LoadDomTree<DocumentFormat.OpenXml.Wordprocessing.Comments>();
+                }
+
+                return _rootElement;
+            }
+
+            set
+            {
+                if (value is null)
+                {
+                    throw new ArgumentNullException(nameof(value));
+                }
+
+                SetDomTree(value);
+            }
+        }
 
         /// <inheritdoc/>
         public sealed override string ContentType => ContentTypeConstant;
@@ -103,6 +130,19 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
 
+        private protected override OpenXmlPartRootElement InternalRootElement
+        {
+            get
+            {
+                return _rootElement;
+            }
+
+            set
+            {
+                _rootElement = value as DocumentFormat.OpenXml.Wordprocessing.Comments;
+            }
+        }
+
         /// <inheritdoc/>
         internal sealed override bool IsContentTypeFixed => true;
 
@@ -165,6 +205,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 return _partConstraints;
             }
         }
+
+        internal override OpenXmlPartRootElement PartRootElement => Comments;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

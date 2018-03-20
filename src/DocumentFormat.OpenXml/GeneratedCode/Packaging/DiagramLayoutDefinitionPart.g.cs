@@ -16,6 +16,7 @@ namespace DocumentFormat.OpenXml.Packaging
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout";
         private static PartConstraintCollection _partConstraints;
+        private DocumentFormat.OpenXml.Drawing.Diagrams.LayoutDefinition _rootElement;
 
         /// <summary>
         /// Creates an instance of the DiagramLayoutDefinitionPart OpenXmlType
@@ -32,8 +33,47 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
 
+        private protected override OpenXmlPartRootElement InternalRootElement
+        {
+            get
+            {
+                return _rootElement;
+            }
+
+            set
+            {
+                _rootElement = value as DocumentFormat.OpenXml.Drawing.Diagrams.LayoutDefinition;
+            }
+        }
+
         /// <inheritdoc/>
         internal sealed override bool IsContentTypeFixed => true;
+
+        /// <summary>
+        /// Gets or sets the root element of this part.
+        /// </summary>
+        public DocumentFormat.OpenXml.Drawing.Diagrams.LayoutDefinition LayoutDefinition
+        {
+            get
+            {
+                if (_rootElement is null)
+                {
+                    LoadDomTree<DocumentFormat.OpenXml.Drawing.Diagrams.LayoutDefinition>();
+                }
+
+                return _rootElement;
+            }
+
+            set
+            {
+                if (value is null)
+                {
+                    throw new ArgumentNullException(nameof(value));
+                }
+
+                SetDomTree(value);
+            }
+        }
 
         /// <inheritdoc/>
         internal sealed override PartConstraintCollection PartConstraints
@@ -54,6 +94,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 return _partConstraints;
             }
         }
+
+        internal override OpenXmlPartRootElement PartRootElement => LayoutDefinition;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

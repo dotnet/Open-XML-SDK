@@ -16,6 +16,7 @@ namespace DocumentFormat.OpenXml.Packaging
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.dialogsheet+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/dialogsheet";
         private static PartConstraintCollection _partConstraints;
+        private DocumentFormat.OpenXml.Spreadsheet.DialogSheet _rootElement;
 
         /// <summary>
         /// Creates an instance of the DialogsheetPart OpenXmlType
@@ -28,6 +29,32 @@ namespace DocumentFormat.OpenXml.Packaging
         public sealed override string ContentType => ContentTypeConstant;
 
         /// <summary>
+        /// Gets or sets the root element of this part.
+        /// </summary>
+        public DocumentFormat.OpenXml.Spreadsheet.DialogSheet DialogSheet
+        {
+            get
+            {
+                if (_rootElement is null)
+                {
+                    LoadDomTree<DocumentFormat.OpenXml.Spreadsheet.DialogSheet>();
+                }
+
+                return _rootElement;
+            }
+
+            set
+            {
+                if (value is null)
+                {
+                    throw new ArgumentNullException(nameof(value));
+                }
+
+                SetDomTree(value);
+            }
+        }
+
+        /// <summary>
         /// Gets the DrawingsPart of the DialogsheetPart
         /// </summary>
         public DrawingsPart DrawingsPart => GetSubPartOfType<DrawingsPart>();
@@ -36,6 +63,19 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the EmbeddedObjectParts of the DialogsheetPart
         /// </summary>
         public IEnumerable<EmbeddedObjectPart> EmbeddedObjectParts => GetPartsOfType<EmbeddedObjectPart>();
+
+        private protected override OpenXmlPartRootElement InternalRootElement
+        {
+            get
+            {
+                return _rootElement;
+            }
+
+            set
+            {
+                _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.DialogSheet;
+            }
+        }
 
         /// <inheritdoc/>
         internal sealed override bool IsContentTypeFixed => true;
@@ -71,6 +111,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 return _partConstraints;
             }
         }
+
+        internal override OpenXmlPartRootElement PartRootElement => DialogSheet;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

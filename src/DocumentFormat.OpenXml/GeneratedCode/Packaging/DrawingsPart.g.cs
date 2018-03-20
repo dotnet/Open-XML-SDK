@@ -16,6 +16,7 @@ namespace DocumentFormat.OpenXml.Packaging
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.drawing+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing";
         private static PartConstraintCollection _partConstraints;
+        private DocumentFormat.OpenXml.Drawing.Spreadsheet.WorksheetDrawing _rootElement;
 
         /// <summary>
         /// Creates an instance of the DrawingsPart OpenXmlType
@@ -66,6 +67,19 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the ImageParts of the DrawingsPart
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
+
+        private protected override OpenXmlPartRootElement InternalRootElement
+        {
+            get
+            {
+                return _rootElement;
+            }
+
+            set
+            {
+                _rootElement = value as DocumentFormat.OpenXml.Drawing.Spreadsheet.WorksheetDrawing;
+            }
+        }
 
         /// <inheritdoc/>
         internal sealed override bool IsContentTypeFixed => true;
@@ -122,6 +136,8 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
+        internal override OpenXmlPartRootElement PartRootElement => WorksheetDrawing;
+
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
 
@@ -135,6 +151,32 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the WebExtensionParts of the DrawingsPart
         /// </summary>
         public IEnumerable<WebExtensionPart> WebExtensionParts => GetPartsOfType<WebExtensionPart>();
+
+        /// <summary>
+        /// Gets or sets the root element of this part.
+        /// </summary>
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.WorksheetDrawing WorksheetDrawing
+        {
+            get
+            {
+                if (_rootElement is null)
+                {
+                    LoadDomTree<DocumentFormat.OpenXml.Drawing.Spreadsheet.WorksheetDrawing>();
+                }
+
+                return _rootElement;
+            }
+
+            set
+            {
+                if (value is null)
+                {
+                    throw new ArgumentNullException(nameof(value));
+                }
+
+                SetDomTree(value);
+            }
+        }
 
         /// <summary>
         /// Adds a CustomXmlPart to the DrawingsPart

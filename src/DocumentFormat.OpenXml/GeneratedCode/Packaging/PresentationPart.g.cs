@@ -14,6 +14,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
         private static PartConstraintCollection _partConstraints;
+        private DocumentFormat.OpenXml.Presentation.Presentation _rootElement;
 
         /// <summary>
         /// Creates an instance of the PresentationPart OpenXmlType
@@ -41,6 +42,19 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the HandoutMasterPart of the PresentationPart
         /// </summary>
         public HandoutMasterPart HandoutMasterPart => GetSubPartOfType<HandoutMasterPart>();
+
+        private protected override OpenXmlPartRootElement InternalRootElement
+        {
+            get
+            {
+                return _rootElement;
+            }
+
+            set
+            {
+                _rootElement = value as DocumentFormat.OpenXml.Presentation.Presentation;
+            }
+        }
 
         /// <inheritdoc/>
         internal sealed override bool IsContentTypeFixed => false;
@@ -124,6 +138,34 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
 
                 return _partConstraints;
+            }
+        }
+
+        internal override OpenXmlPartRootElement PartRootElement => Presentation;
+
+        /// <summary>
+        /// Gets or sets the root element of this part.
+        /// </summary>
+        public DocumentFormat.OpenXml.Presentation.Presentation Presentation
+        {
+            get
+            {
+                if (_rootElement is null)
+                {
+                    LoadDomTree<DocumentFormat.OpenXml.Presentation.Presentation>();
+                }
+
+                return _rootElement;
+            }
+
+            set
+            {
+                if (value is null)
+                {
+                    throw new ArgumentNullException(nameof(value));
+                }
+
+                SetDomTree(value);
             }
         }
 
