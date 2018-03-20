@@ -17,6 +17,7 @@ namespace DocumentFormat.OpenXml.Packaging
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesSlide";
         private static PartConstraintCollection _dataPartConstraints;
         private static PartConstraintCollection _partConstraints;
+        private DocumentFormat.OpenXml.Presentation.NotesSlide _rootElement;
 
         /// <summary>
         /// Creates an instance of the NotesSlidePart OpenXmlType
@@ -107,6 +108,19 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
 
+        private protected override OpenXmlPartRootElement InternalRootElement
+        {
+            get
+            {
+                return _rootElement;
+            }
+
+            set
+            {
+                _rootElement = value as DocumentFormat.OpenXml.Presentation.NotesSlide;
+            }
+        }
+
         /// <inheritdoc/>
         internal sealed override bool IsContentTypeFixed => true;
 
@@ -114,6 +128,32 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the NotesMasterPart of the NotesSlidePart
         /// </summary>
         public NotesMasterPart NotesMasterPart => GetSubPartOfType<NotesMasterPart>();
+
+        /// <summary>
+        /// Gets or sets the root element of this part.
+        /// </summary>
+        public DocumentFormat.OpenXml.Presentation.NotesSlide NotesSlide
+        {
+            get
+            {
+                if (_rootElement is null)
+                {
+                    LoadDomTree<DocumentFormat.OpenXml.Presentation.NotesSlide>();
+                }
+
+                return _rootElement;
+            }
+
+            set
+            {
+                if (value is null)
+                {
+                    throw new ArgumentNullException(nameof(value));
+                }
+
+                SetDomTree(value);
+            }
+        }
 
         /// <inheritdoc/>
         internal sealed override PartConstraintCollection PartConstraints
@@ -194,6 +234,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 return _partConstraints;
             }
         }
+
+        internal override OpenXmlPartRootElement PartRootElement => NotesSlide;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

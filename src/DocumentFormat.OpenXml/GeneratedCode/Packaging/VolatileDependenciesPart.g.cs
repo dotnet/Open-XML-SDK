@@ -15,6 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.volatileDependencies+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/volatileDependencies";
+        private DocumentFormat.OpenXml.Spreadsheet.VolatileTypes _rootElement;
 
         /// <summary>
         /// Creates an instance of the VolatileDependenciesPart OpenXmlType
@@ -26,8 +27,23 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public sealed override string ContentType => ContentTypeConstant;
 
+        private protected override OpenXmlPartRootElement InternalRootElement
+        {
+            get
+            {
+                return _rootElement;
+            }
+
+            set
+            {
+                _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.VolatileTypes;
+            }
+        }
+
         /// <inheritdoc/>
         internal sealed override bool IsContentTypeFixed => true;
+
+        internal override OpenXmlPartRootElement PartRootElement => VolatileTypes;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
@@ -37,5 +53,31 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         internal sealed override string TargetPath => ".";
+
+        /// <summary>
+        /// Gets or sets the root element of this part.
+        /// </summary>
+        public DocumentFormat.OpenXml.Spreadsheet.VolatileTypes VolatileTypes
+        {
+            get
+            {
+                if (_rootElement is null)
+                {
+                    LoadDomTree<DocumentFormat.OpenXml.Spreadsheet.VolatileTypes>();
+                }
+
+                return _rootElement;
+            }
+
+            set
+            {
+                if (value is null)
+                {
+                    throw new ArgumentNullException(nameof(value));
+                }
+
+                SetDomTree(value);
+            }
+        }
     }
 }

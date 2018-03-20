@@ -14,6 +14,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
         private static PartConstraintCollection _partConstraints;
+        private DocumentFormat.OpenXml.Spreadsheet.Workbook _rootElement;
 
         /// <summary>
         /// Creates an instance of the WorkbookPart OpenXmlType
@@ -71,6 +72,19 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the ExternalWorkbookParts of the WorkbookPart
         /// </summary>
         public IEnumerable<ExternalWorkbookPart> ExternalWorkbookParts => GetPartsOfType<ExternalWorkbookPart>();
+
+        private protected override OpenXmlPartRootElement InternalRootElement
+        {
+            get
+            {
+                return _rootElement;
+            }
+
+            set
+            {
+                _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.Workbook;
+            }
+        }
 
         /// <summary>
         /// Gets the InternationalMacroSheetParts of the WorkbookPart
@@ -197,6 +211,8 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
+        internal override OpenXmlPartRootElement PartRootElement => Workbook;
+
         /// <summary>
         /// Gets the PivotTableCacheDefinitionParts of the WorkbookPart
         /// </summary>
@@ -245,6 +261,32 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the VolatileDependenciesPart of the WorkbookPart
         /// </summary>
         public VolatileDependenciesPart VolatileDependenciesPart => GetSubPartOfType<VolatileDependenciesPart>();
+
+        /// <summary>
+        /// Gets or sets the root element of this part.
+        /// </summary>
+        public DocumentFormat.OpenXml.Spreadsheet.Workbook Workbook
+        {
+            get
+            {
+                if (_rootElement is null)
+                {
+                    LoadDomTree<DocumentFormat.OpenXml.Spreadsheet.Workbook>();
+                }
+
+                return _rootElement;
+            }
+
+            set
+            {
+                if (value is null)
+                {
+                    throw new ArgumentNullException(nameof(value));
+                }
+
+                SetDomTree(value);
+            }
+        }
 
         /// <summary>
         /// Gets the WorkbookRevisionHeaderPart of the WorkbookPart

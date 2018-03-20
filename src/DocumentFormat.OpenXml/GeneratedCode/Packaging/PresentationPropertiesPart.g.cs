@@ -15,6 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.presentationml.presProps+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/presProps";
+        private DocumentFormat.OpenXml.Presentation.PresentationProperties _rootElement;
 
         /// <summary>
         /// Creates an instance of the PresentationPropertiesPart OpenXmlType
@@ -26,8 +27,49 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public sealed override string ContentType => ContentTypeConstant;
 
+        private protected override OpenXmlPartRootElement InternalRootElement
+        {
+            get
+            {
+                return _rootElement;
+            }
+
+            set
+            {
+                _rootElement = value as DocumentFormat.OpenXml.Presentation.PresentationProperties;
+            }
+        }
+
         /// <inheritdoc/>
         internal sealed override bool IsContentTypeFixed => true;
+
+        internal override OpenXmlPartRootElement PartRootElement => PresentationProperties;
+
+        /// <summary>
+        /// Gets or sets the root element of this part.
+        /// </summary>
+        public DocumentFormat.OpenXml.Presentation.PresentationProperties PresentationProperties
+        {
+            get
+            {
+                if (_rootElement is null)
+                {
+                    LoadDomTree<DocumentFormat.OpenXml.Presentation.PresentationProperties>();
+                }
+
+                return _rootElement;
+            }
+
+            set
+            {
+                if (value is null)
+                {
+                    throw new ArgumentNullException(nameof(value));
+                }
+
+                SetDomTree(value);
+            }
+        }
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

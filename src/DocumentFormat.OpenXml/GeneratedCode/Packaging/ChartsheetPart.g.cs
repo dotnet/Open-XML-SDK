@@ -16,12 +16,39 @@ namespace DocumentFormat.OpenXml.Packaging
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.chartsheet+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartsheet";
         private static PartConstraintCollection _partConstraints;
+        private DocumentFormat.OpenXml.Spreadsheet.Chartsheet _rootElement;
 
         /// <summary>
         /// Creates an instance of the ChartsheetPart OpenXmlType
         /// </summary>
         internal protected ChartsheetPart()
         {
+        }
+
+        /// <summary>
+        /// Gets or sets the root element of this part.
+        /// </summary>
+        public DocumentFormat.OpenXml.Spreadsheet.Chartsheet Chartsheet
+        {
+            get
+            {
+                if (_rootElement is null)
+                {
+                    LoadDomTree<DocumentFormat.OpenXml.Spreadsheet.Chartsheet>();
+                }
+
+                return _rootElement;
+            }
+
+            set
+            {
+                if (value is null)
+                {
+                    throw new ArgumentNullException(nameof(value));
+                }
+
+                SetDomTree(value);
+            }
         }
 
         /// <inheritdoc/>
@@ -36,6 +63,19 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the ImageParts of the ChartsheetPart
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
+
+        private protected override OpenXmlPartRootElement InternalRootElement
+        {
+            get
+            {
+                return _rootElement;
+            }
+
+            set
+            {
+                _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.Chartsheet;
+            }
+        }
 
         /// <inheritdoc/>
         internal sealed override bool IsContentTypeFixed => true;
@@ -71,6 +111,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 return _partConstraints;
             }
         }
+
+        internal override OpenXmlPartRootElement PartRootElement => Chartsheet;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
