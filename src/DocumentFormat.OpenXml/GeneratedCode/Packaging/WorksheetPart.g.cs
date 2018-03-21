@@ -16,6 +16,7 @@ namespace DocumentFormat.OpenXml.Packaging
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet";
         private static PartConstraintCollection _partConstraints;
+        private DocumentFormat.OpenXml.Spreadsheet.Worksheet _rootElement;
 
         /// <summary>
         /// Creates an instance of the WorksheetPart OpenXmlType
@@ -66,6 +67,19 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the ImageParts of the WorksheetPart
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
+
+        private protected override OpenXmlPartRootElement InternalRootElement
+        {
+            get
+            {
+                return _rootElement;
+            }
+
+            set
+            {
+                _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.Worksheet;
+            }
+        }
 
         /// <inheritdoc/>
         internal sealed override bool IsContentTypeFixed => true;
@@ -158,6 +172,8 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
+        internal override OpenXmlPartRootElement PartRootElement => Worksheet;
+
         /// <summary>
         /// Gets the PivotTableParts of the WorksheetPart
         /// </summary>
@@ -206,6 +222,32 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the VmlDrawingParts of the WorksheetPart
         /// </summary>
         public IEnumerable<VmlDrawingPart> VmlDrawingParts => GetPartsOfType<VmlDrawingPart>();
+
+        /// <summary>
+        /// Gets or sets the root element of this part.
+        /// </summary>
+        public DocumentFormat.OpenXml.Spreadsheet.Worksheet Worksheet
+        {
+            get
+            {
+                if (_rootElement is null)
+                {
+                    LoadDomTree<DocumentFormat.OpenXml.Spreadsheet.Worksheet>();
+                }
+
+                return _rootElement;
+            }
+
+            set
+            {
+                if (value is null)
+                {
+                    throw new ArgumentNullException(nameof(value));
+                }
+
+                SetDomTree(value);
+            }
+        }
 
         /// <summary>
         /// Gets the WorksheetCommentsPart of the WorksheetPart

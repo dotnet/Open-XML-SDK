@@ -2,9 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass;
-using DocumentFormat.OpenXml.Tests.TaskLibraries;
-using OxTest;
-using System;
 using System.IO;
 using Xunit;
 using Xunit.Abstractions;
@@ -13,64 +10,39 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
 {
     public class ChartTrackingRefBasedTest : OpenXmlTestBase
     {
-        private readonly string generateDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
-        private readonly string editDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
-        private readonly string deleteDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
-        private readonly string addDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".pptx");
-
-        private TestEntities testEntities = null;
-
-        /// <summary>
-        /// Constructor
-        /// </summary>
         public ChartTrackingRefBasedTest(ITestOutputHelper output)
             : base(output)
         {
-            string createFilePath = GetTestFilePath(generateDocumentFile);
-            GeneratedDocument generatedDocument = new GeneratedDocument();
-            generatedDocument.CreatePackage(createFilePath);
-
-            testEntities = new TestEntities(createFilePath);
         }
 
-        /// <summary>
-        /// Element editing test of ChartTrackingRefBased
-        /// </summary>
         [Fact]
         public void ChartTrackingRefBasedTest01()
         {
-            string originalFilepath = GetTestFilePath(generateDocumentFile);
-            string editFilePath = GetTestFilePath(editDocumentFile);
+            using (var stream = new MemoryStream())
+            {
+                GeneratedDocument.CreatePackage(stream);
 
-            System.IO.File.Copy(originalFilepath, editFilePath, true);
+                var testEntities = new TestEntities(stream);
 
-            testEntities.EditElements(editFilePath, Log);
-            testEntities.VerifyElements(editFilePath, Log);
+                testEntities.EditElements(stream, Log);
+                testEntities.VerifyElements(stream, Log);
+            }
         }
 
-        /// <summary>
-        /// Element deleting test of ChartTrackingRefBased
-        /// </summary>
         [Fact]
-        public void ChartTrackingRefBasedTest03DeleteElement()
+        public void ChartTrackingRefBasedTest03DeleteAddElement()
         {
-            string originalFilepath = GetTestFilePath(generateDocumentFile);
-            string deleteFilePath = GetTestFilePath(deleteDocumentFile);
-            string addFilePath = GetTestFilePath(addDocumentFile);
+            using (var stream = new MemoryStream())
+            {
+                GeneratedDocument.CreatePackage(stream);
 
-            System.IO.File.Copy(originalFilepath, deleteFilePath, true);
-            Log.Comment("File copy [{0}] to [{1}]", originalFilepath, deleteFilePath);
+                var testEntities = new TestEntities(stream);
+                testEntities.DeleteElements(stream, Log);
+                testEntities.VerifyDeleteElements(stream, Log);
 
-            testEntities.DeleteElements(deleteFilePath, Log);
-            testEntities.VerifyDeleteElements(deleteFilePath, Log);
-
-            System.IO.File.Copy(deleteFilePath, addFilePath, true);
-            Log.Comment("File copy [{0}] to [{1}]", originalFilepath, deleteFilePath);
-
-            testEntities.AddElements(addFilePath, Log);
-            testEntities.VerifyAddElements(addFilePath, Log);
-
-            Log.Pass("Element deletion is complete.");
+                testEntities.AddElements(stream, Log);
+                testEntities.VerifyAddElements(stream, Log);
+            }
         }
     }
 }

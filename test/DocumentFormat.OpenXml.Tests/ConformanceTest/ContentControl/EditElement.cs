@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using LogUtil;
+using System.IO;
 using System.Linq;
 
 using ConstStr = DocumentFormat.OpenXml.Tests.ContentControl.ConstantStrings;
@@ -13,9 +14,9 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 {
     public static class EditElement
     {
-        public static void EditContentControlElements(string filePath, VerifiableLog log)
+        public static void EditContentControlElements(Stream stream, VerifiableLog log)
         {
-            using (WordprocessingDocument package = WordprocessingDocument.Open(filePath, true))
+            using (WordprocessingDocument package = WordprocessingDocument.Open(stream, true))
             {
                 foreach (Tag tag in package.MainDocumentPart.Document.Descendants<Tag>())
                 {

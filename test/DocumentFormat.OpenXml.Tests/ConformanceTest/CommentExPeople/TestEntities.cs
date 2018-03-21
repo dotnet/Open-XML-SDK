@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using LogUtil;
+using System.IO;
 using System.Linq;
 
 using W15 = DocumentFormat.OpenXml.Office2013.Word;
@@ -21,11 +22,9 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
         /// <summary>
         /// Reading of People part element.
         /// </summary>
-        /// <param name="filePath">Target file path.</param>
-        /// <param name="log">Logger.</param>
-        public void ReadElements(string filePath, VerifiableLog log)
+        public void ReadElements(Stream stream, VerifiableLog log)
         {
-            using (WordprocessingDocument package = WordprocessingDocument.Open(filePath, true))
+            using (WordprocessingDocument package = WordprocessingDocument.Open(stream, true))
             {
                 WordprocessingPeoplePart peoplePart = package.MainDocumentPart.WordprocessingPeoplePart;
                 W15.Person person = peoplePart.People.Descendants<W15.Person>().First();
@@ -40,11 +39,9 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
         /// <summary>
         /// Editing of People part element.
         /// </summary>
-        /// <param name="filePath">Target file path.</param>
-        /// <param name="log">Logger.</param>
-        public void EditElements(string filePath, VerifiableLog log)
+        public void EditElements(Stream stream, VerifiableLog log)
         {
-            using (WordprocessingDocument package = WordprocessingDocument.Open(filePath, true))
+            using (WordprocessingDocument package = WordprocessingDocument.Open(stream, true))
             {
                 WordprocessingPeoplePart peoplePart = package.MainDocumentPart.WordprocessingPeoplePart;
                 W15.Person person = peoplePart.People.Descendants<W15.Person>().First();
@@ -61,11 +58,9 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
         /// <summary>
         /// Verifying of People part element.
         /// </summary>
-        /// <param name="filePath">Target file path.</param>
-        /// <param name="log">Logger.</param>
-        public void VerifyElements(string filePath, VerifiableLog log)
+        public void VerifyElements(Stream stream, VerifiableLog log)
         {
-            using (WordprocessingDocument package = WordprocessingDocument.Open(filePath, false))
+            using (WordprocessingDocument package = WordprocessingDocument.Open(stream, false))
             {
                 WordprocessingPeoplePart peoplePart = package.MainDocumentPart.WordprocessingPeoplePart;
                 W15.Person person = peoplePart.People.Descendants<W15.Person>().First();

@@ -16,6 +16,7 @@ namespace DocumentFormat.OpenXml.Packaging
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.fontTable+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable";
         private static PartConstraintCollection _partConstraints;
+        private DocumentFormat.OpenXml.Wordprocessing.Fonts _rootElement;
 
         /// <summary>
         /// Creates an instance of the FontTablePart OpenXmlType
@@ -31,6 +32,45 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the FontParts of the FontTablePart
         /// </summary>
         public IEnumerable<FontPart> FontParts => GetPartsOfType<FontPart>();
+
+        /// <summary>
+        /// Gets or sets the root element of this part.
+        /// </summary>
+        public DocumentFormat.OpenXml.Wordprocessing.Fonts Fonts
+        {
+            get
+            {
+                if (_rootElement is null)
+                {
+                    LoadDomTree<DocumentFormat.OpenXml.Wordprocessing.Fonts>();
+                }
+
+                return _rootElement;
+            }
+
+            set
+            {
+                if (value is null)
+                {
+                    throw new ArgumentNullException(nameof(value));
+                }
+
+                SetDomTree(value);
+            }
+        }
+
+        private protected override OpenXmlPartRootElement InternalRootElement
+        {
+            get
+            {
+                return _rootElement;
+            }
+
+            set
+            {
+                _rootElement = value as DocumentFormat.OpenXml.Wordprocessing.Fonts;
+            }
+        }
 
         /// <inheritdoc/>
         internal sealed override bool IsContentTypeFixed => true;
@@ -54,6 +94,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 return _partConstraints;
             }
         }
+
+        internal override OpenXmlPartRootElement PartRootElement => Fonts;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

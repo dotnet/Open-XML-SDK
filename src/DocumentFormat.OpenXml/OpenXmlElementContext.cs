@@ -12,31 +12,8 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class OpenXmlElementContext
     {
-        #region const data
-
         internal const string xmlnsUri = @"http://www.w3.org/2000/xmlns/";
         internal const string xmlnsPrefix = "xmlns";
-
-        #endregion
-
-        #region data member
-
-        private OpenXmlPart _ownerPart;
-
-        // TODO: XmlNameTable, XmlParserContext, NamespaceManager
-        private XmlNameTable _xmlNameTable;
-        // private XmlNamespaceManager _xmlNamespaceManager;
-        // private XmlParserContext _xmlParserContext;
-        private XmlReaderSettings _xmlReaderSettings;
-
-        private OpenXmlLoadMode _loadMode = OpenXmlLoadMode.Full;
-
-        private int _lazySteps = 3;
-
-        private EventHandler<ElementEventArgs> _onElementInserting;
-        private EventHandler<ElementEventArgs> _onElementInserted;
-        private EventHandler<ElementEventArgs> _onElementRemoving;
-        private EventHandler<ElementEventArgs> _onElementRemoved;
 
         private MarkupCompatibilityProcessSettings _mcSettings;
 
@@ -56,90 +33,63 @@ namespace DocumentFormat.OpenXml
                 _mcSettings = value;
             }
         }
-        #endregion
-
-        internal OpenXmlPart OwnerPart
-        {
-            get { return _ownerPart; }
-            set { _ownerPart = value; }
-        }
 
         /// <summary>
-        /// Gets or sets the XmlReaderSettings to be used by internal XmlReader
+        /// Gets the XmlReaderSettings to be used by internal XmlReader
         /// </summary>
-        internal XmlReaderSettings XmlReaderSettings
-        {
-            get { return _xmlReaderSettings; }
-            set { _xmlReaderSettings = value; }
-        }
+        internal XmlReaderSettings XmlReaderSettings { get; }
 
         /// <summary>
         /// Gets or sets load mode
         /// </summary>
-        internal OpenXmlLoadMode LoadMode
-        {
-            get { return _loadMode; }
-            set { _loadMode = value; }
-        }
+        internal OpenXmlLoadMode LoadMode { get; set; } = OpenXmlLoadMode.Full;
 
         /// <summary>
-        /// Gets or sets layers to be full populated, only effective when LoadMode==Lazy.
-        /// Start from 0 (populate only the children layer).
+        /// Gets layers to be full populated, only effective when LoadMode==Lazy.
+        /// Start from 0 (populate only the children layer). The magic number of 3
+        /// is currently used, but could potentially be made into a public property
+        /// so a user can control this
         /// </summary>
-        internal int LazySteps
-        {
-            get { return _lazySteps; }
+        internal static int LazySteps => 3;
 
-            set
-            {
-                if (value < 0)
-                {
-                    _lazySteps = 0;
-                }
-                else
-                {
-                    _lazySteps = value;
-                }
-            }
-        }
+        internal MCContext MCContext { get; }
+
+        internal uint ACBlockLevel { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlElementContext class.
         /// </summary>
         public OpenXmlElementContext()
         {
-            // this._xmlParserContext = new XmlParserContext(
-            _xmlNameTable = new NameTable();
             MCContext = new MCContext();
-            Init();
+            XmlReaderSettings = CreateDefaultXmlReaderSettings();
         }
 
         internal static XmlReaderSettings CreateDefaultXmlReaderSettings()
         {
-            XmlReaderSettings xmlReaderSettings = new XmlReaderSettings
-            {
-#if FEATURE_XML_PROHIBIT_DTD
-                ProhibitDtd = true, // set true explicitly for security fix
-#else
-                DtdProcessing = DtdProcessing.Prohibit, // set to prohibit explicitly for security fix
-#endif
-
-                // init XmlReaderSettings
-                NameTable = new NameTable()
-            };
-
-            // O15:#3024890, Set IgnoreWhitespace to false for the SDK to handle the whitespace node type. We have to do this because
-            // PPT does not use the preserve attribute (xml:space="preserve") for non-ignorable whitespaces. (See the bug for details.)
-            xmlReaderSettings.IgnoreWhitespace = false;
+            var nameTable = new NameTable();
 
             // load predifined namespace to nametable
             for (int i = 1; i < NamespaceIdMap.Count; i++)
             {
-                xmlReaderSettings.NameTable.Add(NamespaceIdMap.GetNamespaceUri((byte)i));
+                nameTable.Add(NamespaceIdMap.GetNamespaceUri((byte)i));
             }
-            xmlReaderSettings.NameTable.Add(xmlnsUri);
 
-            return xmlReaderSettings;
+            nameTable.Add(xmlnsUri);
+
+            return new XmlReaderSettings
+            {
+#if FEATURE_XML_PROHIBIT_DTD
+                ProhibitDtd = true,
+#else
+                DtdProcessing = DtdProcessing.Prohibit,
+#endif
+                NameTable = new NameTable(),
+
+                // Set IgnoreWhitespace to false for the SDK to handle the whitespace node type. We have to do this because
+                // PPT does not use the preserve attribute (xml:space="preserve") for non-ignorable whitespaces.
+                IgnoreWhitespace = false
+            };
         }
 
         /// <summary>
@@ -149,30 +99,8 @@ namespace DocumentFormat.OpenXml
         /// <returns>Returns true if nsUri equals @"http://www.w3.org/2000/xmlns/".</returns>
         internal bool IsXmlnsUri(string nsUri)
         {
-            return _xmlNameTable.Get(nsUri) == xmlnsUri;
+            return string.Equals(XmlReaderSettings.NameTable.Get(nsUri), xmlnsUri, StringComparison.Ordinal);
         }
-
-        private void Init()
-        {
-            // load predifined namespace to nametable
-            for (int i = 1; i < NamespaceIdMap.Count; i++)
-            {
-                _xmlNameTable.Add(NamespaceIdMap.GetNamespaceUri( (byte)i ));
-            }
-
-            _xmlNameTable.Add(xmlnsUri);
-
-            // init XmlReaderSettings
-            // O15:#3024890, Set IgnoreWhitespace to false for the SDK to handle the whitespace node type. We have to do this because
-            // PPT does not use the preserve attribute (xml:space="preserve") for non-ignorable whitespaces. (See the bug for details.)
-            XmlReaderSettings = new XmlReaderSettings
-            {
-                NameTable = _xmlNameTable,
-                IgnoreWhitespace = false
-            };
-        }
-
-        #region Event mechanism
 
         /// <summary>
         /// Fires the ElementInserting event.
@@ -181,10 +109,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="parent">The parent element.</param>
         internal void ElementInsertingEvent(OpenXmlElement element, OpenXmlElement parent)
         {
-            if (_onElementInserting != null)
-            {
-                _onElementInserting(this, new ElementEventArgs(element, parent));
-            }
+            ElementInserting?.Invoke(this, new ElementEventArgs(element, parent));
         }
 
         /// <summary>
@@ -194,10 +119,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="parent">The parent element.</param>
         internal void ElementInsertedEvent(OpenXmlElement element, OpenXmlElement parent)
         {
-            if (_onElementInserted != null)
-            {
-                _onElementInserted(this, new ElementEventArgs(element, parent));
-            }
+            ElementInserted?.Invoke(this, new ElementEventArgs(element, parent));
         }
 
         /// <summary>
@@ -207,10 +129,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="parent">The parent element.</param>
         internal void ElementRemovingEvent(OpenXmlElement element, OpenXmlElement parent)
         {
-            if (_onElementRemoving != null)
-            {
-                _onElementRemoving(this, new ElementEventArgs(element, parent));
-            }
+            ElementRemoving?.Invoke(this, new ElementEventArgs(element, parent));
         }
 
         /// <summary>
@@ -220,80 +139,27 @@ namespace DocumentFormat.OpenXml
         /// <param name="parent">The parent element.</param>
         internal void ElementRemovedEvent(OpenXmlElement element, OpenXmlElement parent)
         {
-            if (_onElementRemoved != null)
-            {
-                _onElementRemoved(this, new ElementEventArgs(element, parent));
-            }
+            ElementRemoved?.Invoke(this, new ElementEventArgs(element, parent));
         }
 
         /// <summary>
         /// Occurs when an element is about to be inserted into the element hierarchy.
         /// </summary>
-        public event EventHandler<ElementEventArgs> ElementInserting
-        {
-            add
-            {
-                _onElementInserting = (EventHandler<ElementEventArgs>)Delegate.Combine(_onElementInserting, value);
-            }
-
-            remove
-            {
-                _onElementInserting = (EventHandler<ElementEventArgs>)Delegate.Remove(_onElementInserting, value);
-            }
-        }
+        public event EventHandler<ElementEventArgs> ElementInserting;
 
         /// <summary>
         /// Occurs when an element has been inserted into the element hierarchy.
         /// </summary>
-        public event EventHandler<ElementEventArgs> ElementInserted
-        {
-            add
-            {
-                _onElementInserted = (EventHandler<ElementEventArgs>)Delegate.Combine(_onElementInserted, value);
-            }
-
-            remove
-            {
-                _onElementInserted = (EventHandler<ElementEventArgs>)Delegate.Remove(_onElementInserted, value);
-            }
-        }
+        public event EventHandler<ElementEventArgs> ElementInserted;
 
         /// <summary>
         /// Occurs when an element is being removed from the element hierarchy.
         /// </summary>
-        public event EventHandler<ElementEventArgs> ElementRemoving
-        {
-            add
-            {
-                _onElementRemoving = (EventHandler<ElementEventArgs>)Delegate.Combine(_onElementRemoving, value);
-            }
-
-            remove
-            {
-                _onElementRemoving = (EventHandler<ElementEventArgs>)Delegate.Remove(_onElementRemoving, value);
-            }
-        }
+        public event EventHandler<ElementEventArgs> ElementRemoving;
 
         /// <summary>
         /// Occurs when an element has been removed from the element hierarchy.
         /// </summary>
-        public event EventHandler<ElementEventArgs> ElementRemoved
-        {
-            add
-            {
-                _onElementRemoved = (EventHandler<ElementEventArgs>)Delegate.Combine(_onElementRemoved, value);
-            }
-
-            remove
-            {
-                _onElementRemoved = (EventHandler<ElementEventArgs>)Delegate.Remove(_onElementRemoved, value);
-            }
-        }
-
-        #endregion
-
-        internal MCContext MCContext { get; set; }
-
-        internal uint ACBlockLevel { get; set; }
+        public event EventHandler<ElementEventArgs> ElementRemoved;
     }
 }

@@ -2,9 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Tests.PivotClass;
-using DocumentFormat.OpenXml.Tests.TaskLibraries;
-using OxTest;
-using System;
 using System.IO;
 using Xunit;
 using Xunit.Abstractions;
@@ -13,64 +10,51 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
 {
     public class PivotTest : OpenXmlTestBase
     {
-        private ConnectionTestEntities connectionTestEntities = null;
-
-        //private readonly string generatedOldbConnectionDocumentFile = "TestPivotOldbConnectionBase.xlsx";
-        private readonly string generatedOldbConnectionDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
-
-        private readonly string editedOldbConnectionDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
-        private readonly string deletedOldbConnectionDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
-        private readonly string addedOldbConnectionDocumentFile = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".xlsx");
-
-        /// <summary>
-        /// Constructor
-        /// </summary>
         public PivotTest(ITestOutputHelper output)
             : base(output)
         {
-            string createFilePath = GetTestFilePath(generatedOldbConnectionDocumentFile);
-            ConnectionGeneratedDocument connectionGeneratedDocument = new ConnectionGeneratedDocument();
-            connectionGeneratedDocument.CreatePackage(createFilePath);
-
-            Log.Pass("Create Word file. File path=[{0}]", createFilePath);
-
-            connectionTestEntities = new ConnectionTestEntities(createFilePath);
         }
 
-        /// <summary>
-        /// Element editing test for workbookPr element
-        /// </summary>
         [Fact]
         public void PivotConnection01EditElement()
         {
-            string originalFilepath = GetTestFilePath(generatedOldbConnectionDocumentFile);
-            string editFilePath = GetTestFilePath(editedOldbConnectionDocumentFile);
+            using (var stream = new MemoryStream())
+            {
+                ConnectionGeneratedDocument.CreatePackage(stream);
 
-            System.IO.File.Copy(originalFilepath, editFilePath, true);
+                var connectionTestEntities = new ConnectionTestEntities(stream);
 
-            connectionTestEntities.EditElement(editFilePath, Log);
-            connectionTestEntities.VerifyElement(editFilePath, Log);
+                connectionTestEntities.EditElement(stream, Log);
+                connectionTestEntities.VerifyElement(stream, Log);
+            }
         }
 
-        /// <summary>
-        /// Element deleting test for workbookPr element
-        /// </summary>
         [Fact]
-        public void PivotConnection03DeleteAddElement()
+        public void PivotConnection03DeleteElement()
         {
-            string originalFilepath = GetTestFilePath(generatedOldbConnectionDocumentFile);
-            string deleteFilePath = GetTestFilePath(deletedOldbConnectionDocumentFile);
-            string addFilePath = GetTestFilePath(addedOldbConnectionDocumentFile);
+            using (var stream = new MemoryStream())
+            {
+                ConnectionGeneratedDocument.CreatePackage(stream);
 
-            System.IO.File.Copy(originalFilepath, deleteFilePath, true);
+                var connectionTestEntities = new ConnectionTestEntities(stream);
 
-            connectionTestEntities.DeleteElement(deleteFilePath, Log);
-            connectionTestEntities.VerifyDeletedElement(deleteFilePath, Log);
+                connectionTestEntities.DeleteElement(stream, Log);
+                connectionTestEntities.VerifyDeletedElement(stream, Log);
+            }
+        }
 
-            System.IO.File.Copy(deleteFilePath, addFilePath, true);
+        [Fact]
+        public void PivotConnection03AddElement()
+        {
+            using (var stream = new MemoryStream())
+            {
+                ConnectionGeneratedDocument.CreatePackage(stream);
 
-            connectionTestEntities.AddElement(addFilePath, Log);
-            connectionTestEntities.VerifyAddedElement(addFilePath, Log);
+                var connectionTestEntities = new ConnectionTestEntities(stream);
+
+                connectionTestEntities.AddElement(stream, Log);
+                connectionTestEntities.VerifyAddedElement(stream, Log);
+            }
         }
     }
 }

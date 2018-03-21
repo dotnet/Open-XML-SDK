@@ -16,6 +16,7 @@ namespace DocumentFormat.OpenXml.Packaging
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.drawingml.chart+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart";
         private static PartConstraintCollection _partConstraints;
+        private DocumentFormat.OpenXml.Drawing.Charts.ChartSpace _rootElement;
 
         /// <summary>
         /// Creates an instance of the ChartPart OpenXmlType
@@ -35,6 +36,32 @@ namespace DocumentFormat.OpenXml.Packaging
         public ChartDrawingPart ChartDrawingPart => GetSubPartOfType<ChartDrawingPart>();
 
         /// <summary>
+        /// Gets or sets the root element of this part.
+        /// </summary>
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartSpace ChartSpace
+        {
+            get
+            {
+                if (_rootElement is null)
+                {
+                    LoadDomTree<DocumentFormat.OpenXml.Drawing.Charts.ChartSpace>();
+                }
+
+                return _rootElement;
+            }
+
+            set
+            {
+                if (value is null)
+                {
+                    throw new ArgumentNullException(nameof(value));
+                }
+
+                SetDomTree(value);
+            }
+        }
+
+        /// <summary>
         /// Gets the ChartStyleParts of the ChartPart
         /// </summary>
         public IEnumerable<ChartStylePart> ChartStyleParts => GetPartsOfType<ChartStylePart>();
@@ -51,6 +78,19 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the ImageParts of the ChartPart
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
+
+        private protected override OpenXmlPartRootElement InternalRootElement
+        {
+            get
+            {
+                return _rootElement;
+            }
+
+            set
+            {
+                _rootElement = value as DocumentFormat.OpenXml.Drawing.Charts.ChartSpace;
+            }
+        }
 
         /// <inheritdoc/>
         internal sealed override bool IsContentTypeFixed => true;
@@ -94,6 +134,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 return _partConstraints;
             }
         }
+
+        internal override OpenXmlPartRootElement PartRootElement => ChartSpace;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

@@ -16,6 +16,7 @@ namespace DocumentFormat.OpenXml.Packaging
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.theme+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme";
         private static PartConstraintCollection _partConstraints;
+        private DocumentFormat.OpenXml.Drawing.Theme _rootElement;
 
         /// <summary>
         /// Creates an instance of the ThemePart OpenXmlType
@@ -31,6 +32,19 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the ImageParts of the ThemePart
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
+
+        private protected override OpenXmlPartRootElement InternalRootElement
+        {
+            get
+            {
+                return _rootElement;
+            }
+
+            set
+            {
+                _rootElement = value as DocumentFormat.OpenXml.Drawing.Theme;
+            }
+        }
 
         /// <inheritdoc/>
         internal sealed override bool IsContentTypeFixed => true;
@@ -55,6 +69,8 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
+        internal override OpenXmlPartRootElement PartRootElement => Theme;
+
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
 
@@ -63,6 +79,32 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         internal sealed override string TargetPath => "theme";
+
+        /// <summary>
+        /// Gets or sets the root element of this part.
+        /// </summary>
+        public DocumentFormat.OpenXml.Drawing.Theme Theme
+        {
+            get
+            {
+                if (_rootElement is null)
+                {
+                    LoadDomTree<DocumentFormat.OpenXml.Drawing.Theme>();
+                }
+
+                return _rootElement;
+            }
+
+            set
+            {
+                if (value is null)
+                {
+                    throw new ArgumentNullException(nameof(value));
+                }
+
+                SetDomTree(value);
+            }
+        }
 
         /// <summary>
         /// Adds a ImagePart to the ThemePart

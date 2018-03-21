@@ -15,6 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
         private static PartConstraintCollection _dataPartConstraints;
         private static PartConstraintCollection _partConstraints;
+        private DocumentFormat.OpenXml.Wordprocessing.Document _rootElement;
 
         /// <summary>
         /// Creates an instance of the MainDocumentPart OpenXmlType
@@ -89,6 +90,32 @@ namespace DocumentFormat.OpenXml.Packaging
         public IEnumerable<DiagramStylePart> DiagramStyleParts => GetPartsOfType<DiagramStylePart>();
 
         /// <summary>
+        /// Gets or sets the root element of this part.
+        /// </summary>
+        public DocumentFormat.OpenXml.Wordprocessing.Document Document
+        {
+            get
+            {
+                if (_rootElement is null)
+                {
+                    LoadDomTree<DocumentFormat.OpenXml.Wordprocessing.Document>();
+                }
+
+                return _rootElement;
+            }
+
+            set
+            {
+                if (value is null)
+                {
+                    throw new ArgumentNullException(nameof(value));
+                }
+
+                SetDomTree(value);
+            }
+        }
+
+        /// <summary>
         /// Gets the DocumentSettingsPart of the MainDocumentPart
         /// </summary>
         public DocumentSettingsPart DocumentSettingsPart => GetSubPartOfType<DocumentSettingsPart>();
@@ -147,6 +174,19 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the ImageParts of the MainDocumentPart
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
+
+        private protected override OpenXmlPartRootElement InternalRootElement
+        {
+            get
+            {
+                return _rootElement;
+            }
+
+            set
+            {
+                _rootElement = value as DocumentFormat.OpenXml.Wordprocessing.Document;
+            }
+        }
 
         /// <inheritdoc/>
         internal sealed override bool IsContentTypeFixed => false;
@@ -299,6 +339,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 return _partConstraints;
             }
         }
+
+        internal override OpenXmlPartRootElement PartRootElement => Document;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
