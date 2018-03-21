@@ -10,10 +10,6 @@ using P15 = DocumentFormat.OpenXml.Office2013.PowerPoint;
 
 namespace DocumentFormat.OpenXml.Tests.PresetTransition
 {
-    /// <summary>
-    /// Test for Footnote Column
-    /// </summary>
-
     public class PresetTransitionTest :
         ConformanceTestBase<GeneratedDocument, PresentationDocument, P15.PresetTransition>
     {

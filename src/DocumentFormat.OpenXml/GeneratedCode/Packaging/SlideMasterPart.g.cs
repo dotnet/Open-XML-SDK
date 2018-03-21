@@ -17,6 +17,7 @@ namespace DocumentFormat.OpenXml.Packaging
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster";
         private static PartConstraintCollection _dataPartConstraints;
         private static PartConstraintCollection _partConstraints;
+        private DocumentFormat.OpenXml.Presentation.SlideMaster _rootElement;
 
         /// <summary>
         /// Creates an instance of the SlideMasterPart OpenXmlType
@@ -121,6 +122,19 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
 
+        private protected override OpenXmlPartRootElement InternalRootElement
+        {
+            get
+            {
+                return _rootElement;
+            }
+
+            set
+            {
+                _rootElement = value as DocumentFormat.OpenXml.Presentation.SlideMaster;
+            }
+        }
+
         /// <inheritdoc/>
         internal sealed override bool IsContentTypeFixed => true;
 
@@ -212,6 +226,8 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
+        internal override OpenXmlPartRootElement PartRootElement => SlideMaster;
+
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
 
@@ -219,6 +235,32 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the SlideLayoutParts of the SlideMasterPart
         /// </summary>
         public IEnumerable<SlideLayoutPart> SlideLayoutParts => GetPartsOfType<SlideLayoutPart>();
+
+        /// <summary>
+        /// Gets or sets the root element of this part.
+        /// </summary>
+        public DocumentFormat.OpenXml.Presentation.SlideMaster SlideMaster
+        {
+            get
+            {
+                if (_rootElement is null)
+                {
+                    LoadDomTree<DocumentFormat.OpenXml.Presentation.SlideMaster>();
+                }
+
+                return _rootElement;
+            }
+
+            set
+            {
+                if (value is null)
+                {
+                    throw new ArgumentNullException(nameof(value));
+                }
+
+                SetDomTree(value);
+            }
+        }
 
         /// <summary>
         /// Gets the SlideParts of the SlideMasterPart

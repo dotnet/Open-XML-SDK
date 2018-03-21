@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using LogUtil;
+using System.IO;
 using System.Linq;
 
 using ConstStr = DocumentFormat.OpenXml.Tests.ContentControl.ConstantStrings;
@@ -19,11 +20,9 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
         /// <summary>
         /// To check whether a document has been changed correctly
         /// </summary>
-        /// <param name="filePath">Verify file</param>
-        /// <param name="log">Logger</param>
-        public static void VerifyContentControlElement(string filePath, VerifiableLog log)
+        public static void VerifyContentControlElement(Stream stream, VerifiableLog log)
         {
-            using (WordprocessingDocument package = WordprocessingDocument.Open(filePath, false))
+            using (WordprocessingDocument package = WordprocessingDocument.Open(stream, false))
             {
                 foreach (Tag tag in package.MainDocumentPart.Document.Descendants<Tag>())
                 {

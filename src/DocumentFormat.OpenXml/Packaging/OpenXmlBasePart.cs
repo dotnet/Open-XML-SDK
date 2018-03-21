@@ -7,8 +7,11 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.IO.Packaging;
+
+#if FEATURE_XML_SCHEMA
 using System.Xml;
 using System.Xml.Schema;
+#endif
 
 namespace DocumentFormat.OpenXml.Packaging
 {
@@ -17,32 +20,17 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public abstract class OpenXmlPart : OpenXmlPartContainer
     {
-        #region private data members
-
         private OpenXmlPackage _openXmlPackage;
-        private PackagePart _metroPart;
+        private PackagePart _packagePart;
         private Uri _uri;
 
-        // parent part, for internal use only
-        //private OpenXmlPart _ownerPart;
-
-        private string documentClassNameOfWord = "DocumentFormat.OpenXml.Packaging.WordprocessingDocument";
-        private string documentClassNameOfExcel = "DocumentFormat.OpenXml.Packaging.SpreadsheetDocument";
-        private string documentClassNameOfPPT = "DocumentFormat.OpenXml.Packaging.PresentationDocument";
-
-        #endregion
-
-        #region constructors
-
         /// <summary>
-        /// OpenXmlPart constructor
+        /// Create an instance of <see cref="OpenXmlPart"/>
         /// </summary>
-        internal protected OpenXmlPart()
+        protected internal OpenXmlPart()
             : base()
         {
         }
-
-        #endregion
 
         #region methods for LoadPart(), NewPart( ), AddPartFrom( )
 
@@ -73,7 +61,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             _openXmlPackage = openXmlPackage;
-            //this._ownerPart = parent;
 
             Debug.Assert(loadedParts.ContainsKey(uriTarget));
 
@@ -93,7 +80,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new OpenXmlPackageException(errorMessage);
             }
 
-            _metroPart = metroPart;
+            _packagePart = metroPart;
 
             // add the _uri to be reserved
             OpenXmlPackage.ReserveUri(ContentType, Uri);
@@ -134,7 +121,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 // add it and get the id
                 string relationshipId = AttachChild(child);
 
-                ChildrenParts.Add(relationshipId, child);
+                ChildrenRelationshipParts.Add(relationshipId, child);
 
                 return child;
             }
@@ -144,32 +131,20 @@ namespace DocumentFormat.OpenXml.Packaging
         // get app specific TargetPath if exists
         internal string GetTargetPath(string defaultPath)
         {
-            string targetPath = null;
+            if (TargetPathOfWord != null && _openXmlPackage is WordprocessingDocument)
+            {
+                return TargetPathOfWord;
+            }
+            else if (TargetPathOfExcel != null && _openXmlPackage is SpreadsheetDocument)
+            {
+                return TargetPathOfExcel;
+            }
+            else if (TargetPathOfPPT != null && _openXmlPackage is PresentationDocument)
+            {
+                return TargetPathOfPPT;
+            }
 
-            if (TargetPathOfWord != null || TargetPathOfExcel != null || TargetPathOfPPT != null)
-            {
-                string documentClassName = _openXmlPackage.GetType().ToString();
-                if (TargetPathOfWord != null && documentClassName == documentClassNameOfWord)
-                {
-                    targetPath = TargetPathOfWord;
-                }
-                else if (TargetPathOfExcel != null && documentClassName == documentClassNameOfExcel)
-                {
-                    targetPath = TargetPathOfExcel;
-                }
-                else if (TargetPathOfPPT != null && documentClassName == documentClassNameOfPPT)
-                {
-                    targetPath = TargetPathOfPPT;
-                }
-            }
-            if (targetPath != null)
-            {
-                return targetPath;
-            }
-            else
-            {
-                return defaultPath;
-            }
+            return defaultPath;
         }
 
         // create a new part in this package
@@ -191,7 +166,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             // throw exception to catch error in our code
-            if (_metroPart != null)
+            if (_packagePart != null)
             {
                 throw new InvalidOperationException();
             }
@@ -237,7 +212,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             _uri = _openXmlPackage.GetUniquePartUri(contentType, parentUri, targetPath, TargetName, targetFileExt);
 
-            _metroPart = _openXmlPackage.CreateMetroPart(_uri, contentType);
+            _packagePart = _openXmlPackage.CreateMetroPart(_uri, contentType);
         }
 
         // create a new part in this package
@@ -259,7 +234,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             // throw exception to catch error in our code
-            if (_metroPart != null)
+            if (_packagePart != null)
             {
                 throw new InvalidOperationException();
             }
@@ -280,7 +255,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             _uri = _openXmlPackage.GetUniquePartUri(contentType, parentUri, partUri);
 
-            _metroPart = _openXmlPackage.CreateMetroPart(_uri, contentType);
+            _packagePart = _openXmlPackage.CreateMetroPart(_uri, contentType);
         }
 
         #endregion
@@ -308,7 +283,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 ThrowIfObjectDisposed();
 
-                Debug.Assert(_uri.OriginalString.Equals(_metroPart.Uri.OriginalString, StringComparison.OrdinalIgnoreCase));
+                Debug.Assert(_uri.OriginalString.Equals(_packagePart.Uri.OriginalString, StringComparison.OrdinalIgnoreCase));
 
                 return _uri;
             }
@@ -342,7 +317,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Returns the part content data stream.
         /// </summary>
         /// <returns>The content data stream for the part. </returns>
-        public Stream GetStream( )
+        public Stream GetStream()
         {
             ThrowIfObjectDisposed();
 
@@ -358,7 +333,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            return PackagePart.GetStream( mode );
+            return PackagePart.GetStream(mode);
         }
 
         /// <summary>
@@ -439,24 +414,19 @@ namespace DocumentFormat.OpenXml.Packaging
 #else
                 DtdProcessing = DtdProcessing.Prohibit, // set to prohibit explicitly for security fix
 #endif
-                MaxCharactersInDocument = MaxCharactersInPart
+                MaxCharactersInDocument = MaxCharactersInPart,
+                Schemas = schemas,
+                ValidationType = ValidationType.Schema
             };
-            XmlReader xmlReader = null;
 
-            // XML validator object
-
-            using (Stream partStream = GetStream())
+            using (var partStream = GetStream())
             {
-                //xmlReaderSettings.Schemas.Add(null, schemaFile);
-                xmlReaderSettings.Schemas = schemas;
-                xmlReaderSettings.ValidationType = ValidationType.Schema;
-                // Add validation event handler
                 if (validationEventHandler != null)
                 {
                     xmlReaderSettings.ValidationEventHandler += validationEventHandler;
                 }
 
-                using (xmlReader = XmlConvertingReaderFactory.Create(partStream, xmlReaderSettings))
+                using (var xmlReader = XmlConvertingReaderFactory.Create(partStream, xmlReaderSettings))
                 {
                     // Validate XML data
                     while (xmlReader.Read()) ;
@@ -510,7 +480,7 @@ namespace DocumentFormat.OpenXml.Packaging
             get
             {
                 ThrowIfObjectDisposed();
-                return _metroPart;
+                return _packagePart;
             }
         }
 
@@ -568,7 +538,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             reachableParts.Add(this, false);
-            foreach (OpenXmlPart part in ChildrenParts.Values)
+            foreach (OpenXmlPart part in ChildrenRelationshipParts.Values)
             {
                 if (!reachableParts.ContainsKey(part))
                 {
@@ -617,10 +587,9 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <summary>
         /// Gets or sets the root element field.
-        /// Do not call this property outside of OpenXmlPart.
         /// </summary>
         /// <exception cref="InvalidOperationException">If the part does not have root element defined.</exception>
-        internal virtual OpenXmlPartRootElement _rootElement
+        private protected virtual OpenXmlPartRootElement InternalRootElement
         {
             get { return null; }
             set { throw new InvalidOperationException(); }
@@ -652,7 +621,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets a value indicating whether the root element is loaded from the part or it has been set.
         /// </summary>
-        internal bool IsRootElementLoaded => _rootElement != null;
+        internal bool IsRootElementLoaded => InternalRootElement != null;
 
         /// <summary>
         /// Sets the PartRootElement to null.
@@ -663,10 +632,10 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </remarks>
         internal OpenXmlPartRootElement SetPartRootElementToNull()
         {
-            var rootElement = _rootElement;
-            if (_rootElement != null)
+            var rootElement = InternalRootElement;
+            if (InternalRootElement != null)
             {
-                _rootElement = null;
+                InternalRootElement = null;
             }
             return rootElement;
         }
@@ -679,47 +648,36 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <remarks>
         /// The ._rootElement will be assigned if the DOM is loaded.
         /// </remarks>
-        internal void LoadDomTree<T>() where T : OpenXmlPartRootElement, new()
+        internal void LoadDomTree<T>()
+            where T : OpenXmlPartRootElement, new()
         {
-            Debug.Assert(_rootElement == null);
-
-            bool streamIsEmpty = true;
+            Debug.Assert(InternalRootElement == null);
 
             using (Stream stream = GetStream(FileMode.OpenOrCreate, FileAccess.Read))
             {
-                if ( stream.Length > 0 )
+                if (stream.Length == 0)
                 {
-                    streamIsEmpty = false;
+                    return;
                 }
 
-                if (!streamIsEmpty)
+                try
                 {
-                    T rootElement = new T();
+                    var rootElement = new T();
 
-                    try
+                    if (rootElement.LoadFromPart(this, stream))
                     {
-                        if (rootElement.LoadFromPart(this, stream))
-                        {
-                            // set this part to the root Element
-                            rootElement.OpenXmlPart = this;
+                        // set this part to the root Element
+                        rootElement.OpenXmlPart = this;
 
-                            // associate the root element with this part.
-                            _rootElement = rootElement;
-                        }
-                        else
-                        {
-                            // the part stream does not contain a XML root element.
-                            // jus leave the .RootElement as null.
-                        }
+                        // associate the root element with this part.
+                        InternalRootElement = rootElement;
                     }
-                    catch (InvalidDataException e)
-                    {
-                        throw new InvalidDataException(ExceptionMessages.CannotLoadRootElement, e);
-                    }
+                }
+                catch (InvalidDataException e)
+                {
+                    throw new InvalidDataException(ExceptionMessages.CannotLoadRootElement, e);
                 }
             }
-
-            return;
         }
 
         /// <summary>
@@ -734,19 +692,6 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             Debug.Assert(partRootElement != null);
 
-            //if (partRootElement == null)
-            //{
-            //    if (this.RootElement != null)
-            //    {
-            //        // clear the association from the previous root element.
-            //        this.RootElement.OpenXmlPart = null;
-            //    }
-
-            //    this.RootElement = null;
-
-            //    return;
-            //}
-
             if (partRootElement.OpenXmlPart != null)
             {
                 throw new ArgumentException(ExceptionMessages.PartRootAlreadyHasAssociation, nameof(partRootElement));
@@ -754,13 +699,13 @@ namespace DocumentFormat.OpenXml.Packaging
 
             partRootElement.OpenXmlPart = this;
 
-            if (_rootElement != null)
+            if (InternalRootElement != null)
             {
                 // clear the association from the previous root element.
-                _rootElement.OpenXmlPart = null;
+                InternalRootElement.OpenXmlPart = null;
             }
 
-            _rootElement = partRootElement;
+            InternalRootElement = partRootElement;
 
             return;
         }
@@ -770,16 +715,16 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             OpenXmlPackage.Package.DeletePart(Uri);
 
-            PartDictionary = null;
+            ChildrenRelationshipParts.Clear();
             ReferenceRelationshipList.Clear();
             _openXmlPackage = null;
-            _metroPart = null;
+            _packagePart = null;
             _uri = null;
             //this._ownerPart = null;
-            if (_rootElement != null)
+            if (InternalRootElement != null)
             {
-                _rootElement.OpenXmlPart = null;
-                _rootElement = null;
+                InternalRootElement.OpenXmlPart = null;
+                InternalRootElement = null;
             }
         }
 
@@ -790,7 +735,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Indicates whether the object is already disposed.
         /// </summary>
-        protected sealed override void ThrowIfObjectDisposed( )
+        protected sealed override void ThrowIfObjectDisposed()
         {
             if (_openXmlPackage == null)
             {
@@ -819,14 +764,14 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            return _metroPart.CreateRelationship(targetUri, targetMode, relationshipType);
+            return _packagePart.CreateRelationship(targetUri, targetMode, relationshipType);
         }
 
         internal sealed override PackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType, string id)
         {
             ThrowIfObjectDisposed();
 
-            return _metroPart.CreateRelationship(targetUri, targetMode, relationshipType, id);
+            return _packagePart.CreateRelationship(targetUri, targetMode, relationshipType, id);
         }
 
         #endregion

@@ -16,6 +16,7 @@ namespace DocumentFormat.OpenXml.Packaging
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.pivotTable+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotTable";
         private static PartConstraintCollection _partConstraints;
+        private DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinition _rootElement;
 
         /// <summary>
         /// Creates an instance of the PivotTablePart OpenXmlType
@@ -26,6 +27,19 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         public sealed override string ContentType => ContentTypeConstant;
+
+        private protected override OpenXmlPartRootElement InternalRootElement
+        {
+            get
+            {
+                return _rootElement;
+            }
+
+            set
+            {
+                _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinition;
+            }
+        }
 
         /// <inheritdoc/>
         internal sealed override bool IsContentTypeFixed => true;
@@ -50,10 +64,38 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
+        internal override OpenXmlPartRootElement PartRootElement => PivotTableDefinition;
+
         /// <summary>
         /// Gets the PivotTableCacheDefinitionPart of the PivotTablePart
         /// </summary>
         public PivotTableCacheDefinitionPart PivotTableCacheDefinitionPart => GetSubPartOfType<PivotTableCacheDefinitionPart>();
+
+        /// <summary>
+        /// Gets or sets the root element of this part.
+        /// </summary>
+        public DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinition PivotTableDefinition
+        {
+            get
+            {
+                if (_rootElement is null)
+                {
+                    LoadDomTree<DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinition>();
+                }
+
+                return _rootElement;
+            }
+
+            set
+            {
+                if (value is null)
+                {
+                    throw new ArgumentNullException(nameof(value));
+                }
+
+                SetDomTree(value);
+            }
+        }
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

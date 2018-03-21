@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
+using System.IO;
 
 using A = DocumentFormat.OpenXml.Drawing;
 using Ap = DocumentFormat.OpenXml.ExtendedProperties;
@@ -18,9 +19,9 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeopleClass
     public class GeneratedDocument
     {
         // Creates a WordprocessingDocument.
-        public void CreatePackage(string filePath)
+        public void CreatePackage(Stream stream)
         {
-            using(WordprocessingDocument package = WordprocessingDocument.Create(filePath, WordprocessingDocumentType.Document))
+            using(WordprocessingDocument package = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
             {
                 CreateParts(package);
             }

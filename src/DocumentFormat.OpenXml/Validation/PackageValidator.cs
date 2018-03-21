@@ -80,7 +80,7 @@ namespace DocumentFormat.OpenXml.Validation
             // count all parts of same type
             var partOccurs = new Dictionary<string, int>(StringComparer.Ordinal);
 
-            foreach (var part in container.ChildrenParts.Values)
+            foreach (var part in container.ChildrenRelationshipParts.Values)
             {
                 if (partOccurs.TryGetValue(part.RelationshipType, out int occurs))
                 {
@@ -152,7 +152,7 @@ namespace DocumentFormat.OpenXml.Validation
                 }
             }
 
-            foreach (var part in container.ChildrenParts.Values)
+            foreach (var part in container.ChildrenRelationshipParts.Values)
             {
                 if (!processedParts.ContainsKey(part))
                 {

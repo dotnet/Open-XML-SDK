@@ -11,57 +11,53 @@ using System.Runtime.Serialization;
 namespace DocumentFormat.OpenXml.Packaging
 {
     /// <summary>
-    /// Defines a Part Extension Provider which maintains a (Content Type, Part Extension (".xml")) dictionary.
-    /// Used in OpenXmlPackage derived classes.
+    /// Defines a provider which maintains a dictionary where the key is the content type and the value is a part extension.
     /// </summary>
-    [SerializableAttribute]
+    [Serializable]
     public sealed class PartExtensionProvider : Dictionary<string, string>
     {
         /// <summary>
-        /// Initializes a new instance of the PartExtensionProvider class that is empty.
+        /// Initializes a new instance of the <see cref="PartExtensionProvider"/> class that is empty.
         /// </summary>
-        public PartExtensionProvider() : base ( )
+        public PartExtensionProvider()
+            : base(StringComparer.Ordinal)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the PartExtensionProvider class that contains elements copied from the specified PartExtensionProvider.
+        /// Initializes a new instance of the <see cref="PartExtensionProvider"/> class that contains elements copied from <paramref name="partExtProvider"/>.
         /// </summary>
-        /// <param name="partExtProvider">The source PartExtensionProvider whose elements are copied to the new PartExtensionProvider.</param>
+        /// <param name="partExtProvider">The source <see cref="PartExtensionProvider"/> whose elements are copied to the new <see cref="PartExtensionProvider"/>.</param>
         public PartExtensionProvider(PartExtensionProvider partExtProvider)
-            : base(partExtProvider)
+            : base(partExtProvider, StringComparer.Ordinal)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the class that is empty, has the specified initial capacity.
+        /// Initializes a new instance of <see cref="PartExtensionProvider"/> that is empty, has the specified initial capacity.
         /// </summary>
-        /// <param name="capacity">The initial number of elements that the PartExtensionProvider can contain.</param>
+        /// <param name="capacity">The initial number of elements that <see cref="PartExtensionProvider"/> can contain.</param>
         public PartExtensionProvider(int capacity)
-            : base(capacity)
+            : base(capacity, StringComparer.Ordinal)
         {
         }
 
 #if FEATURE_SERIALIZATION
-        // This is the serialization constructor.
-        // Satisfies rule: ImplementSerializationConstructors.
-
         /// <summary>
-        /// Initializes a new instance of the Dictionary class with serialized data.
+        /// Initializes a new instance of <see cref="PartExtensionProvider"/> with serialized data.
         /// </summary>
-        /// <param name="info">A System.Runtime.Serialization.SerializationInfo object containing the information required to serialize the PartExtensionProvider.</param>
-        /// <param name="context">A System.Runtime.Serialization.StreamingContext structure containing the source and destination of the serialized stream associated with the PartExtensionProvider.</param>
-        private PartExtensionProvider(
-           SerializationInfo info,
-           StreamingContext context) : base ( info, context )
+        /// <param name="info">A <see cref="SerializationInfo"/> object containing the information required to serialize the PartExtensionProvider.</param>
+        /// <param name="context">A <see cref="StreamingContext"/> structure containing the source and destination of the serialized stream associated with the PartExtensionProvider.</param>
+        private PartExtensionProvider(SerializationInfo info, StreamingContext context)
+            : base(info, context)
         {
         }
 #endif
 
         /// <summary>
-        /// Add a part extension for the specified ContentType.
+        /// Add a part extension for the specified content type.
         /// </summary>
-        /// <param name="contentType">ContentType.</param>
+        /// <param name="contentType">The content type.</param>
         /// <param name="partExtension">Part Extension (".xml") to be used for the part with the specified content type.</param>
         public void AddPartExtension(string contentType, string partExtension)
         {
@@ -69,10 +65,9 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Check to make sure the (contentType, partExtension) is in the provider.
-        /// The (contentType, partExtension) will be added to the provider if it does not exist in the provider.
+        /// Check to make sure the content type and part extension is in the provider. If not, they will be added.
         /// </summary>
-        /// <param name="contentType">ContentType</param>
+        /// <param name="contentType">The content type</param>
         /// <param name="partExtension">Part Extension (".xml") to be used for the part with the specified content type.</param>
         /// <exception cref="ArgumentNullException">Thrown when either parameter is null.</exception>
         public void MakeSurePartExtensionExist(string contentType, string partExtension)
@@ -87,15 +82,12 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(partExtension));
             }
 
-            if (TryGetValue(contentType, out string existedPartExtension))
+            if (TryGetValue(contentType, out string existedPartExtension) && string.Equals(existedPartExtension, partExtension, StringComparison.Ordinal))
             {
-                if (existedPartExtension == partExtension)
-                {
-                    return;
-                }
+                return;
             }
 
-            Add(contentType, partExtension);
+            this[contentType] = partExtension;
         }
     }
 }

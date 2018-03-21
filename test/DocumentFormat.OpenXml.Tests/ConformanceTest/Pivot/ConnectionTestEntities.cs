@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
 using LogUtil;
 using System;
+using System.IO;
 using System.Linq;
 
 using X15 = DocumentFormat.OpenXml.Office2013.Excel;
@@ -37,9 +38,9 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
 
         private bool X15ConnectionAutoDelete { get; set; }
 
-        public ConnectionTestEntities(string filePath)
+        public ConnectionTestEntities(Stream stream)
         {
-            using (SpreadsheetDocument package = SpreadsheetDocument.Open(filePath, false))
+            using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, false))
             {
                 ConnectionsPart connectionsPart = package.WorkbookPart.ConnectionsPart;
                 foreach (Connection connection in connectionsPart.Connections)
@@ -73,9 +74,9 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
             }
         }
 
-        public void VerifyConnection(string filePath, VerifiableLog log)
+        public void VerifyConnection(Stream stream, VerifiableLog log)
         {
-            using (SpreadsheetDocument package = SpreadsheetDocument.Open(filePath, false))
+            using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, false))
             {
                 ConnectionsPart connectionsPart = package.WorkbookPart.ConnectionsPart;
                 X15.Connection connection = connectionsPart.Connections.Descendants<X15.Connection>().Where(e => e.Descendants<X15.OleDbPrpoperties>().Count() > 0).First();
@@ -94,9 +95,9 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
             }
         }
 
-        public void EditElement(string filePath, VerifiableLog log)
+        public void EditElement(Stream stream, VerifiableLog log)
         {
-            using (SpreadsheetDocument package = SpreadsheetDocument.Open(filePath, true))
+            using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, true))
             {
                 ConnectionsPart connectionsPart = package.WorkbookPart.ConnectionsPart;
                 X15.Connection connection = connectionsPart.Connections.Descendants<X15.Connection>().First();
@@ -111,9 +112,9 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
             }
         }
 
-        public void VerifyElement(string filePath, VerifiableLog log)
+        public void VerifyElement(Stream stream, VerifiableLog log)
         {
-            using (SpreadsheetDocument package = SpreadsheetDocument.Open(filePath, false))
+            using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, false))
             {
                 ConnectionsPart connectionsPart = package.WorkbookPart.ConnectionsPart;
                 X15.Connection connection = connectionsPart.Connections.Descendants<X15.Connection>().First();
@@ -126,9 +127,9 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
             }
         }
 
-        public void DeleteElement(string filePath, VerifiableLog log)
+        public void DeleteElement(Stream stream, VerifiableLog log)
         {
-            using (SpreadsheetDocument package = SpreadsheetDocument.Open(filePath, true))
+            using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, true))
             {
                 ConnectionsPart connectionsPart = package.WorkbookPart.ConnectionsPart;
                 X15.Connection connection = connectionsPart.Connections.Descendants<X15.Connection>().First();
@@ -146,9 +147,9 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
             }
         }
 
-        public void VerifyDeletedElement(string filePath, VerifiableLog log)
+        public void VerifyDeletedElement(Stream stream, VerifiableLog log)
         {
-            using (SpreadsheetDocument package = SpreadsheetDocument.Open(filePath, false))
+            using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, false))
             {
                 bool hasConnection = false;
                 foreach (Connection connection in package.WorkbookPart.ConnectionsPart.Connections)
@@ -160,9 +161,9 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
             }
         }
 
-        public void AddElement(string filePath, VerifiableLog log)
+        public void AddElement(Stream stream, VerifiableLog log)
         {
-            using (SpreadsheetDocument package = SpreadsheetDocument.Open(filePath, true))
+            using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, true))
             {
                 ConnectionsPart connectionsPart = package.WorkbookPart.ConnectionsPart;
                 int connectionNum = connectionsPart.Connections.Descendants<X15.Connection>().Count();
@@ -189,9 +190,9 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
             }
         }
 
-        public void VerifyAddedElement(string filePath, VerifiableLog log)
+        public void VerifyAddedElement(Stream stream, VerifiableLog log)
         {
-            using (SpreadsheetDocument package = SpreadsheetDocument.Open(filePath, true))
+            using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, true))
             {
                 ConnectionsPart connectionsPart = package.WorkbookPart.ConnectionsPart;
 
