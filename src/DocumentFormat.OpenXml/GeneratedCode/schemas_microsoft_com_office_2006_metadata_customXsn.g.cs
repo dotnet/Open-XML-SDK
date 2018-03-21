@@ -21,39 +21,21 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
 ///<item><description>Scope &lt;ntns:xsnScope></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(XsnLocation))]
     [ChildElementInfo(typeof(CachedView))]
     [ChildElementInfo(typeof(OpenByDefault))]
     [ChildElementInfo(typeof(Scope))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class CustomXsn : OpenXmlCompositeElement
 {
-    private const string tagName = "customXsn";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 39;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12706;
+    /// <inheritdoc/>
+    public override string LocalName => "customXsn";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 39;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -78,7 +60,7 @@ public partial class CustomXsn : OpenXmlCompositeElement
     /// </summary>
     public CustomXsn():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the CustomXsn class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -128,21 +110,10 @@ if( 39 == namespaceId && "xsnScope" == name)
         private static readonly string[] eleTagNames = { "xsnLocation","cached","openByDefault","xsnScope" };
     private static readonly byte[] eleNamespaceIds = { 39,39,39,39 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> XsnLocation.</para>
@@ -153,14 +124,8 @@ if( 39 == namespaceId && "xsnScope" == name)
     /// </remark>
     public XsnLocation XsnLocation
     {
-        get 
-        {
-            return GetElement<XsnLocation>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<XsnLocation>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> CachedView.</para>
@@ -171,14 +136,8 @@ if( 39 == namespaceId && "xsnScope" == name)
     /// </remark>
     public CachedView CachedView
     {
-        get 
-        {
-            return GetElement<CachedView>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<CachedView>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> OpenByDefault.</para>
@@ -189,14 +148,8 @@ if( 39 == namespaceId && "xsnScope" == name)
     /// </remark>
     public OpenByDefault OpenByDefault
     {
-        get 
-        {
-            return GetElement<OpenByDefault>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<OpenByDefault>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> Scope.</para>
@@ -207,29 +160,15 @@ if( 39 == namespaceId && "xsnScope" == name)
     /// </remark>
     public Scope Scope
     {
-        get 
-        {
-            return GetElement<Scope>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<Scope>(3);
+        set => SetElement(3, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<CustomXsn>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomXsn>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the XsnLocation Class.</para>
@@ -239,31 +178,13 @@ if( 39 == namespaceId && "xsnScope" == name)
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class XsnLocation : OpenXmlLeafTextElement
 {
-    private const string tagName = "xsnLocation";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 39;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12707;
+    /// <inheritdoc/>
+    public override string LocalName => "xsnLocation";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 39;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -285,7 +206,7 @@ public partial class XsnLocation : OpenXmlLeafTextElement
     /// </summary>
     public XsnLocation():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the XsnLocation class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -295,20 +216,12 @@ public partial class XsnLocation : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new StringValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<XsnLocation>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<XsnLocation>(deep);
 
 }
 /// <summary>
@@ -319,31 +232,13 @@ public partial class XsnLocation : OpenXmlLeafTextElement
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class CachedView : OpenXmlLeafTextElement
 {
-    private const string tagName = "cached";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 39;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12708;
+    /// <inheritdoc/>
+    public override string LocalName => "cached";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 39;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -365,7 +260,7 @@ public partial class CachedView : OpenXmlLeafTextElement
     /// </summary>
     public CachedView():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the CachedView class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -375,20 +270,12 @@ public partial class CachedView : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new StringValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<CachedView>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<CachedView>(deep);
 
 }
 /// <summary>
@@ -399,31 +286,13 @@ public partial class CachedView : OpenXmlLeafTextElement
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class OpenByDefault : OpenXmlLeafTextElement
 {
-    private const string tagName = "openByDefault";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 39;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12709;
+    /// <inheritdoc/>
+    public override string LocalName => "openByDefault";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 39;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -445,7 +314,7 @@ public partial class OpenByDefault : OpenXmlLeafTextElement
     /// </summary>
     public OpenByDefault():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the OpenByDefault class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -455,20 +324,12 @@ public partial class OpenByDefault : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new StringValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<OpenByDefault>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<OpenByDefault>(deep);
 
 }
 /// <summary>
@@ -479,31 +340,13 @@ public partial class OpenByDefault : OpenXmlLeafTextElement
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class Scope : OpenXmlLeafTextElement
 {
-    private const string tagName = "xsnScope";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 39;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12710;
+    /// <inheritdoc/>
+    public override string LocalName => "xsnScope";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 39;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -525,7 +368,7 @@ public partial class Scope : OpenXmlLeafTextElement
     /// </summary>
     public Scope():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the Scope class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -535,20 +378,12 @@ public partial class Scope : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new StringValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Scope>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Scope>(deep);
 
 }
 }

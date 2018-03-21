@@ -76,31 +76,13 @@ namespace DocumentFormat.OpenXml.Office.Excel
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class Macrosheet : OpenXmlPartRootElement
 {
-    private const string tagName = "macrosheet";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 32;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12600;
+    /// <inheritdoc/>
+    public override string LocalName => "macrosheet";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 32;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -121,13 +103,7 @@ public partial class Macrosheet : OpenXmlPartRootElement
     
     
     
-    /// <summary>
-    /// Macrosheet constructor.
-    /// </summary>
-    /// <param name="ownerPart">The owner part of the Macrosheet.</param>
-    internal Macrosheet(MacroSheetPart ownerPart) : base (ownerPart )
-    {
-    }
+	internal Macrosheet(MacroSheetPart ownerPart) : base (ownerPart){}
     
     /// <summary>
     /// Loads the DOM from the MacroSheetPart.
@@ -142,17 +118,11 @@ public partial class Macrosheet : OpenXmlPartRootElement
     /// </summary>
     public MacroSheetPart MacroSheetPart
     {
-		get
-		{
-			return OpenXmlPart as MacroSheetPart;
-		}
-		internal set
-		{
-			OpenXmlPart = value;
-		}
+		get => OpenXmlPart as MacroSheetPart;
+		internal set => OpenXmlPart = value;
     }
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the Macrosheet class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -183,9 +153,7 @@ public partial class Macrosheet : OpenXmlPartRootElement
     /// <summary>
     /// Initializes a new instance of the Macrosheet class.
     /// </summary>
-    public Macrosheet() : base ()
-    {
-    }
+    public Macrosheet():base(){}
     
     /// <summary>
     /// Saves the DOM into the MacroSheetPart.
@@ -287,21 +255,10 @@ if( 22 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "sheetPr","dimension","sheetViews","sheetFormatPr","cols","sheetData","sheetProtection","autoFilter","sortState","dataConsolidate","customSheetViews","phoneticPr","conditionalFormatting","printOptions","pageMargins","pageSetup","headerFooter","rowBreaks","colBreaks","customProperties","drawing","legacyDrawing","legacyDrawingHF","picture","oleObjects","drawingHF","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Sheet Properties.</para>
@@ -312,14 +269,8 @@ if( 22 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Spreadsheet.SheetProperties SheetProperties
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Macro Sheet Dimensions.</para>
@@ -330,14 +281,8 @@ if( 22 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Spreadsheet.SheetDimension SheetDimension
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetDimension>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetDimension>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Macro Sheet Views.</para>
@@ -348,14 +293,8 @@ if( 22 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Spreadsheet.SheetViews SheetViews
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetViews>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetViews>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> Sheet Format Properties.</para>
@@ -366,27 +305,14 @@ if( 22 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties SheetFormatProperties
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>(3);
+        set => SetElement(3, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Macrosheet>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Macrosheet>(deep);
 
 }
 /// <summary>
@@ -406,31 +332,13 @@ if( 22 == namespaceId && "extLst" == name)
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class WorksheetSortMap : OpenXmlPartRootElement
 {
-    private const string tagName = "worksheetSortMap";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 32;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12601;
+    /// <inheritdoc/>
+    public override string LocalName => "worksheetSortMap";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 32;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -451,13 +359,7 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
     
     
     
-    /// <summary>
-    /// WorksheetSortMap constructor.
-    /// </summary>
-    /// <param name="ownerPart">The owner part of the WorksheetSortMap.</param>
-    internal WorksheetSortMap(WorksheetSortMapPart ownerPart) : base (ownerPart )
-    {
-    }
+	internal WorksheetSortMap(WorksheetSortMapPart ownerPart) : base (ownerPart){}
     
     /// <summary>
     /// Loads the DOM from the WorksheetSortMapPart.
@@ -472,17 +374,11 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
     /// </summary>
     public WorksheetSortMapPart WorksheetSortMapPart
     {
-		get
-		{
-			return OpenXmlPart as WorksheetSortMapPart;
-		}
-		internal set
-		{
-			OpenXmlPart = value;
-		}
+		get => OpenXmlPart as WorksheetSortMapPart;
+		internal set => OpenXmlPart = value;
     }
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the WorksheetSortMap class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -513,9 +409,7 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
     /// <summary>
     /// Initializes a new instance of the WorksheetSortMap class.
     /// </summary>
-    public WorksheetSortMap() : base ()
-    {
-    }
+    public WorksheetSortMap():base(){}
     
     /// <summary>
     /// Saves the DOM into the WorksheetSortMapPart.
@@ -542,21 +436,10 @@ if( 32 == namespaceId && "colSortMap" == name)
         private static readonly string[] eleTagNames = { "rowSortMap","colSortMap" };
     private static readonly byte[] eleNamespaceIds = { 32,32 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Row Sort Map.</para>
@@ -567,14 +450,8 @@ if( 32 == namespaceId && "colSortMap" == name)
     /// </remark>
     public RowSortMap RowSortMap
     {
-        get 
-        {
-            return GetElement<RowSortMap>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<RowSortMap>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Column Sort Map.</para>
@@ -585,27 +462,14 @@ if( 32 == namespaceId && "colSortMap" == name)
     /// </remark>
     public ColumnSortMap ColumnSortMap
     {
-        get 
-        {
-            return GetElement<ColumnSortMap>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<ColumnSortMap>(1);
+        set => SetElement(1, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<WorksheetSortMap>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<WorksheetSortMap>(deep);
 
 }
 /// <summary>
@@ -613,36 +477,18 @@ if( 32 == namespaceId && "colSortMap" == name)
 ///<para>This class is available in Office2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xne:sqref.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ReferenceSequence : OpenXmlLeafTextElement
 {
-    private const string tagName = "sqref";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 32;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12602;
+    /// <inheritdoc/>
+    public override string LocalName => "sqref";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 32;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -668,7 +514,7 @@ public partial class ReferenceSequence : OpenXmlLeafTextElement
     public ReferenceSequence():base(){}
     
       
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the ReferenceSequence class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -678,7 +524,6 @@ public partial class ReferenceSequence : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new ListValue<StringValue>(){ InnerText = text };
     }
     
@@ -687,53 +532,27 @@ public partial class ReferenceSequence : OpenXmlLeafTextElement
     
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ReferenceSequence>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ReferenceSequence>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the Formula Class.</para>
 ///<para>This class is available in Office2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xne:f.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Formula : OpenXmlLeafTextElement
 {
-    private const string tagName = "f";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 32;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12603;
+    /// <inheritdoc/>
+    public override string LocalName => "f";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 32;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -759,7 +578,7 @@ public partial class Formula : OpenXmlLeafTextElement
     public Formula():base(){}
     
       
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the Formula class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -769,7 +588,6 @@ public partial class Formula : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new StringValue(){ InnerText = text };
     }
     
@@ -778,17 +596,9 @@ public partial class Formula : OpenXmlLeafTextElement
     
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Formula>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formula>(deep);
 
-   
 }
 /// <summary>
 /// <para>Row Sort Map.</para>
@@ -800,36 +610,18 @@ public partial class Formula : OpenXmlLeafTextElement
 ///<item><description>RowSortMapItem &lt;xne:row></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(RowSortMapItem))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class RowSortMap : OpenXmlCompositeElement
 {
-    private const string tagName = "rowSortMap";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 32;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12604;
+    /// <inheritdoc/>
+    public override string LocalName => "rowSortMap";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 32;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -846,20 +638,12 @@ public partial class RowSortMap : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "ref","count" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "ref","count" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -891,7 +675,7 @@ public partial class RowSortMap : OpenXmlCompositeElement
     /// </summary>
     public RowSortMap():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the RowSortMap class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -943,17 +727,9 @@ if( 0 == namespaceId && "count" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<RowSortMap>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowSortMap>(deep);
 
-   
 }
 /// <summary>
 /// <para>Column Sort Map.</para>
@@ -965,36 +741,18 @@ if( 0 == namespaceId && "count" == name)
 ///<item><description>ColumnSortMapItem &lt;xne:col></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(ColumnSortMapItem))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class ColumnSortMap : OpenXmlCompositeElement
 {
-    private const string tagName = "colSortMap";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 32;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12605;
+    /// <inheritdoc/>
+    public override string LocalName => "colSortMap";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 32;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -1011,20 +769,12 @@ public partial class ColumnSortMap : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "ref","count" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "ref","count" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -1056,7 +806,7 @@ public partial class ColumnSortMap : OpenXmlCompositeElement
     /// </summary>
     public ColumnSortMap():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ColumnSortMap class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -1108,17 +858,9 @@ if( 0 == namespaceId && "count" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ColumnSortMap>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnSortMap>(deep);
 
-   
 }
 /// <summary>
 /// <para>Row.</para>
@@ -1128,31 +870,13 @@ if( 0 == namespaceId && "count" == name)
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class RowSortMapItem : SortMapItemType
 {
-    private const string tagName = "row";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 32;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12606;
+    /// <inheritdoc/>
+    public override string LocalName => "row";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 32;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -1175,15 +899,8 @@ public partial class RowSortMapItem : SortMapItemType
     public RowSortMapItem():base(){}
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<RowSortMapItem>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowSortMapItem>(deep);
 
 }
 /// <summary>
@@ -1194,31 +911,13 @@ public partial class RowSortMapItem : SortMapItemType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class ColumnSortMapItem : SortMapItemType
 {
-    private const string tagName = "col";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 32;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12607;
+    /// <inheritdoc/>
+    public override string LocalName => "col";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 32;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -1241,15 +940,8 @@ public partial class ColumnSortMapItem : SortMapItemType
     public ColumnSortMapItem():base(){}
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ColumnSortMapItem>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnSortMapItem>(deep);
 
 }
 /// <summary>
@@ -1259,20 +951,12 @@ public partial class ColumnSortMapItem : SortMapItemType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class SortMapItemType : OpenXmlLeafElement
 {
-    private static string[] attributeTagNames = { "newVal","oldVal" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "newVal","oldVal" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
     
         /// <summary>

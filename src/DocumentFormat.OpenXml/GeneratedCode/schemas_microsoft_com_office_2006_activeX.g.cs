@@ -18,36 +18,18 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
 ///<item><description>ActiveXObjectProperty &lt;ax:ocxPr></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(ActiveXObjectProperty))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class ActiveXControlData : OpenXmlCompositeElement
 {
-    private const string tagName = "ocx";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 35;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12688;
+    /// <inheritdoc/>
+    public override string LocalName => "ocx";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 35;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -64,20 +46,12 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "classid","license","id","persistence" };
-    private static byte[] attributeNamespaceIds = { 35,35,19,35 };
+    	private static readonly string[] attributeTagNames = { "classid","license","id","persistence" };
+    private static readonly byte[] attributeNamespaceIds = { 35,35,19,35 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -139,7 +113,7 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
     /// </summary>
     public ActiveXControlData():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ActiveXControlData class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -197,17 +171,9 @@ if( 35 == namespaceId && "persistence" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ActiveXControlData>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ActiveXControlData>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the ActiveXObjectProperty Class.</para>
@@ -220,37 +186,19 @@ if( 35 == namespaceId && "persistence" == name)
 ///<item><description>SharedComPicture &lt;ax:picture></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(SharedComFont))]
     [ChildElementInfo(typeof(SharedComPicture))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class ActiveXObjectProperty : OpenXmlCompositeElement
 {
-    private const string tagName = "ocxPr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 35;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12689;
+    /// <inheritdoc/>
+    public override string LocalName => "ocxPr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 35;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -267,20 +215,12 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "name","value" };
-    private static byte[] attributeNamespaceIds = { 35,35 };
+    	private static readonly string[] attributeTagNames = { "name","value" };
+    private static readonly byte[] attributeNamespaceIds = { 35,35 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -316,7 +256,7 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
     /// </summary>
     public ActiveXObjectProperty():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ActiveXObjectProperty class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -360,21 +300,10 @@ if( 35 == namespaceId && "picture" == name)
         private static readonly string[] eleTagNames = { "font","picture" };
     private static readonly byte[] eleNamespaceIds = { 35,35 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneChoice;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> SharedComFont.</para>
@@ -385,14 +314,8 @@ if( 35 == namespaceId && "picture" == name)
     /// </remark>
     public SharedComFont SharedComFont
     {
-        get 
-        {
-            return GetElement<SharedComFont>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<SharedComFont>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> SharedComPicture.</para>
@@ -403,14 +326,8 @@ if( 35 == namespaceId && "picture" == name)
     /// </remark>
     public SharedComPicture SharedComPicture
     {
-        get 
-        {
-            return GetElement<SharedComPicture>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<SharedComPicture>(1);
+        set => SetElement(1, value);
     }
 
 
@@ -427,17 +344,9 @@ if( 35 == namespaceId && "value" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ActiveXObjectProperty>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ActiveXObjectProperty>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the SharedComFont Class.</para>
@@ -449,36 +358,18 @@ if( 35 == namespaceId && "value" == name)
 ///<item><description>ActiveXObjectProperty &lt;ax:ocxPr></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(ActiveXObjectProperty))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class SharedComFont : OpenXmlCompositeElement
 {
-    private const string tagName = "font";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 35;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12690;
+    /// <inheritdoc/>
+    public override string LocalName => "font";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 35;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -495,20 +386,12 @@ public partial class SharedComFont : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "persistence","id" };
-    private static byte[] attributeNamespaceIds = { 35,19 };
+    	private static readonly string[] attributeTagNames = { "persistence","id" };
+    private static readonly byte[] attributeNamespaceIds = { 35,19 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -544,7 +427,7 @@ public partial class SharedComFont : OpenXmlCompositeElement
     /// </summary>
     public SharedComFont():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the SharedComFont class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -596,51 +479,25 @@ if( 19 == namespaceId && "id" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<SharedComFont>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<SharedComFont>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the SharedComPicture Class.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ax:picture.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class SharedComPicture : OpenXmlLeafElement
 {
-    private const string tagName = "picture";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 35;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12691;
+    /// <inheritdoc/>
+    public override string LocalName => "picture";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 35;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -657,20 +514,12 @@ public partial class SharedComPicture : OpenXmlLeafElement
     }
     
 
-    private static string[] attributeTagNames = { "id" };
-    private static byte[] attributeNamespaceIds = { 19 };
+    	private static readonly string[] attributeTagNames = { "id" };
+    private static readonly byte[] attributeNamespaceIds = { 19 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -708,17 +557,9 @@ public partial class SharedComPicture : OpenXmlLeafElement
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<SharedComPicture>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<SharedComPicture>(deep);
 
-   
 }
 /// <summary>
 /// Defines the PersistenceValues enumeration. 

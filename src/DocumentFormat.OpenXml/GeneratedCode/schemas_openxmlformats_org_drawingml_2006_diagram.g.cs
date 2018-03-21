@@ -32,31 +32,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class ColorsDefinition : OpenXmlPartRootElement
 {
-    private const string tagName = "colorsDef";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10682;
+    /// <inheritdoc/>
+    public override string LocalName => "colorsDef";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -73,20 +55,12 @@ public partial class ColorsDefinition : OpenXmlPartRootElement
     }
     
 
-    private static string[] attributeTagNames = { "uniqueId","minVer" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "uniqueId","minVer" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -114,13 +88,7 @@ public partial class ColorsDefinition : OpenXmlPartRootElement
     
 
     
-    /// <summary>
-    /// ColorsDefinition constructor.
-    /// </summary>
-    /// <param name="ownerPart">The owner part of the ColorsDefinition.</param>
-    internal ColorsDefinition(DiagramColorsPart ownerPart) : base (ownerPart )
-    {
-    }
+	internal ColorsDefinition(DiagramColorsPart ownerPart) : base (ownerPart){}
     
     /// <summary>
     /// Loads the DOM from the DiagramColorsPart.
@@ -135,17 +103,11 @@ public partial class ColorsDefinition : OpenXmlPartRootElement
     /// </summary>
     public DiagramColorsPart DiagramColorsPart
     {
-		get
-		{
-			return OpenXmlPart as DiagramColorsPart;
-		}
-		internal set
-		{
-			OpenXmlPart = value;
-		}
+		get => OpenXmlPart as DiagramColorsPart;
+		internal set => OpenXmlPart = value;
     }
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ColorsDefinition class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -176,9 +138,7 @@ public partial class ColorsDefinition : OpenXmlPartRootElement
     /// <summary>
     /// Initializes a new instance of the ColorsDefinition class.
     /// </summary>
-    public ColorsDefinition() : base ()
-    {
-    }
+    public ColorsDefinition():base(){}
     
     /// <summary>
     /// Saves the DOM into the DiagramColorsPart.
@@ -225,15 +185,8 @@ if( 0 == namespaceId && "minVer" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ColorsDefinition>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorsDefinition>(deep);
 
 }
 /// <summary>
@@ -249,39 +202,21 @@ if( 0 == namespaceId && "minVer" == name)
 ///<item><description>ExtensionList &lt;dgm:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(ColorDefinitionTitle))]
     [ChildElementInfo(typeof(ColorTransformDescription))]
     [ChildElementInfo(typeof(ColorTransformCategories))]
     [ChildElementInfo(typeof(ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class ColorsDefinitionHeader : OpenXmlCompositeElement
 {
-    private const string tagName = "colorsDefHdr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10683;
+    /// <inheritdoc/>
+    public override string LocalName => "colorsDefHdr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -298,20 +233,12 @@ public partial class ColorsDefinitionHeader : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "uniqueId","minVer","resId" };
-    private static byte[] attributeNamespaceIds = { 0,0,0 };
+    	private static readonly string[] attributeTagNames = { "uniqueId","minVer","resId" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -354,7 +281,7 @@ public partial class ColorsDefinitionHeader : OpenXmlCompositeElement
     /// </summary>
     public ColorsDefinitionHeader():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ColorsDefinitionHeader class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -418,17 +345,9 @@ if( 0 == namespaceId && "resId" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ColorsDefinitionHeader>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorsDefinitionHeader>(deep);
 
-   
 }
 /// <summary>
 /// <para>Color Transform Header List.</para>
@@ -440,36 +359,18 @@ if( 0 == namespaceId && "resId" == name)
 ///<item><description>ColorsDefinitionHeader &lt;dgm:colorsDefHdr></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(ColorsDefinitionHeader))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class ColorsDefinitionHeaderList : OpenXmlCompositeElement
 {
-    private const string tagName = "colorsDefHdrLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10684;
+    /// <inheritdoc/>
+    public override string LocalName => "colorsDefHdrLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -494,7 +395,7 @@ public partial class ColorsDefinitionHeaderList : OpenXmlCompositeElement
     /// </summary>
     public ColorsDefinitionHeaderList():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ColorsDefinitionHeaderList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -534,17 +435,9 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ColorsDefinitionHeaderList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorsDefinitionHeaderList>(deep);
 
-   
 }
 /// <summary>
 /// <para>Data Model. The root element of DiagramDataPart.</para>
@@ -569,31 +462,13 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class DataModelRoot : OpenXmlPartRootElement
 {
-    private const string tagName = "dataModel";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10685;
+    /// <inheritdoc/>
+    public override string LocalName => "dataModel";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -614,13 +489,7 @@ public partial class DataModelRoot : OpenXmlPartRootElement
     
     
     
-    /// <summary>
-    /// DataModelRoot constructor.
-    /// </summary>
-    /// <param name="ownerPart">The owner part of the DataModelRoot.</param>
-    internal DataModelRoot(DiagramDataPart ownerPart) : base (ownerPart )
-    {
-    }
+	internal DataModelRoot(DiagramDataPart ownerPart) : base (ownerPart){}
     
     /// <summary>
     /// Loads the DOM from the DiagramDataPart.
@@ -635,17 +504,11 @@ public partial class DataModelRoot : OpenXmlPartRootElement
     /// </summary>
     public DiagramDataPart DiagramDataPart
     {
-		get
-		{
-			return OpenXmlPart as DiagramDataPart;
-		}
-		internal set
-		{
-			OpenXmlPart = value;
-		}
+		get => OpenXmlPart as DiagramDataPart;
+		internal set => OpenXmlPart = value;
     }
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the DataModelRoot class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -676,9 +539,7 @@ public partial class DataModelRoot : OpenXmlPartRootElement
     /// <summary>
     /// Initializes a new instance of the DataModelRoot class.
     /// </summary>
-    public DataModelRoot() : base ()
-    {
-    }
+    public DataModelRoot():base(){}
     
     /// <summary>
     /// Saves the DOM into the DiagramDataPart.
@@ -714,21 +575,10 @@ if( 14 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "ptLst","cxnLst","bg","whole","extLst" };
     private static readonly byte[] eleNamespaceIds = { 14,14,14,14,14 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Point List.</para>
@@ -739,14 +589,8 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public PointList PointList
     {
-        get 
-        {
-            return GetElement<PointList>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<PointList>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Connection List.</para>
@@ -757,14 +601,8 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public ConnectionList ConnectionList
     {
-        get 
-        {
-            return GetElement<ConnectionList>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<ConnectionList>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Background Formatting.</para>
@@ -775,14 +613,8 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public Background Background
     {
-        get 
-        {
-            return GetElement<Background>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<Background>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> Whole E2O Formatting.</para>
@@ -793,14 +625,8 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public Whole Whole
     {
-        get 
-        {
-            return GetElement<Whole>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<Whole>(3);
+        set => SetElement(3, value);
     }
     /// <summary>
     /// <para> DataModelExtensionList.</para>
@@ -811,27 +637,14 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public DataModelExtensionList DataModelExtensionList
     {
-        get 
-        {
-            return GetElement<DataModelExtensionList>(4);
-        }
-        set
-        {
-            SetElement(4, value);
-        }
+        get => GetElement<DataModelExtensionList>(4);
+        set => SetElement(4, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<DataModelRoot>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataModelRoot>(deep);
 
 }
 /// <summary>
@@ -863,31 +676,13 @@ if( 14 == namespaceId && "extLst" == name)
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class LayoutDefinition : OpenXmlPartRootElement
 {
-    private const string tagName = "layoutDef";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10686;
+    /// <inheritdoc/>
+    public override string LocalName => "layoutDef";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -904,20 +699,12 @@ public partial class LayoutDefinition : OpenXmlPartRootElement
     }
     
 
-    private static string[] attributeTagNames = { "uniqueId","minVer","defStyle" };
-    private static byte[] attributeNamespaceIds = { 0,0,0 };
+    	private static readonly string[] attributeTagNames = { "uniqueId","minVer","defStyle" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -956,13 +743,7 @@ public partial class LayoutDefinition : OpenXmlPartRootElement
     
 
     
-    /// <summary>
-    /// LayoutDefinition constructor.
-    /// </summary>
-    /// <param name="ownerPart">The owner part of the LayoutDefinition.</param>
-    internal LayoutDefinition(DiagramLayoutDefinitionPart ownerPart) : base (ownerPart )
-    {
-    }
+	internal LayoutDefinition(DiagramLayoutDefinitionPart ownerPart) : base (ownerPart){}
     
     /// <summary>
     /// Loads the DOM from the DiagramLayoutDefinitionPart.
@@ -977,17 +758,11 @@ public partial class LayoutDefinition : OpenXmlPartRootElement
     /// </summary>
     public DiagramLayoutDefinitionPart DiagramLayoutDefinitionPart
     {
-		get
-		{
-			return OpenXmlPart as DiagramLayoutDefinitionPart;
-		}
-		internal set
-		{
-			OpenXmlPart = value;
-		}
+		get => OpenXmlPart as DiagramLayoutDefinitionPart;
+		internal set => OpenXmlPart = value;
     }
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the LayoutDefinition class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -1018,9 +793,7 @@ public partial class LayoutDefinition : OpenXmlPartRootElement
     /// <summary>
     /// Initializes a new instance of the LayoutDefinition class.
     /// </summary>
-    public LayoutDefinition() : base ()
-    {
-    }
+    public LayoutDefinition():base(){}
     
     /// <summary>
     /// Saves the DOM into the DiagramLayoutDefinitionPart.
@@ -1079,15 +852,8 @@ if( 0 == namespaceId && "defStyle" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<LayoutDefinition>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<LayoutDefinition>(deep);
 
 }
 /// <summary>
@@ -1103,39 +869,21 @@ if( 0 == namespaceId && "defStyle" == name)
 ///<item><description>ExtensionList &lt;dgm:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(Title))]
     [ChildElementInfo(typeof(Description))]
     [ChildElementInfo(typeof(CategoryList))]
     [ChildElementInfo(typeof(ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class LayoutDefinitionHeader : OpenXmlCompositeElement
 {
-    private const string tagName = "layoutDefHdr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10687;
+    /// <inheritdoc/>
+    public override string LocalName => "layoutDefHdr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -1152,20 +900,12 @@ public partial class LayoutDefinitionHeader : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "uniqueId","minVer","defStyle","resId" };
-    private static byte[] attributeNamespaceIds = { 0,0,0,0 };
+    	private static readonly string[] attributeTagNames = { "uniqueId","minVer","defStyle","resId" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -1219,7 +959,7 @@ public partial class LayoutDefinitionHeader : OpenXmlCompositeElement
     /// </summary>
     public LayoutDefinitionHeader():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the LayoutDefinitionHeader class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -1286,17 +1026,9 @@ if( 0 == namespaceId && "resId" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<LayoutDefinitionHeader>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<LayoutDefinitionHeader>(deep);
 
-   
 }
 /// <summary>
 /// <para>Diagram Layout Header List.</para>
@@ -1308,36 +1040,18 @@ if( 0 == namespaceId && "resId" == name)
 ///<item><description>LayoutDefinitionHeader &lt;dgm:layoutDefHdr></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(LayoutDefinitionHeader))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class LayoutDefinitionHeaderList : OpenXmlCompositeElement
 {
-    private const string tagName = "layoutDefHdrLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10688;
+    /// <inheritdoc/>
+    public override string LocalName => "layoutDefHdrLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -1362,7 +1076,7 @@ public partial class LayoutDefinitionHeaderList : OpenXmlCompositeElement
     /// </summary>
     public LayoutDefinitionHeaderList():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the LayoutDefinitionHeaderList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -1402,51 +1116,25 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<LayoutDefinitionHeaderList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<LayoutDefinitionHeaderList>(deep);
 
-   
 }
 /// <summary>
 /// <para>Explicit Relationships to Diagram Parts.</para>
 /// <para> When the object is serialized out as xml, its qualified name is dgm:relIds.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class RelationshipIds : OpenXmlLeafElement
 {
-    private const string tagName = "relIds";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10689;
+    /// <inheritdoc/>
+    public override string LocalName => "relIds";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -1463,20 +1151,12 @@ public partial class RelationshipIds : OpenXmlLeafElement
     }
     
 
-    private static string[] attributeTagNames = { "dm","lo","qs","cs" };
-    private static byte[] attributeNamespaceIds = { 19,19,19,19 };
+    	private static readonly string[] attributeTagNames = { "dm","lo","qs","cs" };
+    private static readonly byte[] attributeNamespaceIds = { 19,19,19,19 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -1562,17 +1242,9 @@ if( 19 == namespaceId && "cs" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<RelationshipIds>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<RelationshipIds>(deep);
 
-   
 }
 /// <summary>
 /// <para>Style Definition. The root element of DiagramStylePart.</para>
@@ -1599,31 +1271,13 @@ if( 19 == namespaceId && "cs" == name)
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class StyleDefinition : OpenXmlPartRootElement
 {
-    private const string tagName = "styleDef";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10690;
+    /// <inheritdoc/>
+    public override string LocalName => "styleDef";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -1640,20 +1294,12 @@ public partial class StyleDefinition : OpenXmlPartRootElement
     }
     
 
-    private static string[] attributeTagNames = { "uniqueId","minVer" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "uniqueId","minVer" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -1681,13 +1327,7 @@ public partial class StyleDefinition : OpenXmlPartRootElement
     
 
     
-    /// <summary>
-    /// StyleDefinition constructor.
-    /// </summary>
-    /// <param name="ownerPart">The owner part of the StyleDefinition.</param>
-    internal StyleDefinition(DiagramStylePart ownerPart) : base (ownerPart )
-    {
-    }
+	internal StyleDefinition(DiagramStylePart ownerPart) : base (ownerPart){}
     
     /// <summary>
     /// Loads the DOM from the DiagramStylePart.
@@ -1702,17 +1342,11 @@ public partial class StyleDefinition : OpenXmlPartRootElement
     /// </summary>
     public DiagramStylePart DiagramStylePart
     {
-		get
-		{
-			return OpenXmlPart as DiagramStylePart;
-		}
-		internal set
-		{
-			OpenXmlPart = value;
-		}
+		get => OpenXmlPart as DiagramStylePart;
+		internal set => OpenXmlPart = value;
     }
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the StyleDefinition class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -1743,9 +1377,7 @@ public partial class StyleDefinition : OpenXmlPartRootElement
     /// <summary>
     /// Initializes a new instance of the StyleDefinition class.
     /// </summary>
-    public StyleDefinition() : base ()
-    {
-    }
+    public StyleDefinition():base(){}
     
     /// <summary>
     /// Saves the DOM into the DiagramStylePart.
@@ -1795,15 +1427,8 @@ if( 0 == namespaceId && "minVer" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<StyleDefinition>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleDefinition>(deep);
 
 }
 /// <summary>
@@ -1819,39 +1444,21 @@ if( 0 == namespaceId && "minVer" == name)
 ///<item><description>ExtensionList &lt;dgm:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(StyleDefinitionTitle))]
     [ChildElementInfo(typeof(StyleLabelDescription))]
     [ChildElementInfo(typeof(StyleDisplayCategories))]
     [ChildElementInfo(typeof(ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class StyleDefinitionHeader : OpenXmlCompositeElement
 {
-    private const string tagName = "styleDefHdr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10691;
+    /// <inheritdoc/>
+    public override string LocalName => "styleDefHdr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -1868,20 +1475,12 @@ public partial class StyleDefinitionHeader : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "uniqueId","minVer","resId" };
-    private static byte[] attributeNamespaceIds = { 0,0,0 };
+    	private static readonly string[] attributeTagNames = { "uniqueId","minVer","resId" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -1924,7 +1523,7 @@ public partial class StyleDefinitionHeader : OpenXmlCompositeElement
     /// </summary>
     public StyleDefinitionHeader():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the StyleDefinitionHeader class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -1988,17 +1587,9 @@ if( 0 == namespaceId && "resId" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<StyleDefinitionHeader>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleDefinitionHeader>(deep);
 
-   
 }
 /// <summary>
 /// <para>List of Style Definition Headers.</para>
@@ -2010,36 +1601,18 @@ if( 0 == namespaceId && "resId" == name)
 ///<item><description>StyleDefinitionHeader &lt;dgm:styleDefHdr></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(StyleDefinitionHeader))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class StyleDefinitionHeaderList : OpenXmlCompositeElement
 {
-    private const string tagName = "styleDefHdrLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10692;
+    /// <inheritdoc/>
+    public override string LocalName => "styleDefHdrLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -2064,7 +1637,7 @@ public partial class StyleDefinitionHeaderList : OpenXmlCompositeElement
     /// </summary>
     public StyleDefinitionHeaderList():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the StyleDefinitionHeaderList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -2104,51 +1677,25 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<StyleDefinitionHeaderList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleDefinitionHeaderList>(deep);
 
-   
 }
 /// <summary>
 /// <para>Color Transform Category.</para>
 /// <para> When the object is serialized out as xml, its qualified name is dgm:cat.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class ColorTransformCategory : OpenXmlLeafElement
 {
-    private const string tagName = "cat";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10693;
+    /// <inheritdoc/>
+    public override string LocalName => "cat";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -2165,20 +1712,12 @@ public partial class ColorTransformCategory : OpenXmlLeafElement
     }
     
 
-    private static string[] attributeTagNames = { "type","pri" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "type","pri" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -2228,17 +1767,9 @@ if( 0 == namespaceId && "pri" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ColorTransformCategory>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorTransformCategory>(deep);
 
-   
 }
 /// <summary>
 /// <para>Fill Color List.</para>
@@ -2259,31 +1790,13 @@ if( 0 == namespaceId && "pri" == name)
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class FillColorList : ColorsType
 {
-    private const string tagName = "fillClrLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10694;
+    /// <inheritdoc/>
+    public override string LocalName => "fillClrLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -2304,7 +1817,7 @@ public partial class FillColorList : ColorsType
     /// Initializes a new instance of the FillColorList class.
     /// </summary>
     public FillColorList():base(){}
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the FillColorList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -2331,15 +1844,8 @@ public partial class FillColorList : ColorsType
     }
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<FillColorList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<FillColorList>(deep);
 
 }
 /// <summary>
@@ -2361,31 +1867,13 @@ public partial class FillColorList : ColorsType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class LineColorList : ColorsType
 {
-    private const string tagName = "linClrLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10695;
+    /// <inheritdoc/>
+    public override string LocalName => "linClrLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -2406,7 +1894,7 @@ public partial class LineColorList : ColorsType
     /// Initializes a new instance of the LineColorList class.
     /// </summary>
     public LineColorList():base(){}
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the LineColorList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -2433,15 +1921,8 @@ public partial class LineColorList : ColorsType
     }
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<LineColorList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<LineColorList>(deep);
 
 }
 /// <summary>
@@ -2463,31 +1944,13 @@ public partial class LineColorList : ColorsType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class EffectColorList : ColorsType
 {
-    private const string tagName = "effectClrLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10696;
+    /// <inheritdoc/>
+    public override string LocalName => "effectClrLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -2508,7 +1971,7 @@ public partial class EffectColorList : ColorsType
     /// Initializes a new instance of the EffectColorList class.
     /// </summary>
     public EffectColorList():base(){}
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the EffectColorList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -2535,15 +1998,8 @@ public partial class EffectColorList : ColorsType
     }
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<EffectColorList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<EffectColorList>(deep);
 
 }
 /// <summary>
@@ -2565,31 +2021,13 @@ public partial class EffectColorList : ColorsType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class TextLineColorList : ColorsType
 {
-    private const string tagName = "txLinClrLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10697;
+    /// <inheritdoc/>
+    public override string LocalName => "txLinClrLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -2610,7 +2048,7 @@ public partial class TextLineColorList : ColorsType
     /// Initializes a new instance of the TextLineColorList class.
     /// </summary>
     public TextLineColorList():base(){}
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the TextLineColorList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -2637,15 +2075,8 @@ public partial class TextLineColorList : ColorsType
     }
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<TextLineColorList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextLineColorList>(deep);
 
 }
 /// <summary>
@@ -2667,31 +2098,13 @@ public partial class TextLineColorList : ColorsType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class TextFillColorList : ColorsType
 {
-    private const string tagName = "txFillClrLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10698;
+    /// <inheritdoc/>
+    public override string LocalName => "txFillClrLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -2712,7 +2125,7 @@ public partial class TextFillColorList : ColorsType
     /// Initializes a new instance of the TextFillColorList class.
     /// </summary>
     public TextFillColorList():base(){}
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the TextFillColorList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -2739,15 +2152,8 @@ public partial class TextFillColorList : ColorsType
     }
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<TextFillColorList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextFillColorList>(deep);
 
 }
 /// <summary>
@@ -2769,31 +2175,13 @@ public partial class TextFillColorList : ColorsType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class TextEffectColorList : ColorsType
 {
-    private const string tagName = "txEffectClrLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10699;
+    /// <inheritdoc/>
+    public override string LocalName => "txEffectClrLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -2814,7 +2202,7 @@ public partial class TextEffectColorList : ColorsType
     /// Initializes a new instance of the TextEffectColorList class.
     /// </summary>
     public TextEffectColorList():base(){}
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the TextEffectColorList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -2841,15 +2229,8 @@ public partial class TextEffectColorList : ColorsType
     }
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<TextEffectColorList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextEffectColorList>(deep);
 
 }
 /// <summary>
@@ -2876,20 +2257,12 @@ public partial class TextEffectColorList : ColorsType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class ColorsType : OpenXmlCompositeElement
 {
-    private static string[] attributeTagNames = { "meth","hueDir" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "meth","hueDir" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
     
         /// <summary>
@@ -2960,7 +2333,7 @@ if( 0 == namespaceId && "hueDir" == name)
     /// </summary>
     protected ColorsType(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ColorsType class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -2998,36 +2371,18 @@ if( 0 == namespaceId && "hueDir" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class ExtensionList : OpenXmlCompositeElement
 {
-    private const string tagName = "extLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10700;
+    /// <inheritdoc/>
+    public override string LocalName => "extLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -3052,7 +2407,7 @@ public partial class ExtensionList : OpenXmlCompositeElement
     /// </summary>
     public ExtensionList():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ExtensionList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -3092,51 +2447,25 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ExtensionList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExtensionList>(deep);
 
-   
 }
 /// <summary>
 /// <para>Title.</para>
 /// <para> When the object is serialized out as xml, its qualified name is dgm:title.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class ColorDefinitionTitle : OpenXmlLeafElement
 {
-    private const string tagName = "title";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10701;
+    /// <inheritdoc/>
+    public override string LocalName => "title";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -3153,20 +2482,12 @@ public partial class ColorDefinitionTitle : OpenXmlLeafElement
     }
     
 
-    private static string[] attributeTagNames = { "lang","val" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "lang","val" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -3216,51 +2537,25 @@ if( 0 == namespaceId && "val" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ColorDefinitionTitle>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorDefinitionTitle>(deep);
 
-   
 }
 /// <summary>
 /// <para>Description.</para>
 /// <para> When the object is serialized out as xml, its qualified name is dgm:desc.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class ColorTransformDescription : OpenXmlLeafElement
 {
-    private const string tagName = "desc";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10702;
+    /// <inheritdoc/>
+    public override string LocalName => "desc";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -3277,20 +2572,12 @@ public partial class ColorTransformDescription : OpenXmlLeafElement
     }
     
 
-    private static string[] attributeTagNames = { "lang","val" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "lang","val" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -3340,17 +2627,9 @@ if( 0 == namespaceId && "val" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ColorTransformDescription>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorTransformDescription>(deep);
 
-   
 }
 /// <summary>
 /// <para>Color Transform Category List.</para>
@@ -3362,36 +2641,18 @@ if( 0 == namespaceId && "val" == name)
 ///<item><description>ColorTransformCategory &lt;dgm:cat></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(ColorTransformCategory))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class ColorTransformCategories : OpenXmlCompositeElement
 {
-    private const string tagName = "catLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10703;
+    /// <inheritdoc/>
+    public override string LocalName => "catLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -3416,7 +2677,7 @@ public partial class ColorTransformCategories : OpenXmlCompositeElement
     /// </summary>
     public ColorTransformCategories():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ColorTransformCategories class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -3456,17 +2717,9 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ColorTransformCategories>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorTransformCategories>(deep);
 
-   
 }
 /// <summary>
 /// <para>Style Label.</para>
@@ -3484,7 +2737,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>ExtensionList &lt;dgm:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(FillColorList))]
     [ChildElementInfo(typeof(LineColorList))]
     [ChildElementInfo(typeof(EffectColorList))]
@@ -3492,34 +2745,16 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(TextFillColorList))]
     [ChildElementInfo(typeof(TextEffectColorList))]
     [ChildElementInfo(typeof(ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class ColorTransformStyleLabel : OpenXmlCompositeElement
 {
-    private const string tagName = "styleLbl";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10704;
+    /// <inheritdoc/>
+    public override string LocalName => "styleLbl";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -3536,20 +2771,12 @@ public partial class ColorTransformStyleLabel : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "name" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "name" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -3570,7 +2797,7 @@ public partial class ColorTransformStyleLabel : OpenXmlCompositeElement
     /// </summary>
     public ColorTransformStyleLabel():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ColorTransformStyleLabel class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -3629,21 +2856,10 @@ if( 14 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "fillClrLst","linClrLst","effectClrLst","txLinClrLst","txFillClrLst","txEffectClrLst","extLst" };
     private static readonly byte[] eleNamespaceIds = { 14,14,14,14,14,14,14 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Fill Color List.</para>
@@ -3654,14 +2870,8 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public FillColorList FillColorList
     {
-        get 
-        {
-            return GetElement<FillColorList>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<FillColorList>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Line Color List.</para>
@@ -3672,14 +2882,8 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public LineColorList LineColorList
     {
-        get 
-        {
-            return GetElement<LineColorList>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<LineColorList>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Effect Color List.</para>
@@ -3690,14 +2894,8 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public EffectColorList EffectColorList
     {
-        get 
-        {
-            return GetElement<EffectColorList>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<EffectColorList>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> Text Line Color List.</para>
@@ -3708,14 +2906,8 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public TextLineColorList TextLineColorList
     {
-        get 
-        {
-            return GetElement<TextLineColorList>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<TextLineColorList>(3);
+        set => SetElement(3, value);
     }
     /// <summary>
     /// <para> Text Fill Color List.</para>
@@ -3726,14 +2918,8 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public TextFillColorList TextFillColorList
     {
-        get 
-        {
-            return GetElement<TextFillColorList>(4);
-        }
-        set
-        {
-            SetElement(4, value);
-        }
+        get => GetElement<TextFillColorList>(4);
+        set => SetElement(4, value);
     }
     /// <summary>
     /// <para> Text Effect Color List.</para>
@@ -3744,14 +2930,8 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public TextEffectColorList TextEffectColorList
     {
-        get 
-        {
-            return GetElement<TextEffectColorList>(5);
-        }
-        set
-        {
-            SetElement(5, value);
-        }
+        get => GetElement<TextEffectColorList>(5);
+        set => SetElement(5, value);
     }
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -3762,14 +2942,8 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public ExtensionList ExtensionList
     {
-        get 
-        {
-            return GetElement<ExtensionList>(6);
-        }
-        set
-        {
-            SetElement(6, value);
-        }
+        get => GetElement<ExtensionList>(6);
+        set => SetElement(6, value);
     }
 
 
@@ -3783,17 +2957,9 @@ if( 14 == namespaceId && "extLst" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ColorTransformStyleLabel>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorTransformStyleLabel>(deep);
 
-   
 }
 /// <summary>
 /// <para>Point.</para>
@@ -3808,39 +2974,21 @@ if( 14 == namespaceId && "extLst" == name)
 ///<item><description>PtExtensionList &lt;dgm:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(PropertySet))]
     [ChildElementInfo(typeof(ShapeProperties))]
     [ChildElementInfo(typeof(TextBody))]
     [ChildElementInfo(typeof(PtExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class Point : OpenXmlCompositeElement
 {
-    private const string tagName = "pt";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10705;
+    /// <inheritdoc/>
+    public override string LocalName => "pt";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -3857,20 +3005,12 @@ public partial class Point : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "modelId","type","cxnId" };
-    private static byte[] attributeNamespaceIds = { 0,0,0 };
+    	private static readonly string[] attributeTagNames = { "modelId","type","cxnId" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -3913,7 +3053,7 @@ public partial class Point : OpenXmlCompositeElement
     /// </summary>
     public Point():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the Point class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -3963,21 +3103,10 @@ if( 14 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "prSet","spPr","t","extLst" };
     private static readonly byte[] eleNamespaceIds = { 14,14,14,14 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Property Set.</para>
@@ -3988,14 +3117,8 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public PropertySet PropertySet
     {
-        get 
-        {
-            return GetElement<PropertySet>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<PropertySet>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Shape Properties.</para>
@@ -4006,14 +3129,8 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public ShapeProperties ShapeProperties
     {
-        get 
-        {
-            return GetElement<ShapeProperties>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<ShapeProperties>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Text Body.</para>
@@ -4024,14 +3141,8 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public TextBody TextBody
     {
-        get 
-        {
-            return GetElement<TextBody>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<TextBody>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> PtExtensionList.</para>
@@ -4042,14 +3153,8 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public PtExtensionList PtExtensionList
     {
-        get 
-        {
-            return GetElement<PtExtensionList>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<PtExtensionList>(3);
+        set => SetElement(3, value);
     }
 
 
@@ -4069,17 +3174,9 @@ if( 0 == namespaceId && "cxnId" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Point>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Point>(deep);
 
-   
 }
 /// <summary>
 /// <para>Connection.</para>
@@ -4091,36 +3188,18 @@ if( 0 == namespaceId && "cxnId" == name)
 ///<item><description>ExtensionList &lt;dgm:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class Connection : OpenXmlCompositeElement
 {
-    private const string tagName = "cxn";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10706;
+    /// <inheritdoc/>
+    public override string LocalName => "cxn";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -4137,20 +3216,12 @@ public partial class Connection : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "modelId","type","srcId","destId","srcOrd","destOrd","parTransId","sibTransId","presId" };
-    private static byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0 };
+    	private static readonly string[] attributeTagNames = { "modelId","type","srcId","destId","srcOrd","destOrd","parTransId","sibTransId","presId" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -4259,7 +3330,7 @@ public partial class Connection : OpenXmlCompositeElement
     /// </summary>
     public Connection():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the Connection class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -4300,21 +3371,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         private static readonly string[] eleTagNames = { "extLst" };
     private static readonly byte[] eleNamespaceIds = { 14 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ExtensionList.</para>
@@ -4325,14 +3385,8 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </remark>
     public ExtensionList ExtensionList
     {
-        get 
-        {
-            return GetElement<ExtensionList>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<ExtensionList>(0);
+        set => SetElement(0, value);
     }
 
 
@@ -4370,17 +3424,9 @@ if( 0 == namespaceId && "presId" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Connection>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Connection>(deep);
 
-   
 }
 /// <summary>
 /// <para>Constraint.</para>
@@ -4392,36 +3438,18 @@ if( 0 == namespaceId && "presId" == name)
 ///<item><description>ExtensionList &lt;dgm:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class Constraint : OpenXmlCompositeElement
 {
-    private const string tagName = "constr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10707;
+    /// <inheritdoc/>
+    public override string LocalName => "constr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -4438,20 +3466,12 @@ public partial class Constraint : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "type","for","forName","ptType","refType","refFor","refForName","refPtType","op","val","fact" };
-    private static byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0 };
+    	private static readonly string[] attributeTagNames = { "type","for","forName","ptType","refType","refFor","refForName","refPtType","op","val","fact" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -4582,7 +3602,7 @@ public partial class Constraint : OpenXmlCompositeElement
     /// </summary>
     public Constraint():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the Constraint class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -4623,21 +3643,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         private static readonly string[] eleTagNames = { "extLst" };
     private static readonly byte[] eleNamespaceIds = { 14 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ExtensionList.</para>
@@ -4648,14 +3657,8 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </remark>
     public ExtensionList ExtensionList
     {
-        get 
-        {
-            return GetElement<ExtensionList>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<ExtensionList>(0);
+        set => SetElement(0, value);
     }
 
 
@@ -4699,17 +3702,9 @@ if( 0 == namespaceId && "fact" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Constraint>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Constraint>(deep);
 
-   
 }
 /// <summary>
 /// <para>Rule.</para>
@@ -4721,36 +3716,18 @@ if( 0 == namespaceId && "fact" == name)
 ///<item><description>ExtensionList &lt;dgm:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class Rule : OpenXmlCompositeElement
 {
-    private const string tagName = "rule";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10708;
+    /// <inheritdoc/>
+    public override string LocalName => "rule";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -4767,20 +3744,12 @@ public partial class Rule : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "type","for","forName","ptType","val","fact","max" };
-    private static byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0 };
+    	private static readonly string[] attributeTagNames = { "type","for","forName","ptType","val","fact","max" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -4867,7 +3836,7 @@ public partial class Rule : OpenXmlCompositeElement
     /// </summary>
     public Rule():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the Rule class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -4908,21 +3877,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         private static readonly string[] eleTagNames = { "extLst" };
     private static readonly byte[] eleNamespaceIds = { 14 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ExtensionList.</para>
@@ -4933,14 +3891,8 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </remark>
     public ExtensionList ExtensionList
     {
-        get 
-        {
-            return GetElement<ExtensionList>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<ExtensionList>(0);
+        set => SetElement(0, value);
     }
 
 
@@ -4972,51 +3924,25 @@ if( 0 == namespaceId && "max" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Rule>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Rule>(deep);
 
-   
 }
 /// <summary>
 /// <para>Shape Adjust.</para>
 /// <para> When the object is serialized out as xml, its qualified name is dgm:adj.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class Adjust : OpenXmlLeafElement
 {
-    private const string tagName = "adj";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10709;
+    /// <inheritdoc/>
+    public override string LocalName => "adj";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -5033,20 +3959,12 @@ public partial class Adjust : OpenXmlLeafElement
     }
     
 
-    private static string[] attributeTagNames = { "idx","val" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "idx","val" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -5096,17 +4014,9 @@ if( 0 == namespaceId && "val" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Adjust>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Adjust>(deep);
 
-   
 }
 /// <summary>
 /// <para>Shape Adjust List.</para>
@@ -5118,36 +4028,18 @@ if( 0 == namespaceId && "val" == name)
 ///<item><description>Adjust &lt;dgm:adj></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(Adjust))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class AdjustList : OpenXmlCompositeElement
 {
-    private const string tagName = "adjLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10710;
+    /// <inheritdoc/>
+    public override string LocalName => "adjLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -5172,7 +4064,7 @@ public partial class AdjustList : OpenXmlCompositeElement
     /// </summary>
     public AdjustList():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the AdjustList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -5212,51 +4104,25 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<AdjustList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<AdjustList>(deep);
 
-   
 }
 /// <summary>
 /// <para>Parameter.</para>
 /// <para> When the object is serialized out as xml, its qualified name is dgm:param.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class Parameter : OpenXmlLeafElement
 {
-    private const string tagName = "param";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10711;
+    /// <inheritdoc/>
+    public override string LocalName => "param";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -5273,20 +4139,12 @@ public partial class Parameter : OpenXmlLeafElement
     }
     
 
-    private static string[] attributeTagNames = { "type","val" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "type","val" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -5336,17 +4194,9 @@ if( 0 == namespaceId && "val" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Parameter>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Parameter>(deep);
 
-   
 }
 /// <summary>
 /// <para>Algorithm.</para>
@@ -5359,37 +4209,19 @@ if( 0 == namespaceId && "val" == name)
 ///<item><description>ExtensionList &lt;dgm:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(Parameter))]
     [ChildElementInfo(typeof(ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class Algorithm : OpenXmlCompositeElement
 {
-    private const string tagName = "alg";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10712;
+    /// <inheritdoc/>
+    public override string LocalName => "alg";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -5406,20 +4238,12 @@ public partial class Algorithm : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "type","rev" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "type","rev" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -5451,7 +4275,7 @@ public partial class Algorithm : OpenXmlCompositeElement
     /// </summary>
     public Algorithm():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the Algorithm class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -5506,17 +4330,9 @@ if( 0 == namespaceId && "rev" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Algorithm>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Algorithm>(deep);
 
-   
 }
 /// <summary>
 /// <para>Shape.</para>
@@ -5529,37 +4345,19 @@ if( 0 == namespaceId && "rev" == name)
 ///<item><description>ExtensionList &lt;dgm:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(AdjustList))]
     [ChildElementInfo(typeof(ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class Shape : OpenXmlCompositeElement
 {
-    private const string tagName = "shape";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10713;
+    /// <inheritdoc/>
+    public override string LocalName => "shape";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -5576,20 +4374,12 @@ public partial class Shape : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "rot","type","blip","zOrderOff","hideGeom","lkTxEntry","blipPhldr" };
-    private static byte[] attributeNamespaceIds = { 0,0,19,0,0,0,0 };
+    	private static readonly string[] attributeTagNames = { "rot","type","blip","zOrderOff","hideGeom","lkTxEntry","blipPhldr" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,19,0,0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -5678,7 +4468,7 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
     public Shape():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the Shape class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -5722,21 +4512,10 @@ if( 14 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "adjLst","extLst" };
     private static readonly byte[] eleNamespaceIds = { 14,14 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Shape Adjust List.</para>
@@ -5747,14 +4526,8 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public AdjustList AdjustList
     {
-        get 
-        {
-            return GetElement<AdjustList>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<AdjustList>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -5765,14 +4538,8 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public ExtensionList ExtensionList
     {
-        get 
-        {
-            return GetElement<ExtensionList>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<ExtensionList>(1);
+        set => SetElement(1, value);
     }
 
 
@@ -5804,17 +4571,9 @@ if( 0 == namespaceId && "blipPhldr" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Shape>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shape>(deep);
 
-   
 }
 /// <summary>
 /// <para>Presentation Of.</para>
@@ -5826,36 +4585,18 @@ if( 0 == namespaceId && "blipPhldr" == name)
 ///<item><description>ExtensionList &lt;dgm:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class PresentationOf : OpenXmlCompositeElement
 {
-    private const string tagName = "presOf";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10714;
+    /// <inheritdoc/>
+    public override string LocalName => "presOf";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -5872,20 +4613,12 @@ public partial class PresentationOf : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "axis","ptType","hideLastTrans","st","cnt","step" };
-    private static byte[] attributeNamespaceIds = { 0,0,0,0,0,0 };
+    	private static readonly string[] attributeTagNames = { "axis","ptType","hideLastTrans","st","cnt","step" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -5961,7 +4694,7 @@ public partial class PresentationOf : OpenXmlCompositeElement
     /// </summary>
     public PresentationOf():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the PresentationOf class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -6002,21 +4735,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         private static readonly string[] eleTagNames = { "extLst" };
     private static readonly byte[] eleNamespaceIds = { 14 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ExtensionList.</para>
@@ -6027,14 +4749,8 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </remark>
     public ExtensionList ExtensionList
     {
-        get 
-        {
-            return GetElement<ExtensionList>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<ExtensionList>(0);
+        set => SetElement(0, value);
     }
 
 
@@ -6063,17 +4779,9 @@ if( 0 == namespaceId && "step" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<PresentationOf>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<PresentationOf>(deep);
 
-   
 }
 /// <summary>
 /// <para>Constraint List.</para>
@@ -6085,36 +4793,18 @@ if( 0 == namespaceId && "step" == name)
 ///<item><description>Constraint &lt;dgm:constr></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(Constraint))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class Constraints : OpenXmlCompositeElement
 {
-    private const string tagName = "constrLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10715;
+    /// <inheritdoc/>
+    public override string LocalName => "constrLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -6139,7 +4829,7 @@ public partial class Constraints : OpenXmlCompositeElement
     /// </summary>
     public Constraints():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the Constraints class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -6179,17 +4869,9 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Constraints>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Constraints>(deep);
 
-   
 }
 /// <summary>
 /// <para>Rule List.</para>
@@ -6201,36 +4883,18 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>Rule &lt;dgm:rule></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(Rule))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class RuleList : OpenXmlCompositeElement
 {
-    private const string tagName = "ruleLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10716;
+    /// <inheritdoc/>
+    public override string LocalName => "ruleLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -6255,7 +4919,7 @@ public partial class RuleList : OpenXmlCompositeElement
     /// </summary>
     public RuleList():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the RuleList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -6295,17 +4959,9 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<RuleList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<RuleList>(deep);
 
-   
 }
 /// <summary>
 /// <para>Variable List.</para>
@@ -6329,31 +4985,13 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class VariableList : LayoutVariablePropertySetType
 {
-    private const string tagName = "varLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10717;
+    /// <inheritdoc/>
+    public override string LocalName => "varLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -6374,7 +5012,7 @@ public partial class VariableList : LayoutVariablePropertySetType
     /// Initializes a new instance of the VariableList class.
     /// </summary>
     public VariableList():base(){}
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the VariableList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -6401,15 +5039,8 @@ public partial class VariableList : LayoutVariablePropertySetType
     }
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VariableList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VariableList>(deep);
 
 }
 /// <summary>
@@ -6434,31 +5065,13 @@ public partial class VariableList : LayoutVariablePropertySetType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class PresentationLayoutVariables : LayoutVariablePropertySetType
 {
-    private const string tagName = "presLayoutVars";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10731;
+    /// <inheritdoc/>
+    public override string LocalName => "presLayoutVars";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -6479,7 +5092,7 @@ public partial class PresentationLayoutVariables : LayoutVariablePropertySetType
     /// Initializes a new instance of the PresentationLayoutVariables class.
     /// </summary>
     public PresentationLayoutVariables():base(){}
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the PresentationLayoutVariables class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -6506,15 +5119,8 @@ public partial class PresentationLayoutVariables : LayoutVariablePropertySetType
     }
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<PresentationLayoutVariables>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<PresentationLayoutVariables>(deep);
 
 }
 /// <summary>
@@ -6586,21 +5192,10 @@ if( 14 == namespaceId && "resizeHandles" == name)
         private static readonly string[] eleTagNames = { "orgChart","chMax","chPref","bulletEnabled","dir","hierBranch","animOne","animLvl","resizeHandles" };
     private static readonly byte[] eleNamespaceIds = { 14,14,14,14,14,14,14,14,14 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Show Organization Chart User Interface.</para>
@@ -6611,14 +5206,8 @@ if( 14 == namespaceId && "resizeHandles" == name)
     /// </remark>
     public OrganizationChart OrganizationChart
     {
-        get 
-        {
-            return GetElement<OrganizationChart>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<OrganizationChart>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Maximum Children.</para>
@@ -6629,14 +5218,8 @@ if( 14 == namespaceId && "resizeHandles" == name)
     /// </remark>
     public MaxNumberOfChildren MaxNumberOfChildren
     {
-        get 
-        {
-            return GetElement<MaxNumberOfChildren>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<MaxNumberOfChildren>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Preferred Number of Children.</para>
@@ -6647,14 +5230,8 @@ if( 14 == namespaceId && "resizeHandles" == name)
     /// </remark>
     public PreferredNumberOfChildren PreferredNumberOfChildren
     {
-        get 
-        {
-            return GetElement<PreferredNumberOfChildren>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<PreferredNumberOfChildren>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> Show Insert Bullet.</para>
@@ -6665,14 +5242,8 @@ if( 14 == namespaceId && "resizeHandles" == name)
     /// </remark>
     public BulletEnabled BulletEnabled
     {
-        get 
-        {
-            return GetElement<BulletEnabled>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<BulletEnabled>(3);
+        set => SetElement(3, value);
     }
     /// <summary>
     /// <para> Diagram Direction.</para>
@@ -6683,14 +5254,8 @@ if( 14 == namespaceId && "resizeHandles" == name)
     /// </remark>
     public Direction Direction
     {
-        get 
-        {
-            return GetElement<Direction>(4);
-        }
-        set
-        {
-            SetElement(4, value);
-        }
+        get => GetElement<Direction>(4);
+        set => SetElement(4, value);
     }
     /// <summary>
     /// <para> Organization Chart Branch Style.</para>
@@ -6701,14 +5266,8 @@ if( 14 == namespaceId && "resizeHandles" == name)
     /// </remark>
     public HierarchyBranch HierarchyBranch
     {
-        get 
-        {
-            return GetElement<HierarchyBranch>(5);
-        }
-        set
-        {
-            SetElement(5, value);
-        }
+        get => GetElement<HierarchyBranch>(5);
+        set => SetElement(5, value);
     }
     /// <summary>
     /// <para> One by One Animation String.</para>
@@ -6719,14 +5278,8 @@ if( 14 == namespaceId && "resizeHandles" == name)
     /// </remark>
     public AnimateOneByOne AnimateOneByOne
     {
-        get 
-        {
-            return GetElement<AnimateOneByOne>(6);
-        }
-        set
-        {
-            SetElement(6, value);
-        }
+        get => GetElement<AnimateOneByOne>(6);
+        set => SetElement(6, value);
     }
     /// <summary>
     /// <para> Level Animation.</para>
@@ -6737,14 +5290,8 @@ if( 14 == namespaceId && "resizeHandles" == name)
     /// </remark>
     public AnimationLevel AnimationLevel
     {
-        get 
-        {
-            return GetElement<AnimationLevel>(7);
-        }
-        set
-        {
-            SetElement(7, value);
-        }
+        get => GetElement<AnimationLevel>(7);
+        set => SetElement(7, value);
     }
     /// <summary>
     /// <para> Shape Resize Style.</para>
@@ -6755,14 +5302,8 @@ if( 14 == namespaceId && "resizeHandles" == name)
     /// </remark>
     public ResizeHandles ResizeHandles
     {
-        get 
-        {
-            return GetElement<ResizeHandles>(8);
-        }
-        set
-        {
-            SetElement(8, value);
-        }
+        get => GetElement<ResizeHandles>(8);
+        set => SetElement(8, value);
     }
 
 
@@ -6773,7 +5314,7 @@ if( 14 == namespaceId && "resizeHandles" == name)
     /// </summary>
     protected LayoutVariablePropertySetType(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the LayoutVariablePropertySetType class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -6819,7 +5360,7 @@ if( 14 == namespaceId && "resizeHandles" == name)
 ///<item><description>ExtensionList &lt;dgm:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(Algorithm))]
     [ChildElementInfo(typeof(Shape))]
     [ChildElementInfo(typeof(PresentationOf))]
@@ -6829,34 +5370,16 @@ if( 14 == namespaceId && "resizeHandles" == name)
     [ChildElementInfo(typeof(LayoutNode))]
     [ChildElementInfo(typeof(Choose))]
     [ChildElementInfo(typeof(ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class ForEach : OpenXmlCompositeElement
 {
-    private const string tagName = "forEach";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10718;
+    /// <inheritdoc/>
+    public override string LocalName => "forEach";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -6873,20 +5396,12 @@ public partial class ForEach : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "name","ref","axis","ptType","hideLastTrans","st","cnt","step" };
-    private static byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0 };
+    	private static readonly string[] attributeTagNames = { "name","ref","axis","ptType","hideLastTrans","st","cnt","step" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -6984,7 +5499,7 @@ public partial class ForEach : OpenXmlCompositeElement
     /// </summary>
     public ForEach():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ForEach class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -7078,17 +5593,9 @@ if( 0 == namespaceId && "step" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ForEach>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ForEach>(deep);
 
-   
 }
 /// <summary>
 /// <para>Layout Node.</para>
@@ -7109,7 +5616,7 @@ if( 0 == namespaceId && "step" == name)
 ///<item><description>ExtensionList &lt;dgm:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(Algorithm))]
     [ChildElementInfo(typeof(Shape))]
     [ChildElementInfo(typeof(PresentationOf))]
@@ -7120,34 +5627,16 @@ if( 0 == namespaceId && "step" == name)
     [ChildElementInfo(typeof(LayoutNode))]
     [ChildElementInfo(typeof(Choose))]
     [ChildElementInfo(typeof(ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class LayoutNode : OpenXmlCompositeElement
 {
-    private const string tagName = "layoutNode";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10719;
+    /// <inheritdoc/>
+    public override string LocalName => "layoutNode";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -7164,20 +5653,12 @@ public partial class LayoutNode : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "name","styleLbl","chOrder","moveWith" };
-    private static byte[] attributeNamespaceIds = { 0,0,0,0 };
+    	private static readonly string[] attributeTagNames = { "name","styleLbl","chOrder","moveWith" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -7231,7 +5712,7 @@ public partial class LayoutNode : OpenXmlCompositeElement
     /// </summary>
     public LayoutNode():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the LayoutNode class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -7316,17 +5797,9 @@ if( 0 == namespaceId && "moveWith" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<LayoutNode>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<LayoutNode>(deep);
 
-   
 }
 /// <summary>
 /// <para>Choose Element.</para>
@@ -7339,37 +5812,19 @@ if( 0 == namespaceId && "moveWith" == name)
 ///<item><description>DiagramChooseElse &lt;dgm:else></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DiagramChooseIf))]
     [ChildElementInfo(typeof(DiagramChooseElse))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class Choose : OpenXmlCompositeElement
 {
-    private const string tagName = "choose";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10720;
+    /// <inheritdoc/>
+    public override string LocalName => "choose";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -7386,20 +5841,12 @@ public partial class Choose : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "name" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "name" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -7420,7 +5867,7 @@ public partial class Choose : OpenXmlCompositeElement
     /// </summary>
     public Choose():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the Choose class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -7472,17 +5919,9 @@ if( 14 == namespaceId && "else" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Choose>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Choose>(deep);
 
-   
 }
 /// <summary>
 /// <para>If.</para>
@@ -7502,7 +5941,7 @@ if( 14 == namespaceId && "else" == name)
 ///<item><description>ExtensionList &lt;dgm:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(Algorithm))]
     [ChildElementInfo(typeof(Shape))]
     [ChildElementInfo(typeof(PresentationOf))]
@@ -7512,34 +5951,16 @@ if( 14 == namespaceId && "else" == name)
     [ChildElementInfo(typeof(LayoutNode))]
     [ChildElementInfo(typeof(Choose))]
     [ChildElementInfo(typeof(ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class DiagramChooseIf : OpenXmlCompositeElement
 {
-    private const string tagName = "if";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10721;
+    /// <inheritdoc/>
+    public override string LocalName => "if";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -7556,20 +5977,12 @@ public partial class DiagramChooseIf : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "name","axis","ptType","hideLastTrans","st","cnt","step","func","arg","op","val" };
-    private static byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0 };
+    	private static readonly string[] attributeTagNames = { "name","axis","ptType","hideLastTrans","st","cnt","step","func","arg","op","val" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -7700,7 +6113,7 @@ public partial class DiagramChooseIf : OpenXmlCompositeElement
     /// </summary>
     public DiagramChooseIf():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the DiagramChooseIf class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -7803,17 +6216,9 @@ if( 0 == namespaceId && "val" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<DiagramChooseIf>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<DiagramChooseIf>(deep);
 
-   
 }
 /// <summary>
 /// <para>Else.</para>
@@ -7833,7 +6238,7 @@ if( 0 == namespaceId && "val" == name)
 ///<item><description>ExtensionList &lt;dgm:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(Algorithm))]
     [ChildElementInfo(typeof(Shape))]
     [ChildElementInfo(typeof(PresentationOf))]
@@ -7843,34 +6248,16 @@ if( 0 == namespaceId && "val" == name)
     [ChildElementInfo(typeof(LayoutNode))]
     [ChildElementInfo(typeof(Choose))]
     [ChildElementInfo(typeof(ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class DiagramChooseElse : OpenXmlCompositeElement
 {
-    private const string tagName = "else";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10722;
+    /// <inheritdoc/>
+    public override string LocalName => "else";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -7887,20 +6274,12 @@ public partial class DiagramChooseElse : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "name" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "name" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -7921,7 +6300,7 @@ public partial class DiagramChooseElse : OpenXmlCompositeElement
     /// </summary>
     public DiagramChooseElse():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the DiagramChooseElse class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -7994,17 +6373,9 @@ if( 14 == namespaceId && "extLst" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<DiagramChooseElse>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<DiagramChooseElse>(deep);
 
-   
 }
 /// <summary>
 /// <para>Data Model.</para>
@@ -8020,40 +6391,22 @@ if( 14 == namespaceId && "extLst" == name)
 ///<item><description>DataModelExtensionList &lt;dgm:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(PointList))]
     [ChildElementInfo(typeof(ConnectionList))]
     [ChildElementInfo(typeof(Background))]
     [ChildElementInfo(typeof(Whole))]
     [ChildElementInfo(typeof(DataModelExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class DataModel : OpenXmlCompositeElement
 {
-    private const string tagName = "dataModel";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10723;
+    /// <inheritdoc/>
+    public override string LocalName => "dataModel";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -8078,7 +6431,7 @@ public partial class DataModel : OpenXmlCompositeElement
     /// </summary>
     public DataModel():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the DataModel class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -8131,21 +6484,10 @@ if( 14 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "ptLst","cxnLst","bg","whole","extLst" };
     private static readonly byte[] eleNamespaceIds = { 14,14,14,14,14 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Point List.</para>
@@ -8156,14 +6498,8 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public PointList PointList
     {
-        get 
-        {
-            return GetElement<PointList>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<PointList>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Connection List.</para>
@@ -8174,14 +6510,8 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public ConnectionList ConnectionList
     {
-        get 
-        {
-            return GetElement<ConnectionList>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<ConnectionList>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Background Formatting.</para>
@@ -8192,14 +6522,8 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public Background Background
     {
-        get 
-        {
-            return GetElement<Background>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<Background>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> Whole E2O Formatting.</para>
@@ -8210,14 +6534,8 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public Whole Whole
     {
-        get 
-        {
-            return GetElement<Whole>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<Whole>(3);
+        set => SetElement(3, value);
     }
     /// <summary>
     /// <para> DataModelExtensionList.</para>
@@ -8228,63 +6546,31 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public DataModelExtensionList DataModelExtensionList
     {
-        get 
-        {
-            return GetElement<DataModelExtensionList>(4);
-        }
-        set
-        {
-            SetElement(4, value);
-        }
+        get => GetElement<DataModelExtensionList>(4);
+        set => SetElement(4, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<DataModel>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataModel>(deep);
 
-   
 }
 /// <summary>
 /// <para>Category.</para>
 /// <para> When the object is serialized out as xml, its qualified name is dgm:cat.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class Category : OpenXmlLeafElement
 {
-    private const string tagName = "cat";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10724;
+    /// <inheritdoc/>
+    public override string LocalName => "cat";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -8301,20 +6587,12 @@ public partial class Category : OpenXmlLeafElement
     }
     
 
-    private static string[] attributeTagNames = { "type","pri" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "type","pri" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -8364,51 +6642,25 @@ if( 0 == namespaceId && "pri" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Category>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Category>(deep);
 
-   
 }
 /// <summary>
 /// <para>Title.</para>
 /// <para> When the object is serialized out as xml, its qualified name is dgm:title.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class Title : OpenXmlLeafElement
 {
-    private const string tagName = "title";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10725;
+    /// <inheritdoc/>
+    public override string LocalName => "title";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -8425,20 +6677,12 @@ public partial class Title : OpenXmlLeafElement
     }
     
 
-    private static string[] attributeTagNames = { "lang","val" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "lang","val" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -8488,51 +6732,25 @@ if( 0 == namespaceId && "val" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Title>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Title>(deep);
 
-   
 }
 /// <summary>
 /// <para>Description.</para>
 /// <para> When the object is serialized out as xml, its qualified name is dgm:desc.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class Description : OpenXmlLeafElement
 {
-    private const string tagName = "desc";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10726;
+    /// <inheritdoc/>
+    public override string LocalName => "desc";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -8549,20 +6767,12 @@ public partial class Description : OpenXmlLeafElement
     }
     
 
-    private static string[] attributeTagNames = { "lang","val" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "lang","val" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -8612,17 +6822,9 @@ if( 0 == namespaceId && "val" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Description>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Description>(deep);
 
-   
 }
 /// <summary>
 /// <para>Category List.</para>
@@ -8634,36 +6836,18 @@ if( 0 == namespaceId && "val" == name)
 ///<item><description>Category &lt;dgm:cat></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(Category))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class CategoryList : OpenXmlCompositeElement
 {
-    private const string tagName = "catLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10727;
+    /// <inheritdoc/>
+    public override string LocalName => "catLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -8688,7 +6872,7 @@ public partial class CategoryList : OpenXmlCompositeElement
     /// </summary>
     public CategoryList():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the CategoryList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -8728,17 +6912,9 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<CategoryList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<CategoryList>(deep);
 
-   
 }
 /// <summary>
 /// <para>Sample Data.</para>
@@ -8754,31 +6930,13 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class SampleData : SampleDataType
 {
-    private const string tagName = "sampData";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10728;
+    /// <inheritdoc/>
+    public override string LocalName => "sampData";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -8799,7 +6957,7 @@ public partial class SampleData : SampleDataType
     /// Initializes a new instance of the SampleData class.
     /// </summary>
     public SampleData():base(){}
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the SampleData class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -8826,15 +6984,8 @@ public partial class SampleData : SampleDataType
     }
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<SampleData>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<SampleData>(deep);
 
 }
 /// <summary>
@@ -8851,31 +7002,13 @@ public partial class SampleData : SampleDataType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class StyleData : SampleDataType
 {
-    private const string tagName = "styleData";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10729;
+    /// <inheritdoc/>
+    public override string LocalName => "styleData";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -8896,7 +7029,7 @@ public partial class StyleData : SampleDataType
     /// Initializes a new instance of the StyleData class.
     /// </summary>
     public StyleData():base(){}
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the StyleData class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -8923,15 +7056,8 @@ public partial class StyleData : SampleDataType
     }
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<StyleData>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleData>(deep);
 
 }
 /// <summary>
@@ -8948,31 +7074,13 @@ public partial class StyleData : SampleDataType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class ColorData : SampleDataType
 {
-    private const string tagName = "clrData";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10730;
+    /// <inheritdoc/>
+    public override string LocalName => "clrData";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -8993,7 +7101,7 @@ public partial class ColorData : SampleDataType
     /// Initializes a new instance of the ColorData class.
     /// </summary>
     public ColorData():base(){}
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ColorData class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -9020,15 +7128,8 @@ public partial class ColorData : SampleDataType
     }
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ColorData>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorData>(deep);
 
 }
 /// <summary>
@@ -9045,20 +7146,12 @@ public partial class ColorData : SampleDataType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class SampleDataType : OpenXmlCompositeElement
 {
-    private static string[] attributeTagNames = { "useDef" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "useDef" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
     
         /// <summary>
@@ -9086,21 +7179,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         private static readonly string[] eleTagNames = { "dataModel" };
     private static readonly byte[] eleNamespaceIds = { 14 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Data Model.</para>
@@ -9111,14 +7193,8 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </remark>
     public DataModel DataModel
     {
-        get 
-        {
-            return GetElement<DataModel>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DataModel>(0);
+        set => SetElement(0, value);
     }
 
 
@@ -9138,7 +7214,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </summary>
     protected SampleDataType(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the SampleDataType class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -9179,39 +7255,21 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.FontReference &lt;a:fontRef></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.LineReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FillReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FontReference))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class Style : OpenXmlCompositeElement
 {
-    private const string tagName = "style";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10732;
+    /// <inheritdoc/>
+    public override string LocalName => "style";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -9236,7 +7294,7 @@ public partial class Style : OpenXmlCompositeElement
     /// </summary>
     public Style():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the Style class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -9286,21 +7344,10 @@ if( 10 == namespaceId && "fontRef" == name)
         private static readonly string[] eleTagNames = { "lnRef","fillRef","effectRef","fontRef" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> LineReference.</para>
@@ -9311,14 +7358,8 @@ if( 10 == namespaceId && "fontRef" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.LineReference LineReference
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.LineReference>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> FillReference.</para>
@@ -9329,14 +7370,8 @@ if( 10 == namespaceId && "fontRef" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.FillReference FillReference
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.FillReference>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> EffectReference.</para>
@@ -9347,14 +7382,8 @@ if( 10 == namespaceId && "fontRef" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.EffectReference EffectReference
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> Font Reference.</para>
@@ -9365,63 +7394,31 @@ if( 10 == namespaceId && "fontRef" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.FontReference FontReference
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.FontReference>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>(3);
+        set => SetElement(3, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Style>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Style>(deep);
 
-   
 }
 /// <summary>
 /// <para>Show Organization Chart User Interface.</para>
 /// <para> When the object is serialized out as xml, its qualified name is dgm:orgChart.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class OrganizationChart : OpenXmlLeafElement
 {
-    private const string tagName = "orgChart";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10733;
+    /// <inheritdoc/>
+    public override string LocalName => "orgChart";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -9438,20 +7435,12 @@ public partial class OrganizationChart : OpenXmlLeafElement
     }
     
 
-    private static string[] attributeTagNames = { "val" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "val" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -9487,51 +7476,25 @@ public partial class OrganizationChart : OpenXmlLeafElement
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<OrganizationChart>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<OrganizationChart>(deep);
 
-   
 }
 /// <summary>
 /// <para>Maximum Children.</para>
 /// <para> When the object is serialized out as xml, its qualified name is dgm:chMax.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class MaxNumberOfChildren : OpenXmlLeafElement
 {
-    private const string tagName = "chMax";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10734;
+    /// <inheritdoc/>
+    public override string LocalName => "chMax";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -9548,20 +7511,12 @@ public partial class MaxNumberOfChildren : OpenXmlLeafElement
     }
     
 
-    private static string[] attributeTagNames = { "val" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "val" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -9597,51 +7552,25 @@ public partial class MaxNumberOfChildren : OpenXmlLeafElement
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<MaxNumberOfChildren>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<MaxNumberOfChildren>(deep);
 
-   
 }
 /// <summary>
 /// <para>Preferred Number of Children.</para>
 /// <para> When the object is serialized out as xml, its qualified name is dgm:chPref.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class PreferredNumberOfChildren : OpenXmlLeafElement
 {
-    private const string tagName = "chPref";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10735;
+    /// <inheritdoc/>
+    public override string LocalName => "chPref";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -9658,20 +7587,12 @@ public partial class PreferredNumberOfChildren : OpenXmlLeafElement
     }
     
 
-    private static string[] attributeTagNames = { "val" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "val" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -9707,51 +7628,25 @@ public partial class PreferredNumberOfChildren : OpenXmlLeafElement
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<PreferredNumberOfChildren>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<PreferredNumberOfChildren>(deep);
 
-   
 }
 /// <summary>
 /// <para>Show Insert Bullet.</para>
 /// <para> When the object is serialized out as xml, its qualified name is dgm:bulletEnabled.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class BulletEnabled : OpenXmlLeafElement
 {
-    private const string tagName = "bulletEnabled";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10736;
+    /// <inheritdoc/>
+    public override string LocalName => "bulletEnabled";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -9768,20 +7663,12 @@ public partial class BulletEnabled : OpenXmlLeafElement
     }
     
 
-    private static string[] attributeTagNames = { "val" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "val" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -9817,51 +7704,25 @@ public partial class BulletEnabled : OpenXmlLeafElement
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<BulletEnabled>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<BulletEnabled>(deep);
 
-   
 }
 /// <summary>
 /// <para>Diagram Direction.</para>
 /// <para> When the object is serialized out as xml, its qualified name is dgm:dir.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class Direction : OpenXmlLeafElement
 {
-    private const string tagName = "dir";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10737;
+    /// <inheritdoc/>
+    public override string LocalName => "dir";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -9878,20 +7739,12 @@ public partial class Direction : OpenXmlLeafElement
     }
     
 
-    private static string[] attributeTagNames = { "val" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "val" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -9927,51 +7780,25 @@ public partial class Direction : OpenXmlLeafElement
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Direction>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Direction>(deep);
 
-   
 }
 /// <summary>
 /// <para>Organization Chart Branch Style.</para>
 /// <para> When the object is serialized out as xml, its qualified name is dgm:hierBranch.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class HierarchyBranch : OpenXmlLeafElement
 {
-    private const string tagName = "hierBranch";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10738;
+    /// <inheritdoc/>
+    public override string LocalName => "hierBranch";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -9988,20 +7815,12 @@ public partial class HierarchyBranch : OpenXmlLeafElement
     }
     
 
-    private static string[] attributeTagNames = { "val" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "val" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -10037,51 +7856,25 @@ public partial class HierarchyBranch : OpenXmlLeafElement
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<HierarchyBranch>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<HierarchyBranch>(deep);
 
-   
 }
 /// <summary>
 /// <para>One by One Animation String.</para>
 /// <para> When the object is serialized out as xml, its qualified name is dgm:animOne.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class AnimateOneByOne : OpenXmlLeafElement
 {
-    private const string tagName = "animOne";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10739;
+    /// <inheritdoc/>
+    public override string LocalName => "animOne";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -10098,20 +7891,12 @@ public partial class AnimateOneByOne : OpenXmlLeafElement
     }
     
 
-    private static string[] attributeTagNames = { "val" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "val" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -10147,51 +7932,25 @@ public partial class AnimateOneByOne : OpenXmlLeafElement
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<AnimateOneByOne>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<AnimateOneByOne>(deep);
 
-   
 }
 /// <summary>
 /// <para>Level Animation.</para>
 /// <para> When the object is serialized out as xml, its qualified name is dgm:animLvl.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class AnimationLevel : OpenXmlLeafElement
 {
-    private const string tagName = "animLvl";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10740;
+    /// <inheritdoc/>
+    public override string LocalName => "animLvl";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -10208,20 +7967,12 @@ public partial class AnimationLevel : OpenXmlLeafElement
     }
     
 
-    private static string[] attributeTagNames = { "val" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "val" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -10257,51 +8008,25 @@ public partial class AnimationLevel : OpenXmlLeafElement
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<AnimationLevel>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<AnimationLevel>(deep);
 
-   
 }
 /// <summary>
 /// <para>Shape Resize Style.</para>
 /// <para> When the object is serialized out as xml, its qualified name is dgm:resizeHandles.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class ResizeHandles : OpenXmlLeafElement
 {
-    private const string tagName = "resizeHandles";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10741;
+    /// <inheritdoc/>
+    public override string LocalName => "resizeHandles";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -10318,20 +8043,12 @@ public partial class ResizeHandles : OpenXmlLeafElement
     }
     
 
-    private static string[] attributeTagNames = { "val" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "val" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -10367,51 +8084,25 @@ public partial class ResizeHandles : OpenXmlLeafElement
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ResizeHandles>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ResizeHandles>(deep);
 
-   
 }
 /// <summary>
 /// <para>Category.</para>
 /// <para> When the object is serialized out as xml, its qualified name is dgm:cat.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class StyleDisplayCategory : OpenXmlLeafElement
 {
-    private const string tagName = "cat";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10742;
+    /// <inheritdoc/>
+    public override string LocalName => "cat";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -10428,20 +8119,12 @@ public partial class StyleDisplayCategory : OpenXmlLeafElement
     }
     
 
-    private static string[] attributeTagNames = { "type","pri" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "type","pri" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -10491,17 +8174,9 @@ if( 0 == namespaceId && "pri" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<StyleDisplayCategory>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleDisplayCategory>(deep);
 
-   
 }
 /// <summary>
 /// <para>3-D Scene.</para>
@@ -10516,39 +8191,21 @@ if( 0 == namespaceId && "pri" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Camera))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.LightRig))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Backdrop))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class Scene3D : OpenXmlCompositeElement
 {
-    private const string tagName = "scene3d";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10743;
+    /// <inheritdoc/>
+    public override string LocalName => "scene3d";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -10573,7 +8230,7 @@ public partial class Scene3D : OpenXmlCompositeElement
     /// </summary>
     public Scene3D():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the Scene3D class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -10623,21 +8280,10 @@ if( 10 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "camera","lightRig","backdrop","extLst" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Camera.</para>
@@ -10648,14 +8294,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Camera Camera
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Camera>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Camera>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Light Rig.</para>
@@ -10666,14 +8306,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.LightRig LightRig
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.LightRig>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.LightRig>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Backdrop Plane.</para>
@@ -10684,14 +8318,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Backdrop Backdrop
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Backdrop>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Backdrop>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -10702,29 +8330,15 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(3);
+        set => SetElement(3, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Scene3D>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Scene3D>(deep);
 
-   
 }
 /// <summary>
 /// <para>3-D Shape Properties.</para>
@@ -10740,40 +8354,22 @@ if( 10 == namespaceId && "extLst" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BevelTop))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BevelBottom))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtrusionColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ContourColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class Shape3D : OpenXmlCompositeElement
 {
-    private const string tagName = "sp3d";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10744;
+    /// <inheritdoc/>
+    public override string LocalName => "sp3d";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -10790,20 +8386,12 @@ public partial class Shape3D : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "z","extrusionH","contourW","prstMaterial" };
-    private static byte[] attributeNamespaceIds = { 0,0,0,0 };
+    	private static readonly string[] attributeTagNames = { "z","extrusionH","contourW","prstMaterial" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -10857,7 +8445,7 @@ public partial class Shape3D : OpenXmlCompositeElement
     /// </summary>
     public Shape3D():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the Shape3D class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -10910,21 +8498,10 @@ if( 10 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "bevelT","bevelB","extrusionClr","contourClr","extLst" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Top Bevel.</para>
@@ -10935,14 +8512,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.BevelTop BevelTop
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.BevelTop>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.BevelTop>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Bottom Bevel.</para>
@@ -10953,14 +8524,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.BevelBottom BevelBottom
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.BevelBottom>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.BevelBottom>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Extrusion Color.</para>
@@ -10971,14 +8536,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.ExtrusionColor ExtrusionColor
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.ExtrusionColor>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtrusionColor>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> Contour Color.</para>
@@ -10989,14 +8548,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.ContourColor ContourColor
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.ContourColor>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ContourColor>(3);
+        set => SetElement(3, value);
     }
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -11007,14 +8560,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(4);
-        }
-        set
-        {
-            SetElement(4, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(4);
+        set => SetElement(4, value);
     }
 
 
@@ -11037,17 +8584,9 @@ if( 0 == namespaceId && "prstMaterial" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Shape3D>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shape3D>(deep);
 
-   
 }
 /// <summary>
 /// <para>Text Properties.</para>
@@ -11060,37 +8599,19 @@ if( 0 == namespaceId && "prstMaterial" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.FlatText &lt;a:flatTx></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FlatText))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class TextProperties : OpenXmlCompositeElement
 {
-    private const string tagName = "txPr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10745;
+    /// <inheritdoc/>
+    public override string LocalName => "txPr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -11115,7 +8636,7 @@ public partial class TextProperties : OpenXmlCompositeElement
     /// </summary>
     public TextProperties():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the TextProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -11159,21 +8680,10 @@ if( 10 == namespaceId && "flatTx" == name)
         private static readonly string[] eleTagNames = { "sp3d","flatTx" };
     private static readonly byte[] eleNamespaceIds = { 10,10 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneChoice;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> Apply 3D shape properties.</para>
@@ -11184,14 +8694,8 @@ if( 10 == namespaceId && "flatTx" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Shape3DType Shape3DType
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Shape3DType>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Shape3DType>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> No text in 3D scene.</para>
@@ -11202,63 +8706,31 @@ if( 10 == namespaceId && "flatTx" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.FlatText FlatText
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.FlatText>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.FlatText>(1);
+        set => SetElement(1, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<TextProperties>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextProperties>(deep);
 
-   
 }
 /// <summary>
 /// <para>Title.</para>
 /// <para> When the object is serialized out as xml, its qualified name is dgm:title.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class StyleDefinitionTitle : OpenXmlLeafElement
 {
-    private const string tagName = "title";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10746;
+    /// <inheritdoc/>
+    public override string LocalName => "title";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -11275,20 +8747,12 @@ public partial class StyleDefinitionTitle : OpenXmlLeafElement
     }
     
 
-    private static string[] attributeTagNames = { "lang","val" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "lang","val" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -11338,51 +8802,25 @@ if( 0 == namespaceId && "val" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<StyleDefinitionTitle>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleDefinitionTitle>(deep);
 
-   
 }
 /// <summary>
 /// <para>Style Label Description.</para>
 /// <para> When the object is serialized out as xml, its qualified name is dgm:desc.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class StyleLabelDescription : OpenXmlLeafElement
 {
-    private const string tagName = "desc";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10747;
+    /// <inheritdoc/>
+    public override string LocalName => "desc";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -11399,20 +8837,12 @@ public partial class StyleLabelDescription : OpenXmlLeafElement
     }
     
 
-    private static string[] attributeTagNames = { "lang","val" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "lang","val" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -11462,17 +8892,9 @@ if( 0 == namespaceId && "val" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<StyleLabelDescription>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleLabelDescription>(deep);
 
-   
 }
 /// <summary>
 /// <para>Category List.</para>
@@ -11484,36 +8906,18 @@ if( 0 == namespaceId && "val" == name)
 ///<item><description>StyleDisplayCategory &lt;dgm:cat></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(StyleDisplayCategory))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class StyleDisplayCategories : OpenXmlCompositeElement
 {
-    private const string tagName = "catLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10748;
+    /// <inheritdoc/>
+    public override string LocalName => "catLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -11538,7 +8942,7 @@ public partial class StyleDisplayCategories : OpenXmlCompositeElement
     /// </summary>
     public StyleDisplayCategories():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the StyleDisplayCategories class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -11578,17 +8982,9 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<StyleDisplayCategories>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleDisplayCategories>(deep);
 
-   
 }
 /// <summary>
 /// <para>Style Label.</para>
@@ -11604,40 +9000,22 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>ExtensionList &lt;dgm:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(Scene3D))]
     [ChildElementInfo(typeof(Shape3D))]
     [ChildElementInfo(typeof(TextProperties))]
     [ChildElementInfo(typeof(Style))]
     [ChildElementInfo(typeof(ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class StyleLabel : OpenXmlCompositeElement
 {
-    private const string tagName = "styleLbl";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10749;
+    /// <inheritdoc/>
+    public override string LocalName => "styleLbl";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -11654,20 +9032,12 @@ public partial class StyleLabel : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "name" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "name" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -11688,7 +9058,7 @@ public partial class StyleLabel : OpenXmlCompositeElement
     /// </summary>
     public StyleLabel():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the StyleLabel class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -11741,21 +9111,10 @@ if( 14 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "scene3d","sp3d","txPr","style","extLst" };
     private static readonly byte[] eleNamespaceIds = { 14,14,14,14,14 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> 3-D Scene.</para>
@@ -11766,14 +9125,8 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public Scene3D Scene3D
     {
-        get 
-        {
-            return GetElement<Scene3D>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<Scene3D>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> 3-D Shape Properties.</para>
@@ -11784,14 +9137,8 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public Shape3D Shape3D
     {
-        get 
-        {
-            return GetElement<Shape3D>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<Shape3D>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Text Properties.</para>
@@ -11802,14 +9149,8 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public TextProperties TextProperties
     {
-        get 
-        {
-            return GetElement<TextProperties>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<TextProperties>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> Shape Style.</para>
@@ -11820,14 +9161,8 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public Style Style
     {
-        get 
-        {
-            return GetElement<Style>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<Style>(3);
+        set => SetElement(3, value);
     }
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -11838,14 +9173,8 @@ if( 14 == namespaceId && "extLst" == name)
     /// </remark>
     public ExtensionList ExtensionList
     {
-        get 
-        {
-            return GetElement<ExtensionList>(4);
-        }
-        set
-        {
-            SetElement(4, value);
-        }
+        get => GetElement<ExtensionList>(4);
+        set => SetElement(4, value);
     }
 
 
@@ -11859,17 +9188,9 @@ if( 14 == namespaceId && "extLst" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<StyleLabel>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleLabel>(deep);
 
-   
 }
 /// <summary>
 /// <para>Point List.</para>
@@ -11881,36 +9202,18 @@ if( 14 == namespaceId && "extLst" == name)
 ///<item><description>Point &lt;dgm:pt></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(Point))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class PointList : OpenXmlCompositeElement
 {
-    private const string tagName = "ptLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10750;
+    /// <inheritdoc/>
+    public override string LocalName => "ptLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -11935,7 +9238,7 @@ public partial class PointList : OpenXmlCompositeElement
     /// </summary>
     public PointList():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the PointList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -11975,17 +9278,9 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<PointList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<PointList>(deep);
 
-   
 }
 /// <summary>
 /// <para>Connection List.</para>
@@ -11997,36 +9292,18 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>Connection &lt;dgm:cxn></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(Connection))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class ConnectionList : OpenXmlCompositeElement
 {
-    private const string tagName = "cxnLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10751;
+    /// <inheritdoc/>
+    public override string LocalName => "cxnLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -12051,7 +9328,7 @@ public partial class ConnectionList : OpenXmlCompositeElement
     /// </summary>
     public ConnectionList():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ConnectionList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -12091,17 +9368,9 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ConnectionList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConnectionList>(deep);
 
-   
 }
 /// <summary>
 /// <para>Background Formatting.</para>
@@ -12120,7 +9389,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NoFill))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SolidFill))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GradientFill))]
@@ -12129,34 +9398,16 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupFill))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class Background : OpenXmlCompositeElement
 {
-    private const string tagName = "bg";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10752;
+    /// <inheritdoc/>
+    public override string LocalName => "bg";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -12181,7 +9432,7 @@ public partial class Background : OpenXmlCompositeElement
     /// </summary>
     public Background():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the Background class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -12242,17 +9493,9 @@ if( 10 == namespaceId && "effectDag" == name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Background>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Background>(deep);
 
-   
 }
 /// <summary>
 /// <para>Whole E2O Formatting.</para>
@@ -12266,38 +9509,20 @@ if( 10 == namespaceId && "effectDag" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Outline))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class Whole : OpenXmlCompositeElement
 {
-    private const string tagName = "whole";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10753;
+    /// <inheritdoc/>
+    public override string LocalName => "whole";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -12322,7 +9547,7 @@ public partial class Whole : OpenXmlCompositeElement
     /// </summary>
     public Whole():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the Whole class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -12369,21 +9594,10 @@ if( 10 == namespaceId && "effectDag" == name)
         private static readonly string[] eleTagNames = { "ln","effectLst","effectDag" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Outline.</para>
@@ -12394,29 +9608,15 @@ if( 10 == namespaceId && "effectDag" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Outline Outline
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Outline>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Outline>(0);
+        set => SetElement(0, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Whole>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Whole>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the DataModelExtensionList Class.</para>
@@ -12428,36 +9628,18 @@ if( 10 == namespaceId && "effectDag" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.DataModelExtension &lt;a:ext></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.DataModelExtension))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class DataModelExtensionList : OpenXmlCompositeElement
 {
-    private const string tagName = "extLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10754;
+    /// <inheritdoc/>
+    public override string LocalName => "extLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -12482,7 +9664,7 @@ public partial class DataModelExtensionList : OpenXmlCompositeElement
     /// </summary>
     public DataModelExtensionList():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the DataModelExtensionList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -12522,17 +9704,9 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<DataModelExtensionList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataModelExtensionList>(deep);
 
-   
 }
 /// <summary>
 /// <para>Property Set.</para>
@@ -12545,37 +9719,19 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>Style &lt;dgm:style></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(PresentationLayoutVariables))]
     [ChildElementInfo(typeof(Style))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class PropertySet : OpenXmlCompositeElement
 {
-    private const string tagName = "prSet";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10755;
+    /// <inheritdoc/>
+    public override string LocalName => "prSet";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -12592,20 +9748,12 @@ public partial class PropertySet : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "presAssocID","presName","presStyleLbl","presStyleIdx","presStyleCnt","loTypeId","loCatId","qsTypeId","qsCatId","csTypeId","csCatId","coherent3DOff","phldrT","phldr","custAng","custFlipVert","custFlipHor","custSzX","custSzY","custScaleX","custScaleY","custT","custLinFactX","custLinFactY","custLinFactNeighborX","custLinFactNeighborY","custRadScaleRad","custRadScaleInc" };
-    private static byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+    	private static readonly string[] attributeTagNames = { "presAssocID","presName","presStyleLbl","presStyleIdx","presStyleCnt","loTypeId","loCatId","qsTypeId","qsCatId","csTypeId","csCatId","coherent3DOff","phldrT","phldr","custAng","custFlipVert","custFlipHor","custSzX","custSzY","custScaleX","custScaleY","custT","custLinFactX","custLinFactY","custLinFactNeighborX","custLinFactNeighborY","custRadScaleRad","custRadScaleInc" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -12923,7 +10071,7 @@ public partial class PropertySet : OpenXmlCompositeElement
     /// </summary>
     public PropertySet():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the PropertySet class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -12967,21 +10115,10 @@ if( 14 == namespaceId && "style" == name)
         private static readonly string[] eleTagNames = { "presLayoutVars","style" };
     private static readonly byte[] eleNamespaceIds = { 14,14 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Presentation Layout Variables.</para>
@@ -12992,14 +10129,8 @@ if( 14 == namespaceId && "style" == name)
     /// </remark>
     public PresentationLayoutVariables PresentationLayoutVariables
     {
-        get 
-        {
-            return GetElement<PresentationLayoutVariables>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<PresentationLayoutVariables>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Shape Style.</para>
@@ -13010,14 +10141,8 @@ if( 14 == namespaceId && "style" == name)
     /// </remark>
     public Style Style
     {
-        get 
-        {
-            return GetElement<Style>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<Style>(1);
+        set => SetElement(1, value);
     }
 
 
@@ -13112,17 +10237,9 @@ if( 0 == namespaceId && "custRadScaleInc" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<PropertySet>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<PropertySet>(deep);
 
-   
 }
 /// <summary>
 /// <para>Shape Properties.</para>
@@ -13148,7 +10265,7 @@ if( 0 == namespaceId && "custRadScaleInc" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Transform2D))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry))]
@@ -13164,34 +10281,16 @@ if( 0 == namespaceId && "custRadScaleInc" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class ShapeProperties : OpenXmlCompositeElement
 {
-    private const string tagName = "spPr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10756;
+    /// <inheritdoc/>
+    public override string LocalName => "spPr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -13208,20 +10307,12 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "bwMode" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "bwMode" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -13242,7 +10333,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// </summary>
     public ShapeProperties():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ShapeProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -13325,21 +10416,10 @@ if( 10 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "xfrm","custGeom","prstGeom","noFill","solidFill","gradFill","blipFill","pattFill","grpFill","ln","effectLst","effectDag","scene3d","sp3d","extLst" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10,10,10,10,10,10,10,10 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> 2D Transform for Individual Objects.</para>
@@ -13350,14 +10430,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(0);
+        set => SetElement(0, value);
     }
 
 
@@ -13371,17 +10445,9 @@ if( 10 == namespaceId && "extLst" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ShapeProperties>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeProperties>(deep);
 
-   
 }
 /// <summary>
 /// <para>Text Body.</para>
@@ -13395,38 +10461,20 @@ if( 10 == namespaceId && "extLst" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.Paragraph &lt;a:p></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ListStyle))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Paragraph))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class TextBody : OpenXmlCompositeElement
 {
-    private const string tagName = "t";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10757;
+    /// <inheritdoc/>
+    public override string LocalName => "t";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -13451,7 +10499,7 @@ public partial class TextBody : OpenXmlCompositeElement
     /// </summary>
     public TextBody():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the TextBody class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -13498,21 +10546,10 @@ if( 10 == namespaceId && "p" == name)
         private static readonly string[] eleTagNames = { "bodyPr","lstStyle","p" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Body Properties.</para>
@@ -13523,14 +10560,8 @@ if( 10 == namespaceId && "p" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.BodyProperties BodyProperties
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Text List Styles.</para>
@@ -13541,29 +10572,15 @@ if( 10 == namespaceId && "p" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.ListStyle ListStyle
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>(1);
+        set => SetElement(1, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<TextBody>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextBody>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the PtExtensionList Class.</para>
@@ -13575,36 +10592,18 @@ if( 10 == namespaceId && "p" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.PtExtension &lt;a:ext></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PtExtension))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class PtExtensionList : OpenXmlCompositeElement
 {
-    private const string tagName = "extLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 14;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10758;
+    /// <inheritdoc/>
+    public override string LocalName => "extLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 14;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -13629,7 +10628,7 @@ public partial class PtExtensionList : OpenXmlCompositeElement
     /// </summary>
     public PtExtensionList():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the PtExtensionList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -13669,17 +10668,9 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<PtExtensionList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<PtExtensionList>(deep);
 
-   
 }
 /// <summary>
 /// Color Application Method Type 

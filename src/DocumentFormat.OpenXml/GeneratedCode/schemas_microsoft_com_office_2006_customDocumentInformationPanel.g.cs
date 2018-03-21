@@ -20,38 +20,20 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
 ///<item><description>CustomPropertyEditor &lt;cdip:customPropertyEditor></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(ShowOnOpen))]
     [ChildElementInfo(typeof(DefaultPropertyEditorNamespace))]
     [ChildElementInfo(typeof(CustomPropertyEditor))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class CustomPropertyEditors : OpenXmlCompositeElement
 {
-    private const string tagName = "customPropertyEditors";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 37;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12699;
+    /// <inheritdoc/>
+    public override string LocalName => "customPropertyEditors";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 37;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -76,7 +58,7 @@ public partial class CustomPropertyEditors : OpenXmlCompositeElement
     /// </summary>
     public CustomPropertyEditors():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the CustomPropertyEditors class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -123,21 +105,10 @@ if( 37 == namespaceId && "customPropertyEditor" == name)
         private static readonly string[] eleTagNames = { "showOnOpen","defaultPropertyEditorNamespace","customPropertyEditor" };
     private static readonly byte[] eleNamespaceIds = { 37,37,37 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ShowOnOpen.</para>
@@ -148,14 +119,8 @@ if( 37 == namespaceId && "customPropertyEditor" == name)
     /// </remark>
     public ShowOnOpen ShowOnOpen
     {
-        get 
-        {
-            return GetElement<ShowOnOpen>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<ShowOnOpen>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> DefaultPropertyEditorNamespace.</para>
@@ -166,29 +131,15 @@ if( 37 == namespaceId && "customPropertyEditor" == name)
     /// </remark>
     public DefaultPropertyEditorNamespace DefaultPropertyEditorNamespace
     {
-        get 
-        {
-            return GetElement<DefaultPropertyEditorNamespace>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DefaultPropertyEditorNamespace>(1);
+        set => SetElement(1, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<CustomPropertyEditors>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomPropertyEditors>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the PropertyEditorNamespace Class.</para>
@@ -198,31 +149,13 @@ if( 37 == namespaceId && "customPropertyEditor" == name)
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class PropertyEditorNamespace : OpenXmlLeafTextElement
 {
-    private const string tagName = "XMLNamespace";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 37;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12700;
+    /// <inheritdoc/>
+    public override string LocalName => "XMLNamespace";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 37;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -244,7 +177,7 @@ public partial class PropertyEditorNamespace : OpenXmlLeafTextElement
     /// </summary>
     public PropertyEditorNamespace():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the PropertyEditorNamespace class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -254,20 +187,12 @@ public partial class PropertyEditorNamespace : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new StringValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<PropertyEditorNamespace>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<PropertyEditorNamespace>(deep);
 
 }
 /// <summary>
@@ -278,31 +203,13 @@ public partial class PropertyEditorNamespace : OpenXmlLeafTextElement
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class DefaultPropertyEditorNamespace : OpenXmlLeafTextElement
 {
-    private const string tagName = "defaultPropertyEditorNamespace";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 37;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12703;
+    /// <inheritdoc/>
+    public override string LocalName => "defaultPropertyEditorNamespace";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 37;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -324,7 +231,7 @@ public partial class DefaultPropertyEditorNamespace : OpenXmlLeafTextElement
     /// </summary>
     public DefaultPropertyEditorNamespace():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the DefaultPropertyEditorNamespace class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -334,55 +241,29 @@ public partial class DefaultPropertyEditorNamespace : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new StringValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<DefaultPropertyEditorNamespace>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultPropertyEditorNamespace>(deep);
 
 }
 /// <summary>
 /// <para>Defines the XsnFileLocation Class.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdip:XSNLocation.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class XsnFileLocation : OpenXmlLeafTextElement
 {
-    private const string tagName = "XSNLocation";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 37;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12701;
+    /// <inheritdoc/>
+    public override string LocalName => "XSNLocation";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 37;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -408,7 +289,7 @@ public partial class XsnFileLocation : OpenXmlLeafTextElement
     public XsnFileLocation():base(){}
     
       
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the XsnFileLocation class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -418,7 +299,6 @@ public partial class XsnFileLocation : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new StringValue(){ InnerText = text };
     }
     
@@ -427,51 +307,25 @@ public partial class XsnFileLocation : OpenXmlLeafTextElement
     
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<XsnFileLocation>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<XsnFileLocation>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the ShowOnOpen Class.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdip:showOnOpen.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class ShowOnOpen : OpenXmlLeafTextElement
 {
-    private const string tagName = "showOnOpen";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 37;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12702;
+    /// <inheritdoc/>
+    public override string LocalName => "showOnOpen";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 37;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -497,7 +351,7 @@ public partial class ShowOnOpen : OpenXmlLeafTextElement
     public ShowOnOpen():base(){}
     
       
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the ShowOnOpen class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -507,7 +361,6 @@ public partial class ShowOnOpen : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new BooleanValue(){ InnerText = text };
     }
     
@@ -516,17 +369,9 @@ public partial class ShowOnOpen : OpenXmlLeafTextElement
     
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ShowOnOpen>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowOnOpen>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the CustomPropertyEditor Class.</para>
@@ -539,37 +384,19 @@ public partial class ShowOnOpen : OpenXmlLeafTextElement
 ///<item><description>XsnFileLocation &lt;cdip:XSNLocation></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(PropertyEditorNamespace))]
     [ChildElementInfo(typeof(XsnFileLocation))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class CustomPropertyEditor : OpenXmlCompositeElement
 {
-    private const string tagName = "customPropertyEditor";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 37;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12704;
+    /// <inheritdoc/>
+    public override string LocalName => "customPropertyEditor";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 37;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -594,7 +421,7 @@ public partial class CustomPropertyEditor : OpenXmlCompositeElement
     /// </summary>
     public CustomPropertyEditor():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the CustomPropertyEditor class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -638,21 +465,10 @@ if( 37 == namespaceId && "XSNLocation" == name)
         private static readonly string[] eleTagNames = { "XMLNamespace","XSNLocation" };
     private static readonly byte[] eleNamespaceIds = { 37,37 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> PropertyEditorNamespace.</para>
@@ -663,14 +479,8 @@ if( 37 == namespaceId && "XSNLocation" == name)
     /// </remark>
     public PropertyEditorNamespace PropertyEditorNamespace
     {
-        get 
-        {
-            return GetElement<PropertyEditorNamespace>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<PropertyEditorNamespace>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> XsnFileLocation.</para>
@@ -681,29 +491,15 @@ if( 37 == namespaceId && "XSNLocation" == name)
     /// </remark>
     public XsnFileLocation XsnFileLocation
     {
-        get 
-        {
-            return GetElement<XsnFileLocation>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<XsnFileLocation>(1);
+        set => SetElement(1, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<CustomPropertyEditor>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomPropertyEditor>(deep);
 
-   
 }
 }
  
