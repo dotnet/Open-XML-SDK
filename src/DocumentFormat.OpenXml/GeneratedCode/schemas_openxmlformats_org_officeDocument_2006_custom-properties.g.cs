@@ -24,31 +24,13 @@ namespace DocumentFormat.OpenXml.CustomProperties
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class Properties : OpenXmlPartRootElement
 {
-    private const string tagName = "Properties";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 4;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10903;
+    /// <inheritdoc/>
+    public override string LocalName => "Properties";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 4;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -69,13 +51,7 @@ public partial class Properties : OpenXmlPartRootElement
     
     
     
-    /// <summary>
-    /// Properties constructor.
-    /// </summary>
-    /// <param name="ownerPart">The owner part of the Properties.</param>
-    internal Properties(CustomFilePropertiesPart ownerPart) : base (ownerPart )
-    {
-    }
+	internal Properties(CustomFilePropertiesPart ownerPart) : base (ownerPart){}
     
     /// <summary>
     /// Loads the DOM from the CustomFilePropertiesPart.
@@ -90,17 +66,11 @@ public partial class Properties : OpenXmlPartRootElement
     /// </summary>
     public CustomFilePropertiesPart CustomFilePropertiesPart
     {
-		get
-		{
-			return OpenXmlPart as CustomFilePropertiesPart;
-		}
-		internal set
-		{
-			OpenXmlPart = value;
-		}
+		get => OpenXmlPart as CustomFilePropertiesPart;
+		internal set => OpenXmlPart = value;
     }
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the Properties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -131,9 +101,7 @@ public partial class Properties : OpenXmlPartRootElement
     /// <summary>
     /// Initializes a new instance of the Properties class.
     /// </summary>
-    public Properties() : base ()
-    {
-    }
+    public Properties():base(){}
     
     /// <summary>
     /// Saves the DOM into the CustomFilePropertiesPart.
@@ -156,15 +124,8 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Properties>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Properties>(deep);
 
 }
 /// <summary>
@@ -210,7 +171,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>DocumentFormat.OpenXml.VariantTypes.VTClipboardData &lt;vt:cf></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTArray))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTBlob))]
@@ -245,34 +206,16 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTVStreamData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTClassId))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTClipboardData))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class CustomDocumentProperty : OpenXmlCompositeElement
 {
-    private const string tagName = "property";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 4;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10904;
+    /// <inheritdoc/>
+    public override string LocalName => "property";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 4;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -289,20 +232,12 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "fmtid","pid","name","linkTarget" };
-    private static byte[] attributeNamespaceIds = { 0,0,0,0 };
+    	private static readonly string[] attributeTagNames = { "fmtid","pid","name","linkTarget" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -356,7 +291,7 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// </summary>
     public CustomDocumentProperty():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the CustomDocumentProperty class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -496,21 +431,10 @@ if( 5 == namespaceId && "cf" == name)
         private static readonly string[] eleTagNames = { "vector","array","blob","oblob","empty","null","i1","i2","i4","i8","int","ui1","ui2","ui4","ui8","uint","r4","r8","decimal","lpstr","lpwstr","bstr","date","filetime","bool","cy","error","stream","ostream","storage","ostorage","vstream","clsid","cf" };
     private static readonly byte[] eleNamespaceIds = { 5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneChoice;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> Vector.</para>
@@ -521,14 +445,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTVector VTVector
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Array.</para>
@@ -539,14 +457,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTArray VTArray
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTArray>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTArray>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Binary Blob.</para>
@@ -557,14 +469,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTBlob VTBlob
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTBlob>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBlob>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> Binary Blob Object.</para>
@@ -575,14 +481,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTOBlob VTOBlob
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTOBlob>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOBlob>(3);
+        set => SetElement(3, value);
     }
     /// <summary>
     /// <para> Empty.</para>
@@ -593,14 +493,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTEmpty VTEmpty
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTEmpty>(4);
-        }
-        set
-        {
-            SetElement(4, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTEmpty>(4);
+        set => SetElement(4, value);
     }
     /// <summary>
     /// <para> Null.</para>
@@ -611,14 +505,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTNull VTNull
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTNull>(5);
-        }
-        set
-        {
-            SetElement(5, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTNull>(5);
+        set => SetElement(5, value);
     }
     /// <summary>
     /// <para> 1-Byte Signed Integer.</para>
@@ -629,14 +517,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTByte VTByte
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTByte>(6);
-        }
-        set
-        {
-            SetElement(6, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTByte>(6);
+        set => SetElement(6, value);
     }
     /// <summary>
     /// <para> 2-Byte Signed Integer.</para>
@@ -647,14 +529,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTShort VTShort
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTShort>(7);
-        }
-        set
-        {
-            SetElement(7, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTShort>(7);
+        set => SetElement(7, value);
     }
     /// <summary>
     /// <para> 4-Byte Signed Integer.</para>
@@ -665,14 +541,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTInt32 VTInt32
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTInt32>(8);
-        }
-        set
-        {
-            SetElement(8, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInt32>(8);
+        set => SetElement(8, value);
     }
     /// <summary>
     /// <para> 8-Byte Signed Integer.</para>
@@ -683,14 +553,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTInt64 VTInt64
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTInt64>(9);
-        }
-        set
-        {
-            SetElement(9, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInt64>(9);
+        set => SetElement(9, value);
     }
     /// <summary>
     /// <para> Integer.</para>
@@ -701,14 +565,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTInteger VTInteger
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTInteger>(10);
-        }
-        set
-        {
-            SetElement(10, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInteger>(10);
+        set => SetElement(10, value);
     }
     /// <summary>
     /// <para> 1-Byte Unsigned Integer.</para>
@@ -719,14 +577,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte VTUnsignedByte
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte>(11);
-        }
-        set
-        {
-            SetElement(11, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte>(11);
+        set => SetElement(11, value);
     }
     /// <summary>
     /// <para> 2-Byte Unsigned Integer.</para>
@@ -737,14 +589,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort VTUnsignedShort
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort>(12);
-        }
-        set
-        {
-            SetElement(12, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort>(12);
+        set => SetElement(12, value);
     }
     /// <summary>
     /// <para> 4-Byte Unsigned Integer.</para>
@@ -755,14 +601,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32 VTUnsignedInt32
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32>(13);
-        }
-        set
-        {
-            SetElement(13, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32>(13);
+        set => SetElement(13, value);
     }
     /// <summary>
     /// <para> 8-Byte Unsigned Integer.</para>
@@ -773,14 +613,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64 VTUnsignedInt64
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64>(14);
-        }
-        set
-        {
-            SetElement(14, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64>(14);
+        set => SetElement(14, value);
     }
     /// <summary>
     /// <para> Unsigned Integer.</para>
@@ -791,14 +625,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger VTUnsignedInteger
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger>(15);
-        }
-        set
-        {
-            SetElement(15, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger>(15);
+        set => SetElement(15, value);
     }
     /// <summary>
     /// <para> 4-Byte Real Number.</para>
@@ -809,14 +637,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTFloat VTFloat
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTFloat>(16);
-        }
-        set
-        {
-            SetElement(16, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTFloat>(16);
+        set => SetElement(16, value);
     }
     /// <summary>
     /// <para> 8-Byte Real Number.</para>
@@ -827,14 +649,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTDouble VTDouble
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTDouble>(17);
-        }
-        set
-        {
-            SetElement(17, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDouble>(17);
+        set => SetElement(17, value);
     }
     /// <summary>
     /// <para> Decimal.</para>
@@ -845,14 +661,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTDecimal VTDecimal
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTDecimal>(18);
-        }
-        set
-        {
-            SetElement(18, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDecimal>(18);
+        set => SetElement(18, value);
     }
     /// <summary>
     /// <para> LPSTR.</para>
@@ -863,14 +673,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTLPSTR VTLPSTR
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTLPSTR>(19);
-        }
-        set
-        {
-            SetElement(19, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTLPSTR>(19);
+        set => SetElement(19, value);
     }
     /// <summary>
     /// <para> LPWSTR.</para>
@@ -881,14 +685,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTLPWSTR VTLPWSTR
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTLPWSTR>(20);
-        }
-        set
-        {
-            SetElement(20, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTLPWSTR>(20);
+        set => SetElement(20, value);
     }
     /// <summary>
     /// <para> Basic String.</para>
@@ -899,14 +697,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTBString VTBString
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTBString>(21);
-        }
-        set
-        {
-            SetElement(21, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBString>(21);
+        set => SetElement(21, value);
     }
     /// <summary>
     /// <para> Date and Time.</para>
@@ -917,14 +709,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTDate VTDate
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTDate>(22);
-        }
-        set
-        {
-            SetElement(22, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDate>(22);
+        set => SetElement(22, value);
     }
     /// <summary>
     /// <para> File Time.</para>
@@ -935,14 +721,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTFileTime VTFileTime
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTFileTime>(23);
-        }
-        set
-        {
-            SetElement(23, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTFileTime>(23);
+        set => SetElement(23, value);
     }
     /// <summary>
     /// <para> Boolean.</para>
@@ -953,14 +733,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTBool VTBool
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTBool>(24);
-        }
-        set
-        {
-            SetElement(24, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBool>(24);
+        set => SetElement(24, value);
     }
     /// <summary>
     /// <para> Currency.</para>
@@ -971,14 +745,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTCurrency VTCurrency
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTCurrency>(25);
-        }
-        set
-        {
-            SetElement(25, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTCurrency>(25);
+        set => SetElement(25, value);
     }
     /// <summary>
     /// <para> Error Status Code.</para>
@@ -989,14 +757,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTError VTError
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTError>(26);
-        }
-        set
-        {
-            SetElement(26, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTError>(26);
+        set => SetElement(26, value);
     }
     /// <summary>
     /// <para> Binary Stream.</para>
@@ -1007,14 +769,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTStreamData VTStreamData
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTStreamData>(27);
-        }
-        set
-        {
-            SetElement(27, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTStreamData>(27);
+        set => SetElement(27, value);
     }
     /// <summary>
     /// <para> Binary Stream Object.</para>
@@ -1025,14 +781,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTOStreamData VTOStreamData
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTOStreamData>(28);
-        }
-        set
-        {
-            SetElement(28, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOStreamData>(28);
+        set => SetElement(28, value);
     }
     /// <summary>
     /// <para> Binary Storage.</para>
@@ -1043,14 +793,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTStorage VTStorage
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTStorage>(29);
-        }
-        set
-        {
-            SetElement(29, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTStorage>(29);
+        set => SetElement(29, value);
     }
     /// <summary>
     /// <para> Binary Storage Object.</para>
@@ -1061,14 +805,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTOStorage VTOStorage
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTOStorage>(30);
-        }
-        set
-        {
-            SetElement(30, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOStorage>(30);
+        set => SetElement(30, value);
     }
     /// <summary>
     /// <para> Binary Versioned Stream.</para>
@@ -1079,14 +817,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTVStreamData VTVStreamData
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTVStreamData>(31);
-        }
-        set
-        {
-            SetElement(31, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVStreamData>(31);
+        set => SetElement(31, value);
     }
     /// <summary>
     /// <para> Class ID.</para>
@@ -1097,14 +829,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTClassId VTClassId
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTClassId>(32);
-        }
-        set
-        {
-            SetElement(32, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTClassId>(32);
+        set => SetElement(32, value);
     }
     /// <summary>
     /// <para> Clipboard Data.</para>
@@ -1115,14 +841,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTClipboardData VTClipboardData
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTClipboardData>(33);
-        }
-        set
-        {
-            SetElement(33, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTClipboardData>(33);
+        set => SetElement(33, value);
     }
 
 
@@ -1145,17 +865,9 @@ if( 0 == namespaceId && "linkTarget" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<CustomDocumentProperty>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomDocumentProperty>(deep);
 
-   
 }
 }
  

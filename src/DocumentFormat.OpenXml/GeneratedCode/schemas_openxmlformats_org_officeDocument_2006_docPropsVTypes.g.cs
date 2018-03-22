@@ -52,7 +52,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
 ///<item><description>VTClipboardData &lt;vt:cf></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(Variant))]
     [ChildElementInfo(typeof(VTVector))]
     [ChildElementInfo(typeof(VTArray))]
@@ -88,34 +88,16 @@ namespace DocumentFormat.OpenXml.VariantTypes
     [ChildElementInfo(typeof(VTVStreamData))]
     [ChildElementInfo(typeof(VTClassId))]
     [ChildElementInfo(typeof(VTClipboardData))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class Variant : OpenXmlCompositeElement
 {
-    private const string tagName = "variant";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11029;
+    /// <inheritdoc/>
+    public override string LocalName => "variant";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -140,7 +122,7 @@ public partial class Variant : OpenXmlCompositeElement
     /// </summary>
     public Variant():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the Variant class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -283,21 +265,10 @@ if( 5 == namespaceId && "cf" == name)
         private static readonly string[] eleTagNames = { "variant","vector","array","blob","oblob","empty","null","i1","i2","i4","i8","int","ui1","ui2","ui4","ui8","uint","r4","r8","decimal","lpstr","lpwstr","bstr","date","filetime","bool","cy","error","stream","ostream","storage","ostorage","vstream","clsid","cf" };
     private static readonly byte[] eleNamespaceIds = { 5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneChoice;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> Variant.</para>
@@ -308,14 +279,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public Variant InnerVariant
     {
-        get 
-        {
-            return GetElement<Variant>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<Variant>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Vector.</para>
@@ -326,14 +291,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTVector VTVector
     {
-        get 
-        {
-            return GetElement<VTVector>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<VTVector>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Array.</para>
@@ -344,14 +303,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTArray VTArray
     {
-        get 
-        {
-            return GetElement<VTArray>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<VTArray>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> Binary Blob.</para>
@@ -362,14 +315,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTBlob VTBlob
     {
-        get 
-        {
-            return GetElement<VTBlob>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<VTBlob>(3);
+        set => SetElement(3, value);
     }
     /// <summary>
     /// <para> Binary Blob Object.</para>
@@ -380,14 +327,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTOBlob VTOBlob
     {
-        get 
-        {
-            return GetElement<VTOBlob>(4);
-        }
-        set
-        {
-            SetElement(4, value);
-        }
+        get => GetElement<VTOBlob>(4);
+        set => SetElement(4, value);
     }
     /// <summary>
     /// <para> Empty.</para>
@@ -398,14 +339,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTEmpty VTEmpty
     {
-        get 
-        {
-            return GetElement<VTEmpty>(5);
-        }
-        set
-        {
-            SetElement(5, value);
-        }
+        get => GetElement<VTEmpty>(5);
+        set => SetElement(5, value);
     }
     /// <summary>
     /// <para> Null.</para>
@@ -416,14 +351,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTNull VTNull
     {
-        get 
-        {
-            return GetElement<VTNull>(6);
-        }
-        set
-        {
-            SetElement(6, value);
-        }
+        get => GetElement<VTNull>(6);
+        set => SetElement(6, value);
     }
     /// <summary>
     /// <para> 1-Byte Signed Integer.</para>
@@ -434,14 +363,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTByte VTByte
     {
-        get 
-        {
-            return GetElement<VTByte>(7);
-        }
-        set
-        {
-            SetElement(7, value);
-        }
+        get => GetElement<VTByte>(7);
+        set => SetElement(7, value);
     }
     /// <summary>
     /// <para> 2-Byte Signed Integer.</para>
@@ -452,14 +375,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTShort VTShort
     {
-        get 
-        {
-            return GetElement<VTShort>(8);
-        }
-        set
-        {
-            SetElement(8, value);
-        }
+        get => GetElement<VTShort>(8);
+        set => SetElement(8, value);
     }
     /// <summary>
     /// <para> 4-Byte Signed Integer.</para>
@@ -470,14 +387,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTInt32 VTInt32
     {
-        get 
-        {
-            return GetElement<VTInt32>(9);
-        }
-        set
-        {
-            SetElement(9, value);
-        }
+        get => GetElement<VTInt32>(9);
+        set => SetElement(9, value);
     }
     /// <summary>
     /// <para> 8-Byte Signed Integer.</para>
@@ -488,14 +399,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTInt64 VTInt64
     {
-        get 
-        {
-            return GetElement<VTInt64>(10);
-        }
-        set
-        {
-            SetElement(10, value);
-        }
+        get => GetElement<VTInt64>(10);
+        set => SetElement(10, value);
     }
     /// <summary>
     /// <para> Integer.</para>
@@ -506,14 +411,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTInteger VTInteger
     {
-        get 
-        {
-            return GetElement<VTInteger>(11);
-        }
-        set
-        {
-            SetElement(11, value);
-        }
+        get => GetElement<VTInteger>(11);
+        set => SetElement(11, value);
     }
     /// <summary>
     /// <para> 1-Byte Unsigned Integer.</para>
@@ -524,14 +423,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTUnsignedByte VTUnsignedByte
     {
-        get 
-        {
-            return GetElement<VTUnsignedByte>(12);
-        }
-        set
-        {
-            SetElement(12, value);
-        }
+        get => GetElement<VTUnsignedByte>(12);
+        set => SetElement(12, value);
     }
     /// <summary>
     /// <para> 2-Byte Unsigned Integer.</para>
@@ -542,14 +435,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTUnsignedShort VTUnsignedShort
     {
-        get 
-        {
-            return GetElement<VTUnsignedShort>(13);
-        }
-        set
-        {
-            SetElement(13, value);
-        }
+        get => GetElement<VTUnsignedShort>(13);
+        set => SetElement(13, value);
     }
     /// <summary>
     /// <para> 4-Byte Unsigned Integer.</para>
@@ -560,14 +447,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTUnsignedInt32 VTUnsignedInt32
     {
-        get 
-        {
-            return GetElement<VTUnsignedInt32>(14);
-        }
-        set
-        {
-            SetElement(14, value);
-        }
+        get => GetElement<VTUnsignedInt32>(14);
+        set => SetElement(14, value);
     }
     /// <summary>
     /// <para> 8-Byte Unsigned Integer.</para>
@@ -578,14 +459,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTUnsignedInt64 VTUnsignedInt64
     {
-        get 
-        {
-            return GetElement<VTUnsignedInt64>(15);
-        }
-        set
-        {
-            SetElement(15, value);
-        }
+        get => GetElement<VTUnsignedInt64>(15);
+        set => SetElement(15, value);
     }
     /// <summary>
     /// <para> Unsigned Integer.</para>
@@ -596,14 +471,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTUnsignedInteger VTUnsignedInteger
     {
-        get 
-        {
-            return GetElement<VTUnsignedInteger>(16);
-        }
-        set
-        {
-            SetElement(16, value);
-        }
+        get => GetElement<VTUnsignedInteger>(16);
+        set => SetElement(16, value);
     }
     /// <summary>
     /// <para> 4-Byte Real Number.</para>
@@ -614,14 +483,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTFloat VTFloat
     {
-        get 
-        {
-            return GetElement<VTFloat>(17);
-        }
-        set
-        {
-            SetElement(17, value);
-        }
+        get => GetElement<VTFloat>(17);
+        set => SetElement(17, value);
     }
     /// <summary>
     /// <para> 8-Byte Real Number.</para>
@@ -632,14 +495,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTDouble VTDouble
     {
-        get 
-        {
-            return GetElement<VTDouble>(18);
-        }
-        set
-        {
-            SetElement(18, value);
-        }
+        get => GetElement<VTDouble>(18);
+        set => SetElement(18, value);
     }
     /// <summary>
     /// <para> Decimal.</para>
@@ -650,14 +507,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTDecimal VTDecimal
     {
-        get 
-        {
-            return GetElement<VTDecimal>(19);
-        }
-        set
-        {
-            SetElement(19, value);
-        }
+        get => GetElement<VTDecimal>(19);
+        set => SetElement(19, value);
     }
     /// <summary>
     /// <para> LPSTR.</para>
@@ -668,14 +519,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTLPSTR VTLPSTR
     {
-        get 
-        {
-            return GetElement<VTLPSTR>(20);
-        }
-        set
-        {
-            SetElement(20, value);
-        }
+        get => GetElement<VTLPSTR>(20);
+        set => SetElement(20, value);
     }
     /// <summary>
     /// <para> LPWSTR.</para>
@@ -686,14 +531,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTLPWSTR VTLPWSTR
     {
-        get 
-        {
-            return GetElement<VTLPWSTR>(21);
-        }
-        set
-        {
-            SetElement(21, value);
-        }
+        get => GetElement<VTLPWSTR>(21);
+        set => SetElement(21, value);
     }
     /// <summary>
     /// <para> Basic String.</para>
@@ -704,14 +543,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTBString VTBString
     {
-        get 
-        {
-            return GetElement<VTBString>(22);
-        }
-        set
-        {
-            SetElement(22, value);
-        }
+        get => GetElement<VTBString>(22);
+        set => SetElement(22, value);
     }
     /// <summary>
     /// <para> Date and Time.</para>
@@ -722,14 +555,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTDate VTDate
     {
-        get 
-        {
-            return GetElement<VTDate>(23);
-        }
-        set
-        {
-            SetElement(23, value);
-        }
+        get => GetElement<VTDate>(23);
+        set => SetElement(23, value);
     }
     /// <summary>
     /// <para> File Time.</para>
@@ -740,14 +567,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTFileTime VTFileTime
     {
-        get 
-        {
-            return GetElement<VTFileTime>(24);
-        }
-        set
-        {
-            SetElement(24, value);
-        }
+        get => GetElement<VTFileTime>(24);
+        set => SetElement(24, value);
     }
     /// <summary>
     /// <para> Boolean.</para>
@@ -758,14 +579,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTBool VTBool
     {
-        get 
-        {
-            return GetElement<VTBool>(25);
-        }
-        set
-        {
-            SetElement(25, value);
-        }
+        get => GetElement<VTBool>(25);
+        set => SetElement(25, value);
     }
     /// <summary>
     /// <para> Currency.</para>
@@ -776,14 +591,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTCurrency VTCurrency
     {
-        get 
-        {
-            return GetElement<VTCurrency>(26);
-        }
-        set
-        {
-            SetElement(26, value);
-        }
+        get => GetElement<VTCurrency>(26);
+        set => SetElement(26, value);
     }
     /// <summary>
     /// <para> Error Status Code.</para>
@@ -794,14 +603,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTError VTError
     {
-        get 
-        {
-            return GetElement<VTError>(27);
-        }
-        set
-        {
-            SetElement(27, value);
-        }
+        get => GetElement<VTError>(27);
+        set => SetElement(27, value);
     }
     /// <summary>
     /// <para> Binary Stream.</para>
@@ -812,14 +615,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTStreamData VTStreamData
     {
-        get 
-        {
-            return GetElement<VTStreamData>(28);
-        }
-        set
-        {
-            SetElement(28, value);
-        }
+        get => GetElement<VTStreamData>(28);
+        set => SetElement(28, value);
     }
     /// <summary>
     /// <para> Binary Stream Object.</para>
@@ -830,14 +627,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTOStreamData VTOStreamData
     {
-        get 
-        {
-            return GetElement<VTOStreamData>(29);
-        }
-        set
-        {
-            SetElement(29, value);
-        }
+        get => GetElement<VTOStreamData>(29);
+        set => SetElement(29, value);
     }
     /// <summary>
     /// <para> Binary Storage.</para>
@@ -848,14 +639,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTStorage VTStorage
     {
-        get 
-        {
-            return GetElement<VTStorage>(30);
-        }
-        set
-        {
-            SetElement(30, value);
-        }
+        get => GetElement<VTStorage>(30);
+        set => SetElement(30, value);
     }
     /// <summary>
     /// <para> Binary Storage Object.</para>
@@ -866,14 +651,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTOStorage VTOStorage
     {
-        get 
-        {
-            return GetElement<VTOStorage>(31);
-        }
-        set
-        {
-            SetElement(31, value);
-        }
+        get => GetElement<VTOStorage>(31);
+        set => SetElement(31, value);
     }
     /// <summary>
     /// <para> Binary Versioned Stream.</para>
@@ -884,14 +663,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTVStreamData VTVStreamData
     {
-        get 
-        {
-            return GetElement<VTVStreamData>(32);
-        }
-        set
-        {
-            SetElement(32, value);
-        }
+        get => GetElement<VTVStreamData>(32);
+        set => SetElement(32, value);
     }
     /// <summary>
     /// <para> Class ID.</para>
@@ -902,14 +675,8 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTClassId VTClassId
     {
-        get 
-        {
-            return GetElement<VTClassId>(33);
-        }
-        set
-        {
-            SetElement(33, value);
-        }
+        get => GetElement<VTClassId>(33);
+        set => SetElement(33, value);
     }
     /// <summary>
     /// <para> Clipboard Data.</para>
@@ -920,29 +687,15 @@ if( 5 == namespaceId && "cf" == name)
     /// </remark>
     public VTClipboardData VTClipboardData
     {
-        get 
-        {
-            return GetElement<VTClipboardData>(34);
-        }
-        set
-        {
-            SetElement(34, value);
-        }
+        get => GetElement<VTClipboardData>(34);
+        set => SetElement(34, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Variant>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Variant>(deep);
 
-   
 }
 /// <summary>
 /// <para>Vector.</para>
@@ -974,7 +727,7 @@ if( 5 == namespaceId && "cf" == name)
 ///<item><description>VTClipboardData &lt;vt:cf></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(Variant))]
     [ChildElementInfo(typeof(VTByte))]
     [ChildElementInfo(typeof(VTShort))]
@@ -996,34 +749,16 @@ if( 5 == namespaceId && "cf" == name)
     [ChildElementInfo(typeof(VTError))]
     [ChildElementInfo(typeof(VTClassId))]
     [ChildElementInfo(typeof(VTClipboardData))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class VTVector : OpenXmlCompositeElement
 {
-    private const string tagName = "vector";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11030;
+    /// <inheritdoc/>
+    public override string LocalName => "vector";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -1040,20 +775,12 @@ public partial class VTVector : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "baseType","size" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "baseType","size" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -1085,7 +812,7 @@ public partial class VTVector : OpenXmlCompositeElement
     /// </summary>
     public VTVector():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the VTVector class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -1197,17 +924,9 @@ if( 0 == namespaceId && "size" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTVector>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTVector>(deep);
 
-   
 }
 /// <summary>
 /// <para>Array.</para>
@@ -1235,7 +954,7 @@ if( 0 == namespaceId && "size" == name)
 ///<item><description>VTCurrency &lt;vt:cy></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(Variant))]
     [ChildElementInfo(typeof(VTByte))]
     [ChildElementInfo(typeof(VTShort))]
@@ -1253,34 +972,16 @@ if( 0 == namespaceId && "size" == name)
     [ChildElementInfo(typeof(VTBool))]
     [ChildElementInfo(typeof(VTError))]
     [ChildElementInfo(typeof(VTCurrency))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class VTArray : OpenXmlCompositeElement
 {
-    private const string tagName = "array";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11031;
+    /// <inheritdoc/>
+    public override string LocalName => "array";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -1297,20 +998,12 @@ public partial class VTArray : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "lBound","uBound","baseType" };
-    private static byte[] attributeNamespaceIds = { 0,0,0 };
+    	private static readonly string[] attributeTagNames = { "lBound","uBound","baseType" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -1353,7 +1046,7 @@ public partial class VTArray : OpenXmlCompositeElement
     /// </summary>
     public VTArray():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the VTArray class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -1456,17 +1149,9 @@ if( 0 == namespaceId && "baseType" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTArray>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTArray>(deep);
 
-   
 }
 /// <summary>
 /// <para>Binary Blob.</para>
@@ -1476,31 +1161,13 @@ if( 0 == namespaceId && "baseType" == name)
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class VTBlob : OpenXmlLeafTextElement
 {
-    private const string tagName = "blob";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11032;
+    /// <inheritdoc/>
+    public override string LocalName => "blob";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -1522,7 +1189,7 @@ public partial class VTBlob : OpenXmlLeafTextElement
     /// </summary>
     public VTBlob():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTBlob class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -1532,20 +1199,12 @@ public partial class VTBlob : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Base64BinaryValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTBlob>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTBlob>(deep);
 
 }
 /// <summary>
@@ -1556,31 +1215,13 @@ public partial class VTBlob : OpenXmlLeafTextElement
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class VTOBlob : OpenXmlLeafTextElement
 {
-    private const string tagName = "oblob";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11033;
+    /// <inheritdoc/>
+    public override string LocalName => "oblob";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -1602,7 +1243,7 @@ public partial class VTOBlob : OpenXmlLeafTextElement
     /// </summary>
     public VTOBlob():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTOBlob class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -1612,20 +1253,12 @@ public partial class VTOBlob : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Base64BinaryValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTOBlob>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTOBlob>(deep);
 
 }
 /// <summary>
@@ -1636,31 +1269,13 @@ public partial class VTOBlob : OpenXmlLeafTextElement
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class VTStreamData : OpenXmlLeafTextElement
 {
-    private const string tagName = "stream";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11057;
+    /// <inheritdoc/>
+    public override string LocalName => "stream";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -1682,7 +1297,7 @@ public partial class VTStreamData : OpenXmlLeafTextElement
     /// </summary>
     public VTStreamData():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTStreamData class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -1692,20 +1307,12 @@ public partial class VTStreamData : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Base64BinaryValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTStreamData>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTStreamData>(deep);
 
 }
 /// <summary>
@@ -1716,31 +1323,13 @@ public partial class VTStreamData : OpenXmlLeafTextElement
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class VTOStreamData : OpenXmlLeafTextElement
 {
-    private const string tagName = "ostream";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11058;
+    /// <inheritdoc/>
+    public override string LocalName => "ostream";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -1762,7 +1351,7 @@ public partial class VTOStreamData : OpenXmlLeafTextElement
     /// </summary>
     public VTOStreamData():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTOStreamData class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -1772,20 +1361,12 @@ public partial class VTOStreamData : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Base64BinaryValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTOStreamData>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTOStreamData>(deep);
 
 }
 /// <summary>
@@ -1796,31 +1377,13 @@ public partial class VTOStreamData : OpenXmlLeafTextElement
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class VTStorage : OpenXmlLeafTextElement
 {
-    private const string tagName = "storage";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11059;
+    /// <inheritdoc/>
+    public override string LocalName => "storage";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -1842,7 +1405,7 @@ public partial class VTStorage : OpenXmlLeafTextElement
     /// </summary>
     public VTStorage():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTStorage class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -1852,20 +1415,12 @@ public partial class VTStorage : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Base64BinaryValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTStorage>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTStorage>(deep);
 
 }
 /// <summary>
@@ -1876,31 +1431,13 @@ public partial class VTStorage : OpenXmlLeafTextElement
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class VTOStorage : OpenXmlLeafTextElement
 {
-    private const string tagName = "ostorage";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11060;
+    /// <inheritdoc/>
+    public override string LocalName => "ostorage";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -1922,7 +1459,7 @@ public partial class VTOStorage : OpenXmlLeafTextElement
     /// </summary>
     public VTOStorage():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTOStorage class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -1932,55 +1469,29 @@ public partial class VTOStorage : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Base64BinaryValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTOStorage>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTOStorage>(deep);
 
 }
 /// <summary>
 /// <para>Empty.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:empty.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class VTEmpty : OpenXmlLeafElement
 {
-    private const string tagName = "empty";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11034;
+    /// <inheritdoc/>
+    public override string LocalName => "empty";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -2011,51 +1522,25 @@ public partial class VTEmpty : OpenXmlLeafElement
     
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTEmpty>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTEmpty>(deep);
 
-   
 }
 /// <summary>
 /// <para>Null.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:null.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class VTNull : OpenXmlLeafElement
 {
-    private const string tagName = "null";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11035;
+    /// <inheritdoc/>
+    public override string LocalName => "null";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -2086,51 +1571,25 @@ public partial class VTNull : OpenXmlLeafElement
     
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTNull>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTNull>(deep);
 
-   
 }
 /// <summary>
 /// <para>1-Byte Signed Integer.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:i1.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class VTByte : OpenXmlLeafTextElement
 {
-    private const string tagName = "i1";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11036;
+    /// <inheritdoc/>
+    public override string LocalName => "i1";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -2156,7 +1615,7 @@ public partial class VTByte : OpenXmlLeafTextElement
     public VTByte():base(){}
     
       
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTByte class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -2166,7 +1625,6 @@ public partial class VTByte : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new SByteValue(){ InnerText = text };
     }
     
@@ -2175,51 +1633,25 @@ public partial class VTByte : OpenXmlLeafTextElement
     
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTByte>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTByte>(deep);
 
-   
 }
 /// <summary>
 /// <para>2-Byte Signed Integer.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:i2.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class VTShort : OpenXmlLeafTextElement
 {
-    private const string tagName = "i2";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11037;
+    /// <inheritdoc/>
+    public override string LocalName => "i2";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -2245,7 +1677,7 @@ public partial class VTShort : OpenXmlLeafTextElement
     public VTShort():base(){}
     
       
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTShort class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -2255,7 +1687,6 @@ public partial class VTShort : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Int16Value(){ InnerText = text };
     }
     
@@ -2264,17 +1695,9 @@ public partial class VTShort : OpenXmlLeafTextElement
     
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTShort>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTShort>(deep);
 
-   
 }
 /// <summary>
 /// <para>4-Byte Signed Integer.</para>
@@ -2284,31 +1707,13 @@ public partial class VTShort : OpenXmlLeafTextElement
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class VTInt32 : OpenXmlLeafTextElement
 {
-    private const string tagName = "i4";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11038;
+    /// <inheritdoc/>
+    public override string LocalName => "i4";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -2330,7 +1735,7 @@ public partial class VTInt32 : OpenXmlLeafTextElement
     /// </summary>
     public VTInt32():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTInt32 class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -2340,20 +1745,12 @@ public partial class VTInt32 : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Int32Value(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTInt32>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTInt32>(deep);
 
 }
 /// <summary>
@@ -2364,31 +1761,13 @@ public partial class VTInt32 : OpenXmlLeafTextElement
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class VTInteger : OpenXmlLeafTextElement
 {
-    private const string tagName = "int";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11040;
+    /// <inheritdoc/>
+    public override string LocalName => "int";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -2410,7 +1789,7 @@ public partial class VTInteger : OpenXmlLeafTextElement
     /// </summary>
     public VTInteger():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTInteger class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -2420,55 +1799,29 @@ public partial class VTInteger : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Int32Value(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTInteger>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTInteger>(deep);
 
 }
 /// <summary>
 /// <para>8-Byte Signed Integer.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:i8.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class VTInt64 : OpenXmlLeafTextElement
 {
-    private const string tagName = "i8";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11039;
+    /// <inheritdoc/>
+    public override string LocalName => "i8";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -2494,7 +1847,7 @@ public partial class VTInt64 : OpenXmlLeafTextElement
     public VTInt64():base(){}
     
       
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTInt64 class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -2504,7 +1857,6 @@ public partial class VTInt64 : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Int64Value(){ InnerText = text };
     }
     
@@ -2513,51 +1865,25 @@ public partial class VTInt64 : OpenXmlLeafTextElement
     
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTInt64>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTInt64>(deep);
 
-   
 }
 /// <summary>
 /// <para>1-Byte Unsigned Integer.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:ui1.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class VTUnsignedByte : OpenXmlLeafTextElement
 {
-    private const string tagName = "ui1";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11041;
+    /// <inheritdoc/>
+    public override string LocalName => "ui1";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -2583,7 +1909,7 @@ public partial class VTUnsignedByte : OpenXmlLeafTextElement
     public VTUnsignedByte():base(){}
     
       
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTUnsignedByte class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -2593,7 +1919,6 @@ public partial class VTUnsignedByte : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new ByteValue(){ InnerText = text };
     }
     
@@ -2602,51 +1927,25 @@ public partial class VTUnsignedByte : OpenXmlLeafTextElement
     
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTUnsignedByte>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTUnsignedByte>(deep);
 
-   
 }
 /// <summary>
 /// <para>2-Byte Unsigned Integer.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:ui2.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class VTUnsignedShort : OpenXmlLeafTextElement
 {
-    private const string tagName = "ui2";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11042;
+    /// <inheritdoc/>
+    public override string LocalName => "ui2";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -2672,7 +1971,7 @@ public partial class VTUnsignedShort : OpenXmlLeafTextElement
     public VTUnsignedShort():base(){}
     
       
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTUnsignedShort class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -2682,7 +1981,6 @@ public partial class VTUnsignedShort : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new UInt16Value(){ InnerText = text };
     }
     
@@ -2691,17 +1989,9 @@ public partial class VTUnsignedShort : OpenXmlLeafTextElement
     
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTUnsignedShort>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTUnsignedShort>(deep);
 
-   
 }
 /// <summary>
 /// <para>4-Byte Unsigned Integer.</para>
@@ -2711,31 +2001,13 @@ public partial class VTUnsignedShort : OpenXmlLeafTextElement
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class VTUnsignedInt32 : OpenXmlLeafTextElement
 {
-    private const string tagName = "ui4";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11043;
+    /// <inheritdoc/>
+    public override string LocalName => "ui4";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -2757,7 +2029,7 @@ public partial class VTUnsignedInt32 : OpenXmlLeafTextElement
     /// </summary>
     public VTUnsignedInt32():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTUnsignedInt32 class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -2767,20 +2039,12 @@ public partial class VTUnsignedInt32 : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new UInt32Value(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTUnsignedInt32>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTUnsignedInt32>(deep);
 
 }
 /// <summary>
@@ -2791,31 +2055,13 @@ public partial class VTUnsignedInt32 : OpenXmlLeafTextElement
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class VTUnsignedInteger : OpenXmlLeafTextElement
 {
-    private const string tagName = "uint";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11045;
+    /// <inheritdoc/>
+    public override string LocalName => "uint";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -2837,7 +2083,7 @@ public partial class VTUnsignedInteger : OpenXmlLeafTextElement
     /// </summary>
     public VTUnsignedInteger():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTUnsignedInteger class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -2847,55 +2093,29 @@ public partial class VTUnsignedInteger : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new UInt32Value(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTUnsignedInteger>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTUnsignedInteger>(deep);
 
 }
 /// <summary>
 /// <para>8-Byte Unsigned Integer.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:ui8.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class VTUnsignedInt64 : OpenXmlLeafTextElement
 {
-    private const string tagName = "ui8";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11044;
+    /// <inheritdoc/>
+    public override string LocalName => "ui8";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -2921,7 +2141,7 @@ public partial class VTUnsignedInt64 : OpenXmlLeafTextElement
     public VTUnsignedInt64():base(){}
     
       
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTUnsignedInt64 class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -2931,7 +2151,6 @@ public partial class VTUnsignedInt64 : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new UInt64Value(){ InnerText = text };
     }
     
@@ -2940,51 +2159,25 @@ public partial class VTUnsignedInt64 : OpenXmlLeafTextElement
     
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTUnsignedInt64>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTUnsignedInt64>(deep);
 
-   
 }
 /// <summary>
 /// <para>4-Byte Real Number.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:r4.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class VTFloat : OpenXmlLeafTextElement
 {
-    private const string tagName = "r4";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11046;
+    /// <inheritdoc/>
+    public override string LocalName => "r4";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -3010,7 +2203,7 @@ public partial class VTFloat : OpenXmlLeafTextElement
     public VTFloat():base(){}
     
       
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTFloat class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -3020,7 +2213,6 @@ public partial class VTFloat : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new SingleValue(){ InnerText = text };
     }
     
@@ -3029,51 +2221,25 @@ public partial class VTFloat : OpenXmlLeafTextElement
     
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTFloat>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTFloat>(deep);
 
-   
 }
 /// <summary>
 /// <para>8-Byte Real Number.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:r8.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class VTDouble : OpenXmlLeafTextElement
 {
-    private const string tagName = "r8";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11047;
+    /// <inheritdoc/>
+    public override string LocalName => "r8";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -3099,7 +2265,7 @@ public partial class VTDouble : OpenXmlLeafTextElement
     public VTDouble():base(){}
     
       
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTDouble class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -3109,7 +2275,6 @@ public partial class VTDouble : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new DoubleValue(){ InnerText = text };
     }
     
@@ -3118,51 +2283,25 @@ public partial class VTDouble : OpenXmlLeafTextElement
     
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTDouble>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTDouble>(deep);
 
-   
 }
 /// <summary>
 /// <para>Decimal.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:decimal.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class VTDecimal : OpenXmlLeafTextElement
 {
-    private const string tagName = "decimal";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11048;
+    /// <inheritdoc/>
+    public override string LocalName => "decimal";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -3188,7 +2327,7 @@ public partial class VTDecimal : OpenXmlLeafTextElement
     public VTDecimal():base(){}
     
       
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTDecimal class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -3198,7 +2337,6 @@ public partial class VTDecimal : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new DecimalValue(){ InnerText = text };
     }
     
@@ -3207,17 +2345,9 @@ public partial class VTDecimal : OpenXmlLeafTextElement
     
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTDecimal>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTDecimal>(deep);
 
-   
 }
 /// <summary>
 /// <para>LPSTR.</para>
@@ -3227,31 +2357,13 @@ public partial class VTDecimal : OpenXmlLeafTextElement
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class VTLPSTR : OpenXmlLeafTextElement
 {
-    private const string tagName = "lpstr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11049;
+    /// <inheritdoc/>
+    public override string LocalName => "lpstr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -3273,7 +2385,7 @@ public partial class VTLPSTR : OpenXmlLeafTextElement
     /// </summary>
     public VTLPSTR():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTLPSTR class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -3283,20 +2395,12 @@ public partial class VTLPSTR : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new StringValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTLPSTR>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTLPSTR>(deep);
 
 }
 /// <summary>
@@ -3307,31 +2411,13 @@ public partial class VTLPSTR : OpenXmlLeafTextElement
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class VTLPWSTR : OpenXmlLeafTextElement
 {
-    private const string tagName = "lpwstr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11050;
+    /// <inheritdoc/>
+    public override string LocalName => "lpwstr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -3353,7 +2439,7 @@ public partial class VTLPWSTR : OpenXmlLeafTextElement
     /// </summary>
     public VTLPWSTR():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTLPWSTR class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -3363,20 +2449,12 @@ public partial class VTLPWSTR : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new StringValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTLPWSTR>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTLPWSTR>(deep);
 
 }
 /// <summary>
@@ -3387,31 +2465,13 @@ public partial class VTLPWSTR : OpenXmlLeafTextElement
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class VTBString : OpenXmlLeafTextElement
 {
-    private const string tagName = "bstr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11051;
+    /// <inheritdoc/>
+    public override string LocalName => "bstr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -3433,7 +2493,7 @@ public partial class VTBString : OpenXmlLeafTextElement
     /// </summary>
     public VTBString():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTBString class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -3443,20 +2503,12 @@ public partial class VTBString : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new StringValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTBString>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTBString>(deep);
 
 }
 /// <summary>
@@ -3467,31 +2519,13 @@ public partial class VTBString : OpenXmlLeafTextElement
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class VTDate : OpenXmlLeafTextElement
 {
-    private const string tagName = "date";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11052;
+    /// <inheritdoc/>
+    public override string LocalName => "date";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -3513,7 +2547,7 @@ public partial class VTDate : OpenXmlLeafTextElement
     /// </summary>
     public VTDate():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTDate class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -3523,20 +2557,12 @@ public partial class VTDate : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new DateTimeValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTDate>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTDate>(deep);
 
 }
 /// <summary>
@@ -3547,31 +2573,13 @@ public partial class VTDate : OpenXmlLeafTextElement
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public partial class VTFileTime : OpenXmlLeafTextElement
 {
-    private const string tagName = "filetime";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11053;
+    /// <inheritdoc/>
+    public override string LocalName => "filetime";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -3593,7 +2601,7 @@ public partial class VTFileTime : OpenXmlLeafTextElement
     /// </summary>
     public VTFileTime():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTFileTime class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -3603,55 +2611,29 @@ public partial class VTFileTime : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new DateTimeValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTFileTime>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTFileTime>(deep);
 
 }
 /// <summary>
 /// <para>Boolean.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:bool.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class VTBool : OpenXmlLeafTextElement
 {
-    private const string tagName = "bool";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11054;
+    /// <inheritdoc/>
+    public override string LocalName => "bool";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -3677,7 +2659,7 @@ public partial class VTBool : OpenXmlLeafTextElement
     public VTBool():base(){}
     
       
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTBool class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -3687,7 +2669,6 @@ public partial class VTBool : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new BooleanValue(){ InnerText = text };
     }
     
@@ -3696,51 +2677,25 @@ public partial class VTBool : OpenXmlLeafTextElement
     
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTBool>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTBool>(deep);
 
-   
 }
 /// <summary>
 /// <para>Currency.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:cy.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class VTCurrency : OpenXmlLeafTextElement
 {
-    private const string tagName = "cy";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11055;
+    /// <inheritdoc/>
+    public override string LocalName => "cy";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -3766,7 +2721,7 @@ public partial class VTCurrency : OpenXmlLeafTextElement
     public VTCurrency():base(){}
     
       
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTCurrency class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -3776,7 +2731,6 @@ public partial class VTCurrency : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new StringValue(){ InnerText = text };
     }
     
@@ -3785,51 +2739,25 @@ public partial class VTCurrency : OpenXmlLeafTextElement
     
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTCurrency>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTCurrency>(deep);
 
-   
 }
 /// <summary>
 /// <para>Error Status Code.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:error.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class VTError : OpenXmlLeafTextElement
 {
-    private const string tagName = "error";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11056;
+    /// <inheritdoc/>
+    public override string LocalName => "error";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -3855,7 +2783,7 @@ public partial class VTError : OpenXmlLeafTextElement
     public VTError():base(){}
     
       
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTError class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -3865,7 +2793,6 @@ public partial class VTError : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new StringValue(){ InnerText = text };
     }
     
@@ -3874,51 +2801,25 @@ public partial class VTError : OpenXmlLeafTextElement
     
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTError>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTError>(deep);
 
-   
 }
 /// <summary>
 /// <para>Binary Versioned Stream.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:vstream.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class VTVStreamData : OpenXmlLeafTextElement
 {
-    private const string tagName = "vstream";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11061;
+    /// <inheritdoc/>
+    public override string LocalName => "vstream";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -3935,20 +2836,12 @@ public partial class VTVStreamData : OpenXmlLeafTextElement
     }
     
 
-    private static string[] attributeTagNames = { "version" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "version" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -3970,7 +2863,7 @@ public partial class VTVStreamData : OpenXmlLeafTextElement
     public VTVStreamData():base(){}
     
       
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTVStreamData class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -3980,7 +2873,6 @@ public partial class VTVStreamData : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Base64BinaryValue(){ InnerText = text };
     }
     
@@ -3998,51 +2890,25 @@ public partial class VTVStreamData : OpenXmlLeafTextElement
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTVStreamData>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTVStreamData>(deep);
 
-   
 }
 /// <summary>
 /// <para>Class ID.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:clsid.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class VTClassId : OpenXmlLeafTextElement
 {
-    private const string tagName = "clsid";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11062;
+    /// <inheritdoc/>
+    public override string LocalName => "clsid";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -4068,7 +2934,7 @@ public partial class VTClassId : OpenXmlLeafTextElement
     public VTClassId():base(){}
     
       
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTClassId class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -4078,7 +2944,6 @@ public partial class VTClassId : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new StringValue(){ InnerText = text };
     }
     
@@ -4087,51 +2952,25 @@ public partial class VTClassId : OpenXmlLeafTextElement
     
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTClassId>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTClassId>(deep);
 
-   
 }
 /// <summary>
 /// <para>Clipboard Data.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:cf.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 public partial class VTClipboardData : OpenXmlLeafTextElement
 {
-    private const string tagName = "cf";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 5;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11063;
+    /// <inheritdoc/>
+    public override string LocalName => "cf";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 5;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -4148,20 +2987,12 @@ public partial class VTClipboardData : OpenXmlLeafTextElement
     }
     
 
-    private static string[] attributeTagNames = { "format","size" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "format","size" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -4194,7 +3025,7 @@ public partial class VTClipboardData : OpenXmlLeafTextElement
     public VTClipboardData():base(){}
     
       
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the VTClipboardData class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -4204,7 +3035,6 @@ public partial class VTClipboardData : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Base64BinaryValue(){ InnerText = text };
     }
     
@@ -4225,17 +3055,9 @@ if( 0 == namespaceId && "size" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VTClipboardData>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTClipboardData>(deep);
 
-   
 }
 /// <summary>
 /// Vector Base Type Simple Type 

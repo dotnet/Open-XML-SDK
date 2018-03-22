@@ -19,31 +19,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PercentagePositionHeightOffset : OpenXmlLeafTextElement
 {
-    private const string tagName = "pctPosHOffset";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 51;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12889;
+    /// <inheritdoc/>
+    public override string LocalName => "pctPosHOffset";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 51;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -65,7 +47,7 @@ public partial class PercentagePositionHeightOffset : OpenXmlLeafTextElement
     /// </summary>
     public PercentagePositionHeightOffset():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the PercentagePositionHeightOffset class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -75,20 +57,12 @@ public partial class PercentagePositionHeightOffset : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Int32Value(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<PercentagePositionHeightOffset>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentagePositionHeightOffset>(deep);
 
 }
 /// <summary>
@@ -101,31 +75,13 @@ public partial class PercentagePositionHeightOffset : OpenXmlLeafTextElement
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PercentagePositionVerticalOffset : OpenXmlLeafTextElement
 {
-    private const string tagName = "pctPosVOffset";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 51;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12890;
+    /// <inheritdoc/>
+    public override string LocalName => "pctPosVOffset";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 51;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -147,7 +103,7 @@ public partial class PercentagePositionVerticalOffset : OpenXmlLeafTextElement
     /// </summary>
     public PercentagePositionVerticalOffset():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the PercentagePositionVerticalOffset class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -157,20 +113,12 @@ public partial class PercentagePositionVerticalOffset : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Int32Value(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<PercentagePositionVerticalOffset>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentagePositionVerticalOffset>(deep);
 
 }
 /// <summary>
@@ -184,37 +132,19 @@ public partial class PercentagePositionVerticalOffset : OpenXmlLeafTextElement
 ///<item><description>PercentageWidth &lt;wp14:pctWidth></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(PercentageWidth),(FileFormatVersions)6)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class RelativeWidth : OpenXmlCompositeElement
 {
-    private const string tagName = "sizeRelH";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 51;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12891;
+    /// <inheritdoc/>
+    public override string LocalName => "sizeRelH";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 51;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -231,20 +161,12 @@ public partial class RelativeWidth : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "relativeFrom" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "relativeFrom" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -265,7 +187,7 @@ public partial class RelativeWidth : OpenXmlCompositeElement
     /// </summary>
     public RelativeWidth():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the RelativeWidth class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -306,21 +228,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         private static readonly string[] eleTagNames = { "pctWidth" };
     private static readonly byte[] eleNamespaceIds = { 51 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> PercentageWidth.</para>
@@ -331,14 +242,8 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </remark>
     public PercentageWidth PercentageWidth
     {
-        get 
-        {
-            return GetElement<PercentageWidth>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<PercentageWidth>(0);
+        set => SetElement(0, value);
     }
 
 
@@ -352,17 +257,9 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<RelativeWidth>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<RelativeWidth>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the RelativeHeight Class.</para>
@@ -375,37 +272,19 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>PercentageHeight &lt;wp14:pctHeight></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(PercentageHeight),(FileFormatVersions)6)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class RelativeHeight : OpenXmlCompositeElement
 {
-    private const string tagName = "sizeRelV";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 51;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12892;
+    /// <inheritdoc/>
+    public override string LocalName => "sizeRelV";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 51;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -422,20 +301,12 @@ public partial class RelativeHeight : OpenXmlCompositeElement
     }
     
 
-    private static string[] attributeTagNames = { "relativeFrom" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "relativeFrom" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -456,7 +327,7 @@ public partial class RelativeHeight : OpenXmlCompositeElement
     /// </summary>
     public RelativeHeight():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the RelativeHeight class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -497,21 +368,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         private static readonly string[] eleTagNames = { "pctHeight" };
     private static readonly byte[] eleNamespaceIds = { 51 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> PercentageHeight.</para>
@@ -522,14 +382,8 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </remark>
     public PercentageHeight PercentageHeight
     {
-        get 
-        {
-            return GetElement<PercentageHeight>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<PercentageHeight>(0);
+        set => SetElement(0, value);
     }
 
 
@@ -543,17 +397,9 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<RelativeHeight>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<RelativeHeight>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the PercentageWidth Class.</para>
@@ -565,31 +411,13 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PercentageWidth : OpenXmlLeafTextElement
 {
-    private const string tagName = "pctWidth";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 51;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12893;
+    /// <inheritdoc/>
+    public override string LocalName => "pctWidth";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 51;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -611,7 +439,7 @@ public partial class PercentageWidth : OpenXmlLeafTextElement
     /// </summary>
     public PercentageWidth():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the PercentageWidth class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -621,20 +449,12 @@ public partial class PercentageWidth : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Int32Value(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<PercentageWidth>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentageWidth>(deep);
 
 }
 /// <summary>
@@ -647,31 +467,13 @@ public partial class PercentageWidth : OpenXmlLeafTextElement
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PercentageHeight : OpenXmlLeafTextElement
 {
-    private const string tagName = "pctHeight";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 51;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12894;
+    /// <inheritdoc/>
+    public override string LocalName => "pctHeight";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 51;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
     /// <summary>
     /// Whether this element is available in a specific version of Office Application.
@@ -693,7 +495,7 @@ public partial class PercentageHeight : OpenXmlLeafTextElement
     /// </summary>
     public PercentageHeight():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the PercentageHeight class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -703,20 +505,12 @@ public partial class PercentageHeight : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Int32Value(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<PercentageHeight>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentageHeight>(deep);
 
 }
 /// <summary>
