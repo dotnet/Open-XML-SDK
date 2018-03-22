@@ -27,11 +27,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(DropZoneFilter),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DropZoneCategories),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DropZoneData),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DropZoneSeries),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DropZonesVisible),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(DropZoneFilter), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(DropZoneCategories), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(DropZoneData), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(DropZoneSeries), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(DropZonesVisible), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PivotOptions : OpenXmlCompositeElement
@@ -44,19 +44,7 @@ public partial class PivotOptions : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     
@@ -205,8 +193,8 @@ if( 46 == namespaceId && "dropZonesVisible" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(InSketchMode),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ShowSketchButton),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(InSketchMode), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ShowSketchButton), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class SketchOptions : OpenXmlCompositeElement
@@ -219,19 +207,7 @@ public partial class SketchOptions : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     
@@ -334,7 +310,7 @@ if( 46 == namespaceId && "showSketchBtn" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ShapeProperties),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class InvertSolidFillFormat : OpenXmlCompositeElement
@@ -347,19 +323,7 @@ public partial class InvertSolidFillFormat : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     
@@ -453,19 +417,7 @@ public partial class Style : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "val" };
@@ -566,19 +518,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "bwMode" };
@@ -741,19 +681,7 @@ public partial class DropZoneFilter : BooleanFalseType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -784,19 +712,7 @@ public partial class DropZoneCategories : BooleanFalseType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -827,19 +743,7 @@ public partial class DropZoneData : BooleanFalseType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -870,19 +774,7 @@ public partial class DropZoneSeries : BooleanFalseType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -913,19 +805,7 @@ public partial class DropZonesVisible : BooleanFalseType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -956,19 +836,7 @@ public partial class InSketchMode : BooleanFalseType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -1047,19 +915,7 @@ public partial class ShowSketchButton : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "val" };

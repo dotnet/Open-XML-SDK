@@ -30,15 +30,15 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(NonVisualDrawingProperties),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(NonVisualDrawingShapeProperties),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(NonVisualConnectorProperties),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ShapeProperties),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ShapeStyle),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(TextBoxInfo2),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(LinkedTextBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(TextBodyProperties),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(NonVisualDrawingProperties), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(NonVisualDrawingShapeProperties), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(NonVisualConnectorProperties), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ShapeStyle), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(TextBoxInfo2), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(LinkedTextBox), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class WordprocessingShape : OpenXmlCompositeElement
@@ -51,19 +51,7 @@ public partial class WordprocessingShape : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "normalEastAsianFlow" };
@@ -215,19 +203,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     
@@ -311,19 +287,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","name","descr","hidden","title" };
@@ -539,19 +503,7 @@ public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "txBox" };
@@ -700,19 +652,7 @@ public partial class NonVisualConnectorProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     
@@ -886,19 +826,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "bwMode" };
@@ -1074,19 +1002,7 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     
@@ -1221,7 +1137,7 @@ if( 10 == namespaceId && "fontRef" == name)
 /// </remarks>
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent))]
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class TextBoxInfo2 : OpenXmlCompositeElement
@@ -1234,19 +1150,7 @@ public partial class TextBoxInfo2 : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id" };
@@ -1376,7 +1280,7 @@ if( 61 == namespaceId && "extLst" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class LinkedTextBox : OpenXmlCompositeElement
@@ -1389,19 +1293,7 @@ public partial class LinkedTextBox : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","seq" };
@@ -1557,19 +1449,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "rot","spcFirstLastPara","vertOverflow","horzOverflow","vert","wrap","lIns","tIns","rIns","bIns","numCol","spcCol","rtlCol","fromWordArt","anchor","anchorCtr","forceAA","upright","compatLnSpc" };

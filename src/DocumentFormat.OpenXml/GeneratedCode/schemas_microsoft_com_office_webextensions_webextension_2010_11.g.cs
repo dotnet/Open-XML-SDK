@@ -25,12 +25,12 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(WebExtensionStoreReference),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(WebExtensionReferenceList),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(WebExtensionPropertyBag),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(WebExtensionBindingList),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(Snapshot),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(WebExtensionStoreReference), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(WebExtensionReferenceList), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(WebExtensionPropertyBag), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(WebExtensionBindingList), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(Snapshot), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class WebExtension : OpenXmlPartRootElement
@@ -43,19 +43,7 @@ public partial class WebExtension : OpenXmlPartRootElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     	private static readonly string[] attributeTagNames = { "id","frozen" };
@@ -294,19 +282,7 @@ public partial class WebExtensionReference : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     	private static readonly string[] attributeTagNames = { "id" };
@@ -374,19 +350,7 @@ public partial class WebExtensionProperty : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     	private static readonly string[] attributeTagNames = { "name","value" };
@@ -473,19 +437,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -552,7 +504,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class WebExtensionBinding : OpenXmlCompositeElement
@@ -565,19 +517,7 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     	private static readonly string[] attributeTagNames = { "id","type","appref" };
@@ -720,7 +660,7 @@ if( 0 == namespaceId && "appref" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class WebExtensionStoreReference : OpenXmlCompositeElement
@@ -733,19 +673,7 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     	private static readonly string[] attributeTagNames = { "id","version","store","storeType" };
@@ -902,7 +830,7 @@ if( 0 == namespaceId && "storeType" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(WebExtensionStoreReference),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(WebExtensionStoreReference), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class WebExtensionReferenceList : OpenXmlCompositeElement
@@ -915,19 +843,7 @@ public partial class WebExtensionReferenceList : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -994,7 +910,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(WebExtensionProperty),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(WebExtensionProperty), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class WebExtensionPropertyBag : OpenXmlCompositeElement
@@ -1007,19 +923,7 @@ public partial class WebExtensionPropertyBag : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -1086,7 +990,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(WebExtensionBinding),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(WebExtensionBinding), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class WebExtensionBindingList : OpenXmlCompositeElement
@@ -1099,19 +1003,7 @@ public partial class WebExtensionBindingList : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -1225,19 +1117,7 @@ public partial class Snapshot : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     	private static readonly string[] attributeTagNames = { "embed","link","cstate" };

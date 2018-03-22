@@ -33,8 +33,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
-    [ChildElementInfo(typeof(ColorStyleVariation),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(ColorStyleVariation), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ColorStyle : OpenXmlPartRootElement
@@ -47,19 +47,7 @@ public partial class ColorStyle : OpenXmlPartRootElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     	private static readonly string[] attributeTagNames = { "meth","id" };
@@ -247,38 +235,38 @@ if( 0 == namespaceId && "id" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(AxisTitle),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(CategoryAxis),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(ChartArea),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(DataLabel),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(DataLabelCallout),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(DataPoint),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(DataPoint3D),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(DataPointLine),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(DataPointMarker),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(MarkerLayoutProperties),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(DataPointWireframe),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(DataTableStyle),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(DownBar),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(DropLine),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(ErrorBar),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(Floor),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(GridlineMajor),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(GridlineMinor),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(HiLoLine),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(LeaderLine),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(LegendStyle),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(PlotArea),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(PlotArea3D),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(SeriesAxis),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(SeriesLine),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(TitleStyle),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(TrendlineStyle),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(TrendlineLabel),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(UpBar),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(ValueAxis),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(Wall),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(AxisTitle), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(CategoryAxis), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(ChartArea), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(DataLabel), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(DataLabelCallout), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(DataPoint), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(DataPoint3D), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(DataPointLine), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(DataPointMarker), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(MarkerLayoutProperties), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(DataPointWireframe), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(DataTableStyle), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(DownBar), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(DropLine), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(ErrorBar), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(Floor), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(GridlineMajor), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(GridlineMinor), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(HiLoLine), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(LeaderLine), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(LegendStyle), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(PlotArea), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(PlotArea3D), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(SeriesAxis), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(SeriesLine), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(TitleStyle), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(TrendlineStyle), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(TrendlineLabel), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(UpBar), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(ValueAxis), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(Wall), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ChartStyle : OpenXmlPartRootElement
@@ -291,19 +279,7 @@ public partial class ChartStyle : OpenXmlPartRootElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     	private static readonly string[] attributeTagNames = { "id" };
@@ -979,19 +955,7 @@ public partial class ColorStyleVariation : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -1152,19 +1116,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -1298,19 +1250,7 @@ public partial class StyleColor : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     	private static readonly string[] attributeTagNames = { "val" };
@@ -1503,19 +1443,7 @@ public partial class LineReference : StyleReference
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -1583,19 +1511,7 @@ public partial class FillReference : StyleReference
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -1663,19 +1579,7 @@ public partial class EffectReference : StyleReference
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -1735,7 +1639,7 @@ public partial class EffectReference : StyleReference
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
-    [ChildElementInfo(typeof(StyleColor),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(StyleColor), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class StyleReference : OpenXmlCompositeElement
 {
@@ -1864,19 +1768,7 @@ public partial class LineWidthScale : OpenXmlLeafTextElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -1934,7 +1826,7 @@ public partial class LineWidthScale : OpenXmlLeafTextElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
-    [ChildElementInfo(typeof(StyleColor),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(StyleColor), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class FontReference : OpenXmlCompositeElement
@@ -1947,19 +1839,7 @@ public partial class FontReference : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     	private static readonly string[] attributeTagNames = { "idx","mods" };
@@ -2126,19 +2006,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     	private static readonly string[] attributeTagNames = { "bwMode" };
@@ -2350,19 +2218,7 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     	private static readonly string[] attributeTagNames = { "kumimoji","lang","altLang","sz","b","i","u","strike","kern","cap","spc","normalizeH","baseline","noProof","dirty","err","bmk" };
@@ -2791,19 +2647,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     	private static readonly string[] attributeTagNames = { "rot","spcFirstLastPara","vertOverflow","horzOverflow","vert","wrap","lIns","tIns","rIns","bIns","numCol","spcCol","rtlCol","fromWordArt","anchor","anchorCtr","forceAA","upright","compatLnSpc" };
@@ -3197,19 +3041,7 @@ public partial class CategoryAxisProperties : AxisProperties
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -3240,19 +3072,7 @@ public partial class SeriesAxisProperties : AxisProperties
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -3283,19 +3103,7 @@ public partial class ValueAxisProperties : AxisProperties
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -3458,19 +3266,7 @@ public partial class DataSeries : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     	private static readonly string[] attributeTagNames = { "overlap","gapWidth","gapDepth","doughnutHoleSize","markerVisible","hiloLines","dropLines","seriesLines" };
@@ -3634,19 +3430,7 @@ public partial class DataLabels : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     	private static readonly string[] attributeTagNames = { "position","value","seriesName","categoryName","legendKey","percentage" };
@@ -3782,19 +3566,7 @@ public partial class DataTable : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     	private static readonly string[] attributeTagNames = { "legendKeys","horizontalBorder","verticalBorder","outlineBorder" };
@@ -3902,19 +3674,7 @@ public partial class Legend : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     	private static readonly string[] attributeTagNames = { "visible","includeInLayout","position" };
@@ -4008,19 +3768,7 @@ public partial class Title : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     	private static readonly string[] attributeTagNames = { "position" };
@@ -4086,19 +3834,7 @@ public partial class Trendline : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     	private static readonly string[] attributeTagNames = { "add","equation","rsquared" };
@@ -4192,19 +3928,7 @@ public partial class View3DProperties : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     	private static readonly string[] attributeTagNames = { "rotX","rotY","rAngAx","perspective","heightPercent","depthPercent" };
@@ -4354,19 +4078,7 @@ public partial class AxisTitle : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -4436,19 +4148,7 @@ public partial class CategoryAxis : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -4518,19 +4218,7 @@ public partial class ChartArea : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -4600,19 +4288,7 @@ public partial class DataLabel : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -4682,19 +4358,7 @@ public partial class DataLabelCallout : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -4764,19 +4428,7 @@ public partial class DataPoint : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -4846,19 +4498,7 @@ public partial class DataPoint3D : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -4928,19 +4568,7 @@ public partial class DataPointLine : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -5010,19 +4638,7 @@ public partial class DataPointMarker : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -5092,19 +4708,7 @@ public partial class DataPointWireframe : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -5174,19 +4778,7 @@ public partial class DataTableStyle : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -5256,19 +4848,7 @@ public partial class DownBar : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -5338,19 +4918,7 @@ public partial class DropLine : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -5420,19 +4988,7 @@ public partial class ErrorBar : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -5502,19 +5058,7 @@ public partial class Floor : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -5584,19 +5128,7 @@ public partial class GridlineMajor : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -5666,19 +5198,7 @@ public partial class GridlineMinor : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -5748,19 +5268,7 @@ public partial class HiLoLine : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -5830,19 +5338,7 @@ public partial class LeaderLine : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -5912,19 +5408,7 @@ public partial class LegendStyle : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -5994,19 +5478,7 @@ public partial class PlotArea : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -6076,19 +5548,7 @@ public partial class PlotArea3D : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -6158,19 +5618,7 @@ public partial class SeriesAxis : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -6240,19 +5688,7 @@ public partial class SeriesLine : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -6322,19 +5758,7 @@ public partial class TitleStyle : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -6404,19 +5828,7 @@ public partial class TrendlineStyle : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -6486,19 +5898,7 @@ public partial class TrendlineLabel : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -6568,19 +5968,7 @@ public partial class UpBar : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -6650,19 +6038,7 @@ public partial class ValueAxis : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -6732,19 +6108,7 @@ public partial class Wall : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -6800,15 +6164,15 @@ public partial class Wall : StyleEntry
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(LineReference),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(LineWidthScale),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(FillReference),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(EffectReference),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(FontReference),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(ShapeProperties),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(TextBodyProperties),(FileFormatVersions)4)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList),(FileFormatVersions)4)]
+    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class StyleEntry : OpenXmlCompositeElement
 {
@@ -7046,19 +6410,7 @@ public partial class MarkerLayoutProperties : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((4 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     	private static readonly string[] attributeTagNames = { "symbol","size" };

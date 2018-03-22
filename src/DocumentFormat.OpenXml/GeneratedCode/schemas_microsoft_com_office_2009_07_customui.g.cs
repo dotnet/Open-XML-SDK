@@ -26,19 +26,7 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "idQ","tag","idMso","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -454,19 +442,7 @@ public partial class ButtonRegular : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "onAction","enabled","getEnabled","description","getDescription","image","imageMso","getImage","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -938,19 +914,7 @@ public partial class CheckBox : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "getPressed","onAction","enabled","getEnabled","description","getDescription","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip" };
@@ -1333,8 +1297,8 @@ if( 0 == namespaceId && "getKeytip" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(Item),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(Item), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class GalleryRegular : OpenXmlCompositeElement
@@ -1347,19 +1311,7 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "description","getDescription","invalidateContentOnDrop","columns","rows","itemWidth","itemHeight","getItemWidth","getItemHeight","showItemLabel","showInRibbon","onAction","enabled","getEnabled","image","imageMso","getImage","showItemImage","getItemCount","getItemLabel","getItemScreentip","getItemSupertip","getItemImage","getItemID","sizeString","getSelectedItemID","getSelectedItemIndex","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -2134,19 +2086,7 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "getPressed","onAction","enabled","getEnabled","description","getDescription","image","imageMso","getImage","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -2632,19 +2572,7 @@ public partial class MenuSeparator : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","title","getTitle" };
@@ -2818,9 +2746,9 @@ if( 0 == namespaceId && "getTitle" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(VisibleButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(VisibleToggleButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuRegular),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(VisibleButton), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(VisibleToggleButton), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(MenuRegular), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class SplitButtonRegular : OpenXmlCompositeElement
@@ -2833,19 +2761,7 @@ public partial class SplitButtonRegular : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "enabled","getEnabled","id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel" };
@@ -3163,15 +3079,15 @@ if( 0 == namespaceId && "getShowLabel" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ControlCloneRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(CheckBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(GalleryRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ToggleButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuSeparator),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(SplitButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DynamicMenuRegular),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ControlCloneRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(CheckBox), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(GalleryRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ToggleButtonRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(MenuSeparator), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(SplitButtonRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(MenuRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(DynamicMenuRegular), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class MenuRegular : OpenXmlCompositeElement
@@ -3184,19 +3100,7 @@ public partial class MenuRegular : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "itemSize","description","getDescription","id","idQ","tag","idMso","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -3726,19 +3630,7 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "description","getDescription","id","idQ","tag","idMso","getContent","invalidateContentOnDrop","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -4220,9 +4112,9 @@ if( 0 == namespaceId && "getShowImage" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(VisibleButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(VisibleToggleButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuWithTitle),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(VisibleButton), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(VisibleToggleButton), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(MenuWithTitle), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class SplitButtonWithTitle : OpenXmlCompositeElement
@@ -4235,19 +4127,7 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "enabled","getEnabled","id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel" };
@@ -4565,15 +4445,15 @@ if( 0 == namespaceId && "getShowLabel" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ControlCloneRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(CheckBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(GalleryRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ToggleButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuSeparator),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(SplitButtonWithTitle),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuWithTitle),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DynamicMenuRegular),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ControlCloneRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(CheckBox), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(GalleryRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ToggleButtonRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(MenuSeparator), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(SplitButtonWithTitle), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(MenuWithTitle), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(DynamicMenuRegular), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class MenuWithTitle : OpenXmlCompositeElement
@@ -4586,19 +4466,7 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","itemSize","title","getTitle","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -5128,19 +4996,7 @@ public partial class MenuSeparatorNoTitle : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ" };
@@ -5290,19 +5146,7 @@ public partial class ControlClone : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "size","getSize","enabled","getEnabled","description","getDescription","image","imageMso","getImage","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -5774,19 +5618,7 @@ public partial class LabelControl : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","showLabel","getShowLabel" };
@@ -6118,19 +5950,7 @@ public partial class Button : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "size","getSize","onAction","enabled","getEnabled","description","getDescription","image","imageMso","getImage","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -6630,19 +6450,7 @@ public partial class ToggleButton : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "size","getSize","getPressed","onAction","enabled","getEnabled","description","getDescription","image","imageMso","getImage","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -7156,19 +6964,7 @@ public partial class EditBox : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "enabled","getEnabled","image","imageMso","getImage","maxLength","getText","onChange","sizeString","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -7648,7 +7444,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(Item),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(Item), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ComboBox : OpenXmlCompositeElement
@@ -7661,19 +7457,7 @@ public partial class ComboBox : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "showItemImage","getItemCount","getItemLabel","getItemScreentip","getItemSupertip","getItemImage","getItemID","sizeString","invalidateContentOnDrop","enabled","getEnabled","image","imageMso","getImage","maxLength","getText","onChange","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -8300,8 +8084,8 @@ if( 0 == namespaceId && "getShowImage" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(Item),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(Item), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DropDownRegular : OpenXmlCompositeElement
@@ -8314,19 +8098,7 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "onAction","enabled","getEnabled","image","imageMso","getImage","showItemImage","getItemCount","getItemLabel","getItemScreentip","getItemSupertip","getItemImage","getItemID","sizeString","getSelectedItemID","getSelectedItemIndex","showItemLabel","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -8956,8 +8728,8 @@ if( 0 == namespaceId && "getShowImage" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(Item),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(Item), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Gallery : OpenXmlCompositeElement
@@ -8970,19 +8742,7 @@ public partial class Gallery : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "size","getSize","description","getDescription","invalidateContentOnDrop","columns","rows","itemWidth","itemHeight","getItemWidth","getItemHeight","showItemLabel","showInRibbon","onAction","enabled","getEnabled","image","imageMso","getImage","showItemImage","getItemCount","getItemLabel","getItemScreentip","getItemSupertip","getItemImage","getItemID","sizeString","getSelectedItemID","getSelectedItemIndex","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -9787,15 +9547,15 @@ if( 0 == namespaceId && "getShowImage" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ControlCloneRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(CheckBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(GalleryRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ToggleButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuSeparator),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(SplitButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DynamicMenuRegular),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ControlCloneRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(CheckBox), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(GalleryRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ToggleButtonRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(MenuSeparator), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(SplitButtonRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(MenuRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(DynamicMenuRegular), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Menu : OpenXmlCompositeElement
@@ -9808,19 +9568,7 @@ public partial class Menu : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "size","getSize","itemSize","description","getDescription","id","idQ","tag","idMso","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -10378,19 +10126,7 @@ public partial class DynamicMenu : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "size","getSize","description","getDescription","id","idQ","tag","idMso","getContent","invalidateContentOnDrop","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -10900,9 +10636,9 @@ if( 0 == namespaceId && "getShowImage" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(VisibleButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(VisibleToggleButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuRegular),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(VisibleButton), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(VisibleToggleButton), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(MenuRegular), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class SplitButton : OpenXmlCompositeElement
@@ -10915,19 +10651,7 @@ public partial class SplitButton : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "size","getSize","enabled","getEnabled","id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel" };
@@ -11278,20 +11002,20 @@ if( 0 == namespaceId && "getShowLabel" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ControlClone),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(LabelControl),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Button),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ToggleButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(CheckBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(EditBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ComboBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DropDownRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Gallery),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Menu),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DynamicMenu),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(SplitButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Box),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ButtonGroup),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ControlClone), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(LabelControl), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(Button), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ToggleButton), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(CheckBox), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(EditBox), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ComboBox), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(DropDownRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(Gallery), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(Menu), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(DynamicMenu), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(SplitButton), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(Box), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ButtonGroup), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Box : OpenXmlCompositeElement
@@ -11304,19 +11028,7 @@ public partial class Box : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","visible","getVisible","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","boxStyle" };
@@ -11582,14 +11294,14 @@ if( 0 == namespaceId && "boxStyle" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ControlCloneRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ToggleButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(GalleryRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DynamicMenuRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(SplitButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Separator),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ControlCloneRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ToggleButtonRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(GalleryRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(MenuRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(DynamicMenuRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(SplitButtonRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(Separator), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ButtonGroup : OpenXmlCompositeElement
@@ -11602,19 +11314,7 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","visible","getVisible","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ" };
@@ -11847,19 +11547,7 @@ public partial class BackstageMenuButton : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "description","getDescription","id","idQ","tag","onAction","isDefinitive","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip","image","imageMso","getImage" };
@@ -12163,19 +11851,7 @@ public partial class BackstageMenuCheckBox : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "description","getDescription","id","idQ","tag","onAction","getPressed","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip" };
@@ -12431,7 +12107,7 @@ if( 0 == namespaceId && "getKeytip" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(BackstageMenuGroup),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BackstageMenuGroup), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class BackstageSubMenu : OpenXmlCompositeElement
@@ -12444,19 +12120,7 @@ public partial class BackstageSubMenu : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "description","getDescription","id","idQ","tag","enabled","getEnabled","label","getLabel","visible","getVisible","image","imageMso","getImage","keytip","getKeytip" };
@@ -12766,19 +12430,7 @@ public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "image","imageMso","getImage","description","getDescription","id","idQ","tag","onAction","getPressed","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip" };
@@ -13082,19 +12734,7 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "expand","style","screentip","getScreentip","supertip","getSupertip","id","idQ","tag","onAction","isDefinitive","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip","image","imageMso","getImage" };
@@ -13454,19 +13094,7 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "expand","description","getDescription","screentip","getScreentip","supertip","getSupertip","id","idQ","tag","onAction","getPressed","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip" };
@@ -13798,19 +13426,7 @@ public partial class BackstageEditBox : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","alignLabel","expand","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip","getText","onChange","maxLength","sizeString" };
@@ -14094,7 +13710,7 @@ if( 0 == namespaceId && "sizeString" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ItemBackstageItem),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ItemBackstageItem), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class BackstageDropDown : OpenXmlCompositeElement
@@ -14107,19 +13723,7 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","alignLabel","expand","enabled","getEnabled","label","getLabel","visible","getVisible","onAction","screentip","getScreentip","supertip","getSupertip","keytip","getKeytip","getSelectedItemIndex","sizeString","getItemCount","getItemLabel","getItemID" };
@@ -14521,7 +14125,7 @@ if( 0 == namespaceId && "getItemID" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(RadioButtonBackstageItem),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(RadioButtonBackstageItem), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class RadioGroup : OpenXmlCompositeElement
@@ -14534,19 +14138,7 @@ public partial class RadioGroup : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","alignLabel","expand","enabled","getEnabled","label","getLabel","visible","getVisible","onAction","keytip","getKeytip","getSelectedItemIndex","getItemCount","getItemLabel","getItemID" };
@@ -14878,7 +14470,7 @@ if( 0 == namespaceId && "getItemID" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ItemBackstageItem),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ItemBackstageItem), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class BackstageComboBox : OpenXmlCompositeElement
@@ -14891,19 +14483,7 @@ public partial class BackstageComboBox : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","alignLabel","expand","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip","getText","onChange","sizeString","getItemCount","getItemLabel","getItemID" };
@@ -15255,19 +14835,7 @@ public partial class Hyperlink : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","alignLabel","expand","enabled","getEnabled","visible","getVisible","keytip","getKeytip","label","getLabel","onAction","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","target","getTarget" };
@@ -15641,19 +15209,7 @@ public partial class BackstageLabelControl : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","alignLabel","expand","enabled","getEnabled","label","getLabel","visible","getVisible","noWrap" };
@@ -15877,17 +15433,17 @@ if( 0 == namespaceId && "noWrap" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(BackstageGroupButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageCheckBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageEditBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageDropDown),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(RadioGroup),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageComboBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Hyperlink),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageLabelControl),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(GroupBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(LayoutContainer),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ImageControl),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BackstageGroupButton), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(BackstageCheckBox), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(BackstageEditBox), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(BackstageDropDown), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(RadioGroup), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(BackstageComboBox), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(Hyperlink), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(BackstageLabelControl), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(GroupBox), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(LayoutContainer), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ImageControl), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class GroupBox : OpenXmlCompositeElement
@@ -15900,19 +15456,7 @@ public partial class GroupBox : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","expand","label","getLabel" };
@@ -16116,17 +15660,17 @@ if( 0 == namespaceId && "getLabel" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(BackstageGroupButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageCheckBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageEditBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageDropDown),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(RadioGroup),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageComboBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Hyperlink),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageLabelControl),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(GroupBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(LayoutContainer),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ImageControl),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BackstageGroupButton), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(BackstageCheckBox), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(BackstageEditBox), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(BackstageDropDown), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(RadioGroup), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(BackstageComboBox), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(Hyperlink), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(BackstageLabelControl), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(GroupBox), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(LayoutContainer), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ImageControl), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class LayoutContainer : OpenXmlCompositeElement
@@ -16139,19 +15683,7 @@ public partial class LayoutContainer : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","align","expand","layoutChildren" };
@@ -16351,19 +15883,7 @@ public partial class ImageControl : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","enabled","getEnabled","visible","getVisible","image","imageMso","getImage","altText","getAltText" };
@@ -16579,9 +16099,9 @@ if( 0 == namespaceId && "getAltText" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(PrimaryItem),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(TopItemsGroupControls),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BottomItemsGroupControls),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(PrimaryItem), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(TopItemsGroupControls), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(BottomItemsGroupControls), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class BackstageGroup : OpenXmlCompositeElement
@@ -16594,19 +16114,7 @@ public partial class BackstageGroup : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","label","getLabel","visible","getVisible","style","getStyle","helperText","getHelperText","showLabel","getShowLabel" };
@@ -16944,7 +16452,7 @@ if( 0 == namespaceId && "getShowLabel" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(TaskGroupCategory),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(TaskGroupCategory), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class TaskGroup : OpenXmlCompositeElement
@@ -16957,19 +16465,7 @@ public partial class TaskGroup : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","label","getLabel","visible","getVisible","helperText","getHelperText","showLabel","getShowLabel","allowedTaskSizes" };
@@ -17295,15 +16791,15 @@ if( 0 == namespaceId && "allowedTaskSizes" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ControlCloneRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(CheckBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(GalleryRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ToggleButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuSeparator),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(SplitButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DynamicMenuRegular),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ControlCloneRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(CheckBox), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(GalleryRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ToggleButtonRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(MenuSeparator), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(SplitButtonRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(MenuRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(DynamicMenuRegular), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class MenuRoot : OpenXmlCompositeElement
@@ -17316,19 +16812,7 @@ public partial class MenuRoot : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "title","getTitle","itemSize" };
@@ -17476,10 +16960,10 @@ if( 0 == namespaceId && "itemSize" == name)
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(Commands),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Ribbon),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Backstage),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ContextMenus),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(Commands), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(Ribbon), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(Backstage), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ContextMenus), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class CustomUI : OpenXmlPartRootElement
@@ -17492,19 +16976,7 @@ public partial class CustomUI : OpenXmlPartRootElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "onLoad","loadImage" };
@@ -17713,19 +17185,7 @@ public partial class Item : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","label","image","imageMso","screentip","supertip" };
@@ -17861,19 +17321,7 @@ public partial class VisibleButton : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "onAction","enabled","getEnabled","description","getDescription","image","imageMso","getImage","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -18317,19 +17765,7 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "getPressed","onAction","enabled","getEnabled","description","getDescription","image","imageMso","getImage","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -18787,19 +18223,7 @@ public partial class Separator : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","visible","getVisible","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ" };
@@ -18971,7 +18395,7 @@ if( 0 == namespaceId && "insertBeforeQ" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DialogBoxLauncher : OpenXmlCompositeElement
@@ -18984,19 +18408,7 @@ public partial class DialogBoxLauncher : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     
@@ -19099,22 +18511,22 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ControlClone),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(LabelControl),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Button),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ToggleButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(CheckBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(EditBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ComboBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DropDownRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Gallery),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Menu),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DynamicMenu),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(SplitButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Box),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ButtonGroup),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Separator),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DialogBoxLauncher),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ControlClone), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(LabelControl), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(Button), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ToggleButton), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(CheckBox), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(EditBox), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ComboBox), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(DropDownRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(Gallery), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(Menu), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(DynamicMenu), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(SplitButton), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(Box), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ButtonGroup), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(Separator), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(DialogBoxLauncher), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Group : OpenXmlCompositeElement
@@ -19127,19 +18539,7 @@ public partial class Group : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","label","getLabel","image","imageMso","getImage","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","screentip","getScreentip","supertip","getSupertip","visible","getVisible","keytip","getKeytip","autoScale","centerVertically" };
@@ -19592,19 +18992,7 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","idMso","description","getDescription","size","getSize","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -20084,19 +19472,7 @@ public partial class SharedControlsQatItems : QatItemsType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -20160,19 +19536,7 @@ public partial class DocumentControlsQatItems : QatItemsType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -20222,9 +19586,9 @@ public partial class DocumentControlsQatItems : QatItemsType
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ControlCloneQat),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Separator),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ControlCloneQat), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(Separator), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class QatItemsType : OpenXmlCompositeElement
 {
@@ -20294,7 +19658,7 @@ if( 57 == namespaceId && "separator" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(Group),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(Group), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Tab : OpenXmlCompositeElement
@@ -20307,19 +19671,7 @@ public partial class Tab : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip" };
@@ -20595,7 +19947,7 @@ if( 0 == namespaceId && "getKeytip" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(Tab),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(Tab), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class TabSet : OpenXmlCompositeElement
@@ -20608,19 +19960,7 @@ public partial class TabSet : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "idMso","visible","getVisible" };
@@ -20748,19 +20088,7 @@ public partial class Command : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "onAction","enabled","getEnabled","idMso" };
@@ -20863,8 +20191,8 @@ if( 0 == namespaceId && "idMso" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(SharedControlsQatItems),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DocumentControlsQatItems),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(SharedControlsQatItems), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(DocumentControlsQatItems), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class QuickAccessToolbar : OpenXmlCompositeElement
@@ -20877,19 +20205,7 @@ public partial class QuickAccessToolbar : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     
@@ -20992,7 +20308,7 @@ if( 57 == namespaceId && "documentControls" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(Tab),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(Tab), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Tabs : OpenXmlCompositeElement
@@ -21005,19 +20321,7 @@ public partial class Tabs : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     
@@ -21084,7 +20388,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(TabSet),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(TabSet), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ContextualTabs : OpenXmlCompositeElement
@@ -21097,19 +20401,7 @@ public partial class ContextualTabs : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     
@@ -21184,15 +20476,15 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ControlCloneRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(CheckBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(GalleryRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ToggleButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(SplitButtonRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(DynamicMenuRegular),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(MenuSeparatorNoTitle),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ControlCloneRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(CheckBox), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(GalleryRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ToggleButtonRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(SplitButtonRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(MenuRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(DynamicMenuRegular), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(MenuSeparatorNoTitle), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ContextMenu : OpenXmlCompositeElement
@@ -21205,19 +20497,7 @@ public partial class ContextMenu : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "idMso" };
@@ -21341,19 +20621,7 @@ public partial class ItemBackstageItem : BackstageItemType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -21384,19 +20652,7 @@ public partial class RadioButtonBackstageItem : BackstageItemType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -21503,19 +20759,7 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "screentip","getScreentip","supertip","getSupertip","id","idQ","tag","onAction","isDefinitive","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip","image","imageMso","getImage" };
@@ -21841,7 +21085,7 @@ if( 0 == namespaceId && "getImage" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(BackstageMenuGroup),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BackstageMenuGroup), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
@@ -21854,19 +21098,7 @@ public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "screentip","getScreentip","supertip","getSupertip","id","idQ","tag","enabled","getEnabled","label","getLabel","visible","getVisible","image","imageMso","getImage","keytip","getKeytip" };
@@ -22201,10 +21433,10 @@ if( 0 == namespaceId && "getKeytip" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(BackstageMenuButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageMenuCheckBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageSubMenu),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageMenuToggleButton),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BackstageMenuButton), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(BackstageMenuCheckBox), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(BackstageSubMenu), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(BackstageMenuToggleButton), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class BackstageMenuGroup : OpenXmlCompositeElement
@@ -22217,19 +21449,7 @@ public partial class BackstageMenuGroup : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","label","getLabel","itemSize" };
@@ -22403,8 +21623,8 @@ if( 0 == namespaceId && "itemSize" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(BackstageRegularButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstagePrimaryMenu),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BackstageRegularButton), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(BackstagePrimaryMenu), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PrimaryItem : OpenXmlCompositeElement
@@ -22417,19 +21637,7 @@ public partial class PrimaryItem : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     
@@ -22554,19 +21762,7 @@ public partial class TopItemsGroupControls : GroupControlsType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -22638,19 +21834,7 @@ public partial class BottomItemsGroupControls : GroupControlsType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -22708,17 +21892,17 @@ public partial class BottomItemsGroupControls : GroupControlsType
 /// </list>
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(BackstageGroupButton),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageCheckBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageEditBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageDropDown),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(RadioGroup),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageComboBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Hyperlink),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageLabelControl),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(GroupBox),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(LayoutContainer),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ImageControl),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BackstageGroupButton), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(BackstageCheckBox), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(BackstageEditBox), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(BackstageDropDown), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(RadioGroup), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(BackstageComboBox), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(Hyperlink), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(BackstageLabelControl), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(GroupBox), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(LayoutContainer), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ImageControl), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class GroupControlsType : OpenXmlCompositeElement
 {
@@ -22812,7 +21996,7 @@ if( 57 == namespaceId && "imageControl" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(TaskGroupTask),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(TaskGroupTask), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class TaskGroupCategory : OpenXmlCompositeElement
@@ -22825,19 +22009,7 @@ public partial class TaskGroupCategory : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","label","getLabel" };
@@ -23091,19 +22263,7 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","onAction","isDefinitive","image","imageMso","getImage","enabled","getEnabled","label","getLabel","visible","getVisible","description","getDescription","keytip","getKeytip" };
@@ -23471,7 +22631,7 @@ if( 0 == namespaceId && "getKeytip" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(TaskFormGroupTask),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(TaskFormGroupTask), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class TaskFormGroupCategory : OpenXmlCompositeElement
@@ -23484,19 +22644,7 @@ public partial class TaskFormGroupCategory : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","label","getLabel" };
@@ -23744,7 +22892,7 @@ if( 0 == namespaceId && "getLabel" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(BackstageGroup),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BackstageGroup), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class TaskFormGroupTask : OpenXmlCompositeElement
@@ -23757,19 +22905,7 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","image","imageMso","getImage","enabled","getEnabled","label","getLabel","visible","getVisible","description","getDescription","keytip","getKeytip" };
@@ -24143,7 +23279,7 @@ if( 0 == namespaceId && "getKeytip" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(TaskFormGroupCategory),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(TaskFormGroupCategory), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class TaskFormGroup : OpenXmlCompositeElement
@@ -24156,19 +23292,7 @@ public partial class TaskFormGroup : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","label","getLabel","visible","getVisible","helperText","getHelperText","showLabel","getShowLabel","allowedTaskSizes" };
@@ -24432,9 +23556,9 @@ if( 0 == namespaceId && "allowedTaskSizes" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(TaskFormGroup),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageGroup),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(TaskGroup),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(TaskFormGroup), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(BackstageGroup), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(TaskGroup), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class BackstageGroups : OpenXmlCompositeElement
@@ -24447,19 +23571,7 @@ public partial class BackstageGroups : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     
@@ -24533,8 +23645,8 @@ if( 57 == namespaceId && "taskGroup" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(BackstageGroup),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(TaskGroup),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BackstageGroup), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(TaskGroup), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class SimpleGroups : OpenXmlCompositeElement
@@ -24547,19 +23659,7 @@ public partial class SimpleGroups : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     
@@ -24630,8 +23730,8 @@ if( 57 == namespaceId && "taskGroup" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(BackstageGroups),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(SimpleGroups),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BackstageGroups), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(SimpleGroups), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class BackstageTab : OpenXmlCompositeElement
@@ -24644,19 +23744,7 @@ public partial class BackstageTab : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip","title","getTitle","columnWidthPercent","firstColumnMinWidth","firstColumnMaxWidth","secondColumnMinWidth","secondColumnMaxWidth" };
@@ -25100,19 +24188,7 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","id","idQ","tag","onAction","isDefinitive","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip","image","imageMso","getImage" };
@@ -25452,7 +24528,7 @@ if( 0 == namespaceId && "getImage" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(Command),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(Command), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Commands : OpenXmlCompositeElement
@@ -25465,19 +24541,7 @@ public partial class Commands : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     
@@ -25546,9 +24610,9 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(QuickAccessToolbar),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(Tabs),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(ContextualTabs),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(QuickAccessToolbar), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(Tabs), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ContextualTabs), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Ribbon : OpenXmlCompositeElement
@@ -25561,19 +24625,7 @@ public partial class Ribbon : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "startFromScratch" };
@@ -25719,8 +24771,8 @@ if( 57 == namespaceId && "contextualTabs" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(BackstageTab),(FileFormatVersions)6)]
-    [ChildElementInfo(typeof(BackstageFastCommandButton),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(BackstageTab), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(BackstageFastCommandButton), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Backstage : OpenXmlCompositeElement
@@ -25733,19 +24785,7 @@ public partial class Backstage : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     	private static readonly string[] attributeTagNames = { "onShow","onHide" };
@@ -25856,7 +24896,7 @@ if( 0 == namespaceId && "onHide" == name)
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ContextMenu),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(ContextMenu), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ContextMenus : OpenXmlCompositeElement
@@ -25869,19 +24909,7 @@ public partial class ContextMenus : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((6 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     

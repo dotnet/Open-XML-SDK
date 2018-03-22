@@ -55,18 +55,13 @@ namespace DocumentFormat.OpenXml.Tests
         {
             foreach (var attr in typeof(TableCellBorders).GetTypeInfo().GetCustomAttributes<ChildElementInfoAttribute>(false))
             {
-                var ce = attr as ChildElementInfoAttribute;
-                if (ce.ElementType == typeof(TopBorder))
+                if (attr.ElementType == typeof(TopBorder))
                 {
-                    Assert.Equal(ce.AvailableInVersion, FileFormatVersions.Office2007 | FileFormatVersions.Office2010);
+                    Assert.True(attr.AvailableInVersion.All());
                 }
-                else if (ce.ElementType == typeof(StartBorder) || ce.ElementType == typeof(EndBorder))
+                else if (attr.ElementType == typeof(StartBorder) || attr.ElementType == typeof(EndBorder))
                 {
-                    var av = ce.AvailableInVersion;
-                    var isIn2010 = (ce.AvailableInVersion & FileFormatVersions.Office2010) > 0;
-                    if (!isIn2010)
-                        Console.WriteLine();
-                    Assert.True(isIn2010);
+                    Assert.True(attr.AvailableInVersion.Includes(FileFormatVersions.Office2010));
                 }
             }
 
@@ -77,7 +72,7 @@ namespace DocumentFormat.OpenXml.Tests
             var attr1 = typeof(EndBorder).GetTypeInfo().GetCustomAttributes<OfficeAvailabilityAttribute>(false).First();
             Assert.True(attr1.OfficeVersion == FileFormatVersions.Office2010);
 
-            Assert.True(typeof(TableCellBorders).GetTypeInfo().GetCustomAttributes<OfficeAvailabilityAttribute>(false).FirstOrDefault() == null);
+            Assert.False(typeof(TableCellBorders).GetTypeInfo().GetCustomAttributes<OfficeAvailabilityAttribute>(false).Any());
         }
 
         ///<summary>

@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ConnectionShape))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Picture))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart),(FileFormatVersions)6)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrame))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupShape))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList))]
@@ -50,19 +50,7 @@ public partial class LockedCanvas : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((7 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     
