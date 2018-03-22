@@ -28,11 +28,12 @@ namespace DocumentFormat.OpenXml
         /// <returns>True if the version is all of the known versions, otherwise false</returns>
         public static bool All(this FileFormatVersions version)
         {
-            var all = FileFormatVersions.Office2007
+            const FileFormatVersions AllVersions =
+                  FileFormatVersions.Office2007
                 | FileFormatVersions.Office2010
                 | FileFormatVersions.Office2013;
 
-            return version == all;
+            return version == AllVersions;
         }
 
         /// <summary>
