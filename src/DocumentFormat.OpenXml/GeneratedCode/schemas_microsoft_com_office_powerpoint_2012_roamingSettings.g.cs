@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
 {
 /// <summary>
 /// <para>Defines the Key Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is pRoam:key.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -54,7 +54,7 @@ public partial class Key : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Defines the Value Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is pRoam:value.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -98,7 +98,7 @@ public partial class Value : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Defines the RoamingProperty Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is pRoam:props.</para>
 /// </summary>
 /// <remarks>

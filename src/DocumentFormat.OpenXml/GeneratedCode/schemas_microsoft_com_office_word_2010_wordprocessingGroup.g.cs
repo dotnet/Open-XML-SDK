@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
 {
 /// <summary>
 /// <para>Defines the WordprocessingGroup Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wpg:wgp.</para>
 /// </summary>
 /// <remarks>
@@ -84,7 +84,7 @@ public partial class WordprocessingGroup : WordprocessingGroupType
 }
 /// <summary>
 /// <para>Defines the GroupShape Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wpg:grpSp.</para>
 /// </summary>
 /// <remarks>
@@ -301,7 +301,7 @@ if( 60 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the NonVisualDrawingProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wpg:cNvPr.</para>
 /// </summary>
 /// <remarks>
@@ -519,7 +519,7 @@ if( 0 == namespaceId && "title" == name)
 }
 /// <summary>
 /// <para>Defines the NonVisualGraphicFrameProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wpg:cNvFrPr.</para>
 /// </summary>
 /// <remarks>
@@ -637,7 +637,7 @@ if( 10 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the Transform2D Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wpg:xfrm.</para>
 /// </summary>
 /// <remarks>
@@ -810,7 +810,7 @@ if( 0 == namespaceId && "flipV" == name)
 }
 /// <summary>
 /// <para>Defines the OfficeArtExtensionList Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wpg:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -890,7 +890,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the NonVisualGroupDrawingShapeProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wpg:cNvGrpSpPr.</para>
 /// </summary>
 /// <remarks>
@@ -1008,7 +1008,7 @@ if( 10 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the GroupShapeProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wpg:grpSpPr.</para>
 /// </summary>
 /// <remarks>
@@ -1186,7 +1186,7 @@ if( 10 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the GraphicFrame Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wpg:graphicFrame.</para>
 /// </summary>
 /// <remarks>

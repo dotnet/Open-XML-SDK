@@ -10,10 +10,12 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
 {
 /// <summary>
 /// <para>Top Border.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w10:bordertop.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TopBorder : BorderType
 {
     internal const int ElementTypeIdConst = 12501;
@@ -39,10 +41,12 @@ public partial class TopBorder : BorderType
 }
 /// <summary>
 /// <para>Left Border.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w10:borderleft.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LeftBorder : BorderType
 {
     internal const int ElementTypeIdConst = 12502;
@@ -68,10 +72,12 @@ public partial class LeftBorder : BorderType
 }
 /// <summary>
 /// <para>Right Border.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w10:borderright.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RightBorder : BorderType
 {
     internal const int ElementTypeIdConst = 12503;
@@ -97,10 +103,12 @@ public partial class RightBorder : BorderType
 }
 /// <summary>
 /// <para>Bottom Border.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w10:borderbottom.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BottomBorder : BorderType
 {
     internal const int ElementTypeIdConst = 12504;
@@ -202,10 +210,12 @@ if( 0 == namespaceId && "shadow" == name)
 }
 /// <summary>
 /// <para>Text Wrapping.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w10:wrap.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TextWrap : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12505;
@@ -308,10 +318,12 @@ if( 0 == namespaceId && "anchory" == name)
 }
 /// <summary>
 /// <para>Anchor Location Is Locked.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w10:anchorlock.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AnchorLock : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12506;

@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
 {
 /// <summary>
 /// <para>Defines the PivotOptions Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:pivotOptions.</para>
 /// </summary>
 /// <remarks>
@@ -182,7 +182,7 @@ if( 46 == namespaceId && "dropZonesVisible" == name)
 }
 /// <summary>
 /// <para>Defines the SketchOptions Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:sketchOptions.</para>
 /// </summary>
 /// <remarks>
@@ -300,7 +300,7 @@ if( 46 == namespaceId && "showSketchBtn" == name)
 }
 /// <summary>
 /// <para>Defines the InvertSolidFillFormat Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:invertSolidFillFmt.</para>
 /// </summary>
 /// <remarks>
@@ -401,7 +401,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the Style Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:style.</para>
 /// </summary>
 
@@ -467,7 +467,7 @@ public partial class Style : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the ShapeProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:spPr.</para>
 /// </summary>
 /// <remarks>
@@ -665,7 +665,7 @@ if( 10 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the DropZoneFilter Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:dropZoneFilter.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -696,7 +696,7 @@ public partial class DropZoneFilter : BooleanFalseType
 }
 /// <summary>
 /// <para>Defines the DropZoneCategories Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:dropZoneCategories.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -727,7 +727,7 @@ public partial class DropZoneCategories : BooleanFalseType
 }
 /// <summary>
 /// <para>Defines the DropZoneData Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:dropZoneData.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -758,7 +758,7 @@ public partial class DropZoneData : BooleanFalseType
 }
 /// <summary>
 /// <para>Defines the DropZoneSeries Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:dropZoneSeries.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -789,7 +789,7 @@ public partial class DropZoneSeries : BooleanFalseType
 }
 /// <summary>
 /// <para>Defines the DropZonesVisible Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:dropZonesVisible.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -820,7 +820,7 @@ public partial class DropZonesVisible : BooleanFalseType
 }
 /// <summary>
 /// <para>Defines the InSketchMode Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:inSketchMode.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -899,7 +899,7 @@ public abstract partial class BooleanFalseType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the ShowSketchButton Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:showSketchBtn.</para>
 /// </summary>
 

@@ -878,7 +878,7 @@ if( 65 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the ColorStyleVariation Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:variation.</para>
 /// </summary>
 /// <remarks>
@@ -1093,7 +1093,7 @@ if( 10 == namespaceId && "invGamma" == name)
 }
 /// <summary>
 /// <para>Defines the OfficeArtExtensionList Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -1173,7 +1173,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the StyleColor Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:styleClr.</para>
 /// </summary>
 /// <remarks>
@@ -1415,7 +1415,7 @@ if( 10 == namespaceId && "invGamma" == name)
 }
 /// <summary>
 /// <para>Defines the LineReference Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:lnRef.</para>
 /// </summary>
 /// <remarks>
@@ -1483,7 +1483,7 @@ public partial class LineReference : StyleReference
 }
 /// <summary>
 /// <para>Defines the FillReference Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:fillRef.</para>
 /// </summary>
 /// <remarks>
@@ -1551,7 +1551,7 @@ public partial class FillReference : StyleReference
 }
 /// <summary>
 /// <para>Defines the EffectReference Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:effectRef.</para>
 /// </summary>
 /// <remarks>
@@ -1752,7 +1752,7 @@ if( 0 == namespaceId && "mods" == name)
 }
 /// <summary>
 /// <para>Defines the LineWidthScale Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:lineWidthScale.</para>
 /// </summary>
 
@@ -1804,7 +1804,7 @@ public partial class LineWidthScale : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Defines the FontReference Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:fontRef.</para>
 /// </summary>
 /// <remarks>
@@ -1955,7 +1955,7 @@ if( 0 == namespaceId && "mods" == name)
 }
 /// <summary>
 /// <para>Defines the ShapeProperties Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:spPr.</para>
 /// </summary>
 /// <remarks>
@@ -2153,7 +2153,7 @@ if( 10 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the TextCharacterPropertiesType Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:defRPr.</para>
 /// </summary>
 /// <remarks>
@@ -2610,7 +2610,7 @@ if( 0 == namespaceId && "bmk" == name)
 }
 /// <summary>
 /// <para>Defines the TextBodyProperties Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:bodyPr.</para>
 /// </summary>
 /// <remarks>
@@ -3025,7 +3025,7 @@ if( 0 == namespaceId && "compatLnSpc" == name)
 }
 /// <summary>
 /// <para>Defines the CategoryAxisProperties Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:categoryAxis.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -3056,7 +3056,7 @@ public partial class CategoryAxisProperties : AxisProperties
 }
 /// <summary>
 /// <para>Defines the SeriesAxisProperties Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:seriesAxis.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -3087,7 +3087,7 @@ public partial class SeriesAxisProperties : AxisProperties
 }
 /// <summary>
 /// <para>Defines the ValueAxisProperties Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:valueAxis.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -3250,7 +3250,7 @@ if( 0 == namespaceId && "title" == name)
 }
 /// <summary>
 /// <para>Defines the DataSeries Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:dataSeries.</para>
 /// </summary>
 
@@ -3414,7 +3414,7 @@ if( 0 == namespaceId && "seriesLines" == name)
 }
 /// <summary>
 /// <para>Defines the DataLabels Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:dataLabels.</para>
 /// </summary>
 
@@ -3550,7 +3550,7 @@ if( 0 == namespaceId && "percentage" == name)
 }
 /// <summary>
 /// <para>Defines the DataTable Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:dataTable.</para>
 /// </summary>
 
@@ -3658,7 +3658,7 @@ if( 0 == namespaceId && "outlineBorder" == name)
 }
 /// <summary>
 /// <para>Defines the Legend Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:legend.</para>
 /// </summary>
 
@@ -3752,7 +3752,7 @@ if( 0 == namespaceId && "position" == name)
 }
 /// <summary>
 /// <para>Defines the Title Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:title.</para>
 /// </summary>
 
@@ -3818,7 +3818,7 @@ public partial class Title : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the Trendline Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:trendline.</para>
 /// </summary>
 
@@ -3912,7 +3912,7 @@ if( 0 == namespaceId && "rsquared" == name)
 }
 /// <summary>
 /// <para>Defines the View3DProperties Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:view3D.</para>
 /// </summary>
 
@@ -4048,7 +4048,7 @@ if( 0 == namespaceId && "depthPercent" == name)
 }
 /// <summary>
 /// <para>Defines the AxisTitle Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:axisTitle.</para>
 /// </summary>
 /// <remarks>
@@ -4118,7 +4118,7 @@ public partial class AxisTitle : StyleEntry
 }
 /// <summary>
 /// <para>Defines the CategoryAxis Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:categoryAxis.</para>
 /// </summary>
 /// <remarks>
@@ -4188,7 +4188,7 @@ public partial class CategoryAxis : StyleEntry
 }
 /// <summary>
 /// <para>Defines the ChartArea Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:chartArea.</para>
 /// </summary>
 /// <remarks>
@@ -4258,7 +4258,7 @@ public partial class ChartArea : StyleEntry
 }
 /// <summary>
 /// <para>Defines the DataLabel Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:dataLabel.</para>
 /// </summary>
 /// <remarks>
@@ -4328,7 +4328,7 @@ public partial class DataLabel : StyleEntry
 }
 /// <summary>
 /// <para>Defines the DataLabelCallout Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:dataLabelCallout.</para>
 /// </summary>
 /// <remarks>
@@ -4398,7 +4398,7 @@ public partial class DataLabelCallout : StyleEntry
 }
 /// <summary>
 /// <para>Defines the DataPoint Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:dataPoint.</para>
 /// </summary>
 /// <remarks>
@@ -4468,7 +4468,7 @@ public partial class DataPoint : StyleEntry
 }
 /// <summary>
 /// <para>Defines the DataPoint3D Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:dataPoint3D.</para>
 /// </summary>
 /// <remarks>
@@ -4538,7 +4538,7 @@ public partial class DataPoint3D : StyleEntry
 }
 /// <summary>
 /// <para>Defines the DataPointLine Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:dataPointLine.</para>
 /// </summary>
 /// <remarks>
@@ -4608,7 +4608,7 @@ public partial class DataPointLine : StyleEntry
 }
 /// <summary>
 /// <para>Defines the DataPointMarker Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:dataPointMarker.</para>
 /// </summary>
 /// <remarks>
@@ -4678,7 +4678,7 @@ public partial class DataPointMarker : StyleEntry
 }
 /// <summary>
 /// <para>Defines the DataPointWireframe Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:dataPointWireframe.</para>
 /// </summary>
 /// <remarks>
@@ -4748,7 +4748,7 @@ public partial class DataPointWireframe : StyleEntry
 }
 /// <summary>
 /// <para>Defines the DataTableStyle Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:dataTable.</para>
 /// </summary>
 /// <remarks>
@@ -4818,7 +4818,7 @@ public partial class DataTableStyle : StyleEntry
 }
 /// <summary>
 /// <para>Defines the DownBar Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:downBar.</para>
 /// </summary>
 /// <remarks>
@@ -4888,7 +4888,7 @@ public partial class DownBar : StyleEntry
 }
 /// <summary>
 /// <para>Defines the DropLine Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:dropLine.</para>
 /// </summary>
 /// <remarks>
@@ -4958,7 +4958,7 @@ public partial class DropLine : StyleEntry
 }
 /// <summary>
 /// <para>Defines the ErrorBar Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:errorBar.</para>
 /// </summary>
 /// <remarks>
@@ -5028,7 +5028,7 @@ public partial class ErrorBar : StyleEntry
 }
 /// <summary>
 /// <para>Defines the Floor Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:floor.</para>
 /// </summary>
 /// <remarks>
@@ -5098,7 +5098,7 @@ public partial class Floor : StyleEntry
 }
 /// <summary>
 /// <para>Defines the GridlineMajor Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:gridlineMajor.</para>
 /// </summary>
 /// <remarks>
@@ -5168,7 +5168,7 @@ public partial class GridlineMajor : StyleEntry
 }
 /// <summary>
 /// <para>Defines the GridlineMinor Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:gridlineMinor.</para>
 /// </summary>
 /// <remarks>
@@ -5238,7 +5238,7 @@ public partial class GridlineMinor : StyleEntry
 }
 /// <summary>
 /// <para>Defines the HiLoLine Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:hiLoLine.</para>
 /// </summary>
 /// <remarks>
@@ -5308,7 +5308,7 @@ public partial class HiLoLine : StyleEntry
 }
 /// <summary>
 /// <para>Defines the LeaderLine Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:leaderLine.</para>
 /// </summary>
 /// <remarks>
@@ -5378,7 +5378,7 @@ public partial class LeaderLine : StyleEntry
 }
 /// <summary>
 /// <para>Defines the LegendStyle Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:legend.</para>
 /// </summary>
 /// <remarks>
@@ -5448,7 +5448,7 @@ public partial class LegendStyle : StyleEntry
 }
 /// <summary>
 /// <para>Defines the PlotArea Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:plotArea.</para>
 /// </summary>
 /// <remarks>
@@ -5518,7 +5518,7 @@ public partial class PlotArea : StyleEntry
 }
 /// <summary>
 /// <para>Defines the PlotArea3D Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:plotArea3D.</para>
 /// </summary>
 /// <remarks>
@@ -5588,7 +5588,7 @@ public partial class PlotArea3D : StyleEntry
 }
 /// <summary>
 /// <para>Defines the SeriesAxis Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:seriesAxis.</para>
 /// </summary>
 /// <remarks>
@@ -5658,7 +5658,7 @@ public partial class SeriesAxis : StyleEntry
 }
 /// <summary>
 /// <para>Defines the SeriesLine Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:seriesLine.</para>
 /// </summary>
 /// <remarks>
@@ -5728,7 +5728,7 @@ public partial class SeriesLine : StyleEntry
 }
 /// <summary>
 /// <para>Defines the TitleStyle Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:title.</para>
 /// </summary>
 /// <remarks>
@@ -5798,7 +5798,7 @@ public partial class TitleStyle : StyleEntry
 }
 /// <summary>
 /// <para>Defines the TrendlineStyle Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:trendline.</para>
 /// </summary>
 /// <remarks>
@@ -5868,7 +5868,7 @@ public partial class TrendlineStyle : StyleEntry
 }
 /// <summary>
 /// <para>Defines the TrendlineLabel Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:trendlineLabel.</para>
 /// </summary>
 /// <remarks>
@@ -5938,7 +5938,7 @@ public partial class TrendlineLabel : StyleEntry
 }
 /// <summary>
 /// <para>Defines the UpBar Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:upBar.</para>
 /// </summary>
 /// <remarks>
@@ -6008,7 +6008,7 @@ public partial class UpBar : StyleEntry
 }
 /// <summary>
 /// <para>Defines the ValueAxis Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:valueAxis.</para>
 /// </summary>
 /// <remarks>
@@ -6078,7 +6078,7 @@ public partial class ValueAxis : StyleEntry
 }
 /// <summary>
 /// <para>Defines the Wall Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:wall.</para>
 /// </summary>
 /// <remarks>
@@ -6394,7 +6394,7 @@ if( 65 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the MarkerLayoutProperties Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:dataPointMarkerLayout.</para>
 /// </summary>
 

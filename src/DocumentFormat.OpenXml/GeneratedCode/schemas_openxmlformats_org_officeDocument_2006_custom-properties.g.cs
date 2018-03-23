@@ -22,6 +22,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     [ChildElementInfo(typeof(CustomDocumentProperty))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Properties : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 10903;
@@ -118,6 +119,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Custom File Property.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is op:property.</para>
 /// </summary>
 /// <remarks>
@@ -195,6 +197,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTClassId))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTClipboardData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CustomDocumentProperty : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10904;

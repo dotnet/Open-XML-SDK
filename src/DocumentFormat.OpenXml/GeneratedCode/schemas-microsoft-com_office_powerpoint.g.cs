@@ -10,10 +10,12 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
 {
 /// <summary>
 /// <para>Ink Annotation Flag.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is pvml:iscomment.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class InkAnnotationFlag : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12575;
@@ -47,10 +49,12 @@ public partial class InkAnnotationFlag : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>VML Diagram Text.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is pvml:textdata.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TextData : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12576;

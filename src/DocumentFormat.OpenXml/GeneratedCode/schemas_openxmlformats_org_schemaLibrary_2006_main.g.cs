@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
 {
 /// <summary>
 /// <para>Embedded Custom XML Schema Supplementary Data.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is sl:schemaLibrary.</para>
 /// </summary>
 /// <remarks>
@@ -21,6 +22,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
 
     [ChildElementInfo(typeof(Schema))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SchemaLibrary : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12468;
@@ -88,10 +90,12 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Custom XML Schema Reference.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is sl:schema.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Schema : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12469;

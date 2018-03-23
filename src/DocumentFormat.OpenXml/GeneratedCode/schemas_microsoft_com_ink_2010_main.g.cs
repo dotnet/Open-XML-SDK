@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
 {
 /// <summary>
 /// <para>Defines the ContextNode Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is msink:context.</para>
 /// </summary>
 /// <remarks>
@@ -25,6 +26,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     [ChildElementInfo(typeof(SourceLink))]
     [ChildElementInfo(typeof(DestinationLink))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ContextNode : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12758;
@@ -405,10 +407,12 @@ if( 0 == namespaceId && "shapeGeometry" == name)
 }
 /// <summary>
 /// <para>Defines the ContextNodeProperty Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is msink:property.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ContextNodeProperty : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12759;
@@ -482,10 +486,12 @@ public partial class ContextNodeProperty : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Defines the SourceLink Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is msink:sourceLink.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SourceLink : ContextLinkType
 {
     internal const int ElementTypeIdConst = 12760;
@@ -511,10 +517,12 @@ public partial class SourceLink : ContextLinkType
 }
 /// <summary>
 /// <para>Defines the DestinationLink Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is msink:destinationLink.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DestinationLink : ContextLinkType
 {
     internal const int ElementTypeIdConst = 12761;

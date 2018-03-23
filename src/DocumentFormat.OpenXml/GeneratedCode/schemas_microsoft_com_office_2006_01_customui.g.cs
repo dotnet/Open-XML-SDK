@@ -10,10 +10,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
 {
 /// <summary>
 /// <para>Defines the UnsizedControlClone Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:control.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UnsizedControlClone : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12644;
@@ -424,10 +426,12 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the UnsizedButton Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:button.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UnsizedButton : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12645;
@@ -894,10 +898,12 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the CheckBox Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:checkBox.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CheckBox : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12646;
@@ -1280,6 +1286,7 @@ if( 0 == namespaceId && "getKeytip" == name)
 }
 /// <summary>
 /// <para>Defines the UnsizedGallery Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:gallery.</para>
 /// </summary>
 /// <remarks>
@@ -1293,6 +1300,7 @@ if( 0 == namespaceId && "getKeytip" == name)
     [ChildElementInfo(typeof(Item))]
     [ChildElementInfo(typeof(UnsizedButton))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UnsizedGallery : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12647;
@@ -2048,10 +2056,12 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the UnsizedToggleButton Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:toggleButton.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UnsizedToggleButton : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12648;
@@ -2532,10 +2542,12 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the MenuSeparator Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:menuSeparator.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MenuSeparator : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12649;
@@ -2694,6 +2706,7 @@ if( 0 == namespaceId && "getTitle" == name)
 }
 /// <summary>
 /// <para>Defines the UnsizedSplitButton Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:splitButton.</para>
 /// </summary>
 /// <remarks>
@@ -2709,6 +2722,7 @@ if( 0 == namespaceId && "getTitle" == name)
     [ChildElementInfo(typeof(VisibleToggleButton))]
     [ChildElementInfo(typeof(UnsizedMenu))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UnsizedSplitButton : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12650;
@@ -3019,6 +3033,7 @@ if( 0 == namespaceId && "getShowLabel" == name)
 }
 /// <summary>
 /// <para>Defines the UnsizedMenu Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:menu.</para>
 /// </summary>
 /// <remarks>
@@ -3046,6 +3061,7 @@ if( 0 == namespaceId && "getShowLabel" == name)
     [ChildElementInfo(typeof(UnsizedMenu))]
     [ChildElementInfo(typeof(UnsizedDynamicMenu))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UnsizedMenu : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12651;
@@ -3570,10 +3586,12 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the UnsizedDynamicMenu Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:dynamicMenu.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UnsizedDynamicMenu : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12652;
@@ -4054,6 +4072,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the SplitButtonWithTitle Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:splitButton.</para>
 /// </summary>
 /// <remarks>
@@ -4069,6 +4088,7 @@ if( 0 == namespaceId && "getShowImage" == name)
     [ChildElementInfo(typeof(VisibleToggleButton))]
     [ChildElementInfo(typeof(MenuWithTitle))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SplitButtonWithTitle : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12653;
@@ -4379,6 +4399,7 @@ if( 0 == namespaceId && "getShowLabel" == name)
 }
 /// <summary>
 /// <para>Defines the MenuWithTitle Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:menu.</para>
 /// </summary>
 /// <remarks>
@@ -4406,6 +4427,7 @@ if( 0 == namespaceId && "getShowLabel" == name)
     [ChildElementInfo(typeof(MenuWithTitle))]
     [ChildElementInfo(typeof(UnsizedDynamicMenu))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MenuWithTitle : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12654;
@@ -4930,10 +4952,12 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the ControlClone Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:control.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ControlClone : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12655;
@@ -5400,10 +5424,12 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the TextLabel Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:labelControl.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TextLabel : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12656;
@@ -5730,10 +5756,12 @@ if( 0 == namespaceId && "getShowLabel" == name)
 }
 /// <summary>
 /// <para>Defines the Button Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:button.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Button : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12657;
@@ -6228,10 +6256,12 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the ToggleButton Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:toggleButton.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ToggleButton : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12658;
@@ -6740,10 +6770,12 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the EditBox Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:editBox.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EditBox : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12659;
@@ -7224,6 +7256,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the ComboBox Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:comboBox.</para>
 /// </summary>
 /// <remarks>
@@ -7235,6 +7268,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 
     [ChildElementInfo(typeof(Item))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ComboBox : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12660;
@@ -7861,6 +7895,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the DropDown Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:dropDown.</para>
 /// </summary>
 /// <remarks>
@@ -7874,6 +7909,7 @@ if( 0 == namespaceId && "getShowImage" == name)
     [ChildElementInfo(typeof(Item))]
     [ChildElementInfo(typeof(UnsizedButton))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DropDown : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12661;
@@ -8503,6 +8539,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the Gallery Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:gallery.</para>
 /// </summary>
 /// <remarks>
@@ -8516,6 +8553,7 @@ if( 0 == namespaceId && "getShowImage" == name)
     [ChildElementInfo(typeof(Item))]
     [ChildElementInfo(typeof(UnsizedButton))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Gallery : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12662;
@@ -9299,6 +9337,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the Menu Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:menu.</para>
 /// </summary>
 /// <remarks>
@@ -9326,6 +9365,7 @@ if( 0 == namespaceId && "getShowImage" == name)
     [ChildElementInfo(typeof(UnsizedMenu))]
     [ChildElementInfo(typeof(UnsizedDynamicMenu))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Menu : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12663;
@@ -9878,10 +9918,12 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the DynamicMenu Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:dynamicMenu.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DynamicMenu : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12664;
@@ -10390,6 +10432,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the SplitButton Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:splitButton.</para>
 /// </summary>
 /// <remarks>
@@ -10405,6 +10448,7 @@ if( 0 == namespaceId && "getShowImage" == name)
     [ChildElementInfo(typeof(VisibleToggleButton))]
     [ChildElementInfo(typeof(UnsizedMenu))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SplitButton : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12665;
@@ -10743,6 +10787,7 @@ if( 0 == namespaceId && "getShowLabel" == name)
 }
 /// <summary>
 /// <para>Defines the Box Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:box.</para>
 /// </summary>
 /// <remarks>
@@ -10780,6 +10825,7 @@ if( 0 == namespaceId && "getShowLabel" == name)
     [ChildElementInfo(typeof(Box))]
     [ChildElementInfo(typeof(ButtonGroup))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Box : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12666;
@@ -11025,6 +11071,7 @@ if( 0 == namespaceId && "boxStyle" == name)
 }
 /// <summary>
 /// <para>Defines the ButtonGroup Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:buttonGroup.</para>
 /// </summary>
 /// <remarks>
@@ -11048,6 +11095,7 @@ if( 0 == namespaceId && "boxStyle" == name)
     [ChildElementInfo(typeof(UnsizedDynamicMenu))]
     [ChildElementInfo(typeof(UnsizedSplitButton))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ButtonGroup : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12667;
@@ -11258,6 +11306,7 @@ if( 0 == namespaceId && "insertBeforeQ" == name)
 }
 /// <summary>
 /// <para>Defines the MenuRoot Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:menu.</para>
 /// </summary>
 /// <remarks>
@@ -11285,6 +11334,7 @@ if( 0 == namespaceId && "insertBeforeQ" == name)
     [ChildElementInfo(typeof(UnsizedMenu))]
     [ChildElementInfo(typeof(UnsizedDynamicMenu))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MenuRoot : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12668;
@@ -11431,6 +11481,7 @@ if( 0 == namespaceId && "itemSize" == name)
 }
 /// <summary>
 /// <para>Defines the CustomUI Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:customUI.</para>
 /// </summary>
 /// <remarks>
@@ -11444,6 +11495,7 @@ if( 0 == namespaceId && "itemSize" == name)
     [ChildElementInfo(typeof(RepurposedCommands))]
     [ChildElementInfo(typeof(Ribbon))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CustomUI : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 12669;
@@ -11588,10 +11640,12 @@ if( 0 == namespaceId && "loadImage" == name)
 }
 /// <summary>
 /// <para>Defines the Item Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:item.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Item : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12670;
@@ -11722,10 +11776,12 @@ if( 0 == namespaceId && "supertip" == name)
 }
 /// <summary>
 /// <para>Defines the VisibleButton Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:button.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VisibleButton : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12671;
@@ -12164,10 +12220,12 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the VisibleToggleButton Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:toggleButton.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VisibleToggleButton : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12672;
@@ -12620,10 +12678,12 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the VerticalSeparator Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:separator.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VerticalSeparator : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12673;
@@ -12782,6 +12842,7 @@ if( 0 == namespaceId && "insertBeforeQ" == name)
 }
 /// <summary>
 /// <para>Defines the DialogBoxLauncher Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:dialogBoxLauncher.</para>
 /// </summary>
 /// <remarks>
@@ -12793,6 +12854,7 @@ if( 0 == namespaceId && "insertBeforeQ" == name)
 
     [ChildElementInfo(typeof(UnsizedButton))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DialogBoxLauncher : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12674;
@@ -12881,6 +12943,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the Group Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:group.</para>
 /// </summary>
 /// <remarks>
@@ -12922,6 +12985,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(VerticalSeparator))]
     [ChildElementInfo(typeof(DialogBoxLauncher))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Group : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12675;
@@ -13341,10 +13405,12 @@ if( 0 == namespaceId && "getKeytip" == name)
 }
 /// <summary>
 /// <para>Defines the QuickAccessToolbarControlClone Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:control.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12676;
@@ -13811,6 +13877,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 }
 /// <summary>
 /// <para>Defines the SharedQatControls Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:sharedControls.</para>
 /// </summary>
 /// <remarks>
@@ -13823,6 +13890,7 @@ if( 0 == namespaceId && "getShowImage" == name)
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SharedQatControls : QatItemsType
 {
     internal const int ElementTypeIdConst = 12677;
@@ -13873,6 +13941,7 @@ public partial class SharedQatControls : QatItemsType
 }
 /// <summary>
 /// <para>Defines the DocumentSpecificQuickAccessToolbarControls Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:documentControls.</para>
 /// </summary>
 /// <remarks>
@@ -13885,6 +13954,7 @@ public partial class SharedQatControls : QatItemsType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DocumentSpecificQuickAccessToolbarControls : QatItemsType
 {
     internal const int ElementTypeIdConst = 12678;
@@ -14007,6 +14077,7 @@ if( 34 == namespaceId && "separator" == name)
 }
 /// <summary>
 /// <para>Defines the Tab Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:tab.</para>
 /// </summary>
 /// <remarks>
@@ -14018,6 +14089,7 @@ if( 34 == namespaceId && "separator" == name)
 
     [ChildElementInfo(typeof(Group))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Tab : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12679;
@@ -14294,6 +14366,7 @@ if( 0 == namespaceId && "getKeytip" == name)
 }
 /// <summary>
 /// <para>Defines the ContextualTabSet Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:tabSet.</para>
 /// </summary>
 /// <remarks>
@@ -14305,6 +14378,7 @@ if( 0 == namespaceId && "getKeytip" == name)
 
     [ChildElementInfo(typeof(Tab))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ContextualTabSet : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12680;
@@ -14427,10 +14501,12 @@ if( 0 == namespaceId && "getVisible" == name)
 }
 /// <summary>
 /// <para>Defines the RepurposedCommand Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:command.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RepurposedCommand : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12681;
@@ -14533,6 +14609,7 @@ if( 0 == namespaceId && "idMso" == name)
 }
 /// <summary>
 /// <para>Defines the OfficeMenu Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:officeMenu.</para>
 /// </summary>
 /// <remarks>
@@ -14560,6 +14637,7 @@ if( 0 == namespaceId && "idMso" == name)
     [ChildElementInfo(typeof(MenuWithTitle))]
     [ChildElementInfo(typeof(UnsizedDynamicMenu))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class OfficeMenu : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12682;
@@ -14651,6 +14729,7 @@ if( 34 == namespaceId && "dynamicMenu" == name)
 }
 /// <summary>
 /// <para>Defines the QuickAccessToolbar Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:qat.</para>
 /// </summary>
 /// <remarks>
@@ -14664,6 +14743,7 @@ if( 34 == namespaceId && "dynamicMenu" == name)
     [ChildElementInfo(typeof(SharedQatControls))]
     [ChildElementInfo(typeof(DocumentSpecificQuickAccessToolbarControls))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class QuickAccessToolbar : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12683;
@@ -14767,6 +14847,7 @@ if( 34 == namespaceId && "documentControls" == name)
 }
 /// <summary>
 /// <para>Defines the Tabs Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:tabs.</para>
 /// </summary>
 /// <remarks>
@@ -14778,6 +14859,7 @@ if( 34 == namespaceId && "documentControls" == name)
 
     [ChildElementInfo(typeof(Tab))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Tabs : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12684;
@@ -14845,6 +14927,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the ContextualTabSets Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:contextualTabs.</para>
 /// </summary>
 /// <remarks>
@@ -14856,6 +14939,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(ContextualTabSet))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ContextualTabSets : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12685;
@@ -14923,6 +15007,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the RepurposedCommands Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:commands.</para>
 /// </summary>
 /// <remarks>
@@ -14934,6 +15019,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(RepurposedCommand))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RepurposedCommands : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12686;
@@ -15001,6 +15087,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the Ribbon Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso:ribbon.</para>
 /// </summary>
 /// <remarks>
@@ -15018,6 +15105,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Tabs))]
     [ChildElementInfo(typeof(ContextualTabSets))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Ribbon : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12687;

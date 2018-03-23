@@ -11,6 +11,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
 {
 /// <summary>
 /// <para>Defines the ContentTypeSchema Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ct:contentTypeSchema.</para>
 /// </summary>
 /// <remarks>
@@ -20,6 +21,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
 /// </remarks>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ContentTypeSchema : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12705;

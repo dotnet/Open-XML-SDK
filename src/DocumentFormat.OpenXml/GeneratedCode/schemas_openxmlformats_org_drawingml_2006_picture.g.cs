@@ -12,6 +12,7 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
 {
 /// <summary>
 /// <para>Picture.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is pic:pic.</para>
 /// </summary>
 /// <remarks>
@@ -31,6 +32,7 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Pictures.ShapeStyle), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Pictures.OfficeArtExtensionList), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Picture : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10780;
@@ -179,6 +181,7 @@ if( 50 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Non-Visual Drawing Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is pic:cNvPr.</para>
 /// </summary>
 /// <remarks>
@@ -194,6 +197,7 @@ if( 50 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10781;
@@ -395,6 +399,7 @@ if( 0 == namespaceId && "title" == name)
 }
 /// <summary>
 /// <para>Non-Visual Picture Drawing Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is pic:cNvPicPr.</para>
 /// </summary>
 /// <remarks>
@@ -408,6 +413,7 @@ if( 0 == namespaceId && "title" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PictureLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10782;
@@ -538,6 +544,7 @@ if( 10 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Non-Visual Picture Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is pic:nvPicPr.</para>
 /// </summary>
 /// <remarks>
@@ -551,6 +558,7 @@ if( 10 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(NonVisualDrawingProperties))]
     [ChildElementInfo(typeof(NonVisualPictureDrawingProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NonVisualPictureProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10783;
@@ -654,6 +662,7 @@ if( 17 == namespaceId && "cNvPicPr" == name)
 }
 /// <summary>
 /// <para>Picture Fill.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is pic:blipFill.</para>
 /// </summary>
 /// <remarks>
@@ -671,6 +680,7 @@ if( 17 == namespaceId && "cNvPicPr" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Tile))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Stretch))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BlipFill : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10784;
@@ -821,6 +831,7 @@ if( 0 == namespaceId && "rotWithShape" == name)
 }
 /// <summary>
 /// <para>Shape Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is pic:spPr.</para>
 /// </summary>
 /// <remarks>
@@ -860,6 +871,7 @@ if( 0 == namespaceId && "rotWithShape" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10785;

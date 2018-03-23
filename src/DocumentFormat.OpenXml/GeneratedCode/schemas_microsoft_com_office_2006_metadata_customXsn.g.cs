@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
 {
 /// <summary>
 /// <para>Defines the CustomXsn Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ntns:customXsn.</para>
 /// </summary>
 /// <remarks>
@@ -27,6 +28,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     [ChildElementInfo(typeof(OpenByDefault))]
     [ChildElementInfo(typeof(Scope))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CustomXsn : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12706;
@@ -160,10 +162,12 @@ if( 39 == namespaceId && "xsnScope" == name)
 }
 /// <summary>
 /// <para>Defines the XsnLocation Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ntns:xsnLocation.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class XsnLocation : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12707;
@@ -202,10 +206,12 @@ public partial class XsnLocation : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Defines the CachedView Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ntns:cached.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CachedView : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12708;
@@ -244,10 +250,12 @@ public partial class CachedView : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Defines the OpenByDefault Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ntns:openByDefault.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class OpenByDefault : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12709;
@@ -286,10 +294,12 @@ public partial class OpenByDefault : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Defines the Scope Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ntns:xsnScope.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Scope : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12710;

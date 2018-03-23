@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
 {
 /// <summary>
 /// <para>Defines the CustomPropertyEditors Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdip:customPropertyEditors.</para>
 /// </summary>
 /// <remarks>
@@ -25,6 +26,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     [ChildElementInfo(typeof(DefaultPropertyEditorNamespace))]
     [ChildElementInfo(typeof(CustomPropertyEditor))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CustomPropertyEditors : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12699;
@@ -131,10 +133,12 @@ if( 37 == namespaceId && "customPropertyEditor" == name)
 }
 /// <summary>
 /// <para>Defines the PropertyEditorNamespace Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdip:XMLNamespace.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PropertyEditorNamespace : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12700;
@@ -173,10 +177,12 @@ public partial class PropertyEditorNamespace : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Defines the DefaultPropertyEditorNamespace Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdip:defaultPropertyEditorNamespace.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DefaultPropertyEditorNamespace : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12703;
@@ -215,10 +221,12 @@ public partial class DefaultPropertyEditorNamespace : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Defines the XsnFileLocation Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdip:XSNLocation.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class XsnFileLocation : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12701;
@@ -265,10 +273,12 @@ public partial class XsnFileLocation : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Defines the ShowOnOpen Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdip:showOnOpen.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShowOnOpen : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12702;
@@ -315,6 +325,7 @@ public partial class ShowOnOpen : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Defines the CustomPropertyEditor Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdip:customPropertyEditor.</para>
 /// </summary>
 /// <remarks>
@@ -328,6 +339,7 @@ public partial class ShowOnOpen : OpenXmlLeafTextElement
     [ChildElementInfo(typeof(PropertyEditorNamespace))]
     [ChildElementInfo(typeof(XsnFileLocation))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CustomPropertyEditor : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12704;

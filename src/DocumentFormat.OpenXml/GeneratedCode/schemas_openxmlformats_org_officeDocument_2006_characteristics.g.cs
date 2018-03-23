@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
 {
 /// <summary>
 /// <para>Set of Additional Characteristics.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ac:additionalCharacteristics.</para>
 /// </summary>
 /// <remarks>
@@ -21,6 +22,7 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
 
     [ChildElementInfo(typeof(Characteristic))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AdditionalCharacteristicsInfo : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 10822;
@@ -88,10 +90,12 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Single Characteristic.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ac:characteristic.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Characteristic : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10823;

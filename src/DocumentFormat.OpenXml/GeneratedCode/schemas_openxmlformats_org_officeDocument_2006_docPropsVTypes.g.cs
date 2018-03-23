@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
 {
 /// <summary>
 /// <para>Variant.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:variant.</para>
 /// </summary>
 /// <remarks>
@@ -89,6 +90,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     [ChildElementInfo(typeof(VTClassId))]
     [ChildElementInfo(typeof(VTClipboardData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Variant : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11029;
@@ -687,6 +689,7 @@ if( 5 == namespaceId && "cf" == name)
 }
 /// <summary>
 /// <para>Vector.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:vector.</para>
 /// </summary>
 /// <remarks>
@@ -738,6 +741,7 @@ if( 5 == namespaceId && "cf" == name)
     [ChildElementInfo(typeof(VTClassId))]
     [ChildElementInfo(typeof(VTClipboardData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTVector : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11030;
@@ -906,6 +910,7 @@ if( 0 == namespaceId && "size" == name)
 }
 /// <summary>
 /// <para>Array.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:array.</para>
 /// </summary>
 /// <remarks>
@@ -949,6 +954,7 @@ if( 0 == namespaceId && "size" == name)
     [ChildElementInfo(typeof(VTError))]
     [ChildElementInfo(typeof(VTCurrency))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTArray : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11031;
@@ -1119,10 +1125,12 @@ if( 0 == namespaceId && "baseType" == name)
 }
 /// <summary>
 /// <para>Binary Blob.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:blob.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTBlob : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11032;
@@ -1161,10 +1169,12 @@ public partial class VTBlob : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Binary Blob Object.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:oblob.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTOBlob : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11033;
@@ -1203,10 +1213,12 @@ public partial class VTOBlob : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Binary Stream.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:stream.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTStreamData : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11057;
@@ -1245,10 +1257,12 @@ public partial class VTStreamData : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Binary Stream Object.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:ostream.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTOStreamData : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11058;
@@ -1287,10 +1301,12 @@ public partial class VTOStreamData : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Binary Storage.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:storage.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTStorage : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11059;
@@ -1329,10 +1345,12 @@ public partial class VTStorage : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Binary Storage Object.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:ostorage.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTOStorage : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11060;
@@ -1371,10 +1389,12 @@ public partial class VTOStorage : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Empty.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:empty.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTEmpty : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11034;
@@ -1408,10 +1428,12 @@ public partial class VTEmpty : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Null.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:null.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTNull : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11035;
@@ -1445,10 +1467,12 @@ public partial class VTNull : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>1-Byte Signed Integer.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:i1.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTByte : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11036;
@@ -1495,10 +1519,12 @@ public partial class VTByte : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>2-Byte Signed Integer.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:i2.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTShort : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11037;
@@ -1545,10 +1571,12 @@ public partial class VTShort : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>4-Byte Signed Integer.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:i4.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTInt32 : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11038;
@@ -1587,10 +1615,12 @@ public partial class VTInt32 : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Integer.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:int.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTInteger : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11040;
@@ -1629,10 +1659,12 @@ public partial class VTInteger : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>8-Byte Signed Integer.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:i8.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTInt64 : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11039;
@@ -1679,10 +1711,12 @@ public partial class VTInt64 : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>1-Byte Unsigned Integer.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:ui1.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTUnsignedByte : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11041;
@@ -1729,10 +1763,12 @@ public partial class VTUnsignedByte : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>2-Byte Unsigned Integer.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:ui2.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTUnsignedShort : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11042;
@@ -1779,10 +1815,12 @@ public partial class VTUnsignedShort : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>4-Byte Unsigned Integer.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:ui4.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTUnsignedInt32 : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11043;
@@ -1821,10 +1859,12 @@ public partial class VTUnsignedInt32 : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Unsigned Integer.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:uint.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTUnsignedInteger : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11045;
@@ -1863,10 +1903,12 @@ public partial class VTUnsignedInteger : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>8-Byte Unsigned Integer.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:ui8.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTUnsignedInt64 : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11044;
@@ -1913,10 +1955,12 @@ public partial class VTUnsignedInt64 : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>4-Byte Real Number.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:r4.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTFloat : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11046;
@@ -1963,10 +2007,12 @@ public partial class VTFloat : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>8-Byte Real Number.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:r8.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTDouble : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11047;
@@ -2013,10 +2059,12 @@ public partial class VTDouble : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Decimal.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:decimal.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTDecimal : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11048;
@@ -2063,10 +2111,12 @@ public partial class VTDecimal : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>LPSTR.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:lpstr.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTLPSTR : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11049;
@@ -2105,10 +2155,12 @@ public partial class VTLPSTR : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>LPWSTR.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:lpwstr.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTLPWSTR : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11050;
@@ -2147,10 +2199,12 @@ public partial class VTLPWSTR : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Basic String.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:bstr.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTBString : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11051;
@@ -2189,10 +2243,12 @@ public partial class VTBString : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Date and Time.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:date.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTDate : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11052;
@@ -2231,10 +2287,12 @@ public partial class VTDate : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>File Time.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:filetime.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTFileTime : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11053;
@@ -2273,10 +2331,12 @@ public partial class VTFileTime : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Boolean.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:bool.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTBool : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11054;
@@ -2323,10 +2383,12 @@ public partial class VTBool : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Currency.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:cy.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTCurrency : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11055;
@@ -2373,10 +2435,12 @@ public partial class VTCurrency : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Error Status Code.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:error.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTError : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11056;
@@ -2423,10 +2487,12 @@ public partial class VTError : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Binary Versioned Stream.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:vstream.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTVStreamData : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11061;
@@ -2500,10 +2566,12 @@ public partial class VTVStreamData : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Class ID.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:clsid.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTClassId : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11062;
@@ -2550,10 +2618,12 @@ public partial class VTClassId : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Clipboard Data.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:cf.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTClipboardData : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11063;

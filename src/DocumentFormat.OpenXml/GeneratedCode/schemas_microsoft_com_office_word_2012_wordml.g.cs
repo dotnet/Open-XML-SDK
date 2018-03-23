@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
 {
 /// <summary>
 /// <para>Defines the Color Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:color.</para>
 /// </summary>
 
@@ -127,7 +127,7 @@ if( 23 == namespaceId && "themeShade" == name)
 }
 /// <summary>
 /// <para>Defines the DataBinding Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:dataBinding.</para>
 /// </summary>
 
@@ -227,7 +227,7 @@ if( 23 == namespaceId && "storeItemID" == name)
 }
 /// <summary>
 /// <para>Defines the Appearance Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:appearance.</para>
 /// </summary>
 
@@ -511,7 +511,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the SdtRepeatedSection Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:repeatingSection.</para>
 /// </summary>
 /// <remarks>
@@ -629,7 +629,7 @@ if( 69 == namespaceId && "doNotAllowInsertDeleteSection" == name)
 }
 /// <summary>
 /// <para>Defines the SdtRepeatedSectionItem Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:repeatingSectionItem.</para>
 /// </summary>
 
@@ -668,7 +668,7 @@ public partial class SdtRepeatedSectionItem : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the ChartTrackingRefBased Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:chartTrackingRefBased.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -699,7 +699,7 @@ public partial class ChartTrackingRefBased : OnOffType
 }
 /// <summary>
 /// <para>Defines the DefaultCollapsed Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:collapsed.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -730,7 +730,7 @@ public partial class DefaultCollapsed : OnOffType
 }
 /// <summary>
 /// <para>Defines the WebExtensionLinked Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:webExtensionLinked.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -761,7 +761,7 @@ public partial class WebExtensionLinked : OnOffType
 }
 /// <summary>
 /// <para>Defines the WebExtensionCreated Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:webExtensionCreated.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -792,7 +792,7 @@ public partial class WebExtensionCreated : OnOffType
 }
 /// <summary>
 /// <para>Defines the DoNotAllowInsertDeleteSection Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:doNotAllowInsertDeleteSection.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -873,7 +873,7 @@ public abstract partial class OnOffType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the PersistentDocumentId Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:docId.</para>
 /// </summary>
 
@@ -941,7 +941,7 @@ public partial class PersistentDocumentId : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the FootnoteColumns Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:footnoteColumns.</para>
 /// </summary>
 
@@ -1009,7 +1009,7 @@ public partial class FootnoteColumns : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the CommentEx Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:commentEx.</para>
 /// </summary>
 
@@ -1109,7 +1109,7 @@ if( 69 == namespaceId && "done" == name)
 }
 /// <summary>
 /// <para>Defines the Person Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:person.</para>
 /// </summary>
 /// <remarks>
@@ -1255,7 +1255,7 @@ if( 69 == namespaceId && "contact" == name)
 }
 /// <summary>
 /// <para>Defines the PresenceInfo Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:presenceInfo.</para>
 /// </summary>
 
@@ -1339,7 +1339,7 @@ if( 69 == namespaceId && "userId" == name)
 }
 /// <summary>
 /// <para>Defines the SectionTitle Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:sectionTitle.</para>
 /// </summary>
 

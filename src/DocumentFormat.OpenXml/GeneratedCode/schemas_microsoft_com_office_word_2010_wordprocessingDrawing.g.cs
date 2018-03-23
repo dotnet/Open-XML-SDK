@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
 {
 /// <summary>
 /// <para>Defines the PercentagePositionHeightOffset Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp14:pctPosHOffset.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -55,7 +55,7 @@ public partial class PercentagePositionHeightOffset : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Defines the PercentagePositionVerticalOffset Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp14:pctPosVOffset.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -99,7 +99,7 @@ public partial class PercentagePositionVerticalOffset : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Defines the RelativeWidth Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp14:sizeRelH.</para>
 /// </summary>
 /// <remarks>
@@ -227,7 +227,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the RelativeHeight Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp14:sizeRelV.</para>
 /// </summary>
 /// <remarks>
@@ -355,7 +355,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the PercentageWidth Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp14:pctWidth.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -399,7 +399,7 @@ public partial class PercentageWidth : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Defines the PercentageHeight Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp14:pctHeight.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]

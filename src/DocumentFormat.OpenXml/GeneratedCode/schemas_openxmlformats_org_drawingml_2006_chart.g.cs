@@ -14,10 +14,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
 {
 /// <summary>
 /// <para>Number Format.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:numFmt.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NumberingFormat : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10348;
@@ -92,6 +94,7 @@ if( 0 == namespaceId && "sourceLinked" == name)
 }
 /// <summary>
 /// <para>Defines the ChartShapeProperties Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:spPr.</para>
 /// </summary>
 /// <remarks>
@@ -129,6 +132,7 @@ if( 0 == namespaceId && "sourceLinked" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ChartShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10349;
@@ -283,6 +287,7 @@ if( 10 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the TextProperties Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:txPr.</para>
 /// </summary>
 /// <remarks>
@@ -295,6 +300,7 @@ if( 10 == namespaceId && "extLst" == name)
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TextProperties : TextBodyType
 {
     internal const int ElementTypeIdConst = 10350;
@@ -345,6 +351,7 @@ public partial class TextProperties : TextBodyType
 }
 /// <summary>
 /// <para>Rich Text.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:rich.</para>
 /// </summary>
 /// <remarks>
@@ -357,6 +364,7 @@ public partial class TextProperties : TextBodyType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RichText : TextBodyType
 {
     internal const int ElementTypeIdConst = 10533;
@@ -512,10 +520,12 @@ if( 10 == namespaceId && "p" == name)
 }
 /// <summary>
 /// <para>Data Label Position.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:dLblPos.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DataLabelPosition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10351;
@@ -576,10 +586,12 @@ public partial class DataLabelPosition : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Show Legend Key.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:showLegendKey.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShowLegendKey : BooleanType
 {
     internal const int ElementTypeIdConst = 10352;
@@ -605,10 +617,12 @@ public partial class ShowLegendKey : BooleanType
 }
 /// <summary>
 /// <para>Show Value.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:showVal.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShowValue : BooleanType
 {
     internal const int ElementTypeIdConst = 10353;
@@ -634,10 +648,12 @@ public partial class ShowValue : BooleanType
 }
 /// <summary>
 /// <para>Show Category Name.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:showCatName.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShowCategoryName : BooleanType
 {
     internal const int ElementTypeIdConst = 10354;
@@ -663,10 +679,12 @@ public partial class ShowCategoryName : BooleanType
 }
 /// <summary>
 /// <para>Show Series Name.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:showSerName.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShowSeriesName : BooleanType
 {
     internal const int ElementTypeIdConst = 10355;
@@ -692,10 +710,12 @@ public partial class ShowSeriesName : BooleanType
 }
 /// <summary>
 /// <para>Show Percent.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:showPercent.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShowPercent : BooleanType
 {
     internal const int ElementTypeIdConst = 10356;
@@ -721,10 +741,12 @@ public partial class ShowPercent : BooleanType
 }
 /// <summary>
 /// <para>Show Bubble Size.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:showBubbleSize.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShowBubbleSize : BooleanType
 {
     internal const int ElementTypeIdConst = 10357;
@@ -750,10 +772,12 @@ public partial class ShowBubbleSize : BooleanType
 }
 /// <summary>
 /// <para>Show Leader Lines.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:showLeaderLines.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShowLeaderLines : BooleanType
 {
     internal const int ElementTypeIdConst = 10361;
@@ -779,10 +803,12 @@ public partial class ShowLeaderLines : BooleanType
 }
 /// <summary>
 /// <para>Defines the VaryColors Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:varyColors.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VaryColors : BooleanType
 {
     internal const int ElementTypeIdConst = 10367;
@@ -808,10 +834,12 @@ public partial class VaryColors : BooleanType
 }
 /// <summary>
 /// <para>Wireframe.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:wireframe.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Wireframe : BooleanType
 {
     internal const int ElementTypeIdConst = 10376;
@@ -837,10 +865,12 @@ public partial class Wireframe : BooleanType
 }
 /// <summary>
 /// <para>Delete.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:delete.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Delete : BooleanType
 {
     internal const int ElementTypeIdConst = 10381;
@@ -866,10 +896,12 @@ public partial class Delete : BooleanType
 }
 /// <summary>
 /// <para>Overlay.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:overlay.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Overlay : BooleanType
 {
     internal const int ElementTypeIdConst = 10417;
@@ -895,10 +927,12 @@ public partial class Overlay : BooleanType
 }
 /// <summary>
 /// <para>Right Angle Axes.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:rAngAx.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RightAngleAxes : BooleanType
 {
     internal const int ElementTypeIdConst = 10422;
@@ -924,10 +958,12 @@ public partial class RightAngleAxes : BooleanType
 }
 /// <summary>
 /// <para>Show Horizontal Border.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:showHorzBorder.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShowHorizontalBorder : BooleanType
 {
     internal const int ElementTypeIdConst = 10424;
@@ -953,10 +989,12 @@ public partial class ShowHorizontalBorder : BooleanType
 }
 /// <summary>
 /// <para>Show Vertical Border.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:showVertBorder.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShowVerticalBorder : BooleanType
 {
     internal const int ElementTypeIdConst = 10425;
@@ -982,10 +1020,12 @@ public partial class ShowVerticalBorder : BooleanType
 }
 /// <summary>
 /// <para>Show Outline Border.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:showOutline.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShowOutlineBorder : BooleanType
 {
     internal const int ElementTypeIdConst = 10426;
@@ -1011,10 +1051,12 @@ public partial class ShowOutlineBorder : BooleanType
 }
 /// <summary>
 /// <para>Show Legend Keys.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:showKeys.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShowKeys : BooleanType
 {
     internal const int ElementTypeIdConst = 10427;
@@ -1040,10 +1082,12 @@ public partial class ShowKeys : BooleanType
 }
 /// <summary>
 /// <para>Invert if Negative.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:invertIfNegative.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class InvertIfNegative : BooleanType
 {
     internal const int ElementTypeIdConst = 10431;
@@ -1069,10 +1113,12 @@ public partial class InvertIfNegative : BooleanType
 }
 /// <summary>
 /// <para>3D Bubble.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:bubble3D.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Bubble3D : BooleanType
 {
     internal const int ElementTypeIdConst = 10433;
@@ -1098,10 +1144,12 @@ public partial class Bubble3D : BooleanType
 }
 /// <summary>
 /// <para>Display R Squared Value.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:dispRSqr.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DisplayRSquaredValue : BooleanType
 {
     internal const int ElementTypeIdConst = 10443;
@@ -1127,10 +1175,12 @@ public partial class DisplayRSquaredValue : BooleanType
 }
 /// <summary>
 /// <para>Display Equation.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:dispEq.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DisplayEquation : BooleanType
 {
     internal const int ElementTypeIdConst = 10444;
@@ -1156,10 +1206,12 @@ public partial class DisplayEquation : BooleanType
 }
 /// <summary>
 /// <para>No End Cap.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:noEndCap.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NoEndCap : BooleanType
 {
     internal const int ElementTypeIdConst = 10449;
@@ -1185,10 +1237,12 @@ public partial class NoEndCap : BooleanType
 }
 /// <summary>
 /// <para>Apply To Front.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:applyToFront.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ApplyToFront : BooleanType
 {
     internal const int ElementTypeIdConst = 10463;
@@ -1214,10 +1268,12 @@ public partial class ApplyToFront : BooleanType
 }
 /// <summary>
 /// <para>Apply To Sides.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:applyToSides.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ApplyToSides : BooleanType
 {
     internal const int ElementTypeIdConst = 10464;
@@ -1243,10 +1299,12 @@ public partial class ApplyToSides : BooleanType
 }
 /// <summary>
 /// <para>Apply to End.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:applyToEnd.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ApplyToEnd : BooleanType
 {
     internal const int ElementTypeIdConst = 10465;
@@ -1272,10 +1330,12 @@ public partial class ApplyToEnd : BooleanType
 }
 /// <summary>
 /// <para>Auto Title Is Deleted.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:autoTitleDeleted.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AutoTitleDeleted : BooleanType
 {
     internal const int ElementTypeIdConst = 10478;
@@ -1301,10 +1361,12 @@ public partial class AutoTitleDeleted : BooleanType
 }
 /// <summary>
 /// <para>Plot Visible Only.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:plotVisOnly.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PlotVisibleOnly : BooleanType
 {
     internal const int ElementTypeIdConst = 10486;
@@ -1330,10 +1392,12 @@ public partial class PlotVisibleOnly : BooleanType
 }
 /// <summary>
 /// <para>Show Data Labels over Maximum.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:showDLblsOverMax.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShowDataLabelsOverMaximum : BooleanType
 {
     internal const int ElementTypeIdConst = 10488;
@@ -1359,10 +1423,12 @@ public partial class ShowDataLabelsOverMaximum : BooleanType
 }
 /// <summary>
 /// <para>Chart Object.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:chartObject.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ChartObject : BooleanType
 {
     internal const int ElementTypeIdConst = 10489;
@@ -1388,10 +1454,12 @@ public partial class ChartObject : BooleanType
 }
 /// <summary>
 /// <para>Data Cannot Be Changed.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:data.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Data : BooleanType
 {
     internal const int ElementTypeIdConst = 10490;
@@ -1417,10 +1485,12 @@ public partial class Data : BooleanType
 }
 /// <summary>
 /// <para>Formatting.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:formatting.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Formatting : BooleanType
 {
     internal const int ElementTypeIdConst = 10491;
@@ -1446,10 +1516,12 @@ public partial class Formatting : BooleanType
 }
 /// <summary>
 /// <para>Selection.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:selection.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Selection : BooleanType
 {
     internal const int ElementTypeIdConst = 10492;
@@ -1475,10 +1547,12 @@ public partial class Selection : BooleanType
 }
 /// <summary>
 /// <para>User Interface.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:userInterface.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UserInterface : BooleanType
 {
     internal const int ElementTypeIdConst = 10493;
@@ -1504,10 +1578,12 @@ public partial class UserInterface : BooleanType
 }
 /// <summary>
 /// <para>Update Automatically.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:autoUpdate.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AutoUpdate : BooleanType
 {
     internal const int ElementTypeIdConst = 10500;
@@ -1533,10 +1609,12 @@ public partial class AutoUpdate : BooleanType
 }
 /// <summary>
 /// <para>Defines the Smooth Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:smooth.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Smooth : BooleanType
 {
     internal const int ElementTypeIdConst = 10585;
@@ -1562,10 +1640,12 @@ public partial class Smooth : BooleanType
 }
 /// <summary>
 /// <para>Defines the ShowMarker Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:marker.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShowMarker : BooleanType
 {
     internal const int ElementTypeIdConst = 10600;
@@ -1591,10 +1671,12 @@ public partial class ShowMarker : BooleanType
 }
 /// <summary>
 /// <para>Defines the ShowNegativeBubbles Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:showNegBubbles.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShowNegativeBubbles : BooleanType
 {
     internal const int ElementTypeIdConst = 10617;
@@ -1620,10 +1702,12 @@ public partial class ShowNegativeBubbles : BooleanType
 }
 /// <summary>
 /// <para>Defines the AutoLabeled Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:auto.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AutoLabeled : BooleanType
 {
     internal const int ElementTypeIdConst = 10622;
@@ -1649,10 +1733,12 @@ public partial class AutoLabeled : BooleanType
 }
 /// <summary>
 /// <para>Defines the NoMultiLevelLabels Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:noMultiLvlLbl.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NoMultiLevelLabels : BooleanType
 {
     internal const int ElementTypeIdConst = 10627;
@@ -1678,10 +1764,12 @@ public partial class NoMultiLevelLabels : BooleanType
 }
 /// <summary>
 /// <para>Defines the Date1904 Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:date1904.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Date1904 : BooleanType
 {
     internal const int ElementTypeIdConst = 10639;
@@ -1707,10 +1795,12 @@ public partial class Date1904 : BooleanType
 }
 /// <summary>
 /// <para>Defines the RoundedCorners Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:roundedCorners.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RoundedCorners : BooleanType
 {
     internal const int ElementTypeIdConst = 10641;
@@ -1784,10 +1874,12 @@ public abstract partial class BooleanType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Separator.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:separator.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Separator : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10358;
@@ -1826,10 +1918,12 @@ public partial class Separator : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Trendline Name.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:name.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TrendlineName : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10436;
@@ -1868,10 +1962,12 @@ public partial class TrendlineName : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Defines the Formula Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:f.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Formula : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10570;
@@ -1910,6 +2006,7 @@ public partial class Formula : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Layout.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:layout.</para>
 /// </summary>
 /// <remarks>
@@ -1923,6 +2020,7 @@ public partial class Formula : OpenXmlLeafTextElement
     [ChildElementInfo(typeof(ManualLayout))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Layout : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10359;
@@ -2026,6 +2124,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the ChartText Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:tx.</para>
 /// </summary>
 /// <remarks>
@@ -2041,6 +2140,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(RichText))]
     [ChildElementInfo(typeof(StringLiteral))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ChartText : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10360;
@@ -2159,6 +2259,7 @@ if( 11 == namespaceId && "strLit" == name)
 }
 /// <summary>
 /// <para>Leader Lines.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:leaderLines.</para>
 /// </summary>
 /// <remarks>
@@ -2169,6 +2270,7 @@ if( 11 == namespaceId && "strLit" == name)
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LeaderLines : ChartLinesType
 {
     internal const int ElementTypeIdConst = 10362;
@@ -2219,6 +2321,7 @@ public partial class LeaderLines : ChartLinesType
 }
 /// <summary>
 /// <para>Drop Lines.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:dropLines.</para>
 /// </summary>
 /// <remarks>
@@ -2229,6 +2332,7 @@ public partial class LeaderLines : ChartLinesType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DropLines : ChartLinesType
 {
     internal const int ElementTypeIdConst = 10370;
@@ -2279,6 +2383,7 @@ public partial class DropLines : ChartLinesType
 }
 /// <summary>
 /// <para>Major Gridlines.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:majorGridlines.</para>
 /// </summary>
 /// <remarks>
@@ -2289,6 +2394,7 @@ public partial class DropLines : ChartLinesType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MajorGridlines : ChartLinesType
 {
     internal const int ElementTypeIdConst = 10383;
@@ -2339,6 +2445,7 @@ public partial class MajorGridlines : ChartLinesType
 }
 /// <summary>
 /// <para>Minor Gridlines.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:minorGridlines.</para>
 /// </summary>
 /// <remarks>
@@ -2349,6 +2456,7 @@ public partial class MajorGridlines : ChartLinesType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MinorGridlines : ChartLinesType
 {
     internal const int ElementTypeIdConst = 10384;
@@ -2399,6 +2507,7 @@ public partial class MinorGridlines : ChartLinesType
 }
 /// <summary>
 /// <para>Defines the SeriesLines Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:serLines.</para>
 /// </summary>
 /// <remarks>
@@ -2409,6 +2518,7 @@ public partial class MinorGridlines : ChartLinesType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SeriesLines : ChartLinesType
 {
     internal const int ElementTypeIdConst = 10461;
@@ -2459,6 +2569,7 @@ public partial class SeriesLines : ChartLinesType
 }
 /// <summary>
 /// <para>Defines the HighLowLines Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:hiLowLines.</para>
 /// </summary>
 /// <remarks>
@@ -2469,6 +2580,7 @@ public partial class SeriesLines : ChartLinesType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HighLowLines : ChartLinesType
 {
     internal const int ElementTypeIdConst = 10565;
@@ -2602,10 +2714,12 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Index.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:idx.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Index : UnsignedIntegerType
 {
     internal const int ElementTypeIdConst = 10363;
@@ -2631,10 +2745,12 @@ public partial class Index : UnsignedIntegerType
 }
 /// <summary>
 /// <para>Order.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:order.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Order : UnsignedIntegerType
 {
     internal const int ElementTypeIdConst = 10364;
@@ -2660,10 +2776,12 @@ public partial class Order : UnsignedIntegerType
 }
 /// <summary>
 /// <para>Axis ID.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:axId.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AxisId : UnsignedIntegerType
 {
     internal const int ElementTypeIdConst = 10379;
@@ -2689,10 +2807,12 @@ public partial class AxisId : UnsignedIntegerType
 }
 /// <summary>
 /// <para>Crossing Axis ID.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:crossAx.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CrossingAxis : UnsignedIntegerType
 {
     internal const int ElementTypeIdConst = 10389;
@@ -2718,10 +2838,12 @@ public partial class CrossingAxis : UnsignedIntegerType
 }
 /// <summary>
 /// <para>Point Count.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ptCount.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PointCount : UnsignedIntegerType
 {
     internal const int ElementTypeIdConst = 10398;
@@ -2747,10 +2869,12 @@ public partial class PointCount : UnsignedIntegerType
 }
 /// <summary>
 /// <para>Second Pie Point.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:secondPiePt.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SecondPiePoint : UnsignedIntegerType
 {
     internal const int ElementTypeIdConst = 10428;
@@ -2776,10 +2900,12 @@ public partial class SecondPiePoint : UnsignedIntegerType
 }
 /// <summary>
 /// <para>Explosion.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:explosion.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Explosion : UnsignedIntegerType
 {
     internal const int ElementTypeIdConst = 10434;
@@ -2805,10 +2931,12 @@ public partial class Explosion : UnsignedIntegerType
 }
 /// <summary>
 /// <para>Format ID.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:fmtId.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FormatId : UnsignedIntegerType
 {
     internal const int ElementTypeIdConst = 10506;
@@ -2882,6 +3010,7 @@ public abstract partial class UnsignedIntegerType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Series Text.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:tx.</para>
 /// </summary>
 /// <remarks>
@@ -2895,6 +3024,7 @@ public abstract partial class UnsignedIntegerType : OpenXmlLeafElement
     [ChildElementInfo(typeof(StringReference))]
     [ChildElementInfo(typeof(NumericValue))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SeriesText : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10365;
@@ -2998,10 +3128,12 @@ if( 11 == namespaceId && "v" == name)
 }
 /// <summary>
 /// <para>Grouping.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:grouping.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Grouping : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10366;
@@ -3062,6 +3194,7 @@ public partial class Grouping : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the LineChartSeries Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ser.</para>
 /// </summary>
 /// <remarks>
@@ -3099,6 +3232,7 @@ public partial class Grouping : OpenXmlLeafElement
     [ChildElementInfo(typeof(Smooth))]
     [ChildElementInfo(typeof(LineSerExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LineChartSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10368;
@@ -3286,6 +3420,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Data Labels.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:dLbls.</para>
 /// </summary>
 /// <remarks>
@@ -3327,6 +3462,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(LeaderLines))]
     [ChildElementInfo(typeof(DLblsExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DataLabels : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10369;
@@ -3439,10 +3575,12 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Bar Direction.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:barDir.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BarDirection : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10371;
@@ -3503,10 +3641,12 @@ public partial class BarDirection : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Bar Grouping.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:grouping.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BarGrouping : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10372;
@@ -3567,6 +3707,7 @@ public partial class BarGrouping : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Bar Chart Series.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ser.</para>
 /// </summary>
 /// <remarks>
@@ -3604,6 +3745,7 @@ public partial class BarGrouping : OpenXmlLeafElement
     [ChildElementInfo(typeof(Shape))]
     [ChildElementInfo(typeof(BarSerExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BarChartSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10373;
@@ -3791,6 +3933,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Area Chart Series.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ser.</para>
 /// </summary>
 /// <remarks>
@@ -3824,6 +3967,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(Values))]
     [ChildElementInfo(typeof(AreaSerExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AreaChartSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10374;
@@ -3993,6 +4137,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Pie Chart Series.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ser.</para>
 /// </summary>
 /// <remarks>
@@ -4024,6 +4169,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(Values))]
     [ChildElementInfo(typeof(PieSerExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PieChartSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10375;
@@ -4202,6 +4348,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Surface Chart Series.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ser.</para>
 /// </summary>
 /// <remarks>
@@ -4229,6 +4376,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(Bubble3D))]
     [ChildElementInfo(typeof(SurfaceSerExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SurfaceChartSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10377;
@@ -4437,6 +4585,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Band Formats.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:bandFmts.</para>
 /// </summary>
 /// <remarks>
@@ -4448,6 +4597,7 @@ if( 11 == namespaceId && "extLst" == name)
 
     [ChildElementInfo(typeof(BandFormat))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BandFormats : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10378;
@@ -4515,6 +4665,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Scaling.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:scaling.</para>
 /// </summary>
 /// <remarks>
@@ -4534,6 +4685,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(MinAxisValue))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Scaling : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10380;
@@ -4682,10 +4834,12 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Axis Position.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:axPos.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AxisPosition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10382;
@@ -4746,6 +4900,7 @@ public partial class AxisPosition : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Title.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:title.</para>
 /// </summary>
 /// <remarks>
@@ -4767,6 +4922,7 @@ public partial class AxisPosition : OpenXmlLeafElement
     [ChildElementInfo(typeof(TextProperties))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Title : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10385;
@@ -4930,10 +5086,12 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Major Tick Mark.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:majorTickMark.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MajorTickMark : TickMarkType
 {
     internal const int ElementTypeIdConst = 10386;
@@ -4959,10 +5117,12 @@ public partial class MajorTickMark : TickMarkType
 }
 /// <summary>
 /// <para>Minor Tick Mark.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:minorTickMark.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MinorTickMark : TickMarkType
 {
     internal const int ElementTypeIdConst = 10387;
@@ -5036,10 +5196,12 @@ public abstract partial class TickMarkType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Tick Label Position.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:tickLblPos.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TickLabelPosition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10388;
@@ -5100,10 +5262,12 @@ public partial class TickLabelPosition : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Crosses.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:crosses.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Crosses : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10390;
@@ -5164,10 +5328,12 @@ public partial class Crosses : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Crossing Value.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:crossesAt.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CrossesAt : DoubleType
 {
     internal const int ElementTypeIdConst = 10391;
@@ -5193,10 +5359,12 @@ public partial class CrossesAt : DoubleType
 }
 /// <summary>
 /// <para>Left.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:x.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Left : DoubleType
 {
     internal const int ElementTypeIdConst = 10412;
@@ -5222,10 +5390,12 @@ public partial class Left : DoubleType
 }
 /// <summary>
 /// <para>Top.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:y.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Top : DoubleType
 {
     internal const int ElementTypeIdConst = 10413;
@@ -5251,10 +5421,12 @@ public partial class Top : DoubleType
 }
 /// <summary>
 /// <para>Width.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:w.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Width : DoubleType
 {
     internal const int ElementTypeIdConst = 10414;
@@ -5280,10 +5452,12 @@ public partial class Width : DoubleType
 }
 /// <summary>
 /// <para>Height.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:h.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Height : DoubleType
 {
     internal const int ElementTypeIdConst = 10415;
@@ -5309,10 +5483,12 @@ public partial class Height : DoubleType
 }
 /// <summary>
 /// <para>Forward.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:forward.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Forward : DoubleType
 {
     internal const int ElementTypeIdConst = 10440;
@@ -5338,10 +5514,12 @@ public partial class Forward : DoubleType
 }
 /// <summary>
 /// <para>Backward.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:backward.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Backward : DoubleType
 {
     internal const int ElementTypeIdConst = 10441;
@@ -5367,10 +5545,12 @@ public partial class Backward : DoubleType
 }
 /// <summary>
 /// <para>Intercept.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:intercept.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Intercept : DoubleType
 {
     internal const int ElementTypeIdConst = 10442;
@@ -5396,10 +5576,12 @@ public partial class Intercept : DoubleType
 }
 /// <summary>
 /// <para>Error Bar Value.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:val.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ErrorBarValue : DoubleType
 {
     internal const int ElementTypeIdConst = 10452;
@@ -5425,10 +5607,12 @@ public partial class ErrorBarValue : DoubleType
 }
 /// <summary>
 /// <para>Split Position.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:splitPos.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SplitPosition : DoubleType
 {
     internal const int ElementTypeIdConst = 10458;
@@ -5454,10 +5638,12 @@ public partial class SplitPosition : DoubleType
 }
 /// <summary>
 /// <para>Custom Display Unit.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:custUnit.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CustomDisplayUnit : DoubleType
 {
     internal const int ElementTypeIdConst = 10468;
@@ -5483,10 +5669,12 @@ public partial class CustomDisplayUnit : DoubleType
 }
 /// <summary>
 /// <para>Maximum.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:max.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MaxAxisValue : DoubleType
 {
     internal const int ElementTypeIdConst = 10473;
@@ -5512,10 +5700,12 @@ public partial class MaxAxisValue : DoubleType
 }
 /// <summary>
 /// <para>Minimum.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:min.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MinAxisValue : DoubleType
 {
     internal const int ElementTypeIdConst = 10474;
@@ -5628,6 +5818,7 @@ public abstract partial class DoubleType : OpenXmlLeafElement
     [ChildElementInfo(typeof(UserShapesReference))]
     [ChildElementInfo(typeof(ChartSpaceExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ChartSpace : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 10392;
@@ -5824,6 +6015,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.RelativeAnchorSize))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.AbsoluteAnchorSize))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UserShapes : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 10393;
@@ -5923,10 +6115,12 @@ if( 12 == namespaceId && "absSizeAnchor" == name)
 }
 /// <summary>
 /// <para>Reference to Chart Part.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:chart.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ChartReference : RelationshipIdType
 {
     internal const int ElementTypeIdConst = 10394;
@@ -5952,10 +6146,12 @@ public partial class ChartReference : RelationshipIdType
 }
 /// <summary>
 /// <para>Legacy Drawing for Headers and Footers.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:legacyDrawingHF.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LegacyDrawingHeaderFooter : RelationshipIdType
 {
     internal const int ElementTypeIdConst = 10504;
@@ -5981,10 +6177,12 @@ public partial class LegacyDrawingHeaderFooter : RelationshipIdType
 }
 /// <summary>
 /// <para>Defines the UserShapesReference Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:userShapes.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UserShapesReference : RelationshipIdType
 {
     internal const int ElementTypeIdConst = 10649;
@@ -6060,6 +6258,7 @@ public abstract partial class RelationshipIdType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Extension.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -6069,6 +6268,7 @@ public abstract partial class RelationshipIdType : OpenXmlLeafElement
 /// </remarks>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Extension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10395;
@@ -6160,10 +6360,12 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Numeric Value.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:v.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NumericValue : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10396;
@@ -6202,10 +6404,12 @@ public partial class NumericValue : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Format Code.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:formatCode.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FormatCode : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10397;
@@ -6244,10 +6448,12 @@ public partial class FormatCode : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Odd Header.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:oddHeader.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class OddHeader : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10494;
@@ -6286,10 +6492,12 @@ public partial class OddHeader : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Odd Footer.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:oddFooter.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class OddFooter : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10495;
@@ -6328,10 +6536,12 @@ public partial class OddFooter : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Even Header.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:evenHeader.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EvenHeader : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10496;
@@ -6370,10 +6580,12 @@ public partial class EvenHeader : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Even Footer.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:evenFooter.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EvenFooter : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10497;
@@ -6412,10 +6624,12 @@ public partial class EvenFooter : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>First Header.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:firstHeader.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FirstHeader : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10498;
@@ -6454,10 +6668,12 @@ public partial class FirstHeader : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>First Footer.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:firstFooter.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FirstFooter : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10499;
@@ -6496,10 +6712,12 @@ public partial class FirstFooter : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Pivot Name.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:name.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PivotTableName : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10505;
@@ -6538,6 +6756,7 @@ public partial class PivotTableName : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Numeric Point.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:pt.</para>
 /// </summary>
 /// <remarks>
@@ -6549,6 +6768,7 @@ public partial class PivotTableName : OpenXmlLeafTextElement
 
     [ChildElementInfo(typeof(NumericValue))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NumericPoint : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10399;
@@ -6678,6 +6898,7 @@ if( 0 == namespaceId && "formatCode" == name)
 }
 /// <summary>
 /// <para>Defines the ExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -6689,6 +6910,7 @@ if( 0 == namespaceId && "formatCode" == name)
 
     [ChildElementInfo(typeof(Extension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10400;
@@ -6756,6 +6978,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Number Reference.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:numRef.</para>
 /// </summary>
 /// <remarks>
@@ -6771,6 +6994,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(NumberingCache))]
     [ChildElementInfo(typeof(NumRefExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NumberReference : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10401;
@@ -6889,6 +7113,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Number Literal.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:numLit.</para>
 /// </summary>
 /// <remarks>
@@ -6902,6 +7127,7 @@ if( 11 == namespaceId && "extLst" == name)
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NumberLiteral : NumberDataType
 {
     internal const int ElementTypeIdConst = 10402;
@@ -6952,6 +7178,7 @@ public partial class NumberLiteral : NumberDataType
 }
 /// <summary>
 /// <para>Defines the NumberingCache Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:numCache.</para>
 /// </summary>
 /// <remarks>
@@ -6965,6 +7192,7 @@ public partial class NumberLiteral : NumberDataType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NumberingCache : NumberDataType
 {
     internal const int ElementTypeIdConst = 10571;
@@ -7125,6 +7353,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Level.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:lvl.</para>
 /// </summary>
 /// <remarks>
@@ -7136,6 +7365,7 @@ if( 11 == namespaceId && "extLst" == name)
 
     [ChildElementInfo(typeof(StringPoint))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Level : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10403;
@@ -7203,6 +7433,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Multi Level String Reference.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:multiLvlStrRef.</para>
 /// </summary>
 /// <remarks>
@@ -7218,6 +7449,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(MultiLevelStringCache))]
     [ChildElementInfo(typeof(MultiLvlStrRefExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MultiLevelStringReference : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10404;
@@ -7336,6 +7568,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the StringReference Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:strRef.</para>
 /// </summary>
 /// <remarks>
@@ -7351,6 +7584,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(StringCache))]
     [ChildElementInfo(typeof(StrRefExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StringReference : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10405;
@@ -7469,6 +7703,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>String Literal.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:strLit.</para>
 /// </summary>
 /// <remarks>
@@ -7481,6 +7716,7 @@ if( 11 == namespaceId && "extLst" == name)
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StringLiteral : StringDataType
 {
     internal const int ElementTypeIdConst = 10406;
@@ -7531,6 +7767,7 @@ public partial class StringLiteral : StringDataType
 }
 /// <summary>
 /// <para>Defines the StringCache Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:strCache.</para>
 /// </summary>
 /// <remarks>
@@ -7543,6 +7780,7 @@ public partial class StringLiteral : StringDataType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StringCache : StringDataType
 {
     internal const int ElementTypeIdConst = 10574;
@@ -7686,10 +7924,12 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Layout Target.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:layoutTarget.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LayoutTarget : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10407;
@@ -7750,10 +7990,12 @@ public partial class LayoutTarget : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Left Mode.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:xMode.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LeftMode : LayoutModeType
 {
     internal const int ElementTypeIdConst = 10408;
@@ -7779,10 +8021,12 @@ public partial class LeftMode : LayoutModeType
 }
 /// <summary>
 /// <para>Top Mode.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:yMode.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TopMode : LayoutModeType
 {
     internal const int ElementTypeIdConst = 10409;
@@ -7808,10 +8052,12 @@ public partial class TopMode : LayoutModeType
 }
 /// <summary>
 /// <para>Width Mode.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:wMode.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WidthMode : LayoutModeType
 {
     internal const int ElementTypeIdConst = 10410;
@@ -7837,10 +8083,12 @@ public partial class WidthMode : LayoutModeType
 }
 /// <summary>
 /// <para>Height Mode.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:hMode.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HeightMode : LayoutModeType
 {
     internal const int ElementTypeIdConst = 10411;
@@ -7914,6 +8162,7 @@ public abstract partial class LayoutModeType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Manual Layout.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:manualLayout.</para>
 /// </summary>
 /// <remarks>
@@ -7943,6 +8192,7 @@ public abstract partial class LayoutModeType : OpenXmlLeafElement
     [ChildElementInfo(typeof(Height))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ManualLayout : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10416;
@@ -8166,10 +8416,12 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>X Rotation.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:rotX.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RotateX : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10418;
@@ -8230,10 +8482,12 @@ public partial class RotateX : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Height Percent.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:hPercent.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HeightPercent : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10419;
@@ -8294,10 +8548,12 @@ public partial class HeightPercent : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Y Rotation.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:rotY.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RotateY : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10420;
@@ -8358,10 +8614,12 @@ public partial class RotateY : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Depth Percent.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:depthPercent.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DepthPercent : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10421;
@@ -8422,10 +8680,12 @@ public partial class DepthPercent : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Perspective.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:perspective.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Perspective : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10423;
@@ -8486,10 +8746,12 @@ public partial class Perspective : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Symbol.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:symbol.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Symbol : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10429;
@@ -8550,10 +8812,12 @@ public partial class Symbol : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Size.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:size.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Size : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10430;
@@ -8614,6 +8878,7 @@ public partial class Size : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Marker.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:marker.</para>
 /// </summary>
 /// <remarks>
@@ -8631,6 +8896,7 @@ public partial class Size : OpenXmlLeafElement
     [ChildElementInfo(typeof(ChartShapeProperties))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Marker : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10432;
@@ -8764,6 +9030,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the PictureOptions Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:pictureOptions.</para>
 /// </summary>
 /// <remarks>
@@ -8783,6 +9050,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(PictureFormat))]
     [ChildElementInfo(typeof(PictureStackUnit))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PictureOptions : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10435;
@@ -8931,10 +9199,12 @@ if( 11 == namespaceId && "pictureStackUnit" == name)
 }
 /// <summary>
 /// <para>Trendline Type.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:trendlineType.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TrendlineType : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10437;
@@ -8995,10 +9265,12 @@ public partial class TrendlineType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Polynomial Trendline Order.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:order.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PolynomialOrder : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10438;
@@ -9059,10 +9331,12 @@ public partial class PolynomialOrder : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Period.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:period.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Period : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10439;
@@ -9123,6 +9397,7 @@ public partial class Period : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Trendline Label.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:trendlineLbl.</para>
 /// </summary>
 /// <remarks>
@@ -9144,6 +9419,7 @@ public partial class Period : OpenXmlLeafElement
     [ChildElementInfo(typeof(TextProperties))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TrendlineLabel : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10445;
@@ -9307,10 +9583,12 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Error Bar Direction.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:errDir.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ErrorDirection : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10446;
@@ -9371,10 +9649,12 @@ public partial class ErrorDirection : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Error Bar Type.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:errBarType.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ErrorBarType : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10447;
@@ -9435,10 +9715,12 @@ public partial class ErrorBarType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Error Bar Value Type.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:errValType.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ErrorBarValueType : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10448;
@@ -9499,6 +9781,7 @@ public partial class ErrorBarValueType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Plus.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:plus.</para>
 /// </summary>
 /// <remarks>
@@ -9510,6 +9793,7 @@ public partial class ErrorBarValueType : OpenXmlLeafElement
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Plus : NumberDataSourceType
 {
     internal const int ElementTypeIdConst = 10450;
@@ -9560,6 +9844,7 @@ public partial class Plus : NumberDataSourceType
 }
 /// <summary>
 /// <para>Minus.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:minus.</para>
 /// </summary>
 /// <remarks>
@@ -9571,6 +9856,7 @@ public partial class Plus : NumberDataSourceType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Minus : NumberDataSourceType
 {
     internal const int ElementTypeIdConst = 10451;
@@ -9621,6 +9907,7 @@ public partial class Minus : NumberDataSourceType
 }
 /// <summary>
 /// <para>Defines the Values Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:val.</para>
 /// </summary>
 /// <remarks>
@@ -9632,6 +9919,7 @@ public partial class Minus : NumberDataSourceType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Values : NumberDataSourceType
 {
     internal const int ElementTypeIdConst = 10584;
@@ -9682,6 +9970,7 @@ public partial class Values : NumberDataSourceType
 }
 /// <summary>
 /// <para>Defines the YValues Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:yVal.</para>
 /// </summary>
 /// <remarks>
@@ -9693,6 +9982,7 @@ public partial class Values : NumberDataSourceType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class YValues : NumberDataSourceType
 {
     internal const int ElementTypeIdConst = 10588;
@@ -9743,6 +10033,7 @@ public partial class YValues : NumberDataSourceType
 }
 /// <summary>
 /// <para>Defines the BubbleSize Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:bubbleSize.</para>
 /// </summary>
 /// <remarks>
@@ -9754,6 +10045,7 @@ public partial class YValues : NumberDataSourceType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BubbleSize : NumberDataSourceType
 {
     internal const int ElementTypeIdConst = 10596;
@@ -9904,10 +10196,12 @@ if( 11 == namespaceId && "numLit" == name)
 }
 /// <summary>
 /// <para>Gap Width.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:gapWidth.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class GapWidth : GapAmountType
 {
     internal const int ElementTypeIdConst = 10453;
@@ -9933,10 +10227,12 @@ public partial class GapWidth : GapAmountType
 }
 /// <summary>
 /// <para>Defines the GapDepth Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:gapDepth.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class GapDepth : GapAmountType
 {
     internal const int ElementTypeIdConst = 10602;
@@ -10010,6 +10306,7 @@ public abstract partial class GapAmountType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Up Bars.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:upBars.</para>
 /// </summary>
 /// <remarks>
@@ -10020,6 +10317,7 @@ public abstract partial class GapAmountType : OpenXmlLeafElement
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UpBars : UpDownBarType
 {
     internal const int ElementTypeIdConst = 10454;
@@ -10070,6 +10368,7 @@ public partial class UpBars : UpDownBarType
 }
 /// <summary>
 /// <para>Down Bars.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:downBars.</para>
 /// </summary>
 /// <remarks>
@@ -10080,6 +10379,7 @@ public partial class UpBars : UpDownBarType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DownBars : UpDownBarType
 {
     internal const int ElementTypeIdConst = 10455;
@@ -10213,10 +10513,12 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Pie of Pie or Bar of Pie Type.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ofPieType.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class OfPieType : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10456;
@@ -10277,10 +10579,12 @@ public partial class OfPieType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Split Type.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:splitType.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SplitType : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10457;
@@ -10341,6 +10645,7 @@ public partial class SplitType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Custom Split.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:custSplit.</para>
 /// </summary>
 /// <remarks>
@@ -10352,6 +10657,7 @@ public partial class SplitType : OpenXmlLeafElement
 
     [ChildElementInfo(typeof(SecondPiePoint))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CustomSplit : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10459;
@@ -10419,10 +10725,12 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Second Pie Size.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:secondPieSize.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SecondPieSize : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10460;
@@ -10483,6 +10791,7 @@ public partial class SecondPieSize : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Band Format.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:bandFmt.</para>
 /// </summary>
 /// <remarks>
@@ -10496,6 +10805,7 @@ public partial class SecondPieSize : OpenXmlLeafElement
     [ChildElementInfo(typeof(Index))]
     [ChildElementInfo(typeof(ChartShapeProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BandFormat : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10462;
@@ -10599,10 +10909,12 @@ if( 11 == namespaceId && "spPr" == name)
 }
 /// <summary>
 /// <para>Picture Format.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:pictureFormat.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PictureFormat : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10466;
@@ -10663,10 +10975,12 @@ public partial class PictureFormat : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Picture Stack Unit.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:pictureStackUnit.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PictureStackUnit : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10467;
@@ -10727,10 +11041,12 @@ public partial class PictureStackUnit : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Built in Display Unit Value.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:builtInUnit.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BuiltInUnit : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10469;
@@ -10791,6 +11107,7 @@ public partial class BuiltInUnit : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Display Units Label.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:dispUnitsLbl.</para>
 /// </summary>
 /// <remarks>
@@ -10808,6 +11125,7 @@ public partial class BuiltInUnit : OpenXmlLeafElement
     [ChildElementInfo(typeof(ChartShapeProperties))]
     [ChildElementInfo(typeof(TextProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DisplayUnitsLabel : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10470;
@@ -10941,10 +11259,12 @@ if( 11 == namespaceId && "txPr" == name)
 }
 /// <summary>
 /// <para>Logarithmic Base.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:logBase.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LogBase : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10471;
@@ -11005,10 +11325,12 @@ public partial class LogBase : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Axis Orientation.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:orientation.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Orientation : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10472;
@@ -11069,6 +11391,7 @@ public partial class Orientation : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Pivot Format.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:pivotFmt.</para>
 /// </summary>
 /// <remarks>
@@ -11088,6 +11411,7 @@ public partial class Orientation : OpenXmlLeafElement
     [ChildElementInfo(typeof(DataLabel))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PivotFormat : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10475;
@@ -11236,10 +11560,12 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Legend Position.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:legendPos.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LegendPosition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10476;
@@ -11300,6 +11626,7 @@ public partial class LegendPosition : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Legend Entry.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:legendEntry.</para>
 /// </summary>
 /// <remarks>
@@ -11317,6 +11644,7 @@ public partial class LegendPosition : OpenXmlLeafElement
     [ChildElementInfo(typeof(TextProperties))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LegendEntry : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10477;
@@ -11414,6 +11742,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Pivot Formats.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:pivotFmts.</para>
 /// </summary>
 /// <remarks>
@@ -11425,6 +11754,7 @@ if( 11 == namespaceId && "extLst" == name)
 
     [ChildElementInfo(typeof(PivotFormat))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PivotFormats : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10479;
@@ -11492,6 +11822,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>View In 3D.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:view3D.</para>
 /// </summary>
 /// <remarks>
@@ -11515,6 +11846,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Perspective))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class View3D : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10480;
@@ -11693,6 +12025,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Floor.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:floor.</para>
 /// </summary>
 /// <remarks>
@@ -11706,6 +12039,7 @@ if( 11 == namespaceId && "extLst" == name)
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Floor : SurfaceType
 {
     internal const int ElementTypeIdConst = 10481;
@@ -11756,6 +12090,7 @@ public partial class Floor : SurfaceType
 }
 /// <summary>
 /// <para>Side Wall.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:sideWall.</para>
 /// </summary>
 /// <remarks>
@@ -11769,6 +12104,7 @@ public partial class Floor : SurfaceType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SideWall : SurfaceType
 {
     internal const int ElementTypeIdConst = 10482;
@@ -11819,6 +12155,7 @@ public partial class SideWall : SurfaceType
 }
 /// <summary>
 /// <para>Back Wall.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:backWall.</para>
 /// </summary>
 /// <remarks>
@@ -11832,6 +12169,7 @@ public partial class SideWall : SurfaceType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BackWall : SurfaceType
 {
     internal const int ElementTypeIdConst = 10483;
@@ -12016,6 +12354,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Plot Area.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:plotArea.</para>
 /// </summary>
 /// <remarks>
@@ -12073,6 +12412,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(ShapeProperties))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PlotArea : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10484;
@@ -12230,6 +12570,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Legend.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:legend.</para>
 /// </summary>
 /// <remarks>
@@ -12253,6 +12594,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(TextProperties))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Legend : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10485;
@@ -12359,10 +12701,12 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Display Blanks As.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:dispBlanksAs.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DisplayBlanksAs : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10487;
@@ -12423,6 +12767,7 @@ public partial class DisplayBlanksAs : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Header and Footer.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:headerFooter.</para>
 /// </summary>
 /// <remarks>
@@ -12444,6 +12789,7 @@ public partial class DisplayBlanksAs : OpenXmlLeafElement
     [ChildElementInfo(typeof(FirstHeader))]
     [ChildElementInfo(typeof(FirstFooter))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HeaderFooter : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10501;
@@ -12662,10 +13008,12 @@ if( 0 == namespaceId && "differentFirst" == name)
 }
 /// <summary>
 /// <para>Page Margins.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:pageMargins.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PageMargins : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10502;
@@ -12796,10 +13144,12 @@ if( 0 == namespaceId && "footer" == name)
 }
 /// <summary>
 /// <para>Page Setup.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:pageSetup.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PageSetup : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10503;
@@ -12972,6 +13322,7 @@ if( 0 == namespaceId && "copies" == name)
 }
 /// <summary>
 /// <para>Defines the ShapeProperties Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:spPr.</para>
 /// </summary>
 /// <remarks>
@@ -13011,6 +13362,7 @@ if( 0 == namespaceId && "copies" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10507;
@@ -13168,6 +13520,7 @@ if( 10 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Data Label.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:dLbl.</para>
 /// </summary>
 /// <remarks>
@@ -13209,6 +13562,7 @@ if( 10 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(Separator))]
     [ChildElementInfo(typeof(DLblExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DataLabel : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10508;
@@ -13342,6 +13696,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Area Charts.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:areaChart.</para>
 /// </summary>
 /// <remarks>
@@ -13365,6 +13720,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(AxisId))]
     [ChildElementInfo(typeof(AreaChartExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AreaChart : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10509;
@@ -13483,6 +13839,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>3D Area Charts.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:area3DChart.</para>
 /// </summary>
 /// <remarks>
@@ -13508,6 +13865,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(AxisId))]
     [ChildElementInfo(typeof(Area3DChartExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Area3DChart : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10510;
@@ -13629,6 +13987,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Line Charts.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:lineChart.</para>
 /// </summary>
 /// <remarks>
@@ -13660,6 +14019,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(AxisId))]
     [ChildElementInfo(typeof(LineChartExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LineChart : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10511;
@@ -13790,6 +14150,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>3D Line Charts.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:line3DChart.</para>
 /// </summary>
 /// <remarks>
@@ -13815,6 +14176,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(AxisId))]
     [ChildElementInfo(typeof(Line3DChartExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Line3DChart : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10512;
@@ -13936,6 +14298,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Stock Charts.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:stockChart.</para>
 /// </summary>
 /// <remarks>
@@ -13959,6 +14322,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(AxisId))]
     [ChildElementInfo(typeof(StockChartExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StockChart : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10513;
@@ -14044,6 +14408,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Radar Charts.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:radarChart.</para>
 /// </summary>
 /// <remarks>
@@ -14065,6 +14430,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(AxisId))]
     [ChildElementInfo(typeof(RadarChartExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RadarChart : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10514;
@@ -14180,6 +14546,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Scatter Charts.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:scatterChart.</para>
 /// </summary>
 /// <remarks>
@@ -14201,6 +14568,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(AxisId))]
     [ChildElementInfo(typeof(ScatterChartExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScatterChart : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10515;
@@ -14316,6 +14684,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Pie Charts.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:pieChart.</para>
 /// </summary>
 /// <remarks>
@@ -14335,6 +14704,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(FirstSliceAngle))]
     [ChildElementInfo(typeof(PieChartExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PieChart : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10516;
@@ -14435,6 +14805,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>3D Pie Charts.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:pie3DChart.</para>
 /// </summary>
 /// <remarks>
@@ -14452,6 +14823,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(DataLabels))]
     [ChildElementInfo(typeof(Pie3DChartExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Pie3DChart : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10517;
@@ -14549,6 +14921,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Doughnut Charts.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:doughnutChart.</para>
 /// </summary>
 /// <remarks>
@@ -14570,6 +14943,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(HoleSize))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoughnutChart : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10518;
@@ -14673,6 +15047,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Bar Charts.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:barChart.</para>
 /// </summary>
 /// <remarks>
@@ -14702,6 +15077,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(AxisId))]
     [ChildElementInfo(typeof(BarChartExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BarChart : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10519;
@@ -14841,6 +15217,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>3D Bar Charts.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:bar3DChart.</para>
 /// </summary>
 /// <remarks>
@@ -14870,6 +15247,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(AxisId))]
     [ChildElementInfo(typeof(Bar3DChartExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Bar3DChart : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10520;
@@ -15009,6 +15387,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Pie of Pie or Bar of Pie Charts.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ofPieChart.</para>
 /// </summary>
 /// <remarks>
@@ -15040,6 +15419,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(SeriesLines))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class OfPieChart : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10521;
@@ -15170,6 +15550,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Surface Charts.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:surfaceChart.</para>
 /// </summary>
 /// <remarks>
@@ -15189,6 +15570,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(AxisId))]
     [ChildElementInfo(typeof(SurfaceChartExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SurfaceChart : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10522;
@@ -15289,6 +15671,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>3D Surface Charts.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:surface3DChart.</para>
 /// </summary>
 /// <remarks>
@@ -15310,6 +15693,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(AxisId))]
     [ChildElementInfo(typeof(Surface3DChartExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Surface3DChart : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10523;
@@ -15425,6 +15809,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Bubble Charts.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:bubbleChart.</para>
 /// </summary>
 /// <remarks>
@@ -15452,6 +15837,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(AxisId))]
     [ChildElementInfo(typeof(BubbleChartExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BubbleChart : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10524;
@@ -15564,6 +15950,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Value Axis.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:valAx.</para>
 /// </summary>
 /// <remarks>
@@ -15615,6 +16002,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(DisplayUnits))]
     [ChildElementInfo(typeof(ValAxExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ValueAxis : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10525;
@@ -15919,6 +16307,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Category Axis Data.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:catAx.</para>
 /// </summary>
 /// <remarks>
@@ -15974,6 +16363,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(NoMultiLevelLabels))]
     [ChildElementInfo(typeof(CatAxExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CategoryAxis : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10526;
@@ -16284,6 +16674,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Date Axis.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:dateAx.</para>
 /// </summary>
 /// <remarks>
@@ -16341,6 +16732,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(MinorTimeUnit))]
     [ChildElementInfo(typeof(DateAxExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DateAxis : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10527;
@@ -16654,6 +17046,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Series Axis.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:serAx.</para>
 /// </summary>
 /// <remarks>
@@ -16701,6 +17094,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(TickMarkSkip))]
     [ChildElementInfo(typeof(SerAxExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SeriesAxis : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10528;
@@ -16999,6 +17393,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Data Table.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:dTable.</para>
 /// </summary>
 /// <remarks>
@@ -17022,6 +17417,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(TextProperties))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DataTable : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10529;
@@ -17200,10 +17596,12 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>First Slice Angle.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:firstSliceAng.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FirstSliceAngle : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10530;
@@ -17264,10 +17662,12 @@ public partial class FirstSliceAngle : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Hole Size.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:holeSize.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HoleSize : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10531;
@@ -17328,6 +17728,7 @@ public partial class HoleSize : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>String Point.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:pt.</para>
 /// </summary>
 /// <remarks>
@@ -17339,6 +17740,7 @@ public partial class HoleSize : OpenXmlLeafElement
 
     [ChildElementInfo(typeof(NumericValue))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StringPoint : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10532;
@@ -17454,10 +17856,12 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Thickness.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:thickness.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Thickness : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10534;
@@ -17518,6 +17922,7 @@ public partial class Thickness : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the StockChartExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -17529,6 +17934,7 @@ public partial class Thickness : OpenXmlLeafElement
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StockChartExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10535;
@@ -17623,6 +18029,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the PieChartExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -17634,6 +18041,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PieChartExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10536;
@@ -17728,6 +18136,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the Pie3DChartExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -17739,6 +18148,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Pie3DChartExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10537;
@@ -17833,6 +18243,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the NumRefExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -17848,6 +18259,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NumRefExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10538;
@@ -17948,6 +18360,7 @@ if( 64 == namespaceId && "formulaRef" == name)
 }
 /// <summary>
 /// <para>Defines the StrDataExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -17959,6 +18372,7 @@ if( 64 == namespaceId && "formulaRef" == name)
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.AutoGeneneratedCategories), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StrDataExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10539;
@@ -18053,6 +18467,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the StrRefExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -18068,6 +18483,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StrRefExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10540;
@@ -18168,6 +18584,7 @@ if( 64 == namespaceId && "formulaRef" == name)
 }
 /// <summary>
 /// <para>Defines the MultiLvlStrRefExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -18183,6 +18600,7 @@ if( 64 == namespaceId && "formulaRef" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MultiLvlStrRefExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10541;
@@ -18283,6 +18701,7 @@ if( 64 == namespaceId && "formulaRef" == name)
 }
 /// <summary>
 /// <para>Defines the DLblExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -18302,6 +18721,7 @@ if( 64 == namespaceId && "formulaRef" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DLblExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10542;
@@ -18408,6 +18828,7 @@ if( 64 == namespaceId && "layout" == name)
 }
 /// <summary>
 /// <para>Defines the DLblsExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -18431,6 +18852,7 @@ if( 64 == namespaceId && "layout" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowLeaderLines), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LeaderLines), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DLblsExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10543;
@@ -18543,6 +18965,7 @@ if( 64 == namespaceId && "leaderLines" == name)
 }
 /// <summary>
 /// <para>Defines the LineSerExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -18560,6 +18983,7 @@ if( 64 == namespaceId && "leaderLines" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LineSerExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10544;
@@ -18663,6 +19087,7 @@ if( 64 == namespaceId && "categoryFilterExceptions" == name)
 }
 /// <summary>
 /// <para>Defines the ScatterSerExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -18680,6 +19105,7 @@ if( 64 == namespaceId && "categoryFilterExceptions" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScatterSerExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10545;
@@ -18783,6 +19209,7 @@ if( 64 == namespaceId && "categoryFilterExceptions" == name)
 }
 /// <summary>
 /// <para>Defines the RadarSerExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -18800,6 +19227,7 @@ if( 64 == namespaceId && "categoryFilterExceptions" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RadarSerExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10546;
@@ -18903,6 +19331,7 @@ if( 64 == namespaceId && "categoryFilterExceptions" == name)
 }
 /// <summary>
 /// <para>Defines the AreaSerExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -18920,6 +19349,7 @@ if( 64 == namespaceId && "categoryFilterExceptions" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AreaSerExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10547;
@@ -19023,6 +19453,7 @@ if( 64 == namespaceId && "categoryFilterExceptions" == name)
 }
 /// <summary>
 /// <para>Defines the PieSerExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -19040,6 +19471,7 @@ if( 64 == namespaceId && "categoryFilterExceptions" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PieSerExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10548;
@@ -19143,6 +19575,7 @@ if( 64 == namespaceId && "categoryFilterExceptions" == name)
 }
 /// <summary>
 /// <para>Defines the SurfaceSerExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -19158,6 +19591,7 @@ if( 64 == namespaceId && "categoryFilterExceptions" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SurfaceSerExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10549;
@@ -19258,6 +19692,7 @@ if( 64 == namespaceId && "categoryFilterExceptions" == name)
 }
 /// <summary>
 /// <para>Defines the LineChartExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -19269,6 +19704,7 @@ if( 64 == namespaceId && "categoryFilterExceptions" == name)
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LineChartExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10550;
@@ -19363,6 +19799,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the Line3DChartExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -19374,6 +19811,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Line3DChartExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10551;
@@ -19468,6 +19906,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the ScatterChartExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -19479,6 +19918,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredScatterSeries), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScatterChartExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10552;
@@ -19573,6 +20013,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the RadarChartExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -19584,6 +20025,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredRadarSeries), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RadarChartExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10553;
@@ -19678,6 +20120,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the BarChartExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -19689,6 +20132,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BarChartExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10554;
@@ -19783,6 +20227,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the Bar3DChartExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -19794,6 +20239,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Bar3DChartExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10555;
@@ -19888,6 +20334,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the AreaChartExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -19899,6 +20346,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AreaChartExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10556;
@@ -19993,6 +20441,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the Area3DChartExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -20004,6 +20453,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Area3DChartExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10557;
@@ -20098,6 +20548,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the BubbleChartExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -20109,6 +20560,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBubbleSeries), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BubbleChartExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10558;
@@ -20203,6 +20655,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the SurfaceChartExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -20214,6 +20667,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SurfaceChartExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10559;
@@ -20308,6 +20762,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the Surface3DChartExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -20319,6 +20774,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Surface3DChartExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10560;
@@ -20413,6 +20869,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the CatAxExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -20424,6 +20881,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CatAxExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10561;
@@ -20518,6 +20976,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the DateAxExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -20529,6 +20988,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DateAxExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10562;
@@ -20623,6 +21083,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the SerAxExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -20634,6 +21095,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SerAxExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10563;
@@ -20728,6 +21190,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the ValAxExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -20739,6 +21202,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ValAxExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10564;
@@ -20833,6 +21297,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the UpDownBars Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:upDownBars.</para>
 /// </summary>
 /// <remarks>
@@ -20850,6 +21315,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DownBars))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UpDownBars : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10566;
@@ -20983,6 +21449,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the StockChartExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -20994,6 +21461,7 @@ if( 11 == namespaceId && "extLst" == name)
 
     [ChildElementInfo(typeof(StockChartExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StockChartExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10567;
@@ -21061,6 +21529,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the PieChartExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -21072,6 +21541,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(PieChartExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PieChartExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10568;
@@ -21139,6 +21609,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the Pie3DChartExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -21150,6 +21621,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(Pie3DChartExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Pie3DChartExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10569;
@@ -21217,6 +21689,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the NumRefExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -21228,6 +21701,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(NumRefExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NumRefExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10572;
@@ -21295,6 +21769,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the StrDataExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -21306,6 +21781,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(StrDataExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StrDataExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10573;
@@ -21373,6 +21849,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the StrRefExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -21384,6 +21861,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(StrRefExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StrRefExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10575;
@@ -21451,6 +21929,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the MultiLevelStringCache Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:multiLvlStrCache.</para>
 /// </summary>
 /// <remarks>
@@ -21466,6 +21945,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Level))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MultiLevelStringCache : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10576;
@@ -21560,6 +22040,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the MultiLvlStrRefExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -21571,6 +22052,7 @@ if( 11 == namespaceId && "extLst" == name)
 
     [ChildElementInfo(typeof(MultiLvlStrRefExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MultiLvlStrRefExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10577;
@@ -21638,6 +22120,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the DLblExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -21649,6 +22132,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(DLblExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DLblExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10578;
@@ -21716,6 +22200,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the DLblsExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -21727,6 +22212,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(DLblsExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DLblsExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10579;
@@ -21794,6 +22280,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the DataPoint Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:dPt.</para>
 /// </summary>
 /// <remarks>
@@ -21819,6 +22306,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(PictureOptions))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DataPoint : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10580;
@@ -22012,6 +22500,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the Trendline Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:trendline.</para>
 /// </summary>
 /// <remarks>
@@ -22045,6 +22534,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(TrendlineLabel))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Trendline : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10581;
@@ -22298,6 +22788,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the ErrorBars Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:errBars.</para>
 /// </summary>
 /// <remarks>
@@ -22325,6 +22816,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(ChartShapeProperties))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ErrorBars : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10582;
@@ -22533,6 +23025,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the CategoryAxisData Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:cat.</para>
 /// </summary>
 /// <remarks>
@@ -22547,6 +23040,7 @@ if( 11 == namespaceId && "extLst" == name)
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CategoryAxisData : AxisDataSourceType
 {
     internal const int ElementTypeIdConst = 10583;
@@ -22597,6 +23091,7 @@ public partial class CategoryAxisData : AxisDataSourceType
 }
 /// <summary>
 /// <para>Defines the XValues Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:xVal.</para>
 /// </summary>
 /// <remarks>
@@ -22611,6 +23106,7 @@ public partial class CategoryAxisData : AxisDataSourceType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class XValues : AxisDataSourceType
 {
     internal const int ElementTypeIdConst = 10587;
@@ -22812,6 +23308,7 @@ if( 11 == namespaceId && "strLit" == name)
 }
 /// <summary>
 /// <para>Defines the LineSerExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -22823,6 +23320,7 @@ if( 11 == namespaceId && "strLit" == name)
 
     [ChildElementInfo(typeof(LineSerExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LineSerExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10586;
@@ -22890,6 +23388,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the ScatterSerExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -22901,6 +23400,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(ScatterSerExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScatterSerExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10589;
@@ -22968,6 +23468,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the RadarSerExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -22979,6 +23480,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(RadarSerExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RadarSerExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10590;
@@ -23046,10 +23548,12 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the Shape Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:shape.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Shape : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10591;
@@ -23110,6 +23614,7 @@ public partial class Shape : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the BarSerExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -23121,6 +23626,7 @@ public partial class Shape : OpenXmlLeafElement
 
     [ChildElementInfo(typeof(BarSerExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BarSerExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10592;
@@ -23188,6 +23694,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the BarSerExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -23207,6 +23714,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BarSerExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10593;
@@ -23313,6 +23821,7 @@ if( 64 == namespaceId && "categoryFilterExceptions" == name)
 }
 /// <summary>
 /// <para>Defines the AreaSerExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -23324,6 +23833,7 @@ if( 64 == namespaceId && "categoryFilterExceptions" == name)
 
     [ChildElementInfo(typeof(AreaSerExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AreaSerExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10594;
@@ -23391,6 +23901,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the PieSerExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -23402,6 +23913,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(PieSerExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PieSerExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10595;
@@ -23469,6 +23981,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the BubbleSerExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -23480,6 +23993,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(BubbleSerExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BubbleSerExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10597;
@@ -23547,6 +24061,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the BubbleSerExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -23564,6 +24079,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BubbleSerExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10598;
@@ -23667,6 +24183,7 @@ if( 64 == namespaceId && "categoryFilterExceptions" == name)
 }
 /// <summary>
 /// <para>Defines the SurfaceSerExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -23678,6 +24195,7 @@ if( 64 == namespaceId && "categoryFilterExceptions" == name)
 
     [ChildElementInfo(typeof(SurfaceSerExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SurfaceSerExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10599;
@@ -23745,6 +24263,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the LineChartExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -23756,6 +24275,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(LineChartExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LineChartExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10601;
@@ -23823,6 +24343,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the Line3DChartExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -23834,6 +24355,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(Line3DChartExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Line3DChartExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10603;
@@ -23901,10 +24423,12 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the ScatterStyle Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:scatterStyle.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScatterStyle : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10604;
@@ -23965,6 +24489,7 @@ public partial class ScatterStyle : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the ScatterChartSeries Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ser.</para>
 /// </summary>
 /// <remarks>
@@ -24000,6 +24525,7 @@ public partial class ScatterStyle : OpenXmlLeafElement
     [ChildElementInfo(typeof(Smooth))]
     [ChildElementInfo(typeof(ScatterSerExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScatterChartSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10605;
@@ -24172,6 +24698,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the ScatterChartExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -24183,6 +24710,7 @@ if( 11 == namespaceId && "extLst" == name)
 
     [ChildElementInfo(typeof(ScatterChartExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScatterChartExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10606;
@@ -24250,10 +24778,12 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the RadarStyle Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:radarStyle.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RadarStyle : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10607;
@@ -24314,6 +24844,7 @@ public partial class RadarStyle : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the RadarChartSeries Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ser.</para>
 /// </summary>
 /// <remarks>
@@ -24345,6 +24876,7 @@ public partial class RadarStyle : OpenXmlLeafElement
     [ChildElementInfo(typeof(Values))]
     [ChildElementInfo(typeof(RadarSerExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RadarChartSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10608;
@@ -24523,6 +25055,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the RadarChartExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -24534,6 +25067,7 @@ if( 11 == namespaceId && "extLst" == name)
 
     [ChildElementInfo(typeof(RadarChartExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RadarChartExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10609;
@@ -24601,10 +25135,12 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the Overlap Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:overlap.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Overlap : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10610;
@@ -24665,6 +25201,7 @@ public partial class Overlap : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the BarChartExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -24676,6 +25213,7 @@ public partial class Overlap : OpenXmlLeafElement
 
     [ChildElementInfo(typeof(BarChartExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BarChartExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10611;
@@ -24743,6 +25281,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the Bar3DChartExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -24754,6 +25293,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(Bar3DChartExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Bar3DChartExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10612;
@@ -24821,6 +25361,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the AreaChartExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -24832,6 +25373,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(AreaChartExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AreaChartExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10613;
@@ -24899,6 +25441,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the Area3DChartExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -24910,6 +25453,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(Area3DChartExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Area3DChartExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10614;
@@ -24977,6 +25521,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the BubbleChartSeries Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ser.</para>
 /// </summary>
 /// <remarks>
@@ -25016,6 +25561,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Bubble3D))]
     [ChildElementInfo(typeof(BubbleSerExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BubbleChartSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10615;
@@ -25206,10 +25752,12 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the BubbleScale Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:bubbleScale.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BubbleScale : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10616;
@@ -25270,10 +25818,12 @@ public partial class BubbleScale : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the SizeRepresents Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:sizeRepresents.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SizeRepresents : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10618;
@@ -25334,6 +25884,7 @@ public partial class SizeRepresents : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the BubbleChartExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -25345,6 +25896,7 @@ public partial class SizeRepresents : OpenXmlLeafElement
 
     [ChildElementInfo(typeof(BubbleChartExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BubbleChartExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10619;
@@ -25412,6 +25964,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the SurfaceChartExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -25423,6 +25976,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(SurfaceChartExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SurfaceChartExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10620;
@@ -25490,6 +26044,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the Surface3DChartExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -25501,6 +26056,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(Surface3DChartExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Surface3DChartExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10621;
@@ -25568,10 +26124,12 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the LabelAlignment Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:lblAlgn.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LabelAlignment : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10623;
@@ -25632,10 +26190,12 @@ public partial class LabelAlignment : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the LabelOffset Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:lblOffset.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LabelOffset : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10624;
@@ -25696,10 +26256,12 @@ public partial class LabelOffset : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the TickLabelSkip Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:tickLblSkip.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TickLabelSkip : SkipType
 {
     internal const int ElementTypeIdConst = 10625;
@@ -25725,10 +26287,12 @@ public partial class TickLabelSkip : SkipType
 }
 /// <summary>
 /// <para>Defines the TickMarkSkip Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:tickMarkSkip.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TickMarkSkip : SkipType
 {
     internal const int ElementTypeIdConst = 10626;
@@ -25802,6 +26366,7 @@ public abstract partial class SkipType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the CatAxExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -25813,6 +26378,7 @@ public abstract partial class SkipType : OpenXmlLeafElement
 
     [ChildElementInfo(typeof(CatAxExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CatAxExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10628;
@@ -25880,10 +26446,12 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the BaseTimeUnit Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:baseTimeUnit.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BaseTimeUnit : TimeUnitType
 {
     internal const int ElementTypeIdConst = 10629;
@@ -25909,10 +26477,12 @@ public partial class BaseTimeUnit : TimeUnitType
 }
 /// <summary>
 /// <para>Defines the MajorTimeUnit Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:majorTimeUnit.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MajorTimeUnit : TimeUnitType
 {
     internal const int ElementTypeIdConst = 10631;
@@ -25938,10 +26508,12 @@ public partial class MajorTimeUnit : TimeUnitType
 }
 /// <summary>
 /// <para>Defines the MinorTimeUnit Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:minorTimeUnit.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MinorTimeUnit : TimeUnitType
 {
     internal const int ElementTypeIdConst = 10633;
@@ -26015,10 +26587,12 @@ public abstract partial class TimeUnitType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the MajorUnit Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:majorUnit.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MajorUnit : AxisUnitType
 {
     internal const int ElementTypeIdConst = 10630;
@@ -26044,10 +26618,12 @@ public partial class MajorUnit : AxisUnitType
 }
 /// <summary>
 /// <para>Defines the MinorUnit Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:minorUnit.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MinorUnit : AxisUnitType
 {
     internal const int ElementTypeIdConst = 10632;
@@ -26121,6 +26697,7 @@ public abstract partial class AxisUnitType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the DateAxExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -26132,6 +26709,7 @@ public abstract partial class AxisUnitType : OpenXmlLeafElement
 
     [ChildElementInfo(typeof(DateAxExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DateAxExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10634;
@@ -26199,6 +26777,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the SerAxExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -26210,6 +26789,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(SerAxExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SerAxExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10635;
@@ -26277,10 +26857,12 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the CrossBetween Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:crossBetween.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CrossBetween : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10636;
@@ -26341,6 +26923,7 @@ public partial class CrossBetween : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the DisplayUnits Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:dispUnits.</para>
 /// </summary>
 /// <remarks>
@@ -26358,6 +26941,7 @@ public partial class CrossBetween : OpenXmlLeafElement
     [ChildElementInfo(typeof(DisplayUnitsLabel))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DisplayUnits : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10637;
@@ -26434,6 +27018,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the ValAxExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -26445,6 +27030,7 @@ if( 11 == namespaceId && "extLst" == name)
 
     [ChildElementInfo(typeof(ValAxExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ValAxExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10638;
@@ -26512,10 +27098,12 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the EditingLanguage Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:lang.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EditingLanguage : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10640;
@@ -26576,10 +27164,12 @@ public partial class EditingLanguage : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the Style Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:style.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Style : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10642;
@@ -26640,6 +27230,7 @@ public partial class Style : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the ColorMapOverride Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:clrMapOvr.</para>
 /// </summary>
 /// <remarks>
@@ -26651,6 +27242,7 @@ public partial class Style : OpenXmlLeafElement
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ColorMapOverride : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10643;
@@ -26920,6 +27512,7 @@ if( 0 == namespaceId && "folHlink" == name)
 }
 /// <summary>
 /// <para>Defines the PivotSource Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:pivotSource.</para>
 /// </summary>
 /// <remarks>
@@ -26935,6 +27528,7 @@ if( 0 == namespaceId && "folHlink" == name)
     [ChildElementInfo(typeof(FormatId))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PivotSource : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10644;
@@ -27053,6 +27647,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the Protection Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:protection.</para>
 /// </summary>
 /// <remarks>
@@ -27072,6 +27667,7 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(Selection))]
     [ChildElementInfo(typeof(UserInterface))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Protection : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10645;
@@ -27220,6 +27816,7 @@ if( 11 == namespaceId && "userInterface" == name)
 }
 /// <summary>
 /// <para>Defines the Chart Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:chart.</para>
 /// </summary>
 /// <remarks>
@@ -27255,6 +27852,7 @@ if( 11 == namespaceId && "userInterface" == name)
     [ChildElementInfo(typeof(ShowDataLabelsOverMaximum))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Chart : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10646;
@@ -27523,6 +28121,7 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the ExternalData Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:externalData.</para>
 /// </summary>
 /// <remarks>
@@ -27534,6 +28133,7 @@ if( 11 == namespaceId && "extLst" == name)
 
     [ChildElementInfo(typeof(AutoUpdate))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ExternalData : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10647;
@@ -27651,6 +28251,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the PrintSettings Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:printSettings.</para>
 /// </summary>
 /// <remarks>
@@ -27668,6 +28269,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(PageSetup))]
     [ChildElementInfo(typeof(LegacyDrawingHeaderFooter))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PrintSettings : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10648;
@@ -27801,6 +28403,7 @@ if( 11 == namespaceId && "legacyDrawingHF" == name)
 }
 /// <summary>
 /// <para>Defines the ChartSpaceExtensionList Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -27812,6 +28415,7 @@ if( 11 == namespaceId && "legacyDrawingHF" == name)
 
     [ChildElementInfo(typeof(ChartSpaceExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ChartSpaceExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10650;
@@ -27879,6 +28483,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the ChartSpaceExtension Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:ext.</para>
 /// </summary>
 /// <remarks>
@@ -27894,6 +28499,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ChartSpaceExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10651;

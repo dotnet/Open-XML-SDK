@@ -74,6 +74,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Macrosheet : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 12600;
@@ -318,6 +319,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(RowSortMap))]
     [ChildElementInfo(typeof(ColumnSortMap))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WorksheetSortMap : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 12601;
@@ -450,7 +452,7 @@ if( 32 == namespaceId && "colSortMap" == name)
 }
 /// <summary>
 /// <para>Defines the ReferenceSequence Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xne:sqref.</para>
 /// </summary>
 
@@ -502,7 +504,7 @@ public partial class ReferenceSequence : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Defines the Formula Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xne:f.</para>
 /// </summary>
 
@@ -554,6 +556,7 @@ public partial class Formula : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Row Sort Map.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xne:rowSortMap.</para>
 /// </summary>
 /// <remarks>
@@ -565,6 +568,7 @@ public partial class Formula : OpenXmlLeafTextElement
 
     [ChildElementInfo(typeof(RowSortMapItem))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RowSortMap : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12604;
@@ -673,6 +677,7 @@ if( 0 == namespaceId && "count" == name)
 }
 /// <summary>
 /// <para>Column Sort Map.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xne:colSortMap.</para>
 /// </summary>
 /// <remarks>
@@ -684,6 +689,7 @@ if( 0 == namespaceId && "count" == name)
 
     [ChildElementInfo(typeof(ColumnSortMapItem))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ColumnSortMap : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12605;
@@ -792,10 +798,12 @@ if( 0 == namespaceId && "count" == name)
 }
 /// <summary>
 /// <para>Row.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xne:row.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RowSortMapItem : SortMapItemType
 {
     internal const int ElementTypeIdConst = 12606;
@@ -821,10 +829,12 @@ public partial class RowSortMapItem : SortMapItemType
 }
 /// <summary>
 /// <para>Column.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xne:col.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ColumnSortMapItem : SortMapItemType
 {
     internal const int ElementTypeIdConst = 12607;

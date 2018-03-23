@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Office2010.ExcelAc
 {
 /// <summary>
 /// <para>Defines the List Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x12ac:list.</para>
 /// </summary>
 

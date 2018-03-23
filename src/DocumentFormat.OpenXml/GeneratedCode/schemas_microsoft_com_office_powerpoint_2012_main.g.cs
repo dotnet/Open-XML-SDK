@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
 {
 /// <summary>
 /// <para>Defines the PresetTransition Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p15:prstTrans.</para>
 /// </summary>
 
@@ -106,7 +106,7 @@ if( 0 == namespaceId && "invY" == name)
 }
 /// <summary>
 /// <para>Defines the PresenceInfo Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p15:presenceInfo.</para>
 /// </summary>
 
@@ -186,7 +186,7 @@ if( 0 == namespaceId && "providerId" == name)
 }
 /// <summary>
 /// <para>Defines the ThreadingInfo Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p15:threadingInfo.</para>
 /// </summary>
 /// <remarks>
@@ -314,7 +314,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the SlideGuideList Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p15:sldGuideLst.</para>
 /// </summary>
 /// <remarks>
@@ -377,7 +377,7 @@ public partial class SlideGuideList : ExtendedGuideList
 }
 /// <summary>
 /// <para>Defines the NotesGuideList Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p15:notesGuideLst.</para>
 /// </summary>
 /// <remarks>
@@ -507,7 +507,7 @@ if( 68 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the ChartTrackingReferenceBased Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p15:chartTrackingRefBased.</para>
 /// </summary>
 
@@ -573,7 +573,7 @@ public partial class ChartTrackingReferenceBased : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the ParentCommentIdentifier Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p15:parentCm.</para>
 /// </summary>
 
@@ -653,7 +653,7 @@ if( 0 == namespaceId && "idx" == name)
 }
 /// <summary>
 /// <para>Defines the ColorType Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p15:clr.</para>
 /// </summary>
 /// <remarks>
@@ -839,7 +839,7 @@ if( 10 == namespaceId && "prstClr" == name)
 }
 /// <summary>
 /// <para>Defines the ExtensionList Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p15:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -919,7 +919,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the ExtendedGuide Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p15:guide.</para>
 /// </summary>
 /// <remarks>
