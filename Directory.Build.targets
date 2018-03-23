@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
+
+  <!--
+    Since this project supports multiple configurations which don't all have the same surface area, the following define
+    constants are used to conditionally compile features:
+
+    FEATURE_ABSTRACT_XML_CLOSE       : XmlWriter.Close is defined as abstract
+    FEATURE_ARRAY_EMPTY              : Array.Empty exists
+    FEATURE_CLOSE                    : Stream.Close is available in the platform
+    FEATURE_DCS_SETTINGS             : DataContractSerializer settings class exists
+    FEATURE_SERIALIZATION            : Serialization using ISerializable is in the platform
+    FEATURE_SYSTEMEXCEPTION          : SytemException is available in the platform
+    FEATURE_XML_DISPOSE_PROTECTED    : XmlWriter.Dispose is protected
+    FEATURE_XML_PROHIBIT_DTD         : XML settings only has ProhibitDtd property
+    FEATURE_XML_QUOTECHAR            : XmlReader.QuoteChar is an abstract member
+    FEATURE_XML_SCHEMA               : XML Schema is available in the platform
+    FEATURE_XML_VERIFYTOKEN          : XmlConvert.VerifyTOKEN is available in the platform
+  -->
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net35' ">
+    <DefineConstants>$(DefineConstants);FEATURE_XML_PROHIBIT_DTD</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net35' OR '$(TargetFramework)' == 'net40' ">
+    <DefineConstants>$(DefineConstants);FEATURE_ABSTRACT_XML_CLOSE;FEATURE_CLOSE;FEATURE_SERIALIZATION;FEATURE_SYSTEMEXCEPTION;FEATURE_XML_DISPOSE_PROTECTED;FEATURE_XML_QUOTECHAR;FEATURE_XML_SCHEMA;FEATURE_XML_VERIFYTOKEN</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' OR '$(TargetFramework)' == 'net46' ">
+    <DefineConstants> $(DefineConstants);FEATURE_DCS_SETTINGS;FEATURE_ARRAY_EMPTY</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net46' ">
+    <DefineConstants>$(DefineConstants);FEATURE_ABSTRACT_XML_CLOSE;FEATURE_CLOSE;FEATURE_SERIALIZATION;FEATURE_SYSTEMEXCEPTION;FEATURE_XML_QUOTECHAR;FEATURE_XML_SCHEMA;FEATURE_XML_VERIFYTOKEN</DefineConstants>
+  </PropertyGroup>
+
+
   <ItemGroup>
 
     <AdditionalFiles Include="$(MSBuildThisFileDirectory)\stylecop.json" />
