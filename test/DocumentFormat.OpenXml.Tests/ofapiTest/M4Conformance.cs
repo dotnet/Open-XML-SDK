@@ -43,8 +43,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             var attr1 = typeof(EndBorder).GetTypeInfo().GetCustomAttributes<OfficeAvailabilityAttribute>(false).First();
             Assert.True(attr1.OfficeVersion == FileFormatVersions.Office2010);
-
-            Assert.True(typeof(TableCellBorders).GetTypeInfo().GetCustomAttributes<OfficeAvailabilityAttribute>(false).FirstOrDefault() == null);
         }
 
         ///<summary>
@@ -71,8 +69,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             var attr1 = typeof(EndBorder).GetTypeInfo().GetCustomAttributes<OfficeAvailabilityAttribute>(false).First();
             Assert.True(attr1.OfficeVersion == FileFormatVersions.Office2010);
-
-            Assert.False(typeof(TableCellBorders).GetTypeInfo().GetCustomAttributes<OfficeAvailabilityAttribute>(false).Any());
         }
 
         ///<summary>
