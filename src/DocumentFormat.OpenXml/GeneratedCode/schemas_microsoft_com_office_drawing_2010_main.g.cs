@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
 {
 /// <summary>
 /// <para>Defines the CameraTool Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:cameraTool.</para>
 /// </summary>
 
@@ -91,7 +91,7 @@ if( 0 == namespaceId && "spid" == name)
 }
 /// <summary>
 /// <para>Defines the CompatExtension Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:compatExt.</para>
 /// </summary>
 
@@ -157,7 +157,7 @@ public partial class CompatExtension : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the IsCanvas Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:isCanvas.</para>
 /// </summary>
 
@@ -223,7 +223,7 @@ public partial class IsCanvas : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the GvmlContentPart Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:contentPart.</para>
 /// </summary>
 /// <remarks>
@@ -401,7 +401,7 @@ if( 19 == namespaceId && "id" == name)
 }
 /// <summary>
 /// <para>Defines the ShadowObscured Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:shadowObscured.</para>
 /// </summary>
 
@@ -467,7 +467,7 @@ public partial class ShadowObscured : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the HiddenFillProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:hiddenFill.</para>
 /// </summary>
 /// <remarks>
@@ -653,7 +653,7 @@ if( 10 == namespaceId && "grpFill" == name)
 }
 /// <summary>
 /// <para>Defines the HiddenLineProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:hiddenLine.</para>
 /// </summary>
 /// <remarks>
@@ -857,7 +857,7 @@ if( 0 == namespaceId && "algn" == name)
 }
 /// <summary>
 /// <para>Defines the HiddenEffectsProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:hiddenEffects.</para>
 /// </summary>
 /// <remarks>
@@ -975,7 +975,7 @@ if( 10 == namespaceId && "effectDag" == name)
 }
 /// <summary>
 /// <para>Defines the HiddenScene3D Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:hiddenScene3d.</para>
 /// </summary>
 /// <remarks>
@@ -1127,7 +1127,7 @@ if( 10 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the HiddenShape3D Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:hiddenSp3d.</para>
 /// </summary>
 /// <remarks>
@@ -1365,7 +1365,7 @@ if( 0 == namespaceId && "prstMaterial" == name)
 }
 /// <summary>
 /// <para>Defines the ImageProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:imgProps.</para>
 /// </summary>
 /// <remarks>
@@ -1466,7 +1466,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the UseLocalDpi Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:useLocalDpi.</para>
 /// </summary>
 
@@ -1532,7 +1532,7 @@ public partial class UseLocalDpi : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the TextMath Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:m.</para>
 /// </summary>
 
@@ -1571,7 +1571,7 @@ public partial class TextMath : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the OfficeArtExtensionList Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -1651,7 +1651,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the ContentPartLocks Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:cpLocks.</para>
 /// </summary>
 /// <remarks>
@@ -1905,7 +1905,7 @@ if( 0 == namespaceId && "noChangeShapeType" == name)
 }
 /// <summary>
 /// <para>Defines the ForegroundMark Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:foregroundMark.</para>
 /// </summary>
 
@@ -2013,7 +2013,7 @@ if( 0 == namespaceId && "y2" == name)
 }
 /// <summary>
 /// <para>Defines the BackgroundMark Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:backgroundMark.</para>
 /// </summary>
 
@@ -2121,7 +2121,7 @@ if( 0 == namespaceId && "y2" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticBlur Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticBlur.</para>
 /// </summary>
 
@@ -2187,7 +2187,7 @@ public partial class ArtisticBlur : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the ArtisticCement Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticCement.</para>
 /// </summary>
 
@@ -2267,7 +2267,7 @@ if( 0 == namespaceId && "crackSpacing" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticChalkSketch Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticChalkSketch.</para>
 /// </summary>
 
@@ -2347,7 +2347,7 @@ if( 0 == namespaceId && "pressure" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticCrisscrossEtching Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticCrisscrossEtching.</para>
 /// </summary>
 
@@ -2427,7 +2427,7 @@ if( 0 == namespaceId && "pressure" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticCutout Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticCutout.</para>
 /// </summary>
 
@@ -2507,7 +2507,7 @@ if( 0 == namespaceId && "numberOfShades" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticFilmGrain Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticFilmGrain.</para>
 /// </summary>
 
@@ -2587,7 +2587,7 @@ if( 0 == namespaceId && "grainSize" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticGlass Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticGlass.</para>
 /// </summary>
 
@@ -2667,7 +2667,7 @@ if( 0 == namespaceId && "scaling" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticGlowDiffused Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticGlowDiffused.</para>
 /// </summary>
 
@@ -2747,7 +2747,7 @@ if( 0 == namespaceId && "intensity" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticGlowEdges Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticGlowEdges.</para>
 /// </summary>
 
@@ -2827,7 +2827,7 @@ if( 0 == namespaceId && "smoothness" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticLightScreen Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticLightScreen.</para>
 /// </summary>
 
@@ -2907,7 +2907,7 @@ if( 0 == namespaceId && "gridSize" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticLineDrawing Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticLineDrawing.</para>
 /// </summary>
 
@@ -2987,7 +2987,7 @@ if( 0 == namespaceId && "pencilSize" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticMarker Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticMarker.</para>
 /// </summary>
 
@@ -3067,7 +3067,7 @@ if( 0 == namespaceId && "size" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticMosaicBubbles Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticMosiaicBubbles.</para>
 /// </summary>
 
@@ -3147,7 +3147,7 @@ if( 0 == namespaceId && "pressure" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticPaintStrokes Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticPaintStrokes.</para>
 /// </summary>
 
@@ -3227,7 +3227,7 @@ if( 0 == namespaceId && "intensity" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticPaintBrush Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticPaintBrush.</para>
 /// </summary>
 
@@ -3307,7 +3307,7 @@ if( 0 == namespaceId && "brushSize" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticPastelsSmooth Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticPastelsSmooth.</para>
 /// </summary>
 
@@ -3387,7 +3387,7 @@ if( 0 == namespaceId && "scaling" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticPencilGrayscale Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticPencilGrayscale.</para>
 /// </summary>
 
@@ -3467,7 +3467,7 @@ if( 0 == namespaceId && "pencilSize" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticPencilSketch Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticPencilSketch.</para>
 /// </summary>
 
@@ -3547,7 +3547,7 @@ if( 0 == namespaceId && "pressure" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticPhotocopy Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticPhotocopy.</para>
 /// </summary>
 
@@ -3627,7 +3627,7 @@ if( 0 == namespaceId && "detail" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticPlasticWrap Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticPlasticWrap.</para>
 /// </summary>
 
@@ -3707,7 +3707,7 @@ if( 0 == namespaceId && "smoothness" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticTexturizer Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticTexturizer.</para>
 /// </summary>
 
@@ -3787,7 +3787,7 @@ if( 0 == namespaceId && "scaling" == name)
 }
 /// <summary>
 /// <para>Defines the ArtisticWatercolorSponge Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:artisticWatercolorSponge.</para>
 /// </summary>
 
@@ -3867,7 +3867,7 @@ if( 0 == namespaceId && "brushSize" == name)
 }
 /// <summary>
 /// <para>Defines the BackgroundRemoval Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:backgroundRemoval.</para>
 /// </summary>
 /// <remarks>
@@ -4021,7 +4021,7 @@ if( 0 == namespaceId && "r" == name)
 }
 /// <summary>
 /// <para>Defines the BrightnessContrast Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:brightnessContrast.</para>
 /// </summary>
 
@@ -4101,7 +4101,7 @@ if( 0 == namespaceId && "contrast" == name)
 }
 /// <summary>
 /// <para>Defines the ColorTemperature Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:colorTemperature.</para>
 /// </summary>
 
@@ -4167,7 +4167,7 @@ public partial class ColorTemperature : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the Saturation Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:saturation.</para>
 /// </summary>
 
@@ -4233,7 +4233,7 @@ public partial class Saturation : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the SharpenSoften Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:sharpenSoften.</para>
 /// </summary>
 
@@ -4299,7 +4299,7 @@ public partial class SharpenSoften : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the ImageEffect Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:imgEffect.</para>
 /// </summary>
 /// <remarks>
@@ -4869,7 +4869,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
 }
 /// <summary>
 /// <para>Defines the ImageLayer Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:imgLayer.</para>
 /// </summary>
 /// <remarks>
@@ -4978,7 +4978,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the NonVisualDrawingProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:cNvPr.</para>
 /// </summary>
 /// <remarks>
@@ -5196,7 +5196,7 @@ if( 0 == namespaceId && "title" == name)
 }
 /// <summary>
 /// <para>Defines the NonVisualInkContentPartProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:cNvContentPartPr.</para>
 /// </summary>
 /// <remarks>
@@ -5341,7 +5341,7 @@ if( 48 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the NonVisualContentPartProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:nvContentPartPr.</para>
 /// </summary>
 /// <remarks>
@@ -5459,7 +5459,7 @@ if( 48 == namespaceId && "cNvContentPartPr" == name)
 }
 /// <summary>
 /// <para>Defines the Transform2D Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a14:xfrm.</para>
 /// </summary>
 /// <remarks>

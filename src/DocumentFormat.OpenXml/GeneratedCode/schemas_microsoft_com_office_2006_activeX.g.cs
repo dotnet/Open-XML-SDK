@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
 {
 /// <summary>
 /// <para>Defines the ActiveXControlData Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ax:ocx.</para>
 /// </summary>
 /// <remarks>
@@ -21,6 +22,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
 
     [ChildElementInfo(typeof(ActiveXObjectProperty))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ActiveXControlData : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12688;
@@ -165,6 +167,7 @@ if( 35 == namespaceId && "persistence" == name)
 }
 /// <summary>
 /// <para>Defines the ActiveXObjectProperty Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ax:ocxPr.</para>
 /// </summary>
 /// <remarks>
@@ -178,6 +181,7 @@ if( 35 == namespaceId && "persistence" == name)
     [ChildElementInfo(typeof(SharedComFont))]
     [ChildElementInfo(typeof(SharedComPicture))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ActiveXObjectProperty : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12689;
@@ -326,6 +330,7 @@ if( 35 == namespaceId && "value" == name)
 }
 /// <summary>
 /// <para>Defines the SharedComFont Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ax:font.</para>
 /// </summary>
 /// <remarks>
@@ -337,6 +342,7 @@ if( 35 == namespaceId && "value" == name)
 
     [ChildElementInfo(typeof(ActiveXObjectProperty))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SharedComFont : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12690;
@@ -449,10 +455,12 @@ if( 19 == namespaceId && "id" == name)
 }
 /// <summary>
 /// <para>Defines the SharedComPicture Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ax:picture.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SharedComPicture : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12691;

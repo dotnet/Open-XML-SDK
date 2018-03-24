@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
 {
 /// <summary>
 /// <para>Defines the ThemeFamily Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is thm15:themeFamily.</para>
 /// </summary>
 /// <remarks>
@@ -167,7 +167,7 @@ if( 0 == namespaceId && "vid" == name)
 }
 /// <summary>
 /// <para>Defines the OfficeArtExtensionList Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is thm15:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -247,7 +247,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the ThemeVariant Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is thm15:themeVariant.</para>
 /// </summary>
 /// <remarks>
@@ -433,7 +433,7 @@ if( 19 == namespaceId && "id" == name)
 }
 /// <summary>
 /// <para>Defines the ThemeVariantList Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is thm15:themeVariantLst.</para>
 /// </summary>
 /// <remarks>

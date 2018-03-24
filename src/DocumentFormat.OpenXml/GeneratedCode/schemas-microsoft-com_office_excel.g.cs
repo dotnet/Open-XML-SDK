@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 {
 /// <summary>
 /// <para>Attached Object Data.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:ClientData.</para>
 /// </summary>
 /// <remarks>
@@ -153,6 +154,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     [ChildElementInfo(typeof(ScriptLocation))]
     [ChildElementInfo(typeof(FormulaTextBox))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ClientData : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12507;
@@ -445,10 +447,12 @@ if( 29 == namespaceId && "FmlaTxbx" == name)
 }
 /// <summary>
 /// <para>Move with Cells.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:MoveWithCells.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MoveWithCells : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12508;
@@ -487,10 +491,12 @@ public partial class MoveWithCells : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Resize with Cells.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:SizeWithCells.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ResizeWithCells : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12509;
@@ -529,10 +535,12 @@ public partial class ResizeWithCells : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Lock Toggle.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Locked.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Locked : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12511;
@@ -571,10 +579,12 @@ public partial class Locked : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Default Size Toggle.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:DefaultSize.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DefaultSize : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12512;
@@ -613,10 +623,12 @@ public partial class DefaultSize : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Print Toggle.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:PrintObject.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PrintObject : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12513;
@@ -655,10 +667,12 @@ public partial class PrintObject : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Macro Disable Toggle.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Disabled.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Disabled : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12514;
@@ -697,10 +711,12 @@ public partial class Disabled : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>AutoFill.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:AutoFill.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AutoFill : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12515;
@@ -739,10 +755,12 @@ public partial class AutoFill : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>AutoLine.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:AutoLine.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AutoLine : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12516;
@@ -781,10 +799,12 @@ public partial class AutoLine : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Automatically Size.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:AutoPict.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AutoSizePicture : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12517;
@@ -823,10 +843,12 @@ public partial class AutoSizePicture : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Text Lock.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:LockText.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LockText : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12521;
@@ -865,10 +887,12 @@ public partial class LockText : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Far East Alignment Toggle.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:JustLastX.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class JustifyLastLine : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12522;
@@ -907,10 +931,12 @@ public partial class JustifyLastLine : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Password Edit.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:SecretEdit.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SecretEdit : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12523;
@@ -949,10 +975,12 @@ public partial class SecretEdit : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Default Button.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Default.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DefaultButton : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12524;
@@ -991,10 +1019,12 @@ public partial class DefaultButton : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Help Button.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Help.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HelpButton : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12525;
@@ -1033,10 +1063,12 @@ public partial class HelpButton : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Cancel Button.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Cancel.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CancelButton : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12526;
@@ -1075,10 +1107,12 @@ public partial class CancelButton : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Dismiss Button.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Dismiss.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DismissButton : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12527;
@@ -1117,10 +1151,12 @@ public partial class DismissButton : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Comment Visibility Toggle.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Visible.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Visible : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12532;
@@ -1159,10 +1195,12 @@ public partial class Visible : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Comment's Row is Hidden.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:RowHidden.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RowHidden : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12533;
@@ -1201,10 +1239,12 @@ public partial class RowHidden : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Comment's Column is Hidden.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:ColHidden.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ColumnHidden : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12534;
@@ -1243,10 +1283,12 @@ public partial class ColumnHidden : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Multi-line.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:MultiLine.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MultiLine : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12536;
@@ -1285,10 +1327,12 @@ public partial class MultiLine : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Vertical Scroll.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:VScroll.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VerticalScrollBar : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12537;
@@ -1327,10 +1371,12 @@ public partial class VerticalScrollBar : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Valid ID.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:ValidIds.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ValidIds : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12538;
@@ -1369,10 +1415,12 @@ public partial class ValidIds : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Disable 3D.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:NoThreeD2.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Disable3DForListBoxAndDropDown : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12542;
@@ -1411,10 +1459,12 @@ public partial class Disable3DForListBoxAndDropDown : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Dropdown Color Toggle.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Colored.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Colored : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12548;
@@ -1453,10 +1503,12 @@ public partial class Colored : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Disable 3D.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:NoThreeD.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Disable3D : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12553;
@@ -1495,10 +1547,12 @@ public partial class Disable3D : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>First Radio Button.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:FirstButton.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FirstButton : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12554;
@@ -1537,10 +1591,12 @@ public partial class FirstButton : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Scroll Bar Orientation.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Horiz.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HorizontalScrollBar : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12561;
@@ -1579,10 +1635,12 @@ public partial class HorizontalScrollBar : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>ActiveX Control.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:MapOCX.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MapOcxControl : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12563;
@@ -1621,10 +1679,12 @@ public partial class MapOcxControl : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Camera Tool.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Camera.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CameraObject : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12565;
@@ -1663,10 +1723,12 @@ public partial class CameraObject : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Recalculation Toggle.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:RecalcAlways.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RecalculateAlways : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12566;
@@ -1705,10 +1767,12 @@ public partial class RecalculateAlways : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Font AutoScale.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:AutoScale.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AutoScaleFont : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12567;
@@ -1747,10 +1811,12 @@ public partial class AutoScaleFont : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Dynamic Data Exchange.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:DDE.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DdeObject : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12568;
@@ -1789,10 +1855,12 @@ public partial class DdeObject : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>UI Object Toggle.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:UIObj.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UIObject : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12569;
@@ -1831,10 +1899,12 @@ public partial class UIObject : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Anchor.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Anchor.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Anchor : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12510;
@@ -1873,10 +1943,12 @@ public partial class Anchor : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Horizontal Text Alignment.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:TextHAlign.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HorizontalTextAlignment : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12519;
@@ -1915,10 +1987,12 @@ public partial class HorizontalTextAlignment : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Vertical Text Alignment.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:TextVAlign.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VerticalTextAlignment : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12520;
@@ -1957,10 +2031,12 @@ public partial class VerticalTextAlignment : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>List Items Source Range.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:FmlaRange.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FormulaRange : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12539;
@@ -1999,10 +2075,12 @@ public partial class FormulaRange : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Selection Type.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:SelType.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SelectionType : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12543;
@@ -2041,10 +2119,12 @@ public partial class SelectionType : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Multiple Selections.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:MultiSel.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MultiSelections : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12544;
@@ -2083,10 +2163,12 @@ public partial class MultiSelections : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Callback Type.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:LCT.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ListBoxCallbackType : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12545;
@@ -2125,10 +2207,12 @@ public partial class ListBoxCallbackType : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Non-linked List Item.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:ListItem.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ListItem : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12546;
@@ -2167,10 +2251,12 @@ public partial class ListItem : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Dropdown Style.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:DropStyle.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DropStyle : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12547;
@@ -2209,10 +2295,12 @@ public partial class DropStyle : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Linked Formula.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:FmlaLink.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FormulaLink : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12551;
@@ -2251,10 +2339,12 @@ public partial class FormulaLink : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Camera Source Range.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:FmlaPict.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FormulaPicture : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12552;
@@ -2293,10 +2383,12 @@ public partial class FormulaPicture : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Linked Formula - Group Box.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:FmlaGroup.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FormulaGroup : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12555;
@@ -2335,10 +2427,12 @@ public partial class FormulaGroup : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>HTML Script Text.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:ScriptText.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScriptText : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12570;
@@ -2377,10 +2471,12 @@ public partial class ScriptText : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>HTML Script Attributes.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:ScriptExtended.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScriptExtended : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12571;
@@ -2419,10 +2515,12 @@ public partial class ScriptExtended : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Text Formula.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:FmlaTxbx.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FormulaTextBox : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12574;
@@ -2461,10 +2559,12 @@ public partial class FormulaTextBox : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Reference to Custom Function.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:FmlaMacro.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FormulaMacro : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12518;
@@ -2511,10 +2611,12 @@ public partial class FormulaMacro : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Primary Keyboard Accelerator.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Accel.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AcceleratorPrimary : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12528;
@@ -2553,10 +2655,12 @@ public partial class AcceleratorPrimary : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Secondary Keyboard Accelerator.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Accel2.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AcceleratorSecondary : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12529;
@@ -2595,10 +2699,12 @@ public partial class AcceleratorSecondary : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Comment Row Target.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Row.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CommentRowTarget : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12530;
@@ -2637,10 +2743,12 @@ public partial class CommentRowTarget : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Comment Column Target.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Column.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CommentColumnTarget : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12531;
@@ -2679,10 +2787,12 @@ public partial class CommentColumnTarget : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Validation Type.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:VTEdit.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class InputValidationType : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12535;
@@ -2721,10 +2831,12 @@ public partial class InputValidationType : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Minimum Width.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:WidthMin.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MinDropDownWidth : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12540;
@@ -2763,10 +2875,12 @@ public partial class MinDropDownWidth : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Selected Entry.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Sel.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SelectionEntry : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12541;
@@ -2805,10 +2919,12 @@ public partial class SelectionEntry : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Dropdown Maximum Lines.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:DropLines.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DropLines : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12549;
@@ -2847,10 +2963,12 @@ public partial class DropLines : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Checked.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Checked.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Checked : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12550;
@@ -2889,10 +3007,12 @@ public partial class Checked : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Scroll bar position.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Val.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScrollBarPosition : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12556;
@@ -2931,10 +3051,12 @@ public partial class ScrollBarPosition : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Scroll Bar Minimum.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Min.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScrollBarMin : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12557;
@@ -2973,10 +3095,12 @@ public partial class ScrollBarMin : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Scroll Bar Maximum.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Max.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScrollBarMax : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12558;
@@ -3015,10 +3139,12 @@ public partial class ScrollBarMax : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Scroll Bar Increment.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Inc.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScrollBarIncrement : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12559;
@@ -3057,10 +3183,12 @@ public partial class ScrollBarIncrement : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Scroll Bar Page Increment.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Page.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScrollBarPageIncrement : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12560;
@@ -3099,10 +3227,12 @@ public partial class ScrollBarPageIncrement : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Scroll Bar Width.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Dx.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScrollBarWidth : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12562;
@@ -3141,10 +3271,12 @@ public partial class ScrollBarWidth : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Clipboard Format.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:CF.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ClipboardFormat : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12564;
@@ -3191,10 +3323,12 @@ public partial class ClipboardFormat : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>HTML Script Language.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:ScriptLanguage.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScriptLanguage : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12572;
@@ -3233,10 +3367,12 @@ public partial class ScriptLanguage : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>HTML Script Location.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:ScriptLocation.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScriptLocation : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12573;

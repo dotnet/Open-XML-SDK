@@ -74,6 +74,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     [ChildElementInfo(typeof(ApplicationVersion))]
     [ChildElementInfo(typeof(DocumentSecurity))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Properties : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 11064;
@@ -581,10 +582,12 @@ if( 3 == namespaceId && "DocSecurity" == name)
 }
 /// <summary>
 /// <para>Name of Document Template.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Template.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Template : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11065;
@@ -623,10 +626,12 @@ public partial class Template : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Name of Manager.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Manager.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Manager : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11066;
@@ -665,10 +670,12 @@ public partial class Manager : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Name of Company.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Company.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Company : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11067;
@@ -707,10 +714,12 @@ public partial class Company : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Intended Format of Presentation.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:PresentationFormat.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PresentationFormat : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11071;
@@ -749,10 +758,12 @@ public partial class PresentationFormat : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Relative Hyperlink Base.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:HyperlinkBase.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HyperlinkBase : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11085;
@@ -791,10 +802,12 @@ public partial class HyperlinkBase : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Application Name.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Application.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Application : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11089;
@@ -833,10 +846,12 @@ public partial class Application : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Application Version.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:AppVersion.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ApplicationVersion : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11090;
@@ -875,10 +890,12 @@ public partial class ApplicationVersion : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Total Number of Pages.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Pages.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Pages : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11068;
@@ -917,10 +934,12 @@ public partial class Pages : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Word Count.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Words.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Words : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11069;
@@ -959,10 +978,12 @@ public partial class Words : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Total Number of Characters.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Characters.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Characters : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11070;
@@ -1001,10 +1022,12 @@ public partial class Characters : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Number of Lines.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Lines.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Lines : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11072;
@@ -1043,10 +1066,12 @@ public partial class Lines : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Total Number of Paragraphs.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Paragraphs.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Paragraphs : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11073;
@@ -1085,10 +1110,12 @@ public partial class Paragraphs : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Slides Metadata Element.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Slides.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Slides : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11074;
@@ -1127,10 +1154,12 @@ public partial class Slides : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Number of Slides Containing Notes.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Notes.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Notes : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11075;
@@ -1169,10 +1198,12 @@ public partial class Notes : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Total Edit Time Metadata Element.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:TotalTime.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TotalTime : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11076;
@@ -1211,10 +1242,12 @@ public partial class TotalTime : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Number of Hidden Slides.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:HiddenSlides.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HiddenSlides : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11077;
@@ -1253,10 +1286,12 @@ public partial class HiddenSlides : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Total Number of Multimedia Clips.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:MMClips.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MultimediaClips : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11078;
@@ -1295,10 +1330,12 @@ public partial class MultimediaClips : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Number of Characters (With Spaces).</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:CharactersWithSpaces.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CharactersWithSpaces : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11083;
@@ -1337,10 +1374,12 @@ public partial class CharactersWithSpaces : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Document Security.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:DocSecurity.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DocumentSecurity : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11091;
@@ -1379,10 +1418,12 @@ public partial class DocumentSecurity : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Thumbnail Display Mode.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:ScaleCrop.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScaleCrop : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11079;
@@ -1421,10 +1462,12 @@ public partial class ScaleCrop : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Links Up-to-Date.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:LinksUpToDate.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LinksUpToDate : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11082;
@@ -1463,10 +1506,12 @@ public partial class LinksUpToDate : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Shared Document.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:SharedDoc.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SharedDocument : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11084;
@@ -1505,10 +1550,12 @@ public partial class SharedDocument : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Hyperlinks Changed.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:HyperlinksChanged.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HyperlinksChanged : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11087;
@@ -1547,6 +1594,7 @@ public partial class HyperlinksChanged : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Heading Pairs.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:HeadingPairs.</para>
 /// </summary>
 /// <remarks>
@@ -1557,6 +1605,7 @@ public partial class HyperlinksChanged : OpenXmlLeafTextElement
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HeadingPairs : VectorVariantType
 {
     internal const int ElementTypeIdConst = 11080;
@@ -1607,6 +1656,7 @@ public partial class HeadingPairs : VectorVariantType
 }
 /// <summary>
 /// <para>Hyperlink List.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:HLinks.</para>
 /// </summary>
 /// <remarks>
@@ -1617,6 +1667,7 @@ public partial class HeadingPairs : VectorVariantType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HyperlinkList : VectorVariantType
 {
     internal const int ElementTypeIdConst = 11086;
@@ -1750,6 +1801,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Part Titles.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:TitlesOfParts.</para>
 /// </summary>
 /// <remarks>
@@ -1761,6 +1813,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TitlesOfParts : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11081;
@@ -1849,6 +1902,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Digital Signature.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:DigSig.</para>
 /// </summary>
 /// <remarks>
@@ -1860,6 +1914,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTBlob))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DigitalSignature : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11088;

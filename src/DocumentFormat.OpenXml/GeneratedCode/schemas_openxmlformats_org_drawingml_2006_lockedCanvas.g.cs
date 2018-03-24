@@ -11,6 +11,7 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
 {
 /// <summary>
 /// <para>Locked Canvas Container.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is lc:lockedCanvas.</para>
 /// </summary>
 /// <remarks>
@@ -40,6 +41,7 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupShape))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LockedCanvas : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10759;

@@ -11,10 +11,12 @@ namespace DocumentFormat.OpenXml.EMMA
 {
 /// <summary>
 /// <para>Defines the DerivedFrom Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is emma:derived-from.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DerivedFrom : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12741;
@@ -89,6 +91,7 @@ if( 0 == namespaceId && "composite" == name)
 }
 /// <summary>
 /// <para>Defines the Info Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is emma:info.</para>
 /// </summary>
 /// <remarks>
@@ -98,6 +101,7 @@ if( 0 == namespaceId && "composite" == name)
 /// </remarks>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Info : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12742;
@@ -189,6 +193,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the Lattice Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is emma:lattice.</para>
 /// </summary>
 /// <remarks>
@@ -202,6 +207,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Arc))]
     [ChildElementInfo(typeof(Node))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Lattice : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12743;
@@ -345,10 +351,12 @@ if( 44 == namespaceId && "time-ref-anchor-point" == name)
 }
 /// <summary>
 /// <para>Defines the Literal Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is emma:literal.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Literal : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12744;
@@ -395,6 +403,7 @@ public partial class Literal : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Defines the Interpretation Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is emma:interpretation.</para>
 /// </summary>
 /// <remarks>
@@ -414,6 +423,7 @@ public partial class Literal : OpenXmlLeafTextElement
     [ChildElementInfo(typeof(Literal))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Ink.ContextNode))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Interpretation : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12745;
@@ -920,6 +930,7 @@ if( 44 == namespaceId && "uninterpreted" == name)
 }
 /// <summary>
 /// <para>Defines the OneOf Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is emma:one-of.</para>
 /// </summary>
 /// <remarks>
@@ -941,6 +952,7 @@ if( 44 == namespaceId && "uninterpreted" == name)
     [ChildElementInfo(typeof(Group))]
     [ChildElementInfo(typeof(Sequence))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class OneOf : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12746;
@@ -1432,6 +1444,7 @@ if( 44 == namespaceId && "dialog-turn" == name)
 }
 /// <summary>
 /// <para>Defines the Group Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is emma:group.</para>
 /// </summary>
 /// <remarks>
@@ -1455,6 +1468,7 @@ if( 44 == namespaceId && "dialog-turn" == name)
     [ChildElementInfo(typeof(Group))]
     [ChildElementInfo(typeof(Sequence))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Group : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12747;
@@ -1935,6 +1949,7 @@ if( 44 == namespaceId && "dialog-turn" == name)
 }
 /// <summary>
 /// <para>Defines the Sequence Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is emma:sequence.</para>
 /// </summary>
 /// <remarks>
@@ -1956,6 +1971,7 @@ if( 44 == namespaceId && "dialog-turn" == name)
     [ChildElementInfo(typeof(Group))]
     [ChildElementInfo(typeof(Sequence))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Sequence : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12748;
@@ -2433,6 +2449,7 @@ if( 44 == namespaceId && "dialog-turn" == name)
 }
 /// <summary>
 /// <para>Defines the GroupInfo Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is emma:group-info.</para>
 /// </summary>
 /// <remarks>
@@ -2442,6 +2459,7 @@ if( 44 == namespaceId && "dialog-turn" == name)
 /// </remarks>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class GroupInfo : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12749;
@@ -2533,6 +2551,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the Derivation Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is emma:derivation.</para>
 /// </summary>
 /// <remarks>
@@ -2550,6 +2569,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Sequence))]
     [ChildElementInfo(typeof(Group))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Derivation : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12750;
@@ -2626,10 +2646,12 @@ if( 44 == namespaceId && "group" == name)
 }
 /// <summary>
 /// <para>Defines the Grammar Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is emma:grammar.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Grammar : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12751;
@@ -2704,6 +2726,7 @@ if( 0 == namespaceId && "ref" == name)
 }
 /// <summary>
 /// <para>Defines the Model Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is emma:model.</para>
 /// </summary>
 /// <remarks>
@@ -2713,6 +2736,7 @@ if( 0 == namespaceId && "ref" == name)
 /// </remarks>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Model : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12752;
@@ -2818,6 +2842,7 @@ if( 0 == namespaceId && "ref" == name)
 }
 /// <summary>
 /// <para>Defines the EndPointInfo Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is emma:endpoint-info.</para>
 /// </summary>
 /// <remarks>
@@ -2829,6 +2854,7 @@ if( 0 == namespaceId && "ref" == name)
 
     [ChildElementInfo(typeof(EndPoint))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EndPointInfo : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12753;
@@ -2923,6 +2949,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the EndPoint Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is emma:endpoint.</para>
 /// </summary>
 /// <remarks>
@@ -2932,6 +2959,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </remarks>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EndPoint : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12754;
@@ -3183,6 +3211,7 @@ if( 44 == namespaceId && "mode" == name)
 }
 /// <summary>
 /// <para>Defines the Node Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is emma:node.</para>
 /// </summary>
 /// <remarks>
@@ -3194,6 +3223,7 @@ if( 44 == namespaceId && "mode" == name)
 
     [ChildElementInfo(typeof(Info))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Node : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12755;
@@ -3320,6 +3350,7 @@ if( 44 == namespaceId && "cost" == name)
 }
 /// <summary>
 /// <para>Defines the Arc Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is emma:arc.</para>
 /// </summary>
 /// <remarks>
@@ -3331,6 +3362,7 @@ if( 44 == namespaceId && "cost" == name)
 
     [ChildElementInfo(typeof(Info))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Arc : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12756;
@@ -3599,6 +3631,7 @@ if( 44 == namespaceId && "source" == name)
 }
 /// <summary>
 /// <para>Defines the Emma Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is emma:emma.</para>
 /// </summary>
 /// <remarks>
@@ -3626,6 +3659,7 @@ if( 44 == namespaceId && "source" == name)
     [ChildElementInfo(typeof(Group))]
     [ChildElementInfo(typeof(Sequence))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Emma : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12757;

@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.InkML
 {
 /// <summary>
 /// <para>Defines the Ink Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:ink.</para>
 /// </summary>
 /// <remarks>
@@ -33,6 +34,7 @@ namespace DocumentFormat.OpenXml.InkML
     [ChildElementInfo(typeof(TraceGroup))]
     [ChildElementInfo(typeof(TraceView))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Ink : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 12714;
@@ -145,10 +147,12 @@ if( 43 == namespaceId && "traceView" == name)
 }
 /// <summary>
 /// <para>Defines the Bind Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:bind.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Bind : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12715;
@@ -251,10 +255,12 @@ if( 0 == namespaceId && "variable" == name)
 }
 /// <summary>
 /// <para>Defines the Table Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:table.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Table : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12716;
@@ -358,10 +364,12 @@ if( 0 == namespaceId && "interpolation" == name)
 }
 /// <summary>
 /// <para>Defines the Matrix Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:matrix.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Matrix : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12717;
@@ -437,6 +445,7 @@ public partial class Matrix : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Defines the Mapping Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:mapping.</para>
 /// </summary>
 /// <remarks>
@@ -454,6 +463,7 @@ public partial class Matrix : OpenXmlLeafTextElement
     [ChildElementInfo(typeof(Matrix))]
     [ChildElementInfo(typeof(Mapping))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Mapping : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12718;
@@ -587,6 +597,7 @@ if( 0 == namespaceId && "mappingRef" == name)
 }
 /// <summary>
 /// <para>Defines the Channel Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:channel.</para>
 /// </summary>
 /// <remarks>
@@ -598,6 +609,7 @@ if( 0 == namespaceId && "mappingRef" == name)
 
     [ChildElementInfo(typeof(Mapping))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Channel : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12719;
@@ -806,6 +818,7 @@ if( 0 == namespaceId && "units" == name)
 }
 /// <summary>
 /// <para>Defines the IntermittentChannels Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:intermittentChannels.</para>
 /// </summary>
 /// <remarks>
@@ -817,6 +830,7 @@ if( 0 == namespaceId && "units" == name)
 
     [ChildElementInfo(typeof(Channel))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class IntermittentChannels : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12720;
@@ -884,10 +898,12 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the ChannelProperty Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:channelProperty.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ChannelProperty : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12721;
@@ -990,6 +1006,7 @@ if( 0 == namespaceId && "units" == name)
 }
 /// <summary>
 /// <para>Defines the TraceFormat Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:traceFormat.</para>
 /// </summary>
 /// <remarks>
@@ -1003,6 +1020,7 @@ if( 0 == namespaceId && "units" == name)
     [ChildElementInfo(typeof(Channel))]
     [ChildElementInfo(typeof(IntermittentChannels))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TraceFormat : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12722;
@@ -1102,10 +1120,12 @@ if( 43 == namespaceId && "intermittentChannels" == name)
 }
 /// <summary>
 /// <para>Defines the SampleRate Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:sampleRate.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SampleRate : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12723;
@@ -1180,10 +1200,12 @@ if( 0 == namespaceId && "value" == name)
 }
 /// <summary>
 /// <para>Defines the Latency Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:latency.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Latency : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12724;
@@ -1244,10 +1266,12 @@ public partial class Latency : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the ActiveArea Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:activeArea.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ActiveArea : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12725;
@@ -1350,10 +1374,12 @@ if( 0 == namespaceId && "units" == name)
 }
 /// <summary>
 /// <para>Defines the SourceProperty Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:srcProperty.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SourceProperty : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12726;
@@ -1442,6 +1468,7 @@ if( 0 == namespaceId && "units" == name)
 }
 /// <summary>
 /// <para>Defines the ChannelProperties Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:channelProperties.</para>
 /// </summary>
 /// <remarks>
@@ -1453,6 +1480,7 @@ if( 0 == namespaceId && "units" == name)
 
     [ChildElementInfo(typeof(ChannelProperty))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ChannelProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12727;
@@ -1520,10 +1548,12 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the Annotation Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:annotation.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Annotation : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12728;
@@ -1611,6 +1641,7 @@ if( 0 == namespaceId && "encoding" == name)
 }
 /// <summary>
 /// <para>Defines the AnnotationXml Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:annotationXML.</para>
 /// </summary>
 /// <remarks>
@@ -1622,6 +1653,7 @@ if( 0 == namespaceId && "encoding" == name)
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.EMMA.Emma))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AnnotationXml : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12729;
@@ -1765,6 +1797,7 @@ if( 0 == namespaceId && "href" == name)
 }
 /// <summary>
 /// <para>Defines the BrushProperty Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:brushProperty.</para>
 /// </summary>
 /// <remarks>
@@ -1778,6 +1811,7 @@ if( 0 == namespaceId && "href" == name)
     [ChildElementInfo(typeof(Annotation))]
     [ChildElementInfo(typeof(AnnotationXml))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BrushProperty : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12730;
@@ -1903,6 +1937,7 @@ if( 0 == namespaceId && "units" == name)
 }
 /// <summary>
 /// <para>Defines the Canvas Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:canvas.</para>
 /// </summary>
 /// <remarks>
@@ -1914,6 +1949,7 @@ if( 0 == namespaceId && "units" == name)
 
     [ChildElementInfo(typeof(TraceFormat))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Canvas : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12731;
@@ -2045,6 +2081,7 @@ if( 0 == namespaceId && "traceFormatRef" == name)
 }
 /// <summary>
 /// <para>Defines the CanvasTransform Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:canvasTransform.</para>
 /// </summary>
 /// <remarks>
@@ -2056,6 +2093,7 @@ if( 0 == namespaceId && "traceFormatRef" == name)
 
     [ChildElementInfo(typeof(Mapping))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CanvasTransform : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12732;
@@ -2166,6 +2204,7 @@ if( 0 == namespaceId && "invertible" == name)
 }
 /// <summary>
 /// <para>Defines the InkSource Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:inkSource.</para>
 /// </summary>
 /// <remarks>
@@ -2187,6 +2226,7 @@ if( 0 == namespaceId && "invertible" == name)
     [ChildElementInfo(typeof(SourceProperty))]
     [ChildElementInfo(typeof(ChannelProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class InkSource : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12733;
@@ -2425,6 +2465,7 @@ if( 0 == namespaceId && "description" == name)
 }
 /// <summary>
 /// <para>Defines the Brush Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:brush.</para>
 /// </summary>
 /// <remarks>
@@ -2440,6 +2481,7 @@ if( 0 == namespaceId && "description" == name)
     [ChildElementInfo(typeof(AnnotationXml))]
     [ChildElementInfo(typeof(BrushProperty))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Brush : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12734;
@@ -2556,10 +2598,12 @@ if( 0 == namespaceId && "brushRef" == name)
 }
 /// <summary>
 /// <para>Defines the Timestamp Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:timestamp.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Timestamp : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12735;
@@ -2678,10 +2722,12 @@ if( 0 == namespaceId && "timeOffset" == name)
 }
 /// <summary>
 /// <para>Defines the Trace Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:trace.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Trace : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12736;
@@ -2855,6 +2901,7 @@ if( 0 == namespaceId && "timeOffset" == name)
 }
 /// <summary>
 /// <para>Defines the TraceGroup Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:traceGroup.</para>
 /// </summary>
 /// <remarks>
@@ -2872,6 +2919,7 @@ if( 0 == namespaceId && "timeOffset" == name)
     [ChildElementInfo(typeof(Trace))]
     [ChildElementInfo(typeof(TraceGroup))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TraceGroup : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12737;
@@ -3005,6 +3053,7 @@ if( 0 == namespaceId && "brushRef" == name)
 }
 /// <summary>
 /// <para>Defines the TraceView Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:traceView.</para>
 /// </summary>
 /// <remarks>
@@ -3020,6 +3069,7 @@ if( 0 == namespaceId && "brushRef" == name)
     [ChildElementInfo(typeof(AnnotationXml))]
     [ChildElementInfo(typeof(TraceView))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TraceView : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12738;
@@ -3178,6 +3228,7 @@ if( 0 == namespaceId && "to" == name)
 }
 /// <summary>
 /// <para>Defines the Context Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:context.</para>
 /// </summary>
 /// <remarks>
@@ -3199,6 +3250,7 @@ if( 0 == namespaceId && "to" == name)
     [ChildElementInfo(typeof(Brush))]
     [ChildElementInfo(typeof(Timestamp))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Context : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12739;
@@ -3489,6 +3541,7 @@ if( 0 == namespaceId && "timestampRef" == name)
 }
 /// <summary>
 /// <para>Defines the Definitions Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is inkml:definitions.</para>
 /// </summary>
 /// <remarks>
@@ -3520,6 +3573,7 @@ if( 0 == namespaceId && "timestampRef" == name)
     [ChildElementInfo(typeof(TraceGroup))]
     [ChildElementInfo(typeof(TraceView))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Definitions : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12740;

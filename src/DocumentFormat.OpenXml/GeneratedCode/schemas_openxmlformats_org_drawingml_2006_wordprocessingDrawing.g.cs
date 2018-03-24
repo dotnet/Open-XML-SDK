@@ -12,10 +12,12 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
 {
 /// <summary>
 /// <para>No Text Wrapping.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp:wrapNone.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WrapNone : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10760;
@@ -49,6 +51,7 @@ public partial class WrapNone : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Square Wrapping.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp:wrapSquare.</para>
 /// </summary>
 /// <remarks>
@@ -60,6 +63,7 @@ public partial class WrapNone : OpenXmlLeafElement
 
     [ChildElementInfo(typeof(EffectExtent))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WrapSquare : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10761;
@@ -231,6 +235,7 @@ if( 0 == namespaceId && "distR" == name)
 }
 /// <summary>
 /// <para>Tight Wrapping.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp:wrapTight.</para>
 /// </summary>
 /// <remarks>
@@ -242,6 +247,7 @@ if( 0 == namespaceId && "distR" == name)
 
     [ChildElementInfo(typeof(WrapPolygon))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WrapTight : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10762;
@@ -385,6 +391,7 @@ if( 0 == namespaceId && "distR" == name)
 }
 /// <summary>
 /// <para>Through Wrapping.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp:wrapThrough.</para>
 /// </summary>
 /// <remarks>
@@ -396,6 +403,7 @@ if( 0 == namespaceId && "distR" == name)
 
     [ChildElementInfo(typeof(WrapPolygon))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WrapThrough : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10763;
@@ -539,6 +547,7 @@ if( 0 == namespaceId && "distR" == name)
 }
 /// <summary>
 /// <para>Top and Bottom Wrapping.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp:wrapTopAndBottom.</para>
 /// </summary>
 /// <remarks>
@@ -550,6 +559,7 @@ if( 0 == namespaceId && "distR" == name)
 
     [ChildElementInfo(typeof(EffectExtent))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WrapTopBottom : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10764;
@@ -679,6 +689,7 @@ if( 0 == namespaceId && "distB" == name)
 }
 /// <summary>
 /// <para>Inline DrawingML Object.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp:inline.</para>
 /// </summary>
 /// <remarks>
@@ -698,6 +709,7 @@ if( 0 == namespaceId && "distB" == name)
     [ChildElementInfo(typeof(NonVisualGraphicFrameDrawingProperties))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Graphic))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Inline : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10765;
@@ -947,6 +959,7 @@ if( 51 == namespaceId && "editId" == name)
 }
 /// <summary>
 /// <para>Anchor for Floating DrawingML Object.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp:anchor.</para>
 /// </summary>
 /// <remarks>
@@ -986,6 +999,7 @@ if( 51 == namespaceId && "editId" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeWidth), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Anchor : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10766;
@@ -1363,10 +1377,12 @@ if( 51 == namespaceId && "anchorId" == name)
 }
 /// <summary>
 /// <para>Wrapping Polygon Start.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp:start.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StartPoint : Point2DType
 {
     internal const int ElementTypeIdConst = 10767;
@@ -1392,10 +1408,12 @@ public partial class StartPoint : Point2DType
 }
 /// <summary>
 /// <para>Wrapping Polygon Line End Position.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp:lineTo.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LineTo : Point2DType
 {
     internal const int ElementTypeIdConst = 10768;
@@ -1421,10 +1439,12 @@ public partial class LineTo : Point2DType
 }
 /// <summary>
 /// <para>Simple Positioning Coordinates.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp:simplePos.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SimplePosition : Point2DType
 {
     internal const int ElementTypeIdConst = 10771;
@@ -1512,10 +1532,12 @@ if( 0 == namespaceId && "y" == name)
 }
 /// <summary>
 /// <para>Object Extents Including Effects.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp:effectExtent.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EffectExtent : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10769;
@@ -1618,6 +1640,7 @@ if( 0 == namespaceId && "b" == name)
 }
 /// <summary>
 /// <para>Tight Wrapping Extents Polygon.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp:wrapPolygon.</para>
 /// </summary>
 /// <remarks>
@@ -1631,6 +1654,7 @@ if( 0 == namespaceId && "b" == name)
     [ChildElementInfo(typeof(StartPoint))]
     [ChildElementInfo(typeof(LineTo))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WrapPolygon : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10770;
@@ -1749,6 +1773,7 @@ if( 16 == namespaceId && "lineTo" == name)
 }
 /// <summary>
 /// <para>Horizontal Positioning.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp:positionH.</para>
 /// </summary>
 /// <remarks>
@@ -1764,6 +1789,7 @@ if( 16 == namespaceId && "lineTo" == name)
     [ChildElementInfo(typeof(PositionOffset))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HorizontalPosition : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10772;
@@ -1909,6 +1935,7 @@ if( 51 == namespaceId && "pctPosHOffset" == name)
 }
 /// <summary>
 /// <para>Vertical Positioning.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp:positionV.</para>
 /// </summary>
 /// <remarks>
@@ -1924,6 +1951,7 @@ if( 51 == namespaceId && "pctPosHOffset" == name)
     [ChildElementInfo(typeof(PositionOffset))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VerticalPosition : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10773;
@@ -2069,10 +2097,12 @@ if( 51 == namespaceId && "pctPosVOffset" == name)
 }
 /// <summary>
 /// <para>Inline Drawing Object Extents.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp:extent.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Extent : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10774;
@@ -2147,6 +2177,7 @@ if( 0 == namespaceId && "cy" == name)
 }
 /// <summary>
 /// <para>Drawing Object Non-Visual Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp:docPr.</para>
 /// </summary>
 /// <remarks>
@@ -2162,6 +2193,7 @@ if( 0 == namespaceId && "cy" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DocProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10775;
@@ -2363,6 +2395,7 @@ if( 0 == namespaceId && "title" == name)
 }
 /// <summary>
 /// <para>Defines the NonVisualGraphicFrameDrawingProperties Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp:cNvGraphicFramePr.</para>
 /// </summary>
 /// <remarks>
@@ -2376,6 +2409,7 @@ if( 0 == namespaceId && "title" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10776;
@@ -2479,10 +2513,12 @@ if( 10 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Relative Vertical Alignment.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp:align.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VerticalAlignment : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10777;
@@ -2529,10 +2565,12 @@ public partial class VerticalAlignment : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Defines the PositionOffset Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp:posOffset.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PositionOffset : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10778;
@@ -2579,10 +2617,12 @@ public partial class PositionOffset : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Relative Horizontal Alignment.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp:align.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HorizontalAlignment : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10779;

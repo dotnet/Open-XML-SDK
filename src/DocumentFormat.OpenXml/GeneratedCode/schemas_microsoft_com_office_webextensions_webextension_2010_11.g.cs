@@ -266,7 +266,7 @@ if( 0 == namespaceId && "frozen" == name)
 }
 /// <summary>
 /// <para>Defines the WebExtensionReference Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is we:webextensionref.</para>
 /// </summary>
 
@@ -334,7 +334,7 @@ public partial class WebExtensionReference : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the WebExtensionProperty Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is we:property.</para>
 /// </summary>
 
@@ -414,7 +414,7 @@ if( 0 == namespaceId && "value" == name)
 }
 /// <summary>
 /// <para>Defines the OfficeArtExtensionList Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is we:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -494,7 +494,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the WebExtensionBinding Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is we:binding.</para>
 /// </summary>
 /// <remarks>
@@ -650,7 +650,7 @@ if( 0 == namespaceId && "appref" == name)
 }
 /// <summary>
 /// <para>Defines the WebExtensionStoreReference Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is we:reference.</para>
 /// </summary>
 /// <remarks>
@@ -820,7 +820,7 @@ if( 0 == namespaceId && "storeType" == name)
 }
 /// <summary>
 /// <para>Defines the WebExtensionReferenceList Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is we:alternateReferences.</para>
 /// </summary>
 /// <remarks>
@@ -900,7 +900,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the WebExtensionPropertyBag Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is we:properties.</para>
 /// </summary>
 /// <remarks>
@@ -980,7 +980,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the WebExtensionBindingList Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is we:bindings.</para>
 /// </summary>
 /// <remarks>
@@ -1060,7 +1060,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the Snapshot Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is we:snapshot.</para>
 /// </summary>
 /// <remarks>

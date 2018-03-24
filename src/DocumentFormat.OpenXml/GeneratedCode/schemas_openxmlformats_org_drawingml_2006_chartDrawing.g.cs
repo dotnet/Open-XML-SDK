@@ -12,6 +12,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
 {
 /// <summary>
 /// <para>Relative Anchor Shape Size.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:relSizeAnchor.</para>
 /// </summary>
 /// <remarks>
@@ -37,6 +38,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     [ChildElementInfo(typeof(Picture))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RelativeAnchorSize : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10652;
@@ -158,6 +160,7 @@ if( 47 == namespaceId && "contentPart" == name)
 }
 /// <summary>
 /// <para>Absolute Anchor Shape Size.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:absSizeAnchor.</para>
 /// </summary>
 /// <remarks>
@@ -183,6 +186,7 @@ if( 47 == namespaceId && "contentPart" == name)
     [ChildElementInfo(typeof(Picture))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AbsoluteAnchorSize : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10653;
@@ -304,6 +308,7 @@ if( 47 == namespaceId && "contentPart" == name)
 }
 /// <summary>
 /// <para>Shape Definition.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:sp.</para>
 /// </summary>
 /// <remarks>
@@ -321,6 +326,7 @@ if( 47 == namespaceId && "contentPart" == name)
     [ChildElementInfo(typeof(Style))]
     [ChildElementInfo(typeof(TextBody))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Shape : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10654;
@@ -523,6 +529,7 @@ if( 0 == namespaceId && "fPublished" == name)
 }
 /// <summary>
 /// <para>Group Shape.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:grpSp.</para>
 /// </summary>
 /// <remarks>
@@ -548,6 +555,7 @@ if( 0 == namespaceId && "fPublished" == name)
     [ChildElementInfo(typeof(Picture))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class GroupShape : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10655;
@@ -669,6 +677,7 @@ if( 47 == namespaceId && "contentPart" == name)
 }
 /// <summary>
 /// <para>Graphic Frame.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:graphicFrame.</para>
 /// </summary>
 /// <remarks>
@@ -684,6 +693,7 @@ if( 47 == namespaceId && "contentPart" == name)
     [ChildElementInfo(typeof(Transform))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Graphic))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class GraphicFrame : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10656;
@@ -843,6 +853,7 @@ if( 0 == namespaceId && "fPublished" == name)
 }
 /// <summary>
 /// <para>Connection Shape.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:cxnSp.</para>
 /// </summary>
 /// <remarks>
@@ -858,6 +869,7 @@ if( 0 == namespaceId && "fPublished" == name)
     [ChildElementInfo(typeof(ShapeProperties))]
     [ChildElementInfo(typeof(Style))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ConnectionShape : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10657;
@@ -1017,6 +1029,7 @@ if( 0 == namespaceId && "fPublished" == name)
 }
 /// <summary>
 /// <para>Defines the Picture Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:pic.</para>
 /// </summary>
 /// <remarks>
@@ -1034,6 +1047,7 @@ if( 0 == namespaceId && "fPublished" == name)
     [ChildElementInfo(typeof(ShapeProperties))]
     [ChildElementInfo(typeof(Style))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Picture : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10658;
@@ -1208,6 +1222,7 @@ if( 0 == namespaceId && "fPublished" == name)
 }
 /// <summary>
 /// <para>Chart Non Visual Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:cNvPr.</para>
 /// </summary>
 /// <remarks>
@@ -1223,6 +1238,7 @@ if( 0 == namespaceId && "fPublished" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10659;
@@ -1424,6 +1440,7 @@ if( 0 == namespaceId && "title" == name)
 }
 /// <summary>
 /// <para>Non-Visual Shape Drawing Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:cNvSpPr.</para>
 /// </summary>
 /// <remarks>
@@ -1437,6 +1454,7 @@ if( 0 == namespaceId && "title" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapeLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10660;
@@ -1567,6 +1585,7 @@ if( 10 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Non-Visual Shape Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:nvSpPr.</para>
 /// </summary>
 /// <remarks>
@@ -1580,6 +1599,7 @@ if( 10 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(NonVisualDrawingProperties))]
     [ChildElementInfo(typeof(NonVisualShapeDrawingProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NonVisualShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10661;
@@ -1683,6 +1703,7 @@ if( 12 == namespaceId && "cNvSpPr" == name)
 }
 /// <summary>
 /// <para>Shape Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:spPr.</para>
 /// </summary>
 /// <remarks>
@@ -1722,6 +1743,7 @@ if( 12 == namespaceId && "cNvSpPr" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10662;
@@ -1879,6 +1901,7 @@ if( 10 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Shape Style.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:style.</para>
 /// </summary>
 /// <remarks>
@@ -1896,6 +1919,7 @@ if( 10 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FontReference))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Style : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10663;
@@ -2029,6 +2053,7 @@ if( 10 == namespaceId && "fontRef" == name)
 }
 /// <summary>
 /// <para>Shape Text Body.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:txBody.</para>
 /// </summary>
 /// <remarks>
@@ -2044,6 +2069,7 @@ if( 10 == namespaceId && "fontRef" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ListStyle))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Paragraph))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TextBody : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10664;
@@ -2150,6 +2176,7 @@ if( 10 == namespaceId && "p" == name)
 }
 /// <summary>
 /// <para>Non-Visual Connection Shape Drawing Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:cNvCxnSpPr.</para>
 /// </summary>
 /// <remarks>
@@ -2167,6 +2194,7 @@ if( 10 == namespaceId && "p" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EndConnection))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10665;
@@ -2300,6 +2328,7 @@ if( 10 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Connector Non Visual Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:nvCxnSpPr.</para>
 /// </summary>
 /// <remarks>
@@ -2313,6 +2342,7 @@ if( 10 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(NonVisualDrawingProperties))]
     [ChildElementInfo(typeof(NonVisualConnectionShapeProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10666;
@@ -2416,6 +2446,7 @@ if( 12 == namespaceId && "cNvCxnSpPr" == name)
 }
 /// <summary>
 /// <para>Non-Visual Picture Drawing Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:cNvPicPr.</para>
 /// </summary>
 /// <remarks>
@@ -2429,6 +2460,7 @@ if( 12 == namespaceId && "cNvCxnSpPr" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PictureLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10667;
@@ -2559,6 +2591,7 @@ if( 10 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Non-Visual Picture Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:nvPicPr.</para>
 /// </summary>
 /// <remarks>
@@ -2572,6 +2605,7 @@ if( 10 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(NonVisualDrawingProperties))]
     [ChildElementInfo(typeof(NonVisualPictureDrawingProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NonVisualPictureProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10668;
@@ -2675,6 +2709,7 @@ if( 12 == namespaceId && "cNvPicPr" == name)
 }
 /// <summary>
 /// <para>Picture Fill.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:blipFill.</para>
 /// </summary>
 /// <remarks>
@@ -2692,6 +2727,7 @@ if( 12 == namespaceId && "cNvPicPr" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Tile))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Stretch))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BlipFill : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10669;
@@ -2842,6 +2878,7 @@ if( 0 == namespaceId && "rotWithShape" == name)
 }
 /// <summary>
 /// <para>Non-Visual Graphic Frame Drawing Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:cNvGraphicFramePr.</para>
 /// </summary>
 /// <remarks>
@@ -2855,6 +2892,7 @@ if( 0 == namespaceId && "rotWithShape" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10670;
@@ -2958,6 +2996,7 @@ if( 10 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Non-Visual Graphic Frame Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:nvGraphicFramePr.</para>
 /// </summary>
 /// <remarks>
@@ -2971,6 +3010,7 @@ if( 10 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(NonVisualDrawingProperties))]
     [ChildElementInfo(typeof(NonVisualGraphicFrameDrawingProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10671;
@@ -3074,6 +3114,7 @@ if( 12 == namespaceId && "cNvGraphicFramePr" == name)
 }
 /// <summary>
 /// <para>Graphic Frame Transform.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:xfrm.</para>
 /// </summary>
 /// <remarks>
@@ -3087,6 +3128,7 @@ if( 12 == namespaceId && "cNvGraphicFramePr" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Offset))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extents))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Transform : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10672;
@@ -3245,6 +3287,7 @@ if( 0 == namespaceId && "flipV" == name)
 }
 /// <summary>
 /// <para>Non-Visual Group Shape Drawing Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:cNvGrpSpPr.</para>
 /// </summary>
 /// <remarks>
@@ -3258,6 +3301,7 @@ if( 0 == namespaceId && "flipV" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupShapeLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10673;
@@ -3361,10 +3405,12 @@ if( 10 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Relative X Coordinate.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:x.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class XPosition : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10674;
@@ -3403,10 +3449,12 @@ public partial class XPosition : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Relative Y Coordinate.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:y.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class YPosition : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10675;
@@ -3445,6 +3493,7 @@ public partial class YPosition : OpenXmlLeafTextElement
 }
 /// <summary>
 /// <para>Starting Anchor Point.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:from.</para>
 /// </summary>
 /// <remarks>
@@ -3456,6 +3505,7 @@ public partial class YPosition : OpenXmlLeafTextElement
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FromAnchor : MarkerType
 {
     internal const int ElementTypeIdConst = 10676;
@@ -3506,6 +3556,7 @@ public partial class FromAnchor : MarkerType
 }
 /// <summary>
 /// <para>Ending Anchor Point.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:to.</para>
 /// </summary>
 /// <remarks>
@@ -3517,6 +3568,7 @@ public partial class FromAnchor : MarkerType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ToAnchor : MarkerType
 {
     internal const int ElementTypeIdConst = 10677;
@@ -3667,10 +3719,12 @@ if( 12 == namespaceId && "y" == name)
 }
 /// <summary>
 /// <para>Shape Extent.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:ext.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Extent : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10678;
@@ -3745,6 +3799,7 @@ if( 0 == namespaceId && "cy" == name)
 }
 /// <summary>
 /// <para>Non-Visual Group Shape Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:nvGrpSpPr.</para>
 /// </summary>
 /// <remarks>
@@ -3758,6 +3813,7 @@ if( 0 == namespaceId && "cy" == name)
     [ChildElementInfo(typeof(NonVisualDrawingProperties))]
     [ChildElementInfo(typeof(NonVisualGroupShapeDrawingProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10679;
@@ -3861,6 +3917,7 @@ if( 12 == namespaceId && "cNvGrpSpPr" == name)
 }
 /// <summary>
 /// <para>Group Shape Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:grpSpPr.</para>
 /// </summary>
 /// <remarks>
@@ -3892,6 +3949,7 @@ if( 12 == namespaceId && "cNvGrpSpPr" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class GroupShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10680;

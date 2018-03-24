@@ -21,6 +21,7 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     [ChildElementInfo(typeof(SchemaReferences))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DataStoreItem : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 10900;
@@ -167,10 +168,12 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Associated XML Schema.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ds:schemaRef.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SchemaReference : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10901;
@@ -233,6 +236,7 @@ public partial class SchemaReference : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Set of Associated XML Schemas.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ds:schemaRefs.</para>
 /// </summary>
 /// <remarks>
@@ -244,6 +248,7 @@ public partial class SchemaReference : OpenXmlLeafElement
 
     [ChildElementInfo(typeof(SchemaReference))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SchemaReferences : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10902;

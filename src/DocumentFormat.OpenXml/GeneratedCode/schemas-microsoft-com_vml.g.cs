@@ -15,10 +15,12 @@ namespace DocumentFormat.OpenXml.Vml
 {
 /// <summary>
 /// <para>Defines the Path Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is v:path.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Path : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12577;
@@ -283,6 +285,7 @@ if( 27 == namespaceId && "extrusionok" == name)
 }
 /// <summary>
 /// <para>Defines the Formulas Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is v:formulas.</para>
 /// </summary>
 /// <remarks>
@@ -294,6 +297,7 @@ if( 27 == namespaceId && "extrusionok" == name)
 
     [ChildElementInfo(typeof(Formula))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Formulas : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12578;
@@ -361,6 +365,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the ShapeHandles Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is v:handles.</para>
 /// </summary>
 /// <remarks>
@@ -372,6 +377,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(ShapeHandle))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShapeHandles : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12579;
@@ -439,6 +445,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the Fill Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is v:fill.</para>
 /// </summary>
 /// <remarks>
@@ -450,6 +457,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Fill : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12580;
@@ -927,6 +935,7 @@ if( 19 == namespaceId && "id" == name)
 }
 /// <summary>
 /// <para>Defines the Stroke Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is v:stroke.</para>
 /// </summary>
 /// <remarks>
@@ -946,6 +955,7 @@ if( 19 == namespaceId && "id" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.BottomStroke))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ColumnStroke))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Stroke : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12581;
@@ -1509,10 +1519,12 @@ if( 0 == namespaceId && "insetpen" == name)
 }
 /// <summary>
 /// <para>Defines the Shadow Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is v:shadow.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Shadow : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12582;
@@ -1713,6 +1725,7 @@ if( 0 == namespaceId && "matrix" == name)
 }
 /// <summary>
 /// <para>Defines the TextBox Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is v:textbox.</para>
 /// </summary>
 /// <remarks>
@@ -1724,6 +1737,7 @@ if( 0 == namespaceId && "matrix" == name)
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TextBox : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12583;
@@ -1862,10 +1876,12 @@ if( 27 == namespaceId && "singleclick" == name)
 }
 /// <summary>
 /// <para>Defines the TextPath Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is v:textpath.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TextPath : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12584;
@@ -2024,10 +2040,12 @@ if( 0 == namespaceId && "string" == name)
 }
 /// <summary>
 /// <para>Defines the ImageData Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is v:imagedata.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ImageData : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12585;
@@ -2352,6 +2370,7 @@ if( 19 == namespaceId && "href" == name)
 }
 /// <summary>
 /// <para>Shape Definition.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is v:shape.</para>
 /// </summary>
 /// <remarks>
@@ -2411,6 +2430,7 @@ if( 19 == namespaceId && "href" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Ink))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Shape : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12586;
@@ -3417,6 +3437,7 @@ if( 0 == namespaceId && "equationxml" == name)
 }
 /// <summary>
 /// <para>Shape Template.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is v:shapetype.</para>
 /// </summary>
 /// <remarks>
@@ -3474,6 +3495,7 @@ if( 0 == namespaceId && "equationxml" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Complex))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Shapetype : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12587;
@@ -4449,6 +4471,7 @@ if( 27 == namespaceId && "master" == name)
 }
 /// <summary>
 /// <para>Shape Group.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is v:group.</para>
 /// </summary>
 /// <remarks>
@@ -4492,6 +4515,7 @@ if( 27 == namespaceId && "master" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Group : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12588;
@@ -5124,6 +5148,7 @@ if( 27 == namespaceId && "tablelimits" == name)
 }
 /// <summary>
 /// <para>Document Background.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is v:background.</para>
 /// </summary>
 /// <remarks>
@@ -5135,6 +5160,7 @@ if( 27 == namespaceId && "tablelimits" == name)
 
     [ChildElementInfo(typeof(Fill))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Background : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12589;
@@ -5342,6 +5368,7 @@ if( 27 == namespaceId && "targetscreensize" == name)
 }
 /// <summary>
 /// <para>Arc Segment.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is v:arc.</para>
 /// </summary>
 /// <remarks>
@@ -5397,6 +5424,7 @@ if( 27 == namespaceId && "targetscreensize" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Arc : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12590;
@@ -6339,6 +6367,7 @@ if( 0 == namespaceId && "endangle" == name)
 }
 /// <summary>
 /// <para>Bezier Curve.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is v:curve.</para>
 /// </summary>
 /// <remarks>
@@ -6394,6 +6423,7 @@ if( 0 == namespaceId && "endangle" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Curve : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12591;
@@ -7378,6 +7408,7 @@ if( 0 == namespaceId && "to" == name)
 }
 /// <summary>
 /// <para>Image File.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is v:image.</para>
 /// </summary>
 /// <remarks>
@@ -7433,6 +7464,7 @@ if( 0 == namespaceId && "to" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ImageFile : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12592;
@@ -8487,6 +8519,7 @@ if( 0 == namespaceId && "bilevel" == name)
 }
 /// <summary>
 /// <para>Line.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is v:line.</para>
 /// </summary>
 /// <remarks>
@@ -8542,6 +8575,7 @@ if( 0 == namespaceId && "bilevel" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Line : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12593;
@@ -9498,6 +9532,7 @@ if( 0 == namespaceId && "to" == name)
 }
 /// <summary>
 /// <para>Oval.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is v:oval.</para>
 /// </summary>
 /// <remarks>
@@ -9553,6 +9588,7 @@ if( 0 == namespaceId && "to" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Oval : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12594;
@@ -10481,6 +10517,7 @@ if( 27 == namespaceId && "clip" == name)
 }
 /// <summary>
 /// <para>Multiple Path Line.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is v:polyline.</para>
 /// </summary>
 /// <remarks>
@@ -10538,6 +10575,7 @@ if( 27 == namespaceId && "clip" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Ink))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PolyLine : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12595;
@@ -11483,6 +11521,7 @@ if( 0 == namespaceId && "points" == name)
 }
 /// <summary>
 /// <para>Rectangle.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is v:rect.</para>
 /// </summary>
 /// <remarks>
@@ -11538,6 +11577,7 @@ if( 0 == namespaceId && "points" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Rectangle : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12596;
@@ -12466,6 +12506,7 @@ if( 27 == namespaceId && "clip" == name)
 }
 /// <summary>
 /// <para>Rounded Rectangle.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is v:roundrect.</para>
 /// </summary>
 /// <remarks>
@@ -12521,6 +12562,7 @@ if( 27 == namespaceId && "clip" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RoundRectangle : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12597;
@@ -13449,10 +13491,12 @@ if( 0 == namespaceId && "arcsize" == name)
 }
 /// <summary>
 /// <para>Shape Handle.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is v:h.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShapeHandle : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12598;
@@ -13625,10 +13669,12 @@ if( 0 == namespaceId && "radiusrange" == name)
 }
 /// <summary>
 /// <para>Single Formula.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is v:f.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Formula : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12599;

@@ -120,7 +120,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the WebExtensionPartReference Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wetp:webextensionref.</para>
 /// </summary>
 
@@ -188,7 +188,7 @@ public partial class WebExtensionPartReference : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the OfficeArtExtensionList Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wetp:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -268,7 +268,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the WebExtensionTaskpane Class.</para>
-///<para>This class is only available in Office2013.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wetp:taskpane.</para>
 /// </summary>
 /// <remarks>

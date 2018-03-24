@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
 {
 /// <summary>
 /// <para>Defines the ShapeStyle Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is pic14:style.</para>
 /// </summary>
 /// <remarks>
@@ -163,7 +163,7 @@ if( 10 == namespaceId && "fontRef" == name)
 }
 /// <summary>
 /// <para>Defines the OfficeArtExtensionList Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is pic14:extLst.</para>
 /// </summary>
 /// <remarks>

@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
 {
 /// <summary>
 /// <para>Defines the RunConflictInsertion Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:conflictIns.</para>
 /// </summary>
 /// <remarks>
@@ -130,7 +130,7 @@ public partial class RunConflictInsertion : RunTrackChangeType
 }
 /// <summary>
 /// <para>Defines the RunConflictDeletion Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:conflictDel.</para>
 /// </summary>
 /// <remarks>
@@ -645,7 +645,7 @@ if( 23 == namespaceId && "id" == name)
 }
 /// <summary>
 /// <para>Defines the ConflictInsertion Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:conflictIns.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -676,7 +676,7 @@ public partial class ConflictInsertion : TrackChangeType
 }
 /// <summary>
 /// <para>Defines the ConflictDeletion Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:conflictDel.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -707,7 +707,7 @@ public partial class ConflictDeletion : TrackChangeType
 }
 /// <summary>
 /// <para>Defines the CustomXmlConflictInsertionRangeStart Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:customXmlConflictInsRangeStart.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -738,7 +738,7 @@ public partial class CustomXmlConflictInsertionRangeStart : TrackChangeType
 }
 /// <summary>
 /// <para>Defines the CustomXmlConflictDeletionRangeStart Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:customXmlConflictDelRangeStart.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -851,7 +851,7 @@ if( 23 == namespaceId && "id" == name)
 }
 /// <summary>
 /// <para>Defines the Tint Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:tint.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -882,7 +882,7 @@ public partial class Tint : PositiveFixedPercentageType
 }
 /// <summary>
 /// <para>Defines the Shade Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:shade.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -913,7 +913,7 @@ public partial class Shade : PositiveFixedPercentageType
 }
 /// <summary>
 /// <para>Defines the Alpha Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:alpha.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -994,7 +994,7 @@ public abstract partial class PositiveFixedPercentageType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the HueModulation Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:hueMod.</para>
 /// </summary>
 
@@ -1062,7 +1062,7 @@ public partial class HueModulation : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the Saturation Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:sat.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1093,7 +1093,7 @@ public partial class Saturation : PercentageType
 }
 /// <summary>
 /// <para>Defines the SaturationOffset Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:satOff.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1124,7 +1124,7 @@ public partial class SaturationOffset : PercentageType
 }
 /// <summary>
 /// <para>Defines the SaturationModulation Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:satMod.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1155,7 +1155,7 @@ public partial class SaturationModulation : PercentageType
 }
 /// <summary>
 /// <para>Defines the Luminance Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:lum.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1186,7 +1186,7 @@ public partial class Luminance : PercentageType
 }
 /// <summary>
 /// <para>Defines the LuminanceOffset Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:lumOff.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1217,7 +1217,7 @@ public partial class LuminanceOffset : PercentageType
 }
 /// <summary>
 /// <para>Defines the LuminanceModulation Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:lumMod.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1298,7 +1298,7 @@ public abstract partial class PercentageType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the RgbColorModelHex Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:srgbClr.</para>
 /// </summary>
 /// <remarks>
@@ -1452,7 +1452,7 @@ if( 52 == namespaceId && "lumMod" == name)
 }
 /// <summary>
 /// <para>Defines the SchemeColor Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:schemeClr.</para>
 /// </summary>
 /// <remarks>
@@ -1606,7 +1606,7 @@ if( 52 == namespaceId && "lumMod" == name)
 }
 /// <summary>
 /// <para>Defines the LinearShadeProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:lin.</para>
 /// </summary>
 
@@ -1690,7 +1690,7 @@ if( 52 == namespaceId && "scaled" == name)
 }
 /// <summary>
 /// <para>Defines the PathShadeProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:path.</para>
 /// </summary>
 /// <remarks>
@@ -1820,7 +1820,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the NoFillEmpty Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:noFill.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1851,7 +1851,7 @@ public partial class NoFillEmpty : EmptyType
 }
 /// <summary>
 /// <para>Defines the RoundEmpty Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:round.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1882,7 +1882,7 @@ public partial class RoundEmpty : EmptyType
 }
 /// <summary>
 /// <para>Defines the BevelEmpty Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:bevel.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1913,7 +1913,7 @@ public partial class BevelEmpty : EmptyType
 }
 /// <summary>
 /// <para>Defines the EntityPickerEmpty Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:entityPicker.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1965,7 +1965,7 @@ public abstract partial class EmptyType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the SolidColorFillProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:solidFill.</para>
 /// </summary>
 /// <remarks>
@@ -2083,7 +2083,7 @@ if( 52 == namespaceId && "schemeClr" == name)
 }
 /// <summary>
 /// <para>Defines the GradientFillProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:gradFill.</para>
 /// </summary>
 /// <remarks>
@@ -2194,7 +2194,7 @@ if( 52 == namespaceId && "path" == name)
 }
 /// <summary>
 /// <para>Defines the PresetLineDashProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:prstDash.</para>
 /// </summary>
 
@@ -2262,7 +2262,7 @@ public partial class PresetLineDashProperties : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the LineJoinMiterProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:miter.</para>
 /// </summary>
 
@@ -2330,7 +2330,7 @@ public partial class LineJoinMiterProperties : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the Glow Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:glow.</para>
 /// </summary>
 /// <remarks>
@@ -2477,7 +2477,7 @@ if( 52 == namespaceId && "schemeClr" == name)
 }
 /// <summary>
 /// <para>Defines the Shadow Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:shadow.</para>
 /// </summary>
 /// <remarks>
@@ -2736,7 +2736,7 @@ if( 52 == namespaceId && "algn" == name)
 }
 /// <summary>
 /// <para>Defines the Reflection Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:reflection.</para>
 /// </summary>
 
@@ -2996,7 +2996,7 @@ if( 52 == namespaceId && "algn" == name)
 }
 /// <summary>
 /// <para>Defines the TextOutlineEffect Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:textOutline.</para>
 /// </summary>
 /// <remarks>
@@ -3183,7 +3183,7 @@ if( 52 == namespaceId && "algn" == name)
 }
 /// <summary>
 /// <para>Defines the FillTextEffect Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:textFill.</para>
 /// </summary>
 /// <remarks>
@@ -3318,7 +3318,7 @@ if( 52 == namespaceId && "gradFill" == name)
 }
 /// <summary>
 /// <para>Defines the Scene3D Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:scene3d.</para>
 /// </summary>
 /// <remarks>
@@ -3436,7 +3436,7 @@ if( 52 == namespaceId && "lightRig" == name)
 }
 /// <summary>
 /// <para>Defines the Properties3D Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:props3d.</para>
 /// </summary>
 /// <remarks>
@@ -3649,7 +3649,7 @@ if( 52 == namespaceId && "prstMaterial" == name)
 }
 /// <summary>
 /// <para>Defines the Ligatures Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:ligatures.</para>
 /// </summary>
 
@@ -3717,7 +3717,7 @@ public partial class Ligatures : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the NumberingFormat Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:numForm.</para>
 /// </summary>
 
@@ -3785,7 +3785,7 @@ public partial class NumberingFormat : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the NumberSpacing Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:numSpacing.</para>
 /// </summary>
 
@@ -3853,7 +3853,7 @@ public partial class NumberSpacing : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the StylisticSets Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:stylisticSets.</para>
 /// </summary>
 /// <remarks>
@@ -3933,7 +3933,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the ContextualAlternatives Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:cntxtAlts.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -3964,7 +3964,7 @@ public partial class ContextualAlternatives : OnOffType
 }
 /// <summary>
 /// <para>Defines the ConflictMode Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:conflictMode.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -3995,7 +3995,7 @@ public partial class ConflictMode : OnOffType
 }
 /// <summary>
 /// <para>Defines the DiscardImageEditingData Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:discardImageEditingData.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -4026,7 +4026,7 @@ public partial class DiscardImageEditingData : OnOffType
 }
 /// <summary>
 /// <para>Defines the Checked Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:checked.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -4107,7 +4107,7 @@ public abstract partial class OnOffType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the ContentPart Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:contentPart.</para>
 /// </summary>
 /// <remarks>
@@ -4287,7 +4287,7 @@ if( 19 == namespaceId && "id" == name)
 }
 /// <summary>
 /// <para>Defines the DocumentId Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:docId.</para>
 /// </summary>
 
@@ -4355,7 +4355,7 @@ public partial class DocumentId : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the CustomXmlConflictInsertionRangeEnd Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:customXmlConflictInsRangeEnd.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -4386,7 +4386,7 @@ public partial class CustomXmlConflictInsertionRangeEnd : MarkupType
 }
 /// <summary>
 /// <para>Defines the CustomXmlConflictDeletionRangeEnd Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:customXmlConflictDelRangeEnd.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -4467,7 +4467,7 @@ public abstract partial class MarkupType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the DefaultImageDpi Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:defaultImageDpi.</para>
 /// </summary>
 
@@ -4535,7 +4535,7 @@ public partial class DefaultImageDpi : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the SdtContentCheckBox Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:checkbox.</para>
 /// </summary>
 /// <remarks>
@@ -4670,7 +4670,7 @@ if( 52 == namespaceId && "uncheckedState" == name)
 }
 /// <summary>
 /// <para>Defines the GradientStop Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:gs.</para>
 /// </summary>
 /// <remarks>
@@ -4817,7 +4817,7 @@ if( 52 == namespaceId && "schemeClr" == name)
 }
 /// <summary>
 /// <para>Defines the FillToRectangle Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:fillToRect.</para>
 /// </summary>
 
@@ -4933,7 +4933,7 @@ if( 52 == namespaceId && "b" == name)
 }
 /// <summary>
 /// <para>Defines the GradientStopList Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:gsLst.</para>
 /// </summary>
 /// <remarks>
@@ -5013,7 +5013,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the SphereCoordinates Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:rot.</para>
 /// </summary>
 
@@ -5113,7 +5113,7 @@ if( 52 == namespaceId && "rev" == name)
 }
 /// <summary>
 /// <para>Defines the Camera Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:camera.</para>
 /// </summary>
 
@@ -5181,7 +5181,7 @@ public partial class Camera : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the LightRig Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:lightRig.</para>
 /// </summary>
 /// <remarks>
@@ -5327,7 +5327,7 @@ if( 52 == namespaceId && "dir" == name)
 }
 /// <summary>
 /// <para>Defines the BevelTop Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:bevelT.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -5358,7 +5358,7 @@ public partial class BevelTop : BevelType
 }
 /// <summary>
 /// <para>Defines the BevelBottom Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:bevelB.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -5471,7 +5471,7 @@ if( 52 == namespaceId && "prst" == name)
 }
 /// <summary>
 /// <para>Defines the ExtrusionColor Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:extrusionClr.</para>
 /// </summary>
 /// <remarks>
@@ -5534,7 +5534,7 @@ public partial class ExtrusionColor : ColorType
 }
 /// <summary>
 /// <para>Defines the ContourColor Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:contourClr.</para>
 /// </summary>
 /// <remarks>
@@ -5697,7 +5697,7 @@ if( 52 == namespaceId && "schemeClr" == name)
 }
 /// <summary>
 /// <para>Defines the StyleSet Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:styleSet.</para>
 /// </summary>
 
@@ -5781,7 +5781,7 @@ if( 52 == namespaceId && "val" == name)
 }
 /// <summary>
 /// <para>Defines the CheckedState Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:checkedState.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -5812,7 +5812,7 @@ public partial class CheckedState : CheckBoxSymbolType
 }
 /// <summary>
 /// <para>Defines the UncheckedState Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:uncheckedState.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -5909,7 +5909,7 @@ if( 52 == namespaceId && "val" == name)
 }
 /// <summary>
 /// <para>Defines the NonVisualDrawingProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:cNvPr.</para>
 /// </summary>
 /// <remarks>
@@ -6127,7 +6127,7 @@ if( 0 == namespaceId && "title" == name)
 }
 /// <summary>
 /// <para>Defines the NonVisualInkContentPartProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:cNvContentPartPr.</para>
 /// </summary>
 /// <remarks>
@@ -6272,7 +6272,7 @@ if( 48 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the WordNonVisualContentPartShapeProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:nvContentPartPr.</para>
 /// </summary>
 /// <remarks>
@@ -6390,7 +6390,7 @@ if( 52 == namespaceId && "cNvContentPartPr" == name)
 }
 /// <summary>
 /// <para>Defines the Transform2D Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:xfrm.</para>
 /// </summary>
 /// <remarks>
@@ -6563,7 +6563,7 @@ if( 0 == namespaceId && "flipV" == name)
 }
 /// <summary>
 /// <para>Defines the OfficeArtExtensionList Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w14:extLst.</para>
 /// </summary>
 /// <remarks>

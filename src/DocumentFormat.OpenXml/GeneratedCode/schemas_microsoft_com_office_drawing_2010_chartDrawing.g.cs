@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing
 {
 /// <summary>
 /// <para>Defines the ContentPart Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr14:contentPart.</para>
 /// </summary>
 /// <remarks>
@@ -207,7 +207,7 @@ if( 0 == namespaceId && "bwMode" == name)
 }
 /// <summary>
 /// <para>Defines the NonVisualDrawingProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr14:cNvPr.</para>
 /// </summary>
 /// <remarks>
@@ -425,7 +425,7 @@ if( 0 == namespaceId && "title" == name)
 }
 /// <summary>
 /// <para>Defines the NonVisualInkContentPartProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr14:cNvContentPartPr.</para>
 /// </summary>
 /// <remarks>
@@ -570,7 +570,7 @@ if( 48 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the NonVisualContentPartProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr14:nvContentPartPr.</para>
 /// </summary>
 /// <remarks>
@@ -688,7 +688,7 @@ if( 47 == namespaceId && "cNvContentPartPr" == name)
 }
 /// <summary>
 /// <para>Defines the ApplicationNonVisualDrawingProperties Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr14:nvPr.</para>
 /// </summary>
 
@@ -768,7 +768,7 @@ if( 0 == namespaceId && "fPublished" == name)
 }
 /// <summary>
 /// <para>Defines the Transform2D Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr14:xfrm.</para>
 /// </summary>
 /// <remarks>
@@ -941,7 +941,7 @@ if( 0 == namespaceId && "flipV" == name)
 }
 /// <summary>
 /// <para>Defines the OfficeArtExtensionList Class.</para>
-///<para>This class is available in Office2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr14:extLst.</para>
 /// </summary>
 /// <remarks>

@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
 {
 /// <summary>
 /// <para>Defines the LongProperties Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is lp:LongProperties.</para>
 /// </summary>
 /// <remarks>
@@ -21,6 +22,7 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
 
     [ChildElementInfo(typeof(LongProperty))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LongProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12711;
@@ -88,10 +90,12 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Defines the LongProperty Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is lp:LongProp.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LongProperty : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12712;

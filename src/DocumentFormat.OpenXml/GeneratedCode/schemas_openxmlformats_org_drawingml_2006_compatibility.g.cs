@@ -11,10 +11,12 @@ namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
 {
 /// <summary>
 /// <para>Legacy Drawing Object.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is comp:legacyDrawing.</para>
 /// </summary>
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LegacyDrawing : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10681;
