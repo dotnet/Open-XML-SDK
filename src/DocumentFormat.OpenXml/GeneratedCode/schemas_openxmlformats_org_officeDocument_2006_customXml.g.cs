@@ -21,63 +21,26 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     [ChildElementInfo(typeof(SchemaReferences))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DataStoreItem : OpenXmlPartRootElement
 {
-    private const string tagName = "datastoreItem";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 20;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10900;
+    /// <inheritdoc/>
+    public override string LocalName => "datastoreItem";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 20;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    private static string[] attributeTagNames = { "itemID" };
-    private static byte[] attributeNamespaceIds = { 20 };
+    	private static readonly string[] attributeTagNames = { "itemID" };
+    private static readonly byte[] attributeNamespaceIds = { 20 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -96,13 +59,7 @@ public partial class DataStoreItem : OpenXmlPartRootElement
     
 
     
-    /// <summary>
-    /// DataStoreItem constructor.
-    /// </summary>
-    /// <param name="ownerPart">The owner part of the DataStoreItem.</param>
-    internal DataStoreItem(CustomXmlPropertiesPart ownerPart) : base (ownerPart )
-    {
-    }
+	internal DataStoreItem(CustomXmlPropertiesPart ownerPart) : base (ownerPart){}
     
     /// <summary>
     /// Loads the DOM from the CustomXmlPropertiesPart.
@@ -117,17 +74,11 @@ public partial class DataStoreItem : OpenXmlPartRootElement
     /// </summary>
     public CustomXmlPropertiesPart CustomXmlPropertiesPart
     {
-		get
-		{
-			return OpenXmlPart as CustomXmlPropertiesPart;
-		}
-		internal set
-		{
-			OpenXmlPart = value;
-		}
+		get => OpenXmlPart as CustomXmlPropertiesPart;
+		internal set => OpenXmlPart = value;
     }
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the DataStoreItem class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -158,9 +109,7 @@ public partial class DataStoreItem : OpenXmlPartRootElement
     /// <summary>
     /// Initializes a new instance of the DataStoreItem class.
     /// </summary>
-    public DataStoreItem() : base ()
-    {
-    }
+    public DataStoreItem():base(){}
     
     /// <summary>
     /// Saves the DOM into the CustomXmlPropertiesPart.
@@ -184,21 +133,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         private static readonly string[] eleTagNames = { "schemaRefs" };
     private static readonly byte[] eleNamespaceIds = { 20 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Set of Associated XML Schemas.</para>
@@ -209,14 +147,8 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </remark>
     public SchemaReferences SchemaReferences
     {
-        get 
-        {
-            return GetElement<SchemaReferences>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<SchemaReferences>(0);
+        set => SetElement(0, value);
     }
 
 
@@ -230,80 +162,37 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<DataStoreItem>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataStoreItem>(deep);
 
 }
 /// <summary>
 /// <para>Associated XML Schema.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ds:schemaRef.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SchemaReference : OpenXmlLeafElement
 {
-    private const string tagName = "schemaRef";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 20;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10901;
+    /// <inheritdoc/>
+    public override string LocalName => "schemaRef";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 20;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    private static string[] attributeTagNames = { "uri" };
-    private static byte[] attributeNamespaceIds = { 20 };
+    	private static readonly string[] attributeTagNames = { "uri" };
+    private static readonly byte[] attributeNamespaceIds = { 20 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -341,20 +230,13 @@ public partial class SchemaReference : OpenXmlLeafElement
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<SchemaReference>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<SchemaReference>(deep);
 
-   
 }
 /// <summary>
 /// <para>Set of Associated XML Schemas.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ds:schemaRefs.</para>
 /// </summary>
 /// <remarks>
@@ -363,50 +245,21 @@ public partial class SchemaReference : OpenXmlLeafElement
 ///<item><description>SchemaReference &lt;ds:schemaRef></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(SchemaReference))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SchemaReferences : OpenXmlCompositeElement
 {
-    private const string tagName = "schemaRefs";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 20;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10902;
+    /// <inheritdoc/>
+    public override string LocalName => "schemaRefs";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 20;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     
@@ -417,7 +270,7 @@ public partial class SchemaReferences : OpenXmlCompositeElement
     /// </summary>
     public SchemaReferences():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the SchemaReferences class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -457,17 +310,9 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<SchemaReferences>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<SchemaReferences>(deep);
 
-   
 }
 }
  

@@ -16,20 +16,19 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="elementType">Specifies the type of the possible child element.</param>
         public ChildElementInfoAttribute(Type elementType)
+            : this(elementType, FileFormatVersions.Office2007)
         {
-            ElementType = elementType;
-            AvailableInVersion = FileFormatVersions.Office2007 | FileFormatVersions.Office2010;
         }
 
         /// <summary>
         /// Initialize a new instance of ChildElementTypeAttribute.
         /// </summary>
         /// <param name="elementType">Specifies the type of the possible child element.</param>
-        /// <param name="availableInOfficeVersion">Specifies the office version(s) where the child element is available.</param>
+        /// <param name="availableInOfficeVersion">Specifies the office version where the child element is first available.</param>
         public ChildElementInfoAttribute(Type elementType, FileFormatVersions availableInOfficeVersion)
         {
             ElementType = elementType;
-            AvailableInVersion = availableInOfficeVersion;
+            AvailableInVersion = availableInOfficeVersion.AndLater();
         }
 
         /// <summary>

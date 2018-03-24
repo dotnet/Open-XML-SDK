@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
 {
 /// <summary>
 /// <para>Defines the ShapeStyle Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is pic14:style.</para>
 /// </summary>
 /// <remarks>
@@ -23,54 +23,24 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
 ///<item><description>DocumentFormat.OpenXml.Drawing.FontReference &lt;a:fontRef></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.LineReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FillReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FontReference))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ShapeStyle : OpenXmlCompositeElement
 {
-    private const string tagName = "style";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 50;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12887;
+    /// <inheritdoc/>
+    public override string LocalName => "style";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 50;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     
@@ -81,7 +51,7 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     /// </summary>
     public ShapeStyle():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ShapeStyle class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -131,21 +101,10 @@ if( 10 == namespaceId && "fontRef" == name)
         private static readonly string[] eleTagNames = { "lnRef","fillRef","effectRef","fontRef" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> LineReference.</para>
@@ -156,14 +115,8 @@ if( 10 == namespaceId && "fontRef" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.LineReference LineReference
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.LineReference>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> FillReference.</para>
@@ -174,14 +127,8 @@ if( 10 == namespaceId && "fontRef" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.FillReference FillReference
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.FillReference>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> EffectReference.</para>
@@ -192,14 +139,8 @@ if( 10 == namespaceId && "fontRef" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.EffectReference EffectReference
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> Font Reference.</para>
@@ -210,33 +151,19 @@ if( 10 == namespaceId && "fontRef" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.FontReference FontReference
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.FontReference>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>(3);
+        set => SetElement(3, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ShapeStyle>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeStyle>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the OfficeArtExtensionList Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is pic14:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -245,51 +172,21 @@ if( 10 == namespaceId && "fontRef" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
-    private const string tagName = "extLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 50;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12888;
+    /// <inheritdoc/>
+    public override string LocalName => "extLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 50;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     
@@ -300,7 +197,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     /// </summary>
     public OfficeArtExtensionList():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the OfficeArtExtensionList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -340,17 +237,9 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<OfficeArtExtensionList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<OfficeArtExtensionList>(deep);
 
-   
 }
 }
  

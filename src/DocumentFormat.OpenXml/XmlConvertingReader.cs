@@ -11,392 +11,173 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     internal class XmlConvertingReader : XmlReader
     {
-        // The xmlReader obtained from the Package class.
-        protected XmlReader BaseReader { get; set; }
-
-        private bool _strictTranslation { get; set; }
-
         /// <summary>
-        /// XmlConvertingReader
+        /// Creates an instance of <see cref="XmlConvertingReader"/>
         /// </summary>
         /// <param name="baseReader">XmlReader</param>
         /// <param name="strictTranslation">bool</param>
-        /// <returns></returns>
-        internal XmlConvertingReader(XmlReader baseReader, bool strictTranslation)
+        public XmlConvertingReader(XmlReader baseReader, bool strictTranslation)
         {
             BaseReader = baseReader ?? throw new ArgumentNullException(nameof(baseReader));
-
-            _strictTranslation = strictTranslation;
+            StrictTranslation = strictTranslation;
         }
 
         /// <summary>
-        /// Gets a value indicating whether strictTranslation is enabled.
+        /// Gets the inner <see cref="XmlReader"/>
         /// </summary>
-        internal bool StrictTranslation => _strictTranslation;
+        protected XmlReader BaseReader { get; }
 
-#if FEATURE_CLOSE
+        /// <summary>
+        /// Gets a value indicating whether strict translation is enabled.
+        /// </summary>
+        public bool StrictTranslation { get; }
+
+#if FEATURE_ABSTRACT_XML_CLOSE
         /// <inheritdoc/>
-        public override void Close()
-        {
-            BaseReader.Close();
-        }
+        public override void Close() => BaseReader.Close();
 #endif
 
         /// <inheritdoc/>
         protected override void Dispose(bool disposing)
         {
-#if FEATURE_CLOSE
-            if (ReadState != ReadState.Closed)
-            {
-                Close();
-            }
-#endif
-
-#if !FEATURE_XML_DISPOSE_PROTECTED
+#if FEATURE_XML_DISPOSE_PROTECTED
+            (BaseReader as IDisposable)?.Dispose();
+#else
             BaseReader.Dispose();
 #endif
         }
 
         /// <inheritdoc/>
-        public override bool Read()
-        {
-            return BaseReader.Read();
-        }
+        public override bool Read() => BaseReader.Read();
 
         /// <inheritdoc/>
-        public override string GetAttribute(int index)
-        {
-            return BaseReader.GetAttribute(index);
-        }
+        public override string GetAttribute(int index) => BaseReader.GetAttribute(index);
 
         /// <inheritdoc/>
-        public override string GetAttribute(string name)
-        {
-            return BaseReader.GetAttribute(name);
-        }
+        public override string GetAttribute(string name) => BaseReader.GetAttribute(name);
 
         /// <inheritdoc/>
-        public override string GetAttribute(string localName, string namespaceURI)
-        {
-            return BaseReader.GetAttribute(localName, namespaceURI);
-        }
+        public override string GetAttribute(string localName, string namespaceURI) => BaseReader.GetAttribute(localName, namespaceURI);
 
         /// <inheritdoc/>
-        public override string LookupNamespace(string prefix)
-        {
-            return BaseReader.LookupNamespace(prefix);
-        }
+        public override string LookupNamespace(string prefix) => BaseReader.LookupNamespace(prefix);
 
         /// <inheritdoc/>
-        public override void MoveToAttribute(int index)
-        {
-            BaseReader.MoveToAttribute(index);
-        }
+        public override void MoveToAttribute(int index) => BaseReader.MoveToAttribute(index);
 
         /// <inheritdoc/>
-        public override bool MoveToAttribute(string name)
-        {
-            return BaseReader.MoveToAttribute(name);
-        }
+        public override bool MoveToAttribute(string name) => BaseReader.MoveToAttribute(name);
 
         /// <inheritdoc/>
-        public override bool MoveToAttribute(string localName, string namespaceURI)
-        {
-            return BaseReader.MoveToAttribute(localName, namespaceURI);
-        }
+        public override bool MoveToAttribute(string localName, string namespaceURI) => BaseReader.MoveToAttribute(localName, namespaceURI);
 
         /// <inheritdoc/>
-        public override bool MoveToElement()
-        {
-            return BaseReader.MoveToElement();
-        }
+        public override bool MoveToElement() => BaseReader.MoveToElement();
 
         /// <inheritdoc/>
-        public override bool MoveToFirstAttribute()
-        {
-            return BaseReader.MoveToFirstAttribute();
-        }
+        public override bool MoveToFirstAttribute() => BaseReader.MoveToFirstAttribute();
 
         /// <inheritdoc/>
-        public override bool MoveToNextAttribute()
-        {
-            return BaseReader.MoveToNextAttribute();
-        }
+        public override bool MoveToNextAttribute() => BaseReader.MoveToNextAttribute();
 
         /// <inheritdoc/>
-        public override bool ReadAttributeValue()
-        {
-            return BaseReader.ReadAttributeValue();
-        }
+        public override bool ReadAttributeValue() => BaseReader.ReadAttributeValue();
 
         /// <inheritdoc/>
-        public override void ResolveEntity()
-        {
-            BaseReader.ResolveEntity();
-        }
+        public override void ResolveEntity() => BaseReader.ResolveEntity();
 
         /// <inheritdoc/>
-        public override int ReadValueChunk(char[] buffer, int index, int count)
-        {
-            return BaseReader.ReadValueChunk(buffer, index, count);
-        }
+        public override int ReadValueChunk(char[] buffer, int index, int count) => BaseReader.ReadValueChunk(buffer, index, count);
 
         /// <inheritdoc/>
-        public override int AttributeCount
-        {
-            get
-            {
-                return BaseReader.AttributeCount;
-            }
-        }
+        public override int AttributeCount => BaseReader.AttributeCount;
 
         /// <inheritdoc/>
-        public override string BaseURI
-        {
-            get
-            {
-                return BaseReader.BaseURI;
-            }
-        }
+        public override string BaseURI => BaseReader.BaseURI;
 
         /// <inheritdoc/>
-        public override bool CanReadBinaryContent
-        {
-            get
-            {
-                return BaseReader.CanReadBinaryContent;
-            }
-        }
+        public override bool CanReadBinaryContent => BaseReader.CanReadBinaryContent;
 
         /// <inheritdoc/>
-        public override bool CanReadValueChunk
-        {
-            get
-            {
-                return BaseReader.CanReadValueChunk;
-            }
-        }
+        public override bool CanReadValueChunk => BaseReader.CanReadValueChunk;
 
         /// <inheritdoc/>
-        public override bool CanResolveEntity
-        {
-            get
-            {
-                return BaseReader.CanResolveEntity;
-            }
-        }
+        public override bool CanResolveEntity => BaseReader.CanResolveEntity;
 
         /// <inheritdoc/>
-        public override int Depth
-        {
-            get
-            {
-                return BaseReader.Depth;
-            }
-        }
+        public override int Depth => BaseReader.Depth;
 
         /// <inheritdoc/>
-        public override bool EOF
-        {
-            get
-            {
-                return BaseReader.EOF;
-            }
-        }
+        public override bool EOF => BaseReader.EOF;
 
         /// <inheritdoc/>
-        public override bool HasValue
-        {
-            get
-            {
-                return BaseReader.HasValue;
-            }
-        }
+        public override bool HasValue => BaseReader.HasValue;
 
         /// <inheritdoc/>
-        public override bool IsDefault
-        {
-            get
-            {
-                return BaseReader.IsDefault;
-            }
-        }
+        public override bool IsDefault => BaseReader.IsDefault;
 
         /// <inheritdoc/>
-        public override bool IsEmptyElement
-        {
-            get
-            {
-                return BaseReader.IsEmptyElement;
-            }
-        }
+        public override bool IsEmptyElement => BaseReader.IsEmptyElement;
 
         /// <inheritdoc/>
-        public override string this[int index]
-        {
-            get
-            {
-                return BaseReader[index];
-            }
-        }
+        public override string this[int index] => BaseReader[index];
 
         /// <inheritdoc/>
-        public override string this[string name]
-        {
-            get
-            {
-                return BaseReader[name];
-            }
-        }
+        public override string this[string name] => BaseReader[name];
 
         /// <inheritdoc/>
-        public override string this[string name, string namespaceURI]
-        {
-            get
-            {
-                return BaseReader[name, namespaceURI];
-            }
-        }
+        public override string this[string name, string namespaceURI] => BaseReader[name, namespaceURI];
 
         /// <inheritdoc/>
-        public override string LocalName
-        {
-            get
-            {
-                return BaseReader.LocalName;
-            }
-        }
+        public override string LocalName => BaseReader.LocalName;
 
         /// <inheritdoc/>
-        public override string Name
-        {
-            get
-            {
-                return BaseReader.Name;
-            }
-        }
+        public override string Name => BaseReader.Name;
 
         /// <inheritdoc/>
-        public override string NamespaceURI
-        {
-            get
-            {
-                string uri = BaseReader.NamespaceURI;
-                string translatedNamespace;
-                bool found;
-
-                if (_strictTranslation)
-                {
-                    found = NamespaceIdMap.TryGetTransitionalNamespace(uri, out translatedNamespace);
-                }
-                else
-                {
-                    found = NamespaceIdMap.TryGetExtendedNamespace(uri, out translatedNamespace);
-                }
-
-                if (found)
-                {
-                    uri = translatedNamespace;
-                }
-
-                return uri;
-            }
-        }
+        public override string NamespaceURI => ApplyStrictTranslation(BaseReader.NamespaceURI);
 
         /// <inheritdoc/>
-        public override XmlNameTable NameTable
-        {
-            get
-            {
-                return BaseReader.NameTable;
-            }
-        }
+        public override XmlNameTable NameTable => BaseReader.NameTable;
 
         /// <inheritdoc/>
-        public override XmlNodeType NodeType
-        {
-            get
-            {
-                return BaseReader.NodeType;
-            }
-        }
+        public override XmlNodeType NodeType => BaseReader.NodeType;
 
         /// <inheritdoc/>
-        public override string Prefix
-        {
-            get
-            {
-                return BaseReader.Prefix;
-            }
-        }
+        public override string Prefix => BaseReader.Prefix;
 
 #if FEATURE_XML_QUOTECHAR
         /// <inheritdoc/>
-        public override char QuoteChar
-        {
-            get
-            {
-                return BaseReader.QuoteChar;
-            }
-        }
+        public override char QuoteChar => BaseReader.QuoteChar;
 #endif
 
         /// <inheritdoc/>
-        public override ReadState ReadState
-        {
-            get
-            {
-                return BaseReader.ReadState;
-            }
-        }
+        public override ReadState ReadState => BaseReader.ReadState;
 
         /// <inheritdoc/>
-        public override string Value
-        {
-            get
-            {
-                string textValue = BaseReader.Value;
+        public override string Value => BaseReader.NodeType == XmlNodeType.Attribute ? ApplyStrictTranslation(BaseReader.Value) : BaseReader.Value;
 
-                if (BaseReader.NodeType == XmlNodeType.Attribute)
+        /// <inheritdoc/>
+        public override string XmlLang => BaseReader.XmlLang;
+
+        /// <inheritdoc/>
+        public override XmlSpace XmlSpace => BaseReader.XmlSpace;
+
+        private string ApplyStrictTranslation(string uri)
+        {
+            if (StrictTranslation)
+            {
+                if (NamespaceIdMap.TryGetTransitionalNamespace(uri, out var transitionalNamespace))
                 {
-                    bool found;
-                    string translatedNamespace;
-
-                    if (_strictTranslation)
-                    {
-                        found = NamespaceIdMap.TryGetTransitionalNamespace(textValue, out translatedNamespace);
-                    }
-                    else
-                    {
-                        found = NamespaceIdMap.TryGetExtendedNamespace(textValue, out translatedNamespace);
-                    }
-
-                    if (found)
-                    {
-                        textValue = translatedNamespace;
-                    }
+                    return transitionalNamespace;
                 }
-
-                return textValue;
             }
-        }
-
-        /// <inheritdoc/>
-        public override string XmlLang
-        {
-            get
+            else if (NamespaceIdMap.TryGetExtendedNamespace(uri, out var extendedNamespace))
             {
-                return BaseReader.XmlLang;
+                return extendedNamespace;
             }
-        }
 
-        /// <inheritdoc/>
-        public override XmlSpace XmlSpace
-        {
-            get
-            {
-                return BaseReader.XmlSpace;
-            }
+            return uri;
         }
     }
 }

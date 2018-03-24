@@ -74,60 +74,25 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     [ChildElementInfo(typeof(ApplicationVersion))]
     [ChildElementInfo(typeof(DocumentSecurity))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Properties : OpenXmlPartRootElement
 {
-    private const string tagName = "Properties";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11064;
+    /// <inheritdoc/>
+    public override string LocalName => "Properties";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     
     
     
     
-    /// <summary>
-    /// Properties constructor.
-    /// </summary>
-    /// <param name="ownerPart">The owner part of the Properties.</param>
-    internal Properties(ExtendedFilePropertiesPart ownerPart) : base (ownerPart )
-    {
-    }
+	internal Properties(ExtendedFilePropertiesPart ownerPart) : base (ownerPart){}
     
     /// <summary>
     /// Loads the DOM from the ExtendedFilePropertiesPart.
@@ -142,17 +107,11 @@ public partial class Properties : OpenXmlPartRootElement
     /// </summary>
     public ExtendedFilePropertiesPart ExtendedFilePropertiesPart
     {
-		get
-		{
-			return OpenXmlPart as ExtendedFilePropertiesPart;
-		}
-		internal set
-		{
-			OpenXmlPart = value;
-		}
+		get => OpenXmlPart as ExtendedFilePropertiesPart;
+		internal set => OpenXmlPart = value;
     }
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the Properties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -183,9 +142,7 @@ public partial class Properties : OpenXmlPartRootElement
     /// <summary>
     /// Initializes a new instance of the Properties class.
     /// </summary>
-    public Properties() : base ()
-    {
-    }
+    public Properties():base(){}
     
     /// <summary>
     /// Saves the DOM into the ExtendedFilePropertiesPart.
@@ -287,21 +244,10 @@ if( 3 == namespaceId && "DocSecurity" == name)
         private static readonly string[] eleTagNames = { "Template","Manager","Company","Pages","Words","Characters","PresentationFormat","Lines","Paragraphs","Slides","Notes","TotalTime","HiddenSlides","MMClips","ScaleCrop","HeadingPairs","TitlesOfParts","LinksUpToDate","CharactersWithSpaces","SharedDoc","HyperlinkBase","HLinks","HyperlinksChanged","DigSig","Application","AppVersion","DocSecurity" };
     private static readonly byte[] eleNamespaceIds = { 3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneAll;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
     
         /// <summary>
     /// <para> Name of Document Template.</para>
@@ -312,14 +258,8 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public Template Template
     {
-        get 
-        {
-            return GetElement<Template>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<Template>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Name of Manager.</para>
@@ -330,14 +270,8 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public Manager Manager
     {
-        get 
-        {
-            return GetElement<Manager>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<Manager>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Name of Company.</para>
@@ -348,14 +282,8 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public Company Company
     {
-        get 
-        {
-            return GetElement<Company>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<Company>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> Total Number of Pages.</para>
@@ -366,14 +294,8 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public Pages Pages
     {
-        get 
-        {
-            return GetElement<Pages>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<Pages>(3);
+        set => SetElement(3, value);
     }
     /// <summary>
     /// <para> Word Count.</para>
@@ -384,14 +306,8 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public Words Words
     {
-        get 
-        {
-            return GetElement<Words>(4);
-        }
-        set
-        {
-            SetElement(4, value);
-        }
+        get => GetElement<Words>(4);
+        set => SetElement(4, value);
     }
     /// <summary>
     /// <para> Total Number of Characters.</para>
@@ -402,14 +318,8 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public Characters Characters
     {
-        get 
-        {
-            return GetElement<Characters>(5);
-        }
-        set
-        {
-            SetElement(5, value);
-        }
+        get => GetElement<Characters>(5);
+        set => SetElement(5, value);
     }
     /// <summary>
     /// <para> Intended Format of Presentation.</para>
@@ -420,14 +330,8 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public PresentationFormat PresentationFormat
     {
-        get 
-        {
-            return GetElement<PresentationFormat>(6);
-        }
-        set
-        {
-            SetElement(6, value);
-        }
+        get => GetElement<PresentationFormat>(6);
+        set => SetElement(6, value);
     }
     /// <summary>
     /// <para> Number of Lines.</para>
@@ -438,14 +342,8 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public Lines Lines
     {
-        get 
-        {
-            return GetElement<Lines>(7);
-        }
-        set
-        {
-            SetElement(7, value);
-        }
+        get => GetElement<Lines>(7);
+        set => SetElement(7, value);
     }
     /// <summary>
     /// <para> Total Number of Paragraphs.</para>
@@ -456,14 +354,8 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public Paragraphs Paragraphs
     {
-        get 
-        {
-            return GetElement<Paragraphs>(8);
-        }
-        set
-        {
-            SetElement(8, value);
-        }
+        get => GetElement<Paragraphs>(8);
+        set => SetElement(8, value);
     }
     /// <summary>
     /// <para> Slides Metadata Element.</para>
@@ -474,14 +366,8 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public Slides Slides
     {
-        get 
-        {
-            return GetElement<Slides>(9);
-        }
-        set
-        {
-            SetElement(9, value);
-        }
+        get => GetElement<Slides>(9);
+        set => SetElement(9, value);
     }
     /// <summary>
     /// <para> Number of Slides Containing Notes.</para>
@@ -492,14 +378,8 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public Notes Notes
     {
-        get 
-        {
-            return GetElement<Notes>(10);
-        }
-        set
-        {
-            SetElement(10, value);
-        }
+        get => GetElement<Notes>(10);
+        set => SetElement(10, value);
     }
     /// <summary>
     /// <para> Total Edit Time Metadata Element.</para>
@@ -510,14 +390,8 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public TotalTime TotalTime
     {
-        get 
-        {
-            return GetElement<TotalTime>(11);
-        }
-        set
-        {
-            SetElement(11, value);
-        }
+        get => GetElement<TotalTime>(11);
+        set => SetElement(11, value);
     }
     /// <summary>
     /// <para> Number of Hidden Slides.</para>
@@ -528,14 +402,8 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public HiddenSlides HiddenSlides
     {
-        get 
-        {
-            return GetElement<HiddenSlides>(12);
-        }
-        set
-        {
-            SetElement(12, value);
-        }
+        get => GetElement<HiddenSlides>(12);
+        set => SetElement(12, value);
     }
     /// <summary>
     /// <para> Total Number of Multimedia Clips.</para>
@@ -546,14 +414,8 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public MultimediaClips MultimediaClips
     {
-        get 
-        {
-            return GetElement<MultimediaClips>(13);
-        }
-        set
-        {
-            SetElement(13, value);
-        }
+        get => GetElement<MultimediaClips>(13);
+        set => SetElement(13, value);
     }
     /// <summary>
     /// <para> Thumbnail Display Mode.</para>
@@ -564,14 +426,8 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public ScaleCrop ScaleCrop
     {
-        get 
-        {
-            return GetElement<ScaleCrop>(14);
-        }
-        set
-        {
-            SetElement(14, value);
-        }
+        get => GetElement<ScaleCrop>(14);
+        set => SetElement(14, value);
     }
     /// <summary>
     /// <para> Heading Pairs.</para>
@@ -582,14 +438,8 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public HeadingPairs HeadingPairs
     {
-        get 
-        {
-            return GetElement<HeadingPairs>(15);
-        }
-        set
-        {
-            SetElement(15, value);
-        }
+        get => GetElement<HeadingPairs>(15);
+        set => SetElement(15, value);
     }
     /// <summary>
     /// <para> Part Titles.</para>
@@ -600,14 +450,8 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public TitlesOfParts TitlesOfParts
     {
-        get 
-        {
-            return GetElement<TitlesOfParts>(16);
-        }
-        set
-        {
-            SetElement(16, value);
-        }
+        get => GetElement<TitlesOfParts>(16);
+        set => SetElement(16, value);
     }
     /// <summary>
     /// <para> Links Up-to-Date.</para>
@@ -618,14 +462,8 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public LinksUpToDate LinksUpToDate
     {
-        get 
-        {
-            return GetElement<LinksUpToDate>(17);
-        }
-        set
-        {
-            SetElement(17, value);
-        }
+        get => GetElement<LinksUpToDate>(17);
+        set => SetElement(17, value);
     }
     /// <summary>
     /// <para> Number of Characters (With Spaces).</para>
@@ -636,14 +474,8 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public CharactersWithSpaces CharactersWithSpaces
     {
-        get 
-        {
-            return GetElement<CharactersWithSpaces>(18);
-        }
-        set
-        {
-            SetElement(18, value);
-        }
+        get => GetElement<CharactersWithSpaces>(18);
+        set => SetElement(18, value);
     }
     /// <summary>
     /// <para> Shared Document.</para>
@@ -654,14 +486,8 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public SharedDocument SharedDocument
     {
-        get 
-        {
-            return GetElement<SharedDocument>(19);
-        }
-        set
-        {
-            SetElement(19, value);
-        }
+        get => GetElement<SharedDocument>(19);
+        set => SetElement(19, value);
     }
     /// <summary>
     /// <para> Relative Hyperlink Base.</para>
@@ -672,14 +498,8 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public HyperlinkBase HyperlinkBase
     {
-        get 
-        {
-            return GetElement<HyperlinkBase>(20);
-        }
-        set
-        {
-            SetElement(20, value);
-        }
+        get => GetElement<HyperlinkBase>(20);
+        set => SetElement(20, value);
     }
     /// <summary>
     /// <para> Hyperlink List.</para>
@@ -690,14 +510,8 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public HyperlinkList HyperlinkList
     {
-        get 
-        {
-            return GetElement<HyperlinkList>(21);
-        }
-        set
-        {
-            SetElement(21, value);
-        }
+        get => GetElement<HyperlinkList>(21);
+        set => SetElement(21, value);
     }
     /// <summary>
     /// <para> Hyperlinks Changed.</para>
@@ -708,14 +522,8 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public HyperlinksChanged HyperlinksChanged
     {
-        get 
-        {
-            return GetElement<HyperlinksChanged>(22);
-        }
-        set
-        {
-            SetElement(22, value);
-        }
+        get => GetElement<HyperlinksChanged>(22);
+        set => SetElement(22, value);
     }
     /// <summary>
     /// <para> Digital Signature.</para>
@@ -726,14 +534,8 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public DigitalSignature DigitalSignature
     {
-        get 
-        {
-            return GetElement<DigitalSignature>(23);
-        }
-        set
-        {
-            SetElement(23, value);
-        }
+        get => GetElement<DigitalSignature>(23);
+        set => SetElement(23, value);
     }
     /// <summary>
     /// <para> Application Name.</para>
@@ -744,14 +546,8 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public Application Application
     {
-        get 
-        {
-            return GetElement<Application>(24);
-        }
-        set
-        {
-            SetElement(24, value);
-        }
+        get => GetElement<Application>(24);
+        set => SetElement(24, value);
     }
     /// <summary>
     /// <para> Application Version.</para>
@@ -762,14 +558,8 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public ApplicationVersion ApplicationVersion
     {
-        get 
-        {
-            return GetElement<ApplicationVersion>(25);
-        }
-        set
-        {
-            SetElement(25, value);
-        }
+        get => GetElement<ApplicationVersion>(25);
+        set => SetElement(25, value);
     }
     /// <summary>
     /// <para> Document Security.</para>
@@ -780,76 +570,35 @@ if( 3 == namespaceId && "DocSecurity" == name)
     /// </remark>
     public DocumentSecurity DocumentSecurity
     {
-        get 
-        {
-            return GetElement<DocumentSecurity>(26);
-        }
-        set
-        {
-            SetElement(26, value);
-        }
+        get => GetElement<DocumentSecurity>(26);
+        set => SetElement(26, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Properties>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Properties>(deep);
 
 }
 /// <summary>
 /// <para>Name of Document Template.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Template.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Template : OpenXmlLeafTextElement
 {
-    private const string tagName = "Template";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11065;
+    /// <inheritdoc/>
+    public override string LocalName => "Template";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
@@ -857,7 +606,7 @@ public partial class Template : OpenXmlLeafTextElement
     /// </summary>
     public Template():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the Template class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -867,69 +616,33 @@ public partial class Template : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new StringValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Template>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Template>(deep);
 
 }
 /// <summary>
 /// <para>Name of Manager.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Manager.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Manager : OpenXmlLeafTextElement
 {
-    private const string tagName = "Manager";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11066;
+    /// <inheritdoc/>
+    public override string LocalName => "Manager";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
@@ -937,7 +650,7 @@ public partial class Manager : OpenXmlLeafTextElement
     /// </summary>
     public Manager():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the Manager class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -947,69 +660,33 @@ public partial class Manager : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new StringValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Manager>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Manager>(deep);
 
 }
 /// <summary>
 /// <para>Name of Company.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Company.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Company : OpenXmlLeafTextElement
 {
-    private const string tagName = "Company";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11067;
+    /// <inheritdoc/>
+    public override string LocalName => "Company";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
@@ -1017,7 +694,7 @@ public partial class Company : OpenXmlLeafTextElement
     /// </summary>
     public Company():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the Company class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -1027,69 +704,33 @@ public partial class Company : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new StringValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Company>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Company>(deep);
 
 }
 /// <summary>
 /// <para>Intended Format of Presentation.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:PresentationFormat.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PresentationFormat : OpenXmlLeafTextElement
 {
-    private const string tagName = "PresentationFormat";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11071;
+    /// <inheritdoc/>
+    public override string LocalName => "PresentationFormat";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
@@ -1097,7 +738,7 @@ public partial class PresentationFormat : OpenXmlLeafTextElement
     /// </summary>
     public PresentationFormat():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the PresentationFormat class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -1107,69 +748,33 @@ public partial class PresentationFormat : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new StringValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<PresentationFormat>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<PresentationFormat>(deep);
 
 }
 /// <summary>
 /// <para>Relative Hyperlink Base.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:HyperlinkBase.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HyperlinkBase : OpenXmlLeafTextElement
 {
-    private const string tagName = "HyperlinkBase";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11085;
+    /// <inheritdoc/>
+    public override string LocalName => "HyperlinkBase";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
@@ -1177,7 +782,7 @@ public partial class HyperlinkBase : OpenXmlLeafTextElement
     /// </summary>
     public HyperlinkBase():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the HyperlinkBase class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -1187,69 +792,33 @@ public partial class HyperlinkBase : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new StringValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<HyperlinkBase>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinkBase>(deep);
 
 }
 /// <summary>
 /// <para>Application Name.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Application.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Application : OpenXmlLeafTextElement
 {
-    private const string tagName = "Application";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11089;
+    /// <inheritdoc/>
+    public override string LocalName => "Application";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
@@ -1257,7 +826,7 @@ public partial class Application : OpenXmlLeafTextElement
     /// </summary>
     public Application():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the Application class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -1267,69 +836,33 @@ public partial class Application : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new StringValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Application>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Application>(deep);
 
 }
 /// <summary>
 /// <para>Application Version.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:AppVersion.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ApplicationVersion : OpenXmlLeafTextElement
 {
-    private const string tagName = "AppVersion";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11090;
+    /// <inheritdoc/>
+    public override string LocalName => "AppVersion";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
@@ -1337,7 +870,7 @@ public partial class ApplicationVersion : OpenXmlLeafTextElement
     /// </summary>
     public ApplicationVersion():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the ApplicationVersion class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -1347,69 +880,33 @@ public partial class ApplicationVersion : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new StringValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ApplicationVersion>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ApplicationVersion>(deep);
 
 }
 /// <summary>
 /// <para>Total Number of Pages.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Pages.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Pages : OpenXmlLeafTextElement
 {
-    private const string tagName = "Pages";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11068;
+    /// <inheritdoc/>
+    public override string LocalName => "Pages";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
@@ -1417,7 +914,7 @@ public partial class Pages : OpenXmlLeafTextElement
     /// </summary>
     public Pages():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the Pages class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -1427,69 +924,33 @@ public partial class Pages : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Int32Value(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Pages>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Pages>(deep);
 
 }
 /// <summary>
 /// <para>Word Count.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Words.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Words : OpenXmlLeafTextElement
 {
-    private const string tagName = "Words";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11069;
+    /// <inheritdoc/>
+    public override string LocalName => "Words";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
@@ -1497,7 +958,7 @@ public partial class Words : OpenXmlLeafTextElement
     /// </summary>
     public Words():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the Words class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -1507,69 +968,33 @@ public partial class Words : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Int32Value(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Words>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Words>(deep);
 
 }
 /// <summary>
 /// <para>Total Number of Characters.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Characters.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Characters : OpenXmlLeafTextElement
 {
-    private const string tagName = "Characters";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11070;
+    /// <inheritdoc/>
+    public override string LocalName => "Characters";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
@@ -1577,7 +1002,7 @@ public partial class Characters : OpenXmlLeafTextElement
     /// </summary>
     public Characters():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the Characters class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -1587,69 +1012,33 @@ public partial class Characters : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Int32Value(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Characters>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Characters>(deep);
 
 }
 /// <summary>
 /// <para>Number of Lines.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Lines.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Lines : OpenXmlLeafTextElement
 {
-    private const string tagName = "Lines";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11072;
+    /// <inheritdoc/>
+    public override string LocalName => "Lines";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
@@ -1657,7 +1046,7 @@ public partial class Lines : OpenXmlLeafTextElement
     /// </summary>
     public Lines():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the Lines class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -1667,69 +1056,33 @@ public partial class Lines : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Int32Value(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Lines>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Lines>(deep);
 
 }
 /// <summary>
 /// <para>Total Number of Paragraphs.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Paragraphs.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Paragraphs : OpenXmlLeafTextElement
 {
-    private const string tagName = "Paragraphs";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11073;
+    /// <inheritdoc/>
+    public override string LocalName => "Paragraphs";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
@@ -1737,7 +1090,7 @@ public partial class Paragraphs : OpenXmlLeafTextElement
     /// </summary>
     public Paragraphs():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the Paragraphs class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -1747,69 +1100,33 @@ public partial class Paragraphs : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Int32Value(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Paragraphs>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Paragraphs>(deep);
 
 }
 /// <summary>
 /// <para>Slides Metadata Element.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Slides.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Slides : OpenXmlLeafTextElement
 {
-    private const string tagName = "Slides";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11074;
+    /// <inheritdoc/>
+    public override string LocalName => "Slides";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
@@ -1817,7 +1134,7 @@ public partial class Slides : OpenXmlLeafTextElement
     /// </summary>
     public Slides():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the Slides class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -1827,69 +1144,33 @@ public partial class Slides : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Int32Value(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Slides>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Slides>(deep);
 
 }
 /// <summary>
 /// <para>Number of Slides Containing Notes.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Notes.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Notes : OpenXmlLeafTextElement
 {
-    private const string tagName = "Notes";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11075;
+    /// <inheritdoc/>
+    public override string LocalName => "Notes";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
@@ -1897,7 +1178,7 @@ public partial class Notes : OpenXmlLeafTextElement
     /// </summary>
     public Notes():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the Notes class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -1907,69 +1188,33 @@ public partial class Notes : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Int32Value(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Notes>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Notes>(deep);
 
 }
 /// <summary>
 /// <para>Total Edit Time Metadata Element.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:TotalTime.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TotalTime : OpenXmlLeafTextElement
 {
-    private const string tagName = "TotalTime";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11076;
+    /// <inheritdoc/>
+    public override string LocalName => "TotalTime";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
@@ -1977,7 +1222,7 @@ public partial class TotalTime : OpenXmlLeafTextElement
     /// </summary>
     public TotalTime():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the TotalTime class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -1987,69 +1232,33 @@ public partial class TotalTime : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Int32Value(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<TotalTime>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<TotalTime>(deep);
 
 }
 /// <summary>
 /// <para>Number of Hidden Slides.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:HiddenSlides.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HiddenSlides : OpenXmlLeafTextElement
 {
-    private const string tagName = "HiddenSlides";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11077;
+    /// <inheritdoc/>
+    public override string LocalName => "HiddenSlides";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
@@ -2057,7 +1266,7 @@ public partial class HiddenSlides : OpenXmlLeafTextElement
     /// </summary>
     public HiddenSlides():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the HiddenSlides class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -2067,69 +1276,33 @@ public partial class HiddenSlides : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Int32Value(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<HiddenSlides>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<HiddenSlides>(deep);
 
 }
 /// <summary>
 /// <para>Total Number of Multimedia Clips.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:MMClips.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MultimediaClips : OpenXmlLeafTextElement
 {
-    private const string tagName = "MMClips";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11078;
+    /// <inheritdoc/>
+    public override string LocalName => "MMClips";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
@@ -2137,7 +1310,7 @@ public partial class MultimediaClips : OpenXmlLeafTextElement
     /// </summary>
     public MultimediaClips():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the MultimediaClips class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -2147,69 +1320,33 @@ public partial class MultimediaClips : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Int32Value(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<MultimediaClips>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<MultimediaClips>(deep);
 
 }
 /// <summary>
 /// <para>Number of Characters (With Spaces).</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:CharactersWithSpaces.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CharactersWithSpaces : OpenXmlLeafTextElement
 {
-    private const string tagName = "CharactersWithSpaces";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11083;
+    /// <inheritdoc/>
+    public override string LocalName => "CharactersWithSpaces";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
@@ -2217,7 +1354,7 @@ public partial class CharactersWithSpaces : OpenXmlLeafTextElement
     /// </summary>
     public CharactersWithSpaces():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the CharactersWithSpaces class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -2227,69 +1364,33 @@ public partial class CharactersWithSpaces : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Int32Value(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<CharactersWithSpaces>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<CharactersWithSpaces>(deep);
 
 }
 /// <summary>
 /// <para>Document Security.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:DocSecurity.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DocumentSecurity : OpenXmlLeafTextElement
 {
-    private const string tagName = "DocSecurity";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11091;
+    /// <inheritdoc/>
+    public override string LocalName => "DocSecurity";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
@@ -2297,7 +1398,7 @@ public partial class DocumentSecurity : OpenXmlLeafTextElement
     /// </summary>
     public DocumentSecurity():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the DocumentSecurity class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -2307,69 +1408,33 @@ public partial class DocumentSecurity : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new Int32Value(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<DocumentSecurity>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocumentSecurity>(deep);
 
 }
 /// <summary>
 /// <para>Thumbnail Display Mode.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:ScaleCrop.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScaleCrop : OpenXmlLeafTextElement
 {
-    private const string tagName = "ScaleCrop";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11079;
+    /// <inheritdoc/>
+    public override string LocalName => "ScaleCrop";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
@@ -2377,7 +1442,7 @@ public partial class ScaleCrop : OpenXmlLeafTextElement
     /// </summary>
     public ScaleCrop():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the ScaleCrop class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -2387,69 +1452,33 @@ public partial class ScaleCrop : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new BooleanValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ScaleCrop>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScaleCrop>(deep);
 
 }
 /// <summary>
 /// <para>Links Up-to-Date.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:LinksUpToDate.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LinksUpToDate : OpenXmlLeafTextElement
 {
-    private const string tagName = "LinksUpToDate";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11082;
+    /// <inheritdoc/>
+    public override string LocalName => "LinksUpToDate";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
@@ -2457,7 +1486,7 @@ public partial class LinksUpToDate : OpenXmlLeafTextElement
     /// </summary>
     public LinksUpToDate():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the LinksUpToDate class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -2467,69 +1496,33 @@ public partial class LinksUpToDate : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new BooleanValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<LinksUpToDate>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<LinksUpToDate>(deep);
 
 }
 /// <summary>
 /// <para>Shared Document.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:SharedDoc.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SharedDocument : OpenXmlLeafTextElement
 {
-    private const string tagName = "SharedDoc";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11084;
+    /// <inheritdoc/>
+    public override string LocalName => "SharedDoc";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
@@ -2537,7 +1530,7 @@ public partial class SharedDocument : OpenXmlLeafTextElement
     /// </summary>
     public SharedDocument():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the SharedDocument class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -2547,69 +1540,33 @@ public partial class SharedDocument : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new BooleanValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<SharedDocument>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<SharedDocument>(deep);
 
 }
 /// <summary>
 /// <para>Hyperlinks Changed.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:HyperlinksChanged.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HyperlinksChanged : OpenXmlLeafTextElement
 {
-    private const string tagName = "HyperlinksChanged";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11087;
+    /// <inheritdoc/>
+    public override string LocalName => "HyperlinksChanged";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
@@ -2617,7 +1574,7 @@ public partial class HyperlinksChanged : OpenXmlLeafTextElement
     /// </summary>
     public HyperlinksChanged():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the HyperlinksChanged class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -2627,24 +1584,17 @@ public partial class HyperlinksChanged : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new BooleanValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<HyperlinksChanged>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinksChanged>(deep);
 
 }
 /// <summary>
 /// <para>Heading Pairs.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:HeadingPairs.</para>
 /// </summary>
 /// <remarks>
@@ -2655,54 +1605,25 @@ public partial class HyperlinksChanged : OpenXmlLeafTextElement
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HeadingPairs : VectorVariantType
 {
-    private const string tagName = "HeadingPairs";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11080;
+    /// <inheritdoc/>
+    public override string LocalName => "HeadingPairs";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
     /// Initializes a new instance of the HeadingPairs class.
     /// </summary>
     public HeadingPairs():base(){}
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the HeadingPairs class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -2729,19 +1650,13 @@ public partial class HeadingPairs : VectorVariantType
     }
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<HeadingPairs>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<HeadingPairs>(deep);
 
 }
 /// <summary>
 /// <para>Hyperlink List.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:HLinks.</para>
 /// </summary>
 /// <remarks>
@@ -2752,54 +1667,25 @@ public partial class HeadingPairs : VectorVariantType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HyperlinkList : VectorVariantType
 {
-    private const string tagName = "HLinks";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11086;
+    /// <inheritdoc/>
+    public override string LocalName => "HLinks";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
     /// Initializes a new instance of the HyperlinkList class.
     /// </summary>
     public HyperlinkList():base(){}
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the HyperlinkList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -2826,15 +1712,8 @@ public partial class HyperlinkList : VectorVariantType
     }
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<HyperlinkList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinkList>(deep);
 
 }
 /// <summary>
@@ -2866,21 +1745,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         private static readonly string[] eleTagNames = { "vector" };
     private static readonly byte[] eleNamespaceIds = { 5 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Vector.</para>
@@ -2891,14 +1759,8 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTVector VTVector
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>(0);
+        set => SetElement(0, value);
     }
 
 
@@ -2909,7 +1771,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </summary>
     protected VectorVariantType(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the VectorVariantType class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -2939,6 +1801,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 /// <summary>
 /// <para>Part Titles.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:TitlesOfParts.</para>
 /// </summary>
 /// <remarks>
@@ -2947,50 +1810,21 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>DocumentFormat.OpenXml.VariantTypes.VTVector &lt;vt:vector></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TitlesOfParts : OpenXmlCompositeElement
 {
-    private const string tagName = "TitlesOfParts";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11081;
+    /// <inheritdoc/>
+    public override string LocalName => "TitlesOfParts";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     
@@ -3001,7 +1835,7 @@ public partial class TitlesOfParts : OpenXmlCompositeElement
     /// </summary>
     public TitlesOfParts():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the TitlesOfParts class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -3042,21 +1876,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         private static readonly string[] eleTagNames = { "vector" };
     private static readonly byte[] eleNamespaceIds = { 5 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Vector.</para>
@@ -3067,32 +1890,19 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTVector VTVector
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>(0);
+        set => SetElement(0, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<TitlesOfParts>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<TitlesOfParts>(deep);
 
-   
 }
 /// <summary>
 /// <para>Digital Signature.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:DigSig.</para>
 /// </summary>
 /// <remarks>
@@ -3101,50 +1911,21 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>DocumentFormat.OpenXml.VariantTypes.VTBlob &lt;vt:blob></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTBlob))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DigitalSignature : OpenXmlCompositeElement
 {
-    private const string tagName = "DigSig";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 3;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 11088;
+    /// <inheritdoc/>
+    public override string LocalName => "DigSig";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 3;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     
@@ -3155,7 +1936,7 @@ public partial class DigitalSignature : OpenXmlCompositeElement
     /// </summary>
     public DigitalSignature():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the DigitalSignature class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -3196,21 +1977,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         private static readonly string[] eleTagNames = { "blob" };
     private static readonly byte[] eleNamespaceIds = { 5 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Binary Blob.</para>
@@ -3221,29 +1991,15 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </remark>
     public DocumentFormat.OpenXml.VariantTypes.VTBlob VTBlob
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.VariantTypes.VTBlob>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBlob>(0);
+        set => SetElement(0, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<DigitalSignature>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<DigitalSignature>(deep);
 
-   
 }
 }
  

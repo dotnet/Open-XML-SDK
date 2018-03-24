@@ -17,36 +17,26 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class OpenXmlPartReader : OpenXmlReader
     {
-        private OpenXmlElementContext _elementContext;
-        private XmlReader _xmlReader;
-        private IList<OpenXmlAttribute> _attributeList;
-        private IList<KeyValuePair<string, string>> _nsDecls;
-        private Stack<OpenXmlElement> _elementStack;
+        private readonly XmlReader _xmlReader;
+        private readonly List<OpenXmlAttribute> _attributeList = new List<OpenXmlAttribute>();
+        private readonly List<KeyValuePair<string, string>> _nsDecls = new List<KeyValuePair<string, string>>();
+        private readonly Stack<OpenXmlElement> _elementStack = new Stack<OpenXmlElement>();
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        private readonly string _encoding;
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        private readonly bool? _standalone;
+
         private ElementState _elementState;
-
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private string _encoding;
-
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private bool? _standalone;
 
         private OpenXmlPartReader()
         {
-            _attributeList = new List<OpenXmlAttribute>();
-            _nsDecls = new List<KeyValuePair<string, string>>();
-            _elementStack = new Stack<OpenXmlElement>();
-            _elementContext = new OpenXmlElementContext();
-            _elementState = ElementState.Null;
         }
 
         private OpenXmlPartReader(bool readMiscNodes)
             : base(readMiscNodes)
         {
-            _attributeList = new List<OpenXmlAttribute>();
-            _nsDecls = new List<KeyValuePair<string, string>>();
-            _elementStack = new Stack<OpenXmlElement>();
-            _elementContext = new OpenXmlElementContext();
-            _elementState = ElementState.Null;
         }
 
         /// <summary>
@@ -59,10 +49,8 @@ namespace DocumentFormat.OpenXml
             {
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
-            Stream partStream = openXmlPart.GetStream(FileMode.Open);
-            // set MaxCharactersInDocument to limit the part size on loading DOM.
-            _elementContext.XmlReaderSettings.MaxCharactersInDocument = openXmlPart.MaxCharactersInPart;
-            Init(partStream, /*closeInput*/true);
+
+            _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), true, openXmlPart.MaxCharactersInPart, out _standalone, out _encoding);
         }
 
         /// <summary>
@@ -77,10 +65,8 @@ namespace DocumentFormat.OpenXml
             {
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
-            // set MaxCharactersInDocument to limit the part size on loading DOM.
-            _elementContext.XmlReaderSettings.MaxCharactersInDocument = openXmlPart.MaxCharactersInPart;
-            Stream partStream = openXmlPart.GetStream(FileMode.Open);
-            Init(partStream, /*closeInput*/true);
+
+            _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), true, openXmlPart.MaxCharactersInPart, out _standalone, out _encoding);
         }
 
         /// <summary>
@@ -94,8 +80,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(partStream));
             }
 
-            // we don't know the MaxCharactersInPart if only a stream is passed in.
-            Init(partStream, /*closeInput*/false);
+            _xmlReader = CreateReader(partStream, false, 0, out _standalone, out _encoding);
         }
 
         /// <summary>
@@ -110,8 +95,8 @@ namespace DocumentFormat.OpenXml
             {
                 throw new ArgumentNullException(nameof(partStream));
             }
-            // we don't know the MaxCharactersInPart if only a stream is passed in.
-            Init(partStream, /*closeInput*/false);
+
+            _xmlReader = CreateReader(partStream, false, 0, out _standalone, out _encoding);
         }
 
         /// <summary>
@@ -288,8 +273,6 @@ namespace DocumentFormat.OpenXml
             get
             {
                 ThrowIfObjectDisposed();
-                //Debug.Assert(this._elementStack.Count == 0);
-
                 return _elementState == ElementState.EOF;
             }
         }
@@ -653,17 +636,12 @@ namespace DocumentFormat.OpenXml
         public override string GetText()
         {
             ThrowIfObjectDisposed();
-            if (_elementState == ElementState.LeafStart)
+
+            if (_elementState == ElementState.LeafStart && _elementStack.Peek() is OpenXmlLeafTextElement textElement)
             {
-                OpenXmlElement element = _elementStack.Peek();
-
-                OpenXmlLeafTextElement textElement = element as OpenXmlLeafTextElement;
-
-                if (textElement != null)
-                {
-                    return textElement.Text;
-                }
+                return textElement.Text;
             }
+
             return String.Empty;
         }
 
@@ -673,6 +651,8 @@ namespace DocumentFormat.OpenXml
             ThrowIfObjectDisposed();
             _elementState = ElementState.EOF;
             _elementStack.Clear();
+            _attributeList.Clear();
+            _nsDecls.Clear();
 #if FEATURE_CLOSE
             _xmlReader.Close();
 #else
@@ -680,56 +660,50 @@ namespace DocumentFormat.OpenXml
 #endif
         }
 
-        #region private methods
-
-        private void Init(Stream partStream, bool closeInput)
+        private static XmlReader CreateReader(Stream partStream, bool closeInput, long maxCharactersInPart, out bool? _standalone, out string _encoding)
         {
-            _elementContext.XmlReaderSettings.CloseInput = closeInput;
-
-#if FEATURE_XML_PROHIBIT_DTD
-            _elementContext.XmlReaderSettings.ProhibitDtd = true; // set true explicitly for security fix
-#else
-            _elementContext.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set to prohibit explicitly for security fix
-#endif
-
-            _elementContext.XmlReaderSettings.IgnoreWhitespace = true; // O15:#3024890, the default is false, but we set it to True for compatibility of OpenXmlPartReader behavior
-            _xmlReader = XmlConvertingReaderFactory.Create(partStream, _elementContext.XmlReaderSettings);
-
-            _xmlReader.Read();
-
-            if (_xmlReader.NodeType == XmlNodeType.XmlDeclaration)
+            var settings = new XmlReaderSettings
             {
-                _encoding = _xmlReader["encoding"]; // get the "encoding" attribute
+                MaxCharactersInDocument = maxCharactersInPart,
+                CloseInput = closeInput,
+                IgnoreWhitespace = true,
+#if FEATURE_XML_PROHIBIT_DTD
+                ProhibitDtd = true,
+#else
+                DtdProcessing = DtdProcessing.Prohibit
+#endif
+            };
 
-                //if (!String.IsNullOrEmpty(encoding))
-                //{
-                //    try
-                //    {
-                //        this._encoding = Encoding.GetEncoding(encoding);
-                //    }
-                //    catch (ArgumentException)
-                //    {
-                //        // should we catch?
-                //        this._encoding = Encoding.UTF8;
-                //    }
-                //}
+            var xmlReader = XmlConvertingReaderFactory.Create(partStream, settings);
 
-                string standalone = _xmlReader["standalone"]; // get the "standalone" attribute
+            xmlReader.Read();
 
-                if (!String.IsNullOrEmpty(standalone))
+            if (xmlReader.NodeType == XmlNodeType.XmlDeclaration)
+            {
+                _encoding = xmlReader["encoding"];
+
+                var standalone = xmlReader["standalone"];
+
+                if (string.Equals("yes", standalone, StringComparison.Ordinal))
                 {
-                    if (standalone == "yes")
-                    {
-                        _standalone = true;
-                    }
-                    else
-                    {
-                        _standalone = false;
-                    }
+                    _standalone = true;
+                }
+                else if (string.Equals("no", standalone, StringComparison.Ordinal))
+                {
+                    _standalone = false;
+                }
+                else
+                {
+                    _standalone = null;
                 }
             }
+            else
+            {
+                _encoding = null;
+                _standalone = null;
+            }
 
-            _elementState = ElementState.Null;
+            return xmlReader;
         }
 
         private bool ReadRoot()
@@ -919,8 +893,5 @@ namespace DocumentFormat.OpenXml
                 throw new InvalidOperationException(ExceptionMessages.ReaderInEofState);
             }
         }
-
-        #endregion
-
     }
 }
