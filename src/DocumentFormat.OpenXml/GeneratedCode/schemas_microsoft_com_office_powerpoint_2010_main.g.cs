@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
 {
 /// <summary>
 /// <para>Defines the NonVisualContentPartProperties Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:nvContentPartPr.</para>
 /// </summary>
 /// <remarks>
@@ -24,53 +24,23 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
 ///<item><description>ApplicationNonVisualDrawingProperties &lt;p14:nvPr></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(NonVisualDrawingProperties),(FileFormatVersions)14)]
-    [ChildElementInfo(typeof(NonVisualInkContentPartProperties),(FileFormatVersions)14)]
-    [ChildElementInfo(typeof(ApplicationNonVisualDrawingProperties),(FileFormatVersions)14)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(NonVisualDrawingProperties), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(NonVisualInkContentPartProperties), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ApplicationNonVisualDrawingProperties), FileFormatVersions.Office2010)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
 {
-    private const string tagName = "nvContentPartPr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12831;
+    /// <inheritdoc/>
+    public override string LocalName => "nvContentPartPr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     
@@ -81,7 +51,7 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     /// </summary>
     public NonVisualContentPartProperties():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the NonVisualContentPartProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -128,21 +98,10 @@ if( 49 == namespaceId && "nvPr" == name)
         private static readonly string[] eleTagNames = { "cNvPr","cNvContentPartPr","nvPr" };
     private static readonly byte[] eleNamespaceIds = { 49,49,49 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> NonVisualDrawingProperties.</para>
@@ -153,14 +112,8 @@ if( 49 == namespaceId && "nvPr" == name)
     /// </remark>
     public NonVisualDrawingProperties NonVisualDrawingProperties
     {
-        get 
-        {
-            return GetElement<NonVisualDrawingProperties>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<NonVisualDrawingProperties>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> NonVisualInkContentPartProperties.</para>
@@ -171,14 +124,8 @@ if( 49 == namespaceId && "nvPr" == name)
     /// </remark>
     public NonVisualInkContentPartProperties NonVisualInkContentPartProperties
     {
-        get 
-        {
-            return GetElement<NonVisualInkContentPartProperties>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<NonVisualInkContentPartProperties>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> ApplicationNonVisualDrawingProperties.</para>
@@ -189,33 +136,19 @@ if( 49 == namespaceId && "nvPr" == name)
     /// </remark>
     public ApplicationNonVisualDrawingProperties ApplicationNonVisualDrawingProperties
     {
-        get 
-        {
-            return GetElement<ApplicationNonVisualDrawingProperties>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<ApplicationNonVisualDrawingProperties>(2);
+        set => SetElement(2, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<NonVisualContentPartProperties>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualContentPartProperties>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the Transform2D Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:xfrm.</para>
 /// </summary>
 /// <remarks>
@@ -225,68 +158,30 @@ if( 49 == namespaceId && "nvPr" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.Extents &lt;a:ext></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Offset))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extents))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Transform2D : OpenXmlCompositeElement
 {
-    private const string tagName = "xfrm";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12832;
+    /// <inheritdoc/>
+    public override string LocalName => "xfrm";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "rot","flipH","flipV" };
-    private static byte[] attributeNamespaceIds = { 0,0,0 };
+    	private static readonly string[] attributeTagNames = { "rot","flipH","flipV" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -329,7 +224,7 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// </summary>
     public Transform2D():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the Transform2D class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -373,21 +268,10 @@ if( 10 == namespaceId && "ext" == name)
         private static readonly string[] eleTagNames = { "off","ext" };
     private static readonly byte[] eleNamespaceIds = { 10,10 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Offset.</para>
@@ -398,14 +282,8 @@ if( 10 == namespaceId && "ext" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Offset Offset
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Offset>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Extents.</para>
@@ -416,14 +294,8 @@ if( 10 == namespaceId && "ext" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Extents Extents
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Extents>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>(1);
+        set => SetElement(1, value);
     }
 
 
@@ -443,21 +315,13 @@ if( 0 == namespaceId && "flipV" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Transform2D>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Transform2D>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the ExtensionListModify Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -466,67 +330,29 @@ if( 0 == namespaceId && "flipV" == name)
 ///<item><description>DocumentFormat.OpenXml.Presentation.Extension &lt;p:ext></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.Extension))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ExtensionListModify : OpenXmlCompositeElement
 {
-    private const string tagName = "extLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12833;
+    /// <inheritdoc/>
+    public override string LocalName => "extLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "mod" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "mod" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -547,7 +373,7 @@ public partial class ExtensionListModify : OpenXmlCompositeElement
     /// </summary>
     public ExtensionListModify():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ExtensionListModify class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -596,21 +422,13 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ExtensionListModify>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExtensionListModify>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the Media Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:media.</para>
 /// </summary>
 /// <remarks>
@@ -622,70 +440,32 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>ExtensionList &lt;p14:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(MediaTrim),(FileFormatVersions)14)]
-    [ChildElementInfo(typeof(MediaFade),(FileFormatVersions)14)]
-    [ChildElementInfo(typeof(MediaBookmarkList),(FileFormatVersions)14)]
-    [ChildElementInfo(typeof(ExtensionList),(FileFormatVersions)14)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(MediaTrim), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(MediaFade), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(MediaBookmarkList), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Media : OpenXmlCompositeElement
 {
-    private const string tagName = "media";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12834;
+    /// <inheritdoc/>
+    public override string LocalName => "media";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "embed","link" };
-    private static byte[] attributeNamespaceIds = { 19,19 };
+    	private static readonly string[] attributeTagNames = { "embed","link" };
+    private static readonly byte[] attributeNamespaceIds = { 19,19 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -721,7 +501,7 @@ public partial class Media : OpenXmlCompositeElement
     /// </summary>
     public Media():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the Media class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -771,21 +551,10 @@ if( 49 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "trim","fade","bmkLst","extLst" };
     private static readonly byte[] eleNamespaceIds = { 49,49,49,49 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> MediaTrim.</para>
@@ -796,14 +565,8 @@ if( 49 == namespaceId && "extLst" == name)
     /// </remark>
     public MediaTrim MediaTrim
     {
-        get 
-        {
-            return GetElement<MediaTrim>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<MediaTrim>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> MediaFade.</para>
@@ -814,14 +577,8 @@ if( 49 == namespaceId && "extLst" == name)
     /// </remark>
     public MediaFade MediaFade
     {
-        get 
-        {
-            return GetElement<MediaFade>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<MediaFade>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> MediaBookmarkList.</para>
@@ -832,14 +589,8 @@ if( 49 == namespaceId && "extLst" == name)
     /// </remark>
     public MediaBookmarkList MediaBookmarkList
     {
-        get 
-        {
-            return GetElement<MediaBookmarkList>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<MediaBookmarkList>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -850,14 +601,8 @@ if( 49 == namespaceId && "extLst" == name)
     /// </remark>
     public ExtensionList ExtensionList
     {
-        get 
-        {
-            return GetElement<ExtensionList>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<ExtensionList>(3);
+        set => SetElement(3, value);
     }
 
 
@@ -874,21 +619,13 @@ if( 19 == namespaceId && "link" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Media>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Media>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the VortexTransition Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:vortex.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -896,45 +633,15 @@ if( 19 == namespaceId && "link" == name)
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class VortexTransition : SideDirectionTransitionType
 {
-    private const string tagName = "vortex";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12835;
+    /// <inheritdoc/>
+    public override string LocalName => "vortex";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -943,20 +650,13 @@ public partial class VortexTransition : SideDirectionTransitionType
     public VortexTransition():base(){}
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<VortexTransition>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<VortexTransition>(deep);
 
 }
 /// <summary>
 /// <para>Defines the PanTransition Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:pan.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -964,45 +664,15 @@ public partial class VortexTransition : SideDirectionTransitionType
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PanTransition : SideDirectionTransitionType
 {
-    private const string tagName = "pan";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12846;
+    /// <inheritdoc/>
+    public override string LocalName => "pan";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -1011,15 +681,8 @@ public partial class PanTransition : SideDirectionTransitionType
     public PanTransition():base(){}
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<PanTransition>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<PanTransition>(deep);
 
 }
 /// <summary>
@@ -1029,20 +692,12 @@ public partial class PanTransition : SideDirectionTransitionType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class SideDirectionTransitionType : OpenXmlLeafElement
 {
-    private static string[] attributeTagNames = { "dir" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "dir" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
     
         /// <summary>
@@ -1080,7 +735,7 @@ public abstract partial class SideDirectionTransitionType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the SwitchTransition Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:switch.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1088,45 +743,15 @@ public abstract partial class SideDirectionTransitionType : OpenXmlLeafElement
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class SwitchTransition : LeftRightDirectionTransitionType
 {
-    private const string tagName = "switch";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12836;
+    /// <inheritdoc/>
+    public override string LocalName => "switch";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -1135,20 +760,13 @@ public partial class SwitchTransition : LeftRightDirectionTransitionType
     public SwitchTransition():base(){}
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<SwitchTransition>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<SwitchTransition>(deep);
 
 }
 /// <summary>
 /// <para>Defines the FlipTransition Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:flip.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1156,45 +774,15 @@ public partial class SwitchTransition : LeftRightDirectionTransitionType
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class FlipTransition : LeftRightDirectionTransitionType
 {
-    private const string tagName = "flip";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12837;
+    /// <inheritdoc/>
+    public override string LocalName => "flip";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -1203,20 +791,13 @@ public partial class FlipTransition : LeftRightDirectionTransitionType
     public FlipTransition():base(){}
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<FlipTransition>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<FlipTransition>(deep);
 
 }
 /// <summary>
 /// <para>Defines the FerrisTransition Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:ferris.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1224,45 +805,15 @@ public partial class FlipTransition : LeftRightDirectionTransitionType
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class FerrisTransition : LeftRightDirectionTransitionType
 {
-    private const string tagName = "ferris";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12843;
+    /// <inheritdoc/>
+    public override string LocalName => "ferris";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -1271,20 +822,13 @@ public partial class FerrisTransition : LeftRightDirectionTransitionType
     public FerrisTransition():base(){}
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<FerrisTransition>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<FerrisTransition>(deep);
 
 }
 /// <summary>
 /// <para>Defines the GalleryTransition Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:gallery.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1292,45 +836,15 @@ public partial class FerrisTransition : LeftRightDirectionTransitionType
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class GalleryTransition : LeftRightDirectionTransitionType
 {
-    private const string tagName = "gallery";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12844;
+    /// <inheritdoc/>
+    public override string LocalName => "gallery";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -1339,20 +853,13 @@ public partial class GalleryTransition : LeftRightDirectionTransitionType
     public GalleryTransition():base(){}
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<GalleryTransition>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<GalleryTransition>(deep);
 
 }
 /// <summary>
 /// <para>Defines the ConveyorTransition Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:conveyor.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1360,45 +867,15 @@ public partial class GalleryTransition : LeftRightDirectionTransitionType
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ConveyorTransition : LeftRightDirectionTransitionType
 {
-    private const string tagName = "conveyor";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12845;
+    /// <inheritdoc/>
+    public override string LocalName => "conveyor";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -1407,15 +884,8 @@ public partial class ConveyorTransition : LeftRightDirectionTransitionType
     public ConveyorTransition():base(){}
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ConveyorTransition>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConveyorTransition>(deep);
 
 }
 /// <summary>
@@ -1425,20 +895,12 @@ public partial class ConveyorTransition : LeftRightDirectionTransitionType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class LeftRightDirectionTransitionType : OpenXmlLeafElement
 {
-    private static string[] attributeTagNames = { "dir" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "dir" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
     
         /// <summary>
@@ -1476,69 +938,31 @@ public abstract partial class LeftRightDirectionTransitionType : OpenXmlLeafElem
 }
 /// <summary>
 /// <para>Defines the RippleTransition Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:ripple.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class RippleTransition : OpenXmlLeafElement
 {
-    private const string tagName = "ripple";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12838;
+    /// <inheritdoc/>
+    public override string LocalName => "ripple";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "dir" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "dir" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -1574,21 +998,13 @@ public partial class RippleTransition : OpenXmlLeafElement
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<RippleTransition>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<RippleTransition>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the HoneycombTransition Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:honeycomb.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1596,45 +1012,15 @@ public partial class RippleTransition : OpenXmlLeafElement
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class HoneycombTransition : EmptyType
 {
-    private const string tagName = "honeycomb";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12839;
+    /// <inheritdoc/>
+    public override string LocalName => "honeycomb";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -1643,20 +1029,13 @@ public partial class HoneycombTransition : EmptyType
     public HoneycombTransition():base(){}
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<HoneycombTransition>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<HoneycombTransition>(deep);
 
 }
 /// <summary>
 /// <para>Defines the FlashTransition Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:flash.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1664,45 +1043,15 @@ public partial class HoneycombTransition : EmptyType
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class FlashTransition : EmptyType
 {
-    private const string tagName = "flash";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12850;
+    /// <inheritdoc/>
+    public override string LocalName => "flash";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -1711,15 +1060,8 @@ public partial class FlashTransition : EmptyType
     public FlashTransition():base(){}
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<FlashTransition>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<FlashTransition>(deep);
 
 }
 /// <summary>
@@ -1745,69 +1087,31 @@ public abstract partial class EmptyType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the PrismTransition Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:prism.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PrismTransition : OpenXmlLeafElement
 {
-    private const string tagName = "prism";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12840;
+    /// <inheritdoc/>
+    public override string LocalName => "prism";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "dir","isContent","isInverted" };
-    private static byte[] attributeNamespaceIds = { 0,0,0 };
+    	private static readonly string[] attributeTagNames = { "dir","isContent","isInverted" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -1871,21 +1175,13 @@ if( 0 == namespaceId && "isInverted" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<PrismTransition>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrismTransition>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the DoorsTransition Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:doors.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1893,45 +1189,15 @@ if( 0 == namespaceId && "isInverted" == name)
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DoorsTransition : OrientationTransitionType
 {
-    private const string tagName = "doors";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12841;
+    /// <inheritdoc/>
+    public override string LocalName => "doors";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -1940,20 +1206,13 @@ public partial class DoorsTransition : OrientationTransitionType
     public DoorsTransition():base(){}
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<DoorsTransition>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoorsTransition>(deep);
 
 }
 /// <summary>
 /// <para>Defines the WindowTransition Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:window.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -1961,45 +1220,15 @@ public partial class DoorsTransition : OrientationTransitionType
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class WindowTransition : OrientationTransitionType
 {
-    private const string tagName = "window";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12842;
+    /// <inheritdoc/>
+    public override string LocalName => "window";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -2008,15 +1237,8 @@ public partial class WindowTransition : OrientationTransitionType
     public WindowTransition():base(){}
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<WindowTransition>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<WindowTransition>(deep);
 
 }
 /// <summary>
@@ -2026,20 +1248,12 @@ public partial class WindowTransition : OrientationTransitionType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class OrientationTransitionType : OpenXmlLeafElement
 {
-    private static string[] attributeTagNames = { "dir" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "dir" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
     
         /// <summary>
@@ -2077,69 +1291,31 @@ public abstract partial class OrientationTransitionType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the GlitterTransition Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:glitter.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class GlitterTransition : OpenXmlLeafElement
 {
-    private const string tagName = "glitter";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12847;
+    /// <inheritdoc/>
+    public override string LocalName => "glitter";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "dir","pattern" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "dir","pattern" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -2189,83 +1365,37 @@ if( 0 == namespaceId && "pattern" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<GlitterTransition>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<GlitterTransition>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the WarpTransition Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:warp.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class WarpTransition : OpenXmlLeafElement
 {
-    private const string tagName = "warp";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12848;
+    /// <inheritdoc/>
+    public override string LocalName => "warp";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "dir" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "dir" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -2301,83 +1431,37 @@ public partial class WarpTransition : OpenXmlLeafElement
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<WarpTransition>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<WarpTransition>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the FlythroughTransition Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:flythrough.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class FlythroughTransition : OpenXmlLeafElement
 {
-    private const string tagName = "flythrough";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12849;
+    /// <inheritdoc/>
+    public override string LocalName => "flythrough";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "dir","hasBounce" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "dir","hasBounce" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -2427,83 +1511,37 @@ if( 0 == namespaceId && "hasBounce" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<FlythroughTransition>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<FlythroughTransition>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the ShredTransition Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:shred.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ShredTransition : OpenXmlLeafElement
 {
-    private const string tagName = "shred";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12851;
+    /// <inheritdoc/>
+    public override string LocalName => "shred";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "pattern","dir" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "pattern","dir" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -2553,83 +1591,37 @@ if( 0 == namespaceId && "dir" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ShredTransition>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShredTransition>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the RevealTransition Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:reveal.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class RevealTransition : OpenXmlLeafElement
 {
-    private const string tagName = "reveal";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12852;
+    /// <inheritdoc/>
+    public override string LocalName => "reveal";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "thruBlk","dir" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "thruBlk","dir" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -2679,83 +1671,37 @@ if( 0 == namespaceId && "dir" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<RevealTransition>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevealTransition>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the WheelReverseTransition Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:wheelReverse.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class WheelReverseTransition : OpenXmlLeafElement
 {
-    private const string tagName = "wheelReverse";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12853;
+    /// <inheritdoc/>
+    public override string LocalName => "wheelReverse";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "spokes" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "spokes" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -2791,83 +1737,37 @@ public partial class WheelReverseTransition : OpenXmlLeafElement
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<WheelReverseTransition>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<WheelReverseTransition>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the BookmarkTarget Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:bmkTgt.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class BookmarkTarget : OpenXmlLeafElement
 {
-    private const string tagName = "bmkTgt";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12854;
+    /// <inheritdoc/>
+    public override string LocalName => "bmkTgt";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "spid","bmkName" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "spid","bmkName" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -2917,21 +1817,13 @@ if( 0 == namespaceId && "bmkName" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<BookmarkTarget>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<BookmarkTarget>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the SectionProperties Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:sectionPr.</para>
 /// </summary>
 /// <remarks>
@@ -2940,51 +1832,21 @@ if( 0 == namespaceId && "bmkName" == name)
 ///<item><description>SectionOld &lt;p14:section></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(SectionOld),(FileFormatVersions)14)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(SectionOld), FileFormatVersions.Office2010)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class SectionProperties : OpenXmlCompositeElement
 {
-    private const string tagName = "sectionPr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12855;
+    /// <inheritdoc/>
+    public override string LocalName => "sectionPr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     
@@ -2995,7 +1857,7 @@ public partial class SectionProperties : OpenXmlCompositeElement
     /// </summary>
     public SectionProperties():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the SectionProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -3035,21 +1897,13 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<SectionProperties>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<SectionProperties>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the SectionList Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:sectionLst.</para>
 /// </summary>
 /// <remarks>
@@ -3058,51 +1912,21 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>Section &lt;p14:section></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(Section),(FileFormatVersions)14)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(Section), FileFormatVersions.Office2010)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class SectionList : OpenXmlCompositeElement
 {
-    private const string tagName = "sectionLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12856;
+    /// <inheritdoc/>
+    public override string LocalName => "sectionLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     
@@ -3113,7 +1937,7 @@ public partial class SectionList : OpenXmlCompositeElement
     /// </summary>
     public SectionList():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the SectionList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -3153,83 +1977,37 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<SectionList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<SectionList>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the BrowseMode Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:browseMode.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class BrowseMode : OpenXmlLeafElement
 {
-    private const string tagName = "browseMode";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12857;
+    /// <inheritdoc/>
+    public override string LocalName => "browseMode";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "showStatus" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "showStatus" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -3265,21 +2043,13 @@ public partial class BrowseMode : OpenXmlLeafElement
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<BrowseMode>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<BrowseMode>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the LaserColor Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:laserClr.</para>
 /// </summary>
 /// <remarks>
@@ -3293,56 +2063,26 @@ public partial class BrowseMode : OpenXmlLeafElement
 ///<item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HslColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class LaserColor : OpenXmlCompositeElement
 {
-    private const string tagName = "laserClr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12858;
+    /// <inheritdoc/>
+    public override string LocalName => "laserClr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     
@@ -3353,7 +2093,7 @@ public partial class LaserColor : OpenXmlCompositeElement
     /// </summary>
     public LaserColor():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the LaserColor class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -3409,21 +2149,10 @@ if( 10 == namespaceId && "prstClr" == name)
         private static readonly string[] eleTagNames = { "scrgbClr","srgbClr","hslClr","sysClr","schemeClr","prstClr" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneChoice;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> RGB Color Model - Percentage Variant.</para>
@@ -3434,14 +2163,8 @@ if( 10 == namespaceId && "prstClr" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage RgbColorModelPercentage
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -3452,14 +2175,8 @@ if( 10 == namespaceId && "prstClr" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.RgbColorModelHex RgbColorModelHex
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -3470,14 +2187,8 @@ if( 10 == namespaceId && "prstClr" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.HslColor HslColor
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.HslColor>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> System Color.</para>
@@ -3488,14 +2199,8 @@ if( 10 == namespaceId && "prstClr" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.SystemColor SystemColor
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>(3);
+        set => SetElement(3, value);
     }
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -3506,14 +2211,8 @@ if( 10 == namespaceId && "prstClr" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.SchemeColor SchemeColor
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>(4);
-        }
-        set
-        {
-            SetElement(4, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>(4);
+        set => SetElement(4, value);
     }
     /// <summary>
     /// <para> Preset Color.</para>
@@ -3524,95 +2223,43 @@ if( 10 == namespaceId && "prstClr" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.PresetColor PresetColor
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>(5);
-        }
-        set
-        {
-            SetElement(5, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>(5);
+        set => SetElement(5, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<LaserColor>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<LaserColor>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the DefaultImageDpi Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:defaultImageDpi.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DefaultImageDpi : OpenXmlLeafElement
 {
-    private const string tagName = "defaultImageDpi";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12859;
+    /// <inheritdoc/>
+    public override string LocalName => "defaultImageDpi";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "val" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "val" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -3648,83 +2295,37 @@ public partial class DefaultImageDpi : OpenXmlLeafElement
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<DefaultImageDpi>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultImageDpi>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the DiscardImageEditData Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:discardImageEditData.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DiscardImageEditData : OpenXmlLeafElement
 {
-    private const string tagName = "discardImageEditData";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12860;
+    /// <inheritdoc/>
+    public override string LocalName => "discardImageEditData";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "val" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "val" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -3760,83 +2361,37 @@ public partial class DiscardImageEditData : OpenXmlLeafElement
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<DiscardImageEditData>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<DiscardImageEditData>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the ShowMediaControls Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:showMediaCtrls.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ShowMediaControls : OpenXmlLeafElement
 {
-    private const string tagName = "showMediaCtrls";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12861;
+    /// <inheritdoc/>
+    public override string LocalName => "showMediaCtrls";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "val" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "val" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -3872,21 +2427,13 @@ public partial class ShowMediaControls : OpenXmlLeafElement
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ShowMediaControls>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowMediaControls>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the LaserTraceList Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:laserTraceLst.</para>
 /// </summary>
 /// <remarks>
@@ -3895,51 +2442,21 @@ public partial class ShowMediaControls : OpenXmlLeafElement
 ///<item><description>TracePointList &lt;p14:tracePtLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(TracePointList),(FileFormatVersions)14)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(TracePointList), FileFormatVersions.Office2010)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class LaserTraceList : OpenXmlCompositeElement
 {
-    private const string tagName = "laserTraceLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12862;
+    /// <inheritdoc/>
+    public override string LocalName => "laserTraceLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     
@@ -3950,7 +2467,7 @@ public partial class LaserTraceList : OpenXmlCompositeElement
     /// </summary>
     public LaserTraceList():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the LaserTraceList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -3990,21 +2507,13 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<LaserTraceList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<LaserTraceList>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the CreationId Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:creationId.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -4012,45 +2521,15 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class CreationId : RandomIdType
 {
-    private const string tagName = "creationId";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12863;
+    /// <inheritdoc/>
+    public override string LocalName => "creationId";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -4059,20 +2538,13 @@ public partial class CreationId : RandomIdType
     public CreationId():base(){}
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<CreationId>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<CreationId>(deep);
 
 }
 /// <summary>
 /// <para>Defines the ModificationId Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:modId.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -4080,45 +2552,15 @@ public partial class CreationId : RandomIdType
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ModificationId : RandomIdType
 {
-    private const string tagName = "modId";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12864;
+    /// <inheritdoc/>
+    public override string LocalName => "modId";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -4127,15 +2569,8 @@ public partial class ModificationId : RandomIdType
     public ModificationId():base(){}
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ModificationId>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ModificationId>(deep);
 
 }
 /// <summary>
@@ -4145,20 +2580,12 @@ public partial class ModificationId : RandomIdType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class RandomIdType : OpenXmlLeafElement
 {
-    private static string[] attributeTagNames = { "val" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "val" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
     
         /// <summary>
@@ -4196,7 +2623,7 @@ public abstract partial class RandomIdType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the ShowEventRecordList Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:showEvtLst.</para>
 /// </summary>
 /// <remarks>
@@ -4211,57 +2638,27 @@ public abstract partial class RandomIdType : OpenXmlLeafElement
 ///<item><description>NullEventRecord &lt;p14:nullEvt></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(TriggerEventRecord),(FileFormatVersions)14)]
-    [ChildElementInfo(typeof(PlayEventRecord),(FileFormatVersions)14)]
-    [ChildElementInfo(typeof(StopEventRecord),(FileFormatVersions)14)]
-    [ChildElementInfo(typeof(PauseEventRecord),(FileFormatVersions)14)]
-    [ChildElementInfo(typeof(ResumeEventRecord),(FileFormatVersions)14)]
-    [ChildElementInfo(typeof(SeekEventRecord),(FileFormatVersions)14)]
-    [ChildElementInfo(typeof(NullEventRecord),(FileFormatVersions)14)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(TriggerEventRecord), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(PlayEventRecord), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(StopEventRecord), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(PauseEventRecord), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ResumeEventRecord), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(SeekEventRecord), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(NullEventRecord), FileFormatVersions.Office2010)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ShowEventRecordList : OpenXmlCompositeElement
 {
-    private const string tagName = "showEvtLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12865;
+    /// <inheritdoc/>
+    public override string LocalName => "showEvtLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     
@@ -4272,7 +2669,7 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     /// </summary>
     public ShowEventRecordList():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ShowEventRecordList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -4331,21 +2728,10 @@ if( 49 == namespaceId && "nullEvt" == name)
         private static readonly string[] eleTagNames = { "triggerEvt","playEvt","stopEvt","pauseEvt","resumeEvt","seekEvt","nullEvt" };
     private static readonly byte[] eleNamespaceIds = { 49,49,49,49,49,49,49 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneAll;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
     
         /// <summary>
     /// <para> TriggerEventRecord.</para>
@@ -4356,14 +2742,8 @@ if( 49 == namespaceId && "nullEvt" == name)
     /// </remark>
     public TriggerEventRecord TriggerEventRecord
     {
-        get 
-        {
-            return GetElement<TriggerEventRecord>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<TriggerEventRecord>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> PlayEventRecord.</para>
@@ -4374,14 +2754,8 @@ if( 49 == namespaceId && "nullEvt" == name)
     /// </remark>
     public PlayEventRecord PlayEventRecord
     {
-        get 
-        {
-            return GetElement<PlayEventRecord>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<PlayEventRecord>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> StopEventRecord.</para>
@@ -4392,14 +2766,8 @@ if( 49 == namespaceId && "nullEvt" == name)
     /// </remark>
     public StopEventRecord StopEventRecord
     {
-        get 
-        {
-            return GetElement<StopEventRecord>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<StopEventRecord>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> PauseEventRecord.</para>
@@ -4410,14 +2778,8 @@ if( 49 == namespaceId && "nullEvt" == name)
     /// </remark>
     public PauseEventRecord PauseEventRecord
     {
-        get 
-        {
-            return GetElement<PauseEventRecord>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<PauseEventRecord>(3);
+        set => SetElement(3, value);
     }
     /// <summary>
     /// <para> ResumeEventRecord.</para>
@@ -4428,14 +2790,8 @@ if( 49 == namespaceId && "nullEvt" == name)
     /// </remark>
     public ResumeEventRecord ResumeEventRecord
     {
-        get 
-        {
-            return GetElement<ResumeEventRecord>(4);
-        }
-        set
-        {
-            SetElement(4, value);
-        }
+        get => GetElement<ResumeEventRecord>(4);
+        set => SetElement(4, value);
     }
     /// <summary>
     /// <para> SeekEventRecord.</para>
@@ -4446,14 +2802,8 @@ if( 49 == namespaceId && "nullEvt" == name)
     /// </remark>
     public SeekEventRecord SeekEventRecord
     {
-        get 
-        {
-            return GetElement<SeekEventRecord>(5);
-        }
-        set
-        {
-            SetElement(5, value);
-        }
+        get => GetElement<SeekEventRecord>(5);
+        set => SetElement(5, value);
     }
     /// <summary>
     /// <para> NullEventRecord.</para>
@@ -4464,33 +2814,19 @@ if( 49 == namespaceId && "nullEvt" == name)
     /// </remark>
     public NullEventRecord NullEventRecord
     {
-        get 
-        {
-            return GetElement<NullEventRecord>(6);
-        }
-        set
-        {
-            SetElement(6, value);
-        }
+        get => GetElement<NullEventRecord>(6);
+        set => SetElement(6, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ShowEventRecordList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowEventRecordList>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the NonVisualDrawingProperties Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:cNvPr.</para>
 /// </summary>
 /// <remarks>
@@ -4501,69 +2837,31 @@ if( 49 == namespaceId && "nullEvt" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 {
-    private const string tagName = "cNvPr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12866;
+    /// <inheritdoc/>
+    public override string LocalName => "cNvPr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "id","name","descr","hidden","title" };
-    private static byte[] attributeNamespaceIds = { 0,0,0,0,0 };
+    	private static readonly string[] attributeTagNames = { "id","name","descr","hidden","title" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -4628,7 +2926,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// </summary>
     public NonVisualDrawingProperties():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the NonVisualDrawingProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -4675,21 +2973,10 @@ if( 10 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "hlinkClick","hlinkHover","extLst" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> HyperlinkOnClick.</para>
@@ -4700,14 +2987,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> HyperlinkOnHover.</para>
@@ -4718,14 +2999,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> NonVisualDrawingPropertiesExtensionList.</para>
@@ -4736,14 +3011,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(2);
+        set => SetElement(2, value);
     }
 
 
@@ -4769,21 +3038,13 @@ if( 0 == namespaceId && "title" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<NonVisualDrawingProperties>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualDrawingProperties>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the NonVisualInkContentPartProperties Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:cNvContentPartPr.</para>
 /// </summary>
 /// <remarks>
@@ -4793,68 +3054,30 @@ if( 0 == namespaceId && "title" == name)
 ///<item><description>DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList &lt;a14:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks),(FileFormatVersions)14)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList),(FileFormatVersions)14)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList), FileFormatVersions.Office2010)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
 {
-    private const string tagName = "cNvContentPartPr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12867;
+    /// <inheritdoc/>
+    public override string LocalName => "cNvContentPartPr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "isComment" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "isComment" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -4875,7 +3098,7 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     /// </summary>
     public NonVisualInkContentPartProperties():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the NonVisualInkContentPartProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -4919,21 +3142,10 @@ if( 48 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "cpLocks","extLst" };
     private static readonly byte[] eleNamespaceIds = { 48,48 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ContentPartLocks.</para>
@@ -4944,14 +3156,8 @@ if( 48 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks ContentPartLocks
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -4962,14 +3168,8 @@ if( 48 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList OfficeArtExtensionList
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>(1);
+        set => SetElement(1, value);
     }
 
 
@@ -4983,21 +3183,13 @@ if( 48 == namespaceId && "extLst" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<NonVisualInkContentPartProperties>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualInkContentPartProperties>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the ApplicationNonVisualDrawingProperties Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:nvPr.</para>
 /// </summary>
 /// <remarks>
@@ -5013,7 +3205,7 @@ if( 48 == namespaceId && "extLst" == name)
 ///<item><description>DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList &lt;p:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.PlaceholderShape))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.AudioFromCD))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.WaveAudioFile))]
@@ -5022,65 +3214,27 @@ if( 48 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.QuickTimeFromFile))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.CustomerDataList))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeElement
 {
-    private const string tagName = "nvPr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12868;
+    /// <inheritdoc/>
+    public override string LocalName => "nvPr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "isPhoto","userDrawn" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "isPhoto","userDrawn" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -5112,7 +3266,7 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeEle
     /// </summary>
     public ApplicationNonVisualDrawingProperties():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ApplicationNonVisualDrawingProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -5174,21 +3328,10 @@ if( 24 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "ph","audioCd","wavAudioFile","audioFile","videoFile","quickTimeFile","custDataLst","extLst" };
     private static readonly byte[] eleNamespaceIds = { 24,10,10,10,10,10,24,24 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Placeholder Shape.</para>
@@ -5199,14 +3342,8 @@ if( 24 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Presentation.PlaceholderShape PlaceholderShape
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Presentation.PlaceholderShape>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Presentation.PlaceholderShape>(0);
+        set => SetElement(0, value);
     }
 
 
@@ -5223,83 +3360,37 @@ if( 0 == namespaceId && "userDrawn" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ApplicationNonVisualDrawingProperties>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ApplicationNonVisualDrawingProperties>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the MediaBookmark Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:bmk.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class MediaBookmark : OpenXmlLeafElement
 {
-    private const string tagName = "bmk";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12869;
+    /// <inheritdoc/>
+    public override string LocalName => "bmk";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "name","time" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "name","time" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -5349,83 +3440,37 @@ if( 0 == namespaceId && "time" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<MediaBookmark>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<MediaBookmark>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the MediaTrim Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:trim.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class MediaTrim : OpenXmlLeafElement
 {
-    private const string tagName = "trim";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12870;
+    /// <inheritdoc/>
+    public override string LocalName => "trim";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "st","end" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "st","end" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -5475,83 +3520,37 @@ if( 0 == namespaceId && "end" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<MediaTrim>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<MediaTrim>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the MediaFade Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:fade.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class MediaFade : OpenXmlLeafElement
 {
-    private const string tagName = "fade";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12871;
+    /// <inheritdoc/>
+    public override string LocalName => "fade";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "in","out" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "in","out" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -5601,21 +3600,13 @@ if( 0 == namespaceId && "out" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<MediaFade>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<MediaFade>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the MediaBookmarkList Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:bmkLst.</para>
 /// </summary>
 /// <remarks>
@@ -5624,51 +3615,21 @@ if( 0 == namespaceId && "out" == name)
 ///<item><description>MediaBookmark &lt;p14:bmk></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(MediaBookmark),(FileFormatVersions)14)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(MediaBookmark), FileFormatVersions.Office2010)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class MediaBookmarkList : OpenXmlCompositeElement
 {
-    private const string tagName = "bmkLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12872;
+    /// <inheritdoc/>
+    public override string LocalName => "bmkLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     
@@ -5679,7 +3640,7 @@ public partial class MediaBookmarkList : OpenXmlCompositeElement
     /// </summary>
     public MediaBookmarkList():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the MediaBookmarkList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -5719,21 +3680,13 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<MediaBookmarkList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<MediaBookmarkList>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the ExtensionList Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:extLst.</para>
 /// </summary>
 /// <remarks>
@@ -5742,51 +3695,21 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>DocumentFormat.OpenXml.Presentation.Extension &lt;p:ext></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.Extension))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ExtensionList : OpenXmlCompositeElement
 {
-    private const string tagName = "extLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12873;
+    /// <inheritdoc/>
+    public override string LocalName => "extLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     
@@ -5797,7 +3720,7 @@ public partial class ExtensionList : OpenXmlCompositeElement
     /// </summary>
     public ExtensionList():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ExtensionList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -5837,21 +3760,13 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ExtensionList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExtensionList>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the SectionOld Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:section.</para>
 /// </summary>
 /// <remarks>
@@ -5860,67 +3775,29 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>ExtensionList &lt;p14:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ExtensionList),(FileFormatVersions)14)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class SectionOld : OpenXmlCompositeElement
 {
-    private const string tagName = "section";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12874;
+    /// <inheritdoc/>
+    public override string LocalName => "section";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "name","slideIdLst","id" };
-    private static byte[] attributeNamespaceIds = { 0,0,0 };
+    	private static readonly string[] attributeTagNames = { "name","slideIdLst","id" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -5963,7 +3840,7 @@ public partial class SectionOld : OpenXmlCompositeElement
     /// </summary>
     public SectionOld():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the SectionOld class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -6004,21 +3881,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         private static readonly string[] eleTagNames = { "extLst" };
     private static readonly byte[] eleNamespaceIds = { 49 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ExtensionList.</para>
@@ -6029,14 +3895,8 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </remark>
     public ExtensionList ExtensionList
     {
-        get 
-        {
-            return GetElement<ExtensionList>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<ExtensionList>(0);
+        set => SetElement(0, value);
     }
 
 
@@ -6056,83 +3916,37 @@ if( 0 == namespaceId && "id" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<SectionOld>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<SectionOld>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the SectionSlideIdListEntry Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:sldId.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class SectionSlideIdListEntry : OpenXmlLeafElement
 {
-    private const string tagName = "sldId";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12875;
+    /// <inheritdoc/>
+    public override string LocalName => "sldId";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "id" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "id" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -6168,21 +3982,13 @@ public partial class SectionSlideIdListEntry : OpenXmlLeafElement
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<SectionSlideIdListEntry>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<SectionSlideIdListEntry>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the SectionSlideIdList Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:sldIdLst.</para>
 /// </summary>
 /// <remarks>
@@ -6191,51 +3997,21 @@ public partial class SectionSlideIdListEntry : OpenXmlLeafElement
 ///<item><description>SectionSlideIdListEntry &lt;p14:sldId></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(SectionSlideIdListEntry),(FileFormatVersions)14)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(SectionSlideIdListEntry), FileFormatVersions.Office2010)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class SectionSlideIdList : OpenXmlCompositeElement
 {
-    private const string tagName = "sldIdLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12876;
+    /// <inheritdoc/>
+    public override string LocalName => "sldIdLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     
@@ -6246,7 +4022,7 @@ public partial class SectionSlideIdList : OpenXmlCompositeElement
     /// </summary>
     public SectionSlideIdList():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the SectionSlideIdList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -6286,21 +4062,13 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<SectionSlideIdList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<SectionSlideIdList>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the Section Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:section.</para>
 /// </summary>
 /// <remarks>
@@ -6310,68 +4078,30 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>ExtensionList &lt;p14:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(SectionSlideIdList),(FileFormatVersions)14)]
-    [ChildElementInfo(typeof(ExtensionList),(FileFormatVersions)14)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(SectionSlideIdList), FileFormatVersions.Office2010)]
+    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Section : OpenXmlCompositeElement
 {
-    private const string tagName = "section";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12877;
+    /// <inheritdoc/>
+    public override string LocalName => "section";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "name","id" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "name","id" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -6403,7 +4133,7 @@ public partial class Section : OpenXmlCompositeElement
     /// </summary>
     public Section():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the Section class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -6447,21 +4177,10 @@ if( 49 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "sldIdLst","extLst" };
     private static readonly byte[] eleNamespaceIds = { 49,49 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> SectionSlideIdList.</para>
@@ -6472,14 +4191,8 @@ if( 49 == namespaceId && "extLst" == name)
     /// </remark>
     public SectionSlideIdList SectionSlideIdList
     {
-        get 
-        {
-            return GetElement<SectionSlideIdList>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<SectionSlideIdList>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -6490,14 +4203,8 @@ if( 49 == namespaceId && "extLst" == name)
     /// </remark>
     public ExtensionList ExtensionList
     {
-        get 
-        {
-            return GetElement<ExtensionList>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<ExtensionList>(1);
+        set => SetElement(1, value);
     }
 
 
@@ -6514,83 +4221,37 @@ if( 0 == namespaceId && "id" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Section>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Section>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the TracePoint Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:tracePt.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class TracePoint : OpenXmlLeafElement
 {
-    private const string tagName = "tracePt";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12878;
+    /// <inheritdoc/>
+    public override string LocalName => "tracePt";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "t","x","y" };
-    private static byte[] attributeNamespaceIds = { 0,0,0 };
+    	private static readonly string[] attributeTagNames = { "t","x","y" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -6654,21 +4315,13 @@ if( 0 == namespaceId && "y" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<TracePoint>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<TracePoint>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the TracePointList Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:tracePtLst.</para>
 /// </summary>
 /// <remarks>
@@ -6677,51 +4330,21 @@ if( 0 == namespaceId && "y" == name)
 ///<item><description>TracePoint &lt;p14:tracePt></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(TracePoint),(FileFormatVersions)14)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(TracePoint), FileFormatVersions.Office2010)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class TracePointList : OpenXmlCompositeElement
 {
-    private const string tagName = "tracePtLst";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12879;
+    /// <inheritdoc/>
+    public override string LocalName => "tracePtLst";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     
@@ -6732,7 +4355,7 @@ public partial class TracePointList : OpenXmlCompositeElement
     /// </summary>
     public TracePointList():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the TracePointList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -6772,83 +4395,37 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<TracePointList>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<TracePointList>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the TriggerEventRecord Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:triggerEvt.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class TriggerEventRecord : OpenXmlLeafElement
 {
-    private const string tagName = "triggerEvt";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12880;
+    /// <inheritdoc/>
+    public override string LocalName => "triggerEvt";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "type","time","objId" };
-    private static byte[] attributeNamespaceIds = { 0,0,0 };
+    	private static readonly string[] attributeTagNames = { "type","time","objId" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -6912,21 +4489,13 @@ if( 0 == namespaceId && "objId" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<TriggerEventRecord>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<TriggerEventRecord>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the PlayEventRecord Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:playEvt.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -6934,45 +4503,15 @@ if( 0 == namespaceId && "objId" == name)
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PlayEventRecord : MediaPlaybackEventRecordType
 {
-    private const string tagName = "playEvt";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12881;
+    /// <inheritdoc/>
+    public override string LocalName => "playEvt";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -6981,20 +4520,13 @@ public partial class PlayEventRecord : MediaPlaybackEventRecordType
     public PlayEventRecord():base(){}
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<PlayEventRecord>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<PlayEventRecord>(deep);
 
 }
 /// <summary>
 /// <para>Defines the StopEventRecord Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:stopEvt.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -7002,45 +4534,15 @@ public partial class PlayEventRecord : MediaPlaybackEventRecordType
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class StopEventRecord : MediaPlaybackEventRecordType
 {
-    private const string tagName = "stopEvt";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12882;
+    /// <inheritdoc/>
+    public override string LocalName => "stopEvt";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -7049,20 +4551,13 @@ public partial class StopEventRecord : MediaPlaybackEventRecordType
     public StopEventRecord():base(){}
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<StopEventRecord>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<StopEventRecord>(deep);
 
 }
 /// <summary>
 /// <para>Defines the PauseEventRecord Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:pauseEvt.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -7070,45 +4565,15 @@ public partial class StopEventRecord : MediaPlaybackEventRecordType
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PauseEventRecord : MediaPlaybackEventRecordType
 {
-    private const string tagName = "pauseEvt";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12883;
+    /// <inheritdoc/>
+    public override string LocalName => "pauseEvt";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -7117,20 +4582,13 @@ public partial class PauseEventRecord : MediaPlaybackEventRecordType
     public PauseEventRecord():base(){}
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<PauseEventRecord>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<PauseEventRecord>(deep);
 
 }
 /// <summary>
 /// <para>Defines the ResumeEventRecord Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:resumeEvt.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -7138,45 +4596,15 @@ public partial class PauseEventRecord : MediaPlaybackEventRecordType
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ResumeEventRecord : MediaPlaybackEventRecordType
 {
-    private const string tagName = "resumeEvt";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12884;
+    /// <inheritdoc/>
+    public override string LocalName => "resumeEvt";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
     /// <summary>
@@ -7185,15 +4613,8 @@ public partial class ResumeEventRecord : MediaPlaybackEventRecordType
     public ResumeEventRecord():base(){}
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ResumeEventRecord>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ResumeEventRecord>(deep);
 
 }
 /// <summary>
@@ -7203,20 +4624,12 @@ public partial class ResumeEventRecord : MediaPlaybackEventRecordType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class MediaPlaybackEventRecordType : OpenXmlLeafElement
 {
-    private static string[] attributeTagNames = { "time","objId" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "time","objId" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
     
         /// <summary>
@@ -7268,69 +4681,31 @@ if( 0 == namespaceId && "objId" == name)
 }
 /// <summary>
 /// <para>Defines the SeekEventRecord Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:seekEvt.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class SeekEventRecord : OpenXmlLeafElement
 {
-    private const string tagName = "seekEvt";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12885;
+    /// <inheritdoc/>
+    public override string LocalName => "seekEvt";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "time","objId","seek" };
-    private static byte[] attributeNamespaceIds = { 0,0,0 };
+    	private static readonly string[] attributeTagNames = { "time","objId","seek" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -7394,83 +4769,37 @@ if( 0 == namespaceId && "seek" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<SeekEventRecord>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<SeekEventRecord>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the NullEventRecord Class.</para>
-///<para>This class is available in Office 2010 or above.</para>
+/// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:nullEvt.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class NullEventRecord : OpenXmlLeafElement
 {
-    private const string tagName = "nullEvt";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 49;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12886;
+    /// <inheritdoc/>
+    public override string LocalName => "nullEvt";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 49;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((14 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
     
 
-    private static string[] attributeTagNames = { "time","objId" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "time","objId" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -7520,17 +4849,9 @@ if( 0 == namespaceId && "objId" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<NullEventRecord>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<NullEventRecord>(deep);
 
-   
 }
 /// <summary>
 /// Defines the TransitionPatternValues enumeration. 

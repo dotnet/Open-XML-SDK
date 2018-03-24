@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
 {
 /// <summary>
 /// <para>Defines the ModelTimeGroupings Class.</para>
-///<para>This class is only available in Office 2016.</para>
+/// <para>This class is available in Office 2016 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x16:modelTimeGroupings.</para>
 /// </summary>
 /// <remarks>
@@ -20,51 +20,21 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
 ///<item><description>ModelTimeGrouping &lt;x16:modelTimeGrouping></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ModelTimeGrouping),(FileFormatVersions)8)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(ModelTimeGrouping), FileFormatVersions.Office2016)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2016)]
 public partial class ModelTimeGroupings : OpenXmlCompositeElement
 {
-    private const string tagName = "modelTimeGroupings";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 84;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13589;
+    /// <inheritdoc/>
+    public override string LocalName => "modelTimeGroupings";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 84;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((8 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
     
 
     
@@ -75,7 +45,7 @@ public partial class ModelTimeGroupings : OpenXmlCompositeElement
     /// </summary>
     public ModelTimeGroupings():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ModelTimeGroupings class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -115,21 +85,13 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ModelTimeGroupings>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ModelTimeGroupings>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the ModelTimeGrouping Class.</para>
-///<para>This class is only available in Office 2016.</para>
+/// <para>This class is available in Office 2016 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x16:modelTimeGrouping.</para>
 /// </summary>
 /// <remarks>
@@ -138,67 +100,29 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>CalculatedTimeColumn &lt;x16:calculatedTimeColumn></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(CalculatedTimeColumn),(FileFormatVersions)8)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(CalculatedTimeColumn), FileFormatVersions.Office2016)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2016)]
 public partial class ModelTimeGrouping : OpenXmlCompositeElement
 {
-    private const string tagName = "modelTimeGrouping";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 84;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13590;
+    /// <inheritdoc/>
+    public override string LocalName => "modelTimeGrouping";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 84;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((8 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
     
 
-    private static string[] attributeTagNames = { "tableName","columnName","columnId" };
-    private static byte[] attributeNamespaceIds = { 0,0,0 };
+    	private static readonly string[] attributeTagNames = { "tableName","columnName","columnId" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -241,7 +165,7 @@ public partial class ModelTimeGrouping : OpenXmlCompositeElement
     /// </summary>
     public ModelTimeGrouping():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ModelTimeGrouping class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -296,83 +220,37 @@ if( 0 == namespaceId && "columnId" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ModelTimeGrouping>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ModelTimeGrouping>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the CalculatedTimeColumn Class.</para>
-///<para>This class is only available in Office 2016.</para>
+/// <para>This class is available in Office 2016 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x16:calculatedTimeColumn.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2016)]
 public partial class CalculatedTimeColumn : OpenXmlLeafElement
 {
-    private const string tagName = "calculatedTimeColumn";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 84;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13591;
+    /// <inheritdoc/>
+    public override string LocalName => "calculatedTimeColumn";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 84;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((8 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
     
 
-    private static string[] attributeTagNames = { "columnName","columnId","contentType","isSelected" };
-    private static byte[] attributeNamespaceIds = { 0,0,0,0 };
+    	private static readonly string[] attributeTagNames = { "columnName","columnId","contentType","isSelected" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -450,17 +328,9 @@ if( 0 == namespaceId && "isSelected" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<CalculatedTimeColumn>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<CalculatedTimeColumn>(deep);
 
-   
 }
 /// <summary>
 /// Defines the ModelTimeGroupingContentType enumeration. 

@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
 {
 /// <summary>
 /// <para>Defines the LongProperties Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is lp:LongProperties.</para>
 /// </summary>
 /// <remarks>
@@ -18,50 +19,21 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
 ///<item><description>LongProperty &lt;lp:LongProp></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(LongProperty))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LongProperties : OpenXmlCompositeElement
 {
-    private const string tagName = "LongProperties";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 40;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12711;
+    /// <inheritdoc/>
+    public override string LocalName => "LongProperties";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 40;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     
@@ -72,7 +44,7 @@ public partial class LongProperties : OpenXmlCompositeElement
     /// </summary>
     public LongProperties():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the LongProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -112,81 +84,37 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<LongProperties>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<LongProperties>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the LongProperty Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is lp:LongProp.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LongProperty : OpenXmlLeafTextElement
 {
-    private const string tagName = "LongProp";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 40;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 12712;
+    /// <inheritdoc/>
+    public override string LocalName => "LongProp";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 40;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    private static string[] attributeTagNames = { "name" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "name" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -208,7 +136,7 @@ public partial class LongProperty : OpenXmlLeafTextElement
     public LongProperty():base(){}
     
       
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the LongProperty class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -218,7 +146,6 @@ public partial class LongProperty : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new StringValue(){ InnerText = text };
     }
     
@@ -236,17 +163,9 @@ public partial class LongProperty : OpenXmlLeafTextElement
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<LongProperty>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<LongProperty>(deep);
 
-   
 }
 }
  

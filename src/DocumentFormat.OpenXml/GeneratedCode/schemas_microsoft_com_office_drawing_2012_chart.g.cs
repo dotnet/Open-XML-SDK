@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
 {
 /// <summary>
 /// <para>Defines the PivotSource Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:pivotSource.</para>
 /// </summary>
 /// <remarks>
@@ -23,53 +23,23 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
 ///<item><description>DocumentFormat.OpenXml.Drawing.Charts.ExtensionList &lt;c:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.PivotTableName))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.FormatId))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class PivotSource : OpenXmlCompositeElement
 {
-    private const string tagName = "pivotSource";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13209;
+    /// <inheritdoc/>
+    public override string LocalName => "pivotSource";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -80,7 +50,7 @@ public partial class PivotSource : OpenXmlCompositeElement
     /// </summary>
     public PivotSource():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the PivotSource class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -127,21 +97,10 @@ if( 11 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "name","fmtId","extLst" };
     private static readonly byte[] eleNamespaceIds = { 11,11,11 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Pivot Name.</para>
@@ -152,14 +111,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.PivotTableName PivotTableName
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.PivotTableName>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PivotTableName>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Format ID.</para>
@@ -170,14 +123,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.FormatId FormatId
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.FormatId>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.FormatId>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Chart Extensibility.</para>
@@ -188,95 +135,43 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList ExtensionList
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>(2);
+        set => SetElement(2, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<PivotSource>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotSource>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the NumberingFormat Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:numFmt.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class NumberingFormat : OpenXmlLeafElement
 {
-    private const string tagName = "numFmt";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13210;
+    /// <inheritdoc/>
+    public override string LocalName => "numFmt";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
-    private static string[] attributeTagNames = { "formatCode","sourceLinked" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "formatCode","sourceLinked" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -326,21 +221,13 @@ if( 0 == namespaceId && "sourceLinked" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<NumberingFormat>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberingFormat>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the ShapeProperties Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:spPr.</para>
 /// </summary>
 /// <remarks>
@@ -363,7 +250,7 @@ if( 0 == namespaceId && "sourceLinked" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Transform2D))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry))]
@@ -379,65 +266,27 @@ if( 0 == namespaceId && "sourceLinked" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ShapeProperties : OpenXmlCompositeElement
 {
-    private const string tagName = "spPr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13211;
+    /// <inheritdoc/>
+    public override string LocalName => "spPr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
-    private static string[] attributeTagNames = { "bwMode" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "bwMode" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -458,7 +307,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// </summary>
     public ShapeProperties():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ShapeProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -541,21 +390,10 @@ if( 10 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "xfrm","custGeom","prstGeom","noFill","solidFill","gradFill","blipFill","pattFill","grpFill","ln","effectLst","effectDag","scene3d","sp3d","extLst" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10,10,10,10,10,10,10,10 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> 2D Transform for Individual Objects.</para>
@@ -566,14 +404,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(0);
+        set => SetElement(0, value);
     }
 
 
@@ -587,21 +419,13 @@ if( 10 == namespaceId && "extLst" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ShapeProperties>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeProperties>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the Layout Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:layout.</para>
 /// </summary>
 /// <remarks>
@@ -611,52 +435,22 @@ if( 10 == namespaceId && "extLst" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.Charts.ExtensionList &lt;c:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ManualLayout))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Layout : OpenXmlCompositeElement
 {
-    private const string tagName = "layout";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13212;
+    /// <inheritdoc/>
+    public override string LocalName => "layout";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -667,7 +461,7 @@ public partial class Layout : OpenXmlCompositeElement
     /// </summary>
     public Layout():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the Layout class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -711,21 +505,10 @@ if( 11 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "manualLayout","extLst" };
     private static readonly byte[] eleNamespaceIds = { 11,11 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Manual Layout.</para>
@@ -736,14 +519,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.ManualLayout ManualLayout
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.ManualLayout>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ManualLayout>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Chart Extensibility.</para>
@@ -754,33 +531,19 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList ExtensionList
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>(1);
+        set => SetElement(1, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Layout>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Layout>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the FullReference Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:fullRef.</para>
 /// </summary>
 /// <remarks>
@@ -789,51 +552,21 @@ if( 11 == namespaceId && "extLst" == name)
 ///<item><description>SequenceOfReferences &lt;c15:sqref></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(SequenceOfReferences),(FileFormatVersions)12)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(SequenceOfReferences), FileFormatVersions.Office2013)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class FullReference : OpenXmlCompositeElement
 {
-    private const string tagName = "fullRef";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13213;
+    /// <inheritdoc/>
+    public override string LocalName => "fullRef";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -844,7 +577,7 @@ public partial class FullReference : OpenXmlCompositeElement
     /// </summary>
     public FullReference():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the FullReference class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -885,21 +618,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         private static readonly string[] eleTagNames = { "sqref" };
     private static readonly byte[] eleNamespaceIds = { 64 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> SequenceOfReferences.</para>
@@ -910,33 +632,19 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </remark>
     public SequenceOfReferences SequenceOfReferences
     {
-        get 
-        {
-            return GetElement<SequenceOfReferences>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<SequenceOfReferences>(0);
+        set => SetElement(0, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<FullReference>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<FullReference>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the LevelReference Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:levelRef.</para>
 /// </summary>
 /// <remarks>
@@ -945,51 +653,21 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>SequenceOfReferences &lt;c15:sqref></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(SequenceOfReferences),(FileFormatVersions)12)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(SequenceOfReferences), FileFormatVersions.Office2013)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class LevelReference : OpenXmlCompositeElement
 {
-    private const string tagName = "levelRef";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13214;
+    /// <inheritdoc/>
+    public override string LocalName => "levelRef";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -1000,7 +678,7 @@ public partial class LevelReference : OpenXmlCompositeElement
     /// </summary>
     public LevelReference():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the LevelReference class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -1041,21 +719,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         private static readonly string[] eleTagNames = { "sqref" };
     private static readonly byte[] eleNamespaceIds = { 64 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> SequenceOfReferences.</para>
@@ -1066,33 +733,19 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </remark>
     public SequenceOfReferences SequenceOfReferences
     {
-        get 
-        {
-            return GetElement<SequenceOfReferences>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<SequenceOfReferences>(0);
+        set => SetElement(0, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<LevelReference>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<LevelReference>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the FormulaReference Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:formulaRef.</para>
 /// </summary>
 /// <remarks>
@@ -1101,51 +754,21 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>SequenceOfReferences &lt;c15:sqref></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(SequenceOfReferences),(FileFormatVersions)12)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(SequenceOfReferences), FileFormatVersions.Office2013)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class FormulaReference : OpenXmlCompositeElement
 {
-    private const string tagName = "formulaRef";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13215;
+    /// <inheritdoc/>
+    public override string LocalName => "formulaRef";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -1156,7 +779,7 @@ public partial class FormulaReference : OpenXmlCompositeElement
     /// </summary>
     public FormulaReference():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the FormulaReference class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -1197,21 +820,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         private static readonly string[] eleTagNames = { "sqref" };
     private static readonly byte[] eleNamespaceIds = { 64 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> SequenceOfReferences.</para>
@@ -1222,33 +834,19 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </remark>
     public SequenceOfReferences SequenceOfReferences
     {
-        get 
-        {
-            return GetElement<SequenceOfReferences>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<SequenceOfReferences>(0);
+        set => SetElement(0, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<FormulaReference>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaReference>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the FilteredSeriesTitle Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:filteredSeriesTitle.</para>
 /// </summary>
 /// <remarks>
@@ -1257,51 +855,21 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>ChartText &lt;c15:tx></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ChartText),(FileFormatVersions)12)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(ChartText), FileFormatVersions.Office2013)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class FilteredSeriesTitle : OpenXmlCompositeElement
 {
-    private const string tagName = "filteredSeriesTitle";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13216;
+    /// <inheritdoc/>
+    public override string LocalName => "filteredSeriesTitle";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -1312,7 +880,7 @@ public partial class FilteredSeriesTitle : OpenXmlCompositeElement
     /// </summary>
     public FilteredSeriesTitle():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the FilteredSeriesTitle class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -1353,21 +921,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         private static readonly string[] eleTagNames = { "tx" };
     private static readonly byte[] eleNamespaceIds = { 64 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ChartText.</para>
@@ -1378,33 +935,19 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </remark>
     public ChartText ChartText
     {
-        get 
-        {
-            return GetElement<ChartText>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<ChartText>(0);
+        set => SetElement(0, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<FilteredSeriesTitle>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<FilteredSeriesTitle>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the FilteredCategoryTitle Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:filteredCategoryTitle.</para>
 /// </summary>
 /// <remarks>
@@ -1413,51 +956,21 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>AxisDataSourceType &lt;c15:cat></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(AxisDataSourceType),(FileFormatVersions)12)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(AxisDataSourceType), FileFormatVersions.Office2013)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class FilteredCategoryTitle : OpenXmlCompositeElement
 {
-    private const string tagName = "filteredCategoryTitle";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13217;
+    /// <inheritdoc/>
+    public override string LocalName => "filteredCategoryTitle";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -1468,7 +981,7 @@ public partial class FilteredCategoryTitle : OpenXmlCompositeElement
     /// </summary>
     public FilteredCategoryTitle():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the FilteredCategoryTitle class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -1509,21 +1022,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         private static readonly string[] eleTagNames = { "cat" };
     private static readonly byte[] eleNamespaceIds = { 64 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> AxisDataSourceType.</para>
@@ -1534,33 +1036,19 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </remark>
     public AxisDataSourceType AxisDataSourceType
     {
-        get 
-        {
-            return GetElement<AxisDataSourceType>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<AxisDataSourceType>(0);
+        set => SetElement(0, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<FilteredCategoryTitle>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<FilteredCategoryTitle>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the FilteredAreaSeries Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:filteredAreaSeries.</para>
 /// </summary>
 /// <remarks>
@@ -1569,51 +1057,21 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>AreaChartSeries &lt;c15:ser></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(AreaChartSeries),(FileFormatVersions)12)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(AreaChartSeries), FileFormatVersions.Office2013)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class FilteredAreaSeries : OpenXmlCompositeElement
 {
-    private const string tagName = "filteredAreaSeries";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13218;
+    /// <inheritdoc/>
+    public override string LocalName => "filteredAreaSeries";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -1624,7 +1082,7 @@ public partial class FilteredAreaSeries : OpenXmlCompositeElement
     /// </summary>
     public FilteredAreaSeries():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the FilteredAreaSeries class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -1665,21 +1123,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         private static readonly string[] eleTagNames = { "ser" };
     private static readonly byte[] eleNamespaceIds = { 64 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> AreaChartSeries.</para>
@@ -1690,33 +1137,19 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </remark>
     public AreaChartSeries AreaChartSeries
     {
-        get 
-        {
-            return GetElement<AreaChartSeries>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<AreaChartSeries>(0);
+        set => SetElement(0, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<FilteredAreaSeries>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<FilteredAreaSeries>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the FilteredBarSeries Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:filteredBarSeries.</para>
 /// </summary>
 /// <remarks>
@@ -1725,51 +1158,21 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>BarChartSeries &lt;c15:ser></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(BarChartSeries),(FileFormatVersions)12)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(BarChartSeries), FileFormatVersions.Office2013)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class FilteredBarSeries : OpenXmlCompositeElement
 {
-    private const string tagName = "filteredBarSeries";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13219;
+    /// <inheritdoc/>
+    public override string LocalName => "filteredBarSeries";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -1780,7 +1183,7 @@ public partial class FilteredBarSeries : OpenXmlCompositeElement
     /// </summary>
     public FilteredBarSeries():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the FilteredBarSeries class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -1821,21 +1224,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         private static readonly string[] eleTagNames = { "ser" };
     private static readonly byte[] eleNamespaceIds = { 64 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> BarChartSeries.</para>
@@ -1846,33 +1238,19 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </remark>
     public BarChartSeries BarChartSeries
     {
-        get 
-        {
-            return GetElement<BarChartSeries>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<BarChartSeries>(0);
+        set => SetElement(0, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<FilteredBarSeries>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<FilteredBarSeries>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the FilteredBubbleSeries Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:filteredBubbleSeries.</para>
 /// </summary>
 /// <remarks>
@@ -1881,51 +1259,21 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>BubbleChartSeries &lt;c15:ser></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(BubbleChartSeries),(FileFormatVersions)12)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(BubbleChartSeries), FileFormatVersions.Office2013)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class FilteredBubbleSeries : OpenXmlCompositeElement
 {
-    private const string tagName = "filteredBubbleSeries";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13220;
+    /// <inheritdoc/>
+    public override string LocalName => "filteredBubbleSeries";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -1936,7 +1284,7 @@ public partial class FilteredBubbleSeries : OpenXmlCompositeElement
     /// </summary>
     public FilteredBubbleSeries():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the FilteredBubbleSeries class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -1977,21 +1325,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         private static readonly string[] eleTagNames = { "ser" };
     private static readonly byte[] eleNamespaceIds = { 64 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> BubbleChartSeries.</para>
@@ -2002,33 +1339,19 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </remark>
     public BubbleChartSeries BubbleChartSeries
     {
-        get 
-        {
-            return GetElement<BubbleChartSeries>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<BubbleChartSeries>(0);
+        set => SetElement(0, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<FilteredBubbleSeries>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<FilteredBubbleSeries>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the FilteredLineSeriesExtension Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:filteredLineSeries.</para>
 /// </summary>
 /// <remarks>
@@ -2037,51 +1360,21 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>LineChartSeries &lt;c15:ser></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(LineChartSeries),(FileFormatVersions)12)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(LineChartSeries), FileFormatVersions.Office2013)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class FilteredLineSeriesExtension : OpenXmlCompositeElement
 {
-    private const string tagName = "filteredLineSeries";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13221;
+    /// <inheritdoc/>
+    public override string LocalName => "filteredLineSeries";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -2092,7 +1385,7 @@ public partial class FilteredLineSeriesExtension : OpenXmlCompositeElement
     /// </summary>
     public FilteredLineSeriesExtension():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the FilteredLineSeriesExtension class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -2133,21 +1426,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         private static readonly string[] eleTagNames = { "ser" };
     private static readonly byte[] eleNamespaceIds = { 64 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> LineChartSeries.</para>
@@ -2158,33 +1440,19 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </remark>
     public LineChartSeries LineChartSeries
     {
-        get 
-        {
-            return GetElement<LineChartSeries>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<LineChartSeries>(0);
+        set => SetElement(0, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<FilteredLineSeriesExtension>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<FilteredLineSeriesExtension>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the FilteredPieSeries Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:filteredPieSeries.</para>
 /// </summary>
 /// <remarks>
@@ -2193,51 +1461,21 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>PieChartSeries &lt;c15:ser></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(PieChartSeries),(FileFormatVersions)12)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(PieChartSeries), FileFormatVersions.Office2013)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class FilteredPieSeries : OpenXmlCompositeElement
 {
-    private const string tagName = "filteredPieSeries";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13222;
+    /// <inheritdoc/>
+    public override string LocalName => "filteredPieSeries";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -2248,7 +1486,7 @@ public partial class FilteredPieSeries : OpenXmlCompositeElement
     /// </summary>
     public FilteredPieSeries():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the FilteredPieSeries class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -2289,21 +1527,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         private static readonly string[] eleTagNames = { "ser" };
     private static readonly byte[] eleNamespaceIds = { 64 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> PieChartSeries.</para>
@@ -2314,33 +1541,19 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </remark>
     public PieChartSeries PieChartSeries
     {
-        get 
-        {
-            return GetElement<PieChartSeries>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<PieChartSeries>(0);
+        set => SetElement(0, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<FilteredPieSeries>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<FilteredPieSeries>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the FilteredRadarSeries Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:filteredRadarSeries.</para>
 /// </summary>
 /// <remarks>
@@ -2349,51 +1562,21 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>RadarChartSeries &lt;c15:ser></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(RadarChartSeries),(FileFormatVersions)12)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(RadarChartSeries), FileFormatVersions.Office2013)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class FilteredRadarSeries : OpenXmlCompositeElement
 {
-    private const string tagName = "filteredRadarSeries";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13223;
+    /// <inheritdoc/>
+    public override string LocalName => "filteredRadarSeries";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -2404,7 +1587,7 @@ public partial class FilteredRadarSeries : OpenXmlCompositeElement
     /// </summary>
     public FilteredRadarSeries():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the FilteredRadarSeries class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -2445,21 +1628,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         private static readonly string[] eleTagNames = { "ser" };
     private static readonly byte[] eleNamespaceIds = { 64 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> RadarChartSeries.</para>
@@ -2470,33 +1642,19 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </remark>
     public RadarChartSeries RadarChartSeries
     {
-        get 
-        {
-            return GetElement<RadarChartSeries>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<RadarChartSeries>(0);
+        set => SetElement(0, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<FilteredRadarSeries>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<FilteredRadarSeries>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the FilteredScatterSeries Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:filteredScatterSeries.</para>
 /// </summary>
 /// <remarks>
@@ -2505,51 +1663,21 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>ScatterChartSeries &lt;c15:ser></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(ScatterChartSeries),(FileFormatVersions)12)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(ScatterChartSeries), FileFormatVersions.Office2013)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class FilteredScatterSeries : OpenXmlCompositeElement
 {
-    private const string tagName = "filteredScatterSeries";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13224;
+    /// <inheritdoc/>
+    public override string LocalName => "filteredScatterSeries";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -2560,7 +1688,7 @@ public partial class FilteredScatterSeries : OpenXmlCompositeElement
     /// </summary>
     public FilteredScatterSeries():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the FilteredScatterSeries class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -2601,21 +1729,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         private static readonly string[] eleTagNames = { "ser" };
     private static readonly byte[] eleNamespaceIds = { 64 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ScatterChartSeries.</para>
@@ -2626,33 +1743,19 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </remark>
     public ScatterChartSeries ScatterChartSeries
     {
-        get 
-        {
-            return GetElement<ScatterChartSeries>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<ScatterChartSeries>(0);
+        set => SetElement(0, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<FilteredScatterSeries>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<FilteredScatterSeries>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the FilteredSurfaceSeries Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:filteredSurfaceSeries.</para>
 /// </summary>
 /// <remarks>
@@ -2661,51 +1764,21 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>SurfaceChartSeries &lt;c15:ser></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(SurfaceChartSeries),(FileFormatVersions)12)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(SurfaceChartSeries), FileFormatVersions.Office2013)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class FilteredSurfaceSeries : OpenXmlCompositeElement
 {
-    private const string tagName = "filteredSurfaceSeries";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13225;
+    /// <inheritdoc/>
+    public override string LocalName => "filteredSurfaceSeries";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -2716,7 +1789,7 @@ public partial class FilteredSurfaceSeries : OpenXmlCompositeElement
     /// </summary>
     public FilteredSurfaceSeries():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the FilteredSurfaceSeries class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -2757,21 +1830,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         private static readonly string[] eleTagNames = { "ser" };
     private static readonly byte[] eleNamespaceIds = { 64 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> SurfaceChartSeries.</para>
@@ -2782,33 +1844,19 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </remark>
     public SurfaceChartSeries SurfaceChartSeries
     {
-        get 
-        {
-            return GetElement<SurfaceChartSeries>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<SurfaceChartSeries>(0);
+        set => SetElement(0, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<FilteredSurfaceSeries>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<FilteredSurfaceSeries>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the DataLabelsRange Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:datalabelsRange.</para>
 /// </summary>
 /// <remarks>
@@ -2818,52 +1866,22 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>DataLabelsRangeChache &lt;c15:dlblRangeCache></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(Formula),(FileFormatVersions)12)]
-    [ChildElementInfo(typeof(DataLabelsRangeChache),(FileFormatVersions)12)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(Formula), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(DataLabelsRangeChache), FileFormatVersions.Office2013)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataLabelsRange : OpenXmlCompositeElement
 {
-    private const string tagName = "datalabelsRange";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13226;
+    /// <inheritdoc/>
+    public override string LocalName => "datalabelsRange";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -2874,7 +1892,7 @@ public partial class DataLabelsRange : OpenXmlCompositeElement
     /// </summary>
     public DataLabelsRange():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the DataLabelsRange class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -2918,21 +1936,10 @@ if( 64 == namespaceId && "dlblRangeCache" == name)
         private static readonly string[] eleTagNames = { "f","dlblRangeCache" };
     private static readonly byte[] eleNamespaceIds = { 64,64 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Formula.</para>
@@ -2943,14 +1950,8 @@ if( 64 == namespaceId && "dlblRangeCache" == name)
     /// </remark>
     public Formula Formula
     {
-        get 
-        {
-            return GetElement<Formula>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<Formula>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> DataLabelsRangeChache.</para>
@@ -2961,33 +1962,19 @@ if( 64 == namespaceId && "dlblRangeCache" == name)
     /// </remark>
     public DataLabelsRangeChache DataLabelsRangeChache
     {
-        get 
-        {
-            return GetElement<DataLabelsRangeChache>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DataLabelsRangeChache>(1);
+        set => SetElement(1, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<DataLabelsRange>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataLabelsRange>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the CategoryFilterExceptions Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:categoryFilterExceptions.</para>
 /// </summary>
 /// <remarks>
@@ -2996,51 +1983,21 @@ if( 64 == namespaceId && "dlblRangeCache" == name)
 ///<item><description>CategoryFilterException &lt;c15:categoryFilterException></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(CategoryFilterException),(FileFormatVersions)12)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(CategoryFilterException), FileFormatVersions.Office2013)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class CategoryFilterExceptions : OpenXmlCompositeElement
 {
-    private const string tagName = "categoryFilterExceptions";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13227;
+    /// <inheritdoc/>
+    public override string LocalName => "categoryFilterExceptions";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -3051,7 +2008,7 @@ public partial class CategoryFilterExceptions : OpenXmlCompositeElement
     /// </summary>
     public CategoryFilterExceptions():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the CategoryFilterExceptions class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -3091,21 +2048,13 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<CategoryFilterExceptions>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<CategoryFilterExceptions>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the DataLabelFieldTable Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:dlblFieldTable.</para>
 /// </summary>
 /// <remarks>
@@ -3114,51 +2063,21 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 ///<item><description>DataLabelFieldTableEntry &lt;c15:dlblFTEntry></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(DataLabelFieldTableEntry),(FileFormatVersions)12)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(DataLabelFieldTableEntry), FileFormatVersions.Office2013)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataLabelFieldTable : OpenXmlCompositeElement
 {
-    private const string tagName = "dlblFieldTable";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13228;
+    /// <inheritdoc/>
+    public override string LocalName => "dlblFieldTable";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -3169,7 +2088,7 @@ public partial class DataLabelFieldTable : OpenXmlCompositeElement
     /// </summary>
     public DataLabelFieldTable():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the DataLabelFieldTable class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -3209,21 +2128,13 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<DataLabelFieldTable>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataLabelFieldTable>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the ExceptionForSave Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:xForSave.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -3231,45 +2142,15 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ExceptionForSave : BooleanType
 {
-    private const string tagName = "xForSave";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13229;
+    /// <inheritdoc/>
+    public override string LocalName => "xForSave";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -3278,20 +2159,13 @@ public partial class ExceptionForSave : BooleanType
     public ExceptionForSave():base(){}
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ExceptionForSave>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExceptionForSave>(deep);
 
 }
 /// <summary>
 /// <para>Defines the ShowDataLabelsRange Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:showDataLabelsRange.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -3299,45 +2173,15 @@ public partial class ExceptionForSave : BooleanType
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ShowDataLabelsRange : BooleanType
 {
-    private const string tagName = "showDataLabelsRange";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13230;
+    /// <inheritdoc/>
+    public override string LocalName => "showDataLabelsRange";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -3346,20 +2190,13 @@ public partial class ShowDataLabelsRange : BooleanType
     public ShowDataLabelsRange():base(){}
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ShowDataLabelsRange>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowDataLabelsRange>(deep);
 
 }
 /// <summary>
 /// <para>Defines the ShowLeaderLines Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:showLeaderLines.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -3367,45 +2204,15 @@ public partial class ShowDataLabelsRange : BooleanType
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ShowLeaderLines : BooleanType
 {
-    private const string tagName = "showLeaderLines";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13232;
+    /// <inheritdoc/>
+    public override string LocalName => "showLeaderLines";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -3414,20 +2221,13 @@ public partial class ShowLeaderLines : BooleanType
     public ShowLeaderLines():base(){}
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ShowLeaderLines>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowLeaderLines>(deep);
 
 }
 /// <summary>
 /// <para>Defines the AutoGeneneratedCategories Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:autoCat.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -3435,45 +2235,15 @@ public partial class ShowLeaderLines : BooleanType
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class AutoGeneneratedCategories : BooleanType
 {
-    private const string tagName = "autoCat";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13234;
+    /// <inheritdoc/>
+    public override string LocalName => "autoCat";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -3482,20 +2252,13 @@ public partial class AutoGeneneratedCategories : BooleanType
     public AutoGeneneratedCategories():base(){}
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<AutoGeneneratedCategories>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoGeneneratedCategories>(deep);
 
 }
 /// <summary>
 /// <para>Defines the InvertIfNegativeBoolean Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:invertIfNegative.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -3503,45 +2266,15 @@ public partial class AutoGeneneratedCategories : BooleanType
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class InvertIfNegativeBoolean : BooleanType
 {
-    private const string tagName = "invertIfNegative";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13248;
+    /// <inheritdoc/>
+    public override string LocalName => "invertIfNegative";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -3550,20 +2283,13 @@ public partial class InvertIfNegativeBoolean : BooleanType
     public InvertIfNegativeBoolean():base(){}
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<InvertIfNegativeBoolean>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<InvertIfNegativeBoolean>(deep);
 
 }
 /// <summary>
 /// <para>Defines the Bubble3D Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:bubble3D.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -3571,45 +2297,15 @@ public partial class InvertIfNegativeBoolean : BooleanType
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Bubble3D : BooleanType
 {
-    private const string tagName = "bubble3D";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13249;
+    /// <inheritdoc/>
+    public override string LocalName => "bubble3D";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -3618,15 +2314,8 @@ public partial class Bubble3D : BooleanType
     public Bubble3D():base(){}
     
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Bubble3D>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Bubble3D>(deep);
 
 }
 /// <summary>
@@ -3636,20 +2325,12 @@ public partial class Bubble3D : BooleanType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class BooleanType : OpenXmlLeafElement
 {
-    private static string[] attributeTagNames = { "val" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "val" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
     
         /// <summary>
@@ -3687,7 +2368,7 @@ public abstract partial class BooleanType : OpenXmlLeafElement
 }
 /// <summary>
 /// <para>Defines the ChartText Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:tx.</para>
 /// </summary>
 /// <remarks>
@@ -3698,53 +2379,23 @@ public abstract partial class BooleanType : OpenXmlLeafElement
 ///<item><description>DocumentFormat.OpenXml.Drawing.Charts.StringLiteral &lt;c:strLit></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.RichText))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringLiteral))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ChartText : OpenXmlCompositeElement
 {
-    private const string tagName = "tx";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13231;
+    /// <inheritdoc/>
+    public override string LocalName => "tx";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -3755,7 +2406,7 @@ public partial class ChartText : OpenXmlCompositeElement
     /// </summary>
     public ChartText():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ChartText class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -3802,21 +2453,10 @@ if( 11 == namespaceId && "strLit" == name)
         private static readonly string[] eleTagNames = { "strRef","rich","strLit" };
     private static readonly byte[] eleNamespaceIds = { 11,11,11 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneChoice;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> String Reference.</para>
@@ -3827,14 +2467,8 @@ if( 11 == namespaceId && "strLit" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.StringReference StringReference
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringReference>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringReference>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Rich Text.</para>
@@ -3845,14 +2479,8 @@ if( 11 == namespaceId && "strLit" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.RichText RichText
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.RichText>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.RichText>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> String Literal.</para>
@@ -3863,33 +2491,19 @@ if( 11 == namespaceId && "strLit" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.StringLiteral StringLiteral
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>(2);
+        set => SetElement(2, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ChartText>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartText>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the LeaderLines Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:leaderLines.</para>
 /// </summary>
 /// <remarks>
@@ -3898,51 +2512,21 @@ if( 11 == namespaceId && "strLit" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties &lt;c:spPr></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class LeaderLines : OpenXmlCompositeElement
 {
-    private const string tagName = "leaderLines";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13233;
+    /// <inheritdoc/>
+    public override string LocalName => "leaderLines";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -3953,7 +2537,7 @@ public partial class LeaderLines : OpenXmlCompositeElement
     /// </summary>
     public LeaderLines():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the LeaderLines class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -3994,21 +2578,10 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         private static readonly string[] eleTagNames = { "spPr" };
     private static readonly byte[] eleNamespaceIds = { 11 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ChartShapeProperties.</para>
@@ -4019,33 +2592,19 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(0);
+        set => SetElement(0, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<LeaderLines>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<LeaderLines>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the SequenceOfReferences Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:sqref.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -4053,45 +2612,15 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class SequenceOfReferences : OpenXmlLeafTextElement
 {
-    private const string tagName = "sqref";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13235;
+    /// <inheritdoc/>
+    public override string LocalName => "sqref";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -4099,7 +2628,7 @@ public partial class SequenceOfReferences : OpenXmlLeafTextElement
     /// </summary>
     public SequenceOfReferences():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the SequenceOfReferences class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -4109,25 +2638,17 @@ public partial class SequenceOfReferences : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new StringValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<SequenceOfReferences>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<SequenceOfReferences>(deep);
 
 }
 /// <summary>
 /// <para>Defines the Formula Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:f.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -4135,45 +2656,15 @@ public partial class SequenceOfReferences : OpenXmlLeafTextElement
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Formula : OpenXmlLeafTextElement
 {
-    private const string tagName = "f";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13245;
+    /// <inheritdoc/>
+    public override string LocalName => "f";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -4181,7 +2672,7 @@ public partial class Formula : OpenXmlLeafTextElement
     /// </summary>
     public Formula():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the Formula class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -4191,25 +2682,17 @@ public partial class Formula : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new StringValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Formula>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formula>(deep);
 
 }
 /// <summary>
 /// <para>Defines the TextFieldGuid Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:txfldGUID.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
@@ -4217,45 +2700,15 @@ public partial class Formula : OpenXmlLeafTextElement
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class TextFieldGuid : OpenXmlLeafTextElement
 {
-    private const string tagName = "txfldGUID";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13253;
+    /// <inheritdoc/>
+    public override string LocalName => "txfldGUID";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
@@ -4263,7 +2716,7 @@ public partial class TextFieldGuid : OpenXmlLeafTextElement
     /// </summary>
     public TextFieldGuid():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the TextFieldGuid class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -4273,25 +2726,17 @@ public partial class TextFieldGuid : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new StringValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<TextFieldGuid>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextFieldGuid>(deep);
 
 }
 /// <summary>
 /// <para>Defines the AxisDataSourceType Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:cat.</para>
 /// </summary>
 /// <remarks>
@@ -4304,55 +2749,25 @@ public partial class TextFieldGuid : OpenXmlLeafTextElement
 ///<item><description>DocumentFormat.OpenXml.Drawing.Charts.StringLiteral &lt;c:strLit></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringLiteral))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class AxisDataSourceType : OpenXmlCompositeElement
 {
-    private const string tagName = "cat";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13236;
+    /// <inheritdoc/>
+    public override string LocalName => "cat";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -4363,7 +2778,7 @@ public partial class AxisDataSourceType : OpenXmlCompositeElement
     /// </summary>
     public AxisDataSourceType():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the AxisDataSourceType class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -4416,21 +2831,10 @@ if( 11 == namespaceId && "strLit" == name)
         private static readonly string[] eleTagNames = { "multiLvlStrRef","numRef","numLit","strRef","strLit" };
     private static readonly byte[] eleNamespaceIds = { 11,11,11,11,11 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneChoice;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> Multi Level String Reference.</para>
@@ -4441,14 +2845,8 @@ if( 11 == namespaceId && "strLit" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference MultiLevelStringReference
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Number Reference.</para>
@@ -4459,14 +2857,8 @@ if( 11 == namespaceId && "strLit" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.NumberReference NumberReference
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberReference>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberReference>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Number Literal.</para>
@@ -4477,14 +2869,8 @@ if( 11 == namespaceId && "strLit" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral NumberLiteral
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> StringReference.</para>
@@ -4495,14 +2881,8 @@ if( 11 == namespaceId && "strLit" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.StringReference StringReference
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringReference>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringReference>(3);
+        set => SetElement(3, value);
     }
     /// <summary>
     /// <para> String Literal.</para>
@@ -4513,33 +2893,19 @@ if( 11 == namespaceId && "strLit" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.StringLiteral StringLiteral
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>(4);
-        }
-        set
-        {
-            SetElement(4, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>(4);
+        set => SetElement(4, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<AxisDataSourceType>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<AxisDataSourceType>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the BarChartSeries Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:ser.</para>
 /// </summary>
 /// <remarks>
@@ -4561,7 +2927,7 @@ if( 11 == namespaceId && "strLit" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.Charts.BarSerExtensionList &lt;c:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText))]
@@ -4576,49 +2942,19 @@ if( 11 == namespaceId && "strLit" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Shape))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarSerExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class BarChartSeries : OpenXmlCompositeElement
 {
-    private const string tagName = "ser";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13237;
+    /// <inheritdoc/>
+    public override string LocalName => "ser";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -4629,7 +2965,7 @@ public partial class BarChartSeries : OpenXmlCompositeElement
     /// </summary>
     public BarChartSeries():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the BarChartSeries class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -4709,21 +3045,10 @@ if( 11 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "idx","order","tx","spPr","invertIfNegative","pictureOptions","dPt","dLbls","trendline","errBars","cat","val","shape","extLst" };
     private static readonly byte[] eleNamespaceIds = { 11,11,11,11,11,11,11,11,11,11,11,11,11,11 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Index.</para>
@@ -4734,14 +3059,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.Index Index
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Order.</para>
@@ -4752,14 +3071,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.Order Order
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Series Text.</para>
@@ -4770,14 +3083,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.SeriesText SeriesText
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> ChartShapeProperties.</para>
@@ -4788,14 +3095,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(3);
+        set => SetElement(3, value);
     }
     /// <summary>
     /// <para> InvertIfNegative.</para>
@@ -4806,14 +3107,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative InvertIfNegative
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>(4);
-        }
-        set
-        {
-            SetElement(4, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>(4);
+        set => SetElement(4, value);
     }
     /// <summary>
     /// <para> PictureOptions.</para>
@@ -4824,33 +3119,19 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions PictureOptions
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>(5);
-        }
-        set
-        {
-            SetElement(5, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>(5);
+        set => SetElement(5, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<BarChartSeries>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<BarChartSeries>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the LineChartSeries Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:ser.</para>
 /// </summary>
 /// <remarks>
@@ -4872,7 +3153,7 @@ if( 11 == namespaceId && "extLst" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.Charts.LineSerExtensionList &lt;c:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText))]
@@ -4887,49 +3168,19 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Smooth))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineSerExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class LineChartSeries : OpenXmlCompositeElement
 {
-    private const string tagName = "ser";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13238;
+    /// <inheritdoc/>
+    public override string LocalName => "ser";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -4940,7 +3191,7 @@ public partial class LineChartSeries : OpenXmlCompositeElement
     /// </summary>
     public LineChartSeries():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the LineChartSeries class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -5020,21 +3271,10 @@ if( 11 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "idx","order","tx","spPr","marker","pictureOptions","dPt","dLbls","trendline","errBars","cat","val","smooth","extLst" };
     private static readonly byte[] eleNamespaceIds = { 11,11,11,11,11,11,11,11,11,11,11,11,11,11 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Index.</para>
@@ -5045,14 +3285,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.Index Index
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Order.</para>
@@ -5063,14 +3297,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.Order Order
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Series Text.</para>
@@ -5081,14 +3309,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.SeriesText SeriesText
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> ChartShapeProperties.</para>
@@ -5099,14 +3321,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(3);
+        set => SetElement(3, value);
     }
     /// <summary>
     /// <para> Marker.</para>
@@ -5117,14 +3333,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.Marker Marker
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>(4);
-        }
-        set
-        {
-            SetElement(4, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>(4);
+        set => SetElement(4, value);
     }
     /// <summary>
     /// <para> PictureOptions.</para>
@@ -5135,33 +3345,19 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions PictureOptions
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>(5);
-        }
-        set
-        {
-            SetElement(5, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>(5);
+        set => SetElement(5, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<LineChartSeries>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<LineChartSeries>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the ScatterChartSeries Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:ser.</para>
 /// </summary>
 /// <remarks>
@@ -5182,7 +3378,7 @@ if( 11 == namespaceId && "extLst" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtensionList &lt;c:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText))]
@@ -5196,49 +3392,19 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.YValues))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Smooth))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ScatterChartSeries : OpenXmlCompositeElement
 {
-    private const string tagName = "ser";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13239;
+    /// <inheritdoc/>
+    public override string LocalName => "ser";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -5249,7 +3415,7 @@ public partial class ScatterChartSeries : OpenXmlCompositeElement
     /// </summary>
     public ScatterChartSeries():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ScatterChartSeries class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -5326,21 +3492,10 @@ if( 11 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "idx","order","tx","spPr","marker","dPt","dLbls","trendline","errBars","xVal","yVal","smooth","extLst" };
     private static readonly byte[] eleNamespaceIds = { 11,11,11,11,11,11,11,11,11,11,11,11,11 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Index.</para>
@@ -5351,14 +3506,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.Index Index
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Order.</para>
@@ -5369,14 +3518,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.Order Order
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Series Text.</para>
@@ -5387,14 +3530,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.SeriesText SeriesText
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> ChartShapeProperties.</para>
@@ -5405,14 +3542,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(3);
+        set => SetElement(3, value);
     }
     /// <summary>
     /// <para> Marker.</para>
@@ -5423,33 +3554,19 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.Marker Marker
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>(4);
-        }
-        set
-        {
-            SetElement(4, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>(4);
+        set => SetElement(4, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ScatterChartSeries>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScatterChartSeries>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the AreaChartSeries Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:ser.</para>
 /// </summary>
 /// <remarks>
@@ -5469,7 +3586,7 @@ if( 11 == namespaceId && "extLst" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtensionList &lt;c:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText))]
@@ -5482,49 +3599,19 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class AreaChartSeries : OpenXmlCompositeElement
 {
-    private const string tagName = "ser";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13240;
+    /// <inheritdoc/>
+    public override string LocalName => "ser";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -5535,7 +3622,7 @@ public partial class AreaChartSeries : OpenXmlCompositeElement
     /// </summary>
     public AreaChartSeries():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the AreaChartSeries class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -5609,21 +3696,10 @@ if( 11 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "idx","order","tx","spPr","pictureOptions","dPt","dLbls","trendline","errBars","cat","val","extLst" };
     private static readonly byte[] eleNamespaceIds = { 11,11,11,11,11,11,11,11,11,11,11,11 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Index.</para>
@@ -5634,14 +3710,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.Index Index
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Order.</para>
@@ -5652,14 +3722,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.Order Order
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Series Text.</para>
@@ -5670,14 +3734,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.SeriesText SeriesText
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> ChartShapeProperties.</para>
@@ -5688,14 +3746,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(3);
+        set => SetElement(3, value);
     }
     /// <summary>
     /// <para> PictureOptions.</para>
@@ -5706,33 +3758,19 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions PictureOptions
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>(4);
-        }
-        set
-        {
-            SetElement(4, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>(4);
+        set => SetElement(4, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<AreaChartSeries>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<AreaChartSeries>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the PieChartSeries Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:ser.</para>
 /// </summary>
 /// <remarks>
@@ -5751,7 +3789,7 @@ if( 11 == namespaceId && "extLst" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.Charts.PieSerExtensionList &lt;c:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText))]
@@ -5763,49 +3801,19 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieSerExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class PieChartSeries : OpenXmlCompositeElement
 {
-    private const string tagName = "ser";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13241;
+    /// <inheritdoc/>
+    public override string LocalName => "ser";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -5816,7 +3824,7 @@ public partial class PieChartSeries : OpenXmlCompositeElement
     /// </summary>
     public PieChartSeries():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the PieChartSeries class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -5887,21 +3895,10 @@ if( 11 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "idx","order","tx","spPr","pictureOptions","explosion","dPt","dLbls","cat","val","extLst" };
     private static readonly byte[] eleNamespaceIds = { 11,11,11,11,11,11,11,11,11,11,11 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Index.</para>
@@ -5912,14 +3909,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.Index Index
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Order.</para>
@@ -5930,14 +3921,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.Order Order
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Series Text.</para>
@@ -5948,14 +3933,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.SeriesText SeriesText
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> ChartShapeProperties.</para>
@@ -5966,14 +3945,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(3);
+        set => SetElement(3, value);
     }
     /// <summary>
     /// <para> PictureOptions.</para>
@@ -5984,14 +3957,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions PictureOptions
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>(4);
-        }
-        set
-        {
-            SetElement(4, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>(4);
+        set => SetElement(4, value);
     }
     /// <summary>
     /// <para> Explosion.</para>
@@ -6002,33 +3969,19 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.Explosion Explosion
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.Explosion>(5);
-        }
-        set
-        {
-            SetElement(5, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Explosion>(5);
+        set => SetElement(5, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<PieChartSeries>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<PieChartSeries>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the BubbleChartSeries Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:ser.</para>
 /// </summary>
 /// <remarks>
@@ -6051,7 +4004,7 @@ if( 11 == namespaceId && "extLst" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtensionList &lt;c:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText))]
@@ -6067,49 +4020,19 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleSize))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class BubbleChartSeries : OpenXmlCompositeElement
 {
-    private const string tagName = "ser";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13242;
+    /// <inheritdoc/>
+    public override string LocalName => "ser";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -6120,7 +4043,7 @@ public partial class BubbleChartSeries : OpenXmlCompositeElement
     /// </summary>
     public BubbleChartSeries():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the BubbleChartSeries class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -6203,21 +4126,10 @@ if( 11 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "idx","order","tx","spPr","pictureOptions","invertIfNegative","dPt","dLbls","trendline","errBars","xVal","yVal","bubbleSize","bubble3D","extLst" };
     private static readonly byte[] eleNamespaceIds = { 11,11,11,11,11,11,11,11,11,11,11,11,11,11,11 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Index.</para>
@@ -6228,14 +4140,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.Index Index
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Order.</para>
@@ -6246,14 +4152,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.Order Order
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Series Text.</para>
@@ -6264,14 +4164,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.SeriesText SeriesText
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> ChartShapeProperties.</para>
@@ -6282,14 +4176,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(3);
+        set => SetElement(3, value);
     }
     /// <summary>
     /// <para> PictureOptions.</para>
@@ -6300,14 +4188,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions PictureOptions
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>(4);
-        }
-        set
-        {
-            SetElement(4, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>(4);
+        set => SetElement(4, value);
     }
     /// <summary>
     /// <para> InvertIfNegative.</para>
@@ -6318,33 +4200,19 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative InvertIfNegative
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>(5);
-        }
-        set
-        {
-            SetElement(5, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>(5);
+        set => SetElement(5, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<BubbleChartSeries>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<BubbleChartSeries>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the RadarChartSeries Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:ser.</para>
 /// </summary>
 /// <remarks>
@@ -6363,7 +4231,7 @@ if( 11 == namespaceId && "extLst" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtensionList &lt;c:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText))]
@@ -6375,49 +4243,19 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class RadarChartSeries : OpenXmlCompositeElement
 {
-    private const string tagName = "ser";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13243;
+    /// <inheritdoc/>
+    public override string LocalName => "ser";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -6428,7 +4266,7 @@ public partial class RadarChartSeries : OpenXmlCompositeElement
     /// </summary>
     public RadarChartSeries():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the RadarChartSeries class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -6499,21 +4337,10 @@ if( 11 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "idx","order","tx","spPr","pictureOptions","marker","dPt","dLbls","cat","val","extLst" };
     private static readonly byte[] eleNamespaceIds = { 11,11,11,11,11,11,11,11,11,11,11 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Index.</para>
@@ -6524,14 +4351,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.Index Index
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Order.</para>
@@ -6542,14 +4363,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.Order Order
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Series Text.</para>
@@ -6560,14 +4375,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.SeriesText SeriesText
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> ChartShapeProperties.</para>
@@ -6578,14 +4387,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(3);
+        set => SetElement(3, value);
     }
     /// <summary>
     /// <para> PictureOptions.</para>
@@ -6596,14 +4399,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions PictureOptions
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>(4);
-        }
-        set
-        {
-            SetElement(4, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>(4);
+        set => SetElement(4, value);
     }
     /// <summary>
     /// <para> Marker.</para>
@@ -6614,33 +4411,19 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.Marker Marker
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>(5);
-        }
-        set
-        {
-            SetElement(5, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>(5);
+        set => SetElement(5, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<RadarChartSeries>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<RadarChartSeries>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the SurfaceChartSeries Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:ser.</para>
 /// </summary>
 /// <remarks>
@@ -6657,7 +4440,7 @@ if( 11 == namespaceId && "extLst" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList &lt;c:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText))]
@@ -6667,49 +4450,19 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class SurfaceChartSeries : OpenXmlCompositeElement
 {
-    private const string tagName = "ser";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13244;
+    /// <inheritdoc/>
+    public override string LocalName => "ser";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -6720,7 +4473,7 @@ public partial class SurfaceChartSeries : OpenXmlCompositeElement
     /// </summary>
     public SurfaceChartSeries():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the SurfaceChartSeries class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -6785,21 +4538,10 @@ if( 11 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "idx","order","tx","spPr","pictureOptions","cat","val","bubble3D","extLst" };
     private static readonly byte[] eleNamespaceIds = { 11,11,11,11,11,11,11,11,11 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Index.</para>
@@ -6810,14 +4552,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.Index Index
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Order.</para>
@@ -6828,14 +4564,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.Order Order
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Series Text.</para>
@@ -6846,14 +4576,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.SeriesText SeriesText
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> ChartShapeProperties.</para>
@@ -6864,14 +4588,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(3);
+        set => SetElement(3, value);
     }
     /// <summary>
     /// <para> PictureOptions.</para>
@@ -6882,14 +4600,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions PictureOptions
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>(4);
-        }
-        set
-        {
-            SetElement(4, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>(4);
+        set => SetElement(4, value);
     }
     /// <summary>
     /// <para> CategoryAxisData.</para>
@@ -6900,14 +4612,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData CategoryAxisData
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>(5);
-        }
-        set
-        {
-            SetElement(5, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>(5);
+        set => SetElement(5, value);
     }
     /// <summary>
     /// <para> Values.</para>
@@ -6918,14 +4624,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.Values Values
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.Values>(6);
-        }
-        set
-        {
-            SetElement(6, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Values>(6);
+        set => SetElement(6, value);
     }
     /// <summary>
     /// <para> Bubble3D.</para>
@@ -6936,14 +4636,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.Bubble3D Bubble3D
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>(7);
-        }
-        set
-        {
-            SetElement(7, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>(7);
+        set => SetElement(7, value);
     }
     /// <summary>
     /// <para> SurfaceSerExtensionList.</para>
@@ -6954,33 +4648,19 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList SurfaceSerExtensionList
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList>(8);
-        }
-        set
-        {
-            SetElement(8, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList>(8);
+        set => SetElement(8, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<SurfaceChartSeries>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<SurfaceChartSeries>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the DataLabelsRangeChache Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:dlblRangeCache.</para>
 /// </summary>
 /// <remarks>
@@ -6996,52 +4676,22 @@ if( 11 == namespaceId && "extLst" == name)
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataLabelsRangeChache : StringDataType
 {
-    private const string tagName = "dlblRangeCache";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13246;
+    /// <inheritdoc/>
+    public override string LocalName => "dlblRangeCache";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
     /// Initializes a new instance of the DataLabelsRangeChache class.
     /// </summary>
     public DataLabelsRangeChache():base(){}
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the DataLabelsRangeChache class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -7068,20 +4718,13 @@ public partial class DataLabelsRangeChache : StringDataType
     }
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<DataLabelsRangeChache>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataLabelsRangeChache>(deep);
 
 }
 /// <summary>
 /// <para>Defines the DataLabelFieldTableCache Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:dlblFieldTableCache.</para>
 /// </summary>
 /// <remarks>
@@ -7097,52 +4740,22 @@ public partial class DataLabelsRangeChache : StringDataType
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataLabelFieldTableCache : StringDataType
 {
-    private const string tagName = "dlblFieldTableCache";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13254;
+    /// <inheritdoc/>
+    public override string LocalName => "dlblFieldTableCache";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     /// <summary>
     /// Initializes a new instance of the DataLabelFieldTableCache class.
     /// </summary>
     public DataLabelFieldTableCache():base(){}
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the DataLabelFieldTableCache class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -7169,15 +4782,8 @@ public partial class DataLabelFieldTableCache : StringDataType
     }
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<DataLabelFieldTableCache>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataLabelFieldTableCache>(deep);
 
 }
 /// <summary>
@@ -7219,21 +4825,10 @@ if( 11 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "ptCount","pt","extLst" };
     private static readonly byte[] eleNamespaceIds = { 11,11,11 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> PointCount.</para>
@@ -7244,14 +4839,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.PointCount PointCount
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>(0);
+        set => SetElement(0, value);
     }
 
 
@@ -7262,7 +4851,7 @@ if( 11 == namespaceId && "extLst" == name)
     /// </summary>
     protected StringDataType(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the StringDataType class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -7292,69 +4881,31 @@ if( 11 == namespaceId && "extLst" == name)
 }
 /// <summary>
 /// <para>Defines the Explosion Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:explosion.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Explosion : OpenXmlLeafElement
 {
-    private const string tagName = "explosion";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13247;
+    /// <inheritdoc/>
+    public override string LocalName => "explosion";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
-    private static string[] attributeTagNames = { "val" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "val" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -7390,21 +4941,13 @@ public partial class Explosion : OpenXmlLeafElement
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Explosion>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Explosion>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the Marker Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:marker.</para>
 /// </summary>
 /// <remarks>
@@ -7416,54 +4959,24 @@ public partial class Explosion : OpenXmlLeafElement
 ///<item><description>DocumentFormat.OpenXml.Drawing.Charts.ExtensionList &lt;c:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Symbol))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Size))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Marker : OpenXmlCompositeElement
 {
-    private const string tagName = "marker";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13250;
+    /// <inheritdoc/>
+    public override string LocalName => "marker";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -7474,7 +4987,7 @@ public partial class Marker : OpenXmlCompositeElement
     /// </summary>
     public Marker():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the Marker class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -7524,21 +5037,10 @@ if( 11 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "symbol","size","spPr","extLst" };
     private static readonly byte[] eleNamespaceIds = { 11,11,11,11 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Symbol.</para>
@@ -7549,14 +5051,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.Symbol Symbol
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.Symbol>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Symbol>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Size.</para>
@@ -7567,14 +5063,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.Size Size
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.Size>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Size>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> ChartShapeProperties.</para>
@@ -7585,14 +5075,8 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> Chart Extensibility.</para>
@@ -7603,33 +5087,19 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList ExtensionList
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>(3);
+        set => SetElement(3, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Marker>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Marker>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the DataLabel Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:dLbl.</para>
 /// </summary>
 /// <remarks>
@@ -7653,7 +5123,7 @@ if( 11 == namespaceId && "extLst" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.Charts.DLblExtensionList &lt;c:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Delete))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Layout))]
@@ -7670,49 +5140,19 @@ if( 11 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Separator))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.DLblExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataLabel : OpenXmlCompositeElement
 {
-    private const string tagName = "dLbl";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13251;
+    /// <inheritdoc/>
+    public override string LocalName => "dLbl";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -7723,7 +5163,7 @@ public partial class DataLabel : OpenXmlCompositeElement
     /// </summary>
     public DataLabel():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the DataLabel class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -7809,21 +5249,10 @@ if( 11 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "idx","delete","layout","tx","numFmt","spPr","txPr","dLblPos","showLegendKey","showVal","showCatName","showSerName","showPercent","showBubbleSize","separator","extLst" };
     private static readonly byte[] eleNamespaceIds = { 11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Index.</para>
@@ -7834,33 +5263,19 @@ if( 11 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Charts.Index Index
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
+        set => SetElement(0, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<DataLabel>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataLabel>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the CategoryFilterException Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:categoryFilterException.</para>
 /// </summary>
 /// <remarks>
@@ -7875,57 +5290,27 @@ if( 11 == namespaceId && "extLst" == name)
 ///<item><description>DataLabel &lt;c15:dLbl></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(SequenceOfReferences),(FileFormatVersions)12)]
-    [ChildElementInfo(typeof(ShapeProperties),(FileFormatVersions)12)]
-    [ChildElementInfo(typeof(Explosion),(FileFormatVersions)12)]
-    [ChildElementInfo(typeof(InvertIfNegativeBoolean),(FileFormatVersions)12)]
-    [ChildElementInfo(typeof(Bubble3D),(FileFormatVersions)12)]
-    [ChildElementInfo(typeof(Marker),(FileFormatVersions)12)]
-    [ChildElementInfo(typeof(DataLabel),(FileFormatVersions)12)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(SequenceOfReferences), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(Explosion), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(InvertIfNegativeBoolean), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(Bubble3D), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(Marker), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(DataLabel), FileFormatVersions.Office2013)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class CategoryFilterException : OpenXmlCompositeElement
 {
-    private const string tagName = "categoryFilterException";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13252;
+    /// <inheritdoc/>
+    public override string LocalName => "categoryFilterException";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -7936,7 +5321,7 @@ public partial class CategoryFilterException : OpenXmlCompositeElement
     /// </summary>
     public CategoryFilterException():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the CategoryFilterException class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -7995,21 +5380,10 @@ if( 64 == namespaceId && "dLbl" == name)
         private static readonly string[] eleTagNames = { "sqref","spPr","explosion","invertIfNegative","bubble3D","marker","dLbl" };
     private static readonly byte[] eleNamespaceIds = { 64,64,64,64,64,64,64 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> SequenceOfReferences.</para>
@@ -8020,14 +5394,8 @@ if( 64 == namespaceId && "dLbl" == name)
     /// </remark>
     public SequenceOfReferences SequenceOfReferences
     {
-        get 
-        {
-            return GetElement<SequenceOfReferences>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<SequenceOfReferences>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> ShapeProperties.</para>
@@ -8038,14 +5406,8 @@ if( 64 == namespaceId && "dLbl" == name)
     /// </remark>
     public ShapeProperties ShapeProperties
     {
-        get 
-        {
-            return GetElement<ShapeProperties>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<ShapeProperties>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Explosion.</para>
@@ -8056,14 +5418,8 @@ if( 64 == namespaceId && "dLbl" == name)
     /// </remark>
     public Explosion Explosion
     {
-        get 
-        {
-            return GetElement<Explosion>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<Explosion>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> InvertIfNegativeBoolean.</para>
@@ -8074,14 +5430,8 @@ if( 64 == namespaceId && "dLbl" == name)
     /// </remark>
     public InvertIfNegativeBoolean InvertIfNegativeBoolean
     {
-        get 
-        {
-            return GetElement<InvertIfNegativeBoolean>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<InvertIfNegativeBoolean>(3);
+        set => SetElement(3, value);
     }
     /// <summary>
     /// <para> Bubble3D.</para>
@@ -8092,14 +5442,8 @@ if( 64 == namespaceId && "dLbl" == name)
     /// </remark>
     public Bubble3D Bubble3D
     {
-        get 
-        {
-            return GetElement<Bubble3D>(4);
-        }
-        set
-        {
-            SetElement(4, value);
-        }
+        get => GetElement<Bubble3D>(4);
+        set => SetElement(4, value);
     }
     /// <summary>
     /// <para> Marker.</para>
@@ -8110,14 +5454,8 @@ if( 64 == namespaceId && "dLbl" == name)
     /// </remark>
     public Marker Marker
     {
-        get 
-        {
-            return GetElement<Marker>(5);
-        }
-        set
-        {
-            SetElement(5, value);
-        }
+        get => GetElement<Marker>(5);
+        set => SetElement(5, value);
     }
     /// <summary>
     /// <para> DataLabel.</para>
@@ -8128,33 +5466,19 @@ if( 64 == namespaceId && "dLbl" == name)
     /// </remark>
     public DataLabel DataLabel
     {
-        get 
-        {
-            return GetElement<DataLabel>(6);
-        }
-        set
-        {
-            SetElement(6, value);
-        }
+        get => GetElement<DataLabel>(6);
+        set => SetElement(6, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<CategoryFilterException>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<CategoryFilterException>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the DataLabelFieldTableEntry Class.</para>
-///<para>This class is available in Office 2013 or above.</para>
+/// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:dlblFTEntry.</para>
 /// </summary>
 /// <remarks>
@@ -8165,53 +5489,23 @@ if( 64 == namespaceId && "dLbl" == name)
 ///<item><description>DataLabelFieldTableCache &lt;c15:dlblFieldTableCache></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-    [ChildElementInfo(typeof(TextFieldGuid),(FileFormatVersions)12)]
-    [ChildElementInfo(typeof(Formula),(FileFormatVersions)12)]
-    [ChildElementInfo(typeof(DataLabelFieldTableCache),(FileFormatVersions)12)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(TextFieldGuid), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(Formula), FileFormatVersions.Office2013)]
+    [ChildElementInfo(typeof(DataLabelFieldTableCache), FileFormatVersions.Office2013)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataLabelFieldTableEntry : OpenXmlCompositeElement
 {
-    private const string tagName = "dlblFTEntry";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 64;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 13255;
+    /// <inheritdoc/>
+    public override string LocalName => "dlblFTEntry";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 64;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((12 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
     
@@ -8222,7 +5516,7 @@ public partial class DataLabelFieldTableEntry : OpenXmlCompositeElement
     /// </summary>
     public DataLabelFieldTableEntry():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the DataLabelFieldTableEntry class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -8269,21 +5563,10 @@ if( 64 == namespaceId && "dlblFieldTableCache" == name)
         private static readonly string[] eleTagNames = { "txfldGUID","f","dlblFieldTableCache" };
     private static readonly byte[] eleNamespaceIds = { 64,64,64 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> TextFieldGuid.</para>
@@ -8294,14 +5577,8 @@ if( 64 == namespaceId && "dlblFieldTableCache" == name)
     /// </remark>
     public TextFieldGuid TextFieldGuid
     {
-        get 
-        {
-            return GetElement<TextFieldGuid>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<TextFieldGuid>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Formula.</para>
@@ -8312,14 +5589,8 @@ if( 64 == namespaceId && "dlblFieldTableCache" == name)
     /// </remark>
     public Formula Formula
     {
-        get 
-        {
-            return GetElement<Formula>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<Formula>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> DataLabelFieldTableCache.</para>
@@ -8330,29 +5601,15 @@ if( 64 == namespaceId && "dlblFieldTableCache" == name)
     /// </remark>
     public DataLabelFieldTableCache DataLabelFieldTableCache
     {
-        get 
-        {
-            return GetElement<DataLabelFieldTableCache>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<DataLabelFieldTableCache>(2);
+        set => SetElement(2, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<DataLabelFieldTableEntry>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataLabelFieldTableEntry>(deep);
 
-   
 }
 }
  

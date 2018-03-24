@@ -14,14 +14,9 @@ namespace DocumentFormat.OpenXml
         // When the strictTranslation flag is 'true', the XmlConvertingReader tries to search the incoming xml stream for any Strict namespace
         // that can be translated to Transitional. When the flag is 'false', the reader skips searching.
 
-        public static XmlReader Create(XmlReader xmlReader, bool strictTranslation)
-        {
-            return new XmlConvertingReader(xmlReader, strictTranslation);
-        }
-
         public static XmlReader Create(Stream partStream, XmlReaderSettings settings)
         {
-            return XmlConvertingReaderFactory.Create(partStream, settings, true);
+            return Create(partStream, settings, true);
         }
 
         public static XmlReader Create(Stream partStream, XmlReaderSettings settings, bool strictTranslation)
@@ -33,7 +28,7 @@ namespace DocumentFormat.OpenXml
 
         public static XmlReader Create(TextReader textReader, XmlReaderSettings settings)
         {
-            return XmlConvertingReaderFactory.Create(textReader, settings, true);
+            return Create(textReader, settings, true);
         }
 
         public static XmlReader Create(TextReader textReader, XmlReaderSettings settings, bool strictTranslation)
@@ -45,7 +40,7 @@ namespace DocumentFormat.OpenXml
 
         public static XmlReader Create(TextReader textReader)
         {
-            return XmlConvertingReaderFactory.Create(textReader, true);
+            return Create(textReader, true);
         }
 
         public static XmlReader Create(TextReader textReader, bool strictTranslation)

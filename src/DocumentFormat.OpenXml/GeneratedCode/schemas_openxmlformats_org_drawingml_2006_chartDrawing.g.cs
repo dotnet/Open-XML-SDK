@@ -12,6 +12,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
 {
 /// <summary>
 /// <para>Relative Anchor Shape Size.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:relSizeAnchor.</para>
 /// </summary>
 /// <remarks>
@@ -27,7 +28,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
 ///<item><description>DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart &lt;cdr14:contentPart></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(FromAnchor))]
     [ChildElementInfo(typeof(ToAnchor))]
     [ChildElementInfo(typeof(Shape))]
@@ -35,49 +36,20 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     [ChildElementInfo(typeof(GraphicFrame))]
     [ChildElementInfo(typeof(ConnectionShape))]
     [ChildElementInfo(typeof(Picture))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart),(FileFormatVersions)14)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart), FileFormatVersions.Office2010)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RelativeAnchorSize : OpenXmlCompositeElement
 {
-    private const string tagName = "relSizeAnchor";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10652;
+    /// <inheritdoc/>
+    public override string LocalName => "relSizeAnchor";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     
@@ -88,7 +60,7 @@ public partial class RelativeAnchorSize : OpenXmlCompositeElement
     /// </summary>
     public RelativeAnchorSize():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the RelativeAnchorSize class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -150,21 +122,10 @@ if( 47 == namespaceId && "contentPart" == name)
         private static readonly string[] eleTagNames = { "from","to","sp","grpSp","graphicFrame","cxnSp","pic","contentPart" };
     private static readonly byte[] eleNamespaceIds = { 12,12,12,12,12,12,12,47 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Starting Anchor Point.</para>
@@ -175,14 +136,8 @@ if( 47 == namespaceId && "contentPart" == name)
     /// </remark>
     public FromAnchor FromAnchor
     {
-        get 
-        {
-            return GetElement<FromAnchor>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<FromAnchor>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Ending Anchor Point.</para>
@@ -193,32 +148,19 @@ if( 47 == namespaceId && "contentPart" == name)
     /// </remark>
     public ToAnchor ToAnchor
     {
-        get 
-        {
-            return GetElement<ToAnchor>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<ToAnchor>(1);
+        set => SetElement(1, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<RelativeAnchorSize>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<RelativeAnchorSize>(deep);
 
-   
 }
 /// <summary>
 /// <para>Absolute Anchor Shape Size.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:absSizeAnchor.</para>
 /// </summary>
 /// <remarks>
@@ -234,7 +176,7 @@ if( 47 == namespaceId && "contentPart" == name)
 ///<item><description>DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart &lt;cdr14:contentPart></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(FromAnchor))]
     [ChildElementInfo(typeof(Extent))]
     [ChildElementInfo(typeof(Shape))]
@@ -242,49 +184,20 @@ if( 47 == namespaceId && "contentPart" == name)
     [ChildElementInfo(typeof(GraphicFrame))]
     [ChildElementInfo(typeof(ConnectionShape))]
     [ChildElementInfo(typeof(Picture))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart),(FileFormatVersions)14)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart), FileFormatVersions.Office2010)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AbsoluteAnchorSize : OpenXmlCompositeElement
 {
-    private const string tagName = "absSizeAnchor";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10653;
+    /// <inheritdoc/>
+    public override string LocalName => "absSizeAnchor";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     
@@ -295,7 +208,7 @@ public partial class AbsoluteAnchorSize : OpenXmlCompositeElement
     /// </summary>
     public AbsoluteAnchorSize():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the AbsoluteAnchorSize class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -357,21 +270,10 @@ if( 47 == namespaceId && "contentPart" == name)
         private static readonly string[] eleTagNames = { "from","ext","sp","grpSp","graphicFrame","cxnSp","pic","contentPart" };
     private static readonly byte[] eleNamespaceIds = { 12,12,12,12,12,12,12,47 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> FromAnchor.</para>
@@ -382,14 +284,8 @@ if( 47 == namespaceId && "contentPart" == name)
     /// </remark>
     public FromAnchor FromAnchor
     {
-        get 
-        {
-            return GetElement<FromAnchor>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<FromAnchor>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Shape Extent.</para>
@@ -400,32 +296,19 @@ if( 47 == namespaceId && "contentPart" == name)
     /// </remark>
     public Extent Extent
     {
-        get 
-        {
-            return GetElement<Extent>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<Extent>(1);
+        set => SetElement(1, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<AbsoluteAnchorSize>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<AbsoluteAnchorSize>(deep);
 
-   
 }
 /// <summary>
 /// <para>Shape Definition.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:sp.</para>
 /// </summary>
 /// <remarks>
@@ -437,69 +320,32 @@ if( 47 == namespaceId && "contentPart" == name)
 ///<item><description>TextBody &lt;cdr:txBody></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(NonVisualShapeProperties))]
     [ChildElementInfo(typeof(ShapeProperties))]
     [ChildElementInfo(typeof(Style))]
     [ChildElementInfo(typeof(TextBody))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Shape : OpenXmlCompositeElement
 {
-    private const string tagName = "sp";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10654;
+    /// <inheritdoc/>
+    public override string LocalName => "sp";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    private static string[] attributeTagNames = { "macro","textlink","fLocksText","fPublished" };
-    private static byte[] attributeNamespaceIds = { 0,0,0,0 };
+    	private static readonly string[] attributeTagNames = { "macro","textlink","fLocksText","fPublished" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -553,7 +399,7 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
     public Shape():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the Shape class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -603,21 +449,10 @@ if( 12 == namespaceId && "txBody" == name)
         private static readonly string[] eleTagNames = { "nvSpPr","spPr","style","txBody" };
     private static readonly byte[] eleNamespaceIds = { 12,12,12,12 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Non-Visual Shape Properties.</para>
@@ -628,14 +463,8 @@ if( 12 == namespaceId && "txBody" == name)
     /// </remark>
     public NonVisualShapeProperties NonVisualShapeProperties
     {
-        get 
-        {
-            return GetElement<NonVisualShapeProperties>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<NonVisualShapeProperties>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Shape Properties.</para>
@@ -646,14 +475,8 @@ if( 12 == namespaceId && "txBody" == name)
     /// </remark>
     public ShapeProperties ShapeProperties
     {
-        get 
-        {
-            return GetElement<ShapeProperties>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<ShapeProperties>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Shape Style.</para>
@@ -664,14 +487,8 @@ if( 12 == namespaceId && "txBody" == name)
     /// </remark>
     public Style Style
     {
-        get 
-        {
-            return GetElement<Style>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<Style>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> Shape Text Body.</para>
@@ -682,14 +499,8 @@ if( 12 == namespaceId && "txBody" == name)
     /// </remark>
     public TextBody TextBody
     {
-        get 
-        {
-            return GetElement<TextBody>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<TextBody>(3);
+        set => SetElement(3, value);
     }
 
 
@@ -712,20 +523,13 @@ if( 0 == namespaceId && "fPublished" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Shape>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shape>(deep);
 
-   
 }
 /// <summary>
 /// <para>Group Shape.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:grpSp.</para>
 /// </summary>
 /// <remarks>
@@ -741,7 +545,7 @@ if( 0 == namespaceId && "fPublished" == name)
 ///<item><description>DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart &lt;cdr14:contentPart></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(NonVisualGroupShapeProperties))]
     [ChildElementInfo(typeof(GroupShapeProperties))]
     [ChildElementInfo(typeof(Shape))]
@@ -749,49 +553,20 @@ if( 0 == namespaceId && "fPublished" == name)
     [ChildElementInfo(typeof(GraphicFrame))]
     [ChildElementInfo(typeof(ConnectionShape))]
     [ChildElementInfo(typeof(Picture))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart),(FileFormatVersions)14)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart), FileFormatVersions.Office2010)]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class GroupShape : OpenXmlCompositeElement
 {
-    private const string tagName = "grpSp";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10655;
+    /// <inheritdoc/>
+    public override string LocalName => "grpSp";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     
@@ -802,7 +577,7 @@ public partial class GroupShape : OpenXmlCompositeElement
     /// </summary>
     public GroupShape():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the GroupShape class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -864,21 +639,10 @@ if( 47 == namespaceId && "contentPart" == name)
         private static readonly string[] eleTagNames = { "nvGrpSpPr","grpSpPr","sp","grpSp","graphicFrame","cxnSp","pic","contentPart" };
     private static readonly byte[] eleNamespaceIds = { 12,12,12,12,12,12,12,47 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Non-Visual Group Shape Properties.</para>
@@ -889,14 +653,8 @@ if( 47 == namespaceId && "contentPart" == name)
     /// </remark>
     public NonVisualGroupShapeProperties NonVisualGroupShapeProperties
     {
-        get 
-        {
-            return GetElement<NonVisualGroupShapeProperties>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<NonVisualGroupShapeProperties>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Group Shape Properties.</para>
@@ -907,32 +665,19 @@ if( 47 == namespaceId && "contentPart" == name)
     /// </remark>
     public GroupShapeProperties GroupShapeProperties
     {
-        get 
-        {
-            return GetElement<GroupShapeProperties>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<GroupShapeProperties>(1);
+        set => SetElement(1, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<GroupShape>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<GroupShape>(deep);
 
-   
 }
 /// <summary>
 /// <para>Graphic Frame.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:graphicFrame.</para>
 /// </summary>
 /// <remarks>
@@ -943,68 +688,31 @@ if( 47 == namespaceId && "contentPart" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.Graphic &lt;a:graphic></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(NonVisualGraphicFrameProperties))]
     [ChildElementInfo(typeof(Transform))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Graphic))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class GraphicFrame : OpenXmlCompositeElement
 {
-    private const string tagName = "graphicFrame";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10656;
+    /// <inheritdoc/>
+    public override string LocalName => "graphicFrame";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    private static string[] attributeTagNames = { "macro","fPublished" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "macro","fPublished" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -1036,7 +744,7 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     /// </summary>
     public GraphicFrame():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the GraphicFrame class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -1083,21 +791,10 @@ if( 10 == namespaceId && "graphic" == name)
         private static readonly string[] eleTagNames = { "nvGraphicFramePr","xfrm","graphic" };
     private static readonly byte[] eleNamespaceIds = { 12,12,10 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Non-Visual Graphic Frame Properties.</para>
@@ -1108,14 +805,8 @@ if( 10 == namespaceId && "graphic" == name)
     /// </remark>
     public NonVisualGraphicFrameProperties NonVisualGraphicFrameProperties
     {
-        get 
-        {
-            return GetElement<NonVisualGraphicFrameProperties>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<NonVisualGraphicFrameProperties>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Graphic Frame Transform.</para>
@@ -1126,14 +817,8 @@ if( 10 == namespaceId && "graphic" == name)
     /// </remark>
     public Transform Transform
     {
-        get 
-        {
-            return GetElement<Transform>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<Transform>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Graphical Object.</para>
@@ -1144,14 +829,8 @@ if( 10 == namespaceId && "graphic" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Graphic Graphic
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Graphic>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>(2);
+        set => SetElement(2, value);
     }
 
 
@@ -1168,20 +847,13 @@ if( 0 == namespaceId && "fPublished" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<GraphicFrame>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<GraphicFrame>(deep);
 
-   
 }
 /// <summary>
 /// <para>Connection Shape.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:cxnSp.</para>
 /// </summary>
 /// <remarks>
@@ -1192,68 +864,31 @@ if( 0 == namespaceId && "fPublished" == name)
 ///<item><description>Style &lt;cdr:style></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(NonVisualConnectorShapeDrawingProperties))]
     [ChildElementInfo(typeof(ShapeProperties))]
     [ChildElementInfo(typeof(Style))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ConnectionShape : OpenXmlCompositeElement
 {
-    private const string tagName = "cxnSp";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10657;
+    /// <inheritdoc/>
+    public override string LocalName => "cxnSp";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    private static string[] attributeTagNames = { "macro","fPublished" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "macro","fPublished" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -1285,7 +920,7 @@ public partial class ConnectionShape : OpenXmlCompositeElement
     /// </summary>
     public ConnectionShape():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ConnectionShape class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -1332,21 +967,10 @@ if( 12 == namespaceId && "style" == name)
         private static readonly string[] eleTagNames = { "nvCxnSpPr","spPr","style" };
     private static readonly byte[] eleNamespaceIds = { 12,12,12 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Connector Non Visual Properties.</para>
@@ -1357,14 +981,8 @@ if( 12 == namespaceId && "style" == name)
     /// </remark>
     public NonVisualConnectorShapeDrawingProperties NonVisualConnectorShapeDrawingProperties
     {
-        get 
-        {
-            return GetElement<NonVisualConnectorShapeDrawingProperties>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<NonVisualConnectorShapeDrawingProperties>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Shape Properties.</para>
@@ -1375,14 +993,8 @@ if( 12 == namespaceId && "style" == name)
     /// </remark>
     public ShapeProperties ShapeProperties
     {
-        get 
-        {
-            return GetElement<ShapeProperties>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<ShapeProperties>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Connection Shape Style.</para>
@@ -1393,14 +1005,8 @@ if( 12 == namespaceId && "style" == name)
     /// </remark>
     public Style Style
     {
-        get 
-        {
-            return GetElement<Style>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<Style>(2);
+        set => SetElement(2, value);
     }
 
 
@@ -1417,20 +1023,13 @@ if( 0 == namespaceId && "fPublished" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ConnectionShape>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConnectionShape>(deep);
 
-   
 }
 /// <summary>
 /// <para>Defines the Picture Class.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:pic.</para>
 /// </summary>
 /// <remarks>
@@ -1442,69 +1041,32 @@ if( 0 == namespaceId && "fPublished" == name)
 ///<item><description>Style &lt;cdr:style></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(NonVisualPictureProperties))]
     [ChildElementInfo(typeof(BlipFill))]
     [ChildElementInfo(typeof(ShapeProperties))]
     [ChildElementInfo(typeof(Style))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Picture : OpenXmlCompositeElement
 {
-    private const string tagName = "pic";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10658;
+    /// <inheritdoc/>
+    public override string LocalName => "pic";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    private static string[] attributeTagNames = { "macro","fPublished" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "macro","fPublished" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -1536,7 +1098,7 @@ public partial class Picture : OpenXmlCompositeElement
     /// </summary>
     public Picture():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the Picture class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -1586,21 +1148,10 @@ if( 12 == namespaceId && "style" == name)
         private static readonly string[] eleTagNames = { "nvPicPr","blipFill","spPr","style" };
     private static readonly byte[] eleNamespaceIds = { 12,12,12,12 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Non-Visual Picture Properties.</para>
@@ -1611,14 +1162,8 @@ if( 12 == namespaceId && "style" == name)
     /// </remark>
     public NonVisualPictureProperties NonVisualPictureProperties
     {
-        get 
-        {
-            return GetElement<NonVisualPictureProperties>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<NonVisualPictureProperties>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Picture Fill.</para>
@@ -1629,14 +1174,8 @@ if( 12 == namespaceId && "style" == name)
     /// </remark>
     public BlipFill BlipFill
     {
-        get 
-        {
-            return GetElement<BlipFill>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<BlipFill>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> ShapeProperties.</para>
@@ -1647,14 +1186,8 @@ if( 12 == namespaceId && "style" == name)
     /// </remark>
     public ShapeProperties ShapeProperties
     {
-        get 
-        {
-            return GetElement<ShapeProperties>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<ShapeProperties>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> Style.</para>
@@ -1665,14 +1198,8 @@ if( 12 == namespaceId && "style" == name)
     /// </remark>
     public Style Style
     {
-        get 
-        {
-            return GetElement<Style>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<Style>(3);
+        set => SetElement(3, value);
     }
 
 
@@ -1689,20 +1216,13 @@ if( 0 == namespaceId && "fPublished" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Picture>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Picture>(deep);
 
-   
 }
 /// <summary>
 /// <para>Chart Non Visual Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:cNvPr.</para>
 /// </summary>
 /// <remarks>
@@ -1713,68 +1233,31 @@ if( 0 == namespaceId && "fPublished" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 {
-    private const string tagName = "cNvPr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10659;
+    /// <inheritdoc/>
+    public override string LocalName => "cNvPr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    private static string[] attributeTagNames = { "id","name","descr","hidden","title" };
-    private static byte[] attributeNamespaceIds = { 0,0,0,0,0 };
+    	private static readonly string[] attributeTagNames = { "id","name","descr","hidden","title" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -1839,7 +1322,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// </summary>
     public NonVisualDrawingProperties():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the NonVisualDrawingProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -1886,21 +1369,10 @@ if( 10 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "hlinkClick","hlinkHover","extLst" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> HyperlinkOnClick.</para>
@@ -1911,14 +1383,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> HyperlinkOnHover.</para>
@@ -1929,14 +1395,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> NonVisualDrawingPropertiesExtensionList.</para>
@@ -1947,14 +1407,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(2);
+        set => SetElement(2, value);
     }
 
 
@@ -1980,20 +1434,13 @@ if( 0 == namespaceId && "title" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<NonVisualDrawingProperties>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualDrawingProperties>(deep);
 
-   
 }
 /// <summary>
 /// <para>Non-Visual Shape Drawing Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:cNvSpPr.</para>
 /// </summary>
 /// <remarks>
@@ -2003,67 +1450,30 @@ if( 0 == namespaceId && "title" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapeLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
 {
-    private const string tagName = "cNvSpPr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10660;
+    /// <inheritdoc/>
+    public override string LocalName => "cNvSpPr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    private static string[] attributeTagNames = { "txBox" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "txBox" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -2084,7 +1494,7 @@ public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     /// </summary>
     public NonVisualShapeDrawingProperties():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the NonVisualShapeDrawingProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -2128,21 +1538,10 @@ if( 10 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "spLocks","extLst" };
     private static readonly byte[] eleNamespaceIds = { 10,10 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Shape Locks.</para>
@@ -2153,14 +1552,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.ShapeLocks ShapeLocks
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.ShapeLocks>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ShapeLocks>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -2171,14 +1564,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(1);
+        set => SetElement(1, value);
     }
 
 
@@ -2192,20 +1579,13 @@ if( 10 == namespaceId && "extLst" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<NonVisualShapeDrawingProperties>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualShapeDrawingProperties>(deep);
 
-   
 }
 /// <summary>
 /// <para>Non-Visual Shape Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:nvSpPr.</para>
 /// </summary>
 /// <remarks>
@@ -2215,51 +1595,22 @@ if( 10 == namespaceId && "extLst" == name)
 ///<item><description>NonVisualShapeDrawingProperties &lt;cdr:cNvSpPr></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(NonVisualDrawingProperties))]
     [ChildElementInfo(typeof(NonVisualShapeDrawingProperties))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NonVisualShapeProperties : OpenXmlCompositeElement
 {
-    private const string tagName = "nvSpPr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10661;
+    /// <inheritdoc/>
+    public override string LocalName => "nvSpPr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     
@@ -2270,7 +1621,7 @@ public partial class NonVisualShapeProperties : OpenXmlCompositeElement
     /// </summary>
     public NonVisualShapeProperties():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the NonVisualShapeProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -2314,21 +1665,10 @@ if( 12 == namespaceId && "cNvSpPr" == name)
         private static readonly string[] eleTagNames = { "cNvPr","cNvSpPr" };
     private static readonly byte[] eleNamespaceIds = { 12,12 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Chart Non Visual Properties.</para>
@@ -2339,14 +1679,8 @@ if( 12 == namespaceId && "cNvSpPr" == name)
     /// </remark>
     public NonVisualDrawingProperties NonVisualDrawingProperties
     {
-        get 
-        {
-            return GetElement<NonVisualDrawingProperties>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<NonVisualDrawingProperties>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Non-Visual Shape Drawing Properties.</para>
@@ -2357,32 +1691,19 @@ if( 12 == namespaceId && "cNvSpPr" == name)
     /// </remark>
     public NonVisualShapeDrawingProperties NonVisualShapeDrawingProperties
     {
-        get 
-        {
-            return GetElement<NonVisualShapeDrawingProperties>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<NonVisualShapeDrawingProperties>(1);
+        set => SetElement(1, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<NonVisualShapeProperties>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualShapeProperties>(deep);
 
-   
 }
 /// <summary>
 /// <para>Shape Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:spPr.</para>
 /// </summary>
 /// <remarks>
@@ -2405,7 +1726,7 @@ if( 12 == namespaceId && "cNvSpPr" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Transform2D))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry))]
@@ -2421,64 +1742,27 @@ if( 12 == namespaceId && "cNvSpPr" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShapeProperties : OpenXmlCompositeElement
 {
-    private const string tagName = "spPr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10662;
+    /// <inheritdoc/>
+    public override string LocalName => "spPr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    private static string[] attributeTagNames = { "bwMode" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "bwMode" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -2499,7 +1783,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// </summary>
     public ShapeProperties():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ShapeProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -2582,21 +1866,10 @@ if( 10 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "xfrm","custGeom","prstGeom","noFill","solidFill","gradFill","blipFill","pattFill","grpFill","ln","effectLst","effectDag","scene3d","sp3d","extLst" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10,10,10,10,10,10,10,10 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> 2D Transform for Individual Objects.</para>
@@ -2607,14 +1880,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(0);
+        set => SetElement(0, value);
     }
 
 
@@ -2628,20 +1895,13 @@ if( 10 == namespaceId && "extLst" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ShapeProperties>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeProperties>(deep);
 
-   
 }
 /// <summary>
 /// <para>Shape Style.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:style.</para>
 /// </summary>
 /// <remarks>
@@ -2653,53 +1913,24 @@ if( 10 == namespaceId && "extLst" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.FontReference &lt;a:fontRef></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.LineReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FillReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FontReference))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Style : OpenXmlCompositeElement
 {
-    private const string tagName = "style";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10663;
+    /// <inheritdoc/>
+    public override string LocalName => "style";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     
@@ -2710,7 +1941,7 @@ public partial class Style : OpenXmlCompositeElement
     /// </summary>
     public Style():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the Style class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -2760,21 +1991,10 @@ if( 10 == namespaceId && "fontRef" == name)
         private static readonly string[] eleTagNames = { "lnRef","fillRef","effectRef","fontRef" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> LineReference.</para>
@@ -2785,14 +2005,8 @@ if( 10 == namespaceId && "fontRef" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.LineReference LineReference
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.LineReference>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> FillReference.</para>
@@ -2803,14 +2017,8 @@ if( 10 == namespaceId && "fontRef" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.FillReference FillReference
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.FillReference>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> EffectReference.</para>
@@ -2821,14 +2029,8 @@ if( 10 == namespaceId && "fontRef" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.EffectReference EffectReference
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> Font Reference.</para>
@@ -2839,32 +2041,19 @@ if( 10 == namespaceId && "fontRef" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.FontReference FontReference
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.FontReference>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>(3);
+        set => SetElement(3, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Style>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Style>(deep);
 
-   
 }
 /// <summary>
 /// <para>Shape Text Body.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:txBody.</para>
 /// </summary>
 /// <remarks>
@@ -2875,52 +2064,23 @@ if( 10 == namespaceId && "fontRef" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.Paragraph &lt;a:p></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ListStyle))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Paragraph))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TextBody : OpenXmlCompositeElement
 {
-    private const string tagName = "txBody";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10664;
+    /// <inheritdoc/>
+    public override string LocalName => "txBody";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     
@@ -2931,7 +2091,7 @@ public partial class TextBody : OpenXmlCompositeElement
     /// </summary>
     public TextBody():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the TextBody class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -2978,21 +2138,10 @@ if( 10 == namespaceId && "p" == name)
         private static readonly string[] eleTagNames = { "bodyPr","lstStyle","p" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Body Properties.</para>
@@ -3003,14 +2152,8 @@ if( 10 == namespaceId && "p" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.BodyProperties BodyProperties
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Text List Styles.</para>
@@ -3021,32 +2164,19 @@ if( 10 == namespaceId && "p" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.ListStyle ListStyle
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>(1);
+        set => SetElement(1, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<TextBody>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextBody>(deep);
 
-   
 }
 /// <summary>
 /// <para>Non-Visual Connection Shape Drawing Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:cNvCxnSpPr.</para>
 /// </summary>
 /// <remarks>
@@ -3058,53 +2188,24 @@ if( 10 == namespaceId && "p" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.StartConnection))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EndConnection))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElement
 {
-    private const string tagName = "cNvCxnSpPr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10665;
+    /// <inheritdoc/>
+    public override string LocalName => "cNvCxnSpPr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     
@@ -3115,7 +2216,7 @@ public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElemen
     /// </summary>
     public NonVisualConnectionShapeProperties():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the NonVisualConnectionShapeProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -3165,21 +2266,10 @@ if( 10 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "cxnSpLocks","stCxn","endCxn","extLst" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Connection Shape Locks.</para>
@@ -3190,14 +2280,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks ConnectionShapeLocks
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Connection Start.</para>
@@ -3208,14 +2292,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.StartConnection StartConnection
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.StartConnection>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.StartConnection>(1);
+        set => SetElement(1, value);
     }
     /// <summary>
     /// <para> Connection End.</para>
@@ -3226,14 +2304,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.EndConnection EndConnection
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.EndConnection>(2);
-        }
-        set
-        {
-            SetElement(2, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.EndConnection>(2);
+        set => SetElement(2, value);
     }
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -3244,32 +2316,19 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(3);
-        }
-        set
-        {
-            SetElement(3, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(3);
+        set => SetElement(3, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<NonVisualConnectionShapeProperties>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualConnectionShapeProperties>(deep);
 
-   
 }
 /// <summary>
 /// <para>Connector Non Visual Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:nvCxnSpPr.</para>
 /// </summary>
 /// <remarks>
@@ -3279,51 +2338,22 @@ if( 10 == namespaceId && "extLst" == name)
 ///<item><description>NonVisualConnectionShapeProperties &lt;cdr:cNvCxnSpPr></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(NonVisualDrawingProperties))]
     [ChildElementInfo(typeof(NonVisualConnectionShapeProperties))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlCompositeElement
 {
-    private const string tagName = "nvCxnSpPr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10666;
+    /// <inheritdoc/>
+    public override string LocalName => "nvCxnSpPr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     
@@ -3334,7 +2364,7 @@ public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlComposite
     /// </summary>
     public NonVisualConnectorShapeDrawingProperties():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the NonVisualConnectorShapeDrawingProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -3378,21 +2408,10 @@ if( 12 == namespaceId && "cNvCxnSpPr" == name)
         private static readonly string[] eleTagNames = { "cNvPr","cNvCxnSpPr" };
     private static readonly byte[] eleNamespaceIds = { 12,12 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Chart Non Visual Properties.</para>
@@ -3403,14 +2422,8 @@ if( 12 == namespaceId && "cNvCxnSpPr" == name)
     /// </remark>
     public NonVisualDrawingProperties NonVisualDrawingProperties
     {
-        get 
-        {
-            return GetElement<NonVisualDrawingProperties>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<NonVisualDrawingProperties>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Non-Visual Connection Shape Drawing Properties.</para>
@@ -3421,32 +2434,19 @@ if( 12 == namespaceId && "cNvCxnSpPr" == name)
     /// </remark>
     public NonVisualConnectionShapeProperties NonVisualConnectionShapeProperties
     {
-        get 
-        {
-            return GetElement<NonVisualConnectionShapeProperties>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<NonVisualConnectionShapeProperties>(1);
+        set => SetElement(1, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<NonVisualConnectorShapeDrawingProperties>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualConnectorShapeDrawingProperties>(deep);
 
-   
 }
 /// <summary>
 /// <para>Non-Visual Picture Drawing Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:cNvPicPr.</para>
 /// </summary>
 /// <remarks>
@@ -3456,67 +2456,30 @@ if( 12 == namespaceId && "cNvCxnSpPr" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PictureLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
 {
-    private const string tagName = "cNvPicPr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10667;
+    /// <inheritdoc/>
+    public override string LocalName => "cNvPicPr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    private static string[] attributeTagNames = { "preferRelativeResize" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "preferRelativeResize" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -3537,7 +2500,7 @@ public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     /// </summary>
     public NonVisualPictureDrawingProperties():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the NonVisualPictureDrawingProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -3581,21 +2544,10 @@ if( 10 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "picLocks","extLst" };
     private static readonly byte[] eleNamespaceIds = { 10,10 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> PictureLocks.</para>
@@ -3606,14 +2558,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.PictureLocks PictureLocks
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.PictureLocks>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.PictureLocks>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> NonVisualPicturePropertiesExtensionList.</para>
@@ -3624,14 +2570,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList NonVisualPicturePropertiesExtensionList
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>(1);
+        set => SetElement(1, value);
     }
 
 
@@ -3645,20 +2585,13 @@ if( 10 == namespaceId && "extLst" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<NonVisualPictureDrawingProperties>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualPictureDrawingProperties>(deep);
 
-   
 }
 /// <summary>
 /// <para>Non-Visual Picture Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:nvPicPr.</para>
 /// </summary>
 /// <remarks>
@@ -3668,51 +2601,22 @@ if( 10 == namespaceId && "extLst" == name)
 ///<item><description>NonVisualPictureDrawingProperties &lt;cdr:cNvPicPr></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(NonVisualDrawingProperties))]
     [ChildElementInfo(typeof(NonVisualPictureDrawingProperties))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NonVisualPictureProperties : OpenXmlCompositeElement
 {
-    private const string tagName = "nvPicPr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10668;
+    /// <inheritdoc/>
+    public override string LocalName => "nvPicPr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     
@@ -3723,7 +2627,7 @@ public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     /// </summary>
     public NonVisualPictureProperties():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the NonVisualPictureProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -3767,21 +2671,10 @@ if( 12 == namespaceId && "cNvPicPr" == name)
         private static readonly string[] eleTagNames = { "cNvPr","cNvPicPr" };
     private static readonly byte[] eleNamespaceIds = { 12,12 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> NonVisualDrawingProperties.</para>
@@ -3792,14 +2685,8 @@ if( 12 == namespaceId && "cNvPicPr" == name)
     /// </remark>
     public NonVisualDrawingProperties NonVisualDrawingProperties
     {
-        get 
-        {
-            return GetElement<NonVisualDrawingProperties>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<NonVisualDrawingProperties>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Non-Visual Picture Drawing Properties.</para>
@@ -3810,32 +2697,19 @@ if( 12 == namespaceId && "cNvPicPr" == name)
     /// </remark>
     public NonVisualPictureDrawingProperties NonVisualPictureDrawingProperties
     {
-        get 
-        {
-            return GetElement<NonVisualPictureDrawingProperties>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<NonVisualPictureDrawingProperties>(1);
+        set => SetElement(1, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<NonVisualPictureProperties>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualPictureProperties>(deep);
 
-   
 }
 /// <summary>
 /// <para>Picture Fill.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:blipFill.</para>
 /// </summary>
 /// <remarks>
@@ -3847,69 +2721,32 @@ if( 12 == namespaceId && "cNvPicPr" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.Stretch &lt;a:stretch></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Blip))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SourceRectangle))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Tile))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Stretch))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BlipFill : OpenXmlCompositeElement
 {
-    private const string tagName = "blipFill";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10669;
+    /// <inheritdoc/>
+    public override string LocalName => "blipFill";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    private static string[] attributeTagNames = { "dpi","rotWithShape" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "dpi","rotWithShape" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -3941,7 +2778,7 @@ public partial class BlipFill : OpenXmlCompositeElement
     /// </summary>
     public BlipFill():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the BlipFill class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -3991,21 +2828,10 @@ if( 10 == namespaceId && "stretch" == name)
         private static readonly string[] eleTagNames = { "blip","srcRect","tile","stretch" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Blip.</para>
@@ -4016,14 +2842,8 @@ if( 10 == namespaceId && "stretch" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Blip Blip
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Blip>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Blip>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Source Rectangle.</para>
@@ -4034,14 +2854,8 @@ if( 10 == namespaceId && "stretch" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.SourceRectangle SourceRectangle
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.SourceRectangle>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.SourceRectangle>(1);
+        set => SetElement(1, value);
     }
 
 
@@ -4058,20 +2872,13 @@ if( 0 == namespaceId && "rotWithShape" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<BlipFill>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<BlipFill>(deep);
 
-   
 }
 /// <summary>
 /// <para>Non-Visual Graphic Frame Drawing Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:cNvGraphicFramePr.</para>
 /// </summary>
 /// <remarks>
@@ -4081,51 +2888,22 @@ if( 0 == namespaceId && "rotWithShape" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement
 {
-    private const string tagName = "cNvGraphicFramePr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10670;
+    /// <inheritdoc/>
+    public override string LocalName => "cNvGraphicFramePr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     
@@ -4136,7 +2914,7 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
     /// </summary>
     public NonVisualGraphicFrameDrawingProperties():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the NonVisualGraphicFrameDrawingProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -4180,21 +2958,10 @@ if( 10 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "graphicFrameLocks","extLst" };
     private static readonly byte[] eleNamespaceIds = { 10,10 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Graphic Frame Locks.</para>
@@ -4205,14 +2972,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.GraphicFrameLocks GraphicFrameLocks
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -4223,32 +2984,19 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(1);
+        set => SetElement(1, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<NonVisualGraphicFrameDrawingProperties>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualGraphicFrameDrawingProperties>(deep);
 
-   
 }
 /// <summary>
 /// <para>Non-Visual Graphic Frame Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:nvGraphicFramePr.</para>
 /// </summary>
 /// <remarks>
@@ -4258,51 +3006,22 @@ if( 10 == namespaceId && "extLst" == name)
 ///<item><description>NonVisualGraphicFrameDrawingProperties &lt;cdr:cNvGraphicFramePr></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(NonVisualDrawingProperties))]
     [ChildElementInfo(typeof(NonVisualGraphicFrameDrawingProperties))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
 {
-    private const string tagName = "nvGraphicFramePr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10671;
+    /// <inheritdoc/>
+    public override string LocalName => "nvGraphicFramePr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     
@@ -4313,7 +3032,7 @@ public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     /// </summary>
     public NonVisualGraphicFrameProperties():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the NonVisualGraphicFrameProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -4357,21 +3076,10 @@ if( 12 == namespaceId && "cNvGraphicFramePr" == name)
         private static readonly string[] eleTagNames = { "cNvPr","cNvGraphicFramePr" };
     private static readonly byte[] eleNamespaceIds = { 12,12 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Non-Visual Drawing Properties.</para>
@@ -4382,14 +3090,8 @@ if( 12 == namespaceId && "cNvGraphicFramePr" == name)
     /// </remark>
     public NonVisualDrawingProperties NonVisualDrawingProperties
     {
-        get 
-        {
-            return GetElement<NonVisualDrawingProperties>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<NonVisualDrawingProperties>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Non-Visual Graphic Frame Drawing Properties.</para>
@@ -4400,32 +3102,19 @@ if( 12 == namespaceId && "cNvGraphicFramePr" == name)
     /// </remark>
     public NonVisualGraphicFrameDrawingProperties NonVisualGraphicFrameDrawingProperties
     {
-        get 
-        {
-            return GetElement<NonVisualGraphicFrameDrawingProperties>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<NonVisualGraphicFrameDrawingProperties>(1);
+        set => SetElement(1, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<NonVisualGraphicFrameProperties>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualGraphicFrameProperties>(deep);
 
-   
 }
 /// <summary>
 /// <para>Graphic Frame Transform.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:xfrm.</para>
 /// </summary>
 /// <remarks>
@@ -4435,67 +3124,30 @@ if( 12 == namespaceId && "cNvGraphicFramePr" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.Extents &lt;a:ext></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Offset))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extents))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Transform : OpenXmlCompositeElement
 {
-    private const string tagName = "xfrm";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10672;
+    /// <inheritdoc/>
+    public override string LocalName => "xfrm";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    private static string[] attributeTagNames = { "rot","flipH","flipV" };
-    private static byte[] attributeNamespaceIds = { 0,0,0 };
+    	private static readonly string[] attributeTagNames = { "rot","flipH","flipV" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -4538,7 +3190,7 @@ public partial class Transform : OpenXmlCompositeElement
     /// </summary>
     public Transform():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the Transform class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -4582,21 +3234,10 @@ if( 10 == namespaceId && "ext" == name)
         private static readonly string[] eleTagNames = { "off","ext" };
     private static readonly byte[] eleNamespaceIds = { 10,10 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Offset.</para>
@@ -4607,14 +3248,8 @@ if( 10 == namespaceId && "ext" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Offset Offset
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Offset>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Extents.</para>
@@ -4625,14 +3260,8 @@ if( 10 == namespaceId && "ext" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.Extents Extents
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.Extents>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>(1);
+        set => SetElement(1, value);
     }
 
 
@@ -4652,20 +3281,13 @@ if( 0 == namespaceId && "flipV" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Transform>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Transform>(deep);
 
-   
 }
 /// <summary>
 /// <para>Non-Visual Group Shape Drawing Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:cNvGrpSpPr.</para>
 /// </summary>
 /// <remarks>
@@ -4675,51 +3297,22 @@ if( 0 == namespaceId && "flipV" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupShapeLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElement
 {
-    private const string tagName = "cNvGrpSpPr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10673;
+    /// <inheritdoc/>
+    public override string LocalName => "cNvGrpSpPr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     
@@ -4730,7 +3323,7 @@ public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElem
     /// </summary>
     public NonVisualGroupShapeDrawingProperties():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the NonVisualGroupShapeDrawingProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -4774,21 +3367,10 @@ if( 10 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "grpSpLocks","extLst" };
     private static readonly byte[] eleNamespaceIds = { 10,10 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> GroupShapeLocks.</para>
@@ -4799,14 +3381,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.GroupShapeLocks GroupShapeLocks
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> NonVisualGroupDrawingShapePropsExtensionList.</para>
@@ -4817,77 +3393,35 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList NonVisualGroupDrawingShapePropsExtensionList
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>(1);
+        set => SetElement(1, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<NonVisualGroupShapeDrawingProperties>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualGroupShapeDrawingProperties>(deep);
 
-   
 }
 /// <summary>
 /// <para>Relative X Coordinate.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:x.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class XPosition : OpenXmlLeafTextElement
 {
-    private const string tagName = "x";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10674;
+    /// <inheritdoc/>
+    public override string LocalName => "x";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
@@ -4895,7 +3429,7 @@ public partial class XPosition : OpenXmlLeafTextElement
     /// </summary>
     public XPosition():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the XPosition class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -4905,69 +3439,33 @@ public partial class XPosition : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new DoubleValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<XPosition>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<XPosition>(deep);
 
 }
 /// <summary>
 /// <para>Relative Y Coordinate.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:y.</para>
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class YPosition : OpenXmlLeafTextElement
 {
-    private const string tagName = "y";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10675;
+    /// <inheritdoc/>
+    public override string LocalName => "y";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
@@ -4975,7 +3473,7 @@ public partial class YPosition : OpenXmlLeafTextElement
     /// </summary>
     public YPosition():base(){}
     
-           /// <summary>
+        /// <summary>
     /// Initializes a new instance of the YPosition class with the specified text content.
     /// </summary>
     /// <param name="text">Specifies the text content of the element.</param>
@@ -4985,24 +3483,17 @@ public partial class YPosition : OpenXmlLeafTextElement
     
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
-		
 		return new DoubleValue(){ InnerText = text };
     }
     
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<YPosition>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<YPosition>(deep);
 
 }
 /// <summary>
 /// <para>Starting Anchor Point.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:from.</para>
 /// </summary>
 /// <remarks>
@@ -5014,54 +3505,25 @@ public partial class YPosition : OpenXmlLeafTextElement
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FromAnchor : MarkerType
 {
-    private const string tagName = "from";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10676;
+    /// <inheritdoc/>
+    public override string LocalName => "from";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
     /// Initializes a new instance of the FromAnchor class.
     /// </summary>
     public FromAnchor():base(){}
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the FromAnchor class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -5088,19 +3550,13 @@ public partial class FromAnchor : MarkerType
     }
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<FromAnchor>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<FromAnchor>(deep);
 
 }
 /// <summary>
 /// <para>Ending Anchor Point.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:to.</para>
 /// </summary>
 /// <remarks>
@@ -5112,54 +3568,25 @@ public partial class FromAnchor : MarkerType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ToAnchor : MarkerType
 {
-    private const string tagName = "to";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10677;
+    /// <inheritdoc/>
+    public override string LocalName => "to";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     /// <summary>
     /// Initializes a new instance of the ToAnchor class.
     /// </summary>
     public ToAnchor():base(){}
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the ToAnchor class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -5186,15 +3613,8 @@ public partial class ToAnchor : MarkerType
     }
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<ToAnchor>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<ToAnchor>(deep);
 
 }
 /// <summary>
@@ -5231,21 +3651,10 @@ if( 12 == namespaceId && "y" == name)
         private static readonly string[] eleTagNames = { "x","y" };
     private static readonly byte[] eleNamespaceIds = { 12,12 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Relative X Coordinate.</para>
@@ -5256,14 +3665,8 @@ if( 12 == namespaceId && "y" == name)
     /// </remark>
     public XPosition XPosition
     {
-        get 
-        {
-            return GetElement<XPosition>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<XPosition>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Relative Y Coordinate.</para>
@@ -5274,14 +3677,8 @@ if( 12 == namespaceId && "y" == name)
     /// </remark>
     public YPosition YPosition
     {
-        get 
-        {
-            return GetElement<YPosition>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<YPosition>(1);
+        set => SetElement(1, value);
     }
 
 
@@ -5292,7 +3689,7 @@ if( 12 == namespaceId && "y" == name)
     /// </summary>
     protected MarkerType(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the MarkerType class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -5322,67 +3719,31 @@ if( 12 == namespaceId && "y" == name)
 }
 /// <summary>
 /// <para>Shape Extent.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:ext.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Extent : OpenXmlLeafElement
 {
-    private const string tagName = "ext";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10678;
+    /// <inheritdoc/>
+    public override string LocalName => "ext";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    private static string[] attributeTagNames = { "cx","cy" };
-    private static byte[] attributeNamespaceIds = { 0,0 };
+    	private static readonly string[] attributeTagNames = { "cx","cy" };
+    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -5432,20 +3793,13 @@ if( 0 == namespaceId && "cy" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<Extent>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<Extent>(deep);
 
-   
 }
 /// <summary>
 /// <para>Non-Visual Group Shape Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:nvGrpSpPr.</para>
 /// </summary>
 /// <remarks>
@@ -5455,51 +3809,22 @@ if( 0 == namespaceId && "cy" == name)
 ///<item><description>NonVisualGroupShapeDrawingProperties &lt;cdr:cNvGrpSpPr></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(NonVisualDrawingProperties))]
     [ChildElementInfo(typeof(NonVisualGroupShapeDrawingProperties))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
 {
-    private const string tagName = "nvGrpSpPr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10679;
+    /// <inheritdoc/>
+    public override string LocalName => "nvGrpSpPr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
     
@@ -5510,7 +3835,7 @@ public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
     /// </summary>
     public NonVisualGroupShapeProperties():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the NonVisualGroupShapeProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -5554,21 +3879,10 @@ if( 12 == namespaceId && "cNvGrpSpPr" == name)
         private static readonly string[] eleTagNames = { "cNvPr","cNvGrpSpPr" };
     private static readonly byte[] eleNamespaceIds = { 12,12 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Chart Non Visual Properties.</para>
@@ -5579,14 +3893,8 @@ if( 12 == namespaceId && "cNvGrpSpPr" == name)
     /// </remark>
     public NonVisualDrawingProperties NonVisualDrawingProperties
     {
-        get 
-        {
-            return GetElement<NonVisualDrawingProperties>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<NonVisualDrawingProperties>(0);
+        set => SetElement(0, value);
     }
     /// <summary>
     /// <para> Non-Visual Group Shape Drawing Properties.</para>
@@ -5597,32 +3905,19 @@ if( 12 == namespaceId && "cNvGrpSpPr" == name)
     /// </remark>
     public NonVisualGroupShapeDrawingProperties NonVisualGroupShapeDrawingProperties
     {
-        get 
-        {
-            return GetElement<NonVisualGroupShapeDrawingProperties>(1);
-        }
-        set
-        {
-            SetElement(1, value);
-        }
+        get => GetElement<NonVisualGroupShapeDrawingProperties>(1);
+        set => SetElement(1, value);
     }
 
 
     
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<NonVisualGroupShapeProperties>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualGroupShapeProperties>(deep);
 
-   
 }
 /// <summary>
 /// <para>Group Shape Properties.</para>
+/// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:grpSpPr.</para>
 /// </summary>
 /// <remarks>
@@ -5641,7 +3936,7 @@ if( 12 == namespaceId && "cNvGrpSpPr" == name)
 ///<item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.TransformGroup))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NoFill))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SolidFill))]
@@ -5653,64 +3948,27 @@ if( 12 == namespaceId && "cNvGrpSpPr" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+[OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class GroupShapeProperties : OpenXmlCompositeElement
 {
-    private const string tagName = "grpSpPr";
-    /// <summary>
-    /// Gets the local name of the element.
-    /// </summary>
-    public override string LocalName
-    {
-        get { return tagName; }
-    }
-    
-    private const byte tagNsId = 12;
-    internal override byte NamespaceId
-    {
-        get { return tagNsId; }
-    }
-    
     internal const int ElementTypeIdConst = 10680;
+    /// <inheritdoc/>
+    public override string LocalName => "grpSpPr";
     
-    /// <summary>
-    /// Gets the type ID of the element.
-    /// </summary>
-    internal override int ElementTypeId
-    {
-		get { return ElementTypeIdConst; }
-    }
+    internal override byte NamespaceId => 12;
     
+    internal override int ElementTypeId => ElementTypeIdConst;
    
-    /// <summary>
-    /// Whether this element is available in a specific version of Office Application.
-    /// </summary>
-    /// <param name="version">The Office file format version.</param>
-    /// <returns>Returns true if the element is defined in the specified version.</returns>
-    internal override bool IsInVersion(FileFormatVersions version)
-    {
-		if((15 & (int)version) > 0)
-		{
-			return true;
-		}
-		return false;
-    }
+    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    private static string[] attributeTagNames = { "bwMode" };
-    private static byte[] attributeNamespaceIds = { 0 };
+    	private static readonly string[] attributeTagNames = { "bwMode" };
+    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames {
-        get{
-            return attributeTagNames;
-            }
-    }
+    internal override string[] AttributeTagNames => attributeTagNames;
     
-    internal override byte[] AttributeNamespaceIds {
-        get{
-            return attributeNamespaceIds;
-            }
-    }
+    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
     
 
     
@@ -5731,7 +3989,7 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
     /// </summary>
     public GroupShapeProperties():base(){}
     
-            /// <summary>
+        /// <summary>
     ///Initializes a new instance of the GroupShapeProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
@@ -5802,21 +4060,10 @@ if( 10 == namespaceId && "extLst" == name)
         private static readonly string[] eleTagNames = { "xfrm","noFill","solidFill","gradFill","blipFill","pattFill","grpFill","effectLst","effectDag","scene3d","extLst" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10,10,10,10 };
     
-    internal override string[] ElementTagNames {
-        get{
-            return eleTagNames;
-            }
-    }
+    internal override string[] ElementTagNames => eleTagNames;
     
-    internal override byte[] ElementNamespaceIds {
-        get{
-            return eleNamespaceIds;
-            }
-    }
-    internal override OpenXmlCompositeType OpenXmlCompositeType
-    {
-        get {return OpenXmlCompositeType.OneSequence;}
-    }
+    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
+    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> 2D Transform for Grouped Objects.</para>
@@ -5827,14 +4074,8 @@ if( 10 == namespaceId && "extLst" == name)
     /// </remark>
     public DocumentFormat.OpenXml.Drawing.TransformGroup TransformGroup
     {
-        get 
-        {
-            return GetElement<DocumentFormat.OpenXml.Drawing.TransformGroup>(0);
-        }
-        set
-        {
-            SetElement(0, value);
-        }
+        get => GetElement<DocumentFormat.OpenXml.Drawing.TransformGroup>(0);
+        set => SetElement(0, value);
     }
 
 
@@ -5848,17 +4089,9 @@ if( 10 == namespaceId && "extLst" == name)
     return base.AttributeFactory(namespaceId, name);
 }
 
-        /// <summary>
-    /// Creates a duplicate of this node.  
-    /// </summary>
-    /// <param name="deep">True to recursively clone the subtree under the specified node; false to clone only the node itself. </param>
-    /// <returns>Returns the cloned node. </returns>
-    public override OpenXmlElement CloneNode(bool deep)
-    {
-        return CloneImp<GroupShapeProperties>(deep);
-    }
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<GroupShapeProperties>(deep);
 
-   
 }
 }
  
