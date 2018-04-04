@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Tests
             var acFallback = new AlternateContentFallback();
             var ac = element.AppendChild(new AlternateContent());
             var errors = validator.Validate(ac);
-            // Error case: must have one choice, can not have AlternateContent as di
+            // Error case: must have one choice, can not have AlternateContent as ID
             Assert.Single(errors);
             Assert.Equal("Sch_IncompleteContentExpectingComplex", errors[0].Id);
 

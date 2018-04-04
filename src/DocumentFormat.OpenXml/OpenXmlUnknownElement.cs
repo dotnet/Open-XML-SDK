@@ -9,14 +9,13 @@ using System.Xml;
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
-    /// Represents elements that are not defined in the Ecma Office Open XML.
+    /// Represents elements that are not defined in the Office Open XML ECMA standard.
     /// </summary>
     public class OpenXmlUnknownElement : OpenXmlCompositeElement
     {
         private string _namespaceUri;
         private string _tagName;
         private string _prefix;
-        // int _attributeTotal;
         private string _text;
 
         /// <summary>
@@ -29,11 +28,6 @@ namespace DocumentFormat.OpenXml
             _prefix = string.Empty;
             _namespaceUri = string.Empty;
         }
-
-        //protected OpenXmlUnknownElement(string innerXml)
-        //    : base(innerXml)
-        //{
-        //}
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlUnknownElement class using
@@ -117,7 +111,7 @@ namespace DocumentFormat.OpenXml
             TextReader stringReader = new StringReader(outerXml);
             using (XmlReader xmlReader = XmlConvertingReaderFactory.Create(stringReader, OpenXmlElementContext.CreateDefaultXmlReaderSettings()))
             {
-                do // O15:#3024890, Skip the leading whitespaces. OpenXmUnknownlElement ignores the Whitespace NodeType.
+                do // O15:#3024890, Skip the leading whitespace. OpenXmUnknownlElement ignores the Whitespace NodeType.
                 {
                     // Fix bug #484153.
                     if (xmlReader.Read() && xmlReader.NodeType == XmlNodeType.Element)

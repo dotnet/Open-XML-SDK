@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Tests.TimeLine
         private const string timelineStyleName3 = "TimeSlicerStyleLight3";
 
         /// <summary>
-        /// URI attribute value of PresentationExtension.(Parent of TimelineStyles elemenet)
+        /// URI attribute value of PresentationExtension.(Parent of TimelineStyles element)
         /// </summary>
         private readonly string _stylesheetExtensionUri;
 

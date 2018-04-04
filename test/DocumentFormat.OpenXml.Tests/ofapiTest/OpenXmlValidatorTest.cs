@@ -1735,14 +1735,14 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
-            Assert.EndsWith(" The actual length according to datatype 'string' is not equal to the specified length. The expected length is 12.", actual.First().Description);
+            Assert.EndsWith(" The actual length according to data type 'string' is not equal to the specified length. The expected length is 12.", actual.First().Description);
 
             element.Val = "0101010101010";
             actual = O12Validator.Validate(element);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
-            Assert.EndsWith(" The actual length according to datatype 'string' is not equal to the specified length. The expected length is 12.", actual.First().Description);
+            Assert.EndsWith(" The actual length according to data type 'string' is not equal to the specified length. The expected length is 12.", actual.First().Description);
 
             // pattern invalid
             element.Val = "010101010102";
@@ -1755,10 +1755,10 @@ namespace DocumentFormat.OpenXml.Tests
             // pattern invalid
             element.Val = "invalid";
             actual = O12Validator.Validate(element);
-            Assert.Equal(2, actual.Count()); // both pattern and lenght are incorrect.
+            Assert.Equal(2, actual.Count()); // both pattern and length are incorrect.
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
-            Assert.EndsWith(" The actual length according to datatype 'string' is not equal to the specified length. The expected length is 12.", actual.First().Description);
+            Assert.EndsWith(" The actual length according to data type 'string' is not equal to the specified length. The expected length is 12.", actual.First().Description);
 
             Assert.Equal(ValidationErrorType.Schema, actual.Last().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.Last().Id);
@@ -1806,7 +1806,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
-            Assert.EndsWith(" The actual length according to datatype 'string' is greater than the MaxLength value. The length must be smaller than or equal to 255.", actual.First().Description);
+            Assert.EndsWith(" The actual length according to data type 'string' is greater than the MaxLength value. The length must be smaller than or equal to 255.", actual.First().Description);
         }
 
         /// <summary>
@@ -2059,7 +2059,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
-            Assert.EndsWith(" The actual length according to datatype 'hexBinary' is not equal to the specified length. The expected length is 10.", actual.First().Description);
+            Assert.EndsWith(" The actual length according to data type 'hexBinary' is not equal to the specified length. The expected length is 10.", actual.First().Description);
 
             // hexBinary must contain an even number of characters. See bug #648390
             element.Val = "ABCDEFabcdef123456789";
@@ -2075,7 +2075,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
-            Assert.EndsWith(" The actual length according to datatype 'hexBinary' is not equal to the specified length. The expected length is 10.", actual.First().Description);
+            Assert.EndsWith(" The actual length according to data type 'hexBinary' is not equal to the specified length. The expected length is 10.", actual.First().Description);
 
             // invalid 'X'
             element.Val.InnerText = "ABCDEFabcdef1234567X";
@@ -2927,12 +2927,12 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     IEnumerable<ValidationErrorInfo> actual;
                     actual = O12Validator.Validate(wordTestDocument);
-                    // There are Office2010 elements and attributes in the doucment, so there are should validation errors.
-                    Assert.Equal(34, actual.Count()); // The value 'actual' should contain 34 validtion error including 'doNotEmbedSmartTags' in the test document.
+                    // There are Office2010 elements and attributes in the document, so there are should validation errors.
+                    Assert.Equal(34, actual.Count()); // The value 'actual' should contain 34 validation error including 'doNotEmbedSmartTags' in the test document.
 
                     // Office2010
                     actual = O14Validator.Validate(wordTestDocument);
-                    Assert.Single(actual); // The value 'actual' should contain one validtion error for 'doNotEmbedSmartTags' in the test document.
+                    Assert.Single(actual); // The value 'actual' should contain one validation error for 'doNotEmbedSmartTags' in the test document.
                 }
             }
         }
@@ -2948,11 +2948,11 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 // use stream
                 var o12actual = O12Validator.Validate(pDoc);
-                Assert.Equal(109, o12actual.Count()); // The value 'actual' should contain 109 validtion errors for 'smtClean' in the test document.
+                Assert.Equal(109, o12actual.Count()); // The value 'actual' should contain 109 validation errors for 'smtClean' in the test document.
 
                 // Office2010
                 var o14actual = O14Validator.Validate(pDoc);
-                Assert.Equal(109, o14actual.Count()); // The value 'actual' should contain 109 validtion errors for 'smtClean' in the test document.
+                Assert.Equal(109, o14actual.Count()); // The value 'actual' should contain 109 validation errors for 'smtClean' in the test document.
             }
         }
 
@@ -3853,7 +3853,7 @@ namespace DocumentFormat.OpenXml.Tests
                     IEnumerable<ValidationErrorInfo> actual;
                     // Office2010
                     actual = O14Validator.Validate(wordTestDocument);
-                    Assert.Single(actual); // The value 'actual' should contain one validtion error for 'doNotEmbedSmartTags' in the test document.
+                    Assert.Single(actual); // The value 'actual' should contain one validation error for 'doNotEmbedSmartTags' in the test document.
 
                     // the following line should throw exception.
                     Assert.Throws<System.InvalidOperationException>(() =>

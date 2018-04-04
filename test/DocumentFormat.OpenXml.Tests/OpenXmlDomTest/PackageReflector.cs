@@ -312,7 +312,7 @@ namespace DocumentFormat.OpenXml.Tests
             var mg = GetMethodInfo(parentType, prefix, matchMethod, matchParams, matchReturn);
             if (null == mg)
             {
-                Log.Warning("Specifed method: {0} NOT found on {1}", prefix, parentType);
+                Log.Warning("Specified method: {0} NOT found on {1}", prefix, parentType);
                 return null;
             }
             else
@@ -344,7 +344,7 @@ namespace DocumentFormat.OpenXml.Tests
             var mng = GetMethodInfo(parentType, prefix, matchMethod, matchParams, matchReturn);
             if (null == mng)
             {
-                Log.Warning("Specifed method: {0} NOT found on {1}", prefix, parentType);
+                Log.Warning("Specified method: {0} NOT found on {1}", prefix, parentType);
                 return null;
             }
             else
@@ -534,7 +534,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <summary>
         /// Get attributes value of source element and set them on destination element by calling Attribute Property's setter.
         /// </summary>
-        /// <param name="srcElement">source elment</param>
+        /// <param name="srcElement">source element</param>
         /// <param name="destElement">destination element</param>
         internal void ReflectAttributes(OpenXmlElement srcElement, OpenXmlElement destElement)
         {
@@ -1034,7 +1034,7 @@ namespace DocumentFormat.OpenXml.Tests
         */
         #endregion Properties
 
-        #region Refelction Helpers
+        #region Reflection Helpers
         /// <summary>
         /// Get MethodInfo that meet specified conditions by reflection.
         /// </summary>
@@ -1077,7 +1077,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             if (properties.Count() > 1)
             {
-                Log.Warning("Found {0} Property:{1} on {2}. Please Doubel Check IT!", properties.Count(), prefix, hostType);
+                Log.Warning("Found {0} Property:{1} on {2}. Please Double Check IT!", properties.Count(), prefix, hostType);
                 return properties.First();
             }
             else if (properties.Count() == 0)

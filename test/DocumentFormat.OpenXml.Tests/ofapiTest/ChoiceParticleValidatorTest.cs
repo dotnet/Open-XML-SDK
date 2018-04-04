@@ -51,7 +51,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
 
-            // empty is ok
+            // empty is OK
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
@@ -60,7 +60,7 @@ namespace DocumentFormat.OpenXml.Tests
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            // dup is ok
+            // duplicate is ok
             rRowColumn.AppendChild(new RevisionCellChange());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);

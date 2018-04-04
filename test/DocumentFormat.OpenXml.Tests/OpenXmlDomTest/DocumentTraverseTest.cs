@@ -81,7 +81,7 @@ namespace DocumentFormat.OpenXml.Tests
                 VerifyEqual(Xroot.Elements(), root.ChildElements, part);
 
                 Log.Comment(" ****** test Descendants ******");
-                Log.Comment("check if the decndants if the first child returned are correct");
+                Log.Comment("check if the descendants if the first child returned are correct");
                 VerifyEqual(Xroot.Descendants(), root.Descendants(), part);
 
                 Log.Comment(" ******test Elements<T> ******");
@@ -95,7 +95,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Comment("check if the Descendants<OpenXmlElement> of the first child are returned correctly");
                 VerifyEqual(Xroot.Descendants(), root.Descendants<OpenXmlElement>(), part);
 
-                Log.Comment("check if the Decendants<{0}> returned are correct", typeof(U).Name);
+                Log.Comment("check if the Descendants<{0}> returned are correct", typeof(U).Name);
                 VerifyEqual(Xroot.Descendants().Where(x => x.Name.LocalName == UTagName), root.Descendants<U>(), part);
 
                 Log.Comment(" ****** test GetFirstChildOfType<T> ******");

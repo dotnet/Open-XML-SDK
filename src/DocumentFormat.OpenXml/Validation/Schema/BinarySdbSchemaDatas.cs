@@ -110,7 +110,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <summary>
-        /// Get a SdbClassIdToSchemaTypeIndex data for the sepcified class ID.
+        /// Get a SdbClassIdToSchemaTypeIndex data for the specified class ID.
         /// </summary>
         /// <param name="classId">The class ID.</param>
         /// <returns>A SdbClassIdToSchemaTypeIndex data.</returns>
@@ -162,13 +162,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <summary>
-        /// Check the loaded schema constraint datas.
+        /// Check the loaded schema constraint data.
         /// </summary>
         private void CheckData()
         {
             SdbClassIdToSchemaTypeIndex classIdData;
 
-            // check all datas in debug build
+            // check all data in debug build
             for (var classId = SdbClassIdToSchemaTypeIndex.StartClassId; classId < SdbClassIdToSchemaTypeIndex.StartClassId + SdbDataHead.ClassIdsCount - 1; classId++)
             {
                 classIdData = GetClassIdData(classId);
@@ -490,7 +490,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             public int Count { get; }
 
             /// <summary>
-            /// Indexer to retriver a specified data.
+            /// Indexer to retrieve data.
             /// </summary>
             /// <param name="index">The index of the data item.</param>
             /// <returns>Always returns a new data object.</returns>

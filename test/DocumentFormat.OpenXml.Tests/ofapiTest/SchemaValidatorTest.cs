@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void LeafElementValidateTest()
         {
             string runOuterXml = "<w:r xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\">" +
-            "<w:rPr><w:strike /><w:vanish><!-- comments is ok --></w:vanish><w:webHidden><w:invalidChild /></w:webHidden></w:rPr>" +
+            "<w:rPr><w:strike /><w:vanish><!-- comments is OK --></w:vanish><w:webHidden><w:invalidChild /></w:webHidden></w:rPr>" +
             "<w:t>Run Text.</w:t><w:t><!-- comments is ok -->Text 2</w:t><w:t>Text 3.<invalidElement /></w:t></w:r>";
 
             var target = new SchemaValidator(FileFormatVersions.Office2007);

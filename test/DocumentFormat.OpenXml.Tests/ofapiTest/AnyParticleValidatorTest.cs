@@ -44,7 +44,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
 
-            // empty is ok
+            // empty is OK
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
@@ -57,7 +57,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** error case ******
 
-            // any element with namespace is invlaid
+            // any element with namespace is invalid
             errorChild = textBox.AppendChild(new TextBox());
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);
@@ -85,7 +85,7 @@ namespace DocumentFormat.OpenXml.Tests
             textBox.RemoveChild(errorChild);
 
             validationContext.Clear();
-            // any element with namespace is invlaid
+            // any element with namespace is invalid
             errorChild = textBox.AppendChild(new OpenXmlUnknownElement("t", "test", "http://test"));
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);

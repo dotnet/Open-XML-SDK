@@ -2752,7 +2752,7 @@ EightBytesSignedInteger,
 [EnumString("ui1")]
 OneByteUnsignedInteger,
 ///<summary>
-///2-Byte Unisigned Integer Base Type.
+///2-Byte Unsigned Integer Base Type.
 ///<para>When the item is serialized out as xml, its value is "ui2".</para>
 ///</summary>
 [EnumString("ui2")]
@@ -2940,7 +2940,7 @@ Date,
 [EnumString("bool")]
 Bool,
 ///<summary>
-///Curency Base Type.
+///Currency Base Type.
 ///<para>When the item is serialized out as xml, its value is "cy".</para>
 ///</summary>
 [EnumString("cy")]

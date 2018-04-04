@@ -476,14 +476,8 @@ namespace DocumentFormat.OpenXml
                 prevNode.next = next;
             }
 
-            //foreach (OpenXmlElement descendant in removedElement.Descendants())
-            //{
-            //    descendant.Owner = null;
-            //}
-
             removedElement.next = null;
             removedElement.Parent = null;
-            //removedElement.Owner = null;
 
             ElementRemovedEvent(removedElement);
 
@@ -706,10 +700,11 @@ namespace DocumentFormat.OpenXml
                                         newnode = ElementFactory(node.Prefix, node.LocalName, node.NamespaceUri);
                                         if (!(newnode is OpenXmlUnknownElement))
                                         {
-                                            //the following method will load teh element in MCMode.Full
-                                            //since the node is already MC-processed when loading as unknown type, full loading the outerXml is fine
+                                            // The following method will load teh element in MCMode.Full
+                                            // since the node is already MC-processed when loading as unknown type, full loading the outerXml is fine
                                             newnode.OuterXml = node.OuterXml;
-                                            //unnecessary xmlns attr will be added, remove it.
+
+                                            // unnecessary xmlns attribute will be added, remove it.
                                             RemoveUnnecessaryExtAttr(node, newnode);
                                         }
                                         else
@@ -755,13 +750,13 @@ namespace DocumentFormat.OpenXml
                 xmlReader.Skip();
             }
 
-            // set raw outer xml to empty to indicate that it is pased
+            // set raw outer xml to empty to indicate that it is passed
             RawOuterXml = string.Empty;
         }
 
         private static void RemoveUnnecessaryExtAttr(OpenXmlElement node, OpenXmlElement newnode)
         {
-            //re-construct the _nsMappings for newnode based on the orignal node
+            //re-construct the _nsMappings for the new node based on the original node
             node.MakeSureParsed();
             if (newnode.NamespaceDeclField != null && node.NamespaceDeclField != null)
             {
@@ -773,7 +768,7 @@ namespace DocumentFormat.OpenXml
         /// Gets the tag names of the child elements.
         /// </summary>
         /// <remarks>
-        /// This property is overriden in generated classes.
+        /// This property is overridden in generated classes.
         /// </remarks>
         internal virtual string[] ElementTagNames
         {
@@ -784,7 +779,7 @@ namespace DocumentFormat.OpenXml
         /// Gets the namespace IDs of the child elements.
         /// </summary>
         /// <remarks>
-        /// This property is overriden in generated classes.
+        /// This property is overridden in generated classes.
         /// </remarks>
         internal virtual byte[] ElementNamespaceIds
         {
@@ -856,7 +851,7 @@ namespace DocumentFormat.OpenXml
                             child = child.NextSibling();
                         }
 
-                        // There should be only one valide child.
+                        // There should be only one valid child.
                         if (child != null)
                         {
                             Debug.Assert(OpenXmlElement.IsKnownElement(child));
@@ -1079,19 +1074,6 @@ namespace DocumentFormat.OpenXml
                 _lastChild = node;
             }
         }
-
-        //private void SetOwner(OpenXmlElement element)
-        //{
-        //    element.Owner = this.Owner;
-
-        //    if (element.XmlParsed)
-        //    {
-        //        foreach (OpenXmlElement child in element.ChildElements)
-        //        {
-        //            SetOwner(child);
-        //        }
-        //    }
-        //}
 
         #endregion
     }

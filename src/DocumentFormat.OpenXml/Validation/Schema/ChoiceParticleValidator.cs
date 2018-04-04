@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// This data field is moved from TryMatchOnce.
         /// Base on the following point.
         /// - The TryMatchOnce() method will NOT be called more than once with same ChoiceParticleValidator instance on the stack when validating one element.
-        /// - That means this data field will not be overriden in recursive calling when validating one element.
+        /// - That means this data field will not be overridden in recursive calling when validating one element.
         /// </summary>
         private ParticleMatchInfo _childMatchInfo = new ParticleMatchInfo();
 
@@ -52,7 +52,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 childConstraint = ParticleConstraint.ChildrenParticles[constraintIndex];
 
-                // Use Reset() instead of new() to avoid heavy memory alloction and GC.
+                // Use Reset() instead of new() to avoid heavy memory allocation and GC.
                 _childMatchInfo.Reset(next);
 
                 childConstraint.ParticleValidator.TryMatch(_childMatchInfo, validationContext);
@@ -99,7 +99,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             bool requiredElements = true;
             var requiredChoiceChildren = new ExpectedChildren();
 
-            // if there are any child elements that minOccurs = 0, then there is no requried children.
+            // if there are any child elements that minOccurs = 0, then there is no required children.
 
             if (ParticleConstraint.MinOccurs > 0)
             {

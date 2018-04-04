@@ -160,7 +160,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Created a new instance of the PresentationDocument class from the spcified package.
+        /// Created a new instance of the PresentationDocument class from the specified package.
         /// </summary>
         /// <param name="package">The specified OpenXml package.</param>
         /// <param name="type">The type of the PresentationDocument.</param>
@@ -215,7 +215,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Creates a new instance of the PresentationDocument class from the spcified package.
+        /// Creates a new instance of the PresentationDocument class from the specified package.
         /// </summary>
         /// <param name="package">The specified OpenXml package.</param>
         /// <param name="type">The type of the PresentationDocument.</param>
@@ -298,7 +298,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Creates a new instance of the PresentationDocument class from the spcified package.
+        /// Creates a new instance of the PresentationDocument class from the specified package.
         /// </summary>
         /// <param name="package">The specified OpenXml package.</param>
         /// <returns>A new instance of PresentationDocument.</returns>
@@ -374,7 +374,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Creates a new instance of the PresentationDocument class from the spcified package.
+        /// Creates a new instance of the PresentationDocument class from the specified package.
         /// </summary>
         /// <param name="package">The specified OpenXml package.</param>
         /// <param name="openSettings">The advanced settings for opening a document.</param>
@@ -582,7 +582,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <typeparam name="T">The class of the part.</typeparam>
         /// <param name="contentType">The content type of the part. Must match the defined content type if the part is fixed content type.</param>
-        /// <param name="id">The relationship id. The id will be automaticly generated if this param is null.</param>
+        /// <param name="id">The relationship id. The id will be automatically generated if this param is null.</param>
         /// <returns>The added part.</returns>
         /// <exception cref="OpenXmlPackageException">When the part is not allowed to be referenced by this part.</exception>
         /// <exception cref="ArgumentOutOfRangeException">When the part is fixed content type and the passed in contentType does not match the defined content type.</exception>

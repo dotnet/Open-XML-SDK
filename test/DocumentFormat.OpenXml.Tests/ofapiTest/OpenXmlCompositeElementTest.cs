@@ -130,7 +130,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.IsType<OpenXmlUnknownElement>(unknownElement.FirstChild);
             Assert.IsType<OpenXmlUnknownElement>(unknownElement.FirstChild.FirstChild);
             Assert.IsType<OpenXmlUnknownElement>(unknownElement.FirstChild.FirstChild.FirstChild);
-            // Assert.IsType(unknownElement.FirstChild.FirstChild.FirstChild.FirstChild, typeof(OpenXmlMiscNode));
             Assert.Equal("Text in <drawing>.", (unknownElement.FirstChild.FirstChild.FirstChild as OpenXmlUnknownElement).Text);
 
             Assert.Equal(outerXml, unknownElement.OuterXml);
@@ -145,7 +144,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.IsType<OpenXmlUnknownElement>(clonedElement.FirstChild);
             Assert.IsType<OpenXmlUnknownElement>(clonedElement.FirstChild.FirstChild);
             Assert.IsType<OpenXmlUnknownElement>(clonedElement.FirstChild.FirstChild.FirstChild);
-            //Assert.IsType(typeof(OpenXmlMiscNode), clonedElement.FirstChild.FirstChild.FirstChild.FirstChild);
             Assert.Equal("Text in <drawing>.", (clonedElement.FirstChild.FirstChild.FirstChild as OpenXmlUnknownElement).Text);
 
             Assert.Equal(outerXml, clonedElement.OuterXml);

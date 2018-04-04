@@ -9,7 +9,7 @@ using static DocumentFormat.OpenXml.Tests.TestAssets;
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
-    /// Test for ISO Strict fileformat on Open XML SDK
+    /// Test for ISO Strict file format on Open XML SDK
     /// </summary>
     public class IsoStrictTest
     {

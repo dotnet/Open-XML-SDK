@@ -159,7 +159,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 }
                 else if (matchCount >= ParticleConstraint.MinOccurs)
                 {
-                    // matched ok
+                    // matched OK
                     particleMatchInfo.Match = ParticleMatch.Matched;
                 }
                 else

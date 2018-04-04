@@ -279,7 +279,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
         }
 
         /// <summary>
-        /// The template class to faclilitate the enumeration over the elemnts of different section of a SpreadsheetDocument.
+        /// The template class to facilitate the enumeration over the elements of different section of a SpreadsheetDocument.
         /// Currently supported types are:
         /// 1. WebExtensionPart
         /// 2. Wetp.Taskpanes

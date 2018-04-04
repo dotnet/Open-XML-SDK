@@ -32,15 +32,10 @@ namespace DocumentFormat.OpenXml
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private OpenXmlElement _next;
 
-        // implement annotations mechanism like XObject in Linq
+        // implement annotations mechanism like XObject in XLINQ
         // Annotations will not be cloned when calling .Clone() and .CloneNode(bool)
         private object _annotations;
 
-        // Review: donghz
-        // why do we need to initialize this flag as "true"?
-        // Or do we really need this flag? I feel only _rawOuterXml is enough... null or not-null...
-        // private bool _xmlParsed = true;
-        // private string _rawInnerXml;
         private string _rawOuterXml = string.Empty;
 
         // known attributes - attributes defined in schema
@@ -223,8 +218,8 @@ namespace DocumentFormat.OpenXml
 
         #region internal virtual properties
 
-        // following properties will be overrided in all generated classes.
-        // generate will generate the const data
+        // following properties will be overridden in all generated classes.
+        // generate will generate the constant data
 
         /// <summary>
         /// Gets the namespace ID of the current element.
@@ -796,7 +791,7 @@ namespace DocumentFormat.OpenXml
         /// Removes the attribute from the current element.
         /// </summary>
         /// <param name="localName">The local name of the attribute.</param>
-        /// <param name="namespaceUri">The namesapce URI of the attribute.</param>
+        /// <param name="namespaceUri">The namespace URI of the attribute.</param>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the localName is empty.</exception>
         public void RemoveAttribute(string localName, string namespaceUri)
         {
@@ -898,7 +893,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Adds a namepace declaration to the current node.
+        /// Adds a namespace declaration to the current node.
         /// </summary>
         /// <param name="prefix">The prefix.</param>
         /// <param name="uri">The uri.</param>
@@ -1725,7 +1720,7 @@ namespace DocumentFormat.OpenXml
                 }
                 else
                 {
-                    // Strict -> Transitonal translation
+                    // Strict -> Transitional translation
                     bool isTranslationRequired;
                     bool isBitFieldOperationRequired = false;
                     bool isAttributesArrayAlreadyAvailable = false;
@@ -1895,7 +1890,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// if this is a normal node, check mustunderstand attr in loading time
+        /// If this is a normal node, check <code>mustunderstand</code> attribute at load time
         /// </summary>
         /// <param name="reader">The XmlReader.</param>
         /// <param name="mcAttributes">The MarkupCompatibilityAttributes.</param>
@@ -1926,7 +1921,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// if this is a node in ACB, check mustunderstand after loaded
+        /// If this is a node in ACB, check <code>mustunderstand</code> after load
         /// </summary>
         internal void CheckMustUnderstandAttr()
         {
@@ -1991,7 +1986,7 @@ namespace DocumentFormat.OpenXml
 
             ParseXml();
 
-            // set raw outer xml to empty to indicate that it is pased
+            // set raw outer xml to empty to indicate that it is passed
             RawOuterXml = string.Empty;
         }
 
@@ -2251,7 +2246,7 @@ namespace DocumentFormat.OpenXml
             return target;
         }
 
-        // Copy child elements fom the container.
+        // Copy child elements from the container.
         internal void CopyChilden(OpenXmlElement container, bool deep)
         {
             Debug.Assert(container != null);
@@ -2676,7 +2671,7 @@ namespace DocumentFormat.OpenXml
         {
             using (XmlReader xmlReader = CreateXmlReader(outerXml))
             {
-                do // O15:#3024890, Skip the leading whitespaces. OpenXmlElement ignores the Whitespace NodeType.
+                do // O15:#3024890, Skip the leading whitespace. OpenXmlElement ignores the Whitespace NodeType.
                 {
                     // Fix bug #484153.
                     if (xmlReader.Read())
@@ -2715,7 +2710,7 @@ namespace DocumentFormat.OpenXml
 
         private bool LoadMCAttribute(string localName, string value)
         {
-            // DO NOT call this.MCAttributes as this method is called on xml parseing.
+            // DO NOT call this.MCAttributes as this method is called on xml parsing.
             if (McAttributesFiled == null)
             {
                 McAttributesFiled = new MarkupCompatibilityAttributes();

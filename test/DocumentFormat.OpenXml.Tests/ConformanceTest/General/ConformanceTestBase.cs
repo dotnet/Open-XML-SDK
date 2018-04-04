@@ -78,7 +78,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        /// Obtains elements in a documet package
+        /// Obtains elements in a document package
         /// </summary>
         /// <typeparam name="TElement">Element type</typeparam>
         /// <param name="package">Target document</param>

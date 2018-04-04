@@ -4,7 +4,7 @@
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
-    /// Specifies the type of each child element's occurence.
+    /// Specifies the type of each child element's occurrence.
     /// Used in GetElement() and SetElement() for generated code.
     /// </summary>
     internal enum OpenXmlCompositeType

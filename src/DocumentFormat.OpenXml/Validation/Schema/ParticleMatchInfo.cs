@@ -54,7 +54,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// Gets or sets message on match error
         /// </summary>
         /// <remarks>
-        /// TODO: how can this be decopled from the validator?
+        /// TODO: how can this be decoupled from the validator?
         /// </remarks>
         internal string ErrorMessage { get; set; }
 
@@ -85,7 +85,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         /// <summary>
         /// Purpose:
-        /// Resue this.ExpectedChildren data field.
+        /// Reuse this.ExpectedChildren data field.
         /// Avoid this.ExpectedChildren be referenced by more than one object (so "this.ExpectedChildren = other.ExpectedChildren" is not allowed).
         /// </summary>
         /// <param name="expectedChildren"></param>

@@ -6,7 +6,7 @@ using System;
 namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 {
     /// <summary>
-    /// Schema simple type restrictin facets.
+    /// Schema simple type restriction facets.
     /// </summary>
     [Flags]
     internal enum RestrictionField : byte

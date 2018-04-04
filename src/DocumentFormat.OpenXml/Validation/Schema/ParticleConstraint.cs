@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
     /// A constraint data item for complex type.
-    /// The ParticleType, MinOccurs, MaxOccurs means the constaint of this particle in the parent.
+    /// The ParticleType, MinOccurs, MaxOccurs means the constraint of this particle in the parent.
     /// </summary>
     /// <remarks>
     /// </remarks>
@@ -103,7 +103,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <summary>
-        /// Test whether this is a simple particle - the particle conatains only elements as children.
+        /// Test whether this is a simple particle - the particle contains only elements as children.
         /// </summary>
         /// <returns></returns>
         internal bool IsSimple()

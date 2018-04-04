@@ -206,7 +206,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="id">The desired relationship ID. </param>
         /// <returns>An ExternalRelationship with the relationship ID. </returns>
         /// <exception cref="ArgumentNullException">Thrown when "relationshipType" or the "externalUri" is null reference.</exception>
-        /// <exception cref="InvalidOperationException">Thrown when the relatioship type is hyperlink relationship type (http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink). </exception>
+        /// <exception cref="InvalidOperationException">Thrown when the relationship type is hyperlink relationship type (http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink). </exception>
         public ExternalRelationship AddExternalRelationship(string relationshipType, Uri externalUri, string id)
         {
             ThrowIfObjectDisposed();
@@ -759,7 +759,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <typeparam name="T">The class of the part.</typeparam>
         /// <param name="contentType">The content type of the part. Must match the defined content type if the part is fixed content type.</param>
-        /// <param name="id">The relationship id. The id will be automaticly generated if this param is null.</param>
+        /// <param name="id">The relationship id. The id will be automatically generated if this param is null.</param>
         /// <returns>The added part.</returns>
         /// <exception cref="OpenXmlPackageException">When the part is not allowed to be referenced by this part.</exception>
         /// <exception cref="ArgumentOutOfRangeException">When the part is fixed content type and the passed in contentType does not match the defined content type.</exception>
@@ -1264,7 +1264,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            // use reflection to create the instance. As the default contructor of part is not "public"
+            // use reflection to create the instance. As the default constructor of part is not "public"
             var part = PartActivator.CreateInstance<T>();
 
             try
@@ -1323,7 +1323,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.StringArgumentEmptyException, nameof(contentType));
             }
 
-            // use reflection to create the instance. As the default contructor of part is not "public"
+            // use reflection to create the instance. As the default constructor of part is not "public"
             var part = PartActivator.CreateInstance<T>();
 
             if (part is ExtendedPart)
@@ -1353,7 +1353,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Initilizes a new created part
+        /// Initializes a new created part
         /// </summary>
         /// <typeparam name="T">The type of the part, must be derived from OpenXmlPart.</typeparam>
         /// <param name="newPart">The part to be initialized.</param>
@@ -1364,7 +1364,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Initilizes a new created part
+        /// Initializes a new created part
         /// </summary>
         /// <typeparam name="T">The type of the part, must be derived from OpenXmlPart.</typeparam>
         /// <param name="newPart">The part to be initialized.</param>
@@ -1692,7 +1692,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Attachs the child to the package (create the relationship)
+        /// Attaches the child to the package (create the relationship)
         /// </summary>
         /// <param name="part">The part to be attached.</param>
         /// <returns>The relationship ID.</returns>
@@ -1702,7 +1702,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Attachs the child to the package (create the relationship)
+        /// Attaches the child to the package (create the relationship)
         /// </summary>
         /// <param name="part">The part to be attached.</param>
         /// <param name="rId">The desired relationship ID.</param>
@@ -2078,7 +2078,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
         abstract internal PackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType, string id);
 
-        // find all reachable parts from the package root, the dictionary also used for cycle reference defence
+        // find all reachable parts from the package root, the dictionary also used for cycle reference defense
         abstract internal void FindAllReachableParts(IDictionary<OpenXmlPart, bool> reachableParts);
 
         #endregion
