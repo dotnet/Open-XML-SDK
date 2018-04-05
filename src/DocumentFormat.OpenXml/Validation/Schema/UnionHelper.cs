@@ -25,6 +25,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     Debug.Assert(fileFormatVersion.Any());
                     break;
             }
+
             return null;
         }
 
@@ -45,6 +46,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     Debug.Assert(fileFormatVersion.Any());
                     break;
             }
+
             return null;
         }
     }

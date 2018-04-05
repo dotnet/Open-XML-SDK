@@ -108,6 +108,7 @@ namespace DocumentFormat.OpenXml.Tests
             properties.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             //invalid child in middle
             errorChild = properties.InsertBefore(new Properties(), properties.LastChild);
             target.Validate(validationContext);
@@ -122,6 +123,7 @@ namespace DocumentFormat.OpenXml.Tests
             properties.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             // dup
             errorChild = properties.FirstChild;
             properties.PrependChild(new Company());
@@ -193,6 +195,7 @@ namespace DocumentFormat.OpenXml.Tests
             shapeLayout.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             //invalid child in middle
             errorChild = shapeLayout.InsertBefore(new Paragraphs(), shapeLayout.LastChild);
             target.Validate(validationContext);
@@ -206,6 +209,7 @@ namespace DocumentFormat.OpenXml.Tests
             shapeLayout.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             // dup
             errorChild = shapeLayout.FirstChild;
             shapeLayout.PrependChild(new RegroupTable());

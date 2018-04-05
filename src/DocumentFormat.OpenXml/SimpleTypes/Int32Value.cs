@@ -57,6 +57,7 @@ namespace DocumentFormat.OpenXml
             {
                 throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
             }
+
             return ToInt32(xmlAttribute);
         }
 

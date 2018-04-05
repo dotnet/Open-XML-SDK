@@ -166,11 +166,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 for (int i = 0; i < count; i++)
                 {
                     var sdbAttributeData = SdbAttributes[sdbIndex + i];
+
                     // then load the simple type constraint for this attribute
                     var simpleTypeIndex = sdbAttributeData.SimpleTypeIndex;
                     var simpleTypeConstraint = SimpleTypeRestrictions[simpleTypeIndex];
                     attributeConstraints[i] = new AttributeConstraint(sdbAttributeData.AttributeUse, simpleTypeConstraint, (FileFormatVersions)sdbAttributeData.FileFormatVersion);
                 }
+
                 return attributeConstraints;
             }
 
@@ -199,6 +201,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             else if (sdbSchemaType.IsSimpleContent)
             {
                 Debug.Assert(sdbSchemaType.SimpleTypeIndex != SdbData.InvalidId);
+
                 // simple content
                 var simpleTypeConstraint = SimpleTypeRestrictions[sdbSchemaType.SimpleTypeIndex];
                 return new SchemaTypeData(openxmlTypeId, attributeConstraints, simpleTypeConstraint);

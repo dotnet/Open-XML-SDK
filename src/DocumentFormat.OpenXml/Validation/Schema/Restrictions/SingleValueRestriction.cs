@@ -30,6 +30,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                 //Single value = ((SingleValue)attributeValue).Value;
                 //return !Single.IsNaN(value);
             }
+
             return false;
         }
     }

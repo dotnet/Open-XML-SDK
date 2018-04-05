@@ -193,6 +193,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 {
                     return null;
                 }
+
                 temp = s.First();
                 parts = temp.Parts;
             }

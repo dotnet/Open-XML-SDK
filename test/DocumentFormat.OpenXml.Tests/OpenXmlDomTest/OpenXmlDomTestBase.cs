@@ -91,6 +91,7 @@ namespace DocumentFormat.OpenXml.Tests
                 position++;
                 walker = walker.PreviousSibling();
             }
+
             path.Insert(0, "/" + element.LocalName + "@" + position);
         }
 
@@ -126,6 +127,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     throw new ArgumentException("The path is invalid!!");
                 }
+
                 elementTypeList.Add(ele[0]);
                 elementPositionList.Add(ele[1]);
             }
@@ -141,6 +143,7 @@ namespace DocumentFormat.OpenXml.Tests
                     throw new ArgumentException("The path contains invalid data");
                 }
             }
+
             return targetElement;
         }
 
@@ -164,6 +167,7 @@ namespace DocumentFormat.OpenXml.Tests
         #endregion
 
         #region Find Part
+
         /// <summary> get any reflectable part in given package. </summary>
         internal GetTargetPart getAnyOpenXmlPart =
             p => p.DescendantParts()
@@ -369,7 +373,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Append Collection
 
-        internal enum AppendCollectionType { IEnumerable, Array };
+        internal enum AppendCollectionType { IEnumerable, Array, };
 
         internal void AppendCollectionOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHostElement,
             IFile sourceFile, GetTargetPart getSrcPart, GetTargetElement getImportee, AppendCollectionType operationType)
@@ -456,7 +460,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Pend Operations
 
-        internal enum PendType { Append, Prepend };
+        internal enum PendType { Append, Prepend, };
 
         private protected void PendTestOnFile(IFile testFile, GetTargetPart getHostPart, GetTargetElement getHostElement,
             IFile sourceFile, GetTargetPart getSourcePart, GetTargetElement getSourceHost, PendType pendType)
@@ -569,7 +573,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Insert Before/After
 
-        internal enum InsertType { Before, After };
+        internal enum InsertType { Before, After, };
 
         private protected void InsertTestOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHostElement,
                 IFile sourceFile, GetTargetPart getSourcePart, GetTargetElement getSourceHost, GetTargetElement getRef, InsertType insertType)
@@ -697,7 +701,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region InsertAt
 
-        internal enum InsertAtPosition { AsFirst, NextToFirst, AnyValid, NextToLast, AsLast };
+        internal enum InsertAtPosition { AsFirst, NextToFirst, AnyValid, NextToLast, AsLast, };
 
         private protected void InsertAtOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost,
                  IFile sourceFile, GetTargetPart getSrcPart, GetTargetElement getImportee, InsertAtPosition posType)
@@ -764,6 +768,7 @@ namespace DocumentFormat.OpenXml.Tests
                         default:
                             throw new InvalidOperationException("Operation specified is invalid!!");
                     }
+
                     result = hostElement.InsertAt<OpenXmlElement>(importElement.Clone() as OpenXmlElement, expectPos);
 
                     Log.Comment("Saving changes...");
@@ -792,7 +797,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Insert Before/After Self
 
-        internal enum InsertRel { BeforeSelf, AfterSelf };
+        internal enum InsertRel { BeforeSelf, AfterSelf, };
 
         private protected void InsertRelativeOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost,
             IFile sourceFile, GetTargetPart getSrcPart, GetTargetElement getImportee, InsertRel posType)
@@ -2342,7 +2347,6 @@ namespace DocumentFormat.OpenXml.Tests
         // Annotations<T>()
         // RemoveAnnotations(Type)
         // RemoveAnnotations<T>()
-
         internal void AnnotationType(OpenXmlPart hostPart, GetTargetElement getHost)
         {
             Log.Comment("Loading root element from hosting part...");

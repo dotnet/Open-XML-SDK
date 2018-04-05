@@ -219,6 +219,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 case ParticleType.Element:
                     Debug.Assert(particle.ChildrenCount == 0);
+
                     // element type ID must be a valid ID in the class ID map.
                     Debug.Assert(particle.ElementTypeId >= SdbClassIdToSchemaTypeIndex.StartClassId);
                     Debug.Assert(particle.ElementTypeId < SdbClassIdToSchemaTypeIndex.StartClassId + SdbDataHead.ClassIdsCount);
@@ -234,6 +235,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         var childIndex = SdbParticleIndexs[particle.ChildrenStartIndex + i];
                         CheckParticle(childIndex.ParticleIndex);
                     }
+
                     break;
 
                 case ParticleType.Any:
@@ -256,6 +258,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             if (simpleType.IsEnum)
             {
                 Debug.Assert(simpleType is EnumValueRestriction);
+
                 // Debug.Assert(simpleType.XsdType == XsdType.String || simpleType.XsdType == XsdType.Token);
                 Debug.Assert(simpleType.IsList == false);
             }
@@ -264,6 +267,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 Debug.Assert(simpleType is ListValueRestriction);
                 Debug.Assert(simpleType.IsEnum == false);
                 Debug.Assert(simpleType.XsdType == XsdType.List);
+
                 //                Debug.Assert(simpleType.XsdType == XsdType.AnySimpleType);
             }
             else if (simpleType is RedirectedRestriction)
@@ -275,8 +279,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 Debug.Assert(simpleType.IsEnum == false);
 
                 // !!!! comment out lines are types need to be coded in validation.
-
                 Debug.Assert(simpleType.XsdType != XsdType.AnySimpleType);
+
                 // Debug.Assert(simpleType.XsdType != XsdType.AnyURI);
                 // Debug.Assert(simpleType.XsdType != XsdType.Base64Binary);
                 // Debug.Assert(simpleType.XsdType != XsdType.Boolean);
@@ -288,16 +292,19 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 Debug.Assert(simpleType.XsdType != XsdType.Duration);
                 Debug.Assert(simpleType.XsdType != XsdType.ENTITIES);
                 Debug.Assert(simpleType.XsdType != XsdType.ENTITY);
+
                 // Debug.Assert(simpleType.XsdType != XsdType.Float);
                 Debug.Assert(simpleType.XsdType != XsdType.GDay);
                 Debug.Assert(simpleType.XsdType != XsdType.GMonth);
                 Debug.Assert(simpleType.XsdType != XsdType.GMonthDay);
                 Debug.Assert(simpleType.XsdType != XsdType.GYear);
                 Debug.Assert(simpleType.XsdType != XsdType.GYearMonth);
+
                 // Debug.Assert(simpleType.XsdType != XsdType.HexBinary);
                 // Debug.Assert(simpleType.XsdType != XsdType.ID);
                 // Debug.Assert(simpleType.XsdType != XsdType.IDREF);
                 Debug.Assert(simpleType.XsdType != XsdType.IDREFS);
+
                 // Debug.Assert(simpleType.XsdType != XsdType.Int);
                 // Debug.Assert(simpleType.XsdType != XsdType.Integer);
                 // Debug.Assert(simpleType.XsdType != XsdType.Language);
@@ -307,15 +314,19 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 Debug.Assert(simpleType.XsdType != XsdType.NegativeInteger);
                 Debug.Assert(simpleType.XsdType != XsdType.NMTOKEN);
                 Debug.Assert(simpleType.XsdType != XsdType.NMTOKENS);
+
                 // Debug.Assert(simpleType.XsdType != XsdType.NonNegativeInteger);
                 Debug.Assert(simpleType.XsdType != XsdType.NonPositiveInteger);
+
                 // Debug.Assert(simpleType.XsdType != XsdType.NormalizedString);
                 Debug.Assert(simpleType.XsdType != XsdType.NOTATION);
+
                 // Debug.Assert(simpleType.XsdType != XsdType.PositiveInteger);
                 // Debug.Assert(simpleType.XsdType != XsdType.QName);
                 // Debug.Assert(simpleType.XsdType != XsdType.Short);
                 // Debug.Assert(simpleType.XsdType != XsdType.String);
                 Debug.Assert(simpleType.XsdType != XsdType.Time);
+
                 // Debug.Assert(simpleType.XsdType != XsdType.Token);
                 // Debug.Assert(simpleType.XsdType != XsdType.UnsignedByte);
                 // Debug.Assert(simpleType.XsdType != XsdType.UnsignedInt);
@@ -337,7 +348,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 //case XsdType.NormalizedString:
                 //    Debug.Assert(simpleType is NormalizedStringRestriction);
                 //    break;
-
                 case XsdType.HexBinary:
                     Debug.Assert(simpleType is HexBinaryRestriction);
                     break;
@@ -345,7 +355,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 //case XsdType.Name:
                 //    Debug.Assert(simpleType is NameRestriction);
                 //    break;
-
                 case XsdType.Token:
                     Debug.Assert(simpleType is TokenRestriction);
                     break;
@@ -434,7 +443,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 //    break;
 
                 // enum, list
-
                 case XsdType.Enum:
                     Debug.Assert(simpleType is EnumValueRestriction);
                     break;

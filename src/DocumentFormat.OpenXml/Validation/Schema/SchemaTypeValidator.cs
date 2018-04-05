@@ -60,7 +60,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             ValidateAttributes(validationContext, schemaTypeData);
 
             // validate particles
-
             if (theElement is OpenXmlLeafTextElement)
             {
                 SimpleContentComplexTypeValidator.Validate(validationContext, schemaTypeData.SimpleTypeConstraint);
@@ -113,18 +112,19 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 if (attributeConstraint.SupportedVersion.Includes(validationContext.FileFormat))
                 {
                     // only check the attribute constraints defined in the specified file format version.
-
                     switch (attributeConstraint.XsdAttributeUse)
                     {
                         case XsdAttributeUse.Required:
                             if (element.Attributes[i] == null)
                             {
                                 string attributeQname = element.GetFixedAttributeQname(i).ToString();
+
                                 // error: miss required attribute
                                 errorInfo = validationContext.ComposeSchemaValidationError(element, null, "Sch_MissRequiredAttribute", attributeQname);
                                 errorInfo.SetDebugField(attributeQname, "Sch_MissRequiredAttribute");
                                 validationContext.AddError(errorInfo);
                             }
+
                             break;
 
                         case XsdAttributeUse.None: // none, so use default "optional"
@@ -175,6 +175,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 {
                     // Ignorable attribute, no error.
                 }
+
                 // xml:space is always allowed
                 else if ("http://www.w3.org/XML/1998/namespace" == extendedAttribute.NamespaceUri)
                 {
@@ -260,6 +261,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, subMessage);
                     errorInfo.SetDebugField(isAttribute? qname : null, "Sch_StringIsNotValidValue");
                 }
+
                 validationContext.AddError(errorInfo);
             }
             else
@@ -368,6 +370,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                             errorInfo.SetDebugField(isAttribute? qname : null, "Sch_MaxExclusiveConstraintFailed");
                             validationContext.AddError(errorInfo);
                         }
+
                         if ((errorRestriction & RestrictionField.Length) == RestrictionField.Length)
                         {
                             // length is not ok.

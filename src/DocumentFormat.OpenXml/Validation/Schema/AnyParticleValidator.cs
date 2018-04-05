@@ -126,7 +126,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             else
             {
                 // try to match multiple times.
-
                 ParticleMatchInfo nextParticleMatchInfo;
                 int matchCount = 0;
                 var next = particleMatchInfo.StartElement;
@@ -188,6 +187,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                 return true;
             }
+
             return false;
         }
 

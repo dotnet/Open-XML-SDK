@@ -25,7 +25,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 //case ImagePartType.Xbm:
                 //    return "image/xbm";
-
                 case ImagePartType.Icon:
                     return "image/x-icon";
 
@@ -37,7 +36,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 //case ImagePartType.Pict:
                 //    return "image/pict";
-
                 case ImagePartType.Jpeg:
                     return "image/jpeg";
 
@@ -70,7 +68,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 //case ImagePartType.Xbm:
                 //    return ".xbm";
-
                 case ImagePartType.Icon:
                     return ".ico";
 
@@ -82,7 +79,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 //case ImagePartType.Pict:
                 //    return ".pict";
-
                 case ImagePartType.Jpeg:
                     return ".jpg";
 

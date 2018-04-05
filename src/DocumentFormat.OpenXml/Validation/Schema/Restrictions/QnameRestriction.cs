@@ -31,7 +31,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
             //[6]  QName ::=  (Prefix ':')? LocalPart
             //[7]  Prefix ::=  NCName
             //[8]  LocalPart ::=  NCName
-
             string qname = attributeValue.InnerText;
 
             if (string.IsNullOrEmpty(qname))

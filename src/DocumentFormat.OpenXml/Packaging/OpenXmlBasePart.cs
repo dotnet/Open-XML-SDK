@@ -93,7 +93,6 @@ namespace DocumentFormat.OpenXml.Packaging
         // can not use generic, at it will emit error
         // Compiler Error CS0310
         // The type 'typename' must have a public parameterless constructor in order to use it as parameter 'parameter' in the generic type or method 'generic'
-
         internal sealed override OpenXmlPart NewPart(string relationshipType, string contentType)
         {
             ThrowIfObjectDisposed();
@@ -125,6 +124,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 return child;
             }
+
             throw new ArgumentOutOfRangeException(nameof(relationshipType));
         }
 
@@ -410,13 +410,13 @@ namespace DocumentFormat.OpenXml.Packaging
             XmlReaderSettings xmlReaderSettings = new XmlReaderSettings
             {
 #if FEATURE_XML_PROHIBIT_DTD
-                ProhibitDtd = true, // set true explicitly for security fix
+                ProhibitDtd = true,
 #else
-                DtdProcessing = DtdProcessing.Prohibit, // set to prohibit explicitly for security fix
+                DtdProcessing = DtdProcessing.Prohibit,
 #endif
                 MaxCharactersInDocument = MaxCharactersInPart,
                 Schemas = schemas,
-                ValidationType = ValidationType.Schema
+                ValidationType = ValidationType.Schema,
             };
 
             using (var partStream = GetStream())
@@ -573,6 +573,7 @@ namespace DocumentFormat.OpenXml.Packaging
         internal abstract string TargetName { get; }
 
         private const string DefaultTargetExt = ".xml";
+
         /// <summary>
         /// Gets the file extension to be used for the part in the package.
         /// </summary>
@@ -637,6 +638,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 InternalRootElement = null;
             }
+
             return rootElement;
         }
 
@@ -720,6 +722,7 @@ namespace DocumentFormat.OpenXml.Packaging
             _openXmlPackage = null;
             _packagePart = null;
             _uri = null;
+
             //this._ownerPart = null;
             if (InternalRootElement != null)
             {

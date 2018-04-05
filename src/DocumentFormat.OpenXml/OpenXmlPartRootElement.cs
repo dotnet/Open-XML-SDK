@@ -207,7 +207,7 @@ namespace DocumentFormat.OpenXml
                 CloseOutput = true,
 
                 // We use UTF8 with no BOM as some viewers that consume documents cannot handle the BOM
-                Encoding = new UTF8Encoding(false)
+                Encoding = new UTF8Encoding(false),
             };
 
             using (XmlWriter xmlWriter = XmlWriter.Create(stream, settings))
@@ -294,6 +294,7 @@ namespace DocumentFormat.OpenXml
                 {
                     prefix = xmlWriter.LookupPrefix(NamespaceUri);
                 }
+
                 //if xmlWriter didn't find it, it means the node is constructed by user and is not in the tree yet
                 //in this case, we use the predefined prefix
                 if (string.IsNullOrEmpty(prefix))
@@ -302,6 +303,7 @@ namespace DocumentFormat.OpenXml
                 }
 
                 xmlWriter.WriteStartElement(prefix, LocalName, NamespaceUri);
+
                 // fix bug #225919, write out all namespace into to root
                 WriteNamespaceAtributes(xmlWriter);
                 WriteAttributesTo(xmlWriter);

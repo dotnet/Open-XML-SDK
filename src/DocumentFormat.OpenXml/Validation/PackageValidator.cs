@@ -100,7 +100,7 @@ namespace DocumentFormat.OpenXml.Validation
                         MessageId = "PartIsNotAllowed",
                         PartClassName = part.RelationshipType,
                         Part = container.ThisOpenXmlPart,
-                        SubPart = part
+                        SubPart = part,
                     };
                 }
 
@@ -114,6 +114,7 @@ namespace DocumentFormat.OpenXml.Validation
 
                 // validate the required parts
                 if (constraintRule.MinOccursIsNonZero
+
                     // only check rules apply to the specified version.
                     && version.AtLeast(constraintRule.FileFormat))
                 {
@@ -124,13 +125,14 @@ namespace DocumentFormat.OpenXml.Validation
                         {
                             MessageId = "RequiredPartDoNotExist",
                             PartClassName = constraintRule.PartClassName,
-                            Part = container.ThisOpenXmlPart
+                            Part = container.ThisOpenXmlPart,
                         };
                     }
                 }
 
                 // check for parts MaxOccursGreatThanOne=false, but do have multiple instance
                 if (!constraintRule.MaxOccursGreatThanOne
+
                     // only check rules apply to the specified version.
                     && version.AtLeast(constraintRule.FileFormat))
                 {
@@ -144,7 +146,7 @@ namespace DocumentFormat.OpenXml.Validation
                                 PartClassName = constraintRule.PartClassName,
                                 Part = container.ThisOpenXmlPart,
 #if DEBUG
-                                SubPart = container.GetSubPart(relatinshipType)
+                                SubPart = container.GetSubPart(relatinshipType),
 #endif
                             };
                         }
@@ -171,7 +173,7 @@ namespace DocumentFormat.OpenXml.Validation
                                         Message = message,
                                         MessageId = "InvalidContentTypePart",
                                         SubPart = part,
-                                        Part = container.ThisOpenXmlPart
+                                        Part = container.ThisOpenXmlPart,
                                     };
                                 }
                             }
@@ -191,7 +193,7 @@ namespace DocumentFormat.OpenXml.Validation
                             {
                                 MessageId = "ExtendedPartIsOpenXmlPart",
                                 SubPart = part,
-                                Part = container.ThisOpenXmlPart
+                                Part = container.ThisOpenXmlPart,
                             };
                         }
                     }
@@ -220,7 +222,7 @@ namespace DocumentFormat.OpenXml.Validation
                         PartClassName = dataPartReference.RelationshipType,
                         Part = container.ThisOpenXmlPart,
                         SubPart = null,
-                        DataPartReferenceRelationship = dataPartReference
+                        DataPartReferenceRelationship = dataPartReference,
                     };
                 }
             }

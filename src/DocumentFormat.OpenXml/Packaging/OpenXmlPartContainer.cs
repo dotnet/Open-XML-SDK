@@ -669,6 +669,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(nameof(id));
             }
+
             return (T)AddPartFrom(part, id);
         }
 
@@ -687,6 +688,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(nameof(targetPart));
             }
+
             if (!IsInSamePackage(targetPart))
             {
                 throw new InvalidOperationException(ExceptionMessages.PartNotInSamePackage);
@@ -714,10 +716,12 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(nameof(targetPart));
             }
+
             if (id == null)
             {
                 throw new ArgumentNullException(nameof(id));
             }
+
             if (!IsInSamePackage(targetPart))
             {
                 throw new InvalidOperationException(ExceptionMessages.PartNotInSamePackage);
@@ -930,6 +934,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(nameof(annotation));
             }
+
             if (_annotations == null)
             {
                 _annotations = (annotation is object[]) ? new object[] { annotation } : annotation;
@@ -948,11 +953,13 @@ namespace DocumentFormat.OpenXml.Packaging
                     {
                         index++;
                     }
+
                     if (index == annotations.Length)
                     {
                         Array.Resize<object>(ref annotations, index * 2);
                         _annotations = annotations;
                     }
+
                     annotations[index] = annotation;
                 }
             }
@@ -1025,6 +1032,7 @@ namespace DocumentFormat.OpenXml.Packaging
                         {
                             break;
                         }
+
                         if (type.GetTypeInfo().IsAssignableFrom(obj.GetType().GetTypeInfo()))
                         {
                             return obj;
@@ -1062,6 +1070,7 @@ namespace DocumentFormat.OpenXml.Packaging
                         {
                             break;
                         }
+
                         if (obj is T)
                         {
                             yield return (T)obj;
@@ -1102,6 +1111,7 @@ namespace DocumentFormat.OpenXml.Packaging
                         {
                             break;
                         }
+
                         if (type.GetTypeInfo().IsAssignableFrom(obj.GetType().GetTypeInfo()))
                         {
                             yield return obj;
@@ -1138,12 +1148,15 @@ namespace DocumentFormat.OpenXml.Packaging
                         {
                             break;
                         }
+
                         if (!(obj is T))
                         {
                             annotations[num++] = obj;
                         }
+
                         index++;
                     }
+
                     if (num != 0)
                     {
                         while (num < index)
@@ -1169,6 +1182,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(nameof(type));
             }
+
             if (_annotations != null)
             {
                 object[] annotations = _annotations as object[];
@@ -1190,12 +1204,15 @@ namespace DocumentFormat.OpenXml.Packaging
                         {
                             break;
                         }
+
                         if (!type.GetTypeInfo().IsAssignableFrom(o.GetType().GetTypeInfo()))
                         {
                             annotations[num++] = o;
                         }
+
                         index++;
                     }
+
                     if (num != 0)
                     {
                         while (num < index)
@@ -1409,6 +1426,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 return;
             }
+
             //else if (newPart is ExtensionPart)
             //{
             //    newPart.CreateInternal(this.InternalOpenXmlPackage, this.ThisOpenXmlPart, contentType, null);
@@ -1525,7 +1543,6 @@ namespace DocumentFormat.OpenXml.Packaging
             //    // TODO: should we throw?
             //    this.DeletePart(child);
             //}
-
             return AddSubPart(part, rId);
         }
 
@@ -1586,7 +1603,6 @@ namespace DocumentFormat.OpenXml.Packaging
             if (partDictionary.TryGetValue(part, out var child))
             {
                 // already processed
-
                 string relationshipId;
 
                 relationshipId = AttachChild(child, rId);
@@ -1854,10 +1870,12 @@ namespace DocumentFormat.OpenXml.Packaging
                             }
                         }
                     }
+
                     // else, already processed, just delete the relationship
                     // TODO: is this necessary? Will Package.DeletePart also delete it's .rels?
                     DeleteRelationship(idPartPair.Key);
                 }
+
                 ChildrenRelationshipParts.Clear();
 
                 foreach (OpenXmlPart child in subPartsShouldBeDeleted)
@@ -1904,6 +1922,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 return part;
             }
+
             return null;
         }
 
@@ -1992,6 +2011,7 @@ namespace DocumentFormat.OpenXml.Packaging
                                 {
                                     throw new OpenXmlPackageException(ExceptionMessages.SamePartWithDifferentRelationshipType);
                                 }
+
                                 ChildrenRelationshipParts.Add(relationship.Id, child);
                             }
                             else if (DataPartReferenceRelationship.IsDataPartReferenceRelationship(relationship.RelationshipType))
@@ -2013,6 +2033,7 @@ namespace DocumentFormat.OpenXml.Packaging
                             {
                                 child = CreateOpenXmlPart(relationship.RelationshipType);
                                 child.MCSettings = openXmlPackage.MarkupCompatibilityProcessSettings;
+
                                 // add it to loaded part list
                                 loadedParts.Add(uriTarget, child);
 

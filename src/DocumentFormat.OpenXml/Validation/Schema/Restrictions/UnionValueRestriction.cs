@@ -51,6 +51,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                     }
                 }
             }
+
             return false;
         }
     }

@@ -65,6 +65,7 @@ namespace DocumentFormat.OpenXml
             if (element == null)
             {
                 return null;
+
                 // throw new ArgumentNullException(nameof(element));
             }
 
@@ -125,6 +126,7 @@ namespace DocumentFormat.OpenXml
                     {
                         namespaces.Add(element.Prefix, element.NamespaceUri);
                     }
+
                     xpath.Append(element.Prefix);
                     xpath.Append(":");
                 }

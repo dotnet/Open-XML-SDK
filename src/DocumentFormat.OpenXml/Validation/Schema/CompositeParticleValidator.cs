@@ -69,6 +69,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         errorInfo = validationContext.ComposeSchemaValidationError(element, null, "Sch_IncompleteContentExpectingComplex", GetExpectedChildrenMessage(element, requiredElements));
                         validationContext.AddError(errorInfo);
                     }
+
                     return;
                 }
             }
@@ -102,11 +103,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         // Two cases now.
                         // 1. All children be matched.
                         // 2. Too many children ( > maxOccurs ).
-
                         if (child != null)
                         {
                             // invalid child
                             EmitInvalidElementError(validationContext, _particleMatchInfo);
+
                             // TODO: how can we tell the user what is the required child? Use reflection in OpenXmlElement.
                         }
                         else
@@ -114,6 +115,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                             //Debug.Assert(result.Valid == true);
                         }
                     }
+
                     break;
             }
 
@@ -164,6 +166,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         {
                             particleMatchInfo.SetExpectedChildren(_childMatchInfo.ExpectedChildren);
                         }
+
                         return;
                     }
                 }
@@ -195,6 +198,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     }
                 }
             }
+
             return;
         }
 
@@ -217,6 +221,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     }
                 }
             }
+
             return requiredElements;
         }
 
@@ -293,6 +298,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     {
                         expectedChildren = GetExpectedChildrenMessage(validationContext.Element, particleMatchInfo.ExpectedChildren);
                     }
+
                     break;
 
                 case ParticleMatch.Matched:
@@ -304,6 +310,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     {
                         expectedChildren = GetExpectedChildrenMessage(validationContext.Element, particleMatchInfo.ExpectedChildren);
                     }
+
                     break;
             }
 
@@ -326,6 +333,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     errorInfo = validationContext.ComposeSchemaValidationError(element, child, "Sch_InvalidElementContentWrongType", child.XmlQualifiedName.ToString(), child.GetType().Name);
                 }
             }
+
             validationContext.AddError(errorInfo);
         }
     }

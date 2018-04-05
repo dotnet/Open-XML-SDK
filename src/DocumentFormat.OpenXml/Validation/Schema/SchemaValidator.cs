@@ -44,7 +44,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             ValidationTraverser.ValidatingTraverse(validationContext, ValidateElement, null);
 
             // validationContext.Element = openxmlElement;
-
             return;
         }
 

@@ -37,7 +37,7 @@ namespace DocumentFormat.OpenXml.Packaging
                         { "http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization", PartConstraintRule.Create<QuickAccessToolbarCustomizationsPart>(false, false) },
                         { "http://schemas.microsoft.com/office/2006/relationships/ui/extensibility", PartConstraintRule.Create<RibbonExtensibilityPart>(false, false) },
                         { "http://schemas.microsoft.com/office/2007/relationships/ui/extensibility", PartConstraintRule.Create<RibbonAndBackstageCustomizationsPart>(false, false) },
-                        { "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes", PartConstraintRule.Create<WebExTaskpanesPart>(false, false) }
+                        { "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes", PartConstraintRule.Create<WebExTaskpanesPart>(false, false) },
                     };
                 }
 
@@ -72,6 +72,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                     _validMainPartContentType = tempData;
                 }
+
                 return _validMainPartContentType;
             }
         }
@@ -96,6 +97,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         private WordprocessingDocumentType _documentType;
+
         /// <summary>
         /// Gets the type of the WordprocessingDocument.
         /// </summary>
@@ -182,6 +184,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(nameof(path));
             }
+
             WordprocessingDocument doc = new WordprocessingDocument();
             doc.DocumentType = type;
             doc.OpenSettings = new OpenSettings();
@@ -354,6 +357,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
+
             WordprocessingDocument doc = new WordprocessingDocument();
 
             doc.OpenSettings = new OpenSettings();
@@ -367,6 +371,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 doc.UpdateDocumentTypeFromContentType();
             }
+
             return doc;
         }
 
@@ -388,6 +393,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
+
             WordprocessingDocument doc = new WordprocessingDocument();
             doc.OpenSettings = new OpenSettings();
             doc.OpenSettings.AutoSave = openSettings.AutoSave;
@@ -399,6 +405,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 doc.UpdateDocumentTypeFromContentType();
             }
+
             return doc;
         }
 
@@ -419,6 +426,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
+
             WordprocessingDocument doc = new WordprocessingDocument();
             doc.OpenSettings = new OpenSettings();
             doc.OpenSettings.AutoSave = openSettings.AutoSave;
@@ -430,6 +438,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 doc.UpdateDocumentTypeFromContentType();
             }
+
             return doc;
         }
 
@@ -487,6 +496,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     DocumentType = oldType;
                     MainPartContentType = MainPartContentTypes[oldType];
                 }
+
                 throw;
             }
         }
@@ -504,6 +514,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(nameof(relationshipType));
             }
+
             switch (relationshipType)
             {
                 case MainDocumentPart.RelationshipTypeConstant:
@@ -537,6 +548,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 case WebExTaskpanesPart.RelationshipTypeConstant:
                     return new WebExTaskpanesPart();
             }
+
             throw new ArgumentOutOfRangeException(nameof(relationshipType));
         }
 
@@ -632,6 +644,7 @@ namespace DocumentFormat.OpenXml.Packaging
             InitPart(childPart, contentType);
             return childPart;
         }
+
         /// <summary>
         /// Adds a ThumbnailPart to the WordprocessingDocument.
         /// </summary>
@@ -697,6 +710,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get { return GetSubPartOfType<MainDocumentPart>(); }
         }
+
         /// <summary>
         /// Gets the CoreFilePropertiesPart of the WordprocessingDocument.
         /// </summary>
@@ -704,6 +718,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get { return GetSubPartOfType<CoreFilePropertiesPart>(); }
         }
+
         /// <summary>
         /// Gets the ExtendedFilePropertiesPart of the WordprocessingDocument.
         /// </summary>
@@ -711,6 +726,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get { return GetSubPartOfType<ExtendedFilePropertiesPart>(); }
         }
+
         /// <summary>
         /// Gets the CustomFilePropertiesPart of the WordprocessingDocument.
         /// </summary>
@@ -718,6 +734,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get { return GetSubPartOfType<CustomFilePropertiesPart>(); }
         }
+
         /// <summary>
         /// Gets the ThumbnailPart of the WordprocessingDocument.
         /// </summary>

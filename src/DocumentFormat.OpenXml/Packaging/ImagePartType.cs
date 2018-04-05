@@ -33,14 +33,17 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Windows Bitmap Graphics (.bmp).
         /// </summary>
         Bmp,
+
         /// <summary>
         /// Graphic Interchange Format (.gif).
         /// </summary>
         Gif,
+
         /// <summary>
         /// Portable (Public) Network Graphic (.png).
         /// </summary>
         Png,
+
         /// <summary>
         /// Tagged Image Format File (.tiff).
         /// </summary>
@@ -49,10 +52,12 @@ namespace DocumentFormat.OpenXml.Packaging
         ///// X Bitmap Graphic (.xbm).
         ///// </summary>
         //Xbm,
+
         /// <summary>
         /// Windows Icon (.ico).
         /// </summary>
         Icon,
+
         /// <summary>
         /// PC Paintbrush Bitmap Graphic (.pcx).
         /// </summary>
@@ -67,17 +72,20 @@ namespace DocumentFormat.OpenXml.Packaging
         ///// Macintosh Quickdraw/PICT Drawing (.pict).
         ///// </summary>
         //Pict,
+
         /// <summary>
         /// JPEG/JIFF Image (.jpeg).
         /// </summary>
         Jpeg,
+
         /// <summary>
         /// Extended (Enhanced) Windows Metafile Format (.emf).
         /// </summary>
         Emf,
+
         /// <summary>
         /// Windows Metafile (.wmf).
         /// </summary>
-        Wmf
+        Wmf,
     }
 }

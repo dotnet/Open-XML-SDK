@@ -122,6 +122,7 @@ namespace DocumentFormat.OpenXml
             get
             {
                 ThrowIfObjectDisposed();
+
                 // default is true for standalone
                 // <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
                 return _standalone;
@@ -208,6 +209,7 @@ namespace DocumentFormat.OpenXml
                 else
                 {
                 }
+
                 return false;
             }
         }
@@ -228,6 +230,7 @@ namespace DocumentFormat.OpenXml
                         return true;
                     }
                 }
+
                 return false;
             }
         }
@@ -249,6 +252,7 @@ namespace DocumentFormat.OpenXml
                         return true;
                     }
                 }
+
                 return false;
             }
         }
@@ -471,11 +475,13 @@ namespace DocumentFormat.OpenXml
                         Debug.Assert(false);
                         return false;
                     }
+
                     GetElementInformation();
                     if (_elementState == ElementState.End)
                     {
                         return false;
                     }
+
                     return true;
 
                 case ElementState.LeafStart:
@@ -495,6 +501,7 @@ namespace DocumentFormat.OpenXml
                 default:
                     break;
             }
+
             return false;
         }
 
@@ -574,6 +581,7 @@ namespace DocumentFormat.OpenXml
                 default:
                     break;
             }
+
             return;
         }
 
@@ -608,6 +616,7 @@ namespace DocumentFormat.OpenXml
 
                     element = _elementStack.Pop();
                     element.Load(_xmlReader, OpenXmlLoadMode.Full);
+
                     // stop at next element.
                     GetElementInformation();
                     return element;
@@ -629,6 +638,7 @@ namespace DocumentFormat.OpenXml
                     Debug.Assert(false);
                     break;
             }
+
             return null;
         }
 
@@ -670,7 +680,7 @@ namespace DocumentFormat.OpenXml
 #if FEATURE_XML_PROHIBIT_DTD
                 ProhibitDtd = true,
 #else
-                DtdProcessing = DtdProcessing.Prohibit
+                DtdProcessing = DtdProcessing.Prohibit,
 #endif
             };
 
@@ -713,7 +723,6 @@ namespace DocumentFormat.OpenXml
 
             // TODO: should we take care of entity? <!DOCTYPE page [ <!ENTITY company "Microsoft"> ]>
             // TODO: is it OK that we skip all prolog ( DOCTYPE, Comment, PT ) ?
-
             _xmlReader.MoveToContent();
 
             while (!_xmlReader.EOF && _xmlReader.NodeType != XmlNodeType.Element)
@@ -747,6 +756,7 @@ namespace DocumentFormat.OpenXml
             {
                 _elementState = ElementState.Start;
             }
+
             return true;
         }
 

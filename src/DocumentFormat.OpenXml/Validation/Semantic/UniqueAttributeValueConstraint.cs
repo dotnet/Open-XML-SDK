@@ -56,7 +56,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 ErrorType = ValidationErrorType.Semantic,
                 Node = context.Element,
                 Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_UniqueAttributeValue,
-                                            GetAttributeQualifiedName(context.Element, _attribute), attributeValue.InnerText)
+                                            GetAttributeQualifiedName(context.Element, _attribute), attributeValue.InnerText),
             };
         }
 
@@ -85,6 +85,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 {
                     _stateStack.Push(_values);
                 }
+
                 _reg.AddCallBackMethod(context.Element, AdjustState);
                 _values = new List<string>();
             }

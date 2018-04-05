@@ -90,6 +90,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":rfmt", validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             //invalid child in middle
             rRowColumn.RemoveChild(errorChild);
             errorChild = rRowColumn.InsertBefore(new Paragraph(), rRowColumn.LastChild);
@@ -104,6 +105,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":rfmt", validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             //invalid child in last
             rRowColumn.RemoveChild(errorChild);
             errorChild = rRowColumn.AppendChild(new Paragraph());
@@ -209,6 +211,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":textInput", validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             //invalid child in middle
             ffData.RemoveChild(errorChild);
             errorChild = ffData.InsertBefore(new Paragraph(), ffData.LastChild);
@@ -223,6 +226,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":textInput", validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             //invalid child in last
             ffData.RemoveChild(errorChild);
             errorChild = ffData.AppendChild(new Paragraph());
@@ -279,6 +283,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":bldChart", validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // both element are exist
             bldSub.Append(new Drawing.BuildChart(), new Drawing.BuildDiagram());
             errorChild = bldSub.LastChild;
@@ -292,6 +297,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             //first is invalid
             errorChild = bldSub.PrependChild(new Paragraph());
             target.Validate(validationContext);
@@ -358,6 +364,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":numberingChange", validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // second is invalid
             fldChar.RemoveChild(errorChild);
             errorChild = fldChar.AppendChild(new Paragraph());
@@ -371,6 +378,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // dup first child
             fldChar.RemoveAllChildren();
             fldChar.Append(new FieldData(), new FieldData());
@@ -385,6 +393,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // two different
             fldChar.RemoveAllChildren();
             fldChar.Append(new FieldData(), new FormFieldData());
@@ -399,6 +408,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // two different
             fldChar.RemoveAllChildren();
             fldChar.Append(new FormFieldData(), new FieldData());

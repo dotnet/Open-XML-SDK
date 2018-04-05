@@ -167,6 +167,7 @@ namespace DocumentFormat.OpenXml
                 {
                     Close();
                 }
+
                 _disposed = true;
             }
         }

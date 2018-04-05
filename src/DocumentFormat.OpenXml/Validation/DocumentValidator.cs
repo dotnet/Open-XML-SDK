@@ -53,7 +53,6 @@ namespace DocumentFormat.OpenXml.Validation
                 // traverse from the part root element (by DOM or by Reader) in post-order
                 // that means validate the children first, then validate the parent
                 // the validation engine call bookkeep information
-
                 ValidatePart(part, context);
             }
 
@@ -121,7 +120,7 @@ namespace DocumentFormat.OpenXml.Validation
                     Id = "ExceptionError",
                     Part = part,
                     Path = new XmlPath(part),
-                    Description = string.Format(CultureInfo.CurrentUICulture, ValidationResources.ExceptionError, e.Message)
+                    Description = string.Format(CultureInfo.CurrentUICulture, ValidationResources.ExceptionError, e.Message),
                 };
 
                 context.AddError(errorInfo);
@@ -133,7 +132,7 @@ namespace DocumentFormat.OpenXml.Validation
             var context = new ValidationContext
             {
                 FileFormat = _validationSettings.FileFormat,
-                MaxNumberOfErrors = _validationSettings.MaxNumberOfErrors
+                MaxNumberOfErrors = _validationSettings.MaxNumberOfErrors,
             };
 
             _semanticValidator.ClearConstraintState(SemanticValidationLevel.PackageOnly);
@@ -199,7 +198,7 @@ namespace DocumentFormat.OpenXml.Validation
                     var errorInfo = new ValidationErrorInfo
                     {
                         ErrorType = ValidationErrorType.Package,
-                        Id = "Pkg_" + e.MessageId
+                        Id = "Pkg_" + e.MessageId,
                     };
 
                     string name;
@@ -260,6 +259,7 @@ namespace DocumentFormat.OpenXml.Validation
         {
             Debug.Assert(part != null);
             string partClassName = part.GetType().Name;
+
             // Example: WordprocessingCommentsPart{/word/comments.xml}
             return string.Format(CultureInfo.CurrentUICulture, "{0}{1}{2}{3}", partClassName, '{', part.Uri, '}');
         }
@@ -267,6 +267,7 @@ namespace DocumentFormat.OpenXml.Validation
         private static string GetPartUri(OpenXmlPart part)
         {
             Debug.Assert(part != null);
+
             // Example: WordprocessingCommentsPart{/word/comments.xml}
             return string.Format(CultureInfo.CurrentUICulture, "{0}{1}{2}", '{', part.Uri, '}');
         }

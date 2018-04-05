@@ -35,6 +35,7 @@ namespace DocumentFormat.OpenXml.Tests
             var target = particleConstraint.ParticleValidator as ChoiceParticleValidator;
             validationContext.Element = textBox;
             var expected = textBox;
+
               //<xsd:complexType name="CT_Textbox">
               //  <xsd:choice>
               //    <xsd:element ref="w:txbxContent" minOccurs="0" />
@@ -71,6 +72,7 @@ namespace DocumentFormat.OpenXml.Tests
             textBox.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             // any element with namespace is invalid
             errorChild = textBox.AppendChild(new OpenXmlUnknownElement(string.Empty, "test", "http://test"));
             target.Validate(validationContext);
@@ -85,6 +87,7 @@ namespace DocumentFormat.OpenXml.Tests
             textBox.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             // any element with namespace is invalid
             errorChild = textBox.AppendChild(new OpenXmlUnknownElement("t", "test", "http://test"));
             target.Validate(validationContext);
@@ -99,6 +102,7 @@ namespace DocumentFormat.OpenXml.Tests
             textBox.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             // only one element without namespace is allowed
             textBox.AppendChild(new OpenXmlUnknownElement("test"));
             errorChild = textBox.AppendChild(new OpenXmlUnknownElement("errorElement"));
@@ -113,6 +117,7 @@ namespace DocumentFormat.OpenXml.Tests
             textBox.RemoveAllChildren();
 
             validationContext.Clear();
+
             // only one element without namespace is allowed
             textBox.AppendChild(new OpenXmlUnknownElement("test"));
             errorChild = textBox.AppendChild(new OpenXmlUnknownElement("test"));

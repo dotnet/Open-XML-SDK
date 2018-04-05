@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                     Id = "Sem_InvalidRelationshipId",
                     ErrorType = ValidationErrorType.Semantic,
                     Node = context.Element,
-                    Description = errorDescription
+                    Description = errorDescription,
                 };
             }
         }

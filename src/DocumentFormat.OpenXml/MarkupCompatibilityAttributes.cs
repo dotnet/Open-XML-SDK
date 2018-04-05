@@ -9,11 +9,13 @@ namespace DocumentFormat.OpenXml
     public class MarkupCompatibilityAttributes
     {
         internal static string MCPrefix = NamespaceIdMap.GetNamespacePrefix(NamespaceIdMap.GetNamespaceId(AlternateContent.MarkupCompatibilityNamespace));
+
         /// <summary>
         /// Gets or sets a whitespace-delimited list of prefixes, where each
         ///  prefix identifies an ignorable namespace.
         /// </summary>
         public StringValue Ignorable { get; set; }
+
         /// <summary>
         /// Gets or sets a whitespace-delimited list of element-qualified names
         ///  that identify the expanded names of elements. The content of the
@@ -21,6 +23,7 @@ namespace DocumentFormat.OpenXml
         ///  ignored.
         /// </summary>
         public StringValue ProcessContent { get; set; }
+
         /// <summary>
         /// Gets or sets a whitespace-delimited list of element qualified names
         ///  that identify the expanded names of elements. The elements are suggested
@@ -28,12 +31,14 @@ namespace DocumentFormat.OpenXml
         ///  the elements themselves are ignored.
         /// </summary>
         public StringValue PreserveElements { get; set; }
+
         /// <summary>
         /// Gets or sets a whitespace-delimited list of attribute qualified names
         ///  that identify expanded names of attributes. The attributes were
         ///  suggested by a markup producer for preservation by markup editors.
         /// </summary>
         public StringValue PreserveAttributes { get; set; }
+
         /// <summary>
         /// Gets or sets a whitespace-delimited list of prefixes that identify
         ///  a set of namespace names.
