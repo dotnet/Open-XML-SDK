@@ -17,42 +17,16 @@ using static DocumentFormat.OpenXml.Tests.TestAssets;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    public sealed class OpenXmlValidatorTestFixture : IDisposable
+    public class OpenXmlValidatorTest
     {
-        public OpenXmlValidatorTestFixture()
-        {
-            OpenXmlValidatorTest.MyClassInitialize();
-        }
+        private OpenXmlValidator O12Validator { get; }
 
-        public void Dispose()
-        {
-            OpenXmlValidatorTest.MyClassCleanup();
-        }
-    }
+        private OpenXmlValidator O14Validator { get; }
 
-    public class OpenXmlValidatorTest : IClassFixture<OpenXmlValidatorTestFixture>
-    {
-        private static OpenXmlValidator O12Validator { get; set; }
-
-        private static OpenXmlValidator O14Validator { get; set; }
-
-        ///<summary>
-        ///You can use the following additional attributes as you write your tests:
-        ///Use ClassInitialize to run code before running the first test in the class
-        ///</summary>
-        internal static void MyClassInitialize()
+        public OpenXmlValidatorTest()
         {
             O12Validator = new OpenXmlValidator(FileFormatVersions.Office2007);
             O14Validator = new OpenXmlValidator(FileFormatVersions.Office2010);
-        }
-
-        ///<summary>
-        ///Use ClassCleanup to run code after all tests in a class have run
-        ///</summary>
-        internal static void MyClassCleanup()
-        {
-            O12Validator = null;
-            O14Validator = null;
         }
 
         #region property validation
