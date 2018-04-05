@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
                 P15.ThreadingInfo threadingInfo = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Single();
                 CommentExtension commentExtension = (CommentExtension)threadingInfo.Parent;
-                ThreadingInfoExtUri = commentExtension.Uri; ;
+                ThreadingInfoExtUri = commentExtension.Uri;
 
                 if (string.IsNullOrEmpty(ThreadingInfoExtUri))
                     throw new Exception("Uri attribute value in Extension element is not set.");

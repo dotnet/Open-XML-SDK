@@ -158,7 +158,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         else
                         {
                             // emit error
-                            string attributeQname = element.GetFixedAttributeQname(i).ToString(); ;
+                            string attributeQname = element.GetFixedAttributeQname(i).ToString();
                             errorInfo = validationContext.ComposeSchemaValidationError(element, null, "Sch_UndeclaredAttribute", attributeQname);
                             errorInfo.SetDebugField(attributeQname, "Sch_UndeclaredAttribute");
                             validationContext.AddError(errorInfo);

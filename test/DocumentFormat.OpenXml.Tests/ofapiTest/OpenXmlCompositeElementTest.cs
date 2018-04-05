@@ -230,7 +230,7 @@ namespace DocumentFormat.OpenXml.Tests
                                     "</ap:Properties>";
 
             var properties = new DocumentFormat.OpenXml.ExtendedProperties.Properties();
-            var property = properties.AppendChild( new DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts() );;
+            var property = properties.AppendChild( new DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts() );
             property.VTVector = new DocumentFormat.OpenXml.VariantTypes.VTVector();
             property.VTVector.BaseType = DocumentFormat.OpenXml.VariantTypes.VectorBaseValues.Lpstr;
             property.VTVector.Size = 1;
