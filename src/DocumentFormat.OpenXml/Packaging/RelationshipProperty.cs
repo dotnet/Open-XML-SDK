@@ -13,5 +13,4 @@ namespace DocumentFormat.OpenXml.Packaging
         internal TargetMode TargetMode;
         internal Uri TargetUri;
     }
-;
 }
