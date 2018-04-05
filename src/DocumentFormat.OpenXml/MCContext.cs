@@ -133,6 +133,7 @@ namespace DocumentFormat.OpenXml
                         continue;
                     }
                 }
+
                 var ns = LookupNamespaceDelegate(items[0]);
                 if (string.IsNullOrEmpty(ns))
                 {
@@ -271,10 +272,12 @@ namespace DocumentFormat.OpenXml
                 {
                     return ElementAction.Normal;
                 }
+
                 if (IsProcessContent(element.NamespaceUri, element.LocalName))
                 {
                     return ElementAction.ProcessContent;
                 }
+
                 return ElementAction.Ignore;
             }
 
@@ -294,6 +297,7 @@ namespace DocumentFormat.OpenXml
                     return true;
                 }
             }
+
             return false;
         }
 
@@ -326,6 +330,7 @@ namespace DocumentFormat.OpenXml
                     ret++;
                 }
             }
+
             return ret;
         }
 
@@ -338,6 +343,7 @@ namespace DocumentFormat.OpenXml
                 stack.Push(qn);
                 ret++;
             }
+
             return ret;
         }
 
@@ -348,6 +354,7 @@ namespace DocumentFormat.OpenXml
             {
                 ret = PushQName(_currentPreserveAttr, attr.PreserveAttributes.Value);
             }
+
             return ret;
         }
 
@@ -358,6 +365,7 @@ namespace DocumentFormat.OpenXml
             {
                 ret = PushQName(_currentPreserveEle, attr.PreserveElements.Value);
             }
+
             return ret;
         }
 
@@ -368,6 +376,7 @@ namespace DocumentFormat.OpenXml
             {
                 ret = PushQName(_currentProcessContent, attr.ProcessContent.Value);
             }
+
             return ret;
         }
 
@@ -416,6 +425,7 @@ namespace DocumentFormat.OpenXml
                     //should we throw exception here?
                     continue;
                 }
+
                 string reqs = choice.Requires.InnerText.Trim();
                 if (string.IsNullOrEmpty(reqs))
                 {
@@ -445,6 +455,7 @@ namespace DocumentFormat.OpenXml
                             throw new InvalidMCContentException(msg);
                         }
                     }
+
                     if (!NamespaceIdMap.IsInFileFormat(ns, format))
                     {
                         chooce = false;
@@ -457,11 +468,13 @@ namespace DocumentFormat.OpenXml
                     return choice;
                 }
             }
+
             var fallback = acblk.GetFirstChild<AlternateContentFallback>();
             if (fallback != null)
             {
                 return fallback;
             }
+
             return null;
         }
         #endregion

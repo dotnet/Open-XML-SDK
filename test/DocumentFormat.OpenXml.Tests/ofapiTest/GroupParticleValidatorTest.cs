@@ -133,6 +133,7 @@ namespace DocumentFormat.OpenXml.Tests
             header.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             //last is invalid
             errorChild = header.AppendChild(new Run());
             target.Validate(validationContext);
@@ -277,6 +278,7 @@ namespace DocumentFormat.OpenXml.Tests
             sectPr.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             //first is invalid
             errorChild = sectPr.PrependChild(new Paragraph());
             target.Validate(validationContext);
@@ -293,6 +295,7 @@ namespace DocumentFormat.OpenXml.Tests
             sectPr.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             //invalid child in middle
             errorChild = sectPr.InsertBefore(new Paragraph(), sectPr.LastChild);
             target.Validate(validationContext);
@@ -306,6 +309,7 @@ namespace DocumentFormat.OpenXml.Tests
             sectPr.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             // order wrong
             errorChild = sectPr.FirstChild;
             sectPr.PrependChild(new SectionType());
@@ -319,6 +323,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // dup error
             sectPr.RemoveAllChildren();
             sectPr.Append(new HeaderReference(), new PaperSource());
@@ -334,6 +339,7 @@ namespace DocumentFormat.OpenXml.Tests
             sectPr.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             // out of order error
             errorChild = sectPr.AppendChild(new SectionType());
             target.Validate(validationContext);
@@ -347,6 +353,7 @@ namespace DocumentFormat.OpenXml.Tests
             sectPr.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             // out of order error
             sectPr.AppendChild(new SectionPropertiesChange());
             errorChild = sectPr.AppendChild(new SectionType());

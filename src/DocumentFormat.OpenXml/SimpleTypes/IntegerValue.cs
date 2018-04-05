@@ -64,6 +64,7 @@ namespace DocumentFormat.OpenXml
             {
                 throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
             }
+
             return ToInt64(xmlAttribute);
         }
 

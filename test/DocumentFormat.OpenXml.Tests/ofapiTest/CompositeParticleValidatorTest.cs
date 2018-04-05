@@ -156,6 +156,7 @@ namespace DocumentFormat.OpenXml.Tests
             pPr.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             // SectionProperties order wrong
             errorChild = pPr.FirstChild;
             pPr.PrependChild(new SectionProperties());
@@ -323,6 +324,7 @@ namespace DocumentFormat.OpenXml.Tests
             body.RemoveChild(body.FirstChild);
 
             validationContext.Clear();
+
             // can only have one sectProperties at last
             errorChild = body.AppendChild(new SectionProperties());
             target.Validate(validationContext);
@@ -336,7 +338,8 @@ namespace DocumentFormat.OpenXml.Tests
             body.RemoveChild(errorChild);
 
             validationContext.Clear();
-            // paragrap can be after sectProperties at last
+
+            // paragraph can be after sectProperties at last
             errorChild = body.AppendChild(new Paragraph());
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);
@@ -349,6 +352,7 @@ namespace DocumentFormat.OpenXml.Tests
             body.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             // first is invalid
             errorChild = body.PrependChild(new Run());
             target.Validate(validationContext);
@@ -362,6 +366,7 @@ namespace DocumentFormat.OpenXml.Tests
             body.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             // invalid child in middle
             errorChild = body.InsertBefore(new Run(), body.LastChild);
             target.Validate(validationContext);
@@ -458,6 +463,7 @@ namespace DocumentFormat.OpenXml.Tests
             blip.RemoveChild(blip.FirstChild);
 
             validationContext.Clear();
+
             // can only have one ExtensionList at last
             errorChild = blip.AppendChild(new Drawing.BlipExtensionList());
             target.Validate(validationContext);

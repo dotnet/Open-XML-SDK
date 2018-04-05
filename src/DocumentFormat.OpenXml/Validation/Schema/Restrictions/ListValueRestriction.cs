@@ -40,6 +40,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 
                 return true;
             }
+
             return false;
         }
     }

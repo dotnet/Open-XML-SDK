@@ -12,6 +12,7 @@ namespace DocumentFormat.OpenXml
         internal const int AlternateContentChoiceId = 9004;
         internal const int AlternateContentFallbackId = 9005;
         internal const int MaxReservedId = 10000;
+
         // ID of generated classes will start from 10001;
 
         /// <summary>

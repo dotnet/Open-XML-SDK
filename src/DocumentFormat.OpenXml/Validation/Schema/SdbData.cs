@@ -61,8 +61,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         #region Deserialize helper functions
-        // deserialize helper functions
 
+        // deserialize helper functions
         public static int LoadInt(byte[] bytes, ref int startIndex)
         {
             int result = BitConverter.ToInt32(bytes, startIndex);

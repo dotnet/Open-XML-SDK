@@ -123,6 +123,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 FromFlatOpcDocumentCore(document, package);
             }
+
             return stream;
         }
 
@@ -139,6 +140,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 FromFlatOpcDocumentCore(document, package);
             }
+
             return path;
         }
 

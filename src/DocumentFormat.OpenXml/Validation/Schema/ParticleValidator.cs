@@ -148,7 +148,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                 //case ParticleType.Any:
                 //    return new AnyParticleValidator(particleConstraint);
-
                 case ParticleType.Element:
                 default:
                     throw new InvalidOperationException();

@@ -157,6 +157,7 @@ namespace DocumentFormat.OpenXml
                                 localName = xmlReader.LocalName;
                             }
                         }
+
                         break;
 
                     case XmlNodeType.Text:
@@ -190,6 +191,7 @@ namespace DocumentFormat.OpenXml
                         Debug.Assert(false);
                         break;
                 }
+
                 return localName;
             }
         }
@@ -303,6 +305,7 @@ namespace DocumentFormat.OpenXml
 
                 case XmlNodeType.XmlDeclaration:
                     Debug.Assert(xmlReader.NodeType != XmlNodeType.XmlDeclaration);
+
                     // this.RawOuterXml = String.Format("<?xml version='1.0'?>");
                     Value = xmlReader.Value; // version='1.0'
                     break;

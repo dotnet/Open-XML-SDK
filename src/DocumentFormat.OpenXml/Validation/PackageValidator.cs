@@ -114,6 +114,7 @@ namespace DocumentFormat.OpenXml.Validation
 
                 // validate the required parts
                 if (constraintRule.MinOccursIsNonZero
+
                     // only check rules apply to the specified version.
                     && version.AtLeast(constraintRule.FileFormat))
                 {
@@ -131,6 +132,7 @@ namespace DocumentFormat.OpenXml.Validation
 
                 // check for parts MaxOccursGreatThanOne=false, but do have multiple instance
                 if (!constraintRule.MaxOccursGreatThanOne
+
                     // only check rules apply to the specified version.
                     && version.AtLeast(constraintRule.FileFormat))
                 {

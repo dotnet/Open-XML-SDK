@@ -47,6 +47,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     LoadDomTree<Office.CustomUI.CustomUI>();
                 }
+
                 return _rootEle;
             }
 

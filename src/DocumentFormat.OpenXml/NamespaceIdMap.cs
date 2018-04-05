@@ -184,6 +184,7 @@ namespace DocumentFormat.OpenXml
             "http://www.w3.org/2003/InkML",
             "http://www.w3.org/2003/04/emma",
             "http://schemas.microsoft.com/ink/2010/main",
+
             //o14 extensions
             "http://schemas.microsoft.com/office/drawing/2007/8/2/chart",
             "http://schemas.microsoft.com/office/drawing/2010/chartDrawing",
@@ -202,8 +203,10 @@ namespace DocumentFormat.OpenXml
             "http://schemas.microsoft.com/office/word/2010/wordprocessingGroup",
             "http://schemas.microsoft.com/office/word/2010/wordprocessingShape",
             "http://schemas.microsoft.com/office/drawing/2010/slicer",
+
             //"http://schemas.microsoft.com/office/2007/6/19/audiovideo",
             "http://schemas.microsoft.com/office/drawing/2010/compatibility",
+
             //o15 extension
             "http://schemas.microsoft.com/office/drawing/2012/chart",
             "http://schemas.microsoft.com/office/drawing/2012/chartStyle",
@@ -284,6 +287,7 @@ namespace DocumentFormat.OpenXml
             "inkml",
             "emma",
             "msink",
+
             //o14 extensions
             "c14",
             "cdr14",
@@ -302,8 +306,10 @@ namespace DocumentFormat.OpenXml
             "wpg",
             "wps",
             "sle",
+
             //"pav",
             "com14",
+
             // o15 extension
             "c15",
             "cs",
@@ -389,6 +395,7 @@ namespace DocumentFormat.OpenXml
             "http://schemas.microsoft.com/office/word/2010/wordprocessingGroup",
             "http://schemas.microsoft.com/office/word/2010/wordprocessingShape",
             "http://schemas.microsoft.com/office/drawing/2010/slicer",
+
             //"http://schemas.microsoft.com/office/2007/6/19/audiovideo",
             "http://schemas.microsoft.com/office/drawing/2010/compatibility",
         };

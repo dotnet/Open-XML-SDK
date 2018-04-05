@@ -157,6 +157,7 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
                     if (connection.Id == 1)
                         hasConnection = true;
                 }
+
                 log.Verify(hasConnection == false, "Connection is not delete.");
             }
         }

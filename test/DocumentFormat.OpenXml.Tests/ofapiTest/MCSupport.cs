@@ -75,6 +75,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.NotNull(actual.FirstChild.MCAttributes.PreserveAttributes);
 
                     Assert.True(actual.FirstChild.HasChildren);
+
                     //get attribute, no exception thrown
                     OpenXmlAttribute attr = actual.FirstChild.GetAttribute("PreserveAttributes", AlternateContent.MarkupCompatibilityNamespace);
                     Assert.Equal("w14:editId", attr.Value);
@@ -280,6 +281,7 @@ namespace DocumentFormat.OpenXml.Tests
                     OpenXmlPartRootElement root = target.RootElement;
                     OpenXmlElement p1 = null;
                     p1 = root.FirstChild.FirstChild;
+
                     //should throw exception
                     var attrs = p1.GetAttributes();
                     Assert.Equal(3, attrs.Count);
@@ -353,6 +355,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (var testDocument = WordprocessingDocument.Open(stream, true, settings))
                 {
                     OpenXmlPart target = testDocument.MainDocumentPart;
+
                     //should throw exception here
                     Assert.Throws<NamespaceNotUnderstandException>(() =>
                     {
@@ -461,6 +464,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 Assert.Null(doc.MainDocumentPart.Document.Body.FirstChild);
             }
+
             System.IO.File.Delete(testFile);
         }
 
@@ -490,6 +494,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 Assert.Null(doc.MainDocumentPart.Document.Body.FirstChild);
             }
+
             System.IO.File.Delete(testFile);
         }
     }

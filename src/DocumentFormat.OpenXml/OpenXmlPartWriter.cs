@@ -26,6 +26,7 @@ namespace DocumentFormat.OpenXml
                 {
                     _openXmlLeafTextElementClass = typeof(OpenXmlLeafTextElement);
                 }
+
                 return _openXmlLeafTextElementClass;
             }
         }
@@ -347,9 +348,6 @@ namespace DocumentFormat.OpenXml
             if (_xmlWriter != null)
             {
 #if FEATURE_CLOSE
-                // the end tag of the root element
-                // this._xmlWriter.WriteEndElement();
-
                 _xmlWriter.Close();
 #else
                 _xmlWriter.Dispose();

@@ -62,10 +62,12 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     throw new ArgumentNullException(nameof(value));
                 }
+
                 if (MailMergeRecipients != null)
                 {
                     throw new InvalidOperationException(string.Format(System.Globalization.CultureInfo.CurrentCulture, ExceptionMessages.PropertyMutualExclusive, "Recipients", "MailMergeRecipients"));
                 }
+
                 SetDomTree(value);
             }
         }
@@ -88,10 +90,12 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     throw new ArgumentNullException(nameof(value));
                 }
+
                 if (Recipients != null)
                 {
                     throw new InvalidOperationException(string.Format(System.Globalization.CultureInfo.CurrentCulture, ExceptionMessages.PropertyMutualExclusive, "MailMergeRecipients", "Recipients"));
                 }
+
                 SetDomTree(value);
             }
         }
@@ -107,6 +111,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 catch (System.IO.InvalidDataException)
                 {
                 }
+
                 if (_rootEle == null)
                 {
                     LoadDomTree<DocumentFormat.OpenXml.Office.Word.MailMergeRecipients>();

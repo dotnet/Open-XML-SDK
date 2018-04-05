@@ -67,7 +67,6 @@ namespace DocumentFormat.OpenXml.Validation
                 if (validationContext.McContext.IsProcessContent(element))
                 {
                     // do validating on children elements.
-
                     foreach (OpenXmlElement child in element.ChildElements)
                     {
                         validationContext.Element = child;

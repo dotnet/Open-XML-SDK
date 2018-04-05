@@ -49,6 +49,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     LoadDomTree<DocumentFormat.OpenXml.Wordprocessing.Styles>();
                 }
+
                 return _rootEle;
             }
 

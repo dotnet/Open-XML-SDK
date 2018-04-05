@@ -50,7 +50,6 @@ namespace DocumentFormat.OpenXml.Tests
               //  <xsd:attribute name="rupBuild" type="xsd:string" use="optional">
               //  <xsd:attribute name="codeName" type="ST_Guid" use="optional">
               //</xsd:complexType>
-
             var schemaTypeData = actual.GetSchemaTypeData(DocumentFormat.OpenXml.Spreadsheet.FileVersion.ElementTypeIdConst);
             Assert.Equal(5, schemaTypeData.AttributeConstraintsCount);
 
@@ -75,7 +74,6 @@ namespace DocumentFormat.OpenXml.Tests
               //  <xsd:attribute name="unhideWhenUsed" type="ST_OnOff">
               //  <xsd:attribute name="qFormat" type="ST_OnOff">
               //</xsd:complexType>
-
             schemaTypeData = actual.GetSchemaTypeData(LatentStyleExceptionInfo.ElementTypeIdConst);
             Assert.Equal(6, schemaTypeData.AttributeConstraintsCount);
 
@@ -149,6 +147,7 @@ namespace DocumentFormat.OpenXml.Tests
         private void DocumentConstraintTest(SdbSchemaDatas actual)
         {
             ElementParticle elementParticle;
+
             // CT_Document
             //<xsd:complexType name="CT_DocumentBase">
             //  <xsd:sequence>
@@ -262,7 +261,6 @@ namespace DocumentFormat.OpenXml.Tests
           //    <xsd:group ref="EG_BlockLevelEltsBase" minOccurs="0" maxOccurs="unbounded" />
           //    <xsd:group ref="EG_BlockLevelChunkElts" minOccurs="0" maxOccurs="unbounded" />
           //  </xsd:choice>
-
             var body = new Body();
             var bodyData = actual.GetSchemaTypeData(body.ElementTypeId);
             Assert.Equal(body.ElementTypeId, bodyData.OpenXmlTypeId);
@@ -407,7 +405,6 @@ namespace DocumentFormat.OpenXml.Tests
               //  <xsd:attribute name="inset" type="xsd:string" use="optional">
               //  <xsd:attribute ref="o:singleclick">
               //</xsd:complexType>
-
             var constraintData = actual.GetSchemaTypeData(DocumentFormat.OpenXml.Vml.TextBox.ElementTypeIdConst);
             Assert.Equal(DocumentFormat.OpenXml.Vml.TextBox.ElementTypeIdConst, constraintData.OpenXmlTypeId);
             Assert.True(constraintData.HasAttributeConstraints);
@@ -446,7 +443,6 @@ namespace DocumentFormat.OpenXml.Tests
         {
             // <Bibliography:SourceType /> is a simple type
             // <xsd:element name="SourceType" type="ST_SourceType">
-
             SourceType sourceType = new SourceType();
             var schemaTypeData = actual.GetSchemaTypeData(sourceType.ElementTypeId);
             Assert.Equal(sourceType.ElementTypeId, schemaTypeData.OpenXmlTypeId);

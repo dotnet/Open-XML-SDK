@@ -49,6 +49,7 @@ namespace DocumentFormat.OpenXml.Validation
                 {
                     _schemaValidator = new SchemaValidator(_settings.FileFormat);
                 }
+
                 return _schemaValidator;
             }
         }
@@ -113,6 +114,7 @@ namespace DocumentFormat.OpenXml.Validation
                 {
                     _spreadsheetDocumentValidator = new DocumentValidator(_settings, SchemaValidator, XlsSemanticValidator);
                 }
+
                 return _spreadsheetDocumentValidator;
             }
         }
@@ -125,6 +127,7 @@ namespace DocumentFormat.OpenXml.Validation
                 {
                     _wordprocessingDocumentValidator = new DocumentValidator(_settings, SchemaValidator, DocSmenaticValidator);
                 }
+
                 return _wordprocessingDocumentValidator;
             }
         }
@@ -137,6 +140,7 @@ namespace DocumentFormat.OpenXml.Validation
                 {
                     _presentationDocumentValidator = new DocumentValidator(_settings, SchemaValidator, PptSemanticValidator);
                 }
+
                 return _presentationDocumentValidator;
             }
         }

@@ -16,7 +16,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 //case MediaDataPartType.Basic:
                 //    return "audio/basic";
-
                 case MediaDataPartType.Midi:
                     return "audio/midi";
 
@@ -31,7 +30,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 //case MediaDataPartType.Wax:
                 //    return "audio/x-ms-wax";
-
                 case MediaDataPartType.Wma:
                     return "audio/x-ms-wma";
 
@@ -45,7 +43,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 //case MediaDataPartType.Asf:
                 //    return "video/x-ms-asf";
-
                 case MediaDataPartType.Asx:
                     return "video/x-ms-asf-plugin";
 
@@ -54,7 +51,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 //case MediaDataPartType.Ivf:
                 //    return "video/x-ivf";
-
                 case MediaDataPartType.Mpg:
                     return "video/mpg";
 
@@ -63,7 +59,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 //case MediaDataPartType.WM:
                 //    return "video/x-ms-wm";
-
                 case MediaDataPartType.Wmv:
                     return "video/x-ms-wmv";
 
@@ -96,7 +91,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 //case MediaDataPartType.Basic:
                 //    return ".au";
-
                 case MediaDataPartType.Midi:
                     return ".midi";
 
@@ -111,7 +105,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 //case MediaDataPartType.Wax:
                 //    return ".wax";
-
                 case MediaDataPartType.Wma:
                     return ".wma";
 
@@ -125,7 +118,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 //case MediaDataPartType.Asf:
                 //    return ".asf";
-
                 case MediaDataPartType.Asx:
                     return ".asx";
 
@@ -134,7 +126,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 //case MediaDataPartType.Ivf:
                 //    return ".ivf";
-
                 case MediaDataPartType.Mpg:
                     return ".mpg";
 
@@ -143,7 +134,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 //case MediaDataPartType.WM:
                 //    return ".wm";
-
                 case MediaDataPartType.Wmv:
                     return ".wmv";
 

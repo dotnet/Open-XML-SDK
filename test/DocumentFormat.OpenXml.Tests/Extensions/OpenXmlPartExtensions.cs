@@ -39,6 +39,7 @@ namespace DocumentFormat.OpenXml.Tests
                 if (PartRoot.Name.LocalName == "Sources")
                     return true;
             }
+
             return false;
         }
 
@@ -54,6 +55,7 @@ namespace DocumentFormat.OpenXml.Tests
                 if (PartRoot.Name.LocalName == "additionalCharacteristics")
                     return true;
             }
+
             return false;
         }
 
@@ -69,6 +71,7 @@ namespace DocumentFormat.OpenXml.Tests
                 if (PartRoot.Name.LocalName == "ink")
                     return true;
             }
+
             return false;
         }
 
@@ -204,18 +207,23 @@ namespace DocumentFormat.OpenXml.Tests
             // if two parts have the same reference, return true;
             if (sourcePart == targetPart)
                 return true;
+
             // if there is only one part is null, return false
             if ((targetPart == null && sourcePart != null) || (sourcePart == null && targetPart != null))
                 return false;
+
             //if two parts have different content type, return false
             if (sourcePart.ContentType != targetPart.ContentType)
                 return false;
+
             //if two parts have different number of external relationships, return false
             if (sourcePart.ExternalRelationships.Count() != targetPart.ExternalRelationships.Count())
                 return false;
+
             // if two parts have different number of hyperlink relationships, return false
             if (sourcePart.HyperlinkRelationships.Count() != targetPart.HyperlinkRelationships.Count())
                 return false;
+
             // if two parts have different relationship type, return false
             if (sourcePart.RelationshipType != targetPart.RelationshipType)
                 return false;
@@ -225,12 +233,14 @@ namespace DocumentFormat.OpenXml.Tests
             // if two parts contains different number of parts, return false;
             if (sourcePart.Parts.Count() != targetPart.Parts.Count())
                 return false;
+
             //compare each external relationship
             foreach (var id in sourcePart.ExternalRelationships)
             {
                 if (targetPart.ExternalRelationships.Where(i => i.Id == id.Id && i.RelationshipType == id.RelationshipType && i.Uri == id.Uri).Count() != 1)
                     return false;
             }
+
             //compare each hyperlink relationship
             foreach (var id in sourcePart.HyperlinkRelationships)
             {
@@ -259,6 +269,7 @@ namespace DocumentFormat.OpenXml.Tests
                         xmlCompareSuccess = false;
                     }
                 }
+
                 // else need to do binary compare
                 if (!xmlCompareSuccess)
                 {
@@ -297,6 +308,7 @@ namespace DocumentFormat.OpenXml.Tests
                         return false;
                 }
             }
+
             return true;
         }
 
@@ -315,6 +327,7 @@ namespace DocumentFormat.OpenXml.Tests
                 else
                     sb.Append(string.Empty);
             }
+
             return sb.ToString();
         }
     }

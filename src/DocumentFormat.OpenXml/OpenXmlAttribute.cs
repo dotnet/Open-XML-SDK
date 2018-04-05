@@ -66,6 +66,7 @@ namespace DocumentFormat.OpenXml
                 {
                     return string.Empty;
                 }
+
                 return _namespaceUri;
             }
 
@@ -187,6 +188,7 @@ namespace DocumentFormat.OpenXml
             {
                 return false;
             }
+
             OpenXmlAttribute attribute = (OpenXmlAttribute)obj;
             return Equals(attribute);
         }
@@ -205,14 +207,17 @@ namespace DocumentFormat.OpenXml
             {
                 hashCode ^= LocalName.GetHashCode();
             }
+
             if (NamespaceUri != null)
             {
                 hashCode ^= NamespaceUri.GetHashCode();
             }
+
             if (Prefix != null)
             {
                 hashCode ^= Prefix.GetHashCode();
             }
+
             if (Value != null)
             {
                 hashCode ^= Value.GetHashCode();

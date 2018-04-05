@@ -64,6 +64,7 @@ namespace DocumentFormat.OpenXml
                 {
                     MiscAttrContainer = new MiscAttrContainer();
                 }
+
                 MiscAttrContainer.ExtendedAttributesField = value;
             }
         }
@@ -88,6 +89,7 @@ namespace DocumentFormat.OpenXml
                 {
                     MiscAttrContainer = new MiscAttrContainer();
                 }
+
                 MiscAttrContainer._mcAttributes = value;
             }
         }
@@ -112,6 +114,7 @@ namespace DocumentFormat.OpenXml
                 {
                     MiscAttrContainer = new MiscAttrContainer();
                 }
+
                 MiscAttrContainer._nsMappings = value;
             }
         }
@@ -237,6 +240,7 @@ namespace DocumentFormat.OpenXml
                 {
                     return AttributeTagNames.Length;
                 }
+
                 return 0;
             }
         }
@@ -275,6 +279,7 @@ namespace DocumentFormat.OpenXml
         public OpenXmlElementContext OpenXmlElementContext
         {
             get { return RootElementContext; }
+
             // internal set { _elementContext = value; }
         }
 
@@ -341,6 +346,7 @@ namespace DocumentFormat.OpenXml
                         }
                     }
                 }
+
                 if (MCAttributeCount() > 0)
                 {
                     return true;
@@ -430,6 +436,7 @@ namespace DocumentFormat.OpenXml
                 {
                     ret = NamespaceIdMap.GetNamespacePrefix(NamespaceId);
                 }
+
                 return ret;
             }
         }
@@ -446,6 +453,7 @@ namespace DocumentFormat.OpenXml
                 {
                     return Enumerable.Empty<KeyValuePair<string, string>>();
                 }
+
                 return NamespaceDeclField;
             }
         }
@@ -503,6 +511,7 @@ namespace DocumentFormat.OpenXml
                         {
                             WriteContentTo(writer2);
                         }
+
                         return w.ToString();
                     }
                 }
@@ -539,6 +548,7 @@ namespace DocumentFormat.OpenXml
                         {
                             WriteTo(writer2);
                         }
+
                         return w.ToString();
                     }
                 }
@@ -550,15 +560,6 @@ namespace DocumentFormat.OpenXml
 
             internal set
             {
-                //if (!String.IsNullOrEmpty(value))
-                //{
-                //    if (!ValidOuterXml(value, this.NamespaceURI, this.LocalName))
-                //    {
-                //        // TODO: exception message
-                //        throw new InvalidOperationException();
-                //    }
-                //}
-
                 if (XmlParsed)
                 {
                     RemoveAllChildren();
@@ -571,6 +572,7 @@ namespace DocumentFormat.OpenXml
                             FixedAttributesArray[i] = null;
                         }
                     }
+
                     MCAttributes = null;
                 }
 
@@ -775,13 +777,16 @@ namespace DocumentFormat.OpenXml
                             ExtendedAttributesField.RemoveAt(index);
                             break;
                         }
+
                         index++;
                     }
                 }
+
                 if (ExtendedAttributesField == null)
                 {
                     ExtendedAttributesField = new List<OpenXmlAttribute>();
                 }
+
                 OpenXmlAttribute attribute = new OpenXmlAttribute(openXmlAttribute.Prefix, openXmlAttribute.LocalName, openXmlAttribute.NamespaceUri, openXmlAttribute.Value);
                 ExtendedAttributesField.Add(attribute);
             }
@@ -839,6 +844,7 @@ namespace DocumentFormat.OpenXml
                                 ExtendedAttributesField.RemoveAt(index);
                                 return;
                             }
+
                             index++;
                         }
                     }
@@ -877,6 +883,7 @@ namespace DocumentFormat.OpenXml
         public void ClearAllAttributes()
         {
             MakeSureParsed();
+
             // clear known attributes defined in schema
             if (FixedAttributesArray != null)
             {
@@ -904,15 +911,18 @@ namespace DocumentFormat.OpenXml
             {
                 throw new ArgumentNullException(nameof(prefix));
             }
+
             if (string.IsNullOrEmpty(uri))
             {
                 throw new ArgumentNullException(nameof(uri));
             }
+
             MakeSureParsed();
             if (NamespaceDeclField == null)
             {
                 NamespaceDeclField = new List<KeyValuePair<string, string>>();
             }
+
             foreach (var item in NamespaceDeclField)
             {
                 if (item.Key == prefix)
@@ -921,6 +931,7 @@ namespace DocumentFormat.OpenXml
                     throw new InvalidOperationException(msg);
                 }
             }
+
             NamespaceDeclField.Add(new KeyValuePair<string, string>(prefix, uri));
         }
 
@@ -934,6 +945,7 @@ namespace DocumentFormat.OpenXml
             {
                 throw new ArgumentNullException(nameof(prefix));
             }
+
             MakeSureParsed();
             if (NamespaceDeclField != null)
             {
@@ -970,6 +982,7 @@ namespace DocumentFormat.OpenXml
             {
                 return null;
             }
+
             OpenXmlElement firstChild = parent.FirstChild;
 
             while (firstChild != null)
@@ -979,8 +992,10 @@ namespace DocumentFormat.OpenXml
                 {
                     return firstChild;
                 }
+
                 firstChild = nextSibling;
             }
+
             return firstChild;
         }
 
@@ -999,6 +1014,7 @@ namespace DocumentFormat.OpenXml
                 {
                     return (T)element;
                 }
+
                 element = element.PreviousSibling();
             }
 
@@ -1017,6 +1033,7 @@ namespace DocumentFormat.OpenXml
             {
                 return next;
             }
+
             return null;
         }
 
@@ -1035,6 +1052,7 @@ namespace DocumentFormat.OpenXml
                 {
                     return (T)element;
                 }
+
                 element = element.NextSibling();
             }
 
@@ -1071,6 +1089,7 @@ namespace DocumentFormat.OpenXml
                 {
                     yield return (T)ancestor;
                 }
+
                 ancestor = ancestor.Parent;
             }
         }
@@ -1221,17 +1240,20 @@ namespace DocumentFormat.OpenXml
             {
                 //check the namespace mapping defined in this node first. because till now xmlWriter don't know the mapping defined in the current node.
                 string prefix = LookupPrefixLocal(NamespaceUri);
+
                 //if not defined in the current node, try the xmlWriter
                 if (string.IsNullOrEmpty(prefix))
                 {
                     prefix = xmlWriter.LookupPrefix(NamespaceUri);
                 }
+
                 //if xmlWriter didn't find it, it means the node is constructed by user and is not in the tree yet
                 //in this case, we use the predefined prefix
                 if (string.IsNullOrEmpty(prefix))
                 {
                     prefix = NamespaceIdMap.GetNamespacePrefix(NamespaceId);
                 }
+
                 xmlWriter.WriteStartElement(prefix, LocalName, NamespaceUri);
                 WriteAttributesTo(xmlWriter);
                 WriteContentTo(xmlWriter);
@@ -1319,9 +1341,11 @@ namespace DocumentFormat.OpenXml
             if (newElement == null)
             {
                 throw new ArgumentNullException(nameof(newElement));
+
                 // TODO: should we just return null? InsertBefore / InsertAfter do not throw on null newChild.
                 // return null;
             }
+
             if (Parent == null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ParentIsNull);
@@ -1342,9 +1366,11 @@ namespace DocumentFormat.OpenXml
             if (newElement == null)
             {
                 throw new ArgumentNullException(nameof(newElement));
+
                 // TODO: should we just return null? InsertBefore / InsertAfter do not throw on null newChild.
                 // return null;
             }
+
             if (Parent == null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ParentIsNull);
@@ -1646,6 +1672,7 @@ namespace DocumentFormat.OpenXml
                             xmlWriter.WriteString(attribute.InnerText);
                             xmlWriter.WriteEndAttribute();
                         }
+
                         i++;
                     }
                 }
@@ -1685,6 +1712,7 @@ namespace DocumentFormat.OpenXml
                     }
                 }
             }
+
             // no throw, just return -1.
             return -1;
         }
@@ -1784,6 +1812,7 @@ namespace DocumentFormat.OpenXml
                     }
                 }
             }
+
             return false;
         }
 
@@ -1806,8 +1835,10 @@ namespace DocumentFormat.OpenXml
                             {
                                 continue;
                             }
+
                             //if we cannot recognize the local name with the mc prefix, load it as extended properties
                         }
+
                         // a attribute is (xmlns:nnn=".....")
                         //bool attributeIsXmlnsDefination = this.IsXmlnsUri(xmlReader.NamespaceURI);
                         bool attributeIsXmlnsDefination = xmlReader.NamespaceURI == OpenXmlElementContext.xmlnsUri;
@@ -1819,6 +1850,7 @@ namespace DocumentFormat.OpenXml
                             {
                                 ExtendedAttributesField = new List<OpenXmlAttribute>();
                             }
+
                             ExtendedAttributesField.Add(new OpenXmlAttribute(xmlReader.Prefix, xmlReader.LocalName, xmlReader.NamespaceURI, xmlReader.Value));
                         }
                         else
@@ -1830,6 +1862,7 @@ namespace DocumentFormat.OpenXml
                                 {
                                     NamespaceDeclField = new List<KeyValuePair<string, string>>();
                                 }
+
                                 NamespaceDeclField.Add(new KeyValuePair<string, string>(xmlReader.LocalName, xmlReader.Value));
                             }
                         }
@@ -1867,6 +1900,7 @@ namespace DocumentFormat.OpenXml
                     {
                         CheckMustUnderstandAttr(xmlReader, mcAttributes, OpenXmlElementContext.MCSettings);
                     }
+
                     return true;
                 }
             }
@@ -1874,6 +1908,7 @@ namespace DocumentFormat.OpenXml
             {
                 // no need to process MC attributes, just return.
             }
+
             return false;
         }
 
@@ -1910,10 +1945,12 @@ namespace DocumentFormat.OpenXml
                         var msg = String.Format(System.Globalization.CultureInfo.CurrentCulture, ExceptionMessages.UnknowMCContent, mcAttributes.MustUnderstand.Value);
                         throw new InvalidMCContentException(msg);
                     }
+
                     if (NamespaceIdMap.IsInFileFormat(ns, mcSettings.TargetFileFormatVersions))
                     {
                         continue;
                     }
+
                     var error = string.Format(System.Globalization.CultureInfo.CurrentCulture, ExceptionMessages.NsNotUnderStand, prefix);
                     throw new NamespaceNotUnderstandException(error);
                 }
@@ -1929,6 +1966,7 @@ namespace DocumentFormat.OpenXml
             {
                 return;
             }
+
             if (MCAttributes.MustUnderstand != null && !string.IsNullOrEmpty(MCAttributes.MustUnderstand.Value))
             {
                 var prefixes = MCAttributes.MustUnderstand.Value.Trim().Split(new char[] { ' ' });
@@ -1940,14 +1978,17 @@ namespace DocumentFormat.OpenXml
                         var msg = String.Format(System.Globalization.CultureInfo.CurrentCulture, ExceptionMessages.UnknowMCContent, MCAttributes.MustUnderstand.Value);
                         throw new InvalidMCContentException(msg);
                     }
+
                     if (NamespaceIdMap.IsInFileFormat(ns, OpenXmlElementContext.MCSettings.TargetFileFormatVersions))
                     {
                         continue;
                     }
+
                     var error = string.Format(System.Globalization.CultureInfo.CurrentCulture, ExceptionMessages.NsNotUnderStand, prefix);
                     throw new NamespaceNotUnderstandException(error);
                 }
             }
+
             foreach (var child in ChildElements)
             {
                 child.CheckMustUnderstandAttr();
@@ -1973,6 +2014,7 @@ namespace DocumentFormat.OpenXml
                     {
                         LazyLoad(xmlReader);
                     }
+
                     break;
             }
         }
@@ -2072,6 +2114,7 @@ namespace DocumentFormat.OpenXml
         internal virtual OpenXmlSimpleType AttributeFactory(string namespaceUri, string name)
         {
             Debug.Assert(!String.IsNullOrEmpty(name));
+
             //
             OpenXmlSimpleType simpleType = null;
             byte nsId;
@@ -2226,18 +2269,22 @@ namespace DocumentFormat.OpenXml
             {
                 target.Ignorable = (StringValue)source.Ignorable.Clone();
             }
+
             if (source.MustUnderstand != null)
             {
                 target.MustUnderstand = (StringValue)source.MustUnderstand.Clone();
             }
+
             if (source.PreserveAttributes != null)
             {
                 target.PreserveAttributes = (StringValue)source.PreserveAttributes.Clone();
             }
+
             if (source.PreserveElements != null)
             {
                 target.PreserveElements = (StringValue)source.PreserveElements.Clone();
             }
+
             if (source.ProcessContent != null)
             {
                 target.ProcessContent = (StringValue)source.ProcessContent.Clone();
@@ -2284,6 +2331,7 @@ namespace DocumentFormat.OpenXml
             {
                 throw new ArgumentNullException(nameof(annotation));
             }
+
             if (_annotations == null)
             {
                 _annotations = (annotation is object[]) ? new object[] { annotation } : annotation;
@@ -2302,11 +2350,13 @@ namespace DocumentFormat.OpenXml
                     {
                         index++;
                     }
+
                     if (index == annotations.Length)
                     {
                         Array.Resize<object>(ref annotations, index * 2);
                         _annotations = annotations;
                     }
+
                     annotations[index] = annotation;
                 }
             }
@@ -2379,6 +2429,7 @@ namespace DocumentFormat.OpenXml
                         {
                             break;
                         }
+
                         if (type.GetTypeInfo().IsAssignableFrom(obj.GetType().GetTypeInfo()))
                         {
                             return obj;
@@ -2416,6 +2467,7 @@ namespace DocumentFormat.OpenXml
                         {
                             break;
                         }
+
                         if (obj is T)
                         {
                             yield return (T)obj;
@@ -2456,6 +2508,7 @@ namespace DocumentFormat.OpenXml
                         {
                             break;
                         }
+
                         if (type.GetTypeInfo().IsAssignableFrom(obj.GetType().GetTypeInfo()))
                         {
                             yield return obj;
@@ -2492,12 +2545,15 @@ namespace DocumentFormat.OpenXml
                         {
                             break;
                         }
+
                         if (!(obj is T))
                         {
                             annotations[num++] = obj;
                         }
+
                         index++;
                     }
+
                     if (num != 0)
                     {
                         while (num < index)
@@ -2523,6 +2579,7 @@ namespace DocumentFormat.OpenXml
             {
                 throw new ArgumentNullException(nameof(type));
             }
+
             if (_annotations != null)
             {
                 object[] annotations = _annotations as object[];
@@ -2544,12 +2601,15 @@ namespace DocumentFormat.OpenXml
                         {
                             break;
                         }
+
                         if (!type.GetTypeInfo().IsAssignableFrom(o.GetType().GetTypeInfo()))
                         {
                             annotations[num++] = o;
                         }
+
                         index++;
                     }
+
                     if (num != 0)
                     {
                         while (num < index)
@@ -2568,6 +2628,7 @@ namespace DocumentFormat.OpenXml
         #endregion
 
         #region IEnumerable<OpenXmlElement> Members
+
         /// <summary>
         /// Returns an enumerator that iterates through the child collection.
         /// </summary>
@@ -2690,6 +2751,7 @@ namespace DocumentFormat.OpenXml
         #endregion
 
         #region MC Staffs
+
         /// <summary>
         /// Gets or sets the markup compatibility attributes. Returns null if no markup compatibility attributes are defined for the current element.
         /// </summary>
@@ -2715,31 +2777,37 @@ namespace DocumentFormat.OpenXml
             {
                 McAttributesFiled = new MarkupCompatibilityAttributes();
             }
+
             if (localName.Equals(MCConsts.Ignorable))
             {
                 McAttributesFiled.Ignorable = value;
                 return true;
             }
+
             if (localName.Equals(MCConsts.ProcessContent))
             {
                 McAttributesFiled.ProcessContent = value;
                 return true;
             }
+
             if (localName.Equals(MCConsts.PreserveElements))
             {
                 McAttributesFiled.PreserveElements = value;
                 return true;
             }
+
             if (localName.Equals(MCConsts.PreserveAttributes))
             {
                 McAttributesFiled.PreserveAttributes = value;
                 return true;
             }
+
             if (localName.Equals(MCConsts.MustUnderstand))
             {
                 McAttributesFiled.MustUnderstand = value;
                 return true;
             }
+
             return false;
         }
 
@@ -2765,6 +2833,7 @@ namespace DocumentFormat.OpenXml
                                 {
                                     mcAttributes = new MarkupCompatibilityAttributes();
                                 }
+
                                 mcAttributes.Ignorable = xmlReader.Value;
                                 break;
                             case MCConsts.ProcessContent:
@@ -2772,6 +2841,7 @@ namespace DocumentFormat.OpenXml
                                 {
                                     mcAttributes = new MarkupCompatibilityAttributes();
                                 }
+
                                 mcAttributes.ProcessContent = xmlReader.Value;
                                 break;
                             case MCConsts.PreserveElements:
@@ -2779,6 +2849,7 @@ namespace DocumentFormat.OpenXml
                                 {
                                     mcAttributes = new MarkupCompatibilityAttributes();
                                 }
+
                                 mcAttributes.PreserveElements = xmlReader.Value;
                                 break;
                             case MCConsts.PreserveAttributes:
@@ -2786,6 +2857,7 @@ namespace DocumentFormat.OpenXml
                                 {
                                     mcAttributes = new MarkupCompatibilityAttributes();
                                 }
+
                                 mcAttributes.PreserveAttributes = xmlReader.Value;
                                 break;
                             case MCConsts.MustUnderstand:
@@ -2793,14 +2865,17 @@ namespace DocumentFormat.OpenXml
                                 {
                                     mcAttributes = new MarkupCompatibilityAttributes();
                                 }
+
                                 mcAttributes.MustUnderstand = xmlReader.Value;
                                 break;
                         }
                     }
                 }
+
                 //  Moves the reader back to the element node.
                 xmlReader.MoveToElement();
             }
+
             return mcAttributes;
         }
 
@@ -2810,31 +2885,37 @@ namespace DocumentFormat.OpenXml
             {
                 return false;
             }
+
             if (localName.Equals(MCConsts.Ignorable))
             {
                 MCAttributes.Ignorable = null;
                 return true;
             }
+
             if (localName.Equals(MCConsts.ProcessContent))
             {
                 MCAttributes.ProcessContent = null;
                 return true;
             }
+
             if (localName.Equals(MCConsts.PreserveElements))
             {
                 MCAttributes.PreserveElements = null;
                 return true;
             }
+
             if (localName.Equals(MCConsts.PreserveAttributes))
             {
                 MCAttributes.PreserveAttributes = null;
                 return true;
             }
+
             if (localName.Equals(MCConsts.MustUnderstand))
             {
                 MCAttributes.MustUnderstand = null;
                 return true;
             }
+
             return false;
         }
 
@@ -2854,18 +2935,22 @@ namespace DocumentFormat.OpenXml
             {
                 attributes.Add(new OpenXmlAttribute(mcPrefix, "Ignorable", AlternateContent.MarkupCompatibilityNamespace, MCAttributes.Ignorable));
             }
+
             if (MCAttributes.ProcessContent != null)
             {
                 attributes.Add(new OpenXmlAttribute(mcPrefix, "ProcessContent", AlternateContent.MarkupCompatibilityNamespace, MCAttributes.ProcessContent));
             }
+
             if (MCAttributes.PreserveElements != null)
             {
                 attributes.Add(new OpenXmlAttribute(mcPrefix, "PreserveElements", AlternateContent.MarkupCompatibilityNamespace, MCAttributes.PreserveElements));
             }
+
             if (MCAttributes.PreserveAttributes != null)
             {
                 attributes.Add(new OpenXmlAttribute(mcPrefix, "PreserveAttributes", AlternateContent.MarkupCompatibilityNamespace, MCAttributes.PreserveAttributes));
             }
+
             if (MCAttributes.MustUnderstand != null)
             {
                 attributes.Add(new OpenXmlAttribute(mcPrefix, "MustUnderstand", AlternateContent.MarkupCompatibilityNamespace, MCAttributes.MustUnderstand));
@@ -2914,6 +2999,7 @@ namespace DocumentFormat.OpenXml
             {
                 return new OpenXmlAttribute(mcPrefix, localName, AlternateContent.MarkupCompatibilityNamespace, MCAttributes.MustUnderstand);
             }
+
             throw new KeyNotFoundException(ExceptionMessages.CannotFindAttribute);
         }
 
@@ -2929,22 +3015,27 @@ namespace DocumentFormat.OpenXml
             {
                 mcPrefix = MarkupCompatibilityAttributes.MCPrefix;
             }
+
             if (MCAttributes.Ignorable != null)
             {
                 xmlWriter.WriteAttributeString(mcPrefix, MCConsts.Ignorable, AlternateContent.MarkupCompatibilityNamespace, MCAttributes.Ignorable);
             }
+
             if (MCAttributes.ProcessContent != null)
             {
                 xmlWriter.WriteAttributeString(mcPrefix, MCConsts.ProcessContent, AlternateContent.MarkupCompatibilityNamespace, MCAttributes.ProcessContent);
             }
+
             if (MCAttributes.PreserveElements != null)
             {
                 xmlWriter.WriteAttributeString(mcPrefix, MCConsts.PreserveElements, AlternateContent.MarkupCompatibilityNamespace, MCAttributes.PreserveElements);
             }
+
             if (MCAttributes.PreserveAttributes != null)
             {
                 xmlWriter.WriteAttributeString(mcPrefix, MCConsts.PreserveAttributes, AlternateContent.MarkupCompatibilityNamespace, MCAttributes.PreserveAttributes);
             }
+
             if (MCAttributes.MustUnderstand != null)
             {
                 xmlWriter.WriteAttributeString(mcPrefix, MCConsts.MustUnderstand, AlternateContent.MarkupCompatibilityNamespace, MCAttributes.MustUnderstand);
@@ -2961,22 +3052,27 @@ namespace DocumentFormat.OpenXml
             {
                 ret++;
             }
+
             if (MCAttributes.ProcessContent != null)
             {
                 ret++;
             }
+
             if (MCAttributes.PreserveElements != null)
             {
                 ret++;
             }
+
             if (MCAttributes.PreserveAttributes != null)
             {
                 ret++;
             }
+
             if (MCAttributes.MustUnderstand != null)
             {
                 ret++;
             }
+
             return ret;
         }
 
@@ -2987,10 +3083,12 @@ namespace DocumentFormat.OpenXml
             {
                 return;
             }
+
             if (!OpenXmlElementContext.MCContext.HasIgnorable())
             {
                 return;
             }
+
             if (FixedAttributesArray != null)
             {
                 int i = 0;
@@ -3006,6 +3104,7 @@ namespace DocumentFormat.OpenXml
                             FixedAttributesArray[i] = null;
                         }
                     }
+
                     i++;
                 }
             }
@@ -3041,6 +3140,7 @@ namespace DocumentFormat.OpenXml
                     }
                 }
             }
+
             return null;
         }
 
@@ -3056,6 +3156,7 @@ namespace DocumentFormat.OpenXml
                     }
                 }
             }
+
             return null;
         }
 
@@ -3081,6 +3182,7 @@ namespace DocumentFormat.OpenXml
                 {
                     return ret;
                 }
+
                 node = node.Parent;
             }
 
@@ -3108,6 +3210,7 @@ namespace DocumentFormat.OpenXml
                     return ret;
                 node = node.Parent;
             }
+
             return null;
         }
 

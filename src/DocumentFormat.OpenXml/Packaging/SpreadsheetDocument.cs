@@ -73,6 +73,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                     _validMainPartContentType = tempData;
                 }
+
                 return _validMainPartContentType;
             }
         }
@@ -97,6 +98,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         private SpreadsheetDocumentType _documentType;
+
         /// <summary>
         /// Gets the type of the SpreadsheetDocument.
         /// </summary>
@@ -183,6 +185,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(nameof(path));
             }
+
             SpreadsheetDocument doc = new SpreadsheetDocument();
             doc.DocumentType = type;
             doc.OpenSettings = new OpenSettings();
@@ -289,6 +292,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
+
             SpreadsheetDocument doc = new SpreadsheetDocument();
             doc.OpenSettings = new OpenSettings();
             doc.OpenSettings.AutoSave = openSettings.AutoSave;
@@ -300,6 +304,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 doc.UpdateDocumentTypeFromContentType();
             }
+
             return doc;
         }
 
@@ -321,6 +326,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
+
             SpreadsheetDocument doc = new SpreadsheetDocument();
             doc.OpenSettings = new OpenSettings();
             doc.OpenSettings.AutoSave = openSettings.AutoSave;
@@ -332,6 +338,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 doc.UpdateDocumentTypeFromContentType();
             }
+
             return doc;
         }
 
@@ -352,6 +359,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
+
             SpreadsheetDocument doc = new SpreadsheetDocument();
             doc.OpenSettings = new OpenSettings();
             doc.OpenSettings.AutoSave = openSettings.AutoSave;
@@ -363,8 +371,10 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 doc.UpdateDocumentTypeFromContentType();
             }
+
             return doc;
         }
+
         /// <summary>
         /// Creates a new instance of the SpreadsheetDocument class from the specified file.
         /// </summary>
@@ -446,6 +456,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     DocumentType = oldType;
                     MainPartContentType = MainPartContentTypes[oldType];
                 }
+
                 throw;
             }
         }
@@ -463,6 +474,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(nameof(relationshipType));
             }
+
             switch (relationshipType)
             {
                 case WorkbookPart.RelationshipTypeConstant:
@@ -495,6 +507,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 case WebExTaskpanesPart.RelationshipTypeConstant:
                     return new WebExTaskpanesPart();
             }
+
             throw new ArgumentOutOfRangeException(nameof(relationshipType));
         }
 
@@ -590,6 +603,7 @@ namespace DocumentFormat.OpenXml.Packaging
             InitPart(childPart, contentType);
             return childPart;
         }
+
         /// <summary>
         /// Adds a ThumbnailPart to the SpreadsheetDocument.
         /// </summary>
@@ -655,6 +669,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get { return GetSubPartOfType<WorkbookPart>(); }
         }
+
         /// <summary>
         /// Gets the CoreFilePropertiesPart of the SpreadsheetDocument.
         /// </summary>
@@ -662,6 +677,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get { return GetSubPartOfType<CoreFilePropertiesPart>(); }
         }
+
         /// <summary>
         /// Gets the ExtendedFilePropertiesPart of the SpreadsheetDocument.
         /// </summary>
@@ -669,6 +685,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get { return GetSubPartOfType<ExtendedFilePropertiesPart>(); }
         }
+
         /// <summary>
         /// Gets the CustomFilePropertiesPart of the SpreadsheetDocument.
         /// </summary>
@@ -676,6 +693,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get { return GetSubPartOfType<CustomFilePropertiesPart>(); }
         }
+
         /// <summary>
         /// Gets the ThumbnailPart of the SpreadsheetDocument.
         /// </summary>

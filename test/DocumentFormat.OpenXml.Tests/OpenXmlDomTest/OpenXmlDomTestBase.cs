@@ -91,6 +91,7 @@ namespace DocumentFormat.OpenXml.Tests
                 position++;
                 walker = walker.PreviousSibling();
             }
+
             path.Insert(0, "/" + element.LocalName + "@" + position);
         }
 
@@ -126,6 +127,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     throw new ArgumentException("The path is invalid!!");
                 }
+
                 elementTypeList.Add(ele[0]);
                 elementPositionList.Add(ele[1]);
             }
@@ -141,6 +143,7 @@ namespace DocumentFormat.OpenXml.Tests
                     throw new ArgumentException("The path contains invalid data");
                 }
             }
+
             return targetElement;
         }
 
@@ -164,6 +167,7 @@ namespace DocumentFormat.OpenXml.Tests
         #endregion
 
         #region Find Part
+
         /// <summary> get any reflectable part in given package. </summary>
         internal GetTargetPart getAnyOpenXmlPart =
             p => p.DescendantParts()
@@ -764,6 +768,7 @@ namespace DocumentFormat.OpenXml.Tests
                         default:
                             throw new InvalidOperationException("Operation specified is invalid!!");
                     }
+
                     result = hostElement.InsertAt<OpenXmlElement>(importElement.Clone() as OpenXmlElement, expectPos);
 
                     Log.Comment("Saving changes...");
@@ -2342,7 +2347,6 @@ namespace DocumentFormat.OpenXml.Tests
         // Annotations<T>()
         // RemoveAnnotations(Type)
         // RemoveAnnotations<T>()
-
         internal void AnnotationType(OpenXmlPart hostPart, GetTargetElement getHost)
         {
             Log.Comment("Loading root element from hosting part...");

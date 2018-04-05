@@ -28,9 +28,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
             {
                 // Items in the enum are merged from both Office2007 and Office2010.
                 // So, we should report error when the item is not defined in the specified version.
-
                 return attributeValue.IsInVersion(FileFormat);
             }
+
             return false;
         }
     }

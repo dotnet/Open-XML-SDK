@@ -53,7 +53,6 @@ namespace DocumentFormat.OpenXml.Validation
                 // traverse from the part root element (by DOM or by Reader) in post-order
                 // that means validate the children first, then validate the parent
                 // the validation engine call bookkeep information
-
                 ValidatePart(part, context);
             }
 
@@ -260,6 +259,7 @@ namespace DocumentFormat.OpenXml.Validation
         {
             Debug.Assert(part != null);
             string partClassName = part.GetType().Name;
+
             // Example: WordprocessingCommentsPart{/word/comments.xml}
             return string.Format(CultureInfo.CurrentUICulture, "{0}{1}{2}{3}", partClassName, '{', part.Uri, '}');
         }
@@ -267,6 +267,7 @@ namespace DocumentFormat.OpenXml.Validation
         private static string GetPartUri(OpenXmlPart part)
         {
             Debug.Assert(part != null);
+
             // Example: WordprocessingCommentsPart{/word/comments.xml}
             return string.Format(CultureInfo.CurrentUICulture, "{0}{1}{2}", '{', part.Uri, '}');
         }
