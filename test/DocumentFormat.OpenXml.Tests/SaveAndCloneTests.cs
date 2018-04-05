@@ -327,6 +327,54 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Fact]
+        public void CanSaveProperty()
+        {
+#if FEATURE_PACKAGE_FLUSH
+            Assert.True(OpenXmlPackage.CanSave);
+#else
+            Assert.False(OpenXmlPackage.CanSave);
+#endif
+        }
+
+        [Fact]
+        public void SaveWithoutClosing()
+        {
+            byte[] GetNewSpreadsheet()
+            {
+                using (var stream = new MemoryStream())
+                using (var source = SpreadsheetDocument.Create(stream, SpreadsheetDocumentType.Workbook))
+                {
+                    source.AddWorkbookPart();
+                    source.WorkbookPart.Workbook = new Spreadsheet.Workbook();
+                    source.WorkbookPart.Workbook.AppendChild(new Spreadsheet.Sheets());
+                    source.Save();
+                    source.WorkbookPart.Workbook.AppendChild(new Spreadsheet.Sheets());
+
+                    Assert.Equal(2, source.WorkbookPart.Workbook.ChildElements.Count);
+
+                    return stream.ToArray();
+                }
+            }
+
+            var bytes = GetNewSpreadsheet();
+
+            if (OpenXmlPackage.CanSave)
+            {
+                Assert.NotEmpty(bytes);
+
+                using (var stream = new MemoryStream(bytes))
+                using (var source = SpreadsheetDocument.Open(stream, false))
+                {
+                    Assert.Single(source.WorkbookPart.Workbook.ChildElements);
+                }
+            }
+            else
+            {
+                Assert.Empty(bytes);
+            }
+        }
+
+        [Fact]
         public void CanSaveAsExcel()
         {
             using (var tempFile = TemporaryFile.Create())

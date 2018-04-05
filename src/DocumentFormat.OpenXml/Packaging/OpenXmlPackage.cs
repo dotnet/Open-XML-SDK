@@ -286,6 +286,16 @@ namespace DocumentFormat.OpenXml.Packaging
         public long MaxCharactersInPart { get; internal set; }
 
         /// <summary>
+        /// Gets a value indicating whether saving the package is supported. Some platforms (such as .NET Core, currently do not support this)
+        /// </summary>
+        public static bool CanSave { get; } =
+#if FEATURE_PACKAGE_FLUSH
+            true;
+#else
+            false;
+#endif
+
+        /// <summary>
         /// Gets all the <see cref="DataPart"/> parts in the document package.
         /// </summary>
         public IEnumerable<DataPart> DataParts => _dataPartList;
@@ -1139,7 +1149,10 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <summary>
         /// Saves the contents of all parts and relationships that are contained
-        /// in the OpenXml package, if FileOpenAccess is ReadWrite.
+        /// in the OpenXml package, if FileOpenAccess is ReadWrite. Some platforms
+        /// do not support saving due to limitations in <see cref="System.IO.Packaging.Package"/>,
+        /// so please query <see cref="CanSave"/> at runtime to know if full saving will be supported
+        /// without disposing of the <see cref="OpenXmlPackage"/>.
         /// </summary>
         public void Save()
         {
@@ -1149,6 +1162,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 lock (_saveAndCloneLock)
                 {
                     SavePartContents(true);
+                    Package.Flush();
                 }
             }
         }
