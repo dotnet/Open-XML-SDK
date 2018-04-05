@@ -9,9 +9,9 @@ using System.Diagnostics;
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
 #if DEBUG
-                              /// <summary>
-                              /// InstanceCounter for performance investigation.
-                              /// </summary>
+    /// <summary>
+    /// InstanceCounter for performance investigation.
+    /// </summary>
     public static class InstanceCounter
     {
         /// <summary>
