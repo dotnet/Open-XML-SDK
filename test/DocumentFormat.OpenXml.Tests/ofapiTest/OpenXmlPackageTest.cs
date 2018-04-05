@@ -257,7 +257,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var s = new OpenSettings
             {
-                AutoSave = false
+                AutoSave = false,
             };
 
             using (var stream = GetStream(TestFiles.complex0docx, true))
@@ -319,7 +319,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var s = new OpenSettings
             {
-                AutoSave = false
+                AutoSave = false,
             };
 
             using (var stream = GetStream(TestFiles.autosave, true))
@@ -407,7 +407,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var s = new OpenSettings
             {
-                AutoSave = false
+                AutoSave = false,
             };
 
             using (var stream = GetStream(TestFiles.basicspreadsheet, true))
@@ -859,7 +859,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var settings2012 = new OpenSettings()
             {
-                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013),
             };
 
             using (var stream = GetStream(TestFiles.Youtube))

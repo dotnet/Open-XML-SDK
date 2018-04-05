@@ -207,7 +207,7 @@ namespace DocumentFormat.OpenXml
                 CloseOutput = true,
 
                 // We use UTF8 with no BOM as some viewers that consume documents cannot handle the BOM
-                Encoding = new UTF8Encoding(false)
+                Encoding = new UTF8Encoding(false),
             };
 
             using (XmlWriter xmlWriter = XmlWriter.Create(stream, settings))

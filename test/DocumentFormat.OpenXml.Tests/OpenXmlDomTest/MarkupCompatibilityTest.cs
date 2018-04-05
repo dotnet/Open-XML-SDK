@@ -91,7 +91,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -136,7 +136,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -214,7 +214,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -259,7 +259,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -332,7 +332,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -381,7 +381,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -444,7 +444,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var (known, uriPart, hostPath) = Setup();
                 var settings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, true, settings))
@@ -483,7 +483,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false))
@@ -550,7 +550,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false))
@@ -599,7 +599,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false))
@@ -665,7 +665,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false))
@@ -707,7 +707,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false))
@@ -763,7 +763,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var openSettings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, openSettings))
@@ -844,7 +844,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var openSettings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, openSettings))
@@ -897,7 +897,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var openSettings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, openSettings))
@@ -976,7 +976,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var openSettings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, openSettings))
@@ -1028,7 +1028,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var openSettings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, openSettings))
@@ -1080,7 +1080,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var openSettings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, openSettings))
@@ -1155,7 +1155,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var openSettings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, openSettings))
@@ -1268,7 +1268,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var openSettings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, openSettings))
@@ -1324,7 +1324,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var openSettings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, openSettings))
@@ -1427,7 +1427,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var openSettings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, openSettings))
@@ -1493,7 +1493,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings()
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -1598,7 +1598,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings()
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -1671,7 +1671,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings()
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -1772,7 +1772,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings()
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -1835,7 +1835,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings()
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -1932,7 +1932,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings()
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -1987,7 +1987,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var result = Setup();
                 var settings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -2112,7 +2112,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings()
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -2207,7 +2207,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings()
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -2265,7 +2265,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings()
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -2348,7 +2348,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings()
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -2399,7 +2399,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings()
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -2491,7 +2491,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings()
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -2539,7 +2539,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings()
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -2619,7 +2619,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings()
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -2658,7 +2658,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings()
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -2720,7 +2720,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings()
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -2759,7 +2759,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings()
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -2821,7 +2821,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings()
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -2859,7 +2859,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings()
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -2921,7 +2921,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings()
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -2959,7 +2959,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings()
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -3021,7 +3021,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings()
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -3059,7 +3059,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -3121,7 +3121,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -3159,7 +3159,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -3250,7 +3250,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -3315,7 +3315,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -3363,7 +3363,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -3453,7 +3453,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -3501,7 +3501,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -3583,7 +3583,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
@@ -3633,7 +3633,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var settings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
                 };
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))

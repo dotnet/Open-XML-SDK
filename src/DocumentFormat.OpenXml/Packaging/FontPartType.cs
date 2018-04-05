@@ -21,6 +21,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Obfuscated TTF Font (.odttf).
         /// </summary>
-        FontOdttf
+        FontOdttf,
     }
 }

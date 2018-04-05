@@ -179,7 +179,7 @@ namespace DocumentFormat.OpenXml
         {
             OpenXmlUnknownElement element = new OpenXmlUnknownElement(_prefix, _tagName, _namespaceUri)
             {
-                _text = Text
+                _text = Text,
             };
 
             element.CopyAttributes(this);

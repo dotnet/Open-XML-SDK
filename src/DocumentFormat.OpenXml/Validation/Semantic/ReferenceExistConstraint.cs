@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 RelatedNode = null,
                 Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture,
                                             ValidationResources.Sem_MissingReferenceElement, _elementName, context.Element.LocalName,
-                                            GetAttributeQualifiedName(context.Element, _refAttribute), _relatedPart == null ? _partPath : _relatedPart.PackagePart.Uri.ToString(), attributeValue.InnerText)
+                                            GetAttributeQualifiedName(context.Element, _refAttribute), _relatedPart == null ? _partPath : _relatedPart.PackagePart.Uri.ToString(), attributeValue.InnerText),
             };
         }
 
@@ -91,7 +91,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                         FileFormat = context.FileFormat,
                         Package = context.Package,
                         Part = part,
-                        Element = part.RootElement
+                        Element = part.RootElement,
                     };
 
                     ValidationTraverser.ValidatingTraverse(partContext, ElementTraverse, null);

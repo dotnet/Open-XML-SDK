@@ -26,6 +26,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Ink content (application/inkml+xml).
         /// </summary>
-        InkContent
+        InkContent,
     }
 }

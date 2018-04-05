@@ -123,7 +123,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// VC-1 Stream (.wmv)
         /// </summary>
-        VC1
+        VC1,
 
         #endregion
     }

@@ -680,7 +680,7 @@ namespace DocumentFormat.OpenXml
 #if FEATURE_XML_PROHIBIT_DTD
                 ProhibitDtd = true,
 #else
-                DtdProcessing = DtdProcessing.Prohibit
+                DtdProcessing = DtdProcessing.Prohibit,
 #endif
             };
 

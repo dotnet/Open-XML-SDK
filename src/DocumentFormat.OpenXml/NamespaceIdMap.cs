@@ -415,7 +415,7 @@ namespace DocumentFormat.OpenXml
             "http://schemas.microsoft.com/office/spreadsheetml/2010/11/ac",
             "http://schemas.microsoft.com/office/word/2012/wordprocessingDrawing",
             "http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings",
-            "http://schemas.microsoft.com/office/drawing/2012/timeslicer"
+            "http://schemas.microsoft.com/office/drawing/2012/timeslicer",
         };
 
         private static Dictionary<FileFormatVersions, HashSet<string>> _namespaceSets = new Dictionary<FileFormatVersions, HashSet<string>>

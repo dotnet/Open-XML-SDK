@@ -89,7 +89,7 @@ namespace DocumentFormat.OpenXml
 
                 // Set IgnoreWhitespace to false for the SDK to handle the whitespace node type. We have to do this because
                 // PPT does not use the preserve attribute (xml:space="preserve") for non-ignorable whitespace.
-                IgnoreWhitespace = false
+                IgnoreWhitespace = false,
             };
         }
 
