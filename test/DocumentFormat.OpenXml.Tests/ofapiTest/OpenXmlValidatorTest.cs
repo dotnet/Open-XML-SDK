@@ -1949,7 +1949,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
-            Assert.EndsWith(" The actual length according to datatype 'NCName' is greater than the MaxLength value. The length must be smaller than or equal to 255.", actual.First().Description);
+            Assert.EndsWith("The actual length according to data type 'NCName' is greater than the MaxLength value. The length must be smaller than or equal to 255.", actual.First().Description);
         }
 
         /// <summary>
