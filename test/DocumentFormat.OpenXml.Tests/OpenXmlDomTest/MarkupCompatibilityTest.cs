@@ -3973,7 +3973,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             Log.Comment("Verifying unknown attribute is loaded as extended...");
             if (host.ExtendedAttributes.Any(ea => ea == expectedAttribute))
-                Log.Pass("Verified attribute {0} from unkown ns is loaded as Extended attribute.", expectedAttribute.GetFullName());
+                Log.Pass("Verified attribute {0} from unknown ns is loaded as Extended attribute.", expectedAttribute.GetFullName());
             else
                 Log.Fail("Attribute {0} from unknown ns is NOT loaded as Extended attribute.", expectedAttribute.GetFullName());
         }
@@ -3985,7 +3985,7 @@ namespace DocumentFormat.OpenXml.Tests
             if (verified)
                 Log.Pass("Attribute {0} from unknown ns is NOT loaded as Extended attribute.", expectedAttribute.GetFullName());
             else
-                Log.Fail("Attribute {0} from unkown ns is loaded as Extended attribute.", expectedAttribute.GetFullName());
+                Log.Fail("Attribute {0} from unknown ns is loaded as Extended attribute.", expectedAttribute.GetFullName());
         }
 
         private void VerifyKnownAttribute(OpenXmlElement host, OpenXmlAttribute expectedAttribute)
@@ -4009,7 +4009,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying unknown element is ignored...");
             var unknown = (host is OpenXmlUnknownElement) && host.ToXElement().Compare(expectedElement.ToXElement());
             if (unknown)
-                Log.Fail("Element {0} from unkown ns is loaded as OpenXmlUnknownElement.", expectedElement.GetFullName());
+                Log.Fail("Element {0} from unknown ns is loaded as OpenXmlUnknownElement.", expectedElement.GetFullName());
             else
                 Log.Pass("Element {0} from unknown ns is NOT loaded as OpenXmlUnknownElement.", expectedElement.GetFullName());
         }
@@ -4034,7 +4034,7 @@ namespace DocumentFormat.OpenXml.Tests
                 if (!(host.ChildElements[i] is OpenXmlUnknownElement) || !host.ChildElements[i].ToXElement().Compare(children[i].ToXElement()))
                     Log.Fail("Element {0} under unknown element is NOT loaded as OpenXmlUnknownElement.", host.ChildElements[i].GetFullName());
                 else
-                    Log.Pass("Verified element {0} under unkown element is loaded as OpenXmlUnknownElement.", host.ChildElements[i].GetFullName());
+                    Log.Pass("Verified element {0} under unknown element is loaded as OpenXmlUnknownElement.", host.ChildElements[i].GetFullName());
         }
 
         private void VerifyKnownChildren(OpenXmlElement parent, List<OpenXmlElement> children)
@@ -4052,7 +4052,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying NO unknown child element exist...");
             var hasUnknown = host.ChildElements.Any(c => (c is OpenXmlUnknownElement) && (c.GetFullName() == qualified));
             if (!hasUnknown)
-                Log.Pass("Verified NO element {0} from unkown ns exist.", qualified);
+                Log.Pass("Verified NO element {0} from unknown ns exist.", qualified);
             else
                 Log.Fail("Element {0} from unknown ns is loaded as OpenXmlUnknownElement.", qualified);
         }

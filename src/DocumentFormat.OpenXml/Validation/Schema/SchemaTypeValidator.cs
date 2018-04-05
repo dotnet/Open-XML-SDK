@@ -52,7 +52,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 return;
             }
 
-            // validte Inorable, ProcessContent, etc. compatibility-rule attributes
+            // validate Inorable, ProcessContent, etc. compatibility-rule attributes
             CompatibilityRuleAttributesValidator.ValidateMcAttributes(validationContext);
 
             SchemaTypeData schemaTypeData = _sdbSchemaDatas.GetSchemaTypeData(theElement);
@@ -191,7 +191,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <summary>
-        /// Validate the value accoding to the simpleTypeConstraint.
+        /// Validate the value according to the simpleTypeConstraint.
         /// </summary>
         /// <param name="validationContext">The validation context.</param>
         /// <param name="simpleTypeConstraint">The constraint data of the simple type.</param>
@@ -223,7 +223,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 errorMessageResourceId = "Sch_ElementValueDataTypeDetailed";
             }
 
-            // first, check whether the string is valid accoding the primitive type
+            // first, check whether the string is valid according the primitive type
             if (!simpleTypeConstraint.ValidateValueType(value))
             {
                 if (simpleTypeConstraint.IsEnum)

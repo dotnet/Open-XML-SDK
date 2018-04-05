@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     /// <remarks>
     /// xsd:any can contains only one namespace.
-    /// If there are multiple namespace in the original xsd, it will be splitted into multiple xsd:any in binary database.
+    /// If there are multiple namespace in the original xsd, it will be split into multiple xsd:any in binary database.
     /// </remarks>
     [DebuggerDisplay("NamespaceValue={NamespaceValue}")]
     internal class AnyParticle : ParticleConstraint

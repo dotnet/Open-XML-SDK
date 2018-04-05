@@ -98,7 +98,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
 
-            // empty is ok
+            // empty is OK
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
@@ -144,7 +144,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** error case ******
 
-            // SectionProperties dup error
+            // SectionProperties duplicate error
             errorChild = pPr.AppendChild(new SectionProperties());
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);

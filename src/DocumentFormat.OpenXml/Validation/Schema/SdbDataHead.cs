@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         public int DataVersion { get; set; }
 
         /// <summary>
-        /// Gets or sets size in byte of the schema constraint datas, exclude the DataHead.
+        /// Gets or sets size in byte of the schema constraint data, exclude the DataHead.
         /// </summary>
         public int DataByteCount { get; set; }
 
@@ -119,7 +119,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 if (Signature[i] != SignatureConst[i])
                 {
                     // TODO: change to resource string
-                    throw new InvalidDataException("Invalide schema constraint data.");
+                    throw new InvalidDataException("Invalid schema constraint data.");
                 }
             }
 
@@ -130,7 +130,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             if (DataVersion != LatestDataVersion)
             {
                 // TODO: change to resource string
-                throw new InvalidDataException("Invalide schema constraint data.");
+                throw new InvalidDataException("Invalid schema constraint data.");
             }
 
             StartClassId = SdbData.LoadInt(value, ref startIndex);

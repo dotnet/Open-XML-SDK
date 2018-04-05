@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Create an OpenXmlWriter from the OpenXmlPart.
         /// </summary>
-        /// <param name="openXmlPart">The OpenXmlPart to be writern.</param>
+        /// <param name="openXmlPart">The OpenXmlPart to be written.</param>
         /// <returns>The created OpenXmlWriter instance.</returns>
         public static OpenXmlWriter Create(OpenXmlPart openXmlPart)
         {
@@ -36,7 +36,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Create an OpenXmlWriter from the OpenXmlPart.
         /// </summary>
-        /// <param name="openXmlPart">The OpenXmlPart to be writern.</param>
+        /// <param name="openXmlPart">The OpenXmlPart to be written.</param>
         /// <param name="encoding">The encoding for the XML stream.</param>
         /// <returns>The created OpenXmlWriter instance.</returns>
         public static OpenXmlWriter Create(OpenXmlPart openXmlPart, Encoding encoding)
@@ -86,35 +86,35 @@ namespace DocumentFormat.OpenXml
         /// Writes out a start element tag of the current element of the OpenXmlReader. And write the attributes in attributes.
         /// </summary>
         /// <param name="elementReader">The OpenXmlReader to read from. </param>
-        /// <param name="attributes">The attributes to be writtern, can be null if no attrbutes.</param>
+        /// <param name="attributes">The attributes to be written, can be null if no attributes.</param>
         public abstract void WriteStartElement(OpenXmlReader elementReader, IEnumerable<OpenXmlAttribute> attributes);
 
         /// <summary>
         /// Writes out a start element tag of the current element of the OpenXmlReader. And write the attributes in attributes.
         /// </summary>
         /// <param name="elementReader">The OpenXmlReader to read from. </param>
-        /// <param name="attributes">The attributes to be writtern, can be null if no attrbutes.</param>
+        /// <param name="attributes">The attributes to be written, can be null if no attributes.</param>
         /// <param name="namespaceDeclarations">The namespace declarations to be written, can be null if no namespace declarations.</param>
         public abstract void WriteStartElement(OpenXmlReader elementReader, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations);
 
         /// <summary>
         /// Writes out a start tag of the element and all the attributes of the element.
         /// </summary>
-        /// <param name="elementObject">The OpenXmlElement object to be writen.</param>
+        /// <param name="elementObject">The OpenXmlElement object to be written.</param>
         public abstract void WriteStartElement(OpenXmlElement elementObject);
 
         /// <summary>
         /// Writes out a start tag of the element. And write the attributes in attributes. The attributes of the element will be omitted.
         /// </summary>
-        /// <param name="elementObject">The OpenXmlElement object to be writen.</param>
-        /// <param name="attributes">The attributes to be writtern.</param>
+        /// <param name="elementObject">The OpenXmlElement object to be written.</param>
+        /// <param name="attributes">The attributes to be written.</param>
         public abstract void WriteStartElement(OpenXmlElement elementObject, IEnumerable<OpenXmlAttribute> attributes);
 
         /// <summary>
         /// Writes out a start tag of the element. And write the attributes in attributes. The attributes of the element will be omitted.
         /// </summary>
-        /// <param name="elementObject">The OpenXmlElement object to be writen.</param>
-        /// <param name="attributes">The attributes to be writtern.</param>
+        /// <param name="elementObject">The OpenXmlElement object to be written.</param>
+        /// <param name="attributes">The attributes to be written.</param>
         /// <param name="namespaceDeclarations">The namespace declarations to be written, can be null if no namespace declarations.</param>
         public abstract void WriteStartElement(OpenXmlElement elementObject, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations);
 
@@ -126,7 +126,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Write the OpenXmlElement to the writer.
         /// </summary>
-        /// <param name="elementObject">The OpenXmlElement object to be writen.</param>
+        /// <param name="elementObject">The OpenXmlElement object to be written.</param>
         public abstract void WriteElement(OpenXmlElement elementObject);
 
         /// <summary>

@@ -118,7 +118,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        /// Open specified exsting package.
+        /// Open specified exciting package.
         /// </summary>
         /// <param name="file">File to be opened.</param>
         /// <param name="writable">Open package in read/write mode if true, false for readonly.</param>

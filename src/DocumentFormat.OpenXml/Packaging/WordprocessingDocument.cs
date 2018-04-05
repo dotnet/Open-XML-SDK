@@ -156,7 +156,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Creates a new instance of the WordprocessingDocument class from the spcified package.
+        /// Creates a new instance of the WordprocessingDocument class from the specified package.
         /// </summary>
         /// <param name="package">The specified OpenXml package.</param>
         /// <param name="type">The type of the WordprocessingDocument.</param>
@@ -212,7 +212,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Creates a new instance of the WordprocessingDocument class from the spcified package.
+        /// Creates a new instance of the WordprocessingDocument class from the specified package.
         /// </summary>
         /// <param name="package">The specified OpenXml package</param>
         /// <param name="type">The type of the WordprocessingDocument.</param>
@@ -403,7 +403,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Creates a new instance of the WordprocessingDocument class from the spcified package.
+        /// Creates a new instance of the WordprocessingDocument class from the specified package.
         /// </summary>
         /// <param name="package">The specified OpenXml package</param>
         /// <param name="openSettings">The advanced settings for opening a document.</param>
@@ -434,7 +434,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Creates a new instance of the WordprocessingDocument class from the spcified package.
+        /// Creates a new instance of the WordprocessingDocument class from the specified package.
         /// </summary>
         /// <param name="package">The specified OpenXml package.</param>
         /// <returns>A new instance of WordprocessingDocument.</returns>

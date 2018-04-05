@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
 
         #region Property
         /// <summary>
-        /// URI attribute value of PresentationExtension.(Parent of P15.ThreadingInfo elemenet)
+        /// URI attribute value of PresentationExtension.(Parent of P15.ThreadingInfo element)
         /// </summary>
         private string ThreadingInfoExtUri { get; set; }
         #endregion

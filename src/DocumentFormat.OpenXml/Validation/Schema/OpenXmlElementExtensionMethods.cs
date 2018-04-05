@@ -39,13 +39,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <summary>
-        /// Gets the next child (skip all MC elements (skip ACB layer, skip Ignorabled element.)).
+        /// Gets the next child (skip all MC elements (skip ACB layer, skip Ignorable element.)).
         /// </summary>
         /// <param name="parent">The logic parent element.</param>
         /// <param name="child">The child element to be tested.</param>
         /// <param name="mcContext">Markup Compatibility context.</param>
         /// <param name="format">Targeting file format (Office2007 or Office201).</param>
-        /// <returns>The logic child (when we apply a MC pre-processer).</returns>
+        /// <returns>The logic child (when we apply a MC preprocessor).</returns>
         private static OpenXmlElement GetChildMc(this OpenXmlElement parent, OpenXmlElement child, MCContext mcContext, FileFormatVersions format)
         {
             // Use stack to cache the next siblings in different levels.

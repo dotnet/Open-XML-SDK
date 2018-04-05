@@ -108,7 +108,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         }
 
         /// <summary>
-        /// Indexer to retriver a specified data in the SimpleTypes.
+        /// Indexer to retrieve data in the SimpleTypes.
         /// </summary>
         /// <param name="index">The index of the data in the SimpleTypes array.</param>
         /// <returns>The simple type constraint data.</returns>

@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.Validation
         }
 
         /// <summary>
-        /// Validat the specified document.
+        /// Validate the specified document.
         /// </summary>
         /// <param name="document">The document to be validated.</param>
         /// <returns>Return results in ValidationResult.</returns>
@@ -51,7 +51,7 @@ namespace DocumentFormat.OpenXml.Validation
             foreach (var part in PartsToBeValidated(document))
             {
                 // traverse from the part root element (by DOM or by Reader) in post-order
-                // that means validate the children firt, then validate the parent
+                // that means validate the children first, then validate the parent
                 // the validation engine call bookkeep information
 
                 ValidatePart(part, context);

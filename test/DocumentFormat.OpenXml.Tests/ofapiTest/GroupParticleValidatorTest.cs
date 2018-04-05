@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml.Tests
               //</xs:group>
 
             // ***** good case ******
-            // empty is ok
+            // empty is OK
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 

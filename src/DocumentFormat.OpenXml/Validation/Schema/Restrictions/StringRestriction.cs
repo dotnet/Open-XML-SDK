@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         }
 
         /// <summary>
-        /// Get the lenght of the attribute value according to the xsd type.
+        /// Get the length of the attribute value according to the xsd type.
         /// </summary>
         /// <param name="attributeValue"></param>
         /// <returns></returns>

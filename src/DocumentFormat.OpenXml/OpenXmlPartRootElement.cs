@@ -358,7 +358,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets a value indicating whether the Save method will try write all namespace declation on the root element.
+        /// Gets a value indicating whether the Save method will try write all namespace declaration on the root element.
         /// </summary>
         internal virtual bool WriteAllNamespaceOnRoot => true;
     }

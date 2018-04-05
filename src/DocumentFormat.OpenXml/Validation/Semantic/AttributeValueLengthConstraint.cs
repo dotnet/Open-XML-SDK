@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         {
             OpenXmlSimpleType attribute = context.Element.Attributes[_attribute];
 
-            //if the attribute is omited, semantic validation will do nothing
+            //if the attribute is omitted, semantic validation will do nothing
             if (attribute == null)
             {
                 return null;

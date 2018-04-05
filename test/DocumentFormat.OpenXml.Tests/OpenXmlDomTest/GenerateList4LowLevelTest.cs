@@ -177,7 +177,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var package = PresentationDocument.Open(stream, true))
             {
                 Log.Comment("Opening file that contains duplicated namespace declarations...");
-                Log.Comment("Part that contains duplciated namespace declarations /ppt/diagrams/data3.xml.");
+                Log.Comment("Part that contains duplicated namespace declarations /ppt/diagrams/data3.xml.");
 
                 foreach (var part in package.DescendantParts().Where(p => p.IsReflectable()))
                 {

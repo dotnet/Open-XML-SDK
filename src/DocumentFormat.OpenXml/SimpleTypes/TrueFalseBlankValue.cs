@@ -7,7 +7,7 @@ using System.Diagnostics;
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
-    /// Represents the datatype for attributes that have enum values that are Boolean values that represent 't' or 'f', or 'true' or 'false'.
+    /// Represents the data type for attributes that have enum values that are Boolean values that represent 't' or 'f', or 'true' or 'false'.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
     public class TrueFalseBlankValue : OpenXmlSimpleValue<bool>
@@ -137,7 +137,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>"t" for True, "f" for false.</returns>
         private protected override string GetText(bool boolValue)
         {
-            // TODO : Define the defaul text value.
+            // TODO : Define the default text value.
             return boolValue ? "true" : "false";
         }
     }

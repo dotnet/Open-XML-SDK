@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     public abstract class CustomXmlElement : OpenXmlCompositeElement
     {
         /// <summary>
-        /// Initializes a new instance of the CustomXmlElement class with the speicified child elements.
+        /// Initializes a new instance of the CustomXmlElement class with the specified child elements.
         /// </summary>
         /// <param name="childElements">Specifies the child elements.</param>
         protected CustomXmlElement(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         }
 
         /// <summary>
-        /// Initializes a new instance of the CustomXmlElement class with the speicified child elements.
+        /// Initializes a new instance of the CustomXmlElement class with the specified child elements.
         /// </summary>
         /// <param name="childElements">Specifies the child elements.</param>
         protected CustomXmlElement(params OpenXmlElement[] childElements)
@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// Gets or sets the custom XML Markup Namespace.
         /// </summary>
         /// <remark>
-        /// Represents the attribte in schema: w:uri.
+        /// Represents the attribute in schema: w:uri.
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main.
         /// </remark>
         [SchemaAttr(23, "uri")]
@@ -53,7 +53,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// Gets or sets the element name.
         /// </summary>
         /// <remark>
-        /// Represents the attribte in schema: w:element.
+        /// Represents the attribute in schema: w:element.
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main.
         /// </remark>
         [SchemaAttr(23, "element")]

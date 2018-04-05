@@ -269,7 +269,7 @@ namespace DocumentFormat.OpenXml.Tests
             p.InnerXml = paragraphInnerXml;
             p.RsidParagraphProperties = "001";
 
-            // make sure elements are fullly populated.
+            // make sure elements are fully populated.
             var r1 = p.FirstChild.FirstChild;
             var r2 = r1.NextSibling();
 
@@ -620,7 +620,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        /// A test for the OpenXmlElement contructor with an outerXml as parameter.
+        /// A test for the OpenXmlElement constructor with an outerXml as parameter.
         /// </summary>
         [Fact]
         public void OpenXmlElementConstructorOuterXmlTest()
@@ -642,10 +642,10 @@ namespace DocumentFormat.OpenXml.Tests
             DocumentFormat.OpenXml.Office.CustomUI.CustomUI cUi2 = new DocumentFormat.OpenXml.Office.CustomUI.CustomUI(validOuterXml);
             Assert.Equal(validOuterXml, cUi2.OuterXml);
 
-            // Valid outer xml but starting with whitespaces.
+            // Valid outer xml but starting with whitespace.
             string validOuterXmlWithWhitespaces = "     <customUI  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></customUI>";
             DocumentFormat.OpenXml.Office.CustomUI.CustomUI cUi3 = new DocumentFormat.OpenXml.Office.CustomUI.CustomUI(validOuterXmlWithWhitespaces);
-            // The whitespaces should be trimmed when getting OuterXml.
+            // The whitespace should be trimmed when getting OuterXml.
             Assert.Equal(validOuterXml, cUi2.OuterXml);
 
             // verify bug #671248
@@ -669,7 +669,7 @@ namespace DocumentFormat.OpenXml.Tests
             var unknown1 = OpenXmlUnknownElement.CreateOpenXmlUnknownElement(validOuterXml);
             Assert.Equal(validOuterXml, unknown1.OuterXml);
 
-            // Valid outer xml but starting with whitespaces.
+            // Valid outer xml but starting with whitespace.
             string validOuterXmlWithWhitespaces = "   <myElement  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></myElement>";
             var unknown2 = OpenXmlUnknownElement.CreateOpenXmlUnknownElement(validOuterXmlWithWhitespaces);
             Assert.Equal(validOuterXmlWithWhitespaces, unknown2.OuterXml);

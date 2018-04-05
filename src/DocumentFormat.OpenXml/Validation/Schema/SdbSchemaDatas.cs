@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// Defines SdbSchemaDatas class.
     /// </summary>
     /// <remarks>
-    /// This class serve as the loader which load the schema constraint datas from binary data.
+    /// This class serve as the loader which load the schema constraint data from binary data.
     /// </remarks>
     internal abstract class SdbSchemaDatas
     {

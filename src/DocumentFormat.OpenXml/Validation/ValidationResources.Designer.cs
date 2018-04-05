@@ -368,7 +368,7 @@ namespace DocumentFormat.OpenXml.Validation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  The actual length according to datatype &apos;{0}&apos; is not equal to the specified length. The expected length is {1}..
+        ///   Looks up a localized string similar to  The actual length according to data type &apos;{0}&apos; is not equal to the specified length. The expected length is {1}..
         /// </summary>
         internal static string Sch_LengthConstraintFailed {
             get {
@@ -395,7 +395,7 @@ namespace DocumentFormat.OpenXml.Validation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  The actual length according to datatype &apos;{0}&apos; is greater than the MaxLength value. The length must be smaller than or equal to {1}..
+        ///   Looks up a localized string similar to  The actual length according to data type &apos;{0}&apos; is greater than the MaxLength value. The length must be smaller than or equal to {1}..
         /// </summary>
         internal static string Sch_MaxLengthConstraintFailed {
             get {
@@ -422,7 +422,7 @@ namespace DocumentFormat.OpenXml.Validation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  The actual length according to datatype &apos;{0}&apos; is less than the MinLength value. The length must be bigger than or equal to {1}..
+        ///   Looks up a localized string similar to  The actual length according to data type &apos;{0}&apos; is less than the MinLength value. The length must be bigger than or equal to {1}..
         /// </summary>
         internal static string Sch_MinLengthConstraintFailed {
             get {
