@@ -99,14 +99,14 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
             Wetp.Taskpanes taskpanes1 = new Wetp.Taskpanes();
             taskpanes1.AddNamespaceDeclaration("wetp", "http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11");
 
-            Wetp.WebExtensionTaskpane webExtensionTaskpane1 = new Wetp.WebExtensionTaskpane() { DockState = "", Visibility = true, Width = 270D, Row = (UInt32Value)1U };
+            Wetp.WebExtensionTaskpane webExtensionTaskpane1 = new Wetp.WebExtensionTaskpane() { DockState = string.Empty, Visibility = true, Width = 270D, Row = (UInt32Value)1U };
 
             Wetp.WebExtensionPartReference webExtensionPartReference1 = new Wetp.WebExtensionPartReference() { Id = "rId1" };
             webExtensionPartReference1.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
 
             webExtensionTaskpane1.Append(webExtensionPartReference1);
 
-            Wetp.WebExtensionTaskpane webExtensionTaskpane2 = new Wetp.WebExtensionTaskpane() { DockState = "", Visibility = true, Width = 270D, Row = (UInt32Value)2U };
+            Wetp.WebExtensionTaskpane webExtensionTaskpane2 = new Wetp.WebExtensionTaskpane() { DockState = string.Empty, Visibility = true, Width = 270D, Row = (UInt32Value)2U };
 
             Wetp.WebExtensionPartReference webExtensionPartReference2 = new Wetp.WebExtensionPartReference() { Id = "rId2" };
             webExtensionPartReference2.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
@@ -306,8 +306,8 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
 
             A.MajorFont majorFont1 = new A.MajorFont();
             A.LatinFont latinFont1 = new A.LatinFont() { Typeface = "Calibri Light", Panose = "020F0302020204030204" };
-            A.EastAsianFont eastAsianFont1 = new A.EastAsianFont() { Typeface = "" };
-            A.ComplexScriptFont complexScriptFont1 = new A.ComplexScriptFont() { Typeface = "" };
+            A.EastAsianFont eastAsianFont1 = new A.EastAsianFont() { Typeface = string.Empty };
+            A.ComplexScriptFont complexScriptFont1 = new A.ComplexScriptFont() { Typeface = string.Empty };
             A.SupplementalFont supplementalFont1 = new A.SupplementalFont() { Script = "Jpan", Typeface = "ＭＳ Ｐゴシック" };
             A.SupplementalFont supplementalFont2 = new A.SupplementalFont() { Script = "Hang", Typeface = "맑은 고딕" };
             A.SupplementalFont supplementalFont3 = new A.SupplementalFont() { Script = "Hans", Typeface = "宋体" };
@@ -375,8 +375,8 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
 
             A.MinorFont minorFont1 = new A.MinorFont();
             A.LatinFont latinFont2 = new A.LatinFont() { Typeface = "Calibri", Panose = "020F0502020204030204" };
-            A.EastAsianFont eastAsianFont2 = new A.EastAsianFont() { Typeface = "" };
-            A.ComplexScriptFont complexScriptFont2 = new A.ComplexScriptFont() { Typeface = "" };
+            A.EastAsianFont eastAsianFont2 = new A.EastAsianFont() { Typeface = string.Empty };
+            A.ComplexScriptFont complexScriptFont2 = new A.ComplexScriptFont() { Typeface = string.Empty };
             A.SupplementalFont supplementalFont31 = new A.SupplementalFont() { Script = "Jpan", Typeface = "ＭＳ Ｐゴシック" };
             A.SupplementalFont supplementalFont32 = new A.SupplementalFont() { Script = "Hang", Typeface = "맑은 고딕" };
             A.SupplementalFont supplementalFont33 = new A.SupplementalFont() { Script = "Hans", Typeface = "宋体" };
@@ -820,7 +820,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
             AlternateContentChoice alternateContentChoice2 = new AlternateContentChoice() { Requires = "we" };
             alternateContentChoice2.AddNamespaceDeclaration("we", "http://schemas.microsoft.com/office/webextensions/webextension/2010/11");
 
-            Xdr.GraphicFrame graphicFrame1 = new Xdr.GraphicFrame() { Macro = "" };
+            Xdr.GraphicFrame graphicFrame1 = new Xdr.GraphicFrame() { Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties1 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties1 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Agave 1" };
@@ -944,7 +944,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
             AlternateContentChoice alternateContentChoice3 = new AlternateContentChoice() { Requires = "we" };
             alternateContentChoice3.AddNamespaceDeclaration("we", "http://schemas.microsoft.com/office/webextensions/webextension/2010/11");
 
-            Xdr.GraphicFrame graphicFrame2 = new Xdr.GraphicFrame() { Macro = "" };
+            Xdr.GraphicFrame graphicFrame2 = new Xdr.GraphicFrame() { Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties2 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties3 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Agave 2" };
@@ -1175,7 +1175,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
             AlternateContentChoice alternateContentChoice4 = new AlternateContentChoice() { Requires = "we" };
             alternateContentChoice4.AddNamespaceDeclaration("we", "http://schemas.microsoft.com/office/webextensions/webextension/2010/11");
 
-            Xdr.GraphicFrame graphicFrame3 = new Xdr.GraphicFrame() { Macro = "" };
+            Xdr.GraphicFrame graphicFrame3 = new Xdr.GraphicFrame() { Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties3 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties5 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Agave 1" };

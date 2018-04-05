@@ -55,8 +55,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            string errorId = ""; // TODO: add error id
-            string errorMessage = ""; // TODO: add error message
+            string errorId = string.Empty; // TODO: add error id
+            string errorMessage = string.Empty; // TODO: add error message
 
             return new ValidationErrorInfo() { Id = errorId, ErrorType = ValidationErrorType.Semantic, Node = context.Element, Description = errorMessage };
         }

@@ -161,14 +161,14 @@ namespace DocumentFormat.OpenXml.Tests
             run.MCAttributes.Ignorable = null;
             run.MCAttributes.PreserveAttributes = null;
             run.MCAttributes.PreserveElements = "w15:*";
-            run.MCAttributes.ProcessContent = "";
+            run.MCAttributes.ProcessContent = string.Empty;
             result = validator.Validate(element);
             Assert.Single(result);
             Assert.Equal(ValidationErrorType.MarkupCompatibility, result[0].ErrorType);
             Assert.Equal("MC_InvalidPreserveElementsAttribute", result[0].Id);
 
             run.MCAttributes.Ignorable = "o15";
-            run.MCAttributes.PreserveAttributes = "";
+            run.MCAttributes.PreserveAttributes = string.Empty;
             run.MCAttributes.PreserveElements = "w15:*";
             result = validator.Validate(element);
             Assert.Single(result);

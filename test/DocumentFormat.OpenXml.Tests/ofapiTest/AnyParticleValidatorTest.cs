@@ -72,7 +72,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             validationContext.Clear();
             // any element with namespace is invalid
-            errorChild = textBox.AppendChild(new OpenXmlUnknownElement("", "test", "http://test"));
+            errorChild = textBox.AppendChild(new OpenXmlUnknownElement(string.Empty, "test", "http://test"));
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);
             Assert.Single(validationContext.Errors);

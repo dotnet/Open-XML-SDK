@@ -54,7 +54,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            return new ValidationErrorInfo() { Id = "", ErrorType = ValidationErrorType.Semantic, Node = context.Element, Description = "" };
+            return new ValidationErrorInfo() { Id = string.Empty, ErrorType = ValidationErrorType.Semantic, Node = context.Element, Description = string.Empty };
         }
     }
 }

@@ -859,7 +859,7 @@ namespace DocumentFormat.OpenXml.Tests
             string validValueFalse = "false";
             string validValuet = "t";
             string validValuef = "f";
-            string validValueBlank = "";
+            string validValueBlank = string.Empty;
             string invalidValueTrue = "True";
             string invalidValueFalse = "False";
             string invalidValue2 = "Invalid 0.1 String!";

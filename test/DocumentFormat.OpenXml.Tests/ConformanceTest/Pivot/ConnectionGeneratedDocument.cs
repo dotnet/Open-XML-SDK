@@ -313,8 +313,8 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             A.MajorFont majorFont1 = new A.MajorFont();
             A.LatinFont latinFont1 = new A.LatinFont() { Typeface = "Calibri Light", Panose = "020F0302020204030204" };
-            A.EastAsianFont eastAsianFont1 = new A.EastAsianFont() { Typeface = "" };
-            A.ComplexScriptFont complexScriptFont1 = new A.ComplexScriptFont() { Typeface = "" };
+            A.EastAsianFont eastAsianFont1 = new A.EastAsianFont() { Typeface = string.Empty };
+            A.ComplexScriptFont complexScriptFont1 = new A.ComplexScriptFont() { Typeface = string.Empty };
             A.SupplementalFont supplementalFont1 = new A.SupplementalFont() { Script = "Jpan", Typeface = "ＭＳ Ｐゴシック" };
             A.SupplementalFont supplementalFont2 = new A.SupplementalFont() { Script = "Hang", Typeface = "맑은 고딕" };
             A.SupplementalFont supplementalFont3 = new A.SupplementalFont() { Script = "Hans", Typeface = "宋体" };
@@ -382,8 +382,8 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             A.MinorFont minorFont1 = new A.MinorFont();
             A.LatinFont latinFont2 = new A.LatinFont() { Typeface = "Calibri", Panose = "020F0502020204030204" };
-            A.EastAsianFont eastAsianFont2 = new A.EastAsianFont() { Typeface = "" };
-            A.ComplexScriptFont complexScriptFont2 = new A.ComplexScriptFont() { Typeface = "" };
+            A.EastAsianFont eastAsianFont2 = new A.EastAsianFont() { Typeface = string.Empty };
+            A.ComplexScriptFont complexScriptFont2 = new A.ComplexScriptFont() { Typeface = string.Empty };
             A.SupplementalFont supplementalFont31 = new A.SupplementalFont() { Script = "Jpan", Typeface = "ＭＳ Ｐゴシック" };
             A.SupplementalFont supplementalFont32 = new A.SupplementalFont() { Script = "Hang", Typeface = "맑은 고딕" };
             A.SupplementalFont supplementalFont33 = new A.SupplementalFont() { Script = "Hans", Typeface = "宋体" };
@@ -768,17 +768,17 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
             CacheFields cacheFields1 = new CacheFields() { Count = (UInt32Value)0U };
 
             CacheHierarchies cacheHierarchies1 = new CacheHierarchies() { Count = (UInt32Value)11U };
-            CacheHierarchy cacheHierarchy1 = new CacheHierarchy() { UniqueName = "[Query].[account_id]", Caption = "account_id", Attribute = true, DefaultMemberUniqueName = "[Query].[account_id].[All]", AllUniqueName = "[Query].[account_id].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false };
-            CacheHierarchy cacheHierarchy2 = new CacheHierarchy() { UniqueName = "[Query].[account_parent]", Caption = "account_parent", Attribute = true, DefaultMemberUniqueName = "[Query].[account_parent].[All]", AllUniqueName = "[Query].[account_parent].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false };
-            CacheHierarchy cacheHierarchy3 = new CacheHierarchy() { UniqueName = "[Query].[account_description]", Caption = "account_description", Attribute = true, DefaultMemberUniqueName = "[Query].[account_description].[All]", AllUniqueName = "[Query].[account_description].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false };
-            CacheHierarchy cacheHierarchy4 = new CacheHierarchy() { UniqueName = "[Query].[account_type]", Caption = "account_type", Attribute = true, DefaultMemberUniqueName = "[Query].[account_type].[All]", AllUniqueName = "[Query].[account_type].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false };
-            CacheHierarchy cacheHierarchy5 = new CacheHierarchy() { UniqueName = "[Query].[account_rollup]", Caption = "account_rollup", Attribute = true, DefaultMemberUniqueName = "[Query].[account_rollup].[All]", AllUniqueName = "[Query].[account_rollup].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false };
-            CacheHierarchy cacheHierarchy6 = new CacheHierarchy() { UniqueName = "[Query].[Custom Members]", Caption = "Custom Members", Attribute = true, DefaultMemberUniqueName = "[Query].[Custom Members].[All]", AllUniqueName = "[Query].[Custom Members].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false };
-            CacheHierarchy cacheHierarchy7 = new CacheHierarchy() { UniqueName = "[Query].[CurrentUser]", Caption = "CurrentUser", Attribute = true, DefaultMemberUniqueName = "[Query].[CurrentUser].[All]", AllUniqueName = "[Query].[CurrentUser].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false };
-            CacheHierarchy cacheHierarchy8 = new CacheHierarchy() { UniqueName = "[Query].[RefreshTime]", Caption = "RefreshTime", Attribute = true, DefaultMemberUniqueName = "[Query].[RefreshTime].[All]", AllUniqueName = "[Query].[RefreshTime].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false };
-            CacheHierarchy cacheHierarchy9 = new CacheHierarchy() { UniqueName = "[Query].[RowNumber]", Caption = "RowNumber", Attribute = true, KeyAttribute = true, DefaultMemberUniqueName = "[Query].[RowNumber].[All]", AllUniqueName = "[Query].[RowNumber].[All]", DimensionUniqueName = "[Query]", DisplayFolder = "", Count = (UInt32Value)0U, Unbalanced = false, Hidden = true };
-            CacheHierarchy cacheHierarchy10 = new CacheHierarchy() { UniqueName = "[Measures].[__XL_Count Query]", Caption = "__XL_Count Query", Measure = true, DisplayFolder = "", MeasureGroup = "Query", Count = (UInt32Value)0U, Hidden = true };
-            CacheHierarchy cacheHierarchy11 = new CacheHierarchy() { UniqueName = "[Measures].[__XL_Count of Models]", Caption = "__XL_Count of Models", Measure = true, DisplayFolder = "", Count = (UInt32Value)0U, Hidden = true };
+            CacheHierarchy cacheHierarchy1 = new CacheHierarchy() { UniqueName = "[Query].[account_id]", Caption = "account_id", Attribute = true, DefaultMemberUniqueName = "[Query].[account_id].[All]", AllUniqueName = "[Query].[account_id].[All]", DimensionUniqueName = "[Query]", DisplayFolder = string.Empty, Count = (UInt32Value)0U, Unbalanced = false };
+            CacheHierarchy cacheHierarchy2 = new CacheHierarchy() { UniqueName = "[Query].[account_parent]", Caption = "account_parent", Attribute = true, DefaultMemberUniqueName = "[Query].[account_parent].[All]", AllUniqueName = "[Query].[account_parent].[All]", DimensionUniqueName = "[Query]", DisplayFolder = string.Empty, Count = (UInt32Value)0U, Unbalanced = false };
+            CacheHierarchy cacheHierarchy3 = new CacheHierarchy() { UniqueName = "[Query].[account_description]", Caption = "account_description", Attribute = true, DefaultMemberUniqueName = "[Query].[account_description].[All]", AllUniqueName = "[Query].[account_description].[All]", DimensionUniqueName = "[Query]", DisplayFolder = string.Empty, Count = (UInt32Value)0U, Unbalanced = false };
+            CacheHierarchy cacheHierarchy4 = new CacheHierarchy() { UniqueName = "[Query].[account_type]", Caption = "account_type", Attribute = true, DefaultMemberUniqueName = "[Query].[account_type].[All]", AllUniqueName = "[Query].[account_type].[All]", DimensionUniqueName = "[Query]", DisplayFolder = string.Empty, Count = (UInt32Value)0U, Unbalanced = false };
+            CacheHierarchy cacheHierarchy5 = new CacheHierarchy() { UniqueName = "[Query].[account_rollup]", Caption = "account_rollup", Attribute = true, DefaultMemberUniqueName = "[Query].[account_rollup].[All]", AllUniqueName = "[Query].[account_rollup].[All]", DimensionUniqueName = "[Query]", DisplayFolder = string.Empty, Count = (UInt32Value)0U, Unbalanced = false };
+            CacheHierarchy cacheHierarchy6 = new CacheHierarchy() { UniqueName = "[Query].[Custom Members]", Caption = "Custom Members", Attribute = true, DefaultMemberUniqueName = "[Query].[Custom Members].[All]", AllUniqueName = "[Query].[Custom Members].[All]", DimensionUniqueName = "[Query]", DisplayFolder = string.Empty, Count = (UInt32Value)0U, Unbalanced = false };
+            CacheHierarchy cacheHierarchy7 = new CacheHierarchy() { UniqueName = "[Query].[CurrentUser]", Caption = "CurrentUser", Attribute = true, DefaultMemberUniqueName = "[Query].[CurrentUser].[All]", AllUniqueName = "[Query].[CurrentUser].[All]", DimensionUniqueName = "[Query]", DisplayFolder = string.Empty, Count = (UInt32Value)0U, Unbalanced = false };
+            CacheHierarchy cacheHierarchy8 = new CacheHierarchy() { UniqueName = "[Query].[RefreshTime]", Caption = "RefreshTime", Attribute = true, DefaultMemberUniqueName = "[Query].[RefreshTime].[All]", AllUniqueName = "[Query].[RefreshTime].[All]", DimensionUniqueName = "[Query]", DisplayFolder = string.Empty, Count = (UInt32Value)0U, Unbalanced = false };
+            CacheHierarchy cacheHierarchy9 = new CacheHierarchy() { UniqueName = "[Query].[RowNumber]", Caption = "RowNumber", Attribute = true, KeyAttribute = true, DefaultMemberUniqueName = "[Query].[RowNumber].[All]", AllUniqueName = "[Query].[RowNumber].[All]", DimensionUniqueName = "[Query]", DisplayFolder = string.Empty, Count = (UInt32Value)0U, Unbalanced = false, Hidden = true };
+            CacheHierarchy cacheHierarchy10 = new CacheHierarchy() { UniqueName = "[Measures].[__XL_Count Query]", Caption = "__XL_Count Query", Measure = true, DisplayFolder = string.Empty, MeasureGroup = "Query", Count = (UInt32Value)0U, Hidden = true };
+            CacheHierarchy cacheHierarchy11 = new CacheHierarchy() { UniqueName = "[Measures].[__XL_Count of Models]", Caption = "__XL_Count of Models", Measure = true, DisplayFolder = string.Empty, Count = (UInt32Value)0U, Hidden = true };
 
             cacheHierarchies1.Append(cacheHierarchy1);
             cacheHierarchies1.Append(cacheHierarchy2);
@@ -2458,7 +2458,7 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             ConnectionExtension connectionExtension2 = new ConnectionExtension() { Uri = "{DE250136-89BD-433C-8126-D09CA5730AF9}" };
             connectionExtension2.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
-            X15.Connection connection4 = new X15.Connection() { Id = "", Model = true };
+            X15.Connection connection4 = new X15.Connection() { Id = string.Empty, Model = true };
 
             connectionExtension2.Append(connection4);
 
@@ -2475,7 +2475,7 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             ConnectionExtension connectionExtension3 = new ConnectionExtension() { Uri = "{DE250136-89BD-433C-8126-D09CA5730AF9}" };
             connectionExtension3.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
-            X15.Connection connection6 = new X15.Connection() { Id = "", Model = true };
+            X15.Connection connection6 = new X15.Connection() { Id = string.Empty, Model = true };
 
             connectionExtension3.Append(connection6);
 

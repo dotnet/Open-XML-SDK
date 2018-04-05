@@ -3656,7 +3656,7 @@ namespace DocumentFormat.OpenXml.Tests
                     .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren);
 
                 var unknownElement11 = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
-                var unPrefixedIgnorable = new OpenXmlAttribute("", "Ignorable", "", unknownElement11.Prefix);
+                var unPrefixedIgnorable = new OpenXmlAttribute(string.Empty, "Ignorable", string.Empty, unknownElement11.Prefix);
                 var unknownAttribute11 = new OpenXmlAttribute(prefixUnknown1, a1Unknown1, nsUnknown1, "attribute1 from unknown namespace1.");
 
                 var children = new List<OpenXmlElement>();
