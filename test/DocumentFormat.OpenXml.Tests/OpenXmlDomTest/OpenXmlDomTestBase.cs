@@ -99,7 +99,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// </summary>
         /// <param name="element">the root </param>
         /// <param name="Path">the path used to find the target element</param>
-        /// <returns>the Xelement retrieved from the path</returns>
+        /// <returns>The <see cref="XElement"/> retrieved from the path</returns>
         private static XElement GetXmlElement(String path, OpenXmlPart part)
         {
             if (part == null)
@@ -150,7 +150,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// </summary>
         /// <param name="part">the part that the OpenXmlElement exists in</param>
         /// <param name="element">the OpenXmlElement need to be converted</param>
-        /// <returns>the corresponding Xelement</returns>
+        /// <returns>the corresponding <see cref="XElement"/></returns>
         internal static XElement ConvertToXElement(OpenXmlPart part, OpenXmlElement element)
         {
             if (part == null || element == null)
@@ -367,11 +367,6 @@ namespace DocumentFormat.OpenXml.Tests
 
         #endregion Find Element
 
-        #region Contructing
-        internal enum ConstructorOptions { Default, OuterXml, IEnumberable, IEnumberableGeneric, Params, Part };
-
-        #endregion Constructing
-
         #region Append Collection
 
         internal enum AppendCollectionType { IEnumerable, Array };
@@ -485,7 +480,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// Ap/Pre- pend OpenXmlElement found through getImportee on srcPart to OpenXmlElement found through getTarget on hostPart.
         /// </summary>
         /// <param name="hostPart">Hosting Part</param>
-        /// <param name="getTarget">Delegate method to find specifc OpenXmlElement in host part</param>
+        /// <param name="getTarget">Delegate method to find specific OpenXmlElement in host part</param>
         /// <param name="srcPart">Source Part to import content from</param>
         /// <param name="getImportee">Delegate method to find specific OpenXmlElment in source part</param>
         /// <param name="operationType">Append or Prepend</param>
@@ -559,7 +554,7 @@ namespace DocumentFormat.OpenXml.Tests
         internal OpenXmlElement PendOperation(PendChild<OpenXmlElement> pendOp, OpenXmlElement pendee)
         {
             if (pendOp == null)
-                throw new ArgumentNullException("pender");
+                throw new ArgumentNullException(nameof(pendOp));
 
             Log.Comment("Pending child with {0}...", pendOp.GetMethodInfo().Name);
             OpenXmlElement result = pendOp(pendee);
@@ -1416,9 +1411,9 @@ namespace DocumentFormat.OpenXml.Tests
                         main.Save();
 
                         XElement XAfter = ConvertToXElement(hostPart, hostElement);
-                        Log.Comment("Verifying element: {0} was set to exptected value: {1}", attribute.GetFullName(), attribute.Value);
+                        Log.Comment("Verifying element: {0} was set to expected value: {1}", attribute.GetFullName(), attribute.Value);
                         Log.VerifyValue(XAfter.Attribute(attribute.GetXName()).Value, attribute.Value,
-                            "Attribute {0} was set to {1} instead of exptected value: {2}", attribute.GetFullName(), XAfter.Attribute(attribute.GetXName()).Value, attribute.Value);
+                            "Attribute {0} was set to {1} instead of expected value: {2}", attribute.GetFullName(), XAfter.Attribute(attribute.GetXName()).Value, attribute.Value);
                     }
                     else
                     {
@@ -1998,7 +1993,7 @@ namespace DocumentFormat.OpenXml.Tests
                     if (result)
                         Log.Comment("Verified same attribute {0}={1}", ca.GetFullName(), ca.Value);
                     else
-                        Log.Fail("attriute {0} not found with expected value {1}", ca.GetFullName(), ca.Value);
+                        Log.Fail("attribute {0} not found with expected value {1}", ca.GetFullName(), ca.Value);
                 }
             }
             else
@@ -2118,7 +2113,7 @@ namespace DocumentFormat.OpenXml.Tests
                         if (result)
                             Log.Comment("Verified same attribute {0}={1}", ca.GetFullName(), ca.Value);
                         else
-                            Log.Fail("attriute {0} not found with expected value {1}", ca.GetFullName(), ca.Value);
+                            Log.Fail("attribute {0} not found with expected value {1}", ca.GetFullName(), ca.Value);
                     }
 
                     Log.Comment("Checking if children element are set onto host...");
@@ -2552,7 +2547,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        /// verify if <paramref name="originalElement"/> euqals to <paramref name="resultElement"/>'s child at <paramref name="targetPosition"/>.
+        /// verify if <paramref name="originalElement"/> equals to <paramref name="resultElement"/>'s child at <paramref name="targetPosition"/>.
         /// </summary>
         /// <param name="resultElement">the element after modifying</param>
         /// <param name="originalElement">the element before modifying</param>
@@ -2599,7 +2594,7 @@ namespace DocumentFormat.OpenXml.Tests
                 pass = false;
             }
             else if (XElement.Count() == 0)
-                Log.Warning("0 element is encounted");
+                Log.Warning("0 element is encountered");
 
             if (pass)
             {

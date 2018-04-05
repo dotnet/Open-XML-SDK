@@ -188,7 +188,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <summary>
         /// compare two OpenXmlParts
         /// </summary>
-        /// <param name="sourcePart">the soruce part for comparison</param>
+        /// <param name="sourcePart">the source part for comparison</param>
         /// <param name="targetPart">the target part for comparison</param>
         /// <returns>TRUE, if two parts contains the same content. FALSE, if not</returns>
         public static Boolean Compare(this OpenXmlPart sourcePart, OpenXmlPart targetPart)
@@ -207,16 +207,16 @@ namespace DocumentFormat.OpenXml.Tests
             // if there is only one part is null, return false
             if ((targetPart == null && sourcePart != null) || (sourcePart == null && targetPart != null))
                 return false;
-            //if two parts have different contenttype, return false
+            //if two parts have different content type, return false
             if (sourcePart.ContentType != targetPart.ContentType)
                 return false;
-            //if two parts have different number of externalrelationships, return false
+            //if two parts have different number of external relationships, return false
             if (sourcePart.ExternalRelationships.Count() != targetPart.ExternalRelationships.Count())
                 return false;
-            // if two parts have different number of hyperlinkrelationships, return false
+            // if two parts have different number of hyperlink relationships, return false
             if (sourcePart.HyperlinkRelationships.Count() != targetPart.HyperlinkRelationships.Count())
                 return false;
-            // if two parts have diffent relationship type, return false
+            // if two parts have different relationship type, return false
             if (sourcePart.RelationshipType != targetPart.RelationshipType)
                 return false;
             //// if two parts have different URI, return false
@@ -225,13 +225,13 @@ namespace DocumentFormat.OpenXml.Tests
             // if two parts contains different number of parts, return false;
             if (sourcePart.Parts.Count() != targetPart.Parts.Count())
                 return false;
-            //compare each externalrelationship
+            //compare each external relationship
             foreach (var id in sourcePart.ExternalRelationships)
             {
                 if (targetPart.ExternalRelationships.Where(i => i.Id == id.Id && i.RelationshipType == id.RelationshipType && i.Uri == id.Uri).Count() != 1)
                     return false;
             }
-            //compare each hyperlinkrelationship
+            //compare each hyperlink relationship
             foreach (var id in sourcePart.HyperlinkRelationships)
             {
                 if (targetPart.HyperlinkRelationships.Where(i => i.Id == id.Id && i.IsExternal == id.IsExternal && i.Uri == id.Uri).Count() != 1)

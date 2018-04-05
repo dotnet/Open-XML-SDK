@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
 
-            // empty is ok
+            // empty is OK
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
@@ -94,7 +94,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** error case ******
 
-            // first is invlaid
+            // first is invalid
             errorChild = properties.PrependChild(new Properties());
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);
@@ -179,7 +179,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** error case ******
 
-            // first is invlaid
+            // first is invalid
             errorChild = shapeLayout.PrependChild(new Paragraphs());
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);

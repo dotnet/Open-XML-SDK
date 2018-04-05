@@ -7,7 +7,7 @@ using System.Diagnostics;
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
-    /// Defines an OnOffValue datatype for attributes that have enum values that are Boolean values that represent: 'true' or 'false', 'on' or 'off', or '0' or '1'.
+    /// Defines an OnOffValue data type for attributes that have enum values that are Boolean values that represent: 'true' or 'false', 'on' or 'off', or '0' or '1'.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
     public class OnOffValue : OpenXmlSimpleValue<bool>

@@ -26,7 +26,7 @@ namespace LogUtil
         }
 
         /// <summary>
-        /// Produce a comment in "script" categry
+        /// Produce a comment in "script" category
         /// </summary>
         /// <param name="message">Message containing zero or more format specifications</param>
         /// <param name="arguments">List of objects to be formatted</param>

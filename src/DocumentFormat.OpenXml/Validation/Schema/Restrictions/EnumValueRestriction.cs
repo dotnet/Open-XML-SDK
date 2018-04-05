@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// </summary>
     /// <remarks>
     /// We do not save the enums in the database. Instead we reuse the generated enum class in the generated code.
-    /// For attributes, the type of the enum is known through the code-gen'ed data.
+    /// For attributes, the type of the enum is known through the code generated data.
     /// </remarks>
     [DataContract]
     internal class EnumValueRestriction : SimpleTypeRestriction

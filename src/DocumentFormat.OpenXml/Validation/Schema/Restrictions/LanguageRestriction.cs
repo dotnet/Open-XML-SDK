@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// language (xsd:language) based simple type constraint.
     /// </summary>
     /// <remarks>
-    ///  language represents natural language identifiers as defined by by [RFC 3066] .
+    ///  language represents natural language identifiers as defined by [RFC 3066] .
     ///  The ·value space· of language is the set of all strings that are valid language identifiers as defined [RFC 3066] .
     ///  The ·lexical space· of language is the set of all strings that conform to the pattern [a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})* .
     ///  The ·base type· of language is token.

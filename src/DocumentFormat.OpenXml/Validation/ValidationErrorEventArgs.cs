@@ -6,7 +6,7 @@ using System;
 namespace DocumentFormat.OpenXml.Validation
 {
     /// <summary>
-    /// Event args for validation error event.
+    /// An implementation of <see cref="EventArgs"/> for validation error event.
     /// </summary>
     internal class ValidationErrorEventArgs : EventArgs
     {

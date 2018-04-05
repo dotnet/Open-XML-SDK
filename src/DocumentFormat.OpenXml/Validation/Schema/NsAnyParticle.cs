@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     /// <remarks>
     /// xsd:any can contains only one namespace.
-    /// If there are multiple namespace in the original xsd, it will be splitted into multiple xsd:any in binary database.
+    /// If there are multiple namespace in the original xsd, it will be split into multiple xsd:any in binary database.
     /// </remarks>
     [DebuggerDisplay("NamespaceId={NamespaceId}")]
     internal class NsAnyParticle : ParticleConstraint
@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <summary>
-        /// Gets the namespace ID of the the namespace in the xsd:any@namespace.
+        /// Gets the namespace ID of the namespace in the xsd:any@namespace.
         /// </summary>
         internal byte NamespaceId
         {

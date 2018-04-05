@@ -8,10 +8,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     internal static class XsdTypeExtension
     {
         /// <summary>
-        /// Returns the XML Schema datatype name of the specified type.
+        /// Returns the XML Schema data type name of the specified type.
         /// </summary>
         /// <param name="xsdType">The XsdType type.</param>
-        /// <returns>Returns the XML Schema datatype name of the specified type.</returns>
+        /// <returns>Returns the XML Schema data type name of the specified type.</returns>
         public static string GetXsdDataTypeName(this XsdType xsdType)
         {
             switch (xsdType)

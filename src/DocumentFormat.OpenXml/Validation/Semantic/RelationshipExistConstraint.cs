@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         {
             OpenXmlSimpleType attributeValue = context.Element.Attributes[_rIdAttribute];
 
-            //if the attribute is omited, semantic validation will do nothing
+            //if the attribute is omitted, semantic validation will do nothing
             if (attributeValue == null || string.IsNullOrEmpty(attributeValue.InnerText))
             {
                 return null;

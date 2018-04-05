@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Validation
 
         /// <summary>
         /// Enumerate all the descendants elements of this element and do validating.
-        /// Preorder traversering.
+        /// Preorder traversing.
         /// </summary>
         /// <param name="validationContext"></param>
         /// <param name="validateAction">The delegate method to do the validating.</param>

@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Tests
             Bug743591(validator);
         }
 
-        #region validator bugs resgression
+        #region validator bugs regression
 
         [System.Diagnostics.Conditional("DEBUG")]
         private void AssertValidationErrorCategory(string expected, ValidationErrorInfo targetErrorInfo)
@@ -279,7 +279,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             TableCellMarginDefault tcmd = new TableCellMarginDefault();
             tcmd.AppendChild(new TopMargin());
-            var errorChild = tcmd.AppendChild(new LeftMargin()); // LeftMargin is wrong elemnt, it should be TableCellLeftMargin, but the two element has same element tag.
+            var errorChild = tcmd.AppendChild(new LeftMargin()); // LeftMargin is wrong element, it should be TableCellLeftMargin, but the two element has same element tag.
 
             var errors = validator.Validate(tcmd);
             Assert.Single(errors);
@@ -301,7 +301,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Single(errors);
             Assert.Equal(ValidationErrorType.Schema, errors.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", errors.First().Id);
-            Assert.Equal("The attribute 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:rsidR' has invalid value '0102'. The actual length according to datatype 'hexBinary' is not equal to the specified length. The expected length is 4.", errors.First().Description);
+            Assert.Equal("The attribute 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:rsidR' has invalid value '0102'. The actual length according to data type 'hexBinary' is not equal to the specified length. The expected length is 4.", errors.First().Description);
         }
 
         private void Bug423988(OpenXmlValidator validator)
@@ -368,7 +368,7 @@ namespace DocumentFormat.OpenXml.Tests
             var errors = validator.Validate(ext);
             Assert.Empty(errors);
 
-            // CT_Extension in PPT, <xsd:any > wihtout minOccurs
+            // CT_Extension in PPT, <xsd:any > without minOccurs
             var pext = new DocumentFormat.OpenXml.Presentation.Extension();
             pext.Uri = "http://www.live.com";
             errors = validator.Validate(pext);

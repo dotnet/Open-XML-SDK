@@ -155,7 +155,7 @@ namespace DocumentFormat.OpenXml.Validation
         /// <summary>
         /// Initializes a new instance of the OpenXmlValidator.
         /// </summary>
-        /// <param name="fileFormat">The target filr format to be validated aginst.</param>
+        /// <param name="fileFormat">The target file format to be validated against.</param>
         /// <remarks>
         /// Default to FileFormat.Office2007.
         /// </remarks>
@@ -195,7 +195,7 @@ namespace DocumentFormat.OpenXml.Validation
         /// Validates the specified document.
         /// </summary>
         /// <param name="openXmlPackage">The target WordprocessingDocument, SpreadsheetDocument or PresentationDocument.</param>
-        /// <returns>A set of validation erros.</returns>
+        /// <returns>A set of validation errors.</returns>
         /// <exception cref="ArgumentNullException">Thrown when the "openXmlPackage" parameter is null.</exception>
         public IEnumerable<ValidationErrorInfo> Validate(OpenXmlPackage openXmlPackage)
         {
@@ -221,7 +221,7 @@ namespace DocumentFormat.OpenXml.Validation
         /// Validates the specified content in the OpenXmlPart.
         /// </summary>
         /// <param name="openXmlPart">The target OpenXmlPart.</param>
-        /// <returns>A set of validation erros.</returns>
+        /// <returns>A set of validation errors.</returns>
         /// <exception cref="ArgumentNullException">Thrown when the "openXmlPart" parameter is null.</exception>
         /// <exception cref="InvalidOperationException">Throw when the specified part is not a defined part in the specified FileFormat version.</exception>
         public IEnumerable<ValidationErrorInfo> Validate(OpenXmlPart openXmlPart)
@@ -265,7 +265,7 @@ namespace DocumentFormat.OpenXml.Validation
         /// Validates the specified element.
         /// </summary>
         /// <param name="openXmlElement">The target OpenXmlElement.</param>
-        /// <returns>A set of validation erros.</returns>
+        /// <returns>A set of validation errors.</returns>
         /// <exception cref="ArgumentNullException">Thrown when the "openXmlElement" parameter is null.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the "openXmlElement" is type of OpenXmlUnknownElement, OpenXmlMiscNode, AlternateContent, AlternateContentChoice or AlternateContentFallback.</exception>
         /// <exception cref="InvalidOperationException">Thrown when the "openXmlElement" is not defined in the specified FileFormat.</exception>

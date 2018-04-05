@@ -595,7 +595,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             wrsidP.LocalName = "rsidP";
             wrsidP.Value = "00EC35BB";
-            Log.Comment("Assgined new LocalName: {0} with ByValue: {1} and comparing it with original w:rsidR", wrsidP.LocalName, wrsidP.Value);
+            Log.Comment("Assigned new LocalName: {0} with ByValue: {1} and comparing it with original w:rsidR", wrsidP.LocalName, wrsidP.Value);
             Log.VerifyFalse(wrsidP == wrsidR, "The assigned OpenXmlAttribute variable IS equal to original one.");
             Log.VerifyFalse(object.ReferenceEquals(wrsidP, wrsidR), "The assigned OpenXmlAttribute variable IS reference equal to original one.");
         }
@@ -2197,7 +2197,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                     var fontTablePart = (Package as WordprocessingDocument).MainDocumentPart.GetPartsOfType<FontTablePart>().First();
                     var fonts = fontTablePart.Fonts;
-                    // check if mc:Ignorable="w14" and if there're attribute named xmlns:w14
+                    // check if mc:Ignorable="w14" and if there is an attribute named xmlns:w14
                     var ignorable = fonts.GetAttributes().Where(a => a.LocalName == "Ignorable" && a.Value == "w14").FirstOrDefault();
                     if (ignorable == default(OpenXmlAttribute))
                         Log.Fail("No mc:Ignorable attribute with value {0} exists", "w14");
@@ -2218,7 +2218,7 @@ namespace DocumentFormat.OpenXml.Tests
                     //</w>
                     var fontTablePart = (Package as WordprocessingDocument).MainDocumentPart.GetPartsOfType<FontTablePart>().First();
                     var fonts = fontTablePart.Fonts;
-                    // check if mc:Ignorable="w14" and if there're attribute named xmlns:w14
+                    // check if mc:Ignorable="w14" and if there is an attribute named xmlns:w14
                     var ignorable = fonts.GetAttributes().Where(a => a.LocalName == "Ignorable" && a.Value == "w14").FirstOrDefault();
                     if (ignorable == default(OpenXmlAttribute))
                         Log.Fail("No mc:Ignorable attribute with value {0} exists", "w14");

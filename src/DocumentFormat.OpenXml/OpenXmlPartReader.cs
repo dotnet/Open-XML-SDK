@@ -794,17 +794,6 @@ namespace DocumentFormat.OpenXml
             switch (_xmlReader.NodeType)
             {
                 case XmlNodeType.EndElement:
-                    //#if DEBUG
-                    //                    {
-                    //                        OpenXmlElement top = this._elementStack.Pop();
-
-                    //                        element = this.CreateElement();
-
-                    //                        this._elementStack.Push(top);
-
-                    //                        Debug.Assert(element.GetType() == this._elementStack.Peek().GetType());
-                    //                    }
-                    //#endif
                     _elementState = ElementState.End;
                     break;
 

@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         /// <summary>
         /// Gets or sets the xsd:minOccurs value of this particle.
-        /// Just use ushort at now. throw exceptions if thera are numbers > ushort.MaxValue.
+        /// Just use ushort at now. throw exceptions if there are numbers > ushort.MaxValue.
         /// </summary>
         public ushort MinOccurs { get; set; }
 
@@ -55,7 +55,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         public SdbIndex ChildrenStartIndex { get; set; }
 
         /// <summary>
-        /// Gets the namespace ID defiend in "xsd:any" when the particle type is ParticleType.Any or ParticleType.AnyWithUri
+        /// Gets the namespace ID defined in "xsd:any" when the particle type is ParticleType.Any or ParticleType.AnyWithUri
         /// </summary>
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         public SdbIndex XsdAnyNamespaceId

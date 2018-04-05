@@ -236,12 +236,12 @@ namespace DocumentFormat.OpenXml.Tests
                 reader.Read();
                 reader.Read();
                 reader.Read();
-                Log.VerifyTrue(reader.Value == "test", "Expected: test <> acutal: {0}", reader.Value);
+                Log.VerifyTrue(reader.Value == "test", "Expected: test <> actual: {0}", reader.Value);
 
                 reader.Read();
 
                 Log.Comment("check if the endElement is written successfully");
-                Log.VerifyTrue(reader.NodeType == XmlNodeType.EndElement, "Expected: true <> acutal: false");
+                Log.VerifyTrue(reader.NodeType == XmlNodeType.EndElement, "Expected: true <> actual: false");
 
                 Log.VerifyTrue(reader.LocalName == t.LocalName, "expected: {0} <> actual: {1}", t.LocalName, reader.LocalName);
             }
@@ -375,7 +375,7 @@ namespace DocumentFormat.OpenXml.Tests
             else
             {
                 Log.Comment("verify the standalone is not presented");
-                Log.VerifyTrue(standaloneValue == null, "expected: null <> acutal: {0}", standaloneValue);
+                Log.VerifyTrue(standaloneValue == null, "expected: null <> actual: {0}", standaloneValue);
             }
         }
 
@@ -448,13 +448,13 @@ namespace DocumentFormat.OpenXml.Tests
                 xmlReader.Read();
                 xmlReader.Read();
 
-                Log.Comment("the element writen out is a start element");
+                Log.Comment("the element written out is a start element");
                 Log.VerifyTrue(xmlReader.IsStartElement(), "Expected: True <> Actual: False");
 
                 if (writeSource is OpenXmlReader)
                 {
                     OpenXmlReader oReader = writeSource as OpenXmlReader;
-                    Log.VerifyTrue(xmlReader.LocalName == oReader.LocalName, "expected: {0} <> acutal: {1}", oReader.LocalName, xmlReader.LocalName);
+                    Log.VerifyTrue(xmlReader.LocalName == oReader.LocalName, "expected: {0} <> actual: {1}", oReader.LocalName, xmlReader.LocalName);
 
                     if (attributes != null)
                     {
@@ -489,7 +489,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     OpenXmlElement element = writeSource as OpenXmlElement;
 
-                    Log.VerifyTrue(xmlReader.LocalName == element.LocalName, "expected: {0} <> acutal: {1}", element.LocalName, xmlReader.LocalName);
+                    Log.VerifyTrue(xmlReader.LocalName == element.LocalName, "expected: {0} <> actual: {1}", element.LocalName, xmlReader.LocalName);
 
                     if (attributes != null)
                     {
@@ -882,7 +882,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Activator.CreateInstance(reader.ElementType) is OpenXmlLeafTextElement)
             {
                 string Text = reader.GetText();
-                Log.VerifyTrue(Xreader.ReadContentAsString() == Text, "exptected: '{0}' <> actual: '{1}'", Xreader.Value, Text);
+                Log.VerifyTrue(Xreader.ReadContentAsString() == Text, "expected: '{0}' <> actual: '{1}'", Xreader.Value, Text);
 
                 Read(reader);
             }

@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void BooleanValueTest()
         {
-            // xsd:boolean is enum in W3C XSD 1.1 Part 2: Datatypes  - 'true' | 'false' | '1' | '0'
+            // xsd:boolean is enum in W3C XSD 1.1 Part 2: Data types  - 'true' | 'false' | '1' | '0'
 
             BooleanValue target = new BooleanValue();
             Assert.False(target.HasValue); // default has no value.
@@ -119,7 +119,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(M.BooleanValues.On, (M.BooleanValues)onoffEnum);
             Assert.Equal("on", onoffEnum.ToString());
 
-            // test sepcial case - the enum can be empty string ""
+            // test special case - the enum can be empty string ""
             var truefalseEmpty = new EnumValue<xvml.BooleanEntryWithBlankValues>(xvml.BooleanEntryWithBlankValues.Empty);
             Assert.True(truefalseEmpty.HasValue);
             Assert.Equal("", truefalseEmpty.InnerText);
@@ -618,8 +618,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(p.Start);
             p.Start.InnerText = "false";
             Assert.False(p.Start);
-            //DocumentFormat.OpenXml.Vml.Spreadsheet.Locked locked = new DocumentFormat.OpenXml.Vml.Spreadsheet.Locked("t");
-            //Assert.Equal(typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>), locked.InnerTextToValue(locked.InnerText));
         }
 
         /// <summary>

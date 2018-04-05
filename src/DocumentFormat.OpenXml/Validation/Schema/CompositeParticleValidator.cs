@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// This data field is moved from TryMatchOnce.
         /// Base on the following point.
         /// - The TryMatchOnce() method will NOT be called more than once with same ChoiceParticleValidator instance on the stack when validating one element.
-        /// - That means this data field will not be overriden in recursive calling when validating one element.
+        /// - That means this data field will not be overridden in recursive calling when validating one element.
         /// </summary>
         private ParticleMatchInfo _childMatchInfo = new ParticleMatchInfo();
 
@@ -57,7 +57,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 if (ParticleConstraint.MinOccurs == 0)
                 {
-                    // no child, ok
+                    // no child, OK
                     return;
                 }
                 else
@@ -138,7 +138,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                 while (next != null && ParticleConstraint.MaxOccursGreaterThan(matchCount))
                 {
-                    // Use Reset() instead of new() to avoid heavy memory alloction and GC.
+                    // Use Reset() instead of new() to avoid heavy memory allocation and GC.
                     _childMatchInfo.Reset(next);
                     TryMatchOnce(_childMatchInfo, validationContext);
 
@@ -178,7 +178,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 }
                 else if (matchCount >= ParticleConstraint.MinOccurs)
                 {
-                    // matched ok
+                    // matched OK
                     particleMatchInfo.Match = ParticleMatch.Matched;
                 }
                 else
@@ -314,7 +314,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
             else
             {
-                //Fix bug #448264, specifal case: same element name, but wrong type. Only occurs when validating memory DOM.
+                // Same element name, but wrong type. Only occurs when validating memory DOM.
                 var validElement = element.TryCreateValidChild(validationContext.FileFormat, child.NamespaceUri, child.LocalName);
                 if (validElement == null)
                 {
@@ -322,7 +322,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 }
                 else
                 {
-                    // parent can contains a different type of element with same name
+                    // Parent can contains a different type of element with same name
                     errorInfo = validationContext.ComposeSchemaValidationError(element, child, "Sch_InvalidElementContentWrongType", child.XmlQualifiedName.ToString(), child.GetType().Name);
                 }
             }
@@ -332,7 +332,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
     /**********************************************************************************************
      * Some assumption for schema complex type.
-     * 1). A same tag (like 'w:b') only occurs once in the complext type defination in the schema.
+     * 1). A same tag (like 'w:b') only occurs once in the complex type definition in the schema.
      * This assumption is correct for Ecma376.
     **********************************************************************************************/
 }

@@ -527,7 +527,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        // find all reachable parts from the package root, the dictionary also used for cycle reference defence
+        // find all reachable parts from the package root, the dictionary also used for cycle reference defense
         internal sealed override void FindAllReachableParts(IDictionary<OpenXmlPart, bool> reachableParts)
         {
             ThrowIfObjectDisposed();
@@ -628,7 +628,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <returns></returns>
         /// <remarks>
-        /// Used by validator. To releaase the DOM and so the memory can be GC'ed.
+        /// Used by validator. To release the DOM and so the memory can be GC'ed.
         /// </remarks>
         internal OpenXmlPartRootElement SetPartRootElementToNull()
         {

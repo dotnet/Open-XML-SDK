@@ -72,7 +72,7 @@ namespace DocumentFormat.OpenXml.Validation
         /// <summary>
         /// Get the next child of this.Element according to the MC Mode.
         /// </summary>
-        /// <param name="child">The child after which the next child going to be retrived.</param>
+        /// <param name="child">The child after which the next child going to be retrieved.</param>
         /// <returns>The next child after the specified child in the MC mode.</returns>
         internal OpenXmlElement GetNextChildMc(OpenXmlElement child)
         {

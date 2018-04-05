@@ -1085,7 +1085,7 @@ namespace DocumentFormat.OpenXml.Packaging
                         dataPartSet.Remove(dataPartReferenceRelationship.DataPart);
                         if (dataPartSet.Count == 0)
                         {
-                            // No more DataPart in the set. All DataParts are referenced somethwherr.
+                            // No more DataPart in the set. All DataParts are referenced somewhere.
                             return;
                         }
                     }
