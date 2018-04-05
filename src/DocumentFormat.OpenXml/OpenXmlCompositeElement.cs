@@ -750,13 +750,13 @@ namespace DocumentFormat.OpenXml
                 xmlReader.Skip();
             }
 
-            // set raw outer xml to empty to indicate that it is passed
+            // Set raw outer xml to empty to indicate that it passed
             RawOuterXml = string.Empty;
         }
 
         private static void RemoveUnnecessaryExtAttr(OpenXmlElement node, OpenXmlElement newnode)
         {
-            //re-construct the _nsMappings for the new node based on the original node
+            // Reconstruct the _nsMappings for the new node based on the original node
             node.MakeSureParsed();
             if (newnode.NamespaceDeclField != null && node.NamespaceDeclField != null)
             {

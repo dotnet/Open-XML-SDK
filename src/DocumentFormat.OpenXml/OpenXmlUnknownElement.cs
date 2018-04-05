@@ -54,7 +54,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="qualifiedName">The qualified element name.</param>
         /// <param name="namespaceUri">The namespace URI of the element.</param>
         public OpenXmlUnknownElement(string qualifiedName, string namespaceUri)
-            : this( )
+            : this()
         {
             if (qualifiedName == null)
             {
@@ -74,7 +74,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="localName">The local name of the element.</param>
         /// <param name="namespaceUri">The namespace URI of the element.</param>
         public OpenXmlUnknownElement(string prefix, string localName, string namespaceUri)
-            : this( )
+            : this()
         {
             if (localName == null)
             {
@@ -111,9 +111,9 @@ namespace DocumentFormat.OpenXml
             TextReader stringReader = new StringReader(outerXml);
             using (XmlReader xmlReader = XmlConvertingReaderFactory.Create(stringReader, OpenXmlElementContext.CreateDefaultXmlReaderSettings()))
             {
-                do // O15:#3024890, Skip the leading whitespace. OpenXmUnknownlElement ignores the Whitespace NodeType.
+                // Skip the leading whitespace as OpenXmUnknownlElement ignores the Whitespace NodeType.
+                do
                 {
-                    // Fix bug #484153.
                     if (xmlReader.Read() && xmlReader.NodeType == XmlNodeType.Element)
                     {
                         OpenXmlUnknownElement newElement = new OpenXmlUnknownElement(xmlReader.Prefix, xmlReader.LocalName, xmlReader.NamespaceURI);
@@ -184,7 +184,7 @@ namespace DocumentFormat.OpenXml
 
             element.CopyAttributes(this);
 
-            if(deep)
+            if (deep)
             {
                 element.CopyChilden(this, deep);
             }

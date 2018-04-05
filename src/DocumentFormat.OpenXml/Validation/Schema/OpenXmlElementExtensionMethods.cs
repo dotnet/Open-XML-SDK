@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="child">The child element to be tested.</param>
         /// <param name="mcContext">Markup Compatibility context.</param>
         /// <param name="format">Targeting file format (Office2007 or Office201).</param>
-        /// <returns>The logic child (when we apply a MC pre-processor).</returns>
+        /// <returns>The logic child (when we apply a MC preprocessor).</returns>
         private static OpenXmlElement GetChildMc(this OpenXmlElement parent, OpenXmlElement child, MCContext mcContext, FileFormatVersions format)
         {
             // Use stack to cache the next siblings in different levels.

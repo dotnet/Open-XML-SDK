@@ -1890,7 +1890,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// If this is a normal node, check <code>mustunderstand</code> attribute at load time
+        /// If this is a normal node, check <c>mustunderstand</c> attribute at load time
         /// </summary>
         /// <param name="reader">The XmlReader.</param>
         /// <param name="mcAttributes">The MarkupCompatibilityAttributes.</param>
@@ -1921,7 +1921,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// If this is a node in ACB, check <code>mustunderstand</code> after load
+        /// If this is a node in ACB, check <c>mustunderstand</c> after load
         /// </summary>
         internal void CheckMustUnderstandAttr()
         {
@@ -1986,7 +1986,7 @@ namespace DocumentFormat.OpenXml
 
             ParseXml();
 
-            // set raw outer xml to empty to indicate that it is passed
+            // Set raw outer xml to empty to indicate that it passed
             RawOuterXml = string.Empty;
         }
 
@@ -2671,9 +2671,9 @@ namespace DocumentFormat.OpenXml
         {
             using (XmlReader xmlReader = CreateXmlReader(outerXml))
             {
-                do // O15:#3024890, Skip the leading whitespace. OpenXmlElement ignores the Whitespace NodeType.
+                // Skip the leading whitespace since OpenXmlElement ignores the Whitespace NodeType.
+                do
                 {
-                    // Fix bug #484153.
                     if (xmlReader.Read())
                     {
                         if (xmlReader.NodeType == XmlNodeType.Element)
@@ -2710,7 +2710,7 @@ namespace DocumentFormat.OpenXml
 
         private bool LoadMCAttribute(string localName, string value)
         {
-            // DO NOT call this.MCAttributes as this method is called on xml parsing.
+            // Do not call this.MCAttributes as this method is called on xml parsing.
             if (McAttributesFiled == null)
             {
                 McAttributesFiled = new MarkupCompatibilityAttributes();

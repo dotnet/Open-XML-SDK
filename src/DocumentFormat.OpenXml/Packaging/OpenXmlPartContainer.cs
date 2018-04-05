@@ -1323,7 +1323,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.StringArgumentEmptyException, nameof(contentType));
             }
 
-            // use reflection to create the instance. As the default constructor of part is not "public"
+            // Use reflection to create the instance as the default constructor of part is not public
             var part = PartActivator.CreateInstance<T>();
 
             if (part is ExtendedPart)

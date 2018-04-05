@@ -10,7 +10,7 @@ using System.Text;
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
-    /// Defines the XmlPath - XPath like information for OpenXmlElement.
+    /// Defines XPath like information for OpenXmlElement.
     /// </summary>
     [DebuggerDisplay("XPath={XPath}")]
     public class XmlPath
