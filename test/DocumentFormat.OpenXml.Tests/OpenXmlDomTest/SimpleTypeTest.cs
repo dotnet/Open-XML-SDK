@@ -17,7 +17,6 @@ namespace DocumentFormat.OpenXml.Tests
     //   DocumentFormat.OpenXml.Base64BinaryValue
     //   DocumentFormat.OpenXml.HexBinaryValue
     //   DocumentFormat.OpenXml.OpenXmlSimpleValue<T>
-
     public class OpenXmlSimpleTypeTest : OpenXmlDomTestBase
     {
         public OpenXmlSimpleTypeTest(ITestOutputHelper output)
@@ -1089,7 +1088,6 @@ namespace DocumentFormat.OpenXml.Tests
     //       DocumentFormat.OpenXml.UInt16Value
     //       DocumentFormat.OpenXml.UInt32Value
     //       DocumentFormat.OpenXml.UInt64Value
-
     public class OpenXmlSimpleValueTest : OpenXmlDomTestBase
     {
         public OpenXmlSimpleValueTest(ITestOutputHelper output)
@@ -1766,6 +1764,7 @@ namespace DocumentFormat.OpenXml.Tests
             Decimal specialValue1 = Decimal.MinusOne;
             Decimal specialValue2 = Decimal.One;
             Decimal specialValue3 = Decimal.Zero;
+
             // Decimal validValue = (decimal)(new Random ().Next(0, 10) * (maxValue / 100 - minValue / 100) + minValue / 10);
             Decimal validValue = (decimal)123.456;
             string invalidValue = "Invalid String!";
@@ -2109,6 +2108,7 @@ namespace DocumentFormat.OpenXml.Tests
             DateTime defaultValue = default(DateTime);
             DateTime maxValue = DateTime.MaxValue;
             DateTime minValue = DateTime.MinValue;
+
             //var ratio = (decimal)new Random ().Next(0, 100) / 100;
             var ratio = (decimal)0.5;
             DateTime validValue = new DateTime((long)(ratio * maxValue.Ticks + (1 - ratio) * minValue.Ticks));

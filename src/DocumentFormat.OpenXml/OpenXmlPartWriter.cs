@@ -26,6 +26,7 @@ namespace DocumentFormat.OpenXml
                 {
                     _openXmlLeafTextElementClass = typeof(OpenXmlLeafTextElement);
                 }
+
                 return _openXmlLeafTextElementClass;
             }
         }

@@ -57,6 +57,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 particleMatchInfo.Match = ParticleMatch.Nomatch;
             }
+
             return;
         }
 
@@ -104,10 +105,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         {
                             particleMatchInfo.InitExpectedChildren();
                         }
+
                         particleMatchInfo.ExpectedChildren.Add(ElementId);
                     }
                 }
             }
+
             return;
         }
 
@@ -120,8 +123,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 {
                     result.Add(ElementId);
                 }
+
                 return true;
             }
+
             return false;
         }
 

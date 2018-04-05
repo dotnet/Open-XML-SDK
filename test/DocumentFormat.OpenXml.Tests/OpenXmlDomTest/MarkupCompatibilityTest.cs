@@ -804,6 +804,7 @@ namespace DocumentFormat.OpenXml.Tests
         #endregion IgnorableTest
 
         #region ProcessContent
+
         // process content (attaching attributes and child element)
         [Fact]
         public void ProcessContent_Ignored_UnknownElement_FullMode()
@@ -1376,6 +1377,7 @@ namespace DocumentFormat.OpenXml.Tests
         #endregion ProcessContent
 
         #region Preserve Elements & Attributes
+
         // ignored unknown element along with ignored prefixed attribute, unprefixed attribute, non-ignored unknown attribute.
         [Fact]
         public void Preserve_Ignored_UnknownElement_FullMode()
@@ -3691,6 +3693,7 @@ namespace DocumentFormat.OpenXml.Tests
                 children.Add(c.CloneNode(true));
                 choice.AppendChild(c.CloneNode(true));
             }
+
             e.RemoveAllChildren();
 
             Log.Comment("Appending a choice to AlaternateContent element...");
@@ -3713,6 +3716,7 @@ namespace DocumentFormat.OpenXml.Tests
                 choice.AppendChild(c.CloneNode(true));
                 acb.AppendChild(choice);
             }
+
             e.RemoveAllChildren();
             return e.AppendChild(acb);
         }
@@ -3732,6 +3736,7 @@ namespace DocumentFormat.OpenXml.Tests
                 choice.SetRequires(unknownElement11.Prefix);    // set unknown prefix to make it unselectable
                 acb.AppendChild(choice);
             }
+
             e.RemoveAllChildren();
             e.SetAttribute(unknownAttribute11);    // append unknown element/attribute to make its ns resolvable
             return e.AppendChild(acb);
@@ -3755,6 +3760,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Comment("Appending same child element as Choice to Fallback...");
                 fallback.AppendChild(c.CloneNode(true));
             }
+
             Log.Comment("Appending fallback to Alternate Content element...");
             acb.AppendChild(fallback);
             e.RemoveAllChildren();
@@ -3780,6 +3786,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Comment("Appending same child element as Choice to Fallback...");
                 fallback.AppendChild(c.CloneNode(true));
             }
+
             Log.Comment("Appending fallback to Alternate Content element...");
             acb.AppendChild(fallback);
             e.RemoveAllChildren();
@@ -3807,6 +3814,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Comment("Appending same child element as Choice to Fallback...");
                 fallback.AppendChild(c.CloneNode(true));
             }
+
             e.RemoveAllChildren();
             return e.AppendChild(acb);
         }
@@ -3902,6 +3910,7 @@ namespace DocumentFormat.OpenXml.Tests
                 wrapper.AppendChild(d.CloneNode(true));
                 children.Add(d.CloneNode(true));
             }
+
             host.RemoveAllChildren();
             host.AppendChild(wrapper);
         }

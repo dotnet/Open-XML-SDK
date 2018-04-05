@@ -23,6 +23,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     return true;
                 }
+
                 return (bool)autoSave;
             }
 

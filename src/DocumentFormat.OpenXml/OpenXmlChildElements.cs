@@ -47,9 +47,11 @@ namespace DocumentFormat.OpenXml
                     {
                         return element;
                     }
+
                     index--;
                 }
             }
+
             // return null;
             throw new ArgumentOutOfRangeException(nameof(index));
         }
@@ -68,6 +70,7 @@ namespace DocumentFormat.OpenXml
                         num++;
                     }
                 }
+
                 return num;
             }
         }

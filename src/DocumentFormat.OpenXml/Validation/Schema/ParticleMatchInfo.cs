@@ -97,6 +97,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 {
                     ExpectedChildren.Clear();
                 }
+
                 // else, both are null, just return, nothing to do.
             }
             else
@@ -105,6 +106,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 {
                     ExpectedChildren = new ExpectedChildren();
                 }
+
                 ExpectedChildren.Clear();
                 ExpectedChildren.Add(expectedChildren);
             }

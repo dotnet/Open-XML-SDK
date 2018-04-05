@@ -200,6 +200,7 @@ namespace DocumentFormat.OpenXml.Tests
                     root = new Dr.Theme(part.Theme.OuterXml);
                     break;
             }
+
             return root;
         }
     }

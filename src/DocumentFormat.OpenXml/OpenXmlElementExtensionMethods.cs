@@ -37,6 +37,7 @@ namespace DocumentFormat.OpenXml
             {
                 return 1;
             }
+
             if (element is OpenXmlUnknownElement)
             {
                 foreach (var child in element.Parent.ChildElements)
@@ -45,6 +46,7 @@ namespace DocumentFormat.OpenXml
                     {
                         return count;
                     }
+
                     if (child is OpenXmlUnknownElement &&
                         child.NamespaceUri == element.NamespaceUri &&
                         child.LocalName == element.LocalName)
@@ -63,6 +65,7 @@ namespace DocumentFormat.OpenXml
                     {
                         return count;
                     }
+
                     if (type == child.GetType())
                     {
                         count++;
@@ -206,6 +209,7 @@ namespace DocumentFormat.OpenXml
                     }
                 }
             }
+
             return false;
         }
 
@@ -227,6 +231,7 @@ namespace DocumentFormat.OpenXml
             {
                 return null;
             }
+
             return newElement;
         }
     }

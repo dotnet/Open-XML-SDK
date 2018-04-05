@@ -573,6 +573,7 @@ namespace DocumentFormat.OpenXml.Tests
                     {
                         Assert.Equal(curElem.Attributes.Length, elem.Attributes.Length);
                     }
+
                     Assert.Equal(curElem.ExtendedAttributes.Count(), elem.ExtendedAttributes.Count());
                     var a1 = curElem.ExtendedAttributes.ToArray();
                     var a2 = elem.ExtendedAttributes.ToArray();
@@ -589,6 +590,7 @@ namespace DocumentFormat.OpenXml.Tests
                         Assert.Equal(((OpenXmlLeafTextElement)curElem).Text, ((OpenXmlLeafTextElement)elem).Text);
                     }
                 }
+
                 // Deep clone the unknown element
                 var unknown = doc.MainDocumentPart.Document.Descendants<OpenXmlUnknownElement>().Where(e => e.LocalName == "wsp").First();
                 var clonedUnknown = unknown.CloneNode(true);
@@ -645,6 +647,7 @@ namespace DocumentFormat.OpenXml.Tests
             // Valid outer xml but starting with whitespace.
             string validOuterXmlWithWhitespaces = "     <customUI  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></customUI>";
             DocumentFormat.OpenXml.Office.CustomUI.CustomUI cUi3 = new DocumentFormat.OpenXml.Office.CustomUI.CustomUI(validOuterXmlWithWhitespaces);
+
             // The whitespace should be trimmed when getting OuterXml.
             Assert.Equal(validOuterXml, cUi2.OuterXml);
 
@@ -768,6 +771,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var p = new Paragraph();
             p.ParagraphId = "123";
+
             //NamespaceDeclarations is not null
             Assert.Empty(p.NamespaceDeclarations);
 
@@ -857,6 +861,7 @@ namespace DocumentFormat.OpenXml.Tests
                     target.WriteEndElement();
                     target.Close();
                 }
+
                 memStream.Flush();
                 memStream.Seek(0, SeekOrigin.Begin);
 

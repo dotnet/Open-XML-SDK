@@ -93,12 +93,14 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 // find sdt
                 var sdt = doc.MainDocumentPart.Document.Descendants<SdtBlock>().First();
+
                 // get
                 Assert.Equal(2, sdt.ChildElements.Count);
                 Assert.Equal(typeof(SdtProperties), sdt.ChildElements[0].GetType());
                 Assert.Equal(typeof(SdtContentBlock), sdt.ChildElements[1].GetType());
                 Assert.Equal(typeof(SdtAlias), sdt.ChildElements[0].ChildElements[0].GetType());
                 Assert.Equal("SDT1", (sdt.ChildElements[0].ChildElements[0] as SdtAlias).Val.Value);
+
                 // set
                 SdtContentBlock contentRun = sdt.ChildElements[1] as SdtContentBlock;
                 contentRun.Append(new Paragraph());

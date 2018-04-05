@@ -47,6 +47,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
             // so, the data length is the number of octets
             // then the data length is string length / 2
             var stringLength = attributeValue.InnerText.Length;
+
             //Debug.Assert(stringLength % 2 == 0);
             return (stringLength + 1) / 2;
         }

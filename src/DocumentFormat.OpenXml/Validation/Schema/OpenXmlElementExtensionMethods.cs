@@ -29,6 +29,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 {
                     mcTier = mcTier.Parent;
                 }
+
                 Debug.Assert(mcTier != null);
 
                 // there is no more next sibling in this level, then try to find the next siblig of the up level.
@@ -85,6 +86,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                             if (mcContext.IsProcessContent(child))
                             {
                                 nextSiblings.Push(child.GetNextNonMiscElementSibling());
+
                                 //
                                 child = child.GetFirstNonMiscElementChild();
                             }
@@ -99,6 +101,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                             return child;
                         }
                     }
+
                     mcContext.PopMCAttributes2();
                 }
 

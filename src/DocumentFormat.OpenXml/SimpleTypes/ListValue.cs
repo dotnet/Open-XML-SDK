@@ -186,8 +186,10 @@ namespace DocumentFormat.OpenXml
                             separator = _listSeparator;
                         }
                     }
+
                     TextValue = textString.ToString();
                 }
+
                 return TextValue;
             }
 

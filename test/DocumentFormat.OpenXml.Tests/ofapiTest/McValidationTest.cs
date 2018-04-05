@@ -24,11 +24,13 @@ namespace DocumentFormat.OpenXml.Tests
             var acFallback = new AlternateContentFallback();
             var ac = element.AppendChild(new AlternateContent());
             var errors = validator.Validate(ac);
+
             // Error case: must have one choice, can not have AlternateContent as ID
             Assert.Single(errors);
             Assert.Equal("Sch_IncompleteContentExpectingComplex", errors[0].Id);
 
             ac.AddNamespaceDeclaration("o15", "http://o15.com");
+
             //ac.NamespaceDeclarations
             ac.AppendChild(new AlternateContentChoice() { Requires = "o15" });
             errors = validator.Validate(ac);
@@ -60,6 +62,7 @@ namespace DocumentFormat.OpenXml.Tests
             ac.RemoveChild(ac.LastChild);
 
             ac.RemoveChild(acFallback);
+
             // Error case: wrong sequence
             ac.PrependChild(acFallback);
             errors = validator.Validate(ac);

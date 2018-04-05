@@ -122,6 +122,7 @@ namespace DocumentFormat.OpenXml
             get
             {
                 ThrowIfObjectDisposed();
+
                 // default XML encoding is UTF8
                 return null;
             }
@@ -278,6 +279,7 @@ namespace DocumentFormat.OpenXml
                 {
                     Close();
                 }
+
                 _disposed = true;
             }
         }

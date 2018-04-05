@@ -75,6 +75,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                     _validMainPartContentType = tempData;
                 }
+
                 return _validMainPartContentType;
             }
         }
@@ -186,6 +187,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(path);
             }
+
             PresentationDocument doc = new PresentationDocument();
             doc.DocumentType = type;
             doc.OpenSettings = new OpenSettings();
@@ -194,6 +196,7 @@ namespace DocumentFormat.OpenXml.Packaging
             doc.CreateCore(path);
             return doc;
         }
+
         /// <summary>
         /// Creates a new instance of the PresentationDocument class from the IO stream.
         /// </summary>
@@ -327,6 +330,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
+
             PresentationDocument doc = new PresentationDocument();
             doc.OpenSettings = new OpenSettings();
             doc.OpenSettings.AutoSave = openSettings.AutoSave;
@@ -338,6 +342,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 doc.UpdateDocumentTypeFromContentType();
             }
+
             return doc;
         }
 
@@ -359,6 +364,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
+
             PresentationDocument doc = new PresentationDocument();
             doc.OpenSettings = new OpenSettings();
             doc.OpenSettings.AutoSave = openSettings.AutoSave;
@@ -370,6 +376,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 doc.UpdateDocumentTypeFromContentType();
             }
+
             return doc;
         }
 
@@ -390,6 +397,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
+
             PresentationDocument doc = new PresentationDocument();
             doc.OpenSettings = new OpenSettings();
             doc.OpenSettings.AutoSave = openSettings.AutoSave;
@@ -401,6 +409,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 doc.UpdateDocumentTypeFromContentType();
             }
+
             return doc;
         }
 
@@ -445,6 +454,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     DocumentType = oldType;
                     MainPartContentType = MainPartContentTypes[oldType];
                 }
+
                 throw;
             }
         }
@@ -462,6 +472,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(nameof(relationshipType));
             }
+
             switch (relationshipType)
             {
                 case PresentationPart.RelationshipTypeConstant:
@@ -494,6 +505,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 case WebExTaskpanesPart.RelationshipTypeConstant:
                     return new WebExTaskpanesPart();
             }
+
             throw new ArgumentOutOfRangeException(nameof(relationshipType));
         }
 
@@ -563,6 +575,7 @@ namespace DocumentFormat.OpenXml.Packaging
             InitPart(childPart, contentType);
             return childPart;
         }
+
         /// <summary>
         /// Adds a ThumbnailPart to the PresentationDocument.
         /// </summary>

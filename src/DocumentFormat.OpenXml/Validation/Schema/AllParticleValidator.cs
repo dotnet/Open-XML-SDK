@@ -28,6 +28,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             foreach (var constraint in particleConstraint.ChildrenParticles)
             {
                 Debug.Assert(constraint.ParticleType == ParticleType.Element);
+
                 // all children elements' maxOccurs must be 1
                 Debug.Assert(constraint.MaxOccurs == 1);
             }
@@ -142,6 +143,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         particleMatchInfo.ExpectedChildren.Add(childParticle.ElementId);
                     }
                 }
+
                 return;
             }
         }
@@ -186,6 +188,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         errorInfo = validationContext.ComposeSchemaValidationError(element, child, "Sch_InvalidElementContentExpectingComplex", child.XmlQualifiedName.ToString(), expectedChildren);
                         validationContext.AddError(errorInfo);
                     }
+
                     break;
             }
         }

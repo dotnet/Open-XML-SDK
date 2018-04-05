@@ -150,6 +150,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                 case XsdType.AnySimpleType:
                     return "anySimpleType";
+
                 // return "http://www.w3.org/2001/XMLSchema:anySimpleType":
 
                 // special case for TrueFalseValue, TrueFalseBlankValue, OnOffValue
@@ -157,7 +158,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 //return "TrueFalseValue":
                 //return "TrueFalseBlankValue":
                 //return "OnOffValue":
-
                 default:
                     throw new ArgumentOutOfRangeException(nameof(xsdType));
             }

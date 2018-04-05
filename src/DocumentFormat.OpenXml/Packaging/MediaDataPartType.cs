@@ -18,18 +18,22 @@ namespace DocumentFormat.OpenXml.Packaging
         ///// AU Audio File (.au)
         ///// </summary>
         //Basic,
+
         /// <summary>
         /// MIDI Audio (.mid)
         /// </summary>
         Midi,
+
         /// <summary>
         /// MP3 (.mp3)
         /// </summary>
         Mp3,
+
         /// <summary>
         /// MP3 Playlist File (.m3u)
         /// </summary>
         MpegUrl,
+
         /// <summary>
         /// WAV audio (.wav)
         /// </summary>
@@ -38,14 +42,17 @@ namespace DocumentFormat.OpenXml.Packaging
         ///// Windows Media Audio Redirector (.wax)
         ///// </summary>
         //Wax,
+
         /// <summary>
         /// Windows Media Audio File (.wma)
         /// </summary>
         Wma,
+
         /// <summary>
         /// Mpeg audio (.mpeg)
         /// </summary>
         MpegAudio,
+
         /// <summary>
         /// Ogg Vorbis (.ogg)
         /// </summary>
@@ -59,10 +66,12 @@ namespace DocumentFormat.OpenXml.Packaging
         ///// Advanced Streaming Format (.asf)
         ///// </summary>
         //Asf,
+
         /// <summary>
         /// Advanced Stream Redirector File (.asx)
         /// </summary>
         Asx,
+
         /// <summary>
         /// Audio Video Interleave File (.avi)
         /// </summary>
@@ -71,10 +80,12 @@ namespace DocumentFormat.OpenXml.Packaging
         ///// Indeo Video File (.ivf)
         ///// </summary>
         //Ivf,
+
         /// <summary>
         /// MPEG 1 System Stream (.mpg)
         /// </summary>
         Mpg,
+
         /// <summary>
         /// MPEG 1 System Stream (.mpeg)
         /// </summary>
@@ -83,26 +94,32 @@ namespace DocumentFormat.OpenXml.Packaging
         ///// Windows Media A/V File (.wm)
         ///// </summary>
         //WM,
+
         /// <summary>
         /// Windows Media File (.wmv)
         /// </summary>
         Wmv,
+
         /// <summary>
         /// Windows Media Player A/V Shortcut (.wmx)
         /// </summary>
         Wmx,
+
         /// <summary>
         /// Windows Media Redirector (.wvx)
         /// </summary>
         Wvx,
+
         /// <summary>
         /// QuickTime video (.mov)
         /// </summary>
         Quicktime,
+
         /// <summary>
         ///  Ogg Stream (.ogg)
         /// </summary>
         OggVideo,
+
         /// <summary>
         /// VC-1 Stream (.wmv)
         /// </summary>

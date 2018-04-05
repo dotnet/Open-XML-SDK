@@ -127,6 +127,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void X003_XlsxCreation_Stream()
         {
             using (MemoryStream ms = new MemoryStream())
+
             // By default, AutoSave = true, Editable = true, and Type = xlsx.
             using (SpreadsheetDocument doc = SpreadsheetDocument.Create(ms, SpreadsheetDocumentType.Workbook))
             {
@@ -155,7 +156,6 @@ namespace DocumentFormat.OpenXml.Tests
         public void X002_XlsxCreation()
         {
             // By default, AutoSave = true, Editable = true, and Type = xlsx.
-
             using (var ms = new MemoryStream())
             using (var doc = SpreadsheetDocument.Create(ms, SpreadsheetDocumentType.Workbook))
             {

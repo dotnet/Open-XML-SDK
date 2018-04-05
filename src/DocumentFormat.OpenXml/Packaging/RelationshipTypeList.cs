@@ -90,6 +90,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     _list.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", 1);
                     _list.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", 1);
                 }
+
                 return _list;
             }
         }

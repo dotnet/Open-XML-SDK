@@ -57,6 +57,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                     reader.Close();
                 }
+
                 target.Close();
             }
         }

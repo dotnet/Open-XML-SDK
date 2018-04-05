@@ -126,6 +126,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Log.Pass("InvalidOperationException is thrown as expected");
                 }
             }
+
             File.Delete(file);
         }
 
@@ -152,6 +153,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Log.Pass("InvalidOperationException is thrown as expected");
                 }
             }
+
             File.Delete(file);
         }
 
@@ -245,6 +247,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 Log.VerifyTrue(reader.LocalName == t.LocalName, "expected: {0} <> actual: {1}", t.LocalName, reader.LocalName);
             }
+
             File.Delete(file);
         }
 
@@ -270,6 +273,7 @@ namespace DocumentFormat.OpenXml.Tests
                     }
                 }
             }
+
             File.Delete(file);
         }
 
@@ -351,6 +355,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 VerifyDocumentStart(part, standalone);
             }
+
             File.Delete(file);
         }
 
@@ -470,6 +475,7 @@ namespace DocumentFormat.OpenXml.Tests
                             Log.VerifyTrue(attr.Value == xmlReader.GetAttribute(attr.LocalName, attr.NamespaceUri), "expected: {0} <> actual: {1}", attr.Value, xmlReader.GetAttribute(attr.LocalName, attr.NamespaceUri));
                         }
                     }
+
                     if (namespaceDeclarations != null)
                     {
                         foreach (var ns in namespaceDeclarations)
@@ -505,6 +511,7 @@ namespace DocumentFormat.OpenXml.Tests
                             Log.VerifyTrue(attr.Value == xmlReader.GetAttribute(attr.LocalName, attr.NamespaceUri), "expected: {0} <> actual: {1}", attr.Value, xmlReader.GetAttribute(attr.LocalName, attr.NamespaceUri));
                         }
                     }
+
                     if (namespaceDeclarations != null)
                     {
                         foreach (var ns in namespaceDeclarations)
@@ -632,6 +639,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 Read(Xreader);
             }
+
             return true;
         }
 
@@ -768,6 +776,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var isEndElement = reader.IsEndElement;
                 var xtReaderIsEndElement = XTreader.NodeType == XmlNodeType.EndElement;
+
                 //if (isEndElement != xtReaderIsEndElement)
                 //    Console.WriteLine();
                 Log.VerifyTrue(isEndElement == xtReaderIsEndElement,
@@ -964,6 +973,7 @@ namespace DocumentFormat.OpenXml.Tests
                             break;
                     }
                 }
+
                 if (!IsOreadSuccessful)
                 {
                     Log.Comment("check if the Read returns correctly");
@@ -1012,6 +1022,7 @@ namespace DocumentFormat.OpenXml.Tests
                     {
                         while (Read(Treader) && IsMisc(Treader)) ;
                     }
+
                     return true;
                 }
                 else
@@ -1020,9 +1031,11 @@ namespace DocumentFormat.OpenXml.Tests
                     {
                         while (Read(Treader) && Treader.NodeType != XmlNodeType.EndElement) ;
                     }
+
                     return false;
                 }
             }
+
             return false;
         }
 
@@ -1138,6 +1151,7 @@ namespace DocumentFormat.OpenXml.Tests
                     System.Diagnostics.Debug.WriteLine("O: [{0}] {1}", reader.ElementType, reader.LocalName);
                 }
             }
+
             return result;
         }
 
@@ -1155,6 +1169,7 @@ namespace DocumentFormat.OpenXml.Tests
                 if (reader != null && reader.EOF == false)
                     System.Diagnostics.Debug.WriteLine("X: [{0}] {1}", reader.NodeType, reader.LocalName);
             }
+
             return result;
         }
 
@@ -1169,6 +1184,7 @@ namespace DocumentFormat.OpenXml.Tests
                 if (IGNORE_WHITESPACE_SETTING == false)
                     result = SkipWhitespace(reader);
             }
+
             return result;
         }
 
@@ -1183,6 +1199,7 @@ namespace DocumentFormat.OpenXml.Tests
                 if (IGNORE_WHITESPACE_SETTING == false)
                     result = SkipWhitespace(reader);
             }
+
             return result;
         }
 
@@ -1196,6 +1213,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 result = reader.Read();
             }
+
             return result;
         }
 
@@ -1209,6 +1227,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 result = reader.Read();
             }
+
             return result;
         }
         #endregion

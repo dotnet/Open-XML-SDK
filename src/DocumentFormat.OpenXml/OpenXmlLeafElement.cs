@@ -37,6 +37,7 @@ namespace DocumentFormat.OpenXml
                 {
                     return ShadowElement.InnerXml;
                 }
+
                 return string.Empty;
             }
 
@@ -75,7 +76,6 @@ namespace DocumentFormat.OpenXml
         {
             // BUGBUG! following Read() move the cursor to next node, and skip the attributes of the first node
             // xmlReader.Read(); // read this element
-
             LoadAttributes(xmlReader);
 
             // TODO: handle non Text node ( PI, Comments, etc. )

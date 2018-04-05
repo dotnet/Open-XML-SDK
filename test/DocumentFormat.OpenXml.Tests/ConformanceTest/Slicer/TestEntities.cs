@@ -84,6 +84,7 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
                 X15.TableSlicerCache newTableSlicerCache1 = tableSlicerCache1.Clone() as X15.TableSlicerCache;
                 X15.TableSlicerCache newTableSlicerCache2 = tableSlicerCache2.Clone() as X15.TableSlicerCache;
                 X15.TableSlicerCache newTableSlicerCache3 = tableSlicerCache3.Clone() as X15.TableSlicerCache;
+
                 //Remove the existing Extension, to set the new Extension.
                 slicerCachePart1.RootElement.Descendants<SlicerCacheDefinitionExtension>().Single().Remove();
                 slicerCachePart2.RootElement.Descendants<SlicerCacheDefinitionExtension>().Single().Remove();
@@ -195,9 +196,11 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
                             break;
                         }
                     }
+
                     if (slicerCacheName != null)
                         break;
                 }
+
                 if (slicerCacheName != null)
                     break;
             }

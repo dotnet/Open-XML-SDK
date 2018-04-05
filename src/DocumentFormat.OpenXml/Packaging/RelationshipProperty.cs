@@ -12,5 +12,6 @@ namespace DocumentFormat.OpenXml.Packaging
         internal string RelationshipType;
         internal TargetMode TargetMode;
         internal Uri TargetUri;
-    };
+    }
+;
 }

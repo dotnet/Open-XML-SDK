@@ -23,6 +23,7 @@ namespace DocumentFormat.OpenXml.Packaging
             //11.3 WordprocessingML Parts
             "application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml",
             "application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml",
+
             //12.3 SpreadsheetML Parts
             "application/vnd.openxmlformats-officedocument.spreadsheetml.chartsheet+xml",
             "application/vnd.openxmlformats-officedocument.spreadsheetml.comments+xml",
@@ -40,6 +41,7 @@ namespace DocumentFormat.OpenXml.Packaging
             "application/vnd.openxmlformats-officedocument.spreadsheetml.tableSingleCells+xml",
             "application/vnd.openxmlformats-officedocument.spreadsheetml.table+xml",
             "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml",
+
             //13.3 PresentationML Parts
             "application/vnd.openxmlformats-officedocument.presentationml.comments+xml",
             "application/vnd.openxmlformats-officedocument.presentationml.handoutMaster+xml",
@@ -50,6 +52,7 @@ namespace DocumentFormat.OpenXml.Packaging
             "application/vnd.openxmlformats-officedocument.presentationml.slideMaster+xml",
             "application/vnd.openxmlformats-officedocument.presentationml.slideUpdateInfo+xml",
             "application/vnd.openxmlformats-officedocument.presentationml.tags+xml",
+
             //14.2 DrawingML Parts
             "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
             "application/vnd.openxmlformats-officedocument.drawingml.chartshapes+xml",
@@ -59,6 +62,7 @@ namespace DocumentFormat.OpenXml.Packaging
             "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
             "application/vnd.openxmlformats-officedocument.theme+xml",
             "application/vnd.openxmlformats-officedocument.themeOverride+xml",
+
             //15.2 Shared Parts
             "application/vnd.openxmlformats-officedocument.customXmlProperties+xml",
             "application/vnd.openxmlformats-officedocument.spreadsheetml.printerSettings",

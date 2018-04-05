@@ -21,14 +21,17 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         private readonly int position2 = 2000;
         private readonly int position3 = 3000;
         private readonly int position4 = 4000;
+
         //sldGuideLst orient attribute values.
         private readonly DirectionValues directionValues1 = DirectionValues.Horizontal;
         private readonly DirectionValues directionValues2 = DirectionValues.Vertical;
+
         //ExtendedGuide RgbColorModelHex values.
         private readonly string Color1 = "FF0000";
         private readonly string Color2 = "00FF00";
         private readonly string Color3 = "0000FF";
         private readonly string Color4 = "F0F0F0";
+
         //ExtendedGuide Id values.
         private readonly uint Id1 = 1;
         private readonly uint Id2 = 2;
@@ -192,6 +195,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                 {
                     rgbColorModelHex.Remove();
                 }
+
                 log.Pass("Deleted the RgbColorModelHex element.");
 
                 //Delete ColorType element
@@ -199,6 +203,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                 {
                     colorType.Remove();
                 }
+
                 log.Pass("Deleted the ColorType element.");
 
                 //Delete ExtendedGuide element
@@ -206,6 +211,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                 {
                     extendedGuide.Remove();
                 }
+
                 log.Pass("Deleted the ExtendedGuide element.");
 
                 //Delete ExtendedGuideList element(P15.ExtendedGuideList = P15.SlideGuideList)
@@ -213,6 +219,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                 {
                     extendedGuideList.Remove();
                 }
+
                 log.Pass("Deleted the ExtendedGuideList element.");
 
                 //Delete PresentationExtension element
@@ -220,6 +227,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                 {
                     presentationExtension.Remove();
                 }
+
                 log.Pass("Deleted the PresentationExtension element.");
 
                 //Delete PresentationExtensionList element

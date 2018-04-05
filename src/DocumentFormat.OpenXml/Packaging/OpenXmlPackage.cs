@@ -629,6 +629,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #endregion
 
         #region MC Staffs
+
         /// <summary>
         /// Gets the markup compatibility settings applied at loading time.
         /// </summary>
@@ -666,6 +667,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #endregion
 
         #region Auto-Save functions
+
         /// <summary>
         /// Gets a value indicating whether the parts should be saved when disposed.
         /// </summary>
@@ -758,6 +760,7 @@ namespace DocumentFormat.OpenXml.Packaging
         private static bool IsPartContentChanged(OpenXmlPart part)
         {
             Debug.Assert(part != null);
+
             // If the root element of the part is loaded,
             // consider the part changed and should be saved.
             Debug.Assert(part.OpenXmlPackage != null);
@@ -778,6 +781,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             Debug.Assert(part != null);
             Debug.Assert(part.IsRootElementLoaded);
+
             // Save PartRootElement to the part stream.
             part.PartRootElement.Save();
         }
@@ -852,6 +856,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     {
                         throw new OpenXmlPackageException(ExceptionMessages.DocumentTooBig);
                     }
+
                     memoryStream = new MemoryStream(Convert.ToInt32(mainPartStream.Length));
                     mainPartStream.CopyTo(memoryStream);
                 }
@@ -891,7 +896,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 T newMainPart = PartActivator.CreateInstance<T>();
 
                 // do not call this.InitPart( ).  copy the code here
-
                 newMainPart.CreateInternal2(this, null, MainPartContentType, uri);
 
                 // add it and get the id
@@ -953,7 +957,6 @@ namespace DocumentFormat.OpenXml.Packaging
         // cannot use generic, at it will emit error
         // Compiler Error CS0310
         // The type 'typename' must have a public parameter less constructor in order to use it as parameter 'parameter' in the generic type or method 'generic'
-
         internal sealed override OpenXmlPart NewPart(string relationshipType, string contentType)
         {
             ThrowIfObjectDisposed();
@@ -985,6 +988,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 return child;
             }
+
             throw new ArgumentOutOfRangeException(nameof(relationshipType));
         }
 
@@ -1115,6 +1119,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     return dataPart;
                 }
             }
+
             return null;
         }
 
@@ -1251,6 +1256,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     foreach (var part in Parts)
                         clone.AddPart(part.OpenXmlPart, part.RelationshipId);
                 }
+
                 return OpenClone(stream, isEditable, openSettings);
             }
         }
@@ -1338,6 +1344,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     foreach (var part in Parts)
                         clone.AddPart(part.OpenXmlPart, part.RelationshipId);
                 }
+
                 return OpenClone(path, isEditable, openSettings);
             }
         }
@@ -1413,6 +1420,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     clone.AddPart(part.OpenXmlPart, part.RelationshipId);
                 }
+
                 // TODO: Revisit.
                 // package.Flush();
 

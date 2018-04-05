@@ -87,7 +87,6 @@ namespace DocumentFormat.OpenXml.Tests
             //    <xsd:element name="color" type="x:CT_Color" minOccurs="2" maxOccurs="unbounded">
             //  </xsd:sequence>
             //</xsd:complexType>
-
             DocumentFormat.OpenXml.Spreadsheet.ColorScale colorScale = new DocumentFormat.OpenXml.Spreadsheet.ColorScale(
 "<x:colorScale xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\">" +
 "    <x:cfvo type=\"min\" val=\"0\" />" +
@@ -133,6 +132,7 @@ namespace DocumentFormat.OpenXml.Tests
             //</w:p>
             Paragraph p = new Paragraph();
             AlternateContent acb = p.AppendChild(new AlternateContent());
+
             // one error, w:rPr should before the w:t
             p.AppendChild(new Run(new DocumentFormat.OpenXml.Wordprocessing.Text() { Text = "Acb" },
                                   new RunProperties(new RunFonts() { Hint = FontTypeHintValues.EastAsia })
