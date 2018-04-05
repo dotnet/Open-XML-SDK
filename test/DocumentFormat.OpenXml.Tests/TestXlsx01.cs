@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var openSettings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013),
                 };
 
                 using (var doc = SpreadsheetDocument.Open(package, openSettings))
@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var openSettings = new OpenSettings
             {
-                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013),
             };
 
             using (var stream = GetStream(TestFiles.Spreadsheet))
@@ -89,7 +89,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var openSettings = new OpenSettings
             {
-                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013),
             };
 
             using (var stream = GetStream(TestFiles.Spreadsheet, true))
@@ -109,7 +109,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var openSettings = new OpenSettings
             {
-                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013),
             };
 
             using (var stream = GetStream(TestFiles.Spreadsheet, true))
@@ -141,7 +141,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Id = doc.WorkbookPart.
                         GetIdOfPart(worksheetPart),
                     SheetId = 1,
-                    Name = "mySheet"
+                    Name = "mySheet",
                 };
                 sheets.Append(sheet);
                 workbookpart.Workbook.Save();
@@ -171,7 +171,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Id = doc.WorkbookPart.
                         GetIdOfPart(worksheetPart),
                     SheetId = 1,
-                    Name = "mySheet"
+                    Name = "mySheet",
                 };
 
                 sheets.Append(sheet);

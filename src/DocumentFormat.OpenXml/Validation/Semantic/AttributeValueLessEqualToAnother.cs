@@ -64,7 +64,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Node = context.Element,
                 Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, format,
                                             GetAttributeQualifiedName(context.Element, _attribute), attributeValue.InnerText,
-                                            GetAttributeQualifiedName(context.Element, _otherAttribute), otherAttributeValue.InnerText)
+                                            GetAttributeQualifiedName(context.Element, _otherAttribute), otherAttributeValue.InnerText),
             };
         }
     }

@@ -86,6 +86,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Windows Metafile (.wmf).
         /// </summary>
-        Wmf
+        Wmf,
     }
 }

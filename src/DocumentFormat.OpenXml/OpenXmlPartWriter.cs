@@ -366,7 +366,7 @@ namespace DocumentFormat.OpenXml
             XmlWriterSettings settings = new XmlWriterSettings
             {
                 CloseOutput = closeOutput,
-                Encoding = encoding
+                Encoding = encoding,
             };
 
             _xmlWriter = XmlWriter.Create(partStream, settings);

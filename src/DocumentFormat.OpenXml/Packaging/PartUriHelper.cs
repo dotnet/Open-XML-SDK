@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml.Packaging
             "application/vnd.openxmlformats-officedocument.customXmlProperties+xml",
             "application/vnd.openxmlformats-officedocument.spreadsheetml.printerSettings",
             "application/vnd.openxmlformats-officedocument.wordprocessingml.printerSettings",
-            "application/vnd.openxmlformats-officedocument.presentationml.printerSettings"
+            "application/vnd.openxmlformats-officedocument.presentationml.printerSettings",
         };
 
         public void ReserveUri(string contentType, Uri partUri)

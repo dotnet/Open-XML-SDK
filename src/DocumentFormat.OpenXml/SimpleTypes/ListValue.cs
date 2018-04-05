@@ -128,7 +128,7 @@ namespace DocumentFormat.OpenXml
                 {
                     var itemValue = new T
                     {
-                        InnerText = item
+                        InnerText = item,
                     };
                     _list.Add(itemValue);
                 }
@@ -152,7 +152,7 @@ namespace DocumentFormat.OpenXml
                 {
                     var itemValue = new T
                     {
-                        InnerText = item
+                        InnerText = item,
                     };
                     list.Add(itemValue);
                 }

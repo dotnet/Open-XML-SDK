@@ -145,9 +145,9 @@ namespace DocumentFormat.OpenXml
                             XmlReaderSettings settings = new XmlReaderSettings
                             {
 #if FEATURE_XML_PROHIBIT_DTD
-                                ProhibitDtd = true // set true explicitly for security fix
+                                ProhibitDtd = true,
 #else
-                                DtdProcessing = DtdProcessing.Prohibit, // set to prohibit explicitly for security fix
+                                DtdProcessing = DtdProcessing.Prohibit,
 #endif
                             };
 
@@ -242,7 +242,7 @@ namespace DocumentFormat.OpenXml
         {
             return new OpenXmlMiscNode(XmlNodeType)
             {
-                OuterXml = OuterXml
+                OuterXml = OuterXml,
             };
         }
 

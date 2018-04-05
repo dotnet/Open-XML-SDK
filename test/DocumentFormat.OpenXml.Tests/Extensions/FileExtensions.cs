@@ -139,7 +139,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var settings = new OpenSettings()
             {
-                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(mcProcessMode, format)
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(mcProcessMode, format),
             };
 
             return OpenPackage(file, writable, settings);
