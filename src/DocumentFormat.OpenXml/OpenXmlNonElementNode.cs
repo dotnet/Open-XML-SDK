@@ -242,7 +242,7 @@ namespace DocumentFormat.OpenXml
         {
             return new OpenXmlMiscNode(XmlNodeType)
             {
-                OuterXml = OuterXml
+                OuterXml = OuterXml,
             };
         }
 

@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             var validationContext = new ValidationContext
             {
-                Element = openxmlElement
+                Element = openxmlElement,
             };
 
             schemaValidator.Validate(validationContext);

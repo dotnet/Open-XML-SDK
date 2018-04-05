@@ -95,7 +95,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var settings = new OpenSettings
             {
-                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007)
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007),
             };
 
             using (var stream = GetStream(TestFiles.mcdoc))
@@ -121,7 +121,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var settings = new OpenSettings
             {
-                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007)
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007),
             };
 
             using (var stream = GetStream(TestFiles.mcdoc))
@@ -160,7 +160,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var settings = new OpenSettings
             {
-                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007)
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007),
             };
 
             using (var stream = GetStream(TestFiles.MCExecl))
@@ -191,7 +191,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var settings = new OpenSettings
             {
-                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007)
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007),
             };
 
             using (var stream = GetStream(TestFiles.mcdoc, true))
@@ -217,7 +217,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var settings = new OpenSettings
             {
-                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007)
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007),
             };
 
             using (var stream = GetStream(TestFiles.mcppt))
@@ -261,7 +261,7 @@ namespace DocumentFormat.OpenXml.Tests
             // Didn't process whole package, should not process style part
             var settings = new OpenSettings
             {
-                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007)
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007),
             };
 
             using (var stream = GetStream(TestFiles.mcdoc, true))
@@ -330,7 +330,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var settings = new OpenSettings
             {
-                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007)
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007),
             };
 
             using (var stream = GetStream(TestFiles.mcdoc, true))
@@ -341,7 +341,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var root = target.RootElement;
                     root.FirstChild.MCAttributes = new MarkupCompatibilityAttributes
                     {
-                        MustUnderstand = "w14"
+                        MustUnderstand = "w14",
                     };
 
                     var run = root.FirstChild.FirstChild.FirstChild.NextSibling();
@@ -373,7 +373,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var settings = new OpenSettings
             {
-                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007)
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2007),
             };
 
             using (var stream = GetStream(TestFiles.simpleSdt, true))

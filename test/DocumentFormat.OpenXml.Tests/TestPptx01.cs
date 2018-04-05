@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var openSettings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013),
                 };
 
                 using (var doc = PresentationDocument.Open(package, openSettings))
@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var openSettings = new OpenSettings
             {
-                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013),
             };
 
             using (var stream = GetStream(TestFiles.Presentation))
@@ -64,7 +64,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var openSettings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013),
                 };
 
                 using (var doc = PresentationDocument.Open(package, openSettings))
@@ -82,7 +82,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var openSettings = new OpenSettings
             {
-                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013),
             };
 
             using (var stream = GetStream(TestFiles.Presentation))
@@ -284,7 +284,7 @@ namespace DocumentFormat.OpenXml.Tests
                   Width = 9525,
                   CapType = D.LineCapValues.Flat,
                   CompoundLineType = D.CompoundLineValues.Single,
-                  Alignment = D.PenAlignmentValues.Center
+                  Alignment = D.PenAlignmentValues.Center,
               },
               new D.Outline(
                 new D.SolidFill(
@@ -297,7 +297,7 @@ namespace DocumentFormat.OpenXml.Tests
                   Width = 9525,
                   CapType = D.LineCapValues.Flat,
                   CompoundLineType = D.CompoundLineValues.Single,
-                  Alignment = D.PenAlignmentValues.Center
+                  Alignment = D.PenAlignmentValues.Center,
               },
               new D.Outline(
                 new D.SolidFill(
@@ -310,7 +310,7 @@ namespace DocumentFormat.OpenXml.Tests
                   Width = 9525,
                   CapType = D.LineCapValues.Flat,
                   CompoundLineType = D.CompoundLineValues.Single,
-                  Alignment = D.PenAlignmentValues.Center
+                  Alignment = D.PenAlignmentValues.Center,
               }),
               new D.EffectStyleList(
               new D.EffectStyle(

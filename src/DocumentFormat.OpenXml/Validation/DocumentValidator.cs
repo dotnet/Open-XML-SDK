@@ -120,7 +120,7 @@ namespace DocumentFormat.OpenXml.Validation
                     Id = "ExceptionError",
                     Part = part,
                     Path = new XmlPath(part),
-                    Description = string.Format(CultureInfo.CurrentUICulture, ValidationResources.ExceptionError, e.Message)
+                    Description = string.Format(CultureInfo.CurrentUICulture, ValidationResources.ExceptionError, e.Message),
                 };
 
                 context.AddError(errorInfo);
@@ -132,7 +132,7 @@ namespace DocumentFormat.OpenXml.Validation
             var context = new ValidationContext
             {
                 FileFormat = _validationSettings.FileFormat,
-                MaxNumberOfErrors = _validationSettings.MaxNumberOfErrors
+                MaxNumberOfErrors = _validationSettings.MaxNumberOfErrors,
             };
 
             _semanticValidator.ClearConstraintState(SemanticValidationLevel.PackageOnly);
@@ -198,7 +198,7 @@ namespace DocumentFormat.OpenXml.Validation
                     var errorInfo = new ValidationErrorInfo
                     {
                         ErrorType = ValidationErrorType.Package,
-                        Id = "Pkg_" + e.MessageId
+                        Id = "Pkg_" + e.MessageId,
                     };
 
                     string name;

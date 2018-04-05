@@ -1497,7 +1497,7 @@ namespace DocumentFormat.OpenXml
             Same, // same element
             Before,
             After,
-            NotInSameTree
+            NotInSameTree,
         }
 
         /// <summary>

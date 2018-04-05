@@ -16,6 +16,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// application/xml.
         /// </summary>
-        Xml
+        Xml,
     }
 }

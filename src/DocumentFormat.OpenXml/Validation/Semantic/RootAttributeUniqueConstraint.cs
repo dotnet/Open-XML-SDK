@@ -52,7 +52,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                     Id = "Sem_AttributeValueUniqueInDocument",
                     ErrorType = ValidationErrorType.Semantic,
                     Node = context.Element,
-                    Description = errorDescription
+                    Description = errorDescription,
                 };
             }
             else

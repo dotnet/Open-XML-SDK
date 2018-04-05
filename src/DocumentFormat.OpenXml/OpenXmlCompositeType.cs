@@ -24,6 +24,6 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// xsd:all.
         /// </summary>
-        OneAll
+        OneAll,
     }
 }

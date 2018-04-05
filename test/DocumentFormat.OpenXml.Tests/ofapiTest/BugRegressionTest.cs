@@ -491,7 +491,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var s = new OpenSettings
             {
-                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
             };
 
             using (var stream = GetStream(TestFiles.animation, true))

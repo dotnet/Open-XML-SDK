@@ -303,7 +303,7 @@ namespace DocumentFormat.OpenXml.Validation
             {
                 FileFormat = FileFormat,
                 MaxNumberOfErrors = _settings.MaxNumberOfErrors,
-                Element = openXmlElement
+                Element = openXmlElement,
             };
 
             SchemaValidator.Validate(validationContext);
