@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private OpenXmlElement _next;
 
-        // implement annotations mechanism like XObject in XLINQ
+        // implement annotations mechanism like XObject in LINQ to XML
         // Annotations will not be cloned when calling .Clone() and .CloneNode(bool)
         private object _annotations;
 
