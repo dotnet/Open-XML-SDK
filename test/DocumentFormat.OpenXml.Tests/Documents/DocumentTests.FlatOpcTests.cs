@@ -165,8 +165,7 @@ namespace DocumentFormat.OpenXml.Tests
                 }
                 else
                 {
-                    string opc = document.ToFlatOpcString();
-                    Assert.Null(opc);
+                    Assert.Throws<IOException>(() => document.ToFlatOpcString());
                 }
             }
         }
