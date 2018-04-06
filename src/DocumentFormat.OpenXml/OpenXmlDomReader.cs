@@ -600,7 +600,7 @@ namespace DocumentFormat.OpenXml
                 }
             }
 
-            return String.Empty;
+            return string.Empty;
         }
 
         /// <inheritdoc/>

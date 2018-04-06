@@ -114,7 +114,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         /// <param name="classId">The class ID.</param>
         /// <returns>A SdbClassIdToSchemaTypeIndex data.</returns>
-        private SdbClassIdToSchemaTypeIndex GetClassIdData(SdbIndex classId)
+        private SdbClassIdToSchemaTypeIndex GetClassIdData(ushort classId)
         {
             int index = SdbClassIdToSchemaTypeIndex.ArrayIndexFromClassId(classId);
             return SdbClassIdMap[index];
@@ -185,6 +185,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             var schemaType = SdbSchemaTypes[schemaTypeIndex];
             SdbParticleConstraint particle;
+
             if (schemaType.IsCompositeType)
             {
                 particle = SdbParticles[schemaType.ParticleIndex];
@@ -194,14 +195,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                             particle.ParticleType != ParticleType.AnyWithUri);
 
                 CheckParticle(schemaType.ParticleIndex);
-            }
-            else if (schemaType.IsSimpleContent)
-            {
-                //
-            }
-            else
-            {
-                // only attributes
             }
 
             // check attributes
@@ -240,7 +233,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                 case ParticleType.Any:
                 case ParticleType.AnyWithUri:
-                    SdbIndex namespaceId = particle.XsdAnyNamespaceId;
+                    ushort namespaceId = particle.XsdAnyNamespaceId;
                     Debug.Assert(namespaceId != SdbData.InvalidId);
                     break;
 

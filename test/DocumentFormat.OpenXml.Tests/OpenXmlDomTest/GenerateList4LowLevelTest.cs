@@ -81,11 +81,11 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var v = new Int16Value();
                 v.InnerText = "+100";
-                Int16 v2 = v.Value;
+                short v2 = v.Value;
                 string t = v.InnerText;
 
                 // Verify value and text
-                Log.VerifyValue(v2, (Int16)100, "{0}.Value", v.GetType().Name);
+                Log.VerifyValue(v2, (short)100, "{0}.Value", v.GetType().Name);
                 Log.VerifyValue(t, "+100", "{0}.InnerText", v.GetType().Name);
             }
 
@@ -96,7 +96,7 @@ namespace DocumentFormat.OpenXml.Tests
                 string t = v.InnerText;
 
                 // Verify value and text
-                Log.VerifyValue(v2, (int)100, "{0}.Value", v.GetType().Name);
+                Log.VerifyValue(v2, 100, "{0}.Value", v.GetType().Name);
                 Log.VerifyValue(t, "+100", "{0}.InnerText", v.GetType().Name);
             }
 
@@ -107,7 +107,7 @@ namespace DocumentFormat.OpenXml.Tests
                 string t = v.InnerText;
 
                 // Verify value and text
-                Log.VerifyValue(v2, (long)100, "{0}.Value", v.GetType().Name);
+                Log.VerifyValue(v2, 100L, "{0}.Value", v.GetType().Name);
                 Log.VerifyValue(t, "+100", "{0}.InnerText", v.GetType().Name);
             }
 
@@ -118,7 +118,7 @@ namespace DocumentFormat.OpenXml.Tests
                 string t = v.InnerText;
 
                 // Verify value and text
-                Log.VerifyValue(v2, (decimal)100, "{0}.Value", v.GetType().Name);
+                Log.VerifyValue(v2, 100M, "{0}.Value", v.GetType().Name);
                 Log.VerifyValue(t, "+100", "{0}.InnerText", v.GetType().Name);
             }
 
@@ -129,7 +129,7 @@ namespace DocumentFormat.OpenXml.Tests
                 string t = v.InnerText;
 
                 // Verify value and text
-                Log.VerifyValue(v2, (float)100, "{0}.Value", v.GetType().Name);
+                Log.VerifyValue(v2, 100F, "{0}.Value", v.GetType().Name);
                 Log.VerifyValue(t, "+100", "{0}.InnerText", v.GetType().Name);
             }
 
@@ -140,7 +140,7 @@ namespace DocumentFormat.OpenXml.Tests
                 string t = v.InnerText;
 
                 // Verify value and text
-                Log.VerifyValue(v2, (double)100, "{0}.Value", v.GetType().Name);
+                Log.VerifyValue(v2, 100D, "{0}.Value", v.GetType().Name);
                 Log.VerifyValue(t, "+100", "{0}.InnerText", v.GetType().Name);
             }
         }
@@ -154,7 +154,7 @@ namespace DocumentFormat.OpenXml.Tests
             string t = v.InnerText;
 
             // Verify value and text
-            Log.VerifyValue(v2, (double)0.51200000000000001, "{0}.Value", v.GetType().Name);
+            Log.VerifyValue(v2, 0.51200000000000001, "{0}.Value", v.GetType().Name);
             Log.VerifyValue(t, "0.51200000000000001", "{0}.InnerText", v.GetType().Name);
         }
 

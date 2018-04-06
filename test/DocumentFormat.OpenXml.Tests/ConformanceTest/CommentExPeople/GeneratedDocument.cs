@@ -91,7 +91,7 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeopleClass
 
             Ap.HeadingPairs headingPairs1 = new Ap.HeadingPairs();
 
-            Vt.VTVector vTVector1 = new Vt.VTVector(){ BaseType = Vt.VectorBaseValues.Variant, Size = (UInt32Value)4U };
+            Vt.VTVector vTVector1 = new Vt.VTVector(){ BaseType = Vt.VectorBaseValues.Variant, Size = 4U };
 
             Vt.Variant variant1 = new Vt.Variant();
             Vt.VTLPSTR vTLPSTR1 = new Vt.VTLPSTR();
@@ -126,7 +126,7 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeopleClass
 
             Ap.TitlesOfParts titlesOfParts1 = new Ap.TitlesOfParts();
 
-            Vt.VTVector vTVector2 = new Vt.VTVector(){ BaseType = Vt.VectorBaseValues.Lpstr, Size = (UInt32Value)2U };
+            Vt.VTVector vTVector2 = new Vt.VTVector(){ BaseType = Vt.VectorBaseValues.Lpstr, Size = 2U };
             Vt.VTLPSTR vTLPSTR3 = new Vt.VTLPSTR();
             vTLPSTR3.Text = string.Empty;
             Vt.VTLPSTR vTLPSTR4 = new Vt.VTLPSTR();
@@ -247,8 +247,8 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeopleClass
             paragraph1.Append(run3);
 
             SectionProperties sectionProperties1 = new SectionProperties(){ RsidR = "00743DCB" };
-            PageSize pageSize1 = new PageSize(){ Width = (UInt32Value)12240U, Height = (UInt32Value)15840U };
-            PageMargin pageMargin1 = new PageMargin(){ Top = 1985, Right = (UInt32Value)1701U, Bottom = 1701, Left = (UInt32Value)1701U, Header = (UInt32Value)708U, Footer = (UInt32Value)708U, Gutter = (UInt32Value)0U };
+            PageSize pageSize1 = new PageSize(){ Width = 12240U, Height = 15840U };
+            PageMargin pageMargin1 = new PageMargin(){ Top = 1985, Right = 1701U, Bottom = 1701, Left = 1701U, Header = 708U, Footer = 708U, Gutter = 0U };
             Columns columns1 = new Columns(){ Space = "708" };
             DocGrid docGrid1 = new DocGrid(){ LinePitch = 360 };
 
@@ -940,10 +940,10 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeopleClass
             M.BreakBinarySubtraction breakBinarySubtraction1 = new M.BreakBinarySubtraction(){ Val = M.BreakBinarySubtractionValues.MinusMinus };
             M.SmallFraction smallFraction1 = new M.SmallFraction(){ Val = M.BooleanValues.Zero };
             M.DisplayDefaults displayDefaults1 = new M.DisplayDefaults();
-            M.LeftMargin leftMargin1 = new M.LeftMargin(){ Val = (UInt32Value)0U };
-            M.RightMargin rightMargin1 = new M.RightMargin(){ Val = (UInt32Value)0U };
+            M.LeftMargin leftMargin1 = new M.LeftMargin(){ Val = 0U };
+            M.RightMargin rightMargin1 = new M.RightMargin(){ Val = 0U };
             M.DefaultJustification defaultJustification1 = new M.DefaultJustification(){ Val = M.JustificationValues.CenterGroup };
-            M.WrapIndent wrapIndent1 = new M.WrapIndent(){ Val = (UInt32Value)1440U };
+            M.WrapIndent wrapIndent1 = new M.WrapIndent(){ Val = 1440U };
             M.IntegralLimitLocation integralLimitLocation1 = new M.IntegralLimitLocation(){ Val = M.LimitLocationValues.SubscriptSuperscript };
             M.NaryLimitLocation naryLimitLocation1 = new M.NaryLimitLocation(){ Val = M.LimitLocationValues.UnderOver };
 

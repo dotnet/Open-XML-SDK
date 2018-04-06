@@ -911,7 +911,7 @@ namespace DocumentFormat.OpenXml.Tests
                          },
                          new DW.DocProperties()
                          {
-                             Id = (UInt32Value)1U,
+                             Id = 1U,
                              Name = "Picture 1",
                          },
                          new DW.NonVisualGraphicFrameDrawingProperties(
@@ -922,7 +922,7 @@ namespace DocumentFormat.OpenXml.Tests
                                      new PIC.NonVisualPictureProperties(
                                          new PIC.NonVisualDrawingProperties()
                                          {
-                                             Id = (UInt32Value)0U,
+                                             Id = 0U,
                                              Name = "New Bitmap Image.jpg",
                                          },
                                          new PIC.NonVisualPictureDrawingProperties()),
@@ -954,10 +954,10 @@ namespace DocumentFormat.OpenXml.Tests
                              { Uri = "http://schemas.openxmlformats.org/drawingml/2006/picture" })
                      )
                      {
-                         DistanceFromTop = (UInt32Value)0U,
-                         DistanceFromBottom = (UInt32Value)0U,
-                         DistanceFromLeft = (UInt32Value)0U,
-                         DistanceFromRight = (UInt32Value)0U,
+                         DistanceFromTop = 0U,
+                         DistanceFromBottom = 0U,
+                         DistanceFromLeft = 0U,
+                         DistanceFromRight = 0U,
                          EditId = "50D07946",
                      });
             wordDoc.MainDocumentPart.Document.Body.AppendChild(new W.Paragraph(new W.Run(element)));

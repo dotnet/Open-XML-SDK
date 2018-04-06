@@ -151,7 +151,7 @@ namespace DocumentFormat.OpenXml
         {
             if (!fileFormat.Any())
             {
-                var message = String.Format(CultureInfo.CurrentUICulture, ExceptionMessages.FileFormatNotSupported, fileFormat);
+                var message = string.Format(CultureInfo.CurrentUICulture, ExceptionMessages.FileFormatNotSupported, fileFormat);
 
                 throw new ArgumentOutOfRangeException(parameterName, message);
             }

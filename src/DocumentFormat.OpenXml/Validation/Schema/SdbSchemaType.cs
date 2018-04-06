@@ -17,23 +17,23 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// Will be "SdbData.InvalidId" if the schema type is NOT composite type.
         /// </summary>
         /// <remarks>This field can be eliminated.</remarks>
-        public SdbIndex ParticleIndex { get; set; }
+        public ushort ParticleIndex { get; set; }
 
         /// <summary>
         /// Gets or sets the index of the simple data in the SdbSimpleTypeRestriction data array.
         /// Will be "SdbData.InvalidId" if the schema type is NOT simple content only.
         /// </summary>
-        public SdbIndex SimpleTypeIndex { get; set; }
+        public ushort SimpleTypeIndex { get; set; }
 
         /// <summary>
         /// Gets or sets the count of attributes.
         /// </summary>
-        public SdbIndex AttributesCount { get; set; }
+        public ushort AttributesCount { get; set; }
 
         /// <summary>
         /// Gets or sets the index of the first attribute data in the SdbAttributeConstraint data array.
         /// </summary>
-        public SdbIndex StartIndexOfAttributes { get; set; }
+        public ushort StartIndexOfAttributes { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the SdbSchemaType.
@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="simpleTypeIndex"></param>
         /// <param name="attributeCount"></param>
         /// <param name="startAttribute"></param>
-        public SdbSchemaType(SdbIndex particleIndex, SdbIndex simpleTypeIndex, SdbIndex attributeCount, SdbIndex startAttribute)
+        public SdbSchemaType(ushort particleIndex, ushort simpleTypeIndex, ushort attributeCount, ushort startAttribute)
         {
             ParticleIndex = particleIndex;
             SimpleTypeIndex = simpleTypeIndex;
@@ -70,7 +70,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Gets the size in bytes of this data structure
         /// </summary>
-        public static int TypeSize => sizeof(SdbIndex) * 4;
+        public static int TypeSize => sizeof(ushort) * 4;
 
         /// <inheritdoc/>
         public override int DataSize => TypeSize;

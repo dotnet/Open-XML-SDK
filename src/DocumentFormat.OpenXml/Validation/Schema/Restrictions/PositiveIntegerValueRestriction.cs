@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     [DataContract]
     internal class PositiveIntegerValueRestriction : IntegerValueRestriction
     {
-        protected override Int64 MinValue => 1;
+        protected override long MinValue => 1;
 
         public PositiveIntegerValueRestriction()
         {

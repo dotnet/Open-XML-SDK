@@ -52,7 +52,7 @@ namespace DocumentFormat.OpenXml.Tests
             return true;
         }
 
-        private static Boolean SpecialAttrValueCompare(XAttribute source, XAttribute target)
+        private static bool SpecialAttrValueCompare(XAttribute source, XAttribute target)
         {
             if (True.Contains(source.Value) && True.Contains(target.Value))
             {
@@ -62,11 +62,11 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 return true;
             }
-            else if (Double.TryParse(source.Value, out var src))
+            else if (double.TryParse(source.Value, out var src))
             {
-                var tgt = Double.Parse(target.Value);
+                var tgt = double.Parse(target.Value);
 
-                if (Double.IsNaN(src) && Double.IsNaN(tgt))
+                if (double.IsNaN(src) && double.IsNaN(tgt))
                 {
                     return true;
                 }

@@ -92,7 +92,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
 
             Ap.HeadingPairs headingPairs1 = new Ap.HeadingPairs();
 
-            Vt.VTVector vTVector1 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Variant, Size = (UInt32Value)2U };
+            Vt.VTVector vTVector1 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Variant, Size = 2U };
 
             Vt.Variant variant1 = new Vt.Variant();
             Vt.VTLPSTR vTLPSTR1 = new Vt.VTLPSTR();
@@ -113,7 +113,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
 
             Ap.TitlesOfParts titlesOfParts1 = new Ap.TitlesOfParts();
 
-            Vt.VTVector vTVector2 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Lpstr, Size = (UInt32Value)1U };
+            Vt.VTVector vTVector2 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Lpstr, Size = 1U };
             Vt.VTLPSTR vTLPSTR2 = new Vt.VTLPSTR();
             vTLPSTR2.Text = "Sheet1";
 
@@ -150,7 +150,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             workbook1.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
             workbook1.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
             FileVersion fileVersion1 = new FileVersion() { ApplicationName = "xl", LastEdited = "6", LowestEdited = "6", BuildVersion = "14420" };
-            WorkbookProperties workbookProperties1 = new WorkbookProperties() { DefaultThemeVersion = (UInt32Value)153222U };
+            WorkbookProperties workbookProperties1 = new WorkbookProperties() { DefaultThemeVersion = 153222U };
 
             AlternateContent alternateContent1 = new AlternateContent();
             alternateContent1.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
@@ -165,12 +165,12 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             alternateContent1.Append(alternateContentChoice1);
 
             BookViews bookViews1 = new BookViews();
-            WorkbookView workbookView1 = new WorkbookView() { XWindow = 0, YWindow = 0, WindowWidth = (UInt32Value)26940U, WindowHeight = (UInt32Value)15120U };
+            WorkbookView workbookView1 = new WorkbookView() { XWindow = 0, YWindow = 0, WindowWidth = 26940U, WindowHeight = 15120U };
 
             bookViews1.Append(workbookView1);
 
             Sheets sheets1 = new Sheets();
-            Sheet sheet1 = new Sheet() { Name = "Sheet1", SheetId = (UInt32Value)1U, Id = "rId1" };
+            Sheet sheet1 = new Sheet() { Name = "Sheet1", SheetId = 1U, Id = "rId1" };
 
             sheets1.Append(sheet1);
 
@@ -185,7 +185,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             definedNames1.Append(definedName1);
             definedNames1.Append(definedName2);
             definedNames1.Append(definedName3);
-            CalculationProperties calculationProperties1 = new CalculationProperties() { CalculationId = (UInt32Value)152511U };
+            CalculationProperties calculationProperties1 = new CalculationProperties() { CalculationId = 152511U };
 
             WorkbookExtensionList workbookExtensionList1 = new WorkbookExtensionList();
 
@@ -243,7 +243,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
 
             SlicerCacheDefinitionExtension slicerCacheDefinitionExtension1 = new SlicerCacheDefinitionExtension() { Uri = "{2F2917AC-EB37-4324-AD4E-5DD8C200BD13}" };
             slicerCacheDefinitionExtension1.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
-            X15.TableSlicerCache tableSlicerCache1 = new X15.TableSlicerCache() { TableId = (UInt32Value)1U, Column = (UInt32Value)2U };
+            X15.TableSlicerCache tableSlicerCache1 = new X15.TableSlicerCache() { TableId = 1U, Column = 2U };
 
             slicerCacheDefinitionExtension1.Append(tableSlicerCache1);
 
@@ -257,12 +257,12 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
         // Generates content of sharedStringTablePart1.
         private void GenerateSharedStringTablePart1Content(SharedStringTablePart sharedStringTablePart1)
         {
-            SharedStringTable sharedStringTable1 = new SharedStringTable() { Count = (UInt32Value)18U, UniqueCount = (UInt32Value)15U };
+            SharedStringTable sharedStringTable1 = new SharedStringTable() { Count = 18U, UniqueCount = 15U };
 
             SharedStringItem sharedStringItem1 = new SharedStringItem();
             Text text1 = new Text();
             text1.Text = "TEST_A_1";
-            PhoneticProperties phoneticProperties1 = new PhoneticProperties() { FontId = (UInt32Value)1U };
+            PhoneticProperties phoneticProperties1 = new PhoneticProperties() { FontId = 1U };
 
             sharedStringItem1.Append(text1);
             sharedStringItem1.Append(phoneticProperties1);
@@ -270,7 +270,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             SharedStringItem sharedStringItem2 = new SharedStringItem();
             Text text2 = new Text();
             text2.Text = "TEST_A_2";
-            PhoneticProperties phoneticProperties2 = new PhoneticProperties() { FontId = (UInt32Value)1U };
+            PhoneticProperties phoneticProperties2 = new PhoneticProperties() { FontId = 1U };
 
             sharedStringItem2.Append(text2);
             sharedStringItem2.Append(phoneticProperties2);
@@ -278,7 +278,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             SharedStringItem sharedStringItem3 = new SharedStringItem();
             Text text3 = new Text();
             text3.Text = "A";
-            PhoneticProperties phoneticProperties3 = new PhoneticProperties() { FontId = (UInt32Value)1U };
+            PhoneticProperties phoneticProperties3 = new PhoneticProperties() { FontId = 1U };
 
             sharedStringItem3.Append(text3);
             sharedStringItem3.Append(phoneticProperties3);
@@ -286,7 +286,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             SharedStringItem sharedStringItem4 = new SharedStringItem();
             Text text4 = new Text();
             text4.Text = "B";
-            PhoneticProperties phoneticProperties4 = new PhoneticProperties() { FontId = (UInt32Value)1U };
+            PhoneticProperties phoneticProperties4 = new PhoneticProperties() { FontId = 1U };
 
             sharedStringItem4.Append(text4);
             sharedStringItem4.Append(phoneticProperties4);
@@ -294,7 +294,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             SharedStringItem sharedStringItem5 = new SharedStringItem();
             Text text5 = new Text();
             text5.Text = "TEST_B_1";
-            PhoneticProperties phoneticProperties5 = new PhoneticProperties() { FontId = (UInt32Value)1U };
+            PhoneticProperties phoneticProperties5 = new PhoneticProperties() { FontId = 1U };
 
             sharedStringItem5.Append(text5);
             sharedStringItem5.Append(phoneticProperties5);
@@ -302,7 +302,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             SharedStringItem sharedStringItem6 = new SharedStringItem();
             Text text6 = new Text();
             text6.Text = "TEST_B_2";
-            PhoneticProperties phoneticProperties6 = new PhoneticProperties() { FontId = (UInt32Value)1U };
+            PhoneticProperties phoneticProperties6 = new PhoneticProperties() { FontId = 1U };
 
             sharedStringItem6.Append(text6);
             sharedStringItem6.Append(phoneticProperties6);
@@ -310,7 +310,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             SharedStringItem sharedStringItem7 = new SharedStringItem();
             Text text7 = new Text();
             text7.Text = "TETS_A_3";
-            PhoneticProperties phoneticProperties7 = new PhoneticProperties() { FontId = (UInt32Value)1U };
+            PhoneticProperties phoneticProperties7 = new PhoneticProperties() { FontId = 1U };
 
             sharedStringItem7.Append(text7);
             sharedStringItem7.Append(phoneticProperties7);
@@ -318,7 +318,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             SharedStringItem sharedStringItem8 = new SharedStringItem();
             Text text8 = new Text();
             text8.Text = "C";
-            PhoneticProperties phoneticProperties8 = new PhoneticProperties() { FontId = (UInt32Value)1U };
+            PhoneticProperties phoneticProperties8 = new PhoneticProperties() { FontId = 1U };
 
             sharedStringItem8.Append(text8);
             sharedStringItem8.Append(phoneticProperties8);
@@ -326,7 +326,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             SharedStringItem sharedStringItem9 = new SharedStringItem();
             Text text9 = new Text();
             text9.Text = "TEST_B_3";
-            PhoneticProperties phoneticProperties9 = new PhoneticProperties() { FontId = (UInt32Value)1U };
+            PhoneticProperties phoneticProperties9 = new PhoneticProperties() { FontId = 1U };
 
             sharedStringItem9.Append(text9);
             sharedStringItem9.Append(phoneticProperties9);
@@ -334,7 +334,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             SharedStringItem sharedStringItem10 = new SharedStringItem();
             Text text10 = new Text();
             text10.Text = "D";
-            PhoneticProperties phoneticProperties10 = new PhoneticProperties() { FontId = (UInt32Value)1U };
+            PhoneticProperties phoneticProperties10 = new PhoneticProperties() { FontId = 1U };
 
             sharedStringItem10.Append(text10);
             sharedStringItem10.Append(phoneticProperties10);
@@ -342,7 +342,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             SharedStringItem sharedStringItem11 = new SharedStringItem();
             Text text11 = new Text();
             text11.Text = "E";
-            PhoneticProperties phoneticProperties11 = new PhoneticProperties() { FontId = (UInt32Value)1U };
+            PhoneticProperties phoneticProperties11 = new PhoneticProperties() { FontId = 1U };
 
             sharedStringItem11.Append(text11);
             sharedStringItem11.Append(phoneticProperties11);
@@ -350,7 +350,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             SharedStringItem sharedStringItem12 = new SharedStringItem();
             Text text12 = new Text();
             text12.Text = "F";
-            PhoneticProperties phoneticProperties12 = new PhoneticProperties() { FontId = (UInt32Value)1U };
+            PhoneticProperties phoneticProperties12 = new PhoneticProperties() { FontId = 1U };
 
             sharedStringItem12.Append(text12);
             sharedStringItem12.Append(phoneticProperties12);
@@ -403,7 +403,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
 
             SlicerCacheDefinitionExtension slicerCacheDefinitionExtension2 = new SlicerCacheDefinitionExtension() { Uri = "{2F2917AC-EB37-4324-AD4E-5DD8C200BD13}" };
             slicerCacheDefinitionExtension2.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
-            X15.TableSlicerCache tableSlicerCache2 = new X15.TableSlicerCache() { TableId = (UInt32Value)1U, Column = (UInt32Value)1U };
+            X15.TableSlicerCache tableSlicerCache2 = new X15.TableSlicerCache() { TableId = 1U, Column = 1U };
 
             slicerCacheDefinitionExtension2.Append(tableSlicerCache2);
 
@@ -424,21 +424,21 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             SheetDimension sheetDimension1 = new SheetDimension() { Reference = "A1:G4" };
 
             SheetViews sheetViews1 = new SheetViews();
-            SheetView sheetView1 = new SheetView() { TabSelected = true, WorkbookViewId = (UInt32Value)0U };
+            SheetView sheetView1 = new SheetView() { TabSelected = true, WorkbookViewId = 0U };
 
             sheetViews1.Append(sheetView1);
             SheetFormatProperties sheetFormatProperties1 = new SheetFormatProperties() { DefaultRowHeight = 15D };
 
             Columns columns1 = new Columns();
-            Column column1 = new Column() { Min = (UInt32Value)1U, Max = (UInt32Value)3U, Width = 10.5703125D, CustomWidth = true };
-            Column column2 = new Column() { Min = (UInt32Value)5U, Max = (UInt32Value)7U, Width = 10.5703125D, CustomWidth = true };
+            Column column1 = new Column() { Min = 1U, Max = 3U, Width = 10.5703125D, CustomWidth = true };
+            Column column2 = new Column() { Min = 5U, Max = 7U, Width = 10.5703125D, CustomWidth = true };
 
             columns1.Append(column1);
             columns1.Append(column2);
 
             SheetData sheetData1 = new SheetData();
 
-            Row row1 = new Row() { RowIndex = (UInt32Value)1U, Spans = new ListValue<StringValue>() { InnerText = "1:7" } };
+            Row row1 = new Row() { RowIndex = 1U, Spans = new ListValue<StringValue>() { InnerText = "1:7" } };
 
             Cell cell1 = new Cell() { CellReference = "A1", DataType = CellValues.SharedString };
             CellValue cellValue1 = new CellValue();
@@ -483,7 +483,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             row1.Append(cell5);
             row1.Append(cell6);
 
-            Row row2 = new Row() { RowIndex = (UInt32Value)2U, Spans = new ListValue<StringValue>() { InnerText = "1:7" } };
+            Row row2 = new Row() { RowIndex = 2U, Spans = new ListValue<StringValue>() { InnerText = "1:7" } };
 
             Cell cell7 = new Cell() { CellReference = "A2", DataType = CellValues.SharedString };
             CellValue cellValue7 = new CellValue();
@@ -528,7 +528,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             row2.Append(cell11);
             row2.Append(cell12);
 
-            Row row3 = new Row() { RowIndex = (UInt32Value)3U, Spans = new ListValue<StringValue>() { InnerText = "1:7" } };
+            Row row3 = new Row() { RowIndex = 3U, Spans = new ListValue<StringValue>() { InnerText = "1:7" } };
 
             Cell cell13 = new Cell() { CellReference = "A3", DataType = CellValues.SharedString };
             CellValue cellValue13 = new CellValue();
@@ -573,7 +573,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             row3.Append(cell17);
             row3.Append(cell18);
 
-            Row row4 = new Row() { RowIndex = (UInt32Value)4U, Spans = new ListValue<StringValue>() { InnerText = "1:7" } };
+            Row row4 = new Row() { RowIndex = 4U, Spans = new ListValue<StringValue>() { InnerText = "1:7" } };
 
             Cell cell19 = new Cell() { CellReference = "A4", DataType = CellValues.SharedString };
             CellValue cellValue19 = new CellValue();
@@ -622,11 +622,11 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             sheetData1.Append(row2);
             sheetData1.Append(row3);
             sheetData1.Append(row4);
-            PhoneticProperties phoneticProperties13 = new PhoneticProperties() { FontId = (UInt32Value)1U };
+            PhoneticProperties phoneticProperties13 = new PhoneticProperties() { FontId = 1U };
             PageMargins pageMargins1 = new PageMargins() { Left = 0.7D, Right = 0.7D, Top = 0.75D, Bottom = 0.75D, Header = 0.3D, Footer = 0.3D };
             S.Drawing drawing1 = new S.Drawing() { Id = "rId1" };
 
-            TableParts tableParts1 = new TableParts() { Count = (UInt32Value)2U };
+            TableParts tableParts1 = new TableParts() { Count = 2U };
             TablePart tablePart1 = new TablePart() { Id = "rId2" };
             TablePart tablePart2 = new TablePart() { Id = "rId3" };
 
@@ -665,13 +665,13 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
         // Generates content of tableDefinitionPart1.
         private void GenerateTableDefinitionPart1Content(TableDefinitionPart tableDefinitionPart1)
         {
-            Table table1 = new Table() { Id = (UInt32Value)2U, Name = "Table2", DisplayName = "Table2", Reference = "E1:G4", TotalsRowShown = false };
+            Table table1 = new Table() { Id = 2U, Name = "Table2", DisplayName = "Table2", Reference = "E1:G4", TotalsRowShown = false };
             AutoFilter autoFilter1 = new AutoFilter() { Reference = "E1:G4" };
 
-            TableColumns tableColumns1 = new TableColumns() { Count = (UInt32Value)3U };
-            TableColumn tableColumn1 = new TableColumn() { Id = (UInt32Value)1U, Name = "Column1" };
-            TableColumn tableColumn2 = new TableColumn() { Id = (UInt32Value)2U, Name = "Column2" };
-            TableColumn tableColumn3 = new TableColumn() { Id = (UInt32Value)3U, Name = "Column3" };
+            TableColumns tableColumns1 = new TableColumns() { Count = 3U };
+            TableColumn tableColumn1 = new TableColumn() { Id = 1U, Name = "Column1" };
+            TableColumn tableColumn2 = new TableColumn() { Id = 2U, Name = "Column2" };
+            TableColumn tableColumn3 = new TableColumn() { Id = 3U, Name = "Column3" };
 
             tableColumns1.Append(tableColumn1);
             tableColumns1.Append(tableColumn2);
@@ -688,13 +688,13 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
         // Generates content of tableDefinitionPart2.
         private void GenerateTableDefinitionPart2Content(TableDefinitionPart tableDefinitionPart2)
         {
-            Table table2 = new Table() { Id = (UInt32Value)1U, Name = "Table1", DisplayName = "Table1", Reference = "A1:C4", TotalsRowShown = false };
+            Table table2 = new Table() { Id = 1U, Name = "Table1", DisplayName = "Table1", Reference = "A1:C4", TotalsRowShown = false };
             AutoFilter autoFilter2 = new AutoFilter() { Reference = "A1:C4" };
 
-            TableColumns tableColumns2 = new TableColumns() { Count = (UInt32Value)3U };
-            TableColumn tableColumn4 = new TableColumn() { Id = (UInt32Value)1U, Name = "Column1" };
-            TableColumn tableColumn5 = new TableColumn() { Id = (UInt32Value)2U, Name = "Column2" };
-            TableColumn tableColumn6 = new TableColumn() { Id = (UInt32Value)3U, Name = "Column3" };
+            TableColumns tableColumns2 = new TableColumns() { Count = 3U };
+            TableColumn tableColumn4 = new TableColumn() { Id = 1U, Name = "Column1" };
+            TableColumn tableColumn5 = new TableColumn() { Id = 2U, Name = "Column2" };
+            TableColumn tableColumn6 = new TableColumn() { Id = 3U, Name = "Column3" };
 
             tableColumns2.Append(tableColumn4);
             tableColumns2.Append(tableColumn5);
@@ -756,7 +756,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             Xdr.GraphicFrame graphicFrame1 = new Xdr.GraphicFrame() { Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties1 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties1 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Slicer_1" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties1 = new Xdr.NonVisualDrawingProperties() { Id = 2U, Name = "Slicer_1" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties1 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties1.Append(nonVisualDrawingProperties1);
@@ -791,7 +791,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             Xdr.Shape shape1 = new Xdr.Shape() { Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties1 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties2 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = string.Empty };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties2 = new Xdr.NonVisualDrawingProperties() { Id = 0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties1 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks1 = new A.ShapeLocks() { NoTextEdit = true };
@@ -910,7 +910,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             Xdr.GraphicFrame graphicFrame2 = new Xdr.GraphicFrame() { Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties2 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties3 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Slicer_2" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties3 = new Xdr.NonVisualDrawingProperties() { Id = 3U, Name = "Slicer_2" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties2 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties2.Append(nonVisualDrawingProperties3);
@@ -945,7 +945,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             Xdr.Shape shape2 = new Xdr.Shape() { Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties2 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties4 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = string.Empty };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties4 = new Xdr.NonVisualDrawingProperties() { Id = 0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties2 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks2 = new A.ShapeLocks() { NoTextEdit = true };
@@ -1064,7 +1064,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             Xdr.GraphicFrame graphicFrame3 = new Xdr.GraphicFrame() { Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties3 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties5 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Slicer_3" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties5 = new Xdr.NonVisualDrawingProperties() { Id = 4U, Name = "Slicer_3" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties3 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties3.Append(nonVisualDrawingProperties5);
@@ -1099,7 +1099,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             Xdr.Shape shape3 = new Xdr.Shape() { Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties3 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties6 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = string.Empty };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties6 = new Xdr.NonVisualDrawingProperties() { Id = 0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties3 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks3 = new A.ShapeLocks() { NoTextEdit = true };
@@ -1190,9 +1190,9 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             X14.Slicers slicers1 = new X14.Slicers() { MCAttributes = new MarkupCompatibilityAttributes() { Ignorable = "x" } };
             slicers1.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
             slicers1.AddNamespaceDeclaration("x", "http://schemas.openxmlformats.org/spreadsheetml/2006/main");
-            X14.Slicer slicer4 = new X14.Slicer() { Name = "Slicer_1", Cache = "Slicer_Column1", Caption = "Slicer_1", RowHeight = (UInt32Value)225425U };
-            X14.Slicer slicer5 = new X14.Slicer() { Name = "Slicer_2", Cache = "Slicer_Column2", Caption = "Slicer_2", RowHeight = (UInt32Value)225425U };
-            X14.Slicer slicer6 = new X14.Slicer() { Name = "Slicer_3", Cache = "Slicer_Column3", Caption = "Slicer_3", RowHeight = (UInt32Value)225425U };
+            X14.Slicer slicer4 = new X14.Slicer() { Name = "Slicer_1", Cache = "Slicer_Column1", Caption = "Slicer_1", RowHeight = 225425U };
+            X14.Slicer slicer5 = new X14.Slicer() { Name = "Slicer_2", Cache = "Slicer_Column2", Caption = "Slicer_2", RowHeight = 225425U };
+            X14.Slicer slicer6 = new X14.Slicer() { Name = "Slicer_3", Cache = "Slicer_Column3", Caption = "Slicer_3", RowHeight = 225425U };
 
             slicers1.Append(slicer4);
             slicers1.Append(slicer5);
@@ -1208,11 +1208,11 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             stylesheet1.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
             stylesheet1.AddNamespaceDeclaration("x14ac", "http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac");
 
-            Fonts fonts1 = new Fonts() { Count = (UInt32Value)2U };
+            Fonts fonts1 = new Fonts() { Count = 2U };
 
             Font font1 = new Font();
             FontSize fontSize1 = new FontSize() { Val = 11D };
-            Color color1 = new Color() { Theme = (UInt32Value)1U };
+            Color color1 = new Color() { Theme = 1U };
             FontName fontName1 = new FontName() { Val = "Calibri" };
             FontFamilyNumbering fontFamilyNumbering1 = new FontFamilyNumbering() { Val = 2 };
             FontCharSet fontCharSet1 = new FontCharSet() { Val = 128 };
@@ -1241,7 +1241,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             fonts1.Append(font1);
             fonts1.Append(font2);
 
-            Fills fills1 = new Fills() { Count = (UInt32Value)2U };
+            Fills fills1 = new Fills() { Count = 2U };
 
             Fill fill1 = new Fill();
             PatternFill patternFill1 = new PatternFill() { PatternType = PatternValues.None };
@@ -1256,7 +1256,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
             fills1.Append(fill1);
             fills1.Append(fill2);
 
-            Borders borders1 = new Borders() { Count = (UInt32Value)1U };
+            Borders borders1 = new Borders() { Count = 1U };
 
             Border border1 = new Border();
             LeftBorder leftBorder1 = new LeftBorder();
@@ -1273,30 +1273,30 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
 
             borders1.Append(border1);
 
-            CellStyleFormats cellStyleFormats1 = new CellStyleFormats() { Count = (UInt32Value)1U };
+            CellStyleFormats cellStyleFormats1 = new CellStyleFormats() { Count = 1U };
 
-            CellFormat cellFormat1 = new CellFormat() { NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)0U };
+            CellFormat cellFormat1 = new CellFormat() { NumberFormatId = 0U, FontId = 0U, FillId = 0U, BorderId = 0U };
             Alignment alignment1 = new Alignment() { Vertical = VerticalAlignmentValues.Center };
 
             cellFormat1.Append(alignment1);
 
             cellStyleFormats1.Append(cellFormat1);
 
-            CellFormats cellFormats1 = new CellFormats() { Count = (UInt32Value)1U };
+            CellFormats cellFormats1 = new CellFormats() { Count = 1U };
 
-            CellFormat cellFormat2 = new CellFormat() { NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)0U, FormatId = (UInt32Value)0U };
+            CellFormat cellFormat2 = new CellFormat() { NumberFormatId = 0U, FontId = 0U, FillId = 0U, BorderId = 0U, FormatId = 0U };
             Alignment alignment2 = new Alignment() { Vertical = VerticalAlignmentValues.Center };
 
             cellFormat2.Append(alignment2);
 
             cellFormats1.Append(cellFormat2);
 
-            CellStyles cellStyles1 = new CellStyles() { Count = (UInt32Value)1U };
-            CellStyle cellStyle1 = new CellStyle() { Name = "Normal", FormatId = (UInt32Value)0U, BuiltinId = (UInt32Value)0U };
+            CellStyles cellStyles1 = new CellStyles() { Count = 1U };
+            CellStyle cellStyle1 = new CellStyle() { Name = "Normal", FormatId = 0U, BuiltinId = 0U };
 
             cellStyles1.Append(cellStyle1);
-            DifferentialFormats differentialFormats1 = new DifferentialFormats() { Count = (UInt32Value)0U };
-            TableStyles tableStyles1 = new TableStyles() { Count = (UInt32Value)0U, DefaultTableStyle = "TableStyleMedium2", DefaultPivotStyle = "PivotStyleLight16" };
+            DifferentialFormats differentialFormats1 = new DifferentialFormats() { Count = 0U };
+            TableStyles tableStyles1 = new TableStyles() { Count = 0U, DefaultTableStyle = "TableStyleMedium2", DefaultPivotStyle = "PivotStyleLight16" };
 
             StylesheetExtensionList stylesheetExtensionList1 = new StylesheetExtensionList();
 
@@ -1863,7 +1863,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
 
             SlicerCacheDefinitionExtension slicerCacheDefinitionExtension3 = new SlicerCacheDefinitionExtension() { Uri = "{2F2917AC-EB37-4324-AD4E-5DD8C200BD13}" };
             slicerCacheDefinitionExtension3.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
-            X15.TableSlicerCache tableSlicerCache3 = new X15.TableSlicerCache() { TableId = (UInt32Value)1U, Column = (UInt32Value)3U };
+            X15.TableSlicerCache tableSlicerCache3 = new X15.TableSlicerCache() { TableId = 1U, Column = 3U };
 
             slicerCacheDefinitionExtension3.Append(tableSlicerCache3);
 

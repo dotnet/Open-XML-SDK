@@ -102,42 +102,34 @@ namespace DocumentFormat.OpenXml.Tests
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            //
             pPr.AppendChild(new KeepLines());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            //
             pPr.AppendChild(new Tabs());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            //
             pPr.AppendChild(new Kinsoku());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            //
             pPr.AppendChild(new OutlineLevel());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            //
             pPr.AppendChild(new ConditionalFormatStyle());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            //
             pPr.AppendChild(new ParagraphMarkRunProperties());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            //
             pPr.AppendChild(new SectionProperties());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            //
             pPr.AppendChild(new ParagraphPropertiesChange());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
@@ -271,7 +263,6 @@ namespace DocumentFormat.OpenXml.Tests
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            //
             body.AppendChild(new SectionProperties());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
@@ -423,7 +414,6 @@ namespace DocumentFormat.OpenXml.Tests
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            //
             blip.AppendChild(new Drawing.LuminanceEffect());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);

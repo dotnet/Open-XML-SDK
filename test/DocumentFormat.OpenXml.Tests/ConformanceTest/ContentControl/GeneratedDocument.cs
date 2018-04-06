@@ -112,7 +112,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControlClass
 
             Ap.HeadingPairs headingPairs1 = new Ap.HeadingPairs();
 
-            Vt.VTVector vTVector1 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Variant, Size = (UInt32Value)2U };
+            Vt.VTVector vTVector1 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Variant, Size = 2U };
 
             Vt.Variant variant1 = new Vt.Variant();
             Vt.VTLPSTR vTLPSTR1 = new Vt.VTLPSTR();
@@ -133,7 +133,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControlClass
 
             Ap.TitlesOfParts titlesOfParts1 = new Ap.TitlesOfParts();
 
-            Vt.VTVector vTVector2 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Lpstr, Size = (UInt32Value)1U };
+            Vt.VTVector vTVector2 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Lpstr, Size = 1U };
             Vt.VTLPSTR vTLPSTR2 = new Vt.VTLPSTR();
             vTLPSTR2.Text = string.Empty;
 
@@ -894,12 +894,12 @@ namespace DocumentFormat.OpenXml.Tests.ContentControlClass
             TableWidth tableWidth1 = new TableWidth() { Width = "0", Type = TableWidthUnitValues.Auto };
 
             TableBorders tableBorders1 = new TableBorders();
-            TopBorder topBorder1 = new TopBorder() { Val = BorderValues.Double, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-            LeftBorder leftBorder1 = new LeftBorder() { Val = BorderValues.Double, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-            BottomBorder bottomBorder1 = new BottomBorder() { Val = BorderValues.Double, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-            RightBorder rightBorder1 = new RightBorder() { Val = BorderValues.Double, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-            InsideHorizontalBorder insideHorizontalBorder1 = new InsideHorizontalBorder() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-            InsideVerticalBorder insideVerticalBorder1 = new InsideVerticalBorder() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
+            TopBorder topBorder1 = new TopBorder() { Val = BorderValues.Double, Color = "auto", Size = 4U, Space = 0U };
+            LeftBorder leftBorder1 = new LeftBorder() { Val = BorderValues.Double, Color = "auto", Size = 4U, Space = 0U };
+            BottomBorder bottomBorder1 = new BottomBorder() { Val = BorderValues.Double, Color = "auto", Size = 4U, Space = 0U };
+            RightBorder rightBorder1 = new RightBorder() { Val = BorderValues.Double, Color = "auto", Size = 4U, Space = 0U };
+            InsideHorizontalBorder insideHorizontalBorder1 = new InsideHorizontalBorder() { Val = BorderValues.Single, Color = "auto", Size = 4U, Space = 0U };
+            InsideVerticalBorder insideVerticalBorder1 = new InsideVerticalBorder() { Val = BorderValues.Single, Color = "auto", Size = 4U, Space = 0U };
 
             tableBorders1.Append(topBorder1);
             tableBorders1.Append(leftBorder1);
@@ -1036,7 +1036,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControlClass
             SdtProperties sdtProperties19 = new SdtProperties();
 
             RunProperties runProperties29 = new RunProperties();
-            Kern kern1 = new Kern() { Val = (UInt32Value)0U };
+            Kern kern1 = new Kern() { Val = 0U };
 
             runProperties29.Append(kern1);
             SdtAlias sdtAlias13 = new SdtAlias() { Val = "Test1.5.1_2" };
@@ -1075,7 +1075,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControlClass
             Run run14 = new Run();
 
             RunProperties runProperties30 = new RunProperties();
-            Kern kern2 = new Kern() { Val = (UInt32Value)0U };
+            Kern kern2 = new Kern() { Val = 0U };
 
             runProperties30.Append(kern2);
             Text text14 = new Text();
@@ -1088,7 +1088,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControlClass
 
             RunProperties runProperties31 = new RunProperties();
             RunFonts runFonts27 = new RunFonts() { Hint = FontTypeHintValues.EastAsia };
-            Kern kern3 = new Kern() { Val = (UInt32Value)0U };
+            Kern kern3 = new Kern() { Val = 0U };
 
             runProperties31.Append(runFonts27);
             runProperties31.Append(kern3);
@@ -1101,7 +1101,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControlClass
             Run run16 = new Run();
 
             RunProperties runProperties32 = new RunProperties();
-            Kern kern4 = new Kern() { Val = (UInt32Value)0U };
+            Kern kern4 = new Kern() { Val = 0U };
 
             runProperties32.Append(kern4);
             Text text16 = new Text();
@@ -1114,7 +1114,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControlClass
 
             RunProperties runProperties33 = new RunProperties();
             RunFonts runFonts28 = new RunFonts() { Hint = FontTypeHintValues.EastAsia };
-            Kern kern5 = new Kern() { Val = (UInt32Value)0U };
+            Kern kern5 = new Kern() { Val = 0U };
 
             runProperties33.Append(runFonts28);
             runProperties33.Append(kern5);
@@ -1187,7 +1187,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControlClass
             SdtEndCharProperties sdtEndCharProperties21 = new SdtEndCharProperties();
 
             RunProperties runProperties34 = new RunProperties();
-            Kern kern6 = new Kern() { Val = (UInt32Value)0U };
+            Kern kern6 = new Kern() { Val = 0U };
 
             runProperties34.Append(kern6);
 
@@ -1209,7 +1209,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControlClass
             Run run18 = new Run();
 
             RunProperties runProperties35 = new RunProperties();
-            Kern kern7 = new Kern() { Val = (UInt32Value)0U };
+            Kern kern7 = new Kern() { Val = 0U };
 
             runProperties35.Append(kern7);
             Text text18 = new Text();
@@ -1222,7 +1222,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControlClass
 
             RunProperties runProperties36 = new RunProperties();
             RunFonts runFonts29 = new RunFonts() { Hint = FontTypeHintValues.EastAsia };
-            Kern kern8 = new Kern() { Val = (UInt32Value)0U };
+            Kern kern8 = new Kern() { Val = 0U };
 
             runProperties36.Append(runFonts29);
             runProperties36.Append(kern8);
@@ -1235,7 +1235,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControlClass
             Run run20 = new Run();
 
             RunProperties runProperties37 = new RunProperties();
-            Kern kern9 = new Kern() { Val = (UInt32Value)0U };
+            Kern kern9 = new Kern() { Val = 0U };
 
             runProperties37.Append(kern9);
             Text text20 = new Text();
@@ -1248,7 +1248,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControlClass
 
             RunProperties runProperties38 = new RunProperties();
             RunFonts runFonts30 = new RunFonts() { Hint = FontTypeHintValues.EastAsia };
-            Kern kern10 = new Kern() { Val = (UInt32Value)0U };
+            Kern kern10 = new Kern() { Val = 0U };
 
             runProperties38.Append(runFonts30);
             runProperties38.Append(kern10);
@@ -1262,7 +1262,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControlClass
 
             RunProperties runProperties39 = new RunProperties();
             RunFonts runFonts31 = new RunFonts() { Hint = FontTypeHintValues.EastAsia };
-            Kern kern11 = new Kern() { Val = (UInt32Value)0U };
+            Kern kern11 = new Kern() { Val = 0U };
 
             runProperties39.Append(runFonts31);
             runProperties39.Append(kern11);
@@ -1292,7 +1292,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControlClass
             SdtProperties sdtProperties22 = new SdtProperties();
 
             RunProperties runProperties40 = new RunProperties();
-            Kern kern12 = new Kern() { Val = (UInt32Value)0U };
+            Kern kern12 = new Kern() { Val = 0U };
 
             runProperties40.Append(kern12);
             SdtAlias sdtAlias15 = new SdtAlias() { Val = "Test1.5.1_4" };
@@ -1331,7 +1331,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControlClass
             Run run23 = new Run();
 
             RunProperties runProperties41 = new RunProperties();
-            Kern kern13 = new Kern() { Val = (UInt32Value)0U };
+            Kern kern13 = new Kern() { Val = 0U };
 
             runProperties41.Append(kern13);
             Text text23 = new Text();
@@ -1344,7 +1344,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControlClass
 
             RunProperties runProperties42 = new RunProperties();
             RunFonts runFonts32 = new RunFonts() { Hint = FontTypeHintValues.EastAsia };
-            Kern kern14 = new Kern() { Val = (UInt32Value)0U };
+            Kern kern14 = new Kern() { Val = 0U };
 
             runProperties42.Append(runFonts32);
             runProperties42.Append(kern14);
@@ -1420,8 +1420,8 @@ namespace DocumentFormat.OpenXml.Tests.ContentControlClass
             Paragraph paragraph18 = new Paragraph() { RsidParagraphAddition = "00E930A2", RsidRunAdditionDefault = "00E930A2" };
 
             SectionProperties sectionProperties1 = new SectionProperties() { RsidR = "00E930A2" };
-            PageSize pageSize1 = new PageSize() { Width = (UInt32Value)11906U, Height = (UInt32Value)16838U };
-            PageMargin pageMargin1 = new PageMargin() { Top = 1985, Right = (UInt32Value)1701U, Bottom = 1701, Left = (UInt32Value)1701U, Header = (UInt32Value)851U, Footer = (UInt32Value)992U, Gutter = (UInt32Value)0U };
+            PageSize pageSize1 = new PageSize() { Width = 11906U, Height = 16838U };
+            PageMargin pageMargin1 = new PageMargin() { Top = 1985, Right = 1701U, Bottom = 1701, Left = 1701U, Header = 851U, Footer = 992U, Gutter = 0U };
             Columns columns1 = new Columns() { Space = "425" };
             DocGrid docGrid1 = new DocGrid() { Type = DocGridValues.Lines, LinePitch = 360 };
 
@@ -1779,10 +1779,10 @@ namespace DocumentFormat.OpenXml.Tests.ContentControlClass
             M.BreakBinarySubtraction breakBinarySubtraction1 = new M.BreakBinarySubtraction() { Val = M.BreakBinarySubtractionValues.MinusMinus };
             M.SmallFraction smallFraction1 = new M.SmallFraction() { Val = M.BooleanValues.Zero };
             M.DisplayDefaults displayDefaults1 = new M.DisplayDefaults();
-            M.LeftMargin leftMargin1 = new M.LeftMargin() { Val = (UInt32Value)0U };
-            M.RightMargin rightMargin1 = new M.RightMargin() { Val = (UInt32Value)0U };
+            M.LeftMargin leftMargin1 = new M.LeftMargin() { Val = 0U };
+            M.RightMargin rightMargin1 = new M.RightMargin() { Val = 0U };
             M.DefaultJustification defaultJustification1 = new M.DefaultJustification() { Val = M.JustificationValues.CenterGroup };
-            M.WrapIndent wrapIndent1 = new M.WrapIndent() { Val = (UInt32Value)1440U };
+            M.WrapIndent wrapIndent1 = new M.WrapIndent() { Val = 1440U };
             M.IntegralLimitLocation integralLimitLocation1 = new M.IntegralLimitLocation() { Val = M.LimitLocationValues.SubscriptSuperscript };
             M.NaryLimitLocation naryLimitLocation1 = new M.NaryLimitLocation() { Val = M.LimitLocationValues.UnderOver };
 
@@ -1849,7 +1849,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControlClass
 
             RunPropertiesBaseStyle runPropertiesBaseStyle1 = new RunPropertiesBaseStyle();
             RunFonts runFonts33 = new RunFonts() { AsciiTheme = ThemeFontValues.MinorHighAnsi, HighAnsiTheme = ThemeFontValues.MinorHighAnsi, EastAsiaTheme = ThemeFontValues.MinorEastAsia, ComplexScriptTheme = ThemeFontValues.MinorBidi };
-            Kern kern15 = new Kern() { Val = (UInt32Value)2U };
+            Kern kern15 = new Kern() { Val = 2U };
             FontSize fontSize1 = new FontSize() { Val = "21" };
             FontSizeComplexScript fontSizeComplexScript1 = new FontSizeComplexScript() { Val = "22" };
             Languages languages1 = new Languages() { Val = "en-US", EastAsia = "ja-JP", Bidi = "ar-SA" };
@@ -2335,7 +2335,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControlClass
 
             RunPropertiesBaseStyle runPropertiesBaseStyle2 = new RunPropertiesBaseStyle();
             RunFonts runFonts34 = new RunFonts() { AsciiTheme = ThemeFontValues.MinorHighAnsi, HighAnsiTheme = ThemeFontValues.MinorHighAnsi, EastAsiaTheme = ThemeFontValues.MinorEastAsia, ComplexScriptTheme = ThemeFontValues.MinorBidi };
-            Kern kern16 = new Kern() { Val = (UInt32Value)2U };
+            Kern kern16 = new Kern() { Val = 2U };
             FontSize fontSize2 = new FontSize() { Val = "21" };
             FontSizeComplexScript fontSizeComplexScript2 = new FontSizeComplexScript() { Val = "22" };
             Languages languages2 = new Languages() { Val = "en-US", EastAsia = "ja-JP", Bidi = "ar-SA" };
@@ -3021,10 +3021,10 @@ namespace DocumentFormat.OpenXml.Tests.ContentControlClass
             M.BreakBinarySubtraction breakBinarySubtraction2 = new M.BreakBinarySubtraction() { Val = M.BreakBinarySubtractionValues.MinusMinus };
             M.SmallFraction smallFraction2 = new M.SmallFraction() { Val = M.BooleanValues.Zero };
             M.DisplayDefaults displayDefaults2 = new M.DisplayDefaults();
-            M.LeftMargin leftMargin2 = new M.LeftMargin() { Val = (UInt32Value)0U };
-            M.RightMargin rightMargin2 = new M.RightMargin() { Val = (UInt32Value)0U };
+            M.LeftMargin leftMargin2 = new M.LeftMargin() { Val = 0U };
+            M.RightMargin rightMargin2 = new M.RightMargin() { Val = 0U };
             M.DefaultJustification defaultJustification2 = new M.DefaultJustification() { Val = M.JustificationValues.CenterGroup };
-            M.WrapIndent wrapIndent2 = new M.WrapIndent() { Val = (UInt32Value)1440U };
+            M.WrapIndent wrapIndent2 = new M.WrapIndent() { Val = 1440U };
             M.IntegralLimitLocation integralLimitLocation2 = new M.IntegralLimitLocation() { Val = M.LimitLocationValues.SubscriptSuperscript };
             M.NaryLimitLocation naryLimitLocation2 = new M.NaryLimitLocation() { Val = M.LimitLocationValues.UnderOver };
 
@@ -3201,7 +3201,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControlClass
 
             RunPropertiesBaseStyle runPropertiesBaseStyle3 = new RunPropertiesBaseStyle();
             RunFonts runFonts35 = new RunFonts() { AsciiTheme = ThemeFontValues.MinorHighAnsi, HighAnsiTheme = ThemeFontValues.MinorHighAnsi, EastAsiaTheme = ThemeFontValues.MinorEastAsia, ComplexScriptTheme = ThemeFontValues.MinorBidi };
-            Kern kern17 = new Kern() { Val = (UInt32Value)2U };
+            Kern kern17 = new Kern() { Val = 2U };
             FontSize fontSize3 = new FontSize() { Val = "21" };
             FontSizeComplexScript fontSizeComplexScript3 = new FontSizeComplexScript() { Val = "22" };
             Languages languages3 = new Languages() { Val = "en-US", EastAsia = "ja-JP", Bidi = "ar-SA" };
@@ -3695,7 +3695,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControlClass
 
             RunPropertiesBaseStyle runPropertiesBaseStyle4 = new RunPropertiesBaseStyle();
             RunFonts runFonts36 = new RunFonts() { AsciiTheme = ThemeFontValues.MinorHighAnsi, HighAnsiTheme = ThemeFontValues.MinorHighAnsi, EastAsiaTheme = ThemeFontValues.MinorEastAsia, ComplexScriptTheme = ThemeFontValues.MinorBidi };
-            Kern kern18 = new Kern() { Val = (UInt32Value)2U };
+            Kern kern18 = new Kern() { Val = 2U };
             FontSize fontSize4 = new FontSize() { Val = "21" };
             FontSizeComplexScript fontSizeComplexScript4 = new FontSizeComplexScript() { Val = "22" };
             Languages languages4 = new Languages() { Val = "en-US", EastAsia = "ja-JP", Bidi = "ar-SA" };

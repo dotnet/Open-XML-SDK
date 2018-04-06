@@ -64,7 +64,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                 case XsdAnyPrefidefinedValue.Local:
                     // Elements that are not qualified with a namespace can be present.
-                    if (String.IsNullOrEmpty(element.NamespaceUri))
+                    if (string.IsNullOrEmpty(element.NamespaceUri))
                     {
                         particleMatchInfo.Match = ParticleMatch.Matched;
                         particleMatchInfo.LastMatchedElement = element;
@@ -78,7 +78,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                 case XsdAnyPrefidefinedValue.Other:
                     // Elements from any namespace that is not the target namespace of the parent element containing this element can be present.
-                    if (String.IsNullOrEmpty(element.NamespaceUri) ||
+                    if (string.IsNullOrEmpty(element.NamespaceUri) ||
                         element.Parent != null && element.NamespaceUri != element.Parent.NamespaceUri)
                     {
                         particleMatchInfo.Match = ParticleMatch.Matched;

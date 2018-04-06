@@ -16,8 +16,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     internal abstract class SdbData
     {
-        public const SdbIndex InvalidId = SdbIndex.MaxValue;
-        public const int MaxSdbIndex = SdbIndex.MaxValue;
+        public const ushort InvalidId = ushort.MaxValue;
+        public const int MaxSdbIndex = ushort.MaxValue;
 
         #region abstract methods
 
@@ -70,10 +70,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             return result;
         }
 
-        public static SdbIndex LoadSdbIndex(byte[] bytes, ref int startIndex)
+        public static ushort LoadSdbIndex(byte[] bytes, ref int startIndex)
         {
-            SdbIndex result = BitConverter.ToUInt16(bytes, startIndex);
-            startIndex += sizeof(SdbIndex);
+            ushort result = BitConverter.ToUInt16(bytes, startIndex);
+            startIndex += sizeof(ushort);
             return result;
         }
 

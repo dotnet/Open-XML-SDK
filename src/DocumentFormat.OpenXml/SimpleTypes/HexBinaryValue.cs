@@ -53,7 +53,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="xmlAttribute">The HexBinaryValue object to convert.</param>
         /// <returns>The converted HexBinary string. Returns null when xmlAttribute is null.</returns>
-        public static implicit operator String(HexBinaryValue xmlAttribute)
+        public static implicit operator string(HexBinaryValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {
@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">The specified hexBinary value.</param>
         /// <returns>A new HexBinaryValue instance with the value.</returns>
-        public static implicit operator HexBinaryValue(String value)
+        public static implicit operator HexBinaryValue(string value)
         {
             return FromString(value);
         }
@@ -78,7 +78,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">A String value to use to create a new HexBinaryValue object.</param>
         /// <returns>A HexBinaryValue object that corresponds to the value parameter.</returns>
-        public static HexBinaryValue FromString(String value)
+        public static HexBinaryValue FromString(string value)
         {
             return new HexBinaryValue(value);
         }
@@ -90,7 +90,7 @@ namespace DocumentFormat.OpenXml
         /// A HexBinaryValue object used to retrieve a String value representation.
         /// </param>
         /// <returns>A String value that represents a HexBinaryValue object.</returns>
-        public static String ToString(HexBinaryValue xmlAttribute)
+        public static string ToString(HexBinaryValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {

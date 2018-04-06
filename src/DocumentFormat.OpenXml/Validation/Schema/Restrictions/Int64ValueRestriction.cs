@@ -10,11 +10,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// Int64 (xsd:long) based value restriction.
     /// </summary>
     [DataContract]
-    internal class Int64ValueRestriction : SimpleValueRestriction<Int64, Int64Value>
+    internal class Int64ValueRestriction : SimpleValueRestriction<long, Int64Value>
     {
-        protected override Int64 MinValue => Int64.MinValue;
+        protected override long MinValue => long.MinValue;
 
-        protected override Int64 MaxValue => Int64.MaxValue;
+        protected override long MaxValue => long.MaxValue;
 
         /// <inheritdoc />
         public override XsdType XsdType => XsdType.Long;

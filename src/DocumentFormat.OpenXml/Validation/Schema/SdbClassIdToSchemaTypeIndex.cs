@@ -20,19 +20,19 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Start ID of class ID.
         /// </summary>
-        public const SdbIndex StartClassId = 10001;
+        public const ushort StartClassId = 10001;
 
-        public const SdbIndex InvalidSchemaTypeIndex = SdbIndex.MaxValue;
+        public const ushort InvalidSchemaTypeIndex = ushort.MaxValue;
 
         /// <summary>
         /// Gets or sets class ID (Element Type ID).
         /// </summary>
-        public SdbIndex ClassId { get; set; }
+        public ushort ClassId { get; set; }
 
         /// <summary>
         /// Gets or sets the index of the schema type in the SdbSchemaType data array.
         /// </summary>
-        public SdbIndex SchemaTypeIndex { get; set; }
+        public ushort SchemaTypeIndex { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the SdbClassIdToSchemaTypeIndex.
@@ -46,7 +46,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         /// <param name="classId"></param>
         /// <param name="schemaTypeIndex"></param>
-        public SdbClassIdToSchemaTypeIndex(SdbIndex classId, SdbIndex schemaTypeIndex)
+        public SdbClassIdToSchemaTypeIndex(ushort classId, ushort schemaTypeIndex)
         {
             ClassId = classId;
             SchemaTypeIndex = schemaTypeIndex;
@@ -57,16 +57,16 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         /// <param name="classId"></param>
         /// <returns></returns>
-        public static SdbIndex ArrayIndexFromClassId(SdbIndex classId)
+        public static ushort ArrayIndexFromClassId(ushort classId)
         {
             Debug.Assert(classId >= StartClassId);
-            return (SdbIndex)(classId - StartClassId);
+            return (ushort)(classId - StartClassId);
         }
 
         /// <summary>
         /// Gets the size in bytes of this data structure.
         /// </summary>
-        public static int TypeSize => sizeof(SdbIndex) * 2;
+        public static int TypeSize => sizeof(ushort) * 2;
 
         #region Override SdbData Members
 
