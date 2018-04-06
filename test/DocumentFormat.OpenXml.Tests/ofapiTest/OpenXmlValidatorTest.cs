@@ -3425,7 +3425,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("/w:left[1]", actual.First().Path.XPath);
             Assert.EndsWith(" The Enumeration constraint failed.", actual.First().Description);
 
-            //
             element.Val.InnerText = "Noo";
             actual = O12Validator.Validate(element);
             Assert.Single(actual);

@@ -280,7 +280,6 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         // Comment out as the result of bug 2352836
-        //
         [Fact]
         public void WriteStringWithNonLeafText()
         {
