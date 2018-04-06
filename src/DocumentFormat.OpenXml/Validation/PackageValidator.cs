@@ -167,7 +167,7 @@ namespace DocumentFormat.OpenXml.Validation
                                 // validate content type
                                 if (rule.PartContentType != null && part.ContentType != rule.PartContentType)
                                 {
-                                    var message = String.Format(CultureInfo.CurrentUICulture, ExceptionMessages.InvalidContentTypePart, rule.PartContentType);
+                                    var message = string.Format(CultureInfo.CurrentUICulture, ExceptionMessages.InvalidContentTypePart, rule.PartContentType);
                                     yield return new OpenXmlPackageValidationEventArgs(container)
                                     {
                                         Message = message,

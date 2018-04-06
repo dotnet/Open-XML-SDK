@@ -18,11 +18,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// !******************** TODO: at current, the CodeGen generate int for xsd:integer
     /// </remarks>
     [DataContract]
-    internal class IntegerValueRestriction : SimpleValueRestriction<Int64, IntegerValue>
+    internal class IntegerValueRestriction : SimpleValueRestriction<long, IntegerValue>
     {
-        protected override Int64 MinValue => Int64.MinValue;
+        protected override long MinValue => long.MinValue;
 
-        protected override Int64 MaxValue => Int64.MaxValue;
+        protected override long MaxValue => long.MaxValue;
 
         /// <inheritdoc />
         public override XsdType XsdType => XsdType.Integer;

@@ -208,7 +208,7 @@ namespace DocumentFormat.OpenXml.Validation
                         case "Pkg_PartIsNotAllowed":
                             Debug.Assert(e.SubPart != null);
                             name = e.Part != null ? GetPartNameAndUri(e.Part) : documentName;
-                            errorInfo.Description = String.Format(CultureInfo.CurrentUICulture, ValidationResources.Pkg_PartIsNotAllowed, name, GetPartNameAndUri(e.SubPart));
+                            errorInfo.Description = string.Format(CultureInfo.CurrentUICulture, ValidationResources.Pkg_PartIsNotAllowed, name, GetPartNameAndUri(e.SubPart));
                             break;
 
                         case "Pkg_RequiredPartDoNotExist":
@@ -217,7 +217,7 @@ namespace DocumentFormat.OpenXml.Validation
 
                         case "Pkg_OnlyOnePartAllowed":
                             name = e.Part != null ? GetPartNameAndUri(e.Part) : documentName;
-                            errorInfo.Description = String.Format(CultureInfo.CurrentUICulture, ValidationResources.Pkg_OnlyOnePartAllowed, name, e.PartClassName);
+                            errorInfo.Description = string.Format(CultureInfo.CurrentUICulture, ValidationResources.Pkg_OnlyOnePartAllowed, name, e.PartClassName);
 #if DEBUG
                             Debug.Assert(e.SubPart != null);
                             errorInfo.RelatedPart = e.SubPart;
@@ -232,7 +232,7 @@ namespace DocumentFormat.OpenXml.Validation
                         case "Pkg_DataPartReferenceIsNotAllowed":
                             Debug.Assert(e.DataPartReferenceRelationship != null);
                             name = e.Part != null ? GetPartNameAndUri(e.Part) : documentName;
-                            errorInfo.Description = String.Format(CultureInfo.CurrentUICulture, ValidationResources.Pkg_PartIsNotAllowed, name, e.DataPartReferenceRelationship.Uri);
+                            errorInfo.Description = string.Format(CultureInfo.CurrentUICulture, ValidationResources.Pkg_PartIsNotAllowed, name, e.DataPartReferenceRelationship.Uri);
                             break;
 
                         case "Pkg_InvalidContentTypePart":  // won't get this error.

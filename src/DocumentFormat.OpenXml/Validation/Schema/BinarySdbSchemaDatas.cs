@@ -114,7 +114,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         /// <param name="classId">The class ID.</param>
         /// <returns>A SdbClassIdToSchemaTypeIndex data.</returns>
-        private SdbClassIdToSchemaTypeIndex GetClassIdData(SdbIndex classId)
+        private SdbClassIdToSchemaTypeIndex GetClassIdData(ushort classId)
         {
             int index = SdbClassIdToSchemaTypeIndex.ArrayIndexFromClassId(classId);
             return SdbClassIdMap[index];
@@ -240,7 +240,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                 case ParticleType.Any:
                 case ParticleType.AnyWithUri:
-                    SdbIndex namespaceId = particle.XsdAnyNamespaceId;
+                    ushort namespaceId = particle.XsdAnyNamespaceId;
                     Debug.Assert(namespaceId != SdbData.InvalidId);
                     break;
 

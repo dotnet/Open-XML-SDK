@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         }
 
         /// <inheritdoc />
-        public override string ClrTypeName => typeof(Boolean).Name;
+        public override string ClrTypeName => typeof(bool).Name;
 
 #if DEBUG
         public override void Verify()
