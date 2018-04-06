@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml
     /// Represents the Single value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class SingleValue : OpenXmlSimpleValue<Single>
+    public class SingleValue : OpenXmlSimpleValue<float>
     {
         /// <summary>
         /// Initializes a new instance of the SingleValue class.
@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml
         /// Initializes a new instance of the SingleValue class using the supplied Single value.
         /// </summary>
         /// <param name="value">The Single value.</param>
-        public SingleValue(Single value)
+        public SingleValue(float value)
             : base(value)
         {
         }
@@ -51,7 +51,7 @@ namespace DocumentFormat.OpenXml
         /// The converted Single value.
         /// </returns>
         /// <exception cref="InvalidOperationException">Thrown when xmlAttribute is null.</exception>
-        public static implicit operator Single(SingleValue xmlAttribute)
+        public static implicit operator float(SingleValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">The specified value.</param>
         /// <returns>A new SingleValue instance with the value.</returns>
-        public static implicit operator SingleValue(Single value)
+        public static implicit operator SingleValue(float value)
         {
             return FromSingle(value);
         }
@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">A Single value to use to create a new SingleValue object.</param>
         /// <returns>A SingleValue object that corresponds to the value parameter.</returns>
-        public static SingleValue FromSingle(Single value)
+        public static SingleValue FromSingle(float value)
         {
             return new SingleValue(value);
         }
@@ -88,7 +88,7 @@ namespace DocumentFormat.OpenXml
         /// A SingleValue object used to retrieve a Single value representation.
         /// </param>
         /// <returns>A Single value that represents a SingleValue object.</returns>
-        public static Single ToSingle(SingleValue xmlAttribute)
+        public static float ToSingle(SingleValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {

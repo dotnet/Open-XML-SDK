@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="value">The text value of the attribute.</param>
         public OpenXmlAttribute(string qualifiedName, string namespaceUri, string value)
         {
-            if (String.IsNullOrEmpty(qualifiedName))
+            if (string.IsNullOrEmpty(qualifiedName))
             {
                 throw new ArgumentNullException(nameof(qualifiedName));
             }
@@ -44,7 +44,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="value">The text value of the attribute.</param>
         public OpenXmlAttribute(string prefix, string localName, string namespaceUri, string value)
         {
-            if (String.IsNullOrEmpty(localName))
+            if (string.IsNullOrEmpty(localName))
             {
                 throw new ArgumentNullException(nameof(localName));
             }

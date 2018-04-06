@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     [System.CLSCompliant(false)]
     [DebuggerDisplay("{InnerText}")]
-    public class UInt32Value : OpenXmlSimpleValue<UInt32>
+    public class UInt32Value : OpenXmlSimpleValue<uint>
     {
         /// <summary>
         /// Initializes a new instance of the UInt32Value class.
@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml
         /// Initializes a new instance of the UInt32Value class using the supplied UInt32 value.
         /// </summary>
         /// <param name="value">The UInt32 value.</param>
-        public UInt32Value(UInt32 value)
+        public UInt32Value(uint value)
             : base(value)
         {
         }
@@ -50,7 +50,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="xmlAttribute">The UInt32Value class to convert.</param>
         /// <returns>The converted UInt32 value.</returns>
         /// <exception cref="InvalidOperationException">Thrown when xmlAttribute is null.</exception>
-        public static implicit operator UInt32(UInt32Value xmlAttribute)
+        public static implicit operator uint(UInt32Value xmlAttribute)
         {
             if (xmlAttribute == null)
             {
@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">The specified value.</param>
         /// <returns>A new UInt32Value instance with the value.</returns>
-        public static implicit operator UInt32Value(UInt32 value)
+        public static implicit operator UInt32Value(uint value)
         {
             return FromUInt32(value);
         }
@@ -75,7 +75,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">A UInt32 value to use to create a new UInt32Value object.</param>
         /// <returns>A UInt32Value class that corresponds to the value parameter.</returns>
-        public static UInt32Value FromUInt32(UInt32 value)
+        public static UInt32Value FromUInt32(uint value)
         {
             return new UInt32Value(value);
         }
@@ -87,7 +87,7 @@ namespace DocumentFormat.OpenXml
         /// A UInt32Value object used to retrieve a UInt32 value representation.
         /// </param>
         /// <returns>A UInt32 value that represents a UInt32Value object.</returns>
-        public static UInt32 ToUInt32(UInt32Value xmlAttribute)
+        public static uint ToUInt32(UInt32Value xmlAttribute)
         {
             if (xmlAttribute == null)
             {

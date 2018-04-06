@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Represents the fixed value of the RelationshipType.
         /// </summary>
-        internal const String RelationshipTypeConst = @"http://schemas.openxmlformats.org/officeDocument/2006/relationships/video";
+        internal const string RelationshipTypeConst = @"http://schemas.openxmlformats.org/officeDocument/2006/relationships/video";
 
         /// <summary>
         /// Gets the source relationship type for an audio reference.

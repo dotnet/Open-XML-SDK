@@ -21,14 +21,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Gets or sets the index of the particle in the SdbParticleConstraint data array.
         /// </summary>
-        public SdbIndex ParticleIndex { get; set; }
+        public ushort ParticleIndex { get; set; }
 
         public SdbParticleChildrenIndex()
         {
             ParticleIndex = SdbData.InvalidId;
         }
 
-        public SdbParticleChildrenIndex(SdbIndex index)
+        public SdbParticleChildrenIndex(ushort index)
         {
             ParticleIndex = index;
         }
@@ -40,13 +40,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 throw new ArgumentOutOfRangeException(nameof(index));
             }
 
-            ParticleIndex = (SdbIndex)index;
+            ParticleIndex = (ushort)index;
         }
 
         /// <summary>
         /// Gets the size in bytes of this data structure.
         /// </summary>
-        public static int TypeSize => sizeof(SdbIndex);
+        public static int TypeSize => sizeof(ushort);
 
         #region Override SdbData Members
 

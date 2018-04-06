@@ -72,7 +72,7 @@ namespace DocumentFormat.OpenXml.Tests
             Read(x);
             Read(y);
 
-            standalone = String.Empty;
+            standalone = string.Empty;
             if (y.NodeType == XmlNodeType.XmlDeclaration)
             {
                 standalone = y.GetAttribute("standalone");
@@ -371,7 +371,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("verify the version is 1.0");
             Log.VerifyTrue(reader.GetAttribute("version") == "1.0", "expected: 1.0 <> actual:{0}", reader.GetAttribute("version"));
 
-            String standaloneValue = reader.GetAttribute("standalone");
+            string standaloneValue = reader.GetAttribute("standalone");
 
             if (standalone.HasValue)
             {
@@ -443,7 +443,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             for (int i = 0; i < 5; i++)
             {
-                yield return new OpenXmlAttribute("c", "test" + i, String.Empty, i.ToString());
+                yield return new OpenXmlAttribute("c", "test" + i, string.Empty, i.ToString());
             }
         }
 
@@ -558,7 +558,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         private delegate bool Reading(OpenXmlReader Oreader, XmlReader Xreader);
 
-        private delegate void PreRead(OpenXmlReader Oreader, XmlReader Xreader, out String standalone);
+        private delegate void PreRead(OpenXmlReader Oreader, XmlReader Xreader, out string standalone);
 
         private delegate void ConstrReader(WordprocessingDocument doc, out OpenXmlReader Oreader, out XmlReader Treader);
 
@@ -600,9 +600,9 @@ namespace DocumentFormat.OpenXml.Tests
 
                 Log.Comment("check if the load is successful");
                 Log.VerifyNotNull(element, "Fail to load OpenXmlElement from OpenXmlReader");
-                Log.VerifyTrue(element.LocalName.Equals(Xreader.Name.Replace(Xreader.Prefix + ":", String.Empty),
+                Log.VerifyTrue(element.LocalName.Equals(Xreader.Name.Replace(Xreader.Prefix + ":", string.Empty),
                     StringComparison.OrdinalIgnoreCase), "LocalName test FAIL. Expected: {0} <> Actual: {1}",
-                    Xreader.Name.Replace(Xreader.Prefix + ":", String.Empty), element.LocalName);
+                    Xreader.Name.Replace(Xreader.Prefix + ":", string.Empty), element.LocalName);
                 if (!(reader is OpenXmlDomReader))
                 {
                     Log.VerifyTrue(element.HasAttributes == Xreader.HasAttributes, "HasAttributes test FAIL. Expected: {0} <> Actual: {1}",
@@ -679,14 +679,14 @@ namespace DocumentFormat.OpenXml.Tests
         private void TestStandaloneXml(OpenXmlReader reader, XmlReader XTreader, string standalone)
         {
             Log.Comment("Test Standalone");
-            if (!String.IsNullOrEmpty(standalone) && reader.StandaloneXml.HasValue == true)
+            if (!string.IsNullOrEmpty(standalone) && reader.StandaloneXml.HasValue == true)
             {
                 Log.VerifyTrue(standalone.Equals(reader.StandaloneXml.Value ? "yes" : "no", StringComparison.OrdinalIgnoreCase), "expect: {0}  actual: {1}", standalone, reader.StandaloneXml);
             }
-            else if (String.IsNullOrEmpty(standalone) && reader.StandaloneXml.HasValue == false)
+            else if (string.IsNullOrEmpty(standalone) && reader.StandaloneXml.HasValue == false)
                 Log.Pass(" PASS! expect: NULL == actual: NULL");
             else
-                Log.Fail("Expect: {0} <> actual: {1}", String.IsNullOrEmpty(standalone) ? "Null" : "Not Null", reader.StandaloneXml.HasValue ? "Not Null" : "Null");
+                Log.Fail("Expect: {0} <> actual: {1}", string.IsNullOrEmpty(standalone) ? "Null" : "Not Null", reader.StandaloneXml.HasValue ? "Not Null" : "Null");
         }
 
         /// <summary>
@@ -725,7 +725,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
             else
             {
-                Log.VerifyTrue((Activator.CreateInstance(type) as OpenXmlElement).LocalName.Equals(XTreader.LocalName.Replace(XTreader.Prefix + ":", String.Empty), StringComparison.OrdinalIgnoreCase),
+                Log.VerifyTrue((Activator.CreateInstance(type) as OpenXmlElement).LocalName.Equals(XTreader.LocalName.Replace(XTreader.Prefix + ":", string.Empty), StringComparison.OrdinalIgnoreCase),
                     "Expect: {0} <> actual: {1}", XTreader.LocalName, reader.LocalName);
             }
         }
@@ -808,7 +808,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <param name="XTreader">the corresponding XmlReader</param>
         private void TestLocalName(OpenXmlReader reader, XmlReader XTreader)
         {
-            String localName = XTreader.LocalName;
+            string localName = XTreader.LocalName;
             if (IsMisc(XTreader))
             {
                 switch (XTreader.NodeType)
@@ -904,7 +904,7 @@ namespace DocumentFormat.OpenXml.Tests
             else
             {
                 string Text = reader.GetText();
-                Assert.Equal(String.Empty, Text);
+                Assert.Equal(string.Empty, Text);
             }
         }
 

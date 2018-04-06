@@ -291,7 +291,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("-INF", target.InnerText);
             Assert.Equal("-INF", target.InnerText);
 
-            target = new DoubleValue(Double.NaN);
+            target = new DoubleValue(double.NaN);
             Assert.True(target.HasValue);
             Assert.Equal("NaN", target.InnerText);
             Assert.Equal("NaN", target.InnerText);
@@ -645,7 +645,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // 3. ByteValue
             ByteValue byteValue = new ByteValue();
-            Byte bt = 1;
+            byte bt = 1;
             byteValue = bt;
             Assert.True(bt == byteValue);
             Assert.Equal(bt, byteValue.Value);
@@ -693,7 +693,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // 8. Int16
             Int16Value int16Value = new Int16Value();
-            Int16 int16 = 16;
+            short int16 = 16;
             int16Value = int16;
             Assert.True(int16 == int16Value);
             int16 = 17;
@@ -703,7 +703,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // 9. Int32
             Int32Value int32Value = new Int32Value();
-            Int32 int32 = 32;
+            int int32 = 32;
             int32Value = int32;
             Assert.True(int32 == int32Value);
             int32 = 33;
@@ -713,7 +713,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // 10. Int64
             Int64Value int64Value = new Int64Value();
-            Int64 int64 = 64;
+            long int64 = 64;
             int64Value = int64;
             Assert.True(int64 == int64Value);
             int64 = 17;
@@ -741,27 +741,27 @@ namespace DocumentFormat.OpenXml.Tests
 
             // 13. SByteValue
             SByteValue sbyteValue = new SByteValue();
-            SByte sbt = SByte.MaxValue;
+            sbyte sbt = sbyte.MaxValue;
             sbyteValue = sbt;
             Assert.True(sbt == sbyteValue);
-            sbt = SByte.MinValue;
+            sbt = sbyte.MinValue;
             sbyteValue = SByteValue.FromSByte(sbt);
             Assert.Equal(sbt, sbyteValue.Value);
             Assert.Equal(sbt, SByteValue.ToSByte(sbt));
 
             // 14. SingleValue
             SingleValue singleValue = new SingleValue();
-            Single single = Single.MaxValue;
+            float single = float.MaxValue;
             singleValue = single;
             Assert.True(single == singleValue);
-            single = Single.NaN;
+            single = float.NaN;
             singleValue = SingleValue.FromSingle(single);
             Assert.Equal(single, singleValue.Value);
             Assert.Equal(single, SingleValue.ToSingle(singleValue));
 
             // 15. StringValue
             StringValue stringValue = new StringValue();
-            String str = "Ethan";
+            string str = "Ethan";
             stringValue = str;
             Assert.True(str == stringValue);
             str = "Yin";
@@ -788,30 +788,30 @@ namespace DocumentFormat.OpenXml.Tests
 
             // 18. UInt16Value
             UInt16Value uint16Value = new UInt16Value();
-            UInt16 uint16 = UInt16.MaxValue;
+            ushort uint16 = ushort.MaxValue;
             uint16Value = uint16;
             Assert.True(uint16 == uint16Value);
-            uint16 = UInt16.MinValue;
+            uint16 = ushort.MinValue;
             uint16Value = UInt16Value.FromUInt16(uint16);
             Assert.Equal(uint16, uint16Value.Value);
             Assert.Equal(uint16, UInt16Value.ToUInt16(uint16Value));
 
             // 19. UInt32Value
             UInt32Value uint32Value = new UInt32Value();
-            UInt32 uint32 = UInt32.MaxValue;
+            uint uint32 = uint.MaxValue;
             uint32Value = uint32;
             Assert.True(uint32 == uint32Value);
-            uint32 = UInt32.MinValue;
+            uint32 = uint.MinValue;
             uint32Value = UInt32Value.FromUInt32(uint32);
             Assert.Equal(uint32, uint32Value.Value);
             Assert.Equal(uint32, UInt32Value.ToUInt32(uint32Value));
 
             // 20. UInt64Value
             UInt64Value uint64Value = new UInt64Value();
-            UInt64 uint64 = UInt64.MaxValue;
+            ulong uint64 = ulong.MaxValue;
             uint64Value = uint64;
             Assert.True(uint64 == uint64Value);
-            uint64 = UInt64.MinValue;
+            uint64 = ulong.MinValue;
             uint64Value = UInt64Value.FromUInt64(uint64);
             Assert.Equal(uint64, uint64Value.Value);
             Assert.Equal(uint64, UInt64Value.ToUInt64(uint64Value));

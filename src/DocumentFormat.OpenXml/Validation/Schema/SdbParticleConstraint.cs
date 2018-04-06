@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Gets or sets the element type ID (class ID).
         /// </summary>
-        public SdbIndex ElementTypeId { get; set; }
+        public ushort ElementTypeId { get; set; }
 
         /// <summary>
         /// Gets or sets the xsd:minOccurs value of this particle.
@@ -47,18 +47,18 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Gets or sets count of children particles.
         /// </summary>
-        public SdbIndex ChildrenCount { get; set; }
+        public ushort ChildrenCount { get; set; }
 
         /// <summary>
         /// Gets or sets the index of the first child particle index in the SdbParticleChildrenIndex data array.
         /// </summary>
-        public SdbIndex ChildrenStartIndex { get; set; }
+        public ushort ChildrenStartIndex { get; set; }
 
         /// <summary>
         /// Gets the namespace ID defined in "xsd:any" when the particle type is ParticleType.Any or ParticleType.AnyWithUri
         /// </summary>
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        public SdbIndex XsdAnyNamespaceId
+        public ushort XsdAnyNamespaceId
         {
             get
             {
@@ -78,11 +78,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             get
             {
                 return sizeof(ParticleType) +
-                        sizeof(SdbIndex) +
+                        sizeof(ushort) +
                         sizeof(ushort) +
                         sizeof(int) +
-                        sizeof(SdbIndex) +
-                        sizeof(SdbIndex);
+                        sizeof(ushort) +
+                        sizeof(ushort);
             }
         }
 

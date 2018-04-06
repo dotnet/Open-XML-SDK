@@ -109,11 +109,11 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new EnumValue<HeaderFooterValues>(validValue);
             objB = new EnumValue<HeaderFooterValues>(validValue);
-            Log.VerifyFalse(Object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
             objA = new EnumValue<HeaderFooterValues>(validValue);
             objB = objA;
-            Log.VerifyTrue(Object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
-            Log.VerifyTrue(Object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
+            Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
+            Log.VerifyTrue(object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
 
             Log.Comment("ErrorHandling: Constructing with invalid value {0} and testing...", invalidValue3i);
             try
@@ -248,10 +248,10 @@ namespace DocumentFormat.OpenXml.Tests
         public void ListValueTest()
         {
             //String, Int32, UInt32, Boolean used as T in OpenXml SDK
-            String defaultValue = default(String);
-            String validString = "Normal String Content";
+            string defaultValue = default(string);
+            string validString = "Normal String Content";
             IEnumerable<StringValue> validValue = validString.Split().Select(s => new StringValue(s));
-            String specialString = validString + " " + string.Empty + " " + validString;
+            string specialString = validString + " " + string.Empty + " " + validString;
             List<StringValue> specialValue = new List<StringValue>(validValue.Count() * 2 + 1);
             specialValue.AddRange(validValue);
             specialValue.Add(new StringValue(string.Empty));
@@ -285,11 +285,11 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new ListValue<StringValue>(validValue);
             objB = new ListValue<StringValue>(validValue);
-            Log.VerifyFalse(Object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
             objA = new ListValue<StringValue>(validValue);
             objB = objA;
-            Log.VerifyTrue(Object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
-            Log.VerifyTrue(Object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
+            Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
+            Log.VerifyTrue(object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
 
             Log.Comment("ErrorHandling: Constructing with another instance of null...");
             objA = null;
@@ -375,11 +375,11 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void StringValueTest()
         {
-            String defaultValue = default(String);
-            String validValue = "Normal String Content";
-            String specialString = @"</pPr>";
-            String specialString2 = @"</w:pPr>";
-            String specialString3 = string.Empty;
+            string defaultValue = default(string);
+            string validValue = "Normal String Content";
+            string specialString = @"</pPr>";
+            string specialString2 = @"</w:pPr>";
+            string specialString3 = string.Empty;
 
             Log.Comment("Testing default value...");
             string expectedText = defaultValue;
@@ -426,15 +426,15 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new StringValue(validValue);
             objB = new StringValue(validValue);
-            Log.VerifyFalse(Object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
             objA = new StringValue(validValue);
             objB = objA;
-            Log.VerifyTrue(Object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
-            Log.VerifyTrue(Object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
+            Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
+            Log.VerifyTrue(object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
 
             Log.Comment("ErrorHandling: Implicit string operator on null reference...");
             objA = null;
-            String val = string.Empty;
+            string val = string.Empty;
             val = objA;
             if (val == null)
                 Log.Pass("implicit string operator on null reference returned null, as expected.");
@@ -497,11 +497,11 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Base64BinaryValueTest()
         {
-            String defaultValue = default(String);
-            String validValue = "Normal String Content";
-            String specialString = @"</pPr>";
-            String specialString2 = @"</w:pPr>";
-            String specialString3 = string.Empty;
+            string defaultValue = default(string);
+            string validValue = "Normal String Content";
+            string specialString = @"</pPr>";
+            string specialString2 = @"</w:pPr>";
+            string specialString3 = string.Empty;
 
             Log.Comment("Testing default value...");
             string expectedText = defaultValue;
@@ -552,11 +552,11 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new Base64BinaryValue(validValue);
             objB = new Base64BinaryValue(validValue);
-            Log.VerifyFalse(Object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
             objA = new Base64BinaryValue(validValue);
             objB = objA;
-            Log.VerifyTrue(Object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
-            Log.VerifyTrue(Object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
+            Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
+            Log.VerifyTrue(object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
 
             Log.Comment("ErrorHandling: Constructing with another instance of null...");
             objA = null;
@@ -619,11 +619,11 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void HexBinaryValueTest()
         {
-            String defaultValue = default(String);
-            String validValue = "Normal String Content";
-            String specialString = @"</pPr>";
-            String specialString2 = @"</w:pPr>";
-            String specialString3 = string.Empty;
+            string defaultValue = default(string);
+            string validValue = "Normal String Content";
+            string specialString = @"</pPr>";
+            string specialString2 = @"</w:pPr>";
+            string specialString3 = string.Empty;
 
             Log.Comment("Testing default value...");
             string expectedText = defaultValue;
@@ -674,11 +674,11 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new HexBinaryValue(validValue);
             objB = new HexBinaryValue(validValue);
-            Log.VerifyFalse(Object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
             objA = new HexBinaryValue(validValue);
             objB = objA;
-            Log.VerifyTrue(Object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
-            Log.VerifyTrue(Object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
+            Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
+            Log.VerifyTrue(object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
 
             Log.Comment("ErrorHandling: Constructing with another instance of null...");
             objA = null;
@@ -787,11 +787,11 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new OnOffValue(validValue);
             objB = new OnOffValue(validValue);
-            Log.VerifyFalse(Object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
             objA = new OnOffValue(validValue);
             objB = objA;
-            Log.VerifyTrue(Object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
-            Log.VerifyTrue(Object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
+            Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
+            Log.VerifyTrue(object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
 
             Log.Comment("Setting InnerText as special value and testing...");
             objA = new OnOffValue();
@@ -896,11 +896,11 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new TrueFalseBlankValue(validValue);
             objB = new TrueFalseBlankValue(validValue);
-            Log.VerifyFalse(Object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
             objA = new TrueFalseBlankValue(validValue);
             objB = objA;
-            Log.VerifyTrue(Object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
-            Log.VerifyTrue(Object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
+            Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
+            Log.VerifyTrue(object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
 
             Log.Comment("Setting InnerText as special value and testing...");
             objA = new TrueFalseBlankValue();
