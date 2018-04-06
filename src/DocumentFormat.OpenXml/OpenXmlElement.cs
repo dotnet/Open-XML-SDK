@@ -2115,7 +2115,6 @@ namespace DocumentFormat.OpenXml
         {
             Debug.Assert(!string.IsNullOrEmpty(name));
 
-            //
             OpenXmlSimpleType simpleType = null;
             byte nsId;
 
@@ -2171,7 +2170,6 @@ namespace DocumentFormat.OpenXml
             // Debug.Assert(namespaceUri != null);
             Debug.Assert(!string.IsNullOrEmpty(name));
 
-            //
             OpenXmlElement newElement = null;
             byte nsId;
 

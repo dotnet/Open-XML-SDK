@@ -861,7 +861,6 @@ namespace DocumentFormat.OpenXml.Packaging
                     mainPartStream.CopyTo(memoryStream);
                 }
 
-                //
                 tempPart = AddExtendedPart(@"http://temp", MainPartContentType, @".xml");
 
                 foreach (KeyValuePair<string, OpenXmlPart> idPartPair in mainPart.ChildrenRelationshipParts)
@@ -1095,7 +1094,6 @@ namespace DocumentFormat.OpenXml.Packaging
                     }
                 }
 
-                //
                 foreach (var dataPart in dataPartSet)
                 {
                     // delete the part from the package
