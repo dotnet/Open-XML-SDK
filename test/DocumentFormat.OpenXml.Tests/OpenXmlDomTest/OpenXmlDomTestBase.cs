@@ -373,7 +373,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Append Collection
 
-        internal enum AppendCollectionType { IEnumerable, Array, };
+        internal enum AppendCollectionType { IEnumerable, Array, }
 
         internal void AppendCollectionOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHostElement,
             IFile sourceFile, GetTargetPart getSrcPart, GetTargetElement getImportee, AppendCollectionType operationType)
@@ -460,7 +460,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Pend Operations
 
-        internal enum PendType { Append, Prepend, };
+        internal enum PendType { Append, Prepend, }
 
         private protected void PendTestOnFile(IFile testFile, GetTargetPart getHostPart, GetTargetElement getHostElement,
             IFile sourceFile, GetTargetPart getSourcePart, GetTargetElement getSourceHost, PendType pendType)
@@ -573,7 +573,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Insert Before/After
 
-        internal enum InsertType { Before, After, };
+        internal enum InsertType { Before, After, }
 
         private protected void InsertTestOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHostElement,
                 IFile sourceFile, GetTargetPart getSourcePart, GetTargetElement getSourceHost, GetTargetElement getRef, InsertType insertType)
@@ -701,7 +701,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region InsertAt
 
-        internal enum InsertAtPosition { AsFirst, NextToFirst, AnyValid, NextToLast, AsLast, };
+        internal enum InsertAtPosition { AsFirst, NextToFirst, AnyValid, NextToLast, AsLast, }
 
         private protected void InsertAtOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost,
                  IFile sourceFile, GetTargetPart getSrcPart, GetTargetElement getImportee, InsertAtPosition posType)
@@ -797,7 +797,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Insert Before/After Self
 
-        internal enum InsertRel { BeforeSelf, AfterSelf, };
+        internal enum InsertRel { BeforeSelf, AfterSelf, }
 
         private protected void InsertRelativeOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost,
             IFile sourceFile, GetTargetPart getSrcPart, GetTargetElement getImportee, InsertRel posType)

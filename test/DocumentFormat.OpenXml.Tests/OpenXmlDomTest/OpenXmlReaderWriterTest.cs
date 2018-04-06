@@ -77,7 +77,9 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 standalone = y.GetAttribute("standalone");
                 if (!x.ReadMiscNodes)
-                    while (Read(y) && IsMisc(y)) ;
+                    while (Read(y) && IsMisc(y))
+                    {
+                    }
                 else
                     Read(y);
             }
@@ -618,7 +620,9 @@ namespace DocumentFormat.OpenXml.Tests
                         if (!(Xreader.IsEmptyElement && reader.IsEndElement && skip))
                         {
                             int oldDepth = Xreader.Depth;
-                            while (Read(Xreader) && !(Xreader.NodeType == XmlNodeType.EndElement && Xreader.Depth <= oldDepth)) ;
+                            while (Read(Xreader) && !(Xreader.NodeType == XmlNodeType.EndElement && Xreader.Depth <= oldDepth))
+                            {
+                            }
                         }
                     }
                 }
@@ -627,7 +631,9 @@ namespace DocumentFormat.OpenXml.Tests
                     if (!(Xreader.IsEmptyElement && reader.IsEndElement && skip))
                     {
                         int oldDepth = Xreader.Depth;
-                        while (Read(Xreader) && !(Xreader.NodeType == XmlNodeType.EndElement && Xreader.Depth <= oldDepth)) ;
+                        while (Read(Xreader) && !(Xreader.NodeType == XmlNodeType.EndElement && Xreader.Depth <= oldDepth))
+                        {
+                        }
                     }
                 }
             }
@@ -1020,7 +1026,9 @@ namespace DocumentFormat.OpenXml.Tests
                     }
                     else
                     {
-                        while (Read(Treader) && IsMisc(Treader)) ;
+                        while (Read(Treader) && IsMisc(Treader))
+                        {
+                        }
                     }
 
                     return true;
@@ -1029,7 +1037,9 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     if (!(Treader.IsEmptyElement && Oreader.IsEndElement && skip))
                     {
-                        while (Read(Treader) && Treader.NodeType != XmlNodeType.EndElement) ;
+                        while (Read(Treader) && Treader.NodeType != XmlNodeType.EndElement)
+                        {
+                        }
                     }
 
                     return false;
@@ -1060,7 +1070,9 @@ namespace DocumentFormat.OpenXml.Tests
             }
             else if (Treader.Depth == 0)
             {
-                while (!Treader.EOF && Read(Treader)) ;
+                while (!Treader.EOF && Read(Treader))
+                {
+                }
 
                 foundNextSibling = false;
             }
@@ -1078,7 +1090,9 @@ namespace DocumentFormat.OpenXml.Tests
                     Read(Treader);
                 else
                 {
-                    while (Read(Treader) && (IsMisc(Treader) || Treader.Depth > oldDepth)) ;
+                    while (Read(Treader) && (IsMisc(Treader) || Treader.Depth > oldDepth))
+                    {
+                    }
                 }
 
                 if (Treader.Depth == oldDepth && Treader.NodeType != XmlNodeType.EndElement)

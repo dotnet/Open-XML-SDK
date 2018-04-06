@@ -418,7 +418,7 @@ namespace DocumentFormat.OpenXml
 
             var newMiscNode = new OpenXmlMiscNode(XmlNodeType.CDATA);
             newMiscNode.Value = value;
-            newMiscNode.RawOuterXml = String.Format(CultureInfo.InvariantCulture, "<![CDATA[{0}]]>", value); ;
+            newMiscNode.RawOuterXml = String.Format(CultureInfo.InvariantCulture, "<![CDATA[{0}]]>", value);
             return newMiscNode;
         }
 

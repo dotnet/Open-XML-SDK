@@ -179,7 +179,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        private enum RootElementConstructors { DefaultConstructor, IEnumerable, Params, OuterXml, };
+        private enum RootElementConstructors { DefaultConstructor, IEnumerable, Params, OuterXml, }
 
         private Dr.Theme BuildRootElementFromPart(ThemePart part, RootElementConstructors buildWay)
         {

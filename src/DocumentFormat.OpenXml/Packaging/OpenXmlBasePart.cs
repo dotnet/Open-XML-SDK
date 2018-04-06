@@ -429,7 +429,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 using (var xmlReader = XmlConvertingReaderFactory.Create(partStream, xmlReaderSettings))
                 {
                     // Validate XML data
-                    while (xmlReader.Read()) ;
+                    while (xmlReader.Read())
+                    {
+                    }
                 }
             }
         }
