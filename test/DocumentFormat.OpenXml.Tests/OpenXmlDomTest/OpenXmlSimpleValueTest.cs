@@ -153,7 +153,7 @@ namespace DocumentFormat.OpenXml.Tests
             byte defaultValue = default(byte);
             byte maxValue = byte.MaxValue;
             byte minValue = byte.MinValue;
-            byte validValue = (byte)50;
+            byte validValue = 50;
             string invalidValue = "Invalid String!";
 
             Log.Comment("Testing default value...");
@@ -220,7 +220,7 @@ namespace DocumentFormat.OpenXml.Tests
             sbyte defaultValue = default(sbyte);
             sbyte maxValue = sbyte.MaxValue;
             sbyte minValue = sbyte.MinValue;
-            sbyte validValue = (sbyte)50;
+            sbyte validValue = 50;
             string invalidValue = "Invalid String!";
 
             Log.Comment("Testing default value...");
@@ -287,7 +287,7 @@ namespace DocumentFormat.OpenXml.Tests
             ushort defaultValue = default(ushort);
             ushort maxValue = ushort.MaxValue;
             ushort minValue = ushort.MinValue;
-            ushort validValue = (ushort)123;
+            ushort validValue = 123;
             string invalidValue = "Invalid String!";
 
             Log.Comment("Testing default value...");
@@ -354,7 +354,7 @@ namespace DocumentFormat.OpenXml.Tests
             uint defaultValue = default(uint);
             uint maxValue = uint.MaxValue;
             uint minValue = uint.MinValue;
-            uint validValue = (uint)123456;
+            uint validValue = 123456;
             string invalidValue = "Invalid String!";
 
             Log.Comment("Testing default value...");
@@ -421,7 +421,7 @@ namespace DocumentFormat.OpenXml.Tests
             int defaultValue = default(int);
             int maxValue = int.MaxValue;
             int minValue = int.MinValue;
-            int validValue = (int)123456;
+            int validValue = 123456;
             string invalidValue = "Invalid String!";
 
             Log.Comment("Testing default value...");
@@ -488,7 +488,7 @@ namespace DocumentFormat.OpenXml.Tests
             ulong defaultValue = default(ulong);
             ulong maxValue = ulong.MaxValue;
             ulong minValue = ulong.MinValue;
-            ulong validValue = (ulong)123456;
+            ulong validValue = 123456;
             string invalidValue = "Invalid String!";
 
             Log.Comment("Testing default value...");
@@ -700,7 +700,7 @@ namespace DocumentFormat.OpenXml.Tests
             decimal specialValue3 = decimal.Zero;
 
             // Decimal validValue = (decimal)(new Random ().Next(0, 10) * (maxValue / 100 - minValue / 100) + minValue / 10);
-            decimal validValue = (decimal)123.456;
+            decimal validValue = 123.456M;
             string invalidValue = "Invalid String!";
 
             Log.Comment("Testing default value...");
@@ -776,7 +776,7 @@ namespace DocumentFormat.OpenXml.Tests
             float defaultValue = default(float);
             float maxValue = float.MaxValue;
             float minValue = float.MinValue;
-            float validValue = (float)123.456;
+            float validValue = 123.456F;
             float specialEpsilon = float.Epsilon;
             float specialPositiveInfinity = float.PositiveInfinity;
             float specialNegativeInfinity = float.NegativeInfinity;
@@ -1044,7 +1044,7 @@ namespace DocumentFormat.OpenXml.Tests
             DateTime minValue = DateTime.MinValue;
 
             //var ratio = (decimal)new Random ().Next(0, 100) / 100;
-            var ratio = (decimal)0.5;
+            var ratio = 0.5M;
             DateTime validValue = new DateTime((long)(ratio * maxValue.Ticks + (1 - ratio) * minValue.Ticks));
             string invalidValue = DateTime.Now.ToString();
 

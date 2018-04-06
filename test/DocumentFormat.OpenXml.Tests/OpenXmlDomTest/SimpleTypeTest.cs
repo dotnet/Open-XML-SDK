@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml.Tests
             HeaderFooterValues validValue = HeaderFooterValues.Even;
             HeaderFooterValues validValue1 = HeaderFooterValues.Default;
             HeaderFooterValues validValue2 = HeaderFooterValues.First;
-            HeaderFooterValues validValue0i = (HeaderFooterValues)0;
+            HeaderFooterValues validValue0i = 0;
 
             string validString0 = "even";
             string validString1 = "default";
