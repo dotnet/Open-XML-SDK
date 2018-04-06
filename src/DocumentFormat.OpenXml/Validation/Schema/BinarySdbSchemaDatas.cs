@@ -185,6 +185,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             var schemaType = SdbSchemaTypes[schemaTypeIndex];
             SdbParticleConstraint particle;
+
             if (schemaType.IsCompositeType)
             {
                 particle = SdbParticles[schemaType.ParticleIndex];
@@ -194,13 +195,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                             particle.ParticleType != ParticleType.AnyWithUri);
 
                 CheckParticle(schemaType.ParticleIndex);
-            }
-            else if (schemaType.IsSimpleContent)
-            {
-            }
-            else
-            {
-                // only attributes
             }
 
             // check attributes
