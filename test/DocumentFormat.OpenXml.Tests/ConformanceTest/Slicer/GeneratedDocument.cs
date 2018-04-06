@@ -753,7 +753,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
 
             AlternateContentChoice alternateContentChoice2 = new AlternateContentChoice() { Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame1 = new Xdr.GraphicFrame() { Macro = "" };
+            Xdr.GraphicFrame graphicFrame1 = new Xdr.GraphicFrame() { Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties1 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties1 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Slicer_1" };
@@ -788,10 +788,10 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
 
             AlternateContentFallback alternateContentFallback1 = new AlternateContentFallback();
 
-            Xdr.Shape shape1 = new Xdr.Shape() { Macro = "", TextLink = "" };
+            Xdr.Shape shape1 = new Xdr.Shape() { Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties1 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties2 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties2 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties1 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks1 = new A.ShapeLocks() { NoTextEdit = true };
@@ -907,7 +907,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
 
             AlternateContentChoice alternateContentChoice3 = new AlternateContentChoice() { Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame2 = new Xdr.GraphicFrame() { Macro = "" };
+            Xdr.GraphicFrame graphicFrame2 = new Xdr.GraphicFrame() { Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties2 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties3 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Slicer_2" };
@@ -942,10 +942,10 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
 
             AlternateContentFallback alternateContentFallback2 = new AlternateContentFallback();
 
-            Xdr.Shape shape2 = new Xdr.Shape() { Macro = "", TextLink = "" };
+            Xdr.Shape shape2 = new Xdr.Shape() { Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties2 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties4 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties4 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties2 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks2 = new A.ShapeLocks() { NoTextEdit = true };
@@ -1061,7 +1061,7 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
 
             AlternateContentChoice alternateContentChoice4 = new AlternateContentChoice() { Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame3 = new Xdr.GraphicFrame() { Macro = "" };
+            Xdr.GraphicFrame graphicFrame3 = new Xdr.GraphicFrame() { Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties3 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties5 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Slicer_3" };
@@ -1096,10 +1096,10 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
 
             AlternateContentFallback alternateContentFallback3 = new AlternateContentFallback();
 
-            Xdr.Shape shape3 = new Xdr.Shape() { Macro = "", TextLink = "" };
+            Xdr.Shape shape3 = new Xdr.Shape() { Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties3 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties6 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties6 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties3 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks3 = new A.ShapeLocks() { NoTextEdit = true };
@@ -1415,8 +1415,8 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
 
             A.MajorFont majorFont1 = new A.MajorFont();
             A.LatinFont latinFont1 = new A.LatinFont() { Typeface = "Calibri Light", Panose = "020F0302020204030204" };
-            A.EastAsianFont eastAsianFont1 = new A.EastAsianFont() { Typeface = "" };
-            A.ComplexScriptFont complexScriptFont1 = new A.ComplexScriptFont() { Typeface = "" };
+            A.EastAsianFont eastAsianFont1 = new A.EastAsianFont() { Typeface = string.Empty };
+            A.ComplexScriptFont complexScriptFont1 = new A.ComplexScriptFont() { Typeface = string.Empty };
             A.SupplementalFont supplementalFont1 = new A.SupplementalFont() { Script = "Jpan", Typeface = "ＭＳ Ｐゴシック" };
             A.SupplementalFont supplementalFont2 = new A.SupplementalFont() { Script = "Hang", Typeface = "맑은 고딕" };
             A.SupplementalFont supplementalFont3 = new A.SupplementalFont() { Script = "Hans", Typeface = "宋体" };
@@ -1484,8 +1484,8 @@ namespace DocumentFormat.OpenXml.Tests.SlicerClass
 
             A.MinorFont minorFont1 = new A.MinorFont();
             A.LatinFont latinFont2 = new A.LatinFont() { Typeface = "Calibri", Panose = "020F0502020204030204" };
-            A.EastAsianFont eastAsianFont2 = new A.EastAsianFont() { Typeface = "" };
-            A.ComplexScriptFont complexScriptFont2 = new A.ComplexScriptFont() { Typeface = "" };
+            A.EastAsianFont eastAsianFont2 = new A.EastAsianFont() { Typeface = string.Empty };
+            A.ComplexScriptFont complexScriptFont2 = new A.ComplexScriptFont() { Typeface = string.Empty };
             A.SupplementalFont supplementalFont31 = new A.SupplementalFont() { Script = "Jpan", Typeface = "ＭＳ Ｐゴシック" };
             A.SupplementalFont supplementalFont32 = new A.SupplementalFont() { Script = "Hang", Typeface = "맑은 고딕" };
             A.SupplementalFont supplementalFont33 = new A.SupplementalFont() { Script = "Hans", Typeface = "宋体" };

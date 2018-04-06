@@ -138,7 +138,7 @@ namespace DocumentFormat.OpenXml
         // !! CAUTION !!
         private static string[] _namespaceList =
         {
-            "",
+            string.Empty,
             "http://www.w3.org/XML/1998/namespace",
             "http://schemas.openxmlformats.org/package/2006/metadata/core-properties",
             "http://schemas.openxmlformats.org/officeDocument/2006/extended-properties",
@@ -241,7 +241,7 @@ namespace DocumentFormat.OpenXml
         // namespace prefix list, most of them are come from dev14\tools\inc\xsd\xsdnamespace.h in Office14 depot.
         private static string[] _namespacePrefixList =
         {
-            "",
+            string.Empty,
             "xml",
             "cp",
             "ap",

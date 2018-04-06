@@ -744,7 +744,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker1.Append(rowId2);
             toMarker1.Append(rowOffset2);
 
-            Xdr.GraphicFrame graphicFrame1 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame1 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties1 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties1 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)2U, Name = "Chart 1" };
@@ -818,7 +818,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker2.Append(rowId4);
             toMarker2.Append(rowOffset4);
 
-            Xdr.GraphicFrame graphicFrame2 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame2 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties2 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties2 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)3U, Name = "グラフ 2" };
@@ -898,7 +898,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice2 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame3 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame3 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties3 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties3 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)4U, Name = "DeliveryDate 10" };
@@ -935,10 +935,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback1.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback1.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape1 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape1 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties1 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties4 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties4 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties1 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks1 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -1054,7 +1054,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice3 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame4 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame4 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties4 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties5 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)5U, Name = "DeliveryDate 11" };
@@ -1089,10 +1089,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentFallback alternateContentFallback2 = new AlternateContentFallback();
 
-            Xdr.Shape shape2 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape2 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties2 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties6 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties6 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties2 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks2 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -3300,7 +3300,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker5.Append(rowId10);
             toMarker5.Append(rowOffset10);
 
-            Xdr.GraphicFrame graphicFrame5 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame5 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties5 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties7 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)2U, Name = "グラフ 1" };
@@ -3370,7 +3370,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker6.Append(rowId12);
             toMarker6.Append(rowOffset12);
 
-            Xdr.GraphicFrame graphicFrame6 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame6 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties6 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties8 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)3U, Name = "グラフ 2" };
@@ -3446,7 +3446,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice6 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame7 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame7 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties7 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties9 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)4U, Name = "Date" };
@@ -3483,10 +3483,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback5.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback5.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape3 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape3 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties3 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties10 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties10 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties3 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks3 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -3602,7 +3602,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice7 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame8 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame8 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties8 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties11 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)7U, Name = "Date 1" };
@@ -3637,10 +3637,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentFallback alternateContentFallback6 = new AlternateContentFallback();
 
-            Xdr.Shape shape4 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape4 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties4 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties12 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties12 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties4 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks4 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -4928,7 +4928,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker9.Append(rowId18);
             toMarker9.Append(rowOffset18);
 
-            Xdr.GraphicFrame graphicFrame9 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame9 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties9 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties13 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)2U, Name = "Chart 1" };
@@ -5002,7 +5002,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker10.Append(rowId20);
             toMarker10.Append(rowOffset20);
 
-            Xdr.GraphicFrame graphicFrame10 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame10 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties10 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties14 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)3U, Name = "グラフ 2" };
@@ -5082,7 +5082,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice10 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame11 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame11 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties11 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties15 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)4U, Name = "DeliveryDate 8" };
@@ -5119,10 +5119,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback9.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback9.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape5 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape5 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties5 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties16 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties16 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties5 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks5 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -5238,7 +5238,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice11 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame12 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame12 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties12 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties17 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)5U, Name = "DeliveryDate 9" };
@@ -5275,10 +5275,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback10.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback10.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape6 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape6 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties6 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties18 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties18 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties6 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks6 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -6973,7 +6973,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             PhoneticRun phoneticRun1 = new PhoneticRun(){ BaseTextStartIndex = (UInt32Value)0U, EndingBaseIndex = (UInt32Value)0U };
             Text text8 = new Text();
-            text8.Text = "";
+            text8.Text = string.Empty;
 
             phoneticRun1.Append(text8);
             PhoneticProperties phoneticProperties4 = new PhoneticProperties(){ FontId = (UInt32Value)0U, Type = PhoneticValues.Hiragana };
@@ -6988,7 +6988,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             PhoneticRun phoneticRun2 = new PhoneticRun(){ BaseTextStartIndex = (UInt32Value)0U, EndingBaseIndex = (UInt32Value)0U };
             Text text10 = new Text();
-            text10.Text = "";
+            text10.Text = string.Empty;
 
             phoneticRun2.Append(text10);
             PhoneticProperties phoneticProperties5 = new PhoneticProperties(){ FontId = (UInt32Value)0U, Type = PhoneticValues.Hiragana };
@@ -7003,7 +7003,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             PhoneticRun phoneticRun3 = new PhoneticRun(){ BaseTextStartIndex = (UInt32Value)0U, EndingBaseIndex = (UInt32Value)0U };
             Text text12 = new Text();
-            text12.Text = "";
+            text12.Text = string.Empty;
 
             phoneticRun3.Append(text12);
             PhoneticProperties phoneticProperties6 = new PhoneticProperties(){ FontId = (UInt32Value)0U, Type = PhoneticValues.Hiragana };
@@ -7018,7 +7018,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             PhoneticRun phoneticRun4 = new PhoneticRun(){ BaseTextStartIndex = (UInt32Value)0U, EndingBaseIndex = (UInt32Value)0U };
             Text text14 = new Text();
-            text14.Text = "";
+            text14.Text = string.Empty;
 
             phoneticRun4.Append(text14);
             PhoneticProperties phoneticProperties7 = new PhoneticProperties(){ FontId = (UInt32Value)0U, Type = PhoneticValues.Hiragana };
@@ -7039,7 +7039,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             PhoneticRun phoneticRun5 = new PhoneticRun(){ BaseTextStartIndex = (UInt32Value)0U, EndingBaseIndex = (UInt32Value)0U };
             Text text17 = new Text();
-            text17.Text = "";
+            text17.Text = string.Empty;
 
             phoneticRun5.Append(text17);
             PhoneticProperties phoneticProperties8 = new PhoneticProperties(){ FontId = (UInt32Value)0U, Type = PhoneticValues.Hiragana };
@@ -7174,7 +7174,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             PhoneticRun phoneticRun6 = new PhoneticRun(){ BaseTextStartIndex = (UInt32Value)0U, EndingBaseIndex = (UInt32Value)0U };
             Text text39 = new Text();
-            text39.Text = "";
+            text39.Text = string.Empty;
 
             phoneticRun6.Append(text39);
             PhoneticProperties phoneticProperties9 = new PhoneticProperties(){ FontId = (UInt32Value)0U, Type = PhoneticValues.Hiragana };
@@ -8790,7 +8790,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker13.Append(rowId26);
             toMarker13.Append(rowOffset26);
 
-            Xdr.GraphicFrame graphicFrame13 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame13 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties13 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties19 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)2U, Name = "Chart 1" };
@@ -8864,7 +8864,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker14.Append(rowId28);
             toMarker14.Append(rowOffset28);
 
-            Xdr.GraphicFrame graphicFrame14 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame14 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties14 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties20 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)3U, Name = "グラフ 2" };
@@ -8944,7 +8944,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice14 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame15 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame15 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties15 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties21 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)4U, Name = "DeliveryDate 6" };
@@ -8981,10 +8981,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback13.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback13.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape7 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape7 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties7 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties22 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties22 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties7 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks7 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -9100,7 +9100,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice15 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame16 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame16 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties16 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties23 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)5U, Name = "DeliveryDate 7" };
@@ -9137,10 +9137,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback14.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback14.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape8 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape8 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties8 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties24 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties24 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties8 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks8 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -10929,7 +10929,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker17.Append(rowId34);
             toMarker17.Append(rowOffset34);
 
-            Xdr.GraphicFrame graphicFrame17 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame17 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties17 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties25 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)2U, Name = "Chart 1" };
@@ -11003,7 +11003,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker18.Append(rowId36);
             toMarker18.Append(rowOffset36);
 
-            Xdr.GraphicFrame graphicFrame18 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame18 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties18 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties26 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)3U, Name = "グラフ 2" };
@@ -11083,7 +11083,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice18 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame19 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame19 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties19 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties27 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)4U, Name = "DeliveryDate 16" };
@@ -11120,10 +11120,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback17.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback17.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape9 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape9 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties9 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties28 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties28 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties9 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks9 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -11239,7 +11239,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice19 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame20 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame20 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties20 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties29 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)5U, Name = "DeliveryDate 17" };
@@ -11276,10 +11276,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback18.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback18.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape10 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape10 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties10 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties30 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties30 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties10 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks10 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -13721,7 +13721,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker21.Append(rowId42);
             toMarker21.Append(rowOffset42);
 
-            Xdr.GraphicFrame graphicFrame21 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame21 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties21 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties31 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)2U, Name = "Chart 1" };
@@ -13795,7 +13795,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker22.Append(rowId44);
             toMarker22.Append(rowOffset44);
 
-            Xdr.GraphicFrame graphicFrame22 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame22 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties22 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties32 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)3U, Name = "グラフ 2" };
@@ -13875,7 +13875,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice22 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame23 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame23 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties23 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties33 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)4U, Name = "DeliveryDate 4" };
@@ -13912,10 +13912,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback21.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback21.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape11 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape11 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties11 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties34 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties34 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties11 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks11 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -14031,7 +14031,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice23 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame24 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame24 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties24 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties35 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)5U, Name = "DeliveryDate 5" };
@@ -14068,10 +14068,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback22.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback22.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape12 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape12 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties12 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties36 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties36 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties12 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks12 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -15678,8 +15678,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             A.MajorFont majorFont1 = new A.MajorFont();
             A.LatinFont latinFont16 = new A.LatinFont(){ Typeface = "Cambria" };
-            A.EastAsianFont eastAsianFont16 = new A.EastAsianFont(){ Typeface = "" };
-            A.ComplexScriptFont complexScriptFont16 = new A.ComplexScriptFont(){ Typeface = "" };
+            A.EastAsianFont eastAsianFont16 = new A.EastAsianFont(){ Typeface = string.Empty };
+            A.ComplexScriptFont complexScriptFont16 = new A.ComplexScriptFont(){ Typeface = string.Empty };
             A.SupplementalFont supplementalFont1 = new A.SupplementalFont(){ Script = "Jpan", Typeface = "ＭＳ Ｐゴシック" };
             A.SupplementalFont supplementalFont2 = new A.SupplementalFont(){ Script = "Hang", Typeface = "맑은 고딕" };
             A.SupplementalFont supplementalFont3 = new A.SupplementalFont(){ Script = "Hans", Typeface = "宋体" };
@@ -15747,8 +15747,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             A.MinorFont minorFont1 = new A.MinorFont();
             A.LatinFont latinFont17 = new A.LatinFont(){ Typeface = "Calibri" };
-            A.EastAsianFont eastAsianFont17 = new A.EastAsianFont(){ Typeface = "" };
-            A.ComplexScriptFont complexScriptFont17 = new A.ComplexScriptFont(){ Typeface = "" };
+            A.EastAsianFont eastAsianFont17 = new A.EastAsianFont(){ Typeface = string.Empty };
+            A.ComplexScriptFont complexScriptFont17 = new A.ComplexScriptFont(){ Typeface = string.Empty };
             A.SupplementalFont supplementalFont31 = new A.SupplementalFont(){ Script = "Jpan", Typeface = "ＭＳ Ｐゴシック" };
             A.SupplementalFont supplementalFont32 = new A.SupplementalFont(){ Script = "Hang", Typeface = "맑은 고딕" };
             A.SupplementalFont supplementalFont33 = new A.SupplementalFont(){ Script = "Hans", Typeface = "宋体" };
@@ -16306,7 +16306,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker25.Append(rowId50);
             toMarker25.Append(rowOffset50);
 
-            Xdr.GraphicFrame graphicFrame25 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame25 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties25 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties37 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)2U, Name = "Chart 1" };
@@ -16380,7 +16380,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker26.Append(rowId52);
             toMarker26.Append(rowOffset52);
 
-            Xdr.GraphicFrame graphicFrame26 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame26 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties26 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties38 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)3U, Name = "グラフ 2" };
@@ -16460,7 +16460,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice26 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame27 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame27 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties27 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties39 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)4U, Name = "DeliveryDate 14" };
@@ -16497,10 +16497,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback25.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback25.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape13 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape13 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties13 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties40 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties40 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties13 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks13 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -16616,7 +16616,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice27 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame28 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame28 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties28 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties41 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)5U, Name = "DeliveryDate 15" };
@@ -16653,10 +16653,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback26.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback26.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape14 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape14 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties14 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties42 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties42 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties14 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks14 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -18799,7 +18799,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker29.Append(rowId58);
             toMarker29.Append(rowOffset58);
 
-            Xdr.GraphicFrame graphicFrame29 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame29 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties29 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties43 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)2U, Name = "Chart 1" };
@@ -18869,7 +18869,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker30.Append(rowId60);
             toMarker30.Append(rowOffset60);
 
-            Xdr.GraphicFrame graphicFrame30 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame30 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties30 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties44 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)3U, Name = "グラフ 2" };
@@ -18945,7 +18945,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice30 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame31 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame31 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties31 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties45 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)5U, Name = "DeliveryDate" };
@@ -18982,10 +18982,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback29.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback29.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape15 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape15 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties15 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties46 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties46 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties15 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks15 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -19101,7 +19101,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice31 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame32 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame32 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties32 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties47 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)6U, Name = "DeliveryDate 1" };
@@ -19138,10 +19138,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback30.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback30.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape16 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape16 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties16 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties48 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties48 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties16 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks16 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -19257,7 +19257,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice32 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame33 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame33 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties33 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties49 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)7U, Name = "DeliveryDate 2" };
@@ -19294,10 +19294,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback31.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback31.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape17 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape17 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties17 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties50 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties50 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties17 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks17 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -19413,7 +19413,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice33 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame34 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame34 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties34 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties51 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)8U, Name = "DeliveryDate 3" };
@@ -19450,10 +19450,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback32.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback32.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape18 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape18 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties18 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties52 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties52 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties18 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks18 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -21063,7 +21063,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker35.Append(rowId70);
             toMarker35.Append(rowOffset70);
 
-            Xdr.GraphicFrame graphicFrame35 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame35 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties35 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties53 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)2U, Name = "Chart 1" };
@@ -21137,7 +21137,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker36.Append(rowId72);
             toMarker36.Append(rowOffset72);
 
-            Xdr.GraphicFrame graphicFrame36 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame36 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties36 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties54 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)3U, Name = "グラフ 2" };
@@ -21217,7 +21217,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice35 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame37 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame37 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties37 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties55 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)4U, Name = "DeliveryDate 12" };
@@ -21254,10 +21254,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback34.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback34.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape19 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape19 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties19 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties56 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties56 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties19 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks19 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -21373,7 +21373,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice36 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame38 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame38 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties38 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties57 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)5U, Name = "DeliveryDate 13" };
@@ -21408,10 +21408,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentFallback alternateContentFallback35 = new AlternateContentFallback();
 
-            Xdr.Shape shape20 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape20 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties20 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties58 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties58 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties20 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks20 = new A.ShapeLocks(){ NoTextEdit = true };

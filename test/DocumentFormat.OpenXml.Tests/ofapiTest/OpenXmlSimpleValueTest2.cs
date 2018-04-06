@@ -120,10 +120,10 @@ namespace DocumentFormat.OpenXml.Tests
             // test special case - the enum can be empty string ""
             var truefalseEmpty = new EnumValue<xvml.BooleanEntryWithBlankValues>(xvml.BooleanEntryWithBlankValues.Empty);
             Assert.True(truefalseEmpty.HasValue);
-            Assert.Equal("", truefalseEmpty.InnerText);
+            Assert.Equal(string.Empty, truefalseEmpty.InnerText);
             Assert.Equal(xvml.BooleanEntryWithBlankValues.Empty, truefalseEmpty.Value);
             Assert.Equal(xvml.BooleanEntryWithBlankValues.Empty, (xvml.BooleanEntryWithBlankValues)truefalseEmpty);
-            Assert.Equal("", truefalseEmpty.ToString());
+            Assert.Equal(string.Empty, truefalseEmpty.ToString());
 
             truefalseEmpty = xvml.BooleanEntryWithBlankValues.T;
             Assert.True(truefalseEmpty.HasValue);
@@ -134,10 +134,10 @@ namespace DocumentFormat.OpenXml.Tests
 
             truefalseEmpty.InnerText = string.Empty;
             Assert.True(truefalseEmpty.HasValue);
-            Assert.Equal("", truefalseEmpty.InnerText);
+            Assert.Equal(string.Empty, truefalseEmpty.InnerText);
             Assert.Equal(xvml.BooleanEntryWithBlankValues.Empty, truefalseEmpty.Value);
             Assert.Equal(xvml.BooleanEntryWithBlankValues.Empty, (xvml.BooleanEntryWithBlankValues)truefalseEmpty);
-            Assert.Equal("", truefalseEmpty.ToString());
+            Assert.Equal(string.Empty, truefalseEmpty.ToString());
 
             // Clone constructor for EnumValue
             HeaderFooterValues validValue0 = HeaderFooterValues.Default;
@@ -173,11 +173,11 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Null(target.Value);
             Assert.Null(target.InnerText);
 
-            target.InnerText = "";
+            target.InnerText = string.Empty;
             Assert.True(target.HasValue);
-            Assert.Equal("", target.Value);
-            Assert.Equal("", (string)target);
-            Assert.Equal("", target.ToString());
+            Assert.Equal(string.Empty, target.Value);
+            Assert.Equal(string.Empty, (string)target);
+            Assert.Equal(string.Empty, target.ToString());
 
             target = "test";
             Assert.True(target.HasValue);

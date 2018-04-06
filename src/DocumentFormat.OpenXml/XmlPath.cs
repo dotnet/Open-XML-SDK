@@ -75,7 +75,7 @@ namespace DocumentFormat.OpenXml
 
             Dictionary<string, string> namespaces = new Dictionary<string, string>();
 
-            StringBuilder xpath = new StringBuilder("");
+            StringBuilder xpath = new StringBuilder(string.Empty);
 
             BuildXPath(element, xpath, namespaces);
 
@@ -85,7 +85,7 @@ namespace DocumentFormat.OpenXml
 
             foreach (var ns in namespaces)
             {
-                nsString = new StringBuilder("");
+                nsString = new StringBuilder(string.Empty);
                 nsString.Append("xmlns:");
                 nsString.Append(ns.Key);
                 nsString.Append("=\"");

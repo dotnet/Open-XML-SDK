@@ -128,9 +128,9 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeopleClass
 
             Vt.VTVector vTVector2 = new Vt.VTVector(){ BaseType = Vt.VectorBaseValues.Lpstr, Size = (UInt32Value)2U };
             Vt.VTLPSTR vTLPSTR3 = new Vt.VTLPSTR();
-            vTLPSTR3.Text = "";
+            vTLPSTR3.Text = string.Empty;
             Vt.VTLPSTR vTLPSTR4 = new Vt.VTLPSTR();
-            vTLPSTR4.Text = "";
+            vTLPSTR4.Text = string.Empty;
 
             vTVector2.Append(vTLPSTR3);
             vTVector2.Append(vTLPSTR4);
@@ -352,8 +352,8 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeopleClass
 
             A.MajorFont majorFont1 = new A.MajorFont();
             A.LatinFont latinFont1 = new A.LatinFont(){ Typeface = "Cambria" };
-            A.EastAsianFont eastAsianFont1 = new A.EastAsianFont(){ Typeface = "" };
-            A.ComplexScriptFont complexScriptFont1 = new A.ComplexScriptFont(){ Typeface = "" };
+            A.EastAsianFont eastAsianFont1 = new A.EastAsianFont(){ Typeface = string.Empty };
+            A.ComplexScriptFont complexScriptFont1 = new A.ComplexScriptFont(){ Typeface = string.Empty };
             A.SupplementalFont supplementalFont1 = new A.SupplementalFont(){ Script = "Jpan", Typeface = "ＭＳ ゴシック" };
             A.SupplementalFont supplementalFont2 = new A.SupplementalFont(){ Script = "Hang", Typeface = "맑은 고딕" };
             A.SupplementalFont supplementalFont3 = new A.SupplementalFont(){ Script = "Hans", Typeface = "宋体" };
@@ -421,8 +421,8 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeopleClass
 
             A.MinorFont minorFont1 = new A.MinorFont();
             A.LatinFont latinFont2 = new A.LatinFont(){ Typeface = "Calibri" };
-            A.EastAsianFont eastAsianFont2 = new A.EastAsianFont(){ Typeface = "" };
-            A.ComplexScriptFont complexScriptFont2 = new A.ComplexScriptFont(){ Typeface = "" };
+            A.EastAsianFont eastAsianFont2 = new A.EastAsianFont(){ Typeface = string.Empty };
+            A.ComplexScriptFont complexScriptFont2 = new A.ComplexScriptFont(){ Typeface = string.Empty };
             A.SupplementalFont supplementalFont31 = new A.SupplementalFont(){ Script = "Jpan", Typeface = "ＭＳ 明朝" };
             A.SupplementalFont supplementalFont32 = new A.SupplementalFont(){ Script = "Hang", Typeface = "맑은 고딕" };
             A.SupplementalFont supplementalFont33 = new A.SupplementalFont(){ Script = "Hans", Typeface = "宋体" };

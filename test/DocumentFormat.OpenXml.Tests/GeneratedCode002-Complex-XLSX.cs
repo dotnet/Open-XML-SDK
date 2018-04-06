@@ -157,7 +157,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             titlesOfParts1.Append(vTVector2);
             Ap.Company company1 = new Ap.Company();
-            company1.Text = "";
+            company1.Text = string.Empty;
             Ap.LinksUpToDate linksUpToDate1 = new Ap.LinksUpToDate();
             linksUpToDate1.Text = "false";
             Ap.SharedDocument sharedDocument1 = new Ap.SharedDocument();
@@ -300,8 +300,8 @@ namespace DocumentFormat.OpenXml.Tests
 
             A.MajorFont majorFont1 = new A.MajorFont();
             A.LatinFont latinFont1 = new A.LatinFont() { Typeface = "Cambria", Panose = "020F0302020204030204" };
-            A.EastAsianFont eastAsianFont1 = new A.EastAsianFont() { Typeface = "" };
-            A.ComplexScriptFont complexScriptFont1 = new A.ComplexScriptFont() { Typeface = "" };
+            A.EastAsianFont eastAsianFont1 = new A.EastAsianFont() { Typeface = string.Empty };
+            A.ComplexScriptFont complexScriptFont1 = new A.ComplexScriptFont() { Typeface = string.Empty };
             A.SupplementalFont supplementalFont1 = new A.SupplementalFont() { Script = "Jpan", Typeface = "ＭＳ Ｐゴシック" };
             A.SupplementalFont supplementalFont2 = new A.SupplementalFont() { Script = "Hang", Typeface = "맑은 고딕" };
             A.SupplementalFont supplementalFont3 = new A.SupplementalFont() { Script = "Hans", Typeface = "宋体" };
@@ -369,8 +369,8 @@ namespace DocumentFormat.OpenXml.Tests
 
             A.MinorFont minorFont1 = new A.MinorFont();
             A.LatinFont latinFont2 = new A.LatinFont() { Typeface = "Calibri", Panose = "020F0502020204030204" };
-            A.EastAsianFont eastAsianFont2 = new A.EastAsianFont() { Typeface = "" };
-            A.ComplexScriptFont complexScriptFont2 = new A.ComplexScriptFont() { Typeface = "" };
+            A.EastAsianFont eastAsianFont2 = new A.EastAsianFont() { Typeface = string.Empty };
+            A.ComplexScriptFont complexScriptFont2 = new A.ComplexScriptFont() { Typeface = string.Empty };
             A.SupplementalFont supplementalFont31 = new A.SupplementalFont() { Script = "Jpan", Typeface = "ＭＳ Ｐゴシック" };
             A.SupplementalFont supplementalFont32 = new A.SupplementalFont() { Script = "Hang", Typeface = "맑은 고딕" };
             A.SupplementalFont supplementalFont33 = new A.SupplementalFont() { Script = "Hans", Typeface = "宋体" };
@@ -867,7 +867,7 @@ namespace DocumentFormat.OpenXml.Tests
             toMarker1.Append(rowId2);
             toMarker1.Append(rowOffset2);
 
-            Xdr.GraphicFrame graphicFrame1 = new Xdr.GraphicFrame() { Macro = "" };
+            Xdr.GraphicFrame graphicFrame1 = new Xdr.GraphicFrame() { Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties1 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties1 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Diagram 1" };
@@ -937,7 +937,7 @@ namespace DocumentFormat.OpenXml.Tests
             toMarker2.Append(rowId4);
             toMarker2.Append(rowOffset4);
 
-            Xdr.Shape shape1 = new Xdr.Shape() { Macro = "", TextLink = "" };
+            Xdr.Shape shape1 = new Xdr.Shape() { Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties1 = new Xdr.NonVisualShapeProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties2 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Rectangle 2" };
@@ -1052,7 +1052,7 @@ namespace DocumentFormat.OpenXml.Tests
             toMarker3.Append(rowId6);
             toMarker3.Append(rowOffset6);
 
-            Xdr.Shape shape2 = new Xdr.Shape() { Macro = "", TextLink = "" };
+            Xdr.Shape shape2 = new Xdr.Shape() { Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties2 = new Xdr.NonVisualShapeProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties3 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "TextBox 3" };
@@ -1307,8 +1307,8 @@ namespace DocumentFormat.OpenXml.Tests
             Dgm.StyleDefinition styleDefinition1 = new Dgm.StyleDefinition() { UniqueId = "urn:microsoft.com/office/officeart/2005/8/quickstyle/simple1" };
             styleDefinition1.AddNamespaceDeclaration("dgm", "http://schemas.openxmlformats.org/drawingml/2006/diagram");
             styleDefinition1.AddNamespaceDeclaration("a", "http://schemas.openxmlformats.org/drawingml/2006/main");
-            Dgm.StyleDefinitionTitle styleDefinitionTitle1 = new Dgm.StyleDefinitionTitle() { Val = "" };
-            Dgm.StyleLabelDescription styleLabelDescription1 = new Dgm.StyleLabelDescription() { Val = "" };
+            Dgm.StyleDefinitionTitle styleDefinitionTitle1 = new Dgm.StyleDefinitionTitle() { Val = string.Empty };
+            Dgm.StyleLabelDescription styleLabelDescription1 = new Dgm.StyleLabelDescription() { Val = string.Empty };
 
             Dgm.StyleDisplayCategories styleDisplayCategories1 = new Dgm.StyleDisplayCategories();
             Dgm.StyleDisplayCategory styleDisplayCategory1 = new Dgm.StyleDisplayCategory() { Type = "simple", Priority = (UInt32Value)10100U };
@@ -3385,8 +3385,8 @@ namespace DocumentFormat.OpenXml.Tests
             Dgm.LayoutDefinition layoutDefinition1 = new Dgm.LayoutDefinition() { UniqueId = "urn:microsoft.com/office/officeart/2005/8/layout/default" };
             layoutDefinition1.AddNamespaceDeclaration("dgm", "http://schemas.openxmlformats.org/drawingml/2006/diagram");
             layoutDefinition1.AddNamespaceDeclaration("a", "http://schemas.openxmlformats.org/drawingml/2006/main");
-            Dgm.Title title1 = new Dgm.Title() { Val = "" };
-            Dgm.Description description1 = new Dgm.Description() { Val = "" };
+            Dgm.Title title1 = new Dgm.Title() { Val = string.Empty };
+            Dgm.Description description1 = new Dgm.Description() { Val = string.Empty };
 
             Dgm.CategoryList categoryList1 = new Dgm.CategoryList();
             Dgm.Category category1 = new Dgm.Category() { Type = "list", Priority = (UInt32Value)400U };
@@ -3572,7 +3572,7 @@ namespace DocumentFormat.OpenXml.Tests
             choose1.Append(diagramChooseIf1);
             choose1.Append(diagramChooseElse1);
 
-            Dgm.Shape shape3 = new Dgm.Shape() { Blip = "" };
+            Dgm.Shape shape3 = new Dgm.Shape() { Blip = string.Empty };
             shape3.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             Dgm.AdjustList adjustList1 = new Dgm.AdjustList();
 
@@ -3603,7 +3603,7 @@ namespace DocumentFormat.OpenXml.Tests
             variableList2.Append(bulletEnabled1);
             Dgm.Algorithm algorithm3 = new Dgm.Algorithm() { Type = Dgm.AlgorithmValues.Text };
 
-            Dgm.Shape shape4 = new Dgm.Shape() { Type = "rect", Blip = "" };
+            Dgm.Shape shape4 = new Dgm.Shape() { Type = "rect", Blip = string.Empty };
             shape4.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             Dgm.AdjustList adjustList2 = new Dgm.AdjustList();
 
@@ -3638,7 +3638,7 @@ namespace DocumentFormat.OpenXml.Tests
             Dgm.LayoutNode layoutNode3 = new Dgm.LayoutNode() { Name = "sibTrans" };
             Dgm.Algorithm algorithm4 = new Dgm.Algorithm() { Type = Dgm.AlgorithmValues.Space };
 
-            Dgm.Shape shape5 = new Dgm.Shape() { Blip = "" };
+            Dgm.Shape shape5 = new Dgm.Shape() { Blip = string.Empty };
             shape5.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             Dgm.AdjustList adjustList3 = new Dgm.AdjustList();
 
@@ -4289,7 +4289,7 @@ namespace DocumentFormat.OpenXml.Tests
             Dsp.ShapeTree shapeTree1 = new Dsp.ShapeTree();
 
             Dsp.GroupShapeNonVisualProperties groupShapeNonVisualProperties1 = new Dsp.GroupShapeNonVisualProperties();
-            Dsp.NonVisualDrawingProperties nonVisualDrawingProperties5 = new Dsp.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = "" };
+            Dsp.NonVisualDrawingProperties nonVisualDrawingProperties5 = new Dsp.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = string.Empty };
             Dsp.NonVisualGroupDrawingShapeProperties nonVisualGroupDrawingShapeProperties1 = new Dsp.NonVisualGroupDrawingShapeProperties();
 
             groupShapeNonVisualProperties1.Append(nonVisualDrawingProperties5);
@@ -4299,7 +4299,7 @@ namespace DocumentFormat.OpenXml.Tests
             Dsp.Shape shape6 = new Dsp.Shape() { ModelId = "{B9B6AF63-CBEE-495A-9B14-DABB8AC30D78}" };
 
             Dsp.ShapeNonVisualProperties shapeNonVisualProperties1 = new Dsp.ShapeNonVisualProperties();
-            Dsp.NonVisualDrawingProperties nonVisualDrawingProperties6 = new Dsp.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = "" };
+            Dsp.NonVisualDrawingProperties nonVisualDrawingProperties6 = new Dsp.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = string.Empty };
             Dsp.NonVisualDrawingShapeProperties nonVisualDrawingShapeProperties1 = new Dsp.NonVisualDrawingShapeProperties();
 
             shapeNonVisualProperties1.Append(nonVisualDrawingProperties6);
@@ -4451,7 +4451,7 @@ namespace DocumentFormat.OpenXml.Tests
             Dsp.Shape shape7 = new Dsp.Shape() { ModelId = "{74F2756F-474D-46D1-9293-5E8A451D94BC}" };
 
             Dsp.ShapeNonVisualProperties shapeNonVisualProperties2 = new Dsp.ShapeNonVisualProperties();
-            Dsp.NonVisualDrawingProperties nonVisualDrawingProperties7 = new Dsp.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = "" };
+            Dsp.NonVisualDrawingProperties nonVisualDrawingProperties7 = new Dsp.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = string.Empty };
             Dsp.NonVisualDrawingShapeProperties nonVisualDrawingShapeProperties2 = new Dsp.NonVisualDrawingShapeProperties();
 
             shapeNonVisualProperties2.Append(nonVisualDrawingProperties7);
@@ -4603,7 +4603,7 @@ namespace DocumentFormat.OpenXml.Tests
             Dsp.Shape shape8 = new Dsp.Shape() { ModelId = "{0E25295C-9B60-450E-BEE9-54F1BADAE0D5}" };
 
             Dsp.ShapeNonVisualProperties shapeNonVisualProperties3 = new Dsp.ShapeNonVisualProperties();
-            Dsp.NonVisualDrawingProperties nonVisualDrawingProperties8 = new Dsp.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = "" };
+            Dsp.NonVisualDrawingProperties nonVisualDrawingProperties8 = new Dsp.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = string.Empty };
             Dsp.NonVisualDrawingShapeProperties nonVisualDrawingShapeProperties3 = new Dsp.NonVisualDrawingShapeProperties();
 
             shapeNonVisualProperties3.Append(nonVisualDrawingProperties8);
@@ -4755,7 +4755,7 @@ namespace DocumentFormat.OpenXml.Tests
             Dsp.Shape shape9 = new Dsp.Shape() { ModelId = "{216E7A5E-38CD-46ED-97BD-9B59E6A10E61}" };
 
             Dsp.ShapeNonVisualProperties shapeNonVisualProperties4 = new Dsp.ShapeNonVisualProperties();
-            Dsp.NonVisualDrawingProperties nonVisualDrawingProperties9 = new Dsp.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = "" };
+            Dsp.NonVisualDrawingProperties nonVisualDrawingProperties9 = new Dsp.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = string.Empty };
             Dsp.NonVisualDrawingShapeProperties nonVisualDrawingShapeProperties4 = new Dsp.NonVisualDrawingShapeProperties();
 
             shapeNonVisualProperties4.Append(nonVisualDrawingProperties9);
@@ -4907,7 +4907,7 @@ namespace DocumentFormat.OpenXml.Tests
             Dsp.Shape shape10 = new Dsp.Shape() { ModelId = "{06938A85-ABE7-4259-8535-52632AD9121B}" };
 
             Dsp.ShapeNonVisualProperties shapeNonVisualProperties5 = new Dsp.ShapeNonVisualProperties();
-            Dsp.NonVisualDrawingProperties nonVisualDrawingProperties10 = new Dsp.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = "" };
+            Dsp.NonVisualDrawingProperties nonVisualDrawingProperties10 = new Dsp.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = string.Empty };
             Dsp.NonVisualDrawingShapeProperties nonVisualDrawingShapeProperties5 = new Dsp.NonVisualDrawingShapeProperties();
 
             shapeNonVisualProperties5.Append(nonVisualDrawingProperties10);
@@ -5075,8 +5075,8 @@ namespace DocumentFormat.OpenXml.Tests
             Dgm.ColorsDefinition colorsDefinition1 = new Dgm.ColorsDefinition() { UniqueId = "urn:microsoft.com/office/officeart/2005/8/colors/accent1_2" };
             colorsDefinition1.AddNamespaceDeclaration("dgm", "http://schemas.openxmlformats.org/drawingml/2006/diagram");
             colorsDefinition1.AddNamespaceDeclaration("a", "http://schemas.openxmlformats.org/drawingml/2006/main");
-            Dgm.ColorDefinitionTitle colorDefinitionTitle1 = new Dgm.ColorDefinitionTitle() { Val = "" };
-            Dgm.ColorTransformDescription colorTransformDescription1 = new Dgm.ColorTransformDescription() { Val = "" };
+            Dgm.ColorDefinitionTitle colorDefinitionTitle1 = new Dgm.ColorDefinitionTitle() { Val = string.Empty };
+            Dgm.ColorTransformDescription colorTransformDescription1 = new Dgm.ColorTransformDescription() { Val = string.Empty };
 
             Dgm.ColorTransformCategories colorTransformCategories1 = new Dgm.ColorTransformCategories();
             Dgm.ColorTransformCategory colorTransformCategory1 = new Dgm.ColorTransformCategory() { Type = "accent1", Priority = (UInt32Value)11200U };
@@ -6878,7 +6878,7 @@ namespace DocumentFormat.OpenXml.Tests
             toMarker5.Append(rowId10);
             toMarker5.Append(rowOffset10);
 
-            Xdr.GraphicFrame graphicFrame2 = new Xdr.GraphicFrame() { Macro = "" };
+            Xdr.GraphicFrame graphicFrame2 = new Xdr.GraphicFrame() { Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties2 = new Xdr.NonVisualGraphicFrameProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties11 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Chart 1" };
@@ -6934,7 +6934,7 @@ namespace DocumentFormat.OpenXml.Tests
             fromMarker6.Append(rowOffset11);
             Xdr.Extent extent1 = new Xdr.Extent() { Cx = 3627019L, Cy = 937629L };
 
-            Xdr.Shape shape11 = new Xdr.Shape() { Macro = "", TextLink = "" };
+            Xdr.Shape shape11 = new Xdr.Shape() { Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties3 = new Xdr.NonVisualShapeProperties();
             Xdr.NonVisualDrawingProperties nonVisualDrawingProperties12 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Rectangle 2" };
@@ -9065,10 +9065,10 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void SetPackageProperties(OpenXmlPackage document)
         {
-            document.PackageProperties.Creator = "";
+            document.PackageProperties.Creator = string.Empty;
             document.PackageProperties.Created = System.Xml.XmlConvert.ToDateTime("2006-09-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind);
             document.PackageProperties.Modified = System.Xml.XmlConvert.ToDateTime("2015-11-18T07:26:45Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind);
-            document.PackageProperties.LastModifiedBy = "";
+            document.PackageProperties.LastModifiedBy = string.Empty;
         }
 
         #region Binary Data

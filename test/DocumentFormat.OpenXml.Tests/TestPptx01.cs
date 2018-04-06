@@ -149,7 +149,7 @@ namespace DocumentFormat.OpenXml.Tests
                     new P.CommonSlideData(
                         new P.ShapeTree(
                             new P.NonVisualGroupShapeProperties(
-                                new P.NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" },
+                                new P.NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty },
                                 new P.NonVisualGroupShapeDrawingProperties(),
                                 new P.ApplicationNonVisualDrawingProperties()),
                             new P.GroupShapeProperties(new D.TransformGroup()),
@@ -173,13 +173,13 @@ namespace DocumentFormat.OpenXml.Tests
             P.SlideLayout slideLayout = new P.SlideLayout(
             new P.CommonSlideData(new P.ShapeTree(
               new P.NonVisualGroupShapeProperties(
-              new P.NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" },
+              new P.NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty },
               new P.NonVisualGroupShapeDrawingProperties(),
               new P.ApplicationNonVisualDrawingProperties()),
               new P.GroupShapeProperties(new D.TransformGroup()),
               new P.Shape(
               new P.NonVisualShapeProperties(
-                new P.NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "" },
+                new P.NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = string.Empty },
                 new P.NonVisualShapeDrawingProperties(new D.ShapeLocks() { NoGrouping = true }),
                 new P.ApplicationNonVisualDrawingProperties(new P.PlaceholderShape())),
               new P.ShapeProperties(),
@@ -198,7 +198,7 @@ namespace DocumentFormat.OpenXml.Tests
             P.SlideMaster slideMaster = new P.SlideMaster(
             new P.CommonSlideData(new P.ShapeTree(
               new P.NonVisualGroupShapeProperties(
-              new P.NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" },
+              new P.NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty },
               new P.NonVisualGroupShapeDrawingProperties(),
               new P.ApplicationNonVisualDrawingProperties()),
               new P.GroupShapeProperties(new D.TransformGroup()),
@@ -243,12 +243,12 @@ namespace DocumentFormat.OpenXml.Tests
               new D.FontScheme(
               new D.MajorFont(
               new D.LatinFont() { Typeface = "Calibri" },
-              new D.EastAsianFont() { Typeface = "" },
-              new D.ComplexScriptFont() { Typeface = "" }),
+              new D.EastAsianFont() { Typeface = string.Empty },
+              new D.ComplexScriptFont() { Typeface = string.Empty }),
               new D.MinorFont(
               new D.LatinFont() { Typeface = "Calibri" },
-              new D.EastAsianFont() { Typeface = "" },
-              new D.ComplexScriptFont() { Typeface = "" }))
+              new D.EastAsianFont() { Typeface = string.Empty },
+              new D.ComplexScriptFont() { Typeface = string.Empty }))
               { Name = "Office" },
               new D.FormatScheme(
               new D.FillStyleList(
