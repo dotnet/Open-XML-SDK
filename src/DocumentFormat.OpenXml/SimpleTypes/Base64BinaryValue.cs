@@ -59,7 +59,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="xmlAttribute">The Base64BinaryValue object to convert.</param>
         /// <returns>The base64Binary string. Returns null when xmlAttribute is null.</returns>
-        public static implicit operator String(Base64BinaryValue xmlAttribute)
+        public static implicit operator string(Base64BinaryValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {
@@ -75,7 +75,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">The specified base64Binary value.</param>
         /// <returns>A new Base64BinaryValue instance with the value.</returns>
-        public static implicit operator Base64BinaryValue(String value)
+        public static implicit operator Base64BinaryValue(string value)
         {
             return FromString(value);
         }
@@ -85,7 +85,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">A String value to use to create a new Base64BinaryValue object.</param>
         /// <returns>A Base64BinaryValue that corresponds to the value parameter.</returns>
-        public static Base64BinaryValue FromString(String value)
+        public static Base64BinaryValue FromString(string value)
         {
             return new Base64BinaryValue(value);
         }
@@ -97,7 +97,7 @@ namespace DocumentFormat.OpenXml
         /// A Base64BinaryValue object used to retrieve a String value representation.
         /// </param>
         /// <returns>A String value that represents a Base64BinaryValue object.</returns>
-        public static String ToString(Base64BinaryValue xmlAttribute)
+        public static string ToString(Base64BinaryValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {

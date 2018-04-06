@@ -1006,7 +1006,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="type">The type of the annotation to retrieve.</param>
         /// <returns>The first annotation object of the specified type.</returns>
-        public Object Annotation(Type type)
+        public object Annotation(Type type)
         {
             if (type == null)
             {
@@ -1085,7 +1085,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="type">The Type of the annotations to retrieve.</param>
         /// <returns>An IEnumerable(T) of object that contains the annotations for this PartContainer.</returns>
-        public IEnumerable<Object> Annotations(Type type)
+        public IEnumerable<object> Annotations(Type type)
         {
             if (type == null)
             {

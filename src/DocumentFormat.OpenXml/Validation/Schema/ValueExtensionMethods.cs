@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             return BitConverter.GetBytes(value);
         }
 
-        public static byte[] Bytes(this SdbIndex value)
+        public static byte[] Bytes(this ushort value)
         {
             return BitConverter.GetBytes(value);
         }

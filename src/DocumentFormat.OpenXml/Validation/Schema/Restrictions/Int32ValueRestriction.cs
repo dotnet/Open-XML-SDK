@@ -10,11 +10,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// Int32 (xsd:int) based value restriction.
     /// </summary>
     [DataContract]
-    internal class Int32ValueRestriction : SimpleValueRestriction<Int32, Int32Value>
+    internal class Int32ValueRestriction : SimpleValueRestriction<int, Int32Value>
     {
-        protected override Int32 MinValue => Int32.MinValue;
+        protected override int MinValue => int.MinValue;
 
-        protected override Int32 MaxValue => Int32.MaxValue;
+        protected override int MaxValue => int.MaxValue;
 
         /// <inheritdoc />
         public override XsdType XsdType => XsdType.Int;

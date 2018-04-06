@@ -177,11 +177,11 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        public static OpenXmlPackage CreatePackage(this FileInfo file, Boolean overwiteIfExist)
+        public static OpenXmlPackage CreatePackage(this FileInfo file, bool overwiteIfExist)
         {
             if (file.Exists)
             {
-                throw new InvalidOperationException(String.Format("The file {0} exists!!", file.FullName));
+                throw new InvalidOperationException(string.Format("The file {0} exists!!", file.FullName));
             }
 
             if (IsWordprocessingFile(file))

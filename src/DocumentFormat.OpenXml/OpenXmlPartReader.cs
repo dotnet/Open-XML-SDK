@@ -652,7 +652,7 @@ namespace DocumentFormat.OpenXml
                 return textElement.Text;
             }
 
-            return String.Empty;
+            return string.Empty;
         }
 
         /// <inheritdoc/>

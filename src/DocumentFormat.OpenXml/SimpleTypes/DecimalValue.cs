@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml
     /// Represents the decimal value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class DecimalValue : OpenXmlSimpleValue<Decimal>
+    public class DecimalValue : OpenXmlSimpleValue<decimal>
     {
         /// <summary>
         /// Initializes a new instance of the DecimalValue class.
@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml
         /// Decimal value.
         /// </summary>
         /// <param name="value">The Decimal value.</param>
-        public DecimalValue(Decimal value)
+        public DecimalValue(decimal value)
             : base(value)
         {
         }
@@ -43,9 +43,9 @@ namespace DocumentFormat.OpenXml
         {
         }
 
-        private protected override string GetText(Decimal input) => XmlConvert.ToString(input);
+        private protected override string GetText(decimal input) => XmlConvert.ToString(input);
 
-        private protected override Decimal Parse(string input) => XmlConvert.ToDecimal(input);
+        private protected override decimal Parse(string input) => XmlConvert.ToDecimal(input);
 
         /// <summary>
         /// Implicitly converts the specified value to a Decimal value.
@@ -57,7 +57,7 @@ namespace DocumentFormat.OpenXml
         /// The converted Decimal value.
         /// </returns>
         /// <exception cref="InvalidOperationException">Thrown when xmlAttribute is null.</exception>
-        public static implicit operator Decimal(DecimalValue xmlAttribute)
+        public static implicit operator decimal(DecimalValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {
@@ -75,7 +75,7 @@ namespace DocumentFormat.OpenXml
         /// The Decimal value.
         /// </param>
         /// <returns>A new DecimalValue instance with the value.</returns>
-        public static implicit operator DecimalValue(Decimal value)
+        public static implicit operator DecimalValue(decimal value)
         {
             return FromDecimal(value);
         }
@@ -85,7 +85,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">A Decimal value to use to create a new DecimalValue object.</param>
         /// <returns>A DecimalValue object that corresponds to the value parameter.</returns>
-        public static DecimalValue FromDecimal(Decimal value)
+        public static DecimalValue FromDecimal(decimal value)
         {
             return new DecimalValue(value);
         }
@@ -97,7 +97,7 @@ namespace DocumentFormat.OpenXml
         /// A DecimalValue object to use to retrieve a Decimal representation.
         /// </param>
         /// <returns>A Decimal value that represents a DecimalValue object.</returns>
-        public static Decimal ToDecimal(DecimalValue xmlAttribute)
+        public static decimal ToDecimal(DecimalValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {

@@ -55,7 +55,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>
         /// The converted String value. Returns null when xmlAttribute is null.
         /// </returns>
-        public static implicit operator String(StringValue xmlAttribute)
+        public static implicit operator string(StringValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {
@@ -70,7 +70,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">The specified value.</param>
         /// <returns>A new StringValue instance with the value.</returns>
-        public static implicit operator StringValue(String value)
+        public static implicit operator StringValue(string value)
         {
             return FromString(value);
         }
@@ -80,7 +80,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">A String value to use to create a new StringValue object.</param>
         /// <returns>A StringValue that corresponds to the value parameter.</returns>
-        public static StringValue FromString(String value)
+        public static StringValue FromString(string value)
         {
             return new StringValue(value);
         }
@@ -92,7 +92,7 @@ namespace DocumentFormat.OpenXml
         /// A StringValue object used to retrieve a String value representation.
         /// </param>
         /// <returns>A String value that represents a StringValue object.</returns>
-        public static String ToString(StringValue xmlAttribute)
+        public static string ToString(StringValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {

@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml
         public OpenXmlMiscNode(XmlNodeType nodeType, string outerXml)
             : this(nodeType)
         {
-            if (String.IsNullOrEmpty(outerXml))
+            if (string.IsNullOrEmpty(outerXml))
             {
                 throw new ArgumentNullException(nameof(outerXml));
             }
@@ -228,7 +228,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return String.Empty;
+                return string.Empty;
             }
 
             set
@@ -333,7 +333,7 @@ namespace DocumentFormat.OpenXml
 
                 case XmlNodeType.CDATA:
                     Value = xmlReader.Value;
-                    RawOuterXml = String.Format(CultureInfo.InvariantCulture, "<![CDATA[{0}]]>", xmlReader.Value);
+                    RawOuterXml = string.Format(CultureInfo.InvariantCulture, "<![CDATA[{0}]]>", xmlReader.Value);
                     break;
 
                 case XmlNodeType.SignificantWhitespace:
@@ -346,12 +346,12 @@ namespace DocumentFormat.OpenXml
 
                 case XmlNodeType.ProcessingInstruction:
                     Value = xmlReader.Value;
-                    RawOuterXml = String.Format(CultureInfo.InvariantCulture, "<?{0} {1}?>", xmlReader.Name, xmlReader.Value);
+                    RawOuterXml = string.Format(CultureInfo.InvariantCulture, "<?{0} {1}?>", xmlReader.Name, xmlReader.Value);
                     break;
 
                 case XmlNodeType.Comment:
                     Value = xmlReader.Value;
-                    RawOuterXml = String.Format(CultureInfo.InvariantCulture, "<!--{0}-->", xmlReader.Value);
+                    RawOuterXml = string.Format(CultureInfo.InvariantCulture, "<!--{0}-->", xmlReader.Value);
                     break;
 
                 case XmlNodeType.Document:
@@ -418,7 +418,7 @@ namespace DocumentFormat.OpenXml
 
             var newMiscNode = new OpenXmlMiscNode(XmlNodeType.CDATA);
             newMiscNode.Value = value;
-            newMiscNode.RawOuterXml = String.Format(CultureInfo.InvariantCulture, "<![CDATA[{0}]]>", value);
+            newMiscNode.RawOuterXml = string.Format(CultureInfo.InvariantCulture, "<![CDATA[{0}]]>", value);
             return newMiscNode;
         }
 

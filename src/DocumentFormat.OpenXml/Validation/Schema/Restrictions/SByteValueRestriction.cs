@@ -10,11 +10,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// SByte (xsd:bye) based value restriction.
     /// </summary>
     [DataContract]
-    internal class SByteValueRestriction : SimpleValueRestriction<SByte, SByteValue>
+    internal class SByteValueRestriction : SimpleValueRestriction<sbyte, SByteValue>
     {
-        protected override SByte MinValue => SByte.MinValue;
+        protected override sbyte MinValue => sbyte.MinValue;
 
-        protected override SByte MaxValue => SByte.MaxValue;
+        protected override sbyte MaxValue => sbyte.MaxValue;
 
         /// <inheritdoc />
         public override XsdType XsdType => XsdType.Byte;

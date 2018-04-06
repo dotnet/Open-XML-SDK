@@ -83,7 +83,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         /// <returns></returns>
         public virtual OpenXmlSimpleValue<T> StringToSimpleValue(string valueText)
         {
-            if (String.IsNullOrEmpty(valueText))
+            if (string.IsNullOrEmpty(valueText))
             {
                 return null;
             }

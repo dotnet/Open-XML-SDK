@@ -10,11 +10,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// Single (xsd:float) based value restriction.
     /// </summary>
     [DataContract]
-    internal class SingleValueRestriction : SimpleValueRestriction<Single, SingleValue>
+    internal class SingleValueRestriction : SimpleValueRestriction<float, SingleValue>
     {
-        protected override Single MinValue => Single.MinValue;
+        protected override float MinValue => float.MinValue;
 
-        protected override Single MaxValue => Single.MaxValue;
+        protected override float MaxValue => float.MaxValue;
 
         /// <inheritdoc />
         public override XsdType XsdType => XsdType.Float;
