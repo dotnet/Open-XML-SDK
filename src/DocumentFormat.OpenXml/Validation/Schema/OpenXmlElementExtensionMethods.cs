@@ -87,7 +87,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                             {
                                 nextSiblings.Push(child.GetNextNonMiscElementSibling());
 
-                                //
                                 child = child.GetFirstNonMiscElementChild();
                             }
                             else

@@ -197,7 +197,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
             else if (schemaType.IsSimpleContent)
             {
-                //
             }
             else
             {

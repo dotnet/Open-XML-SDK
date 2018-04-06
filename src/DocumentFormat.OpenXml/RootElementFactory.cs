@@ -13,7 +13,6 @@ namespace DocumentFormat.OpenXml
             // Debug.Assert(namespaceUri != null);
             Debug.Assert(!String.IsNullOrEmpty(name));
 
-            //
             OpenXmlElement newElement = null;
             byte nsId;
 
