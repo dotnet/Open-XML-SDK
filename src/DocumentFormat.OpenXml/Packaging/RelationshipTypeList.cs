@@ -8,9 +8,9 @@ namespace DocumentFormat.OpenXml.Packaging
 {
     internal static class RelationshipTypeList
     {
-        private static Dictionary<String, int> _list;
+        private static Dictionary<string, int> _list;
 
-        public static Dictionary<String, int> IsoKnownRelationships
+        public static Dictionary<string, int> IsoKnownRelationships
         {
             get
             {

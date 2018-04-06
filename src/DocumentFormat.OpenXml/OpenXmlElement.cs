@@ -136,7 +136,7 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlElement(string outerXml)
             : this()
         {
-            if (!String.IsNullOrEmpty(outerXml))
+            if (!string.IsNullOrEmpty(outerXml))
             {
                 if (!ValidOuterXml(outerXml, NamespaceUri, LocalName))
                 {
@@ -163,7 +163,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         internal bool XmlParsed
         {
-            get { return String.IsNullOrEmpty(_rawOuterXml); }
+            get { return string.IsNullOrEmpty(_rawOuterXml); }
         }
 
         /// <summary>
@@ -178,7 +178,7 @@ namespace DocumentFormat.OpenXml
 
             set
             {
-                if (String.IsNullOrEmpty(value))
+                if (string.IsNullOrEmpty(value))
                 {
                     _rawOuterXml = string.Empty;
                 }
@@ -576,13 +576,13 @@ namespace DocumentFormat.OpenXml
                     MCAttributes = null;
                 }
 
-                if (!String.IsNullOrEmpty(value))
+                if (!string.IsNullOrEmpty(value))
                 {
                     RawOuterXml = value;
                 }
                 else
                 {
-                    _rawOuterXml = String.Empty;
+                    _rawOuterXml = string.Empty;
                 }
             }
         }
@@ -743,7 +743,7 @@ namespace DocumentFormat.OpenXml
         /// <exception cref="InvalidOperationException">Thrown when an attempt to set a namespace declaration is made.</exception>
         public void SetAttribute(OpenXmlAttribute openXmlAttribute)
         {
-            if (String.IsNullOrEmpty(openXmlAttribute.LocalName))
+            if (string.IsNullOrEmpty(openXmlAttribute.LocalName))
             {
                 throw new ArgumentOutOfRangeException(nameof(openXmlAttribute), ExceptionMessages.LocalNameIsNull);
             }
@@ -927,7 +927,7 @@ namespace DocumentFormat.OpenXml
             {
                 if (item.Key == prefix)
                 {
-                    var msg = String.Format(System.Globalization.CultureInfo.CurrentUICulture, ExceptionMessages.DuplicatedPrefix, prefix);
+                    var msg = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ExceptionMessages.DuplicatedPrefix, prefix);
                     throw new InvalidOperationException(msg);
                 }
             }
@@ -1514,7 +1514,7 @@ namespace DocumentFormat.OpenXml
             {
                 return ElementOrder.NotInSameTree;
             }
-            else if (Object.ReferenceEquals(element1.Parent, element2.Parent))
+            else if (object.ReferenceEquals(element1.Parent, element2.Parent))
             {
                 return GetSiblingOrder(element1, element2);
             }
@@ -1589,7 +1589,7 @@ namespace DocumentFormat.OpenXml
 
             while (element != null)
             {
-                if (Object.ReferenceEquals(element, element2))
+                if (object.ReferenceEquals(element, element2))
                 {
                     // element1 before element2
                     return ElementOrder.Before;
@@ -1603,7 +1603,7 @@ namespace DocumentFormat.OpenXml
 
             while (element != null)
             {
-                if (Object.ReferenceEquals(element, element2))
+                if (object.ReferenceEquals(element, element2))
                 {
                     break;
                 }
@@ -1694,7 +1694,7 @@ namespace DocumentFormat.OpenXml
 
         internal int TryFindAttributeIndex(string namespaceUri, string tagName)
         {
-            Debug.Assert(!String.IsNullOrEmpty(tagName));
+            Debug.Assert(!string.IsNullOrEmpty(tagName));
 
             byte nsId = 0;
 
@@ -1942,7 +1942,7 @@ namespace DocumentFormat.OpenXml
                     var ns = reader.LookupNamespace(prefix);
                     if (string.IsNullOrEmpty(ns))
                     {
-                        var msg = String.Format(System.Globalization.CultureInfo.CurrentCulture, ExceptionMessages.UnknowMCContent, mcAttributes.MustUnderstand.Value);
+                        var msg = string.Format(System.Globalization.CultureInfo.CurrentCulture, ExceptionMessages.UnknowMCContent, mcAttributes.MustUnderstand.Value);
                         throw new InvalidMCContentException(msg);
                     }
 
@@ -1975,7 +1975,7 @@ namespace DocumentFormat.OpenXml
                     var ns = LookupNamespace(prefix);
                     if (string.IsNullOrEmpty(ns))
                     {
-                        var msg = String.Format(System.Globalization.CultureInfo.CurrentCulture, ExceptionMessages.UnknowMCContent, MCAttributes.MustUnderstand.Value);
+                        var msg = string.Format(System.Globalization.CultureInfo.CurrentCulture, ExceptionMessages.UnknowMCContent, MCAttributes.MustUnderstand.Value);
                         throw new InvalidMCContentException(msg);
                     }
 
@@ -2043,7 +2043,7 @@ namespace DocumentFormat.OpenXml
         {
             Debug.Assert(!XmlParsed);
 
-            if (String.IsNullOrEmpty(RawOuterXml))
+            if (string.IsNullOrEmpty(RawOuterXml))
             {
                 return;
             }
@@ -2113,9 +2113,8 @@ namespace DocumentFormat.OpenXml
 
         internal virtual OpenXmlSimpleType AttributeFactory(string namespaceUri, string name)
         {
-            Debug.Assert(!String.IsNullOrEmpty(name));
+            Debug.Assert(!string.IsNullOrEmpty(name));
 
-            //
             OpenXmlSimpleType simpleType = null;
             byte nsId;
 
@@ -2169,13 +2168,12 @@ namespace DocumentFormat.OpenXml
         internal virtual OpenXmlElement ElementFactory(string prefix, string name, string namespaceUri)
         {
             // Debug.Assert(namespaceUri != null);
-            Debug.Assert(!String.IsNullOrEmpty(name));
+            Debug.Assert(!string.IsNullOrEmpty(name));
 
-            //
             OpenXmlElement newElement = null;
             byte nsId;
 
-            if ((!String.IsNullOrEmpty(namespaceUri)) && NamespaceIdMap.TryGetNamespaceId(namespaceUri, out nsId))
+            if ((!string.IsNullOrEmpty(namespaceUri)) && NamespaceIdMap.TryGetNamespaceId(namespaceUri, out nsId))
             {
                 newElement = ElementFactory(nsId, name);
 
@@ -2403,7 +2401,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="type">The type of the annotation to retrieve.</param>
         /// <returns>The first annotation object with the specified type.</returns>
-        public Object Annotation(Type type)
+        public object Annotation(Type type)
         {
             if (type == null)
             {
@@ -2482,7 +2480,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="type">The type of the annotations to retrieve.</param>
         /// <returns>An IEnumerable(T) object that contains the annotations for the current OpenXmlElement element.</returns>
-        public IEnumerable<Object> Annotations(Type type)
+        public IEnumerable<object> Annotations(Type type)
         {
             if (type == null)
             {

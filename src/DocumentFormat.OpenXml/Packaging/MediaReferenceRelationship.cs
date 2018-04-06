@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Represents the fixed value of the RelationshipType.
         /// </summary>
-        internal const String RelationshipTypeConst = @"http://schemas.microsoft.com/office/2007/relationships/media";
+        internal const string RelationshipTypeConst = @"http://schemas.microsoft.com/office/2007/relationships/media";
 
         /// <summary>
         /// Gets the source relationship type for a media reference.

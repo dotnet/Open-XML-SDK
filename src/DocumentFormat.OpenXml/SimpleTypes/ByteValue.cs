@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml
     /// Represents the byte value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class ByteValue : OpenXmlSimpleValue<Byte>
+    public class ByteValue : OpenXmlSimpleValue<byte>
     {
         /// <summary>
         /// Initializes a new instance of the ByteValue class.
@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml
         /// Byte value.
         /// </summary>
         /// <param name="value">The Byte value.</param>
-        public ByteValue(Byte value)
+        public ByteValue(byte value)
             : base(value)
         {
         }
@@ -57,7 +57,7 @@ namespace DocumentFormat.OpenXml
         /// The converted Byte value.
         /// </returns>
         /// <exception cref="InvalidOperationException">Thrown when xmlAttribute is null.</exception>
-        public static implicit operator Byte(ByteValue xmlAttribute)
+        public static implicit operator byte(ByteValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {
@@ -75,7 +75,7 @@ namespace DocumentFormat.OpenXml
         /// The Byte value.
         /// </param>
         /// <returns>A new ByteValue instance with the value.</returns>
-        public static implicit operator ByteValue(Byte value)
+        public static implicit operator ByteValue(byte value)
         {
             return FromByte(value);
         }
@@ -85,7 +85,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">A Byte value to create a new ByteValue object from.</param>
         /// <returns>A ByteValue that corresponds to the value parameter.</returns>
-        public static ByteValue FromByte(Byte value)
+        public static ByteValue FromByte(byte value)
         {
             return new ByteValue(value);
         }
@@ -97,7 +97,7 @@ namespace DocumentFormat.OpenXml
         /// A ByteValue object to retrieve a Byte value representation.
         /// </param>
         /// <returns>A Byte value that represents a ByteValue object.</returns>
-        public static Byte ToByte(ByteValue xmlAttribute)
+        public static byte ToByte(ByteValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {

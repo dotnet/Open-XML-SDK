@@ -32,10 +32,10 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void BooleanValueTest()
         {
-            Boolean defaultValue = default(Boolean);
-            Boolean maxValue = true;
-            Boolean minValue = false;
-            Boolean validValue = true;
+            bool defaultValue = default(bool);
+            bool maxValue = true;
+            bool minValue = false;
+            bool validValue = true;
             string specialValue0 = "0";
             string specialValue1 = "1";
             string invalidValueOn = "On";
@@ -84,11 +84,11 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new BooleanValue(validValue);
             objB = new BooleanValue(validValue);
-            Log.VerifyFalse(Object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
             objA = new BooleanValue(validValue);
             objB = objA;
-            Log.VerifyTrue(Object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
-            Log.VerifyTrue(Object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
+            Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
+            Log.VerifyTrue(object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
 
             Log.Comment("Setting InnerText as special value and testing...");
             objA = new BooleanValue();
@@ -108,7 +108,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("ErrorHandling: Implicit Int operator on null reference...");
             objA = null;
-            Boolean val = defaultValue;
+            bool val = defaultValue;
             InvalidOperation(objA, val, (a, b) => { b = a; });
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidValueFalse);
@@ -150,10 +150,10 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ByteValueTest()
         {
-            Byte defaultValue = default(Byte);
-            Byte maxValue = Byte.MaxValue;
-            Byte minValue = Byte.MinValue;
-            Byte validValue = (Byte)50;
+            byte defaultValue = default(byte);
+            byte maxValue = byte.MaxValue;
+            byte minValue = byte.MinValue;
+            byte validValue = 50;
             string invalidValue = "Invalid String!";
 
             Log.Comment("Testing default value...");
@@ -192,11 +192,11 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new ByteValue(validValue);
             objB = new ByteValue(validValue);
-            Log.VerifyFalse(Object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
             objA = new ByteValue(validValue);
             objB = objA;
-            Log.VerifyTrue(Object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
-            Log.VerifyTrue(Object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
+            Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
+            Log.VerifyTrue(object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
 
             Log.Comment("ErrorHandling: Constructing with another instance of null...");
             objA = null;
@@ -205,7 +205,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("ErrorHandling: Implicit Int operator on null reference...");
             objA = null;
-            Byte val = default(Byte);
+            byte val = default(byte);
             InvalidOperation(objA, val, (a, b) => { b = a; });
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value...");
@@ -217,10 +217,10 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void SByteValueTest()
         {
-            SByte defaultValue = default(SByte);
-            SByte maxValue = SByte.MaxValue;
-            SByte minValue = SByte.MinValue;
-            SByte validValue = (SByte)50;
+            sbyte defaultValue = default(sbyte);
+            sbyte maxValue = sbyte.MaxValue;
+            sbyte minValue = sbyte.MinValue;
+            sbyte validValue = 50;
             string invalidValue = "Invalid String!";
 
             Log.Comment("Testing default value...");
@@ -259,11 +259,11 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new SByteValue(validValue);
             objB = new SByteValue(validValue);
-            Log.VerifyFalse(Object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
             objA = new SByteValue(validValue);
             objB = objA;
-            Log.VerifyTrue(Object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
-            Log.VerifyTrue(Object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
+            Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
+            Log.VerifyTrue(object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
 
             Log.Comment("ErrorHandling: Constructing with another instance of null...");
             objA = null;
@@ -272,7 +272,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("ErrorHandling: Implicit Int operator on null reference...");
             objA = null;
-            SByte val = default(SByte);
+            sbyte val = default(sbyte);
             InvalidOperation(objA, val, (a, b) => { b = a; });
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value...");
@@ -284,10 +284,10 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void UInt16ValueTest()
         {
-            UInt16 defaultValue = default(UInt16);
-            UInt16 maxValue = UInt16.MaxValue;
-            UInt16 minValue = UInt16.MinValue;
-            UInt16 validValue = (UInt16)123;
+            ushort defaultValue = default(ushort);
+            ushort maxValue = ushort.MaxValue;
+            ushort minValue = ushort.MinValue;
+            ushort validValue = 123;
             string invalidValue = "Invalid String!";
 
             Log.Comment("Testing default value...");
@@ -326,11 +326,11 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new UInt16Value(validValue);
             objB = new UInt16Value(validValue);
-            Log.VerifyFalse(Object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
             objA = new UInt16Value(validValue);
             objB = objA;
-            Log.VerifyTrue(Object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
-            Log.VerifyTrue(Object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
+            Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
+            Log.VerifyTrue(object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
 
             Log.Comment("ErrorHandling: Constructing with another instance of null...");
             objA = null;
@@ -339,7 +339,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("ErrorHandling: Implicit Int operator on null reference...");
             objA = null;
-            UInt16 val = default(UInt16);
+            ushort val = default(ushort);
             InvalidOperation(objA, val, (a, b) => { b = a; });
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value...");
@@ -351,10 +351,10 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void UInt32ValueTest()
         {
-            UInt32 defaultValue = default(UInt32);
-            UInt32 maxValue = UInt32.MaxValue;
-            UInt32 minValue = UInt32.MinValue;
-            UInt32 validValue = (UInt32)123456;
+            uint defaultValue = default(uint);
+            uint maxValue = uint.MaxValue;
+            uint minValue = uint.MinValue;
+            uint validValue = 123456;
             string invalidValue = "Invalid String!";
 
             Log.Comment("Testing default value...");
@@ -393,11 +393,11 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new UInt32Value(validValue);
             objB = new UInt32Value(validValue);
-            Log.VerifyFalse(Object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
             objA = new UInt32Value(validValue);
             objB = objA;
-            Log.VerifyTrue(Object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
-            Log.VerifyTrue(Object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
+            Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
+            Log.VerifyTrue(object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
 
             Log.Comment("ErrorHandling: Constructing with another instance of null...");
             objA = null;
@@ -406,7 +406,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("ErrorHandling: Implicit Int operator on null reference...");
             objA = null;
-            UInt32 val = default(UInt32);
+            uint val = default(uint);
             InvalidOperation(objA, val, (a, b) => { b = a; });
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value...");
@@ -418,10 +418,10 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Int32ValueTest()
         {
-            Int32 defaultValue = default(Int32);
-            Int32 maxValue = Int32.MaxValue;
-            Int32 minValue = Int32.MinValue;
-            Int32 validValue = (Int32)123456;
+            int defaultValue = default(int);
+            int maxValue = int.MaxValue;
+            int minValue = int.MinValue;
+            int validValue = 123456;
             string invalidValue = "Invalid String!";
 
             Log.Comment("Testing default value...");
@@ -460,11 +460,11 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new Int32Value(validValue);
             objB = new Int32Value(validValue);
-            Log.VerifyFalse(Object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
             objA = new Int32Value(validValue);
             objB = objA;
-            Log.VerifyTrue(Object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
-            Log.VerifyTrue(Object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
+            Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
+            Log.VerifyTrue(object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
 
             Log.Comment("ErrorHandling: Constructing with another instance of null...");
             objA = null;
@@ -473,7 +473,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("ErrorHandling: Implicit Int operator on null reference...");
             objA = null;
-            Int32 val = default(Int32);
+            int val = default(int);
             InvalidOperation(objA, val, (a, b) => { b = a; });
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value...");
@@ -485,10 +485,10 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void UInt64ValueTest()
         {
-            UInt64 defaultValue = default(UInt64);
-            UInt64 maxValue = UInt64.MaxValue;
-            UInt64 minValue = UInt64.MinValue;
-            UInt64 validValue = (UInt64)123456;
+            ulong defaultValue = default(ulong);
+            ulong maxValue = ulong.MaxValue;
+            ulong minValue = ulong.MinValue;
+            ulong validValue = 123456;
             string invalidValue = "Invalid String!";
 
             Log.Comment("Testing default value...");
@@ -527,11 +527,11 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new UInt64Value(validValue);
             objB = new UInt64Value(validValue);
-            Log.VerifyFalse(Object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
             objA = new UInt64Value(validValue);
             objB = objA;
-            Log.VerifyTrue(Object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
-            Log.VerifyTrue(Object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
+            Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
+            Log.VerifyTrue(object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
 
             Log.Comment("ErrorHandling: Constructing with another instance of null...");
             objA = null;
@@ -540,7 +540,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("ErrorHandling: Implicit Int operator on null reference...");
             objA = null;
-            UInt64 val = default(UInt64);
+            ulong val = default(ulong);
             InvalidOperation(objA, val, (a, b) => { b = a; });
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value...");
@@ -552,10 +552,10 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Int64ValueTest()
         {
-            Int64 defaultValue = default(Int64);
-            Int64 maxValue = Int64.MaxValue;
-            Int64 minValue = Int64.MinValue;
-            Int64[] testValues = new Int64[] { Int64.MaxValue, Int64.MinValue, Int32.MaxValue, Int32.MinValue, 0 };
+            long defaultValue = default(long);
+            long maxValue = long.MaxValue;
+            long minValue = long.MinValue;
+            long[] testValues = new long[] { long.MaxValue, long.MinValue, int.MaxValue, int.MinValue, 0 };
             string invalidValue = "Invalid String!";
 
             Log.Comment("Testing default value...");
@@ -596,11 +596,11 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Comment("Verifying reference type behavior...");
                 objA = new Int64Value(testValue);
                 objB = new Int64Value(testValue);
-                Log.VerifyFalse(Object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+                Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
                 objA = new Int64Value(testValue);
                 objB = objA;
-                Log.VerifyTrue(Object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
-                Log.VerifyTrue(Object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
+                Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
+                Log.VerifyTrue(object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
             }
 
             Log.Comment("ErrorHandling: Constructing with another instance of null...");
@@ -610,7 +610,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("ErrorHandling: Implicit Int operator on null reference...");
             objA = null;
-            Int64 val = default(Int64);
+            long val = default(long);
             InvalidOperation(objA, val, (a, b) => { b = a; });
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value...");
@@ -622,10 +622,10 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void IntegerValueTest()
         {
-            Int64 defaultValue = default(Int64);
-            Int64 maxValue = Int64.MaxValue;
-            Int64 minValue = Int64.MinValue;
-            Int64[] testValues = new Int64[] { Int64.MaxValue, Int64.MinValue, Int32.MaxValue, Int32.MinValue, 0 };
+            long defaultValue = default(long);
+            long maxValue = long.MaxValue;
+            long minValue = long.MinValue;
+            long[] testValues = new long[] { long.MaxValue, long.MinValue, int.MaxValue, int.MinValue, 0 };
             string invalidValue = "Invalid String!";
 
             Log.Comment("Testing default value...");
@@ -666,11 +666,11 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Comment("Verifying reference type behavior...");
                 objA = new IntegerValue(testValue);
                 objB = new IntegerValue(testValue);
-                Log.VerifyFalse(Object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+                Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
                 objA = new IntegerValue(testValue);
                 objB = objA;
-                Log.VerifyTrue(Object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
-                Log.VerifyTrue(Object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
+                Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
+                Log.VerifyTrue(object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
             }
 
             Log.Comment("ErrorHandling: Constructing with another instance of null...");
@@ -680,7 +680,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("ErrorHandling: Implicit Int operator on null reference...");
             objA = null;
-            Int64 val = default(Int64);
+            long val = default(long);
             InvalidOperation(objA, val, (a, b) => { b = a; });
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value...");
@@ -692,15 +692,15 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void DecimalValueTest()
         {
-            Decimal defaultValue = default(Decimal);
-            Decimal maxValue = Decimal.MaxValue;
-            Decimal minValue = Decimal.MinValue;
-            Decimal specialValue1 = Decimal.MinusOne;
-            Decimal specialValue2 = Decimal.One;
-            Decimal specialValue3 = Decimal.Zero;
+            decimal defaultValue = default(decimal);
+            decimal maxValue = decimal.MaxValue;
+            decimal minValue = decimal.MinValue;
+            decimal specialValue1 = decimal.MinusOne;
+            decimal specialValue2 = decimal.One;
+            decimal specialValue3 = decimal.Zero;
 
             // Decimal validValue = (decimal)(new Random ().Next(0, 10) * (maxValue / 100 - minValue / 100) + minValue / 10);
-            Decimal validValue = (decimal)123.456;
+            decimal validValue = 123.456M;
             string invalidValue = "Invalid String!";
 
             Log.Comment("Testing default value...");
@@ -748,11 +748,11 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new DecimalValue(validValue);
             objB = new DecimalValue(validValue);
-            Log.VerifyFalse(Object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
             objA = new DecimalValue(validValue);
             objB = objA;
-            Log.VerifyTrue(Object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
-            Log.VerifyTrue(Object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
+            Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
+            Log.VerifyTrue(object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
 
             Log.Comment("ErrorHandling: Constructing with another instance of null...");
             objA = null;
@@ -761,7 +761,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("ErrorHandling: Implicit Int operator on null reference...");
             objA = null;
-            Decimal val = default(Decimal);
+            decimal val = default(decimal);
             InvalidOperation(objA, val, (a, b) => { b = a; });
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value...");
@@ -773,14 +773,14 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void SingleValueTest()
         {
-            Single defaultValue = default(Single);
-            Single maxValue = Single.MaxValue;
-            Single minValue = Single.MinValue;
-            Single validValue = (Single)123.456;
-            Single specialEpsilon = Single.Epsilon;
-            Single specialPositiveInfinity = Single.PositiveInfinity;
-            Single specialNegativeInfinity = Single.NegativeInfinity;
-            Single specialNaN = Single.NaN;
+            float defaultValue = default(float);
+            float maxValue = float.MaxValue;
+            float minValue = float.MinValue;
+            float validValue = 123.456F;
+            float specialEpsilon = float.Epsilon;
+            float specialPositiveInfinity = float.PositiveInfinity;
+            float specialNegativeInfinity = float.NegativeInfinity;
+            float specialNaN = float.NaN;
             const string PositiveInfinity = "INF";
             const string NegativeInfinity = "-INF";
             string specialStringINF = "INF";
@@ -841,31 +841,31 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Set InnerText with special value {0} and testing...", specialStringINF);
             objA = new SingleValue();
             objA.InnerText = specialStringINF;
-            simpleValueValidTest(objA, Single.PositiveInfinity, specialStringINF);
+            simpleValueValidTest(objA, float.PositiveInfinity, specialStringINF);
 
             Log.Comment("Set InnerText with special value {0} and testing...", specialStringNINF);
             objA = new SingleValue();
             objA.InnerText = specialStringNINF;
-            simpleValueValidTest(objA, Single.NegativeInfinity, specialStringNINF);
+            simpleValueValidTest(objA, float.NegativeInfinity, specialStringNINF);
 
             Log.Comment("Set InnerText with special value {0} and testing...", specialStringInfinity);
             objA = new SingleValue();
             objA.InnerText = specialStringInfinity;
-            simpleValueValidTest(objA, Single.PositiveInfinity, specialStringInfinity);
+            simpleValueValidTest(objA, float.PositiveInfinity, specialStringInfinity);
 
             Log.Comment("Set InnerText with special value {0} and testing...", specialStringNInfinity);
             objA = new SingleValue();
             objA.InnerText = specialStringNInfinity;
-            simpleValueValidTest(objA, Single.NegativeInfinity, specialStringNInfinity);
+            simpleValueValidTest(objA, float.NegativeInfinity, specialStringNInfinity);
 
             Log.Comment("Verifying reference type behavior...");
             objA = new SingleValue(validValue);
             objB = new SingleValue(validValue);
-            Log.VerifyFalse(Object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
             objA = new SingleValue(validValue);
             objB = objA;
-            Log.VerifyTrue(Object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
-            Log.VerifyTrue(Object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
+            Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
+            Log.VerifyTrue(object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
 
             Log.Comment("ErrorHandling: Constructing with another instance of null...");
             objA = null;
@@ -874,7 +874,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("ErrorHandling: Implicit Int operator on null reference...");
             objA = null;
-            Single val = default(Single);
+            float val = default(float);
             InvalidOperation(objA, val, (a, b) => { b = a; });
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidStringValue);
@@ -906,14 +906,14 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void DoubleValueTest()
         {
-            Double defaultValue = default(Double);
-            Double maxValue = Double.MaxValue;
-            Double minValue = Double.MinValue;
-            Double validValue = (double)123.456;
-            Double specialEpsilon = Double.Epsilon;
-            Double specialPositiveInfinity = Double.PositiveInfinity;
-            Double specialNegativeInfinity = Double.NegativeInfinity;
-            Double specialNaN = Double.NaN;
+            double defaultValue = default(double);
+            double maxValue = double.MaxValue;
+            double minValue = double.MinValue;
+            double validValue = (double)123.456;
+            double specialEpsilon = double.Epsilon;
+            double specialPositiveInfinity = double.PositiveInfinity;
+            double specialNegativeInfinity = double.NegativeInfinity;
+            double specialNaN = double.NaN;
             const string NegativeInfinity = "-INF";
             const string PositiveInfinity = "INF";
             string specialStringINF = "INF";
@@ -974,31 +974,31 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Set InnerText with special value {0} and testing...", specialStringINF);
             objA = new DoubleValue();
             objA.InnerText = specialStringINF;
-            simpleValueValidTest(objA, Double.PositiveInfinity, specialStringINF);
+            simpleValueValidTest(objA, double.PositiveInfinity, specialStringINF);
 
             Log.Comment("Set InnerText with special value {0} and testing...", specialStringNINF);
             objA = new DoubleValue();
             objA.InnerText = specialStringNINF;
-            simpleValueValidTest(objA, Double.NegativeInfinity, specialStringNINF);
+            simpleValueValidTest(objA, double.NegativeInfinity, specialStringNINF);
 
             Log.Comment("Set InnerText with special value {0} and testing...", specialStringInfinity);
             objA = new DoubleValue();
             objA.InnerText = specialStringInfinity;
-            simpleValueValidTest(objA, Double.PositiveInfinity, specialStringInfinity);
+            simpleValueValidTest(objA, double.PositiveInfinity, specialStringInfinity);
 
             Log.Comment("Set InnerText with special value {0} and testing...", specialStringNInfinity);
             objA = new DoubleValue();
             objA.InnerText = specialStringNInfinity;
-            simpleValueValidTest(objA, Double.NegativeInfinity, specialStringNInfinity);
+            simpleValueValidTest(objA, double.NegativeInfinity, specialStringNInfinity);
 
             Log.Comment("Verifying reference type behavior...");
             objA = new DoubleValue(validValue);
             objB = new DoubleValue(validValue);
-            Log.VerifyFalse(Object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
             objA = new DoubleValue(validValue);
             objB = objA;
-            Log.VerifyTrue(Object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
-            Log.VerifyTrue(Object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
+            Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
+            Log.VerifyTrue(object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
 
             Log.Comment("ErrorHandling: Constructing with another instance of null...");
             objA = null;
@@ -1007,7 +1007,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("ErrorHandling: Implicit Int operator on null reference...");
             objA = null;
-            Double val = default(Double);
+            double val = default(double);
             InvalidOperation(objA, val, (a, b) => { b = a; });
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidStringValue);
@@ -1044,7 +1044,7 @@ namespace DocumentFormat.OpenXml.Tests
             DateTime minValue = DateTime.MinValue;
 
             //var ratio = (decimal)new Random ().Next(0, 100) / 100;
-            var ratio = (decimal)0.5;
+            var ratio = 0.5M;
             DateTime validValue = new DateTime((long)(ratio * maxValue.Ticks + (1 - ratio) * minValue.Ticks));
             string invalidValue = DateTime.Now.ToString();
 
@@ -1086,11 +1086,11 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new DateTimeValue(validValue);
             objB = new DateTimeValue(validValue);
-            Log.VerifyFalse(Object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
             objA = new DateTimeValue(validValue);
             objB = objA;
-            Log.VerifyTrue(Object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
-            Log.VerifyTrue(Object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
+            Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
+            Log.VerifyTrue(object.Equals(objA, objB), "Assigned instance is NOT equal to original one.");
 
             Log.Comment("ErrorHandling: Constructing with another instance of null...");
             objA = null;
@@ -1192,7 +1192,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Leaving Generic Test Method...");
         }
 
-        private void simpleValueValidTestNonGeneric(Int32Value oxObj, Int32 expectedValue, string expectedText)
+        private void simpleValueValidTestNonGeneric(Int32Value oxObj, int expectedValue, string expectedText)
         {
             Log.Comment("Entering Non-Generic Test Method...");
 
@@ -1212,11 +1212,11 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyValue(oxObj.Value, expectedValue,
                 "Property Value {0} does NOT equal to expected value {1}.", oxObj.Value, expectedValue);
 
-            Int32 val = oxObj;
+            int val = oxObj;
             Log.VerifyValue(val, expectedValue,
                 "int operator result {0} does NOT equal to expected value {1}.", val, expectedValue);
 
-            val = oxObj as OpenXmlSimpleValue<Int32>;
+            val = oxObj as OpenXmlSimpleValue<int>;
             Log.VerifyValue(val, expectedValue,
                 "int operator result {0} does NOT equal to expected value {1}.", val, expectedValue);
 

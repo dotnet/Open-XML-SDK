@@ -244,7 +244,6 @@ namespace DocumentFormat.OpenXml.Tests
             sectPr.Append(new HeaderReference(), new FooterReference(), new SectionType());
             Assert.True(validationContext.Valid);
 
-            //
             sectPr.AppendChild(new PaperSource());
             Assert.True(validationContext.Valid);
 

@@ -99,14 +99,14 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
             Wetp.Taskpanes taskpanes1 = new Wetp.Taskpanes();
             taskpanes1.AddNamespaceDeclaration("wetp", "http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11");
 
-            Wetp.WebExtensionTaskpane webExtensionTaskpane1 = new Wetp.WebExtensionTaskpane() { DockState = string.Empty, Visibility = true, Width = 270D, Row = (UInt32Value)1U };
+            Wetp.WebExtensionTaskpane webExtensionTaskpane1 = new Wetp.WebExtensionTaskpane() { DockState = string.Empty, Visibility = true, Width = 270D, Row = 1U };
 
             Wetp.WebExtensionPartReference webExtensionPartReference1 = new Wetp.WebExtensionPartReference() { Id = "rId1" };
             webExtensionPartReference1.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
 
             webExtensionTaskpane1.Append(webExtensionPartReference1);
 
-            Wetp.WebExtensionTaskpane webExtensionTaskpane2 = new Wetp.WebExtensionTaskpane() { DockState = string.Empty, Visibility = true, Width = 270D, Row = (UInt32Value)2U };
+            Wetp.WebExtensionTaskpane webExtensionTaskpane2 = new Wetp.WebExtensionTaskpane() { DockState = string.Empty, Visibility = true, Width = 270D, Row = 2U };
 
             Wetp.WebExtensionPartReference webExtensionPartReference2 = new Wetp.WebExtensionPartReference() { Id = "rId2" };
             webExtensionPartReference2.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
@@ -171,7 +171,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
             workbook1.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
             workbook1.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
             FileVersion fileVersion1 = new FileVersion() { ApplicationName = "xl", LastEdited = "6", LowestEdited = "6", BuildVersion = "14420" };
-            WorkbookProperties workbookProperties1 = new WorkbookProperties() { DefaultThemeVersion = (UInt32Value)153222U };
+            WorkbookProperties workbookProperties1 = new WorkbookProperties() { DefaultThemeVersion = 153222U };
 
             AlternateContent alternateContent1 = new AlternateContent();
             alternateContent1.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
@@ -186,17 +186,17 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
             alternateContent1.Append(alternateContentChoice1);
 
             BookViews bookViews1 = new BookViews();
-            WorkbookView workbookView1 = new WorkbookView() { XWindow = 0, YWindow = 0, WindowWidth = (UInt32Value)26940U, WindowHeight = (UInt32Value)15120U };
+            WorkbookView workbookView1 = new WorkbookView() { XWindow = 0, YWindow = 0, WindowWidth = 26940U, WindowHeight = 15120U };
 
             bookViews1.Append(workbookView1);
 
             Sheets sheets1 = new Sheets();
-            Sheet sheet1 = new Sheet() { Name = "Sheet1", SheetId = (UInt32Value)1U, Id = "rId1" };
-            Sheet sheet2 = new Sheet() { Name = "Sheet2", SheetId = (UInt32Value)2U, Id = "rId2" };
+            Sheet sheet1 = new Sheet() { Name = "Sheet1", SheetId = 1U, Id = "rId1" };
+            Sheet sheet2 = new Sheet() { Name = "Sheet2", SheetId = 2U, Id = "rId2" };
 
             sheets1.Append(sheet1);
             sheets1.Append(sheet2);
-            CalculationProperties calculationProperties1 = new CalculationProperties() { CalculationId = (UInt32Value)152511U };
+            CalculationProperties calculationProperties1 = new CalculationProperties() { CalculationId = 152511U };
 
             WorkbookExtensionList workbookExtensionList1 = new WorkbookExtensionList();
 
@@ -754,7 +754,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
 
             SheetViews sheetViews1 = new SheetViews();
 
-            SheetView sheetView1 = new SheetView() { WorkbookViewId = (UInt32Value)0U };
+            SheetView sheetView1 = new SheetView() { WorkbookViewId = 0U };
             Selection selection1 = new Selection() { ActiveCell = "L27", SequenceOfReferences = new ListValue<StringValue>() { InnerText = "L27" } };
 
             sheetView1.Append(selection1);
@@ -823,7 +823,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
             Xdr.GraphicFrame graphicFrame1 = new Xdr.GraphicFrame() { Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties1 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties1 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Agave 1" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties1 = new Xdr.NonVisualDrawingProperties() { Id = 2U, Name = "Agave 1" };
 
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties1 = new Xdr.NonVisualGraphicFrameDrawingProperties();
             A.GraphicFrameLocks graphicFrameLocks1 = new A.GraphicFrameLocks() { NoGrouping = true };
@@ -863,7 +863,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
             Xdr.Picture picture1 = new Xdr.Picture();
 
             Xdr.NonVisualPictureProperties nonVisualPictureProperties1 = new Xdr.NonVisualPictureProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties2 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Agave 1" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties2 = new Xdr.NonVisualDrawingProperties() { Id = 2U, Name = "Agave 1" };
             Xdr.NonVisualPictureDrawingProperties nonVisualPictureDrawingProperties1 = new Xdr.NonVisualPictureDrawingProperties();
 
             nonVisualPictureProperties1.Append(nonVisualDrawingProperties2);
@@ -947,7 +947,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
             Xdr.GraphicFrame graphicFrame2 = new Xdr.GraphicFrame() { Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties2 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties3 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Agave 2" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties3 = new Xdr.NonVisualDrawingProperties() { Id = 3U, Name = "Agave 2" };
 
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties2 = new Xdr.NonVisualGraphicFrameDrawingProperties();
             A.GraphicFrameLocks graphicFrameLocks2 = new A.GraphicFrameLocks() { NoGrouping = true };
@@ -987,7 +987,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
             Xdr.Picture picture2 = new Xdr.Picture();
 
             Xdr.NonVisualPictureProperties nonVisualPictureProperties2 = new Xdr.NonVisualPictureProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties4 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Agave 2" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties4 = new Xdr.NonVisualDrawingProperties() { Id = 3U, Name = "Agave 2" };
             Xdr.NonVisualPictureDrawingProperties nonVisualPictureDrawingProperties2 = new Xdr.NonVisualPictureDrawingProperties();
 
             nonVisualPictureProperties2.Append(nonVisualDrawingProperties4);
@@ -1109,7 +1109,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
 
             SheetViews sheetViews2 = new SheetViews();
 
-            SheetView sheetView2 = new SheetView() { TabSelected = true, TopLeftCell = "A4", WorkbookViewId = (UInt32Value)0U };
+            SheetView sheetView2 = new SheetView() { TabSelected = true, TopLeftCell = "A4", WorkbookViewId = 0U };
             Selection selection2 = new Selection() { ActiveCell = "K19", SequenceOfReferences = new ListValue<StringValue>() { InnerText = "K19" } };
 
             sheetView2.Append(selection2);
@@ -1178,7 +1178,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
             Xdr.GraphicFrame graphicFrame3 = new Xdr.GraphicFrame() { Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties3 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties5 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Agave 1" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties5 = new Xdr.NonVisualDrawingProperties() { Id = 2U, Name = "Agave 1" };
 
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties3 = new Xdr.NonVisualGraphicFrameDrawingProperties();
             A.GraphicFrameLocks graphicFrameLocks3 = new A.GraphicFrameLocks() { NoGrouping = true };
@@ -1218,7 +1218,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
             Xdr.Picture picture3 = new Xdr.Picture();
 
             Xdr.NonVisualPictureProperties nonVisualPictureProperties3 = new Xdr.NonVisualPictureProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties6 = new Xdr.NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Agave 1" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties6 = new Xdr.NonVisualDrawingProperties() { Id = 2U, Name = "Agave 1" };
             Xdr.NonVisualPictureDrawingProperties nonVisualPictureDrawingProperties3 = new Xdr.NonVisualPictureDrawingProperties();
 
             nonVisualPictureProperties3.Append(nonVisualDrawingProperties6);
@@ -1304,11 +1304,11 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
             stylesheet1.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
             stylesheet1.AddNamespaceDeclaration("x14ac", "http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac");
 
-            Fonts fonts1 = new Fonts() { Count = (UInt32Value)1U, KnownFonts = true };
+            Fonts fonts1 = new Fonts() { Count = 1U, KnownFonts = true };
 
             Font font1 = new Font();
             FontSize fontSize1 = new FontSize() { Val = 11D };
-            Color color1 = new Color() { Theme = (UInt32Value)1U };
+            Color color1 = new Color() { Theme = 1U };
             FontName fontName1 = new FontName() { Val = "Calibri" };
             FontFamilyNumbering fontFamilyNumbering1 = new FontFamilyNumbering() { Val = 2 };
             FontScheme fontScheme2 = new FontScheme() { Val = FontSchemeValues.Minor };
@@ -1321,7 +1321,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
 
             fonts1.Append(font1);
 
-            Fills fills1 = new Fills() { Count = (UInt32Value)2U };
+            Fills fills1 = new Fills() { Count = 2U };
 
             Fill fill1 = new Fill();
             PatternFill patternFill1 = new PatternFill() { PatternType = PatternValues.None };
@@ -1336,7 +1336,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
             fills1.Append(fill1);
             fills1.Append(fill2);
 
-            Borders borders1 = new Borders() { Count = (UInt32Value)1U };
+            Borders borders1 = new Borders() { Count = 1U };
 
             Border border1 = new Border();
             LeftBorder leftBorder1 = new LeftBorder();
@@ -1353,22 +1353,22 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
 
             borders1.Append(border1);
 
-            CellStyleFormats cellStyleFormats1 = new CellStyleFormats() { Count = (UInt32Value)1U };
-            CellFormat cellFormat1 = new CellFormat() { NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)0U };
+            CellStyleFormats cellStyleFormats1 = new CellStyleFormats() { Count = 1U };
+            CellFormat cellFormat1 = new CellFormat() { NumberFormatId = 0U, FontId = 0U, FillId = 0U, BorderId = 0U };
 
             cellStyleFormats1.Append(cellFormat1);
 
-            CellFormats cellFormats1 = new CellFormats() { Count = (UInt32Value)1U };
-            CellFormat cellFormat2 = new CellFormat() { NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)0U, FormatId = (UInt32Value)0U };
+            CellFormats cellFormats1 = new CellFormats() { Count = 1U };
+            CellFormat cellFormat2 = new CellFormat() { NumberFormatId = 0U, FontId = 0U, FillId = 0U, BorderId = 0U, FormatId = 0U };
 
             cellFormats1.Append(cellFormat2);
 
-            CellStyles cellStyles1 = new CellStyles() { Count = (UInt32Value)1U };
-            CellStyle cellStyle1 = new CellStyle() { Name = "Normal", FormatId = (UInt32Value)0U, BuiltinId = (UInt32Value)0U };
+            CellStyles cellStyles1 = new CellStyles() { Count = 1U };
+            CellStyle cellStyle1 = new CellStyle() { Name = "Normal", FormatId = 0U, BuiltinId = 0U };
 
             cellStyles1.Append(cellStyle1);
-            DifferentialFormats differentialFormats1 = new DifferentialFormats() { Count = (UInt32Value)0U };
-            TableStyles tableStyles1 = new TableStyles() { Count = (UInt32Value)0U, DefaultTableStyle = "TableStyleMedium2", DefaultPivotStyle = "PivotStyleLight16" };
+            DifferentialFormats differentialFormats1 = new DifferentialFormats() { Count = 0U };
+            TableStyles tableStyles1 = new TableStyles() { Count = 0U, DefaultTableStyle = "TableStyleMedium2", DefaultPivotStyle = "PivotStyleLight16" };
 
             StylesheetExtensionList stylesheetExtensionList1 = new StylesheetExtensionList();
 
@@ -1414,7 +1414,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
 
             Ap.HeadingPairs headingPairs1 = new Ap.HeadingPairs();
 
-            Vt.VTVector vTVector1 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Variant, Size = (UInt32Value)2U };
+            Vt.VTVector vTVector1 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Variant, Size = 2U };
 
             Vt.Variant variant1 = new Vt.Variant();
             Vt.VTLPSTR vTLPSTR1 = new Vt.VTLPSTR();
@@ -1435,7 +1435,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
 
             Ap.TitlesOfParts titlesOfParts1 = new Ap.TitlesOfParts();
 
-            Vt.VTVector vTVector2 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Lpstr, Size = (UInt32Value)2U };
+            Vt.VTVector vTVector2 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Lpstr, Size = 2U };
             Vt.VTLPSTR vTLPSTR2 = new Vt.VTLPSTR();
             vTLPSTR2.Text = "Sheet1";
             Vt.VTLPSTR vTLPSTR3 = new Vt.VTLPSTR();

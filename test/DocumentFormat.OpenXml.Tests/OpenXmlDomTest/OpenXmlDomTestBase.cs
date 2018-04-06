@@ -51,7 +51,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// </summary>
         /// <param name="element">the element need to calculate</param>
         /// <returns>the path of the passed-in element</returns>
-        private static String GetElementPath(OpenXmlElement element)
+        private static string GetElementPath(OpenXmlElement element)
         {
             // Log.Comment("get the current element position path");
             if (element == null)
@@ -101,11 +101,11 @@ namespace DocumentFormat.OpenXml.Tests
         /// <param name="element">the root </param>
         /// <param name="Path">the path used to find the target element</param>
         /// <returns>The <see cref="XElement"/> retrieved from the path</returns>
-        private static XElement GetXmlElement(String path, OpenXmlPart part)
+        private static XElement GetXmlElement(string path, OpenXmlPart part)
         {
             if (part == null)
                 throw new ArgumentNullException(nameof(part));
-            if (String.IsNullOrEmpty(path))
+            if (string.IsNullOrEmpty(path))
                 throw new ArgumentNullException(nameof(path));
 
             XElement element = null;
@@ -116,11 +116,11 @@ namespace DocumentFormat.OpenXml.Tests
             if (element == null)
                 throw new Exception("Failed to load element from specified part.");
 
-            List<String> elementTypeList = new List<string>();
-            List<String> elementPositionList = new List<string>();
+            List<string> elementTypeList = new List<string>();
+            List<string> elementPositionList = new List<string>();
             char[] separator = { '/' };
 
-            foreach (String level in path.Split(separator, StringSplitOptions.RemoveEmptyEntries))
+            foreach (string level in path.Split(separator, StringSplitOptions.RemoveEmptyEntries))
             {
                 string[] ele = level.Split('@');
                 if (ele.Length <= 0 || ele.Length > 2)
@@ -159,7 +159,7 @@ namespace DocumentFormat.OpenXml.Tests
             if (part == null || element == null)
                 throw new ArgumentNullException("part | element");
 
-            String path = GetElementPath(element);
+            string path = GetElementPath(element);
 
             return GetXmlElement(path, part);
         }
@@ -373,7 +373,11 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Append Collection
 
-        internal enum AppendCollectionType { IEnumerable, Array, }
+        internal enum AppendCollectionType
+        {
+            IEnumerable,
+            Array,
+        }
 
         internal void AppendCollectionOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHostElement,
             IFile sourceFile, GetTargetPart getSrcPart, GetTargetElement getImportee, AppendCollectionType operationType)
@@ -417,7 +421,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var originalElementCount = hostElement.ChildElements.Count;
                     var importElementsCount = importHost.ChildElements.Count;
                     var childPosition = originalElementCount;
-                    String importElementOuterXml = null;
+                    string importElementOuterXml = null;
 
                     switch (operationType)
                     {
@@ -460,7 +464,11 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Pend Operations
 
-        internal enum PendType { Append, Prepend, }
+        internal enum PendType
+        {
+            Append,
+            Prepend,
+        }
 
         private protected void PendTestOnFile(IFile testFile, GetTargetPart getHostPart, GetTargetElement getHostElement,
             IFile sourceFile, GetTargetPart getSourcePart, GetTargetElement getSourceHost, PendType pendType)
@@ -512,7 +520,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                     int? childPosition = null;
                     OpenXmlElement result = null;
-                    String importElementOuterXml = importElement.OuterXml;
+                    string importElementOuterXml = importElement.OuterXml;
 
                     switch (operationType)
                     {
@@ -573,7 +581,11 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Insert Before/After
 
-        internal enum InsertType { Before, After, }
+        internal enum InsertType
+        {
+            Before,
+            After,
+        }
 
         private protected void InsertTestOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHostElement,
                 IFile sourceFile, GetTargetPart getSourcePart, GetTargetElement getSourceHost, GetTargetElement getRef, InsertType insertType)
@@ -631,7 +643,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                         OpenXmlElement result = null;
                         int? expectPos = null;
-                        String InsertElement = importElement.OuterXml;
+                        string InsertElement = importElement.OuterXml;
 
                         switch (type)
                         {
@@ -701,7 +713,14 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region InsertAt
 
-        internal enum InsertAtPosition { AsFirst, NextToFirst, AnyValid, NextToLast, AsLast, }
+        internal enum InsertAtPosition
+        {
+            AsFirst,
+            NextToFirst,
+            AnyValid,
+            NextToLast,
+            AsLast,
+        }
 
         private protected void InsertAtOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost,
                  IFile sourceFile, GetTargetPart getSrcPart, GetTargetElement getImportee, InsertAtPosition posType)
@@ -745,7 +764,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                     int expectPos;
                     OpenXmlElement result = null;
-                    String InsertElement = importElement.OuterXml;
+                    string InsertElement = importElement.OuterXml;
 
                     switch (posType)
                     {
@@ -797,7 +816,11 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Insert Before/After Self
 
-        internal enum InsertRel { BeforeSelf, AfterSelf, }
+        internal enum InsertRel
+        {
+            BeforeSelf,
+            AfterSelf,
+        }
 
         private protected void InsertRelativeOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost,
             IFile sourceFile, GetTargetPart getSrcPart, GetTargetElement getImportee, InsertRel posType)
@@ -841,7 +864,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                     int expectPos;
                     OpenXmlElement result = null;
-                    String InsertElement = importElement.OuterXml;
+                    string InsertElement = importElement.OuterXml;
 
                     switch (posType)
                     {

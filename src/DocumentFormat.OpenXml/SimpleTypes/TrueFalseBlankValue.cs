@@ -39,11 +39,11 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Implicitly converts a TrueFalseBlankValue object to a <see cref="Boolean"/> value.
+        /// Implicitly converts a TrueFalseBlankValue object to a <see cref="bool"/> value.
         /// </summary>
         /// <param name="xmlAttribute">The source <see cref="TrueFalseBlankValue"/> to convert.</param>
-        /// <returns>The converted <see cref="Boolean"/> value.</returns>
-        public static implicit operator Boolean(TrueFalseBlankValue xmlAttribute)
+        /// <returns>The converted <see cref="bool"/> value.</returns>
+        public static implicit operator bool(TrueFalseBlankValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {
@@ -54,11 +54,11 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Implicitly converts a <see cref="Boolean"/> value to a TrueFalsBlankValue value.
+        /// Implicitly converts a <see cref="bool"/> value to a TrueFalsBlankValue value.
         /// </summary>
-        /// <param name="value">The source <see cref="Boolean"/> value to convert.</param>
+        /// <param name="value">The source <see cref="bool"/> value to convert.</param>
         /// <returns>The converted <see cref="TrueFalseBlankValue"/> value.</returns>
-        public static implicit operator TrueFalseBlankValue(Boolean value)
+        public static implicit operator TrueFalseBlankValue(bool value)
         {
             return FromBoolean(value);
         }
@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">A Boolean value to create a new TrueFalseBlankValue object from.</param>
         /// <returns>A TrueFalseBlankValue that corresponds to the value parameter.</returns>
-        public static TrueFalseBlankValue FromBoolean(Boolean value)
+        public static TrueFalseBlankValue FromBoolean(bool value)
         {
             return new TrueFalseBlankValue(value);
         }
@@ -78,7 +78,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="xmlAttribute">A TrueFalseBlankValue object to retrieve an internal Boolean representation.</param>
         /// <returns>A Boolean value that represents a TrueFalseBlankValue object.</returns>
-        public static Boolean ToBoolean(TrueFalseBlankValue xmlAttribute)
+        public static bool ToBoolean(TrueFalseBlankValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {

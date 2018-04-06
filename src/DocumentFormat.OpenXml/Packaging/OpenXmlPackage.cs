@@ -481,7 +481,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            void DefaultValidationEventHandler(Object sender, OpenXmlPackageValidationEventArgs e)
+            void DefaultValidationEventHandler(object sender, OpenXmlPackageValidationEventArgs e)
             {
                 var exception = new OpenXmlPackageException(ExceptionMessages.ValidationException);
 
@@ -862,7 +862,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 // read the content to local string
                 using (Stream mainPartStream = mainPart.GetStream())
                 {
-                    if (mainPartStream.Length > Int32.MaxValue)
+                    if (mainPartStream.Length > int.MaxValue)
                     {
                         throw new OpenXmlPackageException(ExceptionMessages.DocumentTooBig);
                     }
@@ -871,7 +871,6 @@ namespace DocumentFormat.OpenXml.Packaging
                     mainPartStream.CopyTo(memoryStream);
                 }
 
-                //
                 tempPart = AddExtendedPart(@"http://temp", MainPartContentType, @".xml");
 
                 foreach (KeyValuePair<string, OpenXmlPart> idPartPair in mainPart.ChildrenRelationshipParts)
@@ -1105,7 +1104,6 @@ namespace DocumentFormat.OpenXml.Packaging
                     }
                 }
 
-                //
                 foreach (var dataPart in dataPartSet)
                 {
                     // delete the part from the package

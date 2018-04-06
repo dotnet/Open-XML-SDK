@@ -55,7 +55,6 @@ namespace DocumentFormat.OpenXml.Tests
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            //
             rRowColumn.AppendChild(new RevisionCellChange());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);

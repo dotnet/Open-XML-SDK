@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (IsContentTypeFixed && metroPart.ContentType != ContentType)
             {
-                string errorMessage = String.Format(CultureInfo.CurrentUICulture,
+                string errorMessage = string.Format(CultureInfo.CurrentUICulture,
                                                     ExceptionMessages.InvalidPartContentType,
                                                     metroPart.Uri.OriginalString,
                                                     metroPart.ContentType,

@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Gets or sets the index of the simple data in the SdbSimpleTypeRestriction data array.
         /// </summary>
-        public SdbIndex SimpleTypeIndex { get; set; }
+        public ushort SimpleTypeIndex { get; set; }
 
         /// <summary>
         /// Gets or sets in which file format version this attribute is allowed.
@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
         }
 
-        public SdbAttributeConstraint(XsdAttributeUse xsdAttributeUse, SdbIndex simpleTypeIndex, byte fileFormatVersion)
+        public SdbAttributeConstraint(XsdAttributeUse xsdAttributeUse, ushort simpleTypeIndex, byte fileFormatVersion)
         {
             AttributeUse = xsdAttributeUse;
             SimpleTypeIndex = simpleTypeIndex;
@@ -50,7 +50,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             get
             {
                 // We save the enum data in byte
-                return sizeof(XsdAttributeUse) + sizeof(SdbIndex) + sizeof(Byte);
+                return sizeof(XsdAttributeUse) + sizeof(ushort) + sizeof(byte);
             }
         }
 

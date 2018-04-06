@@ -362,7 +362,6 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void Bug424104(OpenXmlValidator validator)
         {
-            //
             // change <xsd:any > to <xsd:any minOccurs=0 in CT_OfficeArtExtension"
             DocumentFormat.OpenXml.Drawing.Extension ext = new DocumentFormat.OpenXml.Drawing.Extension() { Uri = "test" };
             var errors = validator.Validate(ext);

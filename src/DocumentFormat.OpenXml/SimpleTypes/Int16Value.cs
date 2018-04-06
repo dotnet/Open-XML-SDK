@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml
     /// Represents the Int16 value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class Int16Value : OpenXmlSimpleValue<Int16>
+    public class Int16Value : OpenXmlSimpleValue<short>
     {
         /// <summary>
         /// Initializes a new instance of the Int16Value class.
@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml
         /// Initializes a new instance of the Int16Value class using the supplied Int16 value.
         /// </summary>
         /// <param name="value">The Int16 value.</param>
-        public Int16Value(Int16 value)
+        public Int16Value(short value)
             : base(value)
         {
         }
@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="xmlAttribute">The Int16Value to convert.</param>
         /// <returns>The converted Int16 value.</returns>
         /// <exception cref="InvalidOperationException">Thrown when xmlAttribute is null.</exception>
-        public static implicit operator Int16(Int16Value xmlAttribute)
+        public static implicit operator short(Int16Value xmlAttribute)
         {
             if (xmlAttribute == null)
             {
@@ -64,7 +64,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">The specified value.</param>
         /// <returns>A new Int16Value instance with the value.</returns>
-        public static implicit operator Int16Value(Int16 value)
+        public static implicit operator Int16Value(short value)
         {
             return FromInt16(value);
         }
@@ -74,7 +74,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">An Int16 value to use to create a new Int16Value object.</param>
         /// <returns>An Int16Value that corresponds to the value parameter.</returns>
-        public static Int16Value FromInt16(Int16 value)
+        public static Int16Value FromInt16(short value)
         {
             return new Int16Value(value);
         }
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml
         /// An Int16Value object to retrieve an Int16 representation.
         /// </param>
         /// <returns>An Int16 value that represents an Int16Value object.</returns>
-        public static Int16 ToInt16(Int16Value xmlAttribute)
+        public static short ToInt16(Int16Value xmlAttribute)
         {
             if (xmlAttribute == null)
             {

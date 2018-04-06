@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml
             return (IEnumerable<T>)GetCustomAttributes(element, typeof(T), inherit);
         }
 
-        public static FieldInfo GetDeclaredField(this Type type, String name)
+        public static FieldInfo GetDeclaredField(this Type type, string name)
         {
             return type.GetField(name);
         }

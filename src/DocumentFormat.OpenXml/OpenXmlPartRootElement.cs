@@ -155,7 +155,7 @@ namespace DocumentFormat.OpenXml
                     xmlReader.LocalName != LocalName)
                 {
                     string elementQName = new XmlQualifiedName(xmlReader.LocalName, xmlReader.NamespaceURI).ToString();
-                    string msg = String.Format(System.Globalization.CultureInfo.CurrentUICulture, ExceptionMessages.Fmt_PartRootIsInvalid, elementQName, XmlQualifiedName.ToString());
+                    string msg = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ExceptionMessages.Fmt_PartRootIsInvalid, elementQName, XmlQualifiedName.ToString());
                     throw new InvalidDataException(msg);
                 }
 
@@ -346,7 +346,7 @@ namespace DocumentFormat.OpenXml
 
                 foreach (var namespacePair in namespaces)
                 {
-                    if (!String.IsNullOrEmpty(namespacePair.Key))
+                    if (!string.IsNullOrEmpty(namespacePair.Key))
                     {
                         if (NamespaceDeclField != null &&
                             string.IsNullOrEmpty(LookupPrefixLocal(namespacePair.Value)) &&

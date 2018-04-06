@@ -145,7 +145,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             presentation1.AddNamespaceDeclaration("p", "http://schemas.openxmlformats.org/presentationml/2006/main");
 
             SlideMasterIdList slideMasterIdList1 = new SlideMasterIdList();
-            SlideMasterId slideMasterId1 = new SlideMasterId() { Id = (UInt32Value)2147483648U, RelationshipId = "rId1" };
+            SlideMasterId slideMasterId1 = new SlideMasterId() { Id = 2147483648U, RelationshipId = "rId1" };
 
             slideMasterIdList1.Append(slideMasterId1);
 
@@ -155,7 +155,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             notesMasterIdList1.Append(notesMasterId1);
 
             SlideIdList slideIdList1 = new SlideIdList();
-            SlideId slideId1 = new SlideId() { Id = (UInt32Value)256U, RelationshipId = "rId2" };
+            SlideId slideId1 = new SlideId() { Id = 256U, RelationshipId = "rId2" };
 
             slideIdList1.Append(slideId1);
             SlideSize slideSize1 = new SlideSize() { Cx = 9144000, Cy = 6858000, Type = SlideSizeValues.Screen4x3 };
@@ -357,7 +357,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             P15.SlideGuideList slideGuideList1 = new P15.SlideGuideList();
             slideGuideList1.AddNamespaceDeclaration("p15", "http://schemas.microsoft.com/office/powerpoint/2012/main");
 
-            P15.ExtendedGuide extendedGuide1 = new P15.ExtendedGuide() { Id = (UInt32Value)1U, Orientation = DirectionValues.Horizontal, Position = 2160 };
+            P15.ExtendedGuide extendedGuide1 = new P15.ExtendedGuide() { Id = 1U, Orientation = DirectionValues.Horizontal, Position = 2160 };
 
             P15.ColorType colorType1 = new P15.ColorType();
             A.RgbColorModelHex rgbColorModelHex1 = new A.RgbColorModelHex() { Val = "A4A3A4" };
@@ -366,7 +366,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
 
             extendedGuide1.Append(colorType1);
 
-            P15.ExtendedGuide extendedGuide2 = new P15.ExtendedGuide() { Id = (UInt32Value)2U, Position = 2880 };
+            P15.ExtendedGuide extendedGuide2 = new P15.ExtendedGuide() { Id = 2U, Position = 2880 };
 
             P15.ColorType colorType2 = new P15.ColorType();
             A.RgbColorModelHex rgbColorModelHex2 = new A.RgbColorModelHex() { Val = "A4A3A4" };
@@ -385,7 +385,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             P15.NotesGuideList notesGuideList1 = new P15.NotesGuideList();
             notesGuideList1.AddNamespaceDeclaration("p15", "http://schemas.microsoft.com/office/powerpoint/2012/main");
 
-            P15.ExtendedGuide extendedGuide3 = new P15.ExtendedGuide() { Id = (UInt32Value)1U, Orientation = DirectionValues.Horizontal, Position = 2160 };
+            P15.ExtendedGuide extendedGuide3 = new P15.ExtendedGuide() { Id = 1U, Orientation = DirectionValues.Horizontal, Position = 2160 };
 
             P15.ColorType colorType3 = new P15.ColorType();
             A.RgbColorModelHex rgbColorModelHex3 = new A.RgbColorModelHex() { Val = "A4A3A4" };
@@ -394,7 +394,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
 
             extendedGuide3.Append(colorType3);
 
-            P15.ExtendedGuide extendedGuide4 = new P15.ExtendedGuide() { Id = (UInt32Value)2U, Position = 2880 };
+            P15.ExtendedGuide extendedGuide4 = new P15.ExtendedGuide() { Id = 2U, Position = 2880 };
 
             P15.ColorType colorType4 = new P15.ColorType();
             A.RgbColorModelHex rgbColorModelHex4 = new A.RgbColorModelHex() { Val = "A4A3A4" };
@@ -434,7 +434,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
 
             Background background1 = new Background();
 
-            BackgroundStyleReference backgroundStyleReference1 = new BackgroundStyleReference() { Index = (UInt32Value)1002U };
+            BackgroundStyleReference backgroundStyleReference1 = new BackgroundStyleReference() { Index = 1002U };
             A.SchemeColor schemeColor10 = new A.SchemeColor() { Val = A.SchemeColorValues.Background2 };
 
             backgroundStyleReference1.Append(schemeColor10);
@@ -444,7 +444,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             ShapeTree shapeTree1 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties1 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties1 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties1 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties1 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties1 = new ApplicationNonVisualDrawingProperties();
 
@@ -470,7 +470,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape1 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties1 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties2 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Header Placeholder 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties2 = new NonVisualDrawingProperties() { Id = 2U, Name = "Header Placeholder 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties1 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks1 = new A.ShapeLocks() { NoGrouping = true };
@@ -553,7 +553,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape2 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties2 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties3 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Date Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties3 = new NonVisualDrawingProperties() { Id = 3U, Name = "Date Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties2 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks2 = new A.ShapeLocks() { NoGrouping = true };
@@ -561,7 +561,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties2.Append(shapeLocks2);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties3 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape2 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape2 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Index = 1U };
 
             applicationNonVisualDrawingProperties3.Append(placeholderShape2);
 
@@ -625,7 +625,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape3 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties3 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties4 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Slide Image Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties4 = new NonVisualDrawingProperties() { Id = 4U, Name = "Slide Image Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties3 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks3 = new A.ShapeLocks() { NoGrouping = true, NoRotation = true, NoChangeAspect = true };
@@ -633,7 +633,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties3.Append(shapeLocks3);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties4 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape3 = new PlaceholderShape() { Type = PlaceholderValues.SlideImage, Index = (UInt32Value)2U };
+            PlaceholderShape placeholderShape3 = new PlaceholderShape() { Type = PlaceholderValues.SlideImage, Index = 2U };
 
             applicationNonVisualDrawingProperties4.Append(placeholderShape3);
 
@@ -690,7 +690,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape4 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties4 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties5 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Notes Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties5 = new NonVisualDrawingProperties() { Id = 5U, Name = "Notes Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties4 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks4 = new A.ShapeLocks() { NoGrouping = true };
@@ -698,7 +698,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties4.Append(shapeLocks4);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties5 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape4 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)3U };
+            PlaceholderShape placeholderShape4 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Quarter, Index = 3U };
 
             applicationNonVisualDrawingProperties5.Append(placeholderShape4);
 
@@ -828,7 +828,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape5 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties5 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties6 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Footer Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties6 = new NonVisualDrawingProperties() { Id = 6U, Name = "Footer Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties5 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks5 = new A.ShapeLocks() { NoGrouping = true };
@@ -836,7 +836,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties5.Append(shapeLocks5);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties6 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape5 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)4U };
+            PlaceholderShape placeholderShape5 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 4U };
 
             applicationNonVisualDrawingProperties6.Append(placeholderShape5);
 
@@ -909,7 +909,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
 
             CommonSlideDataExtension commonSlideDataExtension1 = new CommonSlideDataExtension() { Uri = "{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}" };
 
-            P14.CreationId creationId1 = new P14.CreationId() { Val = (UInt32Value)3631591638U };
+            P14.CreationId creationId1 = new P14.CreationId() { Val = 3631591638U };
             creationId1.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             commonSlideDataExtension1.Append(creationId1);
@@ -1699,7 +1699,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             ShapeTree shapeTree2 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties2 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties7 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties7 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties2 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties7 = new ApplicationNonVisualDrawingProperties();
 
@@ -1725,7 +1725,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape6 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties6 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties8 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "TextBox 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties8 = new NonVisualDrawingProperties() { Id = 4U, Name = "TextBox 3" };
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties6 = new NonVisualShapeDrawingProperties() { TextBox = true };
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties8 = new ApplicationNonVisualDrawingProperties();
 
@@ -1977,7 +1977,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             ShapeTree shapeTree3 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties3 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties9 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties9 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties3 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties9 = new ApplicationNonVisualDrawingProperties();
 
@@ -2003,7 +2003,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape7 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties7 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties10 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties10 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties7 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks6 = new A.ShapeLocks() { NoGrouping = true };
@@ -2061,7 +2061,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape8 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties8 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties11 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Subtitle 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties11 = new NonVisualDrawingProperties() { Id = 3U, Name = "Subtitle 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties8 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks7 = new A.ShapeLocks() { NoGrouping = true };
@@ -2069,7 +2069,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties8.Append(shapeLocks7);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties11 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape7 = new PlaceholderShape() { Type = PlaceholderValues.SubTitle, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape7 = new PlaceholderShape() { Type = PlaceholderValues.SubTitle, Index = 1U };
 
             applicationNonVisualDrawingProperties11.Append(placeholderShape7);
 
@@ -2301,7 +2301,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape9 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties9 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties12 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Date Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties12 = new NonVisualDrawingProperties() { Id = 4U, Name = "Date Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties9 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks8 = new A.ShapeLocks() { NoGrouping = true };
@@ -2309,7 +2309,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties9.Append(shapeLocks8);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties12 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape8 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape8 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties12.Append(placeholderShape8);
 
@@ -2349,7 +2349,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape10 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties10 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties13 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Footer Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties13 = new NonVisualDrawingProperties() { Id = 5U, Name = "Footer Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties10 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks9 = new A.ShapeLocks() { NoGrouping = true };
@@ -2357,7 +2357,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties10.Append(shapeLocks9);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties13 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape9 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape9 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties13.Append(placeholderShape9);
 
@@ -2386,7 +2386,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape11 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties11 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties14 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Slide Number Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties14 = new NonVisualDrawingProperties() { Id = 6U, Name = "Slide Number Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties11 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks10 = new A.ShapeLocks() { NoGrouping = true };
@@ -2394,7 +2394,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties11.Append(shapeLocks10);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties14 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape10 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape10 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties14.Append(placeholderShape10);
 
@@ -2464,7 +2464,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
 
             Background background2 = new Background();
 
-            BackgroundStyleReference backgroundStyleReference2 = new BackgroundStyleReference() { Index = (UInt32Value)1001U };
+            BackgroundStyleReference backgroundStyleReference2 = new BackgroundStyleReference() { Index = 1001U };
             A.SchemeColor schemeColor45 = new A.SchemeColor() { Val = A.SchemeColorValues.Background1 };
 
             backgroundStyleReference2.Append(schemeColor45);
@@ -2474,7 +2474,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             ShapeTree shapeTree4 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties4 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties15 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties15 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties4 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties15 = new ApplicationNonVisualDrawingProperties();
 
@@ -2500,7 +2500,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape12 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties12 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties16 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title Placeholder 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties16 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title Placeholder 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties12 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks11 = new A.ShapeLocks() { NoGrouping = true };
@@ -2568,7 +2568,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape13 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties13 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties17 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Text Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties17 = new NonVisualDrawingProperties() { Id = 3U, Name = "Text Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties13 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks12 = new A.ShapeLocks() { NoGrouping = true };
@@ -2576,7 +2576,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties13.Append(shapeLocks12);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties17 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape12 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape12 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = 1U };
 
             applicationNonVisualDrawingProperties17.Append(placeholderShape12);
 
@@ -2706,7 +2706,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape14 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties14 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties18 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Date Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties18 = new NonVisualDrawingProperties() { Id = 4U, Name = "Date Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties14 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks13 = new A.ShapeLocks() { NoGrouping = true };
@@ -2714,7 +2714,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties14.Append(shapeLocks13);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties18 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape13 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)2U };
+            PlaceholderShape placeholderShape13 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 2U };
 
             applicationNonVisualDrawingProperties18.Append(placeholderShape13);
 
@@ -2790,7 +2790,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape15 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties15 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties19 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Footer Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties19 = new NonVisualDrawingProperties() { Id = 5U, Name = "Footer Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties15 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks14 = new A.ShapeLocks() { NoGrouping = true };
@@ -2798,7 +2798,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties15.Append(shapeLocks14);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties19 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape14 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)3U };
+            PlaceholderShape placeholderShape14 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 3U };
 
             applicationNonVisualDrawingProperties19.Append(placeholderShape14);
 
@@ -2863,7 +2863,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape16 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties16 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties20 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Slide Number Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties20 = new NonVisualDrawingProperties() { Id = 6U, Name = "Slide Number Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties16 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks15 = new A.ShapeLocks() { NoGrouping = true };
@@ -2871,7 +2871,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties16.Append(shapeLocks15);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties20 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape15 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)4U };
+            PlaceholderShape placeholderShape15 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 4U };
 
             applicationNonVisualDrawingProperties20.Append(placeholderShape15);
 
@@ -2956,7 +2956,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
 
             CommonSlideDataExtension commonSlideDataExtension2 = new CommonSlideDataExtension() { Uri = "{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}" };
 
-            P14.CreationId creationId2 = new P14.CreationId() { Val = (UInt32Value)2970118228U };
+            P14.CreationId creationId2 = new P14.CreationId() { Val = 2970118228U };
             creationId2.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             commonSlideDataExtension2.Append(creationId2);
@@ -2969,17 +2969,17 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             ColorMap colorMap2 = new ColorMap() { Background1 = A.ColorSchemeIndexValues.Light1, Text1 = A.ColorSchemeIndexValues.Dark1, Background2 = A.ColorSchemeIndexValues.Light2, Text2 = A.ColorSchemeIndexValues.Dark2, Accent1 = A.ColorSchemeIndexValues.Accent1, Accent2 = A.ColorSchemeIndexValues.Accent2, Accent3 = A.ColorSchemeIndexValues.Accent3, Accent4 = A.ColorSchemeIndexValues.Accent4, Accent5 = A.ColorSchemeIndexValues.Accent5, Accent6 = A.ColorSchemeIndexValues.Accent6, Hyperlink = A.ColorSchemeIndexValues.Hyperlink, FollowedHyperlink = A.ColorSchemeIndexValues.FollowedHyperlink };
 
             SlideLayoutIdList slideLayoutIdList1 = new SlideLayoutIdList();
-            SlideLayoutId slideLayoutId1 = new SlideLayoutId() { Id = (UInt32Value)2147483649U, RelationshipId = "rId1" };
-            SlideLayoutId slideLayoutId2 = new SlideLayoutId() { Id = (UInt32Value)2147483650U, RelationshipId = "rId2" };
-            SlideLayoutId slideLayoutId3 = new SlideLayoutId() { Id = (UInt32Value)2147483651U, RelationshipId = "rId3" };
-            SlideLayoutId slideLayoutId4 = new SlideLayoutId() { Id = (UInt32Value)2147483652U, RelationshipId = "rId4" };
-            SlideLayoutId slideLayoutId5 = new SlideLayoutId() { Id = (UInt32Value)2147483653U, RelationshipId = "rId5" };
-            SlideLayoutId slideLayoutId6 = new SlideLayoutId() { Id = (UInt32Value)2147483654U, RelationshipId = "rId6" };
-            SlideLayoutId slideLayoutId7 = new SlideLayoutId() { Id = (UInt32Value)2147483655U, RelationshipId = "rId7" };
-            SlideLayoutId slideLayoutId8 = new SlideLayoutId() { Id = (UInt32Value)2147483656U, RelationshipId = "rId8" };
-            SlideLayoutId slideLayoutId9 = new SlideLayoutId() { Id = (UInt32Value)2147483657U, RelationshipId = "rId9" };
-            SlideLayoutId slideLayoutId10 = new SlideLayoutId() { Id = (UInt32Value)2147483658U, RelationshipId = "rId10" };
-            SlideLayoutId slideLayoutId11 = new SlideLayoutId() { Id = (UInt32Value)2147483659U, RelationshipId = "rId11" };
+            SlideLayoutId slideLayoutId1 = new SlideLayoutId() { Id = 2147483649U, RelationshipId = "rId1" };
+            SlideLayoutId slideLayoutId2 = new SlideLayoutId() { Id = 2147483650U, RelationshipId = "rId2" };
+            SlideLayoutId slideLayoutId3 = new SlideLayoutId() { Id = 2147483651U, RelationshipId = "rId3" };
+            SlideLayoutId slideLayoutId4 = new SlideLayoutId() { Id = 2147483652U, RelationshipId = "rId4" };
+            SlideLayoutId slideLayoutId5 = new SlideLayoutId() { Id = 2147483653U, RelationshipId = "rId5" };
+            SlideLayoutId slideLayoutId6 = new SlideLayoutId() { Id = 2147483654U, RelationshipId = "rId6" };
+            SlideLayoutId slideLayoutId7 = new SlideLayoutId() { Id = 2147483655U, RelationshipId = "rId7" };
+            SlideLayoutId slideLayoutId8 = new SlideLayoutId() { Id = 2147483656U, RelationshipId = "rId8" };
+            SlideLayoutId slideLayoutId9 = new SlideLayoutId() { Id = 2147483657U, RelationshipId = "rId9" };
+            SlideLayoutId slideLayoutId10 = new SlideLayoutId() { Id = 2147483658U, RelationshipId = "rId10" };
+            SlideLayoutId slideLayoutId11 = new SlideLayoutId() { Id = 2147483659U, RelationshipId = "rId11" };
 
             slideLayoutIdList1.Append(slideLayoutId1);
             slideLayoutIdList1.Append(slideLayoutId2);
@@ -3513,7 +3513,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             ShapeTree shapeTree5 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties5 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties21 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties21 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties5 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties21 = new ApplicationNonVisualDrawingProperties();
 
@@ -3539,7 +3539,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape17 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties17 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties22 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties22 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties17 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks16 = new A.ShapeLocks() { NoGrouping = true };
@@ -3605,7 +3605,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape18 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties18 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties23 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Content Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties23 = new NonVisualDrawingProperties() { Id = 3U, Name = "Content Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties18 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks17 = new A.ShapeLocks() { NoGrouping = true };
@@ -3613,7 +3613,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties18.Append(shapeLocks17);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties23 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape17 = new PlaceholderShape() { Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape17 = new PlaceholderShape() { Index = 1U };
 
             applicationNonVisualDrawingProperties23.Append(placeholderShape17);
 
@@ -3789,7 +3789,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape19 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties19 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties24 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Text Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties24 = new NonVisualDrawingProperties() { Id = 4U, Name = "Text Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties19 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks18 = new A.ShapeLocks() { NoGrouping = true };
@@ -3797,7 +3797,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties19.Append(shapeLocks18);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties24 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape18 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)2U };
+            PlaceholderShape placeholderShape18 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Half, Index = 2U };
 
             applicationNonVisualDrawingProperties24.Append(placeholderShape18);
 
@@ -3921,7 +3921,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape20 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties20 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties25 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Date Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties25 = new NonVisualDrawingProperties() { Id = 5U, Name = "Date Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties20 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks19 = new A.ShapeLocks() { NoGrouping = true };
@@ -3929,7 +3929,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties20.Append(shapeLocks19);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties25 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape19 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape19 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties25.Append(placeholderShape19);
 
@@ -3969,7 +3969,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape21 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties21 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties26 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Footer Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties26 = new NonVisualDrawingProperties() { Id = 6U, Name = "Footer Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties21 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks20 = new A.ShapeLocks() { NoGrouping = true };
@@ -3977,7 +3977,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties21.Append(shapeLocks20);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties26 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape20 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape20 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties26.Append(placeholderShape20);
 
@@ -4006,7 +4006,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape22 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties22 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties27 = new NonVisualDrawingProperties() { Id = (UInt32Value)7U, Name = "Slide Number Placeholder 6" };
+            NonVisualDrawingProperties nonVisualDrawingProperties27 = new NonVisualDrawingProperties() { Id = 7U, Name = "Slide Number Placeholder 6" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties22 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks21 = new A.ShapeLocks() { NoGrouping = true };
@@ -4014,7 +4014,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties22.Append(shapeLocks21);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties27 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape21 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape21 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties27.Append(placeholderShape21);
 
@@ -4086,7 +4086,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             ShapeTree shapeTree6 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties6 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties28 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties28 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties6 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties28 = new ApplicationNonVisualDrawingProperties();
 
@@ -4112,7 +4112,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape23 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties23 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties29 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties29 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties23 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks22 = new A.ShapeLocks() { NoGrouping = true };
@@ -4178,7 +4178,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape24 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties24 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties30 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Text Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties30 = new NonVisualDrawingProperties() { Id = 3U, Name = "Text Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties24 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks23 = new A.ShapeLocks() { NoGrouping = true };
@@ -4186,7 +4186,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties24.Append(shapeLocks23);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties30 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape23 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape23 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = 1U };
 
             applicationNonVisualDrawingProperties30.Append(placeholderShape23);
 
@@ -4418,7 +4418,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape25 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties25 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties31 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Date Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties31 = new NonVisualDrawingProperties() { Id = 4U, Name = "Date Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties25 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks24 = new A.ShapeLocks() { NoGrouping = true };
@@ -4426,7 +4426,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties25.Append(shapeLocks24);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties31 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape24 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape24 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties31.Append(placeholderShape24);
 
@@ -4466,7 +4466,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape26 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties26 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties32 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Footer Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties32 = new NonVisualDrawingProperties() { Id = 5U, Name = "Footer Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties26 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks25 = new A.ShapeLocks() { NoGrouping = true };
@@ -4474,7 +4474,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties26.Append(shapeLocks25);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties32 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape25 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape25 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties32.Append(placeholderShape25);
 
@@ -4503,7 +4503,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape27 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties27 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties33 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Slide Number Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties33 = new NonVisualDrawingProperties() { Id = 6U, Name = "Slide Number Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties27 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks26 = new A.ShapeLocks() { NoGrouping = true };
@@ -4511,7 +4511,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties27.Append(shapeLocks26);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties33 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape26 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape26 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties33.Append(placeholderShape26);
 
@@ -4582,7 +4582,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             ShapeTree shapeTree7 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties7 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties34 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties34 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties7 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties34 = new ApplicationNonVisualDrawingProperties();
 
@@ -4608,7 +4608,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape28 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties28 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties35 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Date Placeholder 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties35 = new NonVisualDrawingProperties() { Id = 2U, Name = "Date Placeholder 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties28 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks27 = new A.ShapeLocks() { NoGrouping = true };
@@ -4616,7 +4616,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties28.Append(shapeLocks27);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties35 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape27 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape27 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties35.Append(placeholderShape27);
 
@@ -4656,7 +4656,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape29 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties29 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties36 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Footer Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties36 = new NonVisualDrawingProperties() { Id = 3U, Name = "Footer Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties29 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks28 = new A.ShapeLocks() { NoGrouping = true };
@@ -4664,7 +4664,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties29.Append(shapeLocks28);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties36 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape28 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape28 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties36.Append(placeholderShape28);
 
@@ -4693,7 +4693,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape30 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties30 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties37 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Slide Number Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties37 = new NonVisualDrawingProperties() { Id = 4U, Name = "Slide Number Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties30 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks29 = new A.ShapeLocks() { NoGrouping = true };
@@ -4701,7 +4701,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties30.Append(shapeLocks29);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties37 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape29 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape29 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties37.Append(placeholderShape29);
 
@@ -5336,7 +5336,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             ShapeTree shapeTree8 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties8 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties38 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties38 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties8 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties38 = new ApplicationNonVisualDrawingProperties();
 
@@ -5362,7 +5362,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape31 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties31 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties39 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties39 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties31 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks30 = new A.ShapeLocks() { NoGrouping = true };
@@ -5410,7 +5410,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape32 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties32 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties40 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Content Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties40 = new NonVisualDrawingProperties() { Id = 3U, Name = "Content Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties32 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks31 = new A.ShapeLocks() { NoGrouping = true };
@@ -5418,7 +5418,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties32.Append(shapeLocks31);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties40 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape31 = new PlaceholderShape() { Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape31 = new PlaceholderShape() { Index = 1U };
 
             applicationNonVisualDrawingProperties40.Append(placeholderShape31);
 
@@ -5528,7 +5528,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape33 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties33 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties41 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Date Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties41 = new NonVisualDrawingProperties() { Id = 4U, Name = "Date Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties33 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks32 = new A.ShapeLocks() { NoGrouping = true };
@@ -5536,7 +5536,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties33.Append(shapeLocks32);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties41 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape32 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape32 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties41.Append(placeholderShape32);
 
@@ -5576,7 +5576,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape34 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties34 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties42 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Footer Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties42 = new NonVisualDrawingProperties() { Id = 5U, Name = "Footer Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties34 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks33 = new A.ShapeLocks() { NoGrouping = true };
@@ -5584,7 +5584,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties34.Append(shapeLocks33);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties42 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape33 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape33 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties42.Append(placeholderShape33);
 
@@ -5613,7 +5613,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape35 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties35 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties43 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Slide Number Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties43 = new NonVisualDrawingProperties() { Id = 6U, Name = "Slide Number Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties35 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks34 = new A.ShapeLocks() { NoGrouping = true };
@@ -5621,7 +5621,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties35.Append(shapeLocks34);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties43 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape34 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape34 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties43.Append(placeholderShape34);
 
@@ -5692,7 +5692,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             ShapeTree shapeTree9 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties9 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties44 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties44 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties9 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties44 = new ApplicationNonVisualDrawingProperties();
 
@@ -5718,7 +5718,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape36 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties36 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties45 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties45 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties36 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks35 = new A.ShapeLocks() { NoGrouping = true };
@@ -5766,7 +5766,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape37 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties37 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties46 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Date Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties46 = new NonVisualDrawingProperties() { Id = 3U, Name = "Date Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties37 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks36 = new A.ShapeLocks() { NoGrouping = true };
@@ -5774,7 +5774,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties37.Append(shapeLocks36);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties46 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape36 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape36 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties46.Append(placeholderShape36);
 
@@ -5814,7 +5814,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape38 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties38 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties47 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Footer Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties47 = new NonVisualDrawingProperties() { Id = 4U, Name = "Footer Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties38 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks37 = new A.ShapeLocks() { NoGrouping = true };
@@ -5822,7 +5822,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties38.Append(shapeLocks37);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties47 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape37 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape37 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties47.Append(placeholderShape37);
 
@@ -5851,7 +5851,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape39 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties39 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties48 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Slide Number Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties48 = new NonVisualDrawingProperties() { Id = 5U, Name = "Slide Number Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties39 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks38 = new A.ShapeLocks() { NoGrouping = true };
@@ -5859,7 +5859,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties39.Append(shapeLocks38);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties48 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape38 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape38 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties48.Append(placeholderShape38);
 
@@ -5929,7 +5929,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             ShapeTree shapeTree10 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties10 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties49 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties49 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties10 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties49 = new ApplicationNonVisualDrawingProperties();
 
@@ -5955,7 +5955,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape40 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties40 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties50 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Vertical Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties50 = new NonVisualDrawingProperties() { Id = 2U, Name = "Vertical Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties40 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks39 = new A.ShapeLocks() { NoGrouping = true };
@@ -6013,7 +6013,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape41 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties41 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties51 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Vertical Text Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties51 = new NonVisualDrawingProperties() { Id = 3U, Name = "Vertical Text Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties41 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks40 = new A.ShapeLocks() { NoGrouping = true };
@@ -6021,7 +6021,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties41.Append(shapeLocks40);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties51 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape40 = new PlaceholderShape() { Type = PlaceholderValues.Body, Orientation = DirectionValues.Vertical, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape40 = new PlaceholderShape() { Type = PlaceholderValues.Body, Orientation = DirectionValues.Vertical, Index = 1U };
 
             applicationNonVisualDrawingProperties51.Append(placeholderShape40);
 
@@ -6141,7 +6141,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape42 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties42 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties52 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Date Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties52 = new NonVisualDrawingProperties() { Id = 4U, Name = "Date Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties42 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks41 = new A.ShapeLocks() { NoGrouping = true };
@@ -6149,7 +6149,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties42.Append(shapeLocks41);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties52 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape41 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape41 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties52.Append(placeholderShape41);
 
@@ -6189,7 +6189,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape43 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties43 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties53 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Footer Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties53 = new NonVisualDrawingProperties() { Id = 5U, Name = "Footer Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties43 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks42 = new A.ShapeLocks() { NoGrouping = true };
@@ -6197,7 +6197,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties43.Append(shapeLocks42);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties53 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape42 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape42 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties53.Append(placeholderShape42);
 
@@ -6226,7 +6226,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape44 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties44 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties54 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Slide Number Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties54 = new NonVisualDrawingProperties() { Id = 6U, Name = "Slide Number Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties44 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks43 = new A.ShapeLocks() { NoGrouping = true };
@@ -6234,7 +6234,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties44.Append(shapeLocks43);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties54 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape43 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape43 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties54.Append(placeholderShape43);
 
@@ -6305,7 +6305,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             ShapeTree shapeTree11 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties11 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties55 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties55 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties11 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties55 = new ApplicationNonVisualDrawingProperties();
 
@@ -6331,7 +6331,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape45 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties45 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties56 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties56 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties45 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks44 = new A.ShapeLocks() { NoGrouping = true };
@@ -6397,7 +6397,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape46 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties46 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties57 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Text Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties57 = new NonVisualDrawingProperties() { Id = 3U, Name = "Text Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties46 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks45 = new A.ShapeLocks() { NoGrouping = true };
@@ -6405,7 +6405,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties46.Append(shapeLocks45);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties57 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape45 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape45 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = 1U };
 
             applicationNonVisualDrawingProperties57.Append(placeholderShape45);
 
@@ -6529,7 +6529,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape47 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties47 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties58 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Content Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties58 = new NonVisualDrawingProperties() { Id = 4U, Name = "Content Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties47 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks46 = new A.ShapeLocks() { NoGrouping = true };
@@ -6537,7 +6537,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties47.Append(shapeLocks46);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties58 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape46 = new PlaceholderShape() { Size = PlaceholderSizeValues.Half, Index = (UInt32Value)2U };
+            PlaceholderShape placeholderShape46 = new PlaceholderShape() { Size = PlaceholderSizeValues.Half, Index = 2U };
 
             applicationNonVisualDrawingProperties58.Append(placeholderShape46);
 
@@ -6713,7 +6713,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape48 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties48 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties59 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Text Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties59 = new NonVisualDrawingProperties() { Id = 5U, Name = "Text Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties48 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks47 = new A.ShapeLocks() { NoGrouping = true };
@@ -6721,7 +6721,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties48.Append(shapeLocks47);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties59 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape47 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)3U };
+            PlaceholderShape placeholderShape47 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Quarter, Index = 3U };
 
             applicationNonVisualDrawingProperties59.Append(placeholderShape47);
 
@@ -6845,7 +6845,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape49 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties49 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties60 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Content Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties60 = new NonVisualDrawingProperties() { Id = 6U, Name = "Content Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties49 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks48 = new A.ShapeLocks() { NoGrouping = true };
@@ -6853,7 +6853,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties49.Append(shapeLocks48);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties60 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape48 = new PlaceholderShape() { Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)4U };
+            PlaceholderShape placeholderShape48 = new PlaceholderShape() { Size = PlaceholderSizeValues.Quarter, Index = 4U };
 
             applicationNonVisualDrawingProperties60.Append(placeholderShape48);
 
@@ -7029,7 +7029,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape50 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties50 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties61 = new NonVisualDrawingProperties() { Id = (UInt32Value)7U, Name = "Date Placeholder 6" };
+            NonVisualDrawingProperties nonVisualDrawingProperties61 = new NonVisualDrawingProperties() { Id = 7U, Name = "Date Placeholder 6" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties50 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks49 = new A.ShapeLocks() { NoGrouping = true };
@@ -7037,7 +7037,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties50.Append(shapeLocks49);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties61 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape49 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape49 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties61.Append(placeholderShape49);
 
@@ -7077,7 +7077,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape51 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties51 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties62 = new NonVisualDrawingProperties() { Id = (UInt32Value)8U, Name = "Footer Placeholder 7" };
+            NonVisualDrawingProperties nonVisualDrawingProperties62 = new NonVisualDrawingProperties() { Id = 8U, Name = "Footer Placeholder 7" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties51 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks50 = new A.ShapeLocks() { NoGrouping = true };
@@ -7085,7 +7085,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties51.Append(shapeLocks50);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties62 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape50 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape50 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties62.Append(placeholderShape50);
 
@@ -7114,7 +7114,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape52 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties52 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties63 = new NonVisualDrawingProperties() { Id = (UInt32Value)9U, Name = "Slide Number Placeholder 8" };
+            NonVisualDrawingProperties nonVisualDrawingProperties63 = new NonVisualDrawingProperties() { Id = 9U, Name = "Slide Number Placeholder 8" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties52 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks51 = new A.ShapeLocks() { NoGrouping = true };
@@ -7122,7 +7122,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties52.Append(shapeLocks51);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties63 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape51 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape51 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties63.Append(placeholderShape51);
 
@@ -7196,7 +7196,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             ShapeTree shapeTree12 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties12 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties64 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties64 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties12 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties64 = new ApplicationNonVisualDrawingProperties();
 
@@ -7222,7 +7222,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape53 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties53 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties65 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties65 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties53 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks52 = new A.ShapeLocks() { NoGrouping = true };
@@ -7270,7 +7270,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape54 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties54 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties66 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Vertical Text Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties66 = new NonVisualDrawingProperties() { Id = 3U, Name = "Vertical Text Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties54 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks53 = new A.ShapeLocks() { NoGrouping = true };
@@ -7278,7 +7278,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties54.Append(shapeLocks53);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties66 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape53 = new PlaceholderShape() { Type = PlaceholderValues.Body, Orientation = DirectionValues.Vertical, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape53 = new PlaceholderShape() { Type = PlaceholderValues.Body, Orientation = DirectionValues.Vertical, Index = 1U };
 
             applicationNonVisualDrawingProperties66.Append(placeholderShape53);
 
@@ -7388,7 +7388,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape55 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties55 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties67 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Date Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties67 = new NonVisualDrawingProperties() { Id = 4U, Name = "Date Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties55 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks54 = new A.ShapeLocks() { NoGrouping = true };
@@ -7396,7 +7396,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties55.Append(shapeLocks54);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties67 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape54 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape54 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties67.Append(placeholderShape54);
 
@@ -7436,7 +7436,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape56 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties56 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties68 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Footer Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties68 = new NonVisualDrawingProperties() { Id = 5U, Name = "Footer Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties56 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks55 = new A.ShapeLocks() { NoGrouping = true };
@@ -7444,7 +7444,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties56.Append(shapeLocks55);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties68 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape55 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape55 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties68.Append(placeholderShape55);
 
@@ -7473,7 +7473,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape57 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties57 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties69 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Slide Number Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties69 = new NonVisualDrawingProperties() { Id = 6U, Name = "Slide Number Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties57 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks56 = new A.ShapeLocks() { NoGrouping = true };
@@ -7481,7 +7481,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties57.Append(shapeLocks56);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties69 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape56 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape56 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties69.Append(placeholderShape56);
 
@@ -7552,7 +7552,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             ShapeTree shapeTree13 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties13 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties70 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties70 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties13 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties70 = new ApplicationNonVisualDrawingProperties();
 
@@ -7578,7 +7578,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape58 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties58 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties71 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties71 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties58 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks57 = new A.ShapeLocks() { NoGrouping = true };
@@ -7626,7 +7626,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape59 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties59 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties72 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Content Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties72 = new NonVisualDrawingProperties() { Id = 3U, Name = "Content Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties59 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks58 = new A.ShapeLocks() { NoGrouping = true };
@@ -7634,7 +7634,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties59.Append(shapeLocks58);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties72 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape58 = new PlaceholderShape() { Size = PlaceholderSizeValues.Half, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape58 = new PlaceholderShape() { Size = PlaceholderSizeValues.Half, Index = 1U };
 
             applicationNonVisualDrawingProperties72.Append(placeholderShape58);
 
@@ -7810,7 +7810,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape60 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties60 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties73 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Content Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties73 = new NonVisualDrawingProperties() { Id = 4U, Name = "Content Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties60 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks59 = new A.ShapeLocks() { NoGrouping = true };
@@ -7818,7 +7818,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties60.Append(shapeLocks59);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties73 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape59 = new PlaceholderShape() { Size = PlaceholderSizeValues.Half, Index = (UInt32Value)2U };
+            PlaceholderShape placeholderShape59 = new PlaceholderShape() { Size = PlaceholderSizeValues.Half, Index = 2U };
 
             applicationNonVisualDrawingProperties73.Append(placeholderShape59);
 
@@ -7994,7 +7994,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape61 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties61 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties74 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Date Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties74 = new NonVisualDrawingProperties() { Id = 5U, Name = "Date Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties61 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks60 = new A.ShapeLocks() { NoGrouping = true };
@@ -8002,7 +8002,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties61.Append(shapeLocks60);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties74 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape60 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape60 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties74.Append(placeholderShape60);
 
@@ -8042,7 +8042,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape62 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties62 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties75 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Footer Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties75 = new NonVisualDrawingProperties() { Id = 6U, Name = "Footer Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties62 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks61 = new A.ShapeLocks() { NoGrouping = true };
@@ -8050,7 +8050,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties62.Append(shapeLocks61);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties75 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape61 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape61 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties75.Append(placeholderShape61);
 
@@ -8079,7 +8079,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape63 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties63 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties76 = new NonVisualDrawingProperties() { Id = (UInt32Value)7U, Name = "Slide Number Placeholder 6" };
+            NonVisualDrawingProperties nonVisualDrawingProperties76 = new NonVisualDrawingProperties() { Id = 7U, Name = "Slide Number Placeholder 6" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties63 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks62 = new A.ShapeLocks() { NoGrouping = true };
@@ -8087,7 +8087,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties63.Append(shapeLocks62);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties76 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape62 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape62 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties76.Append(placeholderShape62);
 
@@ -8159,7 +8159,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             ShapeTree shapeTree14 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties14 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties77 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties77 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties14 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties77 = new ApplicationNonVisualDrawingProperties();
 
@@ -8185,7 +8185,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape64 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties64 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties78 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties78 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties64 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks63 = new A.ShapeLocks() { NoGrouping = true };
@@ -8251,7 +8251,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape65 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties65 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties79 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Picture Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties79 = new NonVisualDrawingProperties() { Id = 3U, Name = "Picture Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties65 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks64 = new A.ShapeLocks() { NoGrouping = true };
@@ -8259,7 +8259,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties65.Append(shapeLocks64);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties79 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape64 = new PlaceholderShape() { Type = PlaceholderValues.Picture, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape64 = new PlaceholderShape() { Type = PlaceholderValues.Picture, Index = 1U };
 
             applicationNonVisualDrawingProperties79.Append(placeholderShape64);
 
@@ -8372,7 +8372,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape66 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties66 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties80 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Text Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties80 = new NonVisualDrawingProperties() { Id = 4U, Name = "Text Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties66 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks65 = new A.ShapeLocks() { NoGrouping = true };
@@ -8380,7 +8380,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties66.Append(shapeLocks65);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties80 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape65 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)2U };
+            PlaceholderShape placeholderShape65 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Half, Index = 2U };
 
             applicationNonVisualDrawingProperties80.Append(placeholderShape65);
 
@@ -8504,7 +8504,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape67 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties67 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties81 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Date Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties81 = new NonVisualDrawingProperties() { Id = 5U, Name = "Date Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties67 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks66 = new A.ShapeLocks() { NoGrouping = true };
@@ -8512,7 +8512,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties67.Append(shapeLocks66);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties81 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape66 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape66 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties81.Append(placeholderShape66);
 
@@ -8552,7 +8552,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape68 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties68 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties82 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Footer Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties82 = new NonVisualDrawingProperties() { Id = 6U, Name = "Footer Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties68 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks67 = new A.ShapeLocks() { NoGrouping = true };
@@ -8560,7 +8560,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties68.Append(shapeLocks67);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties82 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape67 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape67 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties82.Append(placeholderShape67);
 
@@ -8589,7 +8589,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             Shape shape69 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties69 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties83 = new NonVisualDrawingProperties() { Id = (UInt32Value)7U, Name = "Slide Number Placeholder 6" };
+            NonVisualDrawingProperties nonVisualDrawingProperties83 = new NonVisualDrawingProperties() { Id = 7U, Name = "Slide Number Placeholder 6" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties69 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks68 = new A.ShapeLocks() { NoGrouping = true };
@@ -8597,7 +8597,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
             nonVisualShapeDrawingProperties69.Append(shapeLocks68);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties83 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape68 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape68 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties83.Append(placeholderShape68);
 
@@ -8775,7 +8775,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
 
             PresentationPropertiesExtension presentationPropertiesExtension2 = new PresentationPropertiesExtension() { Uri = "{D31A062A-798A-4329-ABDD-BBA856620510}" };
 
-            P14.DefaultImageDpi defaultImageDpi1 = new P14.DefaultImageDpi() { Val = (UInt32Value)220U };
+            P14.DefaultImageDpi defaultImageDpi1 = new P14.DefaultImageDpi() { Val = 220U };
             defaultImageDpi1.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             presentationPropertiesExtension2.Append(defaultImageDpi1);
@@ -8824,7 +8824,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
 
             Ap.HeadingPairs headingPairs1 = new Ap.HeadingPairs();
 
-            Vt.VTVector vTVector1 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Variant, Size = (UInt32Value)6U };
+            Vt.VTVector vTVector1 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Variant, Size = 6U };
 
             Vt.Variant variant1 = new Vt.Variant();
             Vt.VTLPSTR vTLPSTR1 = new Vt.VTLPSTR();
@@ -8873,7 +8873,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideClass
 
             Ap.TitlesOfParts titlesOfParts1 = new Ap.TitlesOfParts();
 
-            Vt.VTVector vTVector2 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Lpstr, Size = (UInt32Value)5U };
+            Vt.VTVector vTVector2 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Lpstr, Size = 5U };
             Vt.VTLPSTR vTLPSTR4 = new Vt.VTLPSTR();
             vTLPSTR4.Text = "Arial";
             Vt.VTLPSTR vTLPSTR5 = new Vt.VTLPSTR();

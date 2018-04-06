@@ -162,7 +162,7 @@ namespace DocumentFormat.OpenXml
                 // first, clear all children
                 RemoveAllChildren();
 
-                if (!String.IsNullOrEmpty(value))
+                if (!string.IsNullOrEmpty(value))
                 {
                     // create an outer XML by wrapping the InnerXml with this element.
                     // because XmlReader can not be created on InnerXml ( InnerXml may have several root elements ).
@@ -795,7 +795,7 @@ namespace DocumentFormat.OpenXml
         {
             for (int i = 0; i < ElementNamespaceIds.Length; i++)
             {
-                if (ElementNamespaceIds[i] == child.NamespaceId && Object.Equals(ElementTagNames[i], child.LocalName))
+                if (ElementNamespaceIds[i] == child.NamespaceId && object.Equals(ElementTagNames[i], child.LocalName))
                 {
                     return i;
                 }
