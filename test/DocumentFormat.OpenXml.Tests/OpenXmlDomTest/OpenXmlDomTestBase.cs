@@ -581,7 +581,11 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Insert Before/After
 
-        internal enum InsertType { Before, After, }
+        internal enum InsertType
+        {
+            Before,
+            After,
+        }
 
         private protected void InsertTestOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHostElement,
                 IFile sourceFile, GetTargetPart getSourcePart, GetTargetElement getSourceHost, GetTargetElement getRef, InsertType insertType)
