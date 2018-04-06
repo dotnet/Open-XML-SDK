@@ -94,7 +94,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(HeaderFooterValues.Default, (HeaderFooterValues) target.Type);
 
             Assert.NotNull(target.Id);
-            Assert.Equal("1", (string)target.Id);
+            Assert.Equal("1", target.Id);
 
             // Remove the custom attribute
             target.RemoveAttribute(openXmlAttribute.LocalName, openXmlAttribute.NamespaceUri);
@@ -108,7 +108,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(HeaderFooterValues.Default, (HeaderFooterValues) target.Type);
 
             Assert.NotNull(target.Id);
-            Assert.Equal("1", (string)target.Id);
+            Assert.Equal("1", target.Id);
 
             // remove the .Id
             openXmlAttribute = target.GetAttributes()[1];

@@ -158,14 +158,14 @@ namespace DocumentFormat.OpenXml.Tests
                                     new wp.Inline(
                                         new wp.Extent() { Cx = 2145665L, Cy = 2177415L },
                                         new wp.EffectExtent() { LeftEdge = 19050L, TopEdge = 0L, RightEdge = 0L, BottomEdge = 0L },
-                                        new wp.DocProperties() { Id = (UInt32Value)1U, Name = "Picture 1", Description = "C:\\Program Files (x86)\\Microsoft Office\\MEDIA\\CAGCAT10\\j0149481.wmf" },
+                                        new wp.DocProperties() { Id = 1U, Name = "Picture 1", Description = "C:\\Program Files (x86)\\Microsoft Office\\MEDIA\\CAGCAT10\\j0149481.wmf" },
                                         new wp.NonVisualGraphicFrameDrawingProperties(
                                             new a.GraphicFrameLocks() { NoChangeAspect = true }),
                                         new a.Graphic(
                                             new a.GraphicData(
                                                 new pic.Picture(
                                                     new pic.NonVisualPictureProperties(
-                                                        new pic.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = "Picture 1", Description = "wmf" },
+                                                        new pic.NonVisualDrawingProperties() { Id = 0U, Name = "Picture 1", Description = "wmf" },
                                                         new pic.NonVisualPictureDrawingProperties(
                                                             new a.PictureLocks() { NoChangeAspect = true, NoChangeArrowheads = true })),
                                                     new pic.BlipFill(
@@ -194,7 +194,7 @@ namespace DocumentFormat.OpenXml.Tests
                                             )
                                             { Uri = "http://schemas.openxmlformats.org/drawingml/2006/picture" })
                                     )
-                                    { DistanceFromTop = (UInt32Value)0U, DistanceFromBottom = (UInt32Value)0U, DistanceFromLeft = (UInt32Value)0U, DistanceFromRight = (UInt32Value)0U }))
+                                    { DistanceFromTop = 0U, DistanceFromBottom = 0U, DistanceFromLeft = 0U, DistanceFromRight = 0U }))
                              ));
             }
 

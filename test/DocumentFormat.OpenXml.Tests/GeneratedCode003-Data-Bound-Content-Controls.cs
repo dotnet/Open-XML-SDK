@@ -615,7 +615,7 @@ namespace DocumentFormat.OpenXml.Tests
             TableRow tableRow7 = new TableRow() { RsidTableRowAddition = "00E850CC", RsidTableRowProperties = "00E850CC" };
 
             TableRowProperties tableRowProperties1 = new TableRowProperties();
-            TableRowHeight tableRowHeight1 = new TableRowHeight() { Val = (UInt32Value)188U };
+            TableRowHeight tableRowHeight1 = new TableRowHeight() { Val = 188U };
 
             tableRowProperties1.Append(tableRowHeight1);
 
@@ -703,8 +703,8 @@ namespace DocumentFormat.OpenXml.Tests
             Paragraph paragraph17 = new Paragraph() { RsidParagraphAddition = "00E850CC", RsidRunAdditionDefault = "00E850CC" };
 
             SectionProperties sectionProperties1 = new SectionProperties() { RsidR = "00E850CC", RsidSect = "006E2549" };
-            PageSize pageSize1 = new PageSize() { Width = (UInt32Value)12240U, Height = (UInt32Value)15840U };
-            PageMargin pageMargin1 = new PageMargin() { Top = 1440, Right = (UInt32Value)1440U, Bottom = 1440, Left = (UInt32Value)1440U, Header = (UInt32Value)720U, Footer = (UInt32Value)720U, Gutter = (UInt32Value)0U };
+            PageSize pageSize1 = new PageSize() { Width = 12240U, Height = 15840U };
+            PageMargin pageMargin1 = new PageMargin() { Top = 1440, Right = 1440U, Bottom = 1440, Left = 1440U, Header = 720U, Footer = 720U, Gutter = 0U };
             Columns columns1 = new Columns() { Space = "720" };
             DocGrid docGrid1 = new DocGrid() { LinePitch = 360 };
 
@@ -779,10 +779,10 @@ namespace DocumentFormat.OpenXml.Tests
             M.BreakBinarySubtraction breakBinarySubtraction1 = new M.BreakBinarySubtraction() { Val = M.BreakBinarySubtractionValues.MinusMinus };
             M.SmallFraction smallFraction1 = new M.SmallFraction() { Val = M.BooleanValues.Off };
             M.DisplayDefaults displayDefaults1 = new M.DisplayDefaults();
-            M.LeftMargin leftMargin1 = new M.LeftMargin() { Val = (UInt32Value)0U };
-            M.RightMargin rightMargin1 = new M.RightMargin() { Val = (UInt32Value)0U };
+            M.LeftMargin leftMargin1 = new M.LeftMargin() { Val = 0U };
+            M.RightMargin rightMargin1 = new M.RightMargin() { Val = 0U };
             M.DefaultJustification defaultJustification1 = new M.DefaultJustification() { Val = M.JustificationValues.CenterGroup };
-            M.WrapIndent wrapIndent1 = new M.WrapIndent() { Val = (UInt32Value)1440U };
+            M.WrapIndent wrapIndent1 = new M.WrapIndent() { Val = 1440U };
             M.IntegralLimitLocation integralLimitLocation1 = new M.IntegralLimitLocation() { Val = M.LimitLocationValues.SubscriptSuperscript };
             M.NaryLimitLocation naryLimitLocation1 = new M.NaryLimitLocation() { Val = M.LimitLocationValues.UnderOver };
 
@@ -1219,12 +1219,12 @@ namespace DocumentFormat.OpenXml.Tests
             TableIndentation tableIndentation2 = new TableIndentation() { Width = 0, Type = TableWidthUnitValues.Dxa };
 
             TableBorders tableBorders1 = new TableBorders();
-            TopBorder topBorder1 = new TopBorder() { Val = BorderValues.Single, Color = "000000", ThemeColor = ThemeColorValues.Text1, Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-            LeftBorder leftBorder1 = new LeftBorder() { Val = BorderValues.Single, Color = "000000", ThemeColor = ThemeColorValues.Text1, Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-            BottomBorder bottomBorder1 = new BottomBorder() { Val = BorderValues.Single, Color = "000000", ThemeColor = ThemeColorValues.Text1, Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-            RightBorder rightBorder1 = new RightBorder() { Val = BorderValues.Single, Color = "000000", ThemeColor = ThemeColorValues.Text1, Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-            InsideHorizontalBorder insideHorizontalBorder1 = new InsideHorizontalBorder() { Val = BorderValues.Single, Color = "000000", ThemeColor = ThemeColorValues.Text1, Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-            InsideVerticalBorder insideVerticalBorder1 = new InsideVerticalBorder() { Val = BorderValues.Single, Color = "000000", ThemeColor = ThemeColorValues.Text1, Size = (UInt32Value)4U, Space = (UInt32Value)0U };
+            TopBorder topBorder1 = new TopBorder() { Val = BorderValues.Single, Color = "000000", ThemeColor = ThemeColorValues.Text1, Size = 4U, Space = 0U };
+            LeftBorder leftBorder1 = new LeftBorder() { Val = BorderValues.Single, Color = "000000", ThemeColor = ThemeColorValues.Text1, Size = 4U, Space = 0U };
+            BottomBorder bottomBorder1 = new BottomBorder() { Val = BorderValues.Single, Color = "000000", ThemeColor = ThemeColorValues.Text1, Size = 4U, Space = 0U };
+            RightBorder rightBorder1 = new RightBorder() { Val = BorderValues.Single, Color = "000000", ThemeColor = ThemeColorValues.Text1, Size = 4U, Space = 0U };
+            InsideHorizontalBorder insideHorizontalBorder1 = new InsideHorizontalBorder() { Val = BorderValues.Single, Color = "000000", ThemeColor = ThemeColorValues.Text1, Size = 4U, Space = 0U };
+            InsideVerticalBorder insideVerticalBorder1 = new InsideVerticalBorder() { Val = BorderValues.Single, Color = "000000", ThemeColor = ThemeColorValues.Text1, Size = 4U, Space = 0U };
 
             tableBorders1.Append(topBorder1);
             tableBorders1.Append(leftBorder1);
@@ -2039,10 +2039,10 @@ namespace DocumentFormat.OpenXml.Tests
             M.BreakBinarySubtraction breakBinarySubtraction2 = new M.BreakBinarySubtraction() { Val = M.BreakBinarySubtractionValues.MinusMinus };
             M.SmallFraction smallFraction2 = new M.SmallFraction() { Val = M.BooleanValues.Off };
             M.DisplayDefaults displayDefaults2 = new M.DisplayDefaults();
-            M.LeftMargin leftMargin2 = new M.LeftMargin() { Val = (UInt32Value)0U };
-            M.RightMargin rightMargin2 = new M.RightMargin() { Val = (UInt32Value)0U };
+            M.LeftMargin leftMargin2 = new M.LeftMargin() { Val = 0U };
+            M.RightMargin rightMargin2 = new M.RightMargin() { Val = 0U };
             M.DefaultJustification defaultJustification2 = new M.DefaultJustification() { Val = M.JustificationValues.CenterGroup };
-            M.WrapIndent wrapIndent2 = new M.WrapIndent() { Val = (UInt32Value)1440U };
+            M.WrapIndent wrapIndent2 = new M.WrapIndent() { Val = 1440U };
             M.IntegralLimitLocation integralLimitLocation2 = new M.IntegralLimitLocation() { Val = M.LimitLocationValues.SubscriptSuperscript };
             M.NaryLimitLocation naryLimitLocation2 = new M.NaryLimitLocation() { Val = M.LimitLocationValues.UnderOver };
 
