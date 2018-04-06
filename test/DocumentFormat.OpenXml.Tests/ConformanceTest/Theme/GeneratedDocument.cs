@@ -416,7 +416,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             ShapeTree shapeTree1 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties1 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties1 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties1 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties1 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties1 = new ApplicationNonVisualDrawingProperties();
 
@@ -570,7 +570,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             ShapeTree shapeTree2 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties2 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties4 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties4 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties2 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties4 = new ApplicationNonVisualDrawingProperties();
 
@@ -730,7 +730,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run1 = new A.Run();
 
             A.RunProperties runProperties1 = new A.RunProperties() { Kumimoji = false, Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties1.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties1.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text1 = new A.Text();
             text1.Text = "Click to edit Master title style";
 
@@ -778,7 +778,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Field field1 = new A.Field() { Id = "{8263865E-5382-4BDD-A09E-2B63F38BCE59}", Type = "datetimeFigureOut" };
 
             A.RunProperties runProperties2 = new A.RunProperties() { Kumimoji = true, Language = "ja-JP", AlternativeLanguage = "en-US" };
-            runProperties2.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties2.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text2 = new A.Text();
             text2.Text = "2012/10/3";
 
@@ -863,7 +863,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Field field2 = new A.Field() { Id = "{DF0B8B9E-EDC2-479A-B980-EDD8632819B1}", Type = "slidenum" };
 
             A.RunProperties runProperties3 = new A.RunProperties() { Kumimoji = true, Language = "ja-JP", AlternativeLanguage = "en-US" };
-            runProperties3.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties3.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text3 = new A.Text();
             text3.Text = "‹#›";
 
@@ -987,7 +987,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run2 = new A.Run();
 
             A.RunProperties runProperties4 = new A.RunProperties() { Kumimoji = false, Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties4.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties4.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text4 = new A.Text();
             text4.Text = "Click to edit Master subtitle style";
 
@@ -1061,7 +1061,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             ShapeTree shapeTree3 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties3 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties10 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties10 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties3 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties10 = new ApplicationNonVisualDrawingProperties();
 
@@ -1151,7 +1151,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run3 = new A.Run();
 
             A.RunProperties runProperties5 = new A.RunProperties() { Kumimoji = false, Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties5.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties5.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text5 = new A.Text();
             text5.Text = "Click to edit Master title style";
 
@@ -1220,7 +1220,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run4 = new A.Run();
 
             A.RunProperties runProperties6 = new A.RunProperties() { Kumimoji = false, Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties6.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties6.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text6 = new A.Text();
             text6.Text = "Click to edit Master text styles";
 
@@ -1236,7 +1236,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run5 = new A.Run();
 
             A.RunProperties runProperties7 = new A.RunProperties() { Kumimoji = false, Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties7.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties7.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text7 = new A.Text();
             text7.Text = "Second level";
 
@@ -1252,7 +1252,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run6 = new A.Run();
 
             A.RunProperties runProperties8 = new A.RunProperties() { Kumimoji = false, Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties8.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties8.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text8 = new A.Text();
             text8.Text = "Third level";
 
@@ -1268,7 +1268,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run7 = new A.Run();
 
             A.RunProperties runProperties9 = new A.RunProperties() { Kumimoji = false, Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties9.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties9.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text9 = new A.Text();
             text9.Text = "Fourth level";
 
@@ -1284,7 +1284,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run8 = new A.Run();
 
             A.RunProperties runProperties10 = new A.RunProperties() { Kumimoji = false, Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties10.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties10.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text10 = new A.Text();
             text10.Text = "Fifth level";
 
@@ -1373,7 +1373,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Field field3 = new A.Field() { Id = "{8263865E-5382-4BDD-A09E-2B63F38BCE59}", Type = "datetimeFigureOut" };
 
             A.RunProperties runProperties11 = new A.RunProperties() { Kumimoji = true, Language = "ja-JP", AlternativeLanguage = "en-US" };
-            runProperties11.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties11.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text11 = new A.Text();
             text11.Text = "2012/10/3";
 
@@ -1530,7 +1530,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Field field4 = new A.Field() { Id = "{DF0B8B9E-EDC2-479A-B980-EDD8632819B1}", Type = "slidenum" };
 
             A.RunProperties runProperties12 = new A.RunProperties() { Kumimoji = true, Language = "ja-JP", AlternativeLanguage = "en-US" };
-            runProperties12.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties12.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text12 = new A.Text();
             text12.Text = "‹#›";
 
@@ -2238,7 +2238,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             ShapeTree shapeTree4 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties4 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties16 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties16 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties4 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties16 = new ApplicationNonVisualDrawingProperties();
 
@@ -2336,7 +2336,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run9 = new A.Run();
 
             A.RunProperties runProperties13 = new A.RunProperties() { Kumimoji = false, Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties13.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties13.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text13 = new A.Text();
             text13.Text = "Click to edit Master title style";
 
@@ -2437,7 +2437,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run10 = new A.Run();
 
             A.RunProperties runProperties14 = new A.RunProperties() { Kumimoji = false, Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties14.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties14.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text14 = new A.Text();
             text14.Text = "Click to edit Master text styles";
 
@@ -2527,7 +2527,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run11 = new A.Run();
 
             A.RunProperties runProperties15 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties15.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties15.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text15 = new A.Text();
             text15.Text = "Click to edit Master text styles";
 
@@ -2543,7 +2543,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run12 = new A.Run();
 
             A.RunProperties runProperties16 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties16.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties16.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text16 = new A.Text();
             text16.Text = "Second level";
 
@@ -2559,7 +2559,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run13 = new A.Run();
 
             A.RunProperties runProperties17 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties17.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties17.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text17 = new A.Text();
             text17.Text = "Third level";
 
@@ -2575,7 +2575,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run14 = new A.Run();
 
             A.RunProperties runProperties18 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties18.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties18.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text18 = new A.Text();
             text18.Text = "Fourth level";
 
@@ -2591,7 +2591,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run15 = new A.Run();
 
             A.RunProperties runProperties19 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties19.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties19.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text19 = new A.Text();
             text19.Text = "Fifth level";
 
@@ -2644,7 +2644,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Field field5 = new A.Field() { Id = "{8263865E-5382-4BDD-A09E-2B63F38BCE59}", Type = "datetimeFigureOut" };
 
             A.RunProperties runProperties20 = new A.RunProperties() { Kumimoji = true, Language = "ja-JP", AlternativeLanguage = "en-US" };
-            runProperties20.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties20.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text20 = new A.Text();
             text20.Text = "2012/10/3";
 
@@ -2729,7 +2729,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Field field6 = new A.Field() { Id = "{DF0B8B9E-EDC2-479A-B980-EDD8632819B1}", Type = "slidenum" };
 
             A.RunProperties runProperties21 = new A.RunProperties() { Kumimoji = true, Language = "ja-JP", AlternativeLanguage = "en-US" };
-            runProperties21.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties21.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text21 = new A.Text();
             text21.Text = "‹#›";
 
@@ -2804,7 +2804,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             ShapeTree shapeTree5 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties5 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties23 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties23 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties5 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties23 = new ApplicationNonVisualDrawingProperties();
 
@@ -2954,7 +2954,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run16 = new A.Run();
 
             A.RunProperties runProperties22 = new A.RunProperties() { Kumimoji = false, Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties22.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties22.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text22 = new A.Text();
             text22.Text = "Click to edit Master title style";
 
@@ -3111,7 +3111,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run17 = new A.Run();
 
             A.RunProperties runProperties23 = new A.RunProperties() { Kumimoji = false, Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties23.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties23.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text23 = new A.Text();
             text23.Text = "Click to edit Master text styles";
 
@@ -3158,7 +3158,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Field field7 = new A.Field() { Id = "{8263865E-5382-4BDD-A09E-2B63F38BCE59}", Type = "datetimeFigureOut" };
 
             A.RunProperties runProperties24 = new A.RunProperties() { Kumimoji = true, Language = "ja-JP", AlternativeLanguage = "en-US" };
-            runProperties24.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties24.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text24 = new A.Text();
             text24.Text = "2012/10/3";
 
@@ -3253,7 +3253,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Field field8 = new A.Field() { Id = "{DF0B8B9E-EDC2-479A-B980-EDD8632819B1}", Type = "slidenum" };
 
             A.RunProperties runProperties25 = new A.RunProperties() { Kumimoji = true, Language = "ja-JP", AlternativeLanguage = "en-US" };
-            runProperties25.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties25.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text25 = new A.Text();
             text25.Text = "‹#›";
 
@@ -3319,7 +3319,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             ShapeTree shapeTree6 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties6 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties29 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties29 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties6 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties29 = new ApplicationNonVisualDrawingProperties();
 
@@ -3371,7 +3371,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Field field9 = new A.Field() { Id = "{8263865E-5382-4BDD-A09E-2B63F38BCE59}", Type = "datetimeFigureOut" };
 
             A.RunProperties runProperties26 = new A.RunProperties() { Kumimoji = true, Language = "ja-JP", AlternativeLanguage = "en-US" };
-            runProperties26.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties26.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text26 = new A.Text();
             text26.Text = "2012/10/3";
 
@@ -3456,7 +3456,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Field field10 = new A.Field() { Id = "{DF0B8B9E-EDC2-479A-B980-EDD8632819B1}", Type = "slidenum" };
 
             A.RunProperties runProperties27 = new A.RunProperties() { Kumimoji = true, Language = "ja-JP", AlternativeLanguage = "en-US" };
-            runProperties27.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties27.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text27 = new A.Text();
             text27.Text = "‹#›";
 
@@ -3593,8 +3593,8 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
 
             A.MajorFont majorFont1 = new A.MajorFont();
             A.LatinFont latinFont30 = new A.LatinFont() { Typeface = "Lucida Sans" };
-            A.EastAsianFont eastAsianFont30 = new A.EastAsianFont() { Typeface = "" };
-            A.ComplexScriptFont complexScriptFont30 = new A.ComplexScriptFont() { Typeface = "" };
+            A.EastAsianFont eastAsianFont30 = new A.EastAsianFont() { Typeface = string.Empty };
+            A.ComplexScriptFont complexScriptFont30 = new A.ComplexScriptFont() { Typeface = string.Empty };
             A.SupplementalFont supplementalFont1 = new A.SupplementalFont() { Script = "Grek", Typeface = "Arial" };
             A.SupplementalFont supplementalFont2 = new A.SupplementalFont() { Script = "Cyrl", Typeface = "Arial" };
             A.SupplementalFont supplementalFont3 = new A.SupplementalFont() { Script = "Jpan", Typeface = "HG丸ｺﾞｼｯｸM-PRO" };
@@ -3666,8 +3666,8 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
 
             A.MinorFont minorFont1 = new A.MinorFont();
             A.LatinFont latinFont31 = new A.LatinFont() { Typeface = "Book Antiqua" };
-            A.EastAsianFont eastAsianFont31 = new A.EastAsianFont() { Typeface = "" };
-            A.ComplexScriptFont complexScriptFont31 = new A.ComplexScriptFont() { Typeface = "" };
+            A.EastAsianFont eastAsianFont31 = new A.EastAsianFont() { Typeface = string.Empty };
+            A.ComplexScriptFont complexScriptFont31 = new A.ComplexScriptFont() { Typeface = string.Empty };
             A.SupplementalFont supplementalFont33 = new A.SupplementalFont() { Script = "Grek", Typeface = "Times New Roman" };
             A.SupplementalFont supplementalFont34 = new A.SupplementalFont() { Script = "Cyrl", Typeface = "Times New Roman" };
             A.SupplementalFont supplementalFont35 = new A.SupplementalFont() { Script = "Jpan", Typeface = "HG明朝B" };
@@ -4107,7 +4107,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             ShapeTree shapeTree7 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties7 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties33 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties33 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties7 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties33 = new ApplicationNonVisualDrawingProperties();
 
@@ -4159,7 +4159,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run18 = new A.Run();
 
             A.RunProperties runProperties28 = new A.RunProperties() { Kumimoji = false, Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties28.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties28.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text28 = new A.Text();
             text28.Text = "Click to edit Master title style";
 
@@ -4208,7 +4208,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run19 = new A.Run();
 
             A.RunProperties runProperties29 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties29.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties29.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text29 = new A.Text();
             text29.Text = "Click to edit Master text styles";
 
@@ -4224,7 +4224,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run20 = new A.Run();
 
             A.RunProperties runProperties30 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties30.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties30.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text30 = new A.Text();
             text30.Text = "Second level";
 
@@ -4240,7 +4240,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run21 = new A.Run();
 
             A.RunProperties runProperties31 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties31.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties31.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text31 = new A.Text();
             text31.Text = "Third level";
 
@@ -4256,7 +4256,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run22 = new A.Run();
 
             A.RunProperties runProperties32 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties32.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties32.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text32 = new A.Text();
             text32.Text = "Fourth level";
 
@@ -4272,7 +4272,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run23 = new A.Run();
 
             A.RunProperties runProperties33 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties33.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties33.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text33 = new A.Text();
             text33.Text = "Fifth level";
 
@@ -4325,7 +4325,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Field field11 = new A.Field() { Id = "{8263865E-5382-4BDD-A09E-2B63F38BCE59}", Type = "datetimeFigureOut" };
 
             A.RunProperties runProperties34 = new A.RunProperties() { Kumimoji = true, Language = "ja-JP", AlternativeLanguage = "en-US" };
-            runProperties34.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties34.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text34 = new A.Text();
             text34.Text = "2012/10/3";
 
@@ -4410,7 +4410,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Field field12 = new A.Field() { Id = "{DF0B8B9E-EDC2-479A-B980-EDD8632819B1}", Type = "slidenum" };
 
             A.RunProperties runProperties35 = new A.RunProperties() { Kumimoji = true, Language = "ja-JP", AlternativeLanguage = "en-US" };
-            runProperties35.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties35.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text35 = new A.Text();
             text35.Text = "‹#›";
 
@@ -4475,7 +4475,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             ShapeTree shapeTree8 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties8 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties39 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties39 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties8 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties39 = new ApplicationNonVisualDrawingProperties();
 
@@ -4527,7 +4527,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run24 = new A.Run();
 
             A.RunProperties runProperties36 = new A.RunProperties() { Kumimoji = false, Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties36.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties36.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text36 = new A.Text();
             text36.Text = "Click to edit Master title style";
 
@@ -4575,7 +4575,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Field field13 = new A.Field() { Id = "{8263865E-5382-4BDD-A09E-2B63F38BCE59}", Type = "datetimeFigureOut" };
 
             A.RunProperties runProperties37 = new A.RunProperties() { Kumimoji = true, Language = "ja-JP", AlternativeLanguage = "en-US" };
-            runProperties37.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties37.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text37 = new A.Text();
             text37.Text = "2012/10/3";
 
@@ -4660,7 +4660,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Field field14 = new A.Field() { Id = "{DF0B8B9E-EDC2-479A-B980-EDD8632819B1}", Type = "slidenum" };
 
             A.RunProperties runProperties38 = new A.RunProperties() { Kumimoji = true, Language = "ja-JP", AlternativeLanguage = "en-US" };
-            runProperties38.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties38.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text38 = new A.Text();
             text38.Text = "‹#›";
 
@@ -4724,7 +4724,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             ShapeTree shapeTree9 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties9 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties44 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties44 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties9 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties44 = new ApplicationNonVisualDrawingProperties();
 
@@ -4786,7 +4786,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run25 = new A.Run();
 
             A.RunProperties runProperties39 = new A.RunProperties() { Kumimoji = false, Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties39.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties39.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text39 = new A.Text();
             text39.Text = "Click to edit Master title style";
 
@@ -4845,7 +4845,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run26 = new A.Run();
 
             A.RunProperties runProperties40 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties40.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties40.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text40 = new A.Text();
             text40.Text = "Click to edit Master text styles";
 
@@ -4861,7 +4861,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run27 = new A.Run();
 
             A.RunProperties runProperties41 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties41.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties41.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text41 = new A.Text();
             text41.Text = "Second level";
 
@@ -4877,7 +4877,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run28 = new A.Run();
 
             A.RunProperties runProperties42 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties42.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties42.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text42 = new A.Text();
             text42.Text = "Third level";
 
@@ -4893,7 +4893,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run29 = new A.Run();
 
             A.RunProperties runProperties43 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties43.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties43.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text43 = new A.Text();
             text43.Text = "Fourth level";
 
@@ -4909,7 +4909,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run30 = new A.Run();
 
             A.RunProperties runProperties44 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties44.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties44.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text44 = new A.Text();
             text44.Text = "Fifth level";
 
@@ -4962,7 +4962,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Field field15 = new A.Field() { Id = "{8263865E-5382-4BDD-A09E-2B63F38BCE59}", Type = "datetimeFigureOut" };
 
             A.RunProperties runProperties45 = new A.RunProperties() { Kumimoji = true, Language = "ja-JP", AlternativeLanguage = "en-US" };
-            runProperties45.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties45.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text45 = new A.Text();
             text45.Text = "2012/10/3";
 
@@ -5047,7 +5047,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Field field16 = new A.Field() { Id = "{DF0B8B9E-EDC2-479A-B980-EDD8632819B1}", Type = "slidenum" };
 
             A.RunProperties runProperties46 = new A.RunProperties() { Kumimoji = true, Language = "ja-JP", AlternativeLanguage = "en-US" };
-            runProperties46.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties46.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text46 = new A.Text();
             text46.Text = "‹#›";
 
@@ -5112,7 +5112,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             ShapeTree shapeTree10 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties10 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties50 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties50 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties10 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties50 = new ApplicationNonVisualDrawingProperties();
 
@@ -5182,7 +5182,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run31 = new A.Run();
 
             A.RunProperties runProperties47 = new A.RunProperties() { Kumimoji = false, Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties47.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties47.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text47 = new A.Text();
             text47.Text = "Click to edit Master title style";
 
@@ -5291,7 +5291,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run32 = new A.Run();
 
             A.RunProperties runProperties48 = new A.RunProperties() { Kumimoji = false, Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties48.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties48.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text48 = new A.Text();
             text48.Text = "Click to edit Master text styles";
 
@@ -5399,7 +5399,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run33 = new A.Run();
 
             A.RunProperties runProperties49 = new A.RunProperties() { Kumimoji = false, Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties49.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties49.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text49 = new A.Text();
             text49.Text = "Click to edit Master text styles";
 
@@ -5489,7 +5489,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run34 = new A.Run();
 
             A.RunProperties runProperties50 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties50.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties50.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text50 = new A.Text();
             text50.Text = "Click to edit Master text styles";
 
@@ -5505,7 +5505,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run35 = new A.Run();
 
             A.RunProperties runProperties51 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties51.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties51.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text51 = new A.Text();
             text51.Text = "Second level";
 
@@ -5521,7 +5521,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run36 = new A.Run();
 
             A.RunProperties runProperties52 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties52.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties52.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text52 = new A.Text();
             text52.Text = "Third level";
 
@@ -5537,7 +5537,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run37 = new A.Run();
 
             A.RunProperties runProperties53 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties53.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties53.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text53 = new A.Text();
             text53.Text = "Fourth level";
 
@@ -5553,7 +5553,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run38 = new A.Run();
 
             A.RunProperties runProperties54 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties54.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties54.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text54 = new A.Text();
             text54.Text = "Fifth level";
 
@@ -5649,7 +5649,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run39 = new A.Run();
 
             A.RunProperties runProperties55 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties55.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties55.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text55 = new A.Text();
             text55.Text = "Click to edit Master text styles";
 
@@ -5665,7 +5665,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run40 = new A.Run();
 
             A.RunProperties runProperties56 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties56.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties56.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text56 = new A.Text();
             text56.Text = "Second level";
 
@@ -5681,7 +5681,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run41 = new A.Run();
 
             A.RunProperties runProperties57 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties57.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties57.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text57 = new A.Text();
             text57.Text = "Third level";
 
@@ -5697,7 +5697,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run42 = new A.Run();
 
             A.RunProperties runProperties58 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties58.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties58.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text58 = new A.Text();
             text58.Text = "Fourth level";
 
@@ -5713,7 +5713,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run43 = new A.Run();
 
             A.RunProperties runProperties59 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties59.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties59.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text59 = new A.Text();
             text59.Text = "Fifth level";
 
@@ -5766,7 +5766,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Field field17 = new A.Field() { Id = "{8263865E-5382-4BDD-A09E-2B63F38BCE59}", Type = "datetimeFigureOut" };
 
             A.RunProperties runProperties60 = new A.RunProperties() { Kumimoji = true, Language = "ja-JP", AlternativeLanguage = "en-US" };
-            runProperties60.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties60.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text60 = new A.Text();
             text60.Text = "2012/10/3";
 
@@ -5851,7 +5851,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Field field18 = new A.Field() { Id = "{DF0B8B9E-EDC2-479A-B980-EDD8632819B1}", Type = "slidenum" };
 
             A.RunProperties runProperties61 = new A.RunProperties() { Kumimoji = true, Language = "ja-JP", AlternativeLanguage = "en-US" };
-            runProperties61.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties61.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text61 = new A.Text();
             text61.Text = "‹#›";
 
@@ -5919,7 +5919,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             ShapeTree shapeTree11 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties11 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties59 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties59 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties11 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties59 = new ApplicationNonVisualDrawingProperties();
 
@@ -5971,7 +5971,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run44 = new A.Run();
 
             A.RunProperties runProperties62 = new A.RunProperties() { Kumimoji = false, Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties62.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties62.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text62 = new A.Text();
             text62.Text = "Click to edit Master title style";
 
@@ -6020,7 +6020,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run45 = new A.Run();
 
             A.RunProperties runProperties63 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties63.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties63.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text63 = new A.Text();
             text63.Text = "Click to edit Master text styles";
 
@@ -6036,7 +6036,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run46 = new A.Run();
 
             A.RunProperties runProperties64 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties64.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties64.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text64 = new A.Text();
             text64.Text = "Second level";
 
@@ -6052,7 +6052,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run47 = new A.Run();
 
             A.RunProperties runProperties65 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties65.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties65.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text65 = new A.Text();
             text65.Text = "Third level";
 
@@ -6068,7 +6068,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run48 = new A.Run();
 
             A.RunProperties runProperties66 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties66.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties66.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text66 = new A.Text();
             text66.Text = "Fourth level";
 
@@ -6084,7 +6084,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run49 = new A.Run();
 
             A.RunProperties runProperties67 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties67.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties67.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text67 = new A.Text();
             text67.Text = "Fifth level";
 
@@ -6137,7 +6137,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Field field19 = new A.Field() { Id = "{8263865E-5382-4BDD-A09E-2B63F38BCE59}", Type = "datetimeFigureOut" };
 
             A.RunProperties runProperties68 = new A.RunProperties() { Kumimoji = true, Language = "ja-JP", AlternativeLanguage = "en-US" };
-            runProperties68.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties68.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text68 = new A.Text();
             text68.Text = "2012/10/3";
 
@@ -6222,7 +6222,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Field field20 = new A.Field() { Id = "{DF0B8B9E-EDC2-479A-B980-EDD8632819B1}", Type = "slidenum" };
 
             A.RunProperties runProperties69 = new A.RunProperties() { Kumimoji = true, Language = "ja-JP", AlternativeLanguage = "en-US" };
-            runProperties69.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties69.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text69 = new A.Text();
             text69.Text = "‹#›";
 
@@ -6287,7 +6287,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             ShapeTree shapeTree12 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties12 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties65 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties65 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties12 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties65 = new ApplicationNonVisualDrawingProperties();
 
@@ -6339,7 +6339,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run50 = new A.Run();
 
             A.RunProperties runProperties70 = new A.RunProperties() { Kumimoji = false, Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties70.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties70.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text70 = new A.Text();
             text70.Text = "Click to edit Master title style";
 
@@ -6430,7 +6430,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run51 = new A.Run();
 
             A.RunProperties runProperties71 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties71.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties71.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text71 = new A.Text();
             text71.Text = "Click to edit Master text styles";
 
@@ -6446,7 +6446,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run52 = new A.Run();
 
             A.RunProperties runProperties72 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties72.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties72.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text72 = new A.Text();
             text72.Text = "Second level";
 
@@ -6462,7 +6462,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run53 = new A.Run();
 
             A.RunProperties runProperties73 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties73.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties73.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text73 = new A.Text();
             text73.Text = "Third level";
 
@@ -6478,7 +6478,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run54 = new A.Run();
 
             A.RunProperties runProperties74 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties74.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties74.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text74 = new A.Text();
             text74.Text = "Fourth level";
 
@@ -6494,7 +6494,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run55 = new A.Run();
 
             A.RunProperties runProperties75 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties75.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties75.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text75 = new A.Text();
             text75.Text = "Fifth level";
 
@@ -6590,7 +6590,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run56 = new A.Run();
 
             A.RunProperties runProperties76 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties76.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties76.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text76 = new A.Text();
             text76.Text = "Click to edit Master text styles";
 
@@ -6606,7 +6606,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run57 = new A.Run();
 
             A.RunProperties runProperties77 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties77.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties77.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text77 = new A.Text();
             text77.Text = "Second level";
 
@@ -6622,7 +6622,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run58 = new A.Run();
 
             A.RunProperties runProperties78 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties78.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties78.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text78 = new A.Text();
             text78.Text = "Third level";
 
@@ -6638,7 +6638,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run59 = new A.Run();
 
             A.RunProperties runProperties79 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties79.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties79.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text79 = new A.Text();
             text79.Text = "Fourth level";
 
@@ -6654,7 +6654,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run60 = new A.Run();
 
             A.RunProperties runProperties80 = new A.RunProperties() { Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties80.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties80.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text80 = new A.Text();
             text80.Text = "Fifth level";
 
@@ -6707,7 +6707,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Field field21 = new A.Field() { Id = "{8263865E-5382-4BDD-A09E-2B63F38BCE59}", Type = "datetimeFigureOut" };
 
             A.RunProperties runProperties81 = new A.RunProperties() { Kumimoji = true, Language = "ja-JP", AlternativeLanguage = "en-US" };
-            runProperties81.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties81.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text81 = new A.Text();
             text81.Text = "2012/10/3";
 
@@ -6792,7 +6792,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Field field22 = new A.Field() { Id = "{DF0B8B9E-EDC2-479A-B980-EDD8632819B1}", Type = "slidenum" };
 
             A.RunProperties runProperties82 = new A.RunProperties() { Kumimoji = true, Language = "ja-JP", AlternativeLanguage = "en-US" };
-            runProperties82.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties82.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text82 = new A.Text();
             text82.Text = "‹#›";
 
@@ -6858,7 +6858,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             ShapeTree shapeTree13 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties13 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties72 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties72 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties13 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties72 = new ApplicationNonVisualDrawingProperties();
 
@@ -6934,7 +6934,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run61 = new A.Run();
 
             A.RunProperties runProperties83 = new A.RunProperties() { Kumimoji = false, Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties83.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties83.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text83 = new A.Text();
             text83.Text = "Click to edit Master title style";
 
@@ -7094,7 +7094,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run62 = new A.Run();
 
             A.RunProperties runProperties84 = new A.RunProperties() { Kumimoji = false, Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties84.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties84.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
 
             A.SolidFill solidFill48 = new A.SolidFill();
             A.SchemeColor schemeColor82 = new A.SchemeColor() { Val = A.SchemeColorValues.Light1 };
@@ -7216,7 +7216,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Run run63 = new A.Run();
 
             A.RunProperties runProperties85 = new A.RunProperties() { Kumimoji = false, Language = "en-US", AlternativeLanguage = "ja-JP" };
-            runProperties85.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties85.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text85 = new A.Text();
             text85.Text = "Click to edit Master text styles";
 
@@ -7263,7 +7263,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Field field23 = new A.Field() { Id = "{8263865E-5382-4BDD-A09E-2B63F38BCE59}", Type = "datetimeFigureOut" };
 
             A.RunProperties runProperties86 = new A.RunProperties() { Kumimoji = true, Language = "ja-JP", AlternativeLanguage = "en-US" };
-            runProperties86.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties86.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text86 = new A.Text();
             text86.Text = "2012/10/3";
 
@@ -7348,7 +7348,7 @@ namespace DocumentFormat.OpenXml.Tests.ThemeClass
             A.Field field24 = new A.Field() { Id = "{DF0B8B9E-EDC2-479A-B980-EDD8632819B1}", Type = "slidenum" };
 
             A.RunProperties runProperties87 = new A.RunProperties() { Kumimoji = true, Language = "ja-JP", AlternativeLanguage = "en-US" };
-            runProperties87.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties87.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text87 = new A.Text();
             text87.Text = "‹#›";
 

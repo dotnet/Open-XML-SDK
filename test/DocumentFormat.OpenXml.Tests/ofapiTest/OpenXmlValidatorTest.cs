@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Empty(actual);
 
             // ***** error case ******
-            element.Val.InnerText = "";
+            element.Val.InnerText = string.Empty;
             actual = O12Validator.Validate(element);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
@@ -1535,7 +1535,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Empty(actual);
 
             // ***** error case ******
-            element.Val.InnerText = "";
+            element.Val.InnerText = string.Empty;
             actual = O12Validator.Validate(element);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
@@ -1608,7 +1608,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Empty(actual);
 
             // ***** error case ******
-            element.Text = "";
+            element.Text = string.Empty;
             actual = O12Validator.Validate(element);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
@@ -1654,7 +1654,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_MissRequiredAttribute", actual.First().Id);
 
-            element.Val = "";
+            element.Val = string.Empty;
             actual = O12Validator.Validate(element);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
@@ -1714,7 +1714,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             var sources = new Sources();
-            sources.StyleName = "";
+            sources.StyleName = string.Empty;
             actual = O12Validator.Validate(sources);
             Assert.Empty(actual);
 
@@ -1779,7 +1779,7 @@ namespace DocumentFormat.OpenXml.Tests
             // ***** error case ******
 
             // pattern invalid
-            element.Text = "";
+            element.Text = string.Empty;
             actual = O12Validator.Validate(element);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
@@ -1903,7 +1903,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Empty(actual);
 
             // ***** error case ******
-            element.Val = "";
+            element.Val = string.Empty;
             actual = O12Validator.Validate(element);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
@@ -1976,7 +1976,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Empty(actual);
 
             // ***** error case ******
-            element.Val = "";
+            element.Val = string.Empty;
             actual = O12Validator.Validate(element);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
@@ -2031,7 +2031,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             // ***** good case ******
             var element = new DocumentProtection();
-            element.Hash = "";
+            element.Hash = string.Empty;
             var actual = O12Validator.Validate(element);
             Assert.Empty(actual);
 
@@ -2074,7 +2074,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             // ***** good case ******
             var element = new UniqueTag();
-            element.Val = "";
+            element.Val = string.Empty;
             var actual = O12Validator.Validate(element);
             Assert.Empty(actual);
 
@@ -2124,7 +2124,7 @@ namespace DocumentFormat.OpenXml.Tests
             var element = new DocumentFormat.OpenXml.Drawing.Diagrams.Category();
             element.Priority = 1;
 
-            element.Type = "";
+            element.Type = string.Empty;
             var actual = O12Validator.Validate(element);
             Assert.Empty(actual);
 
@@ -2224,7 +2224,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Empty(actual);
 
             // ***** error case ******
-            element.Id = "";
+            element.Id = string.Empty;
             actual = O12Validator.Validate(element);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
@@ -2309,7 +2309,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Empty(actual);
 
             // ***** error case ******
-            element.IdQ = "";
+            element.IdQ = string.Empty;
             actual = O12Validator.Validate(element);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
@@ -2407,7 +2407,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Empty(actual);
 
             // ***** error case ******
-            row.Spans.InnerText = "";
+            row.Spans.InnerText = string.Empty;
             actual = O12Validator.Validate(row);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
@@ -2447,7 +2447,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Empty(actual);
 
             // ***** error case ******
-            element.Start.InnerText = "";
+            element.Start.InnerText = string.Empty;
             actual = O12Validator.Validate(element);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
@@ -2526,7 +2526,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Empty(actual);
 
             // ***** error case ******
-            element.Val.InnerText = "";
+            element.Val.InnerText = string.Empty;
             actual = O12Validator.Validate(element);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
@@ -2598,7 +2598,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Empty(actual);
 
             // ***** error case ******
-            element.Val.InnerText = "";
+            element.Val.InnerText = string.Empty;
             actual = O12Validator.Validate(element);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
@@ -2672,7 +2672,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Empty(actual);
 
             // ***** error case ******
-            element.Val.InnerText = "";
+            element.Val.InnerText = string.Empty;
             actual = O12Validator.Validate(element);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
@@ -2761,7 +2761,7 @@ namespace DocumentFormat.OpenXml.Tests
             actual = O12Validator.Validate(element);
             Assert.Empty(actual);
 
-            element.InvertX.InnerText = "";
+            element.InvertX.InnerText = string.Empty;
             actual = O12Validator.Validate(element);
             Assert.Empty(actual);
 
@@ -3410,7 +3410,7 @@ namespace DocumentFormat.OpenXml.Tests
             // ***** error case ******
 
             // following are invalid for both Office2007 and Office2010
-            element.Val.InnerText = "";
+            element.Val.InnerText = string.Empty;
             actual = O12Validator.Validate(element);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
