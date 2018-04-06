@@ -138,7 +138,7 @@ namespace DocumentFormat.OpenXml
         // !! CAUTION !!
         private static string[] _namespaceList =
         {
-            "",
+            string.Empty,
             "http://www.w3.org/XML/1998/namespace",
             "http://schemas.openxmlformats.org/package/2006/metadata/core-properties",
             "http://schemas.openxmlformats.org/officeDocument/2006/extended-properties",
@@ -184,6 +184,7 @@ namespace DocumentFormat.OpenXml
             "http://www.w3.org/2003/InkML",
             "http://www.w3.org/2003/04/emma",
             "http://schemas.microsoft.com/ink/2010/main",
+
             //o14 extensions
             "http://schemas.microsoft.com/office/drawing/2007/8/2/chart",
             "http://schemas.microsoft.com/office/drawing/2010/chartDrawing",
@@ -202,8 +203,10 @@ namespace DocumentFormat.OpenXml
             "http://schemas.microsoft.com/office/word/2010/wordprocessingGroup",
             "http://schemas.microsoft.com/office/word/2010/wordprocessingShape",
             "http://schemas.microsoft.com/office/drawing/2010/slicer",
+
             //"http://schemas.microsoft.com/office/2007/6/19/audiovideo",
             "http://schemas.microsoft.com/office/drawing/2010/compatibility",
+
             //o15 extension
             "http://schemas.microsoft.com/office/drawing/2012/chart",
             "http://schemas.microsoft.com/office/drawing/2012/chartStyle",
@@ -238,7 +241,7 @@ namespace DocumentFormat.OpenXml
         // namespace prefix list, most of them are come from dev14\tools\inc\xsd\xsdnamespace.h in Office14 depot.
         private static string[] _namespacePrefixList =
         {
-            "",
+            string.Empty,
             "xml",
             "cp",
             "ap",
@@ -284,6 +287,7 @@ namespace DocumentFormat.OpenXml
             "inkml",
             "emma",
             "msink",
+
             //o14 extensions
             "c14",
             "cdr14",
@@ -302,8 +306,10 @@ namespace DocumentFormat.OpenXml
             "wpg",
             "wps",
             "sle",
+
             //"pav",
             "com14",
+
             // o15 extension
             "c15",
             "cs",
@@ -389,6 +395,7 @@ namespace DocumentFormat.OpenXml
             "http://schemas.microsoft.com/office/word/2010/wordprocessingGroup",
             "http://schemas.microsoft.com/office/word/2010/wordprocessingShape",
             "http://schemas.microsoft.com/office/drawing/2010/slicer",
+
             //"http://schemas.microsoft.com/office/2007/6/19/audiovideo",
             "http://schemas.microsoft.com/office/drawing/2010/compatibility",
         };
@@ -408,7 +415,7 @@ namespace DocumentFormat.OpenXml
             "http://schemas.microsoft.com/office/spreadsheetml/2010/11/ac",
             "http://schemas.microsoft.com/office/word/2012/wordprocessingDrawing",
             "http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings",
-            "http://schemas.microsoft.com/office/drawing/2012/timeslicer"
+            "http://schemas.microsoft.com/office/drawing/2012/timeslicer",
         };
 
         private static Dictionary<FileFormatVersions, HashSet<string>> _namespaceSets = new Dictionary<FileFormatVersions, HashSet<string>>

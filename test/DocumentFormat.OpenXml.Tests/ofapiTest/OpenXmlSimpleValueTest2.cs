@@ -15,7 +15,6 @@ namespace DocumentFormat.OpenXml.Tests
     ///This is a test class for BooleanValueTest and is intended
     ///to contain all BooleanValueTest Unit Tests
     ///</summary>
-
     public class OpenXmlSimpleValueTest2
     {
         /// <summary>
@@ -25,7 +24,6 @@ namespace DocumentFormat.OpenXml.Tests
         public void BooleanValueTest()
         {
             // xsd:boolean is enum in W3C XSD 1.1 Part 2: Data types  - 'true' | 'false' | '1' | '0'
-
             BooleanValue target = new BooleanValue();
             Assert.False(target.HasValue); // default has no value.
 
@@ -122,10 +120,10 @@ namespace DocumentFormat.OpenXml.Tests
             // test special case - the enum can be empty string ""
             var truefalseEmpty = new EnumValue<xvml.BooleanEntryWithBlankValues>(xvml.BooleanEntryWithBlankValues.Empty);
             Assert.True(truefalseEmpty.HasValue);
-            Assert.Equal("", truefalseEmpty.InnerText);
+            Assert.Equal(string.Empty, truefalseEmpty.InnerText);
             Assert.Equal(xvml.BooleanEntryWithBlankValues.Empty, truefalseEmpty.Value);
             Assert.Equal(xvml.BooleanEntryWithBlankValues.Empty, (xvml.BooleanEntryWithBlankValues)truefalseEmpty);
-            Assert.Equal("", truefalseEmpty.ToString());
+            Assert.Equal(string.Empty, truefalseEmpty.ToString());
 
             truefalseEmpty = xvml.BooleanEntryWithBlankValues.T;
             Assert.True(truefalseEmpty.HasValue);
@@ -136,10 +134,10 @@ namespace DocumentFormat.OpenXml.Tests
 
             truefalseEmpty.InnerText = string.Empty;
             Assert.True(truefalseEmpty.HasValue);
-            Assert.Equal("", truefalseEmpty.InnerText);
+            Assert.Equal(string.Empty, truefalseEmpty.InnerText);
             Assert.Equal(xvml.BooleanEntryWithBlankValues.Empty, truefalseEmpty.Value);
             Assert.Equal(xvml.BooleanEntryWithBlankValues.Empty, (xvml.BooleanEntryWithBlankValues)truefalseEmpty);
-            Assert.Equal("", truefalseEmpty.ToString());
+            Assert.Equal(string.Empty, truefalseEmpty.ToString());
 
             // Clone constructor for EnumValue
             HeaderFooterValues validValue0 = HeaderFooterValues.Default;
@@ -152,7 +150,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // Clone() for EnumValue.
             objA = new EnumValue<HeaderFooterValues>(validValue0);
-            objB = (EnumValue<HeaderFooterValues>) objA.Clone();
+            objB = (EnumValue<HeaderFooterValues>)objA.Clone();
             Assert.True(objA.HasValue);
             Assert.True(objB.HasValue);
             Assert.Equal("default", objA.InnerText);
@@ -175,11 +173,11 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Null(target.Value);
             Assert.Null(target.InnerText);
 
-            target.InnerText = "";
+            target.InnerText = string.Empty;
             Assert.True(target.HasValue);
-            Assert.Equal("", target.Value);
-            Assert.Equal("", (string)target);
-            Assert.Equal("", target.ToString());
+            Assert.Equal(string.Empty, target.Value);
+            Assert.Equal(string.Empty, (string)target);
+            Assert.Equal(string.Empty, target.ToString());
 
             target = "test";
             Assert.True(target.HasValue);
@@ -196,10 +194,11 @@ namespace DocumentFormat.OpenXml.Tests
         public void DateTimeValueTest()
         {
             string utcTime = "2008-07-17T16:11:10.518Z";
+
             // System.Globalization.CultureInfo cultureInfo = System.Globalization.CultureInfo.GetCultureInfo("zh-CN");
             DateTime dateTime = System.Xml.XmlConvert.ToDateTime(utcTime, System.Xml.XmlDateTimeSerializationMode.Utc);
 
-            DateTimeValue target = new DateTimeValue( dateTime );
+            DateTimeValue target = new DateTimeValue(dateTime);
 
             Assert.True(target.HasValue);
             Assert.Equal(utcTime, target.InnerText);
@@ -825,7 +824,6 @@ namespace DocumentFormat.OpenXml.Tests
         public void Bug520719()
         {
             // the following test should pass without Assert() in debug version.
-
             var int8 = new SByteValue();
             int8.InnerText = "+10";
             Assert.Equal(10, int8.Value);

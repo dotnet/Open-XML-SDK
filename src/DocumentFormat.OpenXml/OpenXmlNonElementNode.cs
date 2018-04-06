@@ -145,9 +145,9 @@ namespace DocumentFormat.OpenXml
                             XmlReaderSettings settings = new XmlReaderSettings
                             {
 #if FEATURE_XML_PROHIBIT_DTD
-                                ProhibitDtd = true // set true explicitly for security fix
+                                ProhibitDtd = true,
 #else
-                                DtdProcessing = DtdProcessing.Prohibit, // set to prohibit explicitly for security fix
+                                DtdProcessing = DtdProcessing.Prohibit,
 #endif
                             };
 
@@ -157,6 +157,7 @@ namespace DocumentFormat.OpenXml
                                 localName = xmlReader.LocalName;
                             }
                         }
+
                         break;
 
                     case XmlNodeType.Text:
@@ -190,6 +191,7 @@ namespace DocumentFormat.OpenXml
                         Debug.Assert(false);
                         break;
                 }
+
                 return localName;
             }
         }
@@ -240,7 +242,7 @@ namespace DocumentFormat.OpenXml
         {
             return new OpenXmlMiscNode(XmlNodeType)
             {
-                OuterXml = OuterXml
+                OuterXml = OuterXml,
             };
         }
 
@@ -303,6 +305,7 @@ namespace DocumentFormat.OpenXml
 
                 case XmlNodeType.XmlDeclaration:
                     Debug.Assert(xmlReader.NodeType != XmlNodeType.XmlDeclaration);
+
                     // this.RawOuterXml = String.Format("<?xml version='1.0'?>");
                     Value = xmlReader.Value; // version='1.0'
                     break;
@@ -415,7 +418,7 @@ namespace DocumentFormat.OpenXml
 
             var newMiscNode = new OpenXmlMiscNode(XmlNodeType.CDATA);
             newMiscNode.Value = value;
-            newMiscNode.RawOuterXml = String.Format(CultureInfo.InvariantCulture, "<![CDATA[{0}]]>", value); ;
+            newMiscNode.RawOuterXml = String.Format(CultureInfo.InvariantCulture, "<![CDATA[{0}]]>", value);
             return newMiscNode;
         }
 

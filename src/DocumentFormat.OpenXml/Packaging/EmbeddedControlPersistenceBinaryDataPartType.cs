@@ -11,6 +11,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// ActieveX (.bin).
         /// </summary>
-        ActiveXBin
+        ActiveXBin,
     }
 }

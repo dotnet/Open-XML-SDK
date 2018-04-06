@@ -80,6 +80,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         {
                             particleMatchInfo.SetExpectedChildren(_childMatchInfo.ExpectedChildren);
                         }
+
                         return;
                 }
             }
@@ -100,7 +101,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             var requiredChoiceChildren = new ExpectedChildren();
 
             // if there are any child elements that minOccurs = 0, then there is no required children.
-
             if (ParticleConstraint.MinOccurs > 0)
             {
                 foreach (var constraint in ParticleConstraint.ChildrenParticles)

@@ -10,7 +10,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     // TODO: consider a hash verify for the data
     // System.Security.Cryptography.MD5CryptoServiceProvider for MD5 hash
     // or System.Security.Cryptography.SHA256 hash
-
     internal class SdbDataHead : SdbData
     {
         public const int HeadSize = 128;

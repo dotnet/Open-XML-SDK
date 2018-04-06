@@ -93,6 +93,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                                 log.Pass(string.Format("Edit Content Control an appearance element in attribute of target tag=[{0}], Change an appearance attribute(value=Hidden).", ConstStr.TestTagStrings.TagContent04));
                             }
+
                             break;
 
                         //Tag is "Test1.2.3"
@@ -115,6 +116,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                                 log.Pass(string.Format("Edit Content Control an appearance element in attribute of target tag=[{0}], Change an appearance attribute(value=BoundingBox).", ConstStr.TestTagStrings.TagContent05));
                             }
+
                             break;
 
                         //Tag is "Test1.3.1"
@@ -138,6 +140,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                                 log.Pass(string.Format("Edit Content Control a color element of target tag=[{0}], Change a Color element value={1}.", ConstStr.TestTagStrings.TagContent06, ConstStr.TestColorValues.TestColor));
                             }
+
                             break;
 
                         //Tag is "Test1.3.2"
@@ -155,6 +158,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                             {
                                 log.Fail(string.Format("Not found to be edited. Target tag=[{0}].", ConstStr.TestTagStrings.TagContent07));
                             }
+
                             break;
 
                         //Tag is "Test1.4.3"
@@ -177,6 +181,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                                 log.Pass(string.Format("Edit Content Control a DoNotAllowInsertDeleteSection element of target tag=[{0}], Append The DoNotAllowInsertDeleteSection element. Its element in attribute value is false.", ConstStr.TestTagStrings.TagContent10));
                             }
+
                             break;
 
                         //Tag is "Test1.4.4"
@@ -194,6 +199,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                             {
                                 log.Fail("SectionTitle is not found.");
                             }
+
                             break;
                     }
                 }

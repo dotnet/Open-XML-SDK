@@ -21,24 +21,4 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl.ConstantStrings
         public const string TagContent14 = "Test1.5.1_3";
         public const string TagContent15 = "Test1.5.1_4";
     }
-
-    public static class TestStrings
-    {
-        public const string ContentControlString1 = "Click here to enter text.";
-        public const string ContentControlString2 = "Test string";
-        public const string ContentControlCellString1 = "Repeating Section,Row1,Cell1";
-        public const string ContentControlCellString2 = "Repeating Section,Row1,Cell2";
-        public const string ContentControlCellString3 = "Repeating Section,Row2,Cell1";
-        public const string ContentControlCellString4 = "Repeating Section,Row2,Cell2";
-    }
-
-    public static class TestColorValues
-    {
-        public const string TestColor = "0000FF";
-    }
-
-    public static class RunStyleValues
-    {
-        public const string Placeholder = "PlaceholderText";
-    }
 }

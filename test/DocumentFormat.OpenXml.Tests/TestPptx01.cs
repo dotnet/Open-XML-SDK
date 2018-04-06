@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var openSettings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013),
                 };
 
                 using (var doc = PresentationDocument.Open(package, openSettings))
@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var openSettings = new OpenSettings
             {
-                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013),
             };
 
             using (var stream = GetStream(TestFiles.Presentation))
@@ -64,7 +64,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var openSettings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013),
                 };
 
                 using (var doc = PresentationDocument.Open(package, openSettings))
@@ -82,7 +82,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var openSettings = new OpenSettings
             {
-                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013),
             };
 
             using (var stream = GetStream(TestFiles.Presentation))
@@ -149,7 +149,7 @@ namespace DocumentFormat.OpenXml.Tests
                     new P.CommonSlideData(
                         new P.ShapeTree(
                             new P.NonVisualGroupShapeProperties(
-                                new P.NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" },
+                                new P.NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty },
                                 new P.NonVisualGroupShapeDrawingProperties(),
                                 new P.ApplicationNonVisualDrawingProperties()),
                             new P.GroupShapeProperties(new D.TransformGroup()),
@@ -173,13 +173,13 @@ namespace DocumentFormat.OpenXml.Tests
             P.SlideLayout slideLayout = new P.SlideLayout(
             new P.CommonSlideData(new P.ShapeTree(
               new P.NonVisualGroupShapeProperties(
-              new P.NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" },
+              new P.NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty },
               new P.NonVisualGroupShapeDrawingProperties(),
               new P.ApplicationNonVisualDrawingProperties()),
               new P.GroupShapeProperties(new D.TransformGroup()),
               new P.Shape(
               new P.NonVisualShapeProperties(
-                new P.NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "" },
+                new P.NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = string.Empty },
                 new P.NonVisualShapeDrawingProperties(new D.ShapeLocks() { NoGrouping = true }),
                 new P.ApplicationNonVisualDrawingProperties(new P.PlaceholderShape())),
               new P.ShapeProperties(),
@@ -198,7 +198,7 @@ namespace DocumentFormat.OpenXml.Tests
             P.SlideMaster slideMaster = new P.SlideMaster(
             new P.CommonSlideData(new P.ShapeTree(
               new P.NonVisualGroupShapeProperties(
-              new P.NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" },
+              new P.NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty },
               new P.NonVisualGroupShapeDrawingProperties(),
               new P.ApplicationNonVisualDrawingProperties()),
               new P.GroupShapeProperties(new D.TransformGroup()),
@@ -243,12 +243,12 @@ namespace DocumentFormat.OpenXml.Tests
               new D.FontScheme(
               new D.MajorFont(
               new D.LatinFont() { Typeface = "Calibri" },
-              new D.EastAsianFont() { Typeface = "" },
-              new D.ComplexScriptFont() { Typeface = "" }),
+              new D.EastAsianFont() { Typeface = string.Empty },
+              new D.ComplexScriptFont() { Typeface = string.Empty }),
               new D.MinorFont(
               new D.LatinFont() { Typeface = "Calibri" },
-              new D.EastAsianFont() { Typeface = "" },
-              new D.ComplexScriptFont() { Typeface = "" }))
+              new D.EastAsianFont() { Typeface = string.Empty },
+              new D.ComplexScriptFont() { Typeface = string.Empty }))
               { Name = "Office" },
               new D.FormatScheme(
               new D.FillStyleList(
@@ -284,7 +284,7 @@ namespace DocumentFormat.OpenXml.Tests
                   Width = 9525,
                   CapType = D.LineCapValues.Flat,
                   CompoundLineType = D.CompoundLineValues.Single,
-                  Alignment = D.PenAlignmentValues.Center
+                  Alignment = D.PenAlignmentValues.Center,
               },
               new D.Outline(
                 new D.SolidFill(
@@ -297,7 +297,7 @@ namespace DocumentFormat.OpenXml.Tests
                   Width = 9525,
                   CapType = D.LineCapValues.Flat,
                   CompoundLineType = D.CompoundLineValues.Single,
-                  Alignment = D.PenAlignmentValues.Center
+                  Alignment = D.PenAlignmentValues.Center,
               },
               new D.Outline(
                 new D.SolidFill(
@@ -310,7 +310,7 @@ namespace DocumentFormat.OpenXml.Tests
                   Width = 9525,
                   CapType = D.LineCapValues.Flat,
                   CompoundLineType = D.CompoundLineValues.Single,
-                  Alignment = D.PenAlignmentValues.Center
+                  Alignment = D.PenAlignmentValues.Center,
               }),
               new D.EffectStyleList(
               new D.EffectStyle(

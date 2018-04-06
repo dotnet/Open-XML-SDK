@@ -12,14 +12,17 @@ namespace DocumentFormat.OpenXml.Validation
         /// Schema validation error.
         /// </summary>
         Schema,
+
         /// <summary>
         /// Semantic validation error.
         /// </summary>
         Semantic,
+
         /// <summary>
         /// Package structure validation error.
         /// </summary>
         Package,
+
         /// <summary>
         /// Markup Compatibility validation error.
         /// </summary>

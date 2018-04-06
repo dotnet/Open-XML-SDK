@@ -22,6 +22,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransition
         }
 
         #region Test Methods
+
         /// <summary>
         /// Document Read/Write Test for PresetTransition
         /// </summary>

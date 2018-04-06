@@ -76,11 +76,13 @@ namespace DocumentFormat.OpenXml.Tests
                 using (var document = WordprocessingDocument.Open(stream, true))
                 {
                     var firstText = document.MainDocumentPart.Document.Descendants<Text>().First();
+
                     // change text of the first run
                     firstText.Text = "Changed";
 
                     var stylePart = document.MainDocumentPart.GetPartsOfType<StyleDefinitionsPart>().First();
                     var heading1Style = stylePart.Styles.Descendants<Style>().Where(style => style.StyleId == "Heading1").Single();
+
                     // change color to be black
                     heading1Style.Descendants<Color>().First().Val = "000000";
                 }
@@ -139,6 +141,7 @@ namespace DocumentFormat.OpenXml.Tests
                             new Paragraph(
                                 new Run(
                                     new Text("Hello World")))));
+
                 // add an image
                 var imagePart1 = document.MainDocumentPart.AddNewPart<ImagePart>("image/x-wmf", "rId6");
                 using (System.IO.BinaryWriter writer = new System.IO.BinaryWriter(imagePart1.GetStream()))
@@ -224,6 +227,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var slideLayout1 = slide1.GetPartById("rId1"); // Get part slideLayout1.xml
                     var slideMaster1 = slideLayout1.GetPartById("rId1"); // Get slideMaster1.xml
                     Assert.Equal(typeof(SlideMasterPart), slideMaster1.GetType());
+
                     // Change a text "5/7/2009" to be "5/9/2009"
                     var texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/7/2009");
                     foreach (var text in texts)
@@ -253,7 +257,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var s = new OpenSettings
             {
-                AutoSave = false
+                AutoSave = false,
             };
 
             using (var stream = GetStream(TestFiles.complex0docx, true))
@@ -273,6 +277,7 @@ namespace DocumentFormat.OpenXml.Tests
                     // check first.
                     var firstText = doc.MainDocumentPart.Document.Descendants<Text>().First();
                     Assert.NotEqual("Changed", firstText.Text);
+
                     // do changes, and changes shoud be saved.
                     firstText.Text = "Changed";
                 }
@@ -314,7 +319,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var s = new OpenSettings
             {
-                AutoSave = false
+                AutoSave = false,
             };
 
             using (var stream = GetStream(TestFiles.autosave, true))
@@ -336,9 +341,11 @@ namespace DocumentFormat.OpenXml.Tests
                 using (var doc = PresentationDocument.Open(stream, true, s))
                 {
                     var slideMaster1 = doc.PresentationPart.GetPartById("rId1"); // Get slideMaster1.xml
+
                                                                                  // check first.
                     var texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/9/2009");
                     Assert.True(texts.Count() == 0);
+
                     // change and save.
                     texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/7/2009");
                     foreach (var text in texts)
@@ -352,9 +359,11 @@ namespace DocumentFormat.OpenXml.Tests
                 using (var doc = PresentationDocument.Open(stream, true))
                 {
                     var slideMaster1 = doc.PresentationPart.GetPartById("rId1"); // Get slideMaster1.xml
+
                                                                                  // check first.
                     var texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/9/2009");
                     Assert.True(texts.Count() > 0);
+
                     // change and save.
                     foreach (var text in texts)
                     {
@@ -368,9 +377,11 @@ namespace DocumentFormat.OpenXml.Tests
                 using (var doc = PresentationDocument.Open(pptxPackage, s))
                 {
                     var slideMaster1 = doc.PresentationPart.GetPartById("rId1"); // Get slideMaster1.xml
+
                                                                                  // check first.
                     var texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/10/2009");
                     Assert.True(texts.Count() > 0);
+
                     // change and save.
                     foreach (var text in texts)
                     {
@@ -383,6 +394,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (var doc = PresentationDocument.Open(stream, false))
                 {
                     var slideMaster1 = doc.PresentationPart.GetPartById("rId1"); // Get slideMaster1.xml
+
                                                                                  // check first.
                     var texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/11/2009");
                     Assert.True(texts.Count() > 0);
@@ -395,7 +407,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var s = new OpenSettings
             {
-                AutoSave = false
+                AutoSave = false,
             };
 
             using (var stream = GetStream(TestFiles.basicspreadsheet, true))
@@ -420,6 +432,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var sharedStringsPart = doc.WorkbookPart.GetPartById("rId7");
                     var fonts = sharedStringsPart.RootElement.Descendants<x.RunFont>().Where(e => e.Val == "微软雅黑");
                     Assert.True(fonts.Count() == 0);
+
                     // do changes, and they should be saved.
                     fonts = sharedStringsPart.RootElement.Descendants<x.RunFont>().Where(e => e.Val == "宋体");
                     foreach (var font in fonts)
@@ -478,6 +491,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var parts = document.GetAllParts();
 
                 Assert.Equal(31, parts.Count());
+
                 // Make sure it works well for multi calls
                 Assert.Equal(31, parts.Count());
             }
@@ -522,6 +536,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 // add slideLayout1 to slide2
                 slide2.DeletePart(slideLayout2);
+
                 // try to get exception
                 Assert.Throws<InvalidOperationException>(() => slide2.CreateRelationshipToPart(new SlideLayoutPart()));
 
@@ -583,12 +598,14 @@ namespace DocumentFormat.OpenXml.Tests
                 doc.MainDocumentPart.AddNewPart<StyleDefinitionsPart>();
                 var styles = doc.MainDocumentPart.StyleDefinitionsPart.Styles = new Styles();
                 styles.Save();
+
                 // should no exception
                 doc.Validate(null);
 
                 // add new O14 part
                 doc.MainDocumentPart.AddNewPart<StylesWithEffectsPart>();
                 Assert.IsType<StylesWithEffectsPart>(doc.MainDocumentPart.StylesWithEffectsPart);
+
                 // should no exception
                 doc.Validate(null);
 
@@ -641,6 +658,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 Assert.Null(doc.MainDocumentPart.Document);
             }
+
             File.Delete(testFile);
         }
 
@@ -841,7 +859,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var settings2012 = new OpenSettings()
             {
-                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013),
             };
 
             using (var stream = GetStream(TestFiles.Youtube))

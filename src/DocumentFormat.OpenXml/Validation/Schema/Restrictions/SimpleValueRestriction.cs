@@ -106,6 +106,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                     return false;
                 }
             }
+
             return true;
         }
 
@@ -122,6 +123,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                     return false;
                 }
             }
+
             return true;
         }
 
@@ -138,6 +140,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                     return false;
                 }
             }
+
             return true;
         }
 
@@ -154,6 +157,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                     return false;
                 }
             }
+
             return true;
         }
 
@@ -192,10 +196,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
             {
                 Debug.Assert(MinExclusive.CompareTo(MinValue) >= 0);
             }
+
             if ((RestrictionField & RestrictionField.MaxExclusive) == RestrictionField.MaxExclusive)
             {
                 Debug.Assert(MaxExclusive.CompareTo(MaxValue) <= 0);
             }
+
             if ((RestrictionField & RestrictionField.MinMaxExclusive) == RestrictionField.MinMaxExclusive)
             {
                 Debug.Assert(MinExclusive.CompareTo(MaxExclusive) < 0);
@@ -205,10 +211,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
             {
                 Debug.Assert(MinInclusive.CompareTo(MinValue) >= 0);
             }
+
             if ((RestrictionField & RestrictionField.MaxInclusive) == RestrictionField.MaxInclusive)
             {
                 Debug.Assert(MaxInclusive.CompareTo(MaxValue) <= 0);
             }
+
             if ((RestrictionField & RestrictionField.MinMaxInclusive) == RestrictionField.MinMaxInclusive)
             {
                 Debug.Assert(MinInclusive.CompareTo(MaxInclusive) <= 0);

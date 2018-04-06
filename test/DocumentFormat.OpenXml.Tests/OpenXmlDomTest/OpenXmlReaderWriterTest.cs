@@ -77,7 +77,9 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 standalone = y.GetAttribute("standalone");
                 if (!x.ReadMiscNodes)
-                    while (Read(y) && IsMisc(y)) ;
+                    while (Read(y) && IsMisc(y))
+                    {
+                    }
                 else
                     Read(y);
             }
@@ -107,7 +109,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteStartDocumentMultiple()
         {
-            string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", "") + ".docx");
+            string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", string.Empty) + ".docx");
 
             using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
             {
@@ -126,6 +128,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Log.Pass("InvalidOperationException is thrown as expected");
                 }
             }
+
             File.Delete(file);
         }
 
@@ -133,7 +136,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteStartDocumentOtherPlace()
         {
-            string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", "") + ".docx");
+            string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", string.Empty) + ".docx");
             using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
             {
                 MainDocumentPart part = newDoc.AddMainDocumentPart();
@@ -152,6 +155,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Log.Pass("InvalidOperationException is thrown as expected");
                 }
             }
+
             File.Delete(file);
         }
 
@@ -219,7 +223,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteStringAndEndElement()
         {
-            string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", "") + ".docx");
+            string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", string.Empty) + ".docx");
 
             Text t = new Text();
             using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
@@ -245,6 +249,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 Log.VerifyTrue(reader.LocalName == t.LocalName, "expected: {0} <> actual: {1}", t.LocalName, reader.LocalName);
             }
+
             File.Delete(file);
         }
 
@@ -252,7 +257,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         public void WriteEndElementWithoutStart()
         {
-            string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", "") + ".docx");
+            string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", string.Empty) + ".docx");
             Text t = new Text();
             using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
             {
@@ -270,6 +275,7 @@ namespace DocumentFormat.OpenXml.Tests
                     }
                 }
             }
+
             File.Delete(file);
         }
 
@@ -340,7 +346,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void TestWriteStartDocument(ConstrWriter writerConstr, WriteStartDoc write, bool? standalone)
         {
-            string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", "") + ".docx");
+            string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", string.Empty) + ".docx");
             using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
             {
                 MainDocumentPart part = newDoc.AddMainDocumentPart();
@@ -351,6 +357,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 VerifyDocumentStart(part, standalone);
             }
+
             File.Delete(file);
         }
 
@@ -470,6 +477,7 @@ namespace DocumentFormat.OpenXml.Tests
                             Log.VerifyTrue(attr.Value == xmlReader.GetAttribute(attr.LocalName, attr.NamespaceUri), "expected: {0} <> actual: {1}", attr.Value, xmlReader.GetAttribute(attr.LocalName, attr.NamespaceUri));
                         }
                     }
+
                     if (namespaceDeclarations != null)
                     {
                         foreach (var ns in namespaceDeclarations)
@@ -505,6 +513,7 @@ namespace DocumentFormat.OpenXml.Tests
                             Log.VerifyTrue(attr.Value == xmlReader.GetAttribute(attr.LocalName, attr.NamespaceUri), "expected: {0} <> actual: {1}", attr.Value, xmlReader.GetAttribute(attr.LocalName, attr.NamespaceUri));
                         }
                     }
+
                     if (namespaceDeclarations != null)
                     {
                         foreach (var ns in namespaceDeclarations)
@@ -611,7 +620,9 @@ namespace DocumentFormat.OpenXml.Tests
                         if (!(Xreader.IsEmptyElement && reader.IsEndElement && skip))
                         {
                             int oldDepth = Xreader.Depth;
-                            while (Read(Xreader) && !(Xreader.NodeType == XmlNodeType.EndElement && Xreader.Depth <= oldDepth)) ;
+                            while (Read(Xreader) && !(Xreader.NodeType == XmlNodeType.EndElement && Xreader.Depth <= oldDepth))
+                            {
+                            }
                         }
                     }
                 }
@@ -620,7 +631,9 @@ namespace DocumentFormat.OpenXml.Tests
                     if (!(Xreader.IsEmptyElement && reader.IsEndElement && skip))
                     {
                         int oldDepth = Xreader.Depth;
-                        while (Read(Xreader) && !(Xreader.NodeType == XmlNodeType.EndElement && Xreader.Depth <= oldDepth)) ;
+                        while (Read(Xreader) && !(Xreader.NodeType == XmlNodeType.EndElement && Xreader.Depth <= oldDepth))
+                        {
+                        }
                     }
                 }
             }
@@ -632,6 +645,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 Read(Xreader);
             }
+
             return true;
         }
 
@@ -768,6 +782,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var isEndElement = reader.IsEndElement;
                 var xtReaderIsEndElement = XTreader.NodeType == XmlNodeType.EndElement;
+
                 //if (isEndElement != xtReaderIsEndElement)
                 //    Console.WriteLine();
                 Log.VerifyTrue(isEndElement == xtReaderIsEndElement,
@@ -964,6 +979,7 @@ namespace DocumentFormat.OpenXml.Tests
                             break;
                     }
                 }
+
                 if (!IsOreadSuccessful)
                 {
                     Log.Comment("check if the Read returns correctly");
@@ -1010,19 +1026,26 @@ namespace DocumentFormat.OpenXml.Tests
                     }
                     else
                     {
-                        while (Read(Treader) && IsMisc(Treader)) ;
+                        while (Read(Treader) && IsMisc(Treader))
+                        {
+                        }
                     }
+
                     return true;
                 }
                 else
                 {
                     if (!(Treader.IsEmptyElement && Oreader.IsEndElement && skip))
                     {
-                        while (Read(Treader) && Treader.NodeType != XmlNodeType.EndElement) ;
+                        while (Read(Treader) && Treader.NodeType != XmlNodeType.EndElement)
+                        {
+                        }
                     }
+
                     return false;
                 }
             }
+
             return false;
         }
 
@@ -1047,7 +1070,9 @@ namespace DocumentFormat.OpenXml.Tests
             }
             else if (Treader.Depth == 0)
             {
-                while (!Treader.EOF && Read(Treader)) ;
+                while (!Treader.EOF && Read(Treader))
+                {
+                }
 
                 foundNextSibling = false;
             }
@@ -1065,7 +1090,9 @@ namespace DocumentFormat.OpenXml.Tests
                     Read(Treader);
                 else
                 {
-                    while (Read(Treader) && (IsMisc(Treader) || Treader.Depth > oldDepth)) ;
+                    while (Read(Treader) && (IsMisc(Treader) || Treader.Depth > oldDepth))
+                    {
+                    }
                 }
 
                 if (Treader.Depth == oldDepth && Treader.NodeType != XmlNodeType.EndElement)
@@ -1138,6 +1165,7 @@ namespace DocumentFormat.OpenXml.Tests
                     System.Diagnostics.Debug.WriteLine("O: [{0}] {1}", reader.ElementType, reader.LocalName);
                 }
             }
+
             return result;
         }
 
@@ -1155,6 +1183,7 @@ namespace DocumentFormat.OpenXml.Tests
                 if (reader != null && reader.EOF == false)
                     System.Diagnostics.Debug.WriteLine("X: [{0}] {1}", reader.NodeType, reader.LocalName);
             }
+
             return result;
         }
 
@@ -1169,6 +1198,7 @@ namespace DocumentFormat.OpenXml.Tests
                 if (IGNORE_WHITESPACE_SETTING == false)
                     result = SkipWhitespace(reader);
             }
+
             return result;
         }
 
@@ -1183,6 +1213,7 @@ namespace DocumentFormat.OpenXml.Tests
                 if (IGNORE_WHITESPACE_SETTING == false)
                     result = SkipWhitespace(reader);
             }
+
             return result;
         }
 
@@ -1196,6 +1227,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 result = reader.Read();
             }
+
             return result;
         }
 
@@ -1209,6 +1241,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 result = reader.Read();
             }
+
             return result;
         }
         #endregion

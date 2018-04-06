@@ -43,6 +43,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Fact]
+
         // [Description("O14:537826")]
         public void TestRootElementOfVmlDrawingPartIsLoadedAsUnknown()
         {
@@ -199,7 +200,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var validator = new OpenXmlValidator(FileFormatVersions.Office2007)
                 {
-                    MaxNumberOfErrors = maxErrorCount
+                    MaxNumberOfErrors = maxErrorCount,
                 };
 
                 var errors = validator.Validate(package);

@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
         private static string[] arrayOfOrigTagAttrNames = { "conformance" };
         private static string[] arrayOfNewTagAttrNames = { "conformance" };
         private static string[] arrayOfOrigTagAttrValues = { "strict" };
-        private static string[] arrayOfNewTagAttrValues = { "" }; // Must be "".
+        private static string[] arrayOfNewTagAttrValues = { string.Empty };
         private static long[] arrayOfTagAttrTraits = { 0 };
 
         internal DocumentTagAttributeTranslator()

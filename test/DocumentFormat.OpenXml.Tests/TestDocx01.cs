@@ -328,7 +328,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var openSettings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013),
                 };
 
                 using (var doc = WordprocessingDocument.Open(package, openSettings))
@@ -766,7 +766,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var openSettings = new OpenSettings
                 {
                     MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2013),
-                    MaxCharactersInPart = 1000
+                    MaxCharactersInPart = 1000,
                 };
 
                 using (var doc = WordprocessingDocument.Open(stream, false, openSettings))
@@ -786,7 +786,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var openSettings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2013)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessLoadedPartsOnly, FileFormatVersions.Office2013),
                 };
 
                 using (var doc = WordprocessingDocument.Open(stream, false, openSettings))
@@ -804,7 +804,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var openSettings = new OpenSettings
             {
-                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013),
             };
 
             using (var stream = GetStream(TestFiles.Hyperlink))
@@ -822,7 +822,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var openSettings = new OpenSettings
             {
-                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013),
             };
 
             using (var stream = GetStream(TestFiles.Hyperlink))
@@ -907,12 +907,12 @@ namespace DocumentFormat.OpenXml.Tests
                              LeftEdge = 0L,
                              TopEdge = 0L,
                              RightEdge = 0L,
-                             BottomEdge = 0L
+                             BottomEdge = 0L,
                          },
                          new DW.DocProperties()
                          {
                              Id = (UInt32Value)1U,
-                             Name = "Picture 1"
+                             Name = "Picture 1",
                          },
                          new DW.NonVisualGraphicFrameDrawingProperties(
                              new A.GraphicFrameLocks() { NoChangeAspect = true }),
@@ -923,7 +923,7 @@ namespace DocumentFormat.OpenXml.Tests
                                          new PIC.NonVisualDrawingProperties()
                                          {
                                              Id = (UInt32Value)0U,
-                                             Name = "New Bitmap Image.jpg"
+                                             Name = "New Bitmap Image.jpg",
                                          },
                                          new PIC.NonVisualPictureDrawingProperties()),
                                      new PIC.BlipFill(
@@ -932,13 +932,13 @@ namespace DocumentFormat.OpenXml.Tests
                                                  new A.BlipExtension()
                                                  {
                                                      Uri =
-                                                       "{28A0092B-C50C-407E-A947-70E740481C1C}"
+                                                       "{28A0092B-C50C-407E-A947-70E740481C1C}",
                                                  })
                                          )
                                          {
                                              Embed = relationshipId,
                                              CompressionState =
-                                             A.BlipCompressionValues.Print
+                                             A.BlipCompressionValues.Print,
                                          },
                                          new A.Stretch(
                                              new A.FillRectangle())),
@@ -958,7 +958,7 @@ namespace DocumentFormat.OpenXml.Tests
                          DistanceFromBottom = (UInt32Value)0U,
                          DistanceFromLeft = (UInt32Value)0U,
                          DistanceFromRight = (UInt32Value)0U,
-                         EditId = "50D07946"
+                         EditId = "50D07946",
                      });
             wordDoc.MainDocumentPart.Document.Body.AppendChild(new W.Paragraph(new W.Run(element)));
         }
@@ -1022,7 +1022,7 @@ namespace DocumentFormat.OpenXml.Tests
                         Id = id,
                         Author = author,
                         Initials = initials,
-                        Date = DateTime.Now
+                        Date = DateTime.Now,
                     };
                 cmt.AppendChild(p);
                 comments.AppendChild(cmt);

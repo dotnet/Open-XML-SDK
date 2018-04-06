@@ -58,7 +58,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(
                         MarkupCompatibilityProcessMode.ProcessAllParts,
-                        DocumentFormat.OpenXml.FileFormatVersions.Office2013)
+                        DocumentFormat.OpenXml.FileFormatVersions.Office2013),
             };
 
             if (typeof(TPackage) == typeof(WordprocessingDocument))

@@ -230,7 +230,7 @@ namespace DocumentFormat.OpenXml.Tests
                                     "</ap:Properties>";
 
             var properties = new DocumentFormat.OpenXml.ExtendedProperties.Properties();
-            var property = properties.AppendChild( new DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts() );;
+            var property = properties.AppendChild( new DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts() );
             property.VTVector = new DocumentFormat.OpenXml.VariantTypes.VTVector();
             property.VTVector.BaseType = DocumentFormat.OpenXml.VariantTypes.VectorBaseValues.Lpstr;
             property.VTVector.Size = 1;
@@ -247,8 +247,10 @@ namespace DocumentFormat.OpenXml.Tests
             var customProperties = new DocumentFormat.OpenXml.CustomProperties.Properties();
             var foo = new DocumentFormat.OpenXml.CustomProperties.CustomDocumentProperty();
             foo.Name = "crap";
+
             // format id is required, i copied this from a Word document.
             foo.FormatId = "{D5CDD505-2E9C-101B-9397-08002B2CF9AE}";
+
             // property id is required.
             foo.PropertyId = 2;
             foo.VTBool = new DocumentFormat.OpenXml.VariantTypes.VTBool("true");

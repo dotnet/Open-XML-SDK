@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 Node = element,
                 Id = messageId,
                 RelatedNode = child,
-                Description = string.Format(CultureInfo.CurrentUICulture, ValidationResources.ResourceManager.GetString(messageId), args)
+                Description = string.Format(CultureInfo.CurrentUICulture, ValidationResources.ResourceManager.GetString(messageId), args),
             };
 
             return errorInfo;

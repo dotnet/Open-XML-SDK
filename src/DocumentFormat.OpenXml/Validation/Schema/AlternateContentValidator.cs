@@ -68,6 +68,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                                     ValidateMcAttributesOnAcb(validationContext, child);
                                 }
                             }
+
                             break;
 
                         case 1:
@@ -89,6 +90,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                                 errorInfo = validationContext.ComposeMcValidationError(acElement, "Sch_InvalidElementContentExpectingComplex", child.XmlQualifiedName.ToString(), ValidationResources.MC_ShallContainChoice);
                                 validationContext.AddError(errorInfo);
                             }
+
                             break;
 
                         case 2:
@@ -98,8 +100,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                             break;
                     }
                 }
+
                 child = child.GetNextNonMiscElementSibling();
             }
+
             return;
         }
 
@@ -182,6 +186,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     return true;
                 }
             }
+
             return false;
         }
     }

@@ -75,7 +75,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         {
             var settings = new XmlWriterSettings
             {
-                Indent = true
+                Indent = true,
             };
 
             using (var writer = new StreamWriter(stream, Encoding.UTF8))

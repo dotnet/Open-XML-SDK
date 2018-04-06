@@ -60,7 +60,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Id = "Sem_AttributeValueDataTypeDetailed",
                 ErrorType = ValidationErrorType.Schema,
                 Node = context.Element,
-                Description = errorDescription
+                Description = errorDescription,
             };
         }
     }

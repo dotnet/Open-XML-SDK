@@ -145,6 +145,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
             {
                 tp.DockState = svCallback(tp.DockState);
                 tp.Locked = boolCallback(tp.Locked);
+
                 /// TODO: these are messy, let's do them later:
                 /// OfficeArtExtensionList
                 /// OsfWebExtensionPartRef
@@ -183,6 +184,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
                     {
                         be.Uri = svCallback(be.Uri);
                     }
+
                     // it's possible to try and access the childs of be, but these are OpenXmlUnknownElement
                     // and it's not possible to modify them in an intelligent way.
                 }

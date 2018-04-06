@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 ErrorType = ValidationErrorType.Schema,
                 Node = context.Element,
                 Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sch_MissRequiredAttribute,
-                                            GetAttributeQualifiedName(context.Element, _attribute))
+                                            GetAttributeQualifiedName(context.Element, _attribute)),
             };
         }
     }

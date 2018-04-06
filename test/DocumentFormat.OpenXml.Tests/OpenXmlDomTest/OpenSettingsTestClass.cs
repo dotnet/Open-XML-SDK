@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var invalidSettings = new OpenSettings()
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(mode, (FileFormatVersions)format)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(mode, (FileFormatVersions)format),
                 };
 
                 Assert.Throws<ArgumentException>(() =>
@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var invalidSettings = new OpenSettings()
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(mode, (FileFormatVersions)format)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(mode, (FileFormatVersions)format),
                 };
 
                 using (var package = file.Open(false, invalidSettings))

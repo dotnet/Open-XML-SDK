@@ -48,6 +48,7 @@ namespace DocumentFormat.OpenXml.Tests
                         return false;
                 }
             }
+
             return true;
         }
 

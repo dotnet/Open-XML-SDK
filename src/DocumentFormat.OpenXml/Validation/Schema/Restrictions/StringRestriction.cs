@@ -35,6 +35,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                 string pattern = @"\A(" + Pattern + @")\z";
                 return Regex.IsMatch(attributeValue.InnerText, pattern, RegexOptions.CultureInvariant);
             }
+
             return true;
         }
 
@@ -66,6 +67,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                     return false;
                 }
             }
+
             return true;
         }
 
@@ -79,6 +81,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                     return false;
                 }
             }
+
             return true;
         }
 
@@ -92,6 +95,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                     return false;
                 }
             }
+
             return true;
         }
     }

@@ -35,7 +35,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
             string uriString = attributeValue.InnerText;
 
             // code copied from XmlConvert.TryToUri()
-
             if ((uriString != null) && (uriString.Length > 0))
             {
                 uriString = uriString.Trim(WhitespaceChars);
@@ -44,6 +43,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                     return false;
                 }
             }
+
             if (!Uri.TryCreate(uriString, UriHelper.RelativeOrAbsolute, out result))
             {
                 return false;
