@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml
     /// Represents the Int32 value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class Int32Value : OpenXmlSimpleValue<Int32>
+    public class Int32Value : OpenXmlSimpleValue<int>
     {
         /// <summary>
         /// Initializes a new instance of the Int32Value class.
@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml
         /// Initializes a new instance of the Int32Value class using the supplied Int32 value.
         /// </summary>
         /// <param name="value">The Int32 value.</param>
-        public Int32Value(Int32 value)
+        public Int32Value(int value)
             : base(value)
         {
         }
@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml
 
         private protected override string GetText(int input) => XmlConvert.ToString(input);
 
-        private protected override Int32 Parse(string input) => XmlConvert.ToInt32(input);
+        private protected override int Parse(string input) => XmlConvert.ToInt32(input);
 
         /// <summary>
         /// Implicitly converts the specified value to an Int32 value.
@@ -51,7 +51,7 @@ namespace DocumentFormat.OpenXml
         /// The converted Int32 value.
         /// </returns>
         /// <exception cref="InvalidOperationException">Thrown when xmlAttribute is null.</exception>
-        public static implicit operator Int32(Int32Value xmlAttribute)
+        public static implicit operator int(Int32Value xmlAttribute)
         {
             if (xmlAttribute == null)
             {
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">The specified Int32 value.</param>
         /// <returns>A new Int32Value instance with the value.</returns>
-        public static implicit operator Int32Value(Int32 value)
+        public static implicit operator Int32Value(int value)
         {
             return FromInt32(value);
         }
@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">An Int32 value to use to create a new Int32Value object.</param>
         /// <returns>An Int32Value that corresponds to the value parameter.</returns>
-        public static Int32Value FromInt32(Int32 value)
+        public static Int32Value FromInt32(int value)
         {
             return new Int32Value(value);
         }
@@ -88,7 +88,7 @@ namespace DocumentFormat.OpenXml
         /// An Int32Value object to use to retrieve an Int32 representation.
         /// </param>
         /// <returns>An Int32 value that represents an Int32Value object.</returns>
-        public static Int32 ToInt32(Int32Value xmlAttribute)
+        public static int ToInt32(Int32Value xmlAttribute)
         {
             if (xmlAttribute == null)
             {

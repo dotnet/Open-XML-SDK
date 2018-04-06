@@ -452,7 +452,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var loader = rootType.GetMethod("Load", new Type[] { srcPartType });
                 var ctor = rootType.GetConstructor(Cached.Array<Type>());
                 OpenXmlElement srcRoot = ctor.Invoke(null) as OpenXmlElement;
-                loader.Invoke(srcRoot, new Object[] { srcPart });
+                loader.Invoke(srcRoot, new object[] { srcPart });
 
                 // Construct a new root element for destination part with default constructor
                 OpenXmlElement destRoot = ctor.Invoke(null) as OpenXmlElement;
@@ -463,7 +463,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 // Call Save(OpenXmlPart parentPart) to save the changes
                 var saver = rootType.GetMethod("Save", new Type[] { srcPartType });
-                saver.Invoke(destRoot, new Object[] { destPart });
+                saver.Invoke(destRoot, new object[] { destPart });
                 Log.Comment("Saved {0} by calling Save() on {1}", destPart, destRoot);
             }
             else
@@ -496,7 +496,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var inserter = GetInsertChildMethod(srcElement.GetType(), parentType, "AppendChild");
                 if (null == inserter)
                     throw new Exception(string.Format("Specified InsertChild method: {0} NOT found for {1}", "AppendChild", parentType));
-                inserter.Invoke(destParent, new Object[] { destElement });
+                inserter.Invoke(destParent, new object[] { destElement });
             }
 
             ReflectAttributes(srcElement, destElement);
@@ -574,7 +574,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var prefix = "AddAnnotation";
             Predicate<ParameterInfo[]> matchParams =
-                ps => ps.Count() == 1 && ps[0].ParameterType == typeof(Object);
+                ps => ps.Count() == 1 && ps[0].ParameterType == typeof(object);
             return GetMethodInfo(hostType, prefix, null, matchParams, null);
         }
 
@@ -598,7 +598,7 @@ namespace DocumentFormat.OpenXml.Tests
             Predicate<ParameterInfo[]> matchParams =
                 ps => ps.Count() == 1 && ps[0].ParameterType == typeof(Type);
             Predicate<ParameterInfo> matchReturn =
-                r => r.ParameterType == typeof(Object);
+                r => r.ParameterType == typeof(object);
             return GetMethodInfo(hostType, prefix, matchMethod, matchParams, matchReturn);
         }
 
@@ -949,7 +949,7 @@ namespace DocumentFormat.OpenXml.Tests
             Predicate<ParameterInfo[]> matchParams =
                 ps => ps.Count() == 0;
             Predicate<ParameterInfo> matchReturn =
-                r => r.ParameterType == typeof(Object);
+                r => r.ParameterType == typeof(object);
             return GetMethodInfo(hostType, prefix, matchMethod, matchParams, matchReturn);
         }
 

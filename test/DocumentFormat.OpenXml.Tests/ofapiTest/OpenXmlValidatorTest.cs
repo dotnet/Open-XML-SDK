@@ -271,11 +271,11 @@ namespace DocumentFormat.OpenXml.Tests
             actual = O12Validator.Validate(element);
             Assert.Empty(actual);
 
-            element.Text = Int16.MinValue.ToString();
+            element.Text = short.MinValue.ToString();
             actual = O12Validator.Validate(element);
             Assert.Empty(actual);
 
-            element.Text = Int16.MaxValue.ToString();
+            element.Text = short.MaxValue.ToString();
             actual = O12Validator.Validate(element);
             Assert.Empty(actual);
 
@@ -643,7 +643,7 @@ namespace DocumentFormat.OpenXml.Tests
             actual = O12Validator.Validate(element);
             Assert.Empty(actual);
 
-            element.Text = Int32.MaxValue.ToString();
+            element.Text = int.MaxValue.ToString();
             actual = O12Validator.Validate(element);
             Assert.Empty(actual);
 
@@ -939,15 +939,15 @@ namespace DocumentFormat.OpenXml.Tests
             var actual = O12Validator.Validate(element);
             Assert.Empty(actual);
 
-            element.Text = UInt64.MinValue.ToString();
+            element.Text = ulong.MinValue.ToString();
             actual = O12Validator.Validate(element);
             Assert.Empty(actual);
 
-            element.Text = UInt32.MaxValue.ToString();
+            element.Text = uint.MaxValue.ToString();
             actual = O12Validator.Validate(element);
             Assert.Empty(actual);
 
-            element.Text = UInt64.MaxValue.ToString();
+            element.Text = ulong.MaxValue.ToString();
             actual = O12Validator.Validate(element);
             Assert.Empty(actual);
 
@@ -1354,7 +1354,7 @@ namespace DocumentFormat.OpenXml.Tests
             actual = O12Validator.Validate(element);
             Assert.Empty(actual);
 
-            element.Text = UInt32.MaxValue.ToString();
+            element.Text = uint.MaxValue.ToString();
             actual = O12Validator.Validate(element);
             Assert.Empty(actual);
 
@@ -2585,11 +2585,11 @@ namespace DocumentFormat.OpenXml.Tests
             var actual = O12Validator.Validate(element);
             Assert.Empty(actual);
 
-            element.Val.InnerText = Int32.MaxValue.ToString();
+            element.Val.InnerText = int.MaxValue.ToString();
             actual = O12Validator.Validate(element);
             Assert.Empty(actual);
 
-            element.Val.InnerText = Int32.MinValue.ToString();
+            element.Val.InnerText = int.MinValue.ToString();
             actual = O12Validator.Validate(element);
             Assert.Empty(actual);
 

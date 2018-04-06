@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml
         internal static OpenXmlElement CreateElement(string namespaceUri, string name)
         {
             // Debug.Assert(namespaceUri != null);
-            Debug.Assert(!String.IsNullOrEmpty(name));
+            Debug.Assert(!string.IsNullOrEmpty(name));
 
             //
             OpenXmlElement newElement = null;

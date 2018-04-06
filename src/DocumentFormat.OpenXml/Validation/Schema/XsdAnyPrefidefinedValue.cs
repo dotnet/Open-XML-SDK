@@ -16,29 +16,29 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// ##any - Elements from any namespace can be present.
         /// </summary>
-        public const SdbIndex Any = 0;
+        public const ushort Any = 0;
 
         /// <summary>
         /// ##other - Elements from any namespace that is not the target namespace of the parent element containing this element can be present.
         /// </summary>
-        public const SdbIndex Other = 1;
+        public const ushort Other = 1;
 
         /// <summary>
         /// #local - Elements that are not qualified with a namespace can be present.
         /// </summary>
-        public const SdbIndex Local = 2;
+        public const ushort Local = 2;
 
         /// <summary>
         /// ##targetNamespace - Elements from the target namespace of the parent element containing this element can be present.
         /// </summary>
-        public const SdbIndex TargetNamespace = 3;
+        public const ushort TargetNamespace = 3;
 
         /// <summary>
         /// Get corresponding namespace string for Any, Other, Local and TargetNamespace.
         /// </summary>
         /// <param name="value">One of the Any, Other, Local and TargetNamespace.</param>
         /// <returns>##any, ##other, ##local or ##targetNamespace.</returns>
-        internal static string GetNamespaceString(SdbIndex value)
+        internal static string GetNamespaceString(ushort value)
         {
             switch (value)
             {

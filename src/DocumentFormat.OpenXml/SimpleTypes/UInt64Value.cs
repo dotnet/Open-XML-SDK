@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     [System.CLSCompliant(false)]
     [DebuggerDisplay("{InnerText}")]
-    public class UInt64Value : OpenXmlSimpleValue<UInt64>
+    public class UInt64Value : OpenXmlSimpleValue<ulong>
     {
         /// <summary>
         /// Initializes a new instance of the UInt64Value class.
@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml
         /// Initializes a new instance of the UInt64Value class using the supplied UInt64 value.
         /// </summary>
         /// <param name="value">The UInt64 value.</param>
-        public UInt64Value(UInt64 value)
+        public UInt64Value(ulong value)
             : base(value)
         {
         }
@@ -50,7 +50,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="xmlAttribute">The UInt64Value object to convert.</param>
         /// <returns>The converted UInt64 value.</returns>
         /// <exception cref="InvalidOperationException">Thrown when xmlAttribute is null.</exception>
-        public static implicit operator UInt64(UInt64Value xmlAttribute)
+        public static implicit operator ulong(UInt64Value xmlAttribute)
         {
             if (xmlAttribute == null)
             {
@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">The specified value.</param>
         /// <returns>A new UInt64Value instance with the value.</returns>
-        public static implicit operator UInt64Value(UInt64 value)
+        public static implicit operator UInt64Value(ulong value)
         {
             return FromUInt64(value);
         }
@@ -75,7 +75,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">A UInt64 value to use to create a new UInt64Value object.</param>
         /// <returns>A UInt64Value that corresponds to the value parameter.</returns>
-        public static UInt64Value FromUInt64(UInt64 value)
+        public static UInt64Value FromUInt64(ulong value)
         {
             return new UInt64Value(value);
         }
@@ -87,7 +87,7 @@ namespace DocumentFormat.OpenXml
         /// A UInt64Value object used to retrieve a UInt64 representation.
         /// </param>
         /// <returns>A UInt64 value that represents a UInt64Value object.</returns>
-        public static UInt64 ToUInt64(UInt64Value xmlAttribute)
+        public static ulong ToUInt64(UInt64Value xmlAttribute)
         {
             if (xmlAttribute == null)
             {

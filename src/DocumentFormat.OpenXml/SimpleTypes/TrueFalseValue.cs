@@ -38,11 +38,11 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Implicitly converts a TrueFalseValue class to a <see cref="Boolean"/> value.
+        /// Implicitly converts a TrueFalseValue class to a <see cref="bool"/> value.
         /// </summary>
         /// <param name="xmlAttribute">The <see cref="TrueFalseValue"/> to convert.</param>
-        /// <returns>The converted <see cref="Boolean"/> value.</returns>
-        public static implicit operator Boolean(TrueFalseValue xmlAttribute)
+        /// <returns>The converted <see cref="bool"/> value.</returns>
+        public static implicit operator bool(TrueFalseValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {
@@ -53,11 +53,11 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Implicitly converts a <see cref="Boolean"/> value to a TrueFalseValue instance.
+        /// Implicitly converts a <see cref="bool"/> value to a TrueFalseValue instance.
         /// </summary>
-        /// <param name="value">The <see cref="Boolean"/> value to convert.</param>
+        /// <param name="value">The <see cref="bool"/> value to convert.</param>
         /// <returns>The converted <see cref="TrueFalseValue"/> value.</returns>
-        public static implicit operator TrueFalseValue(Boolean value)
+        public static implicit operator TrueFalseValue(bool value)
         {
             return FromBoolean(value);
         }
@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">A Boolean value to use to create a new TrueFalseValue object.</param>
         /// <returns>A TrueFalseValue that corresponds to the value parameter.</returns>
-        public static TrueFalseValue FromBoolean(Boolean value)
+        public static TrueFalseValue FromBoolean(bool value)
         {
             return new TrueFalseValue(value);
         }
@@ -77,7 +77,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="xmlAttribute">A TrueFalseValue object to retrieve an internal Boolean representation.</param>
         /// <returns>A Boolean value that represents a TrueFalseValue object.</returns>
-        public static Boolean ToBoolean(TrueFalseValue xmlAttribute)
+        public static bool ToBoolean(TrueFalseValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {

@@ -10,11 +10,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// UInt64 (xsd:unsignedLong) based value restriction.
     /// </summary>
     [DataContract]
-    internal class UInt64ValueRestriction : SimpleValueRestriction<UInt64, UInt64Value>
+    internal class UInt64ValueRestriction : SimpleValueRestriction<ulong, UInt64Value>
     {
-        protected override UInt64 MinValue => UInt64.MinValue;
+        protected override ulong MinValue => ulong.MinValue;
 
-        protected override UInt64 MaxValue => UInt64.MaxValue;
+        protected override ulong MaxValue => ulong.MaxValue;
 
         /// <inheritdoc />
         public override XsdType XsdType => XsdType.UnsignedLong;

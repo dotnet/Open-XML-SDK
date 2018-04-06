@@ -17,11 +17,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// The ·order-relation· on decimal is the order relation on real numbers, restricted to this subset.
     /// </remarks>
     [DataContract]
-    internal class DecimalValueRestriction : SimpleValueRestriction<Decimal, DecimalValue>
+    internal class DecimalValueRestriction : SimpleValueRestriction<decimal, DecimalValue>
     {
-        protected override Decimal MinValue => Decimal.MinValue;
+        protected override decimal MinValue => decimal.MinValue;
 
-        protected override Decimal MaxValue => Decimal.MaxValue;
+        protected override decimal MaxValue => decimal.MaxValue;
 
         /// <inheritdoc />
         public override XsdType XsdType => XsdType.Decimal;

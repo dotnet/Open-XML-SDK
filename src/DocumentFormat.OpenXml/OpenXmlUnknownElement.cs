@@ -103,7 +103,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>A new OpenXmlUnknownElement class.</returns>
         public static OpenXmlUnknownElement CreateOpenXmlUnknownElement(string outerXml)
         {
-            if (String.IsNullOrEmpty(outerXml))
+            if (string.IsNullOrEmpty(outerXml))
             {
                 throw new ArgumentNullException(nameof(outerXml));
             }
@@ -242,7 +242,7 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         internal override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode)
         {
-            if (String.IsNullOrEmpty(_tagName))
+            if (string.IsNullOrEmpty(_tagName))
             {
                 _tagName = xmlReader.LocalName;
                 _prefix = xmlReader.Prefix;
@@ -250,9 +250,9 @@ namespace DocumentFormat.OpenXml
             }
             else
             {
-                Debug.Assert(String.Equals(_tagName, xmlReader.LocalName));
-                Debug.Assert(String.Equals(_prefix, xmlReader.Prefix));
-                Debug.Assert(String.Equals(_namespaceUri, xmlReader.NamespaceURI));
+                Debug.Assert(string.Equals(_tagName, xmlReader.LocalName));
+                Debug.Assert(string.Equals(_prefix, xmlReader.Prefix));
+                Debug.Assert(string.Equals(_namespaceUri, xmlReader.NamespaceURI));
             }
 
             // load children elements

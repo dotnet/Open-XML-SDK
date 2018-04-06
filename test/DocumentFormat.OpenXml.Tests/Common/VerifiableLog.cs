@@ -20,7 +20,7 @@ namespace LogUtil
         /// Start logical group in "script" category.
         /// </summary>
         /// <param name="groupName">User provided name for the group</param>
-        public void BeginGroup(String groupName)
+        public void BeginGroup(string groupName)
         {
             _output.WriteLine($"BeginGroup: {groupName}");
         }
@@ -74,7 +74,7 @@ namespace LogUtil
         /// <param name="arguments">List of objects to be formatted</param>
         public void Pass(string message, params object[] arguments)
         {
-            LogPass(String.Format(message, arguments));
+            LogPass(string.Format(message, arguments));
         }
 
         public void Pass(string message)
@@ -156,13 +156,13 @@ namespace LogUtil
 
         public void VerifyNotValue(object actualValue, object expectedNotValue, string message, params object[] arguments)
         {
-            var messageModified = String.Format("{0} [Actual: {1}, Expected Not: {2}]", message, actualValue, expectedNotValue);
+            var messageModified = string.Format("{0} [Actual: {1}, Expected Not: {2}]", message, actualValue, expectedNotValue);
             VerifyFalse(object.Equals(actualValue, expectedNotValue), messageModified, arguments);
         }
 
         public void VerifyNotValue(object actualValue, object expectedNotValue, string message)
         {
-            var messageModified = String.Format("{0} [Actual: {1}, Expected Not: {2}]", message, actualValue, expectedNotValue);
+            var messageModified = string.Format("{0} [Actual: {1}, Expected Not: {2}]", message, actualValue, expectedNotValue);
             VerifyFalse(object.Equals(actualValue, expectedNotValue), messageModified);
         }
 
@@ -246,25 +246,25 @@ namespace LogUtil
         /// <param name="arguments">List of objects to be formatted</param>
         public void VerifyValue(IComparable actualValue, IComparable expectedValue, string message, params object[] arguments)
         {
-            var messageModified = String.Format("{0} [Actual: {1}, Expected: {2}]", message, actualValue, expectedValue);
+            var messageModified = string.Format("{0} [Actual: {1}, Expected: {2}]", message, actualValue, expectedValue);
             VerifyTrue(object.Equals(actualValue, expectedValue), messageModified, arguments);
         }
 
         public void VerifyValue(IComparable actualValue, IComparable expectedValue, string message)
         {
-            var messageModified = String.Format("{0} [Actual: {1}, Expected: {2}]", message, actualValue, expectedValue);
+            var messageModified = string.Format("{0} [Actual: {1}, Expected: {2}]", message, actualValue, expectedValue);
             VerifyTrue(object.Equals(actualValue, expectedValue), messageModified);
         }
 
         public void VerifyValue(object actualValue, object expectedValue, string message, params object[] arguments)
         {
-            var messageModified = String.Format("{0} [Actual: {1}, Expected: {2}]", message, actualValue, expectedValue);
+            var messageModified = string.Format("{0} [Actual: {1}, Expected: {2}]", message, actualValue, expectedValue);
             VerifyTrue(object.Equals(actualValue, expectedValue), messageModified, arguments);
         }
 
         public void VerifyValue(object actualValue, object expectedValue, string message)
         {
-            var messageModified = String.Format("{0} [Actual: {1}, Expected: {2}]", message, actualValue, expectedValue);
+            var messageModified = string.Format("{0} [Actual: {1}, Expected: {2}]", message, actualValue, expectedValue);
             VerifyTrue(object.Equals(actualValue, expectedValue), messageModified);
         }
 

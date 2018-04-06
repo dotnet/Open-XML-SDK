@@ -81,11 +81,11 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var v = new Int16Value();
                 v.InnerText = "+100";
-                Int16 v2 = v.Value;
+                short v2 = v.Value;
                 string t = v.InnerText;
 
                 // Verify value and text
-                Log.VerifyValue(v2, (Int16)100, "{0}.Value", v.GetType().Name);
+                Log.VerifyValue(v2, (short)100, "{0}.Value", v.GetType().Name);
                 Log.VerifyValue(t, "+100", "{0}.InnerText", v.GetType().Name);
             }
 

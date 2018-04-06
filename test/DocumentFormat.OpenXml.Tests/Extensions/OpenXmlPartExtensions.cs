@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Tests
             return false;
         }
 
-        public static Boolean IsBibliographyPart(this OpenXmlPart part)
+        public static bool IsBibliographyPart(this OpenXmlPart part)
         {
             if (part is CustomXmlPart)
             {
@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Tests
             return false;
         }
 
-        public static Boolean IsAdditionalCharacteristicsPart(this OpenXmlPart part)
+        public static bool IsAdditionalCharacteristicsPart(this OpenXmlPart part)
         {
             if (part is CustomXmlPart)
             {
@@ -59,7 +59,7 @@ namespace DocumentFormat.OpenXml.Tests
             return false;
         }
 
-        public static Boolean IsInkPart(this OpenXmlPart part)
+        public static bool IsInkPart(this OpenXmlPart part)
         {
             if (part is CustomXmlPart)
             {
@@ -194,14 +194,14 @@ namespace DocumentFormat.OpenXml.Tests
         /// <param name="sourcePart">the source part for comparison</param>
         /// <param name="targetPart">the target part for comparison</param>
         /// <returns>TRUE, if two parts contains the same content. FALSE, if not</returns>
-        public static Boolean Compare(this OpenXmlPart sourcePart, OpenXmlPart targetPart)
+        public static bool Compare(this OpenXmlPart sourcePart, OpenXmlPart targetPart)
         {
             HashSet<Uri> ComparedParts = new HashSet<Uri>();
 
             return sourcePart.CompareDescendentsAndSelf(targetPart, ComparedParts);
         }
 
-        private static Boolean CompareDescendentsAndSelf(this OpenXmlPart sourcePart, OpenXmlPart targetPart, HashSet<Uri> ComparedPart)
+        private static bool CompareDescendentsAndSelf(this OpenXmlPart sourcePart, OpenXmlPart targetPart, HashSet<Uri> ComparedPart)
         {
             #region compare content of two parts
             // if two parts have the same reference, return true;
