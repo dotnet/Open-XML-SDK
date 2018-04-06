@@ -165,12 +165,12 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             presentation1.AddNamespaceDeclaration("p", "http://schemas.openxmlformats.org/presentationml/2006/main");
 
             SlideMasterIdList slideMasterIdList1 = new SlideMasterIdList();
-            SlideMasterId slideMasterId1 = new SlideMasterId() { Id = (UInt32Value)2147483753U, RelationshipId = "rId1" };
+            SlideMasterId slideMasterId1 = new SlideMasterId() { Id = 2147483753U, RelationshipId = "rId1" };
 
             slideMasterIdList1.Append(slideMasterId1);
 
             SlideIdList slideIdList1 = new SlideIdList();
-            SlideId slideId1 = new SlideId() { Id = (UInt32Value)256U, RelationshipId = "rId2" };
+            SlideId slideId1 = new SlideId() { Id = 256U, RelationshipId = "rId2" };
 
             slideIdList1.Append(slideId1);
             SlideSize slideSize1 = new SlideSize() { Cx = 12192000, Cy = 6858000 };
@@ -405,7 +405,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             PresentationPropertiesExtension presentationPropertiesExtension2 = new PresentationPropertiesExtension() { Uri = "{D31A062A-798A-4329-ABDD-BBA856620510}" };
 
-            P14.DefaultImageDpi defaultImageDpi1 = new P14.DefaultImageDpi() { Val = (UInt32Value)220U };
+            P14.DefaultImageDpi defaultImageDpi1 = new P14.DefaultImageDpi() { Val = 220U };
             defaultImageDpi1.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             presentationPropertiesExtension2.Append(defaultImageDpi1);
@@ -439,7 +439,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ShapeTree shapeTree1 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties1 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties1 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties1 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties1 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties1 = new ApplicationNonVisualDrawingProperties();
 
@@ -465,7 +465,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape1 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties1 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties2 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "タイトル 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties2 = new NonVisualDrawingProperties() { Id = 2U, Name = "タイトル 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties1 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks1 = new A.ShapeLocks() { NoGrouping = true };
@@ -513,7 +513,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape2 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties2 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties3 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "サブタイトル 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties3 = new NonVisualDrawingProperties() { Id = 3U, Name = "サブタイトル 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties2 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks2 = new A.ShapeLocks() { NoGrouping = true };
@@ -521,7 +521,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties2.Append(shapeLocks2);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties3 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape2 = new PlaceholderShape() { Type = PlaceholderValues.SubTitle, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape2 = new PlaceholderShape() { Type = PlaceholderValues.SubTitle, Index = 1U };
 
             applicationNonVisualDrawingProperties3.Append(placeholderShape2);
 
@@ -578,7 +578,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             CommonSlideDataExtension commonSlideDataExtension1 = new CommonSlideDataExtension() { Uri = "{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}" };
 
-            P14.CreationId creationId1 = new P14.CreationId() { Val = (UInt32Value)392542647U };
+            P14.CreationId creationId1 = new P14.CreationId() { Val = 392542647U };
             creationId1.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             commonSlideDataExtension1.Append(creationId1);
@@ -624,7 +624,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             TimeNodeList timeNodeList1 = new TimeNodeList();
 
             ParallelTimeNode parallelTimeNode1 = new ParallelTimeNode();
-            CommonTimeNode commonTimeNode1 = new CommonTimeNode() { Id = (UInt32Value)1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
+            CommonTimeNode commonTimeNode1 = new CommonTimeNode() { Id = 1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
 
             parallelTimeNode1.Append(commonTimeNode1);
 
@@ -653,7 +653,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ShapeTree shapeTree2 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties2 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties4 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties4 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties2 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties4 = new ApplicationNonVisualDrawingProperties();
 
@@ -679,7 +679,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape3 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties3 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties5 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties5 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties3 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks3 = new A.ShapeLocks() { NoGrouping = true };
@@ -753,7 +753,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape4 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties4 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties6 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Subtitle 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties6 = new NonVisualDrawingProperties() { Id = 3U, Name = "Subtitle 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties4 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks4 = new A.ShapeLocks() { NoGrouping = true };
@@ -761,7 +761,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties4.Append(shapeLocks4);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties6 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape4 = new PlaceholderShape() { Type = PlaceholderValues.SubTitle, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape4 = new PlaceholderShape() { Type = PlaceholderValues.SubTitle, Index = 1U };
 
             applicationNonVisualDrawingProperties6.Append(placeholderShape4);
 
@@ -997,7 +997,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape5 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties5 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties7 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Date Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties7 = new NonVisualDrawingProperties() { Id = 4U, Name = "Date Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties5 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks5 = new A.ShapeLocks() { NoGrouping = true };
@@ -1005,7 +1005,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties5.Append(shapeLocks5);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties7 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape5 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape5 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties7.Append(placeholderShape5);
 
@@ -1045,7 +1045,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape6 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties6 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties8 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Footer Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties8 = new NonVisualDrawingProperties() { Id = 5U, Name = "Footer Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties6 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks6 = new A.ShapeLocks() { NoGrouping = true };
@@ -1053,7 +1053,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties6.Append(shapeLocks6);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties8 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape6 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape6 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties8.Append(placeholderShape6);
 
@@ -1082,7 +1082,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape7 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties7 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties9 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Slide Number Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties9 = new NonVisualDrawingProperties() { Id = 6U, Name = "Slide Number Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties7 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks7 = new A.ShapeLocks() { NoGrouping = true };
@@ -1090,7 +1090,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties7.Append(shapeLocks7);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties9 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape7 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape7 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties9.Append(placeholderShape7);
 
@@ -1130,7 +1130,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape1 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties1 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties10 = new NonVisualDrawingProperties() { Id = (UInt32Value)16U, Name = "Straight Connector 15" };
+            NonVisualDrawingProperties nonVisualDrawingProperties10 = new NonVisualDrawingProperties() { Id = 16U, Name = "Straight Connector 15" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties1 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties10 = new ApplicationNonVisualDrawingProperties();
 
@@ -1167,17 +1167,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle1 = new ShapeStyle();
 
-            A.LineReference lineReference1 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference1 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor20 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference1.Append(schemeColor20);
 
-            A.FillReference fillReference1 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference1 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor21 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference1.Append(schemeColor21);
 
-            A.EffectReference effectReference1 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference1 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor22 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference1.Append(schemeColor22);
@@ -1199,7 +1199,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape2 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties2 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties11 = new NonVisualDrawingProperties() { Id = (UInt32Value)17U, Name = "Straight Connector 16" };
+            NonVisualDrawingProperties nonVisualDrawingProperties11 = new NonVisualDrawingProperties() { Id = 17U, Name = "Straight Connector 16" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties2 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties11 = new ApplicationNonVisualDrawingProperties();
 
@@ -1236,17 +1236,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle2 = new ShapeStyle();
 
-            A.LineReference lineReference2 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference2 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor25 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference2.Append(schemeColor25);
 
-            A.FillReference fillReference2 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference2 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor26 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference2.Append(schemeColor26);
 
-            A.EffectReference effectReference2 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference2 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor27 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference2.Append(schemeColor27);
@@ -1268,7 +1268,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape3 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties3 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties12 = new NonVisualDrawingProperties() { Id = (UInt32Value)19U, Name = "Straight Connector 18" };
+            NonVisualDrawingProperties nonVisualDrawingProperties12 = new NonVisualDrawingProperties() { Id = 19U, Name = "Straight Connector 18" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties3 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties12 = new ApplicationNonVisualDrawingProperties();
 
@@ -1305,17 +1305,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle3 = new ShapeStyle();
 
-            A.LineReference lineReference3 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference3 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor30 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference3.Append(schemeColor30);
 
-            A.FillReference fillReference3 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference3 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor31 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference3.Append(schemeColor31);
 
-            A.EffectReference effectReference3 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference3 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor32 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference3.Append(schemeColor32);
@@ -1337,7 +1337,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape4 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties4 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties13 = new NonVisualDrawingProperties() { Id = (UInt32Value)21U, Name = "Straight Connector 20" };
+            NonVisualDrawingProperties nonVisualDrawingProperties13 = new NonVisualDrawingProperties() { Id = 21U, Name = "Straight Connector 20" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties4 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties13 = new ApplicationNonVisualDrawingProperties();
 
@@ -1374,17 +1374,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle4 = new ShapeStyle();
 
-            A.LineReference lineReference4 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference4 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor35 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference4.Append(schemeColor35);
 
-            A.FillReference fillReference4 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference4 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor36 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference4.Append(schemeColor36);
 
-            A.EffectReference effectReference4 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference4 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor37 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference4.Append(schemeColor37);
@@ -1406,7 +1406,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape5 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties5 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties14 = new NonVisualDrawingProperties() { Id = (UInt32Value)23U, Name = "Straight Connector 22" };
+            NonVisualDrawingProperties nonVisualDrawingProperties14 = new NonVisualDrawingProperties() { Id = 23U, Name = "Straight Connector 22" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties5 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties14 = new ApplicationNonVisualDrawingProperties();
 
@@ -1443,17 +1443,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle5 = new ShapeStyle();
 
-            A.LineReference lineReference5 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference5 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor40 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference5.Append(schemeColor40);
 
-            A.FillReference fillReference5 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference5 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor41 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference5.Append(schemeColor41);
 
-            A.EffectReference effectReference5 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference5 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor42 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference5.Append(schemeColor42);
@@ -1489,7 +1489,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             CommonSlideDataExtension commonSlideDataExtension2 = new CommonSlideDataExtension() { Uri = "{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}" };
 
-            P14.CreationId creationId2 = new P14.CreationId() { Val = (UInt32Value)1103893286U };
+            P14.CreationId creationId2 = new P14.CreationId() { Val = 1103893286U };
             creationId2.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             commonSlideDataExtension2.Append(creationId2);
@@ -1509,7 +1509,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             TimeNodeList timeNodeList2 = new TimeNodeList();
 
             ParallelTimeNode parallelTimeNode2 = new ParallelTimeNode();
-            CommonTimeNode commonTimeNode2 = new CommonTimeNode() { Id = (UInt32Value)1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
+            CommonTimeNode commonTimeNode2 = new CommonTimeNode() { Id = 1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
 
             parallelTimeNode2.Append(commonTimeNode2);
 
@@ -1536,7 +1536,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             Background background1 = new Background();
 
-            BackgroundStyleReference backgroundStyleReference1 = new BackgroundStyleReference() { Index = (UInt32Value)1002U };
+            BackgroundStyleReference backgroundStyleReference1 = new BackgroundStyleReference() { Index = 1002U };
             A.SchemeColor schemeColor44 = new A.SchemeColor() { Val = A.SchemeColorValues.Background2 };
 
             backgroundStyleReference1.Append(schemeColor44);
@@ -1546,7 +1546,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ShapeTree shapeTree3 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties3 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties15 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties15 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties3 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties15 = new ApplicationNonVisualDrawingProperties();
 
@@ -1572,7 +1572,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape8 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties8 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties16 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title Placeholder 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties16 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title Placeholder 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties8 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks8 = new A.ShapeLocks() { NoGrouping = true };
@@ -1642,7 +1642,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape9 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties9 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties17 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Text Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties17 = new NonVisualDrawingProperties() { Id = 3U, Name = "Text Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties9 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks9 = new A.ShapeLocks() { NoGrouping = true };
@@ -1650,7 +1650,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties9.Append(shapeLocks9);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties17 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape9 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape9 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = 1U };
 
             applicationNonVisualDrawingProperties17.Append(placeholderShape9);
 
@@ -1780,7 +1780,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape10 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties10 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties18 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Date Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties18 = new NonVisualDrawingProperties() { Id = 4U, Name = "Date Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties10 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks10 = new A.ShapeLocks() { NoGrouping = true };
@@ -1788,7 +1788,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties10.Append(shapeLocks10);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties18 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape10 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)2U };
+            PlaceholderShape placeholderShape10 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 2U };
 
             applicationNonVisualDrawingProperties18.Append(placeholderShape10);
 
@@ -1868,7 +1868,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape11 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties11 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties19 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Footer Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties19 = new NonVisualDrawingProperties() { Id = 5U, Name = "Footer Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties11 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks11 = new A.ShapeLocks() { NoGrouping = true };
@@ -1876,7 +1876,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties11.Append(shapeLocks11);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties19 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape11 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)3U };
+            PlaceholderShape placeholderShape11 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 3U };
 
             applicationNonVisualDrawingProperties19.Append(placeholderShape11);
 
@@ -1945,7 +1945,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape12 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties12 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties20 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Slide Number Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties20 = new NonVisualDrawingProperties() { Id = 6U, Name = "Slide Number Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties12 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks12 = new A.ShapeLocks() { NoGrouping = true };
@@ -1953,7 +1953,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties12.Append(shapeLocks12);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties20 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape12 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)4U };
+            PlaceholderShape placeholderShape12 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 4U };
 
             applicationNonVisualDrawingProperties20.Append(placeholderShape12);
 
@@ -2042,7 +2042,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             CommonSlideDataExtension commonSlideDataExtension3 = new CommonSlideDataExtension() { Uri = "{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}" };
 
-            P14.CreationId creationId3 = new P14.CreationId() { Val = (UInt32Value)1057398551U };
+            P14.CreationId creationId3 = new P14.CreationId() { Val = 1057398551U };
             creationId3.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             commonSlideDataExtension3.Append(creationId3);
@@ -2055,23 +2055,23 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ColorMap colorMap1 = new ColorMap() { Background1 = A.ColorSchemeIndexValues.Dark1, Text1 = A.ColorSchemeIndexValues.Light1, Background2 = A.ColorSchemeIndexValues.Dark2, Text2 = A.ColorSchemeIndexValues.Light2, Accent1 = A.ColorSchemeIndexValues.Accent1, Accent2 = A.ColorSchemeIndexValues.Accent2, Accent3 = A.ColorSchemeIndexValues.Accent3, Accent4 = A.ColorSchemeIndexValues.Accent4, Accent5 = A.ColorSchemeIndexValues.Accent5, Accent6 = A.ColorSchemeIndexValues.Accent6, Hyperlink = A.ColorSchemeIndexValues.Hyperlink, FollowedHyperlink = A.ColorSchemeIndexValues.FollowedHyperlink };
 
             SlideLayoutIdList slideLayoutIdList1 = new SlideLayoutIdList();
-            SlideLayoutId slideLayoutId1 = new SlideLayoutId() { Id = (UInt32Value)2147483754U, RelationshipId = "rId1" };
-            SlideLayoutId slideLayoutId2 = new SlideLayoutId() { Id = (UInt32Value)2147483755U, RelationshipId = "rId2" };
-            SlideLayoutId slideLayoutId3 = new SlideLayoutId() { Id = (UInt32Value)2147483756U, RelationshipId = "rId3" };
-            SlideLayoutId slideLayoutId4 = new SlideLayoutId() { Id = (UInt32Value)2147483757U, RelationshipId = "rId4" };
-            SlideLayoutId slideLayoutId5 = new SlideLayoutId() { Id = (UInt32Value)2147483758U, RelationshipId = "rId5" };
-            SlideLayoutId slideLayoutId6 = new SlideLayoutId() { Id = (UInt32Value)2147483759U, RelationshipId = "rId6" };
-            SlideLayoutId slideLayoutId7 = new SlideLayoutId() { Id = (UInt32Value)2147483760U, RelationshipId = "rId7" };
-            SlideLayoutId slideLayoutId8 = new SlideLayoutId() { Id = (UInt32Value)2147483761U, RelationshipId = "rId8" };
-            SlideLayoutId slideLayoutId9 = new SlideLayoutId() { Id = (UInt32Value)2147483762U, RelationshipId = "rId9" };
-            SlideLayoutId slideLayoutId10 = new SlideLayoutId() { Id = (UInt32Value)2147483763U, RelationshipId = "rId10" };
-            SlideLayoutId slideLayoutId11 = new SlideLayoutId() { Id = (UInt32Value)2147483764U, RelationshipId = "rId11" };
-            SlideLayoutId slideLayoutId12 = new SlideLayoutId() { Id = (UInt32Value)2147483765U, RelationshipId = "rId12" };
-            SlideLayoutId slideLayoutId13 = new SlideLayoutId() { Id = (UInt32Value)2147483766U, RelationshipId = "rId13" };
-            SlideLayoutId slideLayoutId14 = new SlideLayoutId() { Id = (UInt32Value)2147483767U, RelationshipId = "rId14" };
-            SlideLayoutId slideLayoutId15 = new SlideLayoutId() { Id = (UInt32Value)2147483768U, RelationshipId = "rId15" };
-            SlideLayoutId slideLayoutId16 = new SlideLayoutId() { Id = (UInt32Value)2147483769U, RelationshipId = "rId16" };
-            SlideLayoutId slideLayoutId17 = new SlideLayoutId() { Id = (UInt32Value)2147483770U, RelationshipId = "rId17" };
+            SlideLayoutId slideLayoutId1 = new SlideLayoutId() { Id = 2147483754U, RelationshipId = "rId1" };
+            SlideLayoutId slideLayoutId2 = new SlideLayoutId() { Id = 2147483755U, RelationshipId = "rId2" };
+            SlideLayoutId slideLayoutId3 = new SlideLayoutId() { Id = 2147483756U, RelationshipId = "rId3" };
+            SlideLayoutId slideLayoutId4 = new SlideLayoutId() { Id = 2147483757U, RelationshipId = "rId4" };
+            SlideLayoutId slideLayoutId5 = new SlideLayoutId() { Id = 2147483758U, RelationshipId = "rId5" };
+            SlideLayoutId slideLayoutId6 = new SlideLayoutId() { Id = 2147483759U, RelationshipId = "rId6" };
+            SlideLayoutId slideLayoutId7 = new SlideLayoutId() { Id = 2147483760U, RelationshipId = "rId7" };
+            SlideLayoutId slideLayoutId8 = new SlideLayoutId() { Id = 2147483761U, RelationshipId = "rId8" };
+            SlideLayoutId slideLayoutId9 = new SlideLayoutId() { Id = 2147483762U, RelationshipId = "rId9" };
+            SlideLayoutId slideLayoutId10 = new SlideLayoutId() { Id = 2147483763U, RelationshipId = "rId10" };
+            SlideLayoutId slideLayoutId11 = new SlideLayoutId() { Id = 2147483764U, RelationshipId = "rId11" };
+            SlideLayoutId slideLayoutId12 = new SlideLayoutId() { Id = 2147483765U, RelationshipId = "rId12" };
+            SlideLayoutId slideLayoutId13 = new SlideLayoutId() { Id = 2147483766U, RelationshipId = "rId13" };
+            SlideLayoutId slideLayoutId14 = new SlideLayoutId() { Id = 2147483767U, RelationshipId = "rId14" };
+            SlideLayoutId slideLayoutId15 = new SlideLayoutId() { Id = 2147483768U, RelationshipId = "rId15" };
+            SlideLayoutId slideLayoutId16 = new SlideLayoutId() { Id = 2147483769U, RelationshipId = "rId16" };
+            SlideLayoutId slideLayoutId17 = new SlideLayoutId() { Id = 2147483770U, RelationshipId = "rId17" };
 
             slideLayoutIdList1.Append(slideLayoutId1);
             slideLayoutIdList1.Append(slideLayoutId2);
@@ -2121,7 +2121,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             TimeNodeList timeNodeList3 = new TimeNodeList();
 
             ParallelTimeNode parallelTimeNode3 = new ParallelTimeNode();
-            CommonTimeNode commonTimeNode3 = new CommonTimeNode() { Id = (UInt32Value)1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
+            CommonTimeNode commonTimeNode3 = new CommonTimeNode() { Id = 1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
 
             parallelTimeNode3.Append(commonTimeNode3);
 
@@ -2871,7 +2871,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ShapeTree shapeTree4 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties4 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties21 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties21 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties4 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties21 = new ApplicationNonVisualDrawingProperties();
 
@@ -2897,7 +2897,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape13 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties13 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties22 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties22 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties13 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks13 = new A.ShapeLocks() { NoGrouping = true };
@@ -2967,7 +2967,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape14 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties14 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties23 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Content Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties23 = new NonVisualDrawingProperties() { Id = 3U, Name = "Content Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties14 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks14 = new A.ShapeLocks() { NoGrouping = true };
@@ -2975,7 +2975,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties14.Append(shapeLocks14);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties23 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape14 = new PlaceholderShape() { Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape14 = new PlaceholderShape() { Index = 1U };
 
             applicationNonVisualDrawingProperties23.Append(placeholderShape14);
 
@@ -3155,7 +3155,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape15 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties15 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties24 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Text Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties24 = new NonVisualDrawingProperties() { Id = 4U, Name = "Text Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties15 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks15 = new A.ShapeLocks() { NoGrouping = true };
@@ -3163,7 +3163,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties15.Append(shapeLocks15);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties24 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape15 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)2U };
+            PlaceholderShape placeholderShape15 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Half, Index = 2U };
 
             applicationNonVisualDrawingProperties24.Append(placeholderShape15);
 
@@ -3291,7 +3291,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape16 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties16 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties25 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Date Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties25 = new NonVisualDrawingProperties() { Id = 5U, Name = "Date Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties16 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks16 = new A.ShapeLocks() { NoGrouping = true };
@@ -3299,7 +3299,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties16.Append(shapeLocks16);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties25 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape16 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape16 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties25.Append(placeholderShape16);
 
@@ -3339,7 +3339,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape17 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties17 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties26 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Footer Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties26 = new NonVisualDrawingProperties() { Id = 6U, Name = "Footer Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties17 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks17 = new A.ShapeLocks() { NoGrouping = true };
@@ -3347,7 +3347,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties17.Append(shapeLocks17);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties26 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape17 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape17 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties26.Append(placeholderShape17);
 
@@ -3376,7 +3376,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape18 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties18 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties27 = new NonVisualDrawingProperties() { Id = (UInt32Value)7U, Name = "Slide Number Placeholder 6" };
+            NonVisualDrawingProperties nonVisualDrawingProperties27 = new NonVisualDrawingProperties() { Id = 7U, Name = "Slide Number Placeholder 6" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties18 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks18 = new A.ShapeLocks() { NoGrouping = true };
@@ -3384,7 +3384,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties18.Append(shapeLocks18);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties27 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape18 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape18 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties27.Append(placeholderShape18);
 
@@ -3424,7 +3424,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape6 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties6 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties28 = new NonVisualDrawingProperties() { Id = (UInt32Value)8U, Name = "Straight Connector 7" };
+            NonVisualDrawingProperties nonVisualDrawingProperties28 = new NonVisualDrawingProperties() { Id = 8U, Name = "Straight Connector 7" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties6 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties28 = new ApplicationNonVisualDrawingProperties();
 
@@ -3461,17 +3461,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle6 = new ShapeStyle();
 
-            A.LineReference lineReference6 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference6 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor81 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference6.Append(schemeColor81);
 
-            A.FillReference fillReference6 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference6 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor82 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference6.Append(schemeColor82);
 
-            A.EffectReference effectReference6 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference6 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor83 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference6.Append(schemeColor83);
@@ -3493,7 +3493,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape7 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties7 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties29 = new NonVisualDrawingProperties() { Id = (UInt32Value)9U, Name = "Straight Connector 8" };
+            NonVisualDrawingProperties nonVisualDrawingProperties29 = new NonVisualDrawingProperties() { Id = 9U, Name = "Straight Connector 8" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties7 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties29 = new ApplicationNonVisualDrawingProperties();
 
@@ -3530,17 +3530,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle7 = new ShapeStyle();
 
-            A.LineReference lineReference7 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference7 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor86 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference7.Append(schemeColor86);
 
-            A.FillReference fillReference7 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference7 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor87 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference7.Append(schemeColor87);
 
-            A.EffectReference effectReference7 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference7 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor88 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference7.Append(schemeColor88);
@@ -3562,7 +3562,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape8 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties8 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties30 = new NonVisualDrawingProperties() { Id = (UInt32Value)10U, Name = "Straight Connector 9" };
+            NonVisualDrawingProperties nonVisualDrawingProperties30 = new NonVisualDrawingProperties() { Id = 10U, Name = "Straight Connector 9" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties8 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties30 = new ApplicationNonVisualDrawingProperties();
 
@@ -3599,17 +3599,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle8 = new ShapeStyle();
 
-            A.LineReference lineReference8 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference8 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor91 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference8.Append(schemeColor91);
 
-            A.FillReference fillReference8 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference8 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor92 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference8.Append(schemeColor92);
 
-            A.EffectReference effectReference8 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference8 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor93 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference8.Append(schemeColor93);
@@ -3631,7 +3631,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape9 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties9 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties31 = new NonVisualDrawingProperties() { Id = (UInt32Value)11U, Name = "Straight Connector 10" };
+            NonVisualDrawingProperties nonVisualDrawingProperties31 = new NonVisualDrawingProperties() { Id = 11U, Name = "Straight Connector 10" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties9 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties31 = new ApplicationNonVisualDrawingProperties();
 
@@ -3668,17 +3668,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle9 = new ShapeStyle();
 
-            A.LineReference lineReference9 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference9 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor96 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference9.Append(schemeColor96);
 
-            A.FillReference fillReference9 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference9 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor97 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference9.Append(schemeColor97);
 
-            A.EffectReference effectReference9 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference9 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor98 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference9.Append(schemeColor98);
@@ -3700,7 +3700,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape10 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties10 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties32 = new NonVisualDrawingProperties() { Id = (UInt32Value)12U, Name = "Straight Connector 11" };
+            NonVisualDrawingProperties nonVisualDrawingProperties32 = new NonVisualDrawingProperties() { Id = 12U, Name = "Straight Connector 11" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties10 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties32 = new ApplicationNonVisualDrawingProperties();
 
@@ -3737,17 +3737,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle10 = new ShapeStyle();
 
-            A.LineReference lineReference10 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference10 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor101 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference10.Append(schemeColor101);
 
-            A.FillReference fillReference10 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference10 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor102 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference10.Append(schemeColor102);
 
-            A.EffectReference effectReference10 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference10 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor103 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference10.Append(schemeColor103);
@@ -3784,7 +3784,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             CommonSlideDataExtension commonSlideDataExtension4 = new CommonSlideDataExtension() { Uri = "{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}" };
 
-            P14.CreationId creationId4 = new P14.CreationId() { Val = (UInt32Value)2943676450U };
+            P14.CreationId creationId4 = new P14.CreationId() { Val = 2943676450U };
             creationId4.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             commonSlideDataExtension4.Append(creationId4);
@@ -3804,7 +3804,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             TimeNodeList timeNodeList4 = new TimeNodeList();
 
             ParallelTimeNode parallelTimeNode4 = new ParallelTimeNode();
-            CommonTimeNode commonTimeNode4 = new CommonTimeNode() { Id = (UInt32Value)1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
+            CommonTimeNode commonTimeNode4 = new CommonTimeNode() { Id = 1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
 
             parallelTimeNode4.Append(commonTimeNode4);
 
@@ -3832,7 +3832,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ShapeTree shapeTree5 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties5 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties33 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties33 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties5 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties33 = new ApplicationNonVisualDrawingProperties();
 
@@ -3858,7 +3858,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape19 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties19 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties34 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties34 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties19 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks19 = new A.ShapeLocks() { NoGrouping = true };
@@ -3928,7 +3928,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape20 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties20 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties35 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Text Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties35 = new NonVisualDrawingProperties() { Id = 3U, Name = "Text Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties20 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks20 = new A.ShapeLocks() { NoGrouping = true };
@@ -3936,7 +3936,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties20.Append(shapeLocks20);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties35 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape20 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape20 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = 1U };
 
             applicationNonVisualDrawingProperties35.Append(placeholderShape20);
 
@@ -4172,7 +4172,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape21 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties21 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties36 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Date Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties36 = new NonVisualDrawingProperties() { Id = 4U, Name = "Date Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties21 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks21 = new A.ShapeLocks() { NoGrouping = true };
@@ -4180,7 +4180,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties21.Append(shapeLocks21);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties36 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape21 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape21 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties36.Append(placeholderShape21);
 
@@ -4220,7 +4220,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape22 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties22 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties37 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Footer Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties37 = new NonVisualDrawingProperties() { Id = 5U, Name = "Footer Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties22 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks22 = new A.ShapeLocks() { NoGrouping = true };
@@ -4228,7 +4228,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties22.Append(shapeLocks22);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties37 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape22 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape22 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties37.Append(placeholderShape22);
 
@@ -4257,7 +4257,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape23 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties23 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties38 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Slide Number Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties38 = new NonVisualDrawingProperties() { Id = 6U, Name = "Slide Number Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties23 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks23 = new A.ShapeLocks() { NoGrouping = true };
@@ -4265,7 +4265,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties23.Append(shapeLocks23);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties38 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape23 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape23 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties38.Append(placeholderShape23);
 
@@ -4305,7 +4305,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape11 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties11 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties39 = new NonVisualDrawingProperties() { Id = (UInt32Value)7U, Name = "Straight Connector 6" };
+            NonVisualDrawingProperties nonVisualDrawingProperties39 = new NonVisualDrawingProperties() { Id = 7U, Name = "Straight Connector 6" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties11 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties39 = new ApplicationNonVisualDrawingProperties();
 
@@ -4342,17 +4342,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle11 = new ShapeStyle();
 
-            A.LineReference lineReference11 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference11 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor115 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference11.Append(schemeColor115);
 
-            A.FillReference fillReference11 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference11 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor116 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference11.Append(schemeColor116);
 
-            A.EffectReference effectReference11 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference11 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor117 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference11.Append(schemeColor117);
@@ -4374,7 +4374,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape12 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties12 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties40 = new NonVisualDrawingProperties() { Id = (UInt32Value)8U, Name = "Straight Connector 7" };
+            NonVisualDrawingProperties nonVisualDrawingProperties40 = new NonVisualDrawingProperties() { Id = 8U, Name = "Straight Connector 7" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties12 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties40 = new ApplicationNonVisualDrawingProperties();
 
@@ -4411,17 +4411,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle12 = new ShapeStyle();
 
-            A.LineReference lineReference12 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference12 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor120 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference12.Append(schemeColor120);
 
-            A.FillReference fillReference12 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference12 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor121 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference12.Append(schemeColor121);
 
-            A.EffectReference effectReference12 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference12 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor122 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference12.Append(schemeColor122);
@@ -4443,7 +4443,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape13 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties13 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties41 = new NonVisualDrawingProperties() { Id = (UInt32Value)9U, Name = "Straight Connector 8" };
+            NonVisualDrawingProperties nonVisualDrawingProperties41 = new NonVisualDrawingProperties() { Id = 9U, Name = "Straight Connector 8" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties13 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties41 = new ApplicationNonVisualDrawingProperties();
 
@@ -4480,17 +4480,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle13 = new ShapeStyle();
 
-            A.LineReference lineReference13 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference13 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor125 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference13.Append(schemeColor125);
 
-            A.FillReference fillReference13 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference13 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor126 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference13.Append(schemeColor126);
 
-            A.EffectReference effectReference13 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference13 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor127 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference13.Append(schemeColor127);
@@ -4512,7 +4512,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape14 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties14 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties42 = new NonVisualDrawingProperties() { Id = (UInt32Value)10U, Name = "Straight Connector 9" };
+            NonVisualDrawingProperties nonVisualDrawingProperties42 = new NonVisualDrawingProperties() { Id = 10U, Name = "Straight Connector 9" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties14 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties42 = new ApplicationNonVisualDrawingProperties();
 
@@ -4549,17 +4549,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle14 = new ShapeStyle();
 
-            A.LineReference lineReference14 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference14 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor130 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference14.Append(schemeColor130);
 
-            A.FillReference fillReference14 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference14 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor131 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference14.Append(schemeColor131);
 
-            A.EffectReference effectReference14 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference14 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor132 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference14.Append(schemeColor132);
@@ -4581,7 +4581,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape15 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties15 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties43 = new NonVisualDrawingProperties() { Id = (UInt32Value)11U, Name = "Straight Connector 10" };
+            NonVisualDrawingProperties nonVisualDrawingProperties43 = new NonVisualDrawingProperties() { Id = 11U, Name = "Straight Connector 10" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties15 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties43 = new ApplicationNonVisualDrawingProperties();
 
@@ -4618,17 +4618,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle15 = new ShapeStyle();
 
-            A.LineReference lineReference15 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference15 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor135 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference15.Append(schemeColor135);
 
-            A.FillReference fillReference15 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference15 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor136 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference15.Append(schemeColor136);
 
-            A.EffectReference effectReference15 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference15 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor137 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference15.Append(schemeColor137);
@@ -4664,7 +4664,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             CommonSlideDataExtension commonSlideDataExtension5 = new CommonSlideDataExtension() { Uri = "{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}" };
 
-            P14.CreationId creationId5 = new P14.CreationId() { Val = (UInt32Value)283821911U };
+            P14.CreationId creationId5 = new P14.CreationId() { Val = 283821911U };
             creationId5.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             commonSlideDataExtension5.Append(creationId5);
@@ -4684,7 +4684,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             TimeNodeList timeNodeList5 = new TimeNodeList();
 
             ParallelTimeNode parallelTimeNode5 = new ParallelTimeNode();
-            CommonTimeNode commonTimeNode5 = new CommonTimeNode() { Id = (UInt32Value)1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
+            CommonTimeNode commonTimeNode5 = new CommonTimeNode() { Id = 1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
 
             parallelTimeNode5.Append(commonTimeNode5);
 
@@ -5142,7 +5142,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ShapeTree shapeTree6 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties6 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties44 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties44 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties6 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties44 = new ApplicationNonVisualDrawingProperties();
 
@@ -5168,7 +5168,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape24 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties24 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties45 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties45 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties24 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks24 = new A.ShapeLocks() { NoGrouping = true };
@@ -5238,7 +5238,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape25 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties25 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties46 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Text Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties46 = new NonVisualDrawingProperties() { Id = 3U, Name = "Text Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties25 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks25 = new A.ShapeLocks() { NoGrouping = true };
@@ -5246,7 +5246,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties25.Append(shapeLocks25);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties46 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape25 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape25 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = 1U };
 
             applicationNonVisualDrawingProperties46.Append(placeholderShape25);
 
@@ -5482,7 +5482,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape26 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties26 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties47 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Date Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties47 = new NonVisualDrawingProperties() { Id = 4U, Name = "Date Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties26 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks26 = new A.ShapeLocks() { NoGrouping = true };
@@ -5490,7 +5490,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties26.Append(shapeLocks26);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties47 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape26 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape26 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties47.Append(placeholderShape26);
 
@@ -5530,7 +5530,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape27 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties27 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties48 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Footer Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties48 = new NonVisualDrawingProperties() { Id = 5U, Name = "Footer Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties27 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks27 = new A.ShapeLocks() { NoGrouping = true };
@@ -5538,7 +5538,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties27.Append(shapeLocks27);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties48 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape27 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape27 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties48.Append(placeholderShape27);
 
@@ -5567,7 +5567,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape28 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties28 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties49 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Slide Number Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties49 = new NonVisualDrawingProperties() { Id = 6U, Name = "Slide Number Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties28 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks28 = new A.ShapeLocks() { NoGrouping = true };
@@ -5575,7 +5575,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties28.Append(shapeLocks28);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties49 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape28 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape28 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties49.Append(placeholderShape28);
 
@@ -5615,7 +5615,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape16 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties16 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties50 = new NonVisualDrawingProperties() { Id = (UInt32Value)7U, Name = "Straight Connector 6" };
+            NonVisualDrawingProperties nonVisualDrawingProperties50 = new NonVisualDrawingProperties() { Id = 7U, Name = "Straight Connector 6" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties16 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties50 = new ApplicationNonVisualDrawingProperties();
 
@@ -5652,17 +5652,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle16 = new ShapeStyle();
 
-            A.LineReference lineReference16 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference16 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor162 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference16.Append(schemeColor162);
 
-            A.FillReference fillReference16 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference16 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor163 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference16.Append(schemeColor163);
 
-            A.EffectReference effectReference16 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference16 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor164 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference16.Append(schemeColor164);
@@ -5684,7 +5684,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape17 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties17 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties51 = new NonVisualDrawingProperties() { Id = (UInt32Value)8U, Name = "Straight Connector 7" };
+            NonVisualDrawingProperties nonVisualDrawingProperties51 = new NonVisualDrawingProperties() { Id = 8U, Name = "Straight Connector 7" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties17 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties51 = new ApplicationNonVisualDrawingProperties();
 
@@ -5721,17 +5721,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle17 = new ShapeStyle();
 
-            A.LineReference lineReference17 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference17 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor167 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference17.Append(schemeColor167);
 
-            A.FillReference fillReference17 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference17 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor168 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference17.Append(schemeColor168);
 
-            A.EffectReference effectReference17 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference17 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor169 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference17.Append(schemeColor169);
@@ -5753,7 +5753,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape18 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties18 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties52 = new NonVisualDrawingProperties() { Id = (UInt32Value)9U, Name = "Straight Connector 8" };
+            NonVisualDrawingProperties nonVisualDrawingProperties52 = new NonVisualDrawingProperties() { Id = 9U, Name = "Straight Connector 8" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties18 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties52 = new ApplicationNonVisualDrawingProperties();
 
@@ -5790,17 +5790,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle18 = new ShapeStyle();
 
-            A.LineReference lineReference18 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference18 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor172 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference18.Append(schemeColor172);
 
-            A.FillReference fillReference18 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference18 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor173 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference18.Append(schemeColor173);
 
-            A.EffectReference effectReference18 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference18 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor174 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference18.Append(schemeColor174);
@@ -5822,7 +5822,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape19 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties19 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties53 = new NonVisualDrawingProperties() { Id = (UInt32Value)10U, Name = "Straight Connector 9" };
+            NonVisualDrawingProperties nonVisualDrawingProperties53 = new NonVisualDrawingProperties() { Id = 10U, Name = "Straight Connector 9" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties19 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties53 = new ApplicationNonVisualDrawingProperties();
 
@@ -5859,17 +5859,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle19 = new ShapeStyle();
 
-            A.LineReference lineReference19 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference19 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor177 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference19.Append(schemeColor177);
 
-            A.FillReference fillReference19 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference19 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor178 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference19.Append(schemeColor178);
 
-            A.EffectReference effectReference19 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference19 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor179 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference19.Append(schemeColor179);
@@ -5891,7 +5891,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape20 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties20 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties54 = new NonVisualDrawingProperties() { Id = (UInt32Value)11U, Name = "Straight Connector 10" };
+            NonVisualDrawingProperties nonVisualDrawingProperties54 = new NonVisualDrawingProperties() { Id = 11U, Name = "Straight Connector 10" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties20 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties54 = new ApplicationNonVisualDrawingProperties();
 
@@ -5928,17 +5928,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle20 = new ShapeStyle();
 
-            A.LineReference lineReference20 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference20 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor182 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference20.Append(schemeColor182);
 
-            A.FillReference fillReference20 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference20 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor183 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference20.Append(schemeColor183);
 
-            A.EffectReference effectReference20 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference20 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor184 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference20.Append(schemeColor184);
@@ -5974,7 +5974,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             CommonSlideDataExtension commonSlideDataExtension6 = new CommonSlideDataExtension() { Uri = "{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}" };
 
-            P14.CreationId creationId6 = new P14.CreationId() { Val = (UInt32Value)4286813543U };
+            P14.CreationId creationId6 = new P14.CreationId() { Val = 4286813543U };
             creationId6.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             commonSlideDataExtension6.Append(creationId6);
@@ -5994,7 +5994,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             TimeNodeList timeNodeList6 = new TimeNodeList();
 
             ParallelTimeNode parallelTimeNode6 = new ParallelTimeNode();
-            CommonTimeNode commonTimeNode6 = new CommonTimeNode() { Id = (UInt32Value)1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
+            CommonTimeNode commonTimeNode6 = new CommonTimeNode() { Id = 1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
 
             parallelTimeNode6.Append(commonTimeNode6);
 
@@ -6022,7 +6022,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ShapeTree shapeTree7 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties7 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties55 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties55 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties7 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties55 = new ApplicationNonVisualDrawingProperties();
 
@@ -6048,7 +6048,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape29 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties29 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties56 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Date Placeholder 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties56 = new NonVisualDrawingProperties() { Id = 2U, Name = "Date Placeholder 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties29 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks29 = new A.ShapeLocks() { NoGrouping = true };
@@ -6056,7 +6056,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties29.Append(shapeLocks29);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties56 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape29 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape29 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties56.Append(placeholderShape29);
 
@@ -6096,7 +6096,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape30 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties30 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties57 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Footer Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties57 = new NonVisualDrawingProperties() { Id = 3U, Name = "Footer Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties30 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks30 = new A.ShapeLocks() { NoGrouping = true };
@@ -6104,7 +6104,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties30.Append(shapeLocks30);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties57 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape30 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape30 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties57.Append(placeholderShape30);
 
@@ -6133,7 +6133,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape31 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties31 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties58 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Slide Number Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties58 = new NonVisualDrawingProperties() { Id = 4U, Name = "Slide Number Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties31 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks31 = new A.ShapeLocks() { NoGrouping = true };
@@ -6141,7 +6141,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties31.Append(shapeLocks31);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties58 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape31 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape31 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties58.Append(placeholderShape31);
 
@@ -6181,7 +6181,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape21 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties21 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties59 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Straight Connector 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties59 = new NonVisualDrawingProperties() { Id = 5U, Name = "Straight Connector 4" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties21 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties59 = new ApplicationNonVisualDrawingProperties();
 
@@ -6218,17 +6218,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle21 = new ShapeStyle();
 
-            A.LineReference lineReference21 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference21 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor187 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference21.Append(schemeColor187);
 
-            A.FillReference fillReference21 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference21 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor188 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference21.Append(schemeColor188);
 
-            A.EffectReference effectReference21 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference21 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor189 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference21.Append(schemeColor189);
@@ -6250,7 +6250,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape22 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties22 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties60 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Straight Connector 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties60 = new NonVisualDrawingProperties() { Id = 6U, Name = "Straight Connector 5" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties22 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties60 = new ApplicationNonVisualDrawingProperties();
 
@@ -6287,17 +6287,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle22 = new ShapeStyle();
 
-            A.LineReference lineReference22 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference22 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor192 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference22.Append(schemeColor192);
 
-            A.FillReference fillReference22 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference22 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor193 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference22.Append(schemeColor193);
 
-            A.EffectReference effectReference22 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference22 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor194 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference22.Append(schemeColor194);
@@ -6319,7 +6319,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape23 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties23 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties61 = new NonVisualDrawingProperties() { Id = (UInt32Value)7U, Name = "Straight Connector 6" };
+            NonVisualDrawingProperties nonVisualDrawingProperties61 = new NonVisualDrawingProperties() { Id = 7U, Name = "Straight Connector 6" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties23 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties61 = new ApplicationNonVisualDrawingProperties();
 
@@ -6356,17 +6356,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle23 = new ShapeStyle();
 
-            A.LineReference lineReference23 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference23 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor197 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference23.Append(schemeColor197);
 
-            A.FillReference fillReference23 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference23 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor198 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference23.Append(schemeColor198);
 
-            A.EffectReference effectReference23 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference23 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor199 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference23.Append(schemeColor199);
@@ -6388,7 +6388,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape24 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties24 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties62 = new NonVisualDrawingProperties() { Id = (UInt32Value)8U, Name = "Straight Connector 7" };
+            NonVisualDrawingProperties nonVisualDrawingProperties62 = new NonVisualDrawingProperties() { Id = 8U, Name = "Straight Connector 7" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties24 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties62 = new ApplicationNonVisualDrawingProperties();
 
@@ -6425,17 +6425,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle24 = new ShapeStyle();
 
-            A.LineReference lineReference24 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference24 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor202 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference24.Append(schemeColor202);
 
-            A.FillReference fillReference24 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference24 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor203 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference24.Append(schemeColor203);
 
-            A.EffectReference effectReference24 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference24 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor204 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference24.Append(schemeColor204);
@@ -6457,7 +6457,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape25 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties25 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties63 = new NonVisualDrawingProperties() { Id = (UInt32Value)9U, Name = "Straight Connector 8" };
+            NonVisualDrawingProperties nonVisualDrawingProperties63 = new NonVisualDrawingProperties() { Id = 9U, Name = "Straight Connector 8" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties25 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties63 = new ApplicationNonVisualDrawingProperties();
 
@@ -6494,17 +6494,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle25 = new ShapeStyle();
 
-            A.LineReference lineReference25 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference25 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor207 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference25.Append(schemeColor207);
 
-            A.FillReference fillReference25 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference25 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor208 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference25.Append(schemeColor208);
 
-            A.EffectReference effectReference25 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference25 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor209 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference25.Append(schemeColor209);
@@ -6538,7 +6538,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             CommonSlideDataExtension commonSlideDataExtension7 = new CommonSlideDataExtension() { Uri = "{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}" };
 
-            P14.CreationId creationId7 = new P14.CreationId() { Val = (UInt32Value)2634761331U };
+            P14.CreationId creationId7 = new P14.CreationId() { Val = 2634761331U };
             creationId7.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             commonSlideDataExtension7.Append(creationId7);
@@ -6558,7 +6558,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             TimeNodeList timeNodeList7 = new TimeNodeList();
 
             ParallelTimeNode parallelTimeNode7 = new ParallelTimeNode();
-            CommonTimeNode commonTimeNode7 = new CommonTimeNode() { Id = (UInt32Value)1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
+            CommonTimeNode commonTimeNode7 = new CommonTimeNode() { Id = 1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
 
             parallelTimeNode7.Append(commonTimeNode7);
 
@@ -6586,7 +6586,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ShapeTree shapeTree8 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties8 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties64 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties64 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties8 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties64 = new ApplicationNonVisualDrawingProperties();
 
@@ -6612,7 +6612,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape32 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties32 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties65 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties65 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties32 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks32 = new A.ShapeLocks() { NoGrouping = true };
@@ -6690,7 +6690,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape33 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties33 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties66 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Text Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties66 = new NonVisualDrawingProperties() { Id = 3U, Name = "Text Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties33 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks33 = new A.ShapeLocks() { NoGrouping = true };
@@ -6698,7 +6698,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties33.Append(shapeLocks33);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties66 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape33 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape33 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = 1U };
 
             applicationNonVisualDrawingProperties66.Append(placeholderShape33);
 
@@ -6934,7 +6934,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape34 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties34 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties67 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Date Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties67 = new NonVisualDrawingProperties() { Id = 4U, Name = "Date Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties34 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks34 = new A.ShapeLocks() { NoGrouping = true };
@@ -6942,7 +6942,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties34.Append(shapeLocks34);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties67 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape34 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape34 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties67.Append(placeholderShape34);
 
@@ -6982,7 +6982,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape35 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties35 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties68 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Footer Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties68 = new NonVisualDrawingProperties() { Id = 5U, Name = "Footer Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties35 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks35 = new A.ShapeLocks() { NoGrouping = true };
@@ -6990,7 +6990,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties35.Append(shapeLocks35);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties68 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape35 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape35 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties68.Append(placeholderShape35);
 
@@ -7019,7 +7019,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape36 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties36 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties69 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Slide Number Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties69 = new NonVisualDrawingProperties() { Id = 6U, Name = "Slide Number Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties36 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks36 = new A.ShapeLocks() { NoGrouping = true };
@@ -7027,7 +7027,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties36.Append(shapeLocks36);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties69 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape36 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape36 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties69.Append(placeholderShape36);
 
@@ -7067,7 +7067,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape37 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties37 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties70 = new NonVisualDrawingProperties() { Id = (UInt32Value)10U, Name = "Text Placeholder 9" };
+            NonVisualDrawingProperties nonVisualDrawingProperties70 = new NonVisualDrawingProperties() { Id = 10U, Name = "Text Placeholder 9" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties37 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks37 = new A.ShapeLocks() { NoGrouping = true };
@@ -7075,7 +7075,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties37.Append(shapeLocks37);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties70 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape37 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)13U };
+            PlaceholderShape placeholderShape37 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Quarter, Index = 13U };
 
             applicationNonVisualDrawingProperties70.Append(placeholderShape37);
 
@@ -7177,7 +7177,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape38 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties38 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties71 = new NonVisualDrawingProperties() { Id = (UInt32Value)14U, Name = "TextBox 13" };
+            NonVisualDrawingProperties nonVisualDrawingProperties71 = new NonVisualDrawingProperties() { Id = 14U, Name = "TextBox 13" };
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties38 = new NonVisualShapeDrawingProperties() { TextBox = true };
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties71 = new ApplicationNonVisualDrawingProperties();
 
@@ -7428,7 +7428,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape39 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties39 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties72 = new NonVisualDrawingProperties() { Id = (UInt32Value)15U, Name = "TextBox 14" };
+            NonVisualDrawingProperties nonVisualDrawingProperties72 = new NonVisualDrawingProperties() { Id = 15U, Name = "TextBox 14" };
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties39 = new NonVisualShapeDrawingProperties() { TextBox = true };
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties72 = new ApplicationNonVisualDrawingProperties();
 
@@ -7679,7 +7679,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape26 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties26 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties73 = new NonVisualDrawingProperties() { Id = (UInt32Value)23U, Name = "Straight Connector 22" };
+            NonVisualDrawingProperties nonVisualDrawingProperties73 = new NonVisualDrawingProperties() { Id = 23U, Name = "Straight Connector 22" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties26 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties73 = new ApplicationNonVisualDrawingProperties();
 
@@ -7716,17 +7716,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle26 = new ShapeStyle();
 
-            A.LineReference lineReference26 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference26 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor244 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference26.Append(schemeColor244);
 
-            A.FillReference fillReference26 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference26 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor245 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference26.Append(schemeColor245);
 
-            A.EffectReference effectReference26 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference26 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor246 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference26.Append(schemeColor246);
@@ -7748,7 +7748,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape27 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties27 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties74 = new NonVisualDrawingProperties() { Id = (UInt32Value)24U, Name = "Straight Connector 23" };
+            NonVisualDrawingProperties nonVisualDrawingProperties74 = new NonVisualDrawingProperties() { Id = 24U, Name = "Straight Connector 23" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties27 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties74 = new ApplicationNonVisualDrawingProperties();
 
@@ -7785,17 +7785,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle27 = new ShapeStyle();
 
-            A.LineReference lineReference27 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference27 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor249 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference27.Append(schemeColor249);
 
-            A.FillReference fillReference27 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference27 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor250 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference27.Append(schemeColor250);
 
-            A.EffectReference effectReference27 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference27 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor251 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference27.Append(schemeColor251);
@@ -7817,7 +7817,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape28 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties28 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties75 = new NonVisualDrawingProperties() { Id = (UInt32Value)25U, Name = "Straight Connector 24" };
+            NonVisualDrawingProperties nonVisualDrawingProperties75 = new NonVisualDrawingProperties() { Id = 25U, Name = "Straight Connector 24" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties28 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties75 = new ApplicationNonVisualDrawingProperties();
 
@@ -7854,17 +7854,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle28 = new ShapeStyle();
 
-            A.LineReference lineReference28 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference28 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor254 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference28.Append(schemeColor254);
 
-            A.FillReference fillReference28 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference28 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor255 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference28.Append(schemeColor255);
 
-            A.EffectReference effectReference28 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference28 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor256 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference28.Append(schemeColor256);
@@ -7886,7 +7886,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape29 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties29 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties76 = new NonVisualDrawingProperties() { Id = (UInt32Value)26U, Name = "Straight Connector 25" };
+            NonVisualDrawingProperties nonVisualDrawingProperties76 = new NonVisualDrawingProperties() { Id = 26U, Name = "Straight Connector 25" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties29 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties76 = new ApplicationNonVisualDrawingProperties();
 
@@ -7923,17 +7923,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle29 = new ShapeStyle();
 
-            A.LineReference lineReference29 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference29 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor259 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference29.Append(schemeColor259);
 
-            A.FillReference fillReference29 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference29 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor260 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference29.Append(schemeColor260);
 
-            A.EffectReference effectReference29 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference29 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor261 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference29.Append(schemeColor261);
@@ -7955,7 +7955,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape30 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties30 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties77 = new NonVisualDrawingProperties() { Id = (UInt32Value)27U, Name = "Straight Connector 26" };
+            NonVisualDrawingProperties nonVisualDrawingProperties77 = new NonVisualDrawingProperties() { Id = 27U, Name = "Straight Connector 26" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties30 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties77 = new ApplicationNonVisualDrawingProperties();
 
@@ -7992,17 +7992,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle30 = new ShapeStyle();
 
-            A.LineReference lineReference30 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference30 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor264 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference30.Append(schemeColor264);
 
-            A.FillReference fillReference30 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference30 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor265 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference30.Append(schemeColor265);
 
-            A.EffectReference effectReference30 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference30 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor266 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference30.Append(schemeColor266);
@@ -8041,7 +8041,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             CommonSlideDataExtension commonSlideDataExtension8 = new CommonSlideDataExtension() { Uri = "{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}" };
 
-            P14.CreationId creationId8 = new P14.CreationId() { Val = (UInt32Value)629197057U };
+            P14.CreationId creationId8 = new P14.CreationId() { Val = 629197057U };
             creationId8.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             commonSlideDataExtension8.Append(creationId8);
@@ -8061,7 +8061,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             TimeNodeList timeNodeList8 = new TimeNodeList();
 
             ParallelTimeNode parallelTimeNode8 = new ParallelTimeNode();
-            CommonTimeNode commonTimeNode8 = new CommonTimeNode() { Id = (UInt32Value)1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
+            CommonTimeNode commonTimeNode8 = new CommonTimeNode() { Id = 1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
 
             parallelTimeNode8.Append(commonTimeNode8);
 
@@ -8089,7 +8089,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ShapeTree shapeTree9 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties9 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties78 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties78 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties9 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties78 = new ApplicationNonVisualDrawingProperties();
 
@@ -8115,7 +8115,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape40 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties40 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties79 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Vertical Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties79 = new NonVisualDrawingProperties() { Id = 2U, Name = "Vertical Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties40 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks38 = new A.ShapeLocks() { NoGrouping = true };
@@ -8173,7 +8173,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape41 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties41 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties80 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Vertical Text Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties80 = new NonVisualDrawingProperties() { Id = 3U, Name = "Vertical Text Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties41 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks39 = new A.ShapeLocks() { NoGrouping = true };
@@ -8181,7 +8181,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties41.Append(shapeLocks39);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties80 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape39 = new PlaceholderShape() { Type = PlaceholderValues.Body, Orientation = DirectionValues.Vertical, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape39 = new PlaceholderShape() { Type = PlaceholderValues.Body, Orientation = DirectionValues.Vertical, Index = 1U };
 
             applicationNonVisualDrawingProperties80.Append(placeholderShape39);
 
@@ -8301,7 +8301,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape42 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties42 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties81 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Date Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties81 = new NonVisualDrawingProperties() { Id = 4U, Name = "Date Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties42 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks40 = new A.ShapeLocks() { NoGrouping = true };
@@ -8309,7 +8309,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties42.Append(shapeLocks40);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties81 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape40 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape40 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties81.Append(placeholderShape40);
 
@@ -8349,7 +8349,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape43 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties43 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties82 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Footer Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties82 = new NonVisualDrawingProperties() { Id = 5U, Name = "Footer Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties43 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks41 = new A.ShapeLocks() { NoGrouping = true };
@@ -8357,7 +8357,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties43.Append(shapeLocks41);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties82 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape41 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape41 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties82.Append(placeholderShape41);
 
@@ -8386,7 +8386,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape44 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties44 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties83 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Slide Number Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties83 = new NonVisualDrawingProperties() { Id = 6U, Name = "Slide Number Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties44 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks42 = new A.ShapeLocks() { NoGrouping = true };
@@ -8394,7 +8394,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties44.Append(shapeLocks42);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties83 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape42 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape42 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties83.Append(placeholderShape42);
 
@@ -8434,7 +8434,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape31 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties31 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties84 = new NonVisualDrawingProperties() { Id = (UInt32Value)7U, Name = "Straight Connector 6" };
+            NonVisualDrawingProperties nonVisualDrawingProperties84 = new NonVisualDrawingProperties() { Id = 7U, Name = "Straight Connector 6" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties31 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties84 = new ApplicationNonVisualDrawingProperties();
 
@@ -8471,17 +8471,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle31 = new ShapeStyle();
 
-            A.LineReference lineReference31 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference31 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor269 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference31.Append(schemeColor269);
 
-            A.FillReference fillReference31 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference31 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor270 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference31.Append(schemeColor270);
 
-            A.EffectReference effectReference31 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference31 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor271 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference31.Append(schemeColor271);
@@ -8503,7 +8503,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape32 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties32 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties85 = new NonVisualDrawingProperties() { Id = (UInt32Value)8U, Name = "Straight Connector 7" };
+            NonVisualDrawingProperties nonVisualDrawingProperties85 = new NonVisualDrawingProperties() { Id = 8U, Name = "Straight Connector 7" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties32 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties85 = new ApplicationNonVisualDrawingProperties();
 
@@ -8540,17 +8540,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle32 = new ShapeStyle();
 
-            A.LineReference lineReference32 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference32 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor274 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference32.Append(schemeColor274);
 
-            A.FillReference fillReference32 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference32 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor275 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference32.Append(schemeColor275);
 
-            A.EffectReference effectReference32 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference32 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor276 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference32.Append(schemeColor276);
@@ -8572,7 +8572,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape33 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties33 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties86 = new NonVisualDrawingProperties() { Id = (UInt32Value)9U, Name = "Straight Connector 8" };
+            NonVisualDrawingProperties nonVisualDrawingProperties86 = new NonVisualDrawingProperties() { Id = 9U, Name = "Straight Connector 8" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties33 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties86 = new ApplicationNonVisualDrawingProperties();
 
@@ -8609,17 +8609,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle33 = new ShapeStyle();
 
-            A.LineReference lineReference33 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference33 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor279 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference33.Append(schemeColor279);
 
-            A.FillReference fillReference33 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference33 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor280 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference33.Append(schemeColor280);
 
-            A.EffectReference effectReference33 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference33 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor281 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference33.Append(schemeColor281);
@@ -8641,7 +8641,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape34 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties34 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties87 = new NonVisualDrawingProperties() { Id = (UInt32Value)10U, Name = "Straight Connector 9" };
+            NonVisualDrawingProperties nonVisualDrawingProperties87 = new NonVisualDrawingProperties() { Id = 10U, Name = "Straight Connector 9" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties34 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties87 = new ApplicationNonVisualDrawingProperties();
 
@@ -8678,17 +8678,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle34 = new ShapeStyle();
 
-            A.LineReference lineReference34 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference34 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor284 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference34.Append(schemeColor284);
 
-            A.FillReference fillReference34 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference34 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor285 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference34.Append(schemeColor285);
 
-            A.EffectReference effectReference34 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference34 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor286 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference34.Append(schemeColor286);
@@ -8710,7 +8710,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape35 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties35 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties88 = new NonVisualDrawingProperties() { Id = (UInt32Value)11U, Name = "Straight Connector 10" };
+            NonVisualDrawingProperties nonVisualDrawingProperties88 = new NonVisualDrawingProperties() { Id = 11U, Name = "Straight Connector 10" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties35 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties88 = new ApplicationNonVisualDrawingProperties();
 
@@ -8747,17 +8747,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle35 = new ShapeStyle();
 
-            A.LineReference lineReference35 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference35 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor289 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference35.Append(schemeColor289);
 
-            A.FillReference fillReference35 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference35 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor290 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference35.Append(schemeColor290);
 
-            A.EffectReference effectReference35 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference35 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor291 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference35.Append(schemeColor291);
@@ -8793,7 +8793,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             CommonSlideDataExtension commonSlideDataExtension9 = new CommonSlideDataExtension() { Uri = "{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}" };
 
-            P14.CreationId creationId9 = new P14.CreationId() { Val = (UInt32Value)2545892363U };
+            P14.CreationId creationId9 = new P14.CreationId() { Val = 2545892363U };
             creationId9.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             commonSlideDataExtension9.Append(creationId9);
@@ -8813,7 +8813,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             TimeNodeList timeNodeList9 = new TimeNodeList();
 
             ParallelTimeNode parallelTimeNode9 = new ParallelTimeNode();
-            CommonTimeNode commonTimeNode9 = new CommonTimeNode() { Id = (UInt32Value)1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
+            CommonTimeNode commonTimeNode9 = new CommonTimeNode() { Id = 1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
 
             parallelTimeNode9.Append(commonTimeNode9);
 
@@ -8841,7 +8841,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ShapeTree shapeTree10 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties10 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties89 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties89 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties10 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties89 = new ApplicationNonVisualDrawingProperties();
 
@@ -8867,7 +8867,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape45 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties45 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties90 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties90 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties45 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks43 = new A.ShapeLocks() { NoGrouping = true };
@@ -8915,7 +8915,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape46 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties46 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties91 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Content Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties91 = new NonVisualDrawingProperties() { Id = 3U, Name = "Content Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties46 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks44 = new A.ShapeLocks() { NoGrouping = true };
@@ -8923,7 +8923,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties46.Append(shapeLocks44);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties91 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape44 = new PlaceholderShape() { Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape44 = new PlaceholderShape() { Index = 1U };
 
             applicationNonVisualDrawingProperties91.Append(placeholderShape44);
 
@@ -9033,7 +9033,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape47 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties47 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties92 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Date Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties92 = new NonVisualDrawingProperties() { Id = 4U, Name = "Date Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties47 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks45 = new A.ShapeLocks() { NoGrouping = true };
@@ -9041,7 +9041,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties47.Append(shapeLocks45);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties92 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape45 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape45 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties92.Append(placeholderShape45);
 
@@ -9081,7 +9081,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape48 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties48 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties93 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Footer Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties93 = new NonVisualDrawingProperties() { Id = 5U, Name = "Footer Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties48 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks46 = new A.ShapeLocks() { NoGrouping = true };
@@ -9089,7 +9089,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties48.Append(shapeLocks46);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties93 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape46 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape46 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties93.Append(placeholderShape46);
 
@@ -9118,7 +9118,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape49 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties49 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties94 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Slide Number Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties94 = new NonVisualDrawingProperties() { Id = 6U, Name = "Slide Number Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties49 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks47 = new A.ShapeLocks() { NoGrouping = true };
@@ -9126,7 +9126,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties49.Append(shapeLocks47);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties94 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape47 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape47 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties94.Append(placeholderShape47);
 
@@ -9166,7 +9166,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape36 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties36 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties95 = new NonVisualDrawingProperties() { Id = (UInt32Value)7U, Name = "Straight Connector 6" };
+            NonVisualDrawingProperties nonVisualDrawingProperties95 = new NonVisualDrawingProperties() { Id = 7U, Name = "Straight Connector 6" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties36 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties95 = new ApplicationNonVisualDrawingProperties();
 
@@ -9203,17 +9203,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle36 = new ShapeStyle();
 
-            A.LineReference lineReference36 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference36 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor294 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference36.Append(schemeColor294);
 
-            A.FillReference fillReference36 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference36 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor295 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference36.Append(schemeColor295);
 
-            A.EffectReference effectReference36 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference36 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor296 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference36.Append(schemeColor296);
@@ -9235,7 +9235,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape37 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties37 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties96 = new NonVisualDrawingProperties() { Id = (UInt32Value)8U, Name = "Straight Connector 7" };
+            NonVisualDrawingProperties nonVisualDrawingProperties96 = new NonVisualDrawingProperties() { Id = 8U, Name = "Straight Connector 7" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties37 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties96 = new ApplicationNonVisualDrawingProperties();
 
@@ -9272,17 +9272,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle37 = new ShapeStyle();
 
-            A.LineReference lineReference37 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference37 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor299 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference37.Append(schemeColor299);
 
-            A.FillReference fillReference37 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference37 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor300 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference37.Append(schemeColor300);
 
-            A.EffectReference effectReference37 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference37 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor301 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference37.Append(schemeColor301);
@@ -9304,7 +9304,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape38 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties38 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties97 = new NonVisualDrawingProperties() { Id = (UInt32Value)9U, Name = "Straight Connector 8" };
+            NonVisualDrawingProperties nonVisualDrawingProperties97 = new NonVisualDrawingProperties() { Id = 9U, Name = "Straight Connector 8" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties38 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties97 = new ApplicationNonVisualDrawingProperties();
 
@@ -9341,17 +9341,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle38 = new ShapeStyle();
 
-            A.LineReference lineReference38 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference38 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor304 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference38.Append(schemeColor304);
 
-            A.FillReference fillReference38 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference38 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor305 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference38.Append(schemeColor305);
 
-            A.EffectReference effectReference38 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference38 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor306 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference38.Append(schemeColor306);
@@ -9373,7 +9373,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape39 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties39 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties98 = new NonVisualDrawingProperties() { Id = (UInt32Value)10U, Name = "Straight Connector 9" };
+            NonVisualDrawingProperties nonVisualDrawingProperties98 = new NonVisualDrawingProperties() { Id = 10U, Name = "Straight Connector 9" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties39 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties98 = new ApplicationNonVisualDrawingProperties();
 
@@ -9410,17 +9410,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle39 = new ShapeStyle();
 
-            A.LineReference lineReference39 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference39 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor309 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference39.Append(schemeColor309);
 
-            A.FillReference fillReference39 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference39 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor310 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference39.Append(schemeColor310);
 
-            A.EffectReference effectReference39 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference39 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor311 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference39.Append(schemeColor311);
@@ -9442,7 +9442,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape40 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties40 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties99 = new NonVisualDrawingProperties() { Id = (UInt32Value)11U, Name = "Straight Connector 10" };
+            NonVisualDrawingProperties nonVisualDrawingProperties99 = new NonVisualDrawingProperties() { Id = 11U, Name = "Straight Connector 10" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties40 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties99 = new ApplicationNonVisualDrawingProperties();
 
@@ -9479,17 +9479,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle40 = new ShapeStyle();
 
-            A.LineReference lineReference40 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference40 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor314 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference40.Append(schemeColor314);
 
-            A.FillReference fillReference40 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference40 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor315 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference40.Append(schemeColor315);
 
-            A.EffectReference effectReference40 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference40 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor316 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference40.Append(schemeColor316);
@@ -9525,7 +9525,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             CommonSlideDataExtension commonSlideDataExtension10 = new CommonSlideDataExtension() { Uri = "{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}" };
 
-            P14.CreationId creationId10 = new P14.CreationId() { Val = (UInt32Value)1115643822U };
+            P14.CreationId creationId10 = new P14.CreationId() { Val = 1115643822U };
             creationId10.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             commonSlideDataExtension10.Append(creationId10);
@@ -9545,7 +9545,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             TimeNodeList timeNodeList10 = new TimeNodeList();
 
             ParallelTimeNode parallelTimeNode10 = new ParallelTimeNode();
-            CommonTimeNode commonTimeNode10 = new CommonTimeNode() { Id = (UInt32Value)1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
+            CommonTimeNode commonTimeNode10 = new CommonTimeNode() { Id = 1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
 
             parallelTimeNode10.Append(commonTimeNode10);
 
@@ -9573,7 +9573,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ShapeTree shapeTree11 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties11 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties100 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties100 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties11 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties100 = new ApplicationNonVisualDrawingProperties();
 
@@ -9599,7 +9599,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape50 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties50 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties101 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties101 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties50 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks48 = new A.ShapeLocks() { NoGrouping = true };
@@ -9655,7 +9655,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape51 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties51 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties102 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Vertical Text Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties102 = new NonVisualDrawingProperties() { Id = 3U, Name = "Vertical Text Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties51 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks49 = new A.ShapeLocks() { NoGrouping = true };
@@ -9663,7 +9663,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties51.Append(shapeLocks49);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties102 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape49 = new PlaceholderShape() { Type = PlaceholderValues.Body, Orientation = DirectionValues.Vertical, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape49 = new PlaceholderShape() { Type = PlaceholderValues.Body, Orientation = DirectionValues.Vertical, Index = 1U };
 
             applicationNonVisualDrawingProperties102.Append(placeholderShape49);
 
@@ -9805,7 +9805,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape52 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties52 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties103 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Date Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties103 = new NonVisualDrawingProperties() { Id = 4U, Name = "Date Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties52 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks50 = new A.ShapeLocks() { NoGrouping = true };
@@ -9813,7 +9813,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties52.Append(shapeLocks50);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties103 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape50 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape50 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties103.Append(placeholderShape50);
 
@@ -9853,7 +9853,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape53 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties53 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties104 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Footer Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties104 = new NonVisualDrawingProperties() { Id = 5U, Name = "Footer Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties53 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks51 = new A.ShapeLocks() { NoGrouping = true };
@@ -9861,7 +9861,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties53.Append(shapeLocks51);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties104 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape51 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape51 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties104.Append(placeholderShape51);
 
@@ -9890,7 +9890,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape54 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties54 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties105 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Slide Number Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties105 = new NonVisualDrawingProperties() { Id = 6U, Name = "Slide Number Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties54 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks52 = new A.ShapeLocks() { NoGrouping = true };
@@ -9898,7 +9898,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties54.Append(shapeLocks52);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties105 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape52 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape52 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties105.Append(placeholderShape52);
 
@@ -9938,7 +9938,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape41 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties41 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties106 = new NonVisualDrawingProperties() { Id = (UInt32Value)7U, Name = "Straight Connector 6" };
+            NonVisualDrawingProperties nonVisualDrawingProperties106 = new NonVisualDrawingProperties() { Id = 7U, Name = "Straight Connector 6" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties41 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties106 = new ApplicationNonVisualDrawingProperties();
 
@@ -9975,17 +9975,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle41 = new ShapeStyle();
 
-            A.LineReference lineReference41 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference41 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor319 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference41.Append(schemeColor319);
 
-            A.FillReference fillReference41 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference41 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor320 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference41.Append(schemeColor320);
 
-            A.EffectReference effectReference41 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference41 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor321 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference41.Append(schemeColor321);
@@ -10007,7 +10007,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape42 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties42 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties107 = new NonVisualDrawingProperties() { Id = (UInt32Value)8U, Name = "Straight Connector 7" };
+            NonVisualDrawingProperties nonVisualDrawingProperties107 = new NonVisualDrawingProperties() { Id = 8U, Name = "Straight Connector 7" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties42 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties107 = new ApplicationNonVisualDrawingProperties();
 
@@ -10044,17 +10044,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle42 = new ShapeStyle();
 
-            A.LineReference lineReference42 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference42 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor324 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference42.Append(schemeColor324);
 
-            A.FillReference fillReference42 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference42 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor325 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference42.Append(schemeColor325);
 
-            A.EffectReference effectReference42 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference42 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor326 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference42.Append(schemeColor326);
@@ -10076,7 +10076,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape43 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties43 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties108 = new NonVisualDrawingProperties() { Id = (UInt32Value)9U, Name = "Straight Connector 8" };
+            NonVisualDrawingProperties nonVisualDrawingProperties108 = new NonVisualDrawingProperties() { Id = 9U, Name = "Straight Connector 8" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties43 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties108 = new ApplicationNonVisualDrawingProperties();
 
@@ -10113,17 +10113,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle43 = new ShapeStyle();
 
-            A.LineReference lineReference43 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference43 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor329 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference43.Append(schemeColor329);
 
-            A.FillReference fillReference43 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference43 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor330 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference43.Append(schemeColor330);
 
-            A.EffectReference effectReference43 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference43 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor331 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference43.Append(schemeColor331);
@@ -10145,7 +10145,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape44 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties44 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties109 = new NonVisualDrawingProperties() { Id = (UInt32Value)10U, Name = "Straight Connector 9" };
+            NonVisualDrawingProperties nonVisualDrawingProperties109 = new NonVisualDrawingProperties() { Id = 10U, Name = "Straight Connector 9" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties44 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties109 = new ApplicationNonVisualDrawingProperties();
 
@@ -10182,17 +10182,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle44 = new ShapeStyle();
 
-            A.LineReference lineReference44 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference44 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor334 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference44.Append(schemeColor334);
 
-            A.FillReference fillReference44 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference44 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor335 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference44.Append(schemeColor335);
 
-            A.EffectReference effectReference44 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference44 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor336 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference44.Append(schemeColor336);
@@ -10214,7 +10214,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape45 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties45 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties110 = new NonVisualDrawingProperties() { Id = (UInt32Value)11U, Name = "Straight Connector 10" };
+            NonVisualDrawingProperties nonVisualDrawingProperties110 = new NonVisualDrawingProperties() { Id = 11U, Name = "Straight Connector 10" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties45 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties110 = new ApplicationNonVisualDrawingProperties();
 
@@ -10251,17 +10251,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle45 = new ShapeStyle();
 
-            A.LineReference lineReference45 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference45 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor339 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference45.Append(schemeColor339);
 
-            A.FillReference fillReference45 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference45 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor340 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference45.Append(schemeColor340);
 
-            A.EffectReference effectReference45 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference45 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor341 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference45.Append(schemeColor341);
@@ -10297,7 +10297,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             CommonSlideDataExtension commonSlideDataExtension11 = new CommonSlideDataExtension() { Uri = "{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}" };
 
-            P14.CreationId creationId11 = new P14.CreationId() { Val = (UInt32Value)829018732U };
+            P14.CreationId creationId11 = new P14.CreationId() { Val = 829018732U };
             creationId11.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             commonSlideDataExtension11.Append(creationId11);
@@ -10317,7 +10317,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             TimeNodeList timeNodeList11 = new TimeNodeList();
 
             ParallelTimeNode parallelTimeNode11 = new ParallelTimeNode();
-            CommonTimeNode commonTimeNode11 = new CommonTimeNode() { Id = (UInt32Value)1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
+            CommonTimeNode commonTimeNode11 = new CommonTimeNode() { Id = 1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
 
             parallelTimeNode11.Append(commonTimeNode11);
 
@@ -10345,7 +10345,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ShapeTree shapeTree12 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties12 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties111 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties111 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties12 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties111 = new ApplicationNonVisualDrawingProperties();
 
@@ -10371,7 +10371,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape55 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties55 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties112 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties112 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties55 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks53 = new A.ShapeLocks() { NoGrouping = true };
@@ -10419,7 +10419,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape56 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties56 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties113 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Date Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties113 = new NonVisualDrawingProperties() { Id = 3U, Name = "Date Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties56 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks54 = new A.ShapeLocks() { NoGrouping = true };
@@ -10427,7 +10427,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties56.Append(shapeLocks54);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties113 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape54 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape54 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties113.Append(placeholderShape54);
 
@@ -10467,7 +10467,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape57 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties57 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties114 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Footer Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties114 = new NonVisualDrawingProperties() { Id = 4U, Name = "Footer Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties57 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks55 = new A.ShapeLocks() { NoGrouping = true };
@@ -10475,7 +10475,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties57.Append(shapeLocks55);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties114 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape55 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape55 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties114.Append(placeholderShape55);
 
@@ -10504,7 +10504,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape58 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties58 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties115 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Slide Number Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties115 = new NonVisualDrawingProperties() { Id = 5U, Name = "Slide Number Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties58 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks56 = new A.ShapeLocks() { NoGrouping = true };
@@ -10512,7 +10512,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties58.Append(shapeLocks56);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties115 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape56 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape56 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties115.Append(placeholderShape56);
 
@@ -10552,7 +10552,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape46 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties46 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties116 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Straight Connector 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties116 = new NonVisualDrawingProperties() { Id = 6U, Name = "Straight Connector 5" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties46 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties116 = new ApplicationNonVisualDrawingProperties();
 
@@ -10589,17 +10589,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle46 = new ShapeStyle();
 
-            A.LineReference lineReference46 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference46 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor344 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference46.Append(schemeColor344);
 
-            A.FillReference fillReference46 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference46 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor345 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference46.Append(schemeColor345);
 
-            A.EffectReference effectReference46 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference46 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor346 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference46.Append(schemeColor346);
@@ -10621,7 +10621,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape47 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties47 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties117 = new NonVisualDrawingProperties() { Id = (UInt32Value)7U, Name = "Straight Connector 6" };
+            NonVisualDrawingProperties nonVisualDrawingProperties117 = new NonVisualDrawingProperties() { Id = 7U, Name = "Straight Connector 6" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties47 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties117 = new ApplicationNonVisualDrawingProperties();
 
@@ -10658,17 +10658,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle47 = new ShapeStyle();
 
-            A.LineReference lineReference47 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference47 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor349 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference47.Append(schemeColor349);
 
-            A.FillReference fillReference47 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference47 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor350 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference47.Append(schemeColor350);
 
-            A.EffectReference effectReference47 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference47 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor351 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference47.Append(schemeColor351);
@@ -10690,7 +10690,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape48 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties48 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties118 = new NonVisualDrawingProperties() { Id = (UInt32Value)8U, Name = "Straight Connector 7" };
+            NonVisualDrawingProperties nonVisualDrawingProperties118 = new NonVisualDrawingProperties() { Id = 8U, Name = "Straight Connector 7" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties48 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties118 = new ApplicationNonVisualDrawingProperties();
 
@@ -10727,17 +10727,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle48 = new ShapeStyle();
 
-            A.LineReference lineReference48 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference48 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor354 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference48.Append(schemeColor354);
 
-            A.FillReference fillReference48 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference48 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor355 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference48.Append(schemeColor355);
 
-            A.EffectReference effectReference48 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference48 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor356 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference48.Append(schemeColor356);
@@ -10759,7 +10759,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape49 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties49 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties119 = new NonVisualDrawingProperties() { Id = (UInt32Value)9U, Name = "Straight Connector 8" };
+            NonVisualDrawingProperties nonVisualDrawingProperties119 = new NonVisualDrawingProperties() { Id = 9U, Name = "Straight Connector 8" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties49 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties119 = new ApplicationNonVisualDrawingProperties();
 
@@ -10796,17 +10796,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle49 = new ShapeStyle();
 
-            A.LineReference lineReference49 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference49 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor359 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference49.Append(schemeColor359);
 
-            A.FillReference fillReference49 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference49 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor360 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference49.Append(schemeColor360);
 
-            A.EffectReference effectReference49 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference49 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor361 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference49.Append(schemeColor361);
@@ -10828,7 +10828,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape50 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties50 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties120 = new NonVisualDrawingProperties() { Id = (UInt32Value)10U, Name = "Straight Connector 9" };
+            NonVisualDrawingProperties nonVisualDrawingProperties120 = new NonVisualDrawingProperties() { Id = 10U, Name = "Straight Connector 9" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties50 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties120 = new ApplicationNonVisualDrawingProperties();
 
@@ -10865,17 +10865,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle50 = new ShapeStyle();
 
-            A.LineReference lineReference50 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference50 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor364 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference50.Append(schemeColor364);
 
-            A.FillReference fillReference50 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference50 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor365 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference50.Append(schemeColor365);
 
-            A.EffectReference effectReference50 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference50 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor366 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference50.Append(schemeColor366);
@@ -10910,7 +10910,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             CommonSlideDataExtension commonSlideDataExtension12 = new CommonSlideDataExtension() { Uri = "{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}" };
 
-            P14.CreationId creationId12 = new P14.CreationId() { Val = (UInt32Value)1621865369U };
+            P14.CreationId creationId12 = new P14.CreationId() { Val = 1621865369U };
             creationId12.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             commonSlideDataExtension12.Append(creationId12);
@@ -10930,7 +10930,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             TimeNodeList timeNodeList12 = new TimeNodeList();
 
             ParallelTimeNode parallelTimeNode12 = new ParallelTimeNode();
-            CommonTimeNode commonTimeNode12 = new CommonTimeNode() { Id = (UInt32Value)1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
+            CommonTimeNode commonTimeNode12 = new CommonTimeNode() { Id = 1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
 
             parallelTimeNode12.Append(commonTimeNode12);
 
@@ -10958,7 +10958,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ShapeTree shapeTree13 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties13 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties121 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties121 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties13 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties121 = new ApplicationNonVisualDrawingProperties();
 
@@ -10984,7 +10984,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape59 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties59 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties122 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties122 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties59 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks57 = new A.ShapeLocks() { NoGrouping = true };
@@ -11054,7 +11054,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape60 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties60 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties123 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Text Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties123 = new NonVisualDrawingProperties() { Id = 3U, Name = "Text Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties60 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks58 = new A.ShapeLocks() { NoGrouping = true };
@@ -11062,7 +11062,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties60.Append(shapeLocks58);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties123 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape58 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape58 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = 1U };
 
             applicationNonVisualDrawingProperties123.Append(placeholderShape58);
 
@@ -11298,7 +11298,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape61 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties61 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties124 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Date Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties124 = new NonVisualDrawingProperties() { Id = 4U, Name = "Date Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties61 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks59 = new A.ShapeLocks() { NoGrouping = true };
@@ -11306,7 +11306,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties61.Append(shapeLocks59);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties124 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape59 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape59 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties124.Append(placeholderShape59);
 
@@ -11346,7 +11346,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape62 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties62 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties125 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Footer Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties125 = new NonVisualDrawingProperties() { Id = 5U, Name = "Footer Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties62 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks60 = new A.ShapeLocks() { NoGrouping = true };
@@ -11354,7 +11354,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties62.Append(shapeLocks60);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties125 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape60 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape60 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties125.Append(placeholderShape60);
 
@@ -11383,7 +11383,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape63 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties63 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties126 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Slide Number Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties126 = new NonVisualDrawingProperties() { Id = 6U, Name = "Slide Number Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties63 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks61 = new A.ShapeLocks() { NoGrouping = true };
@@ -11391,7 +11391,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties63.Append(shapeLocks61);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties126 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape61 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape61 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties126.Append(placeholderShape61);
 
@@ -11431,7 +11431,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape51 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties51 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties127 = new NonVisualDrawingProperties() { Id = (UInt32Value)17U, Name = "Straight Connector 16" };
+            NonVisualDrawingProperties nonVisualDrawingProperties127 = new NonVisualDrawingProperties() { Id = 17U, Name = "Straight Connector 16" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties51 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties127 = new ApplicationNonVisualDrawingProperties();
 
@@ -11468,17 +11468,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle51 = new ShapeStyle();
 
-            A.LineReference lineReference51 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference51 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor378 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference51.Append(schemeColor378);
 
-            A.FillReference fillReference51 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference51 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor379 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference51.Append(schemeColor379);
 
-            A.EffectReference effectReference51 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference51 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor380 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference51.Append(schemeColor380);
@@ -11500,7 +11500,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape52 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties52 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties128 = new NonVisualDrawingProperties() { Id = (UInt32Value)18U, Name = "Straight Connector 17" };
+            NonVisualDrawingProperties nonVisualDrawingProperties128 = new NonVisualDrawingProperties() { Id = 18U, Name = "Straight Connector 17" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties52 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties128 = new ApplicationNonVisualDrawingProperties();
 
@@ -11537,17 +11537,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle52 = new ShapeStyle();
 
-            A.LineReference lineReference52 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference52 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor383 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference52.Append(schemeColor383);
 
-            A.FillReference fillReference52 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference52 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor384 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference52.Append(schemeColor384);
 
-            A.EffectReference effectReference52 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference52 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor385 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference52.Append(schemeColor385);
@@ -11569,7 +11569,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape53 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties53 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties129 = new NonVisualDrawingProperties() { Id = (UInt32Value)19U, Name = "Straight Connector 18" };
+            NonVisualDrawingProperties nonVisualDrawingProperties129 = new NonVisualDrawingProperties() { Id = 19U, Name = "Straight Connector 18" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties53 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties129 = new ApplicationNonVisualDrawingProperties();
 
@@ -11606,17 +11606,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle53 = new ShapeStyle();
 
-            A.LineReference lineReference53 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference53 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor388 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference53.Append(schemeColor388);
 
-            A.FillReference fillReference53 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference53 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor389 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference53.Append(schemeColor389);
 
-            A.EffectReference effectReference53 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference53 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor390 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference53.Append(schemeColor390);
@@ -11638,7 +11638,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape54 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties54 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties130 = new NonVisualDrawingProperties() { Id = (UInt32Value)20U, Name = "Straight Connector 19" };
+            NonVisualDrawingProperties nonVisualDrawingProperties130 = new NonVisualDrawingProperties() { Id = 20U, Name = "Straight Connector 19" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties54 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties130 = new ApplicationNonVisualDrawingProperties();
 
@@ -11675,17 +11675,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle54 = new ShapeStyle();
 
-            A.LineReference lineReference54 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference54 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor393 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference54.Append(schemeColor393);
 
-            A.FillReference fillReference54 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference54 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor394 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference54.Append(schemeColor394);
 
-            A.EffectReference effectReference54 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference54 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor395 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference54.Append(schemeColor395);
@@ -11707,7 +11707,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape55 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties55 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties131 = new NonVisualDrawingProperties() { Id = (UInt32Value)21U, Name = "Straight Connector 20" };
+            NonVisualDrawingProperties nonVisualDrawingProperties131 = new NonVisualDrawingProperties() { Id = 21U, Name = "Straight Connector 20" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties55 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties131 = new ApplicationNonVisualDrawingProperties();
 
@@ -11744,17 +11744,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle55 = new ShapeStyle();
 
-            A.LineReference lineReference55 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference55 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor398 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference55.Append(schemeColor398);
 
-            A.FillReference fillReference55 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference55 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor399 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference55.Append(schemeColor399);
 
-            A.EffectReference effectReference55 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference55 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor400 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference55.Append(schemeColor400);
@@ -11790,7 +11790,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             CommonSlideDataExtension commonSlideDataExtension13 = new CommonSlideDataExtension() { Uri = "{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}" };
 
-            P14.CreationId creationId13 = new P14.CreationId() { Val = (UInt32Value)940985444U };
+            P14.CreationId creationId13 = new P14.CreationId() { Val = 940985444U };
             creationId13.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             commonSlideDataExtension13.Append(creationId13);
@@ -11810,7 +11810,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             TimeNodeList timeNodeList13 = new TimeNodeList();
 
             ParallelTimeNode parallelTimeNode13 = new ParallelTimeNode();
-            CommonTimeNode commonTimeNode13 = new CommonTimeNode() { Id = (UInt32Value)1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
+            CommonTimeNode commonTimeNode13 = new CommonTimeNode() { Id = 1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
 
             parallelTimeNode13.Append(commonTimeNode13);
 
@@ -11838,7 +11838,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ShapeTree shapeTree14 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties14 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties132 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties132 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties14 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties132 = new ApplicationNonVisualDrawingProperties();
 
@@ -11864,7 +11864,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape64 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties64 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties133 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties133 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties64 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks62 = new A.ShapeLocks() { NoGrouping = true };
@@ -11920,7 +11920,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape65 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties65 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties134 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Text Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties134 = new NonVisualDrawingProperties() { Id = 3U, Name = "Text Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties65 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks63 = new A.ShapeLocks() { NoGrouping = true };
@@ -11928,7 +11928,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties65.Append(shapeLocks63);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties134 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape63 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape63 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = 1U };
 
             applicationNonVisualDrawingProperties134.Append(placeholderShape63);
 
@@ -12064,7 +12064,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape66 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties66 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties135 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Content Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties135 = new NonVisualDrawingProperties() { Id = 4U, Name = "Content Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties66 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks64 = new A.ShapeLocks() { NoGrouping = true };
@@ -12072,7 +12072,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties66.Append(shapeLocks64);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties135 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape64 = new PlaceholderShape() { Size = PlaceholderSizeValues.Half, Index = (UInt32Value)2U };
+            PlaceholderShape placeholderShape64 = new PlaceholderShape() { Size = PlaceholderSizeValues.Half, Index = 2U };
 
             applicationNonVisualDrawingProperties135.Append(placeholderShape64);
 
@@ -12252,7 +12252,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape67 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties67 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties136 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Text Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties136 = new NonVisualDrawingProperties() { Id = 5U, Name = "Text Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties67 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks65 = new A.ShapeLocks() { NoGrouping = true };
@@ -12260,7 +12260,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties67.Append(shapeLocks65);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties136 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape65 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)3U };
+            PlaceholderShape placeholderShape65 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Quarter, Index = 3U };
 
             applicationNonVisualDrawingProperties136.Append(placeholderShape65);
 
@@ -12396,7 +12396,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape68 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties68 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties137 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Content Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties137 = new NonVisualDrawingProperties() { Id = 6U, Name = "Content Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties68 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks66 = new A.ShapeLocks() { NoGrouping = true };
@@ -12404,7 +12404,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties68.Append(shapeLocks66);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties137 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape66 = new PlaceholderShape() { Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)4U };
+            PlaceholderShape placeholderShape66 = new PlaceholderShape() { Size = PlaceholderSizeValues.Quarter, Index = 4U };
 
             applicationNonVisualDrawingProperties137.Append(placeholderShape66);
 
@@ -12584,7 +12584,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape69 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties69 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties138 = new NonVisualDrawingProperties() { Id = (UInt32Value)7U, Name = "Date Placeholder 6" };
+            NonVisualDrawingProperties nonVisualDrawingProperties138 = new NonVisualDrawingProperties() { Id = 7U, Name = "Date Placeholder 6" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties69 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks67 = new A.ShapeLocks() { NoGrouping = true };
@@ -12592,7 +12592,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties69.Append(shapeLocks67);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties138 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape67 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape67 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties138.Append(placeholderShape67);
 
@@ -12632,7 +12632,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape70 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties70 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties139 = new NonVisualDrawingProperties() { Id = (UInt32Value)8U, Name = "Footer Placeholder 7" };
+            NonVisualDrawingProperties nonVisualDrawingProperties139 = new NonVisualDrawingProperties() { Id = 8U, Name = "Footer Placeholder 7" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties70 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks68 = new A.ShapeLocks() { NoGrouping = true };
@@ -12640,7 +12640,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties70.Append(shapeLocks68);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties139 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape68 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape68 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties139.Append(placeholderShape68);
 
@@ -12669,7 +12669,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape71 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties71 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties140 = new NonVisualDrawingProperties() { Id = (UInt32Value)9U, Name = "Slide Number Placeholder 8" };
+            NonVisualDrawingProperties nonVisualDrawingProperties140 = new NonVisualDrawingProperties() { Id = 9U, Name = "Slide Number Placeholder 8" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties71 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks69 = new A.ShapeLocks() { NoGrouping = true };
@@ -12677,7 +12677,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties71.Append(shapeLocks69);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties140 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape69 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape69 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties140.Append(placeholderShape69);
 
@@ -12717,7 +12717,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape56 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties56 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties141 = new NonVisualDrawingProperties() { Id = (UInt32Value)10U, Name = "Straight Connector 9" };
+            NonVisualDrawingProperties nonVisualDrawingProperties141 = new NonVisualDrawingProperties() { Id = 10U, Name = "Straight Connector 9" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties56 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties141 = new ApplicationNonVisualDrawingProperties();
 
@@ -12754,17 +12754,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle56 = new ShapeStyle();
 
-            A.LineReference lineReference56 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference56 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor405 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference56.Append(schemeColor405);
 
-            A.FillReference fillReference56 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference56 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor406 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference56.Append(schemeColor406);
 
-            A.EffectReference effectReference56 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference56 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor407 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference56.Append(schemeColor407);
@@ -12786,7 +12786,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape57 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties57 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties142 = new NonVisualDrawingProperties() { Id = (UInt32Value)11U, Name = "Straight Connector 10" };
+            NonVisualDrawingProperties nonVisualDrawingProperties142 = new NonVisualDrawingProperties() { Id = 11U, Name = "Straight Connector 10" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties57 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties142 = new ApplicationNonVisualDrawingProperties();
 
@@ -12823,17 +12823,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle57 = new ShapeStyle();
 
-            A.LineReference lineReference57 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference57 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor410 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference57.Append(schemeColor410);
 
-            A.FillReference fillReference57 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference57 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor411 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference57.Append(schemeColor411);
 
-            A.EffectReference effectReference57 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference57 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor412 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference57.Append(schemeColor412);
@@ -12855,7 +12855,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape58 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties58 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties143 = new NonVisualDrawingProperties() { Id = (UInt32Value)12U, Name = "Straight Connector 11" };
+            NonVisualDrawingProperties nonVisualDrawingProperties143 = new NonVisualDrawingProperties() { Id = 12U, Name = "Straight Connector 11" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties58 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties143 = new ApplicationNonVisualDrawingProperties();
 
@@ -12892,17 +12892,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle58 = new ShapeStyle();
 
-            A.LineReference lineReference58 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference58 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor415 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference58.Append(schemeColor415);
 
-            A.FillReference fillReference58 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference58 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor416 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference58.Append(schemeColor416);
 
-            A.EffectReference effectReference58 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference58 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor417 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference58.Append(schemeColor417);
@@ -12924,7 +12924,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape59 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties59 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties144 = new NonVisualDrawingProperties() { Id = (UInt32Value)13U, Name = "Straight Connector 12" };
+            NonVisualDrawingProperties nonVisualDrawingProperties144 = new NonVisualDrawingProperties() { Id = 13U, Name = "Straight Connector 12" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties59 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties144 = new ApplicationNonVisualDrawingProperties();
 
@@ -12961,17 +12961,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle59 = new ShapeStyle();
 
-            A.LineReference lineReference59 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference59 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor420 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference59.Append(schemeColor420);
 
-            A.FillReference fillReference59 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference59 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor421 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference59.Append(schemeColor421);
 
-            A.EffectReference effectReference59 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference59 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor422 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference59.Append(schemeColor422);
@@ -12993,7 +12993,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape60 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties60 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties145 = new NonVisualDrawingProperties() { Id = (UInt32Value)14U, Name = "Straight Connector 13" };
+            NonVisualDrawingProperties nonVisualDrawingProperties145 = new NonVisualDrawingProperties() { Id = 14U, Name = "Straight Connector 13" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties60 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties145 = new ApplicationNonVisualDrawingProperties();
 
@@ -13030,17 +13030,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle60 = new ShapeStyle();
 
-            A.LineReference lineReference60 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference60 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor425 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference60.Append(schemeColor425);
 
-            A.FillReference fillReference60 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference60 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor426 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference60.Append(schemeColor426);
 
-            A.EffectReference effectReference60 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference60 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor427 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference60.Append(schemeColor427);
@@ -13079,7 +13079,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             CommonSlideDataExtension commonSlideDataExtension14 = new CommonSlideDataExtension() { Uri = "{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}" };
 
-            P14.CreationId creationId14 = new P14.CreationId() { Val = (UInt32Value)705703276U };
+            P14.CreationId creationId14 = new P14.CreationId() { Val = 705703276U };
             creationId14.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             commonSlideDataExtension14.Append(creationId14);
@@ -13099,7 +13099,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             TimeNodeList timeNodeList14 = new TimeNodeList();
 
             ParallelTimeNode parallelTimeNode14 = new ParallelTimeNode();
-            CommonTimeNode commonTimeNode14 = new CommonTimeNode() { Id = (UInt32Value)1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
+            CommonTimeNode commonTimeNode14 = new CommonTimeNode() { Id = 1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
 
             parallelTimeNode14.Append(commonTimeNode14);
 
@@ -13127,7 +13127,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ShapeTree shapeTree15 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties15 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties146 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties146 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties15 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties146 = new ApplicationNonVisualDrawingProperties();
 
@@ -13153,7 +13153,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape72 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties72 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties147 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties147 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties72 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks70 = new A.ShapeLocks() { NoGrouping = true };
@@ -13225,7 +13225,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape73 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties73 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties148 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Text Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties148 = new NonVisualDrawingProperties() { Id = 3U, Name = "Text Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties73 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks71 = new A.ShapeLocks() { NoGrouping = true };
@@ -13233,7 +13233,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties73.Append(shapeLocks71);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties148 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape71 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape71 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = 1U };
 
             applicationNonVisualDrawingProperties148.Append(placeholderShape71);
 
@@ -13469,7 +13469,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape74 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties74 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties149 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Date Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties149 = new NonVisualDrawingProperties() { Id = 4U, Name = "Date Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties74 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks72 = new A.ShapeLocks() { NoGrouping = true };
@@ -13477,7 +13477,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties74.Append(shapeLocks72);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties149 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape72 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape72 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties149.Append(placeholderShape72);
 
@@ -13517,7 +13517,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape75 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties75 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties150 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Footer Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties150 = new NonVisualDrawingProperties() { Id = 5U, Name = "Footer Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties75 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks73 = new A.ShapeLocks() { NoGrouping = true };
@@ -13525,7 +13525,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties75.Append(shapeLocks73);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties150 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape73 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape73 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties150.Append(placeholderShape73);
 
@@ -13554,7 +13554,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape76 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties76 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties151 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Slide Number Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties151 = new NonVisualDrawingProperties() { Id = 6U, Name = "Slide Number Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties76 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks74 = new A.ShapeLocks() { NoGrouping = true };
@@ -13562,7 +13562,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties76.Append(shapeLocks74);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties151 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape74 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape74 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties151.Append(placeholderShape74);
 
@@ -13602,7 +13602,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape77 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties77 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties152 = new NonVisualDrawingProperties() { Id = (UInt32Value)10U, Name = "Text Placeholder 9" };
+            NonVisualDrawingProperties nonVisualDrawingProperties152 = new NonVisualDrawingProperties() { Id = 10U, Name = "Text Placeholder 9" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties77 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks75 = new A.ShapeLocks() { NoGrouping = true };
@@ -13610,7 +13610,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties77.Append(shapeLocks75);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties152 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape75 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)13U };
+            PlaceholderShape placeholderShape75 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Quarter, Index = 13U };
 
             applicationNonVisualDrawingProperties152.Append(placeholderShape75);
 
@@ -13705,7 +13705,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape61 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties61 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties153 = new NonVisualDrawingProperties() { Id = (UInt32Value)8U, Name = "Straight Connector 7" };
+            NonVisualDrawingProperties nonVisualDrawingProperties153 = new NonVisualDrawingProperties() { Id = 8U, Name = "Straight Connector 7" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties61 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties153 = new ApplicationNonVisualDrawingProperties();
 
@@ -13742,17 +13742,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle61 = new ShapeStyle();
 
-            A.LineReference lineReference61 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference61 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor440 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference61.Append(schemeColor440);
 
-            A.FillReference fillReference61 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference61 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor441 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference61.Append(schemeColor441);
 
-            A.EffectReference effectReference61 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference61 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor442 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference61.Append(schemeColor442);
@@ -13774,7 +13774,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape62 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties62 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties154 = new NonVisualDrawingProperties() { Id = (UInt32Value)9U, Name = "Straight Connector 8" };
+            NonVisualDrawingProperties nonVisualDrawingProperties154 = new NonVisualDrawingProperties() { Id = 9U, Name = "Straight Connector 8" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties62 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties154 = new ApplicationNonVisualDrawingProperties();
 
@@ -13811,17 +13811,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle62 = new ShapeStyle();
 
-            A.LineReference lineReference62 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference62 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor445 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference62.Append(schemeColor445);
 
-            A.FillReference fillReference62 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference62 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor446 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference62.Append(schemeColor446);
 
-            A.EffectReference effectReference62 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference62 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor447 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference62.Append(schemeColor447);
@@ -13843,7 +13843,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape63 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties63 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties155 = new NonVisualDrawingProperties() { Id = (UInt32Value)11U, Name = "Straight Connector 10" };
+            NonVisualDrawingProperties nonVisualDrawingProperties155 = new NonVisualDrawingProperties() { Id = 11U, Name = "Straight Connector 10" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties63 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties155 = new ApplicationNonVisualDrawingProperties();
 
@@ -13880,17 +13880,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle63 = new ShapeStyle();
 
-            A.LineReference lineReference63 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference63 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor450 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference63.Append(schemeColor450);
 
-            A.FillReference fillReference63 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference63 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor451 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference63.Append(schemeColor451);
 
-            A.EffectReference effectReference63 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference63 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor452 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference63.Append(schemeColor452);
@@ -13912,7 +13912,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape64 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties64 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties156 = new NonVisualDrawingProperties() { Id = (UInt32Value)12U, Name = "Straight Connector 11" };
+            NonVisualDrawingProperties nonVisualDrawingProperties156 = new NonVisualDrawingProperties() { Id = 12U, Name = "Straight Connector 11" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties64 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties156 = new ApplicationNonVisualDrawingProperties();
 
@@ -13949,17 +13949,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle64 = new ShapeStyle();
 
-            A.LineReference lineReference64 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference64 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor455 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference64.Append(schemeColor455);
 
-            A.FillReference fillReference64 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference64 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor456 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference64.Append(schemeColor456);
 
-            A.EffectReference effectReference64 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference64 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor457 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference64.Append(schemeColor457);
@@ -13981,7 +13981,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape65 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties65 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties157 = new NonVisualDrawingProperties() { Id = (UInt32Value)13U, Name = "Straight Connector 12" };
+            NonVisualDrawingProperties nonVisualDrawingProperties157 = new NonVisualDrawingProperties() { Id = 13U, Name = "Straight Connector 12" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties65 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties157 = new ApplicationNonVisualDrawingProperties();
 
@@ -14018,17 +14018,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle65 = new ShapeStyle();
 
-            A.LineReference lineReference65 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference65 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor460 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference65.Append(schemeColor460);
 
-            A.FillReference fillReference65 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference65 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor461 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference65.Append(schemeColor461);
 
-            A.EffectReference effectReference65 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference65 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor462 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference65.Append(schemeColor462);
@@ -14065,7 +14065,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             CommonSlideDataExtension commonSlideDataExtension15 = new CommonSlideDataExtension() { Uri = "{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}" };
 
-            P14.CreationId creationId15 = new P14.CreationId() { Val = (UInt32Value)3352052714U };
+            P14.CreationId creationId15 = new P14.CreationId() { Val = 3352052714U };
             creationId15.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             commonSlideDataExtension15.Append(creationId15);
@@ -14085,7 +14085,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             TimeNodeList timeNodeList15 = new TimeNodeList();
 
             ParallelTimeNode parallelTimeNode15 = new ParallelTimeNode();
-            CommonTimeNode commonTimeNode15 = new CommonTimeNode() { Id = (UInt32Value)1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
+            CommonTimeNode commonTimeNode15 = new CommonTimeNode() { Id = 1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
 
             parallelTimeNode15.Append(commonTimeNode15);
 
@@ -14113,7 +14113,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ShapeTree shapeTree16 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties16 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties158 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties158 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties16 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties158 = new ApplicationNonVisualDrawingProperties();
 
@@ -14139,7 +14139,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape78 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties78 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties159 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties159 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties78 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks76 = new A.ShapeLocks() { NoGrouping = true };
@@ -14187,7 +14187,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape79 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties79 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties160 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Date Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties160 = new NonVisualDrawingProperties() { Id = 3U, Name = "Date Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties79 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks77 = new A.ShapeLocks() { NoGrouping = true };
@@ -14195,7 +14195,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties79.Append(shapeLocks77);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties160 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape77 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape77 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties160.Append(placeholderShape77);
 
@@ -14235,7 +14235,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape80 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties80 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties161 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Footer Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties161 = new NonVisualDrawingProperties() { Id = 4U, Name = "Footer Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties80 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks78 = new A.ShapeLocks() { NoGrouping = true };
@@ -14243,7 +14243,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties80.Append(shapeLocks78);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties161 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape78 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape78 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties161.Append(placeholderShape78);
 
@@ -14272,7 +14272,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape81 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties81 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties162 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Slide Number Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties162 = new NonVisualDrawingProperties() { Id = 5U, Name = "Slide Number Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties81 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks79 = new A.ShapeLocks() { NoGrouping = true };
@@ -14280,7 +14280,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties81.Append(shapeLocks79);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties162 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape79 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape79 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties162.Append(placeholderShape79);
 
@@ -14320,7 +14320,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape66 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties66 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties163 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Straight Connector 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties163 = new NonVisualDrawingProperties() { Id = 6U, Name = "Straight Connector 5" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties66 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties163 = new ApplicationNonVisualDrawingProperties();
 
@@ -14357,17 +14357,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle66 = new ShapeStyle();
 
-            A.LineReference lineReference66 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference66 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor465 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference66.Append(schemeColor465);
 
-            A.FillReference fillReference66 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference66 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor466 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference66.Append(schemeColor466);
 
-            A.EffectReference effectReference66 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference66 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor467 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference66.Append(schemeColor467);
@@ -14389,7 +14389,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape67 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties67 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties164 = new NonVisualDrawingProperties() { Id = (UInt32Value)7U, Name = "Straight Connector 6" };
+            NonVisualDrawingProperties nonVisualDrawingProperties164 = new NonVisualDrawingProperties() { Id = 7U, Name = "Straight Connector 6" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties67 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties164 = new ApplicationNonVisualDrawingProperties();
 
@@ -14426,17 +14426,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle67 = new ShapeStyle();
 
-            A.LineReference lineReference67 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference67 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor470 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference67.Append(schemeColor470);
 
-            A.FillReference fillReference67 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference67 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor471 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference67.Append(schemeColor471);
 
-            A.EffectReference effectReference67 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference67 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor472 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference67.Append(schemeColor472);
@@ -14458,7 +14458,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape68 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties68 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties165 = new NonVisualDrawingProperties() { Id = (UInt32Value)8U, Name = "Straight Connector 7" };
+            NonVisualDrawingProperties nonVisualDrawingProperties165 = new NonVisualDrawingProperties() { Id = 8U, Name = "Straight Connector 7" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties68 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties165 = new ApplicationNonVisualDrawingProperties();
 
@@ -14495,17 +14495,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle68 = new ShapeStyle();
 
-            A.LineReference lineReference68 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference68 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor475 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference68.Append(schemeColor475);
 
-            A.FillReference fillReference68 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference68 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor476 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference68.Append(schemeColor476);
 
-            A.EffectReference effectReference68 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference68 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor477 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference68.Append(schemeColor477);
@@ -14527,7 +14527,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape69 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties69 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties166 = new NonVisualDrawingProperties() { Id = (UInt32Value)9U, Name = "Straight Connector 8" };
+            NonVisualDrawingProperties nonVisualDrawingProperties166 = new NonVisualDrawingProperties() { Id = 9U, Name = "Straight Connector 8" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties69 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties166 = new ApplicationNonVisualDrawingProperties();
 
@@ -14564,17 +14564,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle69 = new ShapeStyle();
 
-            A.LineReference lineReference69 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference69 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor480 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference69.Append(schemeColor480);
 
-            A.FillReference fillReference69 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference69 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor481 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference69.Append(schemeColor481);
 
-            A.EffectReference effectReference69 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference69 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor482 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference69.Append(schemeColor482);
@@ -14596,7 +14596,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape70 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties70 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties167 = new NonVisualDrawingProperties() { Id = (UInt32Value)10U, Name = "Straight Connector 9" };
+            NonVisualDrawingProperties nonVisualDrawingProperties167 = new NonVisualDrawingProperties() { Id = 10U, Name = "Straight Connector 9" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties70 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties167 = new ApplicationNonVisualDrawingProperties();
 
@@ -14633,17 +14633,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle70 = new ShapeStyle();
 
-            A.LineReference lineReference70 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference70 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor485 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference70.Append(schemeColor485);
 
-            A.FillReference fillReference70 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference70 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor486 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference70.Append(schemeColor486);
 
-            A.EffectReference effectReference70 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference70 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor487 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference70.Append(schemeColor487);
@@ -14665,7 +14665,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape82 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties82 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties168 = new NonVisualDrawingProperties() { Id = (UInt32Value)16U, Name = "Text Placeholder 9" };
+            NonVisualDrawingProperties nonVisualDrawingProperties168 = new NonVisualDrawingProperties() { Id = 16U, Name = "Text Placeholder 9" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties82 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks80 = new A.ShapeLocks() { NoGrouping = true };
@@ -14673,7 +14673,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties82.Append(shapeLocks80);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties168 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape80 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)14U };
+            PlaceholderShape placeholderShape80 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Quarter, Index = 14U };
 
             applicationNonVisualDrawingProperties168.Append(placeholderShape80);
 
@@ -14779,7 +14779,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape83 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties83 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties169 = new NonVisualDrawingProperties() { Id = (UInt32Value)17U, Name = "Picture Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties169 = new NonVisualDrawingProperties() { Id = 17U, Name = "Picture Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties83 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks81 = new A.ShapeLocks() { NoGrouping = true };
@@ -14787,7 +14787,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties83.Append(shapeLocks81);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties169 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape81 = new PlaceholderShape() { Type = PlaceholderValues.Picture, Index = (UInt32Value)13U };
+            PlaceholderShape placeholderShape81 = new PlaceholderShape() { Type = PlaceholderValues.Picture, Index = 13U };
 
             applicationNonVisualDrawingProperties169.Append(placeholderShape81);
 
@@ -14970,7 +14970,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             CommonSlideDataExtension commonSlideDataExtension16 = new CommonSlideDataExtension() { Uri = "{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}" };
 
-            P14.CreationId creationId16 = new P14.CreationId() { Val = (UInt32Value)1306565808U };
+            P14.CreationId creationId16 = new P14.CreationId() { Val = 1306565808U };
             creationId16.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             commonSlideDataExtension16.Append(creationId16);
@@ -14990,7 +14990,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             TimeNodeList timeNodeList16 = new TimeNodeList();
 
             ParallelTimeNode parallelTimeNode16 = new ParallelTimeNode();
-            CommonTimeNode commonTimeNode16 = new CommonTimeNode() { Id = (UInt32Value)1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
+            CommonTimeNode commonTimeNode16 = new CommonTimeNode() { Id = 1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
 
             parallelTimeNode16.Append(commonTimeNode16);
 
@@ -15018,7 +15018,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ShapeTree shapeTree17 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties17 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties170 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties170 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties17 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties170 = new ApplicationNonVisualDrawingProperties();
 
@@ -15044,7 +15044,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape84 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties84 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties171 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties171 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties84 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks82 = new A.ShapeLocks() { NoGrouping = true };
@@ -15092,7 +15092,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape85 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties85 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties172 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Content Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties172 = new NonVisualDrawingProperties() { Id = 3U, Name = "Content Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties85 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks83 = new A.ShapeLocks() { NoGrouping = true };
@@ -15100,7 +15100,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties85.Append(shapeLocks83);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties172 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape83 = new PlaceholderShape() { Size = PlaceholderSizeValues.Half, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape83 = new PlaceholderShape() { Size = PlaceholderSizeValues.Half, Index = 1U };
 
             applicationNonVisualDrawingProperties172.Append(placeholderShape83);
 
@@ -15280,7 +15280,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape86 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties86 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties173 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Content Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties173 = new NonVisualDrawingProperties() { Id = 4U, Name = "Content Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties86 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks84 = new A.ShapeLocks() { NoGrouping = true };
@@ -15288,7 +15288,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties86.Append(shapeLocks84);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties173 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape84 = new PlaceholderShape() { Size = PlaceholderSizeValues.Half, Index = (UInt32Value)2U };
+            PlaceholderShape placeholderShape84 = new PlaceholderShape() { Size = PlaceholderSizeValues.Half, Index = 2U };
 
             applicationNonVisualDrawingProperties173.Append(placeholderShape84);
 
@@ -15468,7 +15468,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape87 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties87 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties174 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Date Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties174 = new NonVisualDrawingProperties() { Id = 5U, Name = "Date Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties87 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks85 = new A.ShapeLocks() { NoGrouping = true };
@@ -15476,7 +15476,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties87.Append(shapeLocks85);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties174 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape85 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape85 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties174.Append(placeholderShape85);
 
@@ -15516,7 +15516,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape88 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties88 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties175 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Footer Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties175 = new NonVisualDrawingProperties() { Id = 6U, Name = "Footer Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties88 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks86 = new A.ShapeLocks() { NoGrouping = true };
@@ -15524,7 +15524,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties88.Append(shapeLocks86);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties175 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape86 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape86 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties175.Append(placeholderShape86);
 
@@ -15553,7 +15553,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape89 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties89 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties176 = new NonVisualDrawingProperties() { Id = (UInt32Value)7U, Name = "Slide Number Placeholder 6" };
+            NonVisualDrawingProperties nonVisualDrawingProperties176 = new NonVisualDrawingProperties() { Id = 7U, Name = "Slide Number Placeholder 6" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties89 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks87 = new A.ShapeLocks() { NoGrouping = true };
@@ -15561,7 +15561,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties89.Append(shapeLocks87);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties176 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape87 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape87 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties176.Append(placeholderShape87);
 
@@ -15601,7 +15601,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape71 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties71 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties177 = new NonVisualDrawingProperties() { Id = (UInt32Value)8U, Name = "Straight Connector 7" };
+            NonVisualDrawingProperties nonVisualDrawingProperties177 = new NonVisualDrawingProperties() { Id = 8U, Name = "Straight Connector 7" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties71 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties177 = new ApplicationNonVisualDrawingProperties();
 
@@ -15638,17 +15638,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle71 = new ShapeStyle();
 
-            A.LineReference lineReference71 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference71 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor491 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference71.Append(schemeColor491);
 
-            A.FillReference fillReference71 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference71 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor492 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference71.Append(schemeColor492);
 
-            A.EffectReference effectReference71 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference71 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor493 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference71.Append(schemeColor493);
@@ -15670,7 +15670,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape72 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties72 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties178 = new NonVisualDrawingProperties() { Id = (UInt32Value)9U, Name = "Straight Connector 8" };
+            NonVisualDrawingProperties nonVisualDrawingProperties178 = new NonVisualDrawingProperties() { Id = 9U, Name = "Straight Connector 8" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties72 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties178 = new ApplicationNonVisualDrawingProperties();
 
@@ -15707,17 +15707,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle72 = new ShapeStyle();
 
-            A.LineReference lineReference72 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference72 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor496 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference72.Append(schemeColor496);
 
-            A.FillReference fillReference72 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference72 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor497 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference72.Append(schemeColor497);
 
-            A.EffectReference effectReference72 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference72 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor498 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference72.Append(schemeColor498);
@@ -15739,7 +15739,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape73 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties73 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties179 = new NonVisualDrawingProperties() { Id = (UInt32Value)10U, Name = "Straight Connector 9" };
+            NonVisualDrawingProperties nonVisualDrawingProperties179 = new NonVisualDrawingProperties() { Id = 10U, Name = "Straight Connector 9" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties73 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties179 = new ApplicationNonVisualDrawingProperties();
 
@@ -15776,17 +15776,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle73 = new ShapeStyle();
 
-            A.LineReference lineReference73 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference73 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor501 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference73.Append(schemeColor501);
 
-            A.FillReference fillReference73 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference73 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor502 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference73.Append(schemeColor502);
 
-            A.EffectReference effectReference73 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference73 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor503 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference73.Append(schemeColor503);
@@ -15808,7 +15808,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape74 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties74 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties180 = new NonVisualDrawingProperties() { Id = (UInt32Value)11U, Name = "Straight Connector 10" };
+            NonVisualDrawingProperties nonVisualDrawingProperties180 = new NonVisualDrawingProperties() { Id = 11U, Name = "Straight Connector 10" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties74 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties180 = new ApplicationNonVisualDrawingProperties();
 
@@ -15845,17 +15845,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle74 = new ShapeStyle();
 
-            A.LineReference lineReference74 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference74 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor506 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference74.Append(schemeColor506);
 
-            A.FillReference fillReference74 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference74 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor507 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference74.Append(schemeColor507);
 
-            A.EffectReference effectReference74 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference74 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor508 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference74.Append(schemeColor508);
@@ -15877,7 +15877,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape75 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties75 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties181 = new NonVisualDrawingProperties() { Id = (UInt32Value)12U, Name = "Straight Connector 11" };
+            NonVisualDrawingProperties nonVisualDrawingProperties181 = new NonVisualDrawingProperties() { Id = 12U, Name = "Straight Connector 11" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties75 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties181 = new ApplicationNonVisualDrawingProperties();
 
@@ -15914,17 +15914,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle75 = new ShapeStyle();
 
-            A.LineReference lineReference75 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference75 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor511 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference75.Append(schemeColor511);
 
-            A.FillReference fillReference75 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference75 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor512 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference75.Append(schemeColor512);
 
-            A.EffectReference effectReference75 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference75 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor513 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference75.Append(schemeColor513);
@@ -15961,7 +15961,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             CommonSlideDataExtension commonSlideDataExtension17 = new CommonSlideDataExtension() { Uri = "{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}" };
 
-            P14.CreationId creationId17 = new P14.CreationId() { Val = (UInt32Value)681784127U };
+            P14.CreationId creationId17 = new P14.CreationId() { Val = 681784127U };
             creationId17.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             commonSlideDataExtension17.Append(creationId17);
@@ -15981,7 +15981,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             TimeNodeList timeNodeList17 = new TimeNodeList();
 
             ParallelTimeNode parallelTimeNode17 = new ParallelTimeNode();
-            CommonTimeNode commonTimeNode17 = new CommonTimeNode() { Id = (UInt32Value)1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
+            CommonTimeNode commonTimeNode17 = new CommonTimeNode() { Id = 1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
 
             parallelTimeNode17.Append(commonTimeNode17);
 
@@ -16009,7 +16009,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ShapeTree shapeTree18 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties18 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties182 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties182 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties18 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties182 = new ApplicationNonVisualDrawingProperties();
 
@@ -16035,7 +16035,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape90 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties90 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties183 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties183 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties90 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks88 = new A.ShapeLocks() { NoGrouping = true };
@@ -16105,7 +16105,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape91 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties91 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties184 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Text Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties184 = new NonVisualDrawingProperties() { Id = 4U, Name = "Text Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties91 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks89 = new A.ShapeLocks() { NoGrouping = true };
@@ -16113,7 +16113,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties91.Append(shapeLocks89);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties184 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape89 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)2U };
+            PlaceholderShape placeholderShape89 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Half, Index = 2U };
 
             applicationNonVisualDrawingProperties184.Append(placeholderShape89);
 
@@ -16241,7 +16241,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape92 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties92 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties185 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Date Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties185 = new NonVisualDrawingProperties() { Id = 5U, Name = "Date Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties92 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks90 = new A.ShapeLocks() { NoGrouping = true };
@@ -16249,7 +16249,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties92.Append(shapeLocks90);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties185 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape90 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape90 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties185.Append(placeholderShape90);
 
@@ -16289,7 +16289,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape93 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties93 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties186 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Footer Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties186 = new NonVisualDrawingProperties() { Id = 6U, Name = "Footer Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties93 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks91 = new A.ShapeLocks() { NoGrouping = true };
@@ -16297,7 +16297,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties93.Append(shapeLocks91);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties186 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape91 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape91 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties186.Append(placeholderShape91);
 
@@ -16326,7 +16326,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape94 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties94 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties187 = new NonVisualDrawingProperties() { Id = (UInt32Value)7U, Name = "Slide Number Placeholder 6" };
+            NonVisualDrawingProperties nonVisualDrawingProperties187 = new NonVisualDrawingProperties() { Id = 7U, Name = "Slide Number Placeholder 6" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties94 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks92 = new A.ShapeLocks() { NoGrouping = true };
@@ -16334,7 +16334,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties94.Append(shapeLocks92);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties187 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape92 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape92 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties187.Append(placeholderShape92);
 
@@ -16374,7 +16374,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape95 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties95 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties188 = new NonVisualDrawingProperties() { Id = (UInt32Value)14U, Name = "Picture Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties188 = new NonVisualDrawingProperties() { Id = 14U, Name = "Picture Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties95 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks93 = new A.ShapeLocks() { NoGrouping = true };
@@ -16382,7 +16382,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties95.Append(shapeLocks93);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties188 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape93 = new PlaceholderShape() { Type = PlaceholderValues.Picture, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape93 = new PlaceholderShape() { Type = PlaceholderValues.Picture, Index = 1U };
 
             applicationNonVisualDrawingProperties188.Append(placeholderShape93);
 
@@ -16550,7 +16550,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape76 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties76 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties189 = new NonVisualDrawingProperties() { Id = (UInt32Value)8U, Name = "Straight Connector 7" };
+            NonVisualDrawingProperties nonVisualDrawingProperties189 = new NonVisualDrawingProperties() { Id = 8U, Name = "Straight Connector 7" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties76 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties189 = new ApplicationNonVisualDrawingProperties();
 
@@ -16587,17 +16587,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle76 = new ShapeStyle();
 
-            A.LineReference lineReference76 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference76 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor517 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference76.Append(schemeColor517);
 
-            A.FillReference fillReference76 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference76 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor518 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference76.Append(schemeColor518);
 
-            A.EffectReference effectReference76 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference76 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor519 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference76.Append(schemeColor519);
@@ -16619,7 +16619,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape77 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties77 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties190 = new NonVisualDrawingProperties() { Id = (UInt32Value)9U, Name = "Straight Connector 8" };
+            NonVisualDrawingProperties nonVisualDrawingProperties190 = new NonVisualDrawingProperties() { Id = 9U, Name = "Straight Connector 8" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties77 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties190 = new ApplicationNonVisualDrawingProperties();
 
@@ -16656,17 +16656,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle77 = new ShapeStyle();
 
-            A.LineReference lineReference77 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference77 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor522 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference77.Append(schemeColor522);
 
-            A.FillReference fillReference77 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference77 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor523 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference77.Append(schemeColor523);
 
-            A.EffectReference effectReference77 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference77 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor524 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference77.Append(schemeColor524);
@@ -16688,7 +16688,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape78 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties78 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties191 = new NonVisualDrawingProperties() { Id = (UInt32Value)10U, Name = "Straight Connector 9" };
+            NonVisualDrawingProperties nonVisualDrawingProperties191 = new NonVisualDrawingProperties() { Id = 10U, Name = "Straight Connector 9" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties78 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties191 = new ApplicationNonVisualDrawingProperties();
 
@@ -16725,17 +16725,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle78 = new ShapeStyle();
 
-            A.LineReference lineReference78 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference78 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor527 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference78.Append(schemeColor527);
 
-            A.FillReference fillReference78 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference78 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor528 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference78.Append(schemeColor528);
 
-            A.EffectReference effectReference78 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference78 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor529 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference78.Append(schemeColor529);
@@ -16757,7 +16757,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape79 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties79 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties192 = new NonVisualDrawingProperties() { Id = (UInt32Value)11U, Name = "Straight Connector 10" };
+            NonVisualDrawingProperties nonVisualDrawingProperties192 = new NonVisualDrawingProperties() { Id = 11U, Name = "Straight Connector 10" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties79 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties192 = new ApplicationNonVisualDrawingProperties();
 
@@ -16794,17 +16794,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle79 = new ShapeStyle();
 
-            A.LineReference lineReference79 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference79 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor532 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference79.Append(schemeColor532);
 
-            A.FillReference fillReference79 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference79 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor533 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference79.Append(schemeColor533);
 
-            A.EffectReference effectReference79 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference79 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor534 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference79.Append(schemeColor534);
@@ -16826,7 +16826,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape80 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties80 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties193 = new NonVisualDrawingProperties() { Id = (UInt32Value)12U, Name = "Straight Connector 11" };
+            NonVisualDrawingProperties nonVisualDrawingProperties193 = new NonVisualDrawingProperties() { Id = 12U, Name = "Straight Connector 11" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties80 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties193 = new ApplicationNonVisualDrawingProperties();
 
@@ -16863,17 +16863,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle80 = new ShapeStyle();
 
-            A.LineReference lineReference80 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference80 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor537 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference80.Append(schemeColor537);
 
-            A.FillReference fillReference80 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference80 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor538 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference80.Append(schemeColor538);
 
-            A.EffectReference effectReference80 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference80 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor539 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference80.Append(schemeColor539);
@@ -16910,7 +16910,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             CommonSlideDataExtension commonSlideDataExtension18 = new CommonSlideDataExtension() { Uri = "{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}" };
 
-            P14.CreationId creationId18 = new P14.CreationId() { Val = (UInt32Value)1479597387U };
+            P14.CreationId creationId18 = new P14.CreationId() { Val = 1479597387U };
             creationId18.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             commonSlideDataExtension18.Append(creationId18);
@@ -16930,7 +16930,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             TimeNodeList timeNodeList18 = new TimeNodeList();
 
             ParallelTimeNode parallelTimeNode18 = new ParallelTimeNode();
-            CommonTimeNode commonTimeNode18 = new CommonTimeNode() { Id = (UInt32Value)1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
+            CommonTimeNode commonTimeNode18 = new CommonTimeNode() { Id = 1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
 
             parallelTimeNode18.Append(commonTimeNode18);
 
@@ -16958,7 +16958,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ShapeTree shapeTree19 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties19 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties194 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
+            NonVisualDrawingProperties nonVisualDrawingProperties194 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties19 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties194 = new ApplicationNonVisualDrawingProperties();
 
@@ -16984,7 +16984,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape96 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties96 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties195 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties195 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties96 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks94 = new A.ShapeLocks() { NoGrouping = true };
@@ -17062,7 +17062,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape97 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties97 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties196 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Text Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties196 = new NonVisualDrawingProperties() { Id = 3U, Name = "Text Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties97 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks95 = new A.ShapeLocks() { NoGrouping = true };
@@ -17070,7 +17070,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties97.Append(shapeLocks95);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties196 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape95 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape95 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = 1U };
 
             applicationNonVisualDrawingProperties196.Append(placeholderShape95);
 
@@ -17306,7 +17306,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape98 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties98 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties197 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Date Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties197 = new NonVisualDrawingProperties() { Id = 4U, Name = "Date Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties98 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks96 = new A.ShapeLocks() { NoGrouping = true };
@@ -17314,7 +17314,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties98.Append(shapeLocks96);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties197 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape96 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape96 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties197.Append(placeholderShape96);
 
@@ -17354,7 +17354,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape99 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties99 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties198 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Footer Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties198 = new NonVisualDrawingProperties() { Id = 5U, Name = "Footer Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties99 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks97 = new A.ShapeLocks() { NoGrouping = true };
@@ -17362,7 +17362,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties99.Append(shapeLocks97);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties198 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape97 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape97 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties198.Append(placeholderShape97);
 
@@ -17391,7 +17391,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape100 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties100 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties199 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Slide Number Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties199 = new NonVisualDrawingProperties() { Id = 6U, Name = "Slide Number Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties100 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks98 = new A.ShapeLocks() { NoGrouping = true };
@@ -17399,7 +17399,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties100.Append(shapeLocks98);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties199 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape98 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape98 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties199.Append(placeholderShape98);
 
@@ -17439,7 +17439,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape101 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties101 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties200 = new NonVisualDrawingProperties() { Id = (UInt32Value)10U, Name = "Text Placeholder 9" };
+            NonVisualDrawingProperties nonVisualDrawingProperties200 = new NonVisualDrawingProperties() { Id = 10U, Name = "Text Placeholder 9" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties101 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks99 = new A.ShapeLocks() { NoGrouping = true };
@@ -17447,7 +17447,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             nonVisualShapeDrawingProperties101.Append(shapeLocks99);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties200 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape99 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)13U };
+            PlaceholderShape placeholderShape99 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Quarter, Index = 13U };
 
             applicationNonVisualDrawingProperties200.Append(placeholderShape99);
 
@@ -17542,7 +17542,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape102 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties102 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties201 = new NonVisualDrawingProperties() { Id = (UInt32Value)11U, Name = "TextBox 10" };
+            NonVisualDrawingProperties nonVisualDrawingProperties201 = new NonVisualDrawingProperties() { Id = 11U, Name = "TextBox 10" };
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties102 = new NonVisualShapeDrawingProperties() { TextBox = true };
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties201 = new ApplicationNonVisualDrawingProperties();
 
@@ -17793,7 +17793,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             Shape shape103 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties103 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties202 = new NonVisualDrawingProperties() { Id = (UInt32Value)12U, Name = "TextBox 11" };
+            NonVisualDrawingProperties nonVisualDrawingProperties202 = new NonVisualDrawingProperties() { Id = 12U, Name = "TextBox 11" };
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties103 = new NonVisualShapeDrawingProperties() { TextBox = true };
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties202 = new ApplicationNonVisualDrawingProperties();
 
@@ -18044,7 +18044,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape81 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties81 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties203 = new NonVisualDrawingProperties() { Id = (UInt32Value)13U, Name = "Straight Connector 12" };
+            NonVisualDrawingProperties nonVisualDrawingProperties203 = new NonVisualDrawingProperties() { Id = 13U, Name = "Straight Connector 12" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties81 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties203 = new ApplicationNonVisualDrawingProperties();
 
@@ -18081,17 +18081,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle81 = new ShapeStyle();
 
-            A.LineReference lineReference81 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference81 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor575 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference81.Append(schemeColor575);
 
-            A.FillReference fillReference81 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference81 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor576 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference81.Append(schemeColor576);
 
-            A.EffectReference effectReference81 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference81 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor577 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference81.Append(schemeColor577);
@@ -18113,7 +18113,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape82 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties82 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties204 = new NonVisualDrawingProperties() { Id = (UInt32Value)16U, Name = "Straight Connector 15" };
+            NonVisualDrawingProperties nonVisualDrawingProperties204 = new NonVisualDrawingProperties() { Id = 16U, Name = "Straight Connector 15" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties82 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties204 = new ApplicationNonVisualDrawingProperties();
 
@@ -18150,17 +18150,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle82 = new ShapeStyle();
 
-            A.LineReference lineReference82 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference82 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor580 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference82.Append(schemeColor580);
 
-            A.FillReference fillReference82 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference82 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor581 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference82.Append(schemeColor581);
 
-            A.EffectReference effectReference82 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference82 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor582 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference82.Append(schemeColor582);
@@ -18182,7 +18182,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape83 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties83 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties205 = new NonVisualDrawingProperties() { Id = (UInt32Value)17U, Name = "Straight Connector 16" };
+            NonVisualDrawingProperties nonVisualDrawingProperties205 = new NonVisualDrawingProperties() { Id = 17U, Name = "Straight Connector 16" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties83 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties205 = new ApplicationNonVisualDrawingProperties();
 
@@ -18219,17 +18219,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle83 = new ShapeStyle();
 
-            A.LineReference lineReference83 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference83 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor585 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference83.Append(schemeColor585);
 
-            A.FillReference fillReference83 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference83 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor586 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference83.Append(schemeColor586);
 
-            A.EffectReference effectReference83 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference83 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor587 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference83.Append(schemeColor587);
@@ -18251,7 +18251,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape84 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties84 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties206 = new NonVisualDrawingProperties() { Id = (UInt32Value)18U, Name = "Straight Connector 17" };
+            NonVisualDrawingProperties nonVisualDrawingProperties206 = new NonVisualDrawingProperties() { Id = 18U, Name = "Straight Connector 17" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties84 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties206 = new ApplicationNonVisualDrawingProperties();
 
@@ -18288,17 +18288,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle84 = new ShapeStyle();
 
-            A.LineReference lineReference84 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference84 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor590 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference84.Append(schemeColor590);
 
-            A.FillReference fillReference84 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference84 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor591 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference84.Append(schemeColor591);
 
-            A.EffectReference effectReference84 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference84 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor592 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference84.Append(schemeColor592);
@@ -18320,7 +18320,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             ConnectionShape connectionShape85 = new ConnectionShape();
 
             NonVisualConnectionShapeProperties nonVisualConnectionShapeProperties85 = new NonVisualConnectionShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties207 = new NonVisualDrawingProperties() { Id = (UInt32Value)19U, Name = "Straight Connector 18" };
+            NonVisualDrawingProperties nonVisualDrawingProperties207 = new NonVisualDrawingProperties() { Id = 19U, Name = "Straight Connector 18" };
             NonVisualConnectorShapeDrawingProperties nonVisualConnectorShapeDrawingProperties85 = new NonVisualConnectorShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties207 = new ApplicationNonVisualDrawingProperties();
 
@@ -18357,17 +18357,17 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             ShapeStyle shapeStyle85 = new ShapeStyle();
 
-            A.LineReference lineReference85 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference85 = new A.LineReference() { Index = 2U };
             A.SchemeColor schemeColor595 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference85.Append(schemeColor595);
 
-            A.FillReference fillReference85 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference85 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor596 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference85.Append(schemeColor596);
 
-            A.EffectReference effectReference85 = new A.EffectReference() { Index = (UInt32Value)1U };
+            A.EffectReference effectReference85 = new A.EffectReference() { Index = 1U };
             A.SchemeColor schemeColor597 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference85.Append(schemeColor597);
@@ -18406,7 +18406,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             CommonSlideDataExtension commonSlideDataExtension19 = new CommonSlideDataExtension() { Uri = "{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}" };
 
-            P14.CreationId creationId19 = new P14.CreationId() { Val = (UInt32Value)493948837U };
+            P14.CreationId creationId19 = new P14.CreationId() { Val = 493948837U };
             creationId19.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             commonSlideDataExtension19.Append(creationId19);
@@ -18426,7 +18426,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
             TimeNodeList timeNodeList19 = new TimeNodeList();
 
             ParallelTimeNode parallelTimeNode19 = new ParallelTimeNode();
-            CommonTimeNode commonTimeNode19 = new CommonTimeNode() { Id = (UInt32Value)1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
+            CommonTimeNode commonTimeNode19 = new CommonTimeNode() { Id = 1U, Duration = "indefinite", Restart = TimeNodeRestartValues.Never, NodeType = TimeNodeValues.TmingRoot };
 
             parallelTimeNode19.Append(commonTimeNode19);
 
@@ -18544,7 +18544,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             Ap.HeadingPairs headingPairs1 = new Ap.HeadingPairs();
 
-            Vt.VTVector vTVector1 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Variant, Size = (UInt32Value)6U };
+            Vt.VTVector vTVector1 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Variant, Size = 6U };
 
             Vt.Variant variant1 = new Vt.Variant();
             Vt.VTLPSTR vTLPSTR1 = new Vt.VTLPSTR();
@@ -18593,7 +18593,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 
             Ap.TitlesOfParts titlesOfParts1 = new Ap.TitlesOfParts();
 
-            Vt.VTVector vTVector2 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Lpstr, Size = (UInt32Value)6U };
+            Vt.VTVector vTVector2 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Lpstr, Size = 6U };
             Vt.VTLPSTR vTLPSTR4 = new Vt.VTLPSTR();
             vTLPSTR4.Text = "Lucida Grande";
             Vt.VTLPSTR vTLPSTR5 = new Vt.VTLPSTR();

@@ -30,12 +30,12 @@ namespace DocumentFormat.OpenXml.Tests
             target.InnerText = "1";
             Assert.True(target.HasValue);
             Assert.True(target.Value);
-            Assert.True((bool)target);
+            Assert.True(target);
 
             target.InnerText = "0";
             Assert.False(target.Value);
             Assert.True(target.HasValue);
-            Assert.False((bool)target);
+            Assert.False(target);
 
             target.InnerText = "true";
             Assert.True(target.Value);
@@ -176,14 +176,14 @@ namespace DocumentFormat.OpenXml.Tests
             target.InnerText = string.Empty;
             Assert.True(target.HasValue);
             Assert.Equal(string.Empty, target.Value);
-            Assert.Equal(string.Empty, (string)target);
+            Assert.Equal(string.Empty, target);
             Assert.Equal(string.Empty, target.ToString());
 
             target = "test";
             Assert.True(target.HasValue);
             Assert.Equal("test", target.Value);
             Assert.Equal("test", target.InnerText);
-            Assert.Equal("test", (string)target);
+            Assert.Equal("test", target);
             Assert.Equal("test", target.ToString());
         }
 
@@ -250,31 +250,31 @@ namespace DocumentFormat.OpenXml.Tests
 
             target.InnerText = "765.43211234E11";
             Assert.True(target.HasValue);
-            Assert.Equal((double)765.43211234E11, target.Value);
+            Assert.Equal(765.43211234E11, target.Value);
 
             target.InnerText = "7E7";
             Assert.True(target.HasValue);
-            Assert.Equal((double)7E7, target.Value);
+            Assert.Equal(7E7, target.Value);
             Assert.Equal("7E7", target.InnerText);
             Assert.Equal("7E7", target.InnerText);
 
             target.InnerText = "1.0";
             Assert.True(target.HasValue);
-            Assert.Equal((double)1.0, target.Value);
+            Assert.Equal(1.0, target.Value);
             Assert.Equal("1.0", target.InnerText);
             Assert.Equal("1.0", target.InnerText);
 
-            target.Value = (double)1.0;
+            target.Value = 1.0;
             Assert.True(target.HasValue);
-            Assert.Equal(((double)1.0).ToString(), target.InnerText);
+            Assert.Equal(1.0.ToString(), target.InnerText);
 
-            target.Value = (double)7E7;
+            target.Value = 7E7;
             Assert.True(target.HasValue);
-            Assert.Equal(((double)7E7).ToString(), target.InnerText);
+            Assert.Equal(7E7.ToString(), target.InnerText);
 
-            target.Value = (double)765.43211234E11;
+            target.Value = 765.43211234E11;
             Assert.True(target.HasValue);
-            Assert.Equal(((double)765.43211234E11).ToString(), target.InnerText);
+            Assert.Equal(765.43211234E11.ToString(), target.InnerText);
 
             target.Value = double.NaN;
             Assert.True(target.HasValue);
@@ -297,11 +297,11 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("NaN", target.InnerText);
 
             target.InnerText = "0.0";
-            Assert.Equal((double)0.0, target.Value);
+            Assert.Equal(0.0, target.Value);
             Assert.Equal("0.0", target.InnerText);
 
             target.InnerText = "-0.0";
-            Assert.Equal((double)0.0, target.Value);
+            Assert.Equal(0.0, target.Value);
             Assert.Equal("-0.0", target.InnerText);
         }
 
@@ -327,27 +327,27 @@ namespace DocumentFormat.OpenXml.Tests
 
             target.InnerText = "765.43211234E11";
             Assert.True(target.HasValue);
-            Assert.Equal((float)765.43211234E11, target.Value);
+            Assert.Equal(765.43211234E11F, target.Value);
 
             target.InnerText = "7E7";
             Assert.True(target.HasValue);
-            Assert.Equal((float)7E7, target.Value);
+            Assert.Equal(7E7F, target.Value);
 
             target.InnerText = "1.0";
             Assert.True(target.HasValue);
-            Assert.Equal((float)1.0, target.Value);
+            Assert.Equal(1.0F, target.Value);
 
-            target.Value = (float)1.0;
+            target.Value = 1.0F;
             Assert.True(target.HasValue);
-            Assert.Equal(((float)1.0).ToString(CultureInfo.InvariantCulture), target.InnerText);
+            Assert.Equal(1.0F.ToString(CultureInfo.InvariantCulture), target.InnerText);
 
-            target.Value = (float)7E7;
+            target.Value = 7E7F;
             Assert.True(target.HasValue);
-            Assert.Equal(((float)7E7).ToString(CultureInfo.InvariantCulture), target.InnerText);
+            Assert.Equal(7E7F.ToString(CultureInfo.InvariantCulture), target.InnerText);
 
-            target.Value = (float)765.43211234E11;
+            target.Value = 765.43211234E11F;
             Assert.True(target.HasValue);
-            Assert.Equal(((float)765.43211234E11).ToString(CultureInfo.InvariantCulture), target.InnerText);
+            Assert.Equal(765.43211234E11F.ToString(CultureInfo.InvariantCulture), target.InnerText);
 
             target.Value = float.NaN;
             Assert.True(target.HasValue);
