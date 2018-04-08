@@ -12,13 +12,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     internal class SchemaTypeValidator
     {
-        private readonly SdbSchemaDatas _sdbSchemaDatas;
+        private readonly SdbSchemaData _sdbSchemaDatas;
 
         /// <summary>
         /// Initializes a new instance of the SchemaTypeValidator.
         /// </summary>
         /// <param name="sdbSchemaDatas"></param>
-        internal SchemaTypeValidator(SdbSchemaDatas sdbSchemaDatas)
+        internal SchemaTypeValidator(SdbSchemaData sdbSchemaDatas)
         {
             _sdbSchemaDatas = sdbSchemaDatas;
         }

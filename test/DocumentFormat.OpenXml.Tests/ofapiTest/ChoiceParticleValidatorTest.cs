@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ChoiceParticleValidateTest()
         {
-            SdbSchemaDatas sdbSchemaDatas = SdbSchemaDatas.GetSchemaDatas(FileFormatVersions.Office2007);
+            SdbSchemaData sdbSchemaDatas = SdbSchemaData.GetSchemaData(FileFormatVersions.Office2007);
 
             TestSimpleChoice(sdbSchemaDatas);
             TestSimpleChoice2(sdbSchemaDatas);
@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Tests
             TestSimpleChoice4(sdbSchemaDatas);
         }
 
-        private void TestSimpleChoice4(SdbSchemaDatas sdbSchemaDatas)
+        private void TestSimpleChoice4(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
@@ -119,7 +119,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":rfmt", validationContext.Errors[0].Description);
         }
 
-        private void TestSimpleChoice3(SdbSchemaDatas sdbSchemaDatas)
+        private void TestSimpleChoice3(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
@@ -240,7 +240,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":textInput", validationContext.Errors[0].Description);
         }
 
-        private void TestSimpleChoice2(SdbSchemaDatas sdbSchemaDatas)
+        private void TestSimpleChoice2(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
@@ -310,7 +310,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":bldChart", validationContext.Errors[0].Description);
         }
 
-        private void TestSimpleChoice(SdbSchemaDatas sdbSchemaDatas)
+        private void TestSimpleChoice(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;

@@ -1,89 +1,72 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-/**********************************************************
- * Define data struct for schema constraint binary database
- **********************************************************/
-
-using System;
-
-using SdbIndex = System.UInt16;
+using static DocumentFormat.OpenXml.Validation.Schema.SdbData;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
     /// Attribute constraint data.
     /// </summary>
-    internal class SdbAttributeConstraint : SdbData
+    internal readonly struct SdbAttributeConstraint
     {
-        /// <summary>
-        /// Gets or sets the xsd:use value.
-        /// </summary>
-        public XsdAttributeUse AttributeUse { get; set; }
+        public static readonly int TypeSize =
+            sizeof(XsdAttributeUse) +
+            sizeof(ushort) +
+            sizeof(byte);
 
-        /// <summary>
-        /// Gets or sets the index of the simple data in the SdbSimpleTypeRestriction data array.
-        /// </summary>
-        public ushort SimpleTypeIndex { get; set; }
-
-        /// <summary>
-        /// Gets or sets in which file format version this attribute is allowed.
-        /// </summary>
-        public byte FileFormatVersion { get; set; }
-
-        public SdbAttributeConstraint()
+        public SdbAttributeConstraint(XsdAttributeUse attributeUse, ushort simpleTypeIndex, byte fileFormatVersion)
         {
-        }
-
-        public SdbAttributeConstraint(XsdAttributeUse xsdAttributeUse, ushort simpleTypeIndex, byte fileFormatVersion)
-        {
-            AttributeUse = xsdAttributeUse;
+            AttributeUse = attributeUse;
             SimpleTypeIndex = simpleTypeIndex;
             FileFormatVersion = fileFormatVersion;
         }
 
         /// <summary>
-        /// Gets the size in bytes of this data structure.
+        /// Initializes an instance of <see cref="SdbAttributeConstraint"/> that deserializes from data
         /// </summary>
-        public static int TypeSize
+        /// <remarks>
+        /// The order of <see cref="SdbAttributeConstraint(byte[], int)"/> and <see cref="Serialize"/> must remain
+        /// in sync to facilitate serialization and deserialization of binary data
+        /// </remarks>
+        private SdbAttributeConstraint(byte[] data, int startIndex)
         {
-            get
-            {
-                // We save the enum data in byte
-                return sizeof(XsdAttributeUse) + sizeof(ushort) + sizeof(byte);
-            }
-        }
-
-        #region Override SdbData Members
-
-        /// <summary>
-        /// Gets the size in bytes of this data structure.
-        /// </summary>
-        public override int DataSize => TypeSize;
-
-        /// <summary>
-        /// Serialize the data into byte data.
-        /// </summary>
-        /// <returns>Byte data.</returns>
-        public override byte[] GetBytes()
-        {
-            return GetBytes(AttributeUse.Bytes(),
-                                SimpleTypeIndex.Bytes(),
-                                FileFormatVersion.Bytes());
+            AttributeUse = (XsdAttributeUse)LoadByte(data, ref startIndex);
+            SimpleTypeIndex = LoadSdbIndex(data, ref startIndex);
+            FileFormatVersion = LoadByte(data, ref startIndex);
         }
 
         /// <summary>
-        /// Deserialize the data from byte data.
+        /// Gets the xsd:use value.
         /// </summary>
-        /// <param name="value">The byte data.</param>
-        /// <param name="startIndex">The offset the data begins at.</param>
-        public override void LoadFromBytes(byte[] value, int startIndex)
-        {
-            AttributeUse = (XsdAttributeUse)LoadByte(value, ref startIndex);
-            SimpleTypeIndex = LoadSdbIndex(value, ref startIndex);
-            FileFormatVersion = LoadByte(value, ref startIndex);
-        }
+        public XsdAttributeUse AttributeUse { get; }
 
-        #endregion
+        /// <summary>
+        /// Gets the index of the simple data in the SdbSimpleTypeRestriction data array.
+        /// </summary>
+        public ushort SimpleTypeIndex { get; }
+
+        /// <summary>
+        /// Gets the file format version where this attribute is allowed.
+        /// </summary>
+        public byte FileFormatVersion { get; }
+
+        public static SdbAttributeConstraint Deserialize(byte[] data, int startIndex) => new SdbAttributeConstraint(data, startIndex);
+
+        /// <summary>
+        /// Serializes the instance data to a byte array
+        /// </summary>
+        /// <remarks>
+        /// The order of <see cref="SdbAttributeConstraint(byte[], int)"/> and <see cref="Serialize"/> must remain
+        /// in sync to facilitate serialization and deserialization of binary data
+        /// </remarks>
+        public byte[] Serialize()
+        {
+            return GetBytes(
+                TypeSize,
+                AttributeUse.Bytes(),
+                SimpleTypeIndex.Bytes(),
+                FileFormatVersion.Bytes());
+        }
     }
 }

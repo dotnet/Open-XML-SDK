@@ -28,15 +28,16 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             Assert.Equal(ClassId, instance.ClassId);
             Assert.Equal(SchemaTypeIndex, instance.SchemaTypeIndex);
 
-            var bytes = WriteBytes(instance.GetBytes());
+            var bytes = WriteBytes(instance.Serialize());
 
             Assert.True(bytes.SequenceEqual(new byte[] { 0x32, 0x00, 0x3F, 0x00 }));
 
-            var deserialized = new SdbClassIdToSchemaTypeIndex();
-            deserialized.LoadFromBytes(bytes, 0);
+            var deserialized = SdbClassIdToSchemaTypeIndex.Deserialize(bytes, 0);
 
             Assert.Equal(ClassId, deserialized.ClassId);
             Assert.Equal(SchemaTypeIndex, deserialized.SchemaTypeIndex);
+
+            Assert.Equal(instance, deserialized);
         }
 
         [Fact]
@@ -54,17 +55,18 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             Assert.Equal(AttributesCount, instance.AttributesCount);
             Assert.Equal(StartIndexOfAttributes, instance.StartIndexOfAttributes);
 
-            var bytes = WriteBytes(instance.GetBytes());
+            var bytes = WriteBytes(instance.Serialize());
 
             Assert.True(bytes.SequenceEqual(new byte[] { 0x32, 0x00, 0x3F, 0x00, 0x14, 0x00, 0x0A, 0x00 }));
 
-            var deserialized = new SdbSchemaType();
-            deserialized.LoadFromBytes(bytes, 0);
+            var deserialized = SdbSchemaType.Deserialize(bytes, 0);
 
             Assert.Equal(ParticleIndex, deserialized.ParticleIndex);
             Assert.Equal(SimpleTypeIndex, deserialized.SimpleTypeIndex);
             Assert.Equal(AttributesCount, deserialized.AttributesCount);
             Assert.Equal(StartIndexOfAttributes, deserialized.StartIndexOfAttributes);
+
+            Assert.Equal(instance, deserialized);
         }
 
         [Fact]
@@ -77,15 +79,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             const ushort ChildrenCount = 80;
             const ushort ChildrenStartIndex = 132;
 
-            var instance = new SdbParticleConstraint
-            {
-                ParticleType = ParticleType,
-                ElementTypeId = ElementTypeId,
-                MinOccurs = MinOccurs,
-                MaxOccurs = MaxOccurs,
-                ChildrenCount = ChildrenCount,
-                ChildrenStartIndex = ChildrenStartIndex,
-            };
+            var instance = new SdbParticleConstraint(ParticleType, ElementTypeId, MinOccurs, MaxOccurs, ChildrenCount, ChildrenStartIndex);
 
             Assert.Equal(ParticleType, instance.ParticleType);
             Assert.Equal(ElementTypeId, instance.ElementTypeId);
@@ -97,8 +91,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             var bytes = WriteBytes(instance.GetBytes());
             Assert.True(bytes.SequenceEqual(new byte[] { 0x06, 0x12, 0x00, 0x02, 0x00, 0x3C, 0x00, 0x00, 0x00, 0x50, 0x00, 0x84, 0x00 }));
 
-            var deserialized = new SdbParticleConstraint();
-            deserialized.LoadFromBytes(bytes, 0);
+            var deserialized = SdbParticleConstraint.Deserialize(bytes, 0);
 
             Assert.Equal(ParticleType, deserialized.ParticleType);
             Assert.Equal(ElementTypeId, deserialized.ElementTypeId);
@@ -106,6 +99,8 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             Assert.Equal(MaxOccurs, deserialized.MaxOccurs);
             Assert.Equal(ChildrenCount, deserialized.ChildrenCount);
             Assert.Equal(ChildrenStartIndex, deserialized.ChildrenStartIndex);
+
+            Assert.Equal(instance, deserialized);
         }
 
         [Fact]
@@ -117,14 +112,15 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
             Assert.Equal(ParticleIndex, instance.ParticleIndex);
 
-            var bytes = WriteBytes(instance.GetBytes());
+            var bytes = WriteBytes(instance.Serialize());
 
             Assert.True(bytes.SequenceEqual(new byte[] { 0x3F, 0x00 }));
 
-            var deserialized = new SdbParticleChildrenIndex();
-            deserialized.LoadFromBytes(bytes, 0);
+            var deserialized = SdbParticleChildrenIndex.Deserialize(bytes, 0);
 
             Assert.Equal(ParticleIndex, deserialized.ParticleIndex);
+
+            Assert.Equal(instance, deserialized);
         }
 
         [Fact]
@@ -140,16 +136,17 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             Assert.Equal(SimpleTypeIndex, instance.SimpleTypeIndex);
             Assert.Equal(FileFormatVersion, instance.FileFormatVersion);
 
-            var bytes = WriteBytes(instance.GetBytes());
+            var bytes = WriteBytes(instance.Serialize());
 
             Assert.True(bytes.SequenceEqual(new byte[] { 0x02, 0x35, 0x00, 0x20 }));
 
-            var deserialized = new SdbAttributeConstraint();
-            deserialized.LoadFromBytes(bytes, 0);
+            var deserialized = SdbAttributeConstraint.Deserialize(bytes, 0);
 
             Assert.Equal(AttributeUse, deserialized.AttributeUse);
             Assert.Equal(SimpleTypeIndex, deserialized.SimpleTypeIndex);
             Assert.Equal(FileFormatVersion, deserialized.FileFormatVersion);
+
+            Assert.Equal(instance, deserialized);
         }
 
         private byte[] WriteBytes(byte[] bytes)

@@ -20,13 +20,13 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void GroupParticleValidateTest()
         {
-            SdbSchemaDatas sdbSchemaDatas = SdbSchemaDatas.GetSchemaDatas(FileFormatVersions.Office2007);
+            SdbSchemaData sdbSchemaDatas = SdbSchemaData.GetSchemaData(FileFormatVersions.Office2007);
 
             TestSimpleGroup(sdbSchemaDatas);
             TestSimpleGroup2(sdbSchemaDatas);
         }
 
-        private void TestSimpleGroup(SdbSchemaDatas sdbSchemaDatas)
+        private void TestSimpleGroup(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
@@ -148,7 +148,7 @@ namespace DocumentFormat.OpenXml.Tests
             header.RemoveChild(errorChild);
         }
 
-        private void TestSimpleGroup2(SdbSchemaDatas sdbSchemaDatas)
+        private void TestSimpleGroup2(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;

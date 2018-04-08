@@ -5,126 +5,46 @@ using System;
 using System.IO;
 using System.Text;
 
+using static DocumentFormat.OpenXml.Validation.Schema.SdbData;
+
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
-    // TODO: consider a hash verify for the data
-    // System.Security.Cryptography.MD5CryptoServiceProvider for MD5 hash
-    // or System.Security.Cryptography.SHA256 hash
-    internal class SdbDataHead : SdbData
+    /// <summary>
+    /// The data head of the binary schema constraint data
+    /// </summary>
+    internal readonly struct SdbDataHead
     {
         public const int HeadSize = 128;
-        public const int SignatureSize = 16;
-        public const int LatestDataVersion = 0x00010000;
 
-        public static byte[] SignatureConst
+        private const int SignatureSize = 16;
+        private const int LatestDataVersion = 0x00010000;
+
+        private static readonly byte[] SignatureConst = Encoding.ASCII.GetBytes("OPENXML SCHM    ");
+
+        /// <summary>
+        /// Initializes an instance of <see cref="SdbDataHead"/> that deserializes from data
+        /// </summary>
+        /// <remarks>
+        /// The order of <see cref="SdbDataHead(byte[], int)"/> and <see cref="Serialize"/> must remain
+        /// in sync to facilitate serialization and deserialization of binary data
+        /// </remarks>
+        private SdbDataHead(byte[] value, int startIndex)
         {
-            get
-            {
-                byte[] signatureConst = Encoding.ASCII.GetBytes("OPENXML SCHM    ");
-                return signatureConst;
-            }
-        }
-
-        public byte[] Signature { get; set; }
-
-        //public byte[]
-        public int DataVersion { get; set; }
-
-        /// <summary>
-        /// Gets or sets size in byte of the schema constraint data, exclude the DataHead.
-        /// </summary>
-        public int DataByteCount { get; set; }
-
-        /// <summary>
-        /// Gets or sets the first class ID.
-        /// </summary>
-        public int StartClassId { get; set; }
-
-        public int ClassIdsCount { get; set; }
-
-        public int ClassIdsDataOffset { get; set; }
-
-        public int SchemaTypeCount { get; set; }
-
-        public int SchemaTypeDataOffset { get; set; }
-
-        public int ParticleCount { get; set; }
-
-        public int ParticleDataOffset { get; set; }
-
-        public int ParticleChildrenIndexCount { get; set; }
-
-        public int ParticleChildrenIndexDataOffset { get; set; }
-
-        public int AttributeCount { get; set; }
-
-        public int AttributeDataOffset { get; set; }
-
-        public int SimpleTypeCount { get; set; }
-
-        public int SimpleTypeDataOffset { get; set; }
-
-        /// <summary>
-        /// Convert the data of this class (all fields) into byte data.
-        /// </summary>
-        /// <returns>Byte data.</returns>
-        public override byte[] GetBytes()
-        {
-            byte[] headbytes = new byte[HeadSize];
-
-            // !!!!Caution: keep the order of the following code lines!!!!
-            var data = GetBytes(Signature,
-                          DataVersion.Bytes(),
-                          DataByteCount.Bytes(),
-
-                          StartClassId.Bytes(),
-
-                          ClassIdsCount.Bytes(),
-                          ClassIdsDataOffset.Bytes(),
-
-                          SchemaTypeCount.Bytes(),
-                          SchemaTypeDataOffset.Bytes(),
-
-                          ParticleCount.Bytes(),
-                          ParticleDataOffset.Bytes(),
-
-                          ParticleChildrenIndexCount.Bytes(),
-                          ParticleChildrenIndexDataOffset.Bytes(),
-
-                          AttributeCount.Bytes(),
-                          AttributeDataOffset.Bytes(),
-
-                          SimpleTypeCount.Bytes(),
-                          SimpleTypeDataOffset.Bytes());
-
-            data.CopyTo(headbytes, 0);
-
-            return headbytes;
-        }
-
-        /// <summary>
-        /// Load the fields data from byte data.
-        /// </summary>
-        /// <param name="value">The byte data array.</param>
-        /// <param name="startIndex">The offset the data begins at.</param>
-        public override void LoadFromBytes(byte[] value, int startIndex)
-        {
-            Signature = new byte[SignatureSize];
-            Array.Copy(value, startIndex, Signature, 0, SignatureSize);
+            var signature = new byte[SignatureSize];
+            Array.Copy(value, startIndex, signature, 0, SignatureSize);
             startIndex += SignatureSize;
 
             for (int i = 0; i < SignatureSize; i++)
             {
-                if (Signature[i] != SignatureConst[i])
+                if (signature[i] != SignatureConst[i])
                 {
                     // TODO: change to resource string
                     throw new InvalidDataException("Invalid schema constraint data.");
                 }
             }
 
-            // !!!!Caution: keep the order of the following code lines!!!!
-            DataVersion = SdbData.LoadInt(value, ref startIndex);
-            DataByteCount = SdbData.LoadInt(value, ref startIndex);
+            DataVersion = LoadInt(value, ref startIndex);
+            DataByteCount = LoadInt(value, ref startIndex);
 
             if (DataVersion != LatestDataVersion)
             {
@@ -132,30 +52,86 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 throw new InvalidDataException("Invalid schema constraint data.");
             }
 
-            StartClassId = SdbData.LoadInt(value, ref startIndex);
+            StartClassId = LoadInt(value, ref startIndex);
 
-            ClassIdsCount = SdbData.LoadInt(value, ref startIndex);
-            ClassIdsDataOffset = SdbData.LoadInt(value, ref startIndex);
+            ClassIdsCount = LoadInt(value, ref startIndex);
+            ClassIdsDataOffset = LoadInt(value, ref startIndex);
 
-            SchemaTypeCount = SdbData.LoadInt(value, ref startIndex);
-            SchemaTypeDataOffset = SdbData.LoadInt(value, ref startIndex);
+            SchemaTypeCount = LoadInt(value, ref startIndex);
+            SchemaTypeDataOffset = LoadInt(value, ref startIndex);
 
-            ParticleCount = SdbData.LoadInt(value, ref startIndex);
-            ParticleDataOffset = SdbData.LoadInt(value, ref startIndex);
+            ParticleCount = LoadInt(value, ref startIndex);
+            ParticleDataOffset = LoadInt(value, ref startIndex);
 
-            ParticleChildrenIndexCount = SdbData.LoadInt(value, ref startIndex);
-            ParticleChildrenIndexDataOffset = SdbData.LoadInt(value, ref startIndex);
+            ParticleChildrenIndexCount = LoadInt(value, ref startIndex);
+            ParticleChildrenIndexDataOffset = LoadInt(value, ref startIndex);
 
-            AttributeCount = SdbData.LoadInt(value, ref startIndex);
-            AttributeDataOffset = SdbData.LoadInt(value, ref startIndex);
+            AttributeCount = LoadInt(value, ref startIndex);
+            AttributeDataOffset = LoadInt(value, ref startIndex);
 
-            SimpleTypeCount = SdbData.LoadInt(value, ref startIndex);
-            SimpleTypeDataOffset = SdbData.LoadInt(value, ref startIndex);
+            SimpleTypeCount = LoadInt(value, ref startIndex);
+            SimpleTypeDataOffset = LoadInt(value, ref startIndex);
         }
 
-        public override int DataSize
+        public int DataVersion { get; }
+
+        public int DataByteCount { get; }
+
+        public int StartClassId { get; }
+
+        public int ClassIdsCount { get; }
+
+        public int ClassIdsDataOffset { get; }
+
+        public int SchemaTypeCount { get; }
+
+        public int SchemaTypeDataOffset { get; }
+
+        public int ParticleCount { get; }
+
+        public int ParticleDataOffset { get; }
+
+        public int ParticleChildrenIndexCount { get; }
+
+        public int ParticleChildrenIndexDataOffset { get; }
+
+        public int AttributeCount { get; }
+
+        public int AttributeDataOffset { get; }
+
+        public int SimpleTypeCount { get; }
+
+        public int SimpleTypeDataOffset { get; }
+
+        public static SdbDataHead Deserialize(byte[] value, int startIndex) => new SdbDataHead(value, startIndex);
+
+        /// <summary>
+        /// Serializes the instance data to a byte array
+        /// </summary>
+        /// <remarks>
+        /// The order of <see cref="SdbDataHead(byte[], int)"/> and <see cref="Serialize"/> must remain
+        /// in sync to facilitate serialization and deserialization of binary data
+        /// </remarks>
+        public byte[] Serialize()
         {
-            get { return HeadSize; }
+            return GetBytes(
+                HeadSize,
+                SignatureConst,
+                DataVersion.Bytes(),
+                DataByteCount.Bytes(),
+                StartClassId.Bytes(),
+                ClassIdsCount.Bytes(),
+                ClassIdsDataOffset.Bytes(),
+                SchemaTypeCount.Bytes(),
+                SchemaTypeDataOffset.Bytes(),
+                ParticleCount.Bytes(),
+                ParticleDataOffset.Bytes(),
+                ParticleChildrenIndexCount.Bytes(),
+                ParticleChildrenIndexDataOffset.Bytes(),
+                AttributeCount.Bytes(),
+                AttributeDataOffset.Bytes(),
+                SimpleTypeCount.Bytes(),
+                SimpleTypeDataOffset.Bytes());
         }
     }
 }

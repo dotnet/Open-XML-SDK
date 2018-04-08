@@ -20,12 +20,12 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void AnyParticleValidateTest()
         {
-            SdbSchemaDatas sdbSchemaDatas = SdbSchemaDatas.GetSchemaDatas(FileFormatVersions.Office2007);
+            SdbSchemaData sdbSchemaDatas = SdbSchemaData.GetSchemaData(FileFormatVersions.Office2007);
 
             TestSimpleAny(sdbSchemaDatas);
         }
 
-        private void TestSimpleAny(SdbSchemaDatas sdbSchemaDatas)
+        private void TestSimpleAny(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;

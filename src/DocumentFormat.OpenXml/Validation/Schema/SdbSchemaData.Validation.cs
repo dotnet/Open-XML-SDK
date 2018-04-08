@@ -8,7 +8,7 @@ using System.IO;
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
 #if DEBUG
-    internal partial class BinarySdbSchemaDatas
+    internal partial class SdbSchemaData
     {
         /// <summary>
         /// Make sure that the SdbDataHead data is correct.
@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="streamLength">The length of the data.</param>
         private void CheckDataHead(int streamLength)
         {
-            var dataHead = SdbDataHead;
+            var dataHead = DataHead;
 
             Assert(dataHead.StartClassId == 10001);
 
@@ -51,6 +51,17 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <summary>
+        /// Get a SdbClassIdToSchemaTypeIndex data for the specified class ID.
+        /// </summary>
+        /// <param name="classId">The class ID.</param>
+        /// <returns>A SdbClassIdToSchemaTypeIndex data.</returns>
+        private SdbClassIdToSchemaTypeIndex GetClassIdData(ushort classId)
+        {
+            int index = SdbClassIdToSchemaTypeIndex.ArrayIndexFromClassId(classId);
+            return ClassIdMap[index];
+        }
+
+        /// <summary>
         /// Check the loaded schema constraint data.
         /// </summary>
         private void CheckData()
@@ -58,7 +69,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             SdbClassIdToSchemaTypeIndex classIdData;
 
             // check all data in debug build
-            for (var classId = SdbClassIdToSchemaTypeIndex.StartClassId; classId < SdbClassIdToSchemaTypeIndex.StartClassId + SdbDataHead.ClassIdsCount - 1; classId++)
+            for (var classId = SdbClassIdToSchemaTypeIndex.StartClassId; classId < SdbClassIdToSchemaTypeIndex.StartClassId + DataHead.ClassIdsCount - 1; classId++)
             {
                 classIdData = GetClassIdData(classId);
                 Debug.Assert(classIdData.ClassId == classId);
@@ -72,12 +83,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             if (schemaTypeIndex == ushort.MaxValue)
                 return;
 
-            var schemaType = SdbSchemaTypes[schemaTypeIndex];
+            var schemaType = SchemaTypes[schemaTypeIndex];
             SdbParticleConstraint particle;
 
             if (schemaType.IsCompositeType)
             {
-                particle = SdbParticles[schemaType.ParticleIndex];
+                particle = Particles[schemaType.ParticleIndex];
                 Debug.Assert(particle.ParticleType != ParticleType.Element &&
                             particle.ParticleType != ParticleType.Invalid &&
                             particle.ParticleType != ParticleType.Any &&
@@ -89,14 +100,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             // check attributes
             for (int i = 0; i < schemaType.AttributesCount; i++)
             {
-                var attribute = SdbAttributes[schemaType.StartIndexOfAttributes + i];
+                var attribute = Attributes[schemaType.StartIndexOfAttributes + i];
                 CheckSimpleType(attribute.SimpleTypeIndex);
             }
         }
 
         private void CheckParticle(int particleIndex)
         {
-            var particle = SdbParticles[particleIndex];
+            var particle = Particles[particleIndex];
             switch (particle.ParticleType)
             {
                 case ParticleType.Element:
@@ -104,7 +115,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                     // element type ID must be a valid ID in the class ID map.
                     Debug.Assert(particle.ElementTypeId >= SdbClassIdToSchemaTypeIndex.StartClassId);
-                    Debug.Assert(particle.ElementTypeId < SdbClassIdToSchemaTypeIndex.StartClassId + SdbDataHead.ClassIdsCount);
+                    Debug.Assert(particle.ElementTypeId < SdbClassIdToSchemaTypeIndex.StartClassId + DataHead.ClassIdsCount);
                     break;
 
                 case ParticleType.All:
@@ -114,7 +125,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     Debug.Assert(particle.ChildrenCount >= 0); // CT_Ink has an empty <xsd:sequence></xsd:sequence>
                     for (int i = 0; i < particle.ChildrenCount; i++)
                     {
-                        var childIndex = SdbParticleIndexs[particle.ChildrenStartIndex + i];
+                        var childIndex = ParticleIndexes[particle.ChildrenStartIndex + i];
                         CheckParticle(childIndex.ParticleIndex);
                     }
 
@@ -135,7 +146,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         private void CheckSimpleType(int index)
         {
-            var simpleType = SimpleTypeRestrictions.SimpleTypes[index];
+            var simpleType = Restrictions.SimpleTypes[index];
 
             if (simpleType.IsEnum)
             {

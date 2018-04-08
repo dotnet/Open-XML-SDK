@@ -1,13 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-/**********************************************************
- * Define data struct for schema constraint binary database
- **********************************************************/
-
 using System;
-
-using SdbIndex = System.UInt16;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
@@ -19,36 +13,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         public const ushort InvalidId = ushort.MaxValue;
         public const int MaxSdbIndex = ushort.MaxValue;
 
-        #region abstract methods
-
-        /// <summary>
-        /// Gets the size in bytes of this data structure.
-        /// </summary>
-        public abstract int DataSize { get; }
-
-        /// <summary>
-        /// Serialize the data into byte data.
-        /// </summary>
-        /// <returns>Byte data.</returns>
-        public abstract byte[] GetBytes();
-
-        /// <summary>
-        /// Deserialize the data from byte data.
-        /// </summary>
-        /// <param name="value">The byte data.</param>
-        /// <param name="startIndex">The offset the data begins at.</param>
-        public abstract void LoadFromBytes(byte[] value, int startIndex);
-
-        #endregion
-
-        /// <summary>
-        /// Helper function to be called by derived classes.
-        /// </summary>
-        /// <param name="fieldvalues"></param>
-        /// <returns></returns>
-        protected byte[] GetBytes(params byte[][] fieldvalues)
+        public static byte[] GetBytes(int dataSize, params byte[][] fieldvalues)
         {
-            byte[] value = new byte[DataSize];
+            byte[] value = new byte[dataSize];
             int index = 0;
 
             foreach (var fieldvalue in fieldvalues)
@@ -60,9 +27,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             return value;
         }
 
-        #region Deserialize helper functions
-
-        // deserialize helper functions
         public static int LoadInt(byte[] bytes, ref int startIndex)
         {
             int result = BitConverter.ToInt32(bytes, startIndex);
@@ -89,7 +53,5 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             startIndex++;
             return bytes[startIndex - 1];
         }
-
-        #endregion
     }
 }
