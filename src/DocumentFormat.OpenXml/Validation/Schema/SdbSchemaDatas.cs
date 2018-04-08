@@ -5,9 +5,6 @@ using DocumentFormat.OpenXml.Validation.Schema.Restrictions;
 using System.Collections.Generic;
 using System.Diagnostics;
 
-using OpenXmlTypeId = System.UInt16;
-using SdbIndex = System.UInt16;
-
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
@@ -22,15 +19,15 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         protected SdbDataHead SdbDataHead { get; set; }
 
-        protected IReadOnlyList<SdbClassIdToSchemaTypeIndex> SdbClassIdMap { get; set; }
+        protected SdbDataArray<SdbClassIdToSchemaTypeIndex> SdbClassIdMap { get; set; }
 
-        protected IReadOnlyList<SdbSchemaType> SdbSchemaTypes { get; set; }
+        protected SdbDataArray<SdbSchemaType> SdbSchemaTypes { get; set; }
 
-        protected IReadOnlyList<SdbParticleConstraint> SdbParticles { get; set; }
+        protected SdbDataArray<SdbParticleConstraint> SdbParticles { get; set; }
 
-        protected IReadOnlyList<SdbParticleChildrenIndex> SdbParticleIndexs { get; set; }
+        protected SdbDataArray<SdbParticleChildrenIndex> SdbParticleIndexs { get; set; }
 
-        protected IReadOnlyList<SdbAttributeConstraint> SdbAttributes { get; set; }
+        protected SdbDataArray<SdbAttributeConstraint> SdbAttributes { get; set; }
 
         protected SimpleTypeRestrictions SimpleTypeRestrictions { get; set; }
 
