@@ -5,13 +5,9 @@ using System;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
-    /// <summary>
-    /// Base class for fixed size data.
-    /// </summary>
-    internal abstract class SdbData
+    internal static class SdbData
     {
         public const ushort InvalidId = ushort.MaxValue;
-        public const int MaxSdbIndex = ushort.MaxValue;
 
         public static byte[] GetBytes(int dataSize, params byte[][] fieldvalues)
         {
@@ -52,6 +48,31 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             startIndex++;
             return bytes[startIndex - 1];
+        }
+
+        public static byte[] Bytes(this int value)
+        {
+            return BitConverter.GetBytes(value);
+        }
+
+        public static byte[] Bytes(this ushort value)
+        {
+            return BitConverter.GetBytes(value);
+        }
+
+        public static byte[] Bytes(this ParticleType value)
+        {
+            return new byte[1] { (byte)value };
+        }
+
+        public static byte[] Bytes(this XsdAttributeUse value)
+        {
+            return new byte[1] { (byte)value };
+        }
+
+        public static byte[] Bytes(this byte value)
+        {
+            return new byte[1] { value };
         }
     }
 }
