@@ -393,4 +393,7 @@
   <data name="StreamAccessModeShouldRead" xml:space="preserve">
     <value>The stream was not opened for reading.</value>
   </data>
+  <data name="ReaderIncorrectTypeOnLoad" xml:space="preserve">
+    <value>The reader is currently at a {0} but {1} was specified.</value>
+  </data>
 </root>

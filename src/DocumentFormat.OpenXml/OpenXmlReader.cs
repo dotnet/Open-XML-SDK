@@ -242,6 +242,47 @@ namespace DocumentFormat.OpenXml
         public abstract OpenXmlElement LoadCurrentElement();
 
         /// <summary>
+        /// Loads the element at current cursor as the specified type.
+        /// </summary>
+        /// <typeparam name="T">The concrete type of the OpenXmlElement to load.</typeparam>
+        /// <returns>The OpenXmlElement that was loaded.</returns>
+        /// <exception cref="InvalidOperationException">Thrown when the current is the end element or when the ElementType and <typeparamref name="T"/> do not match.</exception>
+        public virtual T LoadElement<T>()
+            where T : OpenXmlElement
+        {
+            if (ElementType == typeof(T))
+            {
+                return (T)LoadCurrentElement();
+            }
+            else
+            {
+                throw new InvalidOperationException(ExceptionMessages.ReaderIncorrectTypeOnLoad);
+            }
+        }
+
+        /// <summary>
+        /// Attempts to load the element at current cursor as the specified type.
+        /// </summary>
+        /// <typeparam name="T">The concrete type of the OpenXmlElement to load.</typeparam>
+        /// <param name="element">The OpenXmlElement that was loaded.</param>
+        /// <returns><c>true</c> if the element was loaded, otherwise <c>false</c>.</returns>
+        /// <exception cref="InvalidOperationException">Thrown when the current is the end element.</exception>
+        public virtual bool TryLoadElement<T>(out T element)
+            where T : OpenXmlElement
+        {
+            if (ElementType == typeof(T))
+            {
+                element = (T)LoadCurrentElement();
+                return true;
+            }
+            else
+            {
+                element = null;
+                return false;
+            }
+        }
+
+        /// <summary>
         /// Gets the text of the element if the element is an OpenXmlLeafTextElement. Returns String.Empty for other elements.
         /// </summary>
         /// <returns>
