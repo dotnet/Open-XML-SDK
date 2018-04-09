@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void SequenceParticleValidateTest()
         {
-            SdbSchemaDatas sdbSchemaDatas = SdbSchemaDatas.GetSchemaDatas(FileFormatVersions.Office2007);
+            SdbSchemaData sdbSchemaDatas = SdbSchemaData.GetSchemaData(FileFormatVersions.Office2007);
 
             TestSimpleSequence(sdbSchemaDatas);
             TestSimpleSequence2(sdbSchemaDatas);
@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Tests
             TestSimpleSequence4(sdbSchemaDatas);
         }
 
-        private void TestSimpleSequence4(SdbSchemaDatas sdbSchemaDatas)
+        private void TestSimpleSequence4(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
@@ -133,7 +133,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":cat", validationContext.Errors[0].Description);
         }
 
-        private void TestSimpleSequence3(SdbSchemaDatas sdbSchemaDatas)
+        private void TestSimpleSequence3(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             Divs divs = new Divs();
@@ -244,7 +244,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":div", validationContext.Errors[0].Description);
         }
 
-        private void TestSimpleSequence2(SdbSchemaDatas sdbSchemaDatas)
+        private void TestSimpleSequence2(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             Ruby ruby = new Ruby();
@@ -362,7 +362,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":rt", validationContext.Errors[0].Description);
         }
 
-        private void TestSimpleSequence(SdbSchemaDatas sdbSchemaDatas)
+        private void TestSimpleSequence(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
 

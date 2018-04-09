@@ -1,14 +1,9 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-/**********************************************************
- * Define data struct for schema constraint binary database
- **********************************************************/
-
-using System;
 using System.Diagnostics;
 
-using SdbIndex = System.UInt16;
+using static DocumentFormat.OpenXml.Validation.Schema.SdbData;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
@@ -16,64 +11,44 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// Particle children index data.
     /// </summary>
     [DebuggerDisplay("ParticleIndex={ParticleIndex}")]
-    internal class SdbParticleChildrenIndex : SdbData
+    internal readonly struct SdbParticleChildrenIndex
     {
-        /// <summary>
-        /// Gets or sets the index of the particle in the SdbParticleConstraint data array.
-        /// </summary>
-        public ushort ParticleIndex { get; set; }
+        public static readonly int TypeSize = sizeof(ushort);
 
-        public SdbParticleChildrenIndex()
+        public SdbParticleChildrenIndex(ushort particleIndex)
         {
-            ParticleIndex = SdbData.InvalidId;
-        }
-
-        public SdbParticleChildrenIndex(ushort index)
-        {
-            ParticleIndex = index;
-        }
-
-        public SdbParticleChildrenIndex(int index)
-        {
-            if (index >= SdbData.MaxSdbIndex)
-            {
-                throw new ArgumentOutOfRangeException(nameof(index));
-            }
-
-            ParticleIndex = (ushort)index;
+            ParticleIndex = particleIndex;
         }
 
         /// <summary>
-        /// Gets the size in bytes of this data structure.
+        /// Initializes an instance of <see cref="SdbParticleChildrenIndex"/> that deserializes from data
         /// </summary>
-        public static int TypeSize => sizeof(ushort);
-
-        #region Override SdbData Members
+        /// <remarks>
+        /// The order of <see cref="SdbParticleChildrenIndex(byte[], int)"/> and <see cref="Serialize"/> must remain
+        /// in sync to facilitate serialization and deserialization of binary data
+        /// </remarks>
+        private SdbParticleChildrenIndex(byte[] data, int startIndex)
+        {
+            ParticleIndex = LoadSdbIndex(data, ref startIndex);
+        }
 
         /// <summary>
-        /// Gets the size in bytes of this data structure.
+        /// Gets the index of the particle in the SdbParticleConstraint data array.
         /// </summary>
-        public override int DataSize => TypeSize;
+        public ushort ParticleIndex { get; }
+
+        public static SdbParticleChildrenIndex Deserialize(byte[] data, int startIndex) => new SdbParticleChildrenIndex(data, startIndex);
 
         /// <summary>
-        /// Serialize the data into byte data.
+        /// Serializes the instance data to a byte array
         /// </summary>
-        /// <returns>Byte data.</returns>
-        public override byte[] GetBytes()
+        /// <remarks>
+        /// The order of <see cref="SdbParticleChildrenIndex(byte[], int)"/> and <see cref="Serialize"/> must remain
+        /// in sync to facilitate serialization and deserialization of binary data
+        /// </remarks>
+        public byte[] Serialize()
         {
             return ParticleIndex.Bytes();
         }
-
-        /// <summary>
-        /// Deserialize the data from byte data.
-        /// </summary>
-        /// <param name="value">The byte data.</param>
-        /// <param name="startIndex">The offset the data begins at.</param>
-        public override void LoadFromBytes(byte[] value, int startIndex)
-        {
-            ParticleIndex = LoadSdbIndex(value, ref startIndex);
-        }
-
-        #endregion
     }
 }

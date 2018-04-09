@@ -2,132 +2,21 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Validation.Schema.Restrictions;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Reflection;
-
-using SdbIndex = System.UInt16;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
-    internal class BinarySdbSchemaDatas : SdbSchemaDatas
+#if DEBUG
+    internal partial class SdbSchemaData
     {
-        private FileFormatVersions _fileFormat;
-
-        public BinarySdbSchemaDatas(FileFormatVersions fileFormat)
-        {
-            Debug.Assert(fileFormat.Any());
-
-            SdbDataHead = new SdbDataHead();
-            _fileFormat = fileFormat;
-
-            var name = $"DocumentFormat.OpenXml.GeneratedCode.{fileFormat}.constraints";
-
-#if DEBUG
-            var names = typeof(ValidationResources).GetTypeInfo().Assembly.GetManifestResourceNames();
-#endif
-
-            using (var schema = typeof(ValidationResources).GetTypeInfo().Assembly.GetManifestResourceStream(name))
-            {
-                if (schema == null)
-                {
-                    var message = string.Format(System.Globalization.CultureInfo.CurrentUICulture,
-                        ExceptionMessages.FileFormatNotSupported,
-                        fileFormat);
-
-                    throw new ArgumentOutOfRangeException(nameof(fileFormat), message);
-                }
-
-                Load(schema);
-            }
-        }
-
-        /// <summary>
-        /// Load the schema constraint data from the stream.
-        /// </summary>
-        /// <param name="dataStream">The data stream.</param>
-        internal void Load(Stream dataStream)
-        {
-            Debug.Assert(dataStream != null);
-            Debug.Assert(dataStream.CanRead);
-            Debug.Assert(dataStream.CanSeek);
-            Debug.Assert(dataStream.Length > SdbDataHead.HeadSize);
-
-            byte[] headBytes = new byte[SdbDataHead.HeadSize];
-
-            dataStream.Read(headBytes, 0, SdbDataHead.HeadSize);
-            SdbDataHead.LoadFromBytes(headBytes, 0);
-
-#if DEBUG
-            CheckDataHead((int)dataStream.Length);
-#endif
-
-            byte[] dataBytes;
-            int count;
-
-            // class ID map
-            count = SdbDataHead.ClassIdsCount * SdbClassIdToSchemaTypeIndex.TypeSize;
-            dataBytes = new byte[count];
-            dataStream.Read(dataBytes, 0, count);
-            SdbClassIdMap = new SdbDataArray<SdbClassIdToSchemaTypeIndex>(dataBytes, SdbDataHead.ClassIdsCount);
-
-            // schema types
-            count = SdbDataHead.SchemaTypeCount * SdbSchemaType.TypeSize;
-            dataBytes = new byte[count];
-            dataStream.Read(dataBytes, 0, count);
-            SdbSchemaTypes = new SdbDataArray<SdbSchemaType>(dataBytes, SdbDataHead.SchemaTypeCount);
-
-            // particle constraints
-            count = SdbDataHead.ParticleCount * SdbParticleConstraint.TypeSize;
-            dataBytes = new byte[count];
-            dataStream.Read(dataBytes, 0, count);
-            SdbParticles = new SdbDataArray<SdbParticleConstraint>(dataBytes, SdbDataHead.ParticleCount);
-
-            // particle children index
-            count = SdbDataHead.ParticleChildrenIndexCount * SdbParticleChildrenIndex.TypeSize;
-            dataBytes = new byte[count];
-            dataStream.Read(dataBytes, 0, count);
-            SdbParticleIndexs = new SdbDataArray<SdbParticleChildrenIndex>(dataBytes, SdbDataHead.ParticleChildrenIndexCount);
-
-            // attribute constraints
-            count = SdbDataHead.AttributeCount * SdbAttributeConstraint.TypeSize;
-            dataBytes = new byte[count];
-            dataStream.Read(dataBytes, 0, count);
-            SdbAttributes = new SdbDataArray<SdbAttributeConstraint>(dataBytes, SdbDataHead.AttributeCount);
-
-            // simple type constraints
-            dataStream.Seek(SdbDataHead.SimpleTypeDataOffset, SeekOrigin.Begin);
-            SimpleTypeRestrictions = Restrictions.SimpleTypeRestrictions.Deserialize(dataStream, _fileFormat);
-
-#if DEBUG
-            Assert(SdbDataHead.SimpleTypeCount == SimpleTypeRestrictions.SimpleTypeCount);
-
-            CheckData();
-#endif
-        }
-
-        /// <summary>
-        /// Get a SdbClassIdToSchemaTypeIndex data for the specified class ID.
-        /// </summary>
-        /// <param name="classId">The class ID.</param>
-        /// <returns>A SdbClassIdToSchemaTypeIndex data.</returns>
-        private SdbClassIdToSchemaTypeIndex GetClassIdData(ushort classId)
-        {
-            int index = SdbClassIdToSchemaTypeIndex.ArrayIndexFromClassId(classId);
-            return SdbClassIdMap[index];
-        }
-
-#if DEBUG
         /// <summary>
         /// Make sure that the SdbDataHead data is correct.
         /// </summary>
         /// <param name="streamLength">The length of the data.</param>
         private void CheckDataHead(int streamLength)
         {
-            var dataHead = SdbDataHead;
+            var dataHead = DataHead;
 
             Assert(dataHead.StartClassId == 10001);
 
@@ -162,6 +51,17 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <summary>
+        /// Get a SdbClassIdToSchemaTypeIndex data for the specified class ID.
+        /// </summary>
+        /// <param name="classId">The class ID.</param>
+        /// <returns>A SdbClassIdToSchemaTypeIndex data.</returns>
+        private SdbClassIdToSchemaTypeIndex GetClassIdData(ushort classId)
+        {
+            int index = SdbClassIdToSchemaTypeIndex.ArrayIndexFromClassId(classId);
+            return ClassIdMap[index];
+        }
+
+        /// <summary>
         /// Check the loaded schema constraint data.
         /// </summary>
         private void CheckData()
@@ -169,7 +69,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             SdbClassIdToSchemaTypeIndex classIdData;
 
             // check all data in debug build
-            for (var classId = SdbClassIdToSchemaTypeIndex.StartClassId; classId < SdbClassIdToSchemaTypeIndex.StartClassId + SdbDataHead.ClassIdsCount - 1; classId++)
+            for (var classId = SdbClassIdToSchemaTypeIndex.StartClassId; classId < SdbClassIdToSchemaTypeIndex.StartClassId + DataHead.ClassIdsCount - 1; classId++)
             {
                 classIdData = GetClassIdData(classId);
                 Debug.Assert(classIdData.ClassId == classId);
@@ -183,12 +83,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             if (schemaTypeIndex == ushort.MaxValue)
                 return;
 
-            var schemaType = SdbSchemaTypes[schemaTypeIndex];
+            var schemaType = SchemaTypes[schemaTypeIndex];
             SdbParticleConstraint particle;
 
             if (schemaType.IsCompositeType)
             {
-                particle = SdbParticles[schemaType.ParticleIndex];
+                particle = Particles[schemaType.ParticleIndex];
                 Debug.Assert(particle.ParticleType != ParticleType.Element &&
                             particle.ParticleType != ParticleType.Invalid &&
                             particle.ParticleType != ParticleType.Any &&
@@ -200,14 +100,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             // check attributes
             for (int i = 0; i < schemaType.AttributesCount; i++)
             {
-                var attribute = SdbAttributes[schemaType.StartIndexOfAttributes + i];
+                var attribute = Attributes[schemaType.StartIndexOfAttributes + i];
                 CheckSimpleType(attribute.SimpleTypeIndex);
             }
         }
 
         private void CheckParticle(int particleIndex)
         {
-            var particle = SdbParticles[particleIndex];
+            var particle = Particles[particleIndex];
             switch (particle.ParticleType)
             {
                 case ParticleType.Element:
@@ -215,7 +115,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                     // element type ID must be a valid ID in the class ID map.
                     Debug.Assert(particle.ElementTypeId >= SdbClassIdToSchemaTypeIndex.StartClassId);
-                    Debug.Assert(particle.ElementTypeId < SdbClassIdToSchemaTypeIndex.StartClassId + SdbDataHead.ClassIdsCount);
+                    Debug.Assert(particle.ElementTypeId < SdbClassIdToSchemaTypeIndex.StartClassId + DataHead.ClassIdsCount);
                     break;
 
                 case ParticleType.All:
@@ -225,7 +125,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     Debug.Assert(particle.ChildrenCount >= 0); // CT_Ink has an empty <xsd:sequence></xsd:sequence>
                     for (int i = 0; i < particle.ChildrenCount; i++)
                     {
-                        var childIndex = SdbParticleIndexs[particle.ChildrenStartIndex + i];
+                        var childIndex = ParticleIndexes[particle.ChildrenStartIndex + i];
                         CheckParticle(childIndex.ParticleIndex);
                     }
 
@@ -246,7 +146,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         private void CheckSimpleType(int index)
         {
-            var simpleType = SimpleTypeRestrictions.SimpleTypes[index];
+            var simpleType = Restrictions.SimpleTypes[index];
 
             if (simpleType.IsEnum)
             {
@@ -470,98 +370,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             simpleType.Verify();
         }
-#endif
-
-        private class SdbDataArray<T> : IReadOnlyList<T>
-            where T : SdbData, new()
-        {
-            [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-            private byte[] _sdbDataBytes;
-
-            public SdbDataArray(byte[] sdbDataBytes, int count)
-            {
-                Debug.Assert(sdbDataBytes != null);
-                Debug.Assert(sdbDataBytes.Length > 0);
-
-                _sdbDataBytes = sdbDataBytes;
-
-                Count = count;
-            }
-
-            public int Count { get; }
-
-            /// <summary>
-            /// Indexer to retrieve data.
-            /// </summary>
-            /// <param name="index">The index of the data item.</param>
-            /// <returns>Always returns a new data object.</returns>
-            public T this[int index]
-            {
-                get
-                {
-                    Debug.Assert(index >= 0);
-
-                    var sdbData = new T();
-
-                    Debug.Assert(index < _sdbDataBytes.Length / sdbData.DataSize);
-
-                    sdbData.LoadFromBytes(_sdbDataBytes, index * sdbData.DataSize);
-
-                    return sdbData;
-                }
-            }
-
-            public IEnumerator<T> GetEnumerator()
-            {
-                return new SdbDataArrayIterator(Count, index => this[index]);
-            }
-
-            IEnumerator IEnumerable.GetEnumerator()
-            {
-                return new SdbDataArrayIterator(Count, index => this[index]);
-            }
-
-            private sealed class SdbDataArrayIterator : IEnumerator<T>
-            {
-                private readonly int _max;
-                private readonly Func<int, T> _index;
-
-                private int _count;
-
-                public SdbDataArrayIterator(int max, Func<int, T> index)
-                {
-                    _max = max;
-                    _index = index;
-                    _count = 0;
-                }
-
-                public T Current { get; private set; }
-
-                object IEnumerator.Current => Current;
-
-                public void Dispose()
-                {
-                }
-
-                public bool MoveNext()
-                {
-                    if (_count < _max)
-                    {
-                        Current = _index(_count);
-                        _count++;
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                }
-
-                public void Reset()
-                {
-                    _count = 0;
-                }
-            }
-        }
     }
+#endif
 }
