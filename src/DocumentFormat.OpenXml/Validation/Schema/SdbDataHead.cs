@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using System;
 using System.IO;
 using System.Text;
 
@@ -16,7 +15,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     {
         public const int HeadSize = 128;
 
-        private const int SignatureSize = 16;
         private const int LatestDataVersion = 0x00010000;
 
         private static readonly byte[] SignatureConst = Encoding.ASCII.GetBytes("OPENXML SCHM    ");
@@ -64,18 +62,16 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </remarks>
         private SdbDataHead(byte[] value, int startIndex)
         {
-            var signature = new byte[SignatureSize];
-            Array.Copy(value, startIndex, signature, 0, SignatureSize);
-            startIndex += SignatureSize;
-
-            for (int i = 0; i < SignatureSize; i++)
+            for (int i = 0; i < SignatureConst.Length; i++)
             {
-                if (signature[i] != SignatureConst[i])
+                if (value[i] != SignatureConst[i])
                 {
                     // TODO: change to resource string
                     throw new InvalidDataException("Invalid schema constraint data.");
                 }
             }
+
+            startIndex += SignatureConst.Length;
 
             DataVersion = LoadInt(value, ref startIndex);
             DataByteCount = LoadInt(value, ref startIndex);
