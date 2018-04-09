@@ -21,6 +21,40 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         private static readonly byte[] SignatureConst = Encoding.ASCII.GetBytes("OPENXML SCHM    ");
 
+        public SdbDataHead(
+            int dataVersion,
+            int dataByteCount,
+            int startClassId,
+            int classIdsCount,
+            int classIdsDataOffset,
+            int schemaTypeCount,
+            int schemaTypeDataOffset,
+            int particleCount,
+            int particleDataOffset,
+            int particleChildrenIndexCount,
+            int particleChildrenIndexDataOffset,
+            int attributeCount,
+            int attributeDataOffset,
+            int simpleTypeCount,
+            int simpleTypeDataOffset)
+        {
+            DataVersion = dataVersion;
+            DataByteCount = dataByteCount;
+            StartClassId = startClassId;
+            ClassIdsCount = classIdsCount;
+            ClassIdsDataOffset = classIdsDataOffset;
+            SchemaTypeCount = schemaTypeCount;
+            SchemaTypeDataOffset = schemaTypeDataOffset;
+            ParticleCount = particleCount;
+            ParticleDataOffset = particleDataOffset;
+            ParticleChildrenIndexCount = particleChildrenIndexCount;
+            ParticleChildrenIndexDataOffset = particleChildrenIndexDataOffset;
+            AttributeCount = attributeCount;
+            AttributeDataOffset = attributeDataOffset;
+            SimpleTypeCount = simpleTypeCount;
+            SimpleTypeDataOffset = simpleTypeDataOffset;
+        }
+
         /// <summary>
         /// Initializes an instance of <see cref="SdbDataHead"/> that deserializes from data
         /// </summary>

@@ -18,6 +18,95 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         }
 
         [Fact]
+        public void SdbDataHeadTest()
+        {
+            const int DataVersion = 0x00010000;
+            const int DataByteCount = 5323;
+            const int StartClassId = 16;
+            const int ClassIdsCount = 32;
+            const int ClassIdsDataOffset = 124;
+            const int SchemaTypeCount = 6432;
+            const int SchemaTypeDataOffset = 1234;
+            const int ParticleCount = 62234;
+            const int ParticleDataOffset = 1536;
+            const int ParticleChildrenIndexCount = 2314;
+            const int ParticleChildrenIndexDataOffset = 187;
+            const int AttributeCount = 7908;
+            const int AttributeDataOffset = 7587;
+            const int SimpleTypeCount = 4887;
+            const int SimpleTypeDataOffset = 5980;
+
+            var instance = new SdbDataHead(
+                DataVersion,
+                DataByteCount,
+                StartClassId,
+                ClassIdsCount,
+                ClassIdsDataOffset,
+                SchemaTypeCount,
+                SchemaTypeDataOffset,
+                ParticleCount,
+                ParticleDataOffset,
+                ParticleChildrenIndexCount,
+                ParticleChildrenIndexDataOffset,
+                AttributeCount,
+                AttributeDataOffset,
+                SimpleTypeCount,
+                SimpleTypeDataOffset);
+
+            Assert.Equal(DataVersion, instance.DataVersion);
+            Assert.Equal(DataByteCount, instance.DataByteCount);
+            Assert.Equal(StartClassId, instance.StartClassId);
+            Assert.Equal(ClassIdsCount, instance.ClassIdsCount);
+            Assert.Equal(ClassIdsDataOffset, instance.ClassIdsDataOffset);
+            Assert.Equal(SchemaTypeCount, instance.SchemaTypeCount);
+            Assert.Equal(SchemaTypeDataOffset, instance.SchemaTypeDataOffset);
+            Assert.Equal(ParticleCount, instance.ParticleCount);
+            Assert.Equal(ParticleDataOffset, instance.ParticleDataOffset);
+            Assert.Equal(ParticleChildrenIndexCount, instance.ParticleChildrenIndexCount);
+            Assert.Equal(ParticleChildrenIndexDataOffset, instance.ParticleChildrenIndexDataOffset);
+            Assert.Equal(AttributeCount, instance.AttributeCount);
+            Assert.Equal(AttributeDataOffset, instance.AttributeDataOffset);
+            Assert.Equal(SimpleTypeCount, instance.SimpleTypeCount);
+            Assert.Equal(SimpleTypeDataOffset, instance.SimpleTypeDataOffset);
+
+            var bytes = WriteBytes(instance.Serialize());
+            var expected = new byte[]
+            {
+                0x4F, 0x50, 0x45, 0x4E, 0x58, 0x4D, 0x4C, 0x20, 0x53, 0x43, 0x48, 0x4D, 0x20, 0x20, 0x20,
+                0x20, 0x00, 0x00, 0x01, 0x00, 0xCB, 0x14, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x20, 0x00,
+                0x00, 0x00, 0x7C, 0x00, 0x00, 0x00, 0x20, 0x19, 0x00, 0x00, 0xD2, 0x04, 0x00, 0x00, 0x1A,
+                0xF3, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x0A, 0x09, 0x00, 0x00, 0xBB, 0x00, 0x00, 0x00,
+                0xE4, 0x1E, 0x00, 0x00, 0xA3, 0x1D, 0x00, 0x00, 0x17, 0x13, 0x00, 0x00, 0x5C, 0x17, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+            };
+
+            Assert.Equal(expected, bytes);
+
+            var deserialized = SdbDataHead.Deserialize(bytes, 0);
+
+            Assert.Equal(DataVersion, deserialized.DataVersion);
+            Assert.Equal(DataByteCount, deserialized.DataByteCount);
+            Assert.Equal(StartClassId, deserialized.StartClassId);
+            Assert.Equal(ClassIdsCount, deserialized.ClassIdsCount);
+            Assert.Equal(ClassIdsDataOffset, deserialized.ClassIdsDataOffset);
+            Assert.Equal(SchemaTypeCount, deserialized.SchemaTypeCount);
+            Assert.Equal(SchemaTypeDataOffset, deserialized.SchemaTypeDataOffset);
+            Assert.Equal(ParticleCount, deserialized.ParticleCount);
+            Assert.Equal(ParticleDataOffset, deserialized.ParticleDataOffset);
+            Assert.Equal(ParticleChildrenIndexCount, deserialized.ParticleChildrenIndexCount);
+            Assert.Equal(ParticleChildrenIndexDataOffset, deserialized.ParticleChildrenIndexDataOffset);
+            Assert.Equal(AttributeCount, deserialized.AttributeCount);
+            Assert.Equal(AttributeDataOffset, deserialized.AttributeDataOffset);
+            Assert.Equal(SimpleTypeCount, deserialized.SimpleTypeCount);
+            Assert.Equal(SimpleTypeDataOffset, deserialized.SimpleTypeDataOffset);
+
+            Assert.Equal(instance, deserialized);
+        }
+
+        [Fact]
         public void SdbClassIdToSchemaTypeIndexTest()
         {
             const ushort ClassId = 50;
