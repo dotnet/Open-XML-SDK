@@ -119,7 +119,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
             var bytes = WriteBytes(instance.Serialize());
 
-            Assert.True(bytes.SequenceEqual(new byte[] { 0x32, 0x00, 0x3F, 0x00 }));
+            Assert.Equal(new byte[] { 0x32, 0x00, 0x3F, 0x00 }, bytes);
 
             var deserialized = SdbClassIdToSchemaTypeIndex.Deserialize(bytes, 0);
 
@@ -146,7 +146,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
             var bytes = WriteBytes(instance.Serialize());
 
-            Assert.True(bytes.SequenceEqual(new byte[] { 0x32, 0x00, 0x3F, 0x00, 0x14, 0x00, 0x0A, 0x00 }));
+            Assert.Equal(new byte[] { 0x32, 0x00, 0x3F, 0x00, 0x14, 0x00, 0x0A, 0x00 }, bytes);
 
             var deserialized = SdbSchemaType.Deserialize(bytes, 0);
 
@@ -178,7 +178,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             Assert.Equal(ChildrenStartIndex, instance.ChildrenStartIndex);
 
             var bytes = WriteBytes(instance.GetBytes());
-            Assert.True(bytes.SequenceEqual(new byte[] { 0x06, 0x12, 0x00, 0x02, 0x00, 0x3C, 0x00, 0x00, 0x00, 0x50, 0x00, 0x84, 0x00 }));
+            Assert.Equal(new byte[] { 0x06, 0x12, 0x00, 0x02, 0x00, 0x3C, 0x00, 0x00, 0x00, 0x50, 0x00, 0x84, 0x00 }, bytes);
 
             var deserialized = SdbParticleConstraint.Deserialize(bytes, 0);
 
@@ -203,7 +203,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
             var bytes = WriteBytes(instance.Serialize());
 
-            Assert.True(bytes.SequenceEqual(new byte[] { 0x3F, 0x00 }));
+            Assert.Equal(new byte[] { 0x3F, 0x00 }, bytes);
 
             var deserialized = SdbParticleChildrenIndex.Deserialize(bytes, 0);
 
@@ -227,7 +227,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
             var bytes = WriteBytes(instance.Serialize());
 
-            Assert.True(bytes.SequenceEqual(new byte[] { 0x02, 0x35, 0x00, 0x20 }));
+            Assert.Equal(new byte[] { 0x02, 0x35, 0x00, 0x20 }, bytes);
 
             var deserialized = SdbAttributeConstraint.Deserialize(bytes, 0);
 
