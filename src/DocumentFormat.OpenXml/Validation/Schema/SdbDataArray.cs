@@ -1,47 +1,30 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using System.Diagnostics;
+using System;
+using System.IO;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
     internal class SdbDataArray<T>
-        where T : SdbData, new()
     {
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private byte[] _sdbDataBytes;
+        private readonly Func<byte[], int, T> _factory;
+        private readonly byte[] _data;
+        private readonly int _typeSize;
 
-        public SdbDataArray(byte[] sdbDataBytes, int count)
+        public SdbDataArray(Stream stream, int count, int typeSize, Func<byte[], int, T> factory)
         {
-            Debug.Assert(sdbDataBytes != null);
-            Debug.Assert(sdbDataBytes.Length > 0);
+            _factory = factory;
+            _typeSize = typeSize;
 
-            _sdbDataBytes = sdbDataBytes;
-
-            Count = count;
+            var size = count * typeSize;
+            _data = new byte[size];
+            stream.Read(_data, 0, size);
         }
 
-        public int Count { get; }
-
-        /// <summary>
-        /// Indexer to retrieve data.
-        /// </summary>
-        /// <param name="index">The index of the data item.</param>
-        /// <returns>Always returns a new data object.</returns>
         public T this[int index]
         {
-            get
-            {
-                Debug.Assert(index >= 0);
-
-                var sdbData = new T();
-
-                Debug.Assert(index < _sdbDataBytes.Length / sdbData.DataSize);
-
-                sdbData.LoadFromBytes(_sdbDataBytes, index * sdbData.DataSize);
-
-                return sdbData;
-            }
+            get => _factory(_data, index * _typeSize);
         }
     }
 }

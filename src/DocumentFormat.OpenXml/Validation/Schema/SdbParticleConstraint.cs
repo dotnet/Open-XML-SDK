@@ -1,13 +1,9 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-/**********************************************************
- * Define data struct for schema constraint binary database
- **********************************************************/
-
 using System.Diagnostics;
 
-using SdbIndex = System.UInt16;
+using static DocumentFormat.OpenXml.Validation.Schema.SdbData;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
@@ -15,49 +11,88 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// Particle constraint data.
     /// </summary>
     [DebuggerDisplay("ParticleType={ParticleType}")]
-    internal class SdbParticleConstraint : SdbData
+    internal readonly struct SdbParticleConstraint
     {
         /// <summary>
-        /// Represent maxOccurs="unbounded" by "0".
+        /// Gets the size in bytes of this data structure.
         /// </summary>
-        public const ushort UnboundedMaxOccurs = 0;
+        public static readonly int TypeSize =
+            sizeof(ParticleType) +
+            sizeof(ushort) +
+            sizeof(ushort) +
+            sizeof(int) +
+            sizeof(ushort) +
+            sizeof(ushort);
+
+        public SdbParticleConstraint(
+            ParticleType particleType,
+            ushort elementTypeId,
+            ushort minOccurs,
+            ushort maxOccurs,
+            ushort childrenCount,
+            ushort childrenStartIndex)
+        {
+            ParticleType = particleType;
+            ElementTypeId = elementTypeId;
+            MinOccurs = minOccurs;
+            MaxOccurs = maxOccurs;
+            ChildrenCount = childrenCount;
+            ChildrenStartIndex = childrenStartIndex;
+        }
 
         /// <summary>
-        /// Gets or sets the particle type of this particle.
+        /// Initializes an instance of <see cref="SdbParticleConstraint"/> that deserializes from data
         /// </summary>
-        public ParticleType ParticleType { get; set; }
+        /// <remarks>
+        /// The order of <see cref="SdbParticleConstraint(byte[], int)"/> and <see cref="GetBytes"/> must remain
+        /// in sync to facilitate serialization and deserialization of binary data
+        /// </remarks>
+        private SdbParticleConstraint(byte[] data, int startIndex)
+        {
+            ParticleType = (ParticleType)LoadByte(data, ref startIndex);
+            ElementTypeId = LoadSdbIndex(data, ref startIndex);
+            MinOccurs = LoadUInt16(data, ref startIndex);
+            MaxOccurs = LoadInt(data, ref startIndex);
+            ChildrenCount = LoadSdbIndex(data, ref startIndex);
+            ChildrenStartIndex = LoadSdbIndex(data, ref startIndex);
+        }
 
         /// <summary>
-        /// Gets or sets the element type ID (class ID).
+        /// Gets the particle type of this particle.
         /// </summary>
-        public ushort ElementTypeId { get; set; }
+        public ParticleType ParticleType { get; }
 
         /// <summary>
-        /// Gets or sets the xsd:minOccurs value of this particle.
+        /// Gets the element type ID (class ID).
+        /// </summary>
+        public ushort ElementTypeId { get; }
+
+        /// <summary>
+        /// Gets the xsd:minOccurs value of this particle.
         /// Just use ushort at now. throw exceptions if there are numbers > ushort.MaxValue.
         /// </summary>
-        public ushort MinOccurs { get; set; }
+        public ushort MinOccurs { get; }
 
         /// <summary>
-        /// Gets or sets the xsd:maxOccurs value of this particle.
+        /// Gets the xsd:maxOccurs value of this particle.
         /// ushort is not enough.
         /// </summary>
-        public int MaxOccurs { get; set; }
+        public int MaxOccurs { get; }
 
         /// <summary>
-        /// Gets or sets count of children particles.
+        /// Gets count of children particles.
         /// </summary>
-        public ushort ChildrenCount { get; set; }
+        public ushort ChildrenCount { get; }
 
         /// <summary>
-        /// Gets or sets the index of the first child particle index in the SdbParticleChildrenIndex data array.
+        /// Gets the index of the first child particle index in the SdbParticleChildrenIndex data array.
         /// </summary>
-        public ushort ChildrenStartIndex { get; set; }
+        public ushort ChildrenStartIndex { get; }
 
+#if DEBUG
         /// <summary>
         /// Gets the namespace ID defined in "xsd:any" when the particle type is ParticleType.Any or ParticleType.AnyWithUri
         /// </summary>
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         public ushort XsdAnyNamespaceId
         {
             get
@@ -69,48 +104,25 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 return ElementTypeId;
             }
         }
+#endif
+
+        public static SdbParticleConstraint Deserialize(byte[] data, int startIndex) => new SdbParticleConstraint(data, startIndex);
 
         /// <summary>
-        /// Gets the size in bytes of this data structure.
+        /// Serializes the instance data to a byte array
         /// </summary>
-        public static int TypeSize
+        /// <remarks>
+        /// The order of <see cref="SdbParticleConstraint(byte[], int)"/> and <see cref="GetBytes"/> must remain
+        /// in sync to facilitate serialization and deserialization of binary data
+        /// </remarks>
+        public byte[] GetBytes()
         {
-            get
-            {
-                return sizeof(ParticleType) +
-                        sizeof(ushort) +
-                        sizeof(ushort) +
-                        sizeof(int) +
-                        sizeof(ushort) +
-                        sizeof(ushort);
-            }
-        }
-
-        /// <inheritdoc/>
-        public override int DataSize => TypeSize;
-
-        /// <inheritdoc/>
-        public override byte[] GetBytes()
-        {
-            // !!!!Caution: keep the order of the following code lines!!!!
-            return GetBytes(ParticleType.Bytes(),
+            return SdbData.GetBytes(TypeSize, ParticleType.Bytes(),
                 ElementTypeId.Bytes(),
                 MinOccurs.Bytes(),
                 MaxOccurs.Bytes(),
                 ChildrenCount.Bytes(),
                 ChildrenStartIndex.Bytes());
-        }
-
-        /// <inheritdoc/>
-        public override void LoadFromBytes(byte[] value, int startIndex)
-        {
-            // !!!!Caution: keep the order of the following code lines!!!!
-            ParticleType = (ParticleType)LoadByte(value, ref startIndex);
-            ElementTypeId = LoadSdbIndex(value, ref startIndex);
-            MinOccurs = LoadUInt16(value, ref startIndex);
-            MaxOccurs = LoadInt(value, ref startIndex);
-            ChildrenCount = LoadSdbIndex(value, ref startIndex);
-            ChildrenStartIndex = LoadSdbIndex(value, ref startIndex);
         }
     }
 }

@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Benchmarks
         [Benchmark]
         public void LoadData()
         {
-            var data = SdbSchemaDatas.GetSchemaDatas(_version);
+            var data = SdbSchemaData.GetSchemaData(_version);
 
             foreach (var type in _types)
             {

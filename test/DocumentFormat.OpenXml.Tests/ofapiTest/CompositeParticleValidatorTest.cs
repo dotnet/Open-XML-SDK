@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CompositeParticleValidateTest()
         {
-            SdbSchemaDatas sdbSchemaDatas = SdbSchemaDatas.GetSchemaDatas(FileFormatVersions.Office2007);
+            SdbSchemaData sdbSchemaDatas = SdbSchemaData.GetSchemaData(FileFormatVersions.Office2007);
 
             // TODO: unit test for some types
             ValidatePpr(sdbSchemaDatas);
@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.Tests
             ValidateBlip(sdbSchemaDatas);
         }
 
-        private void ValidatePpr(SdbSchemaDatas sdbSchemaDatas)
+        private void ValidatePpr(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
@@ -163,7 +163,7 @@ namespace DocumentFormat.OpenXml.Tests
             pPr.RemoveChild(pPr.FirstChild);
         }
 
-        private void ValidateBody(SdbSchemaDatas sdbSchemaDatas)
+        private void ValidateBody(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
@@ -371,7 +371,7 @@ namespace DocumentFormat.OpenXml.Tests
             body.RemoveChild(errorChild);
         }
 
-        private void ValidateBlip(SdbSchemaDatas sdbSchemaDatas)
+        private void ValidateBlip(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;

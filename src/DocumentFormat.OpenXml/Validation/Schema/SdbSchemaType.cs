@@ -1,61 +1,59 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using SdbIndex = System.UInt16;
+using static DocumentFormat.OpenXml.Validation.Schema.SdbData;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
-    /// <summary>
-    /// Schema type data.
-    /// </summary>
-    internal class SdbSchemaType : SdbData
+    internal readonly struct SdbSchemaType
     {
-        // TODO: the ParticleIndex and SimpleTypeIndex can share one field.
+        public static readonly int TypeSize = sizeof(ushort) * 4;
 
-        /// <summary>
-        /// Gets or sets the index of the particle in the SdbParticleConstraint data array.
-        /// Will be "SdbData.InvalidId" if the schema type is NOT composite type.
-        /// </summary>
-        /// <remarks>This field can be eliminated.</remarks>
-        public ushort ParticleIndex { get; set; }
-
-        /// <summary>
-        /// Gets or sets the index of the simple data in the SdbSimpleTypeRestriction data array.
-        /// Will be "SdbData.InvalidId" if the schema type is NOT simple content only.
-        /// </summary>
-        public ushort SimpleTypeIndex { get; set; }
-
-        /// <summary>
-        /// Gets or sets the count of attributes.
-        /// </summary>
-        public ushort AttributesCount { get; set; }
-
-        /// <summary>
-        /// Gets or sets the index of the first attribute data in the SdbAttributeConstraint data array.
-        /// </summary>
-        public ushort StartIndexOfAttributes { get; set; }
-
-        /// <summary>
-        /// Initializes a new instance of the SdbSchemaType.
-        /// </summary>
-        public SdbSchemaType()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the SdbSchemaType.
-        /// </summary>
-        /// <param name="particleIndex"></param>
-        /// <param name="simpleTypeIndex"></param>
-        /// <param name="attributeCount"></param>
-        /// <param name="startAttribute"></param>
-        public SdbSchemaType(ushort particleIndex, ushort simpleTypeIndex, ushort attributeCount, ushort startAttribute)
+        public SdbSchemaType(ushort particleIndex, ushort simpleTypeIndex, ushort attributesCount, ushort startIndexOfAttributes)
         {
             ParticleIndex = particleIndex;
             SimpleTypeIndex = simpleTypeIndex;
-            AttributesCount = attributeCount;
-            StartIndexOfAttributes = startAttribute;
+            AttributesCount = attributesCount;
+            StartIndexOfAttributes = startIndexOfAttributes;
         }
+
+        /// <summary>
+        /// Initializes an instance of <see cref="SdbSchemaType"/> that deserializes from data
+        /// </summary>
+        /// <remarks>
+        /// The order of <see cref="SdbSchemaType(byte[], int)"/> and <see cref="Serialize"/> must remain
+        /// in sync to facilitate serialization and deserialization of binary data
+        /// </remarks>
+        private SdbSchemaType(byte[] data, int startIndex)
+        {
+            ParticleIndex = LoadSdbIndex(data, ref startIndex);
+            SimpleTypeIndex = LoadSdbIndex(data, ref startIndex);
+            AttributesCount = LoadSdbIndex(data, ref startIndex);
+            StartIndexOfAttributes = LoadSdbIndex(data, ref startIndex);
+        }
+
+        /// <summary>
+        /// Gets the index of the particle in the SdbParticleConstraint data array.
+        /// Will be "SdbData.InvalidId" if the schema type is NOT composite type.
+        /// </summary>
+        /// <remarks>This field can be eliminated.</remarks>
+        public ushort ParticleIndex { get; }
+
+        /// <summary>
+        /// Gets the index of the simple data in the SdbSimpleTypeRestriction data array.
+        /// Will be "SdbData.InvalidId" if the schema type is NOT simple content only.
+        /// </summary>
+        public ushort SimpleTypeIndex { get; }
+
+        /// <summary>
+        /// Gets the count of attributes.
+        /// </summary>
+        public ushort AttributesCount { get; }
+
+        /// <summary>
+        /// Gets the index of the first attribute data in the SdbAttributeConstraint data array.
+        /// </summary>
+        public ushort StartIndexOfAttributes { get; }
 
         /// <summary>
         /// Gets a value indicating whether the schema type is a schema type which contains particles.
@@ -67,32 +65,23 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         public bool IsSimpleContent => SimpleTypeIndex != SdbData.InvalidId;
 
+        public static SdbSchemaType Deserialize(byte[] data, int startIndex) => new SdbSchemaType(data, startIndex);
+
         /// <summary>
-        /// Gets the size in bytes of this data structure
+        /// Serializes the instance data to a byte array
         /// </summary>
-        public static int TypeSize => sizeof(ushort) * 4;
-
-        /// <inheritdoc/>
-        public override int DataSize => TypeSize;
-
-        /// <inheritdoc/>
-        public override byte[] GetBytes()
+        /// <remarks>
+        /// The order of <see cref="SdbSchemaType(byte[], int)"/> and <see cref="Serialize"/> must remain
+        /// in sync to facilitate serialization and deserialization of binary data
+        /// </remarks>
+        public byte[] Serialize()
         {
-            // !!!!Caution: keep the order of the following code lines!!!!
-            return GetBytes(ParticleIndex.Bytes(),
-                                SimpleTypeIndex.Bytes(),
-                                AttributesCount.Bytes(),
-                                StartIndexOfAttributes.Bytes());
-        }
-
-        /// <inheritdoc/>
-        public override void LoadFromBytes(byte[] value, int startIndex)
-        {
-            // !!!!Caution: keep the order of the following code lines!!!!
-            ParticleIndex = LoadSdbIndex(value, ref startIndex);
-            SimpleTypeIndex = LoadSdbIndex(value, ref startIndex);
-            AttributesCount = LoadSdbIndex(value, ref startIndex);
-            StartIndexOfAttributes = LoadSdbIndex(value, ref startIndex);
+            return GetBytes(
+                TypeSize,
+                ParticleIndex.Bytes(),
+                SimpleTypeIndex.Bytes(),
+                AttributesCount.Bytes(),
+                StartIndexOfAttributes.Bytes());
         }
     }
 }

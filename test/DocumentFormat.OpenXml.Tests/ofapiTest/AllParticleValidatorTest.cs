@@ -17,13 +17,13 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void AllParticleValidateTest()
         {
-            SdbSchemaDatas sdbSchemaDatas = SdbSchemaDatas.GetSchemaDatas(FileFormatVersions.Office2007);
+            SdbSchemaData sdbSchemaDatas = SdbSchemaData.GetSchemaData(FileFormatVersions.Office2007);
 
             TestSimpleAll(sdbSchemaDatas);
             TestSimpleAll2(sdbSchemaDatas);
         }
 
-        private void TestSimpleAll(SdbSchemaDatas sdbSchemaDatas)
+        private void TestSimpleAll(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
@@ -138,7 +138,7 @@ namespace DocumentFormat.OpenXml.Tests
             properties.RemoveChild(errorChild);
         }
 
-        private void TestSimpleAll2(SdbSchemaDatas sdbSchemaDatas)
+        private void TestSimpleAll2(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
