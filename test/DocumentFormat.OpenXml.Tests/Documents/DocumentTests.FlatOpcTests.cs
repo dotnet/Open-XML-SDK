@@ -145,7 +145,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        [Fact(Skip = "#380")]
+        [Fact]
         public void CanCreateFlatOpcDocumentsDynamically()
         {
             using (var stream = new MemoryStream())
@@ -155,10 +155,17 @@ namespace DocumentFormat.OpenXml.Tests
 
                 document.Save();
 
-                string opc = document.ToFlatOpcString();
-                using (var dest = FromFlatOpcString(opc))
+                if (OpenXmlPackage.CanSave)
                 {
-                    PackageAssert.Equal(document, dest);
+                    string opc = document.ToFlatOpcString();
+                    using (var dest = FromFlatOpcString(opc))
+                    {
+                        PackageAssert.Equal(document, dest);
+                    }
+                }
+                else
+                {
+                    Assert.Throws<IOException>(() => document.ToFlatOpcString());
                 }
             }
         }
