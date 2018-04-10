@@ -288,7 +288,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public long MaxCharactersInPart { get; internal set; }
 
         /// <summary>
-        /// Gets a value indicating whether saving the package is supported by calling <see cref="Save"/>. Some platforms (such as .NET Core), have limited support for saving and.
+        /// Gets a value indicating whether saving the package is supported by calling <see cref="Save"/>. Some platforms (such as .NET Core), have limited support for saving.
         /// If <c>false</c>, in order to save, the document and/or package needs to be fully closed and disposed and then reopened.
         /// </summary>
         public static bool CanSave { get; } =
