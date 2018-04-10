@@ -278,15 +278,18 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Gets or sets a value that indicates the maximum allowable number of characters in an Open XML part. A zero (0) value indicates that there are no limits on the size of the part. A non-zero value specifies the maximum size, in characters.
+        /// Gets or sets a value that indicates the maximum allowable number of characters in an Open XML part. A zero (0) value indicates that there are no limits on the size
+        /// of the part. A non-zero value specifies the maximum size, in characters.
         /// </summary>
         /// <remarks>
-        /// This property allows you to mitigate denial of service attacks where the attacker submits a package with an extremely large Open XML part. By limiting the size of a part, you can detect the attack and recover reliably.
+        /// This property allows you to mitigate denial of service attacks where the attacker submits a package with an extremely large Open XML part. By limiting the size of a
+        /// part, you can detect the attack and recover reliably.
         /// </remarks>
         public long MaxCharactersInPart { get; internal set; }
 
         /// <summary>
-        /// Gets a value indicating whether saving the package is supported. Some platforms (such as .NET Core, currently do not support this)
+        /// Gets a value indicating whether saving the package is supported by calling <see cref="Save"/>. Some platforms (such as .NET Core), have limited support for saving and.
+        /// If <c>false</c>, in order to save, the document and/or package needs to be fully closed and disposed and then reopened.
         /// </summary>
         public static bool CanSave { get; } =
 #if FEATURE_PACKAGE_FLUSH
@@ -1146,11 +1149,9 @@ namespace DocumentFormat.OpenXml.Packaging
         private readonly object _saveAndCloneLock = new object();
 
         /// <summary>
-        /// Saves the contents of all parts and relationships that are contained
-        /// in the OpenXml package, if FileOpenAccess is ReadWrite. Some platforms
-        /// do not support saving due to limitations in <see cref="System.IO.Packaging.Package"/>,
-        /// so please query <see cref="CanSave"/> at runtime to know if full saving will be supported
-        /// without disposing of the <see cref="OpenXmlPackage"/>.
+        /// Saves the contents of all parts and relationships that are contained in the OpenXml package, if <see cref="FileOpenAccess"/> is <see cref="FileAccess.ReadWrite"/>.
+        /// Some platforms do not support saving due to limitations in <see cref="System.IO.Packaging.Package"/>, so please query <see cref="CanSave"/> at runtime to know if
+        /// full saving will be supported without closing and disposing of the <see cref="OpenXmlPackage"/>.
         /// </summary>
         public void Save()
         {
