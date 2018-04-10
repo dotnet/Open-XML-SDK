@@ -341,17 +341,6 @@ namespace DocumentFormat.OpenXml.Packaging
             DeletePartsRecursivelyOfTypeBase<T>();
         }
 
-        // Remove this method due to bug #18394
-        // User can call doc.Package.Flush( ) as a workaround.
-        ///// <summary>
-        ///// Saves the contents of all parts and relationships that are contained in the OpenXml package.
-        ///// </summary>
-        //public void Save()
-        //{
-        //    this.ThrowIfObjectDisposed();
-        //    this.Package.Flush();
-        //}
-
         /// <summary>
         /// Saves and closes the OpenXml package and all underlying part streams.
         /// </summary>
