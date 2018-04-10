@@ -16,7 +16,6 @@
     FEATURE_XML_PROHIBIT_DTD         : XML settings only has ProhibitDtd property
     FEATURE_XML_QUOTECHAR            : XmlReader.QuoteChar is an abstract member
     FEATURE_XML_SCHEMA               : XML Schema is available in the platform
-    FEATURE_XML_VERIFYTOKEN          : XmlConvert.VerifyTOKEN is available in the platform
   -->
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net35' ">
@@ -24,7 +23,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net35' OR '$(TargetFramework)' == 'net40' OR '$(TargetFramework)' == 'net452' ">
-    <DefineConstants>$(DefineConstants);FEATURE_ABSTRACT_XML_CLOSE;FEATURE_CLOSE;FEATURE_PACKAGE_FLUSH;FEATURE_SERIALIZATION;FEATURE_SYSTEMEXCEPTION;FEATURE_XML_DISPOSE_PROTECTED;FEATURE_XML_QUOTECHAR;FEATURE_XML_SCHEMA;FEATURE_XML_VERIFYTOKEN</DefineConstants>
+    <DefineConstants>$(DefineConstants);FEATURE_ABSTRACT_XML_CLOSE;FEATURE_CLOSE;FEATURE_PACKAGE_FLUSH;FEATURE_SERIALIZATION;FEATURE_SYSTEMEXCEPTION;FEATURE_XML_DISPOSE_PROTECTED;FEATURE_XML_QUOTECHAR;FEATURE_XML_SCHEMA</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' OR '$(TargetFramework)' == 'net46' ">
@@ -32,7 +31,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net46' ">
-    <DefineConstants>$(DefineConstants);FEATURE_ABSTRACT_XML_CLOSE;FEATURE_CLOSE;FEATURE_PACKAGE_FLUSH;FEATURE_SERIALIZATION;FEATURE_SYSTEMEXCEPTION;FEATURE_XML_QUOTECHAR;FEATURE_XML_SCHEMA;FEATURE_XML_VERIFYTOKEN</DefineConstants>
+    <DefineConstants>$(DefineConstants);FEATURE_ABSTRACT_XML_CLOSE;FEATURE_CLOSE;FEATURE_PACKAGE_FLUSH;FEATURE_SERIALIZATION;FEATURE_SYSTEMEXCEPTION;FEATURE_XML_QUOTECHAR;FEATURE_XML_SCHEMA</DefineConstants>
   </PropertyGroup>
 
 

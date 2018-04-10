@@ -276,9 +276,8 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc/>
-        internal override void ParseXml()
+        private protected override void ParseXml()
         {
-            // do nothing
         }
 
         /// <summary>

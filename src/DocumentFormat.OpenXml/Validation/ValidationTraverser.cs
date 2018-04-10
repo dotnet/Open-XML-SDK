@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Validation
 
             // bookkeep MC context,
             // MC Spec: Compatibility-rule attributes shall affect the element to which they 1 are attached, including the element’s other attributes and contents.
-            validationContext.McContext.PushMCAttributes2(element.MCAttributes, prefix => element.LookupNamespace(prefix));
+            validationContext.McContext.PushMCAttributes2(element.MCAttributes, element.LookupNamespace);
 
             if (element.IsStrongTypedElement())
             {
