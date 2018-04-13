@@ -48,7 +48,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             var size = Marshal.SizeOf<T>();
 
             var bytes = new byte[size];
-            stream.Read(bytes, 0, size);
+            var read = stream.Read(bytes, 0, size);
+
+            if (read != size)
+            {
+                throw new InvalidDataException();
+            }
 
             var ptr = Marshal.AllocHGlobal(size);
 
@@ -72,7 +77,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
 
             var bytes = new byte[span.Length];
-            stream.Read(bytes, 0, span.Length);
+            var read = stream.Read(bytes, 0, span.Length);
+
+            if (read != span.Length)
+            {
+                throw new InvalidDataException();
+            }
 
             var size = Marshal.SizeOf<T>();
             var array = new T[span.Count];
