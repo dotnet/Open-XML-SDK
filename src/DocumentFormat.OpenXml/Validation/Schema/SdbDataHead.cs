@@ -1,167 +1,69 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using System;
 using System.IO;
-using System.Text;
-
-using static DocumentFormat.OpenXml.Validation.Schema.SdbData;
+using System.Runtime.InteropServices;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
     /// The data head of the binary schema constraint data
     /// </summary>
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
     internal readonly struct SdbDataHead
     {
-        public const int HeadSize = 128;
-
-        private const int LatestDataVersion = 0x00010000;
-
-        private static readonly byte[] SignatureConst = Encoding.ASCII.GetBytes("OPENXML SCHM    ");
+        /// <summary>
+        /// This value must be changed if the layout of any of the structs contained within
+        /// <see cref="SdbSchemaData"/> are changed (ie those contained in the constructor
+        /// for <see cref="SdbDataHead"/>
+        /// </summary>
+        private static readonly Guid CurrentVersion = new Guid("06dd55b7-ef4d-46ee-a618-042af4c3904e");
 
         public SdbDataHead(
-            int dataVersion,
-            int dataByteCount,
-            int startClassId,
-            int classIdsCount,
-            int classIdsDataOffset,
-            int schemaTypeCount,
-            int schemaTypeDataOffset,
-            int particleCount,
-            int particleDataOffset,
-            int particleChildrenIndexCount,
-            int particleChildrenIndexDataOffset,
-            int attributeCount,
-            int attributeDataOffset,
-            int simpleTypeCount,
-            int simpleTypeDataOffset)
+            FileFormatVersions fileFormat,
+            SdbClassIdToSchemaTypeIndex[] classIdMap,
+            SdbSchemaType[] schemaTypes,
+            SdbParticleConstraint[] particles,
+            SdbParticleChildrenIndex[] particleIndexes,
+            SdbAttributeConstraint[] attributes)
         {
-            DataVersion = dataVersion;
-            DataByteCount = dataByteCount;
-            StartClassId = startClassId;
-            ClassIdsCount = classIdsCount;
-            ClassIdsDataOffset = classIdsDataOffset;
-            SchemaTypeCount = schemaTypeCount;
-            SchemaTypeDataOffset = schemaTypeDataOffset;
-            ParticleCount = particleCount;
-            ParticleDataOffset = particleDataOffset;
-            ParticleChildrenIndexCount = particleChildrenIndexCount;
-            ParticleChildrenIndexDataOffset = particleChildrenIndexDataOffset;
-            AttributeCount = attributeCount;
-            AttributeDataOffset = attributeDataOffset;
-            SimpleTypeCount = simpleTypeCount;
-            SimpleTypeDataOffset = simpleTypeDataOffset;
+            Version = CurrentVersion;
+            FileFormat = fileFormat;
+            ClassIds = SdbSpan.Create(Marshal.SizeOf<SdbDataHead>(), classIdMap);
+            SchemaType = SdbSpan.Create(ClassIds.End, schemaTypes);
+            Particles = SdbSpan.Create(SchemaType.End, particles);
+            ParticleChildren = SdbSpan.Create(Particles.End, particleIndexes);
+            Attributes = SdbSpan.Create(ParticleChildren.End, attributes);
         }
 
-        /// <summary>
-        /// Initializes an instance of <see cref="SdbDataHead"/> that deserializes from data
-        /// </summary>
-        /// <remarks>
-        /// The order of <see cref="SdbDataHead(byte[], int)"/> and <see cref="Serialize"/> must remain
-        /// in sync to facilitate serialization and deserialization of binary data
-        /// </remarks>
-        private SdbDataHead(byte[] value, int startIndex)
+        public void Validate()
         {
-            for (int i = 0; i < SignatureConst.Length; i++)
+            if (Version != CurrentVersion
+                || ClassIds.Size != Marshal.SizeOf<SdbClassIdToSchemaTypeIndex>()
+                || SchemaType.Size != Marshal.SizeOf<SdbSchemaType>()
+                || Particles.Size != Marshal.SizeOf<SdbParticleConstraint>()
+                || ParticleChildren.Size != Marshal.SizeOf<SdbParticleChildrenIndex>()
+                || Attributes.Size != Marshal.SizeOf<SdbAttributeConstraint>())
             {
-                if (value[i] != SignatureConst[i])
-                {
-                    // TODO: change to resource string
-                    throw new InvalidDataException("Invalid schema constraint data.");
-                }
+                throw new InvalidDataException();
             }
-
-            startIndex += SignatureConst.Length;
-
-            DataVersion = LoadInt(value, ref startIndex);
-            DataByteCount = LoadInt(value, ref startIndex);
-
-            if (DataVersion != LatestDataVersion)
-            {
-                // TODO: change to resource string
-                throw new InvalidDataException("Invalid schema constraint data.");
-            }
-
-            StartClassId = LoadInt(value, ref startIndex);
-
-            ClassIdsCount = LoadInt(value, ref startIndex);
-            ClassIdsDataOffset = LoadInt(value, ref startIndex);
-
-            SchemaTypeCount = LoadInt(value, ref startIndex);
-            SchemaTypeDataOffset = LoadInt(value, ref startIndex);
-
-            ParticleCount = LoadInt(value, ref startIndex);
-            ParticleDataOffset = LoadInt(value, ref startIndex);
-
-            ParticleChildrenIndexCount = LoadInt(value, ref startIndex);
-            ParticleChildrenIndexDataOffset = LoadInt(value, ref startIndex);
-
-            AttributeCount = LoadInt(value, ref startIndex);
-            AttributeDataOffset = LoadInt(value, ref startIndex);
-
-            SimpleTypeCount = LoadInt(value, ref startIndex);
-            SimpleTypeDataOffset = LoadInt(value, ref startIndex);
         }
 
-        public int DataVersion { get; }
+        public Guid Version { get; }
 
-        public int DataByteCount { get; }
+        public FileFormatVersions FileFormat { get; }
 
-        public int StartClassId { get; }
+        public int End => Attributes.End;
 
-        public int ClassIdsCount { get; }
+        public SdbSpan ClassIds { get; }
 
-        public int ClassIdsDataOffset { get; }
+        public SdbSpan SchemaType { get; }
 
-        public int SchemaTypeCount { get; }
+        public SdbSpan Particles { get; }
 
-        public int SchemaTypeDataOffset { get; }
+        public SdbSpan ParticleChildren { get; }
 
-        public int ParticleCount { get; }
-
-        public int ParticleDataOffset { get; }
-
-        public int ParticleChildrenIndexCount { get; }
-
-        public int ParticleChildrenIndexDataOffset { get; }
-
-        public int AttributeCount { get; }
-
-        public int AttributeDataOffset { get; }
-
-        public int SimpleTypeCount { get; }
-
-        public int SimpleTypeDataOffset { get; }
-
-        public static SdbDataHead Deserialize(byte[] value, int startIndex) => new SdbDataHead(value, startIndex);
-
-        /// <summary>
-        /// Serializes the instance data to a byte array
-        /// </summary>
-        /// <remarks>
-        /// The order of <see cref="SdbDataHead(byte[], int)"/> and <see cref="Serialize"/> must remain
-        /// in sync to facilitate serialization and deserialization of binary data
-        /// </remarks>
-        public byte[] Serialize()
-        {
-            return GetBytes(
-                HeadSize,
-                SignatureConst,
-                DataVersion.Bytes(),
-                DataByteCount.Bytes(),
-                StartClassId.Bytes(),
-                ClassIdsCount.Bytes(),
-                ClassIdsDataOffset.Bytes(),
-                SchemaTypeCount.Bytes(),
-                SchemaTypeDataOffset.Bytes(),
-                ParticleCount.Bytes(),
-                ParticleDataOffset.Bytes(),
-                ParticleChildrenIndexCount.Bytes(),
-                ParticleChildrenIndexDataOffset.Bytes(),
-                AttributeCount.Bytes(),
-                AttributeDataOffset.Bytes(),
-                SimpleTypeCount.Bytes(),
-                SimpleTypeDataOffset.Bytes());
-        }
+        public SdbSpan Attributes { get; }
     }
 }

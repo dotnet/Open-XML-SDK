@@ -11,6 +11,7 @@
     FEATURE_DCS_SETTINGS             : DataContractSerializer settings class exists
     FEATURE_PACKAGE_FLUSH            : System.IO.Package.Flush will correctly flush all data
     FEATURE_SERIALIZATION            : Serialization using ISerializable is in the platform
+    FEATURE_CODE_GENERATOR_HELPERS   : Enables some internal helpers used for code generator.
     FEATURE_SYSTEMEXCEPTION          : SytemException is available in the platform
     FEATURE_XML_DISPOSE_PROTECTED    : XmlWriter.Dispose is protected
     FEATURE_XML_PROHIBIT_DTD         : XML settings only has ProhibitDtd property
@@ -27,12 +28,12 @@
     <DefineConstants>$(DefineConstants);FEATURE_ABSTRACT_XML_CLOSE;FEATURE_CLOSE;FEATURE_PACKAGE_FLUSH;FEATURE_SERIALIZATION;FEATURE_SYSTEMEXCEPTION;FEATURE_XML_DISPOSE_PROTECTED;FEATURE_XML_QUOTECHAR;FEATURE_XML_SCHEMA;FEATURE_XML_VERIFYTOKEN</DefineConstants>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' OR '$(TargetFramework)' == 'net46' ">
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' OR '$(TargetFramework)' == 'net46' OR '$(TargetFramework)' == 'netcoreapp1.0' ">
     <DefineConstants> $(DefineConstants);FEATURE_DCS_SETTINGS;FEATURE_ARRAY_EMPTY</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net46' ">
-    <DefineConstants>$(DefineConstants);FEATURE_ABSTRACT_XML_CLOSE;FEATURE_CLOSE;FEATURE_PACKAGE_FLUSH;FEATURE_SERIALIZATION;FEATURE_SYSTEMEXCEPTION;FEATURE_XML_QUOTECHAR;FEATURE_XML_SCHEMA;FEATURE_XML_VERIFYTOKEN</DefineConstants>
+    <DefineConstants>$(DefineConstants);FEATURE_ABSTRACT_XML_CLOSE;FEATURE_CLOSE;FEATURE_CODE_GENERATOR_HELPERS;FEATURE_PACKAGE_FLUSH;FEATURE_SERIALIZATION;FEATURE_SYSTEMEXCEPTION;FEATURE_XML_QUOTECHAR;FEATURE_XML_SCHEMA;FEATURE_XML_VERIFYTOKEN</DefineConstants>
   </PropertyGroup>
 
 

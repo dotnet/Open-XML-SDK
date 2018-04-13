@@ -1,39 +1,21 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using static DocumentFormat.OpenXml.Validation.Schema.SdbData;
+using System.Runtime.InteropServices;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
     /// Attribute constraint data.
     /// </summary>
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
     internal readonly struct SdbAttributeConstraint
     {
-        public static readonly int TypeSize =
-            sizeof(XsdAttributeUse) +
-            sizeof(ushort) +
-            sizeof(byte);
-
         public SdbAttributeConstraint(XsdAttributeUse attributeUse, ushort simpleTypeIndex, byte fileFormatVersion)
         {
             AttributeUse = attributeUse;
             SimpleTypeIndex = simpleTypeIndex;
             FileFormatVersion = fileFormatVersion;
-        }
-
-        /// <summary>
-        /// Initializes an instance of <see cref="SdbAttributeConstraint"/> that deserializes from data
-        /// </summary>
-        /// <remarks>
-        /// The order of <see cref="SdbAttributeConstraint(byte[], int)"/> and <see cref="Serialize"/> must remain
-        /// in sync to facilitate serialization and deserialization of binary data
-        /// </remarks>
-        private SdbAttributeConstraint(byte[] data, int startIndex)
-        {
-            AttributeUse = (XsdAttributeUse)LoadByte(data, ref startIndex);
-            SimpleTypeIndex = LoadSdbIndex(data, ref startIndex);
-            FileFormatVersion = LoadByte(data, ref startIndex);
         }
 
         /// <summary>
@@ -50,23 +32,5 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// Gets the file format version where this attribute is allowed.
         /// </summary>
         public byte FileFormatVersion { get; }
-
-        public static SdbAttributeConstraint Deserialize(byte[] data, int startIndex) => new SdbAttributeConstraint(data, startIndex);
-
-        /// <summary>
-        /// Serializes the instance data to a byte array
-        /// </summary>
-        /// <remarks>
-        /// The order of <see cref="SdbAttributeConstraint(byte[], int)"/> and <see cref="Serialize"/> must remain
-        /// in sync to facilitate serialization and deserialization of binary data
-        /// </remarks>
-        public byte[] Serialize()
-        {
-            return GetBytes(
-                TypeSize,
-                AttributeUse.Bytes(),
-                SimpleTypeIndex.Bytes(),
-                FileFormatVersion.Bytes());
-        }
     }
 }

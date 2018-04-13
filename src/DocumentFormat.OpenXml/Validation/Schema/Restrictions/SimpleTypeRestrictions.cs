@@ -46,9 +46,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     internal class SimpleTypeRestrictions
     {
         [DataMember]
-        public int SimpleTypeCount { get; set; }
-
-        [DataMember]
         public SimpleTypeRestriction[] SimpleTypes { get; set; }
 
         private static DataContractSerializer GetSerializer()
@@ -71,19 +68,21 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 #endif
         }
 
-        internal void Serialize(Stream stream)
+#if FEATURE_CODE_GENERATOR_HELPERS
+        public void Serialize(Stream stream)
         {
             var settings = new XmlWriterSettings
             {
                 Indent = true,
+                Encoding = Encoding.UTF8,
             };
 
-            using (var writer = new StreamWriter(stream, Encoding.UTF8))
-            using (var xml = XmlWriter.Create(writer, settings))
+            using (var xml = XmlWriter.Create(stream, settings))
             {
                 GetSerializer().WriteObject(xml, this);
             }
         }
+#endif
 
         /// <summary>
         /// Deserialize the binary data into memory object.

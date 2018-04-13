@@ -1,7 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using System;
+using System.IO;
+using System.Runtime.InteropServices;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
@@ -9,70 +10,83 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     {
         public const ushort InvalidId = ushort.MaxValue;
 
-        public static byte[] GetBytes(int dataSize, params byte[][] fieldvalues)
+        public static void Serialize<T>(T[] data, Stream stream)
+            where T : struct
         {
-            byte[] value = new byte[dataSize];
-            int index = 0;
+            var bytes = Serialize(data);
+            stream.Write(bytes, 0, bytes.Length);
+        }
 
-            foreach (var fieldvalue in fieldvalues)
+        public static void Serialize<T>(T instance, Stream stream)
+            where T : struct
+        {
+            Serialize(new[] { instance }, stream);
+        }
+
+        public static byte[] Serialize<T>(T[] data)
+            where T : struct
+        {
+            var size = Marshal.SizeOf<T>();
+            var length = size * data.Length;
+            var bytes = new byte[length];
+            var handle = GCHandle.Alloc(data, GCHandleType.Pinned);
+
+            try
             {
-                fieldvalue.CopyTo(value, index);
-                index += fieldvalue.Length;
+                Marshal.Copy(handle.AddrOfPinnedObject(), bytes, 0, length);
+                return bytes;
+            }
+            finally
+            {
+                handle.Free();
+            }
+        }
+
+        public static T Deserialize<T>(Stream stream)
+            where T : struct
+        {
+            var size = Marshal.SizeOf<T>();
+
+            var bytes = new byte[size];
+            stream.Read(bytes, 0, size);
+
+            var ptr = Marshal.AllocHGlobal(size);
+
+            try
+            {
+                Marshal.Copy(bytes, 0, ptr, size);
+                return Marshal.PtrToStructure<T>(ptr);
+            }
+            finally
+            {
+                Marshal.FreeHGlobal(ptr);
+            }
+        }
+
+        public static T[] Deserialize<T>(Stream stream, in SdbSpan span)
+            where T : struct
+        {
+            if (span.Offset != stream.Position)
+            {
+                throw new InvalidDataException();
             }
 
-            return value;
-        }
+            var bytes = new byte[span.Length];
+            stream.Read(bytes, 0, span.Length);
 
-        public static int LoadInt(byte[] bytes, ref int startIndex)
-        {
-            int result = BitConverter.ToInt32(bytes, startIndex);
-            startIndex += sizeof(int);
-            return result;
-        }
+            var size = Marshal.SizeOf<T>();
+            var array = new T[span.Count];
+            var handle = GCHandle.Alloc(array, GCHandleType.Pinned);
 
-        public static ushort LoadSdbIndex(byte[] bytes, ref int startIndex)
-        {
-            ushort result = BitConverter.ToUInt16(bytes, startIndex);
-            startIndex += sizeof(ushort);
-            return result;
-        }
-
-        public static ushort LoadUInt16(byte[] bytes, ref int startIndex)
-        {
-            ushort result = BitConverter.ToUInt16(bytes, startIndex);
-            startIndex += sizeof(ushort);
-            return result;
-        }
-
-        public static byte LoadByte(byte[] bytes, ref int startIndex)
-        {
-            startIndex++;
-            return bytes[startIndex - 1];
-        }
-
-        public static byte[] Bytes(this int value)
-        {
-            return BitConverter.GetBytes(value);
-        }
-
-        public static byte[] Bytes(this ushort value)
-        {
-            return BitConverter.GetBytes(value);
-        }
-
-        public static byte[] Bytes(this ParticleType value)
-        {
-            return new byte[1] { (byte)value };
-        }
-
-        public static byte[] Bytes(this XsdAttributeUse value)
-        {
-            return new byte[1] { (byte)value };
-        }
-
-        public static byte[] Bytes(this byte value)
-        {
-            return new byte[1] { value };
+            try
+            {
+                Marshal.Copy(bytes, 0, handle.AddrOfPinnedObject(), span.Length);
+                return array;
+            }
+            finally
+            {
+                handle.Free();
+            }
         }
     }
 }

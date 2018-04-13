@@ -2,33 +2,22 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System.Diagnostics;
-
-using static DocumentFormat.OpenXml.Validation.Schema.SdbData;
+using System.Runtime.InteropServices;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
     /// Particle constraint data.
     /// </summary>
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
     [DebuggerDisplay("ParticleType={ParticleType}")]
     internal readonly struct SdbParticleConstraint
     {
-        /// <summary>
-        /// Gets the size in bytes of this data structure.
-        /// </summary>
-        public static readonly int TypeSize =
-            sizeof(ParticleType) +
-            sizeof(ushort) +
-            sizeof(ushort) +
-            sizeof(int) +
-            sizeof(ushort) +
-            sizeof(ushort);
-
         public SdbParticleConstraint(
             ParticleType particleType,
             ushort elementTypeId,
             ushort minOccurs,
-            ushort maxOccurs,
+            int maxOccurs,
             ushort childrenCount,
             ushort childrenStartIndex)
         {
@@ -38,23 +27,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             MaxOccurs = maxOccurs;
             ChildrenCount = childrenCount;
             ChildrenStartIndex = childrenStartIndex;
-        }
-
-        /// <summary>
-        /// Initializes an instance of <see cref="SdbParticleConstraint"/> that deserializes from data
-        /// </summary>
-        /// <remarks>
-        /// The order of <see cref="SdbParticleConstraint(byte[], int)"/> and <see cref="GetBytes"/> must remain
-        /// in sync to facilitate serialization and deserialization of binary data
-        /// </remarks>
-        private SdbParticleConstraint(byte[] data, int startIndex)
-        {
-            ParticleType = (ParticleType)LoadByte(data, ref startIndex);
-            ElementTypeId = LoadSdbIndex(data, ref startIndex);
-            MinOccurs = LoadUInt16(data, ref startIndex);
-            MaxOccurs = LoadInt(data, ref startIndex);
-            ChildrenCount = LoadSdbIndex(data, ref startIndex);
-            ChildrenStartIndex = LoadSdbIndex(data, ref startIndex);
         }
 
         /// <summary>
@@ -105,24 +77,5 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
         }
 #endif
-
-        public static SdbParticleConstraint Deserialize(byte[] data, int startIndex) => new SdbParticleConstraint(data, startIndex);
-
-        /// <summary>
-        /// Serializes the instance data to a byte array
-        /// </summary>
-        /// <remarks>
-        /// The order of <see cref="SdbParticleConstraint(byte[], int)"/> and <see cref="GetBytes"/> must remain
-        /// in sync to facilitate serialization and deserialization of binary data
-        /// </remarks>
-        public byte[] GetBytes()
-        {
-            return SdbData.GetBytes(TypeSize, ParticleType.Bytes(),
-                ElementTypeId.Bytes(),
-                MinOccurs.Bytes(),
-                MaxOccurs.Bytes(),
-                ChildrenCount.Bytes(),
-                ChildrenStartIndex.Bytes());
-        }
     }
 }

@@ -15,26 +15,45 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     internal sealed partial class SdbSchemaData
     {
+        public const string Constraints = "constraints";
+        public const string SimpleTypes = "simpleTypes.xml";
+
         private readonly FileFormatVersions _fileFormat;
-        private readonly Dictionary<ushort, SchemaTypeData> _cache;
+        private readonly Dictionary<ushort, SchemaTypeData> _cache = new Dictionary<ushort, SchemaTypeData>();
 
-        private SdbDataHead DataHead { get; }
+        private SdbClassIdToSchemaTypeIndex[] ClassIdMap { get; }
 
-        private SdbDataArray<SdbClassIdToSchemaTypeIndex> ClassIdMap { get; }
+        private SdbSchemaType[] SchemaTypes { get; }
 
-        private SdbDataArray<SdbSchemaType> SchemaTypes { get; }
+        private SdbParticleConstraint[] Particles { get; }
 
-        private SdbDataArray<SdbParticleConstraint> Particles { get; }
+        private SdbParticleChildrenIndex[] ParticleIndexes { get; }
 
-        private SdbDataArray<SdbParticleChildrenIndex> ParticleIndexes { get; }
-
-        private SdbDataArray<SdbAttributeConstraint> Attributes { get; }
+        private SdbAttributeConstraint[] Attributes { get; }
 
         private SimpleTypeRestrictions Restrictions { get; }
 
         public static SdbSchemaData GetSchemaData(FileFormatVersions fileFormat)
         {
             return new SdbSchemaData(fileFormat);
+        }
+
+        public SdbSchemaData(
+            FileFormatVersions fileFormat,
+            SdbClassIdToSchemaTypeIndex[] classIdMap,
+            SdbSchemaType[] schemaTypes,
+            SdbParticleConstraint[] particles,
+            SdbParticleChildrenIndex[] particleIndexes,
+            SdbAttributeConstraint[] attributes,
+            SimpleTypeRestrictions restrictions)
+        {
+            _fileFormat = fileFormat;
+            ClassIdMap = classIdMap;
+            SchemaTypes = schemaTypes;
+            Particles = particles;
+            ParticleIndexes = particleIndexes;
+            Attributes = attributes;
+            Restrictions = restrictions;
         }
 
         private SdbSchemaData(FileFormatVersions fileFormat)
@@ -44,51 +63,97 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 throw new ArgumentOutOfRangeException(nameof(fileFormat));
             }
 
-            _cache = new Dictionary<ushort, SchemaTypeData>();
             _fileFormat = fileFormat;
+            Restrictions = GetSimpleTypeRestrictions(fileFormat);
 
-            var name = $"DocumentFormat.OpenXml.GeneratedCode.{fileFormat}.constraints";
+            using (var schema = GetStream(fileFormat, Constraints))
+            {
+                var dataHead = SdbData.Deserialize<SdbDataHead>(schema);
+
+                dataHead.Validate();
+
+                var length = (int)schema.Length;
+
+                if (dataHead.End != length)
+                {
+                    throw new InvalidDataException();
+                }
+
+                ClassIdMap = SdbData.Deserialize<SdbClassIdToSchemaTypeIndex>(schema, dataHead.ClassIds);
+                SchemaTypes = SdbData.Deserialize<SdbSchemaType>(schema, dataHead.SchemaType);
+                Particles = SdbData.Deserialize<SdbParticleConstraint>(schema, dataHead.Particles);
+                ParticleIndexes = SdbData.Deserialize<SdbParticleChildrenIndex>(schema, dataHead.ParticleChildren);
+                Attributes = SdbData.Deserialize<SdbAttributeConstraint>(schema, dataHead.Attributes);
+            }
+        }
+
+        private SimpleTypeRestrictions GetSimpleTypeRestrictions(FileFormatVersions fileFormat)
+        {
+            using (var simpleTypes = GetStream(fileFormat, SimpleTypes))
+            {
+                return SimpleTypeRestrictions.Deserialize(simpleTypes, _fileFormat);
+            }
+        }
+
+        public static Stream GetStream(FileFormatVersions fileFormat, string extension)
+        {
+            var name = $"DocumentFormat.OpenXml.GeneratedCode.{fileFormat}.{extension}";
 
 #if DEBUG
             var names = typeof(ValidationResources).GetTypeInfo().Assembly.GetManifestResourceNames();
 #endif
 
-            using (var schema = typeof(ValidationResources).GetTypeInfo().Assembly.GetManifestResourceStream(name))
+            var schema = typeof(ValidationResources).GetTypeInfo().Assembly.GetManifestResourceStream(name);
+
+            if (schema == null)
             {
-                if (schema == null)
-                {
-                    var message = string.Format(System.Globalization.CultureInfo.CurrentUICulture,
-                        ExceptionMessages.FileFormatNotSupported,
-                        fileFormat);
+                var message = string.Format(System.Globalization.CultureInfo.CurrentUICulture,
+                    ExceptionMessages.FileFormatNotSupported,
+                    fileFormat);
 
-                    throw new ArgumentOutOfRangeException(nameof(fileFormat), message);
-                }
-
-                byte[] headBytes = new byte[SdbDataHead.HeadSize];
-
-                schema.Read(headBytes, 0, SdbDataHead.HeadSize);
-                DataHead = SdbDataHead.Deserialize(headBytes, 0);
-
-#if DEBUG
-                CheckDataHead((int)schema.Length);
-#endif
-
-                ClassIdMap = new SdbDataArray<SdbClassIdToSchemaTypeIndex>(schema, DataHead.ClassIdsCount, SdbClassIdToSchemaTypeIndex.TypeSize, SdbClassIdToSchemaTypeIndex.Deserialize);
-                SchemaTypes = new SdbDataArray<SdbSchemaType>(schema, DataHead.SchemaTypeCount, SdbSchemaType.TypeSize, SdbSchemaType.Deserialize);
-                Particles = new SdbDataArray<SdbParticleConstraint>(schema, DataHead.ParticleCount, SdbParticleConstraint.TypeSize, SdbParticleConstraint.Deserialize);
-                ParticleIndexes = new SdbDataArray<SdbParticleChildrenIndex>(schema, DataHead.ParticleChildrenIndexCount, SdbParticleChildrenIndex.TypeSize, SdbParticleChildrenIndex.Deserialize);
-                Attributes = new SdbDataArray<SdbAttributeConstraint>(schema, DataHead.AttributeCount, SdbAttributeConstraint.TypeSize, SdbAttributeConstraint.Deserialize);
-
-                // simple type constraints
-                schema.Seek(DataHead.SimpleTypeDataOffset, SeekOrigin.Begin);
-                Restrictions = SimpleTypeRestrictions.Deserialize(schema, _fileFormat);
-
-#if DEBUG
-                Assert(DataHead.SimpleTypeCount == Restrictions.SimpleTypeCount);
-
-                CheckData();
-#endif
+                throw new ArgumentOutOfRangeException(nameof(fileFormat), message);
             }
+
+            return schema;
+        }
+
+        public void SerializeSdbData(Stream stream)
+        {
+            var head = new SdbDataHead(
+                _fileFormat,
+                ClassIdMap,
+                SchemaTypes,
+                Particles,
+                ParticleIndexes,
+                Attributes);
+
+            head.Validate();
+
+            void ValidatePosition(int position)
+            {
+                if (position != stream.Position)
+                {
+                    throw new InvalidDataException();
+                }
+            }
+
+            ValidatePosition(0);
+            SdbData.Serialize(head, stream);
+
+            ValidatePosition(head.ClassIds.Offset);
+            SdbData.Serialize(ClassIdMap, stream);
+
+            ValidatePosition(head.SchemaType.Offset);
+            SdbData.Serialize(SchemaTypes, stream);
+
+            ValidatePosition(head.Particles.Offset);
+            SdbData.Serialize(Particles, stream);
+
+            ValidatePosition(head.ParticleChildren.Offset);
+            SdbData.Serialize(ParticleIndexes, stream);
+
+            ValidatePosition(head.Attributes.Offset);
+            SdbData.Serialize(Attributes, stream);
         }
 
         /// <summary>
@@ -112,8 +177,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <returns>The constraint data of the schema type.</returns>
         public SchemaTypeData GetSchemaTypeData(int openxmlTypeId)
         {
-            Debug.Assert(openxmlTypeId >= DataHead.StartClassId);
-            Debug.Assert(openxmlTypeId < DataHead.StartClassId + DataHead.ClassIdsCount);
+            Debug.Assert(openxmlTypeId >= SdbClassIdToSchemaTypeIndex.StartClassId);
+            Debug.Assert(openxmlTypeId < SdbClassIdToSchemaTypeIndex.StartClassId + ClassIdMap.Length);
 
             ushort typeId = (ushort)openxmlTypeId;
 
@@ -163,7 +228,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         private ParticleConstraint BuildParticleConstraint(ushort particleIndex)
         {
             Debug.Assert(particleIndex >= 0);
-            Debug.Assert(particleIndex < DataHead.ParticleCount);
+            Debug.Assert(particleIndex < Particles.Length);
 
             SdbParticleConstraint sdbParticleConstraint = Particles[particleIndex];
             var particleConstraint = ParticleConstraint.CreateParticleConstraint(sdbParticleConstraint.ParticleType);
@@ -233,10 +298,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <returns>The SchemaTypeData object.</returns>
         private SchemaTypeData LoadSchemaTypeData(ushort openxmlTypeId)
         {
-            Debug.Assert(openxmlTypeId >= DataHead.StartClassId);
-            Debug.Assert(openxmlTypeId < DataHead.StartClassId + DataHead.ClassIdsCount);
+            Debug.Assert(openxmlTypeId >= SdbClassIdToSchemaTypeIndex.StartClassId);
+            Debug.Assert(openxmlTypeId < SdbClassIdToSchemaTypeIndex.StartClassId + ClassIdMap.Length);
 
-            ushort index = (ushort)(openxmlTypeId - DataHead.StartClassId);
+            ushort index = (ushort)(openxmlTypeId - SdbClassIdToSchemaTypeIndex.StartClassId);
             var sdbSchemaType = SchemaTypes[ClassIdMap[index].SchemaTypeIndex];
             var attributeConstraints = BuildAttributeConstraint(sdbSchemaType);
 
