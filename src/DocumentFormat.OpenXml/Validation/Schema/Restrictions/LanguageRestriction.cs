@@ -3,7 +3,6 @@
 
 using System.Runtime.Serialization;
 using System.Text.RegularExpressions;
-using System.Xml;
 
 namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 {
@@ -19,7 +18,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     [DataContract]
     internal class LanguageRestriction : TokenRestriction
     {
-        private static string LanguageLexicalPattern = @"\A[a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*\z";
+        private static Regex LanguageLexicalPattern = new Regex(@"\A[a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*\z", RegexOptions.Compiled | RegexOptions.CultureInvariant);
 
         /// <inheritdoc />
         public override XsdType XsdType => XsdType.Language;
@@ -30,16 +29,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         /// <inheritdoc />
         public override bool ValidateValueType(OpenXmlSimpleType attributeValue)
         {
-            try
+            if (VerifyTOKEN(attributeValue.InnerText))
             {
-                VerifyTOKEN(attributeValue.InnerText);
-            }
-            catch (XmlException)
-            {
-                return false;
+                return LanguageLexicalPattern.IsMatch(attributeValue.InnerText);
             }
 
-            return Regex.IsMatch(attributeValue.InnerText, LanguageLexicalPattern, RegexOptions.CultureInvariant);
+            return false;
         }
     }
 }

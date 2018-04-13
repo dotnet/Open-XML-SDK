@@ -13,8 +13,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal class AttributeValuePatternConstraint : SemanticConstraint
     {
-        private byte _attribute;
-        private string _pattern;
+        private readonly byte _attribute;
+        private readonly Regex _pattern;
 
         public AttributeValuePatternConstraint(byte attribute, string pattern)
             : base(SemanticValidationLevel.Element)
@@ -23,14 +23,12 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             _attribute = attribute;
 
-            if (pattern.StartsWith("^", StringComparison.Ordinal) && pattern.EndsWith("$", StringComparison.Ordinal))
+            if (!pattern.StartsWith("^", StringComparison.Ordinal) || !pattern.EndsWith("$", StringComparison.Ordinal))
             {
-                _pattern = pattern;
+                pattern = string.Concat("^", pattern, "$");
             }
-            else
-            {
-                _pattern = "^" + pattern + "$";
-            }
+
+            _pattern = new Regex(pattern, RegexOptions.Compiled);
         }
 
         public override ValidationErrorInfo Validate(ValidationContext context)
@@ -43,8 +41,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            Regex regex = new Regex(_pattern);
-            if (regex.IsMatch(attributeValue.InnerText))
+            if (_pattern.IsMatch(attributeValue.InnerText))
             {
                 return null;
             }
