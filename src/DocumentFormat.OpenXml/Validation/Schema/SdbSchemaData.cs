@@ -56,6 +56,24 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             Restrictions = restrictions;
         }
 
+        /// <summary>
+        /// Creates an instance of <see cref="SdbSchemaData"/> using embedded streams for constraint data and simple types.
+        /// </summary>
+        /// <remarks>
+        /// Constraint data are contained in a binary file that is defined as:
+        ///
+        /// <![CDATA[
+        /// [SdbDataHead][SdbClassIdToSchemaTypeIndex][SdbSchemaType][SdbParticleConstraint][SdbParticleChildrenIndex][SdbAttributeConstraint]
+        /// ]]>
+        ///
+        /// Since the size of the arrays are different for different <paramref name="fileFormat"/>, these are all marshalled separately, with the information
+        /// of offsets contained in <see cref="SdbDataHead"/>. These items are deserialized in this method, while <see cref="SerializeSdbData(Stream)"/> provides
+        /// the infrastructure to serialize them back to a binary file in the correct order
+        ///
+        /// Simple type data is contained in an XML file that is serialized with <see cref="SimpleTypeRestrictions.Serialize(Stream)"/> and deserialized with
+        /// <see cref="SimpleTypeRestrictions.Deserialize(Stream, FileFormatVersions)"/>
+        /// </remarks>
+        /// <param name="fileFormat"></param>
         private SdbSchemaData(FileFormatVersions fileFormat)
         {
             if (!fileFormat.Any())

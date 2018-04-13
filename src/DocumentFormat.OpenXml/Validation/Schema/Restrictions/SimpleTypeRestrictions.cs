@@ -68,7 +68,15 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 #endif
         }
 
-#if FEATURE_CODE_GENERATOR_HELPERS
+        /// <summary>
+        /// Serializes the current <see cref="SimpleTypeRestrictions"/> into an XML stream
+        /// </summary>
+        /// <remarks>
+        /// The serialization may produce different outputs on different platforms. All platforms
+        /// will deserialize with <see cref="Deserialize(Stream, FileFormatVersions)"/> into the
+        /// data structure.
+        /// </remarks>
+        /// <param name="stream">Stream to serialize the XML</param>
         public void Serialize(Stream stream)
         {
             var settings = new XmlWriterSettings
@@ -82,13 +90,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                 GetSerializer().WriteObject(xml, this);
             }
         }
-#endif
 
         /// <summary>
-        /// Deserialize the binary data into memory object.
+        /// Deserialize the XML stream into <see cref="SimpleTypeRestrictions"/>
         /// </summary>
-        /// <param name="stream">The data stream.</param>
-        /// <param name="fileFormat">The target file format version.</param>
+        /// <param name="stream">The XML stream</param>
+        /// <param name="fileFormat">The target file format version</param>
         /// <returns></returns>
         internal static SimpleTypeRestrictions Deserialize(Stream stream, FileFormatVersions fileFormat)
         {
