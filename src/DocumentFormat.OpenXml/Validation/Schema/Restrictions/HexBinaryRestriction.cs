@@ -1,9 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
 using System.Runtime.Serialization;
-using System.Text.RegularExpressions;
 
 namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 {
@@ -31,14 +29,33 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
             {
                 return false;
             }
-            else if (attributeValue.InnerText.Length == 0)
+
+            var length = attributeValue.InnerText.Length;
+
+            if (length % 2 == 1)
             {
-                return true;
+                return false;
             }
 
-            string pattern = @"\A([0-9a-fA-F][0-9a-fA-F])+\z";
+            for (var i = 0; i < length; i++)
+            {
+                var current = attributeValue.InnerText[i];
+                var isDigit = IsLetterBetween(current, '0', '9');
+                var isLower = IsLetterBetween(current, 'a', 'f');
+                var isUpper = IsLetterBetween(current, 'A', 'F');
 
-            return Regex.IsMatch(attributeValue.InnerText, pattern, RegexOptions.CultureInvariant);
+                if (!isDigit && !isLower && !isUpper)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        private static bool IsLetterBetween(char check, char lower, char upper)
+        {
+            return check >= lower && check <= upper;
         }
 
         /// <inheritdoc />

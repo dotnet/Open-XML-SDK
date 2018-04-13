@@ -2039,7 +2039,7 @@ namespace DocumentFormat.OpenXml
 
         internal abstract void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode);
 
-        internal virtual void ParseXml()
+        private protected virtual void ParseXml()
         {
             Debug.Assert(!XmlParsed);
 
@@ -2050,15 +2050,9 @@ namespace DocumentFormat.OpenXml
 
             using (XmlReader xmlReader = CreateXmlReader())
             {
-                xmlReader.Read(); // move the reader to the start of the element.
-                if (OpenXmlElementContext != null)
-                {
-                    Populate(xmlReader, OpenXmlElementContext.LoadMode);
-                }
-                else
-                {
-                    Populate(xmlReader, OpenXmlLoadMode.Full);
-                }
+                // move the reader to the start of the element.
+                xmlReader.Read();
+                Populate(xmlReader, OpenXmlElementContext?.LoadMode ?? OpenXmlLoadMode.Full);
             }
         }
 
