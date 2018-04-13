@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// Base class for simple type constraint.
     /// </summary>
     [DebuggerDisplay("RestrictionField={RestrictionField}")]
-    [DataContract]
+    [DataContract(Name = "s")]
     internal abstract class SimpleTypeRestriction
     {
         /// <summary>
@@ -43,26 +43,26 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         /// <summary>
         /// Gets or sets the pattern
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
+        [DataMember(EmitDefaultValue = false, Name = "p")]
         public string Pattern { get; set; }
 
         /// <summary>
         /// Gets or sets the maxLength facets.
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
-        public virtual int MaxLength { get; set; }
+        [DataMember(EmitDefaultValue = false, Name = "xl")]
+        public int MaxLength { get; set; }
 
         /// <summary>
         /// Gets or sets the minLength facets.
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
-        public virtual int MinLength { get; set; }
+        [DataMember(EmitDefaultValue = false, Name = "nl")]
+        public int MinLength { get; set; }
 
         /// <summary>
         /// Gets or sets the length facets.
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
-        public virtual int Length { get; set; }
+        [DataMember(EmitDefaultValue = false, Name = "l")]
+        public int Length { get; set; }
 
         /// <summary>
         /// Gets the restriction value in string in CultureInfo.CurrentUICulture.
@@ -94,7 +94,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         /// <summary>
         /// Gets or sets the effective constraint facets used in this instance.
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
+        [DataMember(EmitDefaultValue = false, Name = "r")]
         public RestrictionField RestrictionField { get; set; }
 
         /// <summary>

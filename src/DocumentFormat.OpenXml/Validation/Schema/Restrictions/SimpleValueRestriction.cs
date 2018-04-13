@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// </summary>
     /// <typeparam name="T">A basic number type.</typeparam>
     /// <typeparam name="ST">A type of OpenXmlSimpleType.</typeparam>
-    [DataContract]
+    [DataContract(Name = "simpletst")]
     internal abstract class SimpleValueRestriction<T, ST> : SimpleTypeRestriction
         where T : struct, IComparable<T>
         where ST : OpenXmlSimpleValue<T>, new()
@@ -33,25 +33,25 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         /// <summary>
         /// Gets or sets the minInclusive facets.
         /// </summary>
-        [DataMember]
+        [DataMember(Name = "ni")]
         public T MinInclusive { get; set; }
 
         /// <summary>
         /// Gets or sets the maxInclusive facets.
         /// </summary>
-        [DataMember]
+        [DataMember(Name = "xi")]
         public T MaxInclusive { get; set; }
 
         /// <summary>
         /// Gets or sets the minExclusive facets.
         /// </summary>
-        [DataMember]
+        [DataMember(Name = "ne")]
         public T MinExclusive { get; set; }
 
         /// <summary>
         /// Gets or sets the maxExclusive facets.
         /// </summary>
-        [DataMember]
+        [DataMember(Name = "xe")]
         public T MaxExclusive { get; set; }
 
         /// <inheritdoc />
@@ -88,16 +88,15 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                 return null;
             }
 
-            ST simpleValue = new ST();
-            simpleValue.InnerText = valueText;
-            return simpleValue;
+            return new ST { InnerText = valueText };
         }
 
         /// <inheritdoc />
         public override bool IsMinInclusiveValid(OpenXmlSimpleType attributeValue)
         {
             Debug.Assert(attributeValue is ST);
-            ST simpleValue = (ST)attributeValue;
+            var simpleValue = (ST)attributeValue;
+
             if ((RestrictionField & RestrictionField.MinInclusive) == RestrictionField.MinInclusive)
             {
                 // true if this.MinInclusive <= simpleValue.Value
@@ -114,7 +113,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         public override bool IsMinExclusiveValid(OpenXmlSimpleType attributeValue)
         {
             Debug.Assert(attributeValue is ST);
-            ST simpleValue = (ST)attributeValue;
+            var simpleValue = (ST)attributeValue;
+
             if ((RestrictionField & RestrictionField.MinExclusive) == RestrictionField.MinExclusive)
             {
                 // true if this.MinExclusive < simpleValue.Value
@@ -131,7 +131,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         public override bool IsMaxInclusiveValid(OpenXmlSimpleType attributeValue)
         {
             Debug.Assert(attributeValue is ST);
-            ST simpleValue = (ST)attributeValue;
+            var simpleValue = (ST)attributeValue;
+
             if ((RestrictionField & RestrictionField.MaxInclusive) == RestrictionField.MaxInclusive)
             {
                 // true if this.MaxInclusive >= simpleValue.Value
@@ -148,7 +149,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         public override bool IsMaxExclusiveValid(OpenXmlSimpleType attributeValue)
         {
             Debug.Assert(attributeValue is ST);
-            ST simpleValue = (ST)attributeValue;
+            var simpleValue = (ST)attributeValue;
+
             if ((RestrictionField & RestrictionField.MaxExclusive) == RestrictionField.MaxExclusive)
             {
                 // true if this.MaxExclusive > simpleValue.Value
@@ -166,7 +168,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         {
             if (attributeValue.HasValue)
             {
-                ST stValue = (ST)attributeValue;
+                var stValue = (ST)attributeValue;
 
                 if (stValue.Value.CompareTo(MinValue) < 0 ||
                     stValue.Value.CompareTo(MaxValue) > 0)

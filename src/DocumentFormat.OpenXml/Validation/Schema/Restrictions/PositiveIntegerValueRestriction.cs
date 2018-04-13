@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     ///
     /// !******************** TODO: at current, the CodeGen generate int for xsd:integer
     /// </remarks>
-    [DataContract]
+    [DataContract(Name = "pi")]
     internal class PositiveIntegerValueRestriction : IntegerValueRestriction
     {
         protected override long MinValue => 1;

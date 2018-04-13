@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using System;
 using System.Runtime.Serialization;
 
 namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
@@ -9,7 +8,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// <summary>
     /// Int16 ( xsd:short ) based value restriction.
     /// </summary>
-    [DataContract]
+    [DataContract(Name = "i16")]
     internal class Int16ValueRestriction : SimpleValueRestriction<short, Int16Value>
     {
         protected override short MinValue => short.MinValue;

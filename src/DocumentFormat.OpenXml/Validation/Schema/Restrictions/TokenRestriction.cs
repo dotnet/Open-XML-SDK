@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     ///
     /// In Ecma376, most token are enumerations.
     /// </remarks>
-    [DataContract]
+    [DataContract(Name = "tkn")]
     internal class TokenRestriction : StringRestriction
     {
         private static char[] crt = { '\n', '\r', '\t' };

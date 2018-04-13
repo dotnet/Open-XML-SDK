@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// consisting of two hexadecimal digits ([0-9a-fA-F]) representing the octet code.
     /// For example, "0FB7" is a hex encoding for the 16-bit integer 4023 (whose binary representation is 111110110111).
     /// </remarks>
-    [DataContract]
+    [DataContract(Name = "h")]
     internal class HexBinaryRestriction : StringRestriction
     {
         /// <inheritdoc />

@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// An anyURI value can be absolute or relative, and may have an optional fragment identifier (i.e., it may be a URI Reference).
     /// This type should be used to specify the intention that the value fulfills the role of a URI as defined by [RFC 2396], as amended by [RFC 2732].
     /// </remarks>
-    [DataContract]
+    [DataContract(Name = "a")]
     internal class AnyUriRestriction : StringRestriction
     {
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]

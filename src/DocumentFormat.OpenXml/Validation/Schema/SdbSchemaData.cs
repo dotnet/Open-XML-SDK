@@ -105,11 +105,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
         }
 
-        private SimpleTypeRestrictions GetSimpleTypeRestrictions(FileFormatVersions fileFormat)
+        private static SimpleTypeRestrictions GetSimpleTypeRestrictions(FileFormatVersions fileFormat)
         {
             using (var simpleTypes = GetStream(fileFormat, SimpleTypes))
             {
-                return SimpleTypeRestrictions.Deserialize(simpleTypes, _fileFormat);
+                return SimpleTypeRestrictions.Deserialize(simpleTypes, fileFormat);
             }
         }
 
