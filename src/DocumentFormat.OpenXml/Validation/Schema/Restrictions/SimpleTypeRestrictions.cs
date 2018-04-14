@@ -46,9 +46,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     internal class SimpleTypeRestrictions
     {
         [DataMember]
-        public int SimpleTypeCount { get; set; }
-
-        [DataMember]
         public SimpleTypeRestriction[] SimpleTypes { get; set; }
 
         private static DataContractSerializer GetSerializer()
@@ -71,25 +68,34 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 #endif
         }
 
-        internal void Serialize(Stream stream)
+        /// <summary>
+        /// Serializes the current <see cref="SimpleTypeRestrictions"/> into an XML stream
+        /// </summary>
+        /// <remarks>
+        /// The serialization may produce different outputs on different platforms. All platforms
+        /// will deserialize with <see cref="Deserialize(Stream, FileFormatVersions)"/> into the
+        /// data structure.
+        /// </remarks>
+        /// <param name="stream">Stream to serialize the XML</param>
+        public void Serialize(Stream stream)
         {
             var settings = new XmlWriterSettings
             {
                 Indent = true,
+                Encoding = Encoding.UTF8,
             };
 
-            using (var writer = new StreamWriter(stream, Encoding.UTF8))
-            using (var xml = XmlWriter.Create(writer, settings))
+            using (var xml = XmlWriter.Create(stream, settings))
             {
                 GetSerializer().WriteObject(xml, this);
             }
         }
 
         /// <summary>
-        /// Deserialize the binary data into memory object.
+        /// Deserialize the XML stream into <see cref="SimpleTypeRestrictions"/>
         /// </summary>
-        /// <param name="stream">The data stream.</param>
-        /// <param name="fileFormat">The target file format version.</param>
+        /// <param name="stream">The XML stream</param>
+        /// <param name="fileFormat">The target file format version</param>
         /// <returns></returns>
         internal static SimpleTypeRestrictions Deserialize(Stream stream, FileFormatVersions fileFormat)
         {

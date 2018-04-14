@@ -1,35 +1,19 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using static DocumentFormat.OpenXml.Validation.Schema.SdbData;
+using System.Runtime.InteropServices;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
     internal readonly struct SdbSchemaType
     {
-        public static readonly int TypeSize = sizeof(ushort) * 4;
-
         public SdbSchemaType(ushort particleIndex, ushort simpleTypeIndex, ushort attributesCount, ushort startIndexOfAttributes)
         {
             ParticleIndex = particleIndex;
             SimpleTypeIndex = simpleTypeIndex;
             AttributesCount = attributesCount;
             StartIndexOfAttributes = startIndexOfAttributes;
-        }
-
-        /// <summary>
-        /// Initializes an instance of <see cref="SdbSchemaType"/> that deserializes from data
-        /// </summary>
-        /// <remarks>
-        /// The order of <see cref="SdbSchemaType(byte[], int)"/> and <see cref="Serialize"/> must remain
-        /// in sync to facilitate serialization and deserialization of binary data
-        /// </remarks>
-        private SdbSchemaType(byte[] data, int startIndex)
-        {
-            ParticleIndex = LoadSdbIndex(data, ref startIndex);
-            SimpleTypeIndex = LoadSdbIndex(data, ref startIndex);
-            AttributesCount = LoadSdbIndex(data, ref startIndex);
-            StartIndexOfAttributes = LoadSdbIndex(data, ref startIndex);
         }
 
         /// <summary>
@@ -64,24 +48,5 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// Gets a value indicating whether the schema type contains simple content only.
         /// </summary>
         public bool IsSimpleContent => SimpleTypeIndex != SdbData.InvalidId;
-
-        public static SdbSchemaType Deserialize(byte[] data, int startIndex) => new SdbSchemaType(data, startIndex);
-
-        /// <summary>
-        /// Serializes the instance data to a byte array
-        /// </summary>
-        /// <remarks>
-        /// The order of <see cref="SdbSchemaType(byte[], int)"/> and <see cref="Serialize"/> must remain
-        /// in sync to facilitate serialization and deserialization of binary data
-        /// </remarks>
-        public byte[] Serialize()
-        {
-            return GetBytes(
-                TypeSize,
-                ParticleIndex.Bytes(),
-                SimpleTypeIndex.Bytes(),
-                AttributesCount.Bytes(),
-                StartIndexOfAttributes.Bytes());
-        }
     }
 }

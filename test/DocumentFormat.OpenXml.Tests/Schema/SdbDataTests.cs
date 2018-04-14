@@ -1,12 +1,14 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation.Schema;
+using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.InteropServices;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace DocumentFormat.OpenXml.Packaging.Tests
+namespace DocumentFormat.OpenXml.Validation.Schema
 {
     public class SdbDataTests
     {
@@ -20,88 +22,52 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         [Fact]
         public void SdbDataHeadTest()
         {
-            const int DataVersion = 0x00010000;
-            const int DataByteCount = 5323;
-            const int StartClassId = 16;
-            const int ClassIdsCount = 32;
-            const int ClassIdsDataOffset = 124;
-            const int SchemaTypeCount = 6432;
-            const int SchemaTypeDataOffset = 1234;
-            const int ParticleCount = 62234;
-            const int ParticleDataOffset = 1536;
-            const int ParticleChildrenIndexCount = 2314;
-            const int ParticleChildrenIndexDataOffset = 187;
-            const int AttributeCount = 7908;
-            const int AttributeDataOffset = 7587;
-            const int SimpleTypeCount = 4887;
-            const int SimpleTypeDataOffset = 5980;
+            const FileFormatVersions FileFormat = FileFormatVersions.Office2010;
+            var classIds = new SdbClassIdToSchemaTypeIndex[5];
+            var schemaTypes = new SdbSchemaType[8];
+            var particleConstraints = new SdbParticleConstraint[2];
+            var particleChildrenIndexes = new SdbParticleChildrenIndex[11];
+            var attributes = new SdbAttributeConstraint[4];
 
             var instance = new SdbDataHead(
-                DataVersion,
-                DataByteCount,
-                StartClassId,
-                ClassIdsCount,
-                ClassIdsDataOffset,
-                SchemaTypeCount,
-                SchemaTypeDataOffset,
-                ParticleCount,
-                ParticleDataOffset,
-                ParticleChildrenIndexCount,
-                ParticleChildrenIndexDataOffset,
-                AttributeCount,
-                AttributeDataOffset,
-                SimpleTypeCount,
-                SimpleTypeDataOffset);
+                FileFormat,
+                classIds,
+                schemaTypes,
+                particleConstraints,
+                particleChildrenIndexes,
+                attributes);
 
-            Assert.Equal(DataVersion, instance.DataVersion);
-            Assert.Equal(DataByteCount, instance.DataByteCount);
-            Assert.Equal(StartClassId, instance.StartClassId);
-            Assert.Equal(ClassIdsCount, instance.ClassIdsCount);
-            Assert.Equal(ClassIdsDataOffset, instance.ClassIdsDataOffset);
-            Assert.Equal(SchemaTypeCount, instance.SchemaTypeCount);
-            Assert.Equal(SchemaTypeDataOffset, instance.SchemaTypeDataOffset);
-            Assert.Equal(ParticleCount, instance.ParticleCount);
-            Assert.Equal(ParticleDataOffset, instance.ParticleDataOffset);
-            Assert.Equal(ParticleChildrenIndexCount, instance.ParticleChildrenIndexCount);
-            Assert.Equal(ParticleChildrenIndexDataOffset, instance.ParticleChildrenIndexDataOffset);
-            Assert.Equal(AttributeCount, instance.AttributeCount);
-            Assert.Equal(AttributeDataOffset, instance.AttributeDataOffset);
-            Assert.Equal(SimpleTypeCount, instance.SimpleTypeCount);
-            Assert.Equal(SimpleTypeDataOffset, instance.SimpleTypeDataOffset);
+            Assert.Equal(FileFormat, instance.FileFormat);
 
-            var bytes = WriteBytes(instance.Serialize());
+            Assert.Equal(SdbSpan.Create(instance.ClassIds.Offset, classIds), instance.ClassIds);
+            Assert.Equal(instance.ClassIds.End, instance.SchemaType.Offset);
+
+            Assert.Equal(SdbSpan.Create(instance.SchemaType.Offset, schemaTypes), instance.SchemaType);
+            Assert.Equal(instance.SchemaType.End, instance.Particles.Offset);
+
+            Assert.Equal(SdbSpan.Create(instance.Particles.Offset, particleConstraints), instance.Particles);
+            Assert.Equal(instance.Particles.End, instance.ParticleChildren.Offset);
+
+            Assert.Equal(SdbSpan.Create(instance.ParticleChildren.Offset, particleChildrenIndexes), instance.ParticleChildren);
+            Assert.Equal(instance.ParticleChildren.End, instance.Attributes.Offset);
+
+            Assert.Equal(SdbSpan.Create(instance.Attributes.Offset, attributes), instance.Attributes);
+            Assert.Equal(instance.Attributes.End, instance.End);
+
             var expected = new byte[]
             {
-                0x4F, 0x50, 0x45, 0x4E, 0x58, 0x4D, 0x4C, 0x20, 0x53, 0x43, 0x48, 0x4D, 0x20, 0x20, 0x20,
-                0x20, 0x00, 0x00, 0x01, 0x00, 0xCB, 0x14, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x20, 0x00,
-                0x00, 0x00, 0x7C, 0x00, 0x00, 0x00, 0x20, 0x19, 0x00, 0x00, 0xD2, 0x04, 0x00, 0x00, 0x1A,
-                0xF3, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x0A, 0x09, 0x00, 0x00, 0xBB, 0x00, 0x00, 0x00,
-                0xE4, 0x1E, 0x00, 0x00, 0xA3, 0x1D, 0x00, 0x00, 0x17, 0x13, 0x00, 0x00, 0x5C, 0x17, 0x00,
-                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                0xB7, 0x55, 0xDD, 0x06, 0x4D, 0xEF, 0xEE, 0x46, 0xA6, 0x18, 0x04, 0x2A, 0xF4,
+                0xC3, 0x90, 0x4E, 0x02, 0x00, 0x00, 0x00, 0x50, 0x00, 0x00, 0x00, 0x05, 0x00,
+                0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x64, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00,
+                0x00, 0x08, 0x00, 0x00, 0x00, 0xA4, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00,
+                0x0D, 0x00, 0x00, 0x00, 0xBE, 0x00, 0x00, 0x00, 0x0B, 0x00, 0x00, 0x00, 0x02,
+                0x00, 0x00, 0x00, 0xD4, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00,
+                0x00, 0x00,
             };
 
-            Assert.Equal(expected, bytes);
+            var bytes = VerifyBytes(instance, expected);
 
-            var deserialized = SdbDataHead.Deserialize(bytes, 0);
-
-            Assert.Equal(DataVersion, deserialized.DataVersion);
-            Assert.Equal(DataByteCount, deserialized.DataByteCount);
-            Assert.Equal(StartClassId, deserialized.StartClassId);
-            Assert.Equal(ClassIdsCount, deserialized.ClassIdsCount);
-            Assert.Equal(ClassIdsDataOffset, deserialized.ClassIdsDataOffset);
-            Assert.Equal(SchemaTypeCount, deserialized.SchemaTypeCount);
-            Assert.Equal(SchemaTypeDataOffset, deserialized.SchemaTypeDataOffset);
-            Assert.Equal(ParticleCount, deserialized.ParticleCount);
-            Assert.Equal(ParticleDataOffset, deserialized.ParticleDataOffset);
-            Assert.Equal(ParticleChildrenIndexCount, deserialized.ParticleChildrenIndexCount);
-            Assert.Equal(ParticleChildrenIndexDataOffset, deserialized.ParticleChildrenIndexDataOffset);
-            Assert.Equal(AttributeCount, deserialized.AttributeCount);
-            Assert.Equal(AttributeDataOffset, deserialized.AttributeDataOffset);
-            Assert.Equal(SimpleTypeCount, deserialized.SimpleTypeCount);
-            Assert.Equal(SimpleTypeDataOffset, deserialized.SimpleTypeDataOffset);
+            var deserialized = Assert.Single(Deserialize<SdbDataHead>(bytes));
 
             Assert.Equal(instance, deserialized);
         }
@@ -117,11 +83,9 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             Assert.Equal(ClassId, instance.ClassId);
             Assert.Equal(SchemaTypeIndex, instance.SchemaTypeIndex);
 
-            var bytes = WriteBytes(instance.Serialize());
+            var bytes = VerifyBytes(instance, new byte[] { 0x32, 0x00, 0x3F, 0x00 });
 
-            Assert.Equal(new byte[] { 0x32, 0x00, 0x3F, 0x00 }, bytes);
-
-            var deserialized = SdbClassIdToSchemaTypeIndex.Deserialize(bytes, 0);
+            var deserialized = Assert.Single(Deserialize<SdbClassIdToSchemaTypeIndex>(bytes));
 
             Assert.Equal(ClassId, deserialized.ClassId);
             Assert.Equal(SchemaTypeIndex, deserialized.SchemaTypeIndex);
@@ -144,11 +108,9 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             Assert.Equal(AttributesCount, instance.AttributesCount);
             Assert.Equal(StartIndexOfAttributes, instance.StartIndexOfAttributes);
 
-            var bytes = WriteBytes(instance.Serialize());
+            var bytes = VerifyBytes(instance, new byte[] { 0x32, 0x00, 0x3F, 0x00, 0x14, 0x00, 0x0A, 0x00 });
 
-            Assert.Equal(new byte[] { 0x32, 0x00, 0x3F, 0x00, 0x14, 0x00, 0x0A, 0x00 }, bytes);
-
-            var deserialized = SdbSchemaType.Deserialize(bytes, 0);
+            var deserialized = Assert.Single(Deserialize<SdbSchemaType>(bytes));
 
             Assert.Equal(ParticleIndex, deserialized.ParticleIndex);
             Assert.Equal(SimpleTypeIndex, deserialized.SimpleTypeIndex);
@@ -177,10 +139,9 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             Assert.Equal(ChildrenCount, instance.ChildrenCount);
             Assert.Equal(ChildrenStartIndex, instance.ChildrenStartIndex);
 
-            var bytes = WriteBytes(instance.GetBytes());
-            Assert.Equal(new byte[] { 0x06, 0x12, 0x00, 0x02, 0x00, 0x3C, 0x00, 0x00, 0x00, 0x50, 0x00, 0x84, 0x00 }, bytes);
+            var bytes = VerifyBytes(instance, new byte[] { 0x06, 0x12, 0x00, 0x02, 0x00, 0x3C, 0x00, 0x00, 0x00, 0x50, 0x00, 0x84, 0x00 });
 
-            var deserialized = SdbParticleConstraint.Deserialize(bytes, 0);
+            var deserialized = Assert.Single(Deserialize<SdbParticleConstraint>(bytes));
 
             Assert.Equal(ParticleType, deserialized.ParticleType);
             Assert.Equal(ElementTypeId, deserialized.ElementTypeId);
@@ -201,11 +162,8 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
             Assert.Equal(ParticleIndex, instance.ParticleIndex);
 
-            var bytes = WriteBytes(instance.Serialize());
-
-            Assert.Equal(new byte[] { 0x3F, 0x00 }, bytes);
-
-            var deserialized = SdbParticleChildrenIndex.Deserialize(bytes, 0);
+            var bytes = VerifyBytes(instance, new byte[] { 0x3F, 0x00 });
+            var deserialized = Assert.Single(Deserialize<SdbParticleChildrenIndex>(bytes));
 
             Assert.Equal(ParticleIndex, deserialized.ParticleIndex);
 
@@ -225,11 +183,8 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             Assert.Equal(SimpleTypeIndex, instance.SimpleTypeIndex);
             Assert.Equal(FileFormatVersion, instance.FileFormatVersion);
 
-            var bytes = WriteBytes(instance.Serialize());
-
-            Assert.Equal(new byte[] { 0x02, 0x35, 0x00, 0x20 }, bytes);
-
-            var deserialized = SdbAttributeConstraint.Deserialize(bytes, 0);
+            var bytes = VerifyBytes(instance, new byte[] { 0x02, 0x35, 0x00, 0x20 });
+            var deserialized = Assert.Single(Deserialize<SdbAttributeConstraint>(bytes));
 
             Assert.Equal(AttributeUse, deserialized.AttributeUse);
             Assert.Equal(SimpleTypeIndex, deserialized.SimpleTypeIndex);
@@ -238,11 +193,67 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             Assert.Equal(instance, deserialized);
         }
 
-        private byte[] WriteBytes(byte[] bytes)
+        [InlineData(FileFormatVersions.Office2007)]
+        [InlineData(FileFormatVersions.Office2010)]
+        [InlineData(FileFormatVersions.Office2013)]
+        [Theory]
+        public void ValidateFormats(FileFormatVersions version)
         {
-            var str = string.Join(", ", bytes.Select(t => "0x" + t.ToString("X2")));
+            byte[] Roundtrip()
+            {
+                var data = SdbSchemaData.GetSchemaData(version);
+                using (var ms = new MemoryStream())
+                {
+                    data.SerializeSdbData(ms);
+                    return ms.ToArray();
+                }
+            }
+
+            byte[] GetStream()
+            {
+                using (var stream = SdbSchemaData.GetStream(version, SdbSchemaData.Constraints))
+                using (var ms = new MemoryStream())
+                {
+                    stream.CopyTo(ms);
+                    return ms.ToArray();
+                }
+            }
+
+            var expected = GetStream();
+            var actual = Roundtrip();
+
+            Assert.Equal(expected.Length, actual.Length);
+            Assert.Equal(expected, actual);
+        }
+
+        private byte[] VerifyBytes<T>(T instance, byte[] expected)
+            where T : struct
+        {
+            var structLayout = typeof(T).GetTypeInfo().StructLayoutAttribute;
+
+            Assert.NotNull(structLayout);
+            Assert.Equal(LayoutKind.Sequential, structLayout.Value);
+            Assert.Equal(1, structLayout.Pack);
+
+            var serialized = SdbData.Serialize(new[] { instance });
+
+            var str = string.Join(", ", serialized.Select(t => "0x" + t.ToString("X2")));
             _output.WriteLine($"{{{str}}}");
-            return bytes;
+
+            Assert.Equal(expected.Length, Marshal.SizeOf<T>());
+            Assert.Equal(expected.Length, serialized.Length);
+            Assert.Equal(expected, serialized);
+
+            return serialized;
+        }
+
+        private static T[] Deserialize<T>(byte[] data)
+            where T : struct
+        {
+            using (var ms = new MemoryStream(data))
+            {
+                return SdbData.Deserialize<T>(ms, SdbSpan.Create<T>(0));
+            }
         }
     }
 }
