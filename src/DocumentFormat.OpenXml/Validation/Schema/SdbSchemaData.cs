@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     internal sealed partial class SdbSchemaData
     {
         public const string Constraints = "constraints";
-        public const string SimpleTypes = "simpleTypes.xml";
+        public const string SimpleTypes = "restrictions.xml";
 
         private readonly FileFormatVersions _fileFormat;
         private readonly Dictionary<ushort, SchemaTypeData> _cache = new Dictionary<ushort, SchemaTypeData>();
