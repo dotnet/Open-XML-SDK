@@ -8,6 +8,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 {
     public class RestrictionsSerializationTests
     {
+#if FEATURE_SCHEMA_GENERATOR
         [InlineData(FileFormatVersions.Office2007)]
         [InlineData(FileFormatVersions.Office2010)]
         [InlineData(FileFormatVersions.Office2013)]
@@ -44,5 +45,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
             Assert.Equal(expected.Length, actual.Length);
             Assert.Equal(expected, actual);
         }
+#endif
     }
 }
