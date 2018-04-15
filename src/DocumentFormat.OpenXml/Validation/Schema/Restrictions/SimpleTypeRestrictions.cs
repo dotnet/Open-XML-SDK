@@ -85,6 +85,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                 Indent = true,
                 Encoding = Encoding.UTF8,
                 IndentChars = "\t",
+                NewLineChars = "\r\n", // Default setting would fail on CI
             };
 
             using (var xml = XmlWriter.Create(stream, settings))

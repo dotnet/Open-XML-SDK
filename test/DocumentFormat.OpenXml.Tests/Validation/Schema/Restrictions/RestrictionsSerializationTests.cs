@@ -31,15 +31,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         {
             byte[] Roundtrip()
             {
-                using (var stream = SdbSchemaData.GetStream(fileFormat, SdbSchemaData.SimpleTypes))
-                {
-                    var restrictions = SimpleTypeRestrictions.Deserialize(stream, fileFormat);
+                var restrictions = SdbSchemaData.GetSchemaData(fileFormat).Restrictions;
 
-                    using (var ms = new MemoryStream())
-                    {
-                        restrictions.Serialize(ms);
-                        return ms.ToArray();
-                    }
+                using (var ms = new MemoryStream())
+                {
+                    restrictions.Serialize(ms);
+                    return ms.ToArray();
                 }
             }
 
