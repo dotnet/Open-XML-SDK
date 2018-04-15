@@ -3,7 +3,6 @@
 
 using System.IO;
 using System.Text;
-using System.Xml;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
@@ -58,14 +57,16 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         }
 
         /// <summary>
-        /// Gets strings and normalize line endings
+        /// Gets string from <paramref name="bytes"/> and normalize line endings as the embedded resource
+        /// may be retrieved from source control with different endings and we want to compare just the
+        /// contents themselves irrespective of line endings.
         /// </summary>
         private static string GetNormalizedString(byte[] bytes)
         {
             var sb = new StringBuilder();
 
             using (var ms = new MemoryStream(bytes))
-            using (var reader = new StreamReader(ms))
+            using (var reader = new StreamReader(ms, Encoding.UTF8))
             {
                 while (!reader.EndOfStream)
                 {

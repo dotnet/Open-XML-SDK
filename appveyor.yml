@@ -28,6 +28,9 @@ test_script:
 artifacts:
   - path: 'bin\**\*.nupkg'
 
+on_finish:
+  - cmd: compat-agent.exe -config compat.yml -version %GitVersion_NuGetVersionV2%
+
 deploy:
   provider: NuGet
   server: https://dotnet.myget.org/F/open-xml-sdk/api/v2/package
