@@ -102,8 +102,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         /// <returns></returns>
         public static SimpleTypeRestrictions Deserialize(Stream stream, FileFormatVersions fileFormat)
         {
-            using (var reader = new StreamReader(stream, Encoding.UTF8, false))
-            using (var xml = XmlReader.Create(reader))
+            using (var xml = XmlReader.Create(stream))
             {
                 var simpleTypeRestrictions = (SimpleTypeRestrictions)GetSerializer().ReadObject(xml);
 
