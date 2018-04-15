@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         /// <summary>
         /// Gets or sets the FileFormat version of this restriction.
         /// </summary>
-        internal FileFormatVersions FileFormat { get; set; }
+        public FileFormatVersions FileFormat { get; set; }
 
         /// <summary>
         /// Gets the XsdType type defined in schema.

@@ -8,6 +8,20 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 {
     public class RestrictionsSerializationTests
     {
+        [InlineData(FileFormatVersions.Office2007)]
+        [InlineData(FileFormatVersions.Office2010)]
+        [InlineData(FileFormatVersions.Office2013)]
+        [Theory]
+        public void FileFormatVersionIsSet(FileFormatVersions fileFormat)
+        {
+            var schemaData = SdbSchemaData.GetSchemaData(fileFormat);
+
+            foreach (var type in schemaData.Restrictions.SimpleTypes)
+            {
+                Assert.Equal(fileFormat, type.FileFormat);
+            }
+        }
+
 #if FEATURE_SCHEMA_GENERATOR
         [InlineData(FileFormatVersions.Office2007)]
         [InlineData(FileFormatVersions.Office2010)]

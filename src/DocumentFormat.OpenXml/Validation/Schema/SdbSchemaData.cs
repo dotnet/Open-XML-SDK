@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         private SdbAttributeConstraint[] Attributes { get; }
 
-        private SimpleTypeRestrictions Restrictions { get; }
+        public SimpleTypeRestrictions Restrictions { get; }
 
         public static SdbSchemaData GetSchemaData(FileFormatVersions fileFormat)
         {
