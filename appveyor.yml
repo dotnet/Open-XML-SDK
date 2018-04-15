@@ -27,6 +27,7 @@ test_script:
 
 artifacts:
   - path: 'bin\**\*.nupkg'
+  - path: '**\*.out.xml'
 
 on_finish:
   - cmd: compat-agent.exe -config compat.yml -version %GitVersion_NuGetVersionV2%
