@@ -68,7 +68,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 #endif
         }
 
-#if  FEATURE_SCHEMA_GENERATOR
         /// <summary>
         /// Serializes the current <see cref="SimpleTypeRestrictions"/> into an XML stream
         /// </summary>
@@ -92,7 +91,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                 GetSerializer().WriteObject(xml, this);
             }
         }
-#endif
 
         /// <summary>
         /// Deserialize the XML stream into <see cref="SimpleTypeRestrictions"/>
