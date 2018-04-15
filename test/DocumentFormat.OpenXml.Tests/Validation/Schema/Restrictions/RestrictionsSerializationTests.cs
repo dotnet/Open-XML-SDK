@@ -23,6 +23,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
             }
         }
 
+#if FEATURE_SCHEMA_GENERATOR
         [InlineData(FileFormatVersions.Office2007)]
         [InlineData(FileFormatVersions.Office2010)]
         [InlineData(FileFormatVersions.Office2013)]
@@ -76,5 +77,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 
             return sb.ToString();
         }
+#endif
     }
 }
