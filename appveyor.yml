@@ -27,7 +27,6 @@ test_script:
 
 artifacts:
   - path: 'bin\**\*.nupkg'
-  - path: '**\*.out.xml'
 
 deploy:
   provider: NuGet
