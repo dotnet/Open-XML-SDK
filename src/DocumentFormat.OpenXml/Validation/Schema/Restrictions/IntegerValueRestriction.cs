@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
-using System;
 using System.Runtime.Serialization;
 
 namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
@@ -17,7 +15,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     ///
     /// !******************** TODO: at current, the CodeGen generate int for xsd:integer
     /// </remarks>
-    [DataContract]
+    [DataContract(Name = "i")]
     internal class IntegerValueRestriction : SimpleValueRestriction<long, IntegerValue>
     {
         protected override long MinValue => long.MinValue;

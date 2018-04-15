@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     ///  The ·lexical space· of IDREF is the set of strings that ·match· the NCName production in [Namespaces in XML].
     ///  The ·base type· of IDREF is NCName.
     /// </remarks>
-    [DataContract]
+    [DataContract(Name = "mcn")]
     internal class NcNameRestriction : StringRestriction
     {
         /// <inheritdoc />

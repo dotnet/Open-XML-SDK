@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// <summary>
     /// SByte (xsd:bye) based value restriction.
     /// </summary>
-    [DataContract]
+    [DataContract(Name = "sb")]
     internal class SByteValueRestriction : SimpleValueRestriction<sbyte, SByteValue>
     {
         protected override sbyte MinValue => sbyte.MinValue;

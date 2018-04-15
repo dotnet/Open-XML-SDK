@@ -9,16 +9,16 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// <summary>
     /// Class for all union simple types.
     /// </summary>
-    [DataContract]
+    [DataContract(Name = "un")]
     internal class UnionValueRestriction : SimpleTypeRestriction
     {
-        [DataMember]
+        [DataMember(Name = "unt")]
         public SimpleTypeRestriction[] UnionTypes { get; set; }
 
         /// <summary>
         /// Gets or sets an ID for union.
         /// </summary>
-        [DataMember]
+        [DataMember(Name = "uid")]
         public int UnionId { get; set; }
 
         /// <inheritdoc />

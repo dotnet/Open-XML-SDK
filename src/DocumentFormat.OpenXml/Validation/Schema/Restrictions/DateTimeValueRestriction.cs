@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// <summary>
     /// DateTime (xsd:dateTime) based value restriction.
     /// </summary>
-    [DataContract]
+    [DataContract(Name = "dt")]
     internal class DateTimeValueRestriction : SimpleValueRestriction<DateTime, DateTimeValue>
     {
         protected override DateTime MinValue => DateTime.MinValue;

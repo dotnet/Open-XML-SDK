@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// The ·lexical space· of ID is the set of all strings that ·match· the NCName production in [Namespaces in XML].
     /// The ·base type· of ID is NCName.
     /// </remarks>
-    [DataContract]
+    [DataContract(Name = "id")]
     internal class IdStringRestriction : StringRestriction
     {
         /// <inheritdoc />

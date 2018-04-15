@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     ///  The ·lexical space· of language is the set of all strings that conform to the pattern [a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})* .
     ///  The ·base type· of language is token.
     /// </remarks>
-    [DataContract]
+    [DataContract(Name = "lang")]
     internal class LanguageRestriction : TokenRestriction
     {
         private static Regex LanguageLexicalPattern = new Regex(@"\A[a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*\z", RegexOptions.Compiled | RegexOptions.CultureInvariant);

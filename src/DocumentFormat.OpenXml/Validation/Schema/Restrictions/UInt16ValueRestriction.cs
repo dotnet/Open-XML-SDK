@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// <summary>
     /// UInt16 ( xsd:unsignedShort ) based value restriction.
     /// </summary>
-    [DataContract]
+    [DataContract(Name = "ui16")]
     internal class UInt16ValueRestriction : SimpleValueRestriction<ushort, UInt16Value>
     {
         protected override ushort MinValue => ushort.MinValue;

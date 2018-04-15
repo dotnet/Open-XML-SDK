@@ -9,18 +9,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// <summary>
     /// Base class for string (xsd:string) based simple type constraints.
     /// </summary>
-    [DataContract]
+    [DataContract(Name = "str")]
     internal class StringRestriction : SimpleTypeRestriction
     {
-        /// <inheritdoc />
-        public override int MaxLength { get; set; }
-
-        /// <inheritdoc />
-        public override int MinLength { get; set; }
-
-        /// <inheritdoc />
-        public override int Length { get; set; }
-
         /// <inheritdoc />
         public override XsdType XsdType => XsdType.String;
 

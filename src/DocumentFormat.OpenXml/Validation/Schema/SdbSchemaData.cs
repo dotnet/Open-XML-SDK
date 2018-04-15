@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         private SdbAttributeConstraint[] Attributes { get; }
 
-        private SimpleTypeRestrictions Restrictions { get; }
+        public SimpleTypeRestrictions Restrictions { get; }
 
         public static SdbSchemaData GetSchemaData(FileFormatVersions fileFormat)
         {
@@ -70,10 +70,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// of offsets contained in <see cref="SdbDataHead"/>. These items are deserialized in this method, while <see cref="SerializeSdbData(Stream)"/> provides
         /// the infrastructure to serialize them back to a binary file in the correct order
         ///
-        /// Simple type data is contained in an XML file that is serialized with <see cref="SimpleTypeRestrictions.Serialize(Stream)"/> and deserialized with
-        /// <see cref="SimpleTypeRestrictions.Deserialize(Stream, FileFormatVersions)"/>
+        /// Simple type data is contained in an XML file that is deserialized with <see cref="GetSimpleTypeRestrictions(FileFormatVersions)"/>
         /// </remarks>
-        /// <param name="fileFormat"></param>
+        /// <param name="fileFormat">The version to load</param>
         private SdbSchemaData(FileFormatVersions fileFormat)
         {
             if (!fileFormat.Any())
@@ -105,11 +104,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
         }
 
-        private SimpleTypeRestrictions GetSimpleTypeRestrictions(FileFormatVersions fileFormat)
+        private static SimpleTypeRestrictions GetSimpleTypeRestrictions(FileFormatVersions fileFormat)
         {
             using (var simpleTypes = GetStream(fileFormat, SimpleTypes))
             {
-                return SimpleTypeRestrictions.Deserialize(simpleTypes, _fileFormat);
+                return SimpleTypeRestrictions.Deserialize(simpleTypes, fileFormat);
             }
         }
 

@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// <summary>
     /// Holds all simple type constraints in array.
     /// </summary>
-    [DataContract]
+    [DataContract(Name = "root")]
     [KnownType(typeof(AnyUriRestriction))]
     [KnownType(typeof(Base64BinaryRestriction))]
     [KnownType(typeof(BooleanValueRestriction))]
@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     [KnownType(typeof(UnionValueRestriction))]
     internal class SimpleTypeRestrictions
     {
-        [DataMember]
+        [DataMember(Name = "types")]
         public SimpleTypeRestriction[] SimpleTypes { get; set; }
 
         private static DataContractSerializer GetSerializer()
@@ -68,6 +68,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 #endif
         }
 
+#if  FEATURE_SCHEMA_GENERATOR
         /// <summary>
         /// Serializes the current <see cref="SimpleTypeRestrictions"/> into an XML stream
         /// </summary>
@@ -83,6 +84,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
             {
                 Indent = true,
                 Encoding = Encoding.UTF8,
+                IndentChars = "\t",
             };
 
             using (var xml = XmlWriter.Create(stream, settings))
@@ -90,6 +92,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                 GetSerializer().WriteObject(xml, this);
             }
         }
+#endif
 
         /// <summary>
         /// Deserialize the XML stream into <see cref="SimpleTypeRestrictions"/>
@@ -97,10 +100,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         /// <param name="stream">The XML stream</param>
         /// <param name="fileFormat">The target file format version</param>
         /// <returns></returns>
-        internal static SimpleTypeRestrictions Deserialize(Stream stream, FileFormatVersions fileFormat)
+        public static SimpleTypeRestrictions Deserialize(Stream stream, FileFormatVersions fileFormat)
         {
-            using (var reader = new StreamReader(stream, Encoding.UTF8, false))
-            using (var xml = XmlReader.Create(reader))
+            using (var xml = XmlReader.Create(stream))
             {
                 var simpleTypeRestrictions = (SimpleTypeRestrictions)GetSerializer().ReadObject(xml);
 

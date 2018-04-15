@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using System;
 using System.Runtime.Serialization;
 
 namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
@@ -9,7 +8,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// <summary>
     /// Single (xsd:float) based value restriction.
     /// </summary>
-    [DataContract]
+    [DataContract(Name = "fl")]
     internal class SingleValueRestriction : SimpleValueRestriction<float, SingleValue>
     {
         protected override float MinValue => float.MinValue;
