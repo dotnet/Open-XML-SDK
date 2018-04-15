@@ -2,6 +2,8 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System.IO;
+using System.Text;
+using System.Xml;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
@@ -50,11 +52,29 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                 }
             }
 
-            var expected = GetStream();
-            var actual = Roundtrip();
+            var expected = GetNormalizedString(GetStream());
+            var actual = GetNormalizedString(Roundtrip());
 
-            Assert.Equal(expected.Length, actual.Length);
             Assert.Equal(expected, actual);
+        }
+
+        /// <summary>
+        /// Gets strings and normalize line endings
+        /// </summary>
+        private static string GetNormalizedString(byte[] bytes)
+        {
+            var sb = new StringBuilder();
+
+            using (var ms = new MemoryStream(bytes))
+            using (var reader = new StreamReader(ms))
+            {
+                while (!reader.EndOfStream)
+                {
+                    sb.AppendLine(reader.ReadLine());
+                }
+            }
+
+            return sb.ToString();
         }
 #endif
     }
