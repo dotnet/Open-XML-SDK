@@ -156,12 +156,16 @@ namespace DocumentFormat.OpenXml.Tests
         private bool TestIfHasUnknownElement(OpenXmlElement element)
         {
             if (element.GetType().ToString().Contains("OpenXmlUnknownElement"))
+            {
                 return true;
+            }
+
             foreach (var item in element.Elements())
             {
                 if (TestIfHasUnknownElement(item))
                     return true;
             }
+
             return false;
         }
 
